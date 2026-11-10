@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "dunhuang-dance-gen"
 version = "0.1.0"
-requires-python = ">=3.10"
+requires-python = ">=3.9"
 dependencies = ["numpy", "scipy", "soundfile"]
 [project.optional-dependencies]
 test = ["pytest"]

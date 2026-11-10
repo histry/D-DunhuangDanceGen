@@ -18,7 +18,7 @@ out.mkdir(parents=True,exist_ok=True)
 legacy=pinned(q['legacy_root'],q['legacy_commit']);sys.path.insert(0,str(legacy))
 from motion.retrieval_generation import decode_continuous_source
 from motion.geometry import fk_24_np
-catalog_path=legacy/'outputs/unpaired_data_protocol_20261015_ZY1C32/catalog/motion_catalog.json'
+catalog_path=Path(q['asset_root'])/'outputs/unpaired_data_protocol_20261015_ZY1C32/catalog/motion_catalog.json'
 catalog=json.loads(catalog_path.read_text());entries=[]
 # Predeclared deterministic coverage: one first event from each of three source recordings.
 for source in sorted(catalog['source_records'],key=lambda r:r['source_uid'])[:3]:
