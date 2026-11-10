@@ -36,6 +36,9 @@ def main():
     payload=torch.load(checkpoint,map_location='cpu',weights_only=False)
     normalizer=payload['normalizer']
     if not isinstance(normalizer,Normalizer) or not isinstance(normalizer.scaler,MinMaxScaler):raise ValueError('Unexpected normalizer')
+    if q.get('save_scaler'):
+        np.savez(out/'scaler.npz',scale=normalizer.scaler.scale_.cpu().numpy(),
+                 bias=normalizer.scaler.min_.cpu().numpy())
     features=np.load(checked(q['features']),allow_pickle=False)[:q['windows']]
     if features.shape!=(q['windows'],150,4800) or not np.isfinite(features).all() or not features.any():raise ValueError('Real Jukebox windows required')
     values,masks=anchor_windows(q['frames'],q.get('anchors',[]))
@@ -58,9 +61,15 @@ def main():
             if masks.any():raise ValueError('Baseline must not contain anchors')
             sample=diffusion.long_ddim_sample((len(features),150,151),cond)
             sampler=dict(method='official_long_ddim',steps=50)
-        elif q['mode']=='anchored':
-            if not masks.any():raise ValueError('Anchored run must have actual anchors')
-            sample,sampler=constrained_ddim(diffusion,cond,normalized,mask)
+        elif q['mode'] in ('anchored','custom_none','temporal'):
+            if q['mode']!='custom_none' and not masks.any():raise ValueError('Anchored run must have actual anchors')
+            policy = {'anchored':'hard','custom_none':'none','temporal':'temporal'}[q['mode']]
+            guide = None
+            if policy == 'temporal':
+                from .temporal import prepare
+                guide = prepare(q,normalizer,out,cond.device)
+            sample,sampler=constrained_ddim(diffusion,cond,normalized,mask,guidance=policy,
+                temporal=guide,overlap=q.get('overlap_policy','mean'))
         else:raise ValueError('Unknown sampler')
     torch.cuda.synchronize()
     raw=normalizer.unnormalize(sample.detach().cpu().clone()).numpy()

@@ -54,3 +54,26 @@ def constraint_support(normalizer, values, masks):
         if count:joints.append(dict(joint=j,unsupported_coordinates=count))
     return dict(supported=not bool(outside.any()),unsupported_coordinates=int(outside.sum()),joints=joints,
         frozen_normalizer=True,poses_clipped=False)
+
+def source_neighborhoods(frames, anchors, radius):
+    """Bind each music tick to an actual 30 Hz source frame at unit time scale."""
+    from .io import checked
+    if type(radius) is not int or radius < 1:
+        raise ValueError('Positive integer trajectory radius required')
+    rows, weights = [], []
+    occupied = set()
+    for anchor in anchors:
+        motion = motion151(np.load(checked(anchor['source']), allow_pickle=False))
+        center, tick = anchor['source_frame'], anchor['frame']
+        if min(center, tick) < radius or center+radius >= len(motion) or tick+radius >= frames:
+            raise ValueError('Insufficient source or music context')
+        if not np.array_equal(motion[center], np.asarray(anchor['pose'], dtype=np.float32)):
+            raise ValueError('Source center differs from frozen target')
+        for offset in range(-radius, radius+1):
+            frame = tick+offset
+            if frame in occupied:
+                raise ValueError('Intersecting temporal anchor neighborhoods')
+            occupied.add(frame)
+            rows.append(dict(frame=frame, pose=motion[center+offset], joints=anchor['joints']))
+            weights.append(float(np.cos(np.pi*offset/(2*radius))**2) if abs(offset)<radius else 0.)
+    return rows, weights
