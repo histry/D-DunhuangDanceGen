@@ -30,7 +30,6 @@ def retrieve(catalog, query=None, limit=3):
 
 def select_supported_phrase(candidates, density, previous_exit=None):
     """Rank supported clips by activity percentile and angular entry compatibility."""
-    from .contracts import matrices
     if not candidates or not np.isfinite(density) or not 0<=density<=1:
         raise ValueError('Candidates and music density in [0,1] required')
     activities=np.array([c['activity_rad_s'] for c in candidates])

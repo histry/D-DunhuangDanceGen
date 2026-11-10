@@ -48,6 +48,11 @@ def evidence(path,q):
         truth=matrices(target['pose'][7:].reshape(24,6)).astype(float)
         errors.append(angle_difference(rotations[target['frame'],joints],truth[joints]).mean())
     audit=read(path/'physical.json')
+    for name, values in [('joint_velocity_mps',d1*30),('joint_acceleration_mps2',d2),('joint_jerk_mps3',d3)]:
+        for stat,measurement in distribution(values).items():
+            if not np.isclose(measurement,audit['audit'][name+'_'+stat],rtol=1e-4,atol=.002):
+                raise ValueError('Saved FK derivatives disagree with Native: '+name+'_'+stat)
+
     from motion.physics import derive_contacts_np
     from motion.config import MotionGenerationConfig
     from motion_geometry import physical as native
@@ -111,6 +116,28 @@ def census(q, scaler):
             eligible_centers=int(legal_centers.sum()),supported_centers=int((legal_centers&spans).sum())))
     return dict(catalog_sha256=sha(catalog_file),sources=result)
 
+def compare(target,duration,q,historical_hard_hash):
+    rows={}
+    for mode in ('custom_none','anchored','temporal'):
+        print(duration,mode,flush=True)
+        directory=target/(duration+'_'+mode)
+        run(dict(q,mode=mode,overlap_policy='mean',trajectory_radius=12,trajectory_strength=.55,
+                 save_scaler=duration=='5s' and mode=='custom_none',output=str(directory)))
+        rows[mode]=evidence(directory,q)
+    a,b,c=rows.values()
+    if len({item['noise_sha256'] for item in rows.values()})!=1:
+        raise ValueError('Noise differs across conditions')
+    if b['motion_sha256']!=historical_hard_hash:
+        raise ValueError('Historical hard replay mismatch')
+    checks=dict(center_better_than_uncontrolled=c['mean_center_angle_rad']<a['mean_center_angle_rad'],
+        trajectory_better_than_uncontrolled=c['mean_trajectory_angle_rad']<a['mean_trajectory_angle_rad'],
+        displacement_down_20pct=c['anchor_step_m']<=.8*b['anchor_step_m'],
+        jerk_peak_down_20pct=c['jerk_mps3']['max']<=.8*b['jerk_mps3']['max'],
+        jerk_p95_no_worse=c['jerk_mps3']['p95']<=b['jerk_mps3']['p95'],
+        skate_no_worse=c['skate_p95']<=b['skate_p95'])
+    write(target/(duration+'_comparison.json'),dict(rows=rows,checks=checks,advance=all(checks.values()),native_pass=c['native_pass']))
+    return all(checks.values())
+
 def main():
     target=Path(sys.argv[1]).resolve()
     target.mkdir(parents=True,exist_ok=False)
@@ -129,27 +156,9 @@ def main():
     write(target/'saved_diagnostics.json',prior)
     for duration in ('5s','15s','whole'):
         q=request(duration)
-        rows={}
-        for mode in ('custom_none','anchored','temporal'):
-            print(duration,mode,flush=True)
-            directory=target/(duration+'_'+mode)
-            run(dict(q,mode=mode,overlap_policy='mean',trajectory_radius=12,trajectory_strength=.55,
-                     save_scaler=duration=='5s' and mode=='custom_none',output=str(directory)))
-            rows[mode]=evidence(directory,q)
-        a,b,c=rows.values()
-        if len({item['noise_sha256'] for item in rows.values()})!=1:
-            raise ValueError('Noise differs across conditions')
-        if b['motion_sha256']!=prior[duration+'_hard']['motion_sha256']:
-            raise ValueError('Historical hard replay mismatch')
-        checks=dict(center_better_than_uncontrolled=c['mean_center_angle_rad']<a['mean_center_angle_rad'],
-            trajectory_better_than_uncontrolled=c['mean_trajectory_angle_rad']<a['mean_trajectory_angle_rad'],
-            displacement_down_20pct=c['anchor_step_m']<=.8*b['anchor_step_m'],
-            jerk_peak_down_20pct=c['jerk_mps3']['max']<=.8*b['jerk_mps3']['max'],
-            jerk_p95_no_worse=c['jerk_mps3']['p95']<=b['jerk_mps3']['p95'],
-            skate_no_worse=c['skate_p95']<=b['skate_p95'])
-        write(target/(duration+'_comparison.json'),dict(rows=rows,checks=checks,advance=all(checks.values()),native_pass=c['native_pass']))
+        qualifies=compare(target,duration,q,prior[duration+'_hard']['motion_sha256'])
         if duration=='5s':
             write(target/'upper10_census.json',census(q,np.load(target/'5s_custom_none/scaler.npz')))
-        if not all(checks.values()):break
+        if duration=='5s' and not qualifies:break
 
 if __name__=='__main__':main()
