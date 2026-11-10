@@ -13,6 +13,21 @@ def run(q):
     import soundfile as sf
     audio=checked(q['audio']);info=sf.info(audio)
     clock=clock_plan(info.frames,info.samplerate)
+    if 'feature_receipt' in q:
+        receipt=json.loads(checked(q['feature_receipt']).read_text())
+        binding=receipt.get('original_audio',receipt.get('audio'))
+        if binding['sha256']!=q['audio']['sha256'] or receipt['clock']!=clock or receipt['layer']!=66:
+            raise ValueError('Cached features are not bound to this audio clock')
+        import numpy as np, hashlib
+        features=np.load(checked(q['features']),allow_pickle=False)
+        if features.shape!=(clock['windows'],150,4800):raise ValueError('Feature clock mismatch')
+        if 'slices' in receipt:
+            if len(receipt['slices'])!=len(features):raise ValueError('Incomplete feature receipt')
+            for index,(row,record) in enumerate(zip(features,receipt['slices'])):
+                if record['start_frame']!=index*75 or hashlib.sha256(row.tobytes()).hexdigest()!=record['features_sha256']:
+                    raise ValueError('Feature window provenance mismatch')
+    else:
+        raise ValueError('Hashed feature extraction receipt required')
     frames=q.get('frames',clock['frames'])
     if type(frames) is not int or not 1<=frames<=clock['frames']:raise ValueError('Requested duration exceeds audio')
     q=dict(q,frames=frames,windows=max(1,(max(0,frames-150)+74)//75+1))

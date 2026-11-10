@@ -21,5 +21,9 @@
   "mode": "baseline",
   "output": "outputs/baseline_5s",
   "frames": 150,
-  "asset_root": "/home/disk/lsm/storage/danceRAG"
+  "asset_root": "/home/disk/lsm/storage/danceRAG",
+  "feature_receipt": {
+    "path": "/home/disk/lsm/storage/danceRAG/outputs/edge_baseline_A65_01/features/receipt.json",
+    "sha256": "5a9b0822849038e2becebb4247a10d794736bfd5c53e068b424bf8a43bfde786"
+  }
 }
