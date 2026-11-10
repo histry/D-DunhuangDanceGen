@@ -1,0 +1,10 @@
+__pycache__/
+.pytest_cache/
+*.egg-info/
+.venv/
+outputs/
+third_party/EDGE/
+*.pt
+*.wav
+*.npy
+*.npz
