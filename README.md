@@ -39,3 +39,17 @@ tmux new-session -d -s dunhuang-v1 'bash scripts/run_server.sh'
 `src/dunhuang/pipeline.py` 是唯一主入口；`contracts.py`、`music.py`、`retrieval.py`、`conditioning.py`、`sampling.py`、`edge_backend.py`、`physical.py`、`evaluation.py` 分别承担清晰职责。测试覆盖表示往返、FK 坐标等价、音乐边界、跨窗口锚点和逐步采样。测试里的微型去噪器只用于算法检查，不用于实验生成。
 
 首轮真实结果与复核方法：[实验报告](reports/实验报告.md) · [机器可读指标](reports/experiment_v1.json)。
+
+## B2 时序可执行性实验
+
+同采样器对照使用 `custom_none`、`anchored`、`temporal` 三种 mode，默认重叠策略为 `mean`。`temporal` 还需要 `trajectory_radius`、`trajectory_strength` 以及每个锚点的哈希绑定源片段和中心帧。当前实验半径为 12 帧、强度为 0.55。原 `baseline` 始终调用官方 long DDIM。
+
+在已具备首轮实验产物的服务器上，可用全新输出目录运行以下命令。首个脚本先只读复核保存结果，然后从 5 秒开始执行匹配对照；后两个是独立研究案例。
+```bash
+PY=/home/disk/lsm/conda_envs/dance-rag/bin/python
+$PY scripts/b2.py outputs/new_b2
+$PY scripts/b2_music.py outputs/new_b2 outputs/new_b2_phrase
+$PY scripts/b2_physical.py outputs/new_b2_support
+```
+
+[B2 实验报告](reports/B2实验报告.md) 和 [机器指标](reports/b2.json) 记录各时长的完整比较、支持域与物理审核。

@@ -33,3 +33,42 @@ def test_one_unsupported_coordinate_rejects_neighborhood():
     values[0,66,79]=1.1
     with pytest.raises(ValueError,match='outside frozen'):
         normalize_constraints(Normalizer(),values,mask)
+
+
+def test_trajectory_guidance_controls_fk_derivatives(tmp_path):
+    """Single moving joint with a rigid distal point; audited real FK is checked by b2.py."""
+    pytest.importorskip("pytorch3d")
+    from scipy.spatial.transform import Rotation
+    from dunhuang.temporal import prepare
+    from dunhuang.contracts import MotionAdapter, matrices, sixd
+    from dunhuang.io import sha
+    identity = np.eye(3)
+    source = np.zeros((25,151),np.float32)
+    source[:,7:] = np.tile(sixd(identity),24)
+    channel = slice(7+6*16,13+6*16)
+    angles = np.linspace(.35,.45,25)
+    source[:,channel] = sixd(Rotation.from_rotvec(np.c_[angles*0,angles*0,angles]).as_matrix())
+    file = tmp_path/'source.npy'
+    np.save(file,source)
+    class Normalizer:
+        class scaler:
+            scale_=torch.ones(151)
+            min_=torch.zeros(151)
+        def normalize(self,x):return x
+        def unnormalize(self,x):return x
+    anchor=dict(frame=70,source_frame=12,joints=[16],pose=source[12].tolist(),
+                source=dict(path=str(file),sha256=sha(file)))
+    guide=prepare(dict(anchors=[anchor],frames=150,trajectory_radius=12,trajectory_strength=.55),
+                  Normalizer(),tmp_path,'cpu')
+    rest=source[:1].copy()
+    rest[:,channel]=sixd(identity)
+    predicted=torch.from_numpy(np.tile(MotionAdapter.to_edge(rest),(1,150,1)))
+    soft=guide(predicted,1.).numpy()[0]
+    hard=predicted.numpy()[0].copy()
+    hard[70,channel]=MotionAdapter.to_edge(source)[12,channel]
+    def endpoint(motion):
+        return matrices(motion[:,channel],row=True)@np.array([.35,0.,0.])
+    assert np.array_equal(soft[58],predicted.numpy()[0,58])
+    assert np.linalg.norm(endpoint(soft)[70]-endpoint(hard)[70])<np.linalg.norm(endpoint(predicted.numpy()[0])[70]-endpoint(hard)[70])
+    for order in (1,2,3):
+        assert abs(np.diff(endpoint(soft),n=order,axis=0)).max()<abs(np.diff(endpoint(hard),n=order,axis=0)).max()
