@@ -21,5 +21,5 @@ def evaluate(motion, positions, anchors=(), beat_frames=()):
     result['window_boundaries']=[dict(frame=t,
         max_joint_step_m=float(np.linalg.norm(positions[t]-positions[t-1],axis=-1).max()),
         max_joint_velocity_change_mps=float(np.linalg.norm((positions[t]-positions[t-1])-(positions[t-1]-positions[t-2]),axis=-1).max()*30))
-        for t in range(75,len(motion),75)]
+        for t in (75*i for i in range(1,1+(max(0,len(motion)-150)+74)//75))]
     return result

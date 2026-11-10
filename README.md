@@ -37,3 +37,5 @@ tmux new-session -d -s dunhuang-v1 'bash scripts/run_server.sh'
 ## 代码
 
 `src/dunhuang/pipeline.py` 是唯一主入口；`contracts.py`、`music.py`、`retrieval.py`、`conditioning.py`、`sampling.py`、`edge_backend.py`、`physical.py`、`evaluation.py` 分别承担清晰职责。测试覆盖表示往返、FK 坐标等价、音乐边界、跨窗口锚点和逐步采样。测试里的微型去噪器只用于算法检查，不用于实验生成。
+
+首轮真实结果与复核方法：[实验报告](reports/实验报告.md) · [机器可读指标](reports/experiment_v1.json)。
