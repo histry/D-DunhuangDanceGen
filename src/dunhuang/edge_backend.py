@@ -9,7 +9,7 @@ from pathlib import Path
 import numpy as np
 from .io import checked, pinned, write
 from .music import blend_contacts
-from .conditioning import anchor_windows, normalize_constraints
+from .conditioning import anchor_windows, normalize_constraints, constraint_support
 from .sampling import constrained_ddim
 
 def main():
@@ -39,6 +39,7 @@ def main():
     features=np.load(checked(q['features']),allow_pickle=False)[:q['windows']]
     if features.shape!=(q['windows'],150,4800) or not np.isfinite(features).all() or not features.any():raise ValueError('Real Jukebox windows required')
     values,masks=anchor_windows(q['frames'],q.get('anchors',[]))
+    write(out/'normalization_preflight.json',constraint_support(normalizer,values,masks))
     normalized,mask=normalize_constraints(normalizer,values,masks)
     model=DanceDecoder(nfeats=151,seq_len=150,latent_dim=512,ff_size=1024,num_layers=8,num_heads=8,dropout=.1,cond_feature_dim=4800,activation=torch.nn.functional.gelu)
     model.load_state_dict(payload['ema_state_dict'],strict=True);del payload

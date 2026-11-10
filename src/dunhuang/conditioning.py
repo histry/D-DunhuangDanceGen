@@ -41,3 +41,16 @@ def normalize_constraints(normalizer, values, masks):
     if m.any() and float((recovered[m]-v[m]).abs().max()) > 1e-4:
         raise ValueError('Anchor normalization roundtrip failed')
     return result, m
+
+
+def constraint_support(normalizer, values, masks):
+    import torch
+    x=torch.as_tensor(values)
+    affine=x*normalizer.scaler.scale_.cpu()+normalizer.scaler.min_.cpu()
+    outside=(affine.abs()>1+32*torch.finfo(x.dtype).eps)&torch.as_tensor(masks)
+    joints=[]
+    for j in range(24):
+        count=int(outside[:,:,7+6*j:13+6*j].sum())
+        if count:joints.append(dict(joint=j,unsupported_coordinates=count))
+    return dict(supported=not bool(outside.any()),unsupported_coordinates=int(outside.sum()),joints=joints,
+        frozen_normalizer=True,poses_clipped=False)

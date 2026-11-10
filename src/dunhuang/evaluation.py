@@ -17,4 +17,9 @@ def evaluate(motion, positions, anchors=(), beat_frames=()):
         angle=np.arccos(np.clip((np.trace(np.swapaxes(a,-1,-2)@b,axis1=-2,axis2=-1)-1)/2,-1,1))
         errors.append(dict(frame=anchor['frame'],mean_radians=float(angle.mean()),max_radians=float(angle.max())))
     result['anchor_errors']=errors
+    # Report every actual 75-frame window boundary, in physical units.
+    result['window_boundaries']=[dict(frame=t,
+        max_joint_step_m=float(np.linalg.norm(positions[t]-positions[t-1],axis=-1).max()),
+        max_joint_velocity_change_mps=float(np.linalg.norm((positions[t]-positions[t-1])-(positions[t-1]-positions[t-2]),axis=-1).max()*30))
+        for t in range(75,len(motion),75)]
     return result

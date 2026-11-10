@@ -21,6 +21,8 @@ def run(q):
         import numpy as np, hashlib
         features=np.load(checked(q['features']),allow_pickle=False)
         if features.shape!=(clock['windows'],150,4800):raise ValueError('Feature clock mismatch')
+        if 'slices' not in receipt and receipt.get('features',{}).get('sha256')!=q['features']['sha256']:
+            raise ValueError('Extracted features differ from their producer receipt')
         if 'slices' in receipt:
             if len(receipt['slices'])!=len(features):raise ValueError('Incomplete feature receipt')
             for index,(row,record) in enumerate(zip(features,receipt['slices'])):
@@ -30,7 +32,7 @@ def run(q):
         raise ValueError('Hashed feature extraction receipt required')
     frames=q.get('frames',clock['frames'])
     if type(frames) is not int or not 1<=frames<=clock['frames']:raise ValueError('Requested duration exceeds audio')
-    q=dict(q,frames=frames,windows=max(1,(max(0,frames-150)+74)//75+1))
+    q=dict(q,code_commit=subprocess.check_output(['git','-C',str(Path(__file__).resolve().parents[2]),'rev-parse','HEAD'],text=True).strip(),frames=frames,windows=max(1,(max(0,frames-150)+74)//75+1))
     out=Path(q['output']).resolve();out.mkdir(parents=True,exist_ok=False);q['output']=str(out)
     request=out/'request.json';write(request,q);write(out/'clock.json',clock)
     env=os.environ.copy();env['PYTHONPATH']=str(Path(__file__).resolve().parents[1]);env.pop('PYTHONHOME',None)
@@ -41,7 +43,9 @@ def run(q):
         gate=json.loads((out/'physical.json').read_text())['absolute']
         write(out/'status.json',dict(status='COMPLETED',physical_ok=gate['ok'],full_generation_qualified=False))
     except Exception:
-        write(out/'status.json',dict(status='FAILED',error=traceback.format_exc(),full_generation_qualified=False))
+        preflight=out/'normalization_preflight.json'
+        rejected=preflight.exists() and not json.loads(preflight.read_text())['supported']
+        write(out/'status.json',dict(status='REJECTED_UNSUPPORTED_ANCHORS' if rejected else 'FAILED',error=traceback.format_exc(),full_generation_qualified=False))
         raise
     return out
 

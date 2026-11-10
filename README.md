@@ -11,10 +11,11 @@ python -m pip install -e '.[test]'
 python -m pytest -q
 python scripts/generate.py --config configs/generation.json
 # 已有服务器环境；先拉取代码，再在 tmux 内执行：
+bash scripts/setup_server.sh
 tmux new-session -d -s dunhuang-v1 'bash scripts/run_server.sh'
 ```
 
-`configs/generation.json` 给出服务器上的已存在资产；换音乐时，先在 EDGE 环境执行 `scripts/extract_music.py --edge-root ... --audio ... --output ...`，把新特征和 WAV 的 SHA256 填入配置。所有输出使用新目录，拒绝覆盖已有实验。新 WAV 的时长必须与其特征窗口对应。环境按官方 EDGE 安装；Native 使用旧项目 dance-rag 环境。外部依赖 commit 见 `configs/dependencies.json`。
+`configs/generation.json` 给出服务器上的已存在资产；换音乐时，先在 EDGE 环境执行 `scripts/extract_music.py --edge-root ... --audio ... --output ...`，把新特征、WAV 和提取 receipt.json 的 SHA256 填入配置。所有输出使用新目录，拒绝覆盖已有实验。新 WAV 的时长必须与其特征窗口对应。环境按官方 EDGE 安装；Native 使用旧项目 dance-rag 环境。外部依赖 commit 见 `configs/dependencies.json`。
 
 ## 动作与控制合同
 
