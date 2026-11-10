@@ -23,7 +23,7 @@ catalog=json.loads(catalog_path.read_text());entries=[]
 # Predeclared deterministic coverage: one first event from each of three source recordings.
 for source in sorted(catalog['source_records'],key=lambda r:r['source_uid'])[:3]:
     event=min((e for e in catalog['events'] if e['source_uid']==source['source_uid']),key=lambda e:e['core_frame_start'])
-    raw=legacy/'assets/motion/smpl_official_14'/Path(source['raw_receipt']['path']).name
+    raw=Path(q['asset_root'])/'assets/motion/smpl_official_14'/Path(source['raw_receipt']['path']).name
     checked(dict(path=str(raw),sha256=source['source_sha256']))
     a,b=event['core_frame_start'],event['core_frame_end']
     motion,_=decode_continuous_source(raw,source['discovery_metadata'],(a,b),known_rows=np.ones(b-a,bool))
