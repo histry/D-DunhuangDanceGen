@@ -6,7 +6,7 @@ from .io import write
 
 
 def prepare(request, normalizer, output, device):
-    from pytorch3d.transforms import (rotation_6d_to_matrix, 
+    from pytorch3d.transforms import (rotation_6d_to_matrix,
         matrix_to_axis_angle, axis_angle_to_matrix)
     radius = request['trajectory_radius']
     strength = float(request['trajectory_strength'])
