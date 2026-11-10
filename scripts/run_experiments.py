@@ -12,7 +12,9 @@ from dunhuang.contracts import MotionAdapter
 
 root=Path(__file__).resolve().parents[1]
 q=json.loads((root/'configs/generation.json').read_text())
-out=root/'outputs/experiment_v1';out.mkdir(parents=True,exist_ok=False)
+out=root/'outputs/experiment_v1'
+if out.exists() and any(out.iterdir()):raise ValueError('Existing experiment outputs must not be overwritten')
+out.mkdir(parents=True,exist_ok=True)
 legacy=pinned(q['legacy_root'],q['legacy_commit']);sys.path.insert(0,str(legacy))
 from motion.retrieval_generation import decode_continuous_source
 from motion.geometry import fk_24_np
