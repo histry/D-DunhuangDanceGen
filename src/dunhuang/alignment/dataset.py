@@ -5,7 +5,8 @@ from dunhuang.io import sha,write,pinned
 POPULATION_SHA='8c0c9dc9725cea5797e90f3dd463a7783f825fed43bb374bdbcb37d2286eef04'
 def prepare(population,output,legacy,assets):
     import sys
-    pinned(legacy,'465f35ba88bbc45d3415e623a60c55a2c8fdb49f')
+    import subprocess
+    commit=subprocess.check_output(['git','-C',str(legacy),'rev-parse','HEAD'],text=True).strip()
     sys.path.insert(0,str(legacy))
     from training.paired_alignment_data_v4 import _native_motion
     from evaluation.paired_alignment_observations_v3 import full_audio_observations,CONTRACT
@@ -54,7 +55,7 @@ def prepare(population,output,legacy,assets):
                 pairing_evidence=row['pairing_evidence']))
         if index%25==0:print('DATA',index,len(manifest),len(blocked),flush=True)
     write(output/'manifest.json',dict(rows=manifest,blocked=blocked,feature_contract=CONTRACT,
-        population_sha256=POPULATION_SHA,roles=roles,heldout_status='previously exposed development regression',
+        population_sha256=POPULATION_SHA,extractor_commit=commit,roles=roles,heldout_status='previously exposed development regression',
         window_policy='four evenly spaced 4s windows with actual +/-0.5s motion halo'))
     return output/'manifest.json'
 
@@ -63,8 +64,9 @@ def load(manifest):
     doc=json.loads(manifest.read_text());rows=doc['rows']
     music=[];motion=[];mm=[];dm=[]
     for row in rows:
-        if sha(row['path'])!=row['sha256']:raise ValueError('Cached features changed')
-        with np.load(row['path']) as z:
+        path=manifest.parent/Path(row['path'].replace(chr(92),'/')).name
+        if sha(path)!=row['sha256']:raise ValueError('Cached features changed')
+        with np.load(path) as z:
             music.append(z['music']);motion.append(z['motion']);mm.append(z['music_mask']);dm.append(z['motion_mask'])
     arrays={k:np.stack(v) for k,v in zip(('music','motion','mm','dm'),(music,motion,mm,dm))}
     norm={}
