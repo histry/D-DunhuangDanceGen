@@ -32,7 +32,7 @@ def _train(assets,destination,steps,task='motion',preflight_only=False):
     if task not in ('motion','paired','upperbody_probe'):raise ValueError('Unknown training task')
     destination.mkdir(parents=True,exist_ok=False)
     commit=subprocess.check_output(['git','-C',str(Path(__file__).resolve().parents[3]),'rev-parse','HEAD'],text=True).strip()
-    catalog=json.loads(checked(assets['catalog']).read_text())
+    catalog=json.loads(checked(assets['catalog']).read_text()) if task!='paired' else dict(entries=[])
     with np.load(checked(assets['scaler']),allow_pickle=False) as scaler:
         scale,bias=scaler['scale'].copy(),scaler['bias'].copy()
     if scale.shape!=(151,) or bias.shape!=(151,) or not np.isfinite(scale).all() or not np.isfinite(bias).all() or np.any(scale==0):
@@ -62,29 +62,15 @@ def _train(assets,destination,steps,task='motion',preflight_only=False):
             partial=upperbody_probe_target(normalized,valid)
             if partial is not None:probes.append((group,start,partial,None,native))
     if task=='upperbody_probe':windows=probes
-    roles={}
+    roles={};paired_audit=None
     if task=='paired':
         windows=[]
         if assets.get('paired_generation_manifest'):
-            paired=json.loads(checked(assets['paired_generation_manifest']).read_text())
-            for row in paired['rows']:
-                group=row['source_group'];role=row['role']
-                if role not in ('train','val','test'):raise ValueError('Explicit paired role required')
-                if group in roles and roles[group]!=role:raise ValueError('Paired source group leakage')
-                roles[group]=role
-                if role=='test':continue
-                if row['pairing_evidence']!='real_aligned_audio_motion' or row['fps']!=30 or row['frames']!=150:
-                    raise ValueError('Real paired generation evidence required')
-                native=np.load(checked(row['motion']),allow_pickle=False)
-                music=np.load(checked(row['jukebox']),allow_pickle=False)
-                if native.shape!=(150,151) or music.shape!=(150,4800) or not np.isfinite(music).all() or not music.any():
-                    raise ValueError('Real 151D motion and Jukebox required')
-                target,_=phase_target(native,scale,bias)
-                if target is None:raise ValueError('Paired target outside frozen support')
-                windows.append((group,row['start_frame'],target,music.astype(np.float32),native))
+            from dunhuang.data.paired_manifest import inspect
+            windows,roles,paired_audit=inspect(assets)
     fitting,validation,validation_group=split_training_rows(windows,task,roles)
     protocol=dict(code_commit=commit,seed=SEED,steps=steps,train_task=task,
-        checkpoint=assets['checkpoint'],catalog=assets['catalog'],scaler=assets['scaler'],
+        checkpoint=assets['checkpoint'],catalog=assets.get('catalog'),scaler=assets['scaler'],
         paired_manifest=assets.get('paired_generation_manifest'),
         split='whole recording; paired roles explicit; no test fitting',
         train_groups=sorted({r[0] for r in fitting}),validation_groups=sorted({r[0] for r in validation}),
@@ -101,7 +87,7 @@ def _train(assets,destination,steps,task='motion',preflight_only=False):
         root_origin='first_observed_context_XZ; height preserved',
         motion_only_supported_150_windows=full_count,upperbody_partial_probe_windows=len(probes),
         source_count=len(refs),source_records=[dict(source_uid=u,recording_group=g,reference=r) for u,(g,r) in refs.items()],
-        eligible_windows=len(windows),train_task=task,
+        eligible_windows=len(windows),train_task=task,paired_preflight=paired_audit,
         paired_jukebox_training_manifest=assets.get('paired_generation_manifest'),
         full_paired_music_training_ready=task=='paired' and bool(fitting and validation),
         full_motion_qualified=False,music_qualified=False,
@@ -109,7 +95,8 @@ def _train(assets,destination,steps,task='motion',preflight_only=False):
     write(destination/'asset_audit.json',audit)
     ready=bool(fitting and validation)
     if not ready or preflight_only:
-        status=('MISSING_REAL_PAIRED_JUKEBOX' if task=='paired' and not assets.get('paired_generation_manifest') else
+        status=('BLOCKED_PAIRED_GENERATION_CONTRACT' if paired_audit and not paired_audit['ready'] else
+                'MISSING_REAL_PAIRED_JUKEBOX' if task=='paired' and not assets.get('paired_generation_manifest') else
                 'PREFLIGHT_READY_RESEARCH_ONLY' if ready and task=='upperbody_probe' else
                 'PREFLIGHT_READY_NOT_QUALIFIED' if ready else 'INSUFFICIENT_DISJOINT_TRAIN_VAL_SOURCES')
         write(destination/'status.json',dict(status=status,training_steps=0,train_task=task,
