@@ -117,9 +117,9 @@ def main(target):
             matrices(proposal[t['frame'],7:].reshape(24,6))[t['joints']]).max()) for t in q['anchors'])
         trajectory_change=0.
         for anchor in q['anchors']:
-            t=anchor['frame'];joints=anchor['joints']
-            proposed=matrices(proposal[t-12:t+13,7:].reshape(25,24,6))[:,joints]
-            trajectory_change=max(trajectory_change,float(angle_difference(rotations[t-12:t+13,joints],proposed).max()))
+            t=anchor['frame'];target_joints=anchor['joints']
+            proposed=matrices(proposal[t-12:t+13,7:].reshape(25,24,6))[:,target_joints]
+            trajectory_change=max(trajectory_change,float(angle_difference(rotations[t-12:t+13,target_joints],proposed).max()))
         new_failures=sorted(set(gate['reasons'])-set(before['absolute']['reasons']))
         protected=not new_failures and anchor_change<=.02 and trajectory_change<=.02
         major=metrics['joint_jerk_mps3_max']<before['audit']['joint_jerk_mps3_max']*.99 or metrics['foot_skate_mps_p95']<before['audit']['foot_skate_mps_p95']*.99
