@@ -1,6 +1,6 @@
 # DunhuangDanceGen
 
-当前正式路径：**Event Catalog → Music Timeline → Event Plan → 冻结 EDGE（Temporal V0.5）→ 原 Native 验收**。保留官方 EDGE 基线。已完成 5 秒、15 秒、整曲六例，全部 Native 未通过。学习检索处于 shadow，Adapter 因真实资产不足未训练，尚非已验证的 V1。见[本轮报告](reports/EventPlan实验报告.md)和[机器指标](reports/event_plan_workflow.json)。
+当前正式路径：**Event Catalog → Music Timeline → Event Plan → 冻结 EDGE（Temporal V0.5）→ 原 Native 验收**。保留官方 EDGE 基线。已完成 5 秒、15 秒、整曲六例，全部 Native 未通过。学习检索处于 shadow，完整151D/配对音乐 Adapter 尚未训练；V0.6 的48D研究探针已训练并完成服务器实验，仍非已验证的 V1。见[本轮报告](reports/EventPlan实验报告.md)和[机器指标](reports/event_plan_workflow.json)。
 
 ## 正式入口
 
@@ -69,3 +69,23 @@ $PY scripts/b2_physical.py outputs/new_b2_support
 ## SDMR 学习式检索
 
 alignment/ 提供50D/74D双编码器、独立同步训练、文件名粗标签、专家偏好弃权接口和候选评分。scripts/sdmr.py先训练完整框架，scripts/sdmr_ablate.py仅在完整框架结束后重训一次去声学32D的消融。生成入口按检查点和资格收据决定启用或回退。见[实验报告](reports/SDMR实验报告.md)和[机器指标](reports/sdmr.json)。本轮真实评价未通过同步资格。
+
+## V0.6 实验分支：连续事件软条件与真实训练探针
+
+PR #2 保持 Draft，main 默认路径仍是 V0.5。soft_reference.py 根据真实 Event Plan 的单调源相位做 SO(3) 测地插值，支持域外关节帧明确未知；重叠窗口条件一致。连续参考只进入冻结 EDGE 的条件 Adapter，不后贴源动作。
+
+本轮服务器完成 300 步48D探针、八例150/225帧生成、两次独立数值重放。42项完整回归通过；原官方/V0.5动作哈希不变；同噪声零 Adapter 与无 Adapter 完全相同。探针验证MSE降低约17.28%，但八例Native全未通过，动作幅度也下降，不能宣称音乐或整体质量提升。详见[V0.6实验报告](reports/V06实验报告.md)及[机器收据](reports/v06.json)。
+
+~~~bash
+# 真实条件支持域预检
+python scripts/inspect_event_reference.py --plan outputs/event_plan_01/dunhuang_150/event_plan.json --scaler outputs/new_prepare/edge_contract/scaler.npz --out outputs/v06_reference_new
+# CPU资产预检，不初始化CUDA
+python scripts/train.py --assets outputs/new_prepare/assets.json --task upperbody_probe --preflight-only --out outputs/v06_preflight_new
+# 一个固定探针 + 匹配噪声对照；服务器长任务需通过tmux运行
+python scripts/v06_experiment.py --assets outputs/event_plan_01/prepare/assets.json --prior-root outputs/event_plan_01 --out outputs/v06_new --steps 300
+python scripts/verify_v06.py --root outputs/v06_new --replay
+~~~
+
+所有输出目录必须为新目录，路径按实际资产替换。记录实际运行提交，训练/生成版本与随后报告提交分开。研究权重的 music_qualified / full_motion_qualified 始终为 false，正式推理默认拒绝，实验才显式给 research_allow_motion_only_adapter。
+
+其他103通道仅是探针占位，不能当完整真值。完整151D目标与真实配对Jukebox仍缺失；学习式音乐演绎V1、双侧生成及SQP尚未完成，未升级450帧/整曲质量验收。

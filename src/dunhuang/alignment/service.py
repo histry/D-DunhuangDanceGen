@@ -9,7 +9,7 @@ from dunhuang.io import checked
 class Reranker:
     def __init__(self,assets,audio_sha256):
         torch.set_num_threads(4)
-        self.decision=authorize(checked(assets['global']),checked(assets['qualification']))
+        self.decision=authorize(checked(assets['global']),checked(assets['qualification']),checked(assets['sync']))
         self.global_model=RetrievalModel().eval()
         payload=torch.load(checked(assets['global']),map_location='cpu',weights_only=True)
         self.global_model.load_state_dict(payload['state']);self.norm=payload['norm']
@@ -17,6 +17,7 @@ class Reranker:
         local=torch.load(checked(assets['sync']),map_location='cpu',weights_only=True)
         if local.get('global_checkpoint_sha256')!=assets['global']['sha256']:
             raise ValueError('Sync model does not bind selected global checkpoint')
+        if local.get('norm')!=self.norm:raise ValueError('Global and sync normalization differs')
         self.sync_model.load_state_dict(local['state'])
         receipt=json.loads(checked(assets['music_receipt']).read_text())
         if receipt['source_sha256']!=audio_sha256 or receipt['features_sha256']!=assets['music_features']['sha256']:

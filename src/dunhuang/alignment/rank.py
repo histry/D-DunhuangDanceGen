@@ -3,11 +3,19 @@ from pathlib import Path
 import torch
 from dunhuang.io import checked,sha
 
-def authorize(checkpoint,report):
+def authorize(checkpoint,report,sync_checkpoint=None):
     receipt=json.loads(Path(report).read_text())
-    if sha(checkpoint)!=receipt['retrieval_checkpoint_sha256']:raise ValueError('Checkpoint identity differs')
-    return dict(enabled=bool(receipt['qualified']) and receipt.get('qualification_basis')=='validation_only',fallback_reason=None if receipt['qualified'] and receipt.get('qualification_basis')=='validation_only' else 'missing_validation_qualification',
-                preference_status=receipt['preference_status'],checkpoint_sha256=sha(checkpoint))
+    global_sha=sha(checkpoint)
+    if global_sha!=receipt['retrieval_checkpoint_sha256']:raise ValueError('Checkpoint identity differs')
+    sync_sha=sha(sync_checkpoint) if sync_checkpoint is not None else None
+    if sync_sha is not None and sync_sha!=receipt.get('sync_checkpoint_sha256'):
+        raise ValueError('Synchronization checkpoint identity differs from qualification')
+    validation=bool(receipt['qualified']) and receipt.get('qualification_basis')=='validation_only'
+    enabled=validation and sync_sha is not None
+    return dict(enabled=enabled,
+        fallback_reason=None if enabled else 'missing_validation_qualification' if not validation else 'missing_sync_binding',
+        preference_status=receipt['preference_status'],checkpoint_sha256=global_sha,
+        sync_checkpoint_sha256=sync_sha,qualification_sha256=sha(report))
 
 def rank(model,music,music_mask,candidates,norm,k=5):
     if not candidates:raise ValueError('No feasible candidates')
