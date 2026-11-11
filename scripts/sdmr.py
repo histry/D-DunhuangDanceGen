@@ -88,6 +88,10 @@ def main(out):
     catalog_file=Path('/home/disk/lsm/storage/danceRAG/outputs/unpaired_data_protocol_20261015_ZY1C32/catalog/motion_catalog.json')
 
     catalog=json.loads(catalog_file.read_text());events=[];embeddings=[];labels=[]
+    smpl_root=Path('/home/disk/lsm/storage/danceRAG/assets/motion/smpl_official_14')
+    write(out/'filename_labels.json',dict(records=[dict(annotation=annotate(file.stem),filename=file.name,sha256=sha(file)) for file in sorted(smpl_root.glob('*.npz'))],
+        policy='user-authorized coarse filename labels, no event-level gesture or music preference inferred'))
+
 
     categories=['飞天','莲花','飘带','琵琶','冥想','三十六式','鼓舞','UNKNOWN']
 
