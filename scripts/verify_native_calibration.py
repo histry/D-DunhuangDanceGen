@@ -87,7 +87,7 @@ def main():
         assert population_metrics(minimum,joints,r['floor_y_m'],contact_height=.05)==r['neutral_mesh']
     # Independently reconstruct the raw-source prefixes, fixed planes and noise copies.
     from dunhuang.evaluation_benchmarks.native_sensitivity import sensitivity as run_sensitivity
-    source_protocol=read(checked(protocol['prior_training_protocol']))
+    checked(protocol['prior_training_protocol'])
     manifest=read(checked(assets['paired_generation_manifest']))
     by_uid={r['window_uid']:r for r in manifest['rows']}
     packet=read(root/'annotation_review/index.json')
@@ -110,7 +110,8 @@ def main():
     status=read(root/'status.json');assert status['legacy_results_unchanged'] and not status['operational_qualified']
     write(out,dict(status='FRESH_NATIVE_RELIABILITY_REPLAY_VERIFIED',train_windows=count,
         historical_unique_replays=len(seen),generated_replays=len(gen),mesh_geometry_replays=mesh_count,
-        controlled_replays=len(controlled['cases']),source_sensitivity_replayed=True,\n        calibration_rows_reconstructed=True,legacy_results_unchanged=True,
+        controlled_replays=len(controlled['cases']),source_sensitivity_replayed=True,
+        calibration_rows_reconstructed=True,legacy_results_unchanged=True,
         source_protocol_sha256=sha(root/'protocol.json'),optimizer_calls=0,new_generations=0,
         operational_qualified=False,mode='SHADOW',expert_labels_supplied=False))
     print('NATIVE_RELIABILITY_VERIFIED',count,len(gen),mesh_count,flush=True)
