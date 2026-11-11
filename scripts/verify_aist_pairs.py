@@ -18,6 +18,7 @@ def main():
     auth=authority(a.authority);pop=read(root/'population.json')
     expected={r['pair_uid']:r for r in pop['records'] if r['dataset_id']=='aistpp'}
     ledger=read(c/'source_ledger.json');assert len(ledger)==len(expected) and not read(c/'protocol.json')['smoke']
+    assert len({r['pair_uid'] for r in ledger})==len(ledger) and {r['pair_uid'] for r in ledger}==set(expected)
     counts=Counter();replay_candidates={};performer_roles=defaultdict(set)
     for record in ledger:
         source=expected[record['pair_uid']];counts[record['status']]+=1
@@ -47,6 +48,10 @@ def main():
     prepared=read(features/'assets.json');windows,roles,preflight=inspect(prepared);assert preflight['ready']
     assert preflight==read(features/'preflight.json')
     manifest=read(checked(prepared['paired_generation_manifest']))
+    index_assets=read(index/'assets.json');index_manifest=read(checked(index_assets['paired_generation_manifest']))
+    saved_gate=read(index/'preflight.json')
+    assert saved_gate['ready'] and saved_gate['stage']=='TARGETS_CLOCK_IDENTITIES_ONLY_NO_JUKEBOX'
+    assert [dict(r,jukebox=None,jukebox_receipt=None) for r in manifest['rows']]==index_manifest['rows']
     look={r['pair_uid']:r for r in ledger}
     identity_roles={};generic_titles=defaultdict(set);producers={};crop_roles=defaultdict(set)
     for row in manifest['rows']:
@@ -66,6 +71,8 @@ def main():
         crop_roles[producer['crop']['sha256']].add(row['role'])
     status=read(training/'status.json');protocol=read(training/'protocol.json');validation=read(training/'validation.json')
     history=read(training/'history.json')
+    val_manifest=[r for r in manifest['rows'] if r['role']=='val']
+    validation_ids=[val_manifest[i]['window_uid'] for i in np.unique(np.linspace(0,len(val_manifest)-1,min(8,len(val_manifest))).astype(int))]
     assert status['status']=='PAIRED_COMPLETION_TRAINED_UNQUALIFIED' and status['training_steps']==300
     assert status['weights_before']==status['weights_after'] and status['frozen_model_unchanged']
     assert not status['full_motion_qualified'] and not status['music_qualified']
@@ -97,6 +104,6 @@ def main():
         dataset_dancer_ids_disjoint_across_roles=True,performer_roles={k:sorted(v) for k,v in performer_roles.items()},
         independence_scope='official capture IDs, audio bytes and genre-namespaced basic workbook entries; not generic-movement semantic independence or a fresh blind test',
         calibration_replays=replays,jukebox_extraction_replays=extraction_replays,preflight=preflight,training_status=status,training_protocol=protocol,
-        validation=validation,history=history,optimizer_steps_in_verifier=0,native_generation_evaluated=False))
+        validation=validation,validation_window_uids=validation_ids,history=history,optimizer_steps_in_verifier=0,native_generation_evaluated=False))
     print('VERIFIED_AIST',dict(counts),'WINDOWS',len(manifest['rows']),'FEATURES',len(producers),flush=True)
 if __name__=='__main__':main()
