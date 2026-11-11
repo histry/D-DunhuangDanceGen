@@ -68,7 +68,10 @@ def run_calibration(assets,root,authroot,out,source_audio,workers=6,smoke=False)
             if identity['status']!='REGISTERED_BASIC':return result
             raw=raw_path(root,row['motion_asset'])
             with raw.open('rb') as f:frames=len(pickle.load(f)['smpl_poses'])
-            movie=videos/(name+'.mp4');video=fetch(identity['video_url'],movie)
+            movie=videos/(name+'_'+hashlib.sha256(identity['video_url'].encode()).hexdigest()[:10]+'.mp4')
+            video=fetch(identity['video_url'],movie)
+            if identity.get('publisher_metadata') and movie.stat().st_size!=int(identity['publisher_metadata']['FILE_SIZE']):
+                raise ValueError('Movie bytes differ from official full CSV size')
             value=calibrate(movie,raw_path(root,row['audio_asset']),frames)
             result.update(calibration=value,video=video,
                 status='VERIFIED_PAIR' if value['verified'] else 'EXCLUDED_CLOCK_CALIBRATION')

@@ -30,3 +30,13 @@ def test_official_basic_identity_preserves_capture_and_shared_choreography():
     assert identify(changed,auth)['status']=='EXCLUDED_UNRESOLVED_ADVANCED_CHOREOGRAPHY'
     auth['urls']=set()
     with pytest.raises(ValueError,match='official refined'):identify(row,auth)
+
+
+def test_registered_lower_bitrate_must_bind_the_same_publisher_identity():
+    n='gBR_sBM_cAll_d04_mBR0_ch01';url='https://aistdancedb.ongaaccel.jp/v1.0.0/video/2M/'+n.replace('cAll','c01')+'.mp4'
+    meta=dict(GENRE='gBR',SITUATION='sBM',CAMERA='c01',DANCER='d04',MUSIC='mBR0',CHOREOGRAPHY='ch01')
+    a=dict(all={n},mapping={n:'setting1'},table={('gBR','ch01'):'indian step'},urls={url},metadata={url:meta})
+    r=identify(dict(sequence_id=n,group_uid='g',purpose_role='train'),a)
+    assert r['video_url']==url
+    meta['MUSIC']='wrong'
+    with pytest.raises(ValueError,match='identities disagree'):identify(dict(sequence_id=n,group_uid='g',purpose_role='train'),a)

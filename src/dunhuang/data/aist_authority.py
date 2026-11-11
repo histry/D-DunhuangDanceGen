@@ -1,5 +1,5 @@
 """Publisher-record identities and signal-based AIST audio clock calibration."""
-import json,hashlib,re,zipfile,subprocess
+import json,hashlib,re,zipfile,subprocess,csv
 from pathlib import Path
 from html.parser import HTMLParser
 from xml.etree import ElementTree as ET
@@ -48,7 +48,12 @@ def authority(root):
     for r in record['files']:checked(dict(path=str(root/r['file']),sha256=r['sha256']))
     parser=VideoLinks();parser.feed((root/'basic_links.html').read_text(encoding='utf8'))
     mapping=dict(line.split() for line in (root/'camera_mapping.txt').read_text().splitlines() if line.strip())
-    return dict(root=root,identity=sha(root/'authority.json'),table=choreography_table(root/'choreo.xlsx'),
+    metadata={}
+    if (root/'refined_2M_sBM_all.csv').exists():
+        with (root/'refined_2M_sBM_all.csv').open(encoding='utf8',newline='') as f:
+            for row in csv.DictReader(f):
+                metadata[row['URL']]=row;parser.urls.add(row['URL'])
+    return dict(root=root,metadata=metadata,identity=sha(root/'authority.json'),table=choreography_table(root/'choreo.xlsx'),
         urls=parser.urls,mapping=mapping,all=set((root/'all.txt').read_text().split()))
 
 def identify(row,auth):
@@ -60,9 +65,15 @@ def identify(row,auth):
     if (genre,ch) not in auth['table']:raise ValueError('Basic choreography not in publisher workbook')
     video=name.replace('cAll','c01')
     url='https://aistdancedb.ongaaccel.jp/v1.0.0/video/10M/'+video+'.mp4'
+    compact=url.replace('/video/10M/','/video/2M/')
+    if compact in auth['urls']:url=compact
     if url not in auth['urls']:raise ValueError('No official refined video link')
+    meta=auth.get('metadata',{}).get(url)
+    if meta:
+        expected=dict(GENRE=genre,SITUATION=situation,CAMERA='c01',DANCER=dancer,MUSIC=music,CHOREOGRAPHY=ch)
+        if any(meta[k]!=v for k,v in expected.items()):raise ValueError('Publisher CSV identities disagree')
     return dict(status='REGISTERED_BASIC',sequence_id=name,video_url=url,music_id=music,dancer_id=dancer,
-        recording_uid='aist_capture:'+name,environment=auth['mapping'][name],
+        recording_uid='aist_capture:'+name,environment=auth['mapping'][name],publisher_metadata=meta,
         choreography_uid='aist_basic:'+genre+':'+ch,choreography_title=auth['table'][(genre,ch)],
         identity_scope='publisher genre-namespaced basic choreography; not unique generic movement title',
         group=row['group_uid'],role=row['purpose_role'])
