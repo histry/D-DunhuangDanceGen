@@ -79,3 +79,10 @@ def test_soft_reference_rejects_unregistered_speed(tmp_path):
     p=_plan(tmp_path,150);p['events'][0]['time_warp']=[[0,0],[25,75],[150,150]]
     with pytest.raises(ValueError,match='rate'):
         build_soft_reference(p,150,np.ones(151),np.zeros(151))
+
+def test_source_following_error_is_geodesic_and_not_a_quality_gate(tmp_path):
+    from dunhuang.generation.diagnostics import reference_error,upperbody_activity
+    p=_plan(tmp_path,150);motion=np.load(p['events'][0]['reference']['path'])
+    error=reference_error(motion,p,np.ones(151),np.zeros(151))
+    assert error['mean_radians']<1e-6 and error['observed_joint_frames']==1200
+    assert upperbody_activity(motion)['mean_radians_per_second']>0

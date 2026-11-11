@@ -1,5 +1,5 @@
 """Frozen-EDGE completion probes; partial targets never imply 151D qualification."""
-import argparse,json,sys,hashlib,subprocess
+import argparse,json,sys,hashlib,subprocess,traceback
 from pathlib import Path
 import numpy as np
 from dunhuang.io import checked,pinned,write,sha
@@ -26,7 +26,7 @@ def digest(model):
         h.update(name.encode());h.update(value.detach().cpu().contiguous().numpy().tobytes())
     return h.hexdigest()
 
-def train(assets,destination,steps,task='motion',preflight_only=False):
+def _train(assets,destination,steps,task='motion',preflight_only=False):
     import torch
     if type(steps) is not int or steps<1:raise ValueError('Positive training steps required')
     if task not in ('motion','paired','upperbody_probe'):raise ValueError('Unknown training task')
@@ -215,6 +215,19 @@ def train(assets,destination,steps,task='motion',preflight_only=False):
         phase_augmented_examples=augmented,unsupported_warp_fallbacks=fallbacks,
         music_qualified=False,full_motion_qualified=False,
         checkpoint_sha256=sha(destination/'adapter.pt'),protocol_sha256=sha(destination/'protocol.json')))
+def train(assets,destination,steps,task='motion',preflight_only=False):
+    destination=Path(destination);existed=destination.exists()
+    try:
+        return _train(assets,destination,steps,task,preflight_only)
+    except Exception:
+        if not existed and destination.is_dir():
+            history=destination/'history.json'
+            rows=json.loads(history.read_text()) if history.exists() else []
+            write(destination/'status.json',dict(status='FAILED',train_task=task,
+                last_recorded_training_step=rows[-1]['step'] if rows else 0,
+                music_qualified=False,full_motion_qualified=False,error=traceback.format_exc()))
+        raise
+
 if __name__=='__main__':
     ap=argparse.ArgumentParser();ap.add_argument('--assets',required=True);ap.add_argument('--out',required=True)
     ap.add_argument('--steps',type=int,default=300);ap.add_argument('--task',choices=['motion','paired','upperbody_probe'],default='motion')

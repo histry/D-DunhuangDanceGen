@@ -27,6 +27,18 @@ def main():
         result['cases'].append(dict(case=name,frames=q['frames'],motion_sha256=sha(folder/'native.npy'),
             generation_commit=q['code_commit'],mode=g['mode'],native=p['absolute'],metrics=p['audit'],
             fk_error_m=p['fk_max_abs_m'],weights_unchanged=True,soft_reference=g.get('soft_reference')))
+    from dunhuang.generation.diagnostics import reference_error,upperbody_activity
+    from dunhuang.evaluation import evaluate
+    import numpy as np
+    for row in result['cases']:
+        folder=root/row['case'];q=read(folder/'request.json')
+        n=q['frames'];source=root/('zero'+str(n))
+        plan=read(source/'event_plan.json')
+        beats=read(source/'music_timeline.json')['beats']
+        with np.load(q['scaler']['path'],allow_pickle=False) as scaler:
+            row['source_following']=reference_error(np.load(folder/'native.npy'),plan,scaler['scale'],scaler['bias'])
+        row['upperbody_activity']=upperbody_activity(np.load(folder/'native.npy'))
+        row['shared_music_diagnostic']=evaluate(np.load(folder/'native.npy'),np.load(folder/'native_fk.npy'),[],beats)
     for n in (150,225):
         folders=[root/(k+str(n)) for k in ('none','zero','probe')]
         hashes=[read(p/'generation.json')['sampler']['noise_sha256'] for p in folders]
