@@ -32,4 +32,6 @@ def test_phase_contract_and_restricted_reference_mask():
     value, mask = masked_reference(x, scope='upperbody_probe')
     assert mask[:, :, :79].sum() == 0 and mask[:, :, 127:].sum() == 0
     assert mask[:, 0:8, 79:127].all()
-    assert not mask[:, 50:100].any()
+    assert not mask[:, 30:35].any()
+    assert not mask[:, 100:110].any()
+    assert mask[:, 55:80, 79:127].all()

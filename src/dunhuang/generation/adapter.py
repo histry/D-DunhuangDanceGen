@@ -34,12 +34,15 @@ class PrimitiveAdapter(nn.Module):
 
 
 def masked_reference(target, scope='full'):
-    if scope not in ('full', 'upperbody_probe'):
+    if scope not in ('full', 'event_soft', 'upperbody_probe'):
         raise ValueError('Unknown reference supervision scope')
     known = torch.zeros_like(target, dtype=torch.bool)
-    for a, b in ((0, 8), (40, 44), (106, 110), (142, 150)):
-        if scope == 'full':
+    if scope == 'full':
+        for a, b in ((0, 8), (40, 44), (106, 110), (142, 150)):
             known[:, a:b] = True
-        else:
-            known[:, a:b, 79:127] = True
+    else:
+        # Dense source prompt with truly hidden completion spans.
+        known[:, :, 79:127] = True
+        known[:, 25:40, 79:127] = False
+        known[:, 90:115, 79:127] = False
     return torch.where(known, target, torch.zeros_like(target)), known

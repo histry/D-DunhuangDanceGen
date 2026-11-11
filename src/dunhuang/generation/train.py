@@ -96,7 +96,7 @@ def train(assets,destination,steps,task='motion'):
     rng=np.random.default_rng(20261111)
     history=[];best=float('inf')
     def loss(target,music):
-        value,known=masked_reference(target,scope='upperbody_probe' if task=='upperbody_probe' else 'full')
+        value,known=masked_reference(target,scope='event_soft' if task in ('paired','upperbody_probe') else 'full')
         state.update(value=value,known=known)
         t=torch.randint(50,950,(len(target),),device='cuda')
         noisy=diffusion.q_sample(target,t)
@@ -125,7 +125,7 @@ def train(assets,destination,steps,task='motion'):
             write(destination/'history.json',history)
             if error<best:
                 best=error;torch.save(dict(state=adapter.state_dict(),base_sha256=assets['checkpoint']['sha256'],
-                    condition_schema='soft_event_reference_v1',
+                    condition_schema=('soft_event_reference_v1' if task in ('paired','upperbody_probe') else 'legacy_sparse_reference_v0'),
                     condition_scope=('paired_music_completion' if task=='paired' else
                         'upperbody_partial_probe_only' if task=='upperbody_probe' else 'motion_only_masked_completion'),
                     full_motion_qualified=False,music_qualified=False),destination/'adapter.pt')

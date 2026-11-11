@@ -69,3 +69,17 @@ $PY scripts/b2_physical.py outputs/new_b2_support
 ## SDMR 学习式检索
 
 alignment/ 提供50D/74D双编码器、独立同步训练、文件名粗标签、专家偏好弃权接口和候选评分。scripts/sdmr.py先训练完整框架，scripts/sdmr_ablate.py仅在完整框架结束后重训一次去声学32D的消融。生成入口按检查点和资格收据决定启用或回退。见[实验报告](reports/SDMR实验报告.md)和[机器指标](reports/sdmr.json)。本轮真实评价未通过同步资格。
+
+## V0.6 实验分支：连续事件软条件与局部可训练探针
+
+新增 generation/soft_reference.py：按 Event Plan 的单调时间映射做 SO(3) 测地插值，将真实来源 12–19 关节的连续轨迹、来源相位和支持域掩码送入同一个冻结 EDGE 的 Adapter。在重叠的 150 帧窗口中保持条件一致，超出冻结归一化支持域的关节帧显式标记为未知，不裁剪源姿态、不把参考轨迹后贴到生成输出。保存 soft_reference_audit.json。原 V0.5 Temporal 默认路径及原 Native 物理阈值不改变。
+
+由于目前 151D 全目标合格窗数为零，新增任务 upperbody_probe 仅在 48D 上身支持域内开展带遮挡的补全研究，其他通道使用零值作为输入占位，**不是真实完整 151D 动作**。在服务器 EDGE 环境可单独运行以下研究命令：
+
+~~~bash
+python scripts/train.py --assets outputs/new_prepare/assets.json --out outputs/upperbody_probe_v06 --task upperbody_probe --steps 300
+~~~
+
+此训练不包含真实配对 Jukebox，得到的权重即使训练成功也只有研究意义，必须保留 music_qualified=false、full_motion_qualified=false，不能作为正式 V1 或合格整曲。event_guided 现在还要求 condition_schema=soft_event_reference_v1；没有实际获得配对数据资格时，默认拒绝该权重。显式 research_allow_motion_only_adapter仅用于自担风险的影子推理，不得当作正式质量提升证据。
+
+下一阶段仍需真实 150×4800D 配对音乐、全 151D 可表达目标，以及150 帧单窗与 225 帧双窗的实际 GPU 物理验收；双侧 Inpainting 与局部 SQP 本次没有实现。不使用测试集指标给予检索或生成器发布资格。
