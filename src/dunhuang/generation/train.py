@@ -4,16 +4,18 @@ import numpy as np
 from dunhuang.io import checked,pinned,write,sha
 from dunhuang.contracts import MotionAdapter
 from .adapter import PrimitiveAdapter,masked_reference
+from .probe import upperbody_probe_target
 
 def train(assets,destination,steps,task='motion'):
     import torch
     if type(steps) is not int or steps < 1:raise ValueError('Positive training steps required')
-    if task not in ('motion','paired'):raise ValueError('Unknown training task')
+    if task not in ('motion','paired','upperbody_probe'):raise ValueError('Unknown training task')
     destination.mkdir(parents=True,exist_ok=False)
     catalog=json.loads(checked(assets['catalog']).read_text())
     scaler=np.load(checked(assets['scaler']))
     refs={r['source_uid']:r['reference'] for r in catalog['entries']}
     windows=[]
+    probe_windows=[]
     tested=0;support_counts={'body8':0,'wrists':0,'root':0}
     for uid,ref in refs.items():
         source=np.load(checked(ref),allow_pickle=False)
@@ -28,7 +30,12 @@ def train(assets,destination,steps,task='motion'):
                 support_counts[name]+=int(valid[:,a:b].all())
             if np.all(valid):
                 windows.append((uid,start,normalized.astype(np.float32)))
+            partial=upperbody_probe_target(normalized,valid)
+            if partial is not None:
+                probe_windows.append((uid,start,partial))
     motion_window_count=len(windows)
+    if task=='upperbody_probe':
+        windows=probe_windows
     paired_roles={}
     if task=='paired':
         if not assets.get('paired_generation_manifest'):
@@ -54,11 +61,11 @@ def train(assets,destination,steps,task='motion'):
             if np.any(abs(normalized)>1+32*np.finfo(np.float32).eps):raise ValueError('Paired target outside frozen support')
             windows.append((row['source_group'],row['start_frame'],normalized.astype(np.float32),music.astype(np.float32)))
     groups=sorted({row[0] for row in windows})
-    audit=dict(tested_150_windows=tested,component_supported_windows=support_counts,root_origin='first_observed_context_XZ; height preserved',motion_only_supported_150_windows=motion_window_count,paired_training_rows=len(windows) if task=='paired' else 0,recording_groups=groups,
+    audit=dict(tested_150_windows=tested,component_supported_windows=support_counts,root_origin='first_observed_context_XZ; height preserved',motion_only_supported_150_windows=motion_window_count,upperbody_partial_probe_windows=len(probe_windows),train_task=task,paired_training_rows=len(windows) if task=='paired' else 0,recording_groups=groups,
         source_count=len(refs),paired_jukebox_training_manifest=assets.get('paired_generation_manifest'),
         full_paired_music_training_ready=bool(assets.get('paired_generation_manifest')),
         checkpoint=assets['checkpoint'],scaler=assets['scaler'],
-        scope='All 151 target channels in frozen support; no clipping or invented Jukebox features')
+        scope=('Upperbody 48D supported-only diagnostic with zero placeholders; NOT full 151D motion completion or music' if task=='upperbody_probe' else 'All 151 target channels in frozen support; no clipping or invented Jukebox features'))
     write(destination/'asset_audit.json',audit)
     if len(groups)<2:
         write(destination/'status.json',dict(status='INSUFFICIENT_SUPPORTED_SOURCE_GROUPS',training_steps=0,music_qualified=False))
@@ -89,12 +96,17 @@ def train(assets,destination,steps,task='motion'):
     rng=np.random.default_rng(20261111)
     history=[];best=float('inf')
     def loss(target,music):
-        value,known=masked_reference(target)
+        value,known=masked_reference(target,scope='upperbody_probe' if task=='upperbody_probe' else 'full')
         state.update(value=value,known=known)
         t=torch.randint(50,950,(len(target),),device='cuda')
         noisy=diffusion.q_sample(target,t)
         predicted=model(noisy,music,t,cond_drop_prob=0.)
-        return ((predicted-target)**2)[~known].mean()
+        supervised=~known
+        if task=='upperbody_probe':
+            scope=torch.zeros_like(supervised)
+            scope[:,:,79:127]=True
+            supervised=supervised&scope
+        return ((predicted-target)**2)[supervised].mean()
     for step in range(1,steps+1):
         ids=rng.integers(0,len(fitting),2)
         target=torch.from_numpy(np.stack([fitting[i][2] for i in ids])).cuda()
@@ -113,11 +125,15 @@ def train(assets,destination,steps,task='motion'):
             write(destination/'history.json',history)
             if error<best:
                 best=error;torch.save(dict(state=adapter.state_dict(),base_sha256=assets['checkpoint']['sha256'],
-                    condition_scope='paired_music_completion' if task=='paired' else 'motion_only_masked_completion',music_qualified=False),destination/'adapter.pt')
+                    condition_schema='soft_event_reference_v1',
+                    condition_scope=('paired_music_completion' if task=='paired' else
+                        'upperbody_partial_probe_only' if task=='upperbody_probe' else 'motion_only_masked_completion'),
+                    full_motion_qualified=False,music_qualified=False),destination/'adapter.pt')
     hook.remove()
     if any(p.grad is not None for p in model.parameters()):raise ValueError('Frozen model got gradients')
-    write(destination/'status.json',dict(status='PAIRED_COMPLETION_TRAINED_UNQUALIFIED' if task=='paired' else 'MOTION_ONLY_TRAINED',training_steps=steps,music_qualified=False,
+    write(destination/'status.json',dict(status=('PAIRED_COMPLETION_TRAINED_UNQUALIFIED' if task=='paired' else
+        'UPPERBODY_PARTIAL_PROBE_TRAINED_UNQUALIFIED' if task=='upperbody_probe' else 'MOTION_ONLY_TRAINED'),training_steps=steps,music_qualified=False,full_motion_qualified=False,
         validation_source=validation_group,checkpoint_sha256=sha(destination/'adapter.pt')))
 if __name__=='__main__':
-    ap=argparse.ArgumentParser();ap.add_argument('--assets',required=True);ap.add_argument('--out',required=True);ap.add_argument('--steps',type=int,default=300);ap.add_argument('--task',choices=['motion','paired'],default='motion')
+    ap=argparse.ArgumentParser();ap.add_argument('--assets',required=True);ap.add_argument('--out',required=True);ap.add_argument('--steps',type=int,default=300);ap.add_argument('--task',choices=['motion','paired','upperbody_probe'],default='motion')
     args=ap.parse_args();train(json.loads(Path(args.assets).read_text()),Path(args.out).resolve(),args.steps,args.task)

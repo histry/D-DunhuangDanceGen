@@ -43,12 +43,21 @@ def main():
     if features.shape!=(q['windows'],150,4800) or not np.isfinite(features).all() or not features.any():raise ValueError('Real Jukebox windows required')
     values,masks=anchor_windows(q['frames'],q.get('anchors',[]))
     support=constraint_support(normalizer,values,masks)
+    soft_audit=None
+    soft_phase=None
     if q['mode']=='event_guided':
-        normalized=torch.from_numpy(values)*normalizer.scaler.scale_.cpu()+normalizer.scaler.min_.cpu()
-        mask=torch.from_numpy(masks)
-        normalized=torch.where(mask,normalized,torch.zeros_like(normalized))
+        if 'event_plan' not in q:raise ValueError('Soft event generation requires an explicit, hashed Event Plan')
+        from .planning.event_plan import validate
+        from .generation.soft_reference import build_soft_reference
+        planned=validate(json.loads(checked(q['event_plan']).read_text()),q['audio']['sha256'],q['frames'])
+        prompts,observed,soft_phase,soft_audit=build_soft_reference(
+            planned,q['frames'],normalizer.scaler.scale_.cpu().numpy(),normalizer.scaler.min_.cpu().numpy())
+        if not observed.any():raise ValueError('No source joint lies within frozen Adapter prompt support')
+        normalized=torch.from_numpy(prompts)
+        mask=torch.from_numpy(observed)
+        write(out/'soft_reference_audit.json',soft_audit)
         write(out/'normalization_preflight.json',dict(supported=True,hard_anchor_support=support,
-            classification='UNCLIPPED_AFFINE_SOFT_REFERENCE',reference_is_not_output_admission=True))
+            classification='SOURCE_EVENT_SOFT_PROMPT_SUPPORT_MASKED',reference_is_not_output_admission=True))
     else:
         write(out/'normalization_preflight.json',support)
         normalized,mask=normalize_constraints(normalizer,values,masks)
@@ -69,11 +78,13 @@ def main():
         from .generation.adapter import PrimitiveAdapter
         adapter_payload=torch.load(checked(q['adapter']),map_location='cpu',weights_only=True)
         if adapter_payload['base_sha256']!=q['checkpoint']['sha256']:raise ValueError('Adapter base differs')
+        if adapter_payload.get('condition_schema')!='soft_event_reference_v1':
+            raise ValueError('Adapter was not trained for source-backed Event Plan conditions')
         if not adapter_payload.get('music_qualified') and not q.get('research_allow_motion_only_adapter'):
             raise ValueError('Adapter lacks music generation qualification')
         adapter=PrimitiveAdapter().cuda().eval()
         adapter.load_state_dict(adapter_payload['state'],strict=True)
-        event_residual=adapter(normalized.cuda(),mask.cuda()).detach()
+        event_residual=adapter(normalized.cuda(),mask.cuda(),torch.from_numpy(soft_phase).cuda()).detach()
         adapter_hook=model.cond_encoder.register_forward_hook(lambda module,args,value:value+event_residual)
 
     with torch.no_grad():
@@ -82,7 +93,7 @@ def main():
             sample=diffusion.long_ddim_sample((len(features),150,151),cond)
             sampler=dict(method='official_long_ddim',steps=50)
         elif q['mode'] in ('anchored','custom_none','temporal','event_guided'):
-            if q['mode']!='custom_none' and not masks.any():raise ValueError('Anchored run must have actual anchors')
+            if q['mode']!='custom_none' and not mask.any():raise ValueError('Guided run must have observed reference')
             policy = {'anchored':'hard','custom_none':'none','temporal':'temporal','event_guided':'none'}[q['mode']]
             guide = None
             if policy == 'temporal':
@@ -114,6 +125,7 @@ def main():
         checkpoint=q['checkpoint'],publisher_provenance_verified=False,edge_commit=q['edge_commit'],
         weights_before=before,weights_after=after,sampler=sampler,
         raw_window_overlap_max_abs=float(abs(raw[:-1,75:]-raw[1:,:75]).max()) if len(raw)>1 else 0.,
-        training=False,official_stitch=True,features=q['features'],audio=q['audio']))
+        training=False,official_stitch=True,features=q['features'],audio=q['audio'],
+        soft_reference=soft_audit,adapter_music_qualified=(adapter_payload.get('music_qualified',False) if q['mode']=='event_guided' else None)))
     print('GENERATION_COMPLETE',q['mode'],q['frames'],flush=True)
 if __name__=='__main__':main()

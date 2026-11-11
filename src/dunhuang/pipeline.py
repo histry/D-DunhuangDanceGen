@@ -56,7 +56,7 @@ def run(q):
             q['anchors']=anchors(plan)
             q['event_plan']=dict(path=str(out/'event_plan.json'),sha256=sha(out/'event_plan.json'))
             q['mode']='event_guided' if q.get('generator')=='adapter' else 'temporal';q['trajectory_radius']=12;q['trajectory_strength']=.55
-            q['generation_stage']='v0.5_event_plan_temporal'
+            q['generation_stage']='v1_event_adapter_research' if q['mode']=='event_guided' else 'v0.5_event_plan_temporal'
             write(request,q)
         for python,module in [(q['edge_python'],'dunhuang.edge_backend'),(q['native_python'],'dunhuang.physical')]:
             with (out/(module.split('.')[-1]+'.log')).open('w') as log:
