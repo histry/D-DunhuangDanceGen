@@ -10,6 +10,16 @@ from .io import checked, write
 from .music import clock_plan
 
 def run(q):
+    if q.get('learned_retrieval'):
+        from .alignment.rank import authorize
+        request=q['learned_retrieval']
+        decision=authorize(checked(request['checkpoint']),checked(request['qualification']))
+        q=dict(q,retrieval_decision=decision)
+        if decision['enabled']:
+            selection=json.loads(checked(request['selection']).read_text())
+            if selection['checkpoint_sha256']!=decision['checkpoint_sha256']:
+                raise ValueError('Selection checkpoint differs')
+            q['anchors']=selection['anchors']
     import soundfile as sf
     audio=checked(q['audio']);info=sf.info(audio)
     clock=clock_plan(info.frames,info.samplerate)
