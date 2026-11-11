@@ -1,7 +1,7 @@
 import numpy as np
 import torch
 
-def retrieval(model,rows,arrays,ids,device):
+def retrieval(model,rows,arrays,ids,device,task='song'):
     music=[];motion=[]
     with torch.no_grad():
         for start in range(0,len(ids),64):
@@ -17,8 +17,13 @@ def retrieval(model,rows,arrays,ids,device):
         values=[];random=[];group={}
         for j in selected:
             # Multiple motions for the same real audio are legitimate global positives.
-            pool=[k for k in selected if rows[ids[k]]['audio_sha256']==rows[ids[j]]['audio_sha256'] or rows[ids[k]]['group']!=rows[ids[j]]['group']]
-            positive=np.array([rows[ids[k]]['audio_sha256']==rows[ids[j]]['audio_sha256'] for k in pool])
+            if task=='local':
+                pool=[k for k in selected if rows[ids[k]]['audio_sha256']==rows[ids[j]]['audio_sha256']]
+                positive=np.array([rows[ids[k]]['start_frame']==rows[ids[j]]['start_frame'] for k in pool])
+            elif task=='song':
+                pool=[k for k in selected if rows[ids[k]]['audio_sha256']==rows[ids[j]]['audio_sha256'] or rows[ids[k]]['group']!=rows[ids[j]]['group']]
+                positive=np.array([rows[ids[k]]['audio_sha256']==rows[ids[j]]['audio_sha256'] for k in pool])
+            else:raise ValueError('Unknown retrieval evaluation task')
             order=np.argsort(-scores[j,pool]);r=int(np.flatnonzero(positive[order])[0])+1
             values.append([r<=1,r<=5,1/r]);random.append(float(positive.mean()))
             group.setdefault(rows[ids[j]]['group'],[]).append([r<=1,1/r])
