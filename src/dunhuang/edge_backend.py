@@ -45,19 +45,28 @@ def main():
     support=constraint_support(normalizer,values,masks)
     soft_audit=None
     soft_phase=None
+    native_event=q.get('research_native_event_adapter',False)
+    if type(native_event) is not bool:
+        raise ValueError('Native event geometry requires an explicit boolean research flag')
+    if native_event and (q['mode']!='event_guided' or q.get('research_allow_motion_only_adapter') is not True):
+        raise ValueError('Native event Adapter requires explicit research-only generation')
     if q['mode']=='event_guided':
         if 'event_plan' not in q:raise ValueError('Soft event generation requires an explicit, hashed Event Plan')
         from .planning.event_plan import validate
         from .generation.soft_reference import build_soft_reference
         planned=validate(json.loads(checked(q['event_plan']).read_text()),q['audio']['sha256'],q['frames'])
-        prompts,observed,soft_phase,soft_audit=build_soft_reference(
-            planned,q['frames'],normalizer.scaler.scale_.cpu().numpy(),normalizer.scaler.min_.cpu().numpy())
+        if native_event:
+            from .generation.soft_reference import build_native_event_reference
+            prompts,observed,soft_phase,soft_audit=build_native_event_reference(planned,q['frames'])
+        else:
+            prompts,observed,soft_phase,soft_audit=build_soft_reference(
+                planned,q['frames'],normalizer.scaler.scale_.cpu().numpy(),normalizer.scaler.min_.cpu().numpy())
         if not observed.any():raise ValueError('No source joint lies within frozen Adapter prompt support')
         normalized=torch.from_numpy(prompts)
         mask=torch.from_numpy(observed)
         write(out/'soft_reference_audit.json',soft_audit)
         write(out/'normalization_preflight.json',dict(supported=True,hard_anchor_support=support,
-            classification='SOURCE_EVENT_SOFT_PROMPT_SUPPORT_MASKED',reference_is_not_output_admission=True))
+            classification='SOURCE_NATIVE_SO3_REFERENCE_NO_TARGET_SCALER_GATE' if native_event else 'SOURCE_EVENT_SOFT_PROMPT_SUPPORT_MASKED',reference_is_not_output_admission=True))
     else:
         write(out/'normalization_preflight.json',support)
         normalized,mask=normalize_constraints(normalizer,values,masks)
@@ -78,8 +87,13 @@ def main():
         from .generation.adapter import PrimitiveAdapter
         adapter_payload=torch.load(checked(q['adapter']),map_location='cpu',weights_only=True)
         from .generation.adapter import authorize_adapter
-        authorize_adapter(adapter_payload,q['checkpoint']['sha256'],q.get('research_allow_motion_only_adapter',False))
-        adapter=PrimitiveAdapter().cuda().eval()
+        if native_event:
+            from .generation.event_music_adapter import EventMusicAdapter,authorize_event_adapter
+            authorize_event_adapter(adapter_payload,q['checkpoint']['sha256'],True)
+            adapter=EventMusicAdapter(adapter_payload['mode']).cuda().eval()
+        else:
+            authorize_adapter(adapter_payload,q['checkpoint']['sha256'],q.get('research_allow_motion_only_adapter',False))
+            adapter=PrimitiveAdapter().cuda().eval()
         adapter.load_state_dict(adapter_payload['state'],strict=True)
         from .generation.conditions import source_condition
         requested_policy=q.get('research_condition_policy','dense_upper8')
@@ -93,8 +107,13 @@ def main():
             visibility_distribution_matches=requested_policy==trained_policy,
             training_music_scope=adapter_payload.get('condition_scope'))
         write(out/'soft_reference_audit.json',soft_audit)
-        event_residual=adapter(condition.value,condition.known,condition.phase).detach()
-        adapter_hook=model.cond_encoder.register_forward_hook(lambda module,args,value:value+event_residual)
+        if native_event:
+            from .generation.event_geometry import event_geometry
+            geometry=event_geometry(condition.value,condition.known,condition.phase)
+            adapter_hook=model.cond_encoder.register_forward_hook(lambda module,args,value:value+adapter(geometry,value))
+        else:
+            event_residual=adapter(condition.value,condition.known,condition.phase).detach()
+            adapter_hook=model.cond_encoder.register_forward_hook(lambda module,args,value:value+event_residual)
 
     # Adapter construction must not alter the matched sampler noise stream.
     torch.manual_seed(q['seed']);torch.cuda.manual_seed_all(q['seed'])

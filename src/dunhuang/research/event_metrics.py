@@ -76,3 +76,28 @@ def identity_probe(features, labels, views):
                 training_samples=int(train.sum()),validation_samples=int(test.sum()),
                 classes=len(classes),ridge_alpha=alpha,
                 scope='closed-set identity, held visibility view; no source generalization claim')
+
+
+def event_timing(output,reference):
+    """Upper8 angular-speed phase proxy, not musical/semantic correctness."""
+    from scipy.signal import find_peaks
+    def profile(x):
+        r=matrices(motion151(x)[:,79:127].reshape(-1,8,6))
+        return Rotation.from_matrix((r[:-1].swapaxes(-1,-2)@r[1:]).reshape(-1,3,3)).magnitude().reshape(-1,8).mean(1)*30
+    a,b=profile(output),profile(reference)
+    if len(a)!=len(b):raise ValueError('Event timing clocks differ')
+    result=dict(output_activity_radps=float(a.mean()),reference_activity_radps=float(b.mean()),
+                scope='angular-speed timing proxy; not musical quality or learned warp proof')
+    if a.std()<1e-6 or b.std()<1e-6:
+        return dict(result,zero_lag_correlation=None,best_lag_frames=None,peak_gap_seconds=None,
+                    reason='INSUFFICIENT_MOTION_VARIATION')
+    corrs=[]
+    for lag in range(-15,16):
+        av=a[max(0,lag):len(a)+min(0,lag)]
+        bv=b[max(0,-lag):len(b)+min(0,-lag)]
+        corrs.append(float(np.corrcoef(av,bv)[0,1]) if av.std()>1e-6 and bv.std()>1e-6 else -1.)
+    pa=find_peaks(a,distance=6,prominence=.25*a.std())[0]
+    pb=find_peaks(b,distance=6,prominence=.25*b.std())[0]
+    return dict(result,zero_lag_correlation=corrs[15],best_lag_frames=int(np.argmax(corrs))-15,
+                best_lag_correlation=max(corrs),output_peak_count=len(pa),reference_peak_count=len(pb),
+                peak_gap_seconds=float(np.min(abs(pb[:,None]-pa[None,:]),axis=1).mean()/30) if len(pa) and len(pb) else None)

@@ -92,3 +92,32 @@ def resample_native(source, positions):
     rotation=first*Rotation.from_rotvec(delta*np.repeat(alpha,24)[:,None])
     result[:,7:]=sixd(rotation.as_matrix()).reshape(-1,144).astype(np.float32)
     return result
+
+
+def build_native_event_reference(plan,frames):
+    """Native upper8 geometry prompts. No EDGE Scaler admission or pose clipping."""
+    if type(frames) is not int or frames<1 or plan.get('frames')!=frames:
+        raise ValueError('Native event prompt clock differs')
+    windows=max(1,(max(0,frames-150)+74)//75+1);covered=150+75*(windows-1)
+    values=np.zeros((covered,151),np.float32);known=np.zeros_like(values,dtype=bool)
+    phase=np.zeros((covered,1),np.float32);cursor=0
+    for event in plan['events']:
+        a,b=event['music_interval'];lo,hi=event['source_interval']
+        if a!=cursor or not a<b<=frames:raise ValueError('Contiguous native event intervals required')
+        source=motion151(np.load(checked(event['reference']),allow_pickle=False))
+        if not 0<=lo<hi<=len(source):raise ValueError('Native source interval differs')
+        positions=source_positions(event,np.arange(a,b))
+        sampled=resample_native(source,positions)
+        # Only fitted source-backed local joints12..19 are declared observed.
+        matrices(sampled[:,79:127].reshape(-1,8,6))
+        values[a:b,79:127]=sampled[:,79:127];known[a:b,79:127]=True
+        phase[a:b,0]=((positions-lo)/(hi-lo)).astype(np.float32);cursor=b
+    if cursor!=frames:raise ValueError('Native event plan incompletely covers song')
+    return (np.stack([values[75*i:75*i+150] for i in range(windows)]),
+            np.stack([known[75*i:75*i+150] for i in range(windows)]),
+            np.stack([phase[75*i:75*i+150] for i in range(windows)]),
+            dict(schema='native_event_music_v1',source_only=True,source_frames=frames,
+                 reference_representation='native local fitted upper8 SO(3), independent of target Scaler',
+                 reference_scaler_clipping=False,no_source_pose_paste=True,
+                 full_151d_target_supported=False,physical_qualified=False,
+                 supported_time_frames=frames,supported_joint_frames=frames*8))

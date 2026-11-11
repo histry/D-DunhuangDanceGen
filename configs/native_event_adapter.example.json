@@ -1,0 +1,14 @@
+{
+  "profile": "dunhuang",
+  "generator": "adapter",
+  "retrieval_policy": "heuristic",
+  "seed": 20261115,
+  "frames": 150,
+  "research_native_event_adapter": true,
+  "research_allow_motion_only_adapter": true,
+  "research_condition_policy": "completion_upper8",
+  "adapter": {
+    "path": "/replace/with/cross_recording_research/adapter.pt",
+    "sha256": "replace_with_actual_checkpoint_sha256"
+  }
+}

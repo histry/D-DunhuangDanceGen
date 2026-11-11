@@ -55,3 +55,76 @@ def test_pose_preference_is_not_merely_large_output_change():
     assert event_margin(a,b,a,b)['preference_margin_radians']>.69
     assert abs(event_margin(a,a,a,b)['preference_margin_radians'])<1e-7
     assert event_margin(b,a,a,b)['preference_margin_radians']<-.69
+
+
+def test_native_geometry_ignores_scaler_and_unknown_storage():
+    import torch
+    from dunhuang.generation.event_geometry import event_geometry
+    x=torch.zeros(2,150,151)
+    x[:,:,7:]=torch.tensor([1,0,0,0,1,0]).repeat(24)
+    available=torch.zeros_like(x,dtype=torch.bool)
+    available[:,:,79:127]=True
+    phase=torch.arange(150).float()[None,:,None].expand(2,-1,-1)/150
+    geom=event_geometry(x,available,phase)
+    assert geom.shape==(2,150,153)
+    changed=x.clone();changed[~available]=float('nan')
+    torch.testing.assert_close(geom,event_geometry(changed,available,phase))
+    # Arbitrarily unsupported target root values cannot block a valid reference.
+    changed[:,:,4:7]=1e9
+    torch.testing.assert_close(geom,event_geometry(changed,available,phase))
+    missing=available.clone();missing[:,:5]=False
+    changed[:,:5]=float('nan')
+    got=event_geometry(changed,missing,phase)
+    assert not got[:,:5,:152].any()
+    assert torch.isfinite(got).all()
+    with pytest.raises(ValueError,match='Degenerate'):
+        event_geometry(torch.zeros_like(x),available,phase)
+
+
+def test_joint_and_additive_have_identical_capacity_and_active_fusion():
+    import torch
+    from dunhuang.generation.event_music_adapter import EventMusicAdapter,authorize_event_adapter
+    torch.set_num_threads(2)
+    torch.manual_seed(73);a=EventMusicAdapter('cross').eval()
+    torch.manual_seed(73);b=EventMusicAdapter('additive').eval()
+    assert sum(p.numel() for p in a.parameters())==sum(p.numel() for p in b.parameters())
+    assert all(torch.equal(a.state_dict()[k],v) for k,v in b.state_dict().items())
+    x=torch.randn(1,150,153);m=torch.randn(1,150,512)
+    assert not a(x,m).any() and not b(x,m).any()
+    with torch.no_grad():
+        a.output.weight.normal_(0,.01);b.load_state_dict(a.state_dict())
+    assert not torch.equal(a(x,m),b(x,m))
+    a(x,m).square().mean().backward()
+    assert a.music[1].weight.grad.abs().sum()>0
+    assert a.attention.in_proj_weight.grad.abs().sum()>0
+    p=dict(base_sha256='base',condition_schema='native_event_music_v1',mode='cross')
+    for flag in (False,None,1,'true'):
+        with pytest.raises(ValueError,match='research-only'):
+            authorize_event_adapter(p,'base',flag)
+    assert authorize_event_adapter(p,'base',True)['research_unqualified']
+
+
+def test_native_plan_condition_does_not_admit_targets_or_use_scaler(tmp_path):
+    from dunhuang.generation.soft_reference import build_native_event_reference
+    from dunhuang.io import sha
+    x=np.zeros((150,151),np.float32)
+    x[:,7:]=np.tile(sixd(np.eye(3)).reshape(1,6),(150,24))
+    x[:,4:7]=1e6 # Unsupported target root is immaterial to upper8 source geometry.
+    p=tmp_path/'source.npy';np.save(p,x)
+    plan=dict(frames=150,events=[dict(music_interval=[0,150],source_interval=[0,150],
+        time_warp=[[0,0],[150,150]],reference=dict(path=str(p),sha256=sha(p)))])
+    value,known,phase,audit=build_native_event_reference(plan,150)
+    assert known[:,:,79:127].all()
+    assert not known[:,:,:79].any() and not known[:,:,127:].any()
+    assert not value[~known].any()
+    assert not audit['full_151d_target_supported'] and not audit['reference_scaler_clipping']
+    assert abs(phase[0,-1,0]-149/150)<1e-6
+
+
+def test_task_receipt_cannot_claim_a_different_capture_or_pose_exact_truth():
+    a,b=row('a','r1'),row('b','r2')
+    p=source_pairs({'rows':[a,b]})[0];index={'a':a,'b':b}
+    with pytest.raises(ValueError,match='binding'):
+        validate_pair(dict(p,source_recording='invented'),index)
+    with pytest.raises(ValueError,match='pose-exact'):
+        validate_pair(dict(p,pose_exact_correspondence=True),index)

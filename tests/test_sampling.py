@@ -27,3 +27,16 @@ def test_anchors_and_overlap_applied_during_all_steps():
 def test_conflicting_overlaps_fail_before_model_call():
     values=torch.zeros((2,150,151));mask=torch.zeros_like(values,dtype=torch.bool);mask[0,100,7]=True
     with pytest.raises(ValueError):constrained_ddim(Denoiser(),torch.ones(2,150,4800),values,mask)
+
+
+def test_observer_cannot_change_samples_or_noise_stream():
+    values=torch.zeros(1,150,151);mask=torch.zeros_like(values,dtype=torch.bool)
+    cond=torch.ones(1,150,4800)
+    torch.manual_seed(3);expected,r1=constrained_ddim(Denoiser(),cond,values,mask,guidance='none')
+    observed=[]
+    def observer(step,t,predicted,clean):
+        observed.append((step,t))
+        predicted.fill_(100);clean.fill_(-100)
+    torch.manual_seed(3);actual,r2=constrained_ddim(Denoiser(),cond,values,mask,guidance='none',observer=observer)
+    assert torch.equal(expected,actual)
+    assert r1['noise_sha256']==r2['noise_sha256'] and len(observed)==50

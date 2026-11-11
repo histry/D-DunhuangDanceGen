@@ -21,3 +21,27 @@ The free-running two-music/two-event/two-seed factorial includes four zero-Adapt
 source_pairs.py forms Train/Val tasks only when source/target have different capture IDs and raw bytes, but identical official basic routine, music bytes, frame start, offset, FPS and duration. It never uses Test as a condition or fitting target. It preserves the original target and records pose_exact_correspondence=false: an official shared routine does not establish pose-exact cross-performer annotations.
 
 Full source-pair and per-window files are ignored local/server outputs, not GitHub publications. Public reports contain aggregate diagnostics only. Historical validation exposure and EDGE pretraining exposure remain limitations.
+
+
+## Cross-recording training and parameter-matched fusion
+
+    PYTHONPATH=src python -m dunhuang.generation.event_transfer --assets outputs/aist_features_01/assets.json --out outputs/event_transfer_preflight_new --preflight-only
+    PYTHONPATH=src python -m dunhuang.generation.event_transfer --assets outputs/aist_features_01/assets.json --mode cross --steps 1200 --out outputs/event_transfer_cross_new
+    PYTHONPATH=src python -m dunhuang.generation.event_transfer --assets outputs/aist_features_01/assets.json --mode additive --steps 1200 --out outputs/event_transfer_additive_new
+
+Train source and target are different authority-linked captures; full151 supervision always reads the target, while the condition reads only independently observed source upper8 rotations. No Test fitting. Native source features contain absolute/first-observed-relative/adjacent SO(3) columns plus availability and phase (153D). They do not require source rotations to fit the target Scaler. Missing storage cannot enter the encoder.
+
+A single128D event Transformer, projected frozen512D music tokens, one attention layer and a zero-init512D residual form the research Adapter. Cross fusion uses music queries into event keys/values; the additive comparator uses event self-attention plus music projection. Both use every module, have identical parameter counts and identical initial weights. An auxiliary source-rotation reconstruction head preserves event geometry; it is not target supervision.
+
+Registered objective: full151 target MSE +0.1 normalized target-velocity error +0.02 SO(3) chordal rotation error +0.05 observed-source reconstruction. All coefficients, steps, data roles and checkpoint selection are fixed before either run. Selection uses fixed8 cross-recording Val pairs, full151 MSE every100/final steps, maximum1200. Report original, zero Adapter, removed reference, wrong source, reversed phase, alternate music and intentionally shifted music controls. Activity and body-group errors are diagnostic safeguards, not a quality certificate. Historical Val exposure remains explicit.
+
+The mechanism runner also accepts these checkpoints and repeats the same frozen information-flow/factorial protocol. Its same-record conditional denoiser interventions are distinct from the trainer's cross-recording validation and are labelled accordingly.
+
+The existing generate.py/EDGE worker supports native event geometry only with both explicit research flags shown in configs/native_event_adapter.example.json. Default generation and old Adapter schemas remain unchanged. Native-source geometry is never an output target or a pose-pasting constraint. New research checkpoints cannot load through the default qualified Adapter path.
+
+
+## Registered server sequence
+
+    PYTHONPATH=src python scripts/transfer_experiment.py --paired-assets outputs/aist_features_01/assets.json --generation-assets outputs/event_plan_01/prepare/assets.json --plans outputs/v07_01/plans/index.json --out outputs/transfer_experiment_new
+
+Publish code before running. The script writes the protocol, runs complete regression and source-task preflight, then cross1200, its12-case factorial, two real ChangE/A65 Event Plan cases and fresh validation replay; only then the identical-budget additive ablation. All28 free-generation executions are retained, including duplicated zero-Adapter controls across methods; this is not28 unique motions. A crash preserves its own output directory and exit receipts. No automatic retry, DEV tuning, native threshold change, long-song promotion or learned feasibility probability is performed. Unsuccessful trajectory executions do not blacklist the source event.

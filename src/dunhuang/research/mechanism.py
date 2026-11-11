@@ -6,7 +6,7 @@ from dunhuang.io import checked, write, sha
 from dunhuang.contracts import MotionAdapter, Q
 from dunhuang.generation.train import digest, phase_target
 from dunhuang.generation.source_pairs import source_pairs
-from .event_metrics import descriptor, representation_stats, identity_probe, dynamics, event_margin
+from .event_metrics import descriptor, representation_stats, identity_probe, dynamics, event_margin, event_timing
 
 SEEDS = (20261113, 20261114)
 TIMES = (100, 500, 900)
@@ -57,8 +57,14 @@ class Runtime:
                 not np.array_equal(self.bias,self.normalizer.scaler.min_.cpu().numpy())):
             raise ValueError('Frozen normalizer binding differs')
         saved=torch.load(checked(adapter_ref),map_location='cpu',weights_only=True)
-        authorize_adapter(saved,assets['checkpoint']['sha256'],True)
-        self.adapter=PrimitiveAdapter().cuda().eval()
+        self.native_geometry=saved.get('condition_schema')=='native_event_music_v1'
+        if self.native_geometry:
+            from dunhuang.generation.event_music_adapter import EventMusicAdapter,authorize_event_adapter
+            authorize_event_adapter(saved,assets['checkpoint']['sha256'],True)
+            self.adapter=EventMusicAdapter(saved['mode']).cuda().eval()
+        else:
+            authorize_adapter(saved,assets['checkpoint']['sha256'],True)
+            self.adapter=PrimitiveAdapter().cuda().eval()
         self.adapter.load_state_dict(saved['state'],strict=True)
         self.before=(digest(self.model),digest(self.adapter))
         self.state={};self.layers={}
@@ -77,7 +83,19 @@ class Runtime:
     def inject(self,module,args,music):
         if self.state.get('enabled',True):
             c=self.state['condition']
-            delta=self.adapter(c.value,c.known,c.phase)
+            if self.native_geometry:
+                from dunhuang.generation.event_geometry import event_geometry
+                if self.state.get('mask_only',False):
+                    # A mask-hint intervention is not a fabricated zero SO(3) pose.
+                    import torch
+                    geometry=torch.zeros(len(c.value),150,153,device=c.value.device,dtype=c.value.dtype)
+                    geometry[:,:,144:152]=c.known[:,:,79:127].reshape(-1,150,8,6).all(-1).to(c.value.dtype)
+                    geometry[:,:,152:]=c.phase
+                else:
+                    geometry=event_geometry(c.value,c.known,c.phase)
+                delta=self.adapter(geometry,music)
+            else:
+                delta=self.adapter(c.value,c.known,c.phase)
             result=music+delta
         else:
             result=music
@@ -90,6 +108,9 @@ class Runtime:
         import torch
         from dunhuang.generation.conditions import source_condition
         phase=torch.arange(150,device='cuda').float()[None,:,None]/150
+        if self.native_geometry:
+            raw=((target.detach().cpu().numpy()-self.bias)/self.scale)
+            target=torch.from_numpy(np.stack([MotionAdapter.to_native(x) for x in raw])).cuda()
         return source_condition(target,torch.ones_like(target,dtype=torch.bool),phase,'completion_upper8')
 
     def tensors(self,row):
@@ -161,7 +182,7 @@ def diagnose(runtime,rows,out):
                             current=ReferenceCondition(torch.where(c.known,other.value,torch.zeros_like(other.value)),c.known,c.phase,'replaced')
                         elif control=='music_replaced':m=alternative
                         elif control=='music_shifted':m=torch.roll(music,37,1)
-                        rt.state.update(condition=current,enabled=control!='zero_adapter',capture=False)
+                        rt.state.update(condition=current,enabled=control!='zero_adapter',capture=False,mask_only=control=='mask_only')
                         y=rt.model(noisy,m,t,cond_drop_prob=0.)
                         row=dict(seed=seed,timestep=timestep,window_uid=rows[i]['window_uid'],control=control,noise_sha256=noise_sha,
                                  group_mse={k:float((y-target)[:,:,ids].square().mean()) for k,ids in GROUPS.items()},
@@ -222,12 +243,17 @@ def generate(rt,rows,assets,out):
                 folder=out/name;folder.mkdir()
                 target,music,native=data[music_id]
                 c=rt.condition(data[max(event_id,0)][0])
-                rt.state.update(condition=c,enabled=event_id>=0,capture=False)
+                rt.state.update(condition=c,enabled=event_id>=0,capture=False,mask_only=False)
                 torch.manual_seed(seed);torch.cuda.manual_seed_all(seed)
+                snapshots={}
+                def observe(step,t,predicted,clean):
+                    if step in (0,24,49):
+                        snapshots[str(step)]=predicted.cpu().numpy()
                 with torch.no_grad():
                     sample,sampler=constrained_ddim(rt.diffusion,music,torch.zeros_like(target),
-                                                   torch.zeros_like(target,dtype=torch.bool),guidance='none')
+                                                   torch.zeros_like(target,dtype=torch.bool),guidance='none',observer=observe)
                     assembled(rt,sample,music,folder)
+                np.savez_compressed(folder/'denoising_stages.npz',**snapshots)
                 request=dict(assets,frames=150,output=str(folder),anchors=[],beat_frames=[])
                 write(folder/'physical_request.json',request)
                 subprocess.run([assets['native_python'],'-m','dunhuang.physical',str(folder/'physical_request.json')],check=True)
@@ -242,6 +268,7 @@ def generate(rt,rows,assets,out):
                     source_window_uid=chosen[max(event_id,0)]['window_uid'] if event_id>=0 else None,
                     sampler=sampler,motion=ref(folder/'native.npy'),fk=ref(folder/'native_fk.npy'),
                     physical=read(folder/'physical.json'),metrics=metrics,raw_window_metrics=raw_metrics,
+                    event_timing=event_timing(native_out,data[max(event_id,0)][2]),
                     identical_template_jerk_delta_max_mps3=float(abs(final_jerk-raw_jerk).max())))
                 write(out/'generation_progress.json',cases)
     margins=[]

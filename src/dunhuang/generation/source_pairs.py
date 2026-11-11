@@ -38,15 +38,19 @@ def source_pairs(manifest, roles=('train', 'val')):
 
 def validate_pair(pair, rows):
     t, s = rows[pair['target_uid']], rows[pair['source_uid']]
-    if t['role'] != s['role'] or t['role'] != pair['role'] or t['role'] == 'test':
+    if t['role'] != s['role'] or t['role'] != pair['role'] or t['role'] not in ('train','val'):
         raise ValueError('Cross-role/Test reference leakage')
     if t['recording_uid'] == s['recording_uid'] or t['raw_motion']['sha256'] == s['raw_motion']['sha256']:
         raise ValueError('Independent recording required')
+    if pair.get('source_recording')!=s['recording_uid'] or pair.get('target_recording')!=t['recording_uid']:
+        raise ValueError('Source task identity binding differs')
+    if pair.get('pose_exact_correspondence') is not False:
+        raise ValueError('Shared routine is not pose-exact correspondence')
     for key in ('choreography_uid', 'music_uid', 'start_frame', 'audio_offset_seconds', 'fps', 'frames'):
         if t[key] != s[key]:
             raise ValueError('Source-target correspondence differs: ' + key)
     if t['audio']['sha256'] != s['audio']['sha256']:
         raise ValueError('Source-target audio differs')
-    if t['dataset'] != 'aistpp' or s['dataset'] != 'aistpp' or '_sBM_' not in t['recording_uid']:
+    if t['dataset'] != 'aistpp' or s['dataset'] != 'aistpp' or any('_sBM_' not in r['recording_uid'] for r in (t,s)):
         raise ValueError('Only authority-verified basic routines admitted')
     return True

@@ -16,7 +16,7 @@ def overlap_consensus(x, policy="mean"):
         x[1:,:75] = shared
     return x
 
-def constrained_ddim(diffusion, cond, values, masks, *, guidance="hard", temporal=None, overlap="mean"):
+def constrained_ddim(diffusion, cond, values, masks, *, guidance="hard", temporal=None, overlap="mean", observer=None):
     import hashlib
     if guidance not in ("none", "hard", "temporal") or (guidance=="temporal") != (temporal is not None):
         raise ValueError("Invalid guidance configuration")
@@ -51,6 +51,9 @@ def constrained_ddim(diffusion, cond, values, masks, *, guidance="hard", tempora
             elif guidance == "temporal":
                 clean = temporal(clean, (step+1)/len(weights))
 
+            if observer is not None:
+                # Detached copies keep instrumentation unable to mutate the sampler.
+                observer(step,t,predicted.detach().clone(),clean.detach().clone())
             if next_t < 0:
                 x = clean
                 continue
