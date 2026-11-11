@@ -9,6 +9,11 @@ from .event_plan import semantic_plan_id
 def digest(value):
     return hashlib.sha256(json.dumps(value,sort_keys=True,separators=(',',':'),allow_nan=False).encode()).hexdigest()
 
+def contract_identity(value):
+    # Dataclass tuples become lists on disk: compare the canonical wire form.
+    canonical=json.loads(json.dumps(value,allow_nan=False))
+    return dict(canonical,id=digest(canonical))
+
 def associated_slots(plan,start,end):
     return [i for i,e in enumerate(plan['events']) if max(start,e['music_interval'][0])<min(end,e['music_interval'][1])]
 
@@ -50,7 +55,7 @@ def native_context(q):
         motion_config=asdict(cfg),
         runtime=dict(python=sys.version,numpy=np.__version__),
         support_policy='final_fail_closed',metrics_schema='dunhuang_physical_metrics_si_v5_contact_states')
-    return dict(value,id=digest(value)),cfg
+    return contract_identity(value),cfg
 
 def build(case,contract):
     case=Path(case);q=json.loads((case/'request.json').read_text())

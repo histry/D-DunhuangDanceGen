@@ -161,3 +161,12 @@ def test_worker_timeout_stays_unknown_and_never_becomes_cached_fail(tmp_path,mon
     assert state['ledger'][0]['native_result']=='UNKNOWN' and 'cache' not in state['ledger'][0]
     r.run_closed_loop(dict(q,closed_loop=dict(q['closed_loop'],resume=True)))
     assert len(calls)==1
+
+
+def test_native_contract_survives_full_dataclass_json_roundtrip():
+    from dunhuang.planning.feedback import contract_identity
+    value=dict(config=dict(joints=(0,1,2),weights=(.1,.2)),limits=dict(jerk=1620.))
+    sealed=contract_identity(value)
+    assert sealed==json.loads(json.dumps(sealed))
+    assert sealed==contract_identity(json.loads(json.dumps(value)))
+    assert sealed!=contract_identity(dict(value,limits=dict(jerk=2000.)))
