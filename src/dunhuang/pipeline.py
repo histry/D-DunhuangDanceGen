@@ -10,6 +10,8 @@ from .io import checked, write
 from .music import clock_plan
 
 def run(q):
+    if q.get('profile')=='dunhuang' and q.get('generator','temporal') not in ('temporal','adapter'):
+        raise ValueError('Unsupported generator; no silent fallback to Temporal')
     if q.get('learned_retrieval'):
         from .alignment.rank import authorize
         request=q['learned_retrieval']

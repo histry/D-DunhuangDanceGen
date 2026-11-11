@@ -57,8 +57,8 @@ def diagnose(assets,plans,probe,prior,out):
         c=state['condition'];delta=adapter(c.value,c.known,c.phase)
         if state.get('capture'):
             activation['edge_music_encoder']=stats(value);activation['adapter_residual']=stats(delta)
-            activation['residual_to_music_rms']=float(delta.square().mean().sqrt()/value.square().mean().sqrt().clamp_min(1e-12))
-            activation['residual_music_cosine']=float(torch.nn.functional.cosine_similarity(delta.flatten()[None],value.flatten()[None]))
+            activation['residual_to_music_rms']=float((delta.square().mean().sqrt()/value.square().mean().sqrt().clamp_min(1e-12)).detach())
+            activation['residual_music_cosine']=float(torch.nn.functional.cosine_similarity(delta.flatten()[None],value.flatten()[None]).detach())
         return value+delta
     handles=[model.cond_encoder.register_forward_hook(inject)]
     def capture(name):

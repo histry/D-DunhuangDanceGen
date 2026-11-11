@@ -23,3 +23,9 @@ def test_global_visibility_policy_preserves_overlap():
         'completion_upper8',[0,75])
     assert torch.equal(c.value[0,75:],c.value[1,:75])
     assert torch.equal(c.known[0,75:],c.known[1,:75])
+
+def test_unimplemented_generator_cannot_silently_fall_back():
+    import pytest
+    from dunhuang.pipeline import run
+    with pytest.raises(ValueError,match='Unsupported generator'):
+        run(dict(profile='dunhuang',generator='music_event_v1'))
