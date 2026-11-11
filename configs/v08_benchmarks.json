@@ -1,0 +1,47 @@
+{
+  "floor_policy": "frozen_baseline_mesh_p05",
+  "contact_height_m": 0.05,
+  "geometry_tolerance_m": 0.005,
+  "cohorts": [
+    {
+      "name": "V08_150f",
+      "baseline": "outputs/event_plan_01/edge_baseline_150",
+      "cases": [
+        {
+          "name": "diagnostic150_0",
+          "run": "outputs/v08_03/diagnostic150/candidate_0"
+        },
+        {
+          "name": "diagnostic150_1",
+          "run": "outputs/v08_03/diagnostic150/candidate_1"
+        },
+        {
+          "name": "diagnostic150_2",
+          "run": "outputs/v08_03/diagnostic150/candidate_2"
+        },
+        {
+          "name": "diagnostic150_3",
+          "run": "outputs/v08_03/diagnostic150/candidate_3"
+        },
+        {
+          "name": "default150",
+          "run": "outputs/v08_03/default150/candidate_0"
+        }
+      ]
+    },
+    {
+      "name": "V08_225f",
+      "baseline": "outputs/v06_01/none225",
+      "cases": [
+        {
+          "name": "overlap225_0",
+          "run": "outputs/v08_03/overlap225/candidate_0"
+        },
+        {
+          "name": "overlap225_1",
+          "run": "outputs/v08_03/overlap225/candidate_1"
+        }
+      ]
+    }
+  ]
+}

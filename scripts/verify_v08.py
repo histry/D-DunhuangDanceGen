@@ -24,8 +24,9 @@ def main():
         assert len(state['plans'])<=b['max_plans'] and not state['event_global_blacklist']
         assert not state['full_generation_qualified'] and not state['full_song_native_pass']
         assert state['diagnostic_replans']<=b['max_diagnostic_replans']
-        assert len(list(folder.glob('resume_*.json')))>=1
-        for resume in folder.glob('resume_*.json'):assert read(resume)['new_generations']==0
+        receipts=[p for p in folder.glob('resume_*.json') if not p.name.startswith('resume_contract_')]
+        assert len(receipts)>=1
+        for resume in receipts:assert read(resume)['new_generations']==0
         rows=[]
         for entry in state['ledger']:
             cache=read(checked(entry['cache']));feedback=verify_cache(cache,entry['key'])
