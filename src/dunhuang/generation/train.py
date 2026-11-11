@@ -6,7 +6,7 @@ from dunhuang.contracts import MotionAdapter
 from .adapter import PrimitiveAdapter,masked_reference
 from .probe import upperbody_probe_target
 
-def train(assets,destination,steps,task='motion'):
+def train(assets,destination,steps,task='motion',preflight_only=False):
     import torch
     if type(steps) is not int or steps < 1:raise ValueError('Positive training steps required')
     if task not in ('motion','paired','upperbody_probe'):raise ValueError('Unknown training task')
@@ -67,6 +67,12 @@ def train(assets,destination,steps,task='motion'):
         checkpoint=assets['checkpoint'],scaler=assets['scaler'],
         scope=('Upperbody 48D supported-only diagnostic with zero placeholders; NOT full 151D motion completion or music' if task=='upperbody_probe' else 'All 151 target channels in frozen support; no clipping or invented Jukebox features'))
     write(destination/'asset_audit.json',audit)
+    if preflight_only:
+        status=('PREFLIGHT_READY_RESEARCH_ONLY' if task=='upperbody_probe' and len(groups)>=2 else
+            'PREFLIGHT_READY_NOT_QUALIFIED' if len(groups)>=2 else 'PREFLIGHT_BLOCKED_INSUFFICIENT_GROUPS')
+        write(destination/'status.json',dict(status=status,training_steps=0,music_qualified=False,
+            full_motion_qualified=False,train_task=task,eligible_windows=len(windows),source_groups=groups))
+        return
     if len(groups)<2:
         write(destination/'status.json',dict(status='INSUFFICIENT_SUPPORTED_SOURCE_GROUPS',training_steps=0,music_qualified=False))
         return
@@ -136,4 +142,5 @@ def train(assets,destination,steps,task='motion'):
         validation_source=validation_group,checkpoint_sha256=sha(destination/'adapter.pt')))
 if __name__=='__main__':
     ap=argparse.ArgumentParser();ap.add_argument('--assets',required=True);ap.add_argument('--out',required=True);ap.add_argument('--steps',type=int,default=300);ap.add_argument('--task',choices=['motion','paired','upperbody_probe'],default='motion')
-    args=ap.parse_args();train(json.loads(Path(args.assets).read_text()),Path(args.out).resolve(),args.steps,args.task)
+    ap.add_argument('--preflight-only',action='store_true')
+    args=ap.parse_args();train(json.loads(Path(args.assets).read_text()),Path(args.out).resolve(),args.steps,args.task,args.preflight_only)

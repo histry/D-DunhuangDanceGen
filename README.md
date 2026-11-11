@@ -83,3 +83,11 @@ python scripts/train.py --assets outputs/new_prepare/assets.json --out outputs/u
 此训练不包含真实配对 Jukebox，得到的权重即使训练成功也只有研究意义，必须保留 music_qualified=false、full_motion_qualified=false，不能作为正式 V1 或合格整曲。event_guided 现在还要求 condition_schema=soft_event_reference_v1；没有实际获得配对数据资格时，默认拒绝该权重。显式 research_allow_motion_only_adapter仅用于自担风险的影子推理，不得当作正式质量提升证据。
 
 下一阶段仍需真实 150×4800D 配对音乐、全 151D 可表达目标，以及150 帧单窗与 225 帧双窗的实际 GPU 物理验收；双侧 Inpainting 与局部 SQP 本次没有实现。不使用测试集指标给予检索或生成器发布资格。
+
+可先用 CPU 预检真实训练来源与支持域而不初始化 EDGE/GPU：
+
+~~~bash
+python scripts/train.py --assets outputs/new_prepare/assets.json --out outputs/probe_preflight_v06 --task upperbody_probe --preflight-only
+~~~
+
+预检只写 asset_audit.json/status.json；PREFLIGHT_READY_RESEARCH_ONLY 不是模型训练成功，也不是完整物理通过。

@@ -52,3 +52,13 @@ def test_source_and_clock_contracts_are_enforced(tmp_path):
     p['events'][0]['reference']['sha256'] = '0' * 64
     with pytest.raises(ValueError, match='Asset hash'):
         build_soft_reference(p, 150, np.ones(151), np.zeros(151))
+
+
+def test_nonuniform_event_time_map_changes_source_phase(tmp_path):
+    plan = _plan(tmp_path, 225)
+    plan['events'][0]['time_warp'] = [[0, 0], [90, 75], [225, 225]]
+    values, known, phase, report = build_soft_reference(plan, 225, np.ones(151), np.zeros(151))
+    assert known[0, 75, 79:127].all()
+    assert abs(float(phase[1, 0, 0]) - 90/225) < 1e-5
+    np.testing.assert_array_equal(values[0, 75:], values[1, :75])
+    assert report['supported_fraction'] == 1.0
