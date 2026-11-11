@@ -26,7 +26,7 @@ for f in range(frames):
     for k,xy in enumerate(projected):
         mid=240+480*k;pts=np.rint(np.stack([mid+xy[f,:,0]*scale,414-(xy[f,:,1]-low)*scale],axis=1)).astype(int)
         color=(150,87,43) if k==0 else (70,110,20)
-        cv2.putText(im,['Frozen EDGE baseline','Eight-joint anchors'][k],(24+k*480,40),cv2.FONT_HERSHEY_SIMPLEX,.72,color,2,cv2.LINE_AA)
+        cv2.putText(im,[a.left_label,a.right_label][k],(24+k*480,40),cv2.FONT_HERSHEY_SIMPLEX,.72,color,2,cv2.LINE_AA)
         y=int(round(414+low*scale));cv2.line(im,(14+k*480,y),(466+k*480,y),(205,205,205),1)
         for j,parent in enumerate(parents[1:],1):cv2.line(im,tuple(pts[parent]),tuple(pts[j]),color,3,cv2.LINE_AA)
         for j,point in enumerate(pts):cv2.circle(im,tuple(point),4,(20,70,220) if k==1 and f in anchors and 12<=j<20 else color,-1,cv2.LINE_AA)

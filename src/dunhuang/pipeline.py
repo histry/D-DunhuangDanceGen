@@ -47,6 +47,17 @@ def run(q):
     request=out/'request.json';write(request,q);write(out/'clock.json',clock)
     env=os.environ.copy();env['PYTHONPATH']=str(Path(__file__).resolve().parents[1]);env.pop('PYTHONHOME',None)
     try:
+        if q.get('profile')=='dunhuang':
+            with (out/'planning.log').open('w') as log:
+                subprocess.run([q['native_python'],'-m','dunhuang.planning.worker',str(request)],env=env,cwd=out,stdout=log,stderr=subprocess.STDOUT,check=True)
+            from .planning.event_plan import validate,anchors
+            from .io import sha
+            plan=validate(json.loads((out/'event_plan.json').read_text()),q['audio']['sha256'],frames)
+            q['anchors']=anchors(plan)
+            q['event_plan']=dict(path=str(out/'event_plan.json'),sha256=sha(out/'event_plan.json'))
+            q['mode']='event_guided' if q.get('generator')=='adapter' else 'temporal';q['trajectory_radius']=12;q['trajectory_strength']=.55
+            q['generation_stage']='v0.5_event_plan_temporal'
+            write(request,q)
         for python,module in [(q['edge_python'],'dunhuang.edge_backend'),(q['native_python'],'dunhuang.physical')]:
             with (out/(module.split('.')[-1]+'.log')).open('w') as log:
                 subprocess.run([python,'-m',module,str(request)],env=env,cwd=out,stdout=log,stderr=subprocess.STDOUT,check=True)
@@ -60,6 +71,18 @@ def run(q):
     return out
 
 def main():
-    ap=argparse.ArgumentParser();ap.add_argument('--config',required=True);args=ap.parse_args()
-    print(run(json.loads(Path(args.config).read_text())),flush=True)
+    ap=argparse.ArgumentParser();ap.add_argument('--config',required=True)
+    ap.add_argument('--assets');ap.add_argument('--audio');ap.add_argument('--out');ap.add_argument('--frames',type=int)
+    args=ap.parse_args()
+    q=json.loads(Path(args.config).read_text())
+    if args.assets:
+        q=dict(json.loads(Path(args.assets).read_text()),**q)
+    if args.audio:
+        from .io import sha
+        q['audio']=dict(path=str(Path(args.audio).resolve()),sha256=sha(args.audio))
+    if args.out:q['output']=args.out
+    if args.frames:q['frames']=args.frames
+    if q.get('profile')=='edge_baseline':
+        q['mode']='baseline';q['anchors']=[]
+    print(run(q),flush=True)
 if __name__=='__main__':main()

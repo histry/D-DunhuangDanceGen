@@ -50,11 +50,13 @@ def fit(rows,arrays,norm,output,steps=5000,sync_steps=2000):
     global_test=retrieval(model,rows,arrays,test,device)
     global_val=retrieval(model,rows,arrays,val,device)
     sync=copy.deepcopy(model)
-    optimizer=torch.optim.AdamW(sync.parameters(),lr=5e-5,weight_decay=.01)
+    for parameter in sync.parameters():parameter.requires_grad_(False)
+    for parameter in sync.sync.parameters():parameter.requires_grad_(True)
+    optimizer=torch.optim.AdamW(sync.sync.parameters(),lr=5e-5,weight_decay=.01)
     best=-1;stale=0
     for step in range(1,sync_steps+1):
         ids=batch();args=tensors(arrays,ids,device)
-        sync.train();logits=sync_logits(sync,*args)
+        sync.eval();logits=sync_logits(sync,*args)
         loss=F.cross_entropy(logits,torch.full((len(ids),),2,device=device,dtype=torch.long))
         optimizer.zero_grad();loss.backward();torch.nn.utils.clip_grad_norm_(sync.parameters(),1.);optimizer.step()
         if step%250==0:
@@ -70,8 +72,13 @@ def fit(rows,arrays,norm,output,steps=5000,sync_steps=2000):
     payload=torch.load(output/'sync.pt',map_location=device,weights_only=True)
     sync.load_state_dict(payload['state']);sync.eval()
     sync_test=synchronization(sync,rows,arrays,test,device)
-    qualified=all(v['recall1']>v['chance'] for v in global_test.values()) and all(v['group_bootstrap95'][0]>.5 for v in sync_test.values())
-    report=dict(retrieval_val=global_val,retrieval_test=global_test,sync_test=sync_test,
+    sync_val=synchronization(sync,rows,arrays,val,device)
+    for branch in ('music','motion'):
+        for name,value in getattr(model,branch).state_dict().items():
+            if not torch.equal(value,getattr(sync,branch).state_dict()[name]):
+                raise ValueError('Synchronization training changed frozen encoders')
+    qualified=all(v['recall1']>v['chance'] for v in global_val.values()) and all(v['group_bootstrap95'][0]>.5 for v in sync_val.values())
+    report=dict(qualification_basis='validation_only',frozen_sync_encoders=True,sync_val=sync_val,retrieval_val=global_val,retrieval_test=global_test,sync_test=sync_test,
         qualified=qualified,preference_status='NO_EXPERT_PREFERENCES',heldout_status='exposed development regression',
         retrieval_checkpoint_sha256=sha(output/'retrieval.pt'),sync_checkpoint_sha256=sha(output/'sync.pt'),
         ablation_status='pending_after_full_framework',train_steps=history[-1]['step'],normalization=norm)

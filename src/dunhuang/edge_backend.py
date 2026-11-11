@@ -56,14 +56,26 @@ def main():
         return h.hexdigest()
     before=digest();torch.manual_seed(q['seed']);torch.cuda.manual_seed_all(q['seed'])
     cond=torch.from_numpy(features).float().cuda();start=time.monotonic()
+    adapter_hook=None
+    if q['mode']=='event_guided':
+        from .generation.adapter import PrimitiveAdapter
+        adapter_payload=torch.load(checked(q['adapter']),map_location='cpu',weights_only=True)
+        if adapter_payload['base_sha256']!=q['checkpoint']['sha256']:raise ValueError('Adapter base differs')
+        if not adapter_payload.get('music_qualified') and not q.get('research_allow_motion_only_adapter'):
+            raise ValueError('Adapter lacks music generation qualification')
+        adapter=PrimitiveAdapter().cuda().eval()
+        adapter.load_state_dict(adapter_payload['state'],strict=True)
+        event_residual=adapter(normalized.cuda(),mask.cuda()).detach()
+        adapter_hook=model.cond_encoder.register_forward_hook(lambda module,args,value:value+event_residual)
+
     with torch.no_grad():
         if q['mode']=='baseline':
             if masks.any():raise ValueError('Baseline must not contain anchors')
             sample=diffusion.long_ddim_sample((len(features),150,151),cond)
             sampler=dict(method='official_long_ddim',steps=50)
-        elif q['mode'] in ('anchored','custom_none','temporal'):
+        elif q['mode'] in ('anchored','custom_none','temporal','event_guided'):
             if q['mode']!='custom_none' and not masks.any():raise ValueError('Anchored run must have actual anchors')
-            policy = {'anchored':'hard','custom_none':'none','temporal':'temporal'}[q['mode']]
+            policy = {'anchored':'hard','custom_none':'none','temporal':'temporal','event_guided':'none'}[q['mode']]
             guide = None
             if policy == 'temporal':
                 from .temporal import prepare
@@ -71,6 +83,7 @@ def main():
             sample,sampler=constrained_ddim(diffusion,cond,normalized,mask,guidance=policy,
                 temporal=guide,overlap=q.get('overlap_policy','mean'))
         else:raise ValueError('Unknown sampler')
+    if adapter_hook is not None:adapter_hook.remove()
     torch.cuda.synchronize()
     raw=normalizer.unnormalize(sample.detach().cpu().clone()).numpy()
     if not np.isfinite(raw).all():raise ValueError('Nonfinite generated motion')

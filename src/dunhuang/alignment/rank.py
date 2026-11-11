@@ -6,7 +6,7 @@ from dunhuang.io import checked,sha
 def authorize(checkpoint,report):
     receipt=json.loads(Path(report).read_text())
     if sha(checkpoint)!=receipt['retrieval_checkpoint_sha256']:raise ValueError('Checkpoint identity differs')
-    return dict(enabled=bool(receipt['qualified']),fallback_reason=None if receipt['qualified'] else 'heldout_sync_or_retrieval_not_qualified',
+    return dict(enabled=bool(receipt['qualified']) and receipt.get('qualification_basis')=='validation_only',fallback_reason=None if receipt['qualified'] and receipt.get('qualification_basis')=='validation_only' else 'missing_validation_qualification',
                 preference_status=receipt['preference_status'],checkpoint_sha256=sha(checkpoint))
 
 def rank(model,music,music_mask,candidates,norm,k=5):
@@ -29,3 +29,16 @@ def rank(model,music,music_mask,candidates,norm,k=5):
             scores.append(dict(event_uid=candidate['event_uid'],source_uid=candidate['source_uid'],
                 score=float((query*vector).sum()),source=candidate['source'],support_receipt=candidate['support_receipt']))
     return sorted(scores,key=lambda row:(-row['score'],row['event_uid']))[:k]
+
+
+def synchronized_scores(global_model,sync_model,music,music_mask,motion,motion_mask):
+    """Scores from matching encoders; synchronization head may be a separate checkpoint."""
+    for branch in ('music','motion'):
+        for name,value in getattr(global_model,branch).state_dict().items():
+            if not torch.equal(value,getattr(sync_model,branch).state_dict()[name]):
+                raise ValueError('Global and synchronization encoder identities differ')
+    with torch.no_grad():
+        m,mt,mv=global_model.music(music,music_mask)
+        d,dt,dv=global_model.motion(motion,motion_mask)
+        if mt.shape[1]!=dt.shape[1]:raise ValueError('Phase-aligned sequences must share physical grid')
+        return (m*d).sum(-1),sync_model.sync_score(mt,dt,mv&dv)
