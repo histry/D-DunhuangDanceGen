@@ -1,0 +1,81 @@
+[
+  {
+    "name": "v08_01",
+    "code_commit": "da8b48f07340638d641ba688a01510828358d61f",
+    "status": {
+      "status": "COMPLETED_DIAGNOSTIC_ONLY",
+      "exit_status": 0
+    },
+    "states": [
+      {
+        "run": "diagnostic150",
+        "stop_reason": "STOP_PLAN_BUDGET",
+        "generations_started": 4,
+        "file": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/v08_01/diagnostic150/state.json",
+        "sha256": "d8d7069e1ef82e6d7955d41ae079ade28a433cd91ad870f87343e986aad85a59"
+      },
+      {
+        "run": "overlap225",
+        "stop_reason": "STOP_PLAN_BUDGET",
+        "generations_started": 2,
+        "file": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/v08_01/overlap225/state.json",
+        "sha256": "b168a5b31150fc2922ecc9b1553b9c045583bacc9188564b7a0d7e768360c6f8"
+      },
+      {
+        "run": "default150",
+        "stop_reason": "STOP_MODEL_DIAGNOSIS",
+        "generations_started": 1,
+        "file": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/v08_01/default150/state.json",
+        "sha256": "5d5aaec896c5370f75996654fd525e007f3ae0d39573e0b6a138c0ceacad3af7"
+      }
+    ]
+  },
+  {
+    "name": "v08_02",
+    "code_commit": "7db0225d2ddd5bf12304f22dbc84335d9da969ec",
+    "status": {
+      "status": "FAILED",
+      "traceback": "Traceback (most recent call last):\n  File \"/home/disk/lsm/storage/DunhuangDanceGen/scripts/v08_experiment.py\", line 35, in main\n    write(out/(name+'.json'),q);run(q)\n  File \"/home/disk/lsm/storage/DunhuangDanceGen/src/dunhuang/pipeline.py\", line 78, in run\n    return run_closed_loop(q)\n  File \"/home/disk/lsm/storage/DunhuangDanceGen/src/dunhuang/planning/replanner.py\", line 213, in run_closed_loop\n    worker(q['native_python'],'dunhuang.planning.feedback',[\n  File \"/home/disk/lsm/storage/DunhuangDanceGen/src/dunhuang/planning/replanner.py\", line 158, in worker\n    launch([python,'-m',module,*map(str,args)],root/(label+'.log'),env,\n  File \"/home/disk/lsm/storage/DunhuangDanceGen/src/dunhuang/planning/replanner.py\", line 90, in launch\n    if code:raise RuntimeError('Worker exited '+str(code)+'; see '+str(log))\nRuntimeError: Worker exited 1; see /home/disk/lsm/storage/DunhuangDanceGen/outputs/v08_02/diagnostic150/candidate_0_feedback.log\n"
+    },
+    "states": [
+      {
+        "run": "diagnostic150",
+        "stop_reason": "STOP_EXECUTION_UNKNOWN",
+        "generations_started": 1,
+        "file": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/v08_02/diagnostic150/state.json",
+        "sha256": "32f3b0264b0188fc33d4264075b7d3543f654fb5ef5d479f5c03f3380a090389"
+      }
+    ]
+  },
+  {
+    "name": "v08_03",
+    "code_commit": "2bda6a3fa5b10a69f367b35a154029994c1d6bca",
+    "status": {
+      "status": "COMPLETED_DIAGNOSTIC_ONLY",
+      "exit_status": 0
+    },
+    "states": [
+      {
+        "run": "diagnostic150",
+        "stop_reason": "STOP_PLAN_BUDGET",
+        "generations_started": 4,
+        "file": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/v08_03/diagnostic150/state.json",
+        "sha256": "3d3cad0ed5ef91041797d2a5984803d098b6189d9215d7f24d9cd9dacfb7413f"
+      },
+      {
+        "run": "overlap225",
+        "stop_reason": "STOP_PLAN_BUDGET",
+        "generations_started": 2,
+        "file": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/v08_03/overlap225/state.json",
+        "sha256": "5948830ed3dcbb9059291ed7dfca5126aea8f9379fb6bd011a97de3bd77f3aef"
+      },
+      {
+        "run": "default150",
+        "stop_reason": "STOP_MODEL_DIAGNOSIS",
+        "generations_started": 1,
+        "file": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/v08_03/default150/state.json",
+        "sha256": "5007544e08035de203e45de71cd9716a2c17791dc65118140ec0acfc5d7bac57"
+      }
+    ]
+  }
+]

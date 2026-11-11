@@ -1,0 +1,755 @@
+{
+  "schema": "physical_feedback_v1",
+  "generated_motion": "81dc326debb4e4b1ad7abb916d81a99c02ae46e98d27d7551fd75b952ccc2ded",
+  "generated_fk": "1b06ecbaea95d4df46fe7dc9eaad124b2a23e906a2ebcc343bd62bf78d5da6ee",
+  "raw_windows": "91d4751ab2a0a4d6294e3dd78d5347ff1367b6d21231d4ba76afcda65961c651",
+  "plan_id": "7eaf6574034aa7353374873b8b7e5140a59ab1c5ce7cc10981c6bd33a6f4adb4",
+  "semantic_plan_id": "93b5d500c56a0c6c62b64470f74b86dc85a418cd12f13c01c19adb70cc1ae9f1",
+  "generator_id": {
+    "checkpoint": "28ca4ce167bb17c36869b4d021af8762a34c6df034002f61b3bc1c1d0b1b02c7",
+    "adapter": "70244681db0a763ee44f283f408a09076d0c7b4814ac2308a3548455c997ae67",
+    "mode": "event_guided"
+  },
+  "audio_sha256": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c",
+  "features_sha256": "9f4682d3884dd9e2626ce5a3ea9d32ddb9bbe8ac0bde5f0a1cfe7b802a8b83ab",
+  "seed": 20261111,
+  "native_contract_id": "446a73177cc90f46966f5f2439462c7ab16f3b053b839f455ddd5e93197465fd",
+  "native_result": "FAIL",
+  "full_song_scope": false,
+  "frames": 150,
+  "violations": [
+    {
+      "metric": "joint_jerk_mps3_p95",
+      "reason": "joint_jerk_mps3_p95_too_high",
+      "actual": 819.9269409179685,
+      "limit": 810.0,
+      "direction": "high",
+      "support_scope": "full_requested_motion",
+      "attribution_status": "UNKNOWN"
+    },
+    {
+      "metric": "joint_jerk_mps3_max",
+      "reason": "joint_jerk_mps3_max_too_high",
+      "actual": 3244.1474609375,
+      "limit": 1620.0,
+      "direction": "high",
+      "support_scope": "full_requested_motion",
+      "attribution_status": "UNKNOWN"
+    },
+    {
+      "metric": "joint_jerk_window_p95_max_mps3",
+      "reason": "joint_jerk_window_p95_max_mps3_too_high",
+      "actual": 1389.5324035644524,
+      "limit": 1080.0,
+      "direction": "high",
+      "support_scope": "full_requested_motion",
+      "attribution_status": "UNKNOWN"
+    },
+    {
+      "metric": "extremity_jerk_mps3_p95",
+      "reason": "extremity_jerk_mps3_p95_too_high",
+      "actual": 1009.7613983154297,
+      "limit": 810.0,
+      "direction": "high",
+      "support_scope": "full_requested_motion",
+      "attribution_status": "UNKNOWN"
+    },
+    {
+      "metric": "extremity_jerk_window_p95_max_mps3",
+      "reason": "extremity_jerk_window_p95_max_mps3_too_high",
+      "actual": 1931.522131347655,
+      "limit": 1080.0,
+      "direction": "high",
+      "support_scope": "full_requested_motion",
+      "attribution_status": "UNKNOWN"
+    },
+    {
+      "metric": "foot_skate_mps_p95",
+      "reason": "foot_skate_mps_p95_too_high",
+      "actual": 0.45360806584358215,
+      "limit": 0.18,
+      "direction": "high",
+      "support_scope": "full_requested_motion",
+      "attribution_status": "UNKNOWN"
+    },
+    {
+      "metric": "foot_skate_mps_max",
+      "reason": "foot_skate_mps_max_too_high",
+      "actual": 0.9803553223609924,
+      "limit": 0.6,
+      "direction": "high",
+      "support_scope": "full_requested_motion",
+      "attribution_status": "UNKNOWN"
+    },
+    {
+      "metric": "foot_support_drift_m_p95",
+      "reason": "foot_support_drift_m_p95_too_high",
+      "actual": 0.30751817635008494,
+      "limit": 0.06,
+      "direction": "high",
+      "support_scope": "full_requested_motion",
+      "attribution_status": "UNKNOWN"
+    },
+    {
+      "metric": "foot_support_drift_m_max",
+      "reason": "foot_support_drift_m_max_too_high",
+      "actual": 0.31297575050094095,
+      "limit": 0.12,
+      "direction": "high",
+      "support_scope": "full_requested_motion",
+      "attribution_status": "UNKNOWN"
+    }
+  ],
+  "jerk": {
+    "schema": "jerk_window_ownership_v1",
+    "limit": 1620.0,
+    "violating_stencils": 14,
+    "supporting_raw_window_exceeded_count": 14,
+    "near_boundary_count": 0,
+    "non_boundary_count": 14,
+    "event_counts": {
+      "0": 1,
+      "1": 13
+    },
+    "rows": [
+      {
+        "stencil": [
+          1,
+          5
+        ],
+        "frame": 3,
+        "value": 1987.63623046875,
+        "geometric_max_joint": 20,
+        "window_owners": [
+          0
+        ],
+        "raw_window_values": [
+          1987.638671875
+        ],
+        "supporting_raw_window_exceeded": true,
+        "near_window_boundary": false,
+        "associated_event_slots": [
+          0
+        ],
+        "attribution_status": "TEMPORAL_ASSOCIATION_ONLY"
+      },
+      {
+        "stencil": [
+          78,
+          82
+        ],
+        "frame": 80,
+        "value": 1791.103759765625,
+        "geometric_max_joint": 23,
+        "window_owners": [
+          0
+        ],
+        "raw_window_values": [
+          1791.0966796875
+        ],
+        "supporting_raw_window_exceeded": true,
+        "near_window_boundary": false,
+        "associated_event_slots": [
+          1
+        ],
+        "attribution_status": "TEMPORAL_ASSOCIATION_ONLY"
+      },
+      {
+        "stencil": [
+          79,
+          83
+        ],
+        "frame": 81,
+        "value": 2211.891845703125,
+        "geometric_max_joint": 23,
+        "window_owners": [
+          0
+        ],
+        "raw_window_values": [
+          2211.89794921875
+        ],
+        "supporting_raw_window_exceeded": true,
+        "near_window_boundary": false,
+        "associated_event_slots": [
+          1
+        ],
+        "attribution_status": "TEMPORAL_ASSOCIATION_ONLY"
+      },
+      {
+        "stencil": [
+          117,
+          121
+        ],
+        "frame": 119,
+        "value": 1776.5936279296875,
+        "geometric_max_joint": 22,
+        "window_owners": [
+          0
+        ],
+        "raw_window_values": [
+          1776.59326171875
+        ],
+        "supporting_raw_window_exceeded": true,
+        "near_window_boundary": false,
+        "associated_event_slots": [
+          1
+        ],
+        "attribution_status": "TEMPORAL_ASSOCIATION_ONLY"
+      },
+      {
+        "stencil": [
+          131,
+          135
+        ],
+        "frame": 133,
+        "value": 2715.330078125,
+        "geometric_max_joint": 23,
+        "window_owners": [
+          0
+        ],
+        "raw_window_values": [
+          2715.31103515625
+        ],
+        "supporting_raw_window_exceeded": true,
+        "near_window_boundary": false,
+        "associated_event_slots": [
+          1
+        ],
+        "attribution_status": "TEMPORAL_ASSOCIATION_ONLY"
+      },
+      {
+        "stencil": [
+          132,
+          136
+        ],
+        "frame": 134,
+        "value": 2682.56787109375,
+        "geometric_max_joint": 23,
+        "window_owners": [
+          0
+        ],
+        "raw_window_values": [
+          2682.573486328125
+        ],
+        "supporting_raw_window_exceeded": true,
+        "near_window_boundary": false,
+        "associated_event_slots": [
+          1
+        ],
+        "attribution_status": "TEMPORAL_ASSOCIATION_ONLY"
+      },
+      {
+        "stencil": [
+          133,
+          137
+        ],
+        "frame": 135,
+        "value": 2697.29541015625,
+        "geometric_max_joint": 23,
+        "window_owners": [
+          0
+        ],
+        "raw_window_values": [
+          2697.307861328125
+        ],
+        "supporting_raw_window_exceeded": true,
+        "near_window_boundary": false,
+        "associated_event_slots": [
+          1
+        ],
+        "attribution_status": "TEMPORAL_ASSOCIATION_ONLY"
+      },
+      {
+        "stencil": [
+          136,
+          140
+        ],
+        "frame": 138,
+        "value": 2352.07080078125,
+        "geometric_max_joint": 23,
+        "window_owners": [
+          0
+        ],
+        "raw_window_values": [
+          2352.064697265625
+        ],
+        "supporting_raw_window_exceeded": true,
+        "near_window_boundary": false,
+        "associated_event_slots": [
+          1
+        ],
+        "attribution_status": "TEMPORAL_ASSOCIATION_ONLY"
+      },
+      {
+        "stencil": [
+          137,
+          141
+        ],
+        "frame": 139,
+        "value": 2834.779296875,
+        "geometric_max_joint": 19,
+        "window_owners": [
+          0
+        ],
+        "raw_window_values": [
+          2834.779052734375
+        ],
+        "supporting_raw_window_exceeded": true,
+        "near_window_boundary": false,
+        "associated_event_slots": [
+          1
+        ],
+        "attribution_status": "TEMPORAL_ASSOCIATION_ONLY"
+      },
+      {
+        "stencil": [
+          138,
+          142
+        ],
+        "frame": 140,
+        "value": 1862.3189697265625,
+        "geometric_max_joint": 23,
+        "window_owners": [
+          0
+        ],
+        "raw_window_values": [
+          1862.330078125
+        ],
+        "supporting_raw_window_exceeded": true,
+        "near_window_boundary": false,
+        "associated_event_slots": [
+          1
+        ],
+        "attribution_status": "TEMPORAL_ASSOCIATION_ONLY"
+      },
+      {
+        "stencil": [
+          139,
+          143
+        ],
+        "frame": 141,
+        "value": 3244.1474609375,
+        "geometric_max_joint": 23,
+        "window_owners": [
+          0
+        ],
+        "raw_window_values": [
+          3244.1357421875
+        ],
+        "supporting_raw_window_exceeded": true,
+        "near_window_boundary": false,
+        "associated_event_slots": [
+          1
+        ],
+        "attribution_status": "TEMPORAL_ASSOCIATION_ONLY"
+      },
+      {
+        "stencil": [
+          140,
+          144
+        ],
+        "frame": 142,
+        "value": 2392.6396484375,
+        "geometric_max_joint": 23,
+        "window_owners": [
+          0
+        ],
+        "raw_window_values": [
+          2392.645751953125
+        ],
+        "supporting_raw_window_exceeded": true,
+        "near_window_boundary": false,
+        "associated_event_slots": [
+          1
+        ],
+        "attribution_status": "TEMPORAL_ASSOCIATION_ONLY"
+      },
+      {
+        "stencil": [
+          141,
+          145
+        ],
+        "frame": 143,
+        "value": 1928.109375,
+        "geometric_max_joint": 22,
+        "window_owners": [
+          0
+        ],
+        "raw_window_values": [
+          1928.115234375
+        ],
+        "supporting_raw_window_exceeded": true,
+        "near_window_boundary": false,
+        "associated_event_slots": [
+          1
+        ],
+        "attribution_status": "TEMPORAL_ASSOCIATION_ONLY"
+      },
+      {
+        "stencil": [
+          142,
+          146
+        ],
+        "frame": 144,
+        "value": 1917.8917236328125,
+        "geometric_max_joint": 23,
+        "window_owners": [
+          0
+        ],
+        "raw_window_values": [
+          1917.8980712890625
+        ],
+        "supporting_raw_window_exceeded": true,
+        "near_window_boundary": false,
+        "associated_event_slots": [
+          1
+        ],
+        "attribution_status": "TEMPORAL_ASSOCIATION_ONLY"
+      }
+    ],
+    "raw_window_scope": "saved sampler output windows before final Root/SLERP assembly, not raw per-step denoiser predictions",
+    "causal_attribution": "UNKNOWN",
+    "boundary_halo_frames": 3
+  },
+  "ranked_diagnostics": [
+    {
+      "metric": "foot_skate_mps",
+      "frame": 2,
+      "frame_span": [
+        0,
+        15
+      ],
+      "value": 0.9803553223609924,
+      "limit": 0.18,
+      "excess": 0.8003553223609925,
+      "family": "foot_skate",
+      "associated_event_slots": [
+        0
+      ],
+      "attribution_status": "TEMPORAL_ASSOCIATION_ONLY"
+    },
+    {
+      "metric": "foot_skate_mps",
+      "frame": 138,
+      "frame_span": [
+        126,
+        150
+      ],
+      "value": 0.6358374357223511,
+      "limit": 0.18,
+      "excess": 0.4558374357223511,
+      "family": "foot_skate",
+      "associated_event_slots": [
+        1
+      ],
+      "attribution_status": "TEMPORAL_ASSOCIATION_ONLY"
+    },
+    {
+      "metric": "foot_skate_mps",
+      "frame": 63,
+      "frame_span": [
+        51,
+        76
+      ],
+      "value": 0.4658438563346863,
+      "limit": 0.18,
+      "excess": 0.2858438563346863,
+      "family": "foot_skate",
+      "associated_event_slots": [
+        0,
+        1
+      ],
+      "attribution_status": "TEMPORAL_ASSOCIATION_ONLY"
+    },
+    {
+      "metric": "foot_skate_mps",
+      "frame": 15,
+      "frame_span": [
+        3,
+        28
+      ],
+      "value": 0.42268508672714233,
+      "limit": 0.18,
+      "excess": 0.24268508672714234,
+      "family": "foot_skate",
+      "associated_event_slots": [
+        0
+      ],
+      "attribution_status": "TEMPORAL_ASSOCIATION_ONLY"
+    },
+    {
+      "metric": "foot_skate_mps",
+      "frame": 119,
+      "frame_span": [
+        107,
+        132
+      ],
+      "value": 0.3045428693294525,
+      "limit": 0.18,
+      "excess": 0.12454286932945252,
+      "family": "foot_skate",
+      "associated_event_slots": [
+        1
+      ],
+      "attribution_status": "TEMPORAL_ASSOCIATION_ONLY"
+    },
+    {
+      "metric": "foot_skate_mps",
+      "frame": 81,
+      "frame_span": [
+        69,
+        94
+      ],
+      "value": 0.23686350882053375,
+      "limit": 0.18,
+      "excess": 0.05686350882053376,
+      "family": "foot_skate",
+      "associated_event_slots": [
+        1
+      ],
+      "attribution_status": "TEMPORAL_ASSOCIATION_ONLY"
+    },
+    {
+      "metric": "foot_skate_mps",
+      "frame": 44,
+      "frame_span": [
+        32,
+        57
+      ],
+      "value": 0.23330961167812347,
+      "limit": 0.18,
+      "excess": 0.05330961167812348,
+      "family": "foot_skate",
+      "associated_event_slots": [
+        0
+      ],
+      "attribution_status": "TEMPORAL_ASSOCIATION_ONLY"
+    },
+    {
+      "metric": "foot_support_drift_m",
+      "frame": 59,
+      "frame_span": [
+        47,
+        72
+      ],
+      "value": 0.3129757344722748,
+      "limit": 0.06,
+      "excess": 0.2529757344722748,
+      "family": "foot_support_drift",
+      "associated_event_slots": [
+        0,
+        1
+      ],
+      "attribution_status": "TEMPORAL_ASSOCIATION_ONLY"
+    },
+    {
+      "metric": "foot_support_drift_m",
+      "frame": 80,
+      "frame_span": [
+        68,
+        93
+      ],
+      "value": 0.3115372657775879,
+      "limit": 0.06,
+      "excess": 0.2515372657775879,
+      "family": "foot_support_drift",
+      "associated_event_slots": [
+        1
+      ],
+      "attribution_status": "TEMPORAL_ASSOCIATION_ONLY"
+    },
+    {
+      "metric": "foot_support_drift_m",
+      "frame": 97,
+      "frame_span": [
+        85,
+        110
+      ],
+      "value": 0.3035220503807068,
+      "limit": 0.06,
+      "excess": 0.2435220503807068,
+      "family": "foot_support_drift",
+      "associated_event_slots": [
+        1
+      ],
+      "attribution_status": "TEMPORAL_ASSOCIATION_ONLY"
+    },
+    {
+      "metric": "foot_support_drift_m",
+      "frame": 125,
+      "frame_span": [
+        113,
+        138
+      ],
+      "value": 0.30061376094818115,
+      "limit": 0.06,
+      "excess": 0.24061376094818115,
+      "family": "foot_support_drift",
+      "associated_event_slots": [
+        1
+      ],
+      "attribution_status": "TEMPORAL_ASSOCIATION_ONLY"
+    },
+    {
+      "metric": "foot_support_drift_m",
+      "frame": 112,
+      "frame_span": [
+        100,
+        125
+      ],
+      "value": 0.2898692190647125,
+      "limit": 0.06,
+      "excess": 0.22986921906471253,
+      "family": "foot_support_drift",
+      "associated_event_slots": [
+        1
+      ],
+      "attribution_status": "TEMPORAL_ASSOCIATION_ONLY"
+    },
+    {
+      "metric": "foot_support_drift_m",
+      "frame": 138,
+      "frame_span": [
+        126,
+        150
+      ],
+      "value": 0.28590670228004456,
+      "limit": 0.06,
+      "excess": 0.22590670228004456,
+      "family": "foot_support_drift",
+      "associated_event_slots": [
+        1
+      ],
+      "attribution_status": "TEMPORAL_ASSOCIATION_ONLY"
+    },
+    {
+      "metric": "foot_support_drift_m",
+      "frame": 42,
+      "frame_span": [
+        30,
+        55
+      ],
+      "value": 0.2791053354740143,
+      "limit": 0.06,
+      "excess": 0.21910533547401428,
+      "family": "foot_support_drift",
+      "associated_event_slots": [
+        0
+      ],
+      "attribution_status": "TEMPORAL_ASSOCIATION_ONLY"
+    },
+    {
+      "metric": "foot_support_drift_m",
+      "frame": 29,
+      "frame_span": [
+        17,
+        42
+      ],
+      "value": 0.2787327766418457,
+      "limit": 0.06,
+      "excess": 0.2187327766418457,
+      "family": "foot_support_drift",
+      "associated_event_slots": [
+        0
+      ],
+      "attribution_status": "TEMPORAL_ASSOCIATION_ONLY"
+    },
+    {
+      "metric": "joint_jerk_mps3",
+      "frame": 141,
+      "frame_span": [
+        129,
+        150
+      ],
+      "value": 3244.1474609375,
+      "limit": 1620.0,
+      "excess": 1624.1474609375,
+      "family": "joint_jerk",
+      "associated_event_slots": [
+        1
+      ],
+      "attribution_status": "TEMPORAL_ASSOCIATION_ONLY"
+    },
+    {
+      "metric": "joint_jerk_mps3",
+      "frame": 81,
+      "frame_span": [
+        69,
+        94
+      ],
+      "value": 2211.891845703125,
+      "limit": 1620.0,
+      "excess": 591.891845703125,
+      "family": "joint_jerk",
+      "associated_event_slots": [
+        1
+      ],
+      "attribution_status": "TEMPORAL_ASSOCIATION_ONLY"
+    },
+    {
+      "metric": "joint_jerk_mps3",
+      "frame": 3,
+      "frame_span": [
+        0,
+        16
+      ],
+      "value": 1987.63623046875,
+      "limit": 1620.0,
+      "excess": 367.63623046875,
+      "family": "joint_jerk",
+      "associated_event_slots": [
+        0
+      ],
+      "attribution_status": "TEMPORAL_ASSOCIATION_ONLY"
+    },
+    {
+      "metric": "joint_jerk_mps3",
+      "frame": 119,
+      "frame_span": [
+        107,
+        132
+      ],
+      "value": 1776.5936279296875,
+      "limit": 1620.0,
+      "excess": 156.5936279296875,
+      "family": "joint_jerk",
+      "associated_event_slots": [
+        1
+      ],
+      "attribution_status": "TEMPORAL_ASSOCIATION_ONLY"
+    },
+    {
+      "metric": "joint_rotation_step_rad",
+      "frame": 141,
+      "frame_span": [
+        129,
+        150
+      ],
+      "value": 0.6268303990364075,
+      "limit": 0.5,
+      "excess": 0.12683039903640747,
+      "family": "rotation_step",
+      "associated_event_slots": [
+        1
+      ],
+      "attribution_status": "TEMPORAL_ASSOCIATION_ONLY"
+    }
+  ],
+  "associated_slots": [
+    1,
+    0
+  ],
+  "slot_temporal_association_counts": {
+    "0": 9,
+    "1": 27
+  },
+  "violating_frame_fraction": 0.9933333333333333,
+  "broad_failure": true,
+  "recommended_route": "MODEL_DIAGNOSIS",
+  "native_replay_exact": true,
+  "event_globally_infeasible": false,
+  "learned_physical_risk": null,
+  "music_alignment_status": "NOT_CALIBRATED",
+  "event_following_status": "NOT_QUALIFIED",
+  "attribution_note": "Associations are not event/joint causal proof. Aggregate percentile failures are not individual-frame acceptance decisions."
+}

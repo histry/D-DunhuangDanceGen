@@ -117,3 +117,19 @@ python scripts/verify_v07.py --root outputs/v07_01
 ~~~
 
 第二、三条只读复核，不更新动作或优化权重。资产模板为configs/benchmark.example.json。详见[论文指标报告](reports/论文物理指标复核.md)、[完整指标](reports/paper_benchmarks.json)与[CSV](reports/paper_benchmarks.csv)。
+
+
+## V0.8 Native 反馈闭环
+
+新增只读反馈层与有界控制器：Native 精确回验 → 指标/时间窗/事件关联 → 条件或种子重生成 → 单槽局部重规划。复用原 beam planner，固定未改事件槽。候选按完整上下文缓存，执行错误保持 UNKNOWN，大范围物理失败默认停止；明确的小额诊断模式最多一次重规划。Native 阈值不变，150/225 帧结果不升级成整曲验收。
+
+入口及阶段边界见 [闭环说明](docs/v08_closed_loop.md)，实际结果见 [V0.8 实验报告](reports/V08实验报告.md) 与 [机器核验数据](reports/v08.json)。完整 151D 训练、音乐配对演绎、双侧上下文和 SQP 尚未由这一控制回路解决。
+
+~~~bash
+python scripts/generate.py --config configs/closed_loop.example.json --assets outputs/event_plan_01/prepare/assets.json --out outputs/loop_new
+python scripts/generate.py --config configs/closed_loop.example.json --assets outputs/event_plan_01/prepare/assets.json --out outputs/loop_new --resume
+python scripts/v08_experiment.py --assets outputs/event_plan_01/prepare/assets.json --out outputs/v08_new
+python scripts/verify_v08.py --root outputs/v08_new --out outputs/v08_new/readout.json
+~~~
+
+首次输出目录必须不存在。完成后的 resume 重新核对 Native 合约、计划和缓存，不启动新生成；中断半成品需使用新目录明确重跑。
