@@ -9,7 +9,7 @@ from pathlib import Path
 from .io import checked, write
 from .music import clock_plan
 
-def run(q):
+def run_once(q):
     if q.get('profile')=='dunhuang' and q.get('generator','temporal') not in ('temporal','adapter'):
         raise ValueError('Unsupported generator; no silent fallback to Temporal')
     if q.get('learned_retrieval'):
@@ -57,7 +57,7 @@ def run(q):
             plan=validate(json.loads((out/'event_plan.json').read_text()),q['audio']['sha256'],frames)
             q['anchors']=anchors(plan)
             q['event_plan']=dict(path=str(out/'event_plan.json'),sha256=sha(out/'event_plan.json'))
-            q['mode']='event_guided' if q.get('generator')=='adapter' else 'temporal';q['trajectory_radius']=12;q['trajectory_strength']=.55
+            q['mode']='event_guided' if q.get('generator')=='adapter' else 'temporal';q['trajectory_radius']=q.get('trajectory_radius',12);q['trajectory_strength']=q.get('trajectory_strength',.55)
             q['generation_stage']='v1_event_adapter_research' if q['mode']=='event_guided' else 'v0.5_event_plan_temporal'
             write(request,q)
         for python,module in [(q['edge_python'],'dunhuang.edge_backend'),(q['native_python'],'dunhuang.physical')]:
@@ -72,9 +72,15 @@ def run(q):
         raise
     return out
 
+def run(q):
+    if q.get('closed_loop',{}).get('enabled'):
+        from .planning.replanner import run_closed_loop
+        return run_closed_loop(q)
+    return run_once(q)
+
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('--config',required=True)
-    ap.add_argument('--assets');ap.add_argument('--audio');ap.add_argument('--out');ap.add_argument('--frames',type=int);ap.add_argument('--plan')
+    ap.add_argument('--assets');ap.add_argument('--audio');ap.add_argument('--out');ap.add_argument('--frames',type=int);ap.add_argument('--plan');ap.add_argument('--closed-loop',action='store_true');ap.add_argument('--resume',action='store_true')
     args=ap.parse_args()
     q=json.loads(Path(args.config).read_text())
     if args.assets:
@@ -85,6 +91,8 @@ def main():
     if args.plan:
         from .io import sha
         q['input_event_plan']=dict(path=str(Path(args.plan).resolve()),sha256=sha(args.plan))
+    if args.closed_loop:q['closed_loop']=dict(q.get('closed_loop',{}),enabled=True)
+    if args.resume:q['closed_loop']=dict(q.get('closed_loop',{}),enabled=True,resume=True)
     if args.out:q['output']=args.out
     if args.frames:q['frames']=args.frames
     if q.get('profile')=='edge_baseline':

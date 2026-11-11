@@ -1,0 +1,18 @@
+{
+  "profile": "dunhuang",
+  "generator": "temporal",
+  "retrieval_policy": "heuristic",
+  "seed": 20261111,
+  "frames": 150,
+  "closed_loop": {
+    "enabled": true,
+    "max_plans": 3,
+    "attempts_per_plan": 2,
+    "max_generations": 6,
+    "max_active_seconds": 3600,
+    "candidate_timeout_seconds": 600,
+    "inner_order": "condition_first",
+    "diagnostic_continue_on_broad_failure": false,
+    "max_diagnostic_replans": 0
+  }
+}

@@ -55,3 +55,25 @@ def candidate_identity(event,model_identity=None):
     payload['condition_schema']='soft_event_reference_v1'
     payload['score_models']=model_identity
     return hashlib.sha256(json.dumps(payload,sort_keys=True,separators=(',',':')).encode()).hexdigest()
+
+
+def semantic_plan_id(plan):
+    """Execution identity excludes lineage, scores and filesystem locations."""
+    import hashlib,json
+    events=[]
+    for event in plan['events']:
+        row={k:event[k] for k in ('event_uid','source_uid','source_interval','music_interval','time_warp','primitive')}
+        row['reference_sha256']=event['reference']['sha256']
+        row['expression']=event.get('expression',dict(amplitude=1.,mode='identity_source_reference'))
+        events.append(row)
+    value=dict(schema='execution_plan_identity_v1',audio_sha256=plan['audio_sha256'],
+        fps=plan['fps'],frames=plan['frames'],events=events)
+    return hashlib.sha256(json.dumps(value,sort_keys=True,separators=(',',':')).encode()).hexdigest()
+
+def revised_plan(plan,parent,feedback,action,changed_slots):
+    import copy
+    result=copy.deepcopy(plan)
+    result['lineage']=dict(parent_semantic_id=semantic_plan_id(parent),feedback=feedback,
+        action=action,changed_slots=sorted(changed_slots),event_globally_infeasible=False)
+    result['semantic_id']=semantic_plan_id(result)
+    return result

@@ -20,16 +20,17 @@ def timeline(audio,frames):
     return dict(fps=30,frames=frames,beats=beats[beats<frames].tolist(),phrase_method='approximately 3s subdivisions snapped to detected beats',
         slots=[dict(start=a,end=b,density=float(energy[a:b].mean())) for a,b in zip(edges[:-1],edges[1:])])
 
-def plan(catalog,timing,audio_sha256,policy='heuristic',top_k=5,beam_width=3,reranker=None,condition_mode='temporal'):
+def _search(catalog,timing,audio_sha256,policy='heuristic',top_k=5,beam_width=3,reranker=None,condition_mode='temporal',count=1,fixed_events=None,excluded_events=None):
     if policy not in ('heuristic','learned_shadow','learned_qualified'):raise ValueError('Unknown retrieval policy')
     if policy=='learned_qualified' and (reranker is None or not reranker.decision['enabled']):
         raise ValueError('Learned retrieval lacks bound validation qualification')
     trace=[]
     if policy=='learned_shadow' and reranker is None:raise ValueError('Shadow mode requires explicitly bound models and query features')
     beams=[(0.,[])]
-    for slot in timing['slots']:
+    for slot_index,slot in enumerate(timing['slots']):
         options=[]
         for entry in catalog['entries']:
+            if entry['event_uid'] in (excluded_events or {}).get(slot_index,[]):continue
             qualification='soft_reference' if condition_mode=='adapter' else 'temporal8'
             if entry['feasibility'].get(qualification)!='PASS':continue
             start,end=slot['start'],slot['end'];a,b=entry['source_interval'];center=entry['center']
@@ -51,6 +52,12 @@ def plan(catalog,timing,audio_sha256,policy='heuristic',top_k=5,beam_width=3,rer
             event['expression']=dict(amplitude=1.,mode='identity_source_reference',learned_expression=False)
             event['candidate_uid']=candidate_identity(event,getattr(reranker,'identity',None))
             options.append(event)
+        if slot_index in (fixed_events or {}):
+            import copy
+            fixed=copy.deepcopy(fixed_events[slot_index])
+            if fixed['music_interval']!=[slot['start'],slot['end']]:raise ValueError('Fixed-slot clock differs')
+            fixed['candidate_uid']=candidate_identity(fixed,getattr(reranker,'identity',None))
+            options=[fixed]
         if not options:raise ValueError('No legal event duration/phase for slot '+str(slot))
         # Keep source diversity in the short candidate list before global search.
         recalled=None
@@ -79,10 +86,20 @@ def plan(catalog,timing,audio_sha256,policy='heuristic',top_k=5,beam_width=3,rer
                 total=cost-utility(event)+.3*repeat+.04*same_source+.25*transition
                 expanded.append((total,sequence+[event]))
         beams=sorted(expanded,key=lambda pair:(pair[0],[e['event_uid'] for e in pair[1]]))[:beam_width]
-    cost,events=beams[0]
-    result=dict(schema='event_plan_v1',fps=30,frames=timing['frames'],audio_sha256=audio_sha256,
-        retrieval_policy=policy,retrieval_qualified=policy=='learned_qualified',ranking_trace=trace,time_scale_limits=[.75,1.33],events=events,
-        planning_cost=cost,top_k=top_k,beam_width=beam_width,
-        controlled_frames=len(set(t for e in events for t in range(e['primitive']['music_frame']-11,e['primitive']['music_frame']+12))),
-        native_feasibility='UNKNOWN')
-    return validate(result,audio_sha256,timing['frames'])
+    results=[]
+    for cost,events in beams[:count]:
+        result=dict(schema='event_plan_v1',fps=30,frames=timing['frames'],audio_sha256=audio_sha256,
+            retrieval_policy=policy,retrieval_qualified=policy=='learned_qualified',ranking_trace=trace,time_scale_limits=[.75,1.33],events=events,
+            planning_cost=cost,top_k=top_k,beam_width=beam_width,
+            controlled_frames=len(set(t for e in events for t in range(e['primitive']['music_frame']-11,e['primitive']['music_frame']+12))),
+            native_feasibility='UNKNOWN')
+        results.append(validate(result,audio_sha256,timing['frames']))
+    return results
+
+def plan(catalog,timing,audio_sha256,policy='heuristic',top_k=5,beam_width=3,reranker=None,condition_mode='temporal'):
+    return _search(catalog,timing,audio_sha256,policy,top_k,beam_width,reranker,condition_mode)[0]
+
+def propose_candidates(catalog,timing,audio_sha256,*,max_plans=3,top_k=5,beam_width=3,condition_mode='temporal',fixed_events=None,excluded_events=None):
+    if type(max_plans) is not int or not 1<=max_plans<=8:raise ValueError('One to eight bounded complete plans required')
+    return _search(catalog,timing,audio_sha256,top_k=top_k,beam_width=max(beam_width,max_plans),
+        condition_mode=condition_mode,count=max_plans,fixed_events=fixed_events,excluded_events=excluded_events)
