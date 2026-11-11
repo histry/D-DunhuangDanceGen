@@ -22,7 +22,7 @@ class Reranker:
         if receipt['source_sha256']!=audio_sha256 or receipt['features_sha256']!=assets['music_features']['sha256']:
             raise ValueError('Alignment query audio differs')
         self.query=np.load(checked(assets['music_features']),allow_pickle=False)
-    def scores(self,event,slot):
+    def scores(self,event,slot,local=True):
         a,b=slot['start'],slot['end'];n=b-a
         if b>len(self.query['music']):raise ValueError('Alignment query clock does not cover slot')
         music=self.query['music'][a:b];mm=self.query['mask'][a:b]
@@ -40,6 +40,11 @@ class Reranker:
         for name,x,m in [('music',music,mm),('motion',motion,mask)]:
             x=(x-np.array(self.norm[name]['mean']))/np.array(self.norm[name]['std'])*m
             args.extend([torch.as_tensor(x).float()[None],torch.as_tensor(m)[None]])
+        if not local:
+            with torch.no_grad():
+                m=self.global_model.music(args[0],args[1])[0]
+                d=self.global_model.motion(args[2],args[3])[0]
+            return dict(global_score=float((m*d).sum()),sync_score=None,preference=None)
         # Local confidence is relative to actual noncyclic phase alternatives.
         # Raw logits have an arbitrary additive offset and cannot be mixed with cosine.
         if n<=32:raise ValueError('Too little common context for synchronization controls')

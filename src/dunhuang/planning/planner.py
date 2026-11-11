@@ -47,15 +47,20 @@ def plan(catalog,timing,audio_sha256,policy='heuristic',top_k=5,beam_width=3,rer
                 boundary_context=dict(left_source_frames=[a,min(a+4,b)],right_source_frames=[max(a,b-4),b],confidence='SOURCE_ONLY'),
                 scores=dict(heuristic=-abs(entry['activity_percentile']-slot['density']),global_score=None,sync_score=None,preference=None))
             if reranker is not None and policy!='heuristic':
-                event['scores'].update(reranker.scores(entry,slot))
+                event['scores'].update(reranker.scores(entry,slot,local=False))
             options.append(event)
         if not options:raise ValueError('No legal event duration/phase for slot '+str(slot))
         # Keep source diversity in the short candidate list before global search.
+        recalled=None
+        if reranker is not None and policy!='heuristic':
+            recalled=sorted(options,key=lambda e:(-e['scores']['global_score'],e['event_uid']))[:top_k]
+            for event in recalled:event['scores'].update(reranker.scores(event,slot,local=True))
+            if policy=='learned_qualified':options=recalled
         def utility(e):
             v=e['scores']
             return v['heuristic'] if policy!='learned_qualified' else v['global_score']+.25*v['sync_score']
         ordered=sorted(options,key=lambda e:(-utility(e),e['event_uid']))
-        trace.append(dict(music_interval=[slot['start'],slot['end']],candidates=[dict(event_uid=e['event_uid'],scores=e['scores']) for e in ordered[:top_k]]))
+        trace.append(dict(music_interval=[slot['start'],slot['end']],candidates=[dict(event_uid=e['event_uid'],scores=e['scores']) for e in (recalled if recalled is not None else ordered[:top_k])]))
         chosen=[]
         for uid in dict.fromkeys(e['source_uid'] for e in ordered):
             chosen.append(next(e for e in ordered if e['source_uid']==uid))
