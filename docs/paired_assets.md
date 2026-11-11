@@ -28,3 +28,7 @@ paired_generation_manifest_v2 是严格训练接口。除完整支持域外，�
 发布包声明零 offset 不自动获得已校准配对资格。历史“known components”也不是已证实独立录制。缺少证据时 paired 预检明确 BLOCKED，零优化器步；完整训练完成也默认保持 music/full_motion_qualified=false，另行验证生成质量。本阶段不修改 Native 或冻结 Normalizer，不裁剪越域目标，也不拿 ChangE 零补全作为真值。
 
 已有单次生成、V0.8 闭环及上身探针入口保持原行为；旧的无 mask/时钟/来源收据的 paired 清单现在拒绝使用。
+
+证据文件的字段示例见 [paired_evidence.example.json](../configs/paired_evidence.example.json)。将 alignment_attestation 和 split_attestation 对象分别写入可哈希的独立 JSON 文件，并在清单中保存 path/sha256。示例明确 unverified；不能仅修改状态代替真实时钟/来源核查。
+
+最终服务器结果与适用范围见 [配对资产预检报告](../reports/配对资产预检报告.md)。

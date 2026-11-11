@@ -1,0 +1,18 @@
+{
+  "schema": "paired_generation_preflight_v2",
+  "rows": 2,
+  "known_identity_isolation": true,
+  "blockers": [
+    "MISSING_DISJOINT_TRAIN_VAL",
+    "RECORDING_INDEPENDENCE_UNVERIFIED",
+    "UNVERIFIED_AUDIO_OFFSET"
+  ],
+  "ready": false,
+  "training_steps": 0,
+  "full_motion_qualified": false,
+  "music_qualified": false,
+  "roles": {
+    "known_component:86fb199f54fc8b35c27c48d0ac534d48e02ef83ab994553406aa067597e433ed": "train",
+    "known_component:2e26abd2cb84675ff63567f6a2b55dba189f17cb47a32c1f72d1954bfadcbbc3": "train"
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "status": "VERIFIED_READ_ONLY",
+  "raw_motions_sha_verified": 1566,
+  "decoded_sources": 1564,
+  "windows": 15665,
+  "channel_aggregation_exact": true,
+  "window_identity_and_roles_exact": true,
+  "numerical_window_replays": [
+    {
+      "dataset": "aistpp",
+      "role": "test",
+      "window_uid": "aistpp:gJB_sBM_cAll_d07_mJB0_ch01:0",
+      "support_exact": true,
+      "excess_exact": true
+    },
+    {
+      "dataset": "aistpp",
+      "role": "train",
+      "window_uid": "aistpp:gBR_sBM_cAll_d04_mBR0_ch01:0",
+      "support_exact": true,
+      "excess_exact": true
+    },
+    {
+      "dataset": "aistpp",
+      "role": "val",
+      "window_uid": "aistpp:gJS_sBM_cAll_d01_mJS0_ch01:0",
+      "support_exact": true,
+      "excess_exact": true
+    },
+    {
+      "dataset": "finedance",
+      "role": "test",
+      "window_uid": "finedance:007:0",
+      "support_exact": true,
+      "excess_exact": true
+    },
+    {
+      "dataset": "finedance",
+      "role": "train",
+      "window_uid": "finedance:001:0",
+      "support_exact": true,
+      "excess_exact": true
+    },
+    {
+      "dataset": "finedance",
+      "role": "val",
+      "window_uid": "finedance:005:0",
+      "support_exact": true,
+      "excess_exact": true
+    }
+  ],
+  "candidate_motion_replays": [
+    {
+      "window_uid": "aistpp:gBR_sBM_cAll_d04_mBR0_ch01:0",
+      "native_target_exact": true,
+      "jukebox": {
+        "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/paired_features_01/features/0/jukebox.npy",
+        "sha256": "a390a0374cedd8108ff1ce54dc7524f28dba5f509490fba50200e4e8806726db"
+      },
+      "jukebox_reextracted": false
+    },
+    {
+      "window_uid": "aistpp:gHO_sBM_cAll_d19_mHO0_ch01:0",
+      "native_target_exact": true,
+      "jukebox": {
+        "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/paired_features_01/features/1/jukebox.npy",
+        "sha256": "2360b2cde5dbd11f01dd9606ff26351b4155a875296a02118c43486afaf0b44d"
+      },
+      "jukebox_reextracted": false
+    }
+  ],
+  "paired_preflight": {
+    "schema": "paired_generation_preflight_v2",
+    "rows": 2,
+    "known_identity_isolation": true,
+    "blockers": [
+      "MISSING_DISJOINT_TRAIN_VAL",
+      "RECORDING_INDEPENDENCE_UNVERIFIED",
+      "UNVERIFIED_AUDIO_OFFSET"
+    ],
+    "ready": false,
+    "training_steps": 0,
+    "full_motion_qualified": false,
+    "music_qualified": false,
+    "roles": {
+      "known_component:86fb199f54fc8b35c27c48d0ac534d48e02ef83ab994553406aa067597e433ed": "train",
+      "known_component:2e26abd2cb84675ff63567f6a2b55dba189f17cb47a32c1f72d1954bfadcbbc3": "train"
+    }
+  },
+  "scaler_producer": {
+    "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/event_plan_01/prepare/edge_contract/receipt.json",
+    "sha256": "096f350874dd3905741760fe4ff506c318b2e02c585109a769f96d81d37ebe2e"
+  },
+  "all_original_targets_unmodified": true,
+  "optimizer_steps": 0,
+  "training_steps": 0,
+  "native_acceptance_evaluated": false,
+  "full_generation_qualified": false
+}

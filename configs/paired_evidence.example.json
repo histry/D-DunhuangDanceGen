@@ -1,0 +1,23 @@
+{
+  "alignment_attestation": {
+    "status": "unverified",
+    "window_uid": "REPLACE_WITH_REAL_WINDOW_UID",
+    "audio_sha256": "REPLACE_WITH_SOURCE_WAV_SHA256",
+    "motion_sha256": "REPLACE_WITH_RAW_MOTION_SHA256",
+    "audio_offset_seconds": null,
+    "method": null
+  },
+  "split_attestation": {
+    "status": "unverified",
+    "method": null,
+    "sources": {
+      "REPLACE_WITH_RAW_MOTION_SHA256": {
+        "source_group": "REPLACE_WITH_COMPONENT_UID",
+        "role": "train",
+        "recording_uid": null,
+        "choreography_uid": null,
+        "music_uid": null
+      }
+    }
+  }
+}

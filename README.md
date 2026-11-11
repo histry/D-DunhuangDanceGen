@@ -133,3 +133,12 @@ python scripts/verify_v08.py --root outputs/v08_new --out outputs/v08_new/readou
 ~~~
 
 首次输出目录必须不存在。完成后的 resume 重新核对 Native 合约、计划和缓存，不启动新生成；中断半成品需使用新目录明确重跑。
+
+
+## 真实配对训练资产预检
+
+新增 AIST++/FineDance 原始资产校验、独立 151D 转换、observed/derived/supervision 掩码、冻结 Scaler 支持域统计、真实 Jukebox 候选提取及严格 paired_generation_manifest_v2。原始数据保存在忽略的 assets/datasets，不随源码发布；保留历史角色和曝光状态。
+
+服务器实际完成 1,566 条原始动作哈希核对、1,564 条解码和 15,665 个 150 帧窗口审计。AIST++ 4,964/5,040 个窗符合当前表示合同；FineDance 0/10,625，且缺少末端手部 22/23 监督。两个不同 Train 关联组的真实 Layer66 Jukebox 提取完成。配对训练因时钟/来源证据不足明确 BLOCKED，训练0步，无新模型质量结论。
+
+详见 [配对资产预检报告](reports/配对资产预检报告.md)、[运行与合同](docs/paired_assets.md)、[支持域数据](reports/paired_asset_support.json)、[独立核验](reports/paired_asset_verification.json)。旧无观测/时钟收据的 paired 清单拒绝使用；单次生成和 V0.8 闭环保持原入口。
