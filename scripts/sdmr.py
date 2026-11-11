@@ -22,7 +22,7 @@ from dunhuang.alignment.dataset import prepare,load
 
 from dunhuang.alignment.train import fit
 
-from dunhuang.alignment.evaluate import retrieval
+from dunhuang.alignment.evaluate import retrieval,EnergyBaseline
 
 from dunhuang.alignment.semantics import annotate
 
@@ -69,6 +69,7 @@ def main(out):
 
     test=[i for i,r in enumerate(rows) if r['role']=='test']
 
+    result['energy_baseline']=retrieval(EnergyBaseline(),rows,arrays,test,'cuda')
     ablated=dict(arrays)
 
     ablated['music']=arrays['music'].copy();ablated['mm']=arrays['mm'].copy()

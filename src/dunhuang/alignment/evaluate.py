@@ -66,3 +66,18 @@ def synchronization(model,rows,arrays,ids,device):
             offset_choice_accuracy=float((z.argmax(1)==2).mean()),chance=.2,
             margin=float((z[:,2,None]-negative).mean()),per_shift_win={str(s/30):float((z[:,2]>z[:,k]).mean()) for k,s in enumerate(SHIFTS) if s!=0},group_wins=grouped,group_bootstrap95=ci.tolist())
     return output
+
+
+class EnergyBaseline:
+    """Per-window energy-envelope correlation on the same 30 Hz observations."""
+    @staticmethod
+    def encode(values,mask,channel):
+        signal=values[:,:,channel][:,::2]
+        valid=mask[:,:,channel][:,::2]
+        mean=(signal*valid).sum(-1,keepdim=True)/valid.sum(-1,keepdim=True).clamp_min(1)
+        vector=torch.nn.functional.normalize((signal-mean)*valid,dim=-1)
+        return vector,None,valid
+    def music(self,x,mask):
+        return self.encode(x,mask,0)
+    def motion(self,x,mask):
+        return self.encode(x,mask,66)
