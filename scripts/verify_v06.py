@@ -6,8 +6,11 @@ from dunhuang.io import sha,write
 
 def read(p):return json.loads(Path(p).read_text())
 def main():
-    ap=argparse.ArgumentParser();ap.add_argument('--root',required=True);ap.add_argument('--replay',action='store_true')
+    ap=argparse.ArgumentParser();ap.add_argument('--root',required=True);ap.add_argument('--replay',action='store_true');ap.add_argument('--out')
     args=ap.parse_args();root=Path(args.root).resolve()
+    destination=Path(args.out).resolve() if args.out else root/'readout.json'
+    if (args.replay or args.out) and destination.exists():
+        raise FileExistsError('Refuse to overwrite verification evidence: '+str(destination))
     status=read(root/'status.json');assert status['status']=='COMPLETED_RESEARCH_UNQUALIFIED'
     training=read(root/'probe/status.json');protocol=read(root/'probe/protocol.json')
     assert training['frozen_model_unchanged'] and training['weights_before']==training['weights_after']
@@ -45,11 +48,12 @@ def main():
         assert len(set(hashes))==1
         assert sha(folders[0]/'native.npy')==sha(folders[1]/'native.npy')
         result['matched'][str(n)]=read(root/f'matched_{n}.json')
-        if args.replay:
-            original=root/('probe'+str(n));out=root/('probe'+str(n)+'_replay')
-            q=read(original/'request.json')
-            with (root/f'replay_{n}.log').open('w') as log:
-                subprocess.run([q['edge_python'],str(ROOT/'scripts/generate.py'),'--config',str(original/'request.json'),'--out',str(out)],cwd=ROOT,stdout=log,stderr=subprocess.STDOUT,check=True)
+        original=root/('probe'+str(n));out=root/('probe'+str(n)+'_replay')
+        if args.replay or out.exists():
+            if args.replay:
+                q=read(original/'request.json')
+                with (root/f'replay_{n}.log').open('w') as log:
+                    subprocess.run([q['edge_python'],str(ROOT/'scripts/generate.py'),'--config',str(original/'request.json'),'--out',str(out)],cwd=ROOT,stdout=log,stderr=subprocess.STDOUT,check=True)
             files=['native.npy','native_fk.npy','normalized.npy','windows.npy','edge.npy','official_fk.npy']
             comparison={f:sha(original/f)==sha(out/f) for f in files}
             assert all(comparison.values()),comparison
@@ -57,9 +61,9 @@ def main():
             result['fresh_replay'][str(n)]=dict(scientific_arrays_equal=comparison,native_audit_exact=True,
                 inference_only=True,optimizer_executed=False)
     result['all_generation_native_passes']=sum(r['native']['ok'] for r in result['cases'])
-    write(root/'readout.json',result)
+    if args.replay or args.out:write(destination,result)
     # Manifest excludes itself and active outer launcher logs.
     manifest={str(p.relative_to(root)):sha(p) for p in sorted(root.rglob('*')) if p.is_file() and p.name!='manifest.json'}
-    write(root/'manifest.json',manifest)
+    if args.replay:write(root/'manifest.json',manifest)
     print('VERIFIED',len(result['cases']),'generations; Native passes',result['all_generation_native_passes'],'replays',len(result['fresh_replay']))
 if __name__=='__main__':main()

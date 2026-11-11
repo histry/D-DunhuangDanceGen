@@ -1,6 +1,6 @@
 # DunhuangDanceGen
 
-当前正式路径：**Event Catalog → Music Timeline → Event Plan → 冻结 EDGE（Temporal V0.5）→ 原 Native 验收**。保留官方 EDGE 基线。已完成 5 秒、15 秒、整曲六例，全部 Native 未通过。学习检索处于 shadow，Adapter 因真实资产不足未训练，尚非已验证的 V1。见[本轮报告](reports/EventPlan实验报告.md)和[机器指标](reports/event_plan_workflow.json)。
+当前正式路径：**Event Catalog → Music Timeline → Event Plan → 冻结 EDGE（Temporal V0.5）→ 原 Native 验收**。保留官方 EDGE 基线。已完成 5 秒、15 秒、整曲六例，全部 Native 未通过。学习检索处于 shadow，完整151D/配对音乐 Adapter 尚未训练；V0.6 的48D研究探针已训练并完成服务器实验，仍非已验证的 V1。见[本轮报告](reports/EventPlan实验报告.md)和[机器指标](reports/event_plan_workflow.json)。
 
 ## 正式入口
 
@@ -70,34 +70,22 @@ $PY scripts/b2_physical.py outputs/new_b2_support
 
 alignment/ 提供50D/74D双编码器、独立同步训练、文件名粗标签、专家偏好弃权接口和候选评分。scripts/sdmr.py先训练完整框架，scripts/sdmr_ablate.py仅在完整框架结束后重训一次去声学32D的消融。生成入口按检查点和资格收据决定启用或回退。见[实验报告](reports/SDMR实验报告.md)和[机器指标](reports/sdmr.json)。本轮真实评价未通过同步资格。
 
-## V0.6 实验分支：连续事件软条件与局部可训练探针
+## V0.6 实验分支：连续事件软条件与真实训练探针
 
-新增 generation/soft_reference.py：按 Event Plan 的单调时间映射做 SO(3) 测地插值，将真实来源 12–19 关节的连续轨迹、来源相位和支持域掩码送入同一个冻结 EDGE 的 Adapter。在重叠的 150 帧窗口中保持条件一致，超出冻结归一化支持域的关节帧显式标记为未知，不裁剪源姿态、不把参考轨迹后贴到生成输出。保存 soft_reference_audit.json。原 V0.5 Temporal 默认路径及原 Native 物理阈值不改变。
+PR #2 保持 Draft，main 默认路径仍是 V0.5。soft_reference.py 根据真实 Event Plan 的单调源相位做 SO(3) 测地插值，支持域外关节帧明确未知；重叠窗口条件一致。连续参考只进入冻结 EDGE 的条件 Adapter，不后贴源动作。
 
-由于目前 151D 全目标合格窗数为零，新增任务 upperbody_probe 仅在 48D 上身支持域内开展带遮挡的补全研究，其他通道使用零值作为输入占位，**不是真实完整 151D 动作**。在服务器 EDGE 环境可单独运行以下研究命令：
-
-~~~bash
-python scripts/train.py --assets outputs/new_prepare/assets.json --out outputs/upperbody_probe_v06 --task upperbody_probe --steps 300
-~~~
-
-此训练不包含真实配对 Jukebox，得到的权重即使训练成功也只有研究意义，必须保留 music_qualified=false、full_motion_qualified=false，不能作为正式 V1 或合格整曲。event_guided 现在还要求 condition_schema=soft_event_reference_v1；没有实际获得配对数据资格时，默认拒绝该权重。显式 research_allow_motion_only_adapter仅用于自担风险的影子推理，不得当作正式质量提升证据。
-
-下一阶段仍需真实 150×4800D 配对音乐、全 151D 可表达目标，以及150 帧单窗与 225 帧双窗的实际 GPU 物理验收；双侧 Inpainting 与局部 SQP 本次没有实现。不使用测试集指标给予检索或生成器发布资格。
-
-可先用 CPU 预检真实训练来源与支持域而不初始化 EDGE/GPU：
+本轮服务器完成 300 步48D探针、八例150/225帧生成、两次独立数值重放。42项完整回归通过；原官方/V0.5动作哈希不变；同噪声零 Adapter 与无 Adapter 完全相同。探针验证MSE降低约17.28%，但八例Native全未通过，动作幅度也下降，不能宣称音乐或整体质量提升。详见[V0.6实验报告](reports/V06实验报告.md)及[机器收据](reports/v06.json)。
 
 ~~~bash
-python scripts/train.py --assets outputs/new_prepare/assets.json --out outputs/probe_preflight_v06 --task upperbody_probe --preflight-only
+# 真实条件支持域预检
+python scripts/inspect_event_reference.py --plan outputs/event_plan_01/dunhuang_150/event_plan.json --scaler outputs/new_prepare/edge_contract/scaler.npz --out outputs/v06_reference_new
+# CPU资产预检，不初始化CUDA
+python scripts/train.py --assets outputs/new_prepare/assets.json --task upperbody_probe --preflight-only --out outputs/v06_preflight_new
+# 一个固定探针 + 匹配噪声对照；服务器长任务需通过tmux运行
+python scripts/v06_experiment.py --assets outputs/event_plan_01/prepare/assets.json --prior-root outputs/event_plan_01 --out outputs/v06_new --steps 300
+python scripts/verify_v06.py --root outputs/v06_new --replay
 ~~~
 
-预检只写 asset_audit.json/status.json；PREFLIGHT_READY_RESEARCH_ONLY 不是模型训练成功，也不是完整物理通过。
+所有输出目录必须为新目录，路径按实际资产替换。记录实际运行提交，训练/生成版本与随后报告提交分开。研究权重的 music_qualified / full_motion_qualified 始终为 false，正式推理默认拒绝，实验才显式给 research_allow_motion_only_adapter。
 
-V0.6 Train/Val 以完整来源组隔离；upperbody_probe 与 motion 使用独立来源保留集，paired 严格使用 manifest 的 train/val 角色。若缺少独立训练/验证来源，状态为 INSUFFICIENT_DISJOINT_TRAIN_VAL_SOURCES 且训练步数为 0。
-
-可以在训练和真实 EDGE 推理之前，单独检查某份已保存 Event Plan 的连续事件条件支持域（无需 GPU）：
-
-~~~bash
-python scripts/inspect_event_reference.py --plan outputs/event_plan_01/generation_150/event_plan.json --scaler outputs/new_prepare/edge_contract/scaler.npz --out outputs/soft_reference_preflight
-~~~
-
-示例路径需替换为机器上实际存在的已哈希绑定计划与冻结 scaler，输出只有条件、掩码、相位和审计，不会生成舞蹈或运行 Native。
+其他103通道仅是探针占位，不能当完整真值。完整151D目标与真实配对Jukebox仍缺失；学习式音乐演绎V1、双侧生成及SQP尚未完成，未升级450帧/整曲质量验收。
