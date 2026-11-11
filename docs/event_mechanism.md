@@ -67,3 +67,11 @@ The original7a1d368 denoiser field named torso covers local rotation channels fo
 
 
 The execution verifier also audits the exact fixed8 fitted Val target motions under unchanged Native limits. Representation support and physical acceptance are separate. These source-quality observations neither filter training data nor reselect checkpoints and do not turn fitted151D values into sensor truth.
+
+
+7a1d368 research weights bind protocol_sha256 but omit the optional condition_scope/policy descriptive fields; the runner used the fixed completion_upper8 cross-recording task recorded in that bound protocol. These original checkpoint bytes and hashes are preserved. Future saves embed the descriptive scope/music-source/target fields too, and inference audits display an explicit missing-header marker plus protocol hash instead of silently writing null. Qualification flags remain false.
+
+
+    python scripts/audit_training_targets.py --assets outputs/aist_features_01/assets.json --training outputs/event_transfer_run/cross/train --out outputs/train_target_native_audit_new
+
+Run with the pinned Native Python. This descriptive audit covers all Train targets admitted to the cross-recording task, after the registered comparison. It never loads Val/Test targets, changes data membership, filters recordings, reweights training, selects checkpoints or starts an optimizer. Native failures are contract membership results, not assertions that real dances or their events are invalid. Per-target JSONL stays in ignored outputs.

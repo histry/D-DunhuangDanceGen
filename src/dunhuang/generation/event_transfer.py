@@ -191,6 +191,10 @@ def run(assets,destination,mode='cross',steps=1200,preflight_only=False):
                         best=score
                         torch.save(dict(state=rt.adapter.state_dict(),mode=mode,
                             condition_schema='native_event_music_v1',base_sha256=assets['checkpoint']['sha256'],
+                            condition_policy='completion_upper8',
+                            condition_scope='official_cross_recording_event_conditioned_denoising',
+                            music_source='real_aligned_jukebox_layer66_30hz',
+                            target_channels='fitted147_plus_derived_contact4',
                             training_commit=protocol['code_commit'],protocol_sha256=sha(out/'protocol.json'),
                             selected_step=step,music_qualified=False,full_motion_qualified=False),out/'adapter.pt')
             saved=torch.load(out/'adapter.pt',map_location='cpu',weights_only=True)

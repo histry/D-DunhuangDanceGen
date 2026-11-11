@@ -105,7 +105,8 @@ def main():
         normalized,mask=condition.value.cpu(),condition.known.cpu()
         soft_audit.update(training_condition_policy=trained_policy,inference_condition_policy=requested_policy,
             visibility_distribution_matches=requested_policy==trained_policy,
-            training_music_scope=adapter_payload.get('condition_scope'))
+            training_music_scope=adapter_payload.get('condition_scope','NOT_EMBEDDED_SEE_BOUND_PROTOCOL'),
+            training_protocol_sha256=adapter_payload.get('protocol_sha256'))
         write(out/'soft_reference_audit.json',soft_audit)
         if native_event:
             from .generation.event_geometry import event_geometry
