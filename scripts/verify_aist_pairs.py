@@ -12,13 +12,13 @@ from dunhuang.data.paired_manifest import inspect
 def main():
     ap=argparse.ArgumentParser()
     for name in ('assets','raw-root','authority','calibration','index','features','training','out'):ap.add_argument('--'+name,required=True)
-    a=ap.parse_args();output=Path(a.out)
+    ap.add_argument('--prior-smoke');a=ap.parse_args();output=Path(a.out)
     if output.exists():raise FileExistsError(output)
     root=Path(a.raw_root);c=Path(a.calibration);index=Path(a.index);features=Path(a.features);training=Path(a.training)
     auth=authority(a.authority);pop=read(root/'population.json')
     expected={r['pair_uid']:r for r in pop['records'] if r['dataset_id']=='aistpp'}
     ledger=read(c/'source_ledger.json');assert len(ledger)==len(expected) and not read(c/'protocol.json')['smoke']
-    counts=Counter();replay_candidates={}
+    counts=Counter();replay_candidates={};performer_roles=defaultdict(set)
     for record in ledger:
         source=expected[record['pair_uid']];counts[record['status']]+=1
         assert record['role']==source['purpose_role'] and record['source_group']==source['group_uid']
@@ -32,7 +32,9 @@ def main():
             assert abs(float(stream['audio'].get('start_time',0))-float(stream['video'].get('start_time',0)))<1e-12
             assert value['verified'] and value['minimum_ncc']>=POLICY['minimum_ncc']
             replay_candidates.setdefault(record['role'],record)
+            performer_roles[record['dancer_id']].add(record['role'])
     assert not counts['EXCLUDED_TECHNICAL']
+    assert all(len(v)==1 for v in performer_roles.values())
     replays=[]
     for role,record in sorted(replay_candidates.items()):
         source=expected[record['pair_uid']]
@@ -73,6 +75,18 @@ def main():
     assert all(roles[g]=='val' for g in protocol['validation_groups'])
     assert all(roles[r['group']]=='val' for r in validation['evaluated_windows'])
     assert len(history)==6 and [r['step'] for r in history]==list(range(50,301,50))
+    extraction_replays=[]
+    if a.prior_smoke:
+        old=read(Path(a.prior_smoke)/'manifest.json')
+        current={r['window_uid']:r for r in manifest['rows']}
+        for prior in old['rows']:
+            match=current[prior['window_uid']]
+            left=np.load(checked(prior['jukebox']));right=np.load(checked(match['jukebox']))
+            extraction_replays.append(dict(window_uid=prior['window_uid'],
+                prior_features=prior['jukebox'],current_features=match['jukebox'],
+                exact=bool(np.array_equal(left,right)),max_abs=float(abs(left-right).max()),
+                rms=float(np.sqrt(np.mean((left.astype(float)-right.astype(float))**2))),
+                independent_new_extraction=True))
     write(output,dict(status='VERIFIED_SOURCE_CLOCK_FEATURE_TRAINING_RECEIPTS',source_counts=dict(counts),
         total_sources=len(ledger),retained_windows=len(manifest['rows']),
         window_roles=dict(Counter(r['role'] for r in manifest['rows'])),
@@ -80,8 +94,9 @@ def main():
         generic_movement_titles_crossing_roles=[k for k,v in generic_titles.items() if len(v)>1],
         exact_audio_crop_hashes_crossing_roles=[k for k,v in crop_roles.items() if len(v)>1],
         stream_origins_match_for_all_admitted_recordings=True,
+        dataset_dancer_ids_disjoint_across_roles=True,performer_roles={k:sorted(v) for k,v in performer_roles.items()},
         independence_scope='official capture IDs, audio bytes and genre-namespaced basic workbook entries; not generic-movement semantic independence or a fresh blind test',
-        calibration_replays=replays,preflight=preflight,training_status=status,training_protocol=protocol,
+        calibration_replays=replays,jukebox_extraction_replays=extraction_replays,preflight=preflight,training_status=status,training_protocol=protocol,
         validation=validation,history=history,optimizer_steps_in_verifier=0,native_generation_evaluated=False))
     print('VERIFIED_AIST',dict(counts),'WINDOWS',len(manifest['rows']),'FEATURES',len(producers),flush=True)
 if __name__=='__main__':main()
