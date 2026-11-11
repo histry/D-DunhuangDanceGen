@@ -93,3 +93,11 @@ python scripts/train.py --assets outputs/new_prepare/assets.json --out outputs/p
 预检只写 asset_audit.json/status.json；PREFLIGHT_READY_RESEARCH_ONLY 不是模型训练成功，也不是完整物理通过。
 
 V0.6 Train/Val 以完整来源组隔离；upperbody_probe 与 motion 使用独立来源保留集，paired 严格使用 manifest 的 train/val 角色。若缺少独立训练/验证来源，状态为 INSUFFICIENT_DISJOINT_TRAIN_VAL_SOURCES 且训练步数为 0。
+
+可以在训练和真实 EDGE 推理之前，单独检查某份已保存 Event Plan 的连续事件条件支持域（无需 GPU）：
+
+~~~bash
+python scripts/inspect_event_reference.py --plan outputs/event_plan_01/generation_150/event_plan.json --scaler outputs/new_prepare/edge_contract/scaler.npz --out outputs/soft_reference_preflight
+~~~
+
+示例路径需替换为机器上实际存在的已哈希绑定计划与冻结 scaler，输出只有条件、掩码、相位和审计，不会生成舞蹈或运行 Native。
