@@ -69,3 +69,23 @@ $PY scripts/b2_physical.py outputs/new_b2_support
 ## SDMR 学习式检索
 
 alignment/ 提供50D/74D双编码器、独立同步训练、文件名粗标签、专家偏好弃权接口和候选评分。scripts/sdmr.py先训练完整框架，scripts/sdmr_ablate.py仅在完整框架结束后重训一次去声学32D的消融。生成入口按检查点和资格收据决定启用或回退。见[实验报告](reports/SDMR实验报告.md)和[机器指标](reports/sdmr.json)。本轮真实评价未通过同步资格。
+
+
+## V0.6 Event Plan phase-guided prompts (opt-in)
+
+The previous V0.5 Event Plan recorded monotone source-to-music time maps but
+the B2 Temporal sampler copied the original local 25 source frames at unit speed.
+The new `planned_time_warp: true` option uses those maps to sample the verified
+source at actual music-frame times, interpolating only the selected SMPL joints
+geodesically on SO(3). The old B2 sampling path, frozen checkpoint, normalization
+and Native thresholds are unchanged. `phase_guidance.json` records the condition
+scope; no Root/contact channels are written and no new physical qualification is
+claimed. An unsupported interpolated reference is **rejected**, not clipped.
+
+The published `configs/dunhuang.json` now enables the new phase-guidance path.
+Set `planned_time_warp: false` for historical V0.5 unit-speed behavior or
+`profile: edge_baseline` for the untouched official EDGE baseline. Run on the
+existing real-data server and compare 150/450/3601-frame actual Native results
+before drawing quality conclusions. This is deterministic V0.6 conditioning,
+**not** a trained V1 Adapter. V1 remains blocked by the missing real paired
+Jukebox generation manifest and 0 fully supported 151D ChangE targets.

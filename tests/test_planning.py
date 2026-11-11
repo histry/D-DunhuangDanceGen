@@ -15,6 +15,7 @@ def test_complete_plan_and_source_identity(tmp_path):
     timing=dict(frames=270,slots=[dict(start=a,end=a+90,density=.5) for a in (0,90,180)],beats=[])
     result=plan(dict(entries=entries),timing,'audio')
     assert result['events'][0]['music_interval']==[0,90]
+    assert all(len(e['time_warp'])==3 for e in result['events'])  # No artificial unit-speed primitive plateau
     assert result['events'][-1]['music_interval']==[180,270]
     assert len(set(e['source_uid'] for e in result['events']))>=2
     import copy

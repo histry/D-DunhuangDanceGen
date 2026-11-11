@@ -39,7 +39,9 @@ def plan(catalog,timing,audio_sha256,policy='heuristic',top_k=5,beam_width=3,rer
             beats=[t for t in timing['beats'] if abs(t-tick)<=4]
             if beats:tick=min(beats,key=lambda t:abs(t-tick))
             if tick-12<start or tick+12>=end:continue
-            warp=[[a,start],[center-12,tick-12],[center+12,tick+12],[b,end]]
+            # Preserve the real source-to-music tempo through the primitive, rather than
+            # silently forcing its central 25 frames to unit speed.
+            warp=[[a,start],[center,tick],[b,end]]
             rates=np.diff(np.array(warp)[:,1])/np.diff(np.array(warp)[:,0])
             if np.any(rates<.75) or np.any(rates>1.33):continue
             event=dict(entry,music_interval=[start,end],time_warp=warp,

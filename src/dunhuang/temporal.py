@@ -1,8 +1,9 @@
 """Geodesic guidance for verified, contiguous local SMPL joint trajectories."""
+import json
 import numpy as np
 import torch
 from .conditioning import anchor_windows, normalize_constraints, source_neighborhoods, constraint_support
-from .io import write
+from .io import write, checked
 
 
 def prepare(request, normalizer, output, device):
@@ -12,7 +13,23 @@ def prepare(request, normalizer, output, device):
     strength = float(request['trajectory_strength'])
     if not 0 < strength < 1:
         raise ValueError('Temporal strength must be strictly between zero and one')
-    rows, weights = source_neighborhoods(request['frames'], request['anchors'], radius)
+    if request.get('planned_time_warp', False):
+        if 'event_plan' not in request or 'audio' not in request:
+            raise ValueError('Planned temporal guidance requires a hash-bound Event Plan and audio')
+        from .planning.event_plan import validate
+        from .planning.phase_guidance import mapped_neighborhoods
+        plan = validate(json.loads(checked(request['event_plan']).read_text()),
+                        request['audio']['sha256'], request['frames'])
+        rows, weights = mapped_neighborhoods(plan, request['frames'], radius)
+        write(output/'phase_guidance.json',
+              dict(schema='phase_guidance_v1', source='verified_event_plan',
+                   music_clock_frames=request['frames'], events=len(plan['events']),
+                   conditioned_frames=sum(float(w)>0 for w in weights),
+                   mapping='inverse_monotone_source_music_slerp',
+                   frozen_normalizer_unchanged=True, native_qualification='UNKNOWN'))
+    else:
+        # Historical B2 and V0.5 replay use their original unit-speed prompts.
+        rows, weights = source_neighborhoods(request['frames'], request['anchors'], radius)
     raw, mask = anchor_windows(request['frames'], rows)
     write(output/'normalization_preflight.json', constraint_support(normalizer, raw, mask))
     normalize_constraints(normalizer, raw, mask)
