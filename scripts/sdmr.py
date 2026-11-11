@@ -111,9 +111,9 @@ def main(out):
 
             values,mask,_=motion_from_edge151(motion)
 
-            source_cache[uid]=(values,mask)
+            source_cache[uid]=(values,mask,motion)
 
-        values,mask=source_cache[uid]
+        values,mask,source_motion=source_cache[uid]
 
         a,b=event['core_frame_start'],event['core_frame_end']
 
@@ -167,6 +167,8 @@ def main(out):
 
     write(out/'result.json',result)
 
+    from dunhuang.alignment.select import select
+    select(model,result,events,np.stack(embeddings),source_cache,out,ROOT)
     print('SDMR_COMPLETE',result['qualified'],flush=True)
 
 if __name__=='__main__':main(Path(sys.argv[1]).resolve())
