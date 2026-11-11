@@ -5,6 +5,7 @@ from dunhuang.io import checked,pinned,write,sha
 from dunhuang.contracts import MotionAdapter
 from .adapter import PrimitiveAdapter,masked_reference
 from .probe import upperbody_probe_target
+from .split import split_training_rows
 
 def train(assets,destination,steps,task='motion',preflight_only=False):
     import torch
@@ -61,6 +62,7 @@ def train(assets,destination,steps,task='motion',preflight_only=False):
             if np.any(abs(normalized)>1+32*np.finfo(np.float32).eps):raise ValueError('Paired target outside frozen support')
             windows.append((row['source_group'],row['start_frame'],normalized.astype(np.float32),music.astype(np.float32)))
     groups=sorted({row[0] for row in windows})
+    fitting,validation,validation_group=split_training_rows(windows,task,paired_roles)
     audit=dict(tested_150_windows=tested,component_supported_windows=support_counts,root_origin='first_observed_context_XZ; height preserved',motion_only_supported_150_windows=motion_window_count,upperbody_partial_probe_windows=len(probe_windows),train_task=task,paired_training_rows=len(windows) if task=='paired' else 0,recording_groups=groups,
         source_count=len(refs),paired_jukebox_training_manifest=assets.get('paired_generation_manifest'),
         full_paired_music_training_ready=bool(assets.get('paired_generation_manifest')),
@@ -68,18 +70,16 @@ def train(assets,destination,steps,task='motion',preflight_only=False):
         scope=('Upperbody 48D supported-only diagnostic with zero placeholders; NOT full 151D motion completion or music' if task=='upperbody_probe' else 'All 151 target channels in frozen support; no clipping or invented Jukebox features'))
     write(destination/'asset_audit.json',audit)
     if preflight_only:
-        status=('PREFLIGHT_READY_RESEARCH_ONLY' if task=='upperbody_probe' and len(groups)>=2 else
-            'PREFLIGHT_READY_NOT_QUALIFIED' if len(groups)>=2 else 'PREFLIGHT_BLOCKED_INSUFFICIENT_GROUPS')
+        ready=bool(fitting and validation)
+        status=('PREFLIGHT_READY_RESEARCH_ONLY' if task=='upperbody_probe' and ready else
+            'PREFLIGHT_READY_NOT_QUALIFIED' if ready else 'PREFLIGHT_BLOCKED_INSUFFICIENT_DISJOINT_GROUPS')
         write(destination/'status.json',dict(status=status,training_steps=0,music_qualified=False,
             full_motion_qualified=False,train_task=task,eligible_windows=len(windows),source_groups=groups))
         return
-    if len(groups)<2:
-        write(destination/'status.json',dict(status='INSUFFICIENT_SUPPORTED_SOURCE_GROUPS',training_steps=0,music_qualified=False))
+    if not fitting or not validation:
+        write(destination/'status.json',dict(status='INSUFFICIENT_DISJOINT_TRAIN_VAL_SOURCES',
+            training_steps=0,music_qualified=False,full_motion_qualified=False))
         return
-    validation_group=groups[-1] if task=='motion' else sorted(k for k,v in paired_roles.items() if v=='val')
-    fitting=[row for row in windows if (row[0]!=validation_group if task=='motion' else paired_roles[row[0]]=='train')]
-    validation=[row for row in windows if (row[0]==validation_group if task=='motion' else paired_roles[row[0]]=='val')]
-    if not fitting or not validation:raise ValueError('Separate fitting and validation sources required')
     root=pinned(assets['edge_root'],assets['edge_commit']);sys.path.insert(0,str(root))
     from dataset.preprocess import Normalizer
     from dataset.scaler import MinMaxScaler

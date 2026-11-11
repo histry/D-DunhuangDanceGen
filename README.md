@@ -91,3 +91,5 @@ python scripts/train.py --assets outputs/new_prepare/assets.json --out outputs/p
 ~~~
 
 预检只写 asset_audit.json/status.json；PREFLIGHT_READY_RESEARCH_ONLY 不是模型训练成功，也不是完整物理通过。
+
+V0.6 Train/Val 以完整来源组隔离；upperbody_probe 与 motion 使用独立来源保留集，paired 严格使用 manifest 的 train/val 角色。若缺少独立训练/验证来源，状态为 INSUFFICIENT_DISJOINT_TRAIN_VAL_SOURCES 且训练步数为 0。
