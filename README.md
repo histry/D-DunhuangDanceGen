@@ -1,6 +1,8 @@
 # DunhuangDanceGen
 
-当前正式路径：**Event Catalog → Music Timeline → Event Plan → 冻结 EDGE（Temporal V0.5）→ 原 Native 验收**。保留官方 EDGE 基线。已完成 5 秒、15 秒、整曲六例，全部 Native 未通过。学习检索处于 shadow，完整151D/配对音乐 Adapter 尚未训练；V0.6 的48D研究探针已训练并完成服务器实验，仍非已验证的 V1。见[本轮报告](reports/EventPlan实验报告.md)和[机器指标](reports/event_plan_workflow.json)。
+当前默认路径：**Event Catalog → Music Timeline → Event Plan → 冻结 EDGE（Temporal V0.5）→ 原 Native 验收**。学习检索保留shadow。研究路径已完成真实151D配对补全，以及原生SO(3)跨录制条件的Cross/Additive同参数量训练（各1,200步）；事件跟随与完整生成质量仍未合格。
+
+最新实验共40次150帧执行、32个不同动作哈希，Native0/40；两种融合效果近似。对1,468个Train目标的只读Native审计有40窗通过，未据此过滤数据或重选权重。详见[事件机制与跨来源训练报告](reports/事件机制与跨来源训练报告.md)、[机器汇总](reports/event_mechanism_summary.json)及[运行合同](docs/event_mechanism.md)。
 
 ## 正式入口
 
@@ -135,7 +137,7 @@ python scripts/verify_v08.py --root outputs/v08_new --out outputs/v08_new/readou
 首次输出目录必须不存在。完成后的 resume 重新核对 Native 合约、计划和缓存，不启动新生成；中断半成品需使用新目录明确重跑。
 
 
-## 真实配对训练资产预检
+## 历史配对训练资产预检（b880337）
 
 新增 AIST++/FineDance 原始资产校验、独立 151D 转换、observed/derived/supervision 掩码、冻结 Scaler 支持域统计、真实 Jukebox 候选提取及严格 paired_generation_manifest_v2。原始数据保存在忽略的 assets/datasets，不随源码发布；保留历史角色和曝光状态。
 

@@ -1,0 +1,468 @@
+{
+  "schema": "public_event_mechanism_aggregate_v1",
+  "code_commits": {
+    "baseline": "0e38bc312135b984333c32f82627e29930545b9d",
+    "training": "7a1d3680db4fd40541f392ed63c864415038b370",
+    "verification": "3fbe5d09006957150468a37cf2285e034f9c2404",
+    "source_quality_audit": "26bb74e1b4238a7cfa53ccba7ee6819a13eeceb4"
+  },
+  "data": {
+    "original_paired_windows": 2418,
+    "cross_recording_train_tasks": 1468,
+    "cross_recording_val_tasks": 446,
+    "condition": "independent capture; same official basic routine/music/time; not pose-exact truth",
+    "full_target": "147 fitted channels plus4 derived contacts",
+    "blind_test_claimed": false,
+    "test_fitting": false
+  },
+  "protocol": {
+    "steps_per_model": 1200,
+    "parameters_per_model": 357424,
+    "matched_initialization": true,
+    "matching": "same data/steps/objective/initialization/selection/execution budget",
+    "selection": "lowest full151 MSE on fixed8 historical Val pairs every100/final",
+    "controls": "target-noised completion, not free-running or music quality"
+  },
+  "baseline": {
+    "native_passes": 0,
+    "executions": 12
+  },
+  "models": {
+    "cross": {
+      "selected_step": 400,
+      "checkpoint_sha256": "16a30fc8b95c43122b67957685edd13178b64daf82dd5b0f3dea8cd429999b64",
+      "protocol_sha256": "d53c9ce1cdbaa4fda12e495913f73fcaf3636673411bf0462b0127802322678a",
+      "validation_controls": {
+        "original": {
+          "mse": 0.011253455149320265,
+          "normalized_velocity_rms": 0.05325035356994098,
+          "target_normalized_velocity_rms": 0.08276174368802458,
+          "group_mse": {
+            "contact": 0.1615970695784199,
+            "root": 0.0019503326232855518,
+            "upper8": 0.014436118285326907,
+            "other_rotation": 0.0036885294442375502
+          }
+        },
+        "zero_adapter": {
+          "mse": 0.011852870923272954,
+          "normalized_velocity_rms": 0.05317695909373773,
+          "target_normalized_velocity_rms": 0.08276174368802458,
+          "group_mse": {
+            "contact": 0.16156904981956663,
+            "root": 0.002047357212480468,
+            "upper8": 0.01566676723208123,
+            "other_rotation": 0.004014171566571652
+          }
+        },
+        "reference_removed": {
+          "mse": 0.011245990400008546,
+          "normalized_velocity_rms": 0.053211742400890216,
+          "target_normalized_velocity_rms": 0.08276174368802458,
+          "group_mse": {
+            "contact": 0.1593529616317634,
+            "root": 0.0019017435552086681,
+            "upper8": 0.014510875853981512,
+            "other_rotation": 0.0037344321790442336
+          }
+        },
+        "wrong_source": {
+          "mse": 0.011254621594465183,
+          "normalized_velocity_rms": 0.053250459798922144,
+          "target_normalized_velocity_rms": 0.08276174368802458,
+          "group_mse": {
+            "contact": 0.1616124280335498,
+            "root": 0.0019509033215096376,
+            "upper8": 0.01443788809895826,
+            "other_rotation": 0.0036888212174138366
+          }
+        },
+        "phase_reversed": {
+          "mse": 0.011253463436635988,
+          "normalized_velocity_rms": 0.05324982141610235,
+          "target_normalized_velocity_rms": 0.08276174368802458,
+          "group_mse": {
+            "contact": 0.16159601490653586,
+            "root": 0.0019503022922435775,
+            "upper8": 0.014436125347856432,
+            "other_rotation": 0.003688583596764753
+          }
+        },
+        "music_replaced": {
+          "mse": 0.019341402456727035,
+          "normalized_velocity_rms": 0.051269536973753325,
+          "target_normalized_velocity_rms": 0.08276174368802458,
+          "group_mse": {
+            "contact": 0.25207405336065375,
+            "root": 0.007121990853192983,
+            "upper8": 0.026400373676248517,
+            "other_rotation": 0.006496580059319967
+          }
+        },
+        "music_shifted": {
+          "mse": 0.01583282708452316,
+          "normalized_velocity_rms": 0.051701551652513444,
+          "target_normalized_velocity_rms": 0.08276174368802458,
+          "group_mse": {
+            "contact": 0.20701353417825885,
+            "root": 0.003689769794921934,
+            "upper8": 0.02181781943848667,
+            "other_rotation": 0.005253938844058818
+          }
+        }
+      },
+      "factorial_native_passes": 0,
+      "factorial_executions": 12,
+      "dunhuang_native_passes": 0,
+      "dunhuang_executions": 2,
+      "own_event_preference_margins_radians": [
+        -7.0973537503737916e-06,
+        -1.9255222244163317e-05,
+        -2.046058518934135e-05,
+        4.240232300745106e-05
+      ],
+      "music_attribution": {
+        "mismatch_penalties": {
+          "frozen_edge": {
+            "music_replaced": 0.008315455915483957,
+            "music_shifted": 0.006988651385957686
+          },
+          "adapter": {
+            "music_replaced": 0.00808794730740677,
+            "music_shifted": 0.004579371935202895
+          }
+        },
+        "incremental_adapter_penalty": {
+          "music_replaced": -0.0002275086080771871,
+          "music_shifted": -0.0024092794507547914
+        },
+        "scope": "matched target-noised completion sensitivity; inherited frozen music response is not evidence of new music-event learning"
+      }
+    },
+    "additive": {
+      "selected_step": 400,
+      "checkpoint_sha256": "7d6b383ef59804c7470c8420185c1d4182eec011d9c922457e2bca723fa6b9b0",
+      "protocol_sha256": "368686f4c3ba3b506f41157d516483a11119ea38a3e3ac1600bb2c35435c2625",
+      "validation_controls": {
+        "original": {
+          "mse": 0.011253607728576753,
+          "normalized_velocity_rms": 0.05325005105502593,
+          "target_normalized_velocity_rms": 0.08276174368802458,
+          "group_mse": {
+            "contact": 0.16160045002228193,
+            "root": 0.0019504230076563545,
+            "upper8": 0.014436252010151899,
+            "other_rotation": 0.0036885588245543963
+          }
+        },
+        "zero_adapter": {
+          "mse": 0.011852870923272954,
+          "normalized_velocity_rms": 0.05317695909373773,
+          "target_normalized_velocity_rms": 0.08276174368802458,
+          "group_mse": {
+            "contact": 0.16156904981956663,
+            "root": 0.002047357212480468,
+            "upper8": 0.01566676723208123,
+            "other_rotation": 0.004014171566571652
+          }
+        },
+        "reference_removed": {
+          "mse": 0.011246553515472138,
+          "normalized_velocity_rms": 0.05321142315127266,
+          "target_normalized_velocity_rms": 0.08276174368802458,
+          "group_mse": {
+            "contact": 0.1593421219610415,
+            "root": 0.001901445642336815,
+            "upper8": 0.014512654022837523,
+            "other_rotation": 0.0037348892304483647
+          }
+        },
+        "wrong_source": {
+          "mse": 0.011254785179820223,
+          "normalized_velocity_rms": 0.053250105576201655,
+          "target_normalized_velocity_rms": 0.08276174368802458,
+          "group_mse": {
+            "contact": 0.16161610119403727,
+            "root": 0.0019509842022671364,
+            "upper8": 0.014438042126130313,
+            "other_rotation": 0.003688846050257174
+          }
+        },
+        "phase_reversed": {
+          "mse": 0.011253614589804783,
+          "normalized_velocity_rms": 0.053249514972170196,
+          "target_normalized_velocity_rms": 0.08276174368802458,
+          "group_mse": {
+            "contact": 0.16159942868155971,
+            "root": 0.0019503871687144663,
+            "upper8": 0.014436261786613613,
+            "other_rotation": 0.0036886080755114867
+          }
+        },
+        "music_replaced": {
+          "mse": 0.019340901766554452,
+          "normalized_velocity_rms": 0.051269330782815814,
+          "target_normalized_velocity_rms": 0.08276174368802458,
+          "group_mse": {
+            "contact": 0.2520667468221897,
+            "root": 0.00712168699343844,
+            "upper8": 0.026399695270811208,
+            "other_rotation": 0.006496446563687641
+          }
+        },
+        "music_shifted": {
+          "mse": 0.015830987014245086,
+          "normalized_velocity_rms": 0.05170101332866276,
+          "target_normalized_velocity_rms": 0.08276174368802458,
+          "group_mse": {
+            "contact": 0.20700025877643688,
+            "root": 0.0036890890029705283,
+            "upper8": 0.021814087784150615,
+            "other_rotation": 0.005253485545836156
+          }
+        }
+      },
+      "factorial_native_passes": 0,
+      "factorial_executions": 12,
+      "dunhuang_native_passes": 0,
+      "dunhuang_executions": 2,
+      "own_event_preference_margins_radians": [
+        -5.266525828495627e-06,
+        -2.0640385221926127e-05,
+        -2.0470045603016018e-05,
+        4.193276500086274e-05
+      ],
+      "music_attribution": {
+        "mismatch_penalties": {
+          "frozen_edge": {
+            "music_replaced": 0.008315455915483957,
+            "music_shifted": 0.006988651385957686
+          },
+          "adapter": {
+            "music_replaced": 0.0080872940379777,
+            "music_shifted": 0.004577379285668332
+          }
+        },
+        "incremental_adapter_penalty": {
+          "music_replaced": -0.00022816187750625792,
+          "music_shifted": -0.002411272100289354
+        },
+        "scope": "matched target-noised completion sensitivity; inherited frozen music response is not evidence of new music-event learning"
+      }
+    }
+  },
+  "native_thresholds_unchanged": true,
+  "raw_records_published": false,
+  "verification": {
+    "status": "FRESH_NATIVE_AND_MEASUREMENT_REPLAYS_VERIFIED",
+    "native_replays": 40,
+    "zero_adapter_sampler_exact_across_methods": true,
+    "new_sampling_calls": 0,
+    "optimizer_calls": 0,
+    "neural_replays_exact": {
+      "cross": true,
+      "additive": true
+    },
+    "final_server_tests": {
+      "passed": 107,
+      "warnings": 2,
+      "exit_status": 0
+    },
+    "local_tests": {
+      "passed": 106,
+      "skipped": 1
+    }
+  },
+  "music_qualified": false,
+  "full_motion_qualified": false,
+  "generation": {
+    "executions": 40,
+    "unique_motion_hashes": 32,
+    "native_passes": 0,
+    "repeated_zero_adapter_controls_are_not_independent_trials": true,
+    "factorial_native_reasons": {
+      "foot_skate_mps_p95_too_high": 30,
+      "foot_skate_mps_max_too_high": 30,
+      "foot_support_drift_m_p95_too_high": 36,
+      "foot_support_drift_m_max_too_high": 15,
+      "joint_jerk_mps3_p95_too_high": 12,
+      "joint_jerk_mps3_max_too_high": 18,
+      "joint_jerk_window_p95_max_mps3_too_high": 12,
+      "extremity_jerk_mps3_p95_too_high": 16,
+      "extremity_jerk_window_p95_max_mps3_too_high": 14,
+      "joint_rotation_step_rad_max_too_high": 9,
+      "root_vertical_speed_mps_p95_too_high": 9
+    },
+    "factorial_executions": 36,
+    "factorial_raw_jerk_over_native_max": 18,
+    "max_same_template_assembly_jerk_delta_mps3": 0.102996826171875
+  },
+  "pretraining_recipe_membership": {
+    "train": {
+      "not_in_pinned_edge_split": 221,
+      "official_test_retained": 12,
+      "official_train_retained": 480
+    },
+    "test": {
+      "not_in_pinned_edge_split": 70,
+      "official_train_retained": 146,
+      "official_test_retained": 4
+    },
+    "val": {
+      "not_in_pinned_edge_split": 67,
+      "official_train_retained": 152,
+      "official_test_retained": 4
+    }
+  },
+  "fixed_val_target_native": {
+    "targets": 8,
+    "native_passes": 1,
+    "scope": "fixed8 fitted Val targets, not entire AIST population; no training filtering"
+  },
+  "train_target_native": {
+    "status": "COMPLETED_TRAIN_ONLY_NATIVE_DESCRIPTION",
+    "targets": 1468,
+    "native_passes": 40,
+    "native_failures": 1428,
+    "reason_counts": {
+      "joint_jerk_mps3_max_too_high": 1045,
+      "foot_skate_mps_p95_too_high": 1423,
+      "foot_skate_mps_max_too_high": 1355,
+      "foot_support_drift_m_p95_too_high": 1303,
+      "foot_support_drift_m_max_too_high": 1164,
+      "joint_jerk_mps3_p95_too_high": 715,
+      "joint_jerk_window_p95_max_mps3_too_high": 594,
+      "extremity_jerk_mps3_p95_too_high": 985,
+      "extremity_jerk_window_p95_max_mps3_too_high": 886,
+      "joint_rotation_step_rad_max_too_high": 75,
+      "root_horizontal_drift_speed_mps_too_high": 71,
+      "foot_penetration_min_m_too_low": 57,
+      "root_vertical_speed_mps_p95_too_high": 152,
+      "joint_angular_acceleration_rps2_max_too_high": 11,
+      "rotation_near_pi_step_ratio_too_high": 2,
+      "joint_rotation_step_window_p95_max_rad_too_high": 10,
+      "joint_rotation_step_rad_p95_too_high": 45,
+      "root_horizontal_window_displacement_max_m_too_high": 1
+    },
+    "jerk_peak_mps3": {
+      "min": 22.93759536743164,
+      "median": 2588.87109375,
+      "max": 32353.3515625
+    },
+    "upper8_angular_speed_mean_radps": {
+      "min": 0.2650807828394094,
+      "median": 2.620652975233212,
+      "max": 7.627728620746147
+    },
+    "optimizer_calls": 0,
+    "new_weight_updates": 0,
+    "data_filtering": false,
+    "checkpoint_selection": false,
+    "interpretation": "Native contract membership only; failures do not label recordings invalid or exclude their source events"
+  },
+  "official_pfc": {
+    "status": "ALL_SAVED_PFC_MATCH_OFFICIAL",
+    "cases": 40,
+    "summary": [
+      {
+        "mode": "legacy_paired300",
+        "domain": "aist_factorial",
+        "zero_adapter": true,
+        "defined_cases": 4,
+        "mean": 0.6125297566998092,
+        "min": 0.05577459840842616,
+        "max": 1.0792500071584066
+      },
+      {
+        "mode": "legacy_paired300",
+        "domain": "aist_factorial",
+        "zero_adapter": false,
+        "defined_cases": 8,
+        "mean": 0.3796345731665418,
+        "min": 0.008468561334602727,
+        "max": 0.8945571581255066
+      },
+      {
+        "mode": "cross",
+        "domain": "aist_factorial",
+        "zero_adapter": true,
+        "defined_cases": 4,
+        "mean": 0.6125297566998092,
+        "min": 0.05577459840842616,
+        "max": 1.0792500071584066
+      },
+      {
+        "mode": "cross",
+        "domain": "aist_factorial",
+        "zero_adapter": false,
+        "defined_cases": 8,
+        "mean": 0.2461655524673764,
+        "min": 0.008167582571567668,
+        "max": 0.4297946700028017
+      },
+      {
+        "mode": "additive",
+        "domain": "aist_factorial",
+        "zero_adapter": true,
+        "defined_cases": 4,
+        "mean": 0.6125297566998092,
+        "min": 0.05577459840842616,
+        "max": 1.0792500071584066
+      },
+      {
+        "mode": "additive",
+        "domain": "aist_factorial",
+        "zero_adapter": false,
+        "defined_cases": 8,
+        "mean": 0.2455353440706202,
+        "min": 0.008169089349341246,
+        "max": 0.4267514415853676
+      },
+      {
+        "mode": "cross",
+        "domain": "dunhuang_unpaired",
+        "zero_adapter": false,
+        "defined_cases": 2,
+        "mean": 1.1530950696234097,
+        "min": 1.1528605267106666,
+        "max": 1.1533296125361527
+      },
+      {
+        "mode": "additive",
+        "domain": "dunhuang_unpaired",
+        "zero_adapter": false,
+        "defined_cases": 2,
+        "mean": 1.1530551903709032,
+        "min": 1.1528234190786617,
+        "max": 1.1532869616631447
+      }
+    ],
+    "official_commit": "17c3428669ed6733edd9d8c66f7dc62060b8e46d",
+    "official_file_sha256": "ff77cf2341a8b4e8570efb1cc5a33c4d273bec9b48543fac9562e4033ba0e6c5",
+    "source": "https://github.com/Stanford-TML/EDGE/blob/17c3428669ed6733edd9d8c66f7dc62060b8e46d/eval/eval_pfc.py",
+    "scope": "official PFC only, small registered execution pool; not Native admission, human quality or paper ranking"
+  },
+  "denoising_stage_jerk": {
+    "0": {
+      "measured": 24,
+      "invalid_geometry": 0,
+      "min": 3393.14794921875,
+      "median": 5385.69677734375,
+      "max": 6995.93115234375
+    },
+    "24": {
+      "measured": 24,
+      "invalid_geometry": 0,
+      "min": 1584.380615234375,
+      "median": 2233.9266357421875,
+      "max": 11995.8515625
+    },
+    "49": {
+      "measured": 24,
+      "invalid_geometry": 0,
+      "min": 260.995361328125,
+      "median": 1714.703369140625,
+      "max": 16528.15625
+    }
+  }
+}
