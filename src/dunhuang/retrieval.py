@@ -43,3 +43,24 @@ def select_supported_phrase(candidates, density, previous_exit=None):
     selected=min(candidates,key=lambda c:(score(c)[0],c['source_uid'],c['raw_center']))
     total,percentile,entry=score(selected)
     return selected,dict(score=total,activity_percentile=percentile,entry_distance_over_pi=entry,density=density)
+
+
+def primitive_index(entries, radius=12):
+    """Merge overlapping source intervals within each recorded event."""
+    groups = {}
+    for row in entries:
+        groups.setdefault((row['source_uid'], row['event']), []).append(row)
+    result = []
+    for (source, event), rows in sorted(groups.items()):
+        rows = sorted(rows, key=lambda r: r['raw_center'])
+        clusters = []
+        for row in rows:
+            start, end = row['raw_center']-radius, row['raw_center']+radius+1
+            if clusters and start < clusters[-1]['end']:
+                clusters[-1]['end'] = max(end,clusters[-1]['end'])
+                clusters[-1]['centers'].append(row['raw_center'])
+            else:
+                clusters.append(dict(start=start,end=end,centers=[row['raw_center']]))
+        result.append(dict(source_uid=source,event_uid=event,center_count=len(rows),clusters=clusters,
+                           representative_center=rows[len(rows)//2]['raw_center']))
+    return result
