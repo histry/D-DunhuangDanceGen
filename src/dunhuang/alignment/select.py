@@ -14,12 +14,3 @@ def select_candidates(candidates,policy='heuristic',qualification=None,top_k=5):
             raise ValueError('Missing global or synchronization score')
         return values['global_score']+.25*values['sync_score']
     return sorted(qualified,key=lambda c:(-score(c),c['event_uid']))[:top_k]
-
-def select(*args,**kwargs):
-    """Compatibility route for historical research scripts, outside formal inference."""
-    import importlib.util
-    from pathlib import Path
-    file=Path(__file__).resolve().parents[3]/'scripts/legacy_sdmr_select.py'
-    spec=importlib.util.spec_from_file_location('legacy_sdmr_select',file)
-    module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
-    return module.select(*args,**kwargs)

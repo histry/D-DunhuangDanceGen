@@ -20,8 +20,12 @@ def timeline(audio,frames):
     return dict(fps=30,frames=frames,beats=beats[beats<frames].tolist(),phrase_method='approximately 3s subdivisions snapped to detected beats',
         slots=[dict(start=a,end=b,density=float(energy[a:b].mean())) for a,b in zip(edges[:-1],edges[1:])])
 
-def plan(catalog,timing,audio_sha256,policy='heuristic',top_k=5,beam_width=3):
-    if policy not in ('heuristic','learned_shadow'):raise ValueError('Qualified learned mode requires a bound reranker')
+def plan(catalog,timing,audio_sha256,policy='heuristic',top_k=5,beam_width=3,reranker=None):
+    if policy not in ('heuristic','learned_shadow','learned_qualified'):raise ValueError('Unknown retrieval policy')
+    if policy=='learned_qualified' and (reranker is None or not reranker.decision['enabled']):
+        raise ValueError('Learned retrieval lacks bound validation qualification')
+    trace=[]
+    if policy=='learned_shadow' and reranker is None:raise ValueError('Shadow mode requires explicitly bound models and query features')
     beams=[(0.,[])]
     for slot in timing['slots']:
         options=[]
@@ -41,14 +45,20 @@ def plan(catalog,timing,audio_sha256,policy='heuristic',top_k=5,beam_width=3):
                 primitive=dict(source_frame=center,music_frame=int(tick),joints=list(range(12,20)),radius=12),
                 boundary_context=dict(left_source_frames=[a,min(a+4,b)],right_source_frames=[max(a,b-4),b],confidence='SOURCE_ONLY'),
                 scores=dict(heuristic=-abs(entry['activity_percentile']-slot['density']),global_score=None,sync_score=None,preference=None))
+            if reranker is not None and policy!='heuristic':
+                event['scores'].update(reranker.scores(entry,slot))
             options.append(event)
         if not options:raise ValueError('No legal event duration/phase for slot '+str(slot))
         # Keep source diversity in the short candidate list before global search.
-        ordered=sorted(options,key=lambda e:(-e['scores']['heuristic'],e['event_uid']))
+        def utility(e):
+            v=e['scores']
+            return v['heuristic'] if policy!='learned_qualified' else v['global_score']+.25*v['sync_score']
+        ordered=sorted(options,key=lambda e:(-utility(e),e['event_uid']))
+        trace.append(dict(music_interval=[slot['start'],slot['end']],candidates=[dict(event_uid=e['event_uid'],scores=e['scores']) for e in ordered[:top_k]]))
         chosen=[]
         for uid in dict.fromkeys(e['source_uid'] for e in ordered):
             chosen.append(next(e for e in ordered if e['source_uid']==uid))
-        chosen=sorted(chosen,key=lambda e:-e['scores']['heuristic'])[:top_k]
+        chosen=sorted(chosen,key=lambda e:-utility(e))[:top_k]
         expanded=[]
         for cost,sequence in beams:
             for event in chosen:
@@ -58,12 +68,12 @@ def plan(catalog,timing,audio_sha256,policy='heuristic',top_k=5,beam_width=3):
                 if sequence:
                     relative=np.swapaxes(np.array(sequence[-1]['exit']),-1,-2)@np.array(event['entry'])
                     transition=float(Rotation.from_matrix(relative).magnitude().mean())
-                total=cost-event['scores']['heuristic']+.3*repeat+.04*same_source+.25*transition
+                total=cost-utility(event)+.3*repeat+.04*same_source+.25*transition
                 expanded.append((total,sequence+[event]))
         beams=sorted(expanded,key=lambda pair:(pair[0],[e['event_uid'] for e in pair[1]]))[:beam_width]
     cost,events=beams[0]
     result=dict(schema='event_plan_v1',fps=30,frames=timing['frames'],audio_sha256=audio_sha256,
-        retrieval_policy=policy,retrieval_qualified=False,time_scale_limits=[.75,1.33],events=events,
+        retrieval_policy=policy,retrieval_qualified=policy=='learned_qualified',ranking_trace=trace,time_scale_limits=[.75,1.33],events=events,
         planning_cost=cost,top_k=top_k,beam_width=beam_width,
         controlled_frames=len(set(t for e in events for t in range(e['primitive']['music_frame']-11,e['primitive']['music_frame']+12))),
         native_feasibility='UNKNOWN')

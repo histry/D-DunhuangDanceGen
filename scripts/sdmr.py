@@ -172,7 +172,8 @@ def main(out):
 
     write(out/'result.json',result)
 
-    from dunhuang.alignment.select import select
+    sys.path.insert(0,str(ROOT/'research/legacy'))
+    from sdmr_select import select
     select(model,result,events,np.stack(embeddings),source_cache,out,ROOT)
     print('SDMR_COMPLETE',result['qualified'],flush=True)
 
