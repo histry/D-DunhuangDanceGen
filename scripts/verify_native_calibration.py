@@ -5,8 +5,8 @@ import numpy as np
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'src'))
 from dunhuang.io import checked,write,sha
 from dunhuang.evaluation_benchmarks.native_shadow import LegacyBackend
-from dunhuang.evaluation_benchmarks.calibration import reference_report
-from dunhuang.evaluation_benchmarks.contact_evidence import load_evidence
+from dunhuang.evaluation_benchmarks.calibration import reference_report,jerk_report
+from dunhuang.evaluation_benchmarks.contact_evidence import load_evidence,conditioned_metrics
 from dunhuang.evaluation_benchmarks.smpl_mesh import SMPLMesh
 from dunhuang.evaluation_benchmarks.physdiff_metrics import population_metrics
 from dunhuang.evaluation_benchmarks.benchmark_report import official_mesh_parity
@@ -34,7 +34,7 @@ def main():
         original=read(checked(r['files']['physical.json']))
         audit=backend.audit(x,backend.cfg,precomputed_joints=fk)
         assert audit==original['audit'] and backend.gate(audit)==original['absolute']
-    ground=read(root/'train/frozen_ground_anchors.json');count=0
+    ground=read(root/'train/frozen_ground_anchors.json');count=0;fresh_records=[]
     for row in map(json.loads,(root/'train/windows.jsonl').read_text().splitlines()):
         x=np.load(checked(row['motion']));anchor=ground[row['recording_uid']]
         labels,_=load_evidence(row.get('labels'),row['motion']['sha256'],len(x))
@@ -43,9 +43,21 @@ def main():
         assert result['legacy_contact']==row['legacy_contact']
         assert result['layers']==row['layers']
         assert result['layers']['judgments']['calibrated']['can_route'] is False
+        lineage={k:row[k] for k in ('window_uid','role','recording_uid','choreography_uid','source_group','music_uid','start_frame')}
+        metrics={spec['metric']:result['legacy_audit'].get(spec['metric']) for spec in backend.registry['metrics']}
+        if not result['legacy_contact']['sample_count']:
+            for key in ('foot_skate_mps_p95','foot_skate_mps_max','foot_support_drift_m_p95','foot_support_drift_m_max'):metrics[key]=None
+        contact=result['layers']['continuous']['contact'];candidate=dict(metrics)
+        for key,field,stat in [('foot_skate_mps_p95','independent_static_speed','p95'),
+                ('foot_skate_mps_max','independent_static_speed','max'),
+                ('foot_support_drift_m_p95','valid_static_drift','p95'),
+                ('foot_support_drift_m_max','valid_static_drift','max')]:
+            candidate[key]=contact[field][stat]
+        for key in ('foot_contact_height_m_max','foot_penetration_min_m'):candidate[key]=None
+        fresh_records.append(dict(lineage,metrics=metrics,candidate_metrics=candidate))
         count+=1
     # Source metrics and grouped resampling use the bound same deterministic protocol.
-    records=read(root/'train/calibration_rows.json')
+    records=read(root/'train/calibration_rows.json');assert records==fresh_records
     fresh=reference_report(records,backend.registry,config['bootstrap']['iterations'],config['bootstrap']['seed'])
     assert fresh==read(root/'calibration.json')
     gen=read(root/'generated/results.json')
@@ -73,6 +85,17 @@ def main():
             cached[key]=(minimum,joints);mesh_count+=1
         minimum,joints=cached[key]
         assert population_metrics(minimum,joints,r['floor_y_m'],contact_height=.05)==r['neutral_mesh']
+    # Independently reconstruct the raw-source prefixes, fixed planes and noise copies.
+    from dunhuang.evaluation_benchmarks.native_sensitivity import sensitivity as run_sensitivity
+    source_protocol=read(checked(protocol['prior_training_protocol']))
+    manifest=read(checked(assets['paired_generation_manifest']))
+    by_uid={r['window_uid']:r for r in manifest['rows']}
+    packet=read(root/'annotation_review/index.json')
+    selected=[by_uid[r['window_uid']] for r in packet['records']]
+    replay_dir=out.with_suffix('.sensitivity')
+    run_sensitivity(backend,selected,gen,mesh_assets,config,replay_dir)
+    for name in ('source_duration_ground_noise.json','saved_long_prefixes.json','mesh_reference_parity.json'):
+        assert read(root/'sensitivity'/name)==read(replay_dir/name)
     controlled=read(root/'controlled/report.json')
     for r in controlled['cases']:
         folder=root/'controlled'/r['case'];x=np.load(folder/'native.npy')
@@ -80,11 +103,14 @@ def main():
         fk=backend.fk(x);minimum,joints=mesh.sequence(x)
         assert backend.gate(backend.audit(x,backend.cfg,precomputed_joints=fk))==r['legacy']
         assert population_metrics(minimum,joints,r['fixed_floor_y_m'],contact_height=.05)==r['mesh']
+        labels=np.load(folder/'labels.npy')
+        assert conditioned_metrics(fk,r['fixed_floor_y_m'],labels=labels)==r['independent_synthetic_contact']
+        assert jerk_report(fk,backend.limits['joint_jerk_mps3_max'])==r['jerk']
     assert all(c['nondecreasing'] for c in controlled['curves'].values())
     status=read(root/'status.json');assert status['legacy_results_unchanged'] and not status['operational_qualified']
     write(out,dict(status='FRESH_NATIVE_RELIABILITY_REPLAY_VERIFIED',train_windows=count,
         historical_unique_replays=len(seen),generated_replays=len(gen),mesh_geometry_replays=mesh_count,
-        controlled_replays=len(controlled['cases']),legacy_results_unchanged=True,
+        controlled_replays=len(controlled['cases']),source_sensitivity_replayed=True,\n        calibration_rows_reconstructed=True,legacy_results_unchanged=True,
         source_protocol_sha256=sha(root/'protocol.json'),optimizer_calls=0,new_generations=0,
         operational_qualified=False,mode='SHADOW',expert_labels_supplied=False))
     print('NATIVE_RELIABILITY_VERIFIED',count,len(gen),mesh_count,flush=True)

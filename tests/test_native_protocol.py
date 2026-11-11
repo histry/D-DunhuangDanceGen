@@ -80,3 +80,26 @@ def test_shadow_cannot_drive_legacy_replanner():
     with pytest.raises(ValueError,match='Shadow'):
         route(dict(native_result='PASS',native_result_source='Native-Calib-v2'),budget({}),0)
     assert route(dict(native_result='PASS',native_result_source='Native-Legacy-v1'),budget({}),0)=='ACCEPT_NATIVE_REQUESTED_SCOPE'
+
+
+def test_threshold_provenance_does_not_confuse_contact_populations():
+    limits=dict(foot_penetration_min_m=-.05,foot_contact_height_m_max=.1,foot_skate_mps_p95=.18)
+    rows={r['metric']:r for r in threshold_registry(limits)['metrics']}
+    assert rows['foot_penetration_min_m']['contact_source']=='all_foot_joint_heights_not_contact_conditioned'
+    assert rows['foot_contact_height_m_max']['contact_source']=='rederived_contacts_only'
+    assert rows['foot_skate_mps_p95']['contact_source']=='rederived_contact_OR_low_height_assumed_static'
+
+
+def test_reference_exceedance_never_becomes_false_rejection_without_labels():
+    from dunhuang.evaluation_benchmarks.calibration import reference_report
+    from dunhuang.evaluation_benchmarks.labelled_calibration import candidates
+    rows=[dict(role='train',recording_uid=str(i),choreography_uid=str(i),source_group=str(i),
+        music_uid=str(i),window_uid=str(i),metrics={'joint_jerk_mps3_max':1000+i},
+        candidate_metrics={'joint_jerk_mps3_max':1000+i},legacy_pass=True) for i in range(6)]
+    registry=threshold_registry({'joint_jerk_mps3_max':1620})
+    report=reference_report(rows,registry,iterations=10)
+    assert report['metrics'][0]['candidate_threshold'] is None
+    assert report['metrics'][0]['false_reject_rate'] is None
+    labelled=candidates(rows,registry,{},iterations=10)
+    assert labelled['records'][0]['candidate_threshold'] is None
+    assert not labelled['operational_qualified']

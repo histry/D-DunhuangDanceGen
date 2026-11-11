@@ -76,19 +76,22 @@ def threshold_registry(limits):
         units=('m/s^3' if 'jerk' in key else 'rad/s^2' if 'angular_acceleration' in key else
                'rad' if 'rotation_step' in key else 'm/s' if 'mps' in key or 'speed' in key else
                'dimensionless' if any(s in key for s in ('ratio','collinearity')) else 'm')
+        contact_source=('all_foot_joint_heights_not_contact_conditioned' if key=='foot_penetration_min_m' else
+                        'rederived_contacts_only' if key=='foot_contact_height_m_max' else
+                        'rederived_contact_OR_low_height_assumed_static' if key.startswith('foot_') else None)
         rows.append(dict(metric=key,units=units,category=category,legacy_threshold=float(value),
             direction='lower' if key=='foot_penetration_min_m' else 'upper',
             metric_definition=dict(legacy_key=key,operator='pinned Native source implementation',
                 aggregation='max of1s-windowP95' if 'window' in key else 'P95' if 'p95' in key else
                             'maximum' if 'max' in key else 'legacy named statistic',
                 reference='motion_geometry/physical.py at pinned legacy commit',
-                support_population='derived-contact OR filtered low-height, provisionally static; not independent static truth' if key.startswith('foot_') else None),
+                support_population=contact_source),
             threshold_origin='project_legacy_engineering_default',
             paper_universal_threshold=None,calibration_status='NOT_CALIBRATED',
-            contact_source='rederived_FK_union_low_height' if key.startswith('foot_') else None,
+            contact_source=contact_source,
             applicability='explicit scene task' if category.startswith('C') else 'Legacy protocol only; empirical validity unresolved',
             legacy_gate_unchanged=True))
-    return dict(schema='native_threshold_provenance_v1',contract='Native-Legacy-v1',
+    return dict(schema='native_threshold_provenance_v1',definition_revision=2,contract='Native-Legacy-v1',
                 count=len(rows),metrics=rows,legacy_gate_unchanged=True)
 
 

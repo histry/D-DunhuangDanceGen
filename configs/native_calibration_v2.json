@@ -5,6 +5,7 @@
   "legacy_gate_unchanged": true,
   "legacy_metric_provenance": {
     "schema": "native_threshold_provenance_v1",
+    "definition_revision": 2,
     "contract": "Native-Legacy-v1",
     "count": 31,
     "metrics": [
@@ -19,12 +20,12 @@
           "operator": "pinned Native source implementation",
           "aggregation": "P95",
           "reference": "motion_geometry/physical.py at pinned legacy commit",
-          "support_population": "derived-contact OR filtered low-height, provisionally static; not independent static truth"
+          "support_population": "rederived_contact_OR_low_height_assumed_static"
         },
         "threshold_origin": "project_legacy_engineering_default",
         "paper_universal_threshold": null,
         "calibration_status": "NOT_CALIBRATED",
-        "contact_source": "rederived_FK_union_low_height",
+        "contact_source": "rederived_contact_OR_low_height_assumed_static",
         "applicability": "Legacy protocol only; empirical validity unresolved",
         "legacy_gate_unchanged": true
       },
@@ -39,12 +40,12 @@
           "operator": "pinned Native source implementation",
           "aggregation": "maximum",
           "reference": "motion_geometry/physical.py at pinned legacy commit",
-          "support_population": "derived-contact OR filtered low-height, provisionally static; not independent static truth"
+          "support_population": "rederived_contact_OR_low_height_assumed_static"
         },
         "threshold_origin": "project_legacy_engineering_default",
         "paper_universal_threshold": null,
         "calibration_status": "NOT_CALIBRATED",
-        "contact_source": "rederived_FK_union_low_height",
+        "contact_source": "rederived_contact_OR_low_height_assumed_static",
         "applicability": "Legacy protocol only; empirical validity unresolved",
         "legacy_gate_unchanged": true
       },
@@ -59,12 +60,12 @@
           "operator": "pinned Native source implementation",
           "aggregation": "P95",
           "reference": "motion_geometry/physical.py at pinned legacy commit",
-          "support_population": "derived-contact OR filtered low-height, provisionally static; not independent static truth"
+          "support_population": "rederived_contact_OR_low_height_assumed_static"
         },
         "threshold_origin": "project_legacy_engineering_default",
         "paper_universal_threshold": null,
         "calibration_status": "NOT_CALIBRATED",
-        "contact_source": "rederived_FK_union_low_height",
+        "contact_source": "rederived_contact_OR_low_height_assumed_static",
         "applicability": "Legacy protocol only; empirical validity unresolved",
         "legacy_gate_unchanged": true
       },
@@ -79,12 +80,12 @@
           "operator": "pinned Native source implementation",
           "aggregation": "maximum",
           "reference": "motion_geometry/physical.py at pinned legacy commit",
-          "support_population": "derived-contact OR filtered low-height, provisionally static; not independent static truth"
+          "support_population": "rederived_contact_OR_low_height_assumed_static"
         },
         "threshold_origin": "project_legacy_engineering_default",
         "paper_universal_threshold": null,
         "calibration_status": "NOT_CALIBRATED",
-        "contact_source": "rederived_FK_union_low_height",
+        "contact_source": "rederived_contact_OR_low_height_assumed_static",
         "applicability": "Legacy protocol only; empirical validity unresolved",
         "legacy_gate_unchanged": true
       },
@@ -99,12 +100,12 @@
           "operator": "pinned Native source implementation",
           "aggregation": "maximum",
           "reference": "motion_geometry/physical.py at pinned legacy commit",
-          "support_population": "derived-contact OR filtered low-height, provisionally static; not independent static truth"
+          "support_population": "rederived_contacts_only"
         },
         "threshold_origin": "project_legacy_engineering_default",
         "paper_universal_threshold": null,
         "calibration_status": "NOT_CALIBRATED",
-        "contact_source": "rederived_FK_union_low_height",
+        "contact_source": "rederived_contacts_only",
         "applicability": "Legacy protocol only; empirical validity unresolved",
         "legacy_gate_unchanged": true
       },
@@ -119,12 +120,12 @@
           "operator": "pinned Native source implementation",
           "aggregation": "legacy named statistic",
           "reference": "motion_geometry/physical.py at pinned legacy commit",
-          "support_population": "derived-contact OR filtered low-height, provisionally static; not independent static truth"
+          "support_population": "all_foot_joint_heights_not_contact_conditioned"
         },
         "threshold_origin": "project_legacy_engineering_default",
         "paper_universal_threshold": null,
         "calibration_status": "NOT_CALIBRATED",
-        "contact_source": "rederived_FK_union_low_height",
+        "contact_source": "all_foot_joint_heights_not_contact_conditioned",
         "applicability": "Legacy protocol only; empirical validity unresolved",
         "legacy_gate_unchanged": true
       },

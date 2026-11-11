@@ -49,6 +49,10 @@ def candidates(records,registry,quality,iterations=300,seed=20261116):
         if not test_bad:blockers.append('NO_INDEPENDENT_ERROR_HOLDOUT')
         if len({r['source_group'] for r in good})<5:blockers.append('FEWER_THAN_FIVE_CALIBRATION_COMPONENTS')
         entries.append(dict(metric=key,candidate_threshold=value,statistics=stat,
+            candidate_population=('independently labelled static adjacent-frame pairs' if key.startswith('foot_skate') else
+                                  'independently labelled static stance segments' if key.startswith('foot_support_drift') else
+                                  'same continuous observable; labelled quality population'),
+            replaces_legacy_measurement=False,
             independent_good_calibration=len(good),independent_good_holdout=len(test_good),
             independent_error_holdout=len(test_bad),false_reject_rate=errors(test_good,True),
             missed_error_rate=errors(test_bad,False),blockers=blockers,

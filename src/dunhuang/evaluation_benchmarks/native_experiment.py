@@ -1,5 +1,5 @@
 """Native-N0/N1/N2 research. No training, generation, threshold activation or editing."""
-import argparse,json,sys,subprocess,time,traceback,shutil,hashlib
+import argparse,json,sys,subprocess,time,traceback,shutil,hashlib,os
 from pathlib import Path
 from collections import defaultdict,Counter
 import numpy as np
@@ -116,7 +116,10 @@ def replay_generated(backend,pool,out,assets):
         q=dict(assets,frames=len(np.load(source/'native.npy')),output=str(dest),anchors=[],beat_frames=[])
         write(dest/'request.json',q)
         with (dest/'native.log').open('w') as log:
-            subprocess.run([assets['native_python'],'-m','dunhuang.physical',str(dest/'request.json')],stdout=log,stderr=subprocess.STDOUT,check=True)
+            child_env=dict(os.environ)
+            package_root=str(Path(__file__).resolve().parents[2])
+            child_env['PYTHONPATH']=package_root+os.pathsep+child_env.get('PYTHONPATH','')
+            subprocess.run([assets['native_python'],'-m','dunhuang.physical',str(dest/'request.json')],stdout=log,stderr=subprocess.STDOUT,check=True,env=child_env)
         if read(dest/'physical.json')!=read(source/'physical.json') or sha(dest/'native.npy')!=sha(source/'native.npy') or sha(dest/'native_fk.npy')!=sha(source/'native_fk.npy'):
             raise ValueError('Historical full Legacy replay changed: '+c['name'])
         x=np.load(source/'native.npy');fk=np.load(source/'native_fk.npy');a=anchors[str(c['anchor'])]
