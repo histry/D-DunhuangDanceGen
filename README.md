@@ -142,3 +142,12 @@ python scripts/verify_v08.py --root outputs/v08_new --out outputs/v08_new/readou
 服务器实际完成 1,566 条原始动作哈希核对、1,564 条解码和 15,665 个 150 帧窗口审计。AIST++ 4,964/5,040 个窗符合当前表示合同；FineDance 0/10,625，且缺少末端手部 22/23 监督。两个不同 Train 关联组的真实 Layer66 Jukebox 提取完成。配对训练因时钟/来源证据不足明确 BLOCKED，训练0步，无新模型质量结论。
 
 详见 [配对资产预检报告](reports/配对资产预检报告.md)、[运行与合同](docs/paired_assets.md)、[支持域数据](reports/paired_asset_support.json)、[独立核验](reports/paired_asset_verification.json)。旧无观测/时钟收据的 paired 清单拒绝使用；单次生成和 V0.8 闭环保持原入口。
+
+
+## AIST++ 基础舞配对与首轮训练
+
+已利用官方精修视频、CSV和基础编舞工作簿核验1,363条来源：1,166条基础舞通过身份/音频时钟校准；197条高级舞共享编舞身份未明确，仍排除。完整配对清单为2,418个窗（Train1480/Val481/Test457），预检通过后提取127份去重的真实Layer66 Jukebox，再完成冻结EDGE的300步151D Adapter补全训练。
+
+服务器96项测试通过，新进程验证MSE与保存结果完全一致、零权重更新。Val补全MSE较零Adapter约改善1.97%，移除来源参考几乎不变；未证明音乐演绎或Native质量，默认生成入口不变。角色隔离只覆盖已核验官方关联键，不宣称语义独立或新盲测。
+
+详见 [实际配对训练报告](reports/AIST++配对训练报告.md) 和 [运行说明](docs/aist_pairing_pipeline.md)。完整清单与原始回执保留在本地/服务器的忽略输出目录，GitHub仅发布汇总。
