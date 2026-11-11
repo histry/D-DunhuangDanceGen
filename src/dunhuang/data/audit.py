@@ -74,7 +74,8 @@ def run(assets,raw_root,out):
     commit=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip()
     report=dict(schema='paired_representation_audit_v1',code_commit=commit,raw_root=str(raw_root),
         population=ref(raw_root/'population.json'),scaler=assets['scaler'],checkpoint=assets['checkpoint'],
-        edge_commit=assets['edge_commit'],links=links,datasets=summary,windows=len(ledger),
+        edge_commit=assets['edge_commit'],conversion_sha256=sha(Path(__file__).with_name('conversion.py')),
+        motion_adapter_sha256=sha(Path(__file__).resolve().parents[1]/'contracts.py'),links=links,datasets=summary,windows=len(ledger),
         support=ref(out/'support.npz'),window_ledger=ref(out/'windows.json'),source_ledger=ref(out/'sources.json'),
         feature_candidates=ref(out/'feature_candidates.json'),clipped_targets=0,normalizer_refitted=False,
         motion_origin='training: first window XZ, preserve absolute height; reference: official uncentered',

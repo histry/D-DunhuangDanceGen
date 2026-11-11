@@ -61,3 +61,87 @@ def test_numerical_support_does_not_clip_unknown_or_out_of_range_channels():
     x[:,5]=3
     _,target,valid=normalized_window(x,0,np.ones(151),np.zeros(151))
     assert target[0,6]==3 and not valid[:,6].any()
+
+
+def paired_fixture(tmp_path):
+    from dunhuang.io import sha
+    import soundfile as sf
+    def ref(path):return dict(path=str(path),sha256=sha(path))
+    scaler=tmp_path/'scaler.npz';np.savez(scaler,scale=np.ones(151,np.float32),bias=np.zeros(151,np.float32))
+    rows=[]
+    for index,role in enumerate(('train','val')):
+        folder=tmp_path/str(index);folder.mkdir()
+        raw=folder/'raw';raw.write_bytes(('source'+str(index)).encode())
+        audio=folder/'audio.wav';sf.write(audio,np.ones(80000,np.float32)*(.1+index*.01),16000,subtype='FLOAT')
+        motion=np.zeros((150,151),np.float32);motion[:,:4]=1;motion[:,5]=.5
+        motion[:,7:]=np.tile([1,0,0,0,1,0],24);np.save(folder/'motion.npy',motion)
+        observed=np.ones((150,151),bool);observed[:,:4]=False
+        derived=~observed
+        for name,v in [('observed',observed),('derived',derived),('supervision',observed|derived)]:
+            np.save(folder/(name+'.npy'),v)
+        np.save(folder/'jukebox.npy',np.ones((150,4800),np.float32)*.1)
+        row=dict(window_uid=str(index),source_group='group'+str(index),role=role,dataset='aistpp',
+            audio=ref(audio),raw_motion=ref(raw),music_uid='music'+str(index),fps=30,frames=150,
+            start_frame=0,audio_offset_seconds=0,observed_body_joints=24,
+            contact_policy='official_edge_forward_displacement_0.01m_last1')
+        for name in ('motion','observed','derived','supervision','jukebox'):row[name]=ref(folder/(name+'.npy'))
+        receipt=dict(audio_sha256=sha(audio),layer=66,fps=30,edge_commit='edge',window_uid=str(index),
+            sample_start=0,sample_end=80000,features_sha256=row['jukebox']['sha256'])
+        path=folder/'receipt.json';path.write_text(json.dumps(receipt));row['jukebox_receipt']=ref(path)
+        attestation=dict(status='verified',window_uid=str(index),audio_sha256=sha(audio),
+            motion_sha256=sha(raw),audio_offset_seconds=0,method='synthetic unit fixture only')
+        path=folder/'alignment.json';path.write_text(json.dumps(attestation));row['alignment_attestation']=ref(path)
+        rows.append(row)
+    manifest=dict(schema='paired_generation_manifest_v2',checkpoint_sha256='checkpoint',
+        scaler_sha256=sha(scaler),rows=rows,recording_independence_verified=True,blind_test_claimed=False)
+    path=tmp_path/'manifest.json';path.write_text(json.dumps(manifest))
+    assets=dict(paired_generation_manifest=ref(path),checkpoint=dict(sha256='checkpoint'),
+                scaler=ref(scaler),edge_commit='edge')
+    return assets,manifest,path
+
+def resave(assets,manifest,path):
+    from dunhuang.io import sha
+    path.write_text(json.dumps(manifest));assets['paired_generation_manifest']['sha256']=sha(path)
+
+def test_real_shapes_provenance_and_preflight_without_change_catalog(tmp_path):
+    from dunhuang.generation.train import train
+    assets,manifest,path=paired_fixture(tmp_path)
+    windows,roles,report=inspect(assets)
+    assert report['ready'] and len(windows)==2 and set(roles.values())=={'train','val'}
+    train(assets,tmp_path/'preflight',1,task='paired',preflight_only=True)
+    status=json.loads((tmp_path/'preflight/status.json').read_text())
+    assert status['status']=='PREFLIGHT_READY_NOT_QUALIFIED' and status['training_steps']==0
+
+def test_release_declared_offset_never_promoted_to_verified_training(tmp_path):
+    assets,manifest,path=paired_fixture(tmp_path)
+    manifest['rows'][0]['alignment_attestation']=None
+    manifest['recording_independence_verified']=False;resave(assets,manifest,path)
+    windows,_,report=inspect(assets)
+    assert not windows and not report['ready']
+    assert {'UNVERIFIED_AUDIO_OFFSET','RECORDING_INDEPENDENCE_UNVERIFIED'}<=set(report['blockers'])
+
+@pytest.mark.parametrize('change',['wrong_layer','wrong_clock','fake_observation','missing_hands'])
+def test_paired_manifest_rejects_false_observation_and_feature_clock(tmp_path,change):
+    from dunhuang.io import sha
+    assets,manifest,path=paired_fixture(tmp_path);row=manifest['rows'][0]
+    if change in ('wrong_layer','wrong_clock'):
+        p=Path(row['jukebox_receipt']['path']);v=json.loads(p.read_text())
+        v['layer' if change=='wrong_layer' else 'sample_start']=35 if change=='wrong_layer' else 1
+        p.write_text(json.dumps(v));row['jukebox_receipt']['sha256']=sha(p)
+    elif change=='fake_observation':
+        row['dataset']='finedance';row['observed_body_joints']=22
+    else:
+        p=Path(row['supervision']['path']);v=np.load(p);v[:,-12:]=False;np.save(p,v)
+        row['supervision']['sha256']=sha(p)
+    resave(assets,manifest,path)
+    if change=='missing_hands':
+        windows,_,report=inspect(assets)
+        assert not windows and 'INCOMPLETE_151D_SUPERVISION' in report['blockers']
+    else:
+        with pytest.raises(ValueError):inspect(assets)
+
+def test_test_role_identity_leak_is_checked_before_skipping_fit(tmp_path):
+    assets,manifest,path=paired_fixture(tmp_path)
+    row=copy.deepcopy(manifest['rows'][0]);row.update(window_uid='test',role='test',source_group='new-test-group')
+    manifest['rows'].append(row);resave(assets,manifest,path)
+    with pytest.raises(ValueError,match='crosses roles'):inspect(assets)

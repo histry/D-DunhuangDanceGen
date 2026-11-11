@@ -13,6 +13,10 @@ def main():
     ap=argparse.ArgumentParser();ap.add_argument('--assets',required=True);ap.add_argument('--audit',required=True)
     ap.add_argument('--raw-root',required=True);ap.add_argument('--out',required=True)
     a=ap.parse_args();assets=read(a.assets);audit=read(Path(a.audit)/'report.json')
+    if (audit['scaler']['sha256']!=assets['scaler']['sha256'] or audit['checkpoint']['sha256']!=assets['checkpoint']['sha256']
+        or audit['edge_commit']!=assets['edge_commit'] or audit['conversion_sha256']!=sha(Path(__file__).resolve().parents[1]/'src/dunhuang/data/conversion.py')
+        or audit['motion_adapter_sha256']!=sha(Path(__file__).resolve().parents[1]/'src/dunhuang/contracts.py')):
+        raise ValueError('Audit conversion/checkpoint/scaler identity changed')
     candidates=read(checked(audit['feature_candidates']))['rows']
     out=Path(a.out).resolve();out.mkdir(parents=True,exist_ok=False)
     edge=pinned(assets['edge_root'],assets['edge_commit']);sys.path.insert(0,str(edge))
