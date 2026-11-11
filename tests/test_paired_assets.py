@@ -156,3 +156,14 @@ def test_boolean_claim_without_source_bound_split_receipt_not_train_ready(tmp_pa
     manifest.pop('split_attestation');resave(assets,manifest,path)
     windows,_,report=inspect(assets)
     assert not windows and 'MISSING_SPLIT_ATTESTATION' in report['blockers']
+
+
+def test_pre_extraction_gate_cannot_bypass_training_feature_gate(tmp_path):
+    assets,manifest,path=paired_fixture(tmp_path)
+    for row in manifest['rows']:
+        row['jukebox']=None;row['jukebox_receipt']=None
+    resave(assets,manifest,path)
+    windows,_,pre=inspect(assets,require_features=False)
+    assert pre['ready'] and len(windows)==2 and pre['stage']=='TARGETS_CLOCK_IDENTITIES_ONLY_NO_JUKEBOX'
+    windows,_,strict=inspect(assets)
+    assert not windows and not strict['ready'] and 'MISSING_REAL_JUKEBOX' in strict['blockers']
