@@ -40,5 +40,24 @@ class Reranker:
         for name,x,m in [('music',music,mm),('motion',motion,mask)]:
             x=(x-np.array(self.norm[name]['mean']))/np.array(self.norm[name]['std'])*m
             args.extend([torch.as_tensor(x).float()[None],torch.as_tensor(m)[None]])
-        global_score,sync_score=synchronized_scores(self.global_model,self.sync_model,args[0],args[1],args[2],args[3])
-        return dict(global_score=float(global_score[0]),sync_score=float(sync_score[0]),preference=None)
+        # Local confidence is relative to actual noncyclic phase alternatives.
+        # Raw logits have an arbitrary additive offset and cannot be mixed with cosine.
+        if n<=32:raise ValueError('Too little common context for synchronization controls')
+        raw_scores=[]
+        trimmed_music=args[0][:,15:-15];trimmed_mask=args[1][:,15:-15]
+        for offset in (-15,-8,0,8,15):
+            positions=(np.arange(15,n-15)+offset)*(len(source)-1)/(n-1)
+            if positions.min()<0 or positions.max()>len(source)-1:raise ValueError('Missing real shift support')
+            v=np.column_stack([np.interp(positions,np.arange(len(source)),source[:,j]) for j in range(74)])
+            valid=source_mask[np.floor(positions).astype(int)]&source_mask[np.ceil(positions).astype(int)]
+            v[:,:66]/=rate;v[:,[66,67]]/=rate;v[:,[70,72,73]]/=rate**2
+            v=(v-np.array(self.norm['motion']['mean']))/np.array(self.norm['motion']['std'])*valid
+            _,score=synchronized_scores(self.global_model,self.sync_model,trimmed_music,trimmed_mask,
+                torch.as_tensor(v).float()[None],torch.as_tensor(valid)[None])
+            raw_scores.append(score[0])
+        probability=float(torch.softmax(torch.stack(raw_scores),0)[2])
+        with torch.no_grad():
+            m=self.global_model.music(args[0],args[1])[0]
+            d=self.global_model.motion(args[2],args[3])[0]
+        return dict(global_score=float((m*d).sum()),sync_score=probability,
+            sync_raw_logits=[float(s) for s in raw_scores],sync_reference='relative zero-offset probability on common true support',preference=None)

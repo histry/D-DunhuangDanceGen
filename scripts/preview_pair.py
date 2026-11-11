@@ -18,7 +18,7 @@ for track in tracks:
 allcoords=np.stack(projected);scale=min(435/max(abs(allcoords[...,0]).max()*2,.001),330/max(np.ptp(allcoords[...,1]),.001))
 low=float(allcoords[...,1].min());height,width=480,960
 cmd=['ffmpeg','-hide_banner','-loglevel','error','-n','-f','rawvideo','-pix_fmt','bgr24','-s','960x480','-r','30','-i','-']
-if a.audio:cmd+=['-i',str(a.audio),'-map','0:v','-map','1:a','-c:a','aac','-shortest']
+if a.audio:cmd+=['-i',str(a.audio),'-map','0:v','-map','1:a','-c:a','aac','-af','apad','-t',str(frames/30)]
 cmd+=['-frames:v',str(frames),'-c:v','libx264','-pix_fmt','yuv420p','-movflags','+faststart',str(a.output)]
 proc=subprocess.Popen(cmd,stdin=subprocess.PIPE)
 for f in range(frames):
