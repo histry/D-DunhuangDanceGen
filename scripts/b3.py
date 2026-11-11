@@ -46,6 +46,12 @@ def main(target):
     from motion_geometry.smpl24 import FOOT_JOINTS
     from contracts.physical_quality import evaluate_physical_audit
     x=np.load(parent/'native.npy');fk=np.load(parent/'native_fk.npy')
+    import subprocess
+    write(target/'provenance.json',dict(code_commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),
+        request=q,parent_sha256=sha(parent/'native.npy'),fk_sha256=sha(parent/'native_fk.npy'),
+        windows_sha256=sha(parent/'windows.npy'),fixed_amplitudes=[.25,.5],continuation_amplitude=.75,
+        rotation_direction_cap_rad=.1,translation_direction_cap_m=.02,anchor_trajectory_cap_rad=.02))
+
     before=read(parent/'physical.json')
     rotations=matrices(x[:,7:].reshape(-1,24,6)).astype(float)
     def audit(value):
@@ -103,18 +109,24 @@ def main(target):
     domains=[('hand_root_trunk',max(0,peak-18),min(len(x),peak+19),[0,3,6,9]),
              ('hand_arm',max(0,peak-18),min(len(x),peak+19),[14,17,19,21]),
              ('support_leg',stance['start'],stance['end'],[1,2,4,5,7,8,10,11])]
+    domains=[(name,int(a),int(b),joints) for name,a,b,joints in domains]
     candidates=[];positive=[]
     def save(label,proposal,a,b,joints,amount):
         pos,metrics,gate=audit(proposal)
         anchor_change=max(float(angle_difference(rotations[t['frame'],t['joints']],
             matrices(proposal[t['frame'],7:].reshape(24,6))[t['joints']]).max()) for t in q['anchors'])
+        trajectory_change=0.
+        for anchor in q['anchors']:
+            t=anchor['frame'];joints=anchor['joints']
+            proposed=matrices(proposal[t-12:t+13,7:].reshape(25,24,6))[:,joints]
+            trajectory_change=max(trajectory_change,float(angle_difference(rotations[t-12:t+13,joints],proposed).max()))
         new_failures=sorted(set(gate['reasons'])-set(before['absolute']['reasons']))
-        protected=not new_failures and anchor_change<=.02
+        protected=not new_failures and anchor_change<=.02 and trajectory_change<=.02
         major=metrics['joint_jerk_mps3_max']<before['audit']['joint_jerk_mps3_max']*.99 or metrics['foot_skate_mps_p95']<before['audit']['foot_skate_mps_p95']*.99
         folder=target/label;folder.mkdir()
         np.save(folder/'native.npy',proposal);np.save(folder/'native_fk.npy',pos)
         write(folder/'physical.json',dict(audit=metrics,absolute=gate))
-        row=dict(case=label,span=[a,b],joints=joints,amount=amount,anchor_max_change_rad=anchor_change,
+        row=dict(case=label,span=[a,b],joints=joints,amount=amount,anchor_max_change_rad=anchor_change,trajectory_max_change_rad=trajectory_change,
             protected=protected,major_improved=major,native_pass=gate['ok'],new_failures=new_failures,
             metrics={k:metrics[k] for k in before['absolute']['limits'] if k in metrics},reasons=gate['reasons'])
         return row
