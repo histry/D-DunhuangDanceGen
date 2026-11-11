@@ -23,7 +23,10 @@ def retrieval(model,rows,arrays,ids,device):
             values.append([r<=1,r<=5,1/r]);random.append(float(positive.mean()))
             group.setdefault(rows[ids[j]]['group'],[]).append([r<=1,1/r])
         if not values:continue
-        result[domain]=dict(queries=len(values),groups=len(group),recall1=float(np.mean(values,0)[0]),
+        group_values=np.array([np.mean(v,0)[0] for v in group.values()])
+        rng=np.random.default_rng(117)
+        ci=np.percentile([rng.choice(group_values,len(group_values),replace=True).mean() for _ in range(500)],[2.5,97.5])
+        result[domain]=dict(recall1_group_bootstrap95=ci.tolist(),queries=len(values),groups=len(group),recall1=float(np.mean(values,0)[0]),
             recall5=float(np.mean(values,0)[1]),mrr=float(np.mean(values,0)[2]),chance=float(np.mean(random)),
             group_metrics={k:np.mean(v,0).tolist() for k,v in group.items()})
     return result
@@ -61,5 +64,5 @@ def synchronization(model,rows,arrays,ids,device):
         ci=np.percentile([rng.choice(means,len(means),replace=True).mean() for _ in range(500)],[2.5,97.5])
         output[domain]=dict(queries=len(selected),groups=len(grouped),aligned_vs_shift_win=float(wins.mean()),
             offset_choice_accuracy=float((z.argmax(1)==2).mean()),chance=.2,
-            margin=float((z[:,2,None]-negative).mean()),group_wins=grouped,group_bootstrap95=ci.tolist())
+            margin=float((z[:,2,None]-negative).mean()),per_shift_win={str(s/30):float((z[:,2]>z[:,k]).mean()) for k,s in enumerate(SHIFTS) if s!=0},group_wins=grouped,group_bootstrap95=ci.tolist())
     return output

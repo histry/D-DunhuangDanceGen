@@ -36,7 +36,7 @@ def main(out):
 
     assets=Path('/home/disk/lsm/storage/danceRAG/assets/datasets')
 
-    protocol=dict(seed=20261111,global_steps=5000,sync_steps=2000,val_interval=250,
+    protocol=dict(seed=20261111,global_steps=5000,sync_steps=2000,val_interval=250,actual_shift_frames=[-15,-8,0,8,15],input_fps=30,
 
         selection='validation MRR for global, group synchronization win for sync',
 
