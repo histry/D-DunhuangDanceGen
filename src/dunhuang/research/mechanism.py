@@ -13,7 +13,7 @@ TIMES = (100, 500, 900)
 CONTROLS = ('original', 'reference_removed', 'mask_only', 'phase_reversed',
             'source_replaced', 'music_replaced', 'music_shifted', 'zero_adapter')
 GROUPS = dict(contact=list(range(4)), root=list(range(4,7)),
-              torso=list(range(7,79)), upper8=list(range(79,127)),
+              body0_11_rotation=list(range(7,79)), upper8=list(range(79,127)),
               wrists_hands=list(range(127,151)), legs=[7+6*j+k for j in (1,2,4,5,7,8,10,11) for k in range(6)])
 
 

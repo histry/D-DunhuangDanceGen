@@ -19,6 +19,13 @@ def main():
         raise ValueError('Training artifact identity changed')
     if protocol['paired_manifest']!=assets['paired_generation_manifest'] or protocol['checkpoint']!=assets['checkpoint']:
         raise ValueError('Replay scientific inputs differ')
+    history=read(root/'history.json')
+    expected=list(range(100,protocol['steps']+1,100))
+    if not expected or expected[-1]!=protocol['steps']:expected.append(protocol['steps'])
+    if [r['step'] for r in history]!=expected or status['training_steps']!=protocol['steps']:
+        raise ValueError('Incomplete registered training history')
+    selected=min(history,key=lambda r:r['validation']['mse'])['step']
+    if selected!=status['selected_step']:raise ValueError('Checkpoint selection rule changed')
     index,pairs,gate=prepare(assets)
     if pairs!=read(root/'source_pairs.json'):raise ValueError('Source correspondence changed')
     rt=TransferRuntime(assets,index,protocol['mode']);rt.validation=[p for p in pairs if p['role']=='val']

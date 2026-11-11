@@ -128,3 +128,31 @@ def test_task_receipt_cannot_claim_a_different_capture_or_pose_exact_truth():
         validate_pair(dict(p,source_recording='invented'),index)
     with pytest.raises(ValueError,match='pose-exact'):
         validate_pair(dict(p,pose_exact_correspondence=True),index)
+
+
+def test_timing_proxy_preserves_undefined_stationary_case_and_known_lag():
+    from dunhuang.research.event_metrics import event_timing
+    x=np.zeros((150,151),np.float32)
+    x[:,7:]=np.tile(sixd(np.eye(3)).reshape(1,6),(150,24))
+    assert event_timing(x,x)['best_lag_frames'] is None
+    y=x.copy()
+    t=np.arange(150)
+    x[:,79:127]=np.tile(sixd(Rotation.from_euler('x',.3*np.sin(2*np.pi*t/50)).as_matrix()),(1,8))
+    y[:,79:127]=np.tile(sixd(Rotation.from_euler('x',.3*np.sin(2*np.pi*(t-6)/50)).as_matrix()),(1,8))
+    timing=event_timing(y,x)
+    assert timing['best_lag_frames']==6 and timing['best_lag_correlation']>.999
+
+
+def test_native_mask_only_is_a_hint_not_degenerate_observed_rotation():
+    import torch
+    from dunhuang.research.mechanism import Runtime
+    from dunhuang.generation.conditions import ReferenceCondition
+    from dunhuang.generation.event_music_adapter import EventMusicAdapter
+    rt=Runtime.__new__(Runtime);rt.native_geometry=True
+    rt.adapter=EventMusicAdapter('cross').eval()
+    value=torch.zeros(1,150,151);known=torch.zeros_like(value,dtype=torch.bool)
+    known[:,:,79:127]=True;phase=torch.arange(150).float()[None,:,None]/150
+    rt.state=dict(enabled=True,condition=ReferenceCondition(value,known,phase,'mask_hint'),
+                  mask_only=True,capture=False)
+    music=torch.randn(1,150,512)
+    torch.testing.assert_close(rt.inject(None,(),music),music)

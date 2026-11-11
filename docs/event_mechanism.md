@@ -45,3 +45,25 @@ The existing generate.py/EDGE worker supports native event geometry only with bo
     PYTHONPATH=src python scripts/transfer_experiment.py --paired-assets outputs/aist_features_01/assets.json --generation-assets outputs/event_plan_01/prepare/assets.json --plans outputs/v07_01/plans/index.json --out outputs/transfer_experiment_new
 
 Publish code before running. The script writes the protocol, runs complete regression and source-task preflight, then cross1200, its12-case factorial, two real ChangE/A65 Event Plan cases and fresh validation replay; only then the identical-budget additive ablation. All28 free-generation executions are retained, including duplicated zero-Adapter controls across methods; this is not28 unique motions. A crash preserves its own output directory and exit receipts. No automatic retry, DEV tuning, native threshold change, long-song promotion or learned feasibility probability is performed. Unsuccessful trajectory executions do not blacklist the source event.
+
+
+## Independent evidence replay and pretraining limits
+
+    python scripts/verify_event_transfer.py --assets outputs/aist_features_01/assets.json --training outputs/event_transfer_run/cross/train --out outputs/event_transfer_cross_replay_new.json
+    python scripts/verify_transfer_execution.py --baseline outputs/mechanism_baseline --experiment outputs/event_transfer_run --out outputs/event_transfer_native_replay_new
+    python scripts/audit_pretraining_exposure.py --assets outputs/aist_features_01/assets.json --out outputs/pretraining_recipe_membership_new.json
+
+The neural replay uses a fresh process and checks all seven controls, source-pair identity, complete training history, the predeclared best-checkpoint rule and unchanged parameters. Native replay executes the original authority in fresh directories, compares exact motion/FK and full physical receipts, and recomputes saved probes/MSE. Zero-Adapter factorial motions must remain bitwise equal to the original mechanism baseline; new fusion and sampler observation cannot alter that control. No new sampling or optimization is permitted in these verification paths.
+
+The provenance audit intersects current sources with the pinned official EDGE recipe's Train/Test minus ignore lists. This is a list-membership audit, not a reconstruction of the downloaded checkpoint's actual optimizer/data lineage. Even a source absent from these lists is not certified unexposed. The current protocol never claims a fresh blind test or unknown-Dunhuang generalization.
+
+
+    python scripts/audit_music_response.py --assets outputs/aist_features_01/assets.json --training outputs/event_transfer_run/cross/train --out outputs/event_music_attribution_new.json
+
+This additional read-only audit compares correct/replaced/shifted music with and without Adapter injection under the same noisy targets. It separates inherited frozen-EDGE mismatch sensitivity from any incremental Adapter effect. It does not select weights or tune the training protocol; perturbation sensitivity is not proof of reasonable musical expression.
+
+
+The original7a1d368 denoiser field named torso covers local rotation channels for joints0..11 (including legs). Later output uses body0_11_rotation to make that scope explicit. Raw historical receipts remain unchanged; public summaries never interpret that field as a torso-only measure. Native and all training body-group calculations are unaffected.
+
+
+The execution verifier also audits the exact fixed8 fitted Val target motions under unchanged Native limits. Representation support and physical acceptance are separate. These source-quality observations neither filter training data nor reselect checkpoints and do not turn fitted151D values into sensor truth.
