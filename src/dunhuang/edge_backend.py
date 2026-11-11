@@ -77,11 +77,8 @@ def main():
     if q['mode']=='event_guided':
         from .generation.adapter import PrimitiveAdapter
         adapter_payload=torch.load(checked(q['adapter']),map_location='cpu',weights_only=True)
-        if adapter_payload['base_sha256']!=q['checkpoint']['sha256']:raise ValueError('Adapter base differs')
-        if adapter_payload.get('condition_schema')!='soft_event_reference_v1':
-            raise ValueError('Adapter was not trained for source-backed Event Plan conditions')
-        if not (adapter_payload.get('music_qualified') and adapter_payload.get('full_motion_qualified')) and not q.get('research_allow_motion_only_adapter'):
-            raise ValueError('Adapter lacks music generation qualification')
+        from .generation.adapter import authorize_adapter
+        authorize_adapter(adapter_payload,q['checkpoint']['sha256'],q.get('research_allow_motion_only_adapter',False))
         adapter=PrimitiveAdapter().cuda().eval()
         adapter.load_state_dict(adapter_payload['state'],strict=True)
         event_residual=adapter(normalized.cuda(),mask.cuda(),torch.from_numpy(soft_phase).cuda()).detach()

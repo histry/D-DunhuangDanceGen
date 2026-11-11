@@ -48,3 +48,15 @@ def test_trained_residual_ignores_hidden_storage_and_uses_phase():
         original=adapter(value,known,phase)
         torch.testing.assert_close(original,adapter(altered,known,phase))
         assert not torch.equal(original,adapter(value,known,phase*.5))
+
+def test_unqualified_probe_requires_explicit_research_true():
+    import pytest
+    from dunhuang.generation.adapter import authorize_adapter
+    payload=dict(base_sha256='base',condition_schema='soft_event_reference_v1',
+        music_qualified=False,full_motion_qualified=False)
+    for flag in (False,None,1,'true'):
+        with pytest.raises(ValueError,match='qualification'):
+            authorize_adapter(payload,'base',flag)
+    assert authorize_adapter(payload,'base',True)['research_unqualified']
+    with pytest.raises(ValueError,match='base'):
+        authorize_adapter(payload,'different',True)

@@ -46,3 +46,12 @@ def masked_reference(target, scope='full'):
         known[:, 25:40, 79:127] = False
         known[:, 90:115, 79:127] = False
     return torch.where(known, target, torch.zeros_like(target)), known
+
+def authorize_adapter(payload,base_sha256,research=False):
+    if payload['base_sha256']!=base_sha256:raise ValueError('Adapter base differs')
+    if payload.get('condition_schema')!='soft_event_reference_v1':
+        raise ValueError('Adapter was not trained for source-backed Event Plan conditions')
+    qualified=bool(payload.get('music_qualified') and payload.get('full_motion_qualified'))
+    if not qualified and research is not True:
+        raise ValueError('Adapter lacks full-motion and music generation qualification')
+    return dict(qualified=qualified,research_unqualified=not qualified)
