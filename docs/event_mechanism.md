@@ -75,3 +75,8 @@ The execution verifier also audits the exact fixed8 fitted Val target motions un
     python scripts/audit_training_targets.py --assets outputs/aist_features_01/assets.json --training outputs/event_transfer_run/cross/train --out outputs/train_target_native_audit_new
 
 Run with the pinned Native Python. This descriptive audit covers all Train targets admitted to the cross-recording task, after the registered comparison. It never loads Val/Test targets, changes data membership, filters recordings, reweights training, selects checkpoints or starts an optimizer. Native failures are contract membership results, not assertions that real dances or their events are invalid. Per-target JSONL stays in ignored outputs.
+
+
+    python scripts/audit_transfer_pfc.py --baseline outputs/mechanism_baseline --experiment outputs/event_transfer_run --out outputs/event_transfer_pfc_new.json
+
+Reuse the existing EDGE PFC implementation and execute the unmodified pinned official calc_physical_score on in-memory copies of every saved FK. Per-case values must match exactly; zero-root-acceleration remains undefined. PFC uses the upstream displacement-product-times1e4 definition, not m/s or a Native threshold. These small registered pools are not a paper leaderboard, and no motion is modified.
