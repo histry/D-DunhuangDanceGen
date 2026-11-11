@@ -11,5 +11,9 @@ if __name__=='__main__':
     if request.get('alignment') and request.get('retrieval_policy')!='heuristic':
         from dunhuang.alignment.service import Reranker
         reranker=Reranker(request['alignment'],request['audio']['sha256'])
-    result=plan(catalog,music,request['audio']['sha256'],request.get('retrieval_policy','heuristic'),reranker=reranker,condition_mode=request.get('generator','temporal'))
+    if request.get('input_event_plan'):
+        from .event_plan import validate
+        result=validate(json.loads(checked(request['input_event_plan']).read_text()),request['audio']['sha256'],request['frames'])
+    else:
+        result=plan(catalog,music,request['audio']['sha256'],request.get('retrieval_policy','heuristic'),reranker=reranker,condition_mode=request.get('generator','temporal'))
     write(output/'music_timeline.json',music);write(output/'event_plan.json',result)

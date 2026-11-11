@@ -26,6 +26,8 @@ def train(assets,destination,steps,task='motion'):
                 support_counts[name]+=int(valid[:,a:b].all())
             if np.all(valid):
                 windows.append((uid,start,normalized.astype(np.float32)))
+    motion_window_count=len(windows)
+    paired_roles={}
     if task=='paired':
         if not assets.get('paired_generation_manifest'):
             write(destination/'status.json',dict(status='MISSING_REAL_PAIRED_JUKEBOX',training_steps=0))
@@ -33,6 +35,12 @@ def train(assets,destination,steps,task='motion'):
         paired=json.loads(checked(assets['paired_generation_manifest']).read_text())
         windows=[]
         for row in paired['rows']:
+            role=row['role']
+            if role not in ('train','val','test'):raise ValueError('Explicit paired role required')
+            group=row['source_group']
+            if group in paired_roles and paired_roles[group]!=role:raise ValueError('Paired source group leakage')
+            paired_roles[group]=role
+            if role=='test':continue
             if row['pairing_evidence']!='real_aligned_audio_motion' or row['fps']!=30 or row['frames']!=150:
                 raise ValueError('Real paired generation clock/evidence required')
             native=np.load(checked(row['motion']),allow_pickle=False)
@@ -43,7 +51,7 @@ def train(assets,destination,steps,task='motion'):
             if np.any(abs(normalized)>1+32*np.finfo(np.float32).eps):raise ValueError('Paired target outside frozen support')
             windows.append((row['source_group'],row['start_frame'],normalized.astype(np.float32),music.astype(np.float32)))
     groups=sorted({row[0] for row in windows})
-    audit=dict(tested_150_windows=tested,component_supported_windows=support_counts,root_origin='first_observed_context_XZ; height preserved',motion_only_supported_150_windows=len(windows),recording_groups=groups,
+    audit=dict(tested_150_windows=tested,component_supported_windows=support_counts,root_origin='first_observed_context_XZ; height preserved',motion_only_supported_150_windows=motion_window_count,paired_training_rows=len(windows) if task=='paired' else 0,recording_groups=groups,
         source_count=len(refs),paired_jukebox_training_manifest=assets.get('paired_generation_manifest'),
         full_paired_music_training_ready=bool(assets.get('paired_generation_manifest')),
         checkpoint=assets['checkpoint'],scaler=assets['scaler'],
@@ -52,9 +60,10 @@ def train(assets,destination,steps,task='motion'):
     if len(groups)<2:
         write(destination/'status.json',dict(status='INSUFFICIENT_SUPPORTED_SOURCE_GROUPS',training_steps=0,music_qualified=False))
         return
-    validation_group=groups[-1]
-    fitting=[row for row in windows if row[0]!=validation_group]
-    validation=[row for row in windows if row[0]==validation_group]
+    validation_group=groups[-1] if task=='motion' else sorted(k for k,v in paired_roles.items() if v=='val')
+    fitting=[row for row in windows if (row[0]!=validation_group if task=='motion' else paired_roles[row[0]]=='train')]
+    validation=[row for row in windows if (row[0]==validation_group if task=='motion' else paired_roles[row[0]]=='val')]
+    if not fitting or not validation:raise ValueError('Separate fitting and validation sources required')
     root=pinned(assets['edge_root'],assets['edge_commit']);sys.path.insert(0,str(root))
     from dataset.preprocess import Normalizer
     from dataset.scaler import MinMaxScaler

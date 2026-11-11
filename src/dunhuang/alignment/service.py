@@ -24,8 +24,12 @@ class Reranker:
         self.query=np.load(checked(assets['music_features']),allow_pickle=False)
     def scores(self,event,slot,local=True):
         a,b=slot['start'],slot['end'];n=b-a
-        if b>len(self.query['music']):raise ValueError('Alignment query clock does not cover slot')
+        missing=max(0,b-len(self.query['music']))
+        if missing>1 or a>=len(self.query['music']):raise ValueError('Alignment query clock does not cover slot')
         music=self.query['music'][a:b];mm=self.query['mask'][a:b]
+        if missing:
+            music=np.pad(music,((0,missing),(0,0)))
+            mm=np.pad(mm,((0,missing),(0,0)),constant_values=False)
         with np.load(checked(event['motion_features'])) as data:
             source=data['motion'];source_mask=data['mask']
         # Explicit uniform phase alignment for retrieval scores, not an output-motion edit.

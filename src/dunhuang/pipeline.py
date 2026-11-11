@@ -72,7 +72,7 @@ def run(q):
 
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('--config',required=True)
-    ap.add_argument('--assets');ap.add_argument('--audio');ap.add_argument('--out');ap.add_argument('--frames',type=int)
+    ap.add_argument('--assets');ap.add_argument('--audio');ap.add_argument('--out');ap.add_argument('--frames',type=int);ap.add_argument('--plan')
     args=ap.parse_args()
     q=json.loads(Path(args.config).read_text())
     if args.assets:
@@ -80,6 +80,9 @@ def main():
     if args.audio:
         from .io import sha
         q['audio']=dict(path=str(Path(args.audio).resolve()),sha256=sha(args.audio))
+    if args.plan:
+        from .io import sha
+        q['input_event_plan']=dict(path=str(Path(args.plan).resolve()),sha256=sha(args.plan))
     if args.out:q['output']=args.out
     if args.frames:q['frames']=args.frames
     if q.get('profile')=='edge_baseline':
