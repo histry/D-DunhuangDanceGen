@@ -8,6 +8,7 @@ from .protocols import GroundAndSkeletonContract,integrity,threshold_registry,di
 from .contact_evidence import conditioned_metrics,distribution,FEET
 from .calibration import jerk_report
 from .edge_pfc import pfc
+from dunhuang.generation.diagnostics import upperbody_activity
 
 SOURCE_FILES=('contracts/physical_quality.py','motion/physics.py','motion_geometry/physical.py',
               'motion_geometry/smpl24.py','configs/baseline.env')
@@ -74,7 +75,10 @@ class LegacyBackend:
         contacts=conditioned_metrics(fk,common,labels=labels,low=newlow,predicted=x[:,:4]>=.5)
         layer=dict(schema='native_three_layer_audit_v1',motion_sha256=motion_sha,
             ground_skeleton=contract.record(),numerical_integrity=numeric,
-            continuous=dict(contact=contacts,jerk=jerk_report(fk,self.limits['joint_jerk_mps3_max']),pfc=pfc(fk),
+            continuous=dict(activity=dict(upperbody=upperbody_activity(x),
+                joint_speed=distribution(np.linalg.norm(np.diff(fk,axis=0)*30,axis=-1),(len(x)-1)*24,'m/s'),
+                static_motion_is_not_automatically_high_quality=True),
+                contact=contacts,jerk=jerk_report(fk,self.limits['joint_jerk_mps3_max']),pfc=pfc(fk),
                 root_motion={k:v for k,v in audit.items() if k.startswith('root_')},
                 foot_joint_height_relative_m=distribution((feet[:,:,1]-common).reshape(-1),feet.shape[0]*4,'m'),
                 mesh_geometry=dict(status='NOT_COMPUTED_IN_JOINT_ONLY_LAYER',penetrate_mm=None,float_mm=None),

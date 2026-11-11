@@ -5,7 +5,7 @@ Legacy Native remains the operational kinematic/contact plausibility contract. I
 ## Three layers
 
 1. Numerical integrity: shape, finite values, nondegenerate rotations, exact skeleton/ground/clock, optional official-FK tolerance1e-5m. These are mathematical/runtime validity checks.
-2. Continuous measurements: exact Legacy contact responsibility, separately evidence-conditioned static/sliding populations, counts and coverage, raw/diagnostically filtered jerk, violation duration/rate, PFC, fixed-plane mesh metrics and Root task extents. No single weighted physical score is introduced.
+2. Continuous measurements: angular/joint activity alongside scores to expose static collapse, exact Legacy contact responsibility, separately evidence-conditioned static/sliding populations, counts and coverage, raw/diagnostically filtered jerk, violation duration/rate, PFC, fixed-plane mesh metrics and Root task extents. No single weighted physical score is introduced.
 3. Contracts: immutable Native-Legacy-v1 plus Native-Calib-v2 in unqualified Shadow mode. No Legacy threshold is changed or represented as a universal paper threshold.
 
 configs/native_calibration_v2.json registers every actual limit, its source, units, category, direction and scope. Root travel/stage limits are task constraints. Collinearity is a conditioning proxy; it is not silently substituted for mathematical singularity.
@@ -27,7 +27,7 @@ Run with the pinned Native Python and available neutral SMPL model. No licensed 
 
     PYTHONPATH=src python scripts/verify_native_calibration.py --root outputs/native_calibration_run --out outputs/native_calibration_replay_new.json
 
-The fresh process rechecks source hashes, Native results, contact responsibility, deterministic grouped estimates, generated layers and neutral mesh caches. No optimizer, generation, data filtering or operational threshold activation is permitted.
+The fresh process rechecks source hashes, reconstructs calibration rows from fresh Native measurements, and verifies contact responsibility, deterministic grouped estimates, generated layers, neutral mesh caches, raw-source sensitivity and synthetic labelled populations. No optimizer, generation, data filtering or operational threshold activation is permitted.
 
 ## Evidence boundaries
 
@@ -40,3 +40,21 @@ Without these labels, reference-distribution quantiles are descriptive only. Fal
 EDGE PFC is retained with its official displacement-product definition; zero Root acceleration remains undefined. PhysDiff metrics retain the existing Appendix-definition reimplementation,5mm tolerance interpretation and50mm geometric contact choice; author-code parity and leaderboard comparability remain unestablished. New wrappers report explicit conditional-population status without changing historical benchmark values.
 
 The audit is kinematic/contact plausibility. Contact forces, friction cones, mass distribution and dynamic balance are not simulated. Native failure of a trajectory does not blacklist its source event.
+
+## Independent annotation interface
+
+Contact labels use an int8 [frames,4] array for joints7,8,10,11:
+- -1: UNKNOWN;0: swing/flight;1: independently confirmed static;2: independently confirmed intentional slide.
+- JSON schema independent_contact_labels_v1 must include validated=true, motion_sha256, frames, fps=30, foot_joint_indices, source (manual_video_annotation or force_plate), reviewer, independent_of_evaluation_metric=true, and a labels path/SHA256 reference.
+- The contact index is a JSON object by_motion_sha256 whose values reference these validated JSON files. Put its path/SHA256 reference in config external_evidence.contact_labels.
+- Review both the fitted motion and source video; source video alone does not certify the fitted foot trajectory. The unreviewed packet binds the source alignment receipt and video clock, and cannot enter calibration.
+
+Quality JSON schema independent_native_quality_v1 requires validated=true, source=manual_motion_review, independent_of_native_metrics=true, reviewer, review_protocol_sha256 and records. Each record binds window_uid and motion_sha256 with quality in high_quality, known_error, unknown. Put this JSON path/SHA256 reference in external_evidence.quality_labels. Review criteria must be fixed independently of Native metrics. All annotations remain private runtime assets.
+
+The optional candidate engine only fits B-class observables from independently reviewed high-quality calibration rows. Foot velocity/drift additionally require independent static contacts. Penetration/contact-height candidates remain unavailable without validated geometry evidence. FPR/FNR are unavailable without independent good/error holdout labels. Candidate proposals never override Legacy, even when annotations exist; qualification and expert agreement need a separate evidence review.
+
+After a completed run and fresh replay, create a public aggregate:
+
+    python scripts/summarize_native_calibration.py --root outputs/native_calibration_run --replay outputs/native_calibration_replay_new.json --out reports/native_reliability_new.json
+
+The exporter refuses incomplete or mismatched receipts, includes hash seals, and excludes raw source identifiers, video records and absolute machine paths. Full receipts, review packets and arrays remain in ignored outputs. Publish aggregate evidence and its limitations together.

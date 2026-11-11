@@ -178,6 +178,7 @@ def annotation_packet(selected,source_ledger,out):
             independent_of_evaluation_metric=True,reviewer=None,labels=ref(states),
             original_video=original['video'],official_video_url=original['video_url'],
             video_start_seconds=r['start_frame']/30,window_uid=r['window_uid'],
+            source_alignment=original['calibration'],official_alignment_authority_sha256=original['authority_sha256'],
             instruction='Review independently; UNKNOWN=-1, swing=0, static=1, intentional_slide=2. Do not label from metric speed or Legacy outcome.')
         write(out/(str(i)+'_evidence.json'),entry);entries.append(entry)
     write(out/'index.json',dict(status='UNREVIEWED_ANNOTATION_PACKET',records=entries,validated=False,

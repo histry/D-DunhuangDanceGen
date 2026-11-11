@@ -5,7 +5,7 @@
   "legacy_gate_unchanged": true,
   "legacy_metric_provenance": {
     "schema": "native_threshold_provenance_v1",
-    "definition_revision": 2,
+    "definition_revision": 3,
     "contract": "Native-Legacy-v1",
     "count": 31,
     "metrics": [
@@ -118,7 +118,7 @@
         "metric_definition": {
           "legacy_key": "foot_penetration_min_m",
           "operator": "pinned Native source implementation",
-          "aggregation": "legacy named statistic",
+          "aggregation": "minimum",
           "reference": "motion_geometry/physical.py at pinned legacy commit",
           "support_population": "all_foot_joint_heights_not_contact_conditioned"
         },
@@ -238,7 +238,7 @@
         "metric_definition": {
           "legacy_key": "root_y_robust_range_m",
           "operator": "pinned Native source implementation",
-          "aggregation": "legacy named statistic",
+          "aggregation": "P99 minus P01",
           "reference": "motion_geometry/physical.py at pinned legacy commit",
           "support_population": null
         },
@@ -338,7 +338,7 @@
         "metric_definition": {
           "legacy_key": "root_horizontal_net_displacement_m",
           "operator": "pinned Native source implementation",
-          "aggregation": "legacy named statistic",
+          "aggregation": "endpoint horizontal displacement",
           "reference": "motion_geometry/physical.py at pinned legacy commit",
           "support_population": null
         },
@@ -358,7 +358,7 @@
         "metric_definition": {
           "legacy_key": "root_horizontal_drift_speed_mps",
           "operator": "pinned Native source implementation",
-          "aggregation": "legacy named statistic",
+          "aggregation": "endpoint horizontal displacement / duration",
           "reference": "motion_geometry/physical.py at pinned legacy commit",
           "support_population": null
         },
@@ -378,7 +378,7 @@
         "metric_definition": {
           "legacy_key": "root_horizontal_window_displacement_max_m",
           "operator": "pinned Native source implementation",
-          "aggregation": "max of1s-windowP95",
+          "aggregation": "maximum endpoint displacement over up-to10s windows; short sequences use endpoints",
           "reference": "motion_geometry/physical.py at pinned legacy commit",
           "support_population": null
         },
@@ -398,7 +398,7 @@
         "metric_definition": {
           "legacy_key": "rot6d_nonfinite_ratio",
           "operator": "pinned Native source implementation",
-          "aggregation": "legacy named statistic",
+          "aggregation": "fraction of Rot6D observations",
           "reference": "motion_geometry/physical.py at pinned legacy commit",
           "support_population": null
         },
@@ -418,7 +418,7 @@
         "metric_definition": {
           "legacy_key": "rot6d_degenerate_ratio",
           "operator": "pinned Native source implementation",
-          "aggregation": "legacy named statistic",
+          "aggregation": "fraction of Rot6D observations",
           "reference": "motion_geometry/physical.py at pinned legacy commit",
           "support_population": null
         },
@@ -438,7 +438,7 @@
         "metric_definition": {
           "legacy_key": "rot6d_collinearity_abs_p99",
           "operator": "pinned Native source implementation",
-          "aggregation": "legacy named statistic",
+          "aggregation": "P99",
           "reference": "motion_geometry/physical.py at pinned legacy commit",
           "support_population": null
         },
@@ -458,7 +458,7 @@
         "metric_definition": {
           "legacy_key": "rotation_near_pi_step_ratio",
           "operator": "pinned Native source implementation",
-          "aggregation": "legacy named statistic",
+          "aggregation": "fraction of joint steps >= pi-0.05rad",
           "reference": "motion_geometry/physical.py at pinned legacy commit",
           "support_population": null
         },

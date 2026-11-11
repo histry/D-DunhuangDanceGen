@@ -59,12 +59,12 @@ def reference_report(records,registry,iterations=300,seed=20261116):
     fitting,held,split=partition(records)
     entries=[]
     for spec in registry['metrics']:
-        metric=spec['metric']
+        metric=spec['metric'];q=.95 if spec['direction']=='upper' else .05
         row=dict(metric=metric,units=spec['units'],category=spec['category'],
                  legacy_threshold=spec['legacy_threshold'],legacy_gate_unchanged=True)
-        row['recording_grouped']=grouped_quantile(fitting,metric,group_key='recording_uid',iterations=iterations,seed=seed)
-        row['choreography_grouped']=grouped_quantile(fitting,metric,group_key='choreography_uid',iterations=iterations,seed=seed)
-        row['connected_component_grouped']=grouped_quantile(fitting,metric,group_key='source_group',iterations=iterations,seed=seed)
+        row['recording_grouped']=grouped_quantile(fitting,metric,q=q,group_key='recording_uid',iterations=iterations,seed=seed)
+        row['choreography_grouped']=grouped_quantile(fitting,metric,q=q,group_key='choreography_uid',iterations=iterations,seed=seed)
+        row['connected_component_grouped']=grouped_quantile(fitting,metric,q=q,group_key='source_group',iterations=iterations,seed=seed)
         valid=[r for r in held if r['metrics'].get(metric) is not None]
         exceeds=[(r['metrics'][metric]>spec['legacy_threshold'] if spec['direction']=='upper'
                   else r['metrics'][metric]<spec['legacy_threshold']) for r in valid]

@@ -103,3 +103,23 @@ def test_reference_exceedance_never_becomes_false_rejection_without_labels():
     labelled=candidates(rows,registry,{},iterations=10)
     assert labelled['records'][0]['candidate_threshold'] is None
     assert not labelled['operational_qualified']
+
+def test_threshold_aggregation_distinguishes_stage_window_and_local_jerk():
+    rows={r['metric']:r for r in threshold_registry(dict(
+        root_horizontal_window_displacement_max_m=1.5,joint_jerk_window_p95_max_mps3=1080,
+        foot_penetration_min_m=-.05,root_y_robust_range_m=.9))['metrics']}
+    assert '10s' in rows['root_horizontal_window_displacement_max_m']['metric_definition']['aggregation']
+    assert rows['joint_jerk_window_p95_max_mps3']['metric_definition']['aggregation']=='max of1s-windowP95'
+    assert rows['foot_penetration_min_m']['metric_definition']['aggregation']=='minimum'
+    assert rows['root_y_robust_range_m']['metric_definition']['aggregation']=='P99 minus P01'
+
+def test_error_rates_resample_sources_instead_of_overlapping_windows():
+    from dunhuang.evaluation_benchmarks.labelled_calibration import clustered_error_rate
+    rows=[dict(recording_uid='one',source_group='a') for _ in range(100)]
+    rows+=[dict(recording_uid='two',source_group='b')]
+    result=clustered_error_rate(rows,[0]*100+[1],iterations=30)
+    assert result['window_rate']==pytest.approx(1/101)
+    assert result['component_balanced_rate']==.5
+    assert result['recording_balanced_rate']==.5
+    assert result['source_components']==2
+    assert clustered_error_rate(rows[:100],[0]*100,iterations=30)['component_bootstrap_interval95'] is None

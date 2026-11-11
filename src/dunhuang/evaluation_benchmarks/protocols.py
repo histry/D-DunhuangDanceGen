@@ -82,8 +82,16 @@ def threshold_registry(limits):
         rows.append(dict(metric=key,units=units,category=category,legacy_threshold=float(value),
             direction='lower' if key=='foot_penetration_min_m' else 'upper',
             metric_definition=dict(legacy_key=key,operator='pinned Native source implementation',
-                aggregation='max of1s-windowP95' if 'window' in key else 'P95' if 'p95' in key else
-                            'maximum' if 'max' in key else 'legacy named statistic',
+                aggregation=('maximum endpoint displacement over up-to10s windows; short sequences use endpoints'
+                    if key=='root_horizontal_window_displacement_max_m' else
+                    'max of1s-windowP95' if 'window' in key else
+                    'P99 minus P01' if key=='root_y_robust_range_m' else
+                    'endpoint horizontal displacement / duration' if key=='root_horizontal_drift_speed_mps' else
+                    'endpoint horizontal displacement' if key=='root_horizontal_net_displacement_m' else
+                    'fraction of joint steps >= pi-0.05rad' if key=='rotation_near_pi_step_ratio' else
+                    'fraction of Rot6D observations' if key in ('rot6d_nonfinite_ratio','rot6d_degenerate_ratio') else
+                    'P99' if 'p99' in key else 'P95' if 'p95' in key else
+                    'minimum' if key=='foot_penetration_min_m' else 'maximum'),
                 reference='motion_geometry/physical.py at pinned legacy commit',
                 support_population=contact_source),
             threshold_origin='project_legacy_engineering_default',
@@ -91,7 +99,7 @@ def threshold_registry(limits):
             contact_source=contact_source,
             applicability='explicit scene task' if category.startswith('C') else 'Legacy protocol only; empirical validity unresolved',
             legacy_gate_unchanged=True))
-    return dict(schema='native_threshold_provenance_v1',definition_revision=2,contract='Native-Legacy-v1',
+    return dict(schema='native_threshold_provenance_v1',definition_revision=3,contract='Native-Legacy-v1',
                 count=len(rows),metrics=rows,legacy_gate_unchanged=True)
 
 

@@ -23,6 +23,27 @@ def load_quality(reference,by_uid):
     return result
 
 
+
+def clustered_error_rate(rows,decisions,iterations=300,seed=20261116):
+    """Equal source-component risk; repeated windows cannot multiply a source vote."""
+    if not rows:return None
+    values=np.asarray(decisions,dtype=float)
+    if values.shape!=(len(rows),) or not np.isin(values,[0,1]).all():
+        raise ValueError('One binary decision per independently labelled window required')
+    def means(key):
+        groups={}
+        for row,value in zip(rows,values):groups.setdefault(row[key],[]).append(value)
+        return np.array([np.mean(groups[k]) for k in sorted(groups)])
+    recordings=means('recording_uid');components=means('source_group')
+    rng=np.random.default_rng(seed)
+    draws=[float(np.mean(components[rng.integers(0,len(components),len(components))])) for _ in range(iterations)]
+    return dict(window_rate=float(values.mean()),recording_balanced_rate=float(recordings.mean()),
+        component_balanced_rate=float(components.mean()),component_bootstrap_interval95=(
+            np.percentile(draws,[2.5,97.5]).tolist() if len(components)>=2 else None),
+        windows=len(rows),recordings=len(recordings),source_components=len(components),
+        iterations=iterations,seed=seed,
+        interval_method='whole source-component resampling percentile; small-group coverage unestablished')
+
 def candidates(records,registry,quality,iterations=300,seed=20261116):
     fitting,held,split=partition(records);entries=[]
     for spec in registry['metrics']:
@@ -42,7 +63,8 @@ def candidates(records,registry,quality,iterations=300,seed=20261116):
             if value is None or not rows:return None
             decisions=[r['candidate_metrics'][key]>value if spec['direction']=='upper'
                        else r['candidate_metrics'][key]<value for r in rows]
-            return float(np.mean(decisions if reject else np.logical_not(decisions)))
+            return clustered_error_rate(rows,decisions if reject else np.logical_not(decisions),iterations,seed)
+        false_reject=errors(test_good,True);missed=errors(test_bad,False)
         blockers=[]
         if value is None:blockers.append('NO_INDEPENDENT_GOOD_CALIBRATION_POPULATION')
         if not test_good:blockers.append('NO_INDEPENDENT_GOOD_HOLDOUT')
@@ -54,8 +76,10 @@ def candidates(records,registry,quality,iterations=300,seed=20261116):
                                   'same continuous observable; labelled quality population'),
             replaces_legacy_measurement=False,
             independent_good_calibration=len(good),independent_good_holdout=len(test_good),
-            independent_error_holdout=len(test_bad),false_reject_rate=errors(test_good,True),
-            missed_error_rate=errors(test_bad,False),blockers=blockers,
+            independent_error_holdout=len(test_bad),
+            false_reject_rate=false_reject['component_balanced_rate'] if false_reject else None,
+            missed_error_rate=missed['component_balanced_rate'] if missed else None,
+            false_reject_statistics=false_reject,missed_error_statistics=missed,blockers=blockers,
             mode='SHADOW',operational_qualified=False,can_route=False,
             scope='annotation-conditioned proposal, not universal physical law or automatic release'))
     return dict(schema='externally_labelled_native_candidates_v1',records=entries,split=split,
