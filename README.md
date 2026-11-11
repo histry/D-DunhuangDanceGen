@@ -1,44 +1,52 @@
 # DunhuangDanceGen
 
-独立的音乐驱动敦煌舞生成实验工程：Music Timeline → Retrieval / Anchor Conditioning → 冻结 EDGE → 原 Native 物理验收。
+当前正式路径：**Event Catalog → Music Timeline → Event Plan → 冻结 EDGE（Temporal V0.5）→ 原 Native 验收**。保留官方 EDGE 基线。已完成 5 秒、15 秒、整曲六例，全部 Native 未通过。学习检索处于 shadow，Adapter 因真实资产不足未训练，尚非已验证的 V1。见[本轮报告](reports/EventPlan实验报告.md)和[机器指标](reports/event_plan_workflow.json)。
 
-唯一生成网络是 EDGE。没有 Refiner、第二个 Diffusion、Graph-SB/WFC 或 SQP。旧项目只通过固定版本的隔离进程提供动作解码和完整物理审核；没有复制旧工程。模型条件仍为真实 Jukebox layer 66、4800D，30 FPS，150 帧窗口、75 帧步长。
+## 正式入口
 
-## 运行
+公开 profile 与运行机器资产分离。从 configs/assets.example.json 填入真实绝对路径、SHA256、固定依赖版本，保存到忽略目录 inputs/runtime_assets.json，占位值不能直接运行。目录源清单沿用 source_records/events，raw SMPL 文件名与哈希必须匹配。EDGE / Native 使用各自环境；prepare 导出原权重 Normalizer 后解码事件目录。
 
 ```bash
 python -m pip install -e '.[test]'
-python -m pytest -q
-python scripts/generate.py --config configs/generation.json
-# 已有服务器环境；先拉取代码，再在 tmux 内执行：
-bash scripts/setup_server.sh
-tmux new-session -d -s dunhuang-v1 'bash scripts/run_server.sh'
+python scripts/prepare.py --assets inputs/runtime_assets.json --out outputs/new_prepare
+python scripts/generate.py --config configs/edge_baseline.json --assets outputs/new_prepare/assets.json --out outputs/new_baseline
+python scripts/generate.py --config configs/dunhuang.json --assets outputs/new_prepare/assets.json --out outputs/new_plan
+python scripts/evaluate.py --run outputs/new_plan --compare outputs/new_baseline
 ```
 
-`configs/generation.json` 给出服务器上的已存在资产；换音乐时，先在 EDGE 环境执行 `scripts/extract_music.py --edge-root ... --audio ... --output ...`，把新特征、WAV 和提取 receipt.json 的 SHA256 填入配置。所有输出使用新目录，拒绝覆盖已有实验。新 WAV 的时长必须与其特征窗口对应。环境按官方 EDGE 安装；Native 使用旧项目 dance-rag 环境。外部依赖 commit 见 `configs/dependencies.json`。
+省略 --frames 生成整曲，可指定 --frames 150 或 450。--plan /path/event_plan.json 可重放显式计划，引用、时钟和映射必须验证。换音乐先运行 scripts/extract_music.py，把真实 layer66/4800D 缓存和绑定音频的提取收据填入资产清单；--audio 不会让旧特征自动对应新音频。所有输出使用新目录。
 
-## 动作与控制合同
+代码 push、服务器 pull 后，在项目目录通过 tmux 运行长任务：
+```bash
+tmux new-session -d -s ddg-generation 'python scripts/generate.py --config configs/dunhuang.json --assets outputs/new_prepare/assets.json --out outputs/new_plan > outputs/new_plan.log 2>&1; echo $? > outputs/new_plan.exit'
+```
 
-- `MotionAdapter` 明确转换 Native Y-up/列式 Rot6D 与 EDGE Z-up/行式 Rot6D，米制 SMPL24；只有 Root 的局部旋转左乘坐标变换。接触预测保持原值，真实支撑由 Native FK 推导。
-- `baseline` 使用官方长序列 DDIM 和原 Root / quaternion SLERP 拼接。
-- `anchored` 在每个 DDIM 步联合施加重叠共识与稀疏姿态条件，最终步也属于约束采样。它是新的采样器，不能冒充原 EDGE inpaint；不在生成后粘贴姿态。记录原始去噪器误差，精确满足约束不代表模型自然地生成这些姿态。
-- 初版仅控制上身关节 12–21，不约束 Root、接触和未观测手部。冻结归一化不支持的姿态直接拒绝，不裁剪掩盖。
-- 检索支持带显式描述符的最近邻和无查询时固定顺序选择。当前实验采用预先固定三种来源，不宣称已实现 Router 语义检索或 Planner 学习。
-- Native 原绝对阈值从固定旧版本 baseline 环境加载；不继承旧父动作相对保护或 50 Core / 49 Bridge 验收。每例保存阈值、整曲审计和真实 FK 交叉检查。
+## 模块与资格
 
-## 实验与证据
+planning/ 实现事件目录、节拍/能量时间线、单调时间映射及 Top5/beam3 全局规划。约 3 秒节拍吸附切分不是人工乐句；计划覆盖和实际控制比例分开报告，当前仅 25 帧上身原语使用 Temporal 控制。
 
-`scripts/run_experiments.py`：同音乐、同 seed，依次运行 5 秒、15 秒、整曲纯 EDGE 与稀疏锚点对照。选用真实 catalog 三个来源的首个事件中间姿态，锚点映射到真实音频检测节拍；不会按生成结果选择姿态。保存匹配姿态误差、音乐速度极小值对齐、原始窗口重叠误差、Native 接触/Root/jerk 等指标。
+alignment/ 是 50D 音乐 / 74D 动作双编码器与局部同步头。heuristic 默认启用；learned_shadow 需要显式绑定全局/同步 checkpoint、对应编码器和查询收据，只记录两级评分；learned_qualified 还需验证资格。历史 Test 已暴露，只作为开发回归。同歌检索与同歌时段检索分开评估。
 
-输出在 `outputs/experiment_v1`，包括输入哈希、动作 NPY、FK、日志和 summary。模型参数前后哈希相等；没有训练。代码运行成功、物理通过、敦煌风格成立分别判断。独立风格与人工自然性评价尚未实现，结果明确为 NOT_EVALUATED。
+generation/adapter.py 提供零初始化、掩码条件 Adapter，冻结 EDGE 主干，复用原 CFG。generation/train.py 提供真实 151D/4800D 配对、来源分离、目标支持域预检；当前没有可用训练权重。以下训练命令需 EDGE 环境：
+```bash
+python scripts/train.py --assets outputs/new_prepare/assets.json --out outputs/new_motion_training --task motion --steps 300
+python scripts/train.py --assets inputs/paired_assets.json --out outputs/new_paired_training --task paired --steps 300
+```
+配对资产额外给 paired_generation_manifest 哈希引用。清单 rows 每行给 role(train/val/test)、source_group、start_frame、pairing_evidence=real_aligned_audio_motion、fps=30、frames=150，以及 SHA256 绑定的 motion[150,151]、jukebox[150,4800] 文件引用。训练本身不授予 music_qualified。双向两遍生成、225 帧训练和新 PFG/SQP 实验尚未完成。
 
-现有权重 SHA256 已冻结，但发布者下载来源未独立核实，不能宣称严格复现官方论文效果。音乐特征复用旧项目已提取的真实缓存，不重新声称本轮做过特征提取。运行前检查 Git 版本与受跟踪文件，环境依赖仍需使用配置指定的已安装环境。
+## 审计与复核
 
-## 代码
+pipeline.py 是正式生成入口。physical.py 保留固定版本 Native 完整绝对阈值，计划阶段始终 UNKNOWN。每次输出保存音频/特征/权重/代码哈希、真实 FK、完整指标、日志和状态。文化文件名标签只是来源粗类别，不是逐事件真值。
 
-`src/dunhuang/pipeline.py` 是唯一主入口；`contracts.py`、`music.py`、`retrieval.py`、`conditioning.py`、`sampling.py`、`edge_backend.py`、`physical.py`、`evaluation.py` 分别承担清晰职责。测试覆盖表示往返、FK 坐标等价、音乐边界、跨窗口锚点和逐步采样。测试里的微型去噪器只用于算法检查，不用于实验生成。
+```bash
+python -m pytest -q
+python scripts/verify_event_plan_report.py
+```
+第二条只读复核保存实验，不训练、不重采样。生成完成、Native 通过、语义风格和人工自然性分别判断。权重发布来源未独立核实，不宣称严格复现官方论文效果。
 
-首轮真实结果与复核方法：[实验报告](reports/实验报告.md) · [机器可读指标](reports/experiment_v1.json)。
+## 历史研究入口
+
+以下保留旧实验及证据，当前正式流程不调用历史 SDMR 生成编排。research/legacy/sdmr_select.py 仅为旧脚本兼容。
 
 ## B2 时序可执行性实验
 

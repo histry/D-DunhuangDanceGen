@@ -1,0 +1,3476 @@
+{
+  "experiments": [
+    {
+      "frames": 150,
+      "profile": "edge_baseline",
+      "motion_sha256": "127a3602ec63e3a1f90ae488b25c29069f72abef1cb82e23b8f9620a67c4fed9",
+      "generation_commit": "9ceee94149eee9d086e7775cc458ef8620d846e0",
+      "native_pass": false,
+      "reasons": [
+        "joint_jerk_mps3_max_too_high",
+        "joint_jerk_window_p95_max_mps3_too_high",
+        "extremity_jerk_mps3_p95_too_high",
+        "extremity_jerk_window_p95_max_mps3_too_high",
+        "foot_skate_mps_p95_too_high",
+        "foot_skate_mps_max_too_high",
+        "foot_support_drift_m_p95_too_high",
+        "foot_support_drift_m_max_too_high"
+      ],
+      "native_metrics": {
+        "foot_skate_mps_p95": 0.6955665349960328,
+        "foot_skate_mps_max": 1.0835998058319092,
+        "foot_support_drift_m_p95": 0.3606559459849323,
+        "foot_support_drift_m_max": 0.39462558950706905,
+        "foot_contact_height_m_max": 0.020141184329986572,
+        "foot_penetration_min_m": -0.02360743284225464,
+        "joint_jerk_mps3_p95": 709.8928710937492,
+        "joint_jerk_mps3_max": 4738.1806640625,
+        "joint_jerk_window_p95_max_mps3": 1321.0418090820312,
+        "extremity_jerk_mps3_p95": 871.0783843994141,
+        "extremity_jerk_window_p95_max_mps3": 2010.7737915039056,
+        "root_y_robust_range_m": 0.1579910743236541,
+        "root_vertical_speed_mps_p95": 0.1842470169067382,
+        "root_vertical_speed_mps_max": 0.2505004405975342,
+        "root_horizontal_radius_p95_m": 0.1441095597216524,
+        "root_horizontal_radius_max_m": 0.21999389781570983,
+        "root_horizontal_net_displacement_m": 0.3467737691871741,
+        "root_horizontal_drift_speed_mps": 0.06982022198399479,
+        "root_horizontal_window_displacement_max_m": 0.3467737691871741,
+        "rot6d_nonfinite_ratio": 0.0,
+        "rot6d_degenerate_ratio": 0.0,
+        "rot6d_collinearity_abs_p99": 5.76464435571901e-08,
+        "rotation_near_pi_step_ratio": 0.0,
+        "joint_rotation_step_rad_p95": 0.09263759292662144,
+        "joint_rotation_step_rad_max": 0.7180134654045105,
+        "joint_rotation_step_window_p95_max_rad": 0.16321980357170096,
+        "extremity_rotation_step_rad_p95": 0.0008835601271130148,
+        "extremity_rotation_step_rad_max": 0.0036702975630760193,
+        "joint_angular_acceleration_rps2_p95": 37.49550914764401,
+        "joint_angular_acceleration_rps2_max": 395.21270751953125,
+        "joint_angular_acceleration_window_p95_max_rps2": 76.57068214416502
+      },
+      "fk_error_m": 7.152557373046875e-07,
+      "weights_unchanged": true
+    },
+    {
+      "frames": 150,
+      "profile": "dunhuang",
+      "motion_sha256": "21a50923d7b4d072e47386e899f076d44d5f0c47009acb9fd9c9a12925442a48",
+      "generation_commit": "9ceee94149eee9d086e7775cc458ef8620d846e0",
+      "native_pass": false,
+      "reasons": [
+        "joint_jerk_mps3_max_too_high",
+        "joint_jerk_window_p95_max_mps3_too_high",
+        "extremity_jerk_mps3_p95_too_high",
+        "extremity_jerk_window_p95_max_mps3_too_high",
+        "foot_skate_mps_p95_too_high",
+        "foot_skate_mps_max_too_high",
+        "foot_support_drift_m_p95_too_high",
+        "foot_support_drift_m_max_too_high"
+      ],
+      "native_metrics": {
+        "foot_skate_mps_p95": 0.6677094399929049,
+        "foot_skate_mps_max": 1.1072062253952026,
+        "foot_support_drift_m_p95": 0.4052197305721577,
+        "foot_support_drift_m_max": 0.4457103036206351,
+        "foot_contact_height_m_max": 0.023934245109558105,
+        "foot_penetration_min_m": -0.023226439952850342,
+        "joint_jerk_mps3_p95": 708.2160064697264,
+        "joint_jerk_mps3_max": 4766.23876953125,
+        "joint_jerk_window_p95_max_mps3": 1272.6496093749993,
+        "extremity_jerk_mps3_p95": 898.5202941894531,
+        "extremity_jerk_window_p95_max_mps3": 2069.0348510742183,
+        "root_y_robust_range_m": 0.15907139420509342,
+        "root_vertical_speed_mps_p95": 0.17783045768737793,
+        "root_vertical_speed_mps_max": 0.26958703994750977,
+        "root_horizontal_radius_p95_m": 0.1445027245292706,
+        "root_horizontal_radius_max_m": 0.20322724263238942,
+        "root_horizontal_net_displacement_m": 0.32040913556173184,
+        "root_horizontal_drift_speed_mps": 0.0645119064889393,
+        "root_horizontal_window_displacement_max_m": 0.32040913556173184,
+        "rot6d_nonfinite_ratio": 0.0,
+        "rot6d_degenerate_ratio": 0.0,
+        "rot6d_collinearity_abs_p99": 5.031999635349689e-08,
+        "rotation_near_pi_step_ratio": 0.0,
+        "joint_rotation_step_rad_p95": 0.10463776253163815,
+        "joint_rotation_step_rad_max": 0.6993845105171204,
+        "joint_rotation_step_window_p95_max_rad": 0.16219638362526892,
+        "extremity_rotation_step_rad_p95": 0.0009174939681543039,
+        "extremity_rotation_step_rad_max": 0.0036482159048318863,
+        "joint_angular_acceleration_rps2_p95": 40.40910148620605,
+        "joint_angular_acceleration_rps2_max": 376.1387634277344,
+        "joint_angular_acceleration_window_p95_max_rps2": 75.87134895324702
+      },
+      "fk_error_m": 7.152557373046875e-07,
+      "weights_unchanged": true,
+      "summary": {
+        "frames": 150,
+        "motion_sha256": "21a50923d7b4d072e47386e899f076d44d5f0c47009acb9fd9c9a12925442a48",
+        "physical_ok": false,
+        "physical_reasons": [
+          "joint_jerk_mps3_max_too_high",
+          "joint_jerk_window_p95_max_mps3_too_high",
+          "extremity_jerk_mps3_p95_too_high",
+          "extremity_jerk_window_p95_max_mps3_too_high",
+          "foot_skate_mps_p95_too_high",
+          "foot_skate_mps_max_too_high",
+          "foot_support_drift_m_p95_too_high",
+          "foot_support_drift_m_max_too_high"
+        ],
+        "fk_error_m": 7.152557373046875e-07,
+        "events": 2,
+        "planned_time_coverage": 1.0,
+        "controlled_time_fraction": 0.30666666666666664,
+        "unique_sources": 2,
+        "unique_events": 2,
+        "event_semantic_quality": "NOT_INDEPENDENTLY_EVALUATED",
+        "naturalness": "NOT_HUMAN_EVALUATED",
+        "differs_from_comparison": true
+      },
+      "same_sampler_noise_as_B2": true,
+      "B2_metrics": {
+        "foot_skate_mps_p95": 0.6298287153244015,
+        "foot_skate_mps_max": 1.060036063194275,
+        "foot_support_drift_m_p95": 0.36092868509688947,
+        "foot_support_drift_m_max": 0.41662065592768904,
+        "foot_contact_height_m_max": 0.014804244041442871,
+        "foot_penetration_min_m": -0.017301082611083984,
+        "joint_jerk_mps3_p95": 760.7404602050759,
+        "joint_jerk_mps3_max": 4694.71435546875,
+        "joint_jerk_window_p95_max_mps3": 1331.5355957031236,
+        "extremity_jerk_mps3_p95": 907.1652374267578,
+        "extremity_jerk_window_p95_max_mps3": 1910.9262023925767,
+        "root_y_robust_range_m": 0.15392821788787847,
+        "root_vertical_speed_mps_p95": 0.1664600372314453,
+        "root_vertical_speed_mps_max": 0.21179437637329102,
+        "root_horizontal_radius_p95_m": 0.12428173731452066,
+        "root_horizontal_radius_max_m": 0.1882942069124257,
+        "root_horizontal_net_displacement_m": 0.2992985358828099,
+        "root_horizontal_drift_speed_mps": 0.060261450177746964,
+        "root_horizontal_window_displacement_max_m": 0.2992985358828099,
+        "rot6d_nonfinite_ratio": 0.0,
+        "rot6d_degenerate_ratio": 0.0,
+        "rot6d_collinearity_abs_p99": 5.3700688669968524e-08,
+        "rotation_near_pi_step_ratio": 0.0,
+        "joint_rotation_step_rad_p95": 0.09243627265095711,
+        "joint_rotation_step_rad_max": 0.7315887808799744,
+        "joint_rotation_step_window_p95_max_rad": 0.13829694017767905,
+        "extremity_rotation_step_rad_p95": 0.0008423921390203759,
+        "extremity_rotation_step_rad_max": 0.003545178333297372,
+        "joint_angular_acceleration_rps2_p95": 33.2333120346069,
+        "joint_angular_acceleration_rps2_max": 404.00201416015625,
+        "joint_angular_acceleration_window_p95_max_rps2": 65.56251869201658
+      },
+      "selected_events": [
+        {
+          "event_uid": "evt_60887d9849d370877e0e91b0",
+          "source_uid": "female_meditation",
+          "music_interval": [
+            0,
+            65
+          ],
+          "time_warp": [
+            [
+              3860,
+              0
+            ],
+            [
+              3870,
+              13
+            ],
+            [
+              3894,
+              37
+            ],
+            [
+              3922,
+              65
+            ]
+          ],
+          "primitive": {
+            "source_frame": 3882,
+            "music_frame": 25,
+            "joints": [
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "radius": 12
+          },
+          "feasibility": {
+            "source": "PASS",
+            "temporal8": "PASS",
+            "soft_reference": "PASS",
+            "native": "UNKNOWN"
+          }
+        },
+        {
+          "event_uid": "evt_6d686f35a712d930ab062627",
+          "source_uid": "female_FeiTian",
+          "music_interval": [
+            65,
+            150
+          ],
+          "time_warp": [
+            [
+              2597,
+              65
+            ],
+            [
+              2613,
+              84
+            ],
+            [
+              2637,
+              108
+            ],
+            [
+              2674,
+              150
+            ]
+          ],
+          "primitive": {
+            "source_frame": 2625,
+            "music_frame": 96,
+            "joints": [
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "radius": 12
+          },
+          "feasibility": {
+            "source": "PASS",
+            "temporal8": "PASS",
+            "soft_reference": "PASS",
+            "native": "UNKNOWN"
+          }
+        }
+      ]
+    },
+    {
+      "frames": 450,
+      "profile": "edge_baseline",
+      "motion_sha256": "9ad93194ef4535f096630075e83f3d2f65cfbe2a0eb0b3250b240253ea73ba51",
+      "generation_commit": "9ceee94149eee9d086e7775cc458ef8620d846e0",
+      "native_pass": false,
+      "reasons": [
+        "joint_jerk_mps3_p95_too_high",
+        "joint_jerk_mps3_max_too_high",
+        "joint_jerk_window_p95_max_mps3_too_high",
+        "extremity_jerk_mps3_p95_too_high",
+        "extremity_jerk_window_p95_max_mps3_too_high",
+        "foot_skate_mps_p95_too_high",
+        "foot_skate_mps_max_too_high",
+        "foot_support_drift_m_p95_too_high",
+        "foot_support_drift_m_max_too_high"
+      ],
+      "native_metrics": {
+        "foot_skate_mps_p95": 1.0128188848495476,
+        "foot_skate_mps_max": 2.71669602394104,
+        "foot_support_drift_m_p95": 0.2494880689621079,
+        "foot_support_drift_m_max": 0.41693268922333937,
+        "foot_contact_height_m_max": 0.017069101333618164,
+        "foot_penetration_min_m": -0.01897144317626953,
+        "joint_jerk_mps3_p95": 1010.3743316650391,
+        "joint_jerk_mps3_max": 4825.20849609375,
+        "joint_jerk_window_p95_max_mps3": 1356.4576538085935,
+        "extremity_jerk_mps3_p95": 1219.9198303222656,
+        "extremity_jerk_window_p95_max_mps3": 1668.4453613281248,
+        "root_y_robust_range_m": 0.07716650009155268,
+        "root_vertical_speed_mps_p95": 0.17761659622192344,
+        "root_vertical_speed_mps_max": 0.6041300296783447,
+        "root_horizontal_radius_p95_m": 0.21253810457434139,
+        "root_horizontal_radius_max_m": 0.29533268975048527,
+        "root_horizontal_net_displacement_m": 0.228699608989296,
+        "root_horizontal_drift_speed_mps": 0.015280597482581025,
+        "root_horizontal_window_displacement_max_m": 0.32664177510539494,
+        "rot6d_nonfinite_ratio": 0.0,
+        "rot6d_degenerate_ratio": 0.0,
+        "rot6d_collinearity_abs_p99": 5.990429310362004e-08,
+        "rotation_near_pi_step_ratio": 0.0,
+        "joint_rotation_step_rad_p95": 0.14925839751958847,
+        "joint_rotation_step_rad_max": 0.8072435259819031,
+        "joint_rotation_step_window_p95_max_rad": 0.22948103025555602,
+        "extremity_rotation_step_rad_p95": 0.0011476044543087482,
+        "extremity_rotation_step_rad_max": 0.0020129643380641937,
+        "joint_angular_acceleration_rps2_p95": 56.34873294830314,
+        "joint_angular_acceleration_rps2_max": 543.3547973632812,
+        "joint_angular_acceleration_window_p95_max_rps2": 94.14121971130368
+      },
+      "fk_error_m": 7.152557373046875e-07,
+      "weights_unchanged": true
+    },
+    {
+      "frames": 450,
+      "profile": "dunhuang",
+      "motion_sha256": "d918ebacdf49405516eecbed05a69edf47c8d34545c1f2b17896469cba8a273a",
+      "generation_commit": "9ceee94149eee9d086e7775cc458ef8620d846e0",
+      "native_pass": false,
+      "reasons": [
+        "joint_jerk_mps3_max_too_high",
+        "joint_jerk_window_p95_max_mps3_too_high",
+        "extremity_jerk_mps3_p95_too_high",
+        "extremity_jerk_window_p95_max_mps3_too_high",
+        "foot_skate_mps_p95_too_high",
+        "foot_skate_mps_max_too_high",
+        "foot_support_drift_m_p95_too_high",
+        "foot_support_drift_m_max_too_high"
+      ],
+      "native_metrics": {
+        "foot_skate_mps_p95": 0.4164581000804899,
+        "foot_skate_mps_max": 3.3759071826934814,
+        "foot_support_drift_m_p95": 0.44786239901434416,
+        "foot_support_drift_m_max": 0.47596005761746757,
+        "foot_contact_height_m_max": 0.02019345760345459,
+        "foot_penetration_min_m": -0.041026949882507324,
+        "joint_jerk_mps3_p95": 789.4409454345702,
+        "joint_jerk_mps3_max": 7901.64794921875,
+        "joint_jerk_window_p95_max_mps3": 2846.863769531249,
+        "extremity_jerk_mps3_p95": 939.7567749023438,
+        "extremity_jerk_window_p95_max_mps3": 3009.7709716796876,
+        "root_y_robust_range_m": 0.12945968389511098,
+        "root_vertical_speed_mps_p95": 0.08423280715942351,
+        "root_vertical_speed_mps_max": 0.6442165374755859,
+        "root_horizontal_radius_p95_m": 0.17568576776527778,
+        "root_horizontal_radius_max_m": 0.19367454358145153,
+        "root_horizontal_net_displacement_m": 0.05500845772815018,
+        "root_horizontal_drift_speed_mps": 0.0036753980664688316,
+        "root_horizontal_window_displacement_max_m": 0.25032616807834795,
+        "rot6d_nonfinite_ratio": 0.0,
+        "rot6d_degenerate_ratio": 0.0,
+        "rot6d_collinearity_abs_p99": 5.453252634618223e-08,
+        "rotation_near_pi_step_ratio": 0.0,
+        "joint_rotation_step_rad_p95": 0.09617268480360508,
+        "joint_rotation_step_rad_max": 0.5806589126586914,
+        "joint_rotation_step_window_p95_max_rad": 0.18252209052443497,
+        "extremity_rotation_step_rad_p95": 0.000747050152858719,
+        "extremity_rotation_step_rad_max": 0.003431314369663596,
+        "joint_angular_acceleration_rps2_p95": 32.044356155395484,
+        "joint_angular_acceleration_rps2_max": 328.0177001953125,
+        "joint_angular_acceleration_window_p95_max_rps2": 58.438234329223576
+      },
+      "fk_error_m": 7.152557373046875e-07,
+      "weights_unchanged": true,
+      "summary": {
+        "frames": 450,
+        "motion_sha256": "d918ebacdf49405516eecbed05a69edf47c8d34545c1f2b17896469cba8a273a",
+        "physical_ok": false,
+        "physical_reasons": [
+          "joint_jerk_mps3_max_too_high",
+          "joint_jerk_window_p95_max_mps3_too_high",
+          "extremity_jerk_mps3_p95_too_high",
+          "extremity_jerk_window_p95_max_mps3_too_high",
+          "foot_skate_mps_p95_too_high",
+          "foot_skate_mps_max_too_high",
+          "foot_support_drift_m_p95_too_high",
+          "foot_support_drift_m_max_too_high"
+        ],
+        "fk_error_m": 7.152557373046875e-07,
+        "events": 5,
+        "planned_time_coverage": 1.0,
+        "controlled_time_fraction": 0.25555555555555554,
+        "unique_sources": 4,
+        "unique_events": 5,
+        "event_semantic_quality": "NOT_INDEPENDENTLY_EVALUATED",
+        "naturalness": "NOT_HUMAN_EVALUATED",
+        "differs_from_comparison": true
+      },
+      "same_sampler_noise_as_B2": true,
+      "B2_metrics": {
+        "foot_skate_mps_p95": 0.43798802196979475,
+        "foot_skate_mps_max": 3.8180832862854004,
+        "foot_support_drift_m_p95": 0.4438553657438031,
+        "foot_support_drift_m_max": 0.47639440708961134,
+        "foot_contact_height_m_max": 0.024779319763183594,
+        "foot_penetration_min_m": -0.03715825080871582,
+        "joint_jerk_mps3_p95": 785.3632019042968,
+        "joint_jerk_mps3_max": 9164.943359375,
+        "joint_jerk_window_p95_max_mps3": 2988.7468872070267,
+        "extremity_jerk_mps3_p95": 971.9357452392578,
+        "extremity_jerk_window_p95_max_mps3": 3476.849902343746,
+        "root_y_robust_range_m": 0.12681790113449098,
+        "root_vertical_speed_mps_p95": 0.09228658676147436,
+        "root_vertical_speed_mps_max": 0.6665182113647461,
+        "root_horizontal_radius_p95_m": 0.2001028567392872,
+        "root_horizontal_radius_max_m": 0.21433143894459056,
+        "root_horizontal_net_displacement_m": 0.08738655327549437,
+        "root_horizontal_drift_speed_mps": 0.005838745207716773,
+        "root_horizontal_window_displacement_max_m": 0.2804028785980407,
+        "rot6d_nonfinite_ratio": 0.0,
+        "rot6d_degenerate_ratio": 0.0,
+        "rot6d_collinearity_abs_p99": 5.331826662095885e-08,
+        "rotation_near_pi_step_ratio": 0.0,
+        "joint_rotation_step_rad_p95": 0.09617755003273487,
+        "joint_rotation_step_rad_max": 0.8823918104171753,
+        "joint_rotation_step_window_p95_max_rad": 0.1734465017914772,
+        "extremity_rotation_step_rad_p95": 0.0006581730645848435,
+        "extremity_rotation_step_rad_max": 0.0038155396468937397,
+        "joint_angular_acceleration_rps2_p95": 33.64246025085449,
+        "joint_angular_acceleration_rps2_max": 569.9901733398438,
+        "joint_angular_acceleration_window_p95_max_rps2": 64.61901435852027
+      },
+      "selected_events": [
+        {
+          "event_uid": "evt_ec4d9c7c444670095df38086",
+          "source_uid": "male_meditation",
+          "music_interval": [
+            0,
+            86
+          ],
+          "time_warp": [
+            [
+              2294,
+              0
+            ],
+            [
+              2330,
+              44
+            ],
+            [
+              2354,
+              68
+            ],
+            [
+              2368,
+              86
+            ]
+          ],
+          "primitive": {
+            "source_frame": 2342,
+            "music_frame": 56,
+            "joints": [
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "radius": 12
+          },
+          "feasibility": {
+            "source": "PASS",
+            "temporal8": "PASS",
+            "soft_reference": "PASS",
+            "native": "UNKNOWN"
+          }
+        },
+        {
+          "event_uid": "evt_d41e08d642ed228e46272616",
+          "source_uid": "female_FeiTian",
+          "music_interval": [
+            86,
+            188
+          ],
+          "time_warp": [
+            [
+              11425,
+              86
+            ],
+            [
+              11481,
+              136
+            ],
+            [
+              11505,
+              160
+            ],
+            [
+              11530,
+              188
+            ]
+          ],
+          "primitive": {
+            "source_frame": 11493,
+            "music_frame": 148,
+            "joints": [
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "radius": 12
+          },
+          "feasibility": {
+            "source": "PASS",
+            "temporal8": "PASS",
+            "soft_reference": "PASS",
+            "native": "UNKNOWN"
+          }
+        },
+        {
+          "event_uid": "evt_c98e6282d94bae8c8fe5ebc2",
+          "source_uid": "female_meditation",
+          "music_interval": [
+            188,
+            270
+          ],
+          "time_warp": [
+            [
+              2122,
+              188
+            ],
+            [
+              2167,
+              230
+            ],
+            [
+              2191,
+              254
+            ],
+            [
+              2209,
+              270
+            ]
+          ],
+          "primitive": {
+            "source_frame": 2179,
+            "music_frame": 242,
+            "joints": [
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "radius": 12
+          },
+          "feasibility": {
+            "source": "PASS",
+            "temporal8": "PASS",
+            "soft_reference": "PASS",
+            "native": "UNKNOWN"
+          }
+        },
+        {
+          "event_uid": "evt_1cf70d5b075c4e4c777a5b6e",
+          "source_uid": "male_meditation",
+          "music_interval": [
+            270,
+            352
+          ],
+          "time_warp": [
+            [
+              4911,
+              270
+            ],
+            [
+              4947,
+              299
+            ],
+            [
+              4971,
+              323
+            ],
+            [
+              5000,
+              352
+            ]
+          ],
+          "primitive": {
+            "source_frame": 4959,
+            "music_frame": 311,
+            "joints": [
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "radius": 12
+          },
+          "feasibility": {
+            "source": "PASS",
+            "temporal8": "PASS",
+            "soft_reference": "PASS",
+            "native": "UNKNOWN"
+          }
+        },
+        {
+          "event_uid": "evt_a49ad45bf8328f46b1d720ec",
+          "source_uid": "female_lotus",
+          "music_interval": [
+            352,
+            450
+          ],
+          "time_warp": [
+            [
+              4492,
+              352
+            ],
+            [
+              4517,
+              381
+            ],
+            [
+              4541,
+              405
+            ],
+            [
+              4581,
+              450
+            ]
+          ],
+          "primitive": {
+            "source_frame": 4529,
+            "music_frame": 393,
+            "joints": [
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "radius": 12
+          },
+          "feasibility": {
+            "source": "PASS",
+            "temporal8": "PASS",
+            "soft_reference": "PASS",
+            "native": "UNKNOWN"
+          }
+        }
+      ]
+    },
+    {
+      "frames": 3601,
+      "profile": "edge_baseline",
+      "motion_sha256": "1f5524b7116817565968e1e9cde3a22b8861c1a0ddc1c5c509e83d25a6c201dc",
+      "generation_commit": "9ceee94149eee9d086e7775cc458ef8620d846e0",
+      "native_pass": false,
+      "reasons": [
+        "joint_jerk_mps3_p95_too_high",
+        "joint_jerk_mps3_max_too_high",
+        "joint_jerk_window_p95_max_mps3_too_high",
+        "extremity_jerk_mps3_p95_too_high",
+        "extremity_jerk_window_p95_max_mps3_too_high",
+        "foot_skate_mps_p95_too_high",
+        "foot_skate_mps_max_too_high",
+        "foot_support_drift_m_p95_too_high",
+        "foot_support_drift_m_max_too_high",
+        "foot_penetration_min_m_too_low",
+        "joint_rotation_step_rad_max_too_high"
+      ],
+      "native_metrics": {
+        "foot_skate_mps_p95": 1.0515216290950773,
+        "foot_skate_mps_max": 6.862325191497803,
+        "foot_support_drift_m_p95": 0.5751937535808448,
+        "foot_support_drift_m_max": 0.8874523406026897,
+        "foot_contact_height_m_max": 0.025088846683502197,
+        "foot_penetration_min_m": -0.05487328767776489,
+        "joint_jerk_mps3_p95": 1243.5102600097657,
+        "joint_jerk_mps3_max": 24111.203125,
+        "joint_jerk_window_p95_max_mps3": 3742.7631958007787,
+        "extremity_jerk_mps3_p95": 1487.560229492187,
+        "extremity_jerk_window_p95_max_mps3": 7062.075952148418,
+        "root_y_robust_range_m": 0.165124773979187,
+        "root_vertical_speed_mps_p95": 0.3426509499549865,
+        "root_vertical_speed_mps_max": 1.0843169689178467,
+        "root_horizontal_radius_p95_m": 0.6962595038369875,
+        "root_horizontal_radius_max_m": 0.9158406248903986,
+        "root_horizontal_net_displacement_m": 0.508509719647084,
+        "root_horizontal_drift_speed_mps": 0.004237580997059034,
+        "root_horizontal_window_displacement_max_m": 1.1080368802487728,
+        "rot6d_nonfinite_ratio": 0.0,
+        "rot6d_degenerate_ratio": 0.0,
+        "rot6d_collinearity_abs_p99": 6.140765099322474e-08,
+        "rotation_near_pi_step_ratio": 0.0,
+        "joint_rotation_step_rad_p95": 0.13687776550650596,
+        "joint_rotation_step_rad_max": 1.5197443962097168,
+        "joint_rotation_step_window_p95_max_rad": 0.25007110312581043,
+        "extremity_rotation_step_rad_p95": 0.0014400765707250683,
+        "extremity_rotation_step_rad_max": 0.0047441269271075726,
+        "joint_angular_acceleration_rps2_p95": 51.483778953552246,
+        "joint_angular_acceleration_rps2_max": 1525.8563232421875,
+        "joint_angular_acceleration_window_p95_max_rps2": 128.16717071533188
+      },
+      "fk_error_m": 9.5367431640625e-07,
+      "weights_unchanged": true
+    },
+    {
+      "frames": 3601,
+      "profile": "dunhuang",
+      "motion_sha256": "86f9eda8a27fc0923db7147194ec22ca03cc40cf6655414232d17fac7c12a8fa",
+      "generation_commit": "9ceee94149eee9d086e7775cc458ef8620d846e0",
+      "native_pass": false,
+      "reasons": [
+        "joint_jerk_mps3_p95_too_high",
+        "joint_jerk_mps3_max_too_high",
+        "joint_jerk_window_p95_max_mps3_too_high",
+        "extremity_jerk_mps3_p95_too_high",
+        "extremity_jerk_window_p95_max_mps3_too_high",
+        "foot_skate_mps_p95_too_high",
+        "foot_skate_mps_max_too_high",
+        "foot_support_drift_m_p95_too_high",
+        "foot_support_drift_m_max_too_high"
+      ],
+      "native_metrics": {
+        "foot_skate_mps_p95": 0.915675291419029,
+        "foot_skate_mps_max": 17.846332550048828,
+        "foot_support_drift_m_p95": 0.6153240565231154,
+        "foot_support_drift_m_max": 1.002777212961822,
+        "foot_contact_height_m_max": 0.026090621948242188,
+        "foot_penetration_min_m": -0.038464128971099854,
+        "joint_jerk_mps3_p95": 1243.2595825195294,
+        "joint_jerk_mps3_max": 30530.541015625,
+        "joint_jerk_window_p95_max_mps3": 13282.393994140624,
+        "extremity_jerk_mps3_p95": 1374.5842651367186,
+        "extremity_jerk_window_p95_max_mps3": 13819.621142578124,
+        "root_y_robust_range_m": 0.1455169916152954,
+        "root_vertical_speed_mps_p95": 0.2828028202056884,
+        "root_vertical_speed_mps_max": 1.015545129776001,
+        "root_horizontal_radius_p95_m": 0.6599565196945453,
+        "root_horizontal_radius_max_m": 0.8568499361606797,
+        "root_horizontal_net_displacement_m": 0.12542458175162327,
+        "root_horizontal_drift_speed_mps": 0.0010452048479301938,
+        "root_horizontal_window_displacement_max_m": 1.1115027839675446,
+        "rot6d_nonfinite_ratio": 0.0,
+        "rot6d_degenerate_ratio": 0.0,
+        "rot6d_collinearity_abs_p99": 5.807393924047978e-08,
+        "rotation_near_pi_step_ratio": 0.0,
+        "joint_rotation_step_rad_p95": 0.09910099469125275,
+        "joint_rotation_step_rad_max": 1.1793537139892578,
+        "joint_rotation_step_window_p95_max_rad": 0.19445786327123638,
+        "extremity_rotation_step_rad_p95": 0.0010115852404851465,
+        "extremity_rotation_step_rad_max": 0.005370493978261948,
+        "joint_angular_acceleration_rps2_p95": 33.50926494598389,
+        "joint_angular_acceleration_rps2_max": 970.2523803710938,
+        "joint_angular_acceleration_window_p95_max_rps2": 78.81623840332024
+      },
+      "fk_error_m": 9.5367431640625e-07,
+      "weights_unchanged": true,
+      "summary": {
+        "frames": 3601,
+        "motion_sha256": "86f9eda8a27fc0923db7147194ec22ca03cc40cf6655414232d17fac7c12a8fa",
+        "physical_ok": false,
+        "physical_reasons": [
+          "joint_jerk_mps3_p95_too_high",
+          "joint_jerk_mps3_max_too_high",
+          "joint_jerk_window_p95_max_mps3_too_high",
+          "extremity_jerk_mps3_p95_too_high",
+          "extremity_jerk_window_p95_max_mps3_too_high",
+          "foot_skate_mps_p95_too_high",
+          "foot_skate_mps_max_too_high",
+          "foot_support_drift_m_p95_too_high",
+          "foot_support_drift_m_max_too_high"
+        ],
+        "fk_error_m": 9.5367431640625e-07,
+        "events": 40,
+        "planned_time_coverage": 1.0,
+        "controlled_time_fraction": 0.2554845876145515,
+        "unique_sources": 8,
+        "unique_events": 40,
+        "event_semantic_quality": "NOT_INDEPENDENTLY_EVALUATED",
+        "naturalness": "NOT_HUMAN_EVALUATED",
+        "differs_from_comparison": true
+      },
+      "same_sampler_noise_as_B2": true,
+      "B2_metrics": {
+        "foot_skate_mps_p95": 0.9007340461015703,
+        "foot_skate_mps_max": 17.01292610168457,
+        "foot_support_drift_m_p95": 0.6625763554037902,
+        "foot_support_drift_m_max": 0.9497171389382468,
+        "foot_contact_height_m_max": 0.028342127799987793,
+        "foot_penetration_min_m": -0.03342634439468384,
+        "joint_jerk_mps3_p95": 1216.0402343749975,
+        "joint_jerk_mps3_max": 32026.3515625,
+        "joint_jerk_window_p95_max_mps3": 12879.706640625,
+        "extremity_jerk_mps3_p95": 1303.5976440429677,
+        "extremity_jerk_window_p95_max_mps3": 12929.957861328125,
+        "root_y_robust_range_m": 0.14388561248779297,
+        "root_vertical_speed_mps_p95": 0.2703187465667723,
+        "root_vertical_speed_mps_max": 0.9986007213592529,
+        "root_horizontal_radius_p95_m": 0.6424308694047121,
+        "root_horizontal_radius_max_m": 0.8184942357520386,
+        "root_horizontal_net_displacement_m": 0.1287014464215641,
+        "root_horizontal_drift_speed_mps": 0.0010725120535130341,
+        "root_horizontal_window_displacement_max_m": 1.1382866325189853,
+        "rot6d_nonfinite_ratio": 0.0,
+        "rot6d_degenerate_ratio": 0.0,
+        "rot6d_collinearity_abs_p99": 5.969834822281097e-08,
+        "rotation_near_pi_step_ratio": 0.0,
+        "joint_rotation_step_rad_p95": 0.08903980702161796,
+        "joint_rotation_step_rad_max": 1.20358407497406,
+        "joint_rotation_step_window_p95_max_rad": 0.20239804461598354,
+        "extremity_rotation_step_rad_p95": 0.0010033772967290133,
+        "extremity_rotation_step_rad_max": 0.005327054299414158,
+        "joint_angular_acceleration_rps2_p95": 31.947968006134033,
+        "joint_angular_acceleration_rps2_max": 880.9497680664062,
+        "joint_angular_acceleration_window_p95_max_rps2": 78.64653778076165
+      },
+      "selected_events": [
+        {
+          "event_uid": "evt_b2eeacbd37a4350616d38c91",
+          "source_uid": "female_lotus",
+          "music_interval": [
+            0,
+            86
+          ],
+          "time_warp": [
+            [
+              1151,
+              0
+            ],
+            [
+              1166,
+              18
+            ],
+            [
+              1190,
+              42
+            ],
+            [
+              1228,
+              86
+            ]
+          ],
+          "primitive": {
+            "source_frame": 1178,
+            "music_frame": 30,
+            "joints": [
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "radius": 12
+          },
+          "feasibility": {
+            "source": "PASS",
+            "temporal8": "PASS",
+            "soft_reference": "PASS",
+            "native": "UNKNOWN"
+          }
+        },
+        {
+          "event_uid": "evt_d41e08d642ed228e46272616",
+          "source_uid": "female_FeiTian",
+          "music_interval": [
+            86,
+            188
+          ],
+          "time_warp": [
+            [
+              11425,
+              86
+            ],
+            [
+              11481,
+              136
+            ],
+            [
+              11505,
+              160
+            ],
+            [
+              11530,
+              188
+            ]
+          ],
+          "primitive": {
+            "source_frame": 11493,
+            "music_frame": 148,
+            "joints": [
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "radius": 12
+          },
+          "feasibility": {
+            "source": "PASS",
+            "temporal8": "PASS",
+            "soft_reference": "PASS",
+            "native": "UNKNOWN"
+          }
+        },
+        {
+          "event_uid": "evt_c98e6282d94bae8c8fe5ebc2",
+          "source_uid": "female_meditation",
+          "music_interval": [
+            188,
+            270
+          ],
+          "time_warp": [
+            [
+              2122,
+              188
+            ],
+            [
+              2167,
+              230
+            ],
+            [
+              2191,
+              254
+            ],
+            [
+              2209,
+              270
+            ]
+          ],
+          "primitive": {
+            "source_frame": 2179,
+            "music_frame": 242,
+            "joints": [
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "radius": 12
+          },
+          "feasibility": {
+            "source": "PASS",
+            "temporal8": "PASS",
+            "soft_reference": "PASS",
+            "native": "UNKNOWN"
+          }
+        },
+        {
+          "event_uid": "evt_1cf70d5b075c4e4c777a5b6e",
+          "source_uid": "male_meditation",
+          "music_interval": [
+            270,
+            352
+          ],
+          "time_warp": [
+            [
+              4911,
+              270
+            ],
+            [
+              4947,
+              299
+            ],
+            [
+              4971,
+              323
+            ],
+            [
+              5000,
+              352
+            ]
+          ],
+          "primitive": {
+            "source_frame": 4959,
+            "music_frame": 311,
+            "joints": [
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "radius": 12
+          },
+          "feasibility": {
+            "source": "PASS",
+            "temporal8": "PASS",
+            "soft_reference": "PASS",
+            "native": "UNKNOWN"
+          }
+        },
+        {
+          "event_uid": "evt_a49ad45bf8328f46b1d720ec",
+          "source_uid": "female_lotus",
+          "music_interval": [
+            352,
+            454
+          ],
+          "time_warp": [
+            [
+              4492,
+              352
+            ],
+            [
+              4517,
+              381
+            ],
+            [
+              4541,
+              405
+            ],
+            [
+              4581,
+              454
+            ]
+          ],
+          "primitive": {
+            "source_frame": 4529,
+            "music_frame": 393,
+            "joints": [
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "radius": 12
+          },
+          "feasibility": {
+            "source": "PASS",
+            "temporal8": "PASS",
+            "soft_reference": "PASS",
+            "native": "UNKNOWN"
+          }
+        },
+        {
+          "event_uid": "evt_39f9a252875aa8cb70dc119a",
+          "source_uid": "male_meditation",
+          "music_interval": [
+            454,
+            537
+          ],
+          "time_warp": [
+            [
+              4194,
+              454
+            ],
+            [
+              4232,
+              496
+            ],
+            [
+              4256,
+              520
+            ],
+            [
+              4271,
+              537
+            ]
+          ],
+          "primitive": {
+            "source_frame": 4244,
+            "music_frame": 508,
+            "joints": [
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "radius": 12
+          },
+          "feasibility": {
+            "source": "PASS",
+            "temporal8": "PASS",
+            "soft_reference": "PASS",
+            "native": "UNKNOWN"
+          }
+        },
+        {
+          "event_uid": "evt_57914634ca5e7ce31db6f24d",
+          "source_uid": "male_meditation",
+          "music_interval": [
+            537,
+            638
+          ],
+          "time_warp": [
+            [
+              4271,
+              537
+            ],
+            [
+              4293,
+              565
+            ],
+            [
+              4317,
+              589
+            ],
+            [
+              4367,
+              638
+            ]
+          ],
+          "primitive": {
+            "source_frame": 4305,
+            "music_frame": 577,
+            "joints": [
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "radius": 12
+          },
+          "feasibility": {
+            "source": "PASS",
+            "temporal8": "PASS",
+            "soft_reference": "PASS",
+            "native": "UNKNOWN"
+          }
+        },
+        {
+          "event_uid": "evt_4098a45c07153b3ae15b9dd2",
+          "source_uid": "male_pipa_2",
+          "music_interval": [
+            638,
+            720
+          ],
+          "time_warp": [
+            [
+              3022,
+              638
+            ],
+            [
+              3050,
+              668
+            ],
+            [
+              3074,
+              692
+            ],
+            [
+              3097,
+              720
+            ]
+          ],
+          "primitive": {
+            "source_frame": 3062,
+            "music_frame": 680,
+            "joints": [
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "radius": 12
+          },
+          "feasibility": {
+            "source": "PASS",
+            "temporal8": "PASS",
+            "soft_reference": "PASS",
+            "native": "UNKNOWN"
+          }
+        },
+        {
+          "event_uid": "evt_5d5b1aed3386449e5b4910e1",
+          "source_uid": "male_ribbon_FenHe",
+          "music_interval": [
+            720,
+            803
+          ],
+          "time_warp": [
+            [
+              1067,
+              720
+            ],
+            [
+              1096,
+              755
+            ],
+            [
+              1120,
+              779
+            ],
+            [
+              1139,
+              803
+            ]
+          ],
+          "primitive": {
+            "source_frame": 1108,
+            "music_frame": 767,
+            "joints": [
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "radius": 12
+          },
+          "feasibility": {
+            "source": "PASS",
+            "temporal8": "PASS",
+            "soft_reference": "PASS",
+            "native": "UNKNOWN"
+          }
+        },
+        {
+          "event_uid": "evt_67743d1c35e5d2ab16e5f833",
+          "source_uid": "male_ribbon_FenHe",
+          "music_interval": [
+            803,
+            904
+          ],
+          "time_warp": [
+            [
+              532,
+              803
+            ],
+            [
+              555,
+              831
+            ],
+            [
+              579,
+              855
+            ],
+            [
+              616,
+              904
+            ]
+          ],
+          "primitive": {
+            "source_frame": 567,
+            "music_frame": 843,
+            "joints": [
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "radius": 12
+          },
+          "feasibility": {
+            "source": "PASS",
+            "temporal8": "PASS",
+            "soft_reference": "PASS",
+            "native": "UNKNOWN"
+          }
+        },
+        {
+          "event_uid": "evt_ddd8e8eeda5355e478f245aa",
+          "source_uid": "female_FeiTian",
+          "music_interval": [
+            904,
+            986
+          ],
+          "time_warp": [
+            [
+              815,
+              904
+            ],
+            [
+              851,
+              938
+            ],
+            [
+              875,
+              962
+            ],
+            [
+              901,
+              986
+            ]
+          ],
+          "primitive": {
+            "source_frame": 863,
+            "music_frame": 950,
+            "joints": [
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "radius": 12
+          },
+          "feasibility": {
+            "source": "PASS",
+            "temporal8": "PASS",
+            "soft_reference": "PASS",
+            "native": "UNKNOWN"
+          }
+        },
+        {
+          "event_uid": "evt_8ef8dfe4e5e1b2bf4995d375",
+          "source_uid": "male_pipa_1",
+          "music_interval": [
+            986,
+            1089
+          ],
+          "time_warp": [
+            [
+              748,
+              986
+            ],
+            [
+              793,
+              1041
+            ],
+            [
+              817,
+              1065
+            ],
+            [
+              836,
+              1089
+            ]
+          ],
+          "primitive": {
+            "source_frame": 805,
+            "music_frame": 1053,
+            "joints": [
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "radius": 12
+          },
+          "feasibility": {
+            "source": "PASS",
+            "temporal8": "PASS",
+            "soft_reference": "PASS",
+            "native": "UNKNOWN"
+          }
+        },
+        {
+          "event_uid": "evt_16692f5cb9c2c1a70507474f",
+          "source_uid": "female_meditation",
+          "music_interval": [
+            1089,
+            1170
+          ],
+          "time_warp": [
+            [
+              3661,
+              1089
+            ],
+            [
+              3706,
+              1130
+            ],
+            [
+              3730,
+              1154
+            ],
+            [
+              3748,
+              1170
+            ]
+          ],
+          "primitive": {
+            "source_frame": 3718,
+            "music_frame": 1142,
+            "joints": [
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "radius": 12
+          },
+          "feasibility": {
+            "source": "PASS",
+            "temporal8": "PASS",
+            "soft_reference": "PASS",
+            "native": "UNKNOWN"
+          }
+        },
+        {
+          "event_uid": "evt_1f1a297ff94d3b6adf9a3f7e",
+          "source_uid": "female_meditation",
+          "music_interval": [
+            1170,
+            1252
+          ],
+          "time_warp": [
+            [
+              2554,
+              1170
+            ],
+            [
+              2595,
+              1212
+            ],
+            [
+              2619,
+              1236
+            ],
+            [
+              2635,
+              1252
+            ]
+          ],
+          "primitive": {
+            "source_frame": 2607,
+            "music_frame": 1224,
+            "joints": [
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "radius": 12
+          },
+          "feasibility": {
+            "source": "PASS",
+            "temporal8": "PASS",
+            "soft_reference": "PASS",
+            "native": "UNKNOWN"
+          }
+        },
+        {
+          "event_uid": "evt_b577c5101e6f836e53203f55",
+          "source_uid": "male_pipa_1",
+          "music_interval": [
+            1252,
+            1344
+          ],
+          "time_warp": [
+            [
+              579,
+              1252
+            ],
+            [
+              603,
+              1281
+            ],
+            [
+              627,
+              1305
+            ],
+            [
+              660,
+              1344
+            ]
+          ],
+          "primitive": {
+            "source_frame": 615,
+            "music_frame": 1293,
+            "joints": [
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "radius": 12
+          },
+          "feasibility": {
+            "source": "PASS",
+            "temporal8": "PASS",
+            "soft_reference": "PASS",
+            "native": "UNKNOWN"
+          }
+        },
+        {
+          "event_uid": "evt_a20eac9b363a8337c9d80fad",
+          "source_uid": "male_pipa_1",
+          "music_interval": [
+            1344,
+            1447
+          ],
+          "time_warp": [
+            [
+              388,
+              1344
+            ],
+            [
+              446,
+              1399
+            ],
+            [
+              470,
+              1423
+            ],
+            [
+              496,
+              1447
+            ]
+          ],
+          "primitive": {
+            "source_frame": 458,
+            "music_frame": 1411,
+            "joints": [
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "radius": 12
+          },
+          "feasibility": {
+            "source": "PASS",
+            "temporal8": "PASS",
+            "soft_reference": "PASS",
+            "native": "UNKNOWN"
+          }
+        },
+        {
+          "event_uid": "evt_c0c6c84a12e7a01ddb77f138",
+          "source_uid": "male_meditation",
+          "music_interval": [
+            1447,
+            1528
+          ],
+          "time_warp": [
+            [
+              3720,
+              1447
+            ],
+            [
+              3742,
+              1464
+            ],
+            [
+              3766,
+              1488
+            ],
+            [
+              3816,
+              1528
+            ]
+          ],
+          "primitive": {
+            "source_frame": 3754,
+            "music_frame": 1476,
+            "joints": [
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "radius": 12
+          },
+          "feasibility": {
+            "source": "PASS",
+            "temporal8": "PASS",
+            "soft_reference": "PASS",
+            "native": "UNKNOWN"
+          }
+        },
+        {
+          "event_uid": "evt_5f97283fc532d24e5d4e7e58",
+          "source_uid": "male_ribbon_FenHe",
+          "music_interval": [
+            1528,
+            1630
+          ],
+          "time_warp": [
+            [
+              2793,
+              1528
+            ],
+            [
+              2839,
+              1578
+            ],
+            [
+              2863,
+              1602
+            ],
+            [
+              2885,
+              1630
+            ]
+          ],
+          "primitive": {
+            "source_frame": 2851,
+            "music_frame": 1590,
+            "joints": [
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "radius": 12
+          },
+          "feasibility": {
+            "source": "PASS",
+            "temporal8": "PASS",
+            "soft_reference": "PASS",
+            "native": "UNKNOWN"
+          }
+        },
+        {
+          "event_uid": "evt_64c0ee72361ecb48bd04003e",
+          "source_uid": "female_FeiTian",
+          "music_interval": [
+            1630,
+            1713
+          ],
+          "time_warp": [
+            [
+              2350,
+              1630
+            ],
+            [
+              2387,
+              1672
+            ],
+            [
+              2411,
+              1696
+            ],
+            [
+              2426,
+              1713
+            ]
+          ],
+          "primitive": {
+            "source_frame": 2399,
+            "music_frame": 1684,
+            "joints": [
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "radius": 12
+          },
+          "feasibility": {
+            "source": "PASS",
+            "temporal8": "PASS",
+            "soft_reference": "PASS",
+            "native": "UNKNOWN"
+          }
+        },
+        {
+          "event_uid": "evt_a5d64c201ceaa0c0c0280846",
+          "source_uid": "female_lotus",
+          "music_interval": [
+            1713,
+            1794
+          ],
+          "time_warp": [
+            [
+              84,
+              1713
+            ],
+            [
+              109,
+              1733
+            ],
+            [
+              133,
+              1757
+            ],
+            [
+              177,
+              1794
+            ]
+          ],
+          "primitive": {
+            "source_frame": 121,
+            "music_frame": 1745,
+            "joints": [
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "radius": 12
+          },
+          "feasibility": {
+            "source": "PASS",
+            "temporal8": "PASS",
+            "soft_reference": "PASS",
+            "native": "UNKNOWN"
+          }
+        },
+        {
+          "event_uid": "evt_164b7f8fa8c6d94dbf7d1415",
+          "source_uid": "female_lotus",
+          "music_interval": [
+            1794,
+            1896
+          ],
+          "time_warp": [
+            [
+              177,
+              1794
+            ],
+            [
+              212,
+              1823
+            ],
+            [
+              236,
+              1847
+            ],
+            [
+              287,
+              1896
+            ]
+          ],
+          "primitive": {
+            "source_frame": 224,
+            "music_frame": 1835,
+            "joints": [
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "radius": 12
+          },
+          "feasibility": {
+            "source": "PASS",
+            "temporal8": "PASS",
+            "soft_reference": "PASS",
+            "native": "UNKNOWN"
+          }
+        },
+        {
+          "event_uid": "evt_6a0138331e551e7499bf37cb",
+          "source_uid": "female_meditation",
+          "music_interval": [
+            1896,
+            1988
+          ],
+          "time_warp": [
+            [
+              693,
+              1896
+            ],
+            [
+              750,
+              1944
+            ],
+            [
+              774,
+              1968
+            ],
+            [
+              799,
+              1988
+            ]
+          ],
+          "primitive": {
+            "source_frame": 762,
+            "music_frame": 1956,
+            "joints": [
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "radius": 12
+          },
+          "feasibility": {
+            "source": "PASS",
+            "temporal8": "PASS",
+            "soft_reference": "PASS",
+            "native": "UNKNOWN"
+          }
+        },
+        {
+          "event_uid": "evt_c11fc62cf6a03599530a6542",
+          "source_uid": "female_FeiTian",
+          "music_interval": [
+            1988,
+            2070
+          ],
+          "time_warp": [
+            [
+              4636,
+              1988
+            ],
+            [
+              4677,
+              2030
+            ],
+            [
+              4701,
+              2054
+            ],
+            [
+              4717,
+              2070
+            ]
+          ],
+          "primitive": {
+            "source_frame": 4689,
+            "music_frame": 2042,
+            "joints": [
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "radius": 12
+          },
+          "feasibility": {
+            "source": "PASS",
+            "temporal8": "PASS",
+            "soft_reference": "PASS",
+            "native": "UNKNOWN"
+          }
+        },
+        {
+          "event_uid": "evt_a84b029d7a637ca37803096d",
+          "source_uid": "male_pipa_2",
+          "music_interval": [
+            2070,
+            2152
+          ],
+          "time_warp": [
+            [
+              1393,
+              2070
+            ],
+            [
+              1439,
+              2111
+            ],
+            [
+              1463,
+              2135
+            ],
+            [
+              1483,
+              2152
+            ]
+          ],
+          "primitive": {
+            "source_frame": 1451,
+            "music_frame": 2123,
+            "joints": [
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "radius": 12
+          },
+          "feasibility": {
+            "source": "PASS",
+            "temporal8": "PASS",
+            "soft_reference": "PASS",
+            "native": "UNKNOWN"
+          }
+        },
+        {
+          "event_uid": "evt_509bbad127dc512e4ac2732e",
+          "source_uid": "male_ribbon",
+          "music_interval": [
+            2152,
+            2254
+          ],
+          "time_warp": [
+            [
+              170,
+              2152
+            ],
+            [
+              224,
+              2207
+            ],
+            [
+              248,
+              2231
+            ],
+            [
+              271,
+              2254
+            ]
+          ],
+          "primitive": {
+            "source_frame": 236,
+            "music_frame": 2219,
+            "joints": [
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "radius": 12
+          },
+          "feasibility": {
+            "source": "PASS",
+            "temporal8": "PASS",
+            "soft_reference": "PASS",
+            "native": "UNKNOWN"
+          }
+        },
+        {
+          "event_uid": "evt_6d686f35a712d930ab062627",
+          "source_uid": "female_FeiTian",
+          "music_interval": [
+            2254,
+            2336
+          ],
+          "time_warp": [
+            [
+              2597,
+              2254
+            ],
+            [
+              2613,
+              2272
+            ],
+            [
+              2637,
+              2296
+            ],
+            [
+              2674,
+              2336
+            ]
+          ],
+          "primitive": {
+            "source_frame": 2625,
+            "music_frame": 2284,
+            "joints": [
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "radius": 12
+          },
+          "feasibility": {
+            "source": "PASS",
+            "temporal8": "PASS",
+            "soft_reference": "PASS",
+            "native": "UNKNOWN"
+          }
+        },
+        {
+          "event_uid": "evt_e9240dcad48cca58045a82e4",
+          "source_uid": "female_meditation",
+          "music_interval": [
+            2336,
+            2438
+          ],
+          "time_warp": [
+            [
+              3050,
+              2336
+            ],
+            [
+              3108,
+              2385
+            ],
+            [
+              3132,
+              2409
+            ],
+            [
+              3161,
+              2438
+            ]
+          ],
+          "primitive": {
+            "source_frame": 3120,
+            "music_frame": 2397,
+            "joints": [
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "radius": 12
+          },
+          "feasibility": {
+            "source": "PASS",
+            "temporal8": "PASS",
+            "soft_reference": "PASS",
+            "native": "UNKNOWN"
+          }
+        },
+        {
+          "event_uid": "evt_bd084a2dfc6599033de3e766",
+          "source_uid": "male_pipa_1",
+          "music_interval": [
+            2438,
+            2520
+          ],
+          "time_warp": [
+            [
+              496,
+              2438
+            ],
+            [
+              513,
+              2455
+            ],
+            [
+              537,
+              2479
+            ],
+            [
+              579,
+              2520
+            ]
+          ],
+          "primitive": {
+            "source_frame": 525,
+            "music_frame": 2467,
+            "joints": [
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "radius": 12
+          },
+          "feasibility": {
+            "source": "PASS",
+            "temporal8": "PASS",
+            "soft_reference": "PASS",
+            "native": "UNKNOWN"
+          }
+        },
+        {
+          "event_uid": "evt_95665082c548c1f324f36dba",
+          "source_uid": "female_meditation",
+          "music_interval": [
+            2520,
+            2602
+          ],
+          "time_warp": [
+            [
+              5753,
+              2520
+            ],
+            [
+              5770,
+              2536
+            ],
+            [
+              5794,
+              2560
+            ],
+            [
+              5837,
+              2602
+            ]
+          ],
+          "primitive": {
+            "source_frame": 5782,
+            "music_frame": 2548,
+            "joints": [
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "radius": 12
+          },
+          "feasibility": {
+            "source": "PASS",
+            "temporal8": "PASS",
+            "soft_reference": "PASS",
+            "native": "UNKNOWN"
+          }
+        },
+        {
+          "event_uid": "evt_7a06e9abe7d75c08fc629dbf",
+          "source_uid": "male_pipa_2",
+          "music_interval": [
+            2602,
+            2704
+          ],
+          "time_warp": [
+            [
+              2080,
+              2602
+            ],
+            [
+              2106,
+              2626
+            ],
+            [
+              2130,
+              2650
+            ],
+            [
+              2188,
+              2704
+            ]
+          ],
+          "primitive": {
+            "source_frame": 2118,
+            "music_frame": 2638,
+            "joints": [
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "radius": 12
+          },
+          "feasibility": {
+            "source": "PASS",
+            "temporal8": "PASS",
+            "soft_reference": "PASS",
+            "native": "UNKNOWN"
+          }
+        },
+        {
+          "event_uid": "evt_d43b53187261be62a1efb967",
+          "source_uid": "male_meditation",
+          "music_interval": [
+            2704,
+            2786
+          ],
+          "time_warp": [
+            [
+              5365,
+              2704
+            ],
+            [
+              5408,
+              2741
+            ],
+            [
+              5432,
+              2765
+            ],
+            [
+              5457,
+              2786
+            ]
+          ],
+          "primitive": {
+            "source_frame": 5420,
+            "music_frame": 2753,
+            "joints": [
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "radius": 12
+          },
+          "feasibility": {
+            "source": "PASS",
+            "temporal8": "PASS",
+            "soft_reference": "PASS",
+            "native": "UNKNOWN"
+          }
+        },
+        {
+          "event_uid": "evt_2c1b934deeff8715391f3609",
+          "source_uid": "female_lotus",
+          "music_interval": [
+            2786,
+            2889
+          ],
+          "time_warp": [
+            [
+              6857,
+              2786
+            ],
+            [
+              6904,
+              2841
+            ],
+            [
+              6928,
+              2865
+            ],
+            [
+              6948,
+              2889
+            ]
+          ],
+          "primitive": {
+            "source_frame": 6916,
+            "music_frame": 2853,
+            "joints": [
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "radius": 12
+          },
+          "feasibility": {
+            "source": "PASS",
+            "temporal8": "PASS",
+            "soft_reference": "PASS",
+            "native": "UNKNOWN"
+          }
+        },
+        {
+          "event_uid": "evt_8d32ec7517f78977057f859e",
+          "source_uid": "male_meditation",
+          "music_interval": [
+            2889,
+            2970
+          ],
+          "time_warp": [
+            [
+              715,
+              2889
+            ],
+            [
+              760,
+              2929
+            ],
+            [
+              784,
+              2953
+            ],
+            [
+              804,
+              2970
+            ]
+          ],
+          "primitive": {
+            "source_frame": 772,
+            "music_frame": 2941,
+            "joints": [
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "radius": 12
+          },
+          "feasibility": {
+            "source": "PASS",
+            "temporal8": "PASS",
+            "soft_reference": "PASS",
+            "native": "UNKNOWN"
+          }
+        },
+        {
+          "event_uid": "evt_0ba0b3d87dc943d50b5bd0dc",
+          "source_uid": "female_FeiTian",
+          "music_interval": [
+            2970,
+            3052
+          ],
+          "time_warp": [
+            [
+              11695,
+              2970
+            ],
+            [
+              11711,
+              2987
+            ],
+            [
+              11735,
+              3011
+            ],
+            [
+              11774,
+              3052
+            ]
+          ],
+          "primitive": {
+            "source_frame": 11723,
+            "music_frame": 2999,
+            "joints": [
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "radius": 12
+          },
+          "feasibility": {
+            "source": "PASS",
+            "temporal8": "PASS",
+            "soft_reference": "PASS",
+            "native": "UNKNOWN"
+          }
+        },
+        {
+          "event_uid": "evt_54afa58c42f8fa9e7f2d69ac",
+          "source_uid": "male_pipa_1",
+          "music_interval": [
+            3052,
+            3154
+          ],
+          "time_warp": [
+            [
+              660,
+              3052
+            ],
+            [
+              679,
+              3076
+            ],
+            [
+              703,
+              3100
+            ],
+            [
+              748,
+              3154
+            ]
+          ],
+          "primitive": {
+            "source_frame": 691,
+            "music_frame": 3088,
+            "joints": [
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "radius": 12
+          },
+          "feasibility": {
+            "source": "PASS",
+            "temporal8": "PASS",
+            "soft_reference": "PASS",
+            "native": "UNKNOWN"
+          }
+        },
+        {
+          "event_uid": "evt_9474780e644af286e770f622",
+          "source_uid": "female_lotus",
+          "music_interval": [
+            3154,
+            3236
+          ],
+          "time_warp": [
+            [
+              797,
+              3154
+            ],
+            [
+              810,
+              3170
+            ],
+            [
+              834,
+              3194
+            ],
+            [
+              869,
+              3236
+            ]
+          ],
+          "primitive": {
+            "source_frame": 822,
+            "music_frame": 3182,
+            "joints": [
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "radius": 12
+          },
+          "feasibility": {
+            "source": "PASS",
+            "temporal8": "PASS",
+            "soft_reference": "PASS",
+            "native": "UNKNOWN"
+          }
+        },
+        {
+          "event_uid": "evt_aae91f6ac1a993243565e61a",
+          "source_uid": "male_meditation",
+          "music_interval": [
+            3236,
+            3338
+          ],
+          "time_warp": [
+            [
+              804,
+              3236
+            ],
+            [
+              827,
+              3264
+            ],
+            [
+              851,
+              3288
+            ],
+            [
+              903,
+              3338
+            ]
+          ],
+          "primitive": {
+            "source_frame": 839,
+            "music_frame": 3276,
+            "joints": [
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "radius": 12
+          },
+          "feasibility": {
+            "source": "PASS",
+            "temporal8": "PASS",
+            "soft_reference": "PASS",
+            "native": "UNKNOWN"
+          }
+        },
+        {
+          "event_uid": "evt_426c91d3368463ca32a497ec",
+          "source_uid": "female_FeiTian",
+          "music_interval": [
+            3338,
+            3420
+          ],
+          "time_warp": [
+            [
+              4218,
+              3338
+            ],
+            [
+              4235,
+              3355
+            ],
+            [
+              4259,
+              3379
+            ],
+            [
+              4301,
+              3420
+            ]
+          ],
+          "primitive": {
+            "source_frame": 4247,
+            "music_frame": 3367,
+            "joints": [
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "radius": 12
+          },
+          "feasibility": {
+            "source": "PASS",
+            "temporal8": "PASS",
+            "soft_reference": "PASS",
+            "native": "UNKNOWN"
+          }
+        },
+        {
+          "event_uid": "evt_002b99154880a3df72a8c1f6",
+          "source_uid": "female_meditation",
+          "music_interval": [
+            3420,
+            3502
+          ],
+          "time_warp": [
+            [
+              1253,
+              3420
+            ],
+            [
+              1272,
+              3437
+            ],
+            [
+              1296,
+              3461
+            ],
+            [
+              1342,
+              3502
+            ]
+          ],
+          "primitive": {
+            "source_frame": 1284,
+            "music_frame": 3449,
+            "joints": [
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "radius": 12
+          },
+          "feasibility": {
+            "source": "PASS",
+            "temporal8": "PASS",
+            "soft_reference": "PASS",
+            "native": "UNKNOWN"
+          }
+        },
+        {
+          "event_uid": "evt_3f1836bddb5048e56b9d4d9a",
+          "source_uid": "male_ribbon_FenHe",
+          "music_interval": [
+            3502,
+            3601
+          ],
+          "time_warp": [
+            [
+              129,
+              3502
+            ],
+            [
+              156,
+              3537
+            ],
+            [
+              180,
+              3561
+            ],
+            [
+              211,
+              3601
+            ]
+          ],
+          "primitive": {
+            "source_frame": 168,
+            "music_frame": 3549,
+            "joints": [
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "radius": 12
+          },
+          "feasibility": {
+            "source": "PASS",
+            "temporal8": "PASS",
+            "soft_reference": "PASS",
+            "native": "UNKNOWN"
+          }
+        }
+      ]
+    }
+  ],
+  "sync": {
+    "qualified": false,
+    "qualification_basis": "validation_only",
+    "retrieval_checkpoint_sha256": "5d425b3f4aeac9267dbf0c227cd1761b1fec04a0ff907cfc8d4102a4ec8cc6ca",
+    "sync_checkpoint_sha256": "c076ffd2be75fa5ad0bccf52e7b3322b1369aa132d2d85c5d32f6a3423772677",
+    "encoder_sha256": "73ad5bc525c498cc7e78cf7ec47ac61ca8d3fcd7509e16b75489ec7696f09091",
+    "encoders_frozen": true,
+    "validation": {
+      "finedance": {
+        "queries": 168,
+        "groups": 35,
+        "aligned_vs_shift_win": 0.5029761904761905,
+        "offset_choice_accuracy": 0.13690476190476192,
+        "chance": 0.2,
+        "margin": -0.10123693197965622,
+        "per_shift_win": {
+          "-0.5": 0.5357142857142857,
+          "-0.26666666666666666": 0.47619047619047616,
+          "0.26666666666666666": 0.4880952380952381,
+          "0.5": 0.5119047619047619
+        },
+        "group_wins": {
+          "known_component:108fb556c24a9a061ab39629253b5e95fd4c1ec745ffcf347e57133df96e6271": 0.4375,
+          "known_component:53f28c7378287db3357ab4ee582d38cbf18ce1a825c36df80196b0583cc90f0b": 0.34375,
+          "known_component:524beec66f88daff76927e5452f29aac88fc8b1c1bc5b909f6a40042247cf304": 0.4375,
+          "known_component:875a8ff4198c3c56ce8872fc4a87d08837ecea4ec1149b44be881e7d89b06c63": 0.3125,
+          "known_component:c7bfe80b3f4649c5047e87b7e5ec4e71ca0e5f2aa06e696816d1ac9287533050": 0.5,
+          "known_component:bd4c05b9974821e102c770d54701d05b5624e4f6ee45ced327918166a8286198": 0.5,
+          "known_component:65645424253e79debc6985c9769944c87d6f8078b2aade141d3b4c3052d442e6": 0.4375,
+          "known_component:6f3847327c8085b7f3b9a9b12e972396555fc17b0c6ff49eabeed7c1feacb699": 0.34375,
+          "known_component:c6df3a92665bf4978820bb4a424c2a714eb7af140d26ec94c41293af1de24181": 0.5625,
+          "known_component:c6b37fb211f50704af621c4f56fa5a3c6795586b9da8e4fb817858464146fbd0": 0.5,
+          "known_component:2178eca7a44eef546ab7ff6f0783f7459692f2c03d9c08564c8c6dbff9c9cc2a": 0.5,
+          "known_component:311a2811898ecddbc6bb76bd35c66c5786ae5187d2c7c368f6e7c26234a0218a": 0.5625,
+          "known_component:9cbc1bdafa1c359acbfcc957e8d2f41b82b8792af7044c99d0d7ab17033eb7d4": 0.5,
+          "known_component:38bb7aa963bec984478a5706fae55a4f54011d3b18694a93b2e7c3d8b4bb059e": 0.375,
+          "known_component:9eaf92d2560fb5a1437b329cd91cbdfbf98b38f3cc69821f7ae2e6115e9fad79": 0.375,
+          "known_component:3974fc3cf679985e30e9f1299e04ff9ffc69abc300930774482e16f832a5ea46": 0.625,
+          "known_component:88515ad7f22341682509b7aa4680ef7667d2da8bee4ea6444f89f61eb8b3c551": 0.5625,
+          "known_component:fb2f8b3dc15dbba85ccdb452290bd9ef731bedd2b504a8dc5c513a51b13af5e1": 0.4375,
+          "known_component:0b2fc8fe31d2f1b2f9bc0449a2052f33b3563d84486ddc2241d46ec084d168ce": 0.5625,
+          "known_component:76dc8859fe3fa6d37b3a97db4e6a5b8b19304d1d094b8cb56573ae984eff59d1": 0.4375,
+          "known_component:f60e1c1e624bd0a12401fbe08acc2634139ecf1c39ee3a45d710abd9bdf80fdf": 0.3125,
+          "known_component:ef7fddc0319696f6d54f9f2f204b641a999a3b3ba7bf49894acdd25470a7e31e": 0.71875,
+          "known_component:c032584eb195f97c28e57efff70c2a7c260a9c9887f39b17993265d9a681a5e0": 0.5,
+          "known_component:ac684b13d2b2037067af419a35cfc19aa1c59ab07d0aefd37a249a2fd36f807f": 0.4375,
+          "known_component:bb37d6d603565dd66d6fd7ef3d733ce284e7cafd1a7141750a33a23fcff3aa53": 0.65625,
+          "known_component:5fc08a6abd8efe78fec5a8dfcfef09f64bf57c34eb13e821c83a358ab87dd5a0": 0.625,
+          "known_component:ea66f0086404d2974d63ccc875498332345d7c2abd65fb5b80a06de103e90f3b": 0.5,
+          "known_component:269c6e8a9d02a04b5fbd9ebfc0414d224c87771c74ce299fe6fa924e38250b02": 0.6875,
+          "known_component:c68779841cb5a0744721013fce03e9689e62bd03be6f5a79a0677ba5f9953b14": 0.5625,
+          "known_component:7ecd3f4b12eb6548a086e6eb32f9ae45858129c91cd75cc01205e5e74025385d": 0.5625,
+          "known_component:bb2eadba9178e261f3d1057c927fa804ae1af881227ce99a115e8a6fccc7516f": 0.5,
+          "known_component:6e6c459cc9301230672dd24bd29fab32819e3b49f630157984cde37b6300ef46": 0.5,
+          "known_component:e8a5699c43a1580828bacbfa4cf02ae80812b10083e71c37b6198de6ae072fcc": 0.625,
+          "known_component:6c68231001cc77f9d60c31b89719171d053bbf160b96ac97ee14c3e600e2fa79": 0.5625,
+          "known_component:f5c344ff0acb15f4a5de14a44e0917804c3b2924fd39e020d25eaa99c4276aed": 0.625
+        },
+        "group_bootstrap95": [
+          0.475,
+          0.5384374999999999
+        ]
+      },
+      "aistpp": {
+        "queries": 1044,
+        "groups": 2,
+        "aligned_vs_shift_win": 0.530411877394636,
+        "offset_choice_accuracy": 0.19827586206896552,
+        "chance": 0.2,
+        "margin": 0.08305046707391739,
+        "per_shift_win": {
+          "-0.5": 0.5507662835249042,
+          "-0.26666666666666666": 0.5191570881226054,
+          "0.26666666666666666": 0.5258620689655172,
+          "0.5": 0.5258620689655172
+        },
+        "group_wins": {
+          "known_component:4b767af48d5baf6a7096abf68eda3ace39a1b12402e76c880d3510f2466ef571": 0.5381433823529411,
+          "known_component:f9283974668c14d0915e63726746025c73b1717896f3f9dd9ba921c4bf6542e2": 0.522
+        },
+        "group_bootstrap95": [
+          0.522,
+          0.5381433823529411
+        ]
+      }
+    },
+    "test": {
+      "finedance": {
+        "queries": 160,
+        "groups": 34,
+        "aligned_vs_shift_win": 0.5328125,
+        "offset_choice_accuracy": 0.16875,
+        "chance": 0.2,
+        "margin": 0.03656170517206192,
+        "per_shift_win": {
+          "-0.5": 0.45,
+          "-0.26666666666666666": 0.5,
+          "0.26666666666666666": 0.6375,
+          "0.5": 0.54375
+        },
+        "group_wins": {
+          "known_component:56d987c2b029bc15ab1c54213ddfe23fb2516a78968ca88ea7fe60cb61ccb8c7": 0.5625,
+          "known_component:674cc45f0ec25ddf7bd9e72a4c5ad24c35b490d9d111f45edfcaf7fc17eaeb4e": 0.0625,
+          "known_component:03c1a9fb2e3fbced86027c83cfc6a25f8c0745bd6ac301e82f3429c795942fca": 0.75,
+          "known_component:bc8ec6fa9272e742630038ba68add856d1728c6f00fd2ecef7222c3c2c8c628a": 0.4375,
+          "known_component:23aede33aaa8cc12d9e20602d5acccceeab9d3f7134f460783bfd0f8c54f0181": 0.6875,
+          "known_component:5595f570b283abba6f863909aeaa8717cde00fda985c5f9c42d1a69f8abea85d": 0.1875,
+          "known_component:24fb5070b7054dce82359bc18c32d7ffe6513aec7c227d014ebe67e5e245940f": 0.5,
+          "known_component:07daef28537e0b0d7aefa970894116706f994461af58a984329c8e823c6594c7": 0.5,
+          "known_component:5be3d8a77c0636dc71401d1a4e6b2d91ecc9aa3c44ee83aaacd7f010472641cc": 0.5625,
+          "known_component:5221a67d5b4ad5d46af96f30e05d9b0669f3b28d677fb110e2ed2e5f50a496ea": 0.625,
+          "known_component:17b78ac5f3fdc5f8bf9415eda06dfa8021b5c371cebeed232b4c838a707b6b2f": 0.6875,
+          "known_component:5ba9bf18f568f4ab3a93ea0d7c38e222118a2aac07051e157972475b333a19ad": 0.375,
+          "known_component:ad4de176174b286f6214fe300a27d9aa86e427612cdab283cf07da77d3595903": 0.5,
+          "known_component:c85e5ffafd2dabd76f14e673fa3fdafd985710e7f1625700728188d6c753ac10": 0.6875,
+          "known_component:3a99b870a2ee9d1a09d632783e25fc3a0d6d874580f81a5e1c96897db9fbda1d": 0.5625,
+          "known_component:4d3d2ffa08ce2468cb43f0dd2773bcedffc8986e2b16263a41378c6831fd5b9f": 0.625,
+          "known_component:185cd4483875721436236bec69d1e956310f86909308ba8fd16a1561e57dd559": 0.5,
+          "known_component:064ebe4610ea3da6f8967d285b39e60c622bfa94728749cfea20f12b0f4c4757": 0.46875,
+          "known_component:4db96dbe0b3a344c52c1be3baf093b5fef21d719c921b503f988b944cadf6c8d": 0.8125,
+          "known_component:89c2e916ab93664aaaa7dd7a24a9653500883dc57e2e311a17771510e53ef6c1": 0.46875,
+          "known_component:bd4a6ea3467b332576693ee9a13bb2c767defdae6cdc980c32c74107b2c2b3d1": 0.625,
+          "known_component:252c24f6ebca61951de1d703275ad5f86117ae5d73d118ad34a684cfd7274019": 0.6875,
+          "known_component:1bfed2b086fac27ae089b7af0fbe2c3d52a82b1dfe0e43dd7a1f24d0a01b526c": 0.625,
+          "known_component:e719ad5e97e6c9433df5eac9e99f4076735f0143244ff0ab2562dcf4e1a0fe31": 0.6875,
+          "known_component:93041415adf56a6f617315e2fbc56f6ff2fad86971d37cde7cbdec641541000f": 0.4375,
+          "known_component:22031d5e410ff7470c11e7ee6228d7da5652683cf267e9dfd9b20db36dad8190": 0.5,
+          "known_component:d201fb5a56c97c6319391bf24f63e4154c7961d6789d7f94270c650e4da8f2bb": 0.25,
+          "known_component:9ae3255268f096efd9988925e197a11bbdf5e6dcc263ad3873a1dff2ece588de": 0.375,
+          "known_component:604c8bc74fb21f64ce8caa90fb813c1ac531c9fa3b94d270cf6bc55dbf5d5d62": 0.3125,
+          "known_component:df1dce65beb030c9ff97f7b7848b8e691ba624b935280961a19d71ce35b44e4c": 0.25,
+          "known_component:7686e78a92b2f9367bcb7e9b442de47f9f9f7d848507c2d11bd3d613ffe2b369": 0.75,
+          "known_component:15b56ac02016314858285cca0c313385734549bb3129d2270862f9931051f8d6": 0.75,
+          "known_component:eec99ddbb25f7ad07bdb1ca1a869daeaf0b08f94d34da412b70a49fb746ab3e2": 0.75,
+          "known_component:c22db1f742119cd3232d4cb691b6a35cf2544f273e2323011dd4ac3294224014": 0.5
+        },
+        "group_bootstrap95": [
+          0.4617876838235294,
+          0.5850873161764706
+        ]
+      },
+      "aistpp": {
+        "queries": 1072,
+        "groups": 2,
+        "aligned_vs_shift_win": 0.5496735074626866,
+        "offset_choice_accuracy": 0.2080223880597015,
+        "chance": 0.2,
+        "margin": 0.1478617638349533,
+        "per_shift_win": {
+          "-0.5": 0.523320895522388,
+          "-0.26666666666666666": 0.5522388059701493,
+          "0.26666666666666666": 0.5382462686567164,
+          "0.5": 0.5848880597014925
+        },
+        "group_wins": {
+          "known_component:e5ad353d15772adbf5f1ce60f0bb92cd9db7ccb501e293fb7ce226a904285202": 0.5,
+          "known_component:50c496252c9cdaf0d730f210768be47494f47246e86bb93771c76db38bbf0285": 0.5944148936170213
+        },
+        "group_bootstrap95": [
+          0.5,
+          0.5944148936170213
+        ]
+      }
+    },
+    "preference_status": "NO_EXPERT_PREFERENCES",
+    "heldout_status": "previously exposed development regression"
+  },
+  "motion_adapter_audit": {
+    "tested_150_windows": 568,
+    "component_supported_windows": {
+      "body8": 564,
+      "wrists": 0,
+      "root": 84
+    },
+    "root_origin": "first_observed_context_XZ; height preserved",
+    "motion_only_supported_150_windows": 0,
+    "recording_groups": [],
+    "source_count": 8,
+    "paired_jukebox_training_manifest": null,
+    "full_paired_music_training_ready": false,
+    "checkpoint": {
+      "path": "/home/disk/lsm/storage/EDGE/checkpoints/checkpoint.pt",
+      "sha256": "28ca4ce167bb17c36869b4d021af8762a34c6df034002f61b3bc1c1d0b1b02c7"
+    },
+    "scaler": {
+      "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/event_plan_01/prepare/edge_contract/scaler.npz",
+      "sha256": "7e4c29d4a7240174531087430ed316040e2b89b38f2c7ea21f81a52c20050dd4"
+    },
+    "scope": "All 151 target channels in frozen support; no clipping or invented Jukebox features"
+  },
+  "motion_adapter_status": {
+    "status": "INSUFFICIENT_SUPPORTED_SOURCE_GROUPS",
+    "training_steps": 0,
+    "music_qualified": false
+  },
+  "shadow": {
+    "qualified": false,
+    "plan_selection_unchanged": true,
+    "trace": [
+      {
+        "music_interval": [
+          0,
+          65
+        ],
+        "candidates": [
+          {
+            "event_uid": "evt_5d5b1aed3386449e5b4910e1",
+            "scores": {
+              "heuristic": -0.039793529234980196,
+              "global_score": 0.52302485704422,
+              "sync_score": 0.13283176720142365,
+              "preference": null,
+              "sync_raw_logits": [
+                17.222002029418945,
+                17.616647720336914,
+                16.27448272705078,
+                13.772368431091309,
+                13.050199508666992
+              ],
+              "sync_reference": "relative zero-offset probability on common true support"
+            }
+          },
+          {
+            "event_uid": "evt_887895c1fa6f69b6746673f4",
+            "scores": {
+              "heuristic": -0.0077294009784671935,
+              "global_score": 0.5216040015220642,
+              "sync_score": 0.008973224088549614,
+              "preference": null,
+              "sync_raw_logits": [
+                11.771807670593262,
+                11.0475492477417,
+                13.116297721862793,
+                16.046497344970703,
+                17.630714416503906
+              ],
+              "sync_reference": "relative zero-offset probability on common true support"
+            }
+          },
+          {
+            "event_uid": "evt_63ab08d0420e71db8cc83c91",
+            "scores": {
+              "heuristic": -0.29029453123898824,
+              "global_score": 0.5126218795776367,
+              "sync_score": 0.019663359969854355,
+              "preference": null,
+              "sync_raw_logits": [
+                14.348246574401855,
+                13.936261177062988,
+                14.378993034362793,
+                17.378582000732422,
+                17.717134475708008
+              ],
+              "sync_reference": "relative zero-offset probability on common true support"
+            }
+          },
+          {
+            "event_uid": "evt_7cffa98a4079b829732bb245",
+            "scores": {
+              "heuristic": -0.30632659536724477,
+              "global_score": 0.5120531320571899,
+              "sync_score": 0.12799908220767975,
+              "preference": null,
+              "sync_raw_logits": [
+                10.573118209838867,
+                10.652661323547363,
+                12.346094131469727,
+                13.891292572021484,
+                12.91703987121582
+              ],
+              "sync_reference": "relative zero-offset probability on common true support"
+            }
+          },
+          {
+            "event_uid": "evt_a6f7665701d79e74849fc535",
+            "scores": {
+              "heuristic": -0.04179753725101226,
+              "global_score": 0.511089026927948,
+              "sync_score": 0.0383915975689888,
+              "preference": null,
+              "sync_raw_logits": [
+                13.925350189208984,
+                16.07307243347168,
+                17.78185272216797,
+                20.380706787109375,
+                20.215187072753906
+              ],
+              "sync_reference": "relative zero-offset probability on common true support"
+            }
+          }
+        ]
+      },
+      {
+        "music_interval": [
+          65,
+          150
+        ],
+        "candidates": [
+          {
+            "event_uid": "evt_ef8f4eedbcea188fa266a4c9",
+            "scores": {
+              "heuristic": -0.06952980392924635,
+              "global_score": 0.5301076769828796,
+              "sync_score": 0.11050063371658325,
+              "preference": null,
+              "sync_raw_logits": [
+                12.227274894714355,
+                11.857014656066895,
+                10.922333717346191,
+                11.215822219848633,
+                10.177370071411133
+              ],
+              "sync_reference": "relative zero-offset probability on common true support"
+            }
+          },
+          {
+            "event_uid": "evt_63ab08d0420e71db8cc83c91",
+            "scores": {
+              "heuristic": -0.17696318204269756,
+              "global_score": 0.5211282968521118,
+              "sync_score": 0.21323511004447937,
+              "preference": null,
+              "sync_raw_logits": [
+                14.13090705871582,
+                14.732995986938477,
+                15.124147415161133,
+                15.838431358337402,
+                14.613794326782227
+              ],
+              "sync_reference": "relative zero-offset probability on common true support"
+            }
+          },
+          {
+            "event_uid": "evt_7aa3623944508dc0efa6028b",
+            "scores": {
+              "heuristic": -0.07475877322506225,
+              "global_score": 0.5154778361320496,
+              "sync_score": 0.16760855913162231,
+              "preference": null,
+              "sync_raw_logits": [
+                12.803909301757812,
+                14.188532829284668,
+                15.216261863708496,
+                15.361963272094727,
+                16.428800582885742
+              ],
+              "sync_reference": "relative zero-offset probability on common true support"
+            }
+          },
+          {
+            "event_uid": "evt_ce7f441f9fccbdd9bef57bd8",
+            "scores": {
+              "heuristic": -0.1015939321857594,
+              "global_score": 0.4994114637374878,
+              "sync_score": 0.0680026262998581,
+              "preference": null,
+              "sync_raw_logits": [
+                12.432741165161133,
+                12.06168270111084,
+                12.557303428649902,
+                14.272032737731934,
+                14.453132629394531
+              ],
+              "sync_reference": "relative zero-offset probability on common true support"
+            }
+          },
+          {
+            "event_uid": "evt_a49ad45bf8328f46b1d720ec",
+            "scores": {
+              "heuristic": -0.0013935313841561547,
+              "global_score": 0.49403268098831177,
+              "sync_score": 0.3893747329711914,
+              "preference": null,
+              "sync_raw_logits": [
+                13.299015998840332,
+                13.082270622253418,
+                13.985615730285645,
+                12.611166954040527,
+                13.08604621887207
+              ],
+              "sync_reference": "relative zero-offset probability on common true support"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "generation_variant": "v0.5 heuristic Event Plan + existing Temporal sampling",
+  "learned_event_adapter_trained": false,
+  "paired_music_adapter_trained": false,
+  "bidirectional_generation_executed": false,
+  "sqp_executed": false,
+  "local_time_retrieval": {
+    "checkpoint_sha256": "5d425b3f4aeac9267dbf0c227cd1761b1fec04a0ff907cfc8d4102a4ec8cc6ca",
+    "local": {
+      "val": {
+        "finedance": {
+          "recall1_group_bootstrap95": [
+            0.2714285714285714,
+            0.4142857142857143
+          ],
+          "queries": 168,
+          "groups": 35,
+          "recall1": 0.32142857142857145,
+          "recall5": 0.9642857142857143,
+          "mrr": 0.5728174603174602,
+          "chance": 0.25,
+          "group_metrics": {
+            "known_component:108fb556c24a9a061ab39629253b5e95fd4c1ec745ffcf347e57133df96e6271": [
+              0.75,
+              0.875
+            ],
+            "known_component:53f28c7378287db3357ab4ee582d38cbf18ce1a825c36df80196b0583cc90f0b": [
+              0.375,
+              0.59375
+            ],
+            "known_component:524beec66f88daff76927e5452f29aac88fc8b1c1bc5b909f6a40042247cf304": [
+              0.25,
+              0.47916666666666663
+            ],
+            "known_component:875a8ff4198c3c56ce8872fc4a87d08837ecea4ec1149b44be881e7d89b06c63": [
+              0.5,
+              0.6458333333333333
+            ],
+            "known_component:c7bfe80b3f4649c5047e87b7e5ec4e71ca0e5f2aa06e696816d1ac9287533050": [
+              0.5,
+              0.6875
+            ],
+            "known_component:bd4c05b9974821e102c770d54701d05b5624e4f6ee45ced327918166a8286198": [
+              0.25,
+              0.625
+            ],
+            "known_component:65645424253e79debc6985c9769944c87d6f8078b2aade141d3b4c3052d442e6": [
+              0.25,
+              0.53125
+            ],
+            "known_component:6f3847327c8085b7f3b9a9b12e972396555fc17b0c6ff49eabeed7c1feacb699": [
+              0.25,
+              0.5416666666666666
+            ],
+            "known_component:c6df3a92665bf4978820bb4a424c2a714eb7af140d26ec94c41293af1de24181": [
+              0.25,
+              0.5208333333333334
+            ],
+            "known_component:c6b37fb211f50704af621c4f56fa5a3c6795586b9da8e4fb817858464146fbd0": [
+              0.25,
+              0.5208333333333333
+            ],
+            "known_component:2178eca7a44eef546ab7ff6f0783f7459692f2c03d9c08564c8c6dbff9c9cc2a": [
+              0.5,
+              0.7083333333333333
+            ],
+            "known_component:311a2811898ecddbc6bb76bd35c66c5786ae5187d2c7c368f6e7c26234a0218a": [
+              0.75,
+              0.8125
+            ],
+            "known_component:9cbc1bdafa1c359acbfcc957e8d2f41b82b8792af7044c99d0d7ab17033eb7d4": [
+              0.25,
+              0.5833333333333334
+            ],
+            "known_component:38bb7aa963bec984478a5706fae55a4f54011d3b18694a93b2e7c3d8b4bb059e": [
+              0.75,
+              0.8125
+            ],
+            "known_component:9eaf92d2560fb5a1437b329cd91cbdfbf98b38f3cc69821f7ae2e6115e9fad79": [
+              0.5,
+              0.6458333333333334
+            ],
+            "known_component:3974fc3cf679985e30e9f1299e04ff9ffc69abc300930774482e16f832a5ea46": [
+              0.5,
+              0.75
+            ],
+            "known_component:88515ad7f22341682509b7aa4680ef7667d2da8bee4ea6444f89f61eb8b3c551": [
+              0.5,
+              0.75
+            ],
+            "known_component:fb2f8b3dc15dbba85ccdb452290bd9ef731bedd2b504a8dc5c513a51b13af5e1": [
+              0.5,
+              0.6458333333333333
+            ],
+            "known_component:0b2fc8fe31d2f1b2f9bc0449a2052f33b3563d84486ddc2241d46ec084d168ce": [
+              0.5,
+              0.7083333333333333
+            ],
+            "known_component:76dc8859fe3fa6d37b3a97db4e6a5b8b19304d1d094b8cb56573ae984eff59d1": [
+              0.25,
+              0.5208333333333333
+            ],
+            "known_component:f60e1c1e624bd0a12401fbe08acc2634139ecf1c39ee3a45d710abd9bdf80fdf": [
+              0.5,
+              0.7083333333333333
+            ],
+            "known_component:ef7fddc0319696f6d54f9f2f204b641a999a3b3ba7bf49894acdd25470a7e31e": [
+              0.25,
+              0.5833333333333333
+            ],
+            "known_component:c032584eb195f97c28e57efff70c2a7c260a9c9887f39b17993265d9a681a5e0": [
+              0.0,
+              0.375
+            ],
+            "known_component:ac684b13d2b2037067af419a35cfc19aa1c59ab07d0aefd37a249a2fd36f807f": [
+              0.0,
+              0.1958333333333333
+            ],
+            "known_component:bb37d6d603565dd66d6fd7ef3d733ce284e7cafd1a7141750a33a23fcff3aa53": [
+              0.25,
+              0.4375
+            ],
+            "known_component:5fc08a6abd8efe78fec5a8dfcfef09f64bf57c34eb13e821c83a358ab87dd5a0": [
+              0.5,
+              0.75
+            ],
+            "known_component:ea66f0086404d2974d63ccc875498332345d7c2abd65fb5b80a06de103e90f3b": [
+              0.25,
+              0.5625
+            ],
+            "known_component:269c6e8a9d02a04b5fbd9ebfc0414d224c87771c74ce299fe6fa924e38250b02": [
+              0.25,
+              0.5208333333333333
+            ],
+            "known_component:c68779841cb5a0744721013fce03e9689e62bd03be6f5a79a0677ba5f9953b14": [
+              0.25,
+              0.625
+            ],
+            "known_component:7ecd3f4b12eb6548a086e6eb32f9ae45858129c91cd75cc01205e5e74025385d": [
+              0.25,
+              0.625
+            ],
+            "known_component:bb2eadba9178e261f3d1057c927fa804ae1af881227ce99a115e8a6fccc7516f": [
+              0.0,
+              0.3958333333333333
+            ],
+            "known_component:6e6c459cc9301230672dd24bd29fab32819e3b49f630157984cde37b6300ef46": [
+              0.0,
+              0.35416666666666663
+            ],
+            "known_component:e8a5699c43a1580828bacbfa4cf02ae80812b10083e71c37b6198de6ae072fcc": [
+              0.25,
+              0.5208333333333333
+            ],
+            "known_component:6c68231001cc77f9d60c31b89719171d053bbf160b96ac97ee14c3e600e2fa79": [
+              0.25,
+              0.5
+            ],
+            "known_component:f5c344ff0acb15f4a5de14a44e0917804c3b2924fd39e020d25eaa99c4276aed": [
+              0.5,
+              0.6875
+            ]
+          }
+        },
+        "aistpp": {
+          "recall1_group_bootstrap95": [
+            0.12683823529411764,
+            0.138
+          ],
+          "queries": 1044,
+          "groups": 2,
+          "recall1": 0.13218390804597702,
+          "recall5": 0.6168582375478927,
+          "mrr": 0.3405938014938434,
+          "chance": 0.20618024605833332,
+          "group_metrics": {
+            "known_component:4b767af48d5baf6a7096abf68eda3ace39a1b12402e76c880d3510f2466ef571": [
+              0.12683823529411764,
+              0.3369888354875791
+            ],
+            "known_component:f9283974668c14d0915e63726746025c73b1717896f3f9dd9ba921c4bf6542e2": [
+              0.138,
+              0.3445160045086624
+            ]
+          }
+        }
+      },
+      "test": {
+        "finedance": {
+          "recall1_group_bootstrap95": [
+            0.3382352941176471,
+            0.47794117647058826
+          ],
+          "queries": 160,
+          "groups": 34,
+          "recall1": 0.375,
+          "recall5": 0.9875,
+          "mrr": 0.6031249999999999,
+          "chance": 0.25,
+          "group_metrics": {
+            "known_component:56d987c2b029bc15ab1c54213ddfe23fb2516a78968ca88ea7fe60cb61ccb8c7": [
+              0.25,
+              0.5208333333333333
+            ],
+            "known_component:674cc45f0ec25ddf7bd9e72a4c5ad24c35b490d9d111f45edfcaf7fc17eaeb4e": [
+              0.5,
+              0.7083333333333333
+            ],
+            "known_component:03c1a9fb2e3fbced86027c83cfc6a25f8c0745bd6ac301e82f3429c795942fca": [
+              0.0,
+              0.4375
+            ],
+            "known_component:bc8ec6fa9272e742630038ba68add856d1728c6f00fd2ecef7222c3c2c8c628a": [
+              0.5,
+              0.7083333333333334
+            ],
+            "known_component:23aede33aaa8cc12d9e20602d5acccceeab9d3f7134f460783bfd0f8c54f0181": [
+              0.5,
+              0.6666666666666666
+            ],
+            "known_component:5595f570b283abba6f863909aeaa8717cde00fda985c5f9c42d1a69f8abea85d": [
+              0.25,
+              0.5208333333333333
+            ],
+            "known_component:24fb5070b7054dce82359bc18c32d7ffe6513aec7c227d014ebe67e5e245940f": [
+              0.5,
+              0.7083333333333333
+            ],
+            "known_component:07daef28537e0b0d7aefa970894116706f994461af58a984329c8e823c6594c7": [
+              0.75,
+              0.8333333333333334
+            ],
+            "known_component:5be3d8a77c0636dc71401d1a4e6b2d91ecc9aa3c44ee83aaacd7f010472641cc": [
+              0.5,
+              0.6458333333333334
+            ],
+            "known_component:5221a67d5b4ad5d46af96f30e05d9b0669f3b28d677fb110e2ed2e5f50a496ea": [
+              0.5,
+              0.7083333333333334
+            ],
+            "known_component:17b78ac5f3fdc5f8bf9415eda06dfa8021b5c371cebeed232b4c838a707b6b2f": [
+              0.25,
+              0.5208333333333333
+            ],
+            "known_component:5ba9bf18f568f4ab3a93ea0d7c38e222118a2aac07051e157972475b333a19ad": [
+              0.5,
+              0.6458333333333333
+            ],
+            "known_component:ad4de176174b286f6214fe300a27d9aa86e427612cdab283cf07da77d3595903": [
+              0.5,
+              0.7083333333333333
+            ],
+            "known_component:c85e5ffafd2dabd76f14e673fa3fdafd985710e7f1625700728188d6c753ac10": [
+              0.25,
+              0.5208333333333334
+            ],
+            "known_component:3a99b870a2ee9d1a09d632783e25fc3a0d6d874580f81a5e1c96897db9fbda1d": [
+              0.25,
+              0.47916666666666663
+            ],
+            "known_component:4d3d2ffa08ce2468cb43f0dd2773bcedffc8986e2b16263a41378c6831fd5b9f": [
+              0.5,
+              0.6666666666666666
+            ],
+            "known_component:185cd4483875721436236bec69d1e956310f86909308ba8fd16a1561e57dd559": [
+              0.5,
+              0.6875
+            ],
+            "known_component:064ebe4610ea3da6f8967d285b39e60c622bfa94728749cfea20f12b0f4c4757": [
+              0.375,
+              0.65625
+            ],
+            "known_component:4db96dbe0b3a344c52c1be3baf093b5fef21d719c921b503f988b944cadf6c8d": [
+              0.5,
+              0.6875
+            ],
+            "known_component:89c2e916ab93664aaaa7dd7a24a9653500883dc57e2e311a17771510e53ef6c1": [
+              0.25,
+              0.5
+            ],
+            "known_component:bd4a6ea3467b332576693ee9a13bb2c767defdae6cdc980c32c74107b2c2b3d1": [
+              0.25,
+              0.5
+            ],
+            "known_component:252c24f6ebca61951de1d703275ad5f86117ae5d73d118ad34a684cfd7274019": [
+              0.0,
+              0.35416666666666663
+            ],
+            "known_component:1bfed2b086fac27ae089b7af0fbe2c3d52a82b1dfe0e43dd7a1f24d0a01b526c": [
+              0.25,
+              0.47916666666666663
+            ],
+            "known_component:e719ad5e97e6c9433df5eac9e99f4076735f0143244ff0ab2562dcf4e1a0fe31": [
+              0.75,
+              0.8333333333333333
+            ],
+            "known_component:93041415adf56a6f617315e2fbc56f6ff2fad86971d37cde7cbdec641541000f": [
+              0.5,
+              0.6458333333333333
+            ],
+            "known_component:22031d5e410ff7470c11e7ee6228d7da5652683cf267e9dfd9b20db36dad8190": [
+              0.5,
+              0.6875
+            ],
+            "known_component:d201fb5a56c97c6319391bf24f63e4154c7961d6789d7f94270c650e4da8f2bb": [
+              1.0,
+              1.0
+            ],
+            "known_component:9ae3255268f096efd9988925e197a11bbdf5e6dcc263ad3873a1dff2ece588de": [
+              0.125,
+              0.4583333333333333
+            ],
+            "known_component:604c8bc74fb21f64ce8caa90fb813c1ac531c9fa3b94d270cf6bc55dbf5d5d62": [
+              0.25,
+              0.4583333333333333
+            ],
+            "known_component:df1dce65beb030c9ff97f7b7848b8e691ba624b935280961a19d71ce35b44e4c": [
+              0.5,
+              0.6458333333333334
+            ],
+            "known_component:7686e78a92b2f9367bcb7e9b442de47f9f9f7d848507c2d11bd3d613ffe2b369": [
+              0.25,
+              0.5833333333333333
+            ],
+            "known_component:15b56ac02016314858285cca0c313385734549bb3129d2270862f9931051f8d6": [
+              0.75,
+              0.8333333333333333
+            ],
+            "known_component:eec99ddbb25f7ad07bdb1ca1a869daeaf0b08f94d34da412b70a49fb746ab3e2": [
+              0.25,
+              0.5833333333333334
+            ],
+            "known_component:c22db1f742119cd3232d4cb691b6a35cf2544f273e2323011dd4ac3294224014": [
+              0.25,
+              0.5833333333333333
+            ]
+          }
+        },
+        "aistpp": {
+          "recall1_group_bootstrap95": [
+            0.13120567375886524,
+            0.21653543307086615
+          ],
+          "queries": 1072,
+          "groups": 2,
+          "recall1": 0.17164179104477612,
+          "recall5": 0.5998134328358209,
+          "mrr": 0.36142443088046633,
+          "chance": 0.20160254451907603,
+          "group_metrics": {
+            "known_component:e5ad353d15772adbf5f1ce60f0bb92cd9db7ccb501e293fb7ce226a904285202": [
+              0.21653543307086615,
+              0.3831466940634498
+            ],
+            "known_component:50c496252c9cdaf0d730f210768be47494f47246e86bb93771c76db38bbf0285": [
+              0.13120567375886524,
+              0.3418589881553676
+            ]
+          }
+        }
+      }
+    },
+    "qualification_modified": false,
+    "task": "same-song exact physical start, alternative time intervals are negatives",
+    "pairing_scope": "release-zero alignment conditional, not independently calibrated event semantic truth",
+    "heldout_status": "historically exposed development regression"
+  },
+  "paired_adapter_preflight": {
+    "status": "MISSING_REAL_PAIRED_JUKEBOX",
+    "training_steps": 0
+  },
+  "catalog_entries": 499,
+  "experiment_root": "outputs/event_plan_01",
+  "video": {
+    "path": "outputs/event_plan_01/comparison_3601_complete.mp4",
+    "frames": 3601,
+    "duration_seconds": 120.03333333333333,
+    "sha256": "1330a54361a1ea8ce78ce1d53175cd3b8ec406178687aeab3a3c2c5964a19212"
+  }
+}

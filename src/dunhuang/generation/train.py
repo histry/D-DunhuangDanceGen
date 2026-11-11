@@ -7,6 +7,8 @@ from .adapter import PrimitiveAdapter,masked_reference
 
 def train(assets,destination,steps,task='motion'):
     import torch
+    if type(steps) is not int or steps < 1:raise ValueError('Positive training steps required')
+    if task not in ('motion','paired'):raise ValueError('Unknown training task')
     destination.mkdir(parents=True,exist_ok=False)
     catalog=json.loads(checked(assets['catalog']).read_text())
     scaler=np.load(checked(assets['scaler']))
@@ -47,7 +49,8 @@ def train(assets,destination,steps,task='motion'):
             music=np.load(checked(row['jukebox']),allow_pickle=False)
             if native.shape!=(150,151) or music.shape!=(150,4800) or not np.isfinite(music).all() or not music.any():
                 raise ValueError('Actual 151D motion and Jukebox required')
-            normalized=MotionAdapter.to_edge(native.copy())*scaler['scale']+scaler['bias']
+            origin=native[0,4:7].copy();origin[1]=0.
+            normalized=MotionAdapter.to_edge(native.copy(),origin)*scaler['scale']+scaler['bias']
             if np.any(abs(normalized)>1+32*np.finfo(np.float32).eps):raise ValueError('Paired target outside frozen support')
             windows.append((row['source_group'],row['start_frame'],normalized.astype(np.float32),music.astype(np.float32)))
     groups=sorted({row[0] for row in windows})
@@ -98,7 +101,7 @@ def train(assets,destination,steps,task='motion'):
         music=torch.from_numpy(np.stack([fitting[i][3] for i in ids])).cuda() if task=='paired' else torch.zeros(len(target),150,4800,device='cuda')
         adapter.train();objective=loss(target,music)
         optimizer.zero_grad();objective.backward();torch.nn.utils.clip_grad_norm_(adapter.parameters(),1.);optimizer.step()
-        if step%50==0:
+        if step%50==0 or step==steps:
             adapter.eval()
             with torch.no_grad():
                 target=torch.from_numpy(np.stack([row[2] for row in validation[:8]])).cuda()
@@ -113,7 +116,7 @@ def train(assets,destination,steps,task='motion'):
                     condition_scope='paired_music_completion' if task=='paired' else 'motion_only_masked_completion',music_qualified=False),destination/'adapter.pt')
     hook.remove()
     if any(p.grad is not None for p in model.parameters()):raise ValueError('Frozen model got gradients')
-    write(destination/'status.json',dict(status='MOTION_ONLY_TRAINED',training_steps=steps,music_qualified=False,
+    write(destination/'status.json',dict(status='PAIRED_COMPLETION_TRAINED_UNQUALIFIED' if task=='paired' else 'MOTION_ONLY_TRAINED',training_steps=steps,music_qualified=False,
         validation_source=validation_group,checkpoint_sha256=sha(destination/'adapter.pt')))
 if __name__=='__main__':
     ap=argparse.ArgumentParser();ap.add_argument('--assets',required=True);ap.add_argument('--out',required=True);ap.add_argument('--steps',type=int,default=300);ap.add_argument('--task',choices=['motion','paired'],default='motion')

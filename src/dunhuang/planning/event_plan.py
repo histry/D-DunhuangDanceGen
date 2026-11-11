@@ -4,6 +4,7 @@ from dunhuang.io import checked
 def validate(plan, audio_sha256, frames):
     if plan['schema']!='event_plan_v1' or plan['fps']!=30 or plan['frames']!=frames or plan['audio_sha256']!=audio_sha256:
         raise ValueError('Event plan clock or audio differs')
+    if plan['time_scale_limits']!=[.75,1.33]:raise ValueError('Registered time-scale limits differ')
     end=0
     for event in plan['events']:
         a,b=event['music_interval']
@@ -15,7 +16,23 @@ def validate(plan, audio_sha256, frames):
         rates=np.diff(warp[:,1])/np.diff(warp[:,0])
         low,high=plan['time_scale_limits']
         if np.any(rates<low-1e-6) or np.any(rates>high+1e-6):raise ValueError('Time map speed outside registered limits')
-        checked(event['reference'])
+        data=np.load(checked(event['reference']),allow_pickle=False,mmap_mode='r')
+        if data.ndim!=2 or data.shape[1]!=151:raise ValueError('Invalid source motion shape')
+        lo,hi=event['source_interval']
+        if type(lo) is not int or type(hi) is not int or not 0<=lo<hi<=len(data):
+            raise ValueError('Invalid source interval')
+        if warp[0,0]!=lo or warp[-1,0]!=hi:raise ValueError('Source time map endpoints differ')
+        primitive=event['primitive'];index=primitive['source_frame'];tick=primitive['music_frame']
+        if type(index) is not int or type(tick) is not int or not lo<=index<hi or not a<=tick<b:
+            raise ValueError('Primitive outside planned interval')
+        if abs(float(np.interp(index,warp[:,0],warp[:,1]))-tick)>1e-6:
+            raise ValueError('Primitive clock differs from time map')
+        radius=primitive['radius']
+        if radius!=12 or index-radius<lo or index+radius>=hi or tick-radius<a or tick+radius>=b:
+            raise ValueError('Primitive context outside planned interval')
+        joints=primitive['joints']
+        if not joints or len(set(joints))!=len(joints) or any(type(j) is not int or not 12<=j<=21 for j in joints):
+            raise ValueError('Unsupported primitive joint contract')
         if event['feasibility']['native']!='UNKNOWN':raise ValueError('Plan cannot pre-admit generated physical quality')
         end=b
     if end!=frames:raise ValueError('Incomplete song plan')

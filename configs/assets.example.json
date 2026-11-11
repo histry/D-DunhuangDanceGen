@@ -1,0 +1,30 @@
+{
+  "edge_root": "/ABSOLUTE/PATH/edge_root",
+  "edge_commit": "17c3428669ed6733edd9d8c66f7dc62060b8e46d",
+  "legacy_root": "/ABSOLUTE/PATH/legacy_root",
+  "legacy_commit": "465f35ba88bbc45d3415e623a60c55a2c8fdb49f",
+  "edge_python": "/ABSOLUTE/PATH/edge_python",
+  "native_python": "/ABSOLUTE/PATH/native_python",
+  "checkpoint": {
+    "path": "/ABSOLUTE/PATH/checkpoint",
+    "sha256": "REPLACE_WITH_ACTUAL_FILE_SHA256"
+  },
+  "features": {
+    "path": "/ABSOLUTE/PATH/features",
+    "sha256": "REPLACE_WITH_ACTUAL_FILE_SHA256"
+  },
+  "audio": {
+    "path": "/ABSOLUTE/PATH/audio",
+    "sha256": "REPLACE_WITH_ACTUAL_FILE_SHA256"
+  },
+  "asset_root": "/ABSOLUTE/PATH/asset_root",
+  "feature_receipt": {
+    "path": "/ABSOLUTE/PATH/feature_receipt",
+    "sha256": "REPLACE_WITH_ACTUAL_FILE_SHA256"
+  },
+  "catalog_source": {
+    "path": "/ABSOLUTE/PATH/source_catalog.json",
+    "sha256": "REPLACE_WITH_ACTUAL_FILE_SHA256"
+  },
+  "motion_root": "/ABSOLUTE/PATH/raw_smpl"
+}

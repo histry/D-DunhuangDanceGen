@@ -17,5 +17,11 @@ def test_complete_plan_and_source_identity(tmp_path):
     assert result['events'][0]['music_interval']==[0,90]
     assert result['events'][-1]['music_interval']==[180,270]
     assert len(set(e['source_uid'] for e in result['events']))>=2
+    import copy
+    for field,value in [('source_frame',999),('music_frame',3),('joints',[0])]:
+        changed=copy.deepcopy(result);changed['events'][0]['primitive'][field]=value
+        with pytest.raises(ValueError):validate(changed,'audio',270)
+    changed=copy.deepcopy(result);changed['time_scale_limits']=[.1,10]
+    with pytest.raises(ValueError):validate(changed,'audio',270)
     result['events'][1]['music_interval'][0]+=1
     with pytest.raises(ValueError):validate(result,'audio',270)
