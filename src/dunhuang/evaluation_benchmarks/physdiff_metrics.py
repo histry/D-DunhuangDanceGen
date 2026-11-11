@@ -15,8 +15,8 @@ def metrics(vertices,joints,floor_y,contact_height=.05,tolerance=.005,contact_ma
         floor_y_m=float(floor_y),mesh_available=vertices is not None,contact_height_m=float(contact_height),
         geometry_tolerance_m=float(tolerance),tolerance_rule='ignore depths <=5mm; retain full depth beyond tolerance',
         skate_reduction='conditional mean over foot-joint adjacent-frame contact pairs',
-        units='mm per frame; no FPS multiplication',direct_paper_leaderboard_comparable=False)
-    feet=j[:,[7,10,8,11]]
+        foot_joint_indices=[7,8,10,11],units='mm per frame; no FPS multiplication',direct_paper_leaderboard_comparable=False)
+    feet=j[:,[7,8,10,11]]
     contacts=feet[:,:,1]-floor_y<=contact_height if contact_mask is None else np.asarray(contact_mask,bool)
     if contacts.shape!=(len(j),4):raise ValueError('Contact population [T,4] required')
     pairs=contacts[:-1]&contacts[1:]

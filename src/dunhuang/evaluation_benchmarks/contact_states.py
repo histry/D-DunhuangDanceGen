@@ -4,7 +4,7 @@ import numpy as np
 def diagnose(joints,floor_y,predicted_contact=None,labels=None,label_evidence=None,contact_height=.05,fps=30):
     x=np.asarray(joints)
     if x.ndim!=3 or x.shape[1:]!=(24,3) or not np.isfinite(x).all():raise ValueError('Finite SMPL24 joints required')
-    feet=x[:,[7,10,8,11]];low=feet[:,:,1]-floor_y<=contact_height
+    feet=x[:,[7,8,10,11]];low=feet[:,:,1]-floor_y<=contact_height
     declared=np.zeros_like(low) if predicted_contact is None else np.asarray(predicted_contact)>=.5
     if declared.shape!=low.shape:raise ValueError('Four predicted contact channels required')
     candidate=low|declared;state=np.full(low.shape,-1,int)
@@ -17,7 +17,7 @@ def diagnose(joints,floor_y,predicted_contact=None,labels=None,label_evidence=No
         state=labels.copy()
     speed=np.linalg.norm(np.diff(feet[:,:,[0,2]],axis=0),axis=-1)*fps
     result=dict(schema='dunhuang_contact_extension_v1',semantic_calibration='NOT_CALIBRATED' if labels is None else 'EXTERNAL_VERIFIED_LABELS',
-        states=dict(unknown_contact=-1,swing_or_flight=0,static=1,intentional_sliding=2),
+        foot_joint_indices=[7,8,10,11],states=dict(unknown_contact=-1,swing_or_flight=0,static=1,intentional_sliding=2),
         counts={str(i):int((state==i).sum()) for i in (-1,0,1,2)},
         intentional_sliding_inferred_from_speed=False,paper_skate_exemptions_applied=False,
         predicted_contact_accuracy=None,predicted_contact_f1=None,

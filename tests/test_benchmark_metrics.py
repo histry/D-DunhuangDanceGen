@@ -54,3 +54,11 @@ def test_lbs_rest_and_global_root_transform():
     v,j=mesh.forward(x)
     np.testing.assert_allclose(v.numpy(),np.broadcast_to(mesh.template.numpy()@r.T+[2,3,4],v.shape),atol=1e-6)
     np.testing.assert_allclose(j[:,0].numpy(),x[:,4:7],atol=1e-6)
+
+def test_declared_contacts_use_native_ankle_ankle_toe_toe_order():
+    x=np.zeros((4,24,3));x[:,:,1]=10
+    x[:,8,1]=0
+    declared=np.zeros((4,4));declared[:,1]=1
+    result=diagnose(x,0,declared)
+    assert result['foot_joint_indices']==[7,8,10,11]
+    assert result['counts']['-1']==4
