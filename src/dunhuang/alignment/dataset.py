@@ -62,6 +62,17 @@ def prepare(population,output,legacy,assets):
 def load(manifest):
     from collections import Counter
     doc=json.loads(manifest.read_text());rows=doc['rows']
+    roles={}
+    audio_roles={}
+    for row in rows:
+        if row['group'] in roles and roles[row['group']]!=row['role']:raise ValueError('Group crosses roles')
+        if row['audio_sha256'] in audio_roles and audio_roles[row['audio_sha256']]!=row['role']:raise ValueError('Audio crosses roles')
+        roles[row['group']]=row['role'];audio_roles[row['audio_sha256']]=row['role']
+    for role in ('train','val','test'):
+        for domain in ('finedance','aistpp'):
+            if not any(r['role']==role and r['domain']==domain for r in rows):
+                raise ValueError('Missing domain/role cell')
+
     music=[];motion=[];mm=[];dm=[]
     for row in rows:
         path=manifest.parent/Path(row['path'].replace(chr(92),'/')).name

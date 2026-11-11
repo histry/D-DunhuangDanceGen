@@ -55,6 +55,11 @@ def main(out):
     manifest=Path(sys.argv[2]).resolve() if len(sys.argv)>2 else prepare(ROOT/'inputs/sdmr_population.json',out/'data',legacy,assets)
 
     rows,arrays,norm=load(manifest)
+    write(out/'data_audit.json',dict(manifest_sha256=sha(manifest),windows=len(rows),
+        counts={role:{domain:sum(r['role']==role and r['domain']==domain for r in rows) for domain in ('finedance','aistpp')} for role in ('train','val','test')},
+        group_counts={role:len({r['group'] for r in rows if r['role']==role}) for role in ('train','val','test')},
+        normalization_role='train',global_inputs_no_identity_features=True))
+
 
     write(out/'normalization.json',norm)
 
