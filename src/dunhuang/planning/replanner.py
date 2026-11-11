@@ -131,6 +131,9 @@ def run_closed_loop(request):
         if state['input_identity']!=identity:raise ValueError('Resume inputs/code/budget changed')
         # Audit receipts before reusing any result. A partially written worker
         # output is UNKNOWN, never a cached FAIL or automatic fresh retry.
+        for proposal in state['plans']:
+            checked(proposal['plan'])
+            if proposal.get('parent'):checked(proposal['parent'])
         for entry in state['ledger']:
             if entry.get('cache'):verify_cache(read(checked(entry['cache'])),entry['key'])
         if not state.get('terminal'):
