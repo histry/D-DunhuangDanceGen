@@ -13,7 +13,7 @@ def run(q):
     if q.get('learned_retrieval'):
         from .alignment.rank import authorize
         request=q['learned_retrieval']
-        decision=authorize(checked(request['checkpoint']),checked(request['qualification']))
+        decision=authorize(checked(request['checkpoint']),checked(request['qualification']),checked(request['sync']) if request.get('sync') else None)
         q=dict(q,retrieval_decision=decision)
         if decision['enabled']:
             selection=json.loads(checked(request['selection']).read_text())

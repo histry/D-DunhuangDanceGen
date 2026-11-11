@@ -65,7 +65,7 @@ def fit(rows,arrays,norm,output,steps=5000,sync_steps=2000):
             history.append(dict(stage='sync',step=step,loss=float(loss),val=metrics))
             write(output/'history.json',history)
             if score>best+1e-5:
-                best=score;stale=0;torch.save(dict(state=sync.state_dict(),norm=norm,step=step),output/'sync.pt')
+                best=score;stale=0;torch.save(dict(state=sync.state_dict(),norm=norm,step=step,global_checkpoint_sha256=sha(output/'retrieval.pt')),output/'sync.pt')
             else:stale+=1
             print('SYNC',step,float(loss),score,flush=True)
             if stale>=4:break

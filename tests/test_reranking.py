@@ -17,3 +17,15 @@ def test_sync_encoding_identity_is_required():
     m=torch.zeros(1,30,50);d=torch.zeros(1,30,74)
     with pytest.raises(ValueError,match='identities'):
         synchronized_scores(first,second,m,torch.ones_like(m,dtype=torch.bool),d,torch.ones_like(d,dtype=torch.bool))
+
+def test_qualification_binds_both_loaded_checkpoints(tmp_path):
+    global_file=tmp_path/'global';global_file.write_bytes(b'global')
+    sync=tmp_path/'sync';sync.write_bytes(b'sync')
+    other=tmp_path/'other';other.write_bytes(b'other')
+    report=tmp_path/'qualification.json'
+    report.write_text(json.dumps(dict(qualified=True,qualification_basis='validation_only',
+        retrieval_checkpoint_sha256=sha(global_file),sync_checkpoint_sha256=sha(sync),preference_status='UNKNOWN')))
+    assert not authorize(global_file,report)['enabled']
+    assert authorize(global_file,report,sync)['enabled']
+    with pytest.raises(ValueError,match='Synchronization checkpoint'):
+        authorize(global_file,report,other)
