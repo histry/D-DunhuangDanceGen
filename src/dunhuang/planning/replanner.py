@@ -97,8 +97,14 @@ def code_identity():
     for package in ('numpy','scipy','torch'):
         try:versions[package]=metadata.version(package)
         except metadata.PackageNotFoundError:versions[package]=None
+    try:
+        hardware=subprocess.check_output(['nvidia-smi','--query-gpu=uuid,name,driver_version',
+            '--format=csv,noheader'],text=True,timeout=5).strip()
+    except (OSError,subprocess.SubprocessError):hardware=None
     return dict(source=digest({str(p.relative_to(root)):sha(p) for p in files}),
-                python=sys.version,runtime=versions)
+                python=sys.version,runtime=versions,gpu_driver=hardware,
+                environment={k:os.environ.get(k) for k in ('CUDA_VISIBLE_DEVICES','CUBLAS_WORKSPACE_CONFIG',
+                    'NVIDIA_TF32_OVERRIDE','PYTHONHASHSEED','OMP_NUM_THREADS')})
 
 def run_closed_loop(request):
     q=copy.deepcopy(request);cfg=q.pop('closed_loop');resume=cfg.pop('resume',False)
@@ -116,6 +122,12 @@ def run_closed_loop(request):
     if root.exists():
         if not resume:raise FileExistsError('Explicit --resume required: '+str(root))
         state=read(state_path)
+        fresh_contract=root/('resume_contract_'+uuid.uuid4().hex+'.json')
+        launch([q['native_python'],'-m','dunhuang.planning.feedback','--request',root/'request.json',
+            '--out',fresh_contract,'--contract-only'],fresh_contract.with_suffix('.log'),env,
+            b['candidate_timeout_seconds'])
+        if read(fresh_contract)!=read(root/'native_contract.json'):
+            raise ValueError('Resume Native environment/contract changed')
         if state['input_identity']!=identity:raise ValueError('Resume inputs/code/budget changed')
         # Audit receipts before reusing any result. A partially written worker
         # output is UNKNOWN, never a cached FAIL or automatic fresh retry.
@@ -186,6 +198,7 @@ def run_closed_loop(request):
                     native_result='UNKNOWN',case=str(case),action='INITIAL' if not state['ledger'] else
                     ('REGENERATE_CONDITION_OR_SEED' if vi else 'REPLAN_ASSOCIATED_SLOTS'))
                 state['ledger'].append(entry);persist()
+                print('CANDIDATE',len(state['ledger'])-1,entry['action'],variant,flush=True)
                 if cache_path.exists():
                     feedback=verify_cache(read(cache_path),key);entry['cache_hit']=True
                     case=Path(read(cache_path)['case'])
@@ -206,6 +219,7 @@ def run_closed_loop(request):
                 entry.update(native_result=feedback['native_result'],feedback=reference(last_feedback),
                              route=route(feedback,b,state['diagnostic_replans']))
                 state['plans'][-1]['last_generated_native_result']=feedback['native_result']
+                print('NATIVE',feedback['native_result'],entry['route'],flush=True)
                 persist()
                 if feedback['native_result']=='PASS':
                     state['accepted']=entry['cache'];state['full_song_native_pass']=feedback['full_song_scope']
@@ -247,4 +261,5 @@ def run_closed_loop(request):
         state['terminal']=True;persist()
         raise
     state['terminal']=True;persist()
+    print('STOP',state['stop_reason'],flush=True)
     return root

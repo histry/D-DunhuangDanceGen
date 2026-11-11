@@ -47,7 +47,7 @@ def native_context(q):
     cfg=MotionGenerationConfig()
     value=dict(schema='native_contract_identity_v1',legacy_commit=q['legacy_commit'],
         limits=asdict(PhysicalQualityLimits.from_environment()),
-        contact_config={k:getattr(cfg,k) for k in ('fps','ik_height_margin','ik_speed_gate_mps','ik_contact_high','ik_contact_low','ik_contact_break_speed_mps')},
+        motion_config=asdict(cfg),
         runtime=dict(python=sys.version,numpy=np.__version__),
         support_policy='final_fail_closed',metrics_schema='dunhuang_physical_metrics_si_v5_contact_states')
     return dict(value,id=digest(value)),cfg

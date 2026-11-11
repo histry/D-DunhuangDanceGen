@@ -81,3 +81,83 @@ def test_cache_corruption_never_becomes_a_native_fail(tmp_path):
 def test_timeout_reaps_owned_worker(tmp_path):
     with pytest.raises(subprocess.TimeoutExpired):
         launch([sys.executable,'-c','import time;time.sleep(30)'],tmp_path/'log',os.environ.copy(),.1)
+
+
+def fake_controller(tmp_path,monkeypatch,result='FAIL',explode=False):
+    import dunhuang.planning.replanner as r
+    catalog,timing=fixture(tmp_path);parent=plan(catalog,timing,'audio')
+    asset=tmp_path/'asset';asset.write_text('fixture')
+    ref=dict(path=str(asset),sha256=sha(asset));calls=[]
+    def launch_worker(argv,log,env,timeout):
+        module=argv[2];args=argv[3:];Path(log).write_text('fixture')
+        if module=='dunhuang.planning.feedback':
+            out=Path(args[args.index('--out')+1])
+            if '--contract-only' in args:save(out,dict(id='fixed-contract'))
+            else:save(out,dict(native_result=result,broad_failure=True,associated_slots=[1],
+                              recommended_route='MODEL_DIAGNOSIS',full_song_scope=False))
+        elif module=='dunhuang.planning.worker':
+            req=r.read(args[0]);out=Path(req['output'])
+            selected=parent
+            if 'replanning' in req:
+                spec=req['replanning'];old=r.read(spec['parent']['path'])
+                selected=propose_candidates(catalog,timing,'audio',
+                    fixed_events={i:e for i,e in enumerate(old['events']) if i!=1},
+                    excluded_events={1:[old['events'][1]['event_uid']]})[0]
+                selected=revised_plan(selected,old,spec['feedback'],'REPLAN_ASSOCIATED_SLOTS',[1])
+            save(out/'event_plan.json',selected);save(out/'event_plans.json',[selected])
+        elif module=='dunhuang.pipeline':
+            calls.append(module)
+            if explode:raise subprocess.TimeoutExpired(argv,timeout)
+            req=r.read(args[args.index('--config')+1]);out=Path(req['output']);out.mkdir()
+            save(out/'request.json',req);selected=r.read(req['input_event_plan']['path'])
+            save(out/'event_plan.json',selected)
+            for name in ('physical.json','generation.json'):save(out/name,{})
+            value=int(selected['events'][1]['event_uid'])+req['seed']+req.get('trajectory_strength',0)
+            for name in ('normalized.npy','windows.npy','native.npy','native_fk.npy'):
+                np.save(out/name,np.full((2,3),value))
+        else:raise AssertionError(module)
+    monkeypatch.setattr(r,'launch',launch_worker);monkeypatch.setattr(r,'code_identity',lambda:'fixed-code')
+    q=dict(profile='dunhuang',seed=7,frames=270,output=str(tmp_path/'run'),edge_python='edge',native_python='native',
+        **{key:ref for key in ('audio','features','feature_receipt','checkpoint','scaler','catalog')})
+    return r,q,calls
+
+def test_controller_broad_stop_resume_and_changed_native_contract(tmp_path,monkeypatch):
+    r,q,calls=fake_controller(tmp_path,monkeypatch)
+    q['closed_loop']=dict(enabled=True)
+    out=r.run_closed_loop(q);state=r.read(out/'state.json')
+    assert len(calls)==1 and state['stop_reason']=='STOP_MODEL_DIAGNOSIS'
+    assert state['plans'][0]['native_result']=='UNKNOWN'
+    assert not state['full_song_native_pass']
+    r.run_closed_loop(dict(q,closed_loop=dict(q['closed_loop'],resume=True)))
+    assert len(calls)==1
+    save(out/'native_contract.json',dict(id='changed-contract'))
+    with pytest.raises(ValueError,match='Native environment'):
+        r.run_closed_loop(dict(q,closed_loop=dict(q['closed_loop'],resume=True)))
+
+def test_controller_one_diagnostic_local_replan_then_budget_stop(tmp_path,monkeypatch):
+    r,q,calls=fake_controller(tmp_path,monkeypatch)
+    q['closed_loop']=dict(enabled=True,max_plans=2,max_generations=4,
+        diagnostic_continue_on_broad_failure=True,max_diagnostic_replans=1)
+    state=r.read(r.run_closed_loop(q)/'state.json')
+    assert len(calls)==4 and len(state['plans'])==2 and state['diagnostic_replans']==1
+    assert state['stop_reason']=='STOP_PLAN_BUDGET'
+    assert [e['action'] for e in state['ledger']]==['INITIAL','REGENERATE_CONDITION_OR_SEED',
+        'REPLAN_ASSOCIATED_SLOTS','REGENERATE_CONDITION_OR_SEED']
+    assert state['event_global_blacklist']==[]
+
+def test_controller_clip_pass_is_not_full_song_pass(tmp_path,monkeypatch):
+    r,q,calls=fake_controller(tmp_path,monkeypatch,result='PASS')
+    q['closed_loop']=dict(enabled=True)
+    state=r.read(r.run_closed_loop(q)/'state.json')
+    assert state['accepted'] and state['stop_reason']=='ACCEPT_NATIVE_CLIP_ONLY'
+    assert len(calls)==1 and not state['full_song_native_pass'] and not state['full_generation_qualified']
+
+def test_worker_timeout_stays_unknown_and_never_becomes_cached_fail(tmp_path,monkeypatch):
+    r,q,calls=fake_controller(tmp_path,monkeypatch,explode=True)
+    q['closed_loop']=dict(enabled=True)
+    with pytest.raises(subprocess.TimeoutExpired):r.run_closed_loop(q)
+    state=r.read(Path(q['output'])/'state.json')
+    assert state['stop_reason']=='STOP_EXECUTION_UNKNOWN'
+    assert state['ledger'][0]['native_result']=='UNKNOWN' and 'cache' not in state['ledger'][0]
+    r.run_closed_loop(dict(q,closed_loop=dict(q['closed_loop'],resume=True)))
+    assert len(calls)==1
