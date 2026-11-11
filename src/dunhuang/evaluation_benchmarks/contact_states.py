@@ -27,3 +27,13 @@ def diagnose(joints,floor_y,predicted_contact=None,labels=None,label_evidence=No
         valid=mask[:-1]&mask[1:]
         result[name+'_horizontal_speed_p95_mps']=float(np.percentile(speed[valid],95)) if valid.any() else None
     return result
+
+
+def diagnose_verified(joints,floor_y,*,motion_sha256,label_reference=None,derived=None,low=None,predicted=None):
+    """V2 entry binds independent labels to exact motion bytes and clock."""
+    from .contact_evidence import load_evidence,conditioned_metrics
+    labels,evidence=load_evidence(label_reference,motion_sha256,len(joints))
+    result=conditioned_metrics(joints,floor_y,labels,derived,low,predicted)
+    result['label_receipt_sha256']=label_reference['sha256'] if evidence is not None else None
+    result['real_contact_truth_verified']=evidence is not None
+    return result

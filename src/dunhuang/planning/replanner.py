@@ -64,6 +64,8 @@ def verify_cache(record,key):
     return feedback
 
 def route(feedback,b,diagnostic_replans):
+    if feedback.get('native_result_source','Native-Legacy-v1')!='Native-Legacy-v1':
+        raise ValueError('Unqualified Shadow calibration cannot route execution')
     if feedback['native_result']=='PASS':return 'ACCEPT_NATIVE_REQUESTED_SCOPE'
     if feedback['broad_failure']:
         if not b['diagnostic_continue_on_broad_failure']:return 'STOP_MODEL_DIAGNOSIS'

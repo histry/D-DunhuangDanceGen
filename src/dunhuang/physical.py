@@ -28,6 +28,8 @@ def main():
     write(out/'physical.json',dict(audit=audit,absolute=gate,limits=asdict(PhysicalQualityLimits.from_environment()),
         fk_max_abs_m=error,legacy_commit=q['legacy_commit'],relative_parent_caps=False,
         full_generation_qualified=False))
+    from .evaluation_benchmarks.native_shadow import write_legacy_sidecar
+    write_legacy_sidecar(q,out,audit,gate,error)
     write(out/'evaluation.json',evaluate(x,positions,q.get('anchors',[]),q.get('beat_frames',[])))
     print('NATIVE',gate['ok'],'FK_ERROR',error,flush=True)
 if __name__=='__main__':main()

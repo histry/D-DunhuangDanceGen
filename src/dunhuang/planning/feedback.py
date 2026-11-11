@@ -101,12 +101,24 @@ def build(case,contract):
     elif jerk['non_boundary_count']:route='REGENERATE_CONDITION_OR_SEED'
     elif jerk['near_boundary_count']:route='BOUNDARY_CONTEXT_DIAGNOSIS'
     else:route='DIAGNOSE_THEN_REPLAN'
+    layer_file=case/'native_layers.json'
+    shadow_measurement=None
+    if layer_file.exists():
+        layers=json.loads(layer_file.read_text())
+        if layers['motion_sha256']!=sha(case/'native.npy'):
+            raise ValueError('Evaluation layers refer to a different generated motion')
+        calibrated=layers['judgments']['calibrated']
+        if calibrated.get('can_route') is not False or calibrated.get('mode')!='SHADOW':
+            raise ValueError('Unqualified evaluation layers cannot replace Legacy routing')
+        shadow_measurement=dict(artifact=dict(path=str(layer_file.resolve()),sha256=sha(layer_file)),
+            ground_skeleton=layers.get('ground_skeleton'),continuous=layers.get('continuous'),
+            result=calibrated,used_for_routing=False)
     result=dict(schema='physical_feedback_v1',generated_motion=sha(case/'native.npy'),
         generated_fk=sha(case/'native_fk.npy'),raw_windows=sha(case/'windows.npy'),
         plan_id=q['event_plan']['sha256'],semantic_plan_id=semantic_plan_id(plan),
         generator_id=dict(checkpoint=q['checkpoint']['sha256'],adapter=q.get('adapter',{}).get('sha256'),mode=q['mode']),
         audio_sha256=q['audio']['sha256'],features_sha256=q['features']['sha256'],seed=q['seed'],
-        native_contract_id=contract['id'],native_result='PASS' if physical['absolute']['ok'] else 'FAIL',
+        native_contract_id=contract['id'],native_result_source='Native-Legacy-v1',native_result='PASS' if physical['absolute']['ok'] else 'FAIL',
         full_song_scope=len(motion)==json.loads((case/'clock.json').read_text())['frames'],
         frames=len(motion),violations=violations,jerk=jerk,ranked_diagnostics=ranked,
         associated_slots=sorted(slot_counts,key=lambda i:(-slot_counts[i],i)),
@@ -114,6 +126,11 @@ def build(case,contract):
         violating_frame_fraction=ratio,broad_failure=broad,recommended_route=route,
         native_replay_exact=True,event_globally_infeasible=False,learned_physical_risk=None,
         music_alignment_status='NOT_CALIBRATED',event_following_status='NOT_QUALIFIED',
+        measurement_uncertainty=dict(contact_semantics='NO_INDEPENDENT_VERIFIED_LABELS',
+            ground='estimated_candidate_floor',floor_ground_truth=False,
+            threshold_calibration='NOT_CALIBRATED',dynamic_feasibility='NOT_SIMULATED'),
+        shadow_calibration=dict(contract='Native-Calib-v2',mode='SHADOW',can_route=False,result='UNKNOWN_UNQUALIFIED'),
+        shadow_measurements=shadow_measurement,
         attribution_note='Associations are not event/joint causal proof. Aggregate percentile failures are not individual-frame acceptance decisions.')
     return result
 

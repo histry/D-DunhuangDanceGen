@@ -1,0 +1,716 @@
+{
+  "schema": "native_calibration_experiment_v2",
+  "mode": "SHADOW",
+  "operational_qualified": false,
+  "legacy_gate_unchanged": true,
+  "legacy_metric_provenance": {
+    "schema": "native_threshold_provenance_v1",
+    "contract": "Native-Legacy-v1",
+    "count": 31,
+    "metrics": [
+      {
+        "metric": "foot_skate_mps_p95",
+        "units": "m/s",
+        "category": "B_plausibility_proxy",
+        "legacy_threshold": 0.18,
+        "direction": "upper",
+        "metric_definition": {
+          "legacy_key": "foot_skate_mps_p95",
+          "operator": "pinned Native source implementation",
+          "aggregation": "P95",
+          "reference": "motion_geometry/physical.py at pinned legacy commit",
+          "support_population": "derived-contact OR filtered low-height, provisionally static; not independent static truth"
+        },
+        "threshold_origin": "project_legacy_engineering_default",
+        "paper_universal_threshold": null,
+        "calibration_status": "NOT_CALIBRATED",
+        "contact_source": "rederived_FK_union_low_height",
+        "applicability": "Legacy protocol only; empirical validity unresolved",
+        "legacy_gate_unchanged": true
+      },
+      {
+        "metric": "foot_skate_mps_max",
+        "units": "m/s",
+        "category": "B_plausibility_proxy",
+        "legacy_threshold": 0.6,
+        "direction": "upper",
+        "metric_definition": {
+          "legacy_key": "foot_skate_mps_max",
+          "operator": "pinned Native source implementation",
+          "aggregation": "maximum",
+          "reference": "motion_geometry/physical.py at pinned legacy commit",
+          "support_population": "derived-contact OR filtered low-height, provisionally static; not independent static truth"
+        },
+        "threshold_origin": "project_legacy_engineering_default",
+        "paper_universal_threshold": null,
+        "calibration_status": "NOT_CALIBRATED",
+        "contact_source": "rederived_FK_union_low_height",
+        "applicability": "Legacy protocol only; empirical validity unresolved",
+        "legacy_gate_unchanged": true
+      },
+      {
+        "metric": "foot_support_drift_m_p95",
+        "units": "m",
+        "category": "B_plausibility_proxy",
+        "legacy_threshold": 0.06,
+        "direction": "upper",
+        "metric_definition": {
+          "legacy_key": "foot_support_drift_m_p95",
+          "operator": "pinned Native source implementation",
+          "aggregation": "P95",
+          "reference": "motion_geometry/physical.py at pinned legacy commit",
+          "support_population": "derived-contact OR filtered low-height, provisionally static; not independent static truth"
+        },
+        "threshold_origin": "project_legacy_engineering_default",
+        "paper_universal_threshold": null,
+        "calibration_status": "NOT_CALIBRATED",
+        "contact_source": "rederived_FK_union_low_height",
+        "applicability": "Legacy protocol only; empirical validity unresolved",
+        "legacy_gate_unchanged": true
+      },
+      {
+        "metric": "foot_support_drift_m_max",
+        "units": "m",
+        "category": "B_plausibility_proxy",
+        "legacy_threshold": 0.12,
+        "direction": "upper",
+        "metric_definition": {
+          "legacy_key": "foot_support_drift_m_max",
+          "operator": "pinned Native source implementation",
+          "aggregation": "maximum",
+          "reference": "motion_geometry/physical.py at pinned legacy commit",
+          "support_population": "derived-contact OR filtered low-height, provisionally static; not independent static truth"
+        },
+        "threshold_origin": "project_legacy_engineering_default",
+        "paper_universal_threshold": null,
+        "calibration_status": "NOT_CALIBRATED",
+        "contact_source": "rederived_FK_union_low_height",
+        "applicability": "Legacy protocol only; empirical validity unresolved",
+        "legacy_gate_unchanged": true
+      },
+      {
+        "metric": "foot_contact_height_m_max",
+        "units": "m",
+        "category": "B_plausibility_proxy",
+        "legacy_threshold": 0.1,
+        "direction": "upper",
+        "metric_definition": {
+          "legacy_key": "foot_contact_height_m_max",
+          "operator": "pinned Native source implementation",
+          "aggregation": "maximum",
+          "reference": "motion_geometry/physical.py at pinned legacy commit",
+          "support_population": "derived-contact OR filtered low-height, provisionally static; not independent static truth"
+        },
+        "threshold_origin": "project_legacy_engineering_default",
+        "paper_universal_threshold": null,
+        "calibration_status": "NOT_CALIBRATED",
+        "contact_source": "rederived_FK_union_low_height",
+        "applicability": "Legacy protocol only; empirical validity unresolved",
+        "legacy_gate_unchanged": true
+      },
+      {
+        "metric": "foot_penetration_min_m",
+        "units": "dimensionless",
+        "category": "B_plausibility_proxy",
+        "legacy_threshold": -0.05,
+        "direction": "lower",
+        "metric_definition": {
+          "legacy_key": "foot_penetration_min_m",
+          "operator": "pinned Native source implementation",
+          "aggregation": "legacy named statistic",
+          "reference": "motion_geometry/physical.py at pinned legacy commit",
+          "support_population": "derived-contact OR filtered low-height, provisionally static; not independent static truth"
+        },
+        "threshold_origin": "project_legacy_engineering_default",
+        "paper_universal_threshold": null,
+        "calibration_status": "NOT_CALIBRATED",
+        "contact_source": "rederived_FK_union_low_height",
+        "applicability": "Legacy protocol only; empirical validity unresolved",
+        "legacy_gate_unchanged": true
+      },
+      {
+        "metric": "joint_jerk_mps3_p95",
+        "units": "m/s^3",
+        "category": "B_plausibility_proxy",
+        "legacy_threshold": 810.0,
+        "direction": "upper",
+        "metric_definition": {
+          "legacy_key": "joint_jerk_mps3_p95",
+          "operator": "pinned Native source implementation",
+          "aggregation": "P95",
+          "reference": "motion_geometry/physical.py at pinned legacy commit",
+          "support_population": null
+        },
+        "threshold_origin": "project_legacy_engineering_default",
+        "paper_universal_threshold": null,
+        "calibration_status": "NOT_CALIBRATED",
+        "contact_source": null,
+        "applicability": "Legacy protocol only; empirical validity unresolved",
+        "legacy_gate_unchanged": true
+      },
+      {
+        "metric": "joint_jerk_mps3_max",
+        "units": "m/s^3",
+        "category": "B_plausibility_proxy",
+        "legacy_threshold": 1620.0,
+        "direction": "upper",
+        "metric_definition": {
+          "legacy_key": "joint_jerk_mps3_max",
+          "operator": "pinned Native source implementation",
+          "aggregation": "maximum",
+          "reference": "motion_geometry/physical.py at pinned legacy commit",
+          "support_population": null
+        },
+        "threshold_origin": "project_legacy_engineering_default",
+        "paper_universal_threshold": null,
+        "calibration_status": "NOT_CALIBRATED",
+        "contact_source": null,
+        "applicability": "Legacy protocol only; empirical validity unresolved",
+        "legacy_gate_unchanged": true
+      },
+      {
+        "metric": "joint_jerk_window_p95_max_mps3",
+        "units": "m/s^3",
+        "category": "B_plausibility_proxy",
+        "legacy_threshold": 1080.0,
+        "direction": "upper",
+        "metric_definition": {
+          "legacy_key": "joint_jerk_window_p95_max_mps3",
+          "operator": "pinned Native source implementation",
+          "aggregation": "max of1s-windowP95",
+          "reference": "motion_geometry/physical.py at pinned legacy commit",
+          "support_population": null
+        },
+        "threshold_origin": "project_legacy_engineering_default",
+        "paper_universal_threshold": null,
+        "calibration_status": "NOT_CALIBRATED",
+        "contact_source": null,
+        "applicability": "Legacy protocol only; empirical validity unresolved",
+        "legacy_gate_unchanged": true
+      },
+      {
+        "metric": "extremity_jerk_mps3_p95",
+        "units": "m/s^3",
+        "category": "B_plausibility_proxy",
+        "legacy_threshold": 810.0,
+        "direction": "upper",
+        "metric_definition": {
+          "legacy_key": "extremity_jerk_mps3_p95",
+          "operator": "pinned Native source implementation",
+          "aggregation": "P95",
+          "reference": "motion_geometry/physical.py at pinned legacy commit",
+          "support_population": null
+        },
+        "threshold_origin": "project_legacy_engineering_default",
+        "paper_universal_threshold": null,
+        "calibration_status": "NOT_CALIBRATED",
+        "contact_source": null,
+        "applicability": "Legacy protocol only; empirical validity unresolved",
+        "legacy_gate_unchanged": true
+      },
+      {
+        "metric": "extremity_jerk_window_p95_max_mps3",
+        "units": "m/s^3",
+        "category": "B_plausibility_proxy",
+        "legacy_threshold": 1080.0,
+        "direction": "upper",
+        "metric_definition": {
+          "legacy_key": "extremity_jerk_window_p95_max_mps3",
+          "operator": "pinned Native source implementation",
+          "aggregation": "max of1s-windowP95",
+          "reference": "motion_geometry/physical.py at pinned legacy commit",
+          "support_population": null
+        },
+        "threshold_origin": "project_legacy_engineering_default",
+        "paper_universal_threshold": null,
+        "calibration_status": "NOT_CALIBRATED",
+        "contact_source": null,
+        "applicability": "Legacy protocol only; empirical validity unresolved",
+        "legacy_gate_unchanged": true
+      },
+      {
+        "metric": "root_y_robust_range_m",
+        "units": "m",
+        "category": "C_scene_task",
+        "legacy_threshold": 0.9,
+        "direction": "upper",
+        "metric_definition": {
+          "legacy_key": "root_y_robust_range_m",
+          "operator": "pinned Native source implementation",
+          "aggregation": "legacy named statistic",
+          "reference": "motion_geometry/physical.py at pinned legacy commit",
+          "support_population": null
+        },
+        "threshold_origin": "project_legacy_engineering_default",
+        "paper_universal_threshold": null,
+        "calibration_status": "NOT_CALIBRATED",
+        "contact_source": null,
+        "applicability": "explicit scene task",
+        "legacy_gate_unchanged": true
+      },
+      {
+        "metric": "root_vertical_speed_mps_p95",
+        "units": "m/s",
+        "category": "B_plausibility_proxy",
+        "legacy_threshold": 1.25,
+        "direction": "upper",
+        "metric_definition": {
+          "legacy_key": "root_vertical_speed_mps_p95",
+          "operator": "pinned Native source implementation",
+          "aggregation": "P95",
+          "reference": "motion_geometry/physical.py at pinned legacy commit",
+          "support_population": null
+        },
+        "threshold_origin": "project_legacy_engineering_default",
+        "paper_universal_threshold": null,
+        "calibration_status": "NOT_CALIBRATED",
+        "contact_source": null,
+        "applicability": "Legacy protocol only; empirical validity unresolved",
+        "legacy_gate_unchanged": true
+      },
+      {
+        "metric": "root_vertical_speed_mps_max",
+        "units": "m/s",
+        "category": "B_plausibility_proxy",
+        "legacy_threshold": 4.0,
+        "direction": "upper",
+        "metric_definition": {
+          "legacy_key": "root_vertical_speed_mps_max",
+          "operator": "pinned Native source implementation",
+          "aggregation": "maximum",
+          "reference": "motion_geometry/physical.py at pinned legacy commit",
+          "support_population": null
+        },
+        "threshold_origin": "project_legacy_engineering_default",
+        "paper_universal_threshold": null,
+        "calibration_status": "NOT_CALIBRATED",
+        "contact_source": null,
+        "applicability": "Legacy protocol only; empirical validity unresolved",
+        "legacy_gate_unchanged": true
+      },
+      {
+        "metric": "root_horizontal_radius_p95_m",
+        "units": "m",
+        "category": "C_scene_task",
+        "legacy_threshold": 1.8,
+        "direction": "upper",
+        "metric_definition": {
+          "legacy_key": "root_horizontal_radius_p95_m",
+          "operator": "pinned Native source implementation",
+          "aggregation": "P95",
+          "reference": "motion_geometry/physical.py at pinned legacy commit",
+          "support_population": null
+        },
+        "threshold_origin": "project_legacy_engineering_default",
+        "paper_universal_threshold": null,
+        "calibration_status": "NOT_CALIBRATED",
+        "contact_source": null,
+        "applicability": "explicit scene task",
+        "legacy_gate_unchanged": true
+      },
+      {
+        "metric": "root_horizontal_radius_max_m",
+        "units": "m",
+        "category": "C_scene_task",
+        "legacy_threshold": 2.2,
+        "direction": "upper",
+        "metric_definition": {
+          "legacy_key": "root_horizontal_radius_max_m",
+          "operator": "pinned Native source implementation",
+          "aggregation": "maximum",
+          "reference": "motion_geometry/physical.py at pinned legacy commit",
+          "support_population": null
+        },
+        "threshold_origin": "project_legacy_engineering_default",
+        "paper_universal_threshold": null,
+        "calibration_status": "NOT_CALIBRATED",
+        "contact_source": null,
+        "applicability": "explicit scene task",
+        "legacy_gate_unchanged": true
+      },
+      {
+        "metric": "root_horizontal_net_displacement_m",
+        "units": "m",
+        "category": "C_scene_task",
+        "legacy_threshold": 3.0,
+        "direction": "upper",
+        "metric_definition": {
+          "legacy_key": "root_horizontal_net_displacement_m",
+          "operator": "pinned Native source implementation",
+          "aggregation": "legacy named statistic",
+          "reference": "motion_geometry/physical.py at pinned legacy commit",
+          "support_population": null
+        },
+        "threshold_origin": "project_legacy_engineering_default",
+        "paper_universal_threshold": null,
+        "calibration_status": "NOT_CALIBRATED",
+        "contact_source": null,
+        "applicability": "explicit scene task",
+        "legacy_gate_unchanged": true
+      },
+      {
+        "metric": "root_horizontal_drift_speed_mps",
+        "units": "m/s",
+        "category": "C_scene_task",
+        "legacy_threshold": 0.12,
+        "direction": "upper",
+        "metric_definition": {
+          "legacy_key": "root_horizontal_drift_speed_mps",
+          "operator": "pinned Native source implementation",
+          "aggregation": "legacy named statistic",
+          "reference": "motion_geometry/physical.py at pinned legacy commit",
+          "support_population": null
+        },
+        "threshold_origin": "project_legacy_engineering_default",
+        "paper_universal_threshold": null,
+        "calibration_status": "NOT_CALIBRATED",
+        "contact_source": null,
+        "applicability": "explicit scene task",
+        "legacy_gate_unchanged": true
+      },
+      {
+        "metric": "root_horizontal_window_displacement_max_m",
+        "units": "m",
+        "category": "C_scene_task",
+        "legacy_threshold": 1.5,
+        "direction": "upper",
+        "metric_definition": {
+          "legacy_key": "root_horizontal_window_displacement_max_m",
+          "operator": "pinned Native source implementation",
+          "aggregation": "max of1s-windowP95",
+          "reference": "motion_geometry/physical.py at pinned legacy commit",
+          "support_population": null
+        },
+        "threshold_origin": "project_legacy_engineering_default",
+        "paper_universal_threshold": null,
+        "calibration_status": "NOT_CALIBRATED",
+        "contact_source": null,
+        "applicability": "explicit scene task",
+        "legacy_gate_unchanged": true
+      },
+      {
+        "metric": "rot6d_nonfinite_ratio",
+        "units": "dimensionless",
+        "category": "A_representation",
+        "legacy_threshold": 0.0,
+        "direction": "upper",
+        "metric_definition": {
+          "legacy_key": "rot6d_nonfinite_ratio",
+          "operator": "pinned Native source implementation",
+          "aggregation": "legacy named statistic",
+          "reference": "motion_geometry/physical.py at pinned legacy commit",
+          "support_population": null
+        },
+        "threshold_origin": "project_legacy_engineering_default",
+        "paper_universal_threshold": null,
+        "calibration_status": "NOT_CALIBRATED",
+        "contact_source": null,
+        "applicability": "Legacy protocol only; empirical validity unresolved",
+        "legacy_gate_unchanged": true
+      },
+      {
+        "metric": "rot6d_degenerate_ratio",
+        "units": "dimensionless",
+        "category": "A_representation",
+        "legacy_threshold": 0.0,
+        "direction": "upper",
+        "metric_definition": {
+          "legacy_key": "rot6d_degenerate_ratio",
+          "operator": "pinned Native source implementation",
+          "aggregation": "legacy named statistic",
+          "reference": "motion_geometry/physical.py at pinned legacy commit",
+          "support_population": null
+        },
+        "threshold_origin": "project_legacy_engineering_default",
+        "paper_universal_threshold": null,
+        "calibration_status": "NOT_CALIBRATED",
+        "contact_source": null,
+        "applicability": "Legacy protocol only; empirical validity unresolved",
+        "legacy_gate_unchanged": true
+      },
+      {
+        "metric": "rot6d_collinearity_abs_p99",
+        "units": "dimensionless",
+        "category": "B_plausibility_proxy",
+        "legacy_threshold": 0.995,
+        "direction": "upper",
+        "metric_definition": {
+          "legacy_key": "rot6d_collinearity_abs_p99",
+          "operator": "pinned Native source implementation",
+          "aggregation": "legacy named statistic",
+          "reference": "motion_geometry/physical.py at pinned legacy commit",
+          "support_population": null
+        },
+        "threshold_origin": "project_legacy_engineering_default",
+        "paper_universal_threshold": null,
+        "calibration_status": "NOT_CALIBRATED",
+        "contact_source": null,
+        "applicability": "Legacy protocol only; empirical validity unresolved",
+        "legacy_gate_unchanged": true
+      },
+      {
+        "metric": "rotation_near_pi_step_ratio",
+        "units": "dimensionless",
+        "category": "B_plausibility_proxy",
+        "legacy_threshold": 0.0,
+        "direction": "upper",
+        "metric_definition": {
+          "legacy_key": "rotation_near_pi_step_ratio",
+          "operator": "pinned Native source implementation",
+          "aggregation": "legacy named statistic",
+          "reference": "motion_geometry/physical.py at pinned legacy commit",
+          "support_population": null
+        },
+        "threshold_origin": "project_legacy_engineering_default",
+        "paper_universal_threshold": null,
+        "calibration_status": "NOT_CALIBRATED",
+        "contact_source": null,
+        "applicability": "Legacy protocol only; empirical validity unresolved",
+        "legacy_gate_unchanged": true
+      },
+      {
+        "metric": "joint_rotation_step_rad_p95",
+        "units": "rad",
+        "category": "B_plausibility_proxy",
+        "legacy_threshold": 0.35,
+        "direction": "upper",
+        "metric_definition": {
+          "legacy_key": "joint_rotation_step_rad_p95",
+          "operator": "pinned Native source implementation",
+          "aggregation": "P95",
+          "reference": "motion_geometry/physical.py at pinned legacy commit",
+          "support_population": null
+        },
+        "threshold_origin": "project_legacy_engineering_default",
+        "paper_universal_threshold": null,
+        "calibration_status": "NOT_CALIBRATED",
+        "contact_source": null,
+        "applicability": "Legacy protocol only; empirical validity unresolved",
+        "legacy_gate_unchanged": true
+      },
+      {
+        "metric": "joint_rotation_step_rad_max",
+        "units": "rad",
+        "category": "B_plausibility_proxy",
+        "legacy_threshold": 1.2,
+        "direction": "upper",
+        "metric_definition": {
+          "legacy_key": "joint_rotation_step_rad_max",
+          "operator": "pinned Native source implementation",
+          "aggregation": "maximum",
+          "reference": "motion_geometry/physical.py at pinned legacy commit",
+          "support_population": null
+        },
+        "threshold_origin": "project_legacy_engineering_default",
+        "paper_universal_threshold": null,
+        "calibration_status": "NOT_CALIBRATED",
+        "contact_source": null,
+        "applicability": "Legacy protocol only; empirical validity unresolved",
+        "legacy_gate_unchanged": true
+      },
+      {
+        "metric": "joint_rotation_step_window_p95_max_rad",
+        "units": "rad",
+        "category": "B_plausibility_proxy",
+        "legacy_threshold": 0.5,
+        "direction": "upper",
+        "metric_definition": {
+          "legacy_key": "joint_rotation_step_window_p95_max_rad",
+          "operator": "pinned Native source implementation",
+          "aggregation": "max of1s-windowP95",
+          "reference": "motion_geometry/physical.py at pinned legacy commit",
+          "support_population": null
+        },
+        "threshold_origin": "project_legacy_engineering_default",
+        "paper_universal_threshold": null,
+        "calibration_status": "NOT_CALIBRATED",
+        "contact_source": null,
+        "applicability": "Legacy protocol only; empirical validity unresolved",
+        "legacy_gate_unchanged": true
+      },
+      {
+        "metric": "extremity_rotation_step_rad_p95",
+        "units": "rad",
+        "category": "B_plausibility_proxy",
+        "legacy_threshold": 0.45,
+        "direction": "upper",
+        "metric_definition": {
+          "legacy_key": "extremity_rotation_step_rad_p95",
+          "operator": "pinned Native source implementation",
+          "aggregation": "P95",
+          "reference": "motion_geometry/physical.py at pinned legacy commit",
+          "support_population": null
+        },
+        "threshold_origin": "project_legacy_engineering_default",
+        "paper_universal_threshold": null,
+        "calibration_status": "NOT_CALIBRATED",
+        "contact_source": null,
+        "applicability": "Legacy protocol only; empirical validity unresolved",
+        "legacy_gate_unchanged": true
+      },
+      {
+        "metric": "extremity_rotation_step_rad_max",
+        "units": "rad",
+        "category": "B_plausibility_proxy",
+        "legacy_threshold": 1.4,
+        "direction": "upper",
+        "metric_definition": {
+          "legacy_key": "extremity_rotation_step_rad_max",
+          "operator": "pinned Native source implementation",
+          "aggregation": "maximum",
+          "reference": "motion_geometry/physical.py at pinned legacy commit",
+          "support_population": null
+        },
+        "threshold_origin": "project_legacy_engineering_default",
+        "paper_universal_threshold": null,
+        "calibration_status": "NOT_CALIBRATED",
+        "contact_source": null,
+        "applicability": "Legacy protocol only; empirical validity unresolved",
+        "legacy_gate_unchanged": true
+      },
+      {
+        "metric": "joint_angular_acceleration_rps2_p95",
+        "units": "rad/s^2",
+        "category": "B_plausibility_proxy",
+        "legacy_threshold": 900.0,
+        "direction": "upper",
+        "metric_definition": {
+          "legacy_key": "joint_angular_acceleration_rps2_p95",
+          "operator": "pinned Native source implementation",
+          "aggregation": "P95",
+          "reference": "motion_geometry/physical.py at pinned legacy commit",
+          "support_population": null
+        },
+        "threshold_origin": "project_legacy_engineering_default",
+        "paper_universal_threshold": null,
+        "calibration_status": "NOT_CALIBRATED",
+        "contact_source": null,
+        "applicability": "Legacy protocol only; empirical validity unresolved",
+        "legacy_gate_unchanged": true
+      },
+      {
+        "metric": "joint_angular_acceleration_rps2_max",
+        "units": "rad/s^2",
+        "category": "B_plausibility_proxy",
+        "legacy_threshold": 3000.0,
+        "direction": "upper",
+        "metric_definition": {
+          "legacy_key": "joint_angular_acceleration_rps2_max",
+          "operator": "pinned Native source implementation",
+          "aggregation": "maximum",
+          "reference": "motion_geometry/physical.py at pinned legacy commit",
+          "support_population": null
+        },
+        "threshold_origin": "project_legacy_engineering_default",
+        "paper_universal_threshold": null,
+        "calibration_status": "NOT_CALIBRATED",
+        "contact_source": null,
+        "applicability": "Legacy protocol only; empirical validity unresolved",
+        "legacy_gate_unchanged": true
+      },
+      {
+        "metric": "joint_angular_acceleration_window_p95_max_rps2",
+        "units": "rad/s^2",
+        "category": "B_plausibility_proxy",
+        "legacy_threshold": 1600.0,
+        "direction": "upper",
+        "metric_definition": {
+          "legacy_key": "joint_angular_acceleration_window_p95_max_rps2",
+          "operator": "pinned Native source implementation",
+          "aggregation": "max of1s-windowP95",
+          "reference": "motion_geometry/physical.py at pinned legacy commit",
+          "support_population": null
+        },
+        "threshold_origin": "project_legacy_engineering_default",
+        "paper_universal_threshold": null,
+        "calibration_status": "NOT_CALIBRATED",
+        "contact_source": null,
+        "applicability": "Legacy protocol only; empirical validity unresolved",
+        "legacy_gate_unchanged": true
+      }
+    ],
+    "legacy_gate_unchanged": true
+  },
+  "split": "historical Train only; existing source connected components hash split ceil(2/3)",
+  "bootstrap": {
+    "iterations": 300,
+    "seed": 20261116,
+    "quantile": 0.95,
+    "group_levels": [
+      "recording_uid",
+      "choreography_uid",
+      "source_group"
+    ]
+  },
+  "sensitivity": {
+    "recordings_per_source_component": 2,
+    "length_frames": [
+      150,
+      300,
+      450
+    ],
+    "measurement_jitter_amplitudes_m": [
+      0,
+      0.0005,
+      0.001,
+      0.003
+    ],
+    "jitter_hz": 10,
+    "floor_offsets_m": [
+      -0.03,
+      0,
+      0.03
+    ],
+    "contact_height_m": 0.055,
+    "saved_long_cases": [
+      "outputs/event_plan_01/edge_baseline_3601",
+      "outputs/event_plan_01/dunhuang_3601"
+    ],
+    "saved_prefix_frames": [
+      150,
+      450,
+      900,
+      1800,
+      3601
+    ]
+  },
+  "controlled": {
+    "frames": 150,
+    "static_slide_mps": [
+      0,
+      0.05,
+      0.15,
+      0.3
+    ],
+    "penetration_offsets_m": [
+      0,
+      0.01,
+      0.03,
+      0.06
+    ],
+    "float_offsets_m": [
+      0,
+      0.01,
+      0.03,
+      0.06
+    ],
+    "jitter_amplitudes_m": [
+      0,
+      0.001,
+      0.003,
+      0.01,
+      0.03
+    ],
+    "jitter_hz": 10
+  },
+  "external_evidence": {
+    "contact_labels": null,
+    "quality_labels": null,
+    "missing_labels_status": "UNKNOWN_NOT_EVALUABLE_NOT_CALIBRATED",
+    "never_infer_quality_from_legacy_pass": true,
+    "never_infer_slide_from_speed": true
+  },
+  "calibration_result_can_route": false,
+  "training_steps": 0,
+  "optimizer_calls": 0
+}

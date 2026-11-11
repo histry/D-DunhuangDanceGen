@@ -43,3 +43,12 @@ def metrics(vertices,joints,floor_y,contact_height=.05,tolerance=.005,contact_ma
         alternate_subtract_tolerance=dict(penetrate_mm=float(np.maximum(penetration-tolerance,0).mean()*1000),
             float_mm=float(np.maximum(floating-tolerance,0).mean()*1000)))
     return result
+
+
+def population_metrics(*args,**kwargs):
+    """V2 wrapper leaves all historical metric return values unchanged."""
+    result=metrics(*args,**kwargs)
+    result.update(conditional_skate_status='COMPUTED' if result['skate_contact_pairs'] else 'NOT_EVALUABLE',
+        no_contact_is_not_perfect_skate=result['skate_contact_pairs']==0,
+        frame_normalized_zero_is_not_a_conditional_quality_verdict=True)
+    return result
