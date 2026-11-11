@@ -1,0 +1,5256 @@
+{
+  "schema": "public_native_reliability_aggregate_v1",
+  "experiment_code_commit": "2118baab6ef1a6aabf9d7847d60fb651610e91d9",
+  "summary_code_commit": "2118baab6ef1a6aabf9d7847d60fb651610e91d9",
+  "mode": "SHADOW_UNQUALIFIED",
+  "operational_qualified": false,
+  "can_route": false,
+  "legacy_identity": {
+    "contract": "Native-Legacy-v1",
+    "legacy_commit": "465f35ba88bbc45d3415e623a60c55a2c8fdb49f",
+    "code_sha256": {
+      "contracts/physical_quality.py": "e1c7ba7250c4f548888476220330143bb42eec1ec92bc031812c35ff213a3f28",
+      "motion/physics.py": "7fc69cee9aad049d042ab3fb1d4fd62354b82207b5d584f620572b0c6568749f",
+      "motion_geometry/physical.py": "200e1aeef11c509f811d754b0510fc93317a60a798fca7af8cf911dad25a969b",
+      "motion_geometry/smpl24.py": "31e0bc0b9fb09c50e6efcd69362b48bed0fe61de493ff68ce9b9675a00e9e66e",
+      "configs/baseline.env": "f50f6a1b3ee3c5f0e88edb7e3221a054162c69877ba60192ebfe0067988311fa"
+    },
+    "skeleton_sha256": "314bf0d1b55fa60519cb57ce413297d221c4f2071d605377fbfe5f33991c8848",
+    "limits": {
+      "foot_skate_mps_p95": 0.18,
+      "foot_skate_mps_max": 0.6,
+      "foot_support_drift_m_p95": 0.06,
+      "foot_support_drift_m_max": 0.12,
+      "foot_contact_height_m_max": 0.1,
+      "foot_penetration_min_m": -0.05,
+      "joint_jerk_mps3_p95": 810.0,
+      "joint_jerk_mps3_max": 1620.0,
+      "joint_jerk_window_p95_max_mps3": 1080.0,
+      "extremity_jerk_mps3_p95": 810.0,
+      "extremity_jerk_window_p95_max_mps3": 1080.0,
+      "root_y_robust_range_m": 0.9,
+      "root_vertical_speed_mps_p95": 1.25,
+      "root_vertical_speed_mps_max": 4.0,
+      "root_horizontal_radius_p95_m": 1.8,
+      "root_horizontal_radius_max_m": 2.2,
+      "root_horizontal_net_displacement_m": 3.0,
+      "root_horizontal_drift_speed_mps": 0.12,
+      "root_horizontal_window_displacement_max_m": 1.5,
+      "rot6d_nonfinite_ratio": 0.0,
+      "rot6d_degenerate_ratio": 0.0,
+      "rot6d_collinearity_abs_p99": 0.995,
+      "rotation_near_pi_step_ratio": 0.0,
+      "joint_rotation_step_rad_p95": 0.35,
+      "joint_rotation_step_rad_max": 1.2,
+      "joint_rotation_step_window_p95_max_rad": 0.5,
+      "extremity_rotation_step_rad_p95": 0.45,
+      "extremity_rotation_step_rad_max": 1.4,
+      "joint_angular_acceleration_rps2_p95": 900.0,
+      "joint_angular_acceleration_rps2_max": 3000.0,
+      "joint_angular_acceleration_window_p95_max_rps2": 1600.0
+    },
+    "motion_config": {
+      "fps": 30.0,
+      "window_len": 120,
+      "hop_len": 60,
+      "min_event_frames": 36,
+      "max_event_frames": 120,
+      "transition_train_min_seconds": 0.3333333333333333,
+      "transition_train_max_seconds": 0.9333333333333333,
+      "transition_root_vertical_tangent_max_mps": 0.9,
+      "transition_angular_speed_max_rps": 8.0,
+      "transition_root_tangent_margin_m": 0.12,
+      "transition_mask_halo_seconds": 0.2,
+      "ik_enable": true,
+      "ik_iters": 120,
+      "ik_lr": 0.02,
+      "ik_chunk": 240,
+      "ik_exact_snapshot_shortlist": 12,
+      "ik_pose_w": 0.035,
+      "ik_temporal_w": 0.055,
+      "ik_root_w": 0.01,
+      "ik_contact_w": 8.0,
+      "ik_penetration_w": 12.0,
+      "ik_contact_high": 0.7,
+      "ik_contact_low": 0.45,
+      "ik_height_margin": 0.035,
+      "ik_speed_gate_mps": 0.36,
+      "ik_contact_break_speed_mps": 0.54,
+      "ik_hard_contact_lock": true,
+      "ik_hard_contact_min_confidence": 0.85,
+      "ik_contact_ramp_seconds": 0.13333333333333333,
+      "ik_max_delta_rot": 0.3,
+      "ik_slide_release_m": 0.05,
+      "ik_slide_release_min_seconds": 0.13333333333333333,
+      "ik_cloud_step_speed_mps": 0.15,
+      "ik_sliding_anchor_seconds": 0.3333333333333333,
+      "ik_cloud_speed_cv_max": 1.75,
+      "ik_cloud_root_min_travel_m": 0.045,
+      "ik_cloud_direction_cos_min": 0.35,
+      "ik_cloud_root_foot_rel_max_m": 0.18,
+      "ik_chunk_overlap": 24,
+      "rollback_root_delta_max_m": 0.12,
+      "ik_post_stabilize_enable": true,
+      "ik_post_stabilize_passes": 2,
+      "full_sequence_contact_repair_top_k": 12,
+      "full_sequence_contact_repair_halo_seconds": 0.4,
+      "full_sequence_contact_repair_merge_gap_seconds": 0.2,
+      "full_sequence_contact_repair_min_gain": 0.01,
+      "full_sequence_contact_repair_jerk_weight": 0.75,
+      "full_sequence_contact_repair_cvar_fraction": 0.1,
+      "full_sequence_contact_repair_frozen_edge_frames": 3,
+      "full_sequence_contact_repair_fd_root_step_m": 0.005,
+      "full_sequence_contact_repair_fd_rotation_step": 0.01,
+      "full_sequence_contact_repair_fd_min_delta": 1e-08,
+      "full_sequence_contact_repair_gpu_batch_size": 256,
+      "full_sequence_contact_repair_gpu_shortlist": 64,
+      "full_sequence_contact_repair_gpu_boundary_tolerance": 1e-05,
+      "full_sequence_contact_repair_backtracking_factors": [
+        1.0,
+        0.5,
+        0.25,
+        0.125,
+        0.0625
+      ],
+      "refiner_enable": true,
+      "diffusion_enable": true,
+      "product_refiner_rotation_cap_rad": 0.35,
+      "product_refiner_root_cap_m": 0.08,
+      "refiner_core_strength": 0.02,
+      "refiner_transition_strength": 1.0,
+      "product_refiner_outside_weight": 0.25,
+      "product_refiner_global_reconstruction_weight": 0.05,
+      "product_refiner_active_reconstruction_weight": 0.0,
+      "product_refiner_tangent_supervision_weight": 0.0,
+      "product_refiner_repair_margin_weight": 1.0,
+      "product_refiner_clean_preservation_weight": 1.0,
+      "product_refiner_training_target_repair_gain": 0.1,
+      "product_refiner_temporal_supervision_weight": 0.0,
+      "product_refiner_clean_identity_weight": 0.5,
+      "product_refiner_clean_identity_temporal_weight": 1.0,
+      "product_refiner_clean_noop_weight": 0.03,
+      "product_refiner_minimum_edit_weight": 0.01,
+      "product_refiner_scientific_training_gain_buffer": 0.005,
+      "product_refiner_scientific_gradient_floor": 0.1,
+      "product_refiner_observable_floor_quantile": 0.25,
+      "product_refiner_observable_floor_ratio": 0.5,
+      "product_refiner_group_guard_relative_tolerance": 0.005,
+      "product_refiner_group_guard_absolute_tolerance": 1e-06,
+      "product_refiner_relative_temporal_weight": 0.25,
+      "product_refiner_residual_smoothing_passes": 2,
+      "product_refiner_residual_taper_frames": 3,
+      "product_refiner_endpoint_continuity_weight": 0.5,
+      "product_refiner_seam_velocity_weight": 0.2,
+      "product_refiner_seam_acceleration_weight": 0.25,
+      "product_refiner_seam_jerk_weight": 0.3,
+      "physics_fk_loss_weight": 0.08,
+      "physics_foot_loss_weight": 0.12,
+      "physics_support_loss_weight": 0.1,
+      "physics_penetration_loss_weight": 0.08,
+      "physics_acceleration_loss_weight": 0.02,
+      "physics_jerk_loss_weight": 0.01,
+      "physics_static_support_speed_mps": 0.18,
+      "checkpoint_validation_fail_closed": true,
+      "checkpoint_validation_min_stage_repair_rate": 0.75,
+      "checkpoint_validation_min_temporal_repair_rate": 0.75,
+      "checkpoint_validation_min_clean_identity_rate": 0.75,
+      "checkpoint_validation_max_fk_p95_m": 0.15,
+      "checkpoint_validation_max_fk_max_m": 1.0,
+      "checkpoint_validation_max_refiner_product_log_l1": 0.03,
+      "checkpoint_validation_min_geometry_repair_gain": 0.03,
+      "checkpoint_validation_min_temporal_repair_gain": 0.03,
+      "checkpoint_validation_min_endpoint_repair_gain": 0.03,
+      "checkpoint_validation_max_clean_identity_product_log_l1": 0.005,
+      "checkpoint_validation_max_clean_identity_contact_l1": 0.05,
+      "tangent_diffusion_rotation_cap_rad": 0.45,
+      "tangent_diffusion_root_cap_m": 0.1,
+      "diffusion_core_strength": 0.0,
+      "diffusion_transition_strength": 0.25,
+      "diffusion_process": "legacy_epsilon_v1",
+      "diffusion_reference_noise_scale": 0.03,
+      "diffusion_frozen_endpoint_frames": 0,
+      "diffusion_endpoint_band_frames": 3,
+      "diffusion_endpoint_min_strength": 0.2,
+      "diffusion_supervised_motion_weight": 1.0,
+      "diffusion_target_encoding": "unweighted_tangent_v1",
+      "diffusion_observable_gate_weight": 1.0,
+      "diffusion_observable_gain_buffer": 0.005,
+      "diffusion_controllability_gradient_floor": 1e-09,
+      "diffusion_controllability_windows": 4,
+      "diffusion_boundary_value_weight": 0.5,
+      "diffusion_boundary_velocity_weight": 0.5,
+      "diffusion_rotation_step_weight": 0.2,
+      "diffusion_steps": 50,
+      "diffusion_train_steps": 15000,
+      "refiner_train_steps": 8000,
+      "training_snapshot_interval_steps": 200,
+      "training_validation_interval_steps": 1000,
+      "training_gradient_diagnostic_interval_steps": 200,
+      "refiner_calibration_steps": 200,
+      "refiner_calibration_min_acceptance_rate": 0.05,
+      "refiner_calibration_max_average_trials": 3.0,
+      "refiner_calibration_max_consecutive_rejected_steps": 50,
+      "refiner_guard_projection_max_constraints": 4,
+      "refiner_guard_max_rebuilds": 2,
+      "refiner_guard_rebuild_max_new_constraints": 2,
+      "refiner_guard_model_error_tolerance": 0.5,
+      "refiner_guard_exact_closure_budget": 3,
+      "refiner_guard_minimum_effective_scale": 1e-05,
+      "batch_size": 64,
+      "inference_window_batch_size": 16,
+      "gpu_preprocessing": true,
+      "diffusion_noise_batch_max_mib": 256.0,
+      "lr": 0.0002,
+      "seed": 42,
+      "device": "cuda",
+      "overlap": 12,
+      "transition_bridge_mix": 1.0,
+      "transition_root_tangent_max_mps": 1.35
+    },
+    "fps": 30,
+    "units": "SI",
+    "support_policy": "final_fail_closed",
+    "metric_schema": "dunhuang_physical_metrics_si_v5_contact_states",
+    "scope": "kinematic and contact plausibility; not dynamics simulation",
+    "id": "7309d12fa1e3295ad174823804c7a7a43b78799080af4d2ee7aaf54df77c8787"
+  },
+  "threshold_provenance": {
+    "schema": "native_threshold_provenance_v1",
+    "definition_revision": 3,
+    "contract": "Native-Legacy-v1",
+    "count": 31,
+    "metrics": [
+      {
+        "metric": "foot_skate_mps_p95",
+        "units": "m/s",
+        "category": "B_plausibility_proxy",
+        "legacy_threshold": 0.18,
+        "direction": "upper",
+        "metric_definition": {
+          "legacy_key": "foot_skate_mps_p95",
+          "operator": "pinned Native source implementation",
+          "aggregation": "P95",
+          "reference": "motion_geometry/physical.py at pinned legacy commit",
+          "support_population": "rederived_contact_OR_low_height_assumed_static"
+        },
+        "threshold_origin": "project_legacy_engineering_default",
+        "paper_universal_threshold": null,
+        "calibration_status": "NOT_CALIBRATED",
+        "contact_source": "rederived_contact_OR_low_height_assumed_static",
+        "applicability": "Legacy protocol only; empirical validity unresolved",
+        "legacy_gate_unchanged": true
+      },
+      {
+        "metric": "foot_skate_mps_max",
+        "units": "m/s",
+        "category": "B_plausibility_proxy",
+        "legacy_threshold": 0.6,
+        "direction": "upper",
+        "metric_definition": {
+          "legacy_key": "foot_skate_mps_max",
+          "operator": "pinned Native source implementation",
+          "aggregation": "maximum",
+          "reference": "motion_geometry/physical.py at pinned legacy commit",
+          "support_population": "rederived_contact_OR_low_height_assumed_static"
+        },
+        "threshold_origin": "project_legacy_engineering_default",
+        "paper_universal_threshold": null,
+        "calibration_status": "NOT_CALIBRATED",
+        "contact_source": "rederived_contact_OR_low_height_assumed_static",
+        "applicability": "Legacy protocol only; empirical validity unresolved",
+        "legacy_gate_unchanged": true
+      },
+      {
+        "metric": "foot_support_drift_m_p95",
+        "units": "m",
+        "category": "B_plausibility_proxy",
+        "legacy_threshold": 0.06,
+        "direction": "upper",
+        "metric_definition": {
+          "legacy_key": "foot_support_drift_m_p95",
+          "operator": "pinned Native source implementation",
+          "aggregation": "P95",
+          "reference": "motion_geometry/physical.py at pinned legacy commit",
+          "support_population": "rederived_contact_OR_low_height_assumed_static"
+        },
+        "threshold_origin": "project_legacy_engineering_default",
+        "paper_universal_threshold": null,
+        "calibration_status": "NOT_CALIBRATED",
+        "contact_source": "rederived_contact_OR_low_height_assumed_static",
+        "applicability": "Legacy protocol only; empirical validity unresolved",
+        "legacy_gate_unchanged": true
+      },
+      {
+        "metric": "foot_support_drift_m_max",
+        "units": "m",
+        "category": "B_plausibility_proxy",
+        "legacy_threshold": 0.12,
+        "direction": "upper",
+        "metric_definition": {
+          "legacy_key": "foot_support_drift_m_max",
+          "operator": "pinned Native source implementation",
+          "aggregation": "maximum",
+          "reference": "motion_geometry/physical.py at pinned legacy commit",
+          "support_population": "rederived_contact_OR_low_height_assumed_static"
+        },
+        "threshold_origin": "project_legacy_engineering_default",
+        "paper_universal_threshold": null,
+        "calibration_status": "NOT_CALIBRATED",
+        "contact_source": "rederived_contact_OR_low_height_assumed_static",
+        "applicability": "Legacy protocol only; empirical validity unresolved",
+        "legacy_gate_unchanged": true
+      },
+      {
+        "metric": "foot_contact_height_m_max",
+        "units": "m",
+        "category": "B_plausibility_proxy",
+        "legacy_threshold": 0.1,
+        "direction": "upper",
+        "metric_definition": {
+          "legacy_key": "foot_contact_height_m_max",
+          "operator": "pinned Native source implementation",
+          "aggregation": "maximum",
+          "reference": "motion_geometry/physical.py at pinned legacy commit",
+          "support_population": "rederived_contacts_only"
+        },
+        "threshold_origin": "project_legacy_engineering_default",
+        "paper_universal_threshold": null,
+        "calibration_status": "NOT_CALIBRATED",
+        "contact_source": "rederived_contacts_only",
+        "applicability": "Legacy protocol only; empirical validity unresolved",
+        "legacy_gate_unchanged": true
+      },
+      {
+        "metric": "foot_penetration_min_m",
+        "units": "dimensionless",
+        "category": "B_plausibility_proxy",
+        "legacy_threshold": -0.05,
+        "direction": "lower",
+        "metric_definition": {
+          "legacy_key": "foot_penetration_min_m",
+          "operator": "pinned Native source implementation",
+          "aggregation": "minimum",
+          "reference": "motion_geometry/physical.py at pinned legacy commit",
+          "support_population": "all_foot_joint_heights_not_contact_conditioned"
+        },
+        "threshold_origin": "project_legacy_engineering_default",
+        "paper_universal_threshold": null,
+        "calibration_status": "NOT_CALIBRATED",
+        "contact_source": "all_foot_joint_heights_not_contact_conditioned",
+        "applicability": "Legacy protocol only; empirical validity unresolved",
+        "legacy_gate_unchanged": true
+      },
+      {
+        "metric": "joint_jerk_mps3_p95",
+        "units": "m/s^3",
+        "category": "B_plausibility_proxy",
+        "legacy_threshold": 810.0,
+        "direction": "upper",
+        "metric_definition": {
+          "legacy_key": "joint_jerk_mps3_p95",
+          "operator": "pinned Native source implementation",
+          "aggregation": "P95",
+          "reference": "motion_geometry/physical.py at pinned legacy commit",
+          "support_population": null
+        },
+        "threshold_origin": "project_legacy_engineering_default",
+        "paper_universal_threshold": null,
+        "calibration_status": "NOT_CALIBRATED",
+        "contact_source": null,
+        "applicability": "Legacy protocol only; empirical validity unresolved",
+        "legacy_gate_unchanged": true
+      },
+      {
+        "metric": "joint_jerk_mps3_max",
+        "units": "m/s^3",
+        "category": "B_plausibility_proxy",
+        "legacy_threshold": 1620.0,
+        "direction": "upper",
+        "metric_definition": {
+          "legacy_key": "joint_jerk_mps3_max",
+          "operator": "pinned Native source implementation",
+          "aggregation": "maximum",
+          "reference": "motion_geometry/physical.py at pinned legacy commit",
+          "support_population": null
+        },
+        "threshold_origin": "project_legacy_engineering_default",
+        "paper_universal_threshold": null,
+        "calibration_status": "NOT_CALIBRATED",
+        "contact_source": null,
+        "applicability": "Legacy protocol only; empirical validity unresolved",
+        "legacy_gate_unchanged": true
+      },
+      {
+        "metric": "joint_jerk_window_p95_max_mps3",
+        "units": "m/s^3",
+        "category": "B_plausibility_proxy",
+        "legacy_threshold": 1080.0,
+        "direction": "upper",
+        "metric_definition": {
+          "legacy_key": "joint_jerk_window_p95_max_mps3",
+          "operator": "pinned Native source implementation",
+          "aggregation": "max of1s-windowP95",
+          "reference": "motion_geometry/physical.py at pinned legacy commit",
+          "support_population": null
+        },
+        "threshold_origin": "project_legacy_engineering_default",
+        "paper_universal_threshold": null,
+        "calibration_status": "NOT_CALIBRATED",
+        "contact_source": null,
+        "applicability": "Legacy protocol only; empirical validity unresolved",
+        "legacy_gate_unchanged": true
+      },
+      {
+        "metric": "extremity_jerk_mps3_p95",
+        "units": "m/s^3",
+        "category": "B_plausibility_proxy",
+        "legacy_threshold": 810.0,
+        "direction": "upper",
+        "metric_definition": {
+          "legacy_key": "extremity_jerk_mps3_p95",
+          "operator": "pinned Native source implementation",
+          "aggregation": "P95",
+          "reference": "motion_geometry/physical.py at pinned legacy commit",
+          "support_population": null
+        },
+        "threshold_origin": "project_legacy_engineering_default",
+        "paper_universal_threshold": null,
+        "calibration_status": "NOT_CALIBRATED",
+        "contact_source": null,
+        "applicability": "Legacy protocol only; empirical validity unresolved",
+        "legacy_gate_unchanged": true
+      },
+      {
+        "metric": "extremity_jerk_window_p95_max_mps3",
+        "units": "m/s^3",
+        "category": "B_plausibility_proxy",
+        "legacy_threshold": 1080.0,
+        "direction": "upper",
+        "metric_definition": {
+          "legacy_key": "extremity_jerk_window_p95_max_mps3",
+          "operator": "pinned Native source implementation",
+          "aggregation": "max of1s-windowP95",
+          "reference": "motion_geometry/physical.py at pinned legacy commit",
+          "support_population": null
+        },
+        "threshold_origin": "project_legacy_engineering_default",
+        "paper_universal_threshold": null,
+        "calibration_status": "NOT_CALIBRATED",
+        "contact_source": null,
+        "applicability": "Legacy protocol only; empirical validity unresolved",
+        "legacy_gate_unchanged": true
+      },
+      {
+        "metric": "root_y_robust_range_m",
+        "units": "m",
+        "category": "C_scene_task",
+        "legacy_threshold": 0.9,
+        "direction": "upper",
+        "metric_definition": {
+          "legacy_key": "root_y_robust_range_m",
+          "operator": "pinned Native source implementation",
+          "aggregation": "P99 minus P01",
+          "reference": "motion_geometry/physical.py at pinned legacy commit",
+          "support_population": null
+        },
+        "threshold_origin": "project_legacy_engineering_default",
+        "paper_universal_threshold": null,
+        "calibration_status": "NOT_CALIBRATED",
+        "contact_source": null,
+        "applicability": "explicit scene task",
+        "legacy_gate_unchanged": true
+      },
+      {
+        "metric": "root_vertical_speed_mps_p95",
+        "units": "m/s",
+        "category": "B_plausibility_proxy",
+        "legacy_threshold": 1.25,
+        "direction": "upper",
+        "metric_definition": {
+          "legacy_key": "root_vertical_speed_mps_p95",
+          "operator": "pinned Native source implementation",
+          "aggregation": "P95",
+          "reference": "motion_geometry/physical.py at pinned legacy commit",
+          "support_population": null
+        },
+        "threshold_origin": "project_legacy_engineering_default",
+        "paper_universal_threshold": null,
+        "calibration_status": "NOT_CALIBRATED",
+        "contact_source": null,
+        "applicability": "Legacy protocol only; empirical validity unresolved",
+        "legacy_gate_unchanged": true
+      },
+      {
+        "metric": "root_vertical_speed_mps_max",
+        "units": "m/s",
+        "category": "B_plausibility_proxy",
+        "legacy_threshold": 4.0,
+        "direction": "upper",
+        "metric_definition": {
+          "legacy_key": "root_vertical_speed_mps_max",
+          "operator": "pinned Native source implementation",
+          "aggregation": "maximum",
+          "reference": "motion_geometry/physical.py at pinned legacy commit",
+          "support_population": null
+        },
+        "threshold_origin": "project_legacy_engineering_default",
+        "paper_universal_threshold": null,
+        "calibration_status": "NOT_CALIBRATED",
+        "contact_source": null,
+        "applicability": "Legacy protocol only; empirical validity unresolved",
+        "legacy_gate_unchanged": true
+      },
+      {
+        "metric": "root_horizontal_radius_p95_m",
+        "units": "m",
+        "category": "C_scene_task",
+        "legacy_threshold": 1.8,
+        "direction": "upper",
+        "metric_definition": {
+          "legacy_key": "root_horizontal_radius_p95_m",
+          "operator": "pinned Native source implementation",
+          "aggregation": "P95",
+          "reference": "motion_geometry/physical.py at pinned legacy commit",
+          "support_population": null
+        },
+        "threshold_origin": "project_legacy_engineering_default",
+        "paper_universal_threshold": null,
+        "calibration_status": "NOT_CALIBRATED",
+        "contact_source": null,
+        "applicability": "explicit scene task",
+        "legacy_gate_unchanged": true
+      },
+      {
+        "metric": "root_horizontal_radius_max_m",
+        "units": "m",
+        "category": "C_scene_task",
+        "legacy_threshold": 2.2,
+        "direction": "upper",
+        "metric_definition": {
+          "legacy_key": "root_horizontal_radius_max_m",
+          "operator": "pinned Native source implementation",
+          "aggregation": "maximum",
+          "reference": "motion_geometry/physical.py at pinned legacy commit",
+          "support_population": null
+        },
+        "threshold_origin": "project_legacy_engineering_default",
+        "paper_universal_threshold": null,
+        "calibration_status": "NOT_CALIBRATED",
+        "contact_source": null,
+        "applicability": "explicit scene task",
+        "legacy_gate_unchanged": true
+      },
+      {
+        "metric": "root_horizontal_net_displacement_m",
+        "units": "m",
+        "category": "C_scene_task",
+        "legacy_threshold": 3.0,
+        "direction": "upper",
+        "metric_definition": {
+          "legacy_key": "root_horizontal_net_displacement_m",
+          "operator": "pinned Native source implementation",
+          "aggregation": "endpoint horizontal displacement",
+          "reference": "motion_geometry/physical.py at pinned legacy commit",
+          "support_population": null
+        },
+        "threshold_origin": "project_legacy_engineering_default",
+        "paper_universal_threshold": null,
+        "calibration_status": "NOT_CALIBRATED",
+        "contact_source": null,
+        "applicability": "explicit scene task",
+        "legacy_gate_unchanged": true
+      },
+      {
+        "metric": "root_horizontal_drift_speed_mps",
+        "units": "m/s",
+        "category": "C_scene_task",
+        "legacy_threshold": 0.12,
+        "direction": "upper",
+        "metric_definition": {
+          "legacy_key": "root_horizontal_drift_speed_mps",
+          "operator": "pinned Native source implementation",
+          "aggregation": "endpoint horizontal displacement / duration",
+          "reference": "motion_geometry/physical.py at pinned legacy commit",
+          "support_population": null
+        },
+        "threshold_origin": "project_legacy_engineering_default",
+        "paper_universal_threshold": null,
+        "calibration_status": "NOT_CALIBRATED",
+        "contact_source": null,
+        "applicability": "explicit scene task",
+        "legacy_gate_unchanged": true
+      },
+      {
+        "metric": "root_horizontal_window_displacement_max_m",
+        "units": "m",
+        "category": "C_scene_task",
+        "legacy_threshold": 1.5,
+        "direction": "upper",
+        "metric_definition": {
+          "legacy_key": "root_horizontal_window_displacement_max_m",
+          "operator": "pinned Native source implementation",
+          "aggregation": "maximum endpoint displacement over up-to10s windows; short sequences use endpoints",
+          "reference": "motion_geometry/physical.py at pinned legacy commit",
+          "support_population": null
+        },
+        "threshold_origin": "project_legacy_engineering_default",
+        "paper_universal_threshold": null,
+        "calibration_status": "NOT_CALIBRATED",
+        "contact_source": null,
+        "applicability": "explicit scene task",
+        "legacy_gate_unchanged": true
+      },
+      {
+        "metric": "rot6d_nonfinite_ratio",
+        "units": "dimensionless",
+        "category": "A_representation",
+        "legacy_threshold": 0.0,
+        "direction": "upper",
+        "metric_definition": {
+          "legacy_key": "rot6d_nonfinite_ratio",
+          "operator": "pinned Native source implementation",
+          "aggregation": "fraction of Rot6D observations",
+          "reference": "motion_geometry/physical.py at pinned legacy commit",
+          "support_population": null
+        },
+        "threshold_origin": "project_legacy_engineering_default",
+        "paper_universal_threshold": null,
+        "calibration_status": "NOT_CALIBRATED",
+        "contact_source": null,
+        "applicability": "Legacy protocol only; empirical validity unresolved",
+        "legacy_gate_unchanged": true
+      },
+      {
+        "metric": "rot6d_degenerate_ratio",
+        "units": "dimensionless",
+        "category": "A_representation",
+        "legacy_threshold": 0.0,
+        "direction": "upper",
+        "metric_definition": {
+          "legacy_key": "rot6d_degenerate_ratio",
+          "operator": "pinned Native source implementation",
+          "aggregation": "fraction of Rot6D observations",
+          "reference": "motion_geometry/physical.py at pinned legacy commit",
+          "support_population": null
+        },
+        "threshold_origin": "project_legacy_engineering_default",
+        "paper_universal_threshold": null,
+        "calibration_status": "NOT_CALIBRATED",
+        "contact_source": null,
+        "applicability": "Legacy protocol only; empirical validity unresolved",
+        "legacy_gate_unchanged": true
+      },
+      {
+        "metric": "rot6d_collinearity_abs_p99",
+        "units": "dimensionless",
+        "category": "B_plausibility_proxy",
+        "legacy_threshold": 0.995,
+        "direction": "upper",
+        "metric_definition": {
+          "legacy_key": "rot6d_collinearity_abs_p99",
+          "operator": "pinned Native source implementation",
+          "aggregation": "P99",
+          "reference": "motion_geometry/physical.py at pinned legacy commit",
+          "support_population": null
+        },
+        "threshold_origin": "project_legacy_engineering_default",
+        "paper_universal_threshold": null,
+        "calibration_status": "NOT_CALIBRATED",
+        "contact_source": null,
+        "applicability": "Legacy protocol only; empirical validity unresolved",
+        "legacy_gate_unchanged": true
+      },
+      {
+        "metric": "rotation_near_pi_step_ratio",
+        "units": "dimensionless",
+        "category": "B_plausibility_proxy",
+        "legacy_threshold": 0.0,
+        "direction": "upper",
+        "metric_definition": {
+          "legacy_key": "rotation_near_pi_step_ratio",
+          "operator": "pinned Native source implementation",
+          "aggregation": "fraction of joint steps >= pi-0.05rad",
+          "reference": "motion_geometry/physical.py at pinned legacy commit",
+          "support_population": null
+        },
+        "threshold_origin": "project_legacy_engineering_default",
+        "paper_universal_threshold": null,
+        "calibration_status": "NOT_CALIBRATED",
+        "contact_source": null,
+        "applicability": "Legacy protocol only; empirical validity unresolved",
+        "legacy_gate_unchanged": true
+      },
+      {
+        "metric": "joint_rotation_step_rad_p95",
+        "units": "rad",
+        "category": "B_plausibility_proxy",
+        "legacy_threshold": 0.35,
+        "direction": "upper",
+        "metric_definition": {
+          "legacy_key": "joint_rotation_step_rad_p95",
+          "operator": "pinned Native source implementation",
+          "aggregation": "P95",
+          "reference": "motion_geometry/physical.py at pinned legacy commit",
+          "support_population": null
+        },
+        "threshold_origin": "project_legacy_engineering_default",
+        "paper_universal_threshold": null,
+        "calibration_status": "NOT_CALIBRATED",
+        "contact_source": null,
+        "applicability": "Legacy protocol only; empirical validity unresolved",
+        "legacy_gate_unchanged": true
+      },
+      {
+        "metric": "joint_rotation_step_rad_max",
+        "units": "rad",
+        "category": "B_plausibility_proxy",
+        "legacy_threshold": 1.2,
+        "direction": "upper",
+        "metric_definition": {
+          "legacy_key": "joint_rotation_step_rad_max",
+          "operator": "pinned Native source implementation",
+          "aggregation": "maximum",
+          "reference": "motion_geometry/physical.py at pinned legacy commit",
+          "support_population": null
+        },
+        "threshold_origin": "project_legacy_engineering_default",
+        "paper_universal_threshold": null,
+        "calibration_status": "NOT_CALIBRATED",
+        "contact_source": null,
+        "applicability": "Legacy protocol only; empirical validity unresolved",
+        "legacy_gate_unchanged": true
+      },
+      {
+        "metric": "joint_rotation_step_window_p95_max_rad",
+        "units": "rad",
+        "category": "B_plausibility_proxy",
+        "legacy_threshold": 0.5,
+        "direction": "upper",
+        "metric_definition": {
+          "legacy_key": "joint_rotation_step_window_p95_max_rad",
+          "operator": "pinned Native source implementation",
+          "aggregation": "max of1s-windowP95",
+          "reference": "motion_geometry/physical.py at pinned legacy commit",
+          "support_population": null
+        },
+        "threshold_origin": "project_legacy_engineering_default",
+        "paper_universal_threshold": null,
+        "calibration_status": "NOT_CALIBRATED",
+        "contact_source": null,
+        "applicability": "Legacy protocol only; empirical validity unresolved",
+        "legacy_gate_unchanged": true
+      },
+      {
+        "metric": "extremity_rotation_step_rad_p95",
+        "units": "rad",
+        "category": "B_plausibility_proxy",
+        "legacy_threshold": 0.45,
+        "direction": "upper",
+        "metric_definition": {
+          "legacy_key": "extremity_rotation_step_rad_p95",
+          "operator": "pinned Native source implementation",
+          "aggregation": "P95",
+          "reference": "motion_geometry/physical.py at pinned legacy commit",
+          "support_population": null
+        },
+        "threshold_origin": "project_legacy_engineering_default",
+        "paper_universal_threshold": null,
+        "calibration_status": "NOT_CALIBRATED",
+        "contact_source": null,
+        "applicability": "Legacy protocol only; empirical validity unresolved",
+        "legacy_gate_unchanged": true
+      },
+      {
+        "metric": "extremity_rotation_step_rad_max",
+        "units": "rad",
+        "category": "B_plausibility_proxy",
+        "legacy_threshold": 1.4,
+        "direction": "upper",
+        "metric_definition": {
+          "legacy_key": "extremity_rotation_step_rad_max",
+          "operator": "pinned Native source implementation",
+          "aggregation": "maximum",
+          "reference": "motion_geometry/physical.py at pinned legacy commit",
+          "support_population": null
+        },
+        "threshold_origin": "project_legacy_engineering_default",
+        "paper_universal_threshold": null,
+        "calibration_status": "NOT_CALIBRATED",
+        "contact_source": null,
+        "applicability": "Legacy protocol only; empirical validity unresolved",
+        "legacy_gate_unchanged": true
+      },
+      {
+        "metric": "joint_angular_acceleration_rps2_p95",
+        "units": "rad/s^2",
+        "category": "B_plausibility_proxy",
+        "legacy_threshold": 900.0,
+        "direction": "upper",
+        "metric_definition": {
+          "legacy_key": "joint_angular_acceleration_rps2_p95",
+          "operator": "pinned Native source implementation",
+          "aggregation": "P95",
+          "reference": "motion_geometry/physical.py at pinned legacy commit",
+          "support_population": null
+        },
+        "threshold_origin": "project_legacy_engineering_default",
+        "paper_universal_threshold": null,
+        "calibration_status": "NOT_CALIBRATED",
+        "contact_source": null,
+        "applicability": "Legacy protocol only; empirical validity unresolved",
+        "legacy_gate_unchanged": true
+      },
+      {
+        "metric": "joint_angular_acceleration_rps2_max",
+        "units": "rad/s^2",
+        "category": "B_plausibility_proxy",
+        "legacy_threshold": 3000.0,
+        "direction": "upper",
+        "metric_definition": {
+          "legacy_key": "joint_angular_acceleration_rps2_max",
+          "operator": "pinned Native source implementation",
+          "aggregation": "maximum",
+          "reference": "motion_geometry/physical.py at pinned legacy commit",
+          "support_population": null
+        },
+        "threshold_origin": "project_legacy_engineering_default",
+        "paper_universal_threshold": null,
+        "calibration_status": "NOT_CALIBRATED",
+        "contact_source": null,
+        "applicability": "Legacy protocol only; empirical validity unresolved",
+        "legacy_gate_unchanged": true
+      },
+      {
+        "metric": "joint_angular_acceleration_window_p95_max_rps2",
+        "units": "rad/s^2",
+        "category": "B_plausibility_proxy",
+        "legacy_threshold": 1600.0,
+        "direction": "upper",
+        "metric_definition": {
+          "legacy_key": "joint_angular_acceleration_window_p95_max_rps2",
+          "operator": "pinned Native source implementation",
+          "aggregation": "max of1s-windowP95",
+          "reference": "motion_geometry/physical.py at pinned legacy commit",
+          "support_population": null
+        },
+        "threshold_origin": "project_legacy_engineering_default",
+        "paper_universal_threshold": null,
+        "calibration_status": "NOT_CALIBRATED",
+        "contact_source": null,
+        "applicability": "Legacy protocol only; empirical validity unresolved",
+        "legacy_gate_unchanged": true
+      }
+    ],
+    "legacy_gate_unchanged": true
+  },
+  "historical": {
+    "records": 182,
+    "unique_measurements": 61,
+    "skipped_different_or_unsealed": 22,
+    "legacy_replay_exact": true
+  },
+  "train": {
+    "windows": 1468,
+    "recordings": 708,
+    "choreographies": 60,
+    "connected_source_components": 6,
+    "legacy_passes": 40,
+    "legacy_replay_exact": true,
+    "reason_counts": {
+      "joint_jerk_mps3_max_too_high": 1045,
+      "foot_skate_mps_p95_too_high": 1423,
+      "foot_skate_mps_max_too_high": 1355,
+      "foot_support_drift_m_p95_too_high": 1303,
+      "foot_support_drift_m_max_too_high": 1164,
+      "joint_jerk_mps3_p95_too_high": 715,
+      "joint_jerk_window_p95_max_mps3_too_high": 594,
+      "extremity_jerk_mps3_p95_too_high": 985,
+      "extremity_jerk_window_p95_max_mps3_too_high": 886,
+      "joint_rotation_step_rad_max_too_high": 75,
+      "root_horizontal_drift_speed_mps_too_high": 71,
+      "foot_penetration_min_m_too_low": 57,
+      "root_vertical_speed_mps_p95_too_high": 152,
+      "joint_angular_acceleration_rps2_max_too_high": 11,
+      "rotation_near_pi_step_ratio_too_high": 2,
+      "joint_rotation_step_window_p95_max_rad_too_high": 10,
+      "joint_rotation_step_rad_p95_too_high": 45,
+      "root_horizontal_window_displacement_max_m_too_high": 1
+    },
+    "exceeding_frame_foot_ownership": {
+      "derived_only": 0,
+      "height_only": 141246,
+      "both": 22518
+    },
+    "ownership_population": "overlapping window-frame-foot observations, not independent source frames",
+    "recording_balanced_height_only_exceedance_fraction": 0.8249312256903119,
+    "independence_warning": "cluster summaries do not prove statistical independence",
+    "independent_real_contact_labels": 0
+  },
+  "calibration": {
+    "schema": "native_calibration_shadow_v2",
+    "status": "SHADOW_UNQUALIFIED",
+    "historical_train_windows": 1468,
+    "calibration_windows": 972,
+    "holdout_windows": 496,
+    "split": {
+      "rule": "hash-sorted existing connected source components; first ceil(2/3) calibration",
+      "calibration_components": 4,
+      "holdout_components": 2,
+      "shared_recording_choreography_music": false,
+      "fresh_blind_test": false
+    },
+    "metrics": [
+      {
+        "metric": "foot_skate_mps_p95",
+        "units": "m/s",
+        "category": "B_plausibility_proxy",
+        "legacy_threshold": 0.18,
+        "legacy_gate_unchanged": true,
+        "recording_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 3.631302452087402,
+          "interval95": [
+            3.428917742371559,
+            3.873840570449829
+          ],
+          "groups": 474,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "choreography_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 3.4700867176055907,
+          "interval95": [
+            3.0395429828763003,
+            3.794730329513549
+          ],
+          "groups": 40,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "connected_component_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 3.4700867176055907,
+          "interval95": [
+            2.561577796936037,
+            3.894899368286133
+          ],
+          "groups": 4,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "held_reference_windows": 496,
+        "held_legacy_exceedance_fraction": 0.9375,
+        "false_reject_rate": null,
+        "false_negative_rate": null,
+        "candidate_threshold": null,
+        "qualification": "BLOCKED_NO_INDEPENDENT_REAL_QUALITY_AND_CONTACT_LABELS",
+        "descriptive_quantile_is_not_a_threshold": true
+      },
+      {
+        "metric": "foot_skate_mps_max",
+        "units": "m/s",
+        "category": "B_plausibility_proxy",
+        "legacy_threshold": 0.6,
+        "legacy_gate_unchanged": true,
+        "recording_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 5.177799224853516,
+          "interval95": [
+            4.978150367736816,
+            5.396940231323242
+          ],
+          "groups": 474,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "choreography_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 5.0674309730529785,
+          "interval95": [
+            4.616971516609192,
+            5.329373359680176
+          ],
+          "groups": 40,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "connected_component_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 5.0674309730529785,
+          "interval95": [
+            4.562857627868652,
+            5.305390357971191
+          ],
+          "groups": 4,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "held_reference_windows": 496,
+        "held_legacy_exceedance_fraction": 0.8931451612903226,
+        "false_reject_rate": null,
+        "false_negative_rate": null,
+        "candidate_threshold": null,
+        "qualification": "BLOCKED_NO_INDEPENDENT_REAL_QUALITY_AND_CONTACT_LABELS",
+        "descriptive_quantile_is_not_a_threshold": true
+      },
+      {
+        "metric": "foot_support_drift_m_p95",
+        "units": "m",
+        "category": "B_plausibility_proxy",
+        "legacy_threshold": 0.06,
+        "legacy_gate_unchanged": true,
+        "recording_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 0.625822167393118,
+          "interval95": [
+            0.5698151379395915,
+            0.6955082675142635
+          ],
+          "groups": 474,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "choreography_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 0.6196281202384973,
+          "interval95": [
+            0.5015877762572026,
+            0.6994298237602036
+          ],
+          "groups": 40,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "connected_component_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 0.6210756051754462,
+          "interval95": [
+            0.3647259891911424,
+            0.7104430563585844
+          ],
+          "groups": 4,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "held_reference_windows": 496,
+        "held_legacy_exceedance_fraction": 0.9092741935483871,
+        "false_reject_rate": null,
+        "false_negative_rate": null,
+        "candidate_threshold": null,
+        "qualification": "BLOCKED_NO_INDEPENDENT_REAL_QUALITY_AND_CONTACT_LABELS",
+        "descriptive_quantile_is_not_a_threshold": true
+      },
+      {
+        "metric": "foot_support_drift_m_max",
+        "units": "m",
+        "category": "B_plausibility_proxy",
+        "legacy_threshold": 0.12,
+        "legacy_gate_unchanged": true,
+        "recording_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 0.7470826473171567,
+          "interval95": [
+            0.701184589230736,
+            0.8060216859336015
+          ],
+          "groups": 474,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "choreography_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 0.7364202981033262,
+          "interval95": [
+            0.6191539403777165,
+            0.8354322459427526
+          ],
+          "groups": 40,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "connected_component_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 0.7433268587578113,
+          "interval95": [
+            0.49346837714092046,
+            0.8354322459427526
+          ],
+          "groups": 4,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "held_reference_windows": 496,
+        "held_legacy_exceedance_fraction": 0.8064516129032258,
+        "false_reject_rate": null,
+        "false_negative_rate": null,
+        "candidate_threshold": null,
+        "qualification": "BLOCKED_NO_INDEPENDENT_REAL_QUALITY_AND_CONTACT_LABELS",
+        "descriptive_quantile_is_not_a_threshold": true
+      },
+      {
+        "metric": "foot_contact_height_m_max",
+        "units": "m",
+        "category": "B_plausibility_proxy",
+        "legacy_threshold": 0.1,
+        "legacy_gate_unchanged": true,
+        "recording_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 0.02637392282485962,
+          "interval95": [
+            0.0258406400680542,
+            0.02675049602985382
+          ],
+          "groups": 474,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "choreography_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 0.026472866535186768,
+          "interval95": [
+            0.025549092888832094,
+            0.0268285870552063
+          ],
+          "groups": 40,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "connected_component_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 0.026472866535186768,
+          "interval95": [
+            0.02423194944858551,
+            0.027427196502685547
+          ],
+          "groups": 4,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "held_reference_windows": 496,
+        "held_legacy_exceedance_fraction": 0.0,
+        "false_reject_rate": null,
+        "false_negative_rate": null,
+        "candidate_threshold": null,
+        "qualification": "BLOCKED_NO_INDEPENDENT_REAL_QUALITY_AND_CONTACT_LABELS",
+        "descriptive_quantile_is_not_a_threshold": true
+      },
+      {
+        "metric": "foot_penetration_min_m",
+        "units": "dimensionless",
+        "category": "B_plausibility_proxy",
+        "legacy_threshold": -0.05,
+        "legacy_gate_unchanged": true,
+        "recording_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": -0.040162861347198486,
+          "interval95": [
+            -0.044161783158779146,
+            -0.0380743145942688
+          ],
+          "groups": 474,
+          "samples": 972,
+          "quantile": 0.05,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "choreography_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": -0.040162861347198486,
+          "interval95": [
+            -0.04526287317276001,
+            -0.036427062749862675
+          ],
+          "groups": 40,
+          "samples": 972,
+          "quantile": 0.05,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "connected_component_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": -0.040162861347198486,
+          "interval95": [
+            -0.04616636037826538,
+            -0.029388606548309326
+          ],
+          "groups": 4,
+          "samples": 972,
+          "quantile": 0.05,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "held_reference_windows": 496,
+        "held_legacy_exceedance_fraction": 0.09274193548387097,
+        "false_reject_rate": null,
+        "false_negative_rate": null,
+        "candidate_threshold": null,
+        "qualification": "BLOCKED_NO_INDEPENDENT_REAL_QUALITY_AND_CONTACT_LABELS",
+        "descriptive_quantile_is_not_a_threshold": true
+      },
+      {
+        "metric": "joint_jerk_mps3_p95",
+        "units": "m/s^3",
+        "category": "B_plausibility_proxy",
+        "legacy_threshold": 810.0,
+        "legacy_gate_unchanged": true,
+        "recording_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 2150.280737304684,
+          "interval95": [
+            2004.4004776000959,
+            2465.8787109375
+          ],
+          "groups": 474,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "choreography_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 2054.1102172851556,
+          "interval95": [
+            1819.2041514587372,
+            2194.910744934081
+          ],
+          "groups": 40,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "connected_component_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 2054.1102172851556,
+          "interval95": [
+            1629.936291503905,
+            2439.3136108398385
+          ],
+          "groups": 4,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "held_reference_windows": 496,
+        "held_legacy_exceedance_fraction": 0.45161290322580644,
+        "false_reject_rate": null,
+        "false_negative_rate": null,
+        "candidate_threshold": null,
+        "qualification": "BLOCKED_NO_INDEPENDENT_REAL_QUALITY_AND_CONTACT_LABELS",
+        "descriptive_quantile_is_not_a_threshold": true
+      },
+      {
+        "metric": "joint_jerk_mps3_max",
+        "units": "m/s^3",
+        "category": "B_plausibility_proxy",
+        "legacy_threshold": 1620.0,
+        "legacy_gate_unchanged": true,
+        "recording_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 11886.0771484375,
+          "interval95": [
+            9811.501513671876,
+            12748.447265625
+          ],
+          "groups": 474,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "choreography_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 11727.50390625,
+          "interval95": [
+            8685.154467773438,
+            13467.53515625
+          ],
+          "groups": 40,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "connected_component_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 11727.50390625,
+          "interval95": [
+            6546.58154296875,
+            13572.6552734375
+          ],
+          "groups": 4,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "held_reference_windows": 496,
+        "held_legacy_exceedance_fraction": 0.5645161290322581,
+        "false_reject_rate": null,
+        "false_negative_rate": null,
+        "candidate_threshold": null,
+        "qualification": "BLOCKED_NO_INDEPENDENT_REAL_QUALITY_AND_CONTACT_LABELS",
+        "descriptive_quantile_is_not_a_threshold": true
+      },
+      {
+        "metric": "joint_jerk_window_p95_max_mps3",
+        "units": "m/s^3",
+        "category": "B_plausibility_proxy",
+        "legacy_threshold": 1080.0,
+        "legacy_gate_unchanged": true,
+        "recording_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 2642.398669433593,
+          "interval95": [
+            2349.107112426758,
+            3001.3234619140594
+          ],
+          "groups": 474,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "choreography_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 2408.0375488281243,
+          "interval95": [
+            2161.087866210937,
+            2927.6415649414043
+          ],
+          "groups": 40,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "connected_component_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 2408.0375488281243,
+          "interval95": [
+            1847.688302612304,
+            3076.2274169921857
+          ],
+          "groups": 4,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "held_reference_windows": 496,
+        "held_legacy_exceedance_fraction": 0.4213709677419355,
+        "false_reject_rate": null,
+        "false_negative_rate": null,
+        "candidate_threshold": null,
+        "qualification": "BLOCKED_NO_INDEPENDENT_REAL_QUALITY_AND_CONTACT_LABELS",
+        "descriptive_quantile_is_not_a_threshold": true
+      },
+      {
+        "metric": "extremity_jerk_mps3_p95",
+        "units": "m/s^3",
+        "category": "B_plausibility_proxy",
+        "legacy_threshold": 810.0,
+        "legacy_gate_unchanged": true,
+        "recording_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 3126.9747924804688,
+          "interval95": [
+            2862.1583251953125,
+            3605.9505004882812
+          ],
+          "groups": 474,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "choreography_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 2948.2362670898438,
+          "interval95": [
+            2530.214942932129,
+            3233.568115234375
+          ],
+          "groups": 40,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "connected_component_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 2948.2362670898438,
+          "interval95": [
+            2321.531379699707,
+            3605.9505004882812
+          ],
+          "groups": 4,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "held_reference_windows": 496,
+        "held_legacy_exceedance_fraction": 0.5201612903225806,
+        "false_reject_rate": null,
+        "false_negative_rate": null,
+        "candidate_threshold": null,
+        "qualification": "BLOCKED_NO_INDEPENDENT_REAL_QUALITY_AND_CONTACT_LABELS",
+        "descriptive_quantile_is_not_a_threshold": true
+      },
+      {
+        "metric": "extremity_jerk_window_p95_max_mps3",
+        "units": "m/s^3",
+        "category": "B_plausibility_proxy",
+        "legacy_threshold": 1080.0,
+        "legacy_gate_unchanged": true,
+        "recording_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 4075.831726074218,
+          "interval95": [
+            3552.187240295406,
+            4551.616113281246
+          ],
+          "groups": 474,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "choreography_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 3723.649560546871,
+          "interval95": [
+            3196.1776733398415,
+            4348.126262817381
+          ],
+          "groups": 40,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "connected_component_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 3723.649560546871,
+          "interval95": [
+            3013.392370605469,
+            4798.738452148437
+          ],
+          "groups": 4,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "held_reference_windows": 496,
+        "held_legacy_exceedance_fraction": 0.5141129032258065,
+        "false_reject_rate": null,
+        "false_negative_rate": null,
+        "candidate_threshold": null,
+        "qualification": "BLOCKED_NO_INDEPENDENT_REAL_QUALITY_AND_CONTACT_LABELS",
+        "descriptive_quantile_is_not_a_threshold": true
+      },
+      {
+        "metric": "root_y_robust_range_m",
+        "units": "m",
+        "category": "C_scene_task",
+        "legacy_threshold": 0.9,
+        "legacy_gate_unchanged": true,
+        "recording_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 0.28720535159111016,
+          "interval95": [
+            0.270266466140747,
+            0.30057050824165366
+          ],
+          "groups": 474,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "choreography_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 0.28776716113090517,
+          "interval95": [
+            0.2570950233936309,
+            0.3472420477867124
+          ],
+          "groups": 40,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "connected_component_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 0.28776716113090517,
+          "interval95": [
+            0.24866217070817964,
+            0.3546211314201353
+          ],
+          "groups": 4,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "held_reference_windows": 496,
+        "held_legacy_exceedance_fraction": 0.0,
+        "false_reject_rate": null,
+        "false_negative_rate": null,
+        "candidate_threshold": null,
+        "qualification": "BLOCKED_NO_INDEPENDENT_REAL_QUALITY_AND_CONTACT_LABELS",
+        "descriptive_quantile_is_not_a_threshold": true
+      },
+      {
+        "metric": "root_vertical_speed_mps_p95",
+        "units": "m/s",
+        "category": "B_plausibility_proxy",
+        "legacy_threshold": 1.25,
+        "legacy_gate_unchanged": true,
+        "recording_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 1.4932558536529537,
+          "interval95": [
+            1.3551228046417236,
+            1.5621797025203705
+          ],
+          "groups": 474,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "choreography_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 1.493779420852661,
+          "interval95": [
+            1.2426066398620605,
+            1.6918065547943113
+          ],
+          "groups": 40,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "connected_component_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 1.5068042278289795,
+          "interval95": [
+            1.1669268608093262,
+            1.6557819843292234
+          ],
+          "groups": 4,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "held_reference_windows": 496,
+        "held_legacy_exceedance_fraction": 0.07862903225806452,
+        "false_reject_rate": null,
+        "false_negative_rate": null,
+        "candidate_threshold": null,
+        "qualification": "BLOCKED_NO_INDEPENDENT_REAL_QUALITY_AND_CONTACT_LABELS",
+        "descriptive_quantile_is_not_a_threshold": true
+      },
+      {
+        "metric": "root_vertical_speed_mps_max",
+        "units": "m/s",
+        "category": "B_plausibility_proxy",
+        "legacy_threshold": 4.0,
+        "legacy_gate_unchanged": true,
+        "recording_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 1.7521870136260986,
+          "interval95": [
+            1.6105045080184937,
+            1.9043778777122498
+          ],
+          "groups": 474,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "choreography_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 1.7521870136260986,
+          "interval95": [
+            1.504830926656723,
+            1.9341051578521729
+          ],
+          "groups": 40,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "connected_component_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 1.7521870136260986,
+          "interval95": [
+            1.4065530896186829,
+            1.9246244430541992
+          ],
+          "groups": 4,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "held_reference_windows": 496,
+        "held_legacy_exceedance_fraction": 0.0,
+        "false_reject_rate": null,
+        "false_negative_rate": null,
+        "candidate_threshold": null,
+        "qualification": "BLOCKED_NO_INDEPENDENT_REAL_QUALITY_AND_CONTACT_LABELS",
+        "descriptive_quantile_is_not_a_threshold": true
+      },
+      {
+        "metric": "root_horizontal_radius_p95_m",
+        "units": "m",
+        "category": "C_scene_task",
+        "legacy_threshold": 1.8,
+        "legacy_gate_unchanged": true,
+        "recording_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 0.5539417743440745,
+          "interval95": [
+            0.5333522398148994,
+            0.6207686957419297
+          ],
+          "groups": 474,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "choreography_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 0.568481777130022,
+          "interval95": [
+            0.4816795266270804,
+            0.6739190234878335
+          ],
+          "groups": 40,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "connected_component_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 0.568481777130022,
+          "interval95": [
+            0.40646094809009425,
+            0.6747077777018345
+          ],
+          "groups": 4,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "held_reference_windows": 496,
+        "held_legacy_exceedance_fraction": 0.0,
+        "false_reject_rate": null,
+        "false_negative_rate": null,
+        "candidate_threshold": null,
+        "qualification": "BLOCKED_NO_INDEPENDENT_REAL_QUALITY_AND_CONTACT_LABELS",
+        "descriptive_quantile_is_not_a_threshold": true
+      },
+      {
+        "metric": "root_horizontal_radius_max_m",
+        "units": "m",
+        "category": "C_scene_task",
+        "legacy_threshold": 2.2,
+        "legacy_gate_unchanged": true,
+        "recording_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 0.5948365221230019,
+          "interval95": [
+            0.5633404327552897,
+            0.6477835032134939
+          ],
+          "groups": 474,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "choreography_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 0.6073496486145186,
+          "interval95": [
+            0.5124700205857077,
+            0.7114364222596993
+          ],
+          "groups": 40,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "connected_component_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 0.6073496486145186,
+          "interval95": [
+            0.4390657254264688,
+            0.7149841858337646
+          ],
+          "groups": 4,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "held_reference_windows": 496,
+        "held_legacy_exceedance_fraction": 0.0,
+        "false_reject_rate": null,
+        "false_negative_rate": null,
+        "candidate_threshold": null,
+        "qualification": "BLOCKED_NO_INDEPENDENT_REAL_QUALITY_AND_CONTACT_LABELS",
+        "descriptive_quantile_is_not_a_threshold": true
+      },
+      {
+        "metric": "root_horizontal_net_displacement_m",
+        "units": "m",
+        "category": "C_scene_task",
+        "legacy_threshold": 3.0,
+        "legacy_gate_unchanged": true,
+        "recording_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 0.5605268444553931,
+          "interval95": [
+            0.5214610990504659,
+            0.5851984783619398
+          ],
+          "groups": 474,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "choreography_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 0.5576365853199967,
+          "interval95": [
+            0.4568877435336239,
+            0.5894986565907406
+          ],
+          "groups": 40,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "connected_component_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 0.5576365853199967,
+          "interval95": [
+            0.4809230282888303,
+            0.5838119191199279
+          ],
+          "groups": 4,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "held_reference_windows": 496,
+        "held_legacy_exceedance_fraction": 0.0,
+        "false_reject_rate": null,
+        "false_negative_rate": null,
+        "candidate_threshold": null,
+        "qualification": "BLOCKED_NO_INDEPENDENT_REAL_QUALITY_AND_CONTACT_LABELS",
+        "descriptive_quantile_is_not_a_threshold": true
+      },
+      {
+        "metric": "root_horizontal_drift_speed_mps",
+        "units": "m/s",
+        "category": "C_scene_task",
+        "legacy_threshold": 0.12,
+        "legacy_gate_unchanged": true,
+        "recording_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 0.11285775391719324,
+          "interval95": [
+            0.10499216759405353,
+            0.11782519698562546
+          ],
+          "groups": 474,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "choreography_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 0.11227582254765034,
+          "interval95": [
+            0.09199082084569608,
+            0.11869100468269946
+          ],
+          "groups": 40,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "connected_component_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 0.11227582254765034,
+          "interval95": [
+            0.09683013992392557,
+            0.1175460239838781
+          ],
+          "groups": 4,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "held_reference_windows": 496,
+        "held_legacy_exceedance_fraction": 0.08266129032258064,
+        "false_reject_rate": null,
+        "false_negative_rate": null,
+        "candidate_threshold": null,
+        "qualification": "BLOCKED_NO_INDEPENDENT_REAL_QUALITY_AND_CONTACT_LABELS",
+        "descriptive_quantile_is_not_a_threshold": true
+      },
+      {
+        "metric": "root_horizontal_window_displacement_max_m",
+        "units": "m",
+        "category": "C_scene_task",
+        "legacy_threshold": 1.5,
+        "legacy_gate_unchanged": true,
+        "recording_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 0.5605268444553931,
+          "interval95": [
+            0.5214610990504659,
+            0.5851984783619398
+          ],
+          "groups": 474,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "choreography_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 0.5576365853199967,
+          "interval95": [
+            0.4568877435336239,
+            0.5894986565907406
+          ],
+          "groups": 40,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "connected_component_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 0.5576365853199967,
+          "interval95": [
+            0.4809230282888303,
+            0.5838119191199279
+          ],
+          "groups": 4,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "held_reference_windows": 496,
+        "held_legacy_exceedance_fraction": 0.0020161290322580645,
+        "false_reject_rate": null,
+        "false_negative_rate": null,
+        "candidate_threshold": null,
+        "qualification": "BLOCKED_NO_INDEPENDENT_REAL_QUALITY_AND_CONTACT_LABELS",
+        "descriptive_quantile_is_not_a_threshold": true
+      },
+      {
+        "metric": "rot6d_nonfinite_ratio",
+        "units": "dimensionless",
+        "category": "A_representation",
+        "legacy_threshold": 0.0,
+        "legacy_gate_unchanged": true,
+        "recording_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 0.0,
+          "interval95": [
+            0.0,
+            0.0
+          ],
+          "groups": 474,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "choreography_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 0.0,
+          "interval95": [
+            0.0,
+            0.0
+          ],
+          "groups": 40,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "connected_component_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 0.0,
+          "interval95": [
+            0.0,
+            0.0
+          ],
+          "groups": 4,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "held_reference_windows": 496,
+        "held_legacy_exceedance_fraction": 0.0,
+        "false_reject_rate": null,
+        "false_negative_rate": null,
+        "candidate_threshold": null,
+        "qualification": "BLOCKED_NO_INDEPENDENT_REAL_QUALITY_AND_CONTACT_LABELS",
+        "descriptive_quantile_is_not_a_threshold": true
+      },
+      {
+        "metric": "rot6d_degenerate_ratio",
+        "units": "dimensionless",
+        "category": "A_representation",
+        "legacy_threshold": 0.0,
+        "legacy_gate_unchanged": true,
+        "recording_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 0.0,
+          "interval95": [
+            0.0,
+            0.0
+          ],
+          "groups": 474,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "choreography_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 0.0,
+          "interval95": [
+            0.0,
+            0.0
+          ],
+          "groups": 40,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "connected_component_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 0.0,
+          "interval95": [
+            0.0,
+            0.0
+          ],
+          "groups": 4,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "held_reference_windows": 496,
+        "held_legacy_exceedance_fraction": 0.0,
+        "false_reject_rate": null,
+        "false_negative_rate": null,
+        "candidate_threshold": null,
+        "qualification": "BLOCKED_NO_INDEPENDENT_REAL_QUALITY_AND_CONTACT_LABELS",
+        "descriptive_quantile_is_not_a_threshold": true
+      },
+      {
+        "metric": "rot6d_collinearity_abs_p99",
+        "units": "dimensionless",
+        "category": "B_plausibility_proxy",
+        "legacy_threshold": 0.995,
+        "legacy_gate_unchanged": true,
+        "recording_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 4.1627490304404315e-08,
+          "interval95": [
+            4.0747126645035026e-08,
+            4.2245956107376017e-08
+          ],
+          "groups": 474,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "choreography_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 4.161598099981761e-08,
+          "interval95": [
+            4.046997988001589e-08,
+            4.2513100607813966e-08
+          ],
+          "groups": 40,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "connected_component_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 4.161598099981761e-08,
+          "interval95": [
+            4.0247138638667025e-08,
+            4.270504200691021e-08
+          ],
+          "groups": 4,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "held_reference_windows": 496,
+        "held_legacy_exceedance_fraction": 0.0,
+        "false_reject_rate": null,
+        "false_negative_rate": null,
+        "candidate_threshold": null,
+        "qualification": "BLOCKED_NO_INDEPENDENT_REAL_QUALITY_AND_CONTACT_LABELS",
+        "descriptive_quantile_is_not_a_threshold": true
+      },
+      {
+        "metric": "rotation_near_pi_step_ratio",
+        "units": "dimensionless",
+        "category": "B_plausibility_proxy",
+        "legacy_threshold": 0.0,
+        "legacy_gate_unchanged": true,
+        "recording_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 0.0,
+          "interval95": [
+            0.0,
+            0.0
+          ],
+          "groups": 474,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "choreography_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 0.0,
+          "interval95": [
+            0.0,
+            0.0
+          ],
+          "groups": 40,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "connected_component_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 0.0,
+          "interval95": [
+            0.0,
+            0.0
+          ],
+          "groups": 4,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "held_reference_windows": 496,
+        "held_legacy_exceedance_fraction": 0.004032258064516129,
+        "false_reject_rate": null,
+        "false_negative_rate": null,
+        "candidate_threshold": null,
+        "qualification": "BLOCKED_NO_INDEPENDENT_REAL_QUALITY_AND_CONTACT_LABELS",
+        "descriptive_quantile_is_not_a_threshold": true
+      },
+      {
+        "metric": "joint_rotation_step_rad_p95",
+        "units": "rad",
+        "category": "B_plausibility_proxy",
+        "legacy_threshold": 0.35,
+        "legacy_gate_unchanged": true,
+        "recording_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 0.3323362395167351,
+          "interval95": [
+            0.315465928055346,
+            0.35015100762248036
+          ],
+          "groups": 474,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "choreography_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 0.3232174292206764,
+          "interval95": [
+            0.29904957972466945,
+            0.34062905609607697
+          ],
+          "groups": 40,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "connected_component_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 0.32091909646987915,
+          "interval95": [
+            0.27099633738398554,
+            0.3526765778660774
+          ],
+          "groups": 4,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "held_reference_windows": 496,
+        "held_legacy_exceedance_fraction": 0.04233870967741935,
+        "false_reject_rate": null,
+        "false_negative_rate": null,
+        "candidate_threshold": null,
+        "qualification": "BLOCKED_NO_INDEPENDENT_REAL_QUALITY_AND_CONTACT_LABELS",
+        "descriptive_quantile_is_not_a_threshold": true
+      },
+      {
+        "metric": "joint_rotation_step_rad_max",
+        "units": "rad",
+        "category": "B_plausibility_proxy",
+        "legacy_threshold": 1.2,
+        "legacy_gate_unchanged": true,
+        "recording_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 1.1455934047698975,
+          "interval95": [
+            1.0602185785770417,
+            1.3364183902740479
+          ],
+          "groups": 474,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "choreography_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 1.0906940698623657,
+          "interval95": [
+            1.0126558542251587,
+            1.1607235670089722
+          ],
+          "groups": 40,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "connected_component_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 1.0906940698623657,
+          "interval95": [
+            0.809149818122387,
+            1.2705607414245605
+          ],
+          "groups": 4,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "held_reference_windows": 496,
+        "held_legacy_exceedance_fraction": 0.08064516129032258,
+        "false_reject_rate": null,
+        "false_negative_rate": null,
+        "candidate_threshold": null,
+        "qualification": "BLOCKED_NO_INDEPENDENT_REAL_QUALITY_AND_CONTACT_LABELS",
+        "descriptive_quantile_is_not_a_threshold": true
+      },
+      {
+        "metric": "joint_rotation_step_window_p95_max_rad",
+        "units": "rad",
+        "category": "B_plausibility_proxy",
+        "legacy_threshold": 0.5,
+        "legacy_gate_unchanged": true,
+        "recording_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 0.3681501865386962,
+          "interval95": [
+            0.3548920407891273,
+            0.39805470556020695
+          ],
+          "groups": 474,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "choreography_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 0.3605230584740636,
+          "interval95": [
+            0.3343477078154682,
+            0.37726633548736555
+          ],
+          "groups": 40,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "connected_component_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 0.3605230584740636,
+          "interval95": [
+            0.30445228643715344,
+            0.39307675510644907
+          ],
+          "groups": 4,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "held_reference_windows": 496,
+        "held_legacy_exceedance_fraction": 0.014112903225806451,
+        "false_reject_rate": null,
+        "false_negative_rate": null,
+        "candidate_threshold": null,
+        "qualification": "BLOCKED_NO_INDEPENDENT_REAL_QUALITY_AND_CONTACT_LABELS",
+        "descriptive_quantile_is_not_a_threshold": true
+      },
+      {
+        "metric": "extremity_rotation_step_rad_p95",
+        "units": "rad",
+        "category": "B_plausibility_proxy",
+        "legacy_threshold": 0.45,
+        "legacy_gate_unchanged": true,
+        "recording_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 0.00793942757882178,
+          "interval95": [
+            0.007352968328632415,
+            0.008544834190979601
+          ],
+          "groups": 474,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "choreography_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 0.007556814886629582,
+          "interval95": [
+            0.006782394414767624,
+            0.008471313025802375
+          ],
+          "groups": 40,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "connected_component_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 0.007556814886629582,
+          "interval95": [
+            0.0063831711752573034,
+            0.008765702415257695
+          ],
+          "groups": 4,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "held_reference_windows": 496,
+        "held_legacy_exceedance_fraction": 0.0,
+        "false_reject_rate": null,
+        "false_negative_rate": null,
+        "candidate_threshold": null,
+        "qualification": "BLOCKED_NO_INDEPENDENT_REAL_QUALITY_AND_CONTACT_LABELS",
+        "descriptive_quantile_is_not_a_threshold": true
+      },
+      {
+        "metric": "extremity_rotation_step_rad_max",
+        "units": "rad",
+        "category": "B_plausibility_proxy",
+        "legacy_threshold": 1.4,
+        "legacy_gate_unchanged": true,
+        "recording_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 0.018143756315112114,
+          "interval95": [
+            0.01667044749483466,
+            0.020323170349001884
+          ],
+          "groups": 474,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "choreography_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 0.017511246725916862,
+          "interval95": [
+            0.01534620113670826,
+            0.0194625873118639
+          ],
+          "groups": 40,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "connected_component_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 0.017511246725916862,
+          "interval95": [
+            0.012438815576024354,
+            0.023604610934853554
+          ],
+          "groups": 4,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "held_reference_windows": 496,
+        "held_legacy_exceedance_fraction": 0.0,
+        "false_reject_rate": null,
+        "false_negative_rate": null,
+        "candidate_threshold": null,
+        "qualification": "BLOCKED_NO_INDEPENDENT_REAL_QUALITY_AND_CONTACT_LABELS",
+        "descriptive_quantile_is_not_a_threshold": true
+      },
+      {
+        "metric": "joint_angular_acceleration_rps2_p95",
+        "units": "rad/s^2",
+        "category": "B_plausibility_proxy",
+        "legacy_threshold": 900.0,
+        "legacy_gate_unchanged": true,
+        "recording_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 235.83204956054684,
+          "interval95": [
+            207.60246332168572,
+            247.5120071411131
+          ],
+          "groups": 474,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "choreography_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 212.58299102783204,
+          "interval95": [
+            184.63823776245118,
+            239.47619781494123
+          ],
+          "groups": 40,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "connected_component_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 212.58299102783204,
+          "interval95": [
+            156.88091089248647,
+            247.5120071411131
+          ],
+          "groups": 4,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "held_reference_windows": 496,
+        "held_legacy_exceedance_fraction": 0.0,
+        "false_reject_rate": null,
+        "false_negative_rate": null,
+        "candidate_threshold": null,
+        "qualification": "BLOCKED_NO_INDEPENDENT_REAL_QUALITY_AND_CONTACT_LABELS",
+        "descriptive_quantile_is_not_a_threshold": true
+      },
+      {
+        "metric": "joint_angular_acceleration_rps2_max",
+        "units": "rad/s^2",
+        "category": "B_plausibility_proxy",
+        "legacy_threshold": 3000.0,
+        "legacy_gate_unchanged": true,
+        "recording_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 1024.9561767578125,
+          "interval95": [
+            917.2291091918945,
+            1232.8876953125
+          ],
+          "groups": 474,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "choreography_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 980.0465087890625,
+          "interval95": [
+            829.4151214599609,
+            1061.740478515625
+          ],
+          "groups": 40,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "connected_component_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 980.0465087890625,
+          "interval95": [
+            635.0429428100587,
+            1146.72216796875
+          ],
+          "groups": 4,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "held_reference_windows": 496,
+        "held_legacy_exceedance_fraction": 0.018145161290322582,
+        "false_reject_rate": null,
+        "false_negative_rate": null,
+        "candidate_threshold": null,
+        "qualification": "BLOCKED_NO_INDEPENDENT_REAL_QUALITY_AND_CONTACT_LABELS",
+        "descriptive_quantile_is_not_a_threshold": true
+      },
+      {
+        "metric": "joint_angular_acceleration_window_p95_max_rps2",
+        "units": "rad/s^2",
+        "category": "B_plausibility_proxy",
+        "legacy_threshold": 1600.0,
+        "legacy_gate_unchanged": true,
+        "recording_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 270.4358581542968,
+          "interval95": [
+            249.41547088623042,
+            292.2824432373045
+          ],
+          "groups": 474,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "choreography_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 256.3621292114256,
+          "interval95": [
+            217.21152954101547,
+            274.22373046875
+          ],
+          "groups": 40,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "connected_component_grouped": {
+          "status": "DESCRIPTIVE_ONLY",
+          "value": 256.3621292114256,
+          "interval95": [
+            176.12246627807616,
+            291.2138259887694
+          ],
+          "groups": 4,
+          "samples": 972,
+          "quantile": 0.95,
+          "iterations": 300,
+          "seed": 20261116,
+          "estimand": "equal cluster weight, equal window weight within cluster",
+          "interval_method": "cluster resampling percentile interval; independence/coverage not established",
+          "one_group_interval_undefined": false
+        },
+        "held_reference_windows": 496,
+        "held_legacy_exceedance_fraction": 0.0,
+        "false_reject_rate": null,
+        "false_negative_rate": null,
+        "candidate_threshold": null,
+        "qualification": "BLOCKED_NO_INDEPENDENT_REAL_QUALITY_AND_CONTACT_LABELS",
+        "descriptive_quantile_is_not_a_threshold": true
+      }
+    ],
+    "operational_qualified": false,
+    "can_route": false,
+    "independent_quality_labels": 0,
+    "independent_contact_labels": 0,
+    "optimizer_calls": 0,
+    "human_false_rejection_rate": null,
+    "expert_agreement": null,
+    "reason": "Reference exceedance is not false rejection; fitted motions were not independently certified high quality"
+  },
+  "labelled_candidates": {
+    "schema": "externally_labelled_native_candidates_v1",
+    "records": [
+      {
+        "metric": "foot_skate_mps_p95",
+        "candidate_threshold": null,
+        "statistics": null,
+        "candidate_population": "independently labelled static adjacent-frame pairs",
+        "replaces_legacy_measurement": false,
+        "independent_good_calibration": 0,
+        "independent_good_holdout": 0,
+        "independent_error_holdout": 0,
+        "false_reject_rate": null,
+        "missed_error_rate": null,
+        "false_reject_statistics": null,
+        "missed_error_statistics": null,
+        "blockers": [
+          "NO_INDEPENDENT_GOOD_CALIBRATION_POPULATION",
+          "NO_INDEPENDENT_GOOD_HOLDOUT",
+          "NO_INDEPENDENT_ERROR_HOLDOUT",
+          "FEWER_THAN_FIVE_CALIBRATION_COMPONENTS"
+        ],
+        "mode": "SHADOW",
+        "operational_qualified": false,
+        "can_route": false,
+        "scope": "annotation-conditioned proposal, not universal physical law or automatic release"
+      },
+      {
+        "metric": "foot_skate_mps_max",
+        "candidate_threshold": null,
+        "statistics": null,
+        "candidate_population": "independently labelled static adjacent-frame pairs",
+        "replaces_legacy_measurement": false,
+        "independent_good_calibration": 0,
+        "independent_good_holdout": 0,
+        "independent_error_holdout": 0,
+        "false_reject_rate": null,
+        "missed_error_rate": null,
+        "false_reject_statistics": null,
+        "missed_error_statistics": null,
+        "blockers": [
+          "NO_INDEPENDENT_GOOD_CALIBRATION_POPULATION",
+          "NO_INDEPENDENT_GOOD_HOLDOUT",
+          "NO_INDEPENDENT_ERROR_HOLDOUT",
+          "FEWER_THAN_FIVE_CALIBRATION_COMPONENTS"
+        ],
+        "mode": "SHADOW",
+        "operational_qualified": false,
+        "can_route": false,
+        "scope": "annotation-conditioned proposal, not universal physical law or automatic release"
+      },
+      {
+        "metric": "foot_support_drift_m_p95",
+        "candidate_threshold": null,
+        "statistics": null,
+        "candidate_population": "independently labelled static stance segments",
+        "replaces_legacy_measurement": false,
+        "independent_good_calibration": 0,
+        "independent_good_holdout": 0,
+        "independent_error_holdout": 0,
+        "false_reject_rate": null,
+        "missed_error_rate": null,
+        "false_reject_statistics": null,
+        "missed_error_statistics": null,
+        "blockers": [
+          "NO_INDEPENDENT_GOOD_CALIBRATION_POPULATION",
+          "NO_INDEPENDENT_GOOD_HOLDOUT",
+          "NO_INDEPENDENT_ERROR_HOLDOUT",
+          "FEWER_THAN_FIVE_CALIBRATION_COMPONENTS"
+        ],
+        "mode": "SHADOW",
+        "operational_qualified": false,
+        "can_route": false,
+        "scope": "annotation-conditioned proposal, not universal physical law or automatic release"
+      },
+      {
+        "metric": "foot_support_drift_m_max",
+        "candidate_threshold": null,
+        "statistics": null,
+        "candidate_population": "independently labelled static stance segments",
+        "replaces_legacy_measurement": false,
+        "independent_good_calibration": 0,
+        "independent_good_holdout": 0,
+        "independent_error_holdout": 0,
+        "false_reject_rate": null,
+        "missed_error_rate": null,
+        "false_reject_statistics": null,
+        "missed_error_statistics": null,
+        "blockers": [
+          "NO_INDEPENDENT_GOOD_CALIBRATION_POPULATION",
+          "NO_INDEPENDENT_GOOD_HOLDOUT",
+          "NO_INDEPENDENT_ERROR_HOLDOUT",
+          "FEWER_THAN_FIVE_CALIBRATION_COMPONENTS"
+        ],
+        "mode": "SHADOW",
+        "operational_qualified": false,
+        "can_route": false,
+        "scope": "annotation-conditioned proposal, not universal physical law or automatic release"
+      },
+      {
+        "metric": "foot_contact_height_m_max",
+        "candidate_threshold": null,
+        "statistics": null,
+        "candidate_population": "same continuous observable; labelled quality population",
+        "replaces_legacy_measurement": false,
+        "independent_good_calibration": 0,
+        "independent_good_holdout": 0,
+        "independent_error_holdout": 0,
+        "false_reject_rate": null,
+        "missed_error_rate": null,
+        "false_reject_statistics": null,
+        "missed_error_statistics": null,
+        "blockers": [
+          "NO_INDEPENDENT_GOOD_CALIBRATION_POPULATION",
+          "NO_INDEPENDENT_GOOD_HOLDOUT",
+          "NO_INDEPENDENT_ERROR_HOLDOUT",
+          "FEWER_THAN_FIVE_CALIBRATION_COMPONENTS"
+        ],
+        "mode": "SHADOW",
+        "operational_qualified": false,
+        "can_route": false,
+        "scope": "annotation-conditioned proposal, not universal physical law or automatic release"
+      },
+      {
+        "metric": "foot_penetration_min_m",
+        "candidate_threshold": null,
+        "statistics": null,
+        "candidate_population": "same continuous observable; labelled quality population",
+        "replaces_legacy_measurement": false,
+        "independent_good_calibration": 0,
+        "independent_good_holdout": 0,
+        "independent_error_holdout": 0,
+        "false_reject_rate": null,
+        "missed_error_rate": null,
+        "false_reject_statistics": null,
+        "missed_error_statistics": null,
+        "blockers": [
+          "NO_INDEPENDENT_GOOD_CALIBRATION_POPULATION",
+          "NO_INDEPENDENT_GOOD_HOLDOUT",
+          "NO_INDEPENDENT_ERROR_HOLDOUT",
+          "FEWER_THAN_FIVE_CALIBRATION_COMPONENTS"
+        ],
+        "mode": "SHADOW",
+        "operational_qualified": false,
+        "can_route": false,
+        "scope": "annotation-conditioned proposal, not universal physical law or automatic release"
+      },
+      {
+        "metric": "joint_jerk_mps3_p95",
+        "candidate_threshold": null,
+        "statistics": null,
+        "candidate_population": "same continuous observable; labelled quality population",
+        "replaces_legacy_measurement": false,
+        "independent_good_calibration": 0,
+        "independent_good_holdout": 0,
+        "independent_error_holdout": 0,
+        "false_reject_rate": null,
+        "missed_error_rate": null,
+        "false_reject_statistics": null,
+        "missed_error_statistics": null,
+        "blockers": [
+          "NO_INDEPENDENT_GOOD_CALIBRATION_POPULATION",
+          "NO_INDEPENDENT_GOOD_HOLDOUT",
+          "NO_INDEPENDENT_ERROR_HOLDOUT",
+          "FEWER_THAN_FIVE_CALIBRATION_COMPONENTS"
+        ],
+        "mode": "SHADOW",
+        "operational_qualified": false,
+        "can_route": false,
+        "scope": "annotation-conditioned proposal, not universal physical law or automatic release"
+      },
+      {
+        "metric": "joint_jerk_mps3_max",
+        "candidate_threshold": null,
+        "statistics": null,
+        "candidate_population": "same continuous observable; labelled quality population",
+        "replaces_legacy_measurement": false,
+        "independent_good_calibration": 0,
+        "independent_good_holdout": 0,
+        "independent_error_holdout": 0,
+        "false_reject_rate": null,
+        "missed_error_rate": null,
+        "false_reject_statistics": null,
+        "missed_error_statistics": null,
+        "blockers": [
+          "NO_INDEPENDENT_GOOD_CALIBRATION_POPULATION",
+          "NO_INDEPENDENT_GOOD_HOLDOUT",
+          "NO_INDEPENDENT_ERROR_HOLDOUT",
+          "FEWER_THAN_FIVE_CALIBRATION_COMPONENTS"
+        ],
+        "mode": "SHADOW",
+        "operational_qualified": false,
+        "can_route": false,
+        "scope": "annotation-conditioned proposal, not universal physical law or automatic release"
+      },
+      {
+        "metric": "joint_jerk_window_p95_max_mps3",
+        "candidate_threshold": null,
+        "statistics": null,
+        "candidate_population": "same continuous observable; labelled quality population",
+        "replaces_legacy_measurement": false,
+        "independent_good_calibration": 0,
+        "independent_good_holdout": 0,
+        "independent_error_holdout": 0,
+        "false_reject_rate": null,
+        "missed_error_rate": null,
+        "false_reject_statistics": null,
+        "missed_error_statistics": null,
+        "blockers": [
+          "NO_INDEPENDENT_GOOD_CALIBRATION_POPULATION",
+          "NO_INDEPENDENT_GOOD_HOLDOUT",
+          "NO_INDEPENDENT_ERROR_HOLDOUT",
+          "FEWER_THAN_FIVE_CALIBRATION_COMPONENTS"
+        ],
+        "mode": "SHADOW",
+        "operational_qualified": false,
+        "can_route": false,
+        "scope": "annotation-conditioned proposal, not universal physical law or automatic release"
+      },
+      {
+        "metric": "extremity_jerk_mps3_p95",
+        "candidate_threshold": null,
+        "statistics": null,
+        "candidate_population": "same continuous observable; labelled quality population",
+        "replaces_legacy_measurement": false,
+        "independent_good_calibration": 0,
+        "independent_good_holdout": 0,
+        "independent_error_holdout": 0,
+        "false_reject_rate": null,
+        "missed_error_rate": null,
+        "false_reject_statistics": null,
+        "missed_error_statistics": null,
+        "blockers": [
+          "NO_INDEPENDENT_GOOD_CALIBRATION_POPULATION",
+          "NO_INDEPENDENT_GOOD_HOLDOUT",
+          "NO_INDEPENDENT_ERROR_HOLDOUT",
+          "FEWER_THAN_FIVE_CALIBRATION_COMPONENTS"
+        ],
+        "mode": "SHADOW",
+        "operational_qualified": false,
+        "can_route": false,
+        "scope": "annotation-conditioned proposal, not universal physical law or automatic release"
+      },
+      {
+        "metric": "extremity_jerk_window_p95_max_mps3",
+        "candidate_threshold": null,
+        "statistics": null,
+        "candidate_population": "same continuous observable; labelled quality population",
+        "replaces_legacy_measurement": false,
+        "independent_good_calibration": 0,
+        "independent_good_holdout": 0,
+        "independent_error_holdout": 0,
+        "false_reject_rate": null,
+        "missed_error_rate": null,
+        "false_reject_statistics": null,
+        "missed_error_statistics": null,
+        "blockers": [
+          "NO_INDEPENDENT_GOOD_CALIBRATION_POPULATION",
+          "NO_INDEPENDENT_GOOD_HOLDOUT",
+          "NO_INDEPENDENT_ERROR_HOLDOUT",
+          "FEWER_THAN_FIVE_CALIBRATION_COMPONENTS"
+        ],
+        "mode": "SHADOW",
+        "operational_qualified": false,
+        "can_route": false,
+        "scope": "annotation-conditioned proposal, not universal physical law or automatic release"
+      },
+      {
+        "metric": "root_y_robust_range_m",
+        "candidate_threshold": null,
+        "statistics": null,
+        "candidate_population": "same continuous observable; labelled quality population",
+        "replaces_legacy_measurement": false,
+        "independent_good_calibration": 0,
+        "independent_good_holdout": 0,
+        "independent_error_holdout": 0,
+        "false_reject_rate": null,
+        "missed_error_rate": null,
+        "false_reject_statistics": null,
+        "missed_error_statistics": null,
+        "blockers": [
+          "NO_INDEPENDENT_GOOD_CALIBRATION_POPULATION",
+          "NO_INDEPENDENT_GOOD_HOLDOUT",
+          "NO_INDEPENDENT_ERROR_HOLDOUT",
+          "FEWER_THAN_FIVE_CALIBRATION_COMPONENTS"
+        ],
+        "mode": "SHADOW",
+        "operational_qualified": false,
+        "can_route": false,
+        "scope": "annotation-conditioned proposal, not universal physical law or automatic release"
+      },
+      {
+        "metric": "root_vertical_speed_mps_p95",
+        "candidate_threshold": null,
+        "statistics": null,
+        "candidate_population": "same continuous observable; labelled quality population",
+        "replaces_legacy_measurement": false,
+        "independent_good_calibration": 0,
+        "independent_good_holdout": 0,
+        "independent_error_holdout": 0,
+        "false_reject_rate": null,
+        "missed_error_rate": null,
+        "false_reject_statistics": null,
+        "missed_error_statistics": null,
+        "blockers": [
+          "NO_INDEPENDENT_GOOD_CALIBRATION_POPULATION",
+          "NO_INDEPENDENT_GOOD_HOLDOUT",
+          "NO_INDEPENDENT_ERROR_HOLDOUT",
+          "FEWER_THAN_FIVE_CALIBRATION_COMPONENTS"
+        ],
+        "mode": "SHADOW",
+        "operational_qualified": false,
+        "can_route": false,
+        "scope": "annotation-conditioned proposal, not universal physical law or automatic release"
+      },
+      {
+        "metric": "root_vertical_speed_mps_max",
+        "candidate_threshold": null,
+        "statistics": null,
+        "candidate_population": "same continuous observable; labelled quality population",
+        "replaces_legacy_measurement": false,
+        "independent_good_calibration": 0,
+        "independent_good_holdout": 0,
+        "independent_error_holdout": 0,
+        "false_reject_rate": null,
+        "missed_error_rate": null,
+        "false_reject_statistics": null,
+        "missed_error_statistics": null,
+        "blockers": [
+          "NO_INDEPENDENT_GOOD_CALIBRATION_POPULATION",
+          "NO_INDEPENDENT_GOOD_HOLDOUT",
+          "NO_INDEPENDENT_ERROR_HOLDOUT",
+          "FEWER_THAN_FIVE_CALIBRATION_COMPONENTS"
+        ],
+        "mode": "SHADOW",
+        "operational_qualified": false,
+        "can_route": false,
+        "scope": "annotation-conditioned proposal, not universal physical law or automatic release"
+      },
+      {
+        "metric": "root_horizontal_radius_p95_m",
+        "candidate_threshold": null,
+        "statistics": null,
+        "candidate_population": "same continuous observable; labelled quality population",
+        "replaces_legacy_measurement": false,
+        "independent_good_calibration": 0,
+        "independent_good_holdout": 0,
+        "independent_error_holdout": 0,
+        "false_reject_rate": null,
+        "missed_error_rate": null,
+        "false_reject_statistics": null,
+        "missed_error_statistics": null,
+        "blockers": [
+          "NO_INDEPENDENT_GOOD_CALIBRATION_POPULATION",
+          "NO_INDEPENDENT_GOOD_HOLDOUT",
+          "NO_INDEPENDENT_ERROR_HOLDOUT",
+          "FEWER_THAN_FIVE_CALIBRATION_COMPONENTS"
+        ],
+        "mode": "SHADOW",
+        "operational_qualified": false,
+        "can_route": false,
+        "scope": "annotation-conditioned proposal, not universal physical law or automatic release"
+      },
+      {
+        "metric": "root_horizontal_radius_max_m",
+        "candidate_threshold": null,
+        "statistics": null,
+        "candidate_population": "same continuous observable; labelled quality population",
+        "replaces_legacy_measurement": false,
+        "independent_good_calibration": 0,
+        "independent_good_holdout": 0,
+        "independent_error_holdout": 0,
+        "false_reject_rate": null,
+        "missed_error_rate": null,
+        "false_reject_statistics": null,
+        "missed_error_statistics": null,
+        "blockers": [
+          "NO_INDEPENDENT_GOOD_CALIBRATION_POPULATION",
+          "NO_INDEPENDENT_GOOD_HOLDOUT",
+          "NO_INDEPENDENT_ERROR_HOLDOUT",
+          "FEWER_THAN_FIVE_CALIBRATION_COMPONENTS"
+        ],
+        "mode": "SHADOW",
+        "operational_qualified": false,
+        "can_route": false,
+        "scope": "annotation-conditioned proposal, not universal physical law or automatic release"
+      },
+      {
+        "metric": "root_horizontal_net_displacement_m",
+        "candidate_threshold": null,
+        "statistics": null,
+        "candidate_population": "same continuous observable; labelled quality population",
+        "replaces_legacy_measurement": false,
+        "independent_good_calibration": 0,
+        "independent_good_holdout": 0,
+        "independent_error_holdout": 0,
+        "false_reject_rate": null,
+        "missed_error_rate": null,
+        "false_reject_statistics": null,
+        "missed_error_statistics": null,
+        "blockers": [
+          "NO_INDEPENDENT_GOOD_CALIBRATION_POPULATION",
+          "NO_INDEPENDENT_GOOD_HOLDOUT",
+          "NO_INDEPENDENT_ERROR_HOLDOUT",
+          "FEWER_THAN_FIVE_CALIBRATION_COMPONENTS"
+        ],
+        "mode": "SHADOW",
+        "operational_qualified": false,
+        "can_route": false,
+        "scope": "annotation-conditioned proposal, not universal physical law or automatic release"
+      },
+      {
+        "metric": "root_horizontal_drift_speed_mps",
+        "candidate_threshold": null,
+        "statistics": null,
+        "candidate_population": "same continuous observable; labelled quality population",
+        "replaces_legacy_measurement": false,
+        "independent_good_calibration": 0,
+        "independent_good_holdout": 0,
+        "independent_error_holdout": 0,
+        "false_reject_rate": null,
+        "missed_error_rate": null,
+        "false_reject_statistics": null,
+        "missed_error_statistics": null,
+        "blockers": [
+          "NO_INDEPENDENT_GOOD_CALIBRATION_POPULATION",
+          "NO_INDEPENDENT_GOOD_HOLDOUT",
+          "NO_INDEPENDENT_ERROR_HOLDOUT",
+          "FEWER_THAN_FIVE_CALIBRATION_COMPONENTS"
+        ],
+        "mode": "SHADOW",
+        "operational_qualified": false,
+        "can_route": false,
+        "scope": "annotation-conditioned proposal, not universal physical law or automatic release"
+      },
+      {
+        "metric": "root_horizontal_window_displacement_max_m",
+        "candidate_threshold": null,
+        "statistics": null,
+        "candidate_population": "same continuous observable; labelled quality population",
+        "replaces_legacy_measurement": false,
+        "independent_good_calibration": 0,
+        "independent_good_holdout": 0,
+        "independent_error_holdout": 0,
+        "false_reject_rate": null,
+        "missed_error_rate": null,
+        "false_reject_statistics": null,
+        "missed_error_statistics": null,
+        "blockers": [
+          "NO_INDEPENDENT_GOOD_CALIBRATION_POPULATION",
+          "NO_INDEPENDENT_GOOD_HOLDOUT",
+          "NO_INDEPENDENT_ERROR_HOLDOUT",
+          "FEWER_THAN_FIVE_CALIBRATION_COMPONENTS"
+        ],
+        "mode": "SHADOW",
+        "operational_qualified": false,
+        "can_route": false,
+        "scope": "annotation-conditioned proposal, not universal physical law or automatic release"
+      },
+      {
+        "metric": "rot6d_nonfinite_ratio",
+        "candidate_threshold": null,
+        "statistics": null,
+        "candidate_population": "same continuous observable; labelled quality population",
+        "replaces_legacy_measurement": false,
+        "independent_good_calibration": 0,
+        "independent_good_holdout": 0,
+        "independent_error_holdout": 0,
+        "false_reject_rate": null,
+        "missed_error_rate": null,
+        "false_reject_statistics": null,
+        "missed_error_statistics": null,
+        "blockers": [
+          "NO_INDEPENDENT_GOOD_CALIBRATION_POPULATION",
+          "NO_INDEPENDENT_GOOD_HOLDOUT",
+          "NO_INDEPENDENT_ERROR_HOLDOUT",
+          "FEWER_THAN_FIVE_CALIBRATION_COMPONENTS"
+        ],
+        "mode": "SHADOW",
+        "operational_qualified": false,
+        "can_route": false,
+        "scope": "annotation-conditioned proposal, not universal physical law or automatic release"
+      },
+      {
+        "metric": "rot6d_degenerate_ratio",
+        "candidate_threshold": null,
+        "statistics": null,
+        "candidate_population": "same continuous observable; labelled quality population",
+        "replaces_legacy_measurement": false,
+        "independent_good_calibration": 0,
+        "independent_good_holdout": 0,
+        "independent_error_holdout": 0,
+        "false_reject_rate": null,
+        "missed_error_rate": null,
+        "false_reject_statistics": null,
+        "missed_error_statistics": null,
+        "blockers": [
+          "NO_INDEPENDENT_GOOD_CALIBRATION_POPULATION",
+          "NO_INDEPENDENT_GOOD_HOLDOUT",
+          "NO_INDEPENDENT_ERROR_HOLDOUT",
+          "FEWER_THAN_FIVE_CALIBRATION_COMPONENTS"
+        ],
+        "mode": "SHADOW",
+        "operational_qualified": false,
+        "can_route": false,
+        "scope": "annotation-conditioned proposal, not universal physical law or automatic release"
+      },
+      {
+        "metric": "rot6d_collinearity_abs_p99",
+        "candidate_threshold": null,
+        "statistics": null,
+        "candidate_population": "same continuous observable; labelled quality population",
+        "replaces_legacy_measurement": false,
+        "independent_good_calibration": 0,
+        "independent_good_holdout": 0,
+        "independent_error_holdout": 0,
+        "false_reject_rate": null,
+        "missed_error_rate": null,
+        "false_reject_statistics": null,
+        "missed_error_statistics": null,
+        "blockers": [
+          "NO_INDEPENDENT_GOOD_CALIBRATION_POPULATION",
+          "NO_INDEPENDENT_GOOD_HOLDOUT",
+          "NO_INDEPENDENT_ERROR_HOLDOUT",
+          "FEWER_THAN_FIVE_CALIBRATION_COMPONENTS"
+        ],
+        "mode": "SHADOW",
+        "operational_qualified": false,
+        "can_route": false,
+        "scope": "annotation-conditioned proposal, not universal physical law or automatic release"
+      },
+      {
+        "metric": "rotation_near_pi_step_ratio",
+        "candidate_threshold": null,
+        "statistics": null,
+        "candidate_population": "same continuous observable; labelled quality population",
+        "replaces_legacy_measurement": false,
+        "independent_good_calibration": 0,
+        "independent_good_holdout": 0,
+        "independent_error_holdout": 0,
+        "false_reject_rate": null,
+        "missed_error_rate": null,
+        "false_reject_statistics": null,
+        "missed_error_statistics": null,
+        "blockers": [
+          "NO_INDEPENDENT_GOOD_CALIBRATION_POPULATION",
+          "NO_INDEPENDENT_GOOD_HOLDOUT",
+          "NO_INDEPENDENT_ERROR_HOLDOUT",
+          "FEWER_THAN_FIVE_CALIBRATION_COMPONENTS"
+        ],
+        "mode": "SHADOW",
+        "operational_qualified": false,
+        "can_route": false,
+        "scope": "annotation-conditioned proposal, not universal physical law or automatic release"
+      },
+      {
+        "metric": "joint_rotation_step_rad_p95",
+        "candidate_threshold": null,
+        "statistics": null,
+        "candidate_population": "same continuous observable; labelled quality population",
+        "replaces_legacy_measurement": false,
+        "independent_good_calibration": 0,
+        "independent_good_holdout": 0,
+        "independent_error_holdout": 0,
+        "false_reject_rate": null,
+        "missed_error_rate": null,
+        "false_reject_statistics": null,
+        "missed_error_statistics": null,
+        "blockers": [
+          "NO_INDEPENDENT_GOOD_CALIBRATION_POPULATION",
+          "NO_INDEPENDENT_GOOD_HOLDOUT",
+          "NO_INDEPENDENT_ERROR_HOLDOUT",
+          "FEWER_THAN_FIVE_CALIBRATION_COMPONENTS"
+        ],
+        "mode": "SHADOW",
+        "operational_qualified": false,
+        "can_route": false,
+        "scope": "annotation-conditioned proposal, not universal physical law or automatic release"
+      },
+      {
+        "metric": "joint_rotation_step_rad_max",
+        "candidate_threshold": null,
+        "statistics": null,
+        "candidate_population": "same continuous observable; labelled quality population",
+        "replaces_legacy_measurement": false,
+        "independent_good_calibration": 0,
+        "independent_good_holdout": 0,
+        "independent_error_holdout": 0,
+        "false_reject_rate": null,
+        "missed_error_rate": null,
+        "false_reject_statistics": null,
+        "missed_error_statistics": null,
+        "blockers": [
+          "NO_INDEPENDENT_GOOD_CALIBRATION_POPULATION",
+          "NO_INDEPENDENT_GOOD_HOLDOUT",
+          "NO_INDEPENDENT_ERROR_HOLDOUT",
+          "FEWER_THAN_FIVE_CALIBRATION_COMPONENTS"
+        ],
+        "mode": "SHADOW",
+        "operational_qualified": false,
+        "can_route": false,
+        "scope": "annotation-conditioned proposal, not universal physical law or automatic release"
+      },
+      {
+        "metric": "joint_rotation_step_window_p95_max_rad",
+        "candidate_threshold": null,
+        "statistics": null,
+        "candidate_population": "same continuous observable; labelled quality population",
+        "replaces_legacy_measurement": false,
+        "independent_good_calibration": 0,
+        "independent_good_holdout": 0,
+        "independent_error_holdout": 0,
+        "false_reject_rate": null,
+        "missed_error_rate": null,
+        "false_reject_statistics": null,
+        "missed_error_statistics": null,
+        "blockers": [
+          "NO_INDEPENDENT_GOOD_CALIBRATION_POPULATION",
+          "NO_INDEPENDENT_GOOD_HOLDOUT",
+          "NO_INDEPENDENT_ERROR_HOLDOUT",
+          "FEWER_THAN_FIVE_CALIBRATION_COMPONENTS"
+        ],
+        "mode": "SHADOW",
+        "operational_qualified": false,
+        "can_route": false,
+        "scope": "annotation-conditioned proposal, not universal physical law or automatic release"
+      },
+      {
+        "metric": "extremity_rotation_step_rad_p95",
+        "candidate_threshold": null,
+        "statistics": null,
+        "candidate_population": "same continuous observable; labelled quality population",
+        "replaces_legacy_measurement": false,
+        "independent_good_calibration": 0,
+        "independent_good_holdout": 0,
+        "independent_error_holdout": 0,
+        "false_reject_rate": null,
+        "missed_error_rate": null,
+        "false_reject_statistics": null,
+        "missed_error_statistics": null,
+        "blockers": [
+          "NO_INDEPENDENT_GOOD_CALIBRATION_POPULATION",
+          "NO_INDEPENDENT_GOOD_HOLDOUT",
+          "NO_INDEPENDENT_ERROR_HOLDOUT",
+          "FEWER_THAN_FIVE_CALIBRATION_COMPONENTS"
+        ],
+        "mode": "SHADOW",
+        "operational_qualified": false,
+        "can_route": false,
+        "scope": "annotation-conditioned proposal, not universal physical law or automatic release"
+      },
+      {
+        "metric": "extremity_rotation_step_rad_max",
+        "candidate_threshold": null,
+        "statistics": null,
+        "candidate_population": "same continuous observable; labelled quality population",
+        "replaces_legacy_measurement": false,
+        "independent_good_calibration": 0,
+        "independent_good_holdout": 0,
+        "independent_error_holdout": 0,
+        "false_reject_rate": null,
+        "missed_error_rate": null,
+        "false_reject_statistics": null,
+        "missed_error_statistics": null,
+        "blockers": [
+          "NO_INDEPENDENT_GOOD_CALIBRATION_POPULATION",
+          "NO_INDEPENDENT_GOOD_HOLDOUT",
+          "NO_INDEPENDENT_ERROR_HOLDOUT",
+          "FEWER_THAN_FIVE_CALIBRATION_COMPONENTS"
+        ],
+        "mode": "SHADOW",
+        "operational_qualified": false,
+        "can_route": false,
+        "scope": "annotation-conditioned proposal, not universal physical law or automatic release"
+      },
+      {
+        "metric": "joint_angular_acceleration_rps2_p95",
+        "candidate_threshold": null,
+        "statistics": null,
+        "candidate_population": "same continuous observable; labelled quality population",
+        "replaces_legacy_measurement": false,
+        "independent_good_calibration": 0,
+        "independent_good_holdout": 0,
+        "independent_error_holdout": 0,
+        "false_reject_rate": null,
+        "missed_error_rate": null,
+        "false_reject_statistics": null,
+        "missed_error_statistics": null,
+        "blockers": [
+          "NO_INDEPENDENT_GOOD_CALIBRATION_POPULATION",
+          "NO_INDEPENDENT_GOOD_HOLDOUT",
+          "NO_INDEPENDENT_ERROR_HOLDOUT",
+          "FEWER_THAN_FIVE_CALIBRATION_COMPONENTS"
+        ],
+        "mode": "SHADOW",
+        "operational_qualified": false,
+        "can_route": false,
+        "scope": "annotation-conditioned proposal, not universal physical law or automatic release"
+      },
+      {
+        "metric": "joint_angular_acceleration_rps2_max",
+        "candidate_threshold": null,
+        "statistics": null,
+        "candidate_population": "same continuous observable; labelled quality population",
+        "replaces_legacy_measurement": false,
+        "independent_good_calibration": 0,
+        "independent_good_holdout": 0,
+        "independent_error_holdout": 0,
+        "false_reject_rate": null,
+        "missed_error_rate": null,
+        "false_reject_statistics": null,
+        "missed_error_statistics": null,
+        "blockers": [
+          "NO_INDEPENDENT_GOOD_CALIBRATION_POPULATION",
+          "NO_INDEPENDENT_GOOD_HOLDOUT",
+          "NO_INDEPENDENT_ERROR_HOLDOUT",
+          "FEWER_THAN_FIVE_CALIBRATION_COMPONENTS"
+        ],
+        "mode": "SHADOW",
+        "operational_qualified": false,
+        "can_route": false,
+        "scope": "annotation-conditioned proposal, not universal physical law or automatic release"
+      },
+      {
+        "metric": "joint_angular_acceleration_window_p95_max_rps2",
+        "candidate_threshold": null,
+        "statistics": null,
+        "candidate_population": "same continuous observable; labelled quality population",
+        "replaces_legacy_measurement": false,
+        "independent_good_calibration": 0,
+        "independent_good_holdout": 0,
+        "independent_error_holdout": 0,
+        "false_reject_rate": null,
+        "missed_error_rate": null,
+        "false_reject_statistics": null,
+        "missed_error_statistics": null,
+        "blockers": [
+          "NO_INDEPENDENT_GOOD_CALIBRATION_POPULATION",
+          "NO_INDEPENDENT_GOOD_HOLDOUT",
+          "NO_INDEPENDENT_ERROR_HOLDOUT",
+          "FEWER_THAN_FIVE_CALIBRATION_COMPONENTS"
+        ],
+        "mode": "SHADOW",
+        "operational_qualified": false,
+        "can_route": false,
+        "scope": "annotation-conditioned proposal, not universal physical law or automatic release"
+      }
+    ],
+    "split": {
+      "rule": "hash-sorted existing connected source components; first ceil(2/3) calibration",
+      "calibration_components": 4,
+      "holdout_components": 2,
+      "shared_recording_choreography_music": false,
+      "fresh_blind_test": false
+    },
+    "independent_quality_annotations": 0,
+    "mode": "SHADOW",
+    "operational_qualified": false,
+    "can_route": false
+  },
+  "generated": [
+    {
+      "domain": "A65_historical",
+      "mode": "edge",
+      "executions": 1,
+      "unique_motions": 1,
+      "legacy_passes": 0,
+      "pfc": {
+        "samples": 1,
+        "not_evaluable": 0,
+        "median": 0.15522628027514812,
+        "min": 0.15522628027514812,
+        "max": 0.15522628027514812
+      },
+      "upperbody_radians_per_second": {
+        "samples": 1,
+        "not_evaluable": 0,
+        "median": 1.654780629021926,
+        "min": 1.654780629021926,
+        "max": 1.654780629021926
+      },
+      "joint_speed_mps": {
+        "samples": 1,
+        "not_evaluable": 0,
+        "median": 0.4123440310955402,
+        "min": 0.4123440310955402,
+        "max": 0.4123440310955402
+      },
+      "raw_jerk_max_mps3": {
+        "samples": 1,
+        "not_evaluable": 0,
+        "median": 4738.1806640625,
+        "min": 4738.1806640625,
+        "max": 4738.1806640625
+      },
+      "independent_static_speed": {
+        "samples": 0,
+        "not_evaluable": 1,
+        "median": null,
+        "min": null,
+        "max": null
+      }
+    },
+    {
+      "domain": "A65_historical",
+      "mode": "temporal",
+      "executions": 1,
+      "unique_motions": 1,
+      "legacy_passes": 0,
+      "pfc": {
+        "samples": 1,
+        "not_evaluable": 0,
+        "median": 0.13815630645987984,
+        "min": 0.13815630645987984,
+        "max": 0.13815630645987984
+      },
+      "upperbody_radians_per_second": {
+        "samples": 1,
+        "not_evaluable": 0,
+        "median": 1.8950972891319138,
+        "min": 1.8950972891319138,
+        "max": 1.8950972891319138
+      },
+      "joint_speed_mps": {
+        "samples": 1,
+        "not_evaluable": 0,
+        "median": 0.5019043766947097,
+        "min": 0.5019043766947097,
+        "max": 0.5019043766947097
+      },
+      "raw_jerk_max_mps3": {
+        "samples": 1,
+        "not_evaluable": 0,
+        "median": 4766.23876953125,
+        "min": 4766.23876953125,
+        "max": 4766.23876953125
+      },
+      "independent_static_speed": {
+        "samples": 0,
+        "not_evaluable": 1,
+        "median": null,
+        "min": null,
+        "max": null
+      }
+    },
+    {
+      "domain": "aist_historical_val",
+      "mode": "additive",
+      "executions": 12,
+      "unique_motions": 12,
+      "legacy_passes": 0,
+      "pfc": {
+        "samples": 12,
+        "not_evaluable": 0,
+        "median": 0.35552208568280025,
+        "min": 0.008169089349341246,
+        "max": 1.0792500071584066
+      },
+      "upperbody_radians_per_second": {
+        "samples": 12,
+        "not_evaluable": 0,
+        "median": 0.6203344627216996,
+        "min": 0.19041459274407524,
+        "max": 2.3711926180283203
+      },
+      "joint_speed_mps": {
+        "samples": 12,
+        "not_evaluable": 0,
+        "median": 0.44715435680313065,
+        "min": 0.19644314811931676,
+        "max": 0.8462362847170091
+      },
+      "raw_jerk_max_mps3": {
+        "samples": 12,
+        "not_evaluable": 0,
+        "median": 1714.6651000976562,
+        "min": 261.00201416015625,
+        "max": 16528.130859375
+      },
+      "independent_static_speed": {
+        "samples": 0,
+        "not_evaluable": 12,
+        "median": null,
+        "min": null,
+        "max": null
+      }
+    },
+    {
+      "domain": "aist_historical_val",
+      "mode": "cross",
+      "executions": 12,
+      "unique_motions": 12,
+      "legacy_passes": 0,
+      "pfc": {
+        "samples": 12,
+        "not_evaluable": 0,
+        "median": 0.3555685388106524,
+        "min": 0.008167582571567668,
+        "max": 1.0792500071584066
+      },
+      "upperbody_radians_per_second": {
+        "samples": 12,
+        "not_evaluable": 0,
+        "median": 0.6203013070894453,
+        "min": 0.19041459274407524,
+        "max": 2.3711926180283203
+      },
+      "joint_speed_mps": {
+        "samples": 12,
+        "not_evaluable": 0,
+        "median": 0.44727211724833293,
+        "min": 0.19644577702645669,
+        "max": 0.8462362847170091
+      },
+      "raw_jerk_max_mps3": {
+        "samples": 12,
+        "not_evaluable": 0,
+        "median": 1714.7262573242188,
+        "min": 260.9928894042969,
+        "max": 16528.130859375
+      },
+      "independent_static_speed": {
+        "samples": 0,
+        "not_evaluable": 12,
+        "median": null,
+        "min": null,
+        "max": null
+      }
+    },
+    {
+      "domain": "aist_historical_val",
+      "mode": "paired300",
+      "executions": 12,
+      "unique_motions": 12,
+      "legacy_passes": 0,
+      "pfc": {
+        "samples": 12,
+        "not_evaluable": 0,
+        "median": 0.3863980608359062,
+        "min": 0.008468561334602727,
+        "max": 1.0792500071584066
+      },
+      "upperbody_radians_per_second": {
+        "samples": 12,
+        "not_evaluable": 0,
+        "median": 0.6237163196577477,
+        "min": 0.19041459274407524,
+        "max": 2.3711926180283203
+      },
+      "joint_speed_mps": {
+        "samples": 12,
+        "not_evaluable": 0,
+        "median": 0.522340723440224,
+        "min": 0.19399094109939644,
+        "max": 0.8462362847170091
+      },
+      "raw_jerk_max_mps3": {
+        "samples": 12,
+        "not_evaluable": 0,
+        "median": 1763.6543579101562,
+        "min": 252.7102813720703,
+        "max": 19404.927734375
+      },
+      "independent_static_speed": {
+        "samples": 0,
+        "not_evaluable": 12,
+        "median": null,
+        "min": null,
+        "max": null
+      }
+    },
+    {
+      "domain": "dunhuang_unpaired",
+      "mode": "additive",
+      "executions": 2,
+      "unique_motions": 2,
+      "legacy_passes": 0,
+      "pfc": {
+        "samples": 2,
+        "not_evaluable": 0,
+        "median": 1.1530551903709032,
+        "min": 1.1528234190786617,
+        "max": 1.1532869616631447
+      },
+      "upperbody_radians_per_second": {
+        "samples": 2,
+        "not_evaluable": 0,
+        "median": 2.005128352795351,
+        "min": 2.003453344166416,
+        "max": 2.0068033614242866
+      },
+      "joint_speed_mps": {
+        "samples": 2,
+        "not_evaluable": 0,
+        "median": 0.6951623650782603,
+        "min": 0.6950507099616239,
+        "max": 0.6952740201948969
+      },
+      "raw_jerk_max_mps3": {
+        "samples": 2,
+        "not_evaluable": 0,
+        "median": 1903.2084350585938,
+        "min": 1896.9334716796875,
+        "max": 1909.4833984375
+      },
+      "independent_static_speed": {
+        "samples": 0,
+        "not_evaluable": 2,
+        "median": null,
+        "min": null,
+        "max": null
+      }
+    },
+    {
+      "domain": "dunhuang_unpaired",
+      "mode": "cross",
+      "executions": 2,
+      "unique_motions": 2,
+      "legacy_passes": 0,
+      "pfc": {
+        "samples": 2,
+        "not_evaluable": 0,
+        "median": 1.1530950696234097,
+        "min": 1.1528605267106666,
+        "max": 1.1533296125361527
+      },
+      "upperbody_radians_per_second": {
+        "samples": 2,
+        "not_evaluable": 0,
+        "median": 2.005877315823973,
+        "min": 2.0042007616744097,
+        "max": 2.007553869973537
+      },
+      "joint_speed_mps": {
+        "samples": 2,
+        "not_evaluable": 0,
+        "median": 0.6952410226016382,
+        "min": 0.6951286372628638,
+        "max": 0.6953534079404127
+      },
+      "raw_jerk_max_mps3": {
+        "samples": 2,
+        "not_evaluable": 0,
+        "median": 1905.2130126953125,
+        "min": 1898.8089599609375,
+        "max": 1911.6170654296875
+      },
+      "independent_static_speed": {
+        "samples": 0,
+        "not_evaluable": 2,
+        "median": null,
+        "min": null,
+        "max": null
+      }
+    }
+  ],
+  "ground_skeleton": [
+    {
+      "domain": "A65_historical",
+      "mode": "edge",
+      "ground_protocol": "estimated_candidate_native_joint",
+      "executions": 1,
+      "penetrate_mm": {
+        "samples": 1,
+        "not_evaluable": 0,
+        "median": 4.424517974257469,
+        "min": 4.424517974257469,
+        "max": 4.424517974257469
+      },
+      "float_mm": {
+        "samples": 1,
+        "not_evaluable": 0,
+        "median": 28.329066932201385,
+        "min": 28.329066932201385,
+        "max": 28.329066932201385
+      },
+      "geometric_skate_mm": {
+        "samples": 1,
+        "not_evaluable": 0,
+        "median": 9.136235237121582,
+        "min": 9.136235237121582,
+        "max": 9.136235237121582
+      },
+      "foot_geometry_max_abs_m": {
+        "samples": 1,
+        "not_evaluable": 0,
+        "median": 0.0382990837097168,
+        "min": 0.0382990837097168,
+        "max": 0.0382990837097168
+      }
+    },
+    {
+      "domain": "A65_historical",
+      "mode": "edge",
+      "ground_protocol": "frozen_common_mesh",
+      "executions": 1,
+      "penetrate_mm": {
+        "samples": 1,
+        "not_evaluable": 0,
+        "median": 0.31598887289874256,
+        "min": 0.31598887289874256,
+        "max": 0.31598887289874256
+      },
+      "float_mm": {
+        "samples": 1,
+        "not_evaluable": 0,
+        "median": 63.42492252588272,
+        "min": 63.42492252588272,
+        "max": 63.42492252588272
+      },
+      "geometric_skate_mm": {
+        "samples": 1,
+        "not_evaluable": 0,
+        "median": 13.401474952697754,
+        "min": 13.401474952697754,
+        "max": 13.401474952697754
+      },
+      "foot_geometry_max_abs_m": {
+        "samples": 1,
+        "not_evaluable": 0,
+        "median": 0.0382990837097168,
+        "min": 0.0382990837097168,
+        "max": 0.0382990837097168
+      }
+    },
+    {
+      "domain": "A65_historical",
+      "mode": "edge",
+      "ground_protocol": "frozen_common_native_joint",
+      "executions": 1,
+      "penetrate_mm": {
+        "samples": 1,
+        "not_evaluable": 0,
+        "median": 4.424517974257469,
+        "min": 4.424517974257469,
+        "max": 4.424517974257469
+      },
+      "float_mm": {
+        "samples": 1,
+        "not_evaluable": 0,
+        "median": 28.329066932201385,
+        "min": 28.329066932201385,
+        "max": 28.329066932201385
+      },
+      "geometric_skate_mm": {
+        "samples": 1,
+        "not_evaluable": 0,
+        "median": 9.136235237121582,
+        "min": 9.136235237121582,
+        "max": 9.136235237121582
+      },
+      "foot_geometry_max_abs_m": {
+        "samples": 1,
+        "not_evaluable": 0,
+        "median": 0.0382990837097168,
+        "min": 0.0382990837097168,
+        "max": 0.0382990837097168
+      }
+    },
+    {
+      "domain": "A65_historical",
+      "mode": "temporal",
+      "ground_protocol": "estimated_candidate_native_joint",
+      "executions": 1,
+      "penetrate_mm": {
+        "samples": 1,
+        "not_evaluable": 0,
+        "median": 4.715506453067064,
+        "min": 4.715506453067064,
+        "max": 4.715506453067064
+      },
+      "float_mm": {
+        "samples": 1,
+        "not_evaluable": 0,
+        "median": 26.43732540309429,
+        "min": 26.43732540309429,
+        "max": 26.43732540309429
+      },
+      "geometric_skate_mm": {
+        "samples": 1,
+        "not_evaluable": 0,
+        "median": 8.401505470275879,
+        "min": 8.401505470275879,
+        "max": 8.401505470275879
+      },
+      "foot_geometry_max_abs_m": {
+        "samples": 1,
+        "not_evaluable": 0,
+        "median": 0.03798377513885498,
+        "min": 0.03798377513885498,
+        "max": 0.03798377513885498
+      }
+    },
+    {
+      "domain": "A65_historical",
+      "mode": "temporal",
+      "ground_protocol": "frozen_common_mesh",
+      "executions": 1,
+      "penetrate_mm": {
+        "samples": 1,
+        "not_evaluable": 0,
+        "median": 0.15729268488939852,
+        "min": 0.15729268488939852,
+        "max": 0.15729268488939852
+      },
+      "float_mm": {
+        "samples": 1,
+        "not_evaluable": 0,
+        "median": 63.77534568309784,
+        "min": 63.77534568309784,
+        "max": 63.77534568309784
+      },
+      "geometric_skate_mm": {
+        "samples": 1,
+        "not_evaluable": 0,
+        "median": 13.115673065185547,
+        "min": 13.115673065185547,
+        "max": 13.115673065185547
+      },
+      "foot_geometry_max_abs_m": {
+        "samples": 1,
+        "not_evaluable": 0,
+        "median": 0.03798377513885498,
+        "min": 0.03798377513885498,
+        "max": 0.03798377513885498
+      }
+    },
+    {
+      "domain": "A65_historical",
+      "mode": "temporal",
+      "ground_protocol": "frozen_common_native_joint",
+      "executions": 1,
+      "penetrate_mm": {
+        "samples": 1,
+        "not_evaluable": 0,
+        "median": 4.140103701502085,
+        "min": 4.140103701502085,
+        "max": 4.140103701502085
+      },
+      "float_mm": {
+        "samples": 1,
+        "not_evaluable": 0,
+        "median": 28.51143293082714,
+        "min": 28.51143293082714,
+        "max": 28.51143293082714
+      },
+      "geometric_skate_mm": {
+        "samples": 1,
+        "not_evaluable": 0,
+        "median": 8.385653495788574,
+        "min": 8.385653495788574,
+        "max": 8.385653495788574
+      },
+      "foot_geometry_max_abs_m": {
+        "samples": 1,
+        "not_evaluable": 0,
+        "median": 0.03798377513885498,
+        "min": 0.03798377513885498,
+        "max": 0.03798377513885498
+      }
+    },
+    {
+      "domain": "aist_historical_val",
+      "mode": "additive",
+      "ground_protocol": "estimated_candidate_native_joint",
+      "executions": 12,
+      "penetrate_mm": {
+        "samples": 12,
+        "not_evaluable": 0,
+        "median": 3.8817746099084616,
+        "min": 0.0,
+        "max": 6.426456850022078
+      },
+      "float_mm": {
+        "samples": 12,
+        "not_evaluable": 0,
+        "median": 29.00394145399332,
+        "min": 12.412052601575851,
+        "max": 65.68073481321335
+      },
+      "geometric_skate_mm": {
+        "samples": 12,
+        "not_evaluable": 0,
+        "median": 4.4277507066726685,
+        "min": 1.9560173749923706,
+        "max": 12.211010932922363
+      },
+      "foot_geometry_max_abs_m": {
+        "samples": 12,
+        "not_evaluable": 0,
+        "median": 0.038926005363464355,
+        "min": 0.03766226768493652,
+        "max": 0.042223215103149414
+      }
+    },
+    {
+      "domain": "aist_historical_val",
+      "mode": "additive",
+      "ground_protocol": "frozen_common_mesh",
+      "executions": 12,
+      "penetrate_mm": {
+        "samples": 12,
+        "not_evaluable": 0,
+        "median": 1.6278024995699525,
+        "min": 0.0,
+        "max": 5.520212464034557
+      },
+      "float_mm": {
+        "samples": 12,
+        "not_evaluable": 0,
+        "median": 52.911488339304924,
+        "min": 21.327506750822067,
+        "max": 75.95190405845642
+      },
+      "geometric_skate_mm": {
+        "samples": 10,
+        "not_evaluable": 2,
+        "median": 2.012935698032379,
+        "min": 1.7859766483306885,
+        "max": 13.097219467163086
+      },
+      "foot_geometry_max_abs_m": {
+        "samples": 12,
+        "not_evaluable": 0,
+        "median": 0.038926005363464355,
+        "min": 0.03766226768493652,
+        "max": 0.042223215103149414
+      }
+    },
+    {
+      "domain": "aist_historical_val",
+      "mode": "additive",
+      "ground_protocol": "frozen_common_native_joint",
+      "executions": 12,
+      "penetrate_mm": {
+        "samples": 12,
+        "not_evaluable": 0,
+        "median": 8.516007335856557,
+        "min": 0.0,
+        "max": 18.5409989207983
+      },
+      "float_mm": {
+        "samples": 12,
+        "not_evaluable": 0,
+        "median": 37.012917920947075,
+        "min": 12.412052601575851,
+        "max": 65.68073481321335
+      },
+      "geometric_skate_mm": {
+        "samples": 10,
+        "not_evaluable": 2,
+        "median": 3.1643344163894653,
+        "min": 2.0132598876953125,
+        "max": 12.211010932922363
+      },
+      "foot_geometry_max_abs_m": {
+        "samples": 12,
+        "not_evaluable": 0,
+        "median": 0.038926005363464355,
+        "min": 0.03766226768493652,
+        "max": 0.042223215103149414
+      }
+    },
+    {
+      "domain": "aist_historical_val",
+      "mode": "cross",
+      "ground_protocol": "estimated_candidate_native_joint",
+      "executions": 12,
+      "penetrate_mm": {
+        "samples": 12,
+        "not_evaluable": 0,
+        "median": 3.8817746099084616,
+        "min": 0.0,
+        "max": 6.426456850022078
+      },
+      "float_mm": {
+        "samples": 12,
+        "not_evaluable": 0,
+        "median": 29.003879986703396,
+        "min": 12.412052601575851,
+        "max": 65.68073481321335
+      },
+      "geometric_skate_mm": {
+        "samples": 12,
+        "not_evaluable": 0,
+        "median": 4.427839636802673,
+        "min": 1.956133246421814,
+        "max": 12.211010932922363
+      },
+      "foot_geometry_max_abs_m": {
+        "samples": 12,
+        "not_evaluable": 0,
+        "median": 0.03892594575881958,
+        "min": 0.03766202926635742,
+        "max": 0.042223215103149414
+      }
+    },
+    {
+      "domain": "aist_historical_val",
+      "mode": "cross",
+      "ground_protocol": "frozen_common_mesh",
+      "executions": 12,
+      "penetrate_mm": {
+        "samples": 12,
+        "not_evaluable": 0,
+        "median": 1.6278731636703014,
+        "min": 0.0,
+        "max": 5.512393545359373
+      },
+      "float_mm": {
+        "samples": 12,
+        "not_evaluable": 0,
+        "median": 52.91086435317993,
+        "min": 21.32982946932316,
+        "max": 75.9323388338089
+      },
+      "geometric_skate_mm": {
+        "samples": 10,
+        "not_evaluable": 2,
+        "median": 2.0129013657569885,
+        "min": 1.7859766483306885,
+        "max": 13.097219467163086
+      },
+      "foot_geometry_max_abs_m": {
+        "samples": 12,
+        "not_evaluable": 0,
+        "median": 0.03892594575881958,
+        "min": 0.03766202926635742,
+        "max": 0.042223215103149414
+      }
+    },
+    {
+      "domain": "aist_historical_val",
+      "mode": "cross",
+      "ground_protocol": "frozen_common_native_joint",
+      "executions": 12,
+      "penetrate_mm": {
+        "samples": 12,
+        "not_evaluable": 0,
+        "median": 8.516153087839484,
+        "min": 0.0,
+        "max": 18.527859821915627
+      },
+      "float_mm": {
+        "samples": 12,
+        "not_evaluable": 0,
+        "median": 37.012310698628426,
+        "min": 12.412052601575851,
+        "max": 65.68073481321335
+      },
+      "geometric_skate_mm": {
+        "samples": 10,
+        "not_evaluable": 2,
+        "median": 3.16446590423584,
+        "min": 2.013248920440674,
+        "max": 12.211010932922363
+      },
+      "foot_geometry_max_abs_m": {
+        "samples": 12,
+        "not_evaluable": 0,
+        "median": 0.03892594575881958,
+        "min": 0.03766202926635742,
+        "max": 0.042223215103149414
+      }
+    },
+    {
+      "domain": "aist_historical_val",
+      "mode": "paired300",
+      "ground_protocol": "estimated_candidate_native_joint",
+      "executions": 12,
+      "penetrate_mm": {
+        "samples": 12,
+        "not_evaluable": 0,
+        "median": 3.8817746099084616,
+        "min": 0.681873585563153,
+        "max": 6.426456850022078
+      },
+      "float_mm": {
+        "samples": 12,
+        "not_evaluable": 0,
+        "median": 28.582297265529633,
+        "min": 12.412052601575851,
+        "max": 65.68073481321335
+      },
+      "geometric_skate_mm": {
+        "samples": 12,
+        "not_evaluable": 0,
+        "median": 4.331292986869812,
+        "min": 1.9526537656784058,
+        "max": 12.211010932922363
+      },
+      "foot_geometry_max_abs_m": {
+        "samples": 12,
+        "not_evaluable": 0,
+        "median": 0.03897961974143982,
+        "min": 0.037789225578308105,
+        "max": 0.042223215103149414
+      }
+    },
+    {
+      "domain": "aist_historical_val",
+      "mode": "paired300",
+      "ground_protocol": "frozen_common_mesh",
+      "executions": 12,
+      "penetrate_mm": {
+        "samples": 12,
+        "not_evaluable": 0,
+        "median": 2.2985399700701237,
+        "min": 0.0,
+        "max": 5.5197239853441715
+      },
+      "float_mm": {
+        "samples": 12,
+        "not_evaluable": 0,
+        "median": 53.28580550849438,
+        "min": 19.965315237641335,
+        "max": 74.17196780443192
+      },
+      "geometric_skate_mm": {
+        "samples": 10,
+        "not_evaluable": 2,
+        "median": 2.417193293571472,
+        "min": 1.7859766483306885,
+        "max": 13.097219467163086
+      },
+      "foot_geometry_max_abs_m": {
+        "samples": 12,
+        "not_evaluable": 0,
+        "median": 0.03897961974143982,
+        "min": 0.037789225578308105,
+        "max": 0.042223215103149414
+      }
+    },
+    {
+      "domain": "aist_historical_val",
+      "mode": "paired300",
+      "ground_protocol": "frozen_common_native_joint",
+      "executions": 12,
+      "penetrate_mm": {
+        "samples": 12,
+        "not_evaluable": 0,
+        "median": 9.28455893881619,
+        "min": 0.0,
+        "max": 17.238445580005646
+      },
+      "float_mm": {
+        "samples": 12,
+        "not_evaluable": 0,
+        "median": 33.717650920152664,
+        "min": 12.412052601575851,
+        "max": 65.68073481321335
+      },
+      "geometric_skate_mm": {
+        "samples": 10,
+        "not_evaluable": 2,
+        "median": 3.306269645690918,
+        "min": 1.9854626655578613,
+        "max": 12.211010932922363
+      },
+      "foot_geometry_max_abs_m": {
+        "samples": 12,
+        "not_evaluable": 0,
+        "median": 0.03897961974143982,
+        "min": 0.037789225578308105,
+        "max": 0.042223215103149414
+      }
+    },
+    {
+      "domain": "dunhuang_unpaired",
+      "mode": "additive",
+      "ground_protocol": "estimated_candidate_native_joint",
+      "executions": 2,
+      "penetrate_mm": {
+        "samples": 2,
+        "not_evaluable": 0,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "float_mm": {
+        "samples": 2,
+        "not_evaluable": 0,
+        "median": 21.28403354436159,
+        "min": 21.263767033815384,
+        "max": 21.3043000549078
+      },
+      "geometric_skate_mm": {
+        "samples": 2,
+        "not_evaluable": 0,
+        "median": 16.916553497314453,
+        "min": 16.914396286010742,
+        "max": 16.918710708618164
+      },
+      "foot_geometry_max_abs_m": {
+        "samples": 2,
+        "not_evaluable": 0,
+        "median": 0.04000961780548096,
+        "min": 0.040009498596191406,
+        "max": 0.04000973701477051
+      }
+    },
+    {
+      "domain": "dunhuang_unpaired",
+      "mode": "additive",
+      "ground_protocol": "frozen_common_mesh",
+      "executions": 2,
+      "penetrate_mm": {
+        "samples": 2,
+        "not_evaluable": 0,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "float_mm": {
+        "samples": 2,
+        "not_evaluable": 0,
+        "median": 84.85985919833183,
+        "min": 84.84651148319244,
+        "max": 84.87320691347122
+      },
+      "geometric_skate_mm": {
+        "samples": 0,
+        "not_evaluable": 2,
+        "median": null,
+        "min": null,
+        "max": null
+      },
+      "foot_geometry_max_abs_m": {
+        "samples": 2,
+        "not_evaluable": 0,
+        "median": 0.04000961780548096,
+        "min": 0.040009498596191406,
+        "max": 0.04000973701477051
+      }
+    },
+    {
+      "domain": "dunhuang_unpaired",
+      "mode": "additive",
+      "ground_protocol": "frozen_common_native_joint",
+      "executions": 2,
+      "penetrate_mm": {
+        "samples": 2,
+        "not_evaluable": 0,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "float_mm": {
+        "samples": 2,
+        "not_evaluable": 0,
+        "median": 45.583317056298256,
+        "min": 45.56996747851372,
+        "max": 45.596666634082794
+      },
+      "geometric_skate_mm": {
+        "samples": 0,
+        "not_evaluable": 2,
+        "median": null,
+        "min": null,
+        "max": null
+      },
+      "foot_geometry_max_abs_m": {
+        "samples": 2,
+        "not_evaluable": 0,
+        "median": 0.04000961780548096,
+        "min": 0.040009498596191406,
+        "max": 0.04000973701477051
+      }
+    },
+    {
+      "domain": "dunhuang_unpaired",
+      "mode": "cross",
+      "ground_protocol": "estimated_candidate_native_joint",
+      "executions": 2,
+      "penetrate_mm": {
+        "samples": 2,
+        "not_evaluable": 0,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "float_mm": {
+        "samples": 2,
+        "not_evaluable": 0,
+        "median": 21.274168975651264,
+        "min": 21.243968978524208,
+        "max": 21.30436897277832
+      },
+      "geometric_skate_mm": {
+        "samples": 2,
+        "not_evaluable": 0,
+        "median": 16.915699005126953,
+        "min": 16.913545608520508,
+        "max": 16.9178524017334
+      },
+      "foot_geometry_max_abs_m": {
+        "samples": 2,
+        "not_evaluable": 0,
+        "median": 0.04000970721244812,
+        "min": 0.04000955820083618,
+        "max": 0.04000985622406006
+      }
+    },
+    {
+      "domain": "dunhuang_unpaired",
+      "mode": "cross",
+      "ground_protocol": "frozen_common_mesh",
+      "executions": 2,
+      "penetrate_mm": {
+        "samples": 2,
+        "not_evaluable": 0,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "float_mm": {
+        "samples": 2,
+        "not_evaluable": 0,
+        "median": 84.86582338809967,
+        "min": 84.8524421453476,
+        "max": 84.87920463085175
+      },
+      "geometric_skate_mm": {
+        "samples": 0,
+        "not_evaluable": 2,
+        "median": null,
+        "min": null,
+        "max": null
+      },
+      "foot_geometry_max_abs_m": {
+        "samples": 2,
+        "not_evaluable": 0,
+        "median": 0.04000970721244812,
+        "min": 0.04000955820083618,
+        "max": 0.04000985622406006
+      }
+    },
+    {
+      "domain": "dunhuang_unpaired",
+      "mode": "cross",
+      "ground_protocol": "frozen_common_native_joint",
+      "executions": 2,
+      "penetrate_mm": {
+        "samples": 2,
+        "not_evaluable": 0,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "float_mm": {
+        "samples": 2,
+        "not_evaluable": 0,
+        "median": 45.58928683400154,
+        "min": 45.57590186595917,
+        "max": 45.602671802043915
+      },
+      "geometric_skate_mm": {
+        "samples": 0,
+        "not_evaluable": 2,
+        "median": null,
+        "min": null,
+        "max": null
+      },
+      "foot_geometry_max_abs_m": {
+        "samples": 2,
+        "not_evaluable": 0,
+        "median": 0.04000970721244812,
+        "min": 0.04000955820083618,
+        "max": 0.04000985622406006
+      }
+    }
+  ],
+  "source_duration_noise": [
+    {
+      "variable": "duration_frames",
+      "value": 150,
+      "recordings": 12,
+      "jerk_max_mps3": {
+        "samples": 12,
+        "not_evaluable": 0,
+        "median": 1352.1062622070312,
+        "min": 150.90550231933594,
+        "max": 3656.33056640625
+      },
+      "jerk_p95_mps3": {
+        "samples": 12,
+        "not_evaluable": 0,
+        "median": 443.658322906494,
+        "min": 83.86711959838865,
+        "max": 915.3061981201172
+      },
+      "jerk_violation_fraction": {
+        "samples": 12,
+        "not_evaluable": 0,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.1564625850340136
+      },
+      "legacy_passes": 1
+    },
+    {
+      "variable": "duration_frames",
+      "value": 300,
+      "recordings": 10,
+      "jerk_max_mps3": {
+        "samples": 10,
+        "not_evaluable": 0,
+        "median": 1888.3756103515625,
+        "min": 157.8410186767578,
+        "max": 5615.8759765625
+      },
+      "jerk_p95_mps3": {
+        "samples": 10,
+        "not_evaluable": 0,
+        "median": 454.60449600219704,
+        "min": 83.0551944732666,
+        "max": 984.7710571289061
+      },
+      "jerk_violation_fraction": {
+        "samples": 10,
+        "not_evaluable": 0,
+        "median": 0.00505050505050505,
+        "min": 0.0,
+        "max": 0.16161616161616163
+      },
+      "legacy_passes": 1
+    },
+    {
+      "variable": "noise_amplitude_m",
+      "value": 0,
+      "recordings": 12,
+      "jerk_max_mps3": {
+        "samples": 12,
+        "not_evaluable": 0,
+        "median": 1352.1062622070312,
+        "min": 150.90550231933594,
+        "max": 3656.33056640625
+      },
+      "jerk_p95_mps3": {
+        "samples": 12,
+        "not_evaluable": 0,
+        "median": 443.658322906494,
+        "min": 83.86711959838865,
+        "max": 915.3061981201172
+      },
+      "jerk_violation_fraction": {
+        "samples": 12,
+        "not_evaluable": 0,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.1564625850340136
+      },
+      "legacy_passes": 1
+    },
+    {
+      "variable": "noise_amplitude_m",
+      "value": 0.0005,
+      "recordings": 12,
+      "jerk_max_mps3": {
+        "samples": 12,
+        "not_evaluable": 0,
+        "median": 1379.0267333984375,
+        "min": 212.55340576171875,
+        "max": 3662.740234375
+      },
+      "jerk_p95_mps3": {
+        "samples": 12,
+        "not_evaluable": 0,
+        "median": 451.86934280395496,
+        "min": 107.12138442993162,
+        "max": 911.0477416992178
+      },
+      "jerk_violation_fraction": {
+        "samples": 12,
+        "not_evaluable": 0,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.16326530612244897
+      },
+      "legacy_passes": 1
+    },
+    {
+      "variable": "noise_amplitude_m",
+      "value": 0.001,
+      "recordings": 12,
+      "jerk_max_mps3": {
+        "samples": 12,
+        "not_evaluable": 0,
+        "median": 1407.5192260742188,
+        "min": 282.4097595214844,
+        "max": 3669.473876953125
+      },
+      "jerk_p95_mps3": {
+        "samples": 12,
+        "not_evaluable": 0,
+        "median": 465.15289306640597,
+        "min": 162.3790672302246,
+        "max": 927.2871978759765
+      },
+      "jerk_violation_fraction": {
+        "samples": 12,
+        "not_evaluable": 0,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.17006802721088435
+      },
+      "legacy_passes": 1
+    },
+    {
+      "variable": "noise_amplitude_m",
+      "value": 0.003,
+      "recordings": 12,
+      "jerk_max_mps3": {
+        "samples": 12,
+        "not_evaluable": 0,
+        "median": 1534.9424438476562,
+        "min": 562.582275390625,
+        "max": 3699.615966796875
+      },
+      "jerk_p95_mps3": {
+        "samples": 12,
+        "not_evaluable": 0,
+        "median": 618.1062194824218,
+        "min": 437.9938690185547,
+        "max": 1026.3253295898432
+      },
+      "jerk_violation_fraction": {
+        "samples": 12,
+        "not_evaluable": 0,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.1564625850340136
+      },
+      "legacy_passes": 1
+    }
+  ],
+  "skipped_source_lengths": 14,
+  "long_prefixes": [
+    {
+      "cohort": "edge_baseline_3601",
+      "prefix_frames": 150,
+      "raw_jerk": {
+        "p50": 268.2884521484375,
+        "p95": 944.7465454101556,
+        "p99": 1363.6409155273439,
+        "max": 2290.96923828125
+      },
+      "violation_fraction": 0.061224489795918366,
+      "longest_stencil_seconds": 0.06666666666666667,
+      "legacy_pass": false
+    },
+    {
+      "cohort": "edge_baseline_3601",
+      "prefix_frames": 450,
+      "raw_jerk": {
+        "p50": 231.1795654296875,
+        "p95": 883.9516235351557,
+        "p99": 1375.6817224121091,
+        "max": 6177.71728515625
+      },
+      "violation_fraction": 0.0738255033557047,
+      "longest_stencil_seconds": 0.13333333333333333,
+      "legacy_pass": false
+    },
+    {
+      "cohort": "edge_baseline_3601",
+      "prefix_frames": 900,
+      "raw_jerk": {
+        "p50": 311.2696075439453,
+        "p95": 1174.8861633300778,
+        "p99": 1870.0615466308593,
+        "max": 22797.39453125
+      },
+      "violation_fraction": 0.13154960981047936,
+      "longest_stencil_seconds": 0.2,
+      "legacy_pass": false
+    },
+    {
+      "cohort": "edge_baseline_3601",
+      "prefix_frames": 1800,
+      "raw_jerk": {
+        "p50": 340.5024108886719,
+        "p95": 1251.4948486328126,
+        "p99": 1996.9341162109388,
+        "max": 24111.203125
+      },
+      "violation_fraction": 0.1636060100166945,
+      "longest_stencil_seconds": 0.3,
+      "legacy_pass": false
+    },
+    {
+      "cohort": "edge_baseline_3601",
+      "prefix_frames": 3601,
+      "raw_jerk": {
+        "p50": 346.5854797363281,
+        "p95": 1243.5102600097657,
+        "p99": 2022.733822021489,
+        "max": 24111.203125
+      },
+      "violation_fraction": 0.14285714285714285,
+      "longest_stencil_seconds": 0.4,
+      "legacy_pass": false
+    },
+    {
+      "cohort": "dunhuang_3601",
+      "prefix_frames": 150,
+      "raw_jerk": {
+        "p50": 99.75150680541992,
+        "p95": 428.4505783081043,
+        "p99": 1300.9499060058595,
+        "max": 4066.4423828125
+      },
+      "violation_fraction": 0.013605442176870748,
+      "longest_stencil_seconds": 0.06666666666666667,
+      "legacy_pass": false
+    },
+    {
+      "cohort": "dunhuang_3601",
+      "prefix_frames": 450,
+      "raw_jerk": {
+        "p50": 89.19972229003906,
+        "p95": 555.1435852050781,
+        "p99": 3945.5789379882717,
+        "max": 15785.009765625
+      },
+      "violation_fraction": 0.040268456375838924,
+      "longest_stencil_seconds": 0.13333333333333333,
+      "legacy_pass": false
+    },
+    {
+      "cohort": "dunhuang_3601",
+      "prefix_frames": 900,
+      "raw_jerk": {
+        "p50": 127.84980773925781,
+        "p95": 1135.3000305175754,
+        "p99": 5956.782573242182,
+        "max": 21846.2578125
+      },
+      "violation_fraction": 0.06688963210702341,
+      "longest_stencil_seconds": 0.16666666666666666,
+      "legacy_pass": false
+    },
+    {
+      "cohort": "dunhuang_3601",
+      "prefix_frames": 1800,
+      "raw_jerk": {
+        "p50": 131.53343200683594,
+        "p95": 1243.3682067871105,
+        "p99": 8662.543330078239,
+        "max": 30530.541015625
+      },
+      "violation_fraction": 0.06566499721758487,
+      "longest_stencil_seconds": 0.16666666666666666,
+      "legacy_pass": false
+    },
+    {
+      "cohort": "dunhuang_3601",
+      "prefix_frames": 3601,
+      "raw_jerk": {
+        "p50": 158.2688446044922,
+        "p95": 1243.2595825195294,
+        "p99": 9087.69608398441,
+        "max": 30530.541015625
+      },
+      "violation_fraction": 0.06170094496942746,
+      "longest_stencil_seconds": 0.16666666666666666,
+      "legacy_pass": false
+    }
+  ],
+  "controlled": {
+    "count": 23,
+    "curves": {
+      "slide": {
+        "amplitudes": [
+          0.0,
+          0.05,
+          0.15,
+          0.3
+        ],
+        "values": [
+          0.0,
+          0.050000399351119995,
+          0.15000075101852417,
+          0.30000150203704834
+        ],
+        "nondecreasing": true
+      },
+      "penetration": {
+        "amplitudes": [
+          0.0,
+          0.01,
+          0.03,
+          0.06
+        ],
+        "values": [
+          0.0,
+          9.999990463256836,
+          29.999971389770508,
+          60.00005826354027
+        ],
+        "nondecreasing": true
+      },
+      "floating": {
+        "amplitudes": [
+          0.0,
+          0.01,
+          0.03,
+          0.06
+        ],
+        "values": [
+          0.0,
+          9.999990463256836,
+          29.999971389770508,
+          59.999942779541016
+        ],
+        "nondecreasing": true
+      },
+      "jitter": {
+        "amplitudes": [
+          0.0,
+          0.001,
+          0.003,
+          0.01,
+          0.03
+        ],
+        "values": [
+          0.0,
+          140.29615783691406,
+          420.8836669921875,
+          1402.956787109375,
+          4208.8798828125
+        ],
+        "nondecreasing": true
+      }
+    },
+    "cases": [
+      {
+        "case": "static_slide_0",
+        "amplitude": 0.0,
+        "legacy_pass": true,
+        "legacy_floor_y_m": 0.043647583574056625,
+        "legacy_foot_penetration_min_m": 0.0,
+        "mesh_penetrate_mm": 0.0,
+        "mesh_float_mm": 0.0,
+        "synthetic_static_p95_mps": 0.0
+      },
+      {
+        "case": "declared_slide_0",
+        "amplitude": 0.0,
+        "legacy_pass": true,
+        "legacy_floor_y_m": 0.043647583574056625,
+        "legacy_foot_penetration_min_m": 0.0,
+        "mesh_penetrate_mm": 0.0,
+        "mesh_float_mm": 0.0,
+        "synthetic_static_p95_mps": null
+      },
+      {
+        "case": "static_slide_0.05",
+        "amplitude": 0.05,
+        "legacy_pass": false,
+        "legacy_floor_y_m": 0.043647583574056625,
+        "legacy_foot_penetration_min_m": 0.0,
+        "mesh_penetrate_mm": 0.0,
+        "mesh_float_mm": 0.0,
+        "synthetic_static_p95_mps": 0.050000399351119995
+      },
+      {
+        "case": "declared_slide_0.05",
+        "amplitude": 0.05,
+        "legacy_pass": false,
+        "legacy_floor_y_m": 0.043647583574056625,
+        "legacy_foot_penetration_min_m": 0.0,
+        "mesh_penetrate_mm": 0.0,
+        "mesh_float_mm": 0.0,
+        "synthetic_static_p95_mps": null
+      },
+      {
+        "case": "static_slide_0.15",
+        "amplitude": 0.15,
+        "legacy_pass": false,
+        "legacy_floor_y_m": 0.043647583574056625,
+        "legacy_foot_penetration_min_m": 0.0,
+        "mesh_penetrate_mm": 0.0,
+        "mesh_float_mm": 0.0,
+        "synthetic_static_p95_mps": 0.15000075101852417
+      },
+      {
+        "case": "declared_slide_0.15",
+        "amplitude": 0.15,
+        "legacy_pass": false,
+        "legacy_floor_y_m": 0.043647583574056625,
+        "legacy_foot_penetration_min_m": 0.0,
+        "mesh_penetrate_mm": 0.0,
+        "mesh_float_mm": 0.0,
+        "synthetic_static_p95_mps": null
+      },
+      {
+        "case": "static_slide_0.3",
+        "amplitude": 0.3,
+        "legacy_pass": false,
+        "legacy_floor_y_m": 0.043647583574056625,
+        "legacy_foot_penetration_min_m": 0.0,
+        "mesh_penetrate_mm": 0.0,
+        "mesh_float_mm": 0.0,
+        "synthetic_static_p95_mps": 0.30000150203704834
+      },
+      {
+        "case": "declared_slide_0.3",
+        "amplitude": 0.3,
+        "legacy_pass": false,
+        "legacy_floor_y_m": 0.043647583574056625,
+        "legacy_foot_penetration_min_m": 0.0,
+        "mesh_penetrate_mm": 0.0,
+        "mesh_float_mm": 0.0,
+        "synthetic_static_p95_mps": null
+      },
+      {
+        "case": "penetration_offsets_m_0",
+        "amplitude": 0.0,
+        "legacy_pass": true,
+        "legacy_floor_y_m": 0.043647583574056625,
+        "legacy_foot_penetration_min_m": 0.0,
+        "mesh_penetrate_mm": 0.0,
+        "mesh_float_mm": 0.0,
+        "synthetic_static_p95_mps": 0.0
+      },
+      {
+        "case": "penetration_offsets_m_0.01",
+        "amplitude": 0.01,
+        "legacy_pass": true,
+        "legacy_floor_y_m": 0.03364759311079979,
+        "legacy_foot_penetration_min_m": 0.0,
+        "mesh_penetrate_mm": 9.999990463256836,
+        "mesh_float_mm": 0.0,
+        "synthetic_static_p95_mps": 0.0
+      },
+      {
+        "case": "penetration_offsets_m_0.03",
+        "amplitude": 0.03,
+        "legacy_pass": true,
+        "legacy_floor_y_m": 0.013647612184286118,
+        "legacy_foot_penetration_min_m": 0.0,
+        "mesh_penetrate_mm": 29.999971389770508,
+        "mesh_float_mm": 0.0,
+        "synthetic_static_p95_mps": 0.0
+      },
+      {
+        "case": "penetration_offsets_m_0.06",
+        "amplitude": 0.06,
+        "legacy_pass": true,
+        "legacy_floor_y_m": -0.01635235920548439,
+        "legacy_foot_penetration_min_m": 0.0,
+        "mesh_penetrate_mm": 60.00005826354027,
+        "mesh_float_mm": 0.0,
+        "synthetic_static_p95_mps": 0.0
+      },
+      {
+        "case": "float_offsets_m_0",
+        "amplitude": 0.0,
+        "legacy_pass": true,
+        "legacy_floor_y_m": 0.043647583574056625,
+        "legacy_foot_penetration_min_m": 0.0,
+        "mesh_penetrate_mm": 0.0,
+        "mesh_float_mm": 0.0,
+        "synthetic_static_p95_mps": 0.0
+      },
+      {
+        "case": "float_offsets_m_0.01",
+        "amplitude": 0.01,
+        "legacy_pass": true,
+        "legacy_floor_y_m": 0.05364757403731346,
+        "legacy_foot_penetration_min_m": 0.0,
+        "mesh_penetrate_mm": 0.0,
+        "mesh_float_mm": 9.999990463256836,
+        "synthetic_static_p95_mps": 0.0
+      },
+      {
+        "case": "float_offsets_m_0.03",
+        "amplitude": 0.03,
+        "legacy_pass": true,
+        "legacy_floor_y_m": 0.07364755868911743,
+        "legacy_foot_penetration_min_m": 0.0,
+        "mesh_penetrate_mm": 0.0,
+        "mesh_float_mm": 29.999971389770508,
+        "synthetic_static_p95_mps": 0.0
+      },
+      {
+        "case": "float_offsets_m_0.06",
+        "amplitude": 0.06,
+        "legacy_pass": true,
+        "legacy_floor_y_m": 0.10364753007888794,
+        "legacy_foot_penetration_min_m": 0.0,
+        "mesh_penetrate_mm": 0.0,
+        "mesh_float_mm": 59.999942779541016,
+        "synthetic_static_p95_mps": 0.0
+      },
+      {
+        "case": "root_jitter_0",
+        "amplitude": 0.0,
+        "legacy_pass": true,
+        "legacy_floor_y_m": 0.043647583574056625,
+        "legacy_foot_penetration_min_m": 0.0,
+        "mesh_penetrate_mm": 0.0,
+        "mesh_float_mm": 0.0,
+        "synthetic_static_p95_mps": 0.0
+      },
+      {
+        "case": "root_jitter_0.001",
+        "amplitude": 0.001,
+        "legacy_pass": true,
+        "legacy_floor_y_m": 0.04278164729475975,
+        "legacy_foot_penetration_min_m": 0.0,
+        "mesh_penetrate_mm": 0.0,
+        "mesh_float_mm": 0.0,
+        "synthetic_static_p95_mps": 0.0
+      },
+      {
+        "case": "root_jitter_0.003",
+        "amplitude": 0.003,
+        "legacy_pass": true,
+        "legacy_floor_y_m": 0.0410495363175869,
+        "legacy_foot_penetration_min_m": 0.0,
+        "mesh_penetrate_mm": 0.0,
+        "mesh_float_mm": 0.0,
+        "synthetic_static_p95_mps": 0.0
+      },
+      {
+        "case": "root_jitter_0.01",
+        "amplitude": 0.01,
+        "legacy_pass": false,
+        "legacy_floor_y_m": 0.03498738631606102,
+        "legacy_foot_penetration_min_m": 0.0,
+        "mesh_penetrate_mm": 2.8867721557617188,
+        "mesh_float_mm": 2.886732341721654,
+        "synthetic_static_p95_mps": 0.0
+      },
+      {
+        "case": "root_jitter_0.03",
+        "amplitude": 0.03,
+        "legacy_pass": false,
+        "legacy_floor_y_m": 0.017666872590780258,
+        "legacy_foot_penetration_min_m": 0.0,
+        "mesh_penetrate_mm": 8.660276420414448,
+        "mesh_float_mm": 8.660237304866314,
+        "synthetic_static_p95_mps": 0.0
+      },
+      {
+        "case": "synthetic_flight_no_static",
+        "amplitude": 0.3,
+        "legacy_pass": true,
+        "legacy_floor_y_m": 0.3436475396156311,
+        "legacy_foot_penetration_min_m": 0.0,
+        "mesh_penetrate_mm": 0.0,
+        "mesh_float_mm": 299.9999225139618,
+        "synthetic_static_p95_mps": null
+      },
+      {
+        "case": "unknown_high_speed",
+        "amplitude": 0.3,
+        "legacy_pass": false,
+        "legacy_floor_y_m": 0.043647583574056625,
+        "legacy_foot_penetration_min_m": 0.0,
+        "mesh_penetrate_mm": 0.0,
+        "mesh_float_mm": 0.0,
+        "synthetic_static_p95_mps": null
+      }
+    ]
+  },
+  "mesh_reference_parity": {
+    "runtime": "smplx==0.1.28",
+    "vertices_max_abs_m": 2.384185791015625e-07,
+    "joints_max_abs_m": 2.384185791015625e-07,
+    "tolerance_m": 1e-05,
+    "source": "https://github.com/vchoutas/smplx",
+    "shape": "shared neutral beta0"
+  },
+  "fresh_replay": {
+    "status": "FRESH_NATIVE_RELIABILITY_REPLAY_VERIFIED",
+    "train_windows": 1468,
+    "historical_unique_replays": 61,
+    "generated_replays": 42,
+    "mesh_geometry_replays": 34,
+    "controlled_replays": 23,
+    "source_sensitivity_replayed": true,
+    "calibration_rows_reconstructed": true,
+    "legacy_results_unchanged": true,
+    "source_protocol_sha256": "9d788c507a6719293d860fbb8610d5748c5c55f2298a771757700fbebbc93aac",
+    "optimizer_calls": 0,
+    "new_generations": 0,
+    "operational_qualified": false,
+    "mode": "SHADOW",
+    "expert_labels_supplied": false
+  },
+  "input_receipt_hashes": {
+    "protocol.json": "9d788c507a6719293d860fbb8610d5748c5c55f2298a771757700fbebbc93aac",
+    "historical_inventory.json": "805a6c32480f53188e4f47f64060b88478a6bf0e6537a7501592e903c706b0ba",
+    "train/windows.jsonl": "23f524a50083de486051637fe0f7b57d88ca5966eb4ce10a98479ae5a72fbdfb",
+    "train/calibration_rows.json": "7ab5e01a732ff714fc2d7997509c2291302f05f656c69fa2932567606a15ed34",
+    "calibration.json": "cbf22d95a236fc45d18cf40d2a0550ccfa4bf2ce6f2c5c22b6c4b316e6f6297e",
+    "labelled_candidates.json": "5179368f1602f16c9c138fc160a662b795ec16dd8d68b036ba4fd57b8c700b82",
+    "generated/results.json": "624e4ce43218a4d066187b1cc5537a74f8bfd1e30b2496b60b0e1cce7c4e349f",
+    "sensitivity/generated_ground_skeleton.json": "207905e31c07e2960a9f470a46de8c457398e9fbc0d04ad5fdd87efafc52cad1",
+    "sensitivity/source_duration_ground_noise.json": "255400339759439fc10c72481bccf244b212bb6036d0b8e3609fe545b6c91f48",
+    "sensitivity/saved_long_prefixes.json": "3ac423daf2b68befad077b377e7264888b3757fc7b3000659a62e1c4e6af0544",
+    "controlled/report.json": "b901d7b4721c0f031b3e002b4568293ff808fc3506b78b1b16cd7987e6714004"
+  },
+  "replay_receipt_sha256": "b88f5226eef310fef396d48f7584d8fb7a09cf98f7bf22c7846d3095b19b74c8",
+  "annotation_packet_records": 12,
+  "expert_labels_supplied": false,
+  "training_steps": 0,
+  "optimizer_calls": 0,
+  "new_generations": 0,
+  "boundaries": [
+    "Fitted source motion is not independently certified high-quality truth.",
+    "Reference exceedance is not false rejection. Conditional real static metrics are NOT_EVALUABLE without labels.",
+    "Fixed reference ground is a geometric proxy, not measured scene ground.",
+    "Six connected source groups do not establish independent statistical coverage.",
+    "Controlled neutral fixtures test operators, not real dance quality or detection accuracy.",
+    "PhysDiff is a declared Appendix reimplementation, without author-code or leaderboard parity.",
+    "Legacy kinematic/contact audit does not simulate forces, friction or balance."
+  ]
+}
