@@ -80,13 +80,15 @@ def main():
         if adapter_payload['base_sha256']!=q['checkpoint']['sha256']:raise ValueError('Adapter base differs')
         if adapter_payload.get('condition_schema')!='soft_event_reference_v1':
             raise ValueError('Adapter was not trained for source-backed Event Plan conditions')
-        if not adapter_payload.get('music_qualified') and not q.get('research_allow_motion_only_adapter'):
+        if not (adapter_payload.get('music_qualified') and adapter_payload.get('full_motion_qualified')) and not q.get('research_allow_motion_only_adapter'):
             raise ValueError('Adapter lacks music generation qualification')
         adapter=PrimitiveAdapter().cuda().eval()
         adapter.load_state_dict(adapter_payload['state'],strict=True)
         event_residual=adapter(normalized.cuda(),mask.cuda(),torch.from_numpy(soft_phase).cuda()).detach()
         adapter_hook=model.cond_encoder.register_forward_hook(lambda module,args,value:value+event_residual)
 
+    # Adapter construction must not alter the matched sampler noise stream.
+    torch.manual_seed(q['seed']);torch.cuda.manual_seed_all(q['seed'])
     with torch.no_grad():
         if q['mode']=='baseline':
             if masks.any():raise ValueError('Baseline must not contain anchors')
@@ -126,6 +128,8 @@ def main():
         weights_before=before,weights_after=after,sampler=sampler,
         raw_window_overlap_max_abs=float(abs(raw[:-1,75:]-raw[1:,:75]).max()) if len(raw)>1 else 0.,
         training=False,official_stitch=True,features=q['features'],audio=q['audio'],
+        adapter=(q.get('adapter') if q['mode']=='event_guided' else None),
+        research_unqualified_adapter=(not (adapter_payload.get('music_qualified') and adapter_payload.get('full_motion_qualified')) if q['mode']=='event_guided' else False),
         soft_reference=soft_audit,adapter_music_qualified=(adapter_payload.get('music_qualified',False) if q['mode']=='event_guided' else None)))
     print('GENERATION_COMPLETE',q['mode'],q['frames'],flush=True)
 if __name__=='__main__':main()

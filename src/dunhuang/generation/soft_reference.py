@@ -43,27 +43,23 @@ def build_soft_reference(plan, frames, scale, bias):
         if not 0 <= lo < hi <= len(source):
             raise ValueError('Event prompt source interval invalid')
         warp = np.asarray(event['time_warp'], np.float64)
-        if (warp.ndim != 2 or warp.shape[1] != 2 or
+        if (warp.ndim != 2 or warp.shape[1] != 2 or len(warp) < 2 or
                 not np.isfinite(warp).all() or np.any(np.diff(warp, axis=0) <= 0) or
                 not np.array_equal(warp[0], [lo, a]) or
                 not np.array_equal(warp[-1], [hi, b])):
             raise ValueError('Event prompt time map differs')
+        rates = np.diff(warp[:, 1]) / np.diff(warp[:, 0])
+        if np.any(rates < .75 - 1e-6) or np.any(rates > 1.33 + 1e-6):
+            raise ValueError('Event prompt time-map rate outside registered limits')
         times = np.arange(a, b)
         positions = np.interp(times, warp[:, 1], warp[:, 0])
         positions = np.clip(positions, lo, hi - 1)
-        left = np.floor(positions).astype(int)
-        right = np.minimum(left + 1, hi - 1)
-        alpha = (positions - left).astype(np.float32)
-        first = MotionAdapter.to_edge(source[left].copy())[:, 7:].reshape(-1, 24, 6)
-        second = MotionAdapter.to_edge(source[right].copy())[:, 7:].reshape(-1, 24, 6)
+        sampled = resample_native(source, positions)
+        edge = MotionAdapter.to_edge(sampled)
         phase[a:b, 0] = ((positions - lo) / (hi - lo)).astype(np.float32)
         for joint in JOINTS:
-            r0 = Rotation.from_matrix(matrices(first[:, joint], row=True))
-            r1 = Rotation.from_matrix(matrices(second[:, joint], row=True))
-            delta = (r0.inv() * r1).as_rotvec()
-            pose = sixd((r0 * Rotation.from_rotvec(delta * alpha[:, None])).as_matrix(), row=True).astype(np.float32)
             channels = slice(7 + 6 * joint, 13 + 6 * joint)
-            normalized = pose * scale[channels] + bias[channels]
+            normalized = edge[:, channels] * scale[channels] + bias[channels]
             good = np.isfinite(normalized).all(axis=1) & (np.abs(normalized) <= 1 + 32 * np.finfo(np.float32).eps).all(axis=1)
             values[a:b, channels] = np.where(good[:, None], normalized, 0.)
             masks[a:b, channels] = good[:, None]
@@ -76,8 +72,33 @@ def build_soft_reference(plan, frames, scale, bias):
     known = np.stack([masks[75*i:75*i+150] for i in range(windows)])
     phases = np.stack([phase[75*i:75*i+150] for i in range(windows)])
     return reference, known, phases, dict(
-        schema=SCHEMA, source_joint_frames=total, supported_joint_frames=supported,
+        schema=SCHEMA, source_frames=frames,
+        supported_time_frames=int(masks[:frames].any(axis=1).sum()),
+        source_joint_frames=total, supported_joint_frames=supported,
         masked_unsupported_joint_frames=total-supported,
         supported_fraction=float(supported/max(total, 1)),
         full_151d_target_supported=False, physical_qualified=False,
-        source_only=True, no_source_pose_paste=True)
+        source_only=True, no_source_pose_paste=True,
+        endpoint_policy='half-open source interval: hold last observed pose for final fractional sample')
+
+
+def resample_native(source, positions):
+    """SO(3) geodesics for rotations, linear root, nearest predicted contacts.
+
+    Positions must refer to observed frames. This is a source condition/target
+    transform; it never reads generated output or certifies physical quality.
+    """
+    source = motion151(np.asarray(source))
+    positions = np.asarray(positions, dtype=np.float64)
+    if positions.ndim != 1 or not len(positions) or not np.isfinite(positions).all() or positions.min()<0 or positions.max()>len(source)-1:
+        raise ValueError('Source sampling outside observed motion')
+    left=np.floor(positions).astype(int);right=np.minimum(left+1,len(source)-1)
+    alpha=(positions-left).astype(np.float32)
+    result=source[np.rint(positions).astype(int)].copy()
+    result[:,4:7]=source[left,4:7]*(1-alpha[:,None])+source[right,4:7]*alpha[:,None]
+    first=Rotation.from_matrix(matrices(source[left,7:].reshape(-1,24,6)).reshape(-1,3,3))
+    second=Rotation.from_matrix(matrices(source[right,7:].reshape(-1,24,6)).reshape(-1,3,3))
+    delta=(first.inv()*second).as_rotvec()
+    rotation=first*Rotation.from_rotvec(delta*np.repeat(alpha,24)[:,None])
+    result[:,7:]=sixd(rotation.as_matrix()).reshape(-1,144).astype(np.float32)
+    return result

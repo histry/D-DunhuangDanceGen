@@ -62,3 +62,20 @@ def test_nonuniform_event_time_map_changes_source_phase(tmp_path):
     assert abs(float(phase[1, 0, 0]) - 90/225) < 1e-5
     np.testing.assert_array_equal(values[0, 75:], values[1, :75])
     assert report['supported_fraction'] == 1.0
+
+def test_geodesic_training_phase_and_support(tmp_path):
+    from dunhuang.generation.train import phase_target
+    from dunhuang.contracts import matrices
+    p=_plan(tmp_path,150)
+    native=np.load(p['events'][0]['reference']['path'])
+    target,phase=phase_target(native,np.ones(151),np.zeros(151),69,partial=True)
+    assert target.shape==(150,151) and phase.shape==(150,1)
+    assert abs(phase[75,0]-69/150)<1e-6
+    assert not target[:,:79].any() and not target[:,127:].any()
+    rotations=matrices(target[:,79:127].reshape(-1,8,6),row=True)
+    np.testing.assert_allclose(np.linalg.det(rotations),1,atol=1e-5)
+
+def test_soft_reference_rejects_unregistered_speed(tmp_path):
+    p=_plan(tmp_path,150);p['events'][0]['time_warp']=[[0,0],[25,75],[150,150]]
+    with pytest.raises(ValueError,match='rate'):
+        build_soft_reference(p,150,np.ones(151),np.zeros(151))
