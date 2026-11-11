@@ -1,0 +1,83 @@
+{
+  "floor_policy": "frozen_baseline_mesh_p05",
+  "contact_height_m": 0.05,
+  "geometry_tolerance_m": 0.005,
+  "cohorts": [
+    {
+      "name": "150f",
+      "baseline": "outputs/event_plan_01/edge_baseline_150",
+      "cases": [
+        {
+          "name": "V05_temporal",
+          "run": "outputs/event_plan_01/dunhuang_150"
+        },
+        {
+          "name": "V06_no_adapter",
+          "run": "outputs/v06_01/none150"
+        },
+        {
+          "name": "V06_probe",
+          "run": "outputs/v06_01/probe150"
+        },
+        {
+          "name": "V07_dense_s1",
+          "run": "outputs/v07_01/dense_s1"
+        },
+        {
+          "name": "V07_matched_s1",
+          "run": "outputs/v07_01/matched_s1"
+        },
+        {
+          "name": "V07_replaced_s1",
+          "run": "outputs/v07_01/replaced_s1"
+        },
+        {
+          "name": "V07_warp_s1",
+          "run": "outputs/v07_01/warp_s1"
+        },
+        {
+          "name": "V07_dense_s2",
+          "run": "outputs/v07_01/dense_s2"
+        },
+        {
+          "name": "V07_replaced_s2",
+          "run": "outputs/v07_01/replaced_s2"
+        }
+      ]
+    },
+    {
+      "name": "225f",
+      "baseline": "outputs/v06_01/none225",
+      "cases": [
+        {
+          "name": "V06_zero225",
+          "run": "outputs/v06_01/zero225"
+        },
+        {
+          "name": "V06_probe225",
+          "run": "outputs/v06_01/probe225"
+        }
+      ]
+    },
+    {
+      "name": "450f",
+      "baseline": "outputs/event_plan_01/edge_baseline_450",
+      "cases": [
+        {
+          "name": "V05_temporal450",
+          "run": "outputs/event_plan_01/dunhuang_450"
+        }
+      ]
+    },
+    {
+      "name": "3601f",
+      "baseline": "outputs/event_plan_01/edge_baseline_3601",
+      "cases": [
+        {
+          "name": "V05_temporal3601",
+          "run": "outputs/event_plan_01/dunhuang_3601"
+        }
+      ]
+    }
+  ]
+}
