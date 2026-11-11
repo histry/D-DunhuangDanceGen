@@ -1,5 +1,7 @@
 {
   "profile": "dunhuang",
   "seed": 20261111,
-  "retrieval_policy": "heuristic"
+  "retrieval_policy": "heuristic",
+  "generator": "temporal",
+  "planned_time_warp": true
 }

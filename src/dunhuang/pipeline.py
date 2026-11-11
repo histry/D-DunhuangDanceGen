@@ -55,8 +55,17 @@ def run(q):
             plan=validate(json.loads((out/'event_plan.json').read_text()),q['audio']['sha256'],frames)
             q['anchors']=anchors(plan)
             q['event_plan']=dict(path=str(out/'event_plan.json'),sha256=sha(out/'event_plan.json'))
-            q['mode']='event_guided' if q.get('generator')=='adapter' else 'temporal';q['trajectory_radius']=12;q['trajectory_strength']=.55
-            q['generation_stage']='v0.5_event_plan_temporal'
+            generator=q.get('generator','temporal')
+            if generator not in ('temporal','adapter'):
+                raise ValueError('Unknown Dunhuang generation method')
+            q['mode']='event_guided' if generator=='adapter' else 'temporal'
+            q['trajectory_radius']=12;q['trajectory_strength']=.55
+            if generator=='adapter' and q.get('planned_time_warp'):
+                raise ValueError('Adapter does not yet consume phase-warped temporal prompts')
+            q['planned_time_warp']=bool(q.get('planned_time_warp',False)) if generator=='temporal' else False
+            q['generation_stage']=('v0.6_event_plan_phase_guidance' if q['planned_time_warp']
+                                  else 'v0.5_event_plan_temporal' if generator=='temporal'
+                                  else 'v1_research_adapter_unqualified')
             write(request,q)
         for python,module in [(q['edge_python'],'dunhuang.edge_backend'),(q['native_python'],'dunhuang.physical')]:
             with (out/(module.split('.')[-1]+'.log')).open('w') as log:
