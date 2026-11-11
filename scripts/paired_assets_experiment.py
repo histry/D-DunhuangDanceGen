@@ -22,8 +22,8 @@ def main():
     def command(args):
         print('RUN',args,flush=True);subprocess.run(list(map(str,args)),cwd=ROOT,env=env,check=True,timeout=3600)
     try:
+        command([assets['edge_python'],'-m','pytest','-q'])
         if a.mode=='audit':
-            command([assets['edge_python'],'-m','pytest','-q'])
             command([assets['edge_python'],'scripts/verify_paired_conversion.py','--assets',a.assets,
                 '--raw-root',raw,'--out',out/'conversion_parity.json'])
             command([assets['edge_python'],'-m','dunhuang.data.audit','--assets',a.assets,

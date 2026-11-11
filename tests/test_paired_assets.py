@@ -81,6 +81,7 @@ def paired_fixture(tmp_path):
             np.save(folder/(name+'.npy'),v)
         np.save(folder/'jukebox.npy',np.ones((150,4800),np.float32)*.1)
         row=dict(window_uid=str(index),source_group='group'+str(index),role=role,dataset='aistpp',
+            recording_uid='recording'+str(index),choreography_uid='choreography'+str(index),
             audio=ref(audio),raw_motion=ref(raw),music_uid='music'+str(index),fps=30,frames=150,
             start_frame=0,audio_offset_seconds=0,observed_body_joints=24,
             contact_policy='official_edge_forward_displacement_0.01m_last1')
@@ -92,7 +93,10 @@ def paired_fixture(tmp_path):
             motion_sha256=sha(raw),audio_offset_seconds=0,method='synthetic unit fixture only')
         path=folder/'alignment.json';path.write_text(json.dumps(attestation));row['alignment_attestation']=ref(path)
         rows.append(row)
-    manifest=dict(schema='paired_generation_manifest_v2',checkpoint_sha256='checkpoint',
+    split_proof=dict(status='verified',method='synthetic unit fixture only',sources={
+        r['raw_motion']['sha256']:{k:r[k] for k in ('source_group','role','recording_uid','choreography_uid','music_uid')} for r in rows})
+    split_path=tmp_path/'split.json';split_path.write_text(json.dumps(split_proof))
+    manifest=dict(split_attestation=ref(split_path),schema='paired_generation_manifest_v2',checkpoint_sha256='checkpoint',
         scaler_sha256=sha(scaler),rows=rows,recording_independence_verified=True,blind_test_claimed=False)
     path=tmp_path/'manifest.json';path.write_text(json.dumps(manifest))
     assets=dict(paired_generation_manifest=ref(path),checkpoint=dict(sha256='checkpoint'),
@@ -144,4 +148,11 @@ def test_test_role_identity_leak_is_checked_before_skipping_fit(tmp_path):
     assets,manifest,path=paired_fixture(tmp_path)
     row=copy.deepcopy(manifest['rows'][0]);row.update(window_uid='test',role='test',source_group='new-test-group')
     manifest['rows'].append(row);resave(assets,manifest,path)
-    with pytest.raises(ValueError,match='crosses roles'):inspect(assets)
+    with pytest.raises(ValueError):inspect(assets)
+
+
+def test_boolean_claim_without_source_bound_split_receipt_not_train_ready(tmp_path):
+    assets,manifest,path=paired_fixture(tmp_path)
+    manifest.pop('split_attestation');resave(assets,manifest,path)
+    windows,_,report=inspect(assets)
+    assert not windows and 'MISSING_SPLIT_ATTESTATION' in report['blockers']

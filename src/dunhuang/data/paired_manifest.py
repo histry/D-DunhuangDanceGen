@@ -13,7 +13,15 @@ def inspect(assets):
         raise ValueError('Paired manifest bound to another checkpoint/scaler')
     with np.load(checked(assets['scaler'])) as s:scale,bias=s['scale'],s['bias']
     roles={};identities={};windows=[];blockers=set();seen=set()
-    if not manifest.get('recording_independence_verified'):blockers.add('RECORDING_INDEPENDENCE_UNVERIFIED')
+    split_proof=None
+    if manifest.get('recording_independence_verified') is not True:
+        blockers.add('RECORDING_INDEPENDENCE_UNVERIFIED')
+    elif not manifest.get('split_attestation'):
+        blockers.add('MISSING_SPLIT_ATTESTATION')
+    else:
+        split_proof=read(checked(manifest['split_attestation']))
+        if split_proof.get('status')!='verified' or not split_proof.get('method'):
+            raise ValueError('Split attestation lacks verification method')
     if manifest.get('blind_test_claimed'):raise ValueError('Previously exposed public data is not a fresh blind test')
     for row in manifest['rows']:
         uid=row['window_uid']
@@ -22,6 +30,12 @@ def inspect(assets):
         if role not in ('train','val','test'):raise ValueError('Explicit role required')
         if group in roles and roles[group]!=role:raise ValueError('Paired source leakage')
         roles[group]=role
+        if split_proof is not None:
+            expected=dict(source_group=group,role=role,recording_uid=row.get('recording_uid'),
+                choreography_uid=row.get('choreography_uid'),music_uid=row['music_uid'])
+            if (not expected['recording_uid'] or not expected['choreography_uid'] or
+                split_proof['sources'].get(row['raw_motion']['sha256'])!=expected):
+                raise ValueError('Verified split does not bind source/group/role identities')
         for kind,identity in [('audio',row['audio']['sha256']),('motion',row['raw_motion']['sha256']),
                               ('music',row['music_uid']),('choreography',row.get('choreography_uid')),
                               ('recording',row.get('recording_uid'))]:

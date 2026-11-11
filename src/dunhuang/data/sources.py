@@ -57,3 +57,21 @@ def validate_links(records):
     return dict(known_links_isolated=True,groups=len(roles),roles=roles,
         grouping_scope='historical known links and conservative families; recording independence unverified',
         blind_test_claimed=False,recording_independence_verified=False)
+
+
+def materialize_candidate_audio(source,raw_root,audit):
+    raw_root=Path(raw_root).resolve();audit=Path(audit)
+    report=read(audit/'report.json')
+    candidate_ref=dict(report['feature_candidates'],path=str(audit/'feature_candidates.json'))
+    rows=read(checked(candidate_ref))['rows'];files={}
+    for row in rows:
+        asset=row['raw_audio'];original=raw_path(Path(source)/'assets/datasets',asset)
+        target=raw_root/relative(asset);target.parent.mkdir(parents=True,exist_ok=True)
+        if target.exists():checked(dict(path=str(target),sha256=asset['sha256']))
+        else:
+            temporary=target.with_name(target.name+'.copy')
+            shutil.copyfile(original,temporary);checked(dict(path=str(temporary),sha256=asset['sha256']))
+            temporary.replace(target)
+        files[target.relative_to(raw_root).as_posix()]=dict(sha256=sha(target),bytes=target.stat().st_size)
+    write(raw_root/'audio_inventory.json',dict(files=files,candidates=len(rows),pairing_verified=False))
+    return files
