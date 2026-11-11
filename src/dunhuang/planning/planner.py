@@ -1,6 +1,6 @@
 import numpy as np
 from dunhuang.io import checked
-from .event_plan import validate
+from .event_plan import validate,candidate_identity
 from scipy.spatial.transform import Rotation
 
 def timeline(audio,frames):
@@ -47,7 +47,9 @@ def plan(catalog,timing,audio_sha256,policy='heuristic',top_k=5,beam_width=3,rer
                 boundary_context=dict(left_source_frames=[a,min(a+4,b)],right_source_frames=[max(a,b-4),b],confidence='SOURCE_ONLY'),
                 scores=dict(heuristic=-abs(entry['activity_percentile']-slot['density']),global_score=None,sync_score=None,preference=None))
             if reranker is not None and policy!='heuristic':
-                event['scores'].update(reranker.scores(entry,slot,local=False))
+                event['scores'].update(reranker.scores(event,slot,local=False))
+            event['expression']=dict(amplitude=1.,mode='identity_source_reference',learned_expression=False)
+            event['candidate_uid']=candidate_identity(event,getattr(reranker,'identity',None))
             options.append(event)
         if not options:raise ValueError('No legal event duration/phase for slot '+str(slot))
         # Keep source diversity in the short candidate list before global search.
@@ -60,7 +62,7 @@ def plan(catalog,timing,audio_sha256,policy='heuristic',top_k=5,beam_width=3,rer
             v=e['scores']
             return v['heuristic'] if policy!='learned_qualified' else v['global_score']+.25*v['sync_score']
         ordered=sorted(options,key=lambda e:(-utility(e),e['event_uid']))
-        trace.append(dict(music_interval=[slot['start'],slot['end']],candidates=[dict(event_uid=e['event_uid'],scores=e['scores']) for e in (recalled if recalled is not None else ordered[:top_k])]))
+        trace.append(dict(music_interval=[slot['start'],slot['end']],candidates=[dict(event_uid=e['event_uid'],candidate_uid=e['candidate_uid'],time_warp=e['time_warp'],scores=e['scores']) for e in (recalled if recalled is not None else ordered[:top_k])]))
         chosen=[]
         for uid in dict.fromkeys(e['source_uid'] for e in ordered):
             chosen.append(next(e for e in ordered if e['source_uid']==uid))

@@ -8,6 +8,7 @@ from scipy.spatial.transform import Rotation
 
 from dunhuang.contracts import MotionAdapter, matrices, sixd, motion151
 from dunhuang.io import checked
+from dunhuang.planning.time_map import source_positions
 
 SCHEMA = 'soft_event_reference_v1'
 JOINTS = tuple(range(12, 20))
@@ -42,18 +43,7 @@ def build_soft_reference(plan, frames, scale, bias):
         source = motion151(np.asarray(np.load(checked(event['reference']), allow_pickle=False)))
         if not 0 <= lo < hi <= len(source):
             raise ValueError('Event prompt source interval invalid')
-        warp = np.asarray(event['time_warp'], np.float64)
-        if (warp.ndim != 2 or warp.shape[1] != 2 or len(warp) < 2 or
-                not np.isfinite(warp).all() or np.any(np.diff(warp, axis=0) <= 0) or
-                not np.array_equal(warp[0], [lo, a]) or
-                not np.array_equal(warp[-1], [hi, b])):
-            raise ValueError('Event prompt time map differs')
-        rates = np.diff(warp[:, 1]) / np.diff(warp[:, 0])
-        if np.any(rates < .75 - 1e-6) or np.any(rates > 1.33 + 1e-6):
-            raise ValueError('Event prompt time-map rate outside registered limits')
-        times = np.arange(a, b)
-        positions = np.interp(times, warp[:, 1], warp[:, 0])
-        positions = np.clip(positions, lo, hi - 1)
+        positions = source_positions(event, np.arange(a,b))
         sampled = resample_native(source, positions)
         edge = MotionAdapter.to_edge(sampled)
         phase[a:b, 0] = ((positions - lo) / (hi - lo)).astype(np.float32)

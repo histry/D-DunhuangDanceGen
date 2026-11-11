@@ -70,9 +70,9 @@ $PY scripts/b2_physical.py outputs/new_b2_support
 
 alignment/ 提供50D/74D双编码器、独立同步训练、文件名粗标签、专家偏好弃权接口和候选评分。scripts/sdmr.py先训练完整框架，scripts/sdmr_ablate.py仅在完整框架结束后重训一次去声学32D的消融。生成入口按检查点和资格收据决定启用或回退。见[实验报告](reports/SDMR实验报告.md)和[机器指标](reports/sdmr.json)。本轮真实评价未通过同步资格。
 
-## V0.6 实验分支：连续事件软条件与真实训练探针
+## V0.6 研究基线：连续事件软条件与真实训练探针
 
-PR #2 保持 Draft，main 默认路径仍是 V0.5。soft_reference.py 根据真实 Event Plan 的单调源相位做 SO(3) 测地插值，支持域外关节帧明确未知；重叠窗口条件一致。连续参考只进入冻结 EDGE 的条件 Adapter，不后贴源动作。
+PR #2 已通过 merge commit 合并，研究基线标签为 v0.6-research；main 默认生成路径仍是 V0.5。soft_reference.py 根据真实 Event Plan 的单调源相位做 SO(3) 测地插值，支持域外关节帧明确未知；重叠窗口条件一致。连续参考只进入冻结 EDGE 的条件 Adapter，不后贴源动作。
 
 本轮服务器完成 300 步48D探针、八例150/225帧生成、两次独立数值重放。42项完整回归通过；原官方/V0.5动作哈希不变；同噪声零 Adapter 与无 Adapter 完全相同。探针验证MSE降低约17.28%，但八例Native全未通过，动作幅度也下降，不能宣称音乐或整体质量提升。详见[V0.6实验报告](reports/V06实验报告.md)及[机器收据](reports/v06.json)。
 
@@ -89,3 +89,15 @@ python scripts/verify_v06.py --root outputs/v06_new --replay
 所有输出目录必须为新目录，路径按实际资产替换。记录实际运行提交，训练/生成版本与随后报告提交分开。研究权重的 music_qualified / full_motion_qualified 始终为 false，正式推理默认拒绝，实验才显式给 research_allow_motion_only_adapter。
 
 其他103通道仅是探针占位，不能当完整真值。完整151D目标与真实配对Jukebox仍缺失；学习式音乐演绎V1、双侧生成及SQP尚未完成，未升级450帧/整曲质量验收。
+
+## V0.7：条件合同与底层诊断
+
+本阶段不重复训练探针。共享 planning/time_map.py 将分段源→音乐时间映射同时用于生成条件和检索；74D节奏特征在真实映射后的SO(3)轨迹上重新求导，旧的均匀缩放同步资格不能自动升级到新执行合同。候选身份绑定来源、时长、时间映射、演法占位和评分模型哈希。当前演法仍是identity，不宣称已学习力度或停顿。
+
+generation/conditions.py 分开来源参考、观测掩码、相位及目标监督，dense_upper8 / completion_upper8 显式命名。匹配的150帧训练/推理条件由同一函数产生；全局窗口原点用于保证重叠掩码一致。历史V0.6 dense推理与completion训练的差异单独入审计，研究权限不授予正式资格。
+
+~~~bash
+tmux new-session -d -s ddg-v07 'python scripts/v07_experiment.py --assets outputs/event_plan_01/prepare/assets.json --prior outputs/v06_01 --alignment-request outputs/event_plan_shadow_verified/request.json --out outputs/v07_new > outputs/v07_new.log 2>&1; echo $? > outputs/v07_new.exit'
+~~~
+
+输出新目录，保存逐通道支持域、坐标往返、逐层激活、注意力熵、随机VJP、来源/相位/音乐干预、匹配噪声单窗生成及原Native结果。VJP只衡量局部网络敏感性，不是完整物理可控性证明。未来PFG-1D、Music–Event Cross-Attention、双侧两遍生成与SQP仍需各自数据和资格，不由诊断成功自动启用。

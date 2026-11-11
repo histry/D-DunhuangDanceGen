@@ -81,7 +81,19 @@ def main():
         authorize_adapter(adapter_payload,q['checkpoint']['sha256'],q.get('research_allow_motion_only_adapter',False))
         adapter=PrimitiveAdapter().cuda().eval()
         adapter.load_state_dict(adapter_payload['state'],strict=True)
-        event_residual=adapter(normalized.cuda(),mask.cuda(),torch.from_numpy(soft_phase).cuda()).detach()
+        from .generation.conditions import source_condition
+        requested_policy=q.get('research_condition_policy','dense_upper8')
+        trained_policy=adapter_payload.get('condition_policy','completion_upper8')
+        if not q.get('research_allow_motion_only_adapter') and requested_policy!=trained_policy:
+            raise ValueError('Qualified Adapter condition distribution differs')
+        condition=source_condition(normalized.cuda(),mask.cuda(),torch.from_numpy(soft_phase).cuda(),
+            requested_policy,window_offsets=[75*i for i in range(len(normalized))])
+        normalized,mask=condition.value.cpu(),condition.known.cpu()
+        soft_audit.update(training_condition_policy=trained_policy,inference_condition_policy=requested_policy,
+            visibility_distribution_matches=requested_policy==trained_policy,
+            training_music_scope=adapter_payload.get('condition_scope'))
+        write(out/'soft_reference_audit.json',soft_audit)
+        event_residual=adapter(condition.value,condition.known,condition.phase).detach()
         adapter_hook=model.cond_encoder.register_forward_hook(lambda module,args,value:value+event_residual)
 
     # Adapter construction must not alter the matched sampler noise stream.

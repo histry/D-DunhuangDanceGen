@@ -41,10 +41,10 @@ def masked_reference(target, scope='full'):
         for a, b in ((0, 8), (40, 44), (106, 110), (142, 150)):
             known[:, a:b] = True
     else:
-        # Dense source prompt with truly hidden completion spans.
-        known[:, :, 79:127] = True
-        known[:, 25:40, 79:127] = False
-        known[:, 90:115, 79:127] = False
+        from .conditions import source_condition
+        phase=torch.linspace(0,1,150,device=target.device,dtype=target.dtype)[None,:,None].expand(len(target),-1,-1)
+        condition=source_condition(target,torch.ones_like(known),phase,'completion_upper8')
+        return condition.value,condition.known
     return torch.where(known, target, torch.zeros_like(target)), known
 
 def authorize_adapter(payload,base_sha256,research=False):

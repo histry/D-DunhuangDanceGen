@@ -47,3 +47,11 @@ def anchors(plan):
             source=event['reference'],pose=data[index].tolist(),joints=event['primitive']['joints'],
             catalog_id=event['event_uid']))
     return result
+
+def candidate_identity(event,model_identity=None):
+    import hashlib,json
+    payload={k:event[k] for k in ('event_uid','source_interval','music_interval','time_warp','reference')}
+    payload['expression']=event.get('expression',dict(amplitude=1.,mode='identity_source_reference'))
+    payload['condition_schema']='soft_event_reference_v1'
+    payload['score_models']=model_identity
+    return hashlib.sha256(json.dumps(payload,sort_keys=True,separators=(',',':')).encode()).hexdigest()

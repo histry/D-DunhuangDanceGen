@@ -5,6 +5,8 @@ import torch
 from .model import RetrievalModel
 from .rank import synchronized_scores,authorize
 from dunhuang.io import checked
+from dunhuang.planning.time_map import source_positions,motion_features74,SCHEMA
+from dunhuang.generation.soft_reference import resample_native
 
 class Reranker:
     def __init__(self,assets,audio_sha256):
@@ -22,6 +24,13 @@ class Reranker:
         receipt=json.loads(checked(assets['music_receipt']).read_text())
         if receipt['source_sha256']!=audio_sha256 or receipt['features_sha256']!=assets['music_features']['sha256']:
             raise ValueError('Alignment query audio differs')
+        qualification=json.loads(checked(assets['qualification']).read_text())
+        if self.decision['enabled'] and qualification.get('execution_time_map_schema')!=SCHEMA:
+            self.decision.update(enabled=False,fallback_reason='missing_execution_time_map_qualification')
+        self.decision['execution_time_map_schema']=SCHEMA
+        self.identity=dict(global_sha256=assets['global']['sha256'],sync_sha256=assets['sync']['sha256'],
+            qualification_sha256=assets['qualification']['sha256'],time_map_schema=SCHEMA)
+        self.sources={}
         self.query=np.load(checked(assets['music_features']),allow_pickle=False)
     def scores(self,event,slot,local=True):
         a,b=slot['start'],slot['end'];n=b-a
@@ -31,16 +40,12 @@ class Reranker:
         if missing:
             music=np.pad(music,((0,missing),(0,0)))
             mm=np.pad(mm,((0,missing),(0,0)),constant_values=False)
-        with np.load(checked(event['motion_features'])) as data:
-            source=data['motion'];source_mask=data['mask']
-        # Explicit uniform phase alignment for retrieval scores, not an output-motion edit.
-        times=np.linspace(0,len(source)-1,n)
-        motion=np.column_stack([np.interp(times,np.arange(len(source)),source[:,j]) for j in range(74)])
-        mask=source_mask[np.floor(times).astype(int)]&source_mask[np.ceil(times).astype(int)]
-        rate=n/len(source)
-        motion[:,:66]/=rate
-        motion[:,[66,67]]/=rate
-        motion[:,[70,72,73]]/=rate**2
+        key=event['reference']['sha256']
+        if key not in self.sources:
+            self.sources[key]=np.load(checked(event['reference']),allow_pickle=False)
+        positions=source_positions(event,np.arange(a,b))
+        mapped=resample_native(self.sources[key],positions)
+        motion,mask=motion_features74(mapped)
         args=[]
         for name,x,m in [('music',music,mm),('motion',motion,mask)]:
             x=(x-np.array(self.norm[name]['mean']))/np.array(self.norm[name]['std'])*m
@@ -56,11 +61,10 @@ class Reranker:
         raw_scores=[]
         trimmed_music=args[0][:,15:-15];trimmed_mask=args[1][:,15:-15]
         for offset in (-15,-8,0,8,15):
-            positions=(np.arange(15,n-15)+offset)*(len(source)-1)/(n-1)
-            if positions.min()<0 or positions.max()>len(source)-1:raise ValueError('Missing real shift support')
-            v=np.column_stack([np.interp(positions,np.arange(len(source)),source[:,j]) for j in range(74)])
-            valid=source_mask[np.floor(positions).astype(int)]&source_mask[np.ceil(positions).astype(int)]
-            v[:,:66]/=rate;v[:,[66,67]]/=rate;v[:,[70,72,73]]/=rate**2
+            # Same exact mapped trajectory as generation, shifted only on its
+            # real music clock; no circular roll or alternative uniform map.
+            v=motion[15+offset:n-15+offset]
+            valid=mask[15+offset:n-15+offset]
             v=(v-np.array(self.norm['motion']['mean']))/np.array(self.norm['motion']['std'])*valid
             _,score=synchronized_scores(self.global_model,self.sync_model,trimmed_music,trimmed_mask,
                 torch.as_tensor(v).float()[None],torch.as_tensor(valid)[None])
@@ -70,4 +74,4 @@ class Reranker:
             m=self.global_model.music(args[0],args[1])[0]
             d=self.global_model.motion(args[2],args[3])[0]
         return dict(global_score=float((m*d).sum()),sync_score=probability,
-            sync_raw_logits=[float(s) for s in raw_scores],sync_reference='relative zero-offset probability on common true support',preference=None)
+            sync_raw_logits=[float(s) for s in raw_scores],sync_reference='relative zero-offset probability on exact Event Plan time warp',execution_time_map_schema=SCHEMA,preference=None)
