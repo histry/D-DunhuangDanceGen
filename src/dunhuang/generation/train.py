@@ -12,12 +12,19 @@ def train(assets,destination,steps,task='motion'):
     scaler=np.load(checked(assets['scaler']))
     refs={r['source_uid']:r['reference'] for r in catalog['entries']}
     windows=[]
+    tested=0;support_counts={'body8':0,'wrists':0,'root':0}
     for uid,ref in refs.items():
         source=np.load(checked(ref),allow_pickle=False)
         for start in range(0,len(source)-149,75):
-            edge=MotionAdapter.to_edge(source[start:start+150].copy())
+            clip=source[start:start+150].copy()
+            origin=clip[0,4:7].copy();origin[1]=0.
+            edge=MotionAdapter.to_edge(clip,origin)
             normalized=edge*scaler['scale']+scaler['bias']
-            if np.all(abs(normalized)<=1+32*np.finfo(np.float32).eps):
+            valid=abs(normalized)<=1+32*np.finfo(np.float32).eps
+            tested+=1
+            for name,(a,b) in {'body8':(79,127),'wrists':(127,139),'root':(4,7)}.items():
+                support_counts[name]+=int(valid[:,a:b].all())
+            if np.all(valid):
                 windows.append((uid,start,normalized.astype(np.float32)))
     if task=='paired':
         if not assets.get('paired_generation_manifest'):
@@ -36,7 +43,7 @@ def train(assets,destination,steps,task='motion'):
             if np.any(abs(normalized)>1+32*np.finfo(np.float32).eps):raise ValueError('Paired target outside frozen support')
             windows.append((row['source_group'],row['start_frame'],normalized.astype(np.float32),music.astype(np.float32)))
     groups=sorted({row[0] for row in windows})
-    audit=dict(motion_only_supported_150_windows=len(windows),recording_groups=groups,
+    audit=dict(tested_150_windows=tested,component_supported_windows=support_counts,root_origin='first_observed_context_XZ; height preserved',motion_only_supported_150_windows=len(windows),recording_groups=groups,
         source_count=len(refs),paired_jukebox_training_manifest=assets.get('paired_generation_manifest'),
         full_paired_music_training_ready=bool(assets.get('paired_generation_manifest')),
         checkpoint=assets['checkpoint'],scaler=assets['scaler'],

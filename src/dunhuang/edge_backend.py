@@ -42,8 +42,16 @@ def main():
     features=np.load(checked(q['features']),allow_pickle=False)[:q['windows']]
     if features.shape!=(q['windows'],150,4800) or not np.isfinite(features).all() or not features.any():raise ValueError('Real Jukebox windows required')
     values,masks=anchor_windows(q['frames'],q.get('anchors',[]))
-    write(out/'normalization_preflight.json',constraint_support(normalizer,values,masks))
-    normalized,mask=normalize_constraints(normalizer,values,masks)
+    support=constraint_support(normalizer,values,masks)
+    if q['mode']=='event_guided':
+        normalized=torch.from_numpy(values)*normalizer.scaler.scale_.cpu()+normalizer.scaler.min_.cpu()
+        mask=torch.from_numpy(masks)
+        normalized=torch.where(mask,normalized,torch.zeros_like(normalized))
+        write(out/'normalization_preflight.json',dict(supported=True,hard_anchor_support=support,
+            classification='UNCLIPPED_AFFINE_SOFT_REFERENCE',reference_is_not_output_admission=True))
+    else:
+        write(out/'normalization_preflight.json',support)
+        normalized,mask=normalize_constraints(normalizer,values,masks)
     model=DanceDecoder(nfeats=151,seq_len=150,latent_dim=512,ff_size=1024,num_layers=8,num_heads=8,dropout=.1,cond_feature_dim=4800,activation=torch.nn.functional.gelu)
     model.load_state_dict(payload['ema_state_dict'],strict=True);del payload
     skeleton=SMPLSkeleton('cuda')

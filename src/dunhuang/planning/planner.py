@@ -20,7 +20,7 @@ def timeline(audio,frames):
     return dict(fps=30,frames=frames,beats=beats[beats<frames].tolist(),phrase_method='approximately 3s subdivisions snapped to detected beats',
         slots=[dict(start=a,end=b,density=float(energy[a:b].mean())) for a,b in zip(edges[:-1],edges[1:])])
 
-def plan(catalog,timing,audio_sha256,policy='heuristic',top_k=5,beam_width=3,reranker=None):
+def plan(catalog,timing,audio_sha256,policy='heuristic',top_k=5,beam_width=3,reranker=None,condition_mode='temporal'):
     if policy not in ('heuristic','learned_shadow','learned_qualified'):raise ValueError('Unknown retrieval policy')
     if policy=='learned_qualified' and (reranker is None or not reranker.decision['enabled']):
         raise ValueError('Learned retrieval lacks bound validation qualification')
@@ -30,7 +30,8 @@ def plan(catalog,timing,audio_sha256,policy='heuristic',top_k=5,beam_width=3,rer
     for slot in timing['slots']:
         options=[]
         for entry in catalog['entries']:
-            if entry['feasibility']['temporal8']!='PASS':continue
+            qualification='soft_reference' if condition_mode=='adapter' else 'temporal8'
+            if entry['feasibility'].get(qualification)!='PASS':continue
             start,end=slot['start'],slot['end'];a,b=entry['source_interval'];center=entry['center']
             ratio=(end-start)/(b-a)
             if not .75<=ratio<=1.33:continue

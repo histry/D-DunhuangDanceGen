@@ -5,7 +5,7 @@ import subprocess
 from pathlib import Path
 import cv2
 import numpy as np
-p=argparse.ArgumentParser();p.add_argument('baseline',type=Path);p.add_argument('anchored',type=Path);p.add_argument('output',type=Path);p.add_argument('--audio',type=Path);a=p.parse_args()
+p=argparse.ArgumentParser();p.add_argument('--left-label',default='Frozen EDGE baseline');p.add_argument('--right-label',default='Eight-joint anchors');p.add_argument('baseline',type=Path);p.add_argument('anchored',type=Path);p.add_argument('output',type=Path);p.add_argument('--audio',type=Path);a=p.parse_args()
 parents=[-1,0,0,0,1,2,3,4,5,6,7,8,9,9,9,12,13,14,16,17,18,19,20,21]
 tracks=[np.load(d/'native_fk.npy') for d in (a.baseline,a.anchored)]
 if tracks[0].shape!=tracks[1].shape or tracks[0].shape[1:]!=(24,3):raise ValueError('Two matched SMPL24 tracks required')
