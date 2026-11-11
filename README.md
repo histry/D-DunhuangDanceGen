@@ -101,3 +101,19 @@ tmux new-session -d -s ddg-v07 'python scripts/v07_experiment.py --assets output
 ~~~
 
 输出新目录，保存逐通道支持域、坐标往返、逐层激活、注意力熵、随机VJP、来源/相位/音乐干预、匹配噪声单窗生成及原Native结果。VJP只衡量局部网络敏感性，不是完整物理可控性证明。未来PFG-1D、Music–Event Cross-Attention、双侧两遍生成与SQP仍需各自数据和资格，不由诊断成功自动启用。
+
+## V0.7与论文评价的真实结果
+
+本轮V0.7主实验不训练新模型：568窗支持域、两噪声seed/三时间步的层级响应、八例150帧生成均完成。右踝通道60在全部568窗越域，完整151D支持仍为0；来源替换对现有探针的作用很弱，不能仅凭局部MSE改善宣称事件演绎成功。八例Native仍0/8。详见[V0.7报告](reports/V07实验报告.md)和[机器数据](reports/v07.json)。
+
+新增独立evaluation_benchmarks/：EDGE PFC、网格Penetrate/Float/Skate、敦煌接触状态和事件/窗口边界诊断。17个保存结果、15个唯一动作已只读评价，PFC逐例与冻结EDGE官方脚本一致；统一SMPL网格与smplx参考最大差约2.4e-7m。
+
+PhysDiff仅为附录定义复现：公共地面来自冻结基线网格，Skate接触高度50mm为本项目显式协议选择；官方评价源码未获得，统一neutral网格骨架也与旧Native骨架不同。不能直接与论文表格排名比较。无连续接触样本时Skate/Phys-Err未定义；无独立标签时静止/有意滑动保持UNKNOWN，不自动豁免高速滑动。旧Native判决和阈值不变。
+
+~~~bash
+python scripts/evaluate_benchmarks.py --assets inputs/benchmark_assets.json --manifest configs/benchmark_runs.example.json --out outputs/paper_benchmarks_new
+python scripts/verify_benchmarks.py --root outputs/paper_benchmarks_01
+python scripts/verify_v07.py --root outputs/v07_01
+~~~
+
+第二、三条只读复核，不更新动作或优化权重。资产模板为configs/benchmark.example.json。详见[论文指标报告](reports/论文物理指标复核.md)、[完整指标](reports/paper_benchmarks.json)与[CSV](reports/paper_benchmarks.csv)。
