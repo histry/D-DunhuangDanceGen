@@ -2,7 +2,9 @@
 
 当前默认路径：**Event Catalog → Music Timeline → Event Plan → 冻结 EDGE（Temporal V0.5）→ 原 Native 验收**。学习检索保留shadow。研究路径已完成真实151D配对补全，以及原生SO(3)跨录制条件的Cross/Additive同参数量训练（各1,200步）；事件跟随与完整生成质量仍未合格。
 
-最新实验共40次150帧执行、32个不同动作哈希，Native0/40；两种融合效果近似。对1,468个Train目标的只读Native审计有40窗通过，未据此过滤数据或重选权重。详见[事件机制与跨来源训练报告](reports/事件机制与跨来源训练报告.md)、[机器汇总](reports/event_mechanism_summary.json)及[运行合同](docs/event_mechanism.md)。
+上一轮事件机制实验共40次150帧执行、32个不同动作哈希，Native0/40；两种融合效果近似。对1,468个Train目标的只读Native审计有40窗通过，未据此过滤数据或重选权重。详见[事件机制与跨来源训练报告](reports/事件机制与跨来源训练报告.md)、[机器汇总](reports/event_mechanism_summary.json)及[运行合同](docs/event_mechanism.md)。
+
+新增[时钟约束对齐与Root联合条件实验报告](reports/时钟约束对齐与Root联合条件实验报告.md)及[机器汇总](reports/clock_root_summary.json)：实现带NULL的时钟OT/位置对比、37D来源Root–Contact软条件和责任诊断，完成A/B/C固定预算训练、Root掩码消融、六例150帧生成与独立复核，服务器128项测试通过。时间辨别未建立稳定优势，Root条件收益仍未成立，Native0/6；新路径保持Shadow研究模式，默认检索与31项门限不变。
 
 新增[Native物理评价可靠性报告](reports/Native物理评价可靠性报告.md)与[机器汇总](reports/native_reliability_summary.json)：本轮只读重放1,468个目标和42次历史生成执行，并完成地面/骨架/噪声及23个合成测试；服务器117项回归通过，独立复核通过。旧31项限制与判决不变。Native-Calib-v2仍为未获准的Shadow，真实静态接触、误拒率与专家一致性因缺少独立标注保持未知；本轮没有训练或新采样。
 
@@ -31,7 +33,7 @@ planning/ 实现事件目录、节拍/能量时间线、单调时间映射及 To
 
 alignment/ 是 50D 音乐 / 74D 动作双编码器与局部同步头。heuristic 默认启用；learned_shadow 需要显式绑定全局/同步 checkpoint、对应编码器和查询收据，只记录两级评分；learned_qualified 还需验证资格。历史 Test 已暴露，只作为开发回归。同歌检索与同歌时段检索分开评估。
 
-generation/adapter.py 提供零初始化、掩码条件 Adapter，冻结 EDGE 主干，复用原 CFG。generation/train.py 提供真实 151D/4800D 配对、来源分离、目标支持域预检；当前没有可用训练权重。以下训练命令需 EDGE 环境：
+generation/adapter.py 提供零初始化、掩码条件 Adapter，冻结 EDGE 主干，复用原 CFG。generation/train.py 提供真实 151D/4800D 配对、来源分离、目标支持域预检；尚无获完整生成资格的训练权重。以下训练命令需 EDGE 环境：
 ```bash
 python scripts/train.py --assets outputs/new_prepare/assets.json --out outputs/new_motion_training --task motion --steps 300
 python scripts/train.py --assets inputs/paired_assets.json --out outputs/new_paired_training --task paired --steps 300
