@@ -27,6 +27,16 @@ def metadata(assets):
 def prepare(assets,global_ref,sync_ref,out):
     out=Path(out);out.mkdir();(out/'audio').mkdir();(out/'windows').mkdir()
     manifest=metadata(assets)
+    runtime=None
+    if assets.get('audio_runtime'):
+        runtime=read(checked(assets['audio_runtime']))
+        if runtime.get('schema')!='isolated_audio_runtime_v1' or runtime.get('version')!='0.5.0.post1':
+            raise ValueError('Unregistered isolated audio runtime')
+        checked(runtime['wheel'])
+        for item in runtime['files']:checked(item)
+        sys.path.insert(0,str(Path(runtime['import_root']).resolve()))
+    import soxr
+    if runtime and soxr.__version__!=runtime['version']:raise ValueError('Imported resampler differs')
     rows=sorted([r for r in manifest['rows'] if r['role'] in ('train','val')],key=lambda r:r['window_uid'])
     legacy=pinned(assets['legacy_root'],assets['legacy_commit']);sys.path.insert(0,str(legacy))
     from evaluation.paired_alignment_observations_v3 import full_audio_observations,CONTRACT
@@ -71,6 +81,7 @@ def prepare(assets,global_ref,sync_ref,out):
     np.savez_compressed(out/'observations.npz',**arrays)
     write(out/'manifest.json',dict(schema='verified_clock_alignment_population_v1',rows=rows,
         paired_manifest=assets['paired_generation_manifest'],feature_contract=CONTRACT,
+        audio_runtime=assets.get('audio_runtime'),resampler_version=soxr.__version__,libsoxr_version=soxr.__libsoxr_version__,
         extractor_commit=assets['legacy_commit'],extractor_sha256=sha(legacy/'evaluation/paired_alignment_observations_v3.py'),
         global_checkpoint=global_ref,sync_checkpoint=sync_ref,norm=norm,
         train_rows=sum(r['role']=='train' for r in rows),val_rows=sum(r['role']=='val' for r in rows),

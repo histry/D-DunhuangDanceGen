@@ -4,7 +4,7 @@ This research path leaves the EDGE generator, Native31-limit acceptance, default
 
 ## Frozen design
 
-The source is [VTaMo](https://arxiv.org/html/2607.09126v1) and its [public OT implementation](https://github.com/junyi2005/vtamo/blob/main/vtamo/ot_sinkhorn.py). We independently implement music/motion matching; no sign/text reordering or T5 code is copied. The old danceRAG paired v3/local/sync reports remain unqualified; their losses and probes are not evidence of new source generalization.
+The source is [VTaMo](https://arxiv.org/html/2607.09126v1) and its [public OT implementation](https://github.com/junyi2005/vtamo/blob/a674902d8eeff9e7e2dc68c727418936542ba5a0/vtamo/ot_sinkhorn.py). We independently implement music/motion matching; no sign/text reordering or T5 code is copied. The old danceRAG paired v3/local/sync reports remain unqualified; their losses and probes are not evidence of new source generalization.
 
 Use the verified AIST manifest (1480 Train,481 Val;457 Test excluded from new feature extraction/evaluation). Every source-origin attestation and associated recording/choreography/music role is checked. Full-audio50D observations are extracted with the frozen legacy implementation; motion74 is recomputed from actual150-frame native observations. Music has a real120-frame core, motion a real150-frame halo; four offsets are noncyclic crops. No shift label enters the model clocks or features.
 
@@ -40,3 +40,5 @@ EDGE training/generation uses the pinned EDGE Python; diagnosis/alignment/Native
     python scripts/verify_clock_root.py --assets outputs/aist_features_01/assets.json --clock outputs/clock_alignment_new --root outputs/root_condition_new --diagnosis outputs/root_responsibility_new --out outputs/clock_root_replay_new
 
 The fresh verifier re-extracts observations, recomputes frozen encodings and A/B/C measurements, reconstructs Root/body diagnostics, and invokes the real Native worker on saved new generations. It never retrains or resamples. Keep full logs, input/output hashes, launch/exit receipts and failed attempts. Public Git receives code and aggregate results only; raw source identities, waveform/model data and server paths remain private. Remove only SSH helpers and transfer archives created for this run.
+
+The Native environment initially lacked SoXR. The extractor remains unchanged: no resampler fallback is permitted. An optional audio_runtime reference binds an isolated import directory, every package file and the exact official soxr0.5.0.post1 CPython3.9 Linux wheel (SHA2569c8e9c980637e03d3f345a4fd81d56477a58c294fb26205fa121bc4eb23d9d01), matching the old verified dependency. A private assets copy adds this reference; original asset files and shared Python installations remain unchanged. Extraction receipts record imported Python-SoXR/libsoxr versions.
