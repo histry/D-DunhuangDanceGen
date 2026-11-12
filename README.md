@@ -157,3 +157,7 @@ python scripts/verify_v08.py --root outputs/v08_new --out outputs/v08_new/readou
 服务器96项测试通过，新进程验证MSE与保存结果完全一致、零权重更新。Val补全MSE较零Adapter约改善1.97%，移除来源参考几乎不变；未证明音乐演绎或Native质量，默认生成入口不变。角色隔离只覆盖已核验官方关联键，不宣称语义独立或新盲测。
 
 详见 [实际配对训练报告](reports/AIST++配对训练报告.md) 和 [运行说明](docs/aist_pairing_pipeline.md)。完整清单与原始回执保留在本地/服务器的忽略输出目录，GitHub仅发布汇总。
+
+## 事件可辨识性研究（Shadow）
+
+新增自动事件、来源可追溯弱标签、严格部分路径、合成插入/删除/合法变速及独立重放。固定预算与指标边界见 [研究协议](docs/事件可辨识性研究协议.md)。历史 A/B/C、Native31、默认生成路径保持冻结。真实事件评价仍需要独立审核。

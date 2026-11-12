@@ -20,13 +20,14 @@ def sinkhorn(log_kernel,mu,nu,iterations):
 
 
 class ClockNullTransport(nn.Module):
-    def __init__(self,width=128,band_seconds=.5,epsilon=.15,iterations=80):
+    def __init__(self,width=128,band_seconds=.5,epsilon=.15,iterations=80,allow_simultaneous=False):
         super().__init__()
         if band_seconds<=0 or epsilon<=0:raise ValueError('Physical bandwidth and entropy required')
         self.music=nn.Linear(width,width,bias=False);self.motion=nn.Linear(width,width,bias=False)
         nn.init.eye_(self.music.weight);nn.init.eye_(self.motion.weight)
         self.null_logit=nn.Parameter(torch.tensor(0.))
         self.band_seconds=band_seconds;self.epsilon=epsilon;self.iterations=iterations
+        self.allow_simultaneous=allow_simultaneous
 
     def forward(self,music,motion,mv,dv,mt,dt):
         b,n,width=music.shape;k=motion.shape[1]
@@ -38,8 +39,10 @@ class ClockNullTransport(nn.Module):
         if dt.ndim==1:dt=dt.expand(b,-1)
         if mt.shape!=mv.shape or dt.shape!=dv.shape or not torch.isfinite(mt).all() or not torch.isfinite(dt).all():
             raise ValueError('Explicit finite physical clocks required')
-        if torch.any(torch.diff(mt,dim=-1)<=0) or torch.any(torch.diff(dt,dim=-1)<=0):
-            raise ValueError('Candidate clocks must remain strictly increasing')
+        md=torch.diff(mt,dim=-1);dd=torch.diff(dt,dim=-1)
+        reversed_clock=(torch.any(md<0) or torch.any(dd<0)) if self.allow_simultaneous else (torch.any(md<=0) or torch.any(dd<=0))
+        if reversed_clock:
+            raise ValueError('Candidate clocks must remain increasing; equal times only in explicit event mode')
         if not torch.isfinite(music[mv]).all() or not torch.isfinite(motion[dv]).all():
             raise ValueError('Nonfinite observed tokens')
         m=F.normalize(self.music(torch.where(mv[...,None],music,0)),dim=-1)

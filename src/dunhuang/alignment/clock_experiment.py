@@ -9,6 +9,7 @@ from .clock_data import prepare,encode,metadata,read,ref
 from .clock_metrics import energy_scores,clock_report,retrieval,grouped,correlation
 from .transport import ClockNullTransport,position_contrastive,SCHEMA
 from .model import RetrievalModel
+from .sampling import group_schedule
 
 
 def digest(model):
@@ -108,8 +109,7 @@ def run(assets,global_ref,sync_ref,config,out):
     write(out/'baselines.json',dict(energy=baseline,frozen_global=retrieval(global_scores,[rows[i] for i in val],'song')))
     groups={}
     for i in train:groups.setdefault(rows[i]['source_group'],[]).append(i)
-    rng=np.random.default_rng(config['seed']);names=sorted(groups)
-    schedule=[[int(rng.choice(groups[names[k%len(names)]])) for k in rng.permutation(config['batch'])] for _ in range(config['steps'])]
+    schedule=group_schedule(rows,config['steps'],config['batch'],config['seed'])
     np.save(out/'training_schedule.npy',np.asarray(schedule))
     results={};initializations={}
     for mode in ('A','B','C'):
