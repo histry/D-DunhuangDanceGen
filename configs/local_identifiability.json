@@ -1,0 +1,42 @@
+{
+  "schema": "local_identifiability_r1_r2_v1",
+  "frozen_baseline": "01c051521b0b3baf1b3f01085b40f73a6e02174a",
+  "seed": 20261122,
+  "steps": 400,
+  "batch": 12,
+  "learning_rate": 0.0005,
+  "score_temperature": 0.1,
+  "ridge_regularization": 0.01,
+  "max_geometry_tokens": 4096,
+  "repeat_pairs": 128,
+  "gradient_batches": [
+    0,
+    100,
+    200,
+    300
+  ],
+  "diagnostic_step": 0.0005,
+  "whitening_shrinkage": 0.05,
+  "r2_arms": [
+    "path_retrieval_warm",
+    "conditional_warm",
+    "conditional_cold",
+    "conditional_random"
+  ],
+  "strict": {
+    "count_tolerance": 0,
+    "time_w1_seconds": 0.15,
+    "histogram_l1": 0.25,
+    "energy_log_ratio": 0.22314355131420976,
+    "onset_density_per_second": 0.25,
+    "min_queries": 30,
+    "min_recordings": 15,
+    "min_train_components": 3,
+    "min_val_components": 2
+  },
+  "test_evaluations": 0,
+  "encoder_training": false,
+  "planner_routing": false,
+  "new_blind_source": false,
+  "selection": "fixed_last_no_validation_selection"
+}
