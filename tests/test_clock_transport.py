@@ -56,3 +56,9 @@ def test_real_source_derivatives_precede_window_selection():
     sliced,_=motion_features74(x[60:210])
     assert not np.allclose(actual[0,:3],sliced[0,:3])
     assert mask.shape==(150,74)
+
+def test_audio_reference_does_not_mislabel_actual_motion_operator():
+    from dunhuang.alignment.clock_data import observation_contract
+    result=observation_contract({'motion_derivative':'old native60 operation'})
+    assert result['legacy_reference_motion_operator_not_used']
+    assert 'native30Hz' in result['motion_operator'] and 'before window' in result['motion_operator']

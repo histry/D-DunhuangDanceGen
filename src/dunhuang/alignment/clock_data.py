@@ -25,6 +25,16 @@ def metadata(assets):
     return manifest
 
 
+def observation_contract(audio_reference):
+    return dict(schema='verified_clock_inputs_50_74_v2',fps=30,music_channels=50,motion_channels=74,
+        music_operator='frozen full-audio controls18/logmel32; no role-dependent crop context',
+        motion_operator='native30Hz body22 SO(3) increments times30 after official60to30 decimation, before window selection',
+        motion_masked=[68,69,71],time_map_schema='event_time_warp_motion74_v1',
+        legacy_audio_extractor_reference=audio_reference,
+        legacy_reference_motion_operator_not_used=True,
+        pretrained_encoder_norm_frozen=True,pretrained_native60_derivative_distribution_shift_possible=True)
+
+
 def window_motion_features(native,start,frames=150):
     # Derivatives precede window selection; do not create a new numerical origin per halo.
     if type(start) is not int or start<0 or start+frames>len(native):
@@ -98,7 +108,7 @@ def prepare(assets,global_ref,sync_ref,out):
         arrays[name]=(((arrays[name]-np.asarray(norm[name]['mean']))/np.asarray(norm[name]['std']))*arrays[mask]).astype(np.float32)
     np.savez_compressed(out/'observations.npz',**arrays)
     write(out/'manifest.json',dict(schema='verified_clock_alignment_population_v1',rows=rows,
-        paired_manifest=assets['paired_generation_manifest'],feature_contract=CONTRACT,
+        paired_manifest=assets['paired_generation_manifest'],feature_contract=observation_contract(CONTRACT),
         audio_runtime=assets.get('audio_runtime'),resampler_version=soxr.__version__,libsoxr_version=soxr.__libsoxr_version__,
         extractor_commit=assets['legacy_commit'],extractor_sha256=sha(legacy/'evaluation/paired_alignment_observations_v3.py'),
         global_checkpoint=global_ref,sync_checkpoint=sync_ref,norm=norm,
