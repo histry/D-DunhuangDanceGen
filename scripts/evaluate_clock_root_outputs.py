@@ -98,6 +98,7 @@ def main():
     public=dict(schema='clock_root_research_aggregate_v1',analysis_code_commit=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),
         clock_code_commit=read(clock/'protocol.json')['code_commit'],root_code_commit=read(root/'protocol.json')['code_commit'],
         diagnosis=read(Path(a.diagnosis)/'summary.json'),alignment=clock_result,
+        head_checkpoint_sha256={mode:sha(clock/mode/'head.pt') for mode in ('A','B','C')},
         paired_method_deltas=delta,root_training=dict(results=stripped,initializations=root_result['initializations'],
             steps_per_arm=root_result['training_steps_per_arm']),
         generation=metrics,shadow_service=read(out/'shadow_service.json'),
