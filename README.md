@@ -161,3 +161,5 @@ python scripts/verify_v08.py --root outputs/v08_new --out outputs/v08_new/readou
 ## 事件可辨识性研究（Shadow）
 
 新增自动事件、来源可追溯弱标签、严格部分路径、合成插入/删除/合法变速及独立重放。固定预算与指标边界见 [研究协议](docs/事件可辨识性研究协议.md)。历史 A/B/C、Native31、默认生成路径保持冻结。真实事件评价仍需要独立审核。
+
+本轮服务器六组固定预算实验及独立重放已完成；结果与边界见 [事件可辨识性实验报告](reports/event_identifiability_report.md)。合成身份/NULL恢复改善，真实时钟内容判别未超过时间先验，弱对应未显示独立收益，继续保持 Shadow。

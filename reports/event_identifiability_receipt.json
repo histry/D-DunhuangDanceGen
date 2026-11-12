@@ -1,0 +1,43 @@
+{
+  "schema": "public_event_delivery_receipt_v1",
+  "status": "COMPLETED_AND_FRESH_REPLAY_VERIFIED",
+  "training_commit": "fcb289f0fcad5bafe14bd8eed79f33bae43525fc",
+  "replay_commit": "1cb4cc362722d068113c533be38498933e00c649",
+  "analysis_commit": "1cb4cc362722d068113c533be38498933e00c649",
+  "launcher_exit_status": 0,
+  "pytest": "135 passed, 1 skipped",
+  "optimizer_calls_during_replay": 0,
+  "source_observations_rebuilt": true,
+  "scientific_array_fields_verified": 26,
+  "steps_per_arm": {
+    "sync_cold": 400,
+    "null_ot": 400,
+    "strict_path": 400,
+    "path_synthetic": 400,
+    "path_weak": 400,
+    "path_random_weak": 400
+  },
+  "probe_updates": 1600,
+  "started_utc": "2026-11-12T07:12:20Z",
+  "finished_utc": "2026-11-12T07:18:54Z",
+  "runtime": {
+    "python": "3.9.23",
+    "numpy": "1.23.5",
+    "scipy": "1.10.1",
+    "torch": "2.8.0+cu128",
+    "cuda": "12.8",
+    "gpu": "NVIDIA GeForce RTX 4090"
+  },
+  "public_summary_sha256": "8a131d7adada73e4e94c429b4528ca7b137591153dfe17c6e2eb66ed18d287a0",
+  "public_audit_sha256": "04c5b590ff915d7870e3f640b21af3bc51055c7116853952e66bf2373c581e2b",
+  "result_sha256": "e937f124401dfecfc30aa28182193d9b61ff12ac9d478005b20730e7ded5eca8",
+  "replay_result_sha256": "a303c5b6b884d1a40b36f7e00ef3ab3614fcbf5a0ad2930e4600493d444209f3",
+  "all_individual_source_identities_weights_and_arrays_retained_on_server": true,
+  "local_delivery_scope": "whitelisted public aggregate JSON and receipt only",
+  "temporary_ssh_files_created": 0,
+  "temporary_ssh_files_remaining": 0,
+  "generation_and_native_code_unchanged": true,
+  "test_evaluations": 0,
+  "human_reviewed": false,
+  "operational_qualified": false
+}

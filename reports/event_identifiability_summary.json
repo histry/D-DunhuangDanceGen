@@ -1,0 +1,1754 @@
+{
+  "schema": "event_identifiability_public_summary_v1",
+  "status": "COMPLETED_EVENT_IDENTIFIABILITY_SHADOW",
+  "execution_commit": "fcb289f0fcad5bafe14bd8eed79f33bae43525fc",
+  "config": {
+    "schema": "event_identifiability_design_v1",
+    "seed": 20261121,
+    "steps": 400,
+    "probe_steps": 400,
+    "batch": 12,
+    "candidates": 8,
+    "learning_rate": 0.0005,
+    "score_temperature": 0.1,
+    "band_seconds": 0.5,
+    "epsilon": 0.15,
+    "sinkhorn_iterations": 80,
+    "music_event_cap": 12,
+    "motion_event_cap": 20,
+    "selection": "fixed_last_no_val_selection",
+    "lag_seconds": 0.0,
+    "lag_calibrated": false,
+    "test_evaluations": 0,
+    "planner_routing_enabled": false,
+    "independent_event_labels_required_for_qualification": true,
+    "shift_weight": 0.25,
+    "partial_weight": 0.25,
+    "null_weight": 0.1,
+    "weak_weight": 0.1,
+    "synthetic_sequences": 96,
+    "synthetic_events": 12,
+    "shift_stride": 3,
+    "arms": [
+      "sync_cold",
+      "null_ot",
+      "strict_path",
+      "path_synthetic",
+      "path_weak",
+      "path_random_weak"
+    ]
+  },
+  "results": {
+    "sync_cold": {
+      "status": "SOURCE_CLOCK_PROXY_ONLY",
+      "queries": 150,
+      "R1": 0.2733333333333333,
+      "R5": 0.7666666666666667,
+      "negative_pair_win_rate": 0.577777777777778,
+      "pair_win_grouped": {
+        "recording_uid": {
+          "groups": 76,
+          "balanced_mean": 0.5723684210526315,
+          "bootstrap95": [
+            0.49665570175438595,
+            0.6404057017543859
+          ]
+        },
+        "choreography_uid": {
+          "groups": 20,
+          "balanced_mean": 0.5740972222222223,
+          "bootstrap95": [
+            0.5271493055555555,
+            0.6241145833333334
+          ]
+        },
+        "source_group": {
+          "groups": 2,
+          "balanced_mean": 0.5732142857142857,
+          "bootstrap95": [
+            0.5047619047619047,
+            0.6416666666666667
+          ]
+        }
+      },
+      "controls": {
+        "zero": {
+          "metrics": {
+            "status": "SOURCE_CLOCK_PROXY_ONLY",
+            "queries": 150,
+            "R1": 0.0,
+            "R5": 0.0,
+            "negative_pair_win_rate": 0.5
+          },
+          "mean_abs_score_change": 0.412713885307312
+        },
+        "shuffle": {
+          "metrics": {
+            "status": "SOURCE_CLOCK_PROXY_ONLY",
+            "queries": 150,
+            "R1": 0.2,
+            "R5": 0.8933333333333333,
+            "negative_pair_win_rate": 0.61
+          },
+          "mean_abs_score_change": 0.37415432929992676
+        },
+        "swap": {
+          "metrics": {
+            "status": "SOURCE_CLOCK_PROXY_ONLY",
+            "queries": 150,
+            "R1": 0.26,
+            "R5": 0.78,
+            "negative_pair_win_rate": 0.6411111111111112
+          },
+          "mean_abs_score_change": 0.6603699326515198
+        }
+      },
+      "independent_event_metrics": {
+        "status": "NOT_EVALUABLE_NO_INDEPENDENT_ANCHORS",
+        "validated": false,
+        "EventRecall1": null,
+        "EventRecall5": null,
+        "EventMAE_seconds": null,
+        "TypedEventAccuracy": null,
+        "NULL_precision": null,
+        "NULL_recall": null,
+        "risk_coverage": null
+      },
+      "synthetic_shift": {
+        "scope": "known injected cross-modal source-clock offsets; not semantic event labels",
+        "offsets_seconds": [
+          -0.5,
+          -0.26666666666666666,
+          0.0,
+          0.26666666666666666,
+          0.5
+        ],
+        "accuracy": 0.25333333333333335,
+        "selected_offset_MAE_seconds": 0.2862222222222222,
+        "correct_vs_shift_win_rate": 0.51,
+        "stride": 3,
+        "input_clock_grid_class_independent": true
+      }
+    },
+    "null_ot": {
+      "status": "SOURCE_CLOCK_PROXY_ONLY",
+      "queries": 150,
+      "R1": 0.3933333333333333,
+      "R5": 0.7933333333333333,
+      "negative_pair_win_rate": 0.6300000000000001,
+      "pair_win_grouped": {
+        "recording_uid": {
+          "groups": 76,
+          "balanced_mean": 0.625,
+          "bootstrap95": [
+            0.5399396929824561,
+            0.7083881578947369
+          ]
+        },
+        "choreography_uid": {
+          "groups": 20,
+          "balanced_mean": 0.6240277777777777,
+          "bootstrap95": [
+            0.5820000000000001,
+            0.6715468749999999
+          ]
+        },
+        "source_group": {
+          "groups": 2,
+          "balanced_mean": 0.6260416666666666,
+          "bootstrap95": [
+            0.5666666666666668,
+            0.6854166666666666
+          ]
+        }
+      },
+      "controls": {
+        "zero": {
+          "metrics": {
+            "status": "SOURCE_CLOCK_PROXY_ONLY",
+            "queries": 150,
+            "R1": 0.6333333333333333,
+            "R5": 0.9466666666666667,
+            "negative_pair_win_rate": 0.8688888888888889
+          },
+          "mean_abs_score_change": 0.1315317302942276
+        },
+        "shuffle": {
+          "metrics": {
+            "status": "SOURCE_CLOCK_PROXY_ONLY",
+            "queries": 150,
+            "R1": 0.4066666666666667,
+            "R5": 0.7933333333333333,
+            "negative_pair_win_rate": 0.6177777777777778
+          },
+          "mean_abs_score_change": 0.035458583384752274
+        },
+        "swap": {
+          "metrics": {
+            "status": "SOURCE_CLOCK_PROXY_ONLY",
+            "queries": 150,
+            "R1": 0.5333333333333333,
+            "R5": 0.8666666666666667,
+            "negative_pair_win_rate": 0.7333333333333333
+          },
+          "mean_abs_score_change": 0.20267066359519958
+        }
+      },
+      "independent_event_metrics": {
+        "status": "NOT_EVALUABLE_NO_INDEPENDENT_ANCHORS",
+        "validated": false,
+        "EventRecall1": null,
+        "EventRecall5": null,
+        "EventMAE_seconds": null,
+        "TypedEventAccuracy": null,
+        "NULL_precision": null,
+        "NULL_recall": null,
+        "risk_coverage": null
+      },
+      "synthetic_shift": {
+        "scope": "known injected cross-modal source-clock offsets; not semantic event labels",
+        "offsets_seconds": [
+          -0.5,
+          -0.26666666666666666,
+          0.0,
+          0.26666666666666666,
+          0.5
+        ],
+        "accuracy": 0.24,
+        "selected_offset_MAE_seconds": 0.30222222222222217,
+        "correct_vs_shift_win_rate": 0.5133333333333333,
+        "stride": 3,
+        "input_clock_grid_class_independent": true
+      },
+      "synthetic_partial": {
+        "scope": "SYNTHETIC_TRUTH within-modality copy/insert/delete/legal-warp; not human cross-modal event truth",
+        "sequences": 96,
+        "correspondence_accuracy": 0.8237847222222222,
+        "warp_error_seconds": 0.0,
+        "warp_error_population": "accepted ground-truth non-NULL events; NULL misses count in correspondence accuracy",
+        "NULL_precision": 0.4860050890585242,
+        "NULL_recall": 0.9947916666666666,
+        "NULL_F1": 0.652991452991453,
+        "hard_path_crossings": 0,
+        "risk_coverage": [
+          {
+            "requested_coverage": 0.2,
+            "actual_coverage": 0.20052083333333334,
+            "risk": 0.008658008658008698
+          },
+          {
+            "requested_coverage": 0.4,
+            "actual_coverage": 0.4001736111111111,
+            "risk": 0.030368763557483747
+          },
+          {
+            "requested_coverage": 0.6,
+            "actual_coverage": 0.6006944444444444,
+            "risk": 0.06213872832369938
+          },
+          {
+            "requested_coverage": 0.8,
+            "actual_coverage": 0.8003472222222222,
+            "risk": 0.1095444685466378
+          },
+          {
+            "requested_coverage": 1.0,
+            "actual_coverage": 1.0,
+            "risk": 0.1762152777777778
+          }
+        ],
+        "confidence_calibrated": false
+      }
+    },
+    "strict_path": {
+      "status": "SOURCE_CLOCK_PROXY_ONLY",
+      "queries": 150,
+      "R1": 0.38,
+      "R5": 0.84,
+      "negative_pair_win_rate": 0.6533333333333333,
+      "pair_win_grouped": {
+        "recording_uid": {
+          "groups": 76,
+          "balanced_mean": 0.6480263157894737,
+          "bootstrap95": [
+            0.5685032894736841,
+            0.721080043859649
+          ]
+        },
+        "choreography_uid": {
+          "groups": 20,
+          "balanced_mean": 0.6465972222222222,
+          "bootstrap95": [
+            0.6028663194444445,
+            0.6905468750000001
+          ]
+        },
+        "source_group": {
+          "groups": 2,
+          "balanced_mean": 0.6480654761904762,
+          "bootstrap95": [
+            0.5690476190476191,
+            0.7270833333333332
+          ]
+        }
+      },
+      "controls": {
+        "zero": {
+          "metrics": {
+            "status": "SOURCE_CLOCK_PROXY_ONLY",
+            "queries": 150,
+            "R1": 0.5533333333333333,
+            "R5": 0.92,
+            "negative_pair_win_rate": 0.7811111111111111
+          },
+          "mean_abs_score_change": 0.05121219530701637
+        },
+        "shuffle": {
+          "metrics": {
+            "status": "SOURCE_CLOCK_PROXY_ONLY",
+            "queries": 150,
+            "R1": 0.4066666666666667,
+            "R5": 0.8333333333333334,
+            "negative_pair_win_rate": 0.6522222222222223
+          },
+          "mean_abs_score_change": 0.005513438954949379
+        },
+        "swap": {
+          "metrics": {
+            "status": "SOURCE_CLOCK_PROXY_ONLY",
+            "queries": 150,
+            "R1": 0.4,
+            "R5": 0.8133333333333334,
+            "negative_pair_win_rate": 0.69
+          },
+          "mean_abs_score_change": 0.0889849066734314
+        }
+      },
+      "independent_event_metrics": {
+        "status": "NOT_EVALUABLE_NO_INDEPENDENT_ANCHORS",
+        "validated": false,
+        "EventRecall1": null,
+        "EventRecall5": null,
+        "EventMAE_seconds": null,
+        "TypedEventAccuracy": null,
+        "NULL_precision": null,
+        "NULL_recall": null,
+        "risk_coverage": null
+      },
+      "synthetic_shift": {
+        "scope": "known injected cross-modal source-clock offsets; not semantic event labels",
+        "offsets_seconds": [
+          -0.5,
+          -0.26666666666666666,
+          0.0,
+          0.26666666666666666,
+          0.5
+        ],
+        "accuracy": 0.20666666666666667,
+        "selected_offset_MAE_seconds": 0.32511111111111113,
+        "correct_vs_shift_win_rate": 0.495,
+        "stride": 3,
+        "input_clock_grid_class_independent": true
+      },
+      "synthetic_partial": {
+        "scope": "SYNTHETIC_TRUTH within-modality copy/insert/delete/legal-warp; not human cross-modal event truth",
+        "sequences": 96,
+        "correspondence_accuracy": 0.9383680555555556,
+        "warp_error_seconds": 0.003660368362349215,
+        "warp_error_population": "accepted ground-truth non-NULL events; NULL misses count in correspondence accuracy",
+        "NULL_precision": 0.9230769230769231,
+        "NULL_recall": 0.8125,
+        "NULL_F1": 0.8642659279778393,
+        "hard_path_crossings": 0,
+        "risk_coverage": [
+          {
+            "requested_coverage": 0.2,
+            "actual_coverage": 0.20052083333333334,
+            "risk": 0.0
+          },
+          {
+            "requested_coverage": 0.4,
+            "actual_coverage": 0.4001736111111111,
+            "risk": 0.010845986984815648
+          },
+          {
+            "requested_coverage": 0.6,
+            "actual_coverage": 0.6006944444444444,
+            "risk": 0.020231213872832332
+          },
+          {
+            "requested_coverage": 0.8,
+            "actual_coverage": 0.8003472222222222,
+            "risk": 0.04772234273318876
+          },
+          {
+            "requested_coverage": 1.0,
+            "actual_coverage": 1.0,
+            "risk": 0.06163194444444442
+          }
+        ],
+        "confidence_calibrated": false
+      }
+    },
+    "path_synthetic": {
+      "status": "SOURCE_CLOCK_PROXY_ONLY",
+      "queries": 150,
+      "R1": 0.3933333333333333,
+      "R5": 0.8533333333333334,
+      "negative_pair_win_rate": 0.6588888888888889,
+      "pair_win_grouped": {
+        "recording_uid": {
+          "groups": 76,
+          "balanced_mean": 0.6535087719298245,
+          "bootstrap95": [
+            0.5728892543859648,
+            0.7253563596491228
+          ]
+        },
+        "choreography_uid": {
+          "groups": 20,
+          "balanced_mean": 0.6525000000000001,
+          "bootstrap95": [
+            0.6091163194444444,
+            0.6955538194444445
+          ]
+        },
+        "source_group": {
+          "groups": 2,
+          "balanced_mean": 0.6538690476190476,
+          "bootstrap95": [
+            0.5785714285714286,
+            0.7291666666666666
+          ]
+        }
+      },
+      "controls": {
+        "zero": {
+          "metrics": {
+            "status": "SOURCE_CLOCK_PROXY_ONLY",
+            "queries": 150,
+            "R1": 0.5533333333333333,
+            "R5": 0.92,
+            "negative_pair_win_rate": 0.7811111111111111
+          },
+          "mean_abs_score_change": 0.05017717555165291
+        },
+        "shuffle": {
+          "metrics": {
+            "status": "SOURCE_CLOCK_PROXY_ONLY",
+            "queries": 150,
+            "R1": 0.43333333333333335,
+            "R5": 0.8466666666666667,
+            "negative_pair_win_rate": 0.6644444444444444
+          },
+          "mean_abs_score_change": 0.005538445897400379
+        },
+        "swap": {
+          "metrics": {
+            "status": "SOURCE_CLOCK_PROXY_ONLY",
+            "queries": 150,
+            "R1": 0.30666666666666664,
+            "R5": 0.8133333333333334,
+            "negative_pair_win_rate": 0.6744444444444444
+          },
+          "mean_abs_score_change": 0.0869411826133728
+        }
+      },
+      "independent_event_metrics": {
+        "status": "NOT_EVALUABLE_NO_INDEPENDENT_ANCHORS",
+        "validated": false,
+        "EventRecall1": null,
+        "EventRecall5": null,
+        "EventMAE_seconds": null,
+        "TypedEventAccuracy": null,
+        "NULL_precision": null,
+        "NULL_recall": null,
+        "risk_coverage": null
+      },
+      "synthetic_shift": {
+        "scope": "known injected cross-modal source-clock offsets; not semantic event labels",
+        "offsets_seconds": [
+          -0.5,
+          -0.26666666666666666,
+          0.0,
+          0.26666666666666666,
+          0.5
+        ],
+        "accuracy": 0.20666666666666667,
+        "selected_offset_MAE_seconds": 0.322,
+        "correct_vs_shift_win_rate": 0.5016666666666667,
+        "stride": 3,
+        "input_clock_grid_class_independent": true
+      },
+      "synthetic_partial": {
+        "scope": "SYNTHETIC_TRUTH within-modality copy/insert/delete/legal-warp; not human cross-modal event truth",
+        "sequences": 96,
+        "correspondence_accuracy": 0.9565972222222222,
+        "warp_error_seconds": 0.002368432439434591,
+        "warp_error_population": "accepted ground-truth non-NULL events; NULL misses count in correspondence accuracy",
+        "NULL_precision": 0.9698795180722891,
+        "NULL_recall": 0.8385416666666666,
+        "NULL_F1": 0.8994413407821229,
+        "hard_path_crossings": 0,
+        "risk_coverage": [
+          {
+            "requested_coverage": 0.2,
+            "actual_coverage": 0.20052083333333334,
+            "risk": 0.0
+          },
+          {
+            "requested_coverage": 0.4,
+            "actual_coverage": 0.4001736111111111,
+            "risk": 0.002169197396963085
+          },
+          {
+            "requested_coverage": 0.6,
+            "actual_coverage": 0.6015625,
+            "risk": 0.008658008658008698
+          },
+          {
+            "requested_coverage": 0.8,
+            "actual_coverage": 0.8003472222222222,
+            "risk": 0.02819956616052066
+          },
+          {
+            "requested_coverage": 1.0,
+            "actual_coverage": 1.0,
+            "risk": 0.04340277777777779
+          }
+        ],
+        "confidence_calibrated": false
+      }
+    },
+    "path_weak": {
+      "status": "SOURCE_CLOCK_PROXY_ONLY",
+      "queries": 150,
+      "R1": 0.38666666666666666,
+      "R5": 0.8133333333333334,
+      "negative_pair_win_rate": 0.6455555555555557,
+      "pair_win_grouped": {
+        "recording_uid": {
+          "groups": 76,
+          "balanced_mean": 0.6392543859649124,
+          "bootstrap95": [
+            0.5591557017543859,
+            0.7166392543859649
+          ]
+        },
+        "choreography_uid": {
+          "groups": 20,
+          "balanced_mean": 0.6384722222222222,
+          "bootstrap95": [
+            0.5949895833333333,
+            0.6810416666666668
+          ]
+        },
+        "source_group": {
+          "groups": 2,
+          "balanced_mean": 0.640327380952381,
+          "bootstrap95": [
+            0.5619047619047619,
+            0.71875
+          ]
+        }
+      },
+      "controls": {
+        "zero": {
+          "metrics": {
+            "status": "SOURCE_CLOCK_PROXY_ONLY",
+            "queries": 150,
+            "R1": 0.5533333333333333,
+            "R5": 0.92,
+            "negative_pair_win_rate": 0.7811111111111111
+          },
+          "mean_abs_score_change": 0.053819213062524796
+        },
+        "shuffle": {
+          "metrics": {
+            "status": "SOURCE_CLOCK_PROXY_ONLY",
+            "queries": 150,
+            "R1": 0.4266666666666667,
+            "R5": 0.8,
+            "negative_pair_win_rate": 0.6466666666666666
+          },
+          "mean_abs_score_change": 0.005679169669747353
+        },
+        "swap": {
+          "metrics": {
+            "status": "SOURCE_CLOCK_PROXY_ONLY",
+            "queries": 150,
+            "R1": 0.31333333333333335,
+            "R5": 0.84,
+            "negative_pair_win_rate": 0.6744444444444445
+          },
+          "mean_abs_score_change": 0.09145428985357285
+        }
+      },
+      "independent_event_metrics": {
+        "status": "NOT_EVALUABLE_NO_INDEPENDENT_ANCHORS",
+        "validated": false,
+        "EventRecall1": null,
+        "EventRecall5": null,
+        "EventMAE_seconds": null,
+        "TypedEventAccuracy": null,
+        "NULL_precision": null,
+        "NULL_recall": null,
+        "risk_coverage": null
+      },
+      "synthetic_shift": {
+        "scope": "known injected cross-modal source-clock offsets; not semantic event labels",
+        "offsets_seconds": [
+          -0.5,
+          -0.26666666666666666,
+          0.0,
+          0.26666666666666666,
+          0.5
+        ],
+        "accuracy": 0.18666666666666668,
+        "selected_offset_MAE_seconds": 0.3273333333333333,
+        "correct_vs_shift_win_rate": 0.5133333333333333,
+        "stride": 3,
+        "input_clock_grid_class_independent": true
+      },
+      "synthetic_partial": {
+        "scope": "SYNTHETIC_TRUTH within-modality copy/insert/delete/legal-warp; not human cross-modal event truth",
+        "sequences": 96,
+        "correspondence_accuracy": 0.9557291666666666,
+        "warp_error_seconds": 0.001668656360189912,
+        "warp_error_population": "accepted ground-truth non-NULL events; NULL misses count in correspondence accuracy",
+        "NULL_precision": 0.9575757575757575,
+        "NULL_recall": 0.8229166666666666,
+        "NULL_F1": 0.8851540616246498,
+        "hard_path_crossings": 0,
+        "risk_coverage": [
+          {
+            "requested_coverage": 0.2,
+            "actual_coverage": 0.20052083333333334,
+            "risk": 0.0
+          },
+          {
+            "requested_coverage": 0.4,
+            "actual_coverage": 0.4001736111111111,
+            "risk": 0.002169197396963085
+          },
+          {
+            "requested_coverage": 0.6,
+            "actual_coverage": 0.6006944444444444,
+            "risk": 0.00867052023121384
+          },
+          {
+            "requested_coverage": 0.8,
+            "actual_coverage": 0.8003472222222222,
+            "risk": 0.027114967462039008
+          },
+          {
+            "requested_coverage": 1.0,
+            "actual_coverage": 1.0,
+            "risk": 0.04427083333333337
+          }
+        ],
+        "confidence_calibrated": false
+      }
+    },
+    "path_random_weak": {
+      "status": "SOURCE_CLOCK_PROXY_ONLY",
+      "queries": 150,
+      "R1": 0.3933333333333333,
+      "R5": 0.82,
+      "negative_pair_win_rate": 0.6344444444444445,
+      "pair_win_grouped": {
+        "recording_uid": {
+          "groups": 76,
+          "balanced_mean": 0.6282894736842104,
+          "bootstrap95": [
+            0.5416118421052631,
+            0.7100054824561404
+          ]
+        },
+        "choreography_uid": {
+          "groups": 20,
+          "balanced_mean": 0.6280555555555556,
+          "bootstrap95": [
+            0.58521875,
+            0.6684670138888889
+          ]
+        },
+        "source_group": {
+          "groups": 2,
+          "balanced_mean": 0.6300595238095239,
+          "bootstrap95": [
+            0.5642857142857144,
+            0.6958333333333333
+          ]
+        }
+      },
+      "controls": {
+        "zero": {
+          "metrics": {
+            "status": "SOURCE_CLOCK_PROXY_ONLY",
+            "queries": 150,
+            "R1": 0.5533333333333333,
+            "R5": 0.92,
+            "negative_pair_win_rate": 0.7811111111111111
+          },
+          "mean_abs_score_change": 0.05413157865405083
+        },
+        "shuffle": {
+          "metrics": {
+            "status": "SOURCE_CLOCK_PROXY_ONLY",
+            "queries": 150,
+            "R1": 0.43333333333333335,
+            "R5": 0.7933333333333333,
+            "negative_pair_win_rate": 0.6366666666666667
+          },
+          "mean_abs_score_change": 0.005089375656098127
+        },
+        "swap": {
+          "metrics": {
+            "status": "SOURCE_CLOCK_PROXY_ONLY",
+            "queries": 150,
+            "R1": 0.42,
+            "R5": 0.8333333333333334,
+            "negative_pair_win_rate": 0.6977777777777779
+          },
+          "mean_abs_score_change": 0.09215975552797318
+        }
+      },
+      "independent_event_metrics": {
+        "status": "NOT_EVALUABLE_NO_INDEPENDENT_ANCHORS",
+        "validated": false,
+        "EventRecall1": null,
+        "EventRecall5": null,
+        "EventMAE_seconds": null,
+        "TypedEventAccuracy": null,
+        "NULL_precision": null,
+        "NULL_recall": null,
+        "risk_coverage": null
+      },
+      "synthetic_shift": {
+        "scope": "known injected cross-modal source-clock offsets; not semantic event labels",
+        "offsets_seconds": [
+          -0.5,
+          -0.26666666666666666,
+          0.0,
+          0.26666666666666666,
+          0.5
+        ],
+        "accuracy": 0.18666666666666668,
+        "selected_offset_MAE_seconds": 0.3257777777777777,
+        "correct_vs_shift_win_rate": 0.5016666666666667,
+        "stride": 3,
+        "input_clock_grid_class_independent": true
+      },
+      "synthetic_partial": {
+        "scope": "SYNTHETIC_TRUTH within-modality copy/insert/delete/legal-warp; not human cross-modal event truth",
+        "sequences": 96,
+        "correspondence_accuracy": 0.9583333333333334,
+        "warp_error_seconds": 0.0017241740101919124,
+        "warp_error_population": "accepted ground-truth non-NULL events; NULL misses count in correspondence accuracy",
+        "NULL_precision": 0.9698795180722891,
+        "NULL_recall": 0.8385416666666666,
+        "NULL_F1": 0.8994413407821229,
+        "hard_path_crossings": 0,
+        "risk_coverage": [
+          {
+            "requested_coverage": 0.2,
+            "actual_coverage": 0.20052083333333334,
+            "risk": 0.0
+          },
+          {
+            "requested_coverage": 0.4,
+            "actual_coverage": 0.4001736111111111,
+            "risk": 0.002169197396963085
+          },
+          {
+            "requested_coverage": 0.6,
+            "actual_coverage": 0.6024305555555556,
+            "risk": 0.010086455331412059
+          },
+          {
+            "requested_coverage": 0.8,
+            "actual_coverage": 0.8003472222222222,
+            "risk": 0.027114967462039008
+          },
+          {
+            "requested_coverage": 1.0,
+            "actual_coverage": 1.0,
+            "risk": 0.04166666666666663
+          }
+        ],
+        "confidence_calibrated": false
+      }
+    }
+  },
+  "baselines": {
+    "clock_only_path": {
+      "status": "SOURCE_CLOCK_PROXY_ONLY",
+      "queries": 150,
+      "R1": 0.2733333333333333,
+      "R5": 0.92,
+      "negative_pair_win_rate": 0.7055555555555556
+    },
+    "nearest_time": {
+      "status": "SOURCE_CLOCK_PROXY_ONLY",
+      "queries": 150,
+      "R1": 0.2733333333333333,
+      "R5": 0.98,
+      "negative_pair_win_rate": 0.7805555555555556
+    },
+    "energy": {
+      "status": "SOURCE_CLOCK_PROXY_ONLY",
+      "queries": 150,
+      "R1": 0.0,
+      "R5": 0.32666666666666666,
+      "negative_pair_win_rate": 0.15999999999999998
+    }
+  },
+  "probes": {
+    "results": {
+      "raw74": {
+        "parameters": 387,
+        "steps": 400,
+        "kinematic_proxy_mse": 0.22985488176345825,
+        "per_body_mse": [
+          0.2223837673664093,
+          0.3269127309322357,
+          0.1402662843465805
+        ],
+        "peak_phase_mae_seconds": [
+          0.8243936243936236,
+          1.0266112266112253,
+          0.973665973665973
+        ],
+        "peak_phase_scope": "argmax of Cartesian FK speed on common 60-slot 15Hz grid; no semantic event correspondence",
+        "pair_grouped_mse": {
+          "recording_uid": {
+            "groups": 223,
+            "balanced_mean": 0.23407316488535415,
+            "bootstrap95": [
+              0.21260029174741052,
+              0.25992750959701955
+            ]
+          },
+          "choreography_uid": {
+            "groups": 20,
+            "balanced_mean": 0.2335068238511196,
+            "bootstrap95": [
+              0.1928325395680002,
+              0.27604979697589804
+            ]
+          },
+          "source_group": {
+            "groups": 2,
+            "balanced_mean": 0.23233139599602323,
+            "bootstrap95": [
+              0.19829694028626116,
+              0.2663658517057853
+            ]
+          }
+        }
+      },
+      "tcn": {
+        "parameters": 387,
+        "steps": 400,
+        "kinematic_proxy_mse": 0.16155599057674408,
+        "per_body_mse": [
+          0.12770947813987732,
+          0.2439696490764618,
+          0.11298860609531403
+        ],
+        "peak_phase_mae_seconds": [
+          0.9025641025641015,
+          1.1857241857241851,
+          1.1523215523215504
+        ],
+        "peak_phase_scope": "argmax of Cartesian FK speed on common 60-slot 15Hz grid; no semantic event correspondence",
+        "pair_grouped_mse": {
+          "recording_uid": {
+            "groups": 223,
+            "balanced_mean": 0.16693055826574785,
+            "bootstrap95": [
+              0.14667922308581835,
+              0.18833095227205995
+            ]
+          },
+          "choreography_uid": {
+            "groups": 20,
+            "balanced_mean": 0.16871933634290276,
+            "bootstrap95": [
+              0.12266462380583051,
+              0.2095390768107278
+            ]
+          },
+          "source_group": {
+            "groups": 2,
+            "balanced_mean": 0.1668079332828621,
+            "bootstrap95": [
+              0.09463126501862625,
+              0.23898460154709794
+            ]
+          }
+        }
+      },
+      "transformer": {
+        "parameters": 387,
+        "steps": 400,
+        "kinematic_proxy_mse": 0.15950638055801392,
+        "per_body_mse": [
+          0.13879938423633575,
+          0.22894462943077087,
+          0.1107749193906784
+        ],
+        "peak_phase_mae_seconds": [
+          0.9853083853083839,
+          1.224116424116424,
+          1.0821898821898808
+        ],
+        "peak_phase_scope": "argmax of Cartesian FK speed on common 60-slot 15Hz grid; no semantic event correspondence",
+        "pair_grouped_mse": {
+          "recording_uid": {
+            "groups": 223,
+            "balanced_mean": 0.1629310246238204,
+            "bootstrap95": [
+              0.14039985516441983,
+              0.19036825992450981
+            ]
+          },
+          "choreography_uid": {
+            "groups": 20,
+            "balanced_mean": 0.1661143306337701,
+            "bootstrap95": [
+              0.114551474467012,
+              0.21649408328584008
+            ]
+          },
+          "source_group": {
+            "groups": 2,
+            "balanced_mean": 0.16480210244396257,
+            "bootstrap95": [
+              0.09202377978611247,
+              0.23758042510181265
+            ]
+          }
+        }
+      },
+      "fk": {
+        "parameters": 387,
+        "steps": 400,
+        "kinematic_proxy_mse": 0.2776128053665161,
+        "per_body_mse": [
+          0.31682756543159485,
+          0.3502541482448578,
+          0.16575533151626587
+        ],
+        "peak_phase_mae_seconds": [
+          1.0600138600138589,
+          1.1250173250173232,
+          1.0695772695772687
+        ],
+        "peak_phase_scope": "argmax of Cartesian FK speed on common 60-slot 15Hz grid; no semantic event correspondence",
+        "pair_grouped_mse": {
+          "recording_uid": {
+            "groups": 223,
+            "balanced_mean": 0.2757539457832261,
+            "bootstrap95": [
+              0.2547512364752663,
+              0.2961254490957065
+            ]
+          },
+          "choreography_uid": {
+            "groups": 20,
+            "balanced_mean": 0.2732220382373743,
+            "bootstrap95": [
+              0.21821032939958132,
+              0.3217925088513452
+            ]
+          },
+          "source_group": {
+            "groups": 2,
+            "balanced_mean": 0.2740185695872289,
+            "bootstrap95": [
+              0.2246231986669147,
+              0.3234139405075432
+            ]
+          }
+        }
+      }
+    },
+    "target": "independent Native fixed-offset FK Cartesian upper/lower/root speed proxy",
+    "capacity": "all four probes Linear(128,3)=387 parameters, same source schedule and 60-slot grid",
+    "padding": "raw74 structural zero features are probe design, never zero-filled 151D motion targets",
+    "train_only_normalization": true,
+    "zero_optimizer_calls": false
+  },
+  "operator": {
+    "scope": "same complete Train/Val windows; native60 increments then30 sampling versus native30 increments; no crop derivative origin",
+    "mean_abs_difference": 0.27663737535476685,
+    "max_abs_difference": 9681.0068359375,
+    "per_channel_rmse": [
+      0.5147398710250854,
+      0.8849403858184814,
+      0.3181082010269165,
+      0.6803930997848511,
+      0.9206962585449219,
+      0.7254747152328491,
+      0.6295874118804932,
+      0.6479300856590271,
+      0.6637171506881714,
+      0.7624868154525757,
+      0.2911507189273834,
+      0.6466323137283325,
+      1.1995532512664795,
+      0.9675258994102478,
+      1.094403624534607,
+      0.8497562408447266,
+      0.7068966031074524,
+      0.8155110478401184,
+      0.44047027826309204,
+      0.263002872467041,
+      0.2759893834590912,
+      0.01976284570991993,
+      0.032753050327301025,
+      0.030404511839151382,
+      0.014537899754941463,
+      0.02263328619301319,
+      0.02141595631837845,
+      0.6329088807106018,
+      0.3104112446308136,
+      0.4104022979736328,
+      0.03838011249899864,
+      0.04448976367712021,
+      0.0374160073697567,
+      0.019635017961263657,
+      0.034004997462034225,
+      0.024536170065402985,
+      0.6676118969917297,
+      0.610162615776062,
+      0.4925428330898285,
+      0.6272199749946594,
+      1.0030615329742432,
+      0.7333820462226868,
+      0.6665337681770325,
+      0.9104304313659668,
+      0.7743598222732544,
+      0.9204661846160889,
+      0.5883863568305969,
+      0.6376922726631165,
+      0.5311757326126099,
+      0.8007610440254211,
+      0.7856934070587158,
+      0.5669456124305725,
+      0.7191516160964966,
+      0.7592631578445435,
+      0.9328585267066956,
+      1.0831173658370972,
+      0.8410348892211914,
+      0.9397919774055481,
+      1.0446977615356445,
+      0.9489445686340332,
+      0.02702038735151291,
+      0.027492275461554527,
+      0.02698804810643196,
+      0.02399464137852192,
+      0.023245997726917267,
+      0.02008064091205597,
+      0.3853378891944885,
+      1.068282961845398,
+      0.0,
+      0.0,
+      42.375404357910156,
+      0.0,
+      43.63942337036133,
+      62.6152458190918
+    ],
+    "normalization_frozen": true,
+    "native60_then30": {
+      "channel_mean": [
+        0.007787272334098816,
+        -0.06315667182207108,
+        0.0010077120969071984,
+        -0.007475929334759712,
+        -0.012787868268787861,
+        0.005878774914890528,
+        0.010598879307508469,
+        0.01019139215350151,
+        0.005368753336369991,
+        0.005809710826724768,
+        -0.002131812972947955,
+        0.0016366495983675122,
+        0.009319446049630642,
+        -0.021683381870388985,
+        0.03020169399678707,
+        -0.017644908279180527,
+        -0.017604000866413116,
+        0.008432249538600445,
+        0.00018549231754150242,
+        0.002121338155120611,
+        0.0004631615011021495,
+        -8.874342165654525e-05,
+        -0.00011619192082434893,
+        -2.6210291252937168e-05,
+        -7.50468680053018e-05,
+        8.378423808608204e-05,
+        -6.984839274082333e-05,
+        0.00028913887217640877,
+        0.001987829338759184,
+        -0.001212381524965167,
+        0.0001075596665032208,
+        0.0001281776203541085,
+        8.241219620686024e-05,
+        -3.515577191137709e-05,
+        -0.00014262355398386717,
+        4.7112022002693266e-05,
+        0.0015698854112997651,
+        0.003958803601562977,
+        -0.0021928197238594294,
+        -0.011658012866973877,
+        0.0027841830160468817,
+        -0.0035821290221065283,
+        -0.0020678129512816668,
+        0.0035049314610660076,
+        0.004610548261553049,
+        -0.002874781144782901,
+        0.00014918904344085604,
+        0.00043451719102449715,
+        -0.014080611988902092,
+        0.003949794452637434,
+        0.013447695411741734,
+        -0.012032500468194485,
+        0.0007988380384631455,
+        -0.009753584861755371,
+        0.022904496639966965,
+        0.02012491784989834,
+        -0.023203283548355103,
+        0.06870527565479279,
+        -0.024910494685173035,
+        0.04601294547319412,
+        6.441028381232172e-05,
+        6.320872671494726e-06,
+        9.06395580386743e-05,
+        3.8317284634104e-05,
+        4.8830610467121005e-05,
+        5.2329178288346156e-05,
+        1.6562336683273315,
+        3.641566276550293,
+        0.0,
+        0.0,
+        9.222472190856934,
+        0.0,
+        10.745238304138184,
+        7.023133277893066
+      ],
+      "channel_std": [
+        1.3032619953155518,
+        1.9915231466293335,
+        0.8192790150642395,
+        1.9422779083251953,
+        1.3143266439437866,
+        1.5210480690002441,
+        1.9385799169540405,
+        1.244235873222351,
+        1.4262058734893799,
+        1.8943309783935547,
+        0.6109756827354431,
+        1.5318856239318848,
+        3.3184053897857666,
+        2.067091464996338,
+        2.588682174682617,
+        3.143653392791748,
+        1.8069218397140503,
+        2.5530707836151123,
+        1.1130510568618774,
+        0.5136223435401917,
+        0.6095418930053711,
+        0.03671709820628166,
+        0.07183448225259781,
+        0.062498144805431366,
+        0.0246292557567358,
+        0.066615529358387,
+        0.040591854602098465,
+        1.6404987573623657,
+        0.5788919925689697,
+        1.0259859561920166,
+        0.07031337916851044,
+        0.08866963535547256,
+        0.07250288873910904,
+        0.03572241961956024,
+        0.07422377914190292,
+        0.06012983247637749,
+        1.6343241930007935,
+        1.162363052368164,
+        1.0495738983154297,
+        1.1619709730148315,
+        2.349984645843506,
+        1.8063246011734009,
+        1.1811330318450928,
+        2.297866106033325,
+        1.6951284408569336,
+        1.9462252855300903,
+        1.1199229955673218,
+        1.2012017965316772,
+        1.2938615083694458,
+        1.9778907299041748,
+        2.5875368118286133,
+        1.3932734727859497,
+        1.9379287958145142,
+        2.522617816925049,
+        3.049020528793335,
+        4.08566427230835,
+        3.2180707454681396,
+        3.036545753479004,
+        4.040653228759766,
+        3.1392173767089844,
+        0.06261273473501205,
+        0.05053194239735603,
+        0.06642943620681763,
+        0.04225538671016693,
+        0.055071841925382614,
+        0.04720929265022278,
+        1.192238211631775,
+        2.852742910385132,
+        0.0,
+        0.0,
+        54.598880767822266,
+        0.0,
+        58.09134292602539,
+        78.71094512939453
+      ],
+      "normalized_abs_above3_fraction": 0.08842360298113687,
+      "normalized_abs_above6_fraction": 0.02151628109640334
+    },
+    "native30": {
+      "channel_mean": [
+        0.007946357131004333,
+        -0.06242984160780907,
+        0.0013990263687446713,
+        -0.006680232007056475,
+        -0.01389795821160078,
+        0.003475210163742304,
+        0.010729018598794937,
+        0.009929470717906952,
+        0.005762267392128706,
+        0.005351048894226551,
+        -0.0018552218098193407,
+        2.2363934476743452e-05,
+        0.009465575218200684,
+        -0.026858171448111534,
+        0.026318177580833435,
+        -0.01734403893351555,
+        -0.01877906545996666,
+        0.0064499108120799065,
+        0.00036907719913870096,
+        0.0024130044039338827,
+        0.0013870118418708444,
+        -9.477507410338148e-05,
+        -8.310562407132238e-05,
+        -6.928986113052815e-05,
+        -4.8170808440772817e-05,
+        0.00011618328426266089,
+        -5.933061765972525e-05,
+        7.750605436740443e-05,
+        0.0028251809999346733,
+        0.00015028336201794446,
+        0.00014812854351475835,
+        6.400695565389469e-05,
+        9.521202446194366e-05,
+        -3.7416288250824437e-05,
+        -0.0001811358379200101,
+        2.7626092560240068e-05,
+        0.0025433835107833147,
+        0.0024962511379271746,
+        -0.0017435095505788922,
+        -0.011343264952301979,
+        0.0009767193114385009,
+        -0.004761029500514269,
+        -0.0016394582344219089,
+        0.000651970156468451,
+        0.004091581329703331,
+        -0.002573122503235936,
+        0.000589538540225476,
+        -0.001342243398539722,
+        -0.013148210011422634,
+        0.003575483337044716,
+        0.012559788301587105,
+        -0.011949939653277397,
+        -0.0007049213745631278,
+        -0.010686710476875305,
+        0.022240206599235535,
+        0.02112826704978943,
+        -0.02445918321609497,
+        0.07076240330934525,
+        -0.02360527776181698,
+        0.048384830355644226,
+        0.00013705443416256458,
+        -4.046239337185398e-05,
+        0.00011389398423489183,
+        6.7697587837756146e-06,
+        7.584536069771275e-05,
+        2.9136246666894294e-05,
+        1.595007061958313,
+        3.518699884414673,
+        0.0,
+        0.0,
+        8.115859985351562,
+        0.0,
+        9.512598037719727,
+        6.098089694976807
+      ],
+      "channel_std": [
+        1.1933106184005737,
+        1.8282687664031982,
+        0.7561071515083313,
+        1.8194917440414429,
+        1.0147035121917725,
+        1.3385508060455322,
+        1.8210724592208862,
+        1.0396807193756104,
+        1.3199535608291626,
+        1.725559115409851,
+        0.5483829379081726,
+        1.394543170928955,
+        3.161294460296631,
+        1.8843508958816528,
+        2.4298882484436035,
+        3.0119268894195557,
+        1.6763373613357544,
+        2.4264588356018066,
+        1.033837080001831,
+        0.45085734128952026,
+        0.5430731177330017,
+        0.03160813823342323,
+        0.06499305367469788,
+        0.05547851696610451,
+        0.02078767865896225,
+        0.06294336915016174,
+        0.03548368811607361,
+        1.5208725929260254,
+        0.4946829080581665,
+        0.9429296851158142,
+        0.05780468508601189,
+        0.07850004732608795,
+        0.06123196333646774,
+        0.027129970490932465,
+        0.06570544093847275,
+        0.05499545484781265,
+        1.4904193878173828,
+        0.951484203338623,
+        0.9102361798286438,
+        0.9841530919075012,
+        2.1468420028686523,
+        1.662307858467102,
+        0.997327446937561,
+        2.115774631500244,
+        1.5287386178970337,
+        1.7171375751495361,
+        0.9652822613716125,
+        1.0200635194778442,
+        1.1966744661331177,
+        1.8511509895324707,
+        2.4939332008361816,
+        1.234100103378296,
+        1.8165990114212036,
+        2.4113447666168213,
+        2.906395435333252,
+        3.9799792766571045,
+        3.1167616844177246,
+        2.864194393157959,
+        3.918789863586426,
+        3.013493537902832,
+        0.05643957480788231,
+        0.04165671020746231,
+        0.061060115694999695,
+        0.03517897427082062,
+        0.049400798976421356,
+        0.04316183924674988,
+        1.0518696308135986,
+        2.486693859100342,
+        0.0,
+        0.0,
+        18.61549186706543,
+        0.0,
+        22.65660285949707,
+        24.290142059326172
+      ],
+      "normalized_abs_above3_fraction": 0.0809127277689595,
+      "normalized_abs_above6_fraction": 0.018354245821692008
+    },
+    "token_cosine_mean": 0.9729011654853821,
+    "token_cosine_min": -0.48083826899528503,
+    "frozen_heads": {
+      "A": {
+        "mean_absolute_score_change": 0.1408451497554779,
+        "native60_then30": {
+          "queries": 481,
+          "aligned_vs_shift": {
+            "recording_uid": {
+              "groups": 223,
+              "balanced_mean": 0.5175635276532138,
+              "bootstrap95": [
+                0.48269338565022424,
+                0.5539190956651718
+              ]
+            },
+            "choreography_uid": {
+              "groups": 20,
+              "balanced_mean": 0.5205913980184574,
+              "bootstrap95": [
+                0.47446965212990677,
+                0.5675890190568394
+              ]
+            },
+            "source_group": {
+              "groups": 2,
+              "balanced_mean": 0.5218609865470851,
+              "bootstrap95": [
+                0.5,
+                0.5437219730941704
+              ]
+            }
+          },
+          "offset_choice_accuracy": 0.1995841995841996,
+          "chance_offset": 0.2,
+          "per_shift": {
+            "-0.5": 0.5384615384615384,
+            "-0.26666666666666666": 0.5280665280665281,
+            "0.26666666666666666": 0.5155925155925156,
+            "0.5": 0.498960498960499
+          },
+          "bootstrap_scope": "whole known association groups; only two Val components, coverage unestablished",
+          "labels": "official paired source clock; not independent music-onset/action-peak correspondence",
+          "fresh_blind_test": false
+        },
+        "native30": {
+          "queries": 481,
+          "aligned_vs_shift": {
+            "recording_uid": {
+              "groups": 223,
+              "balanced_mean": 0.5029895366218237,
+              "bootstrap95": [
+                0.4656717115097159,
+                0.5352438340807175
+              ]
+            },
+            "choreography_uid": {
+              "groups": 20,
+              "balanced_mean": 0.5110261911048524,
+              "bootstrap95": [
+                0.46987239995892743,
+                0.5569791244939271
+              ]
+            },
+            "source_group": {
+              "groups": 2,
+              "balanced_mean": 0.5117713004484306,
+              "bootstrap95": [
+                0.5,
+                0.523542600896861
+              ]
+            }
+          },
+          "offset_choice_accuracy": 0.18503118503118504,
+          "chance_offset": 0.2,
+          "per_shift": {
+            "-0.5": 0.5301455301455301,
+            "-0.26666666666666666": 0.5176715176715176,
+            "0.26666666666666666": 0.5176715176715176,
+            "0.5": 0.4781704781704782
+          },
+          "bootstrap_scope": "whole known association groups; only two Val components, coverage unestablished",
+          "labels": "official paired source clock; not independent music-onset/action-peak correspondence",
+          "fresh_blind_test": false
+        }
+      },
+      "B": {
+        "mean_absolute_score_change": 0.009929396212100983,
+        "native60_then30": {
+          "queries": 481,
+          "aligned_vs_shift": {
+            "recording_uid": {
+              "groups": 223,
+              "balanced_mean": 0.48168908819133033,
+              "bootstrap95": [
+                0.4508501494768311,
+                0.5149757100149477
+              ]
+            },
+            "choreography_uid": {
+              "groups": 20,
+              "balanced_mean": 0.4853458609944593,
+              "bootstrap95": [
+                0.4568055777115238,
+                0.511670497640946
+              ]
+            },
+            "source_group": {
+              "groups": 2,
+              "balanced_mean": 0.48737485660652835,
+              "bootstrap95": [
+                0.4680232558139535,
+                0.5067264573991032
+              ]
+            }
+          },
+          "offset_choice_accuracy": 0.13721413721413722,
+          "chance_offset": 0.2,
+          "per_shift": {
+            "-0.5": 0.498960498960499,
+            "-0.26666666666666666": 0.5031185031185031,
+            "0.26666666666666666": 0.49064449064449067,
+            "0.5": 0.45114345114345117
+          },
+          "bootstrap_scope": "whole known association groups; only two Val components, coverage unestablished",
+          "labels": "official paired source clock; not independent music-onset/action-peak correspondence",
+          "fresh_blind_test": false
+        },
+        "native30": {
+          "queries": 481,
+          "aligned_vs_shift": {
+            "recording_uid": {
+              "groups": 223,
+              "balanced_mean": 0.47571001494768317,
+              "bootstrap95": [
+                0.44748692077727953,
+                0.5134809417040358
+              ]
+            },
+            "choreography_uid": {
+              "groups": 20,
+              "balanced_mean": 0.4848519579676617,
+              "bootstrap95": [
+                0.4526070729185003,
+                0.5111229644449754
+              ]
+            },
+            "source_group": {
+              "groups": 2,
+              "balanced_mean": 0.4855411582716307,
+              "bootstrap95": [
+                0.4699612403100775,
+                0.5011210762331838
+              ]
+            }
+          },
+          "offset_choice_accuracy": 0.12681912681912683,
+          "chance_offset": 0.2,
+          "per_shift": {
+            "-0.5": 0.5051975051975052,
+            "-0.26666666666666666": 0.498960498960499,
+            "0.26666666666666666": 0.4864864864864865,
+            "0.5": 0.446985446985447
+          },
+          "bootstrap_scope": "whole known association groups; only two Val components, coverage unestablished",
+          "labels": "official paired source clock; not independent music-onset/action-peak correspondence",
+          "fresh_blind_test": false
+        }
+      },
+      "C": {
+        "mean_absolute_score_change": 0.01026463694870472,
+        "native60_then30": {
+          "queries": 481,
+          "aligned_vs_shift": {
+            "recording_uid": {
+              "groups": 223,
+              "balanced_mean": 0.5018684603886397,
+              "bootstrap95": [
+                0.47571001494768317,
+                0.5325112107623319
+              ]
+            },
+            "choreography_uid": {
+              "groups": 20,
+              "balanced_mean": 0.4986072727806138,
+              "bootstrap95": [
+                0.46534008876444877,
+                0.5266654615347944
+              ]
+            },
+            "source_group": {
+              "groups": 2,
+              "balanced_mean": 0.5027548927590642,
+              "bootstrap95": [
+                0.4977578475336323,
+                0.5077519379844961
+              ]
+            }
+          },
+          "offset_choice_accuracy": 0.1683991683991684,
+          "chance_offset": 0.2,
+          "per_shift": {
+            "-0.5": 0.5155925155925156,
+            "-0.26666666666666666": 0.5301455301455301,
+            "0.26666666666666666": 0.49480249480249483,
+            "0.5": 0.47193347193347196
+          },
+          "bootstrap_scope": "whole known association groups; only two Val components, coverage unestablished",
+          "labels": "official paired source clock; not independent music-onset/action-peak correspondence",
+          "fresh_blind_test": false
+        },
+        "native30": {
+          "queries": 481,
+          "aligned_vs_shift": {
+            "recording_uid": {
+              "groups": 223,
+              "balanced_mean": 0.49701046337817645,
+              "bootstrap95": [
+                0.4698103512705531,
+                0.5304559043348281
+              ]
+            },
+            "choreography_uid": {
+              "groups": 20,
+              "balanced_mean": 0.4976239328463299,
+              "bootstrap95": [
+                0.4624819298979054,
+                0.5274646390746934
+              ]
+            },
+            "source_group": {
+              "groups": 2,
+              "balanced_mean": 0.5005605381165918,
+              "bootstrap95": [
+                0.5,
+                0.5011210762331838
+              ]
+            }
+          },
+          "offset_choice_accuracy": 0.1600831600831601,
+          "chance_offset": 0.2,
+          "per_shift": {
+            "-0.5": 0.5051975051975052,
+            "-0.26666666666666666": 0.525987525987526,
+            "0.26666666666666666": 0.501039501039501,
+            "0.5": 0.4698544698544699
+          },
+          "bootstrap_scope": "whole known association groups; only two Val components, coverage unestablished",
+          "labels": "official paired source clock; not independent music-onset/action-peak correspondence",
+          "fresh_blind_test": false
+        }
+      }
+    }
+  },
+  "initializations": {
+    "sync_cold": {
+      "digest": "f3d981667b97e1b21c60968e721c9569206f13ddb8991cf1b5dc22c669997efd",
+      "parameters": 73985
+    },
+    "null_ot": {
+      "digest": "e46f32b48dd01a56083152ceb49a1ca028b9bf9d9d92ff33042cdc2b81784b68",
+      "parameters": 41473
+    },
+    "strict_path": {
+      "digest": "e46f32b48dd01a56083152ceb49a1ca028b9bf9d9d92ff33042cdc2b81784b68",
+      "parameters": 41473
+    },
+    "path_synthetic": {
+      "digest": "e46f32b48dd01a56083152ceb49a1ca028b9bf9d9d92ff33042cdc2b81784b68",
+      "parameters": 41473
+    },
+    "path_weak": {
+      "digest": "e46f32b48dd01a56083152ceb49a1ca028b9bf9d9d92ff33042cdc2b81784b68",
+      "parameters": 41473
+    },
+    "path_random_weak": {
+      "digest": "e46f32b48dd01a56083152ceb49a1ca028b9bf9d9d92ff33042cdc2b81784b68",
+      "parameters": 41473
+    }
+  },
+  "steps_per_arm": 400,
+  "source_rows": 1961,
+  "validation_queries": 150,
+  "validation_components": 2,
+  "test_evaluations": 0,
+  "operational_qualified": false,
+  "downstream_generation_executed": false,
+  "qualification_blockers": [
+    "NO_INDEPENDENT_EVENT_ANCHORS",
+    "NO_NEW_BLIND_SOURCE",
+    "ONLY_TWO_VAL_COMPONENTS"
+  ],
+  "seconds": 814.693804601091,
+  "population": {
+    "train_rows": 1480,
+    "val_rows": 481,
+    "train_eligible": 390,
+    "val_eligible": 150,
+    "old_schedule": {
+      "groups": 6,
+      "visited_groups": 6,
+      "omitted_groups": 0,
+      "samples": 9600,
+      "per_group_counts": [
+        1600,
+        1600,
+        1600,
+        1600,
+        1600,
+        1600
+      ],
+      "unique_windows": 1477
+    },
+    "new_schedule": {
+      "groups": 5,
+      "visited_groups": 5,
+      "omitted_groups": 0,
+      "samples": 4800,
+      "per_group_counts": [
+        960,
+        960,
+        960,
+        960,
+        960
+      ],
+      "unique_windows": 390
+    }
+  },
+  "weak_label_states": {
+    "PSEUDO_MATCH": 4473,
+    "PSEUDO_NULL": 0,
+    "UNKNOWN": 13287
+  },
+  "human_reviewed": false,
+  "replay": {
+    "status": "FRESH_EVENT_IDENTIFIABILITY_REPLAY_VERIFIED",
+    "execution_commit": "fcb289f0fcad5bafe14bd8eed79f33bae43525fc",
+    "replay_commit": "1cb4cc362722d068113c533be38498933e00c649",
+    "protocol_sha256": "b9495f35b7b2fdcd94dc433c7ef5971ba1fd23ac042b33638547c727b579afaf",
+    "source_observations_rebuilt": true,
+    "array_fields_verified": 26,
+    "head_predictions": {
+      "sync_cold": "EXACT",
+      "null_ot": "EXACT",
+      "strict_path": "EXACT",
+      "path_synthetic": "EXACT",
+      "path_weak": "EXACT",
+      "path_random_weak": "EXACT"
+    },
+    "probe_predictions": "EXACT",
+    "optimizer_calls": 0,
+    "test_evaluations": 0,
+    "operational_qualified": false
+  },
+  "provenance": {
+    "protocol_sha256": "b9495f35b7b2fdcd94dc433c7ef5971ba1fd23ac042b33638547c727b579afaf",
+    "data_sha256": "588ece63f4989586434c7abe54fe5795c5f38887323b4277b28bfd2fea9d3bee",
+    "synthetic_truth_sha256": "1d2ef58696038c5c5e32e2968c56bfae01ef567c27ebb057224f42a0f95f58ef",
+    "preflight_sha256": "ff9d274e2b7c9c0553c1c8020f279889b533a6582d76104261d0f6eeabb9fb61",
+    "heads": {
+      "sync_cold": "d107ab2c7bd8756f389a9c31f029a822cfe5b2aa103656e79129c04e57eb1d0d",
+      "null_ot": "a48703d4ed3ed10a3145abff9ec4325eb88ba0e8f29ca3378e2c030843480ffb",
+      "strict_path": "6e1437db158e6d0f53839147d9fd53c4d55fe64a1a0f7826f2d394c8443bf2f3",
+      "path_synthetic": "1ba2c54cd506d3ef41abcbb13885724614dfc80c4536fb5e76f4d15d8d0010dc",
+      "path_weak": "ea10592147d557badf440fd8f40835d53043f52a9e70ca54920713fbe6f0e8e7",
+      "path_random_weak": "0639dca57840310bfcd0a6a80c9237d631e178116f30435e0ce45a7b44f8a339"
+    },
+    "measurements": {
+      "sync_cold": "1d07a9ed6bd26d1befe4604fef025469f325f22aa79461b25240154bba65a0af",
+      "null_ot": "2c2736d541c9d2e27c5ebbc9453314ac9b8ed44dfb6de0e1d26ec8ebb3edca0c",
+      "strict_path": "f975e35c164164ace14438f01d5f1b8b7bfb125b104437022fa1c99dcccba8e6",
+      "path_synthetic": "51bf35ed9b61e470bbcabab98d2e05bc0a46d01da2ebb1963a9376682a40cbc2",
+      "path_weak": "3328790f63a28fa05d27663bab5b0aca76f4253e429a8a5bc9c789c672bedd28",
+      "path_random_weak": "1c9e26ee5bb5ab804b542ebb5a452a26145f11ec99a53459c62dada4c4409551"
+    },
+    "pytest_log_sha256": "e118ef1e34671f6a77bf4f2478f24fe69859cf72c0e8e0f19333f34633fc25e0"
+  }
+}

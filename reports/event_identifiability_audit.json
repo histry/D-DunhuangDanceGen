@@ -1,0 +1,2468 @@
+{
+  "schema": "event_identifiability_additional_audit_v1",
+  "execution_commit": "fcb289f0fcad5bafe14bd8eed79f33bae43525fc",
+  "analysis_commit": "1cb4cc362722d068113c533be38498933e00c649",
+  "population": {
+    "train": {
+      "source_rows": 1480,
+      "eligible_rows": 390,
+      "excluded_rows": 1090,
+      "source_components": 6,
+      "eligible_components": 5,
+      "weak_supported_rows": 236,
+      "weak_supported_events": 1108,
+      "reason": "nonempty detected events; own/other-capture source-clock positives, two non-overlapping same-song candidates and energy-matched unrelated controls"
+    },
+    "val": {
+      "source_rows": 481,
+      "eligible_rows": 150,
+      "excluded_rows": 331,
+      "source_components": 2,
+      "eligible_components": 2,
+      "weak_supported_rows": 0,
+      "weak_supported_events": 0,
+      "reason": "nonempty detected events; own/other-capture source-clock positives, two non-overlapping same-song candidates and energy-matched unrelated controls"
+    }
+  },
+  "event_composition": {
+    "train": {
+      "music": {
+        "beat": 5958,
+        "accent": 5862,
+        "onset": 5862,
+        "silence": 78
+      },
+      "motion": {
+        "deceleration": 7498,
+        "speed_peak": 6501,
+        "start": 7243,
+        "turn": 6452,
+        "hold": 1663
+      }
+    },
+    "val": {
+      "music": {
+        "beat": 2018,
+        "accent": 1830,
+        "onset": 1830,
+        "silence": 94
+      },
+      "motion": {
+        "turn": 1919,
+        "start": 2229,
+        "deceleration": 2318,
+        "speed_peak": 1978,
+        "hold": 1100
+      }
+    }
+  },
+  "operator_peak_phase": {
+    "mean_angular_speed": {
+      "scope": "argmax of a numerical motion channel on same 120-frame support; not labelled semantic events",
+      "mean_seconds": 0.3313785483596804,
+      "p95_seconds": 2.1666666666666665,
+      "max_seconds": 3.8666666666666667,
+      "equal_peak_fraction": 0.5996940336562978
+    },
+    "p90_angular_speed": {
+      "scope": "argmax of a numerical motion channel on same 120-frame support; not labelled semantic events",
+      "mean_seconds": 0.3900560938296787,
+      "p95_seconds": 2.2333333333333334,
+      "max_seconds": 3.8,
+      "equal_peak_fraction": 0.5639979602243753
+    },
+    "upper_squared_speed": {
+      "scope": "argmax of a numerical motion channel on same 120-frame support; not labelled semantic events",
+      "mean_seconds": 0.3174230834608193,
+      "p95_seconds": 2.2333333333333334,
+      "max_seconds": 3.8666666666666667,
+      "equal_peak_fraction": 0.5945945945945946
+    },
+    "lower_squared_speed": {
+      "scope": "argmax of a numerical motion channel on same 120-frame support; not labelled semantic events",
+      "mean_seconds": 0.32323644399116097,
+      "p95_seconds": 2.1666666666666665,
+      "max_seconds": 3.933333333333333,
+      "equal_peak_fraction": 0.6083630800611932
+    }
+  },
+  "restricted_source_clock_retrieval": {
+    "sync_cold": {
+      "final": {
+        "scores": {
+          "same_song_wrong_time": {
+            "status": "SOURCE_CLOCK_PROXY_ONLY",
+            "queries": 150,
+            "R1": 0.4066666666666667,
+            "R5": 1.0,
+            "negative_pair_win_rate": 0.61,
+            "pair_win_grouped": {
+              "recording_uid": {
+                "groups": 76,
+                "balanced_mean": 0.6052631578947368,
+                "bootstrap95": [
+                  0.5460526315789473,
+                  0.6727796052631578
+                ]
+              },
+              "choreography_uid": {
+                "groups": 20,
+                "balanced_mean": 0.6054166666666666,
+                "bootstrap95": [
+                  0.5388072916666666,
+                  0.66315625
+                ]
+              },
+              "source_group": {
+                "groups": 2,
+                "balanced_mean": 0.6049107142857143,
+                "bootstrap95": [
+                  0.5285714285714286,
+                  0.68125
+                ]
+              }
+            }
+          },
+          "other_song_energy_matched": {
+            "status": "SOURCE_CLOCK_PROXY_ONLY",
+            "queries": 150,
+            "R1": 0.44666666666666666,
+            "R5": 1.0,
+            "negative_pair_win_rate": 0.5616666666666666,
+            "pair_win_grouped": {
+              "recording_uid": {
+                "groups": 76,
+                "balanced_mean": 0.555921052631579,
+                "bootstrap95": [
+                  0.4546463815789474,
+                  0.6407483552631578
+                ]
+              },
+              "choreography_uid": {
+                "groups": 20,
+                "balanced_mean": 0.5584374999999999,
+                "bootstrap95": [
+                  0.5144921875,
+                  0.6050937499999999
+                ]
+              },
+              "source_group": {
+                "groups": 2,
+                "balanced_mean": 0.5573660714285714,
+                "bootstrap95": [
+                  0.4928571428571429,
+                  0.621875
+                ]
+              }
+            }
+          }
+        },
+        "zero": {
+          "same_song_wrong_time": {
+            "status": "SOURCE_CLOCK_PROXY_ONLY",
+            "queries": 150,
+            "R1": 0.0,
+            "R5": 1.0,
+            "negative_pair_win_rate": 0.5,
+            "pair_win_grouped": {
+              "recording_uid": {
+                "groups": 76,
+                "balanced_mean": 0.5,
+                "bootstrap95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "choreography_uid": {
+                "groups": 20,
+                "balanced_mean": 0.5,
+                "bootstrap95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "source_group": {
+                "groups": 2,
+                "balanced_mean": 0.5,
+                "bootstrap95": [
+                  0.5,
+                  0.5
+                ]
+              }
+            }
+          },
+          "other_song_energy_matched": {
+            "status": "SOURCE_CLOCK_PROXY_ONLY",
+            "queries": 150,
+            "R1": 0.0,
+            "R5": 1.0,
+            "negative_pair_win_rate": 0.5,
+            "pair_win_grouped": {
+              "recording_uid": {
+                "groups": 76,
+                "balanced_mean": 0.5,
+                "bootstrap95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "choreography_uid": {
+                "groups": 20,
+                "balanced_mean": 0.5,
+                "bootstrap95": [
+                  0.5,
+                  0.5
+                ]
+              },
+              "source_group": {
+                "groups": 2,
+                "balanced_mean": 0.5,
+                "bootstrap95": [
+                  0.5,
+                  0.5
+                ]
+              }
+            }
+          }
+        },
+        "shuffle": {
+          "same_song_wrong_time": {
+            "status": "SOURCE_CLOCK_PROXY_ONLY",
+            "queries": 150,
+            "R1": 0.5333333333333333,
+            "R5": 1.0,
+            "negative_pair_win_rate": 0.6966666666666667,
+            "pair_win_grouped": {
+              "recording_uid": {
+                "groups": 76,
+                "balanced_mean": 0.6973684210526315,
+                "bootstrap95": [
+                  0.6314144736842104,
+                  0.756578947368421
+                ]
+              },
+              "choreography_uid": {
+                "groups": 20,
+                "balanced_mean": 0.7039583333333334,
+                "bootstrap95": [
+                  0.646765625,
+                  0.7524635416666667
+                ]
+              },
+              "source_group": {
+                "groups": 2,
+                "balanced_mean": 0.7,
+                "bootstrap95": [
+                  0.65,
+                  0.75
+                ]
+              }
+            }
+          },
+          "other_song_energy_matched": {
+            "status": "SOURCE_CLOCK_PROXY_ONLY",
+            "queries": 150,
+            "R1": 0.22,
+            "R5": 1.0,
+            "negative_pair_win_rate": 0.5666666666666667,
+            "pair_win_grouped": {
+              "recording_uid": {
+                "groups": 76,
+                "balanced_mean": 0.5625,
+                "bootstrap95": [
+                  0.4974917763157895,
+                  0.6200657894736842
+                ]
+              },
+              "choreography_uid": {
+                "groups": 20,
+                "balanced_mean": 0.5630208333333333,
+                "bootstrap95": [
+                  0.5255208333333333,
+                  0.6044661458333334
+                ]
+              },
+              "source_group": {
+                "groups": 2,
+                "balanced_mean": 0.5625,
+                "bootstrap95": [
+                  0.5,
+                  0.625
+                ]
+              }
+            }
+          }
+        },
+        "swap": {
+          "same_song_wrong_time": {
+            "status": "SOURCE_CLOCK_PROXY_ONLY",
+            "queries": 150,
+            "R1": 0.36,
+            "R5": 1.0,
+            "negative_pair_win_rate": 0.5733333333333334,
+            "pair_win_grouped": {
+              "recording_uid": {
+                "groups": 76,
+                "balanced_mean": 0.569078947368421,
+                "bootstrap95": [
+                  0.49827302631578946,
+                  0.6282894736842105
+                ]
+              },
+              "choreography_uid": {
+                "groups": 20,
+                "balanced_mean": 0.5785416666666667,
+                "bootstrap95": [
+                  0.5314375,
+                  0.6219947916666667
+                ]
+              },
+              "source_group": {
+                "groups": 2,
+                "balanced_mean": 0.5772321428571429,
+                "bootstrap95": [
+                  0.51875,
+                  0.6357142857142857
+                ]
+              }
+            }
+          },
+          "other_song_energy_matched": {
+            "status": "SOURCE_CLOCK_PROXY_ONLY",
+            "queries": 150,
+            "R1": 0.5266666666666666,
+            "R5": 1.0,
+            "negative_pair_win_rate": 0.675,
+            "pair_win_grouped": {
+              "recording_uid": {
+                "groups": 76,
+                "balanced_mean": 0.6792763157894737,
+                "bootstrap95": [
+                  0.5870888157894737,
+                  0.7640213815789474
+                ]
+              },
+              "choreography_uid": {
+                "groups": 20,
+                "balanced_mean": 0.6889583333333333,
+                "bootstrap95": [
+                  0.5826718750000001,
+                  0.78209375
+                ]
+              },
+              "source_group": {
+                "groups": 2,
+                "balanced_mean": 0.6895089285714285,
+                "bootstrap95": [
+                  0.471875,
+                  0.9071428571428571
+                ]
+              }
+            }
+          }
+        }
+      },
+      "frozen": {
+        "same_song_wrong_time": {
+          "status": "SOURCE_CLOCK_PROXY_ONLY",
+          "queries": 150,
+          "R1": 0.4533333333333333,
+          "R5": 1.0,
+          "negative_pair_win_rate": 0.6266666666666667,
+          "pair_win_grouped": {
+            "recording_uid": {
+              "groups": 76,
+              "balanced_mean": 0.625,
+              "bootstrap95": [
+                0.5592105263157895,
+                0.6826480263157895
+              ]
+            },
+            "choreography_uid": {
+              "groups": 20,
+              "balanced_mean": 0.6335416666666667,
+              "bootstrap95": [
+                0.5298385416666667,
+                0.7223229166666666
+              ]
+            },
+            "source_group": {
+              "groups": 2,
+              "balanced_mean": 0.634375,
+              "bootstrap95": [
+                0.51875,
+                0.75
+              ]
+            }
+          }
+        },
+        "other_song_energy_matched": {
+          "status": "SOURCE_CLOCK_PROXY_ONLY",
+          "queries": 150,
+          "R1": 0.3333333333333333,
+          "R5": 1.0,
+          "negative_pair_win_rate": 0.48,
+          "pair_win_grouped": {
+            "recording_uid": {
+              "groups": 76,
+              "balanced_mean": 0.4819078947368421,
+              "bootstrap95": [
+                0.3807154605263158,
+                0.5781661184210526
+              ]
+            },
+            "choreography_uid": {
+              "groups": 20,
+              "balanced_mean": 0.5004166666666666,
+              "bootstrap95": [
+                0.32341666666666663,
+                0.6462578125
+              ]
+            },
+            "source_group": {
+              "groups": 2,
+              "balanced_mean": 0.5024553571428572,
+              "bootstrap95": [
+                0.165625,
+                0.8392857142857143
+              ]
+            }
+          }
+        }
+      }
+    },
+    "null_ot": {
+      "final": {
+        "scores": {
+          "same_song_wrong_time": {
+            "status": "SOURCE_CLOCK_PROXY_ONLY",
+            "queries": 150,
+            "R1": 0.66,
+            "R5": 1.0,
+            "negative_pair_win_rate": 0.79,
+            "pair_win_grouped": {
+              "recording_uid": {
+                "groups": 76,
+                "balanced_mean": 0.7894736842105263,
+                "bootstrap95": [
+                  0.7384046052631579,
+                  0.8372532894736842
+                ]
+              },
+              "choreography_uid": {
+                "groups": 20,
+                "balanced_mean": 0.7858333333333334,
+                "bootstrap95": [
+                  0.7330989583333334,
+                  0.8388125
+                ]
+              },
+              "source_group": {
+                "groups": 2,
+                "balanced_mean": 0.7861607142857143,
+                "bootstrap95": [
+                  0.7285714285714285,
+                  0.84375
+                ]
+              }
+            }
+          },
+          "other_song_energy_matched": {
+            "status": "SOURCE_CLOCK_PROXY_ONLY",
+            "queries": 150,
+            "R1": 0.5,
+            "R5": 1.0,
+            "negative_pair_win_rate": 0.55,
+            "pair_win_grouped": {
+              "recording_uid": {
+                "groups": 76,
+                "balanced_mean": 0.5427631578947368,
+                "bootstrap95": [
+                  0.4233963815789474,
+                  0.6505345394736842
+                ]
+              },
+              "choreography_uid": {
+                "groups": 20,
+                "balanced_mean": 0.543125,
+                "bootstrap95": [
+                  0.48685156249999995,
+                  0.6048880208333333
+                ]
+              },
+              "source_group": {
+                "groups": 2,
+                "balanced_mean": 0.5459821428571429,
+                "bootstrap95": [
+                  0.4857142857142857,
+                  0.60625
+                ]
+              }
+            }
+          }
+        },
+        "zero": {
+          "same_song_wrong_time": {
+            "status": "SOURCE_CLOCK_PROXY_ONLY",
+            "queries": 150,
+            "R1": 0.6933333333333334,
+            "R5": 1.0,
+            "negative_pair_win_rate": 0.8366666666666667,
+            "pair_win_grouped": {
+              "recording_uid": {
+                "groups": 76,
+                "balanced_mean": 0.8388157894736842,
+                "bootstrap95": [
+                  0.8026315789473685,
+                  0.875
+                ]
+              },
+              "choreography_uid": {
+                "groups": 20,
+                "balanced_mean": 0.8333333333333333,
+                "bootstrap95": [
+                  0.80115625,
+                  0.8604166666666666
+                ]
+              },
+              "source_group": {
+                "groups": 2,
+                "balanced_mean": 0.8348214285714286,
+                "bootstrap95": [
+                  0.8071428571428572,
+                  0.8625
+                ]
+              }
+            }
+          },
+          "other_song_energy_matched": {
+            "status": "SOURCE_CLOCK_PROXY_ONLY",
+            "queries": 150,
+            "R1": 0.7733333333333333,
+            "R5": 1.0,
+            "negative_pair_win_rate": 0.885,
+            "pair_win_grouped": {
+              "recording_uid": {
+                "groups": 76,
+                "balanced_mean": 0.8848684210526315,
+                "bootstrap95": [
+                  0.8453947368421053,
+                  0.9226973684210527
+                ]
+              },
+              "choreography_uid": {
+                "groups": 20,
+                "balanced_mean": 0.8795833333333333,
+                "bootstrap95": [
+                  0.8461692708333334,
+                  0.9103880208333333
+                ]
+              },
+              "source_group": {
+                "groups": 2,
+                "balanced_mean": 0.8810267857142857,
+                "bootstrap95": [
+                  0.8214285714285714,
+                  0.940625
+                ]
+              }
+            }
+          }
+        },
+        "shuffle": {
+          "same_song_wrong_time": {
+            "status": "SOURCE_CLOCK_PROXY_ONLY",
+            "queries": 150,
+            "R1": 0.6733333333333333,
+            "R5": 1.0,
+            "negative_pair_win_rate": 0.77,
+            "pair_win_grouped": {
+              "recording_uid": {
+                "groups": 76,
+                "balanced_mean": 0.7697368421052632,
+                "bootstrap95": [
+                  0.7120888157894737,
+                  0.8339638157894737
+                ]
+              },
+              "choreography_uid": {
+                "groups": 20,
+                "balanced_mean": 0.76625,
+                "bootstrap95": [
+                  0.70178125,
+                  0.8225312499999999
+                ]
+              },
+              "source_group": {
+                "groups": 2,
+                "balanced_mean": 0.7669642857142858,
+                "bootstrap95": [
+                  0.7214285714285714,
+                  0.8125
+                ]
+              }
+            }
+          },
+          "other_song_energy_matched": {
+            "status": "SOURCE_CLOCK_PROXY_ONLY",
+            "queries": 150,
+            "R1": 0.41333333333333333,
+            "R5": 1.0,
+            "negative_pair_win_rate": 0.5416666666666666,
+            "pair_win_grouped": {
+              "recording_uid": {
+                "groups": 76,
+                "balanced_mean": 0.5345394736842105,
+                "bootstrap95": [
+                  0.42417763157894733,
+                  0.6390213815789474
+                ]
+              },
+              "choreography_uid": {
+                "groups": 20,
+                "balanced_mean": 0.5329166666666667,
+                "bootstrap95": [
+                  0.470515625,
+                  0.6036536458333331
+                ]
+              },
+              "source_group": {
+                "groups": 2,
+                "balanced_mean": 0.5352678571428571,
+                "bootstrap95": [
+                  0.4392857142857143,
+                  0.63125
+                ]
+              }
+            }
+          }
+        },
+        "swap": {
+          "same_song_wrong_time": {
+            "status": "SOURCE_CLOCK_PROXY_ONLY",
+            "queries": 150,
+            "R1": 0.7,
+            "R5": 1.0,
+            "negative_pair_win_rate": 0.7933333333333333,
+            "pair_win_grouped": {
+              "recording_uid": {
+                "groups": 76,
+                "balanced_mean": 0.7894736842105263,
+                "bootstrap95": [
+                  0.7384046052631579,
+                  0.8388157894736842
+                ]
+              },
+              "choreography_uid": {
+                "groups": 20,
+                "balanced_mean": 0.7954166666666668,
+                "bootstrap95": [
+                  0.7615572916666666,
+                  0.8306666666666667
+                ]
+              },
+              "source_group": {
+                "groups": 2,
+                "balanced_mean": 0.7915178571428572,
+                "bootstrap95": [
+                  0.7642857142857142,
+                  0.81875
+                ]
+              }
+            }
+          },
+          "other_song_energy_matched": {
+            "status": "SOURCE_CLOCK_PROXY_ONLY",
+            "queries": 150,
+            "R1": 0.62,
+            "R5": 1.0,
+            "negative_pair_win_rate": 0.7033333333333334,
+            "pair_win_grouped": {
+              "recording_uid": {
+                "groups": 76,
+                "balanced_mean": 0.7072368421052632,
+                "bootstrap95": [
+                  0.6208470394736842,
+                  0.7937911184210524
+                ]
+              },
+              "choreography_uid": {
+                "groups": 20,
+                "balanced_mean": 0.715,
+                "bootstrap95": [
+                  0.6364609375,
+                  0.7899635416666666
+                ]
+              },
+              "source_group": {
+                "groups": 2,
+                "balanced_mean": 0.7142857142857143,
+                "bootstrap95": [
+                  0.55,
+                  0.8785714285714286
+                ]
+              }
+            }
+          }
+        }
+      },
+      "frozen": {
+        "same_song_wrong_time": {
+          "status": "SOURCE_CLOCK_PROXY_ONLY",
+          "queries": 150,
+          "R1": 0.58,
+          "R5": 1.0,
+          "negative_pair_win_rate": 0.74,
+          "pair_win_grouped": {
+            "recording_uid": {
+              "groups": 76,
+              "balanced_mean": 0.7401315789473685,
+              "bootstrap95": [
+                0.6907894736842105,
+                0.7894736842105263
+              ]
+            },
+            "choreography_uid": {
+              "groups": 20,
+              "balanced_mean": 0.740625,
+              "bootstrap95": [
+                0.68015625,
+                0.7911718750000001
+              ]
+            },
+            "source_group": {
+              "groups": 2,
+              "balanced_mean": 0.7357142857142858,
+              "bootstrap95": [
+                0.6714285714285714,
+                0.8
+              ]
+            }
+          }
+        },
+        "other_song_energy_matched": {
+          "status": "SOURCE_CLOCK_PROXY_ONLY",
+          "queries": 150,
+          "R1": 0.31333333333333335,
+          "R5": 1.0,
+          "negative_pair_win_rate": 0.725,
+          "pair_win_grouped": {
+            "recording_uid": {
+              "groups": 76,
+              "balanced_mean": 0.7220394736842105,
+              "bootstrap95": [
+                0.6858552631578947,
+                0.7583059210526315
+              ]
+            },
+            "choreography_uid": {
+              "groups": 20,
+              "balanced_mean": 0.7220833333333333,
+              "bootstrap95": [
+                0.6890520833333333,
+                0.7578125
+              ]
+            },
+            "source_group": {
+              "groups": 2,
+              "balanced_mean": 0.7212053571428572,
+              "bootstrap95": [
+                0.6642857142857143,
+                0.778125
+              ]
+            }
+          }
+        }
+      }
+    },
+    "strict_path": {
+      "final": {
+        "scores": {
+          "same_song_wrong_time": {
+            "status": "SOURCE_CLOCK_PROXY_ONLY",
+            "queries": 150,
+            "R1": 0.64,
+            "R5": 1.0,
+            "negative_pair_win_rate": 0.7833333333333333,
+            "pair_win_grouped": {
+              "recording_uid": {
+                "groups": 76,
+                "balanced_mean": 0.7828947368421053,
+                "bootstrap95": [
+                  0.7318256578947369,
+                  0.8306743421052631
+                ]
+              },
+              "choreography_uid": {
+                "groups": 20,
+                "balanced_mean": 0.7795833333333333,
+                "bootstrap95": [
+                  0.73478125,
+                  0.8257499999999999
+                ]
+              },
+              "source_group": {
+                "groups": 2,
+                "balanced_mean": 0.7794642857142857,
+                "bootstrap95": [
+                  0.7214285714285714,
+                  0.8375
+                ]
+              }
+            }
+          },
+          "other_song_energy_matched": {
+            "status": "SOURCE_CLOCK_PROXY_ONLY",
+            "queries": 150,
+            "R1": 0.5,
+            "R5": 1.0,
+            "negative_pair_win_rate": 0.5883333333333334,
+            "pair_win_grouped": {
+              "recording_uid": {
+                "groups": 76,
+                "balanced_mean": 0.5805921052631579,
+                "bootstrap95": [
+                  0.47368421052631576,
+                  0.6802220394736841
+                ]
+              },
+              "choreography_uid": {
+                "groups": 20,
+                "balanced_mean": 0.5801041666666666,
+                "bootstrap95": [
+                  0.5243958333333333,
+                  0.6348828125
+                ]
+              },
+              "source_group": {
+                "groups": 2,
+                "balanced_mean": 0.5823660714285714,
+                "bootstrap95": [
+                  0.4928571428571429,
+                  0.671875
+                ]
+              }
+            }
+          }
+        },
+        "zero": {
+          "same_song_wrong_time": {
+            "status": "SOURCE_CLOCK_PROXY_ONLY",
+            "queries": 150,
+            "R1": 0.7133333333333334,
+            "R5": 1.0,
+            "negative_pair_win_rate": 0.82,
+            "pair_win_grouped": {
+              "recording_uid": {
+                "groups": 76,
+                "balanced_mean": 0.819078947368421,
+                "bootstrap95": [
+                  0.7796052631578947,
+                  0.8618421052631579
+                ]
+              },
+              "choreography_uid": {
+                "groups": 20,
+                "balanced_mean": 0.8110416666666665,
+                "bootstrap95": [
+                  0.7573697916666666,
+                  0.8640260416666664
+                ]
+              },
+              "source_group": {
+                "groups": 2,
+                "balanced_mean": 0.8147321428571429,
+                "bootstrap95": [
+                  0.7357142857142858,
+                  0.89375
+                ]
+              }
+            }
+          },
+          "other_song_energy_matched": {
+            "status": "SOURCE_CLOCK_PROXY_ONLY",
+            "queries": 150,
+            "R1": 0.5866666666666667,
+            "R5": 1.0,
+            "negative_pair_win_rate": 0.7616666666666667,
+            "pair_win_grouped": {
+              "recording_uid": {
+                "groups": 76,
+                "balanced_mean": 0.7631578947368421,
+                "bootstrap95": [
+                  0.7293996710526316,
+                  0.8034950657894737
+                ]
+              },
+              "choreography_uid": {
+                "groups": 20,
+                "balanced_mean": 0.7565625,
+                "bootstrap95": [
+                  0.7105781250000001,
+                  0.8029765624999999
+                ]
+              },
+              "source_group": {
+                "groups": 2,
+                "balanced_mean": 0.7551339285714286,
+                "bootstrap95": [
+                  0.6571428571428571,
+                  0.853125
+                ]
+              }
+            }
+          }
+        },
+        "shuffle": {
+          "same_song_wrong_time": {
+            "status": "SOURCE_CLOCK_PROXY_ONLY",
+            "queries": 150,
+            "R1": 0.6333333333333333,
+            "R5": 1.0,
+            "negative_pair_win_rate": 0.7566666666666667,
+            "pair_win_grouped": {
+              "recording_uid": {
+                "groups": 76,
+                "balanced_mean": 0.756578947368421,
+                "bootstrap95": [
+                  0.7022203947368422,
+                  0.819078947368421
+                ]
+              },
+              "choreography_uid": {
+                "groups": 20,
+                "balanced_mean": 0.755625,
+                "bootstrap95": [
+                  0.7089479166666667,
+                  0.8030260416666667
+                ]
+              },
+              "source_group": {
+                "groups": 2,
+                "balanced_mean": 0.7553571428571428,
+                "bootstrap95": [
+                  0.7357142857142858,
+                  0.775
+                ]
+              }
+            }
+          },
+          "other_song_energy_matched": {
+            "status": "SOURCE_CLOCK_PROXY_ONLY",
+            "queries": 150,
+            "R1": 0.5133333333333333,
+            "R5": 1.0,
+            "negative_pair_win_rate": 0.6,
+            "pair_win_grouped": {
+              "recording_uid": {
+                "groups": 76,
+                "balanced_mean": 0.5921052631578947,
+                "bootstrap95": [
+                  0.48511513157894737,
+                  0.6916529605263158
+                ]
+              },
+              "choreography_uid": {
+                "groups": 20,
+                "balanced_mean": 0.5910416666666667,
+                "bootstrap95": [
+                  0.5282734375,
+                  0.6528125
+                ]
+              },
+              "source_group": {
+                "groups": 2,
+                "balanced_mean": 0.5933035714285715,
+                "bootstrap95": [
+                  0.4928571428571429,
+                  0.69375
+                ]
+              }
+            }
+          }
+        },
+        "swap": {
+          "same_song_wrong_time": {
+            "status": "SOURCE_CLOCK_PROXY_ONLY",
+            "queries": 150,
+            "R1": 0.6666666666666666,
+            "R5": 1.0,
+            "negative_pair_win_rate": 0.7833333333333333,
+            "pair_win_grouped": {
+              "recording_uid": {
+                "groups": 76,
+                "balanced_mean": 0.7796052631578947,
+                "bootstrap95": [
+                  0.7268092105263158,
+                  0.8322368421052632
+                ]
+              },
+              "choreography_uid": {
+                "groups": 20,
+                "balanced_mean": 0.7854166666666667,
+                "bootstrap95": [
+                  0.7289479166666667,
+                  0.8323020833333332
+                ]
+              },
+              "source_group": {
+                "groups": 2,
+                "balanced_mean": 0.7866071428571428,
+                "bootstrap95": [
+                  0.7375,
+                  0.8357142857142857
+                ]
+              }
+            }
+          },
+          "other_song_energy_matched": {
+            "status": "SOURCE_CLOCK_PROXY_ONLY",
+            "queries": 150,
+            "R1": 0.5133333333333333,
+            "R5": 1.0,
+            "negative_pair_win_rate": 0.6433333333333333,
+            "pair_win_grouped": {
+              "recording_uid": {
+                "groups": 76,
+                "balanced_mean": 0.6480263157894737,
+                "bootstrap95": [
+                  0.558264802631579,
+                  0.7401315789473685
+                ]
+              },
+              "choreography_uid": {
+                "groups": 20,
+                "balanced_mean": 0.651875,
+                "bootstrap95": [
+                  0.5964973958333334,
+                  0.7036458333333335
+                ]
+              },
+              "source_group": {
+                "groups": 2,
+                "balanced_mean": 0.6513392857142857,
+                "bootstrap95": [
+                  0.53125,
+                  0.7714285714285715
+                ]
+              }
+            }
+          }
+        }
+      },
+      "frozen": {
+        "same_song_wrong_time": {
+          "status": "SOURCE_CLOCK_PROXY_ONLY",
+          "queries": 150,
+          "R1": 0.6,
+          "R5": 1.0,
+          "negative_pair_win_rate": 0.7533333333333333,
+          "pair_win_grouped": {
+            "recording_uid": {
+              "groups": 76,
+              "balanced_mean": 0.7532894736842105,
+              "bootstrap95": [
+                0.7072368421052632,
+                0.8142269736842105
+              ]
+            },
+            "choreography_uid": {
+              "groups": 20,
+              "balanced_mean": 0.7475,
+              "bootstrap95": [
+                0.68978125,
+                0.8038125
+              ]
+            },
+            "source_group": {
+              "groups": 2,
+              "balanced_mean": 0.7477678571428572,
+              "bootstrap95": [
+                0.6642857142857143,
+                0.83125
+              ]
+            }
+          }
+        },
+        "other_song_energy_matched": {
+          "status": "SOURCE_CLOCK_PROXY_ONLY",
+          "queries": 150,
+          "R1": 0.3333333333333333,
+          "R5": 1.0,
+          "negative_pair_win_rate": 0.7033333333333334,
+          "pair_win_grouped": {
+            "recording_uid": {
+              "groups": 76,
+              "balanced_mean": 0.7006578947368421,
+              "bootstrap95": [
+                0.6710526315789473,
+                0.7360608552631579
+              ]
+            },
+            "choreography_uid": {
+              "groups": 20,
+              "balanced_mean": 0.7033333333333334,
+              "bootstrap95": [
+                0.6658723958333334,
+                0.741984375
+              ]
+            },
+            "source_group": {
+              "groups": 2,
+              "balanced_mean": 0.7011160714285714,
+              "bootstrap95": [
+                0.6678571428571428,
+                0.734375
+              ]
+            }
+          }
+        }
+      }
+    },
+    "path_synthetic": {
+      "final": {
+        "scores": {
+          "same_song_wrong_time": {
+            "status": "SOURCE_CLOCK_PROXY_ONLY",
+            "queries": 150,
+            "R1": 0.6666666666666666,
+            "R5": 1.0,
+            "negative_pair_win_rate": 0.7966666666666666,
+            "pair_win_grouped": {
+              "recording_uid": {
+                "groups": 76,
+                "balanced_mean": 0.7960526315789473,
+                "bootstrap95": [
+                  0.743421052631579,
+                  0.8486842105263158
+                ]
+              },
+              "choreography_uid": {
+                "groups": 20,
+                "balanced_mean": 0.7941666666666667,
+                "bootstrap95": [
+                  0.7462187499999999,
+                  0.847453125
+                ]
+              },
+              "source_group": {
+                "groups": 2,
+                "balanced_mean": 0.79375,
+                "bootstrap95": [
+                  0.75,
+                  0.8375
+                ]
+              }
+            }
+          },
+          "other_song_energy_matched": {
+            "status": "SOURCE_CLOCK_PROXY_ONLY",
+            "queries": 150,
+            "R1": 0.5,
+            "R5": 1.0,
+            "negative_pair_win_rate": 0.59,
+            "pair_win_grouped": {
+              "recording_uid": {
+                "groups": 76,
+                "balanced_mean": 0.5822368421052632,
+                "bootstrap95": [
+                  0.4761101973684211,
+                  0.6810032894736842
+                ]
+              },
+              "choreography_uid": {
+                "groups": 20,
+                "balanced_mean": 0.5816666666666667,
+                "bootstrap95": [
+                  0.5243958333333333,
+                  0.6364453125
+                ]
+              },
+              "source_group": {
+                "groups": 2,
+                "balanced_mean": 0.5839285714285715,
+                "bootstrap95": [
+                  0.4928571428571429,
+                  0.675
+                ]
+              }
+            }
+          }
+        },
+        "zero": {
+          "same_song_wrong_time": {
+            "status": "SOURCE_CLOCK_PROXY_ONLY",
+            "queries": 150,
+            "R1": 0.7133333333333334,
+            "R5": 1.0,
+            "negative_pair_win_rate": 0.82,
+            "pair_win_grouped": {
+              "recording_uid": {
+                "groups": 76,
+                "balanced_mean": 0.819078947368421,
+                "bootstrap95": [
+                  0.7796052631578947,
+                  0.8618421052631579
+                ]
+              },
+              "choreography_uid": {
+                "groups": 20,
+                "balanced_mean": 0.8110416666666665,
+                "bootstrap95": [
+                  0.7573697916666666,
+                  0.8640260416666664
+                ]
+              },
+              "source_group": {
+                "groups": 2,
+                "balanced_mean": 0.8147321428571429,
+                "bootstrap95": [
+                  0.7357142857142858,
+                  0.89375
+                ]
+              }
+            }
+          },
+          "other_song_energy_matched": {
+            "status": "SOURCE_CLOCK_PROXY_ONLY",
+            "queries": 150,
+            "R1": 0.5866666666666667,
+            "R5": 1.0,
+            "negative_pair_win_rate": 0.7616666666666667,
+            "pair_win_grouped": {
+              "recording_uid": {
+                "groups": 76,
+                "balanced_mean": 0.7631578947368421,
+                "bootstrap95": [
+                  0.7293996710526316,
+                  0.8034950657894737
+                ]
+              },
+              "choreography_uid": {
+                "groups": 20,
+                "balanced_mean": 0.7565625,
+                "bootstrap95": [
+                  0.7105781250000001,
+                  0.8029765624999999
+                ]
+              },
+              "source_group": {
+                "groups": 2,
+                "balanced_mean": 0.7551339285714286,
+                "bootstrap95": [
+                  0.6571428571428571,
+                  0.853125
+                ]
+              }
+            }
+          }
+        },
+        "shuffle": {
+          "same_song_wrong_time": {
+            "status": "SOURCE_CLOCK_PROXY_ONLY",
+            "queries": 150,
+            "R1": 0.68,
+            "R5": 1.0,
+            "negative_pair_win_rate": 0.79,
+            "pair_win_grouped": {
+              "recording_uid": {
+                "groups": 76,
+                "balanced_mean": 0.7927631578947368,
+                "bootstrap95": [
+                  0.7384046052631579,
+                  0.8519736842105263
+                ]
+              },
+              "choreography_uid": {
+                "groups": 20,
+                "balanced_mean": 0.7897916666666667,
+                "bootstrap95": [
+                  0.7464062499999999,
+                  0.83771875
+                ]
+              },
+              "source_group": {
+                "groups": 2,
+                "balanced_mean": 0.7883928571428571,
+                "bootstrap95": [
+                  0.7642857142857142,
+                  0.8125
+                ]
+              }
+            }
+          },
+          "other_song_energy_matched": {
+            "status": "SOURCE_CLOCK_PROXY_ONLY",
+            "queries": 150,
+            "R1": 0.5133333333333333,
+            "R5": 1.0,
+            "negative_pair_win_rate": 0.6016666666666667,
+            "pair_win_grouped": {
+              "recording_uid": {
+                "groups": 76,
+                "balanced_mean": 0.59375,
+                "bootstrap95": [
+                  0.48355263157894735,
+                  0.6908717105263158
+                ]
+              },
+              "choreography_uid": {
+                "groups": 20,
+                "balanced_mean": 0.5926041666666666,
+                "bootstrap95": [
+                  0.5312786458333334,
+                  0.6559375000000001
+                ]
+              },
+              "source_group": {
+                "groups": 2,
+                "balanced_mean": 0.5948660714285714,
+                "bootstrap95": [
+                  0.4928571428571429,
+                  0.696875
+                ]
+              }
+            }
+          }
+        },
+        "swap": {
+          "same_song_wrong_time": {
+            "status": "SOURCE_CLOCK_PROXY_ONLY",
+            "queries": 150,
+            "R1": 0.68,
+            "R5": 1.0,
+            "negative_pair_win_rate": 0.79,
+            "pair_win_grouped": {
+              "recording_uid": {
+                "groups": 76,
+                "balanced_mean": 0.7861842105263158,
+                "bootstrap95": [
+                  0.7285361842105263,
+                  0.8372532894736842
+                ]
+              },
+              "choreography_uid": {
+                "groups": 20,
+                "balanced_mean": 0.7916666666666667,
+                "bootstrap95": [
+                  0.7351979166666667,
+                  0.839625
+                ]
+              },
+              "source_group": {
+                "groups": 2,
+                "balanced_mean": 0.7928571428571429,
+                "bootstrap95": [
+                  0.75,
+                  0.8357142857142857
+                ]
+              }
+            }
+          },
+          "other_song_energy_matched": {
+            "status": "SOURCE_CLOCK_PROXY_ONLY",
+            "queries": 150,
+            "R1": 0.4,
+            "R5": 1.0,
+            "negative_pair_win_rate": 0.6166666666666667,
+            "pair_win_grouped": {
+              "recording_uid": {
+                "groups": 76,
+                "balanced_mean": 0.6217105263157895,
+                "bootstrap95": [
+                  0.540172697368421,
+                  0.7064555921052631
+                ]
+              },
+              "choreography_uid": {
+                "groups": 20,
+                "balanced_mean": 0.626875,
+                "bootstrap95": [
+                  0.5597395833333334,
+                  0.6876744791666667
+                ]
+              },
+              "source_group": {
+                "groups": 2,
+                "balanced_mean": 0.6263392857142858,
+                "bootstrap95": [
+                  0.48125,
+                  0.7714285714285715
+                ]
+              }
+            }
+          }
+        }
+      },
+      "frozen": {
+        "same_song_wrong_time": {
+          "status": "SOURCE_CLOCK_PROXY_ONLY",
+          "queries": 150,
+          "R1": 0.6,
+          "R5": 1.0,
+          "negative_pair_win_rate": 0.7533333333333333,
+          "pair_win_grouped": {
+            "recording_uid": {
+              "groups": 76,
+              "balanced_mean": 0.7532894736842105,
+              "bootstrap95": [
+                0.7072368421052632,
+                0.8142269736842105
+              ]
+            },
+            "choreography_uid": {
+              "groups": 20,
+              "balanced_mean": 0.7475,
+              "bootstrap95": [
+                0.68978125,
+                0.8038125
+              ]
+            },
+            "source_group": {
+              "groups": 2,
+              "balanced_mean": 0.7477678571428572,
+              "bootstrap95": [
+                0.6642857142857143,
+                0.83125
+              ]
+            }
+          }
+        },
+        "other_song_energy_matched": {
+          "status": "SOURCE_CLOCK_PROXY_ONLY",
+          "queries": 150,
+          "R1": 0.3333333333333333,
+          "R5": 1.0,
+          "negative_pair_win_rate": 0.7033333333333334,
+          "pair_win_grouped": {
+            "recording_uid": {
+              "groups": 76,
+              "balanced_mean": 0.7006578947368421,
+              "bootstrap95": [
+                0.6710526315789473,
+                0.7360608552631579
+              ]
+            },
+            "choreography_uid": {
+              "groups": 20,
+              "balanced_mean": 0.7033333333333334,
+              "bootstrap95": [
+                0.6658723958333334,
+                0.741984375
+              ]
+            },
+            "source_group": {
+              "groups": 2,
+              "balanced_mean": 0.7011160714285714,
+              "bootstrap95": [
+                0.6678571428571428,
+                0.734375
+              ]
+            }
+          }
+        }
+      }
+    },
+    "path_weak": {
+      "final": {
+        "scores": {
+          "same_song_wrong_time": {
+            "status": "SOURCE_CLOCK_PROXY_ONLY",
+            "queries": 150,
+            "R1": 0.6133333333333333,
+            "R5": 1.0,
+            "negative_pair_win_rate": 0.7633333333333333,
+            "pair_win_grouped": {
+              "recording_uid": {
+                "groups": 76,
+                "balanced_mean": 0.7598684210526315,
+                "bootstrap95": [
+                  0.7087993421052632,
+                  0.817516447368421
+                ]
+              },
+              "choreography_uid": {
+                "groups": 20,
+                "balanced_mean": 0.75625,
+                "bootstrap95": [
+                  0.704609375,
+                  0.8172656249999999
+                ]
+              },
+              "source_group": {
+                "groups": 2,
+                "balanced_mean": 0.7584821428571429,
+                "bootstrap95": [
+                  0.6857142857142857,
+                  0.83125
+                ]
+              }
+            }
+          },
+          "other_song_energy_matched": {
+            "status": "SOURCE_CLOCK_PROXY_ONLY",
+            "queries": 150,
+            "R1": 0.5066666666666667,
+            "R5": 1.0,
+            "negative_pair_win_rate": 0.5866666666666667,
+            "pair_win_grouped": {
+              "recording_uid": {
+                "groups": 76,
+                "balanced_mean": 0.5789473684210527,
+                "bootstrap95": [
+                  0.46788651315789476,
+                  0.6736430921052631
+                ]
+              },
+              "choreography_uid": {
+                "groups": 20,
+                "balanced_mean": 0.5795833333333333,
+                "bootstrap95": [
+                  0.5315520833333334,
+                  0.6286328125
+                ]
+              },
+              "source_group": {
+                "groups": 2,
+                "balanced_mean": 0.58125,
+                "bootstrap95": [
+                  0.5,
+                  0.6625
+                ]
+              }
+            }
+          }
+        },
+        "zero": {
+          "same_song_wrong_time": {
+            "status": "SOURCE_CLOCK_PROXY_ONLY",
+            "queries": 150,
+            "R1": 0.7133333333333334,
+            "R5": 1.0,
+            "negative_pair_win_rate": 0.82,
+            "pair_win_grouped": {
+              "recording_uid": {
+                "groups": 76,
+                "balanced_mean": 0.819078947368421,
+                "bootstrap95": [
+                  0.7796052631578947,
+                  0.8618421052631579
+                ]
+              },
+              "choreography_uid": {
+                "groups": 20,
+                "balanced_mean": 0.8110416666666665,
+                "bootstrap95": [
+                  0.7573697916666666,
+                  0.8640260416666664
+                ]
+              },
+              "source_group": {
+                "groups": 2,
+                "balanced_mean": 0.8147321428571429,
+                "bootstrap95": [
+                  0.7357142857142858,
+                  0.89375
+                ]
+              }
+            }
+          },
+          "other_song_energy_matched": {
+            "status": "SOURCE_CLOCK_PROXY_ONLY",
+            "queries": 150,
+            "R1": 0.5866666666666667,
+            "R5": 1.0,
+            "negative_pair_win_rate": 0.7616666666666667,
+            "pair_win_grouped": {
+              "recording_uid": {
+                "groups": 76,
+                "balanced_mean": 0.7631578947368421,
+                "bootstrap95": [
+                  0.7293996710526316,
+                  0.8034950657894737
+                ]
+              },
+              "choreography_uid": {
+                "groups": 20,
+                "balanced_mean": 0.7565625,
+                "bootstrap95": [
+                  0.7105781250000001,
+                  0.8029765624999999
+                ]
+              },
+              "source_group": {
+                "groups": 2,
+                "balanced_mean": 0.7551339285714286,
+                "bootstrap95": [
+                  0.6571428571428571,
+                  0.853125
+                ]
+              }
+            }
+          }
+        },
+        "shuffle": {
+          "same_song_wrong_time": {
+            "status": "SOURCE_CLOCK_PROXY_ONLY",
+            "queries": 150,
+            "R1": 0.64,
+            "R5": 1.0,
+            "negative_pair_win_rate": 0.7766666666666666,
+            "pair_win_grouped": {
+              "recording_uid": {
+                "groups": 76,
+                "balanced_mean": 0.7763157894736842,
+                "bootstrap95": [
+                  0.7236842105263158,
+                  0.8339638157894737
+                ]
+              },
+              "choreography_uid": {
+                "groups": 20,
+                "balanced_mean": 0.7754166666666668,
+                "bootstrap95": [
+                  0.722265625,
+                  0.825875
+                ]
+              },
+              "source_group": {
+                "groups": 2,
+                "balanced_mean": 0.7745535714285714,
+                "bootstrap95": [
+                  0.7428571428571429,
+                  0.80625
+                ]
+              }
+            }
+          },
+          "other_song_energy_matched": {
+            "status": "SOURCE_CLOCK_PROXY_ONLY",
+            "queries": 150,
+            "R1": 0.5133333333333333,
+            "R5": 1.0,
+            "negative_pair_win_rate": 0.5816666666666667,
+            "pair_win_grouped": {
+              "recording_uid": {
+                "groups": 76,
+                "balanced_mean": 0.5740131578947368,
+                "bootstrap95": [
+                  0.45966282894736843,
+                  0.6727796052631578
+                ]
+              },
+              "choreography_uid": {
+                "groups": 20,
+                "balanced_mean": 0.5743750000000001,
+                "bootstrap95": [
+                  0.5157421875,
+                  0.6292265625000001
+                ]
+              },
+              "source_group": {
+                "groups": 2,
+                "balanced_mean": 0.5763392857142857,
+                "bootstrap95": [
+                  0.49642857142857144,
+                  0.65625
+                ]
+              }
+            }
+          }
+        },
+        "swap": {
+          "same_song_wrong_time": {
+            "status": "SOURCE_CLOCK_PROXY_ONLY",
+            "queries": 150,
+            "R1": 0.7,
+            "R5": 1.0,
+            "negative_pair_win_rate": 0.7966666666666666,
+            "pair_win_grouped": {
+              "recording_uid": {
+                "groups": 76,
+                "balanced_mean": 0.7927631578947368,
+                "bootstrap95": [
+                  0.7335526315789473,
+                  0.8453947368421053
+                ]
+              },
+              "choreography_uid": {
+                "groups": 20,
+                "balanced_mean": 0.7977083333333332,
+                "bootstrap95": [
+                  0.749046875,
+                  0.8400208333333333
+                ]
+              },
+              "source_group": {
+                "groups": 2,
+                "balanced_mean": 0.796875,
+                "bootstrap95": [
+                  0.79375,
+                  0.8
+                ]
+              }
+            }
+          },
+          "other_song_energy_matched": {
+            "status": "SOURCE_CLOCK_PROXY_ONLY",
+            "queries": 150,
+            "R1": 0.3933333333333333,
+            "R5": 1.0,
+            "negative_pair_win_rate": 0.6133333333333333,
+            "pair_win_grouped": {
+              "recording_uid": {
+                "groups": 76,
+                "balanced_mean": 0.618421052631579,
+                "bootstrap95": [
+                  0.5336759868421053,
+                  0.7056743421052631
+                ]
+              },
+              "choreography_uid": {
+                "groups": 20,
+                "balanced_mean": 0.62375,
+                "bootstrap95": [
+                  0.5565364583333333,
+                  0.6861119791666667
+                ]
+              },
+              "source_group": {
+                "groups": 2,
+                "balanced_mean": 0.6227678571428571,
+                "bootstrap95": [
+                  0.48125,
+                  0.7642857142857142
+                ]
+              }
+            }
+          }
+        }
+      },
+      "frozen": {
+        "same_song_wrong_time": {
+          "status": "SOURCE_CLOCK_PROXY_ONLY",
+          "queries": 150,
+          "R1": 0.6,
+          "R5": 1.0,
+          "negative_pair_win_rate": 0.7533333333333333,
+          "pair_win_grouped": {
+            "recording_uid": {
+              "groups": 76,
+              "balanced_mean": 0.7532894736842105,
+              "bootstrap95": [
+                0.7072368421052632,
+                0.8142269736842105
+              ]
+            },
+            "choreography_uid": {
+              "groups": 20,
+              "balanced_mean": 0.7475,
+              "bootstrap95": [
+                0.68978125,
+                0.8038125
+              ]
+            },
+            "source_group": {
+              "groups": 2,
+              "balanced_mean": 0.7477678571428572,
+              "bootstrap95": [
+                0.6642857142857143,
+                0.83125
+              ]
+            }
+          }
+        },
+        "other_song_energy_matched": {
+          "status": "SOURCE_CLOCK_PROXY_ONLY",
+          "queries": 150,
+          "R1": 0.3333333333333333,
+          "R5": 1.0,
+          "negative_pair_win_rate": 0.7033333333333334,
+          "pair_win_grouped": {
+            "recording_uid": {
+              "groups": 76,
+              "balanced_mean": 0.7006578947368421,
+              "bootstrap95": [
+                0.6710526315789473,
+                0.7360608552631579
+              ]
+            },
+            "choreography_uid": {
+              "groups": 20,
+              "balanced_mean": 0.7033333333333334,
+              "bootstrap95": [
+                0.6658723958333334,
+                0.741984375
+              ]
+            },
+            "source_group": {
+              "groups": 2,
+              "balanced_mean": 0.7011160714285714,
+              "bootstrap95": [
+                0.6678571428571428,
+                0.734375
+              ]
+            }
+          }
+        }
+      }
+    },
+    "path_random_weak": {
+      "final": {
+        "scores": {
+          "same_song_wrong_time": {
+            "status": "SOURCE_CLOCK_PROXY_ONLY",
+            "queries": 150,
+            "R1": 0.6266666666666667,
+            "R5": 1.0,
+            "negative_pair_win_rate": 0.77,
+            "pair_win_grouped": {
+              "recording_uid": {
+                "groups": 76,
+                "balanced_mean": 0.7664473684210527,
+                "bootstrap95": [
+                  0.7072368421052632,
+                  0.8273848684210526
+                ]
+              },
+              "choreography_uid": {
+                "groups": 20,
+                "balanced_mean": 0.7635416666666667,
+                "bootstrap95": [
+                  0.706640625,
+                  0.8220312499999998
+                ]
+              },
+              "source_group": {
+                "groups": 2,
+                "balanced_mean": 0.765625,
+                "bootstrap95": [
+                  0.7,
+                  0.83125
+                ]
+              }
+            }
+          },
+          "other_song_energy_matched": {
+            "status": "SOURCE_CLOCK_PROXY_ONLY",
+            "queries": 150,
+            "R1": 0.5,
+            "R5": 1.0,
+            "negative_pair_win_rate": 0.5666666666666667,
+            "pair_win_grouped": {
+              "recording_uid": {
+                "groups": 76,
+                "balanced_mean": 0.5592105263157895,
+                "bootstrap95": [
+                  0.4448601973684211,
+                  0.6590871710526311
+                ]
+              },
+              "choreography_uid": {
+                "groups": 20,
+                "balanced_mean": 0.5603125,
+                "bootstrap95": [
+                  0.5110546875,
+                  0.6072031250000001
+                ]
+              },
+              "source_group": {
+                "groups": 2,
+                "balanced_mean": 0.5622767857142857,
+                "bootstrap95": [
+                  0.49642857142857144,
+                  0.628125
+                ]
+              }
+            }
+          }
+        },
+        "zero": {
+          "same_song_wrong_time": {
+            "status": "SOURCE_CLOCK_PROXY_ONLY",
+            "queries": 150,
+            "R1": 0.7133333333333334,
+            "R5": 1.0,
+            "negative_pair_win_rate": 0.82,
+            "pair_win_grouped": {
+              "recording_uid": {
+                "groups": 76,
+                "balanced_mean": 0.819078947368421,
+                "bootstrap95": [
+                  0.7796052631578947,
+                  0.8618421052631579
+                ]
+              },
+              "choreography_uid": {
+                "groups": 20,
+                "balanced_mean": 0.8110416666666665,
+                "bootstrap95": [
+                  0.7573697916666666,
+                  0.8640260416666664
+                ]
+              },
+              "source_group": {
+                "groups": 2,
+                "balanced_mean": 0.8147321428571429,
+                "bootstrap95": [
+                  0.7357142857142858,
+                  0.89375
+                ]
+              }
+            }
+          },
+          "other_song_energy_matched": {
+            "status": "SOURCE_CLOCK_PROXY_ONLY",
+            "queries": 150,
+            "R1": 0.5866666666666667,
+            "R5": 1.0,
+            "negative_pair_win_rate": 0.7616666666666667,
+            "pair_win_grouped": {
+              "recording_uid": {
+                "groups": 76,
+                "balanced_mean": 0.7631578947368421,
+                "bootstrap95": [
+                  0.7293996710526316,
+                  0.8034950657894737
+                ]
+              },
+              "choreography_uid": {
+                "groups": 20,
+                "balanced_mean": 0.7565625,
+                "bootstrap95": [
+                  0.7105781250000001,
+                  0.8029765624999999
+                ]
+              },
+              "source_group": {
+                "groups": 2,
+                "balanced_mean": 0.7551339285714286,
+                "bootstrap95": [
+                  0.6571428571428571,
+                  0.853125
+                ]
+              }
+            }
+          }
+        },
+        "shuffle": {
+          "same_song_wrong_time": {
+            "status": "SOURCE_CLOCK_PROXY_ONLY",
+            "queries": 150,
+            "R1": 0.6466666666666666,
+            "R5": 1.0,
+            "negative_pair_win_rate": 0.7633333333333333,
+            "pair_win_grouped": {
+              "recording_uid": {
+                "groups": 76,
+                "balanced_mean": 0.7631578947368421,
+                "bootstrap95": [
+                  0.7055098684210527,
+                  0.8322368421052632
+                ]
+              },
+              "choreography_uid": {
+                "groups": 20,
+                "balanced_mean": 0.7610416666666666,
+                "bootstrap95": [
+                  0.713171875,
+                  0.81959375
+                ]
+              },
+              "source_group": {
+                "groups": 2,
+                "balanced_mean": 0.7625,
+                "bootstrap95": [
+                  0.75,
+                  0.775
+                ]
+              }
+            }
+          },
+          "other_song_energy_matched": {
+            "status": "SOURCE_CLOCK_PROXY_ONLY",
+            "queries": 150,
+            "R1": 0.5133333333333333,
+            "R5": 1.0,
+            "negative_pair_win_rate": 0.5733333333333334,
+            "pair_win_grouped": {
+              "recording_uid": {
+                "groups": 76,
+                "balanced_mean": 0.5657894736842105,
+                "bootstrap95": [
+                  0.4514391447368421,
+                  0.6679276315789472
+                ]
+              },
+              "choreography_uid": {
+                "groups": 20,
+                "balanced_mean": 0.5665625000000001,
+                "bootstrap95": [
+                  0.515,
+                  0.623203125
+                ]
+              },
+              "source_group": {
+                "groups": 2,
+                "balanced_mean": 0.56875,
+                "bootstrap95": [
+                  0.5,
+                  0.6375
+                ]
+              }
+            }
+          }
+        },
+        "swap": {
+          "same_song_wrong_time": {
+            "status": "SOURCE_CLOCK_PROXY_ONLY",
+            "queries": 150,
+            "R1": 0.7066666666666667,
+            "R5": 1.0,
+            "negative_pair_win_rate": 0.81,
+            "pair_win_grouped": {
+              "recording_uid": {
+                "groups": 76,
+                "balanced_mean": 0.805921052631579,
+                "bootstrap95": [
+                  0.7467105263157895,
+                  0.8635690789473683
+                ]
+              },
+              "choreography_uid": {
+                "groups": 20,
+                "balanced_mean": 0.8114583333333332,
+                "bootstrap95": [
+                  0.754390625,
+                  0.8578281249999999
+                ]
+              },
+              "source_group": {
+                "groups": 2,
+                "balanced_mean": 0.8120535714285715,
+                "bootstrap95": [
+                  0.78125,
+                  0.8428571428571429
+                ]
+              }
+            }
+          },
+          "other_song_energy_matched": {
+            "status": "SOURCE_CLOCK_PROXY_ONLY",
+            "queries": 150,
+            "R1": 0.5066666666666667,
+            "R5": 1.0,
+            "negative_pair_win_rate": 0.6416666666666667,
+            "pair_win_grouped": {
+              "recording_uid": {
+                "groups": 76,
+                "balanced_mean": 0.6463815789473685,
+                "bootstrap95": [
+                  0.5558388157894737,
+                  0.7368421052631579
+                ]
+              },
+              "choreography_uid": {
+                "groups": 20,
+                "balanced_mean": 0.6503125,
+                "bootstrap95": [
+                  0.5954296875,
+                  0.7023567708333335
+                ]
+              },
+              "source_group": {
+                "groups": 2,
+                "balanced_mean": 0.6493303571428571,
+                "bootstrap95": [
+                  0.534375,
+                  0.7642857142857142
+                ]
+              }
+            }
+          }
+        }
+      },
+      "frozen": {
+        "same_song_wrong_time": {
+          "status": "SOURCE_CLOCK_PROXY_ONLY",
+          "queries": 150,
+          "R1": 0.6,
+          "R5": 1.0,
+          "negative_pair_win_rate": 0.7533333333333333,
+          "pair_win_grouped": {
+            "recording_uid": {
+              "groups": 76,
+              "balanced_mean": 0.7532894736842105,
+              "bootstrap95": [
+                0.7072368421052632,
+                0.8142269736842105
+              ]
+            },
+            "choreography_uid": {
+              "groups": 20,
+              "balanced_mean": 0.7475,
+              "bootstrap95": [
+                0.68978125,
+                0.8038125
+              ]
+            },
+            "source_group": {
+              "groups": 2,
+              "balanced_mean": 0.7477678571428572,
+              "bootstrap95": [
+                0.6642857142857143,
+                0.83125
+              ]
+            }
+          }
+        },
+        "other_song_energy_matched": {
+          "status": "SOURCE_CLOCK_PROXY_ONLY",
+          "queries": 150,
+          "R1": 0.3333333333333333,
+          "R5": 1.0,
+          "negative_pair_win_rate": 0.7033333333333334,
+          "pair_win_grouped": {
+            "recording_uid": {
+              "groups": 76,
+              "balanced_mean": 0.7006578947368421,
+              "bootstrap95": [
+                0.6710526315789473,
+                0.7360608552631579
+              ]
+            },
+            "choreography_uid": {
+              "groups": 20,
+              "balanced_mean": 0.7033333333333334,
+              "bootstrap95": [
+                0.6658723958333334,
+                0.741984375
+              ]
+            },
+            "source_group": {
+              "groups": 2,
+              "balanced_mean": 0.7011160714285714,
+              "bootstrap95": [
+                0.6678571428571428,
+                0.734375
+              ]
+            }
+          }
+        }
+      }
+    },
+    "clock_only_path": {
+      "same_song_wrong_time": {
+        "status": "SOURCE_CLOCK_PROXY_ONLY",
+        "queries": 150,
+        "R1": 0.6133333333333333,
+        "R5": 1.0,
+        "negative_pair_win_rate": 0.7416666666666667,
+        "pair_win_grouped": {
+          "recording_uid": {
+            "groups": 76,
+            "balanced_mean": 0.7319078947368421,
+            "bootstrap95": [
+              0.6742598684210527,
+              0.7936266447368421
+            ]
+          },
+          "choreography_uid": {
+            "groups": 20,
+            "balanced_mean": 0.7338541666666667,
+            "bootstrap95": [
+              0.6663906249999999,
+              0.8036979166666667
+            ]
+          },
+          "source_group": {
+            "groups": 2,
+            "balanced_mean": 0.7350446428571429,
+            "bootstrap95": [
+              0.6357142857142857,
+              0.834375
+            ]
+          }
+        }
+      },
+      "other_song_energy_matched": {
+        "status": "SOURCE_CLOCK_PROXY_ONLY",
+        "queries": 150,
+        "R1": 0.36666666666666664,
+        "R5": 1.0,
+        "negative_pair_win_rate": 0.6875,
+        "pair_win_grouped": {
+          "recording_uid": {
+            "groups": 76,
+            "balanced_mean": 0.6817434210526315,
+            "bootstrap95": [
+              0.6389802631578947,
+              0.7311266447368421
+            ]
+          },
+          "choreography_uid": {
+            "groups": 20,
+            "balanced_mean": 0.6767708333333333,
+            "bootstrap95": [
+              0.5956927083333333,
+              0.746875
+            ]
+          },
+          "source_group": {
+            "groups": 2,
+            "balanced_mean": 0.6765625,
+            "bootstrap95": [
+              0.5125,
+              0.840625
+            ]
+          }
+        }
+      }
+    },
+    "nearest_time": {
+      "same_song_wrong_time": {
+        "status": "SOURCE_CLOCK_PROXY_ONLY",
+        "queries": 150,
+        "R1": 0.6933333333333334,
+        "R5": 1.0,
+        "negative_pair_win_rate": 0.815,
+        "pair_win_grouped": {
+          "recording_uid": {
+            "groups": 76,
+            "balanced_mean": 0.8174342105263158,
+            "bootstrap95": [
+              0.7787417763157894,
+              0.8601973684210527
+            ]
+          },
+          "choreography_uid": {
+            "groups": 20,
+            "balanced_mean": 0.8207291666666666,
+            "bootstrap95": [
+              0.7708151041666667,
+              0.8662552083333334
+            ]
+          },
+          "source_group": {
+            "groups": 2,
+            "balanced_mean": 0.8167410714285714,
+            "bootstrap95": [
+              0.790625,
+              0.8428571428571429
+            ]
+          }
+        }
+      },
+      "other_song_energy_matched": {
+        "status": "SOURCE_CLOCK_PROXY_ONLY",
+        "queries": 150,
+        "R1": 0.3,
+        "R5": 1.0,
+        "negative_pair_win_rate": 0.7633333333333333,
+        "pair_win_grouped": {
+          "recording_uid": {
+            "groups": 76,
+            "balanced_mean": 0.7639802631578947,
+            "bootstrap95": [
+              0.741344572368421,
+              0.7886513157894737
+            ]
+          },
+          "choreography_uid": {
+            "groups": 20,
+            "balanced_mean": 0.7610937499999999,
+            "bootstrap95": [
+              0.7414752604166667,
+              0.78237109375
+            ]
+          },
+          "source_group": {
+            "groups": 2,
+            "balanced_mean": 0.7619419642857144,
+            "bootstrap95": [
+              0.7410714285714286,
+              0.7828125
+            ]
+          }
+        }
+      }
+    },
+    "energy": {
+      "same_song_wrong_time": {
+        "status": "SOURCE_CLOCK_PROXY_ONLY",
+        "queries": 150,
+        "R1": 0.32666666666666666,
+        "R5": 1.0,
+        "negative_pair_win_rate": 0.4633333333333333,
+        "pair_win_grouped": {
+          "recording_uid": {
+            "groups": 76,
+            "balanced_mean": 0.45723684210526316,
+            "bootstrap95": [
+              0.3848684210526316,
+              0.5460526315789473
+            ]
+          },
+          "choreography_uid": {
+            "groups": 20,
+            "balanced_mean": 0.4541666666666667,
+            "bootstrap95": [
+              0.370859375,
+              0.5399635416666666
+            ]
+          },
+          "source_group": {
+            "groups": 2,
+            "balanced_mean": 0.45669642857142856,
+            "bootstrap95": [
+              0.35714285714285715,
+              0.55625
+            ]
+          }
+        }
+      },
+      "other_song_energy_matched": {
+        "status": "SOURCE_CLOCK_PROXY_ONLY",
+        "queries": 150,
+        "R1": 0.0,
+        "R5": 1.0,
+        "negative_pair_win_rate": 0.008333333333333333,
+        "pair_win_grouped": {
+          "recording_uid": {
+            "groups": 76,
+            "balanced_mean": 0.008223684210526315,
+            "bootstrap95": [
+              0.0,
+              0.02138157894736842
+            ]
+          },
+          "choreography_uid": {
+            "groups": 20,
+            "balanced_mean": 0.0078125,
+            "bootstrap95": [
+              0.0007421875000000009,
+              0.01875
+            ]
+          },
+          "source_group": {
+            "groups": 2,
+            "balanced_mean": 0.008035714285714287,
+            "bootstrap95": [
+              0.0035714285714285713,
+              0.0125
+            ]
+          }
+        }
+      }
+    }
+  },
+  "path_diagnostics": {
+    "null_ot": {
+      "crossing_mass": {
+        "mean": 0.0006159106484254492,
+        "max": 0.002180482792255134,
+        "sum": 0.09238659726381737
+      },
+      "expected_position_violations": {
+        "mean": 2.1,
+        "max": 5.0,
+        "sum": 315.0
+      },
+      "coverage": {
+        "mean": 0.3569573841492335,
+        "max": 0.5912728905677795,
+        "sum": 53.543607622385025
+      }
+    },
+    "strict_path": {
+      "hard_path_crossings": {
+        "mean": 0.0,
+        "max": 0.0,
+        "sum": 0.0
+      },
+      "music_null_fraction": {
+        "mean": 0.3888888888888889,
+        "max": 1.0,
+        "sum": 58.333333333333336
+      },
+      "motion_null_fraction": {
+        "mean": 0.6291337002637313,
+        "max": 1.0,
+        "sum": 94.37005503955969
+      }
+    },
+    "path_synthetic": {
+      "hard_path_crossings": {
+        "mean": 0.0,
+        "max": 0.0,
+        "sum": 0.0
+      },
+      "music_null_fraction": {
+        "mean": 0.37666666666666665,
+        "max": 1.0,
+        "sum": 56.5
+      },
+      "motion_null_fraction": {
+        "mean": 0.6216912051370256,
+        "max": 1.0,
+        "sum": 93.25368077055384
+      }
+    },
+    "path_weak": {
+      "hard_path_crossings": {
+        "mean": 0.0,
+        "max": 0.0,
+        "sum": 0.0
+      },
+      "music_null_fraction": {
+        "mean": 0.34611111111111115,
+        "max": 1.0,
+        "sum": 51.91666666666667
+      },
+      "motion_null_fraction": {
+        "mean": 0.6030238504758629,
+        "max": 1.0,
+        "sum": 90.45357757137944
+      }
+    },
+    "path_random_weak": {
+      "hard_path_crossings": {
+        "mean": 0.0,
+        "max": 0.0,
+        "sum": 0.0
+      },
+      "music_null_fraction": {
+        "mean": 0.3505555555555555,
+        "max": 1.0,
+        "sum": 52.58333333333333
+      },
+      "motion_null_fraction": {
+        "mean": 0.6058935901846119,
+        "max": 1.0,
+        "sum": 90.88403852769179
+      }
+    }
+  },
+  "completed_steps": {
+    "sync_cold": 400,
+    "null_ot": 400,
+    "strict_path": 400,
+    "path_synthetic": 400,
+    "path_weak": 400,
+    "path_random_weak": 400
+  },
+  "total_head_optimizer_updates": 2400,
+  "total_probe_optimizer_updates": 1600,
+  "synthetic_source_roles": [
+    "val"
+  ],
+  "synthetic_donor_roles": [
+    "val"
+  ],
+  "synthetic_recipe_sha256": "dff00327c58df455c70e106088ce2ed141e7a38585a4aedece4f6725a40ee4e6",
+  "data_manifest_sha256": "f20c60b7b6c7a0a9a2d0d18997813281fdcc3e57d0857047c01c25f4aefaf96f",
+  "synthetic_truth_sha256": "1d2ef58696038c5c5e32e2968c56bfae01ef567c27ebb057224f42a0f95f58ef",
+  "independent_human_labels": 0,
+  "operational_qualified": false,
+  "new_optimizer_calls": 0
+}
