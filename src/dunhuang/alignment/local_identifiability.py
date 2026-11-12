@@ -177,7 +177,7 @@ def run(out,replay_out=None):
     normalizations={k:fit_normalization(bank,rows,k,config["whitening_shrinkage"]) for k in ("zscore","whiten")}
     np.savez_compressed(dest/"train_normalizations.npz",**{k+"_"+side+"_"+field:value for k,v in normalizations.items() for side,x in v.items() for field,value in x.items() if field!="samples"})
     cost={label:geometry.evaluate(head,bank,rows,co,dest/("cost_"+label),config,normalizations) for label,co in cohort.items()}
-    enc=np.load(clock/"encodings.npz")
+    enc=dict(np.load(clock/"encodings.npz"))
     token_geometry=geometry.geometry(bank,rows,events,head,config);token_geometry["repeat_consistency"]=geometry.repeat_consistency(rows,enc,config["repeat_pairs"])
     token_geometry["global256_source_window_baseline"]={k:global_baseline(enc,rows,v) for k,v in cohort.items()}
     write(dest/"token_geometry.json",token_geometry)

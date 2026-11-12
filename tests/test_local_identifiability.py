@@ -102,3 +102,16 @@ def test_equal_global_pool_does_not_identify_local_rotation():
     assert np.array_equal(x.mean(0), (x@q).mean(0))
     assert np.trace(x@(x@q).T)==0
     assert np.trace(x@((x@q)@q.T).T)==4
+
+def test_repeat_consistency_materializes_lazy_banks_once():
+    from dunhuang.alignment.token_geometry_audit import repeat_consistency
+    r=rows()
+    # Make all captures use the same original interval for repeated-capture analysis.
+    for x in r:x["start_frame"]=0
+    class Lazy:
+        calls={}
+        def __getitem__(self,key):
+            self.calls[key]=self.calls.get(key,0)+1
+            return np.ones((4,60,128),np.float32) if key=="mt" else np.ones((4,5,60,128),np.float32)
+    source=Lazy();a=repeat_consistency(r,source,20)
+    assert source.calls=={"mt":1,"dt":1} and a["train"]["capture_pairs"]==3

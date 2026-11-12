@@ -95,7 +95,16 @@ def run(source,clock,rows,config,out):
             m=torch.as_tensor(obs["music"][start:start+32],device="cuda");mm=torch.as_tensor(obs["mm"][start:start+32],device="cuda")
             d=torch.as_tensor(obs["motion"][start:start+32,15:135],device="cuda");dm=torch.as_tensor(obs["dm"][start:start+32,15:135],device="cuda")
             for name,x,mask in (("music",m,mm),("motion",d,dm)):
-                t,_=getattr(model,name).temporal_features(x,mask);_,z,_=getattr(model,name)(x,mask)
+                t,_=getattr(model,name).temporal_features(x,mask)
+                if name=="motion":
+                    # Reproduce the saved encoder's five-shift batch layout exactly.
+                    halo=torch.as_tensor(obs["motion"][start:start+32],device="cuda")
+                    halo_mask=torch.as_tensor(obs["dm"][start:start+32],device="cuda")
+                    stack=torch.stack([halo[:,15+s:135+s] for s in (-15,-8,0,8,15)],1)
+                    masks=torch.stack([halo_mask[:,15+s:135+s] for s in (-15,-8,0,8,15)],1)
+                    _,all_tokens,_=model.motion(stack.flatten(0,1),masks.flatten(0,1))
+                    z=all_tokens.reshape(len(x),5,60,128)[:,2]
+                else:_,z,_=model.music(x,mask)
                 extracted[name+"_tcn"].append(t.cpu().numpy());extracted[name+"_transformer"].append(z.cpu().numpy())
     extracted={k:np.concatenate(v) for k,v in extracted.items()}
     for name,saved in (("music_transformer",enc["mt"]),("motion_transformer",enc["dt"][:,2]),("motion_tcn",enc["tcn"])):

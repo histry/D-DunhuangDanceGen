@@ -124,6 +124,8 @@ def evaluate(head,bank,rows,cohort,out,config,normalizations=None):
     write(out/"result.json",report);return report
 
 def repeat_consistency(rows,enc,limit):
+    # np.load is lazy: indexing enc["dt"] in a pair loop decompresses the entire bank.
+    music_tokens=enc["mt"];motion_tokens=enc["dt"]
     groups={}
     for i,r in enumerate(rows):groups.setdefault((r["role"],r["music_uid"],r["choreography_uid"],r["start_frame"]),[]).append(i)
     results={}
@@ -136,7 +138,7 @@ def repeat_consistency(rows,enc,limit):
                 if not peers:continue
                 j=peers[0]
                 def unit(x):return x/np.maximum(np.linalg.norm(x,axis=-1,keepdims=True),1e-8)
-                m=unit(enc["mt"][i]);d=unit(enc["dt"][i,2]);other=unit(enc["dt"][j,2])
+                m=unit(music_tokens[i]);d=unit(motion_tokens[i,2]);other=unit(motion_tokens[j,2])
                 values.append((float((d*other).sum(-1).mean()),float(np.sqrt(np.mean((m@d.T-m@other.T)**2)))))
                 if len(values)>=limit:break
             if len(values)>=limit:break
