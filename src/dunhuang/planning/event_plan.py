@@ -52,6 +52,7 @@ def candidate_identity(event,model_identity=None):
     import hashlib,json
     payload={k:event[k] for k in ('event_uid','source_interval','music_interval','time_warp','reference')}
     payload['expression']=event.get('expression',dict(amplitude=1.,mode='identity_source_reference'))
+    if event.get('root_observation'):payload['root_observation']=event['root_observation']
     payload['condition_schema']='soft_event_reference_v1'
     payload['score_models']=model_identity
     return hashlib.sha256(json.dumps(payload,sort_keys=True,separators=(',',':')).encode()).hexdigest()
@@ -64,6 +65,7 @@ def semantic_plan_id(plan):
     for event in plan['events']:
         row={k:event[k] for k in ('event_uid','source_uid','source_interval','music_interval','time_warp','primitive')}
         row['reference_sha256']=event['reference']['sha256']
+        if event.get('root_observation'):row['root_observation_sha256']=event['root_observation']['sha256']
         row['expression']=event.get('expression',dict(amplitude=1.,mode='identity_source_reference'))
         events.append(row)
     value=dict(schema='execution_plan_identity_v1',audio_sha256=plan['audio_sha256'],

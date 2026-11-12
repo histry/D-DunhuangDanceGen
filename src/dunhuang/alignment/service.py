@@ -30,6 +30,20 @@ class Reranker:
         self.decision['execution_time_map_schema']=SCHEMA
         self.identity=dict(global_sha256=assets['global']['sha256'],sync_sha256=assets['sync']['sha256'],
             qualification_sha256=assets['qualification']['sha256'],time_map_schema=SCHEMA)
+        self.transport=None
+        if assets.get('transport'):
+            from .transport import ClockNullTransport,SCHEMA as TRANSPORT_SCHEMA
+            saved=torch.load(checked(assets['transport']),map_location='cpu',weights_only=True)
+            if (saved.get('schema')!=TRANSPORT_SCHEMA or saved.get('mode') not in ('B','C')
+                or saved.get('global_checkpoint_sha256')!=assets['global']['sha256']
+                or saved.get('norm')!=self.norm or saved.get('execution_time_map_schema')!=SCHEMA
+                or saved.get('operational_qualified') is not False):
+                raise ValueError('Shadow transport identity, clock or qualification differs')
+            cfg=saved['config']
+            self.transport=ClockNullTransport(band_seconds=cfg['band_seconds'],epsilon=cfg['epsilon'],iterations=cfg['sinkhorn_iterations']).eval()
+            self.transport.load_state_dict(saved['state'],strict=True)
+            self.identity['transport_sha256']=assets['transport']['sha256']
+            self.decision.update(enabled=False,fallback_reason='clock_transport_shadow_unqualified')
         self.sources={}
         self.query=np.load(checked(assets['music_features']),allow_pickle=False)
     def scores(self,event,slot,local=True):
@@ -73,5 +87,18 @@ class Reranker:
         with torch.no_grad():
             m=self.global_model.music(args[0],args[1])[0]
             d=self.global_model.motion(args[2],args[3])[0]
-        return dict(global_score=float((m*d).sum()),sync_score=probability,
+        transport={}
+        if self.transport is not None:
+            with torch.no_grad():
+                _,mt,mv=self.global_model.music(trimmed_music,trimmed_mask)
+                _,dt,dv=self.global_model.motion(args[2][:,15:-15],args[3][:,15:-15])
+                clock=torch.arange(mt.shape[1])/15
+                value=self.transport(mt,dt,mv,dv,clock,clock)
+            transport=dict(transport_score=float(value['score'][0]),transport_coverage=float(value['coverage'][0]),
+                transport_music_null_fraction=float(value['music_null_fraction'][0]),
+                transport_motion_null_fraction=float(value['motion_null_fraction'][0]),
+                transport_monotonic_violations=int(value['monotonic_violations'][0]),
+                transport_marginal_residual=float(value['marginal_residual'][0]),
+                transport_mode='SHADOW_UNQUALIFIED',transport_can_route=False)
+        return dict(transport,global_score=float((m*d).sum()),sync_score=probability,
             sync_raw_logits=[float(s) for s in raw_scores],sync_reference='relative zero-offset probability on exact Event Plan time warp',execution_time_map_schema=SCHEMA,preference=None)

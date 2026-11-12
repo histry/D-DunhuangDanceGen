@@ -1,0 +1,18 @@
+{
+  "schema": "clock_alignment_design_v1",
+  "seed": 20261117,
+  "steps": 800,
+  "batch": 12,
+  "learning_rate": 0.0005,
+  "score_temperature": 0.1,
+  "band_seconds": 0.5,
+  "epsilon": 0.15,
+  "sinkhorn_iterations": 80,
+  "monotonic_weight": 0.1,
+  "position_weight": 0.1,
+  "test_evaluations": 0,
+  "selection": "fixed_last",
+  "null_ratio_target": null,
+  "global_orthogonal_enabled": false,
+  "attention_pooling_enabled": false
+}

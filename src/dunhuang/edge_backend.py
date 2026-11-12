@@ -90,7 +90,8 @@ def main():
         if native_event:
             from .generation.event_music_adapter import EventMusicAdapter,authorize_event_adapter
             authorize_event_adapter(adapter_payload,q['checkpoint']['sha256'],True)
-            adapter=EventMusicAdapter(adapter_payload['mode']).cuda().eval()
+            from .generation.root_contact import make_adapter
+            adapter=make_adapter(adapter_payload).cuda().eval()
         else:
             authorize_adapter(adapter_payload,q['checkpoint']['sha256'],q.get('research_allow_motion_only_adapter',False))
             adapter=PrimitiveAdapter().cuda().eval()
@@ -111,7 +112,14 @@ def main():
         if native_event:
             from .generation.event_geometry import event_geometry
             geometry=event_geometry(condition.value,condition.known,condition.phase)
-            adapter_hook=model.cond_encoder.register_forward_hook(lambda module,args,value:value+adapter(geometry,value))
+            if adapter_payload.get('condition_schema')=='root_contact_event_music_v1':
+                from .generation.root_contact import build_reference
+                root_values,root_audit=build_reference(planned,q['frames'])
+                write(out/'root_reference_audit.json',root_audit)
+                root_values=torch.from_numpy(root_values).cuda()
+                adapter_hook=model.cond_encoder.register_forward_hook(lambda module,args,value:value+adapter(geometry,value,root=root_values))
+            else:
+                adapter_hook=model.cond_encoder.register_forward_hook(lambda module,args,value:value+adapter(geometry,value))
         else:
             event_residual=adapter(condition.value,condition.known,condition.phase).detach()
             adapter_hook=model.cond_encoder.register_forward_hook(lambda module,args,value:value+event_residual)

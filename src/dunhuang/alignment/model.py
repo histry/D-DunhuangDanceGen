@@ -22,11 +22,14 @@ class Encoder(nn.Module):
         self.transformer=nn.TransformerEncoder(layer,2)
         self.pool=nn.Linear(128,1)
         self.output=nn.Linear(128,256)
-    def forward(self,x,mask):
+    def temporal_features(self,x,mask):
         valid=mask.any(-1)
         if not valid.any(-1).all():raise ValueError('Empty observation')
         x=self.input(torch.cat((x*mask,mask.float()),-1))*valid[...,None]
         for block in self.tcn:x=block(x,valid)
+        return x,valid
+    def forward(self,x,mask):
+        x,valid=self.temporal_features(x,mask)
         x=x[:,::2];valid=valid[:,::2]
         position=torch.arange(x.shape[1],device=x.device)[:,None]/15
         frequency=torch.exp(torch.arange(0,128,2,device=x.device)*(-math.log(10000.)/128))

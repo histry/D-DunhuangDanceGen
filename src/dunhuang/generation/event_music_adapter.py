@@ -35,7 +35,7 @@ class EventMusicAdapter(nn.Module):
 
 
 def authorize_event_adapter(payload,base_sha256,research=False):
-    if payload.get('base_sha256')!=base_sha256 or payload.get('condition_schema')!='native_event_music_v1':
+    if payload.get('base_sha256')!=base_sha256 or payload.get('condition_schema') not in ('native_event_music_v1','root_contact_event_music_v1'):
         raise ValueError('Event/music base or geometry schema differs')
     if payload.get('mode') not in ('cross','additive'):
         raise ValueError('Unknown saved fusion mode')
