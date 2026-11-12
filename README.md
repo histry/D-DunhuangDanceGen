@@ -192,3 +192,8 @@ New studies are isolated in research/source_identifiability; historical generati
 ## A2-V3 candidate support / G2-M mechanism study (2026-11-13)
 
 See [report](reports/A2V3候选支持域与G2M机制对照报告.md), [registered protocol](docs/source_necessity_v1.md), and [sealed receipt](reports/source_necessity_receipt.json). New separately registered A2 tasks have 1,023/885 Val queries; the historical strict task remains unchanged. Five matched Adapters completed 400 updates each. All source-following arms remain 0/4; Native 11/52 overall (bypass 1/4, learned arms 2/8 each). All52 generations and156 motion/FK arrays were independently replayed exactly with zero optimizer calls. Production retrieval/generation and G3 remain unqualified.
+
+
+## Real source CF and fixed-candidate content tasks (2026-11-13)
+
+[Report](reports/来源效应与G2CF及A2内容对照报告.md) · [protocol](docs/source_tasks_v1.md) · [receipt](reports/source_tasks_receipt.json). Saved-source response was independently measured; real paired high-noise source qualification and four matched CF arms completed. All CF source-follow gates remain 0/4 (Native9/44). Four equal-parameter15/30/dual/shuffle content models were trained on the same frozen offline A2 candidates and independently replayed. Default retrieval/generation, Native and G3 remain unqualified. The pipeline now rejects legacy anchor selection which a whole-song Planner would overwrite.

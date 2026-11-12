@@ -1,0 +1,320 @@
+{
+  "within_content_comparisons": {
+    "time": {
+      "30_minus_15": {
+        "status": "EXPOSED_DEVELOPMENT_OFFLINE_CONTENT",
+        "queries": 1023,
+        "recordings": 117,
+        "music_groups": 6,
+        "group_R1": 0.2979349006562469,
+        "group_MRR": 0.5671911696541523,
+        "delta_R1": -0.001132165512092741,
+        "delta_MRR": -0.0009892230688925635,
+        "delta95": [
+          [
+            -0.019624460471754285,
+            -0.011505769431027163
+          ],
+          [
+            0.020169218289291063,
+            0.010881198176528682
+          ]
+        ],
+        "gain_lower_bounds_positive": false,
+        "fresh_blind": false,
+        "semantic_event_ground_truth": false
+      },
+      "dual_minus_15": {
+        "status": "EXPOSED_DEVELOPMENT_OFFLINE_CONTENT",
+        "queries": 1023,
+        "recordings": 117,
+        "music_groups": 6,
+        "group_R1": 0.3012043419487325,
+        "group_MRR": 0.5662998772718048,
+        "delta_R1": 0.0021372757803928204,
+        "delta_MRR": -0.0018805154512401324,
+        "delta95": [
+          [
+            -0.0075271260307646,
+            -0.007576852333144025
+          ],
+          [
+            0.011183016330075153,
+            0.0035764888706065184
+          ]
+        ],
+        "gain_lower_bounds_positive": false,
+        "fresh_blind": false,
+        "semantic_event_ground_truth": false
+      },
+      "dual_minus_shuffle": {
+        "status": "EXPOSED_DEVELOPMENT_OFFLINE_CONTENT",
+        "queries": 1023,
+        "recordings": 117,
+        "music_groups": 6,
+        "group_R1": 0.3012043419487325,
+        "group_MRR": 0.5662998772718048,
+        "delta_R1": -0.0028595862282945355,
+        "delta_MRR": -0.005874139234003799,
+        "delta95": [
+          [
+            -0.043153742244100034,
+            -0.03159374021872758
+          ],
+          [
+            0.03469703499115264,
+            0.019742294742294737
+          ]
+        ],
+        "gain_lower_bounds_positive": false,
+        "fresh_blind": false,
+        "semantic_event_ground_truth": false
+      }
+    },
+    "association": {
+      "30_minus_15": {
+        "status": "EXPOSED_DEVELOPMENT_OFFLINE_CONTENT",
+        "queries": 885,
+        "recordings": 118,
+        "music_groups": 6,
+        "group_R1": 0.41601501248948153,
+        "group_MRR": 0.634303572014845,
+        "delta_R1": -0.02532018118853761,
+        "delta_MRR": -0.01801767287618615,
+        "delta95": [
+          [
+            -0.10727885188733122,
+            -0.07324236640202102
+          ],
+          [
+            0.05771719678209447,
+            0.0391456300716744
+          ]
+        ],
+        "gain_lower_bounds_positive": false,
+        "fresh_blind": false,
+        "semantic_event_ground_truth": false
+      },
+      "dual_minus_15": {
+        "status": "EXPOSED_DEVELOPMENT_OFFLINE_CONTENT",
+        "queries": 885,
+        "recordings": 118,
+        "music_groups": 6,
+        "group_R1": 0.42006615153572185,
+        "group_MRR": 0.6409788769899448,
+        "delta_R1": -0.021269042142297346,
+        "delta_MRR": -0.011342367901086456,
+        "delta95": [
+          [
+            -0.08212992433736539,
+            -0.05154720970093038
+          ],
+          [
+            0.044618803159738166,
+            0.03173241518829754
+          ]
+        ],
+        "gain_lower_bounds_positive": false,
+        "fresh_blind": false,
+        "semantic_event_ground_truth": false
+      },
+      "dual_minus_shuffle": {
+        "status": "EXPOSED_DEVELOPMENT_OFFLINE_CONTENT",
+        "queries": 885,
+        "recordings": 118,
+        "music_groups": 6,
+        "group_R1": 0.42006615153572185,
+        "group_MRR": 0.6409788769899448,
+        "delta_R1": 0.028785762388210498,
+        "delta_MRR": 0.023419697511037507,
+        "delta95": [
+          [
+            -0.14602925389157273,
+            -0.11345575971934668
+          ],
+          [
+            0.2138414209147499,
+            0.1593215634789018
+          ]
+        ],
+        "gain_lower_bounds_positive": false,
+        "fresh_blind": false,
+        "semantic_event_ground_truth": false
+      }
+    }
+  },
+  "analysis_scope": "Frozen paired-score contrasts, no refitting, no checkpoint or hyperparameter selection",
+  "schema": "source_tasks_additional_checks",
+  "execution_commit": "6beb9d1993f625525b14a6edbc14022a90013f4f",
+  "original_assets_and_backbone_unchanged": true,
+  "real_pair_and_fixed_case_identities_replayed": true,
+  "cf_gradient": {
+    "C2": {
+      "first_cf_gradient_norm": 0.02313060499727726,
+      "margin_squared_rad": 0.009999999776482582,
+      "shared_noisy_state": true
+    },
+    "C3": {
+      "first_cf_gradient_norm": 0.023163627833127975,
+      "margin_squared_rad": 0.009999999776482582,
+      "shared_noisy_state": true
+    }
+  },
+  "attempts": [
+    {
+      "attempt": "01",
+      "execution_commit": "1920e3c54fd090c33bf5073303d066cf01b54083",
+      "exit_status": 130,
+      "started_utc": "2026-11-12T19:36:42Z",
+      "finished_utc": "2026-11-12T19:40:34Z",
+      "cf_updates": 0,
+      "content_updates": 0,
+      "reason": "Stopped before any training: training q support was incorrectly filtering free-generation Val cases; corrected role scope without numeric or case changes.",
+      "outputs_preserved": true,
+      "receipt_sha256": {
+        "edge_check.log": "74c37480a8bea3fc902bce0df3f17a53505e74ec255863b472c38e94b32d4b2b",
+        "execution_commit.txt": "ee57924028ac66a11362dd0f4ac0db12067bc919d35bd08d815ccc690b6bed4c",
+        "started_utc.txt": "1b19928219ed3ad9cc31b351fa3d01aec29c8ebd52e6ad788bf7ff98f8351237",
+        "pytest.log": "eb152f84af0ff85b40397afdbf33a52766203fe07aaddcb439abf94648b35ed8",
+        "exit_status.txt": "f5bde7eb9f6c71611dc5726e8aca3eb4eba3e386da49e0a4ed5c295a90a73a0d",
+        "finished_utc.txt": "4cc08e1cfbdbcfb5a4425466b483d02691d8323bd1b80418ff0ade20dde4abfa"
+      }
+    },
+    {
+      "attempt": "02",
+      "execution_commit": "6beb9d1993f625525b14a6edbc14022a90013f4f",
+      "exit_status": 0,
+      "started_utc": "2026-11-12T19:41:18Z",
+      "finished_utc": "2026-11-12T20:06:00Z",
+      "cf_updates": 1600,
+      "content_updates": 1600,
+      "reason": "Complete registered study and independent frozen replays.",
+      "outputs_preserved": true,
+      "receipt_sha256": {
+        "edge_check.log": "b1502139382a5946ee622b4866c1db3cf78fc176a0648ba34fe51e68080c3340",
+        "execution_commit.txt": "c99472feffcd69b7160108e78399a50d53fc4e4ba5d6727b150545ef23f5eb16",
+        "started_utc.txt": "281ca657b2383edbc8f66a69d1d329f344558a263e7f7c3a2023bcb59a2e7e69",
+        "pytest.log": "19ff0650488ff4d67fc5f1b5754ced160d75775bd015e99f4d2f3060dce79155",
+        "exit_status.txt": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+        "finished_utc.txt": "a603294939dcf4c7bcd5106cb5880ea1545dfd5d8dee81978ae4d2f575606793"
+      }
+    }
+  ],
+  "cf_summary": {
+    "C0": {
+      "native_passes": 2,
+      "native_evaluations": 8,
+      "means": {
+        "source_a_preference": 0.025578250193171115,
+        "source_b_preference": -0.025472425035947113,
+        "mean_preference": 5.291257861200077e-05,
+        "gain": 0.12238770360347118,
+        "activity_retention": 0.8229449862855656,
+        "hidden_direction_A": 0.0002140183956354097,
+        "hidden_direction_B": -0.0001730379242955507
+      },
+      "hidden_both_directions_positive": 1,
+      "hidden_both_improve_null": 4,
+      "own_errors": {
+        "full": 0.44563897861395085,
+        "provided": 0.45724908595701275,
+        "hidden": 0.4137111834205308,
+        "keys": 0.4725069434146435,
+        "stages": 0.45712191288589643
+      }
+    },
+    "C1": {
+      "native_passes": 2,
+      "native_evaluations": 8,
+      "means": {
+        "source_a_preference": 0.025743259818507558,
+        "source_b_preference": -0.025640190161912838,
+        "mean_preference": 5.153482829736017e-05,
+        "gain": 0.12257896893659678,
+        "activity_retention": 0.8214252462320022,
+        "hidden_direction_A": 0.00019769756628084528,
+        "hidden_direction_B": -0.00015583992861235157
+      },
+      "hidden_both_directions_positive": 1,
+      "hidden_both_improve_null": 4,
+      "own_errors": {
+        "full": 0.4454477132808253,
+        "provided": 0.4570428777502129,
+        "hidden": 0.41356101099000925,
+        "keys": 0.4722896583296321,
+        "stages": 0.4569137921301083
+      }
+    },
+    "C2": {
+      "native_passes": 2,
+      "native_evaluations": 8,
+      "means": {
+        "source_a_preference": 0.02233057529144629,
+        "source_b_preference": -0.022227624705238216,
+        "mean_preference": 5.147529310403631e-05,
+        "gain": 0.12165764291628936,
+        "activity_retention": 0.859247172686708,
+        "hidden_direction_A": 0.00012970508997012936,
+        "hidden_direction_B": -9.852742917633439e-05
+      },
+      "hidden_both_directions_positive": 1,
+      "hidden_both_improve_null": 4,
+      "own_errors": {
+        "full": 0.4463690393011327,
+        "provided": 0.4584684862903494,
+        "hidden": 0.4130955600807866,
+        "keys": 0.4742811306713127,
+        "stages": 0.45824601457777475
+      }
+    },
+    "C3": {
+      "native_passes": 2,
+      "native_evaluations": 8,
+      "means": {
+        "source_a_preference": 0.022466186331470114,
+        "source_b_preference": -0.022450982880782164,
+        "mean_preference": 7.601725343975296e-06,
+        "gain": 0.12143502004156605,
+        "activity_retention": 0.8582140179459853,
+        "hidden_direction_A": 0.0001662004445581386,
+        "hidden_direction_B": -0.00018032456208613712
+      },
+      "hidden_both_directions_positive": 1,
+      "hidden_both_improve_null": 4,
+      "own_errors": {
+        "full": 0.446591662175856,
+        "provided": 0.4586972151443627,
+        "hidden": 0.4133013915124628,
+        "keys": 0.47453889873711985,
+        "stages": 0.45846530988523176
+      }
+    },
+    "hard": {
+      "native_passes": 0,
+      "native_evaluations": 8,
+      "means": {
+        "source_a_preference": 0.023745564946992953,
+        "source_b_preference": 0.001966103540029865,
+        "mean_preference": 0.012855834243511409,
+        "gain": 0.004327284158584091,
+        "activity_retention": 1.9792378273463533,
+        "hidden_direction_A": 0.0012848216550871011,
+        "hidden_direction_B": 0.000816593245882638
+      },
+      "hidden_both_directions_positive": 0,
+      "hidden_both_improve_null": 3,
+      "own_errors": {
+        "full": 0.563699398058838,
+        "provided": 0.5593762135957254,
+        "hidden": 0.5755881553323973,
+        "keys": 3.949363800223188e-08,
+        "stages": 0.5495047136434352
+      }
+    }
+  },
+  "bypass_native_passes": 1,
+  "summary_sha256": "e3df893b5f45e5896b8345e0317693d38f42f37f765a046bd70314d1af20c680",
+  "optimizer_calls": 0,
+  "temporary_ssh_files_created": 0,
+  "temporary_ssh_files_remaining": 0
+}
