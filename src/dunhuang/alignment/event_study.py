@@ -91,7 +91,9 @@ def path_diagnostics(head,mode,bank,ids):
         for i in ids:
             _,r=score(head,mode,bank,[i],[i])
             if mode!="null_ot":
-                d=head.decode(r);records.append(dict(matches=len(d["matches"]),hard_path_crossings=d["crossings"],
+                d=head.decode(r);records.append(dict(query_index=int(i),hard_matches=d["matches"],music_drops=d["music_drops"],motion_drops=d["motion_drops"],
+                    music_event_seconds=bank["mt"][i][bank["mv"][i]].cpu().tolist(),motion_event_seconds=bank["dt"][i][bank["dv"][i]].cpu().tolist(),
+                    shadow_only=True,matches=len(d["matches"]),hard_path_crossings=d["crossings"],
                     music_null_fraction=len(d["music_drops"])/int(bank["mv"][i].sum()),
                     motion_null_fraction=len(d["motion_drops"])/int(bank["dv"][i].sum()),cost=d["cost"]))
             else:
@@ -100,7 +102,7 @@ def path_diagnostics(head,mode,bank,ids):
                 # Weighted crossing mass over all i<i', j>j', not an arbitrary thresholded accuracy.
                 suffix=np.cumsum(np.cumsum(p[::-1],axis=0),axis=1)[::-1]
                 crossing=sum(float(p[a,b]*suffix[a+1,b-1]) for a in range(len(p)-1) for b in range(1,p.shape[1]))
-                records.append(dict(coverage=float(r["coverage"][0]),expected_position_violations=int(r["monotonic_violations"][0]),
+                records.append(dict(query_index=int(i),soft_plan=p.tolist(),shadow_only=True,coverage=float(r["coverage"][0]),expected_position_violations=int(r["monotonic_violations"][0]),
                     crossing_mass=crossing,marginal_residual=float(r["marginal_residual"][0])))
     return records
 

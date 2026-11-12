@@ -76,6 +76,7 @@ def metrics(head,samples,mode):
                 for i,j in decoded["matches"]:prediction[i]=j
                 crossings.append(decoded["crossings"])
                 c=r["cost"][0].cpu().numpy();confidence=1/(1+np.exp(np.clip(c.min(-1)-2*float(r["null_cost"]),-60,60)))
+                confidence=np.where(prediction<0,1-confidence,confidence)
             for i,(t,p) in enumerate(zip(s["target"],prediction)):
                 nt.append(t<0);npred.append(p<0);good=int(t)==int(p);correct.append(good)
                 all_conf.append(float(confidence[i]));all_good.append(good)
