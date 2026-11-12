@@ -10,7 +10,7 @@ TYPES=("start","speed_peak","deceleration","turn","hold")
 EXTRACTOR=dict(schema="numerical_event_sidecar_v1",fps=30,min_peak_distance_frames=6,
     prominence_mad=1.,hold_quantile=.2,confidence="prominence/(prominence+robust_scale)",
     contacts="UNKNOWN",force_or_intent="UNKNOWN",correspondence_validated=False,
-    context="whole source before crop; selected events sorted by physical time")
+    context="whole source before crop; selected events sorted by physical time",selection="equal per-event-type quota, confidence backfill, cap then physical ordering")
 
 def peaks(signal,kind,part):
     signal=np.asarray(signal,float)
@@ -63,8 +63,16 @@ def music_events(values,mask):
 def crop_events(events,start,frames=120,cap=24):
     selected=[dict(e,relative_seconds=(e["frame"]-start)/30) for e in events if start<=e["frame"]<start+frames]
     # Detector confidence only; no matching score participates in this selection.
-    selected=sorted(selected,key=lambda e:(-e["confidence"],e["frame"],e["body_part"],e["event_type"]))[:cap]
-    return sorted(selected,key=lambda e:(e["frame"],e["body_part"],e["event_type"]))
+    rank=lambda e:(-e["confidence"],e["frame"],e["body_part"],e["event_type"])
+    kinds=sorted({e["event_type"] for e in selected});kept=[]
+    # Equal per-type quota before confidence backfill prevents derivative events crowding holds/peaks.
+    quota=max(1,cap//max(len(kinds),1))
+    for kind in kinds:kept.extend(sorted([e for e in selected if e["event_type"]==kind],key=rank)[:quota])
+    if len(kept)<cap:
+        identities={(e["frame"],e["body_part"],e["event_type"]) for e in kept}
+        remaining=[e for e in selected if (e["frame"],e["body_part"],e["event_type"]) not in identities]
+        kept.extend(sorted(remaining,key=rank)[:cap-len(kept)])
+    return sorted(kept[:cap],key=lambda e:(e["frame"],e["body_part"],e["event_type"]))
 
 def review_packet(row):
     return dict(schema="independent_event_anchors_v1",window_uid=row["window_uid"],role=row["role"],

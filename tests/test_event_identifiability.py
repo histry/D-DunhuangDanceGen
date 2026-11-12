@@ -107,3 +107,11 @@ def test_weak_evidence_no_model_labels_and_unknown_not_forced_null():
     events[0]["music"]=[dict(m,relative_seconds=3.)]
     target,weight,e=weak_labels(rows,events)
     assert weight[0,0]==0 and e["states"]["PSEUDO_NULL"]==0 and e["no_model_predictions_used"]
+
+def test_event_type_quota_prevents_single_type_crowding():
+    events=[]
+    for kind in ("start","deceleration","speed_peak","turn","hold"):
+        for frame in range(10):
+            events.append(dict(frame=frame,confidence=.999 if kind=="start" else .5,event_type=kind,body_part="upper"))
+    selected=crop_events(events,0,cap=10)
+    assert len(selected)==10 and {e["event_type"] for e in selected}=={"start","deceleration","speed_peak","turn","hold"}

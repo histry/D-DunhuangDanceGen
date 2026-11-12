@@ -230,6 +230,9 @@ def preflight(source,assets,config,out):
     if read(prior).get("status")!="FRESH_CLOCK_ROOT_REPLAY_VERIFIED":raise ValueError("Prior frozen source replay missing")
     protocol["prior_fresh_replay"]=ref(prior);write(out/"protocol.json",protocol)
     bank=np.load(out/"data/events.npz");eligible=bank["eligible"]
+    train_mask=np.asarray([r["role"]=="train" for r in rows])&eligible
+    if any(x in config["arms"] for x in ("path_weak","path_random_weak")) and not (bank["weak_weight"][train_mask]>0).any():
+        raise ValueError("Weak training requested but eligible Train has no PSEUDO_MATCH evidence")
     schedule_rows=[dict(r,role=r["role"] if eligible[i] else "excluded") for i,r in enumerate(rows)]
     schedule=group_schedule(schedule_rows,max(config["steps"],config["probe_steps"]),config["batch"],config["seed"])
     np.save(out/"training_schedule.npy",schedule)

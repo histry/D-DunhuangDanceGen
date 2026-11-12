@@ -25,10 +25,10 @@ def weak_labels(rows,events,band=.5):
                 salience=float(np.sqrt(m["confidence"]*d["confidence"]))
                 consensus=bool(m.get("detector_agreement",False) and d.get("detector_agreement",False))
                 q=clock*salience*repeat
-                accepted=(gap<=band and len(peers)>=2 and repeat>=.5 and consensus and
+                accepted=(gap<=band and len(peers)>=1 and repeat>=.5 and consensus and
                     m["event_type"]!="silence" and m["confidence"]>=.4 and d["confidence"]>=.4)
                 support.append(dict(motion_index=b,clock=clock,salience=salience,repeat=repeat,
-                    repeat_recordings=len(peers),detector_consensus=consensus,uncalibrated_score=q,accepted=accepted))
+                    repeat_recordings=len(peers),total_recordings=1+len(peers),detector_consensus=consensus,uncalibrated_score=q,accepted=accepted))
                 if accepted:target[i,a,b]=q
             if target[i,a].sum()>0:
                 weight[i,a]=min(.5,float(target[i,a].max()));target[i,a]/=target[i,a].sum();state="PSEUDO_MATCH"
