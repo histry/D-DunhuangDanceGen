@@ -64,7 +64,7 @@ def test_nonuniform_event_time_map_changes_source_phase(tmp_path):
     assert report['supported_fraction'] == 1.0
 
 def test_geodesic_training_phase_and_support(tmp_path):
-    from dunhuang.generation.train import phase_target
+    from dunhuang.generation.targets import phase_target
     from dunhuang.contracts import matrices
     p=_plan(tmp_path,150)
     native=np.load(p['events'][0]['reference']['path'])

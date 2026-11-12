@@ -4,10 +4,10 @@ from pathlib import Path
 from collections import Counter
 import numpy as np
 from dunhuang.io import checked,sha,write
-from .source_pairs import source_pairs,validate_pair
-from .event_geometry import event_geometry,_matrix
-from .event_music_adapter import EventMusicAdapter
-from .train import phase_target,digest
+from dunhuang.generation.source_pairs import source_pairs,validate_pair
+from dunhuang.generation.event_geometry import event_geometry,_matrix
+from dunhuang.generation.event_music_adapter import EventMusicAdapter
+from dunhuang.generation.targets import phase_target,digest
 
 SEED=20261115
 CONTROLS=('original','zero_adapter','reference_removed','wrong_source',
@@ -74,7 +74,7 @@ class TransferRuntime:
 
     def batch(self,pairs,control='original',wrong=None):
         import torch
-        from .conditions import source_condition
+        from dunhuang.generation.conditions import source_condition
         data=[self.data(p) for p in pairs]
         target=torch.from_numpy(np.stack([r[0] for r in data])).cuda()
         music=torch.from_numpy(np.stack([r[1] for r in data])).cuda()

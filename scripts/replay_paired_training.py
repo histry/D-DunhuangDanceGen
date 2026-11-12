@@ -6,7 +6,7 @@ ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/'src'))
 from dunhuang.io import checked,pinned,write,sha
 from dunhuang.data.sources import read,ref
 from dunhuang.data.paired_manifest import inspect
-from dunhuang.generation.train import phase_target,digest
+from dunhuang.generation.targets import phase_target,digest
 from dunhuang.generation.adapter import PrimitiveAdapter,masked_reference
 from dunhuang.generation.split import split_training_rows
 

@@ -147,7 +147,7 @@ def compile_index(assets,root,calibration,audit,out):
                 rejected.append(dict(window_uid=row['window_uid'],reason='insufficient_real_audio'));continue
             target,_,valid=normalized_window(native,start,scale,bias)
             if not valid.all():raise ValueError('Representable target changed')
-            from dunhuang.generation.train import phase_target
+            from dunhuang.generation.targets import phase_target
             if phase_target(target,scale,bias)[0] is None:
                 rejected.append(dict(window_uid=row['window_uid'],reason='phase_roundtrip_outside_support'));continue
             stem=hashlib.sha256(row['window_uid'].encode()).hexdigest()[:24]

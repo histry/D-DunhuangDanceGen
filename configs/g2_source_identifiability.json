@@ -1,0 +1,31 @@
+{
+  "schema": "g2_source_identifiability_v1",
+  "baseline": "1e8f99b0ff08266968b529615b0917028b493e6a",
+  "steps": 400,
+  "batch": 2,
+  "seed": 20261112,
+  "learning_rate": 0.0001,
+  "following_weight": 2.0,
+  "original_loss_weights": {
+    "velocity": 0.1,
+    "rotation": 0.02,
+    "source_reconstruction": 0.05
+  },
+  "music_cases": 2,
+  "timesteps": [
+    100,
+    500,
+    900
+  ],
+  "generation_seeds": [
+    20261112,
+    20261113
+  ],
+  "event_source": "outputs/event_id_02",
+  "condition_policy": "completion_upper8",
+  "visibility_policy": "observed",
+  "train_scope": "same_recording_pose_exact",
+  "selection": "fixed_last_no_validation_selection",
+  "test_tensor_reads": 0,
+  "operational_qualified": false
+}

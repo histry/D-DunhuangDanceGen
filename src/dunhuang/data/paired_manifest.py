@@ -5,7 +5,7 @@ from dunhuang.io import checked
 from .sources import read
 
 def inspect(assets,require_features=True):
-    from dunhuang.generation.train import phase_target
+    from dunhuang.generation.targets import phase_target
     validated={};feature_cache={}
     def verify(reference):
         key=(reference['path'],reference['sha256'])

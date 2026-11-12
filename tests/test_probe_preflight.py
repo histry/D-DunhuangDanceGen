@@ -2,7 +2,7 @@ import json
 import numpy as np
 import pytest
 from dunhuang.io import sha
-from dunhuang.generation.train import train
+from dunhuang.research.legacy.paired_training import train
 
 def test_real_preflight_groups_by_recording_without_touching_cuda(tmp_path,monkeypatch):
     import torch

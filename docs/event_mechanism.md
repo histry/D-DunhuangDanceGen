@@ -25,9 +25,9 @@ Full source-pair and per-window files are ignored local/server outputs, not GitH
 
 ## Cross-recording training and parameter-matched fusion
 
-    PYTHONPATH=src python -m dunhuang.generation.event_transfer --assets outputs/aist_features_01/assets.json --out outputs/event_transfer_preflight_new --preflight-only
-    PYTHONPATH=src python -m dunhuang.generation.event_transfer --assets outputs/aist_features_01/assets.json --mode cross --steps 1200 --out outputs/event_transfer_cross_new
-    PYTHONPATH=src python -m dunhuang.generation.event_transfer --assets outputs/aist_features_01/assets.json --mode additive --steps 1200 --out outputs/event_transfer_additive_new
+    PYTHONPATH=src python -m dunhuang.research.legacy.event_transfer --assets outputs/aist_features_01/assets.json --out outputs/event_transfer_preflight_new --preflight-only
+    PYTHONPATH=src python -m dunhuang.research.legacy.event_transfer --assets outputs/aist_features_01/assets.json --mode cross --steps 1200 --out outputs/event_transfer_cross_new
+    PYTHONPATH=src python -m dunhuang.research.legacy.event_transfer --assets outputs/aist_features_01/assets.json --mode additive --steps 1200 --out outputs/event_transfer_additive_new
 
 Train source and target are different authority-linked captures; full151 supervision always reads the target, while the condition reads only independently observed source upper8 rotations. No Test fitting. Native source features contain absolute/first-observed-relative/adjacent SO(3) columns plus availability and phase (153D). They do not require source rotations to fit the target Scaler. Missing storage cannot enter the encoder.
 

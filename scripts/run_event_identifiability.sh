@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
+export PYTHONPATH="$PWD/src"
 study="$1"
 receipt="$2"
 assets="$3"
@@ -14,8 +15,8 @@ trap 'exit 143' TERM
 date -u +%FT%TZ > "$receipt/started_utc.txt"
 git rev-parse HEAD > "$receipt/execution_commit.txt"
 "$python_bin" -m pytest -q > "$receipt/pytest.log" 2>&1
-"$python_bin" scripts/event_identifiability_experiment.py --phase preflight --source "$source" --assets "$assets" --config configs/event_identifiability.json --out "$study"
-"$python_bin" scripts/event_identifiability_experiment.py --phase train --source "$source" --out "$study"
+"$python_bin" -m dunhuang.alignment.event_study --phase preflight --source "$source" --assets "$assets" --config configs/event_identifiability.json --out "$study"
+"$python_bin" -m dunhuang.alignment.event_study --phase train --source "$source" --out "$study"
 "$python_bin" scripts/verify_event_identifiability.py --source "$source" --out "$study" --replay-out "$study/replay"
 "$python_bin" scripts/export_event_identifiability.py --out "$study" --receipt "$receipt" --dest "$study/public_summary.json"
 success=1

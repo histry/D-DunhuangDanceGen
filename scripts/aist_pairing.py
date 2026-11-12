@@ -25,7 +25,7 @@ def main():
             from dunhuang.data.paired_manifest import inspect
             _,_,preflight=inspect(assets)
             if not preflight['ready']:raise ValueError('Complete paired preflight blocked')
-            from dunhuang.generation.train import train
+            from dunhuang.research.legacy.paired_training import train
             train(assets,out,a.steps,task='paired',preflight_only=False)
         write(out/'stage_exit.json',dict(stage=a.stage,exit_status=0,seconds=time.monotonic()-begun,
             code_commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()))

@@ -2,9 +2,9 @@
 import argparse,sys
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'src'))
-from dunhuang.generation.event_transfer import prepare,TransferRuntime,read
+from dunhuang.research.legacy.event_transfer import prepare,TransferRuntime,read
 from dunhuang.generation.event_music_adapter import authorize_event_adapter
-from dunhuang.generation.train import digest
+from dunhuang.generation.targets import digest
 from dunhuang.io import sha,write
 
 

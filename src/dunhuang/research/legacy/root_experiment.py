@@ -5,8 +5,8 @@ import numpy as np
 import torch
 from dunhuang.io import checked,sha,write
 from .event_transfer import TransferRuntime,prepare,read,SEED
-from .root_contact import RootContactAdapter,root_contact_features,SCHEMA
-from .train import digest
+from dunhuang.generation.root_contact import RootContactAdapter,root_contact_features,SCHEMA
+from dunhuang.generation.targets import digest
 
 CONTROLS=('original','root_removed','zero_adapter','wrong_source','reference_removed')
 
@@ -84,7 +84,7 @@ def generate(assets,index,pairs,root,out,seed):
                 research_condition_policy='completion_upper8',paired_jukebox_receipt=row['jukebox_receipt'],
                 source_task=pair,source_pose_pasted=False)
             write(folder/'request.json',q)
-            env=dict(os.environ);env['PYTHONPATH']=str(Path(__file__).resolve().parents[2])+os.pathsep+env.get('PYTHONPATH','')
+            env=dict(os.environ);env['PYTHONPATH']=str(Path(__file__).resolve().parents[3])+os.pathsep+env.get('PYTHONPATH','')
             for name,python,module in [('edge',assets['edge_python'],'dunhuang.edge_backend'),('native',assets['native_python'],'dunhuang.physical')]:
                 with (folder/(name+'.log')).open('w') as log:
                     subprocess.run([python,'-m',module,str(folder/'request.json')],env=env,stdout=log,stderr=subprocess.STDOUT,check=True)

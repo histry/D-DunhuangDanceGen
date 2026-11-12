@@ -1,0 +1,30 @@
+{
+  "schema": "content_identifiability_v2",
+  "baseline": "1e8f99b0ff08266968b529615b0917028b493e6a",
+  "strict": {
+    "count_tolerance": 0,
+    "time_w1_seconds": 0.15,
+    "histogram_l1": 0.25,
+    "energy_log_ratio": 0.22314355131420976,
+    "onset_density_per_second": 0.25,
+    "min_queries": 30,
+    "min_recordings": 15,
+    "min_train_components": 3,
+    "min_val_components": 2
+  },
+  "steps": 400,
+  "batch": 12,
+  "seed": 20261112,
+  "learning_rate": 0.0005,
+  "arms": [
+    "tcn30",
+    "tcn15",
+    "transformer15",
+    "tcn30_random"
+  ],
+  "event_source": "outputs/event_id_02",
+  "negative_definition": "same audible start, different verified music/choreography/association; artistic suitability UNKNOWN",
+  "selection": "fixed_last_no_validation_selection",
+  "test_tensor_reads": 0,
+  "operational_qualified": false
+}

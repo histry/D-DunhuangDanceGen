@@ -4,34 +4,20 @@ from pathlib import Path
 import numpy as np
 from dunhuang.io import checked,pinned,write,sha
 from dunhuang.contracts import MotionAdapter
-from .probe import upperbody_probe_target
-from .split import split_training_rows
-from .soft_reference import resample_native,SCHEMA
+from dunhuang.generation.probe import upperbody_probe_target
+from dunhuang.generation.split import split_training_rows
+from dunhuang.generation.soft_reference import resample_native,SCHEMA
 
 SEED=20261111
 
-def phase_target(native,scale,bias,knot=75,partial=False):
-    """The same geodesic source-time operator as inference, never linear Rot6D."""
-    positions=np.interp(np.arange(150),[0,75,150],[0,knot,150])
-    sampled=resample_native(native,np.minimum(positions,149))
-    origin=native[0,4:7].copy();origin[1]=0.
-    normalized=MotionAdapter.to_edge(sampled,origin)*scale+bias
-    valid=np.isfinite(normalized)&(abs(normalized)<=1+32*np.finfo(np.float32).eps)
-    target=upperbody_probe_target(normalized,valid) if partial else (normalized if valid.all() else None)
-    return target, (positions/150).astype(np.float32)[:,None]
-
-def digest(model):
-    h=hashlib.sha256()
-    for name,value in sorted(model.state_dict().items()):
-        h.update(name.encode());h.update(value.detach().cpu().contiguous().numpy().tobytes())
-    return h.hexdigest()
+from dunhuang.generation.targets import phase_target,digest
 
 def _train(assets,destination,steps,task='motion',preflight_only=False):
     import torch
     if type(steps) is not int or steps<1:raise ValueError('Positive training steps required')
     if task not in ('motion','paired','upperbody_probe'):raise ValueError('Unknown training task')
     destination.mkdir(parents=True,exist_ok=False)
-    commit=subprocess.check_output(['git','-C',str(Path(__file__).resolve().parents[3]),'rev-parse','HEAD'],text=True).strip()
+    commit=subprocess.check_output(['git','-C',str(Path(__file__).resolve().parents[4]),'rev-parse','HEAD'],text=True).strip()
     catalog=json.loads(checked(assets['catalog']).read_text()) if task!='paired' else dict(entries=[])
     with np.load(checked(assets['scaler']),allow_pickle=False) as scaler:
         scale,bias=scaler['scale'].copy(),scaler['bias'].copy()
@@ -121,7 +107,7 @@ def _train(assets,destination,steps,task='motion',preflight_only=False):
     diffusion=GaussianDiffusion(model,150,151,SMPLSkeleton('cuda'),schedule='cosine',n_timestep=1000,predict_epsilon=False,loss_type='l2',use_p2=False,cond_drop_prob=.25,guidance_weight=2).cuda().eval()
     torch.manual_seed(SEED);torch.cuda.manual_seed_all(SEED)
     adapter=__import__('dunhuang.generation.adapter',fromlist=['PrimitiveAdapter']).PrimitiveAdapter().cuda()
-    from .adapter import masked_reference
+    from dunhuang.generation.adapter import masked_reference
     before=digest(model);state={'enabled':True}
     def condition(module,args,value):
         return value+adapter(state['value'],state['known'],state['phase']) if state['enabled'] else value

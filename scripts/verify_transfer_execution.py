@@ -4,7 +4,7 @@ from pathlib import Path
 import numpy as np
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'src'))
 from dunhuang.io import checked,write,sha
-from dunhuang.generation.train import phase_target
+from dunhuang.generation.targets import phase_target
 from dunhuang.research.event_metrics import identity_probe,representation_stats,dynamics,event_margin,event_timing
 
 

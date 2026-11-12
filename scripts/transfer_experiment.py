@@ -35,7 +35,7 @@ def main():
     try:
         python=paired['edge_python']
         command([python,'-m','pytest','-q'],'tests')
-        common=[python,'-m','dunhuang.generation.event_transfer','--assets',a.paired_assets]
+        common=[python,'-m','dunhuang.research.legacy.event_transfer','--assets',a.paired_assets]
         command(common+['--preflight-only','--out',root/'preflight'],'preflight')
         summaries={}
         for mode in protocol['modes']:

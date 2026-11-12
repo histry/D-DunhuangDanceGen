@@ -7,7 +7,7 @@ from dunhuang.io import checked,write,sha
 from dunhuang.generation.adapter import PrimitiveAdapter,authorize_adapter
 from dunhuang.generation.conditions import source_condition,target_supervision
 from dunhuang.generation.soft_reference import build_soft_reference
-from dunhuang.generation.train import digest,phase_target
+from dunhuang.generation.targets import digest,phase_target
 from .frozen import denoiser
 
 JOINT_GROUPS=dict(torso=(0,3,6,9,12,15),arms=(13,14,16,17,18,19),wrists=(20,21),

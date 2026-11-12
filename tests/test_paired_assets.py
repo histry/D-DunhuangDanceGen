@@ -108,7 +108,7 @@ def resave(assets,manifest,path):
     path.write_text(json.dumps(manifest));assets['paired_generation_manifest']['sha256']=sha(path)
 
 def test_real_shapes_provenance_and_preflight_without_change_catalog(tmp_path):
-    from dunhuang.generation.train import train
+    from dunhuang.research.legacy.paired_training import train
     assets,manifest,path=paired_fixture(tmp_path)
     windows,roles,report=inspect(assets)
     assert report['ready'] and len(windows)==2 and set(roles.values())=={'train','val'}

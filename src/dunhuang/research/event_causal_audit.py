@@ -10,7 +10,7 @@ from dunhuang.generation.event_geometry import event_geometry
 from dunhuang.generation.event_visibility import intervene
 from dunhuang.generation.source_pairs import validate_pair
 from dunhuang.planning.primitive_contract import build as contract,verify as verify_contract
-from dunhuang.generation.train import digest
+from dunhuang.generation.targets import digest
 from .mechanism import Runtime,assembled
 from .event_metrics import event_margin,dynamics,rotation_error
 from dunhuang.sampling import constrained_ddim

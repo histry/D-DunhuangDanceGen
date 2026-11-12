@@ -4,7 +4,7 @@ from pathlib import Path
 import numpy as np
 from dunhuang.io import checked, write, sha
 from dunhuang.contracts import MotionAdapter, Q
-from dunhuang.generation.train import digest, phase_target
+from dunhuang.generation.targets import digest, phase_target
 from dunhuang.generation.source_pairs import source_pairs
 from .event_metrics import descriptor, representation_stats, identity_probe, dynamics, event_margin, event_timing
 
