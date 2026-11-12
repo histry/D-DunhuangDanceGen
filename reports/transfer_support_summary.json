@@ -1,0 +1,125 @@
+{
+  "schema": "posthoc_fixed_support_diagnosis",
+  "analysis_commit": "850c85e9169b25457e581a21cff9a46f410a9740",
+  "source_execution_commit": "020113a73ff7e36cc2d967c8a717fbf7038fb3f2",
+  "input_sha256": {
+    "a2/result.json": "a2a457969087563785c3cd9e199c71307b9c06dc2d6c9333e0116e6574e7f6c3",
+    "a2/manifest.json": "0ecbf5f563a6e6cf5966cd1b1ce1ea5bc2ee76c0d86defd4bdf738673998876b",
+    "a2/nodes.npz": "fbbd1129132da55ea230d6638ed8e6bd7a3b3ba470b7d989a070beb436f14269",
+    "a2/nuisance.npz": "3191e0f68f74e1d98666f96deaa748db8d577b8b5b90bc1246195521e16362e1",
+    "a2/train_statistics.json": "9c099607bc7e88b78d5d82c721ed64a6d02caa1f67498bf54489326f60f70a6f"
+  },
+  "reports": {
+    "train": {
+      "comparisons": 5648932,
+      "all_rules_pass": 118,
+      "single_rule_failure_counts": {
+        "count": 40,
+        "time_w1": 8874,
+        "histogram": 66,
+        "energy": 596,
+        "onset": 86
+      },
+      "individual_rule_pass_counts": {
+        "count": 4169772,
+        "time_w1": 3280,
+        "histogram": 152770,
+        "energy": 774636,
+        "onset": 2457850
+      },
+      "failure_intersections": {
+        "0": 118,
+        "1": 40,
+        "2": 8874,
+        "3": 2372,
+        "4": 66,
+        "5": 20,
+        "6": 273248,
+        "7": 93352,
+        "8": 596,
+        "9": 172,
+        "10": 45128,
+        "11": 11870,
+        "12": 510,
+        "13": 196,
+        "14": 1499784,
+        "15": 521504,
+        "16": 86,
+        "17": 34,
+        "18": 8960,
+        "19": 2592,
+        "20": 90,
+        "21": 48,
+        "22": 276216,
+        "23": 108520,
+        "24": 522,
+        "25": 154,
+        "26": 56212,
+        "27": 15040,
+        "28": 490,
+        "29": 138,
+        "30": 1998872,
+        "31": 723108
+      }
+    },
+    "val": {
+      "comparisons": 96480,
+      "all_rules_pass": 0,
+      "single_rule_failure_counts": {
+        "count": 0,
+        "time_w1": 60,
+        "histogram": 0,
+        "energy": 12,
+        "onset": 0
+      },
+      "individual_rule_pass_counts": {
+        "count": 73066,
+        "time_w1": 26,
+        "histogram": 1572,
+        "energy": 4228,
+        "onset": 64400
+      },
+      "failure_intersections": {
+        "2": 60,
+        "3": 6,
+        "6": 2142,
+        "7": 694,
+        "8": 12,
+        "9": 2,
+        "10": 834,
+        "11": 142,
+        "12": 10,
+        "14": 45800,
+        "15": 14698,
+        "18": 14,
+        "19": 8,
+        "22": 1052,
+        "23": 252,
+        "24": 2,
+        "26": 406,
+        "27": 86,
+        "30": 22734,
+        "31": 7526
+      }
+    }
+  },
+  "historical_source_role_transitions": {
+    "train_to_train": 553,
+    "test_to_train": 182,
+    "val_to_train": 184,
+    "train_to_val": 60,
+    "val_to_val": 20,
+    "test_to_val": 38
+  },
+  "known_identity_overlap_counts": {
+    "music_uid": 0,
+    "choreography_uid": 60,
+    "recording_uid": 0,
+    "source_group": 0
+  },
+  "thresholds_changed": false,
+  "new_candidates_selected": false,
+  "optimizer_calls": 0,
+  "test_tensor_reads": 0,
+  "interpretation": "Comparison counts are dependent; single-failure responsibility is diagnostic, not relaxed qualification"
+}
