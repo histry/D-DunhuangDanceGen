@@ -136,3 +136,14 @@ def test_a2_small_source_audit_completes_without_starting_ineligible_training(tm
     assert result["training"]["optimizer_updates"]==0
     assert result["training"]["status"]=="NOT_STARTED_INSUFFICIENT_V2_POPULATION"
     assert result["clock"]["old_positive_actual_clock_disagreements"]==0
+
+def test_corrupted_identity_preserves_exact_source_occurrence_marginal():
+    pytest.importorskip("torch")
+    from dunhuang.research.source_identifiability.g2 import source_derangement
+    rows=[dict(source_group=str(i//2),choreography_uid=str(i//2)) for i in range(6)]
+    schedule=np.tile(np.arange(6).reshape(3,2),(3,1))
+    donors=source_derangement(schedule,rows,13)
+    assert sorted(schedule.flatten())==sorted(donors.flatten())
+    assert all(rows[a]["source_group"]!=rows[b]["source_group"] for a,b in zip(schedule.flatten(),donors.flatten()))
+    np.testing.assert_array_equal(donors,source_derangement(schedule,rows,13))
+    with pytest.raises(ValueError):source_derangement(np.zeros((3,2),int),rows,13)

@@ -81,6 +81,19 @@ class Runtime(TransferRuntime):
         for h in self.trace_handles:h.remove()
         super().close()
 
+def source_derangement(schedule,rows,seed):
+    flat=np.asarray(schedule).reshape(-1)
+    buckets={}
+    for position,i in enumerate(flat):buckets.setdefault(rows[int(i)]["source_group"],[]).append(position)
+    maximum=max(map(len,buckets.values()))
+    if maximum>len(flat)/2:raise ValueError("Exact source-marginal derangement requires balanced independent groups")
+    rng=np.random.default_rng(seed);order=np.concatenate([rng.permutation(buckets[k]) for k in sorted(buckets)])
+    donors=np.empty_like(flat);donors[order]=flat[np.roll(order,maximum)]
+    if sorted(map(int,flat))!=sorted(map(int,donors)):raise ValueError("Corruption altered source marginal")
+    for a,b in zip(flat,donors):
+        if rows[int(a)]["source_group"]==rows[int(b)]["source_group"] or rows[int(a)]["choreography_uid"]==rows[int(b)]["choreography_uid"]:raise ValueError("Corruption retained source identity association")
+    return donors.reshape(np.asarray(schedule).shape)
+
 def preflight(assets,index,out,config,initial,registered):
     rows=list(index.values());validate_roles(rows);validated={}
     def check(r):
@@ -111,11 +124,7 @@ def preflight(assets,index,out,config,initial,registered):
     contrasts=[next(p["target_uid"] for p in registered if index[p["target_uid"]]["choreography_uid"]!=index[uid]["choreography_uid"]) for uid in chosen]
     train=[r for r in rows if r["role"]=="train"]
     schedule=group_schedule(train,config["steps"],config["batch"],config["seed"])
-    rng=np.random.default_rng(config["seed"]+31);donors=np.empty_like(schedule)
-    for step,ids in enumerate(schedule):
-        for k,i in enumerate(ids):
-            pool=[j for j,r in enumerate(train) if r["source_group"]!=train[i]["source_group"] and r["choreography_uid"]!=train[i]["choreography_uid"]]
-            donors[step,k]=rng.choice(pool)
+    donors=source_derangement(schedule,train,config["seed"]+31)
     np.save(out/"training_schedule.npy",schedule);np.save(out/"donor_schedule.npy",donors)
     return train,chosen,contrasts,coverage(train,schedule)
 
@@ -182,15 +191,19 @@ def evaluate(rt,states,index,chosen,contrasts,out,config):
             generator=torch.Generator(device="cuda").manual_seed(config["seed"]+case*1000+timestep)
             t=torch.tensor([timestep],device="cuda");noisy=rt.diffusion.q_sample(target,t,torch.randn(target.shape,device="cuda",generator=generator))
             for arm,state in states.items():
-                rt.adapter.load_state_dict(state);rt.adapter.eval();base=None
+                rt.adapter.load_state_dict(state);rt.adapter.eval();base=None;native_predictions=[]
                 for s in range(2):
                     rt.batch_self([uid],[ (uid,other)[s] ]);rt.state["capture"]=True;rt.trace={}
                     with torch.no_grad():y=rt.model(noisy,music,t,cond_drop_prob=0.)
                     key=str(case)+"_"+str(timestep)+"_"+arm+"_"+str(s);snapshots[key]=y.cpu().numpy()
+                    native_predictions.append(MotionAdapter.to_native(rt.normalizer.unnormalize(y.detach().cpu().clone())[0].numpy()))
                     if base is None:base={k:v.copy() for k,v in rt.trace.items()}
                     else:
                         denoising.append(dict(case=case,timestep=timestep,arm=arm,noisy_sha256=tensor_hash(noisy),music_sha256=tensor_hash(music),source_exchange_layers={k:layer_delta(v,base[k]) for k,v in rt.trace.items()}))
                         for k,v in rt.trace.items():layers[key+"_"+k]=v-base[k]
+                        region=np.ones((150,8),bool);ya,yb=native_predictions
+                        denoising[-1]["source_a_preference"]=source_error(ya,refs[1],region)-source_error(ya,refs[0],region)
+                        denoising[-1]["source_b_preference"]=source_error(yb,refs[0],region)-source_error(yb,refs[1],region)
                     rt.state["capture"]=False
         for seed in config["generation_seeds"]:
             folder=out/("case_"+str(case)+"_seed_"+str(seed));folder.mkdir()
@@ -256,7 +269,7 @@ def run(assets_file,out,config,root_protocol,replay_from=None):
     protocol=dict(schema="g2_source_identifiability_v1",code_commit=subprocess.check_output(["git","rev-parse","HEAD"],text=True).strip(),config=config,
         initial_adapter=initial,paired_manifest=assets["paired_generation_manifest"],scaler=assets["scaler"],base=assets["checkpoint"],
         train_uids=[r["window_uid"] for r in train_rows],evaluation_uids=chosen,contrast_uids=contrasts,schedule_coverage=cov,
-        selection="fixed_last_no_validation_selection",scope="same-recording exact training, real source-exchange evaluation",test_tensor_reads=0,operational_qualified=False)
+        selection="fixed_last_no_validation_selection",scope="same-recording exact training, real source-exchange evaluation",negative_control="exact source occurrence marginal preserved by derangement",test_tensor_reads=0,operational_qualified=False)
     write(out/"protocol.json",protocol);write(out/"preflight.json",dict(status="PASSED_REAL_SOURCE_JUKEBOX_PREFLIGHT",train=len(train_rows),val=len(index)-len(train_rows),test_tensor_reads=0))
     torch.set_num_threads(4);torch.backends.cuda.matmul.allow_tf32=False;torch.backends.cudnn.allow_tf32=False;torch.backends.mha.set_fastpath_enabled(False)
     rt=Runtime(assets,index,initial,config["event_source"])
