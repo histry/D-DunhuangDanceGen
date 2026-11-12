@@ -1,0 +1,451 @@
+{
+  "schema": "public_primitive_warp_v1",
+  "execution_commit": "a62b23f149230bef98dfbcd70150d4dc599066e2",
+  "result": {
+    "schema": "primitive_warp_results_v1",
+    "events": 499,
+    "sources": 8,
+    "music_slots": 49,
+    "arms": {
+      "T0": {
+        "legal_candidate_pairs": 11298,
+        "empty_slots": 0,
+        "events_ever_eligible": 423,
+        "sources_ever_eligible": 8,
+        "peak_capturing_eligible_events": 243,
+        "peak_capturing_candidate_pairs": 6483,
+        "exact_slot_beat_pairs": 2096,
+        "beat_distance_frames": {
+          "count": 11298,
+          "mean": 6.012126040007081,
+          "median": 7.0,
+          "p95": 9.0,
+          "max": 11.0
+        },
+        "linear_displacement_frames": {
+          "count": 11298,
+          "mean": 0.3992742078243937,
+          "median": 0.0,
+          "p95": 3.0,
+          "max": 4.0
+        },
+        "per_music_frames": {
+          "150": 350,
+          "225": 281,
+          "450": 1208,
+          "3601": 9459
+        },
+        "per_recording": [
+          {
+            "recording_index": 1,
+            "events": 135,
+            "legal_pairs": 2856
+          },
+          {
+            "recording_index": 2,
+            "events": 83,
+            "legal_pairs": 1661
+          },
+          {
+            "recording_index": 3,
+            "events": 68,
+            "legal_pairs": 1989
+          },
+          {
+            "recording_index": 4,
+            "events": 69,
+            "legal_pairs": 1834
+          },
+          {
+            "recording_index": 5,
+            "events": 41,
+            "legal_pairs": 836
+          },
+          {
+            "recording_index": 6,
+            "events": 40,
+            "legal_pairs": 867
+          },
+          {
+            "recording_index": 7,
+            "events": 28,
+            "legal_pairs": 508
+          },
+          {
+            "recording_index": 8,
+            "events": 35,
+            "legal_pairs": 747
+          }
+        ]
+      },
+      "T1": {
+        "legal_candidate_pairs": 8640,
+        "empty_slots": 0,
+        "events_ever_eligible": 388,
+        "sources_ever_eligible": 8,
+        "peak_capturing_eligible_events": 316,
+        "peak_capturing_candidate_pairs": 6985,
+        "exact_slot_beat_pairs": 3544,
+        "beat_distance_frames": {
+          "count": 8640,
+          "mean": 4.264236111111111,
+          "median": 5.0,
+          "p95": 10.0,
+          "max": 24.0
+        },
+        "linear_displacement_frames": {
+          "count": 8640,
+          "mean": 0.7611111111111111,
+          "median": 0.0,
+          "p95": 4.0,
+          "max": 4.0
+        },
+        "per_music_frames": {
+          "150": 272,
+          "225": 238,
+          "450": 929,
+          "3601": 7201
+        },
+        "per_recording": [
+          {
+            "recording_index": 1,
+            "events": 135,
+            "legal_pairs": 2207
+          },
+          {
+            "recording_index": 2,
+            "events": 83,
+            "legal_pairs": 1197
+          },
+          {
+            "recording_index": 3,
+            "events": 68,
+            "legal_pairs": 1479
+          },
+          {
+            "recording_index": 4,
+            "events": 69,
+            "legal_pairs": 1395
+          },
+          {
+            "recording_index": 5,
+            "events": 41,
+            "legal_pairs": 633
+          },
+          {
+            "recording_index": 6,
+            "events": 40,
+            "legal_pairs": 680
+          },
+          {
+            "recording_index": 7,
+            "events": 28,
+            "legal_pairs": 437
+          },
+          {
+            "recording_index": 8,
+            "events": 35,
+            "legal_pairs": 612
+          }
+        ]
+      },
+      "T2": {
+        "legal_candidate_pairs": 13188,
+        "empty_slots": 0,
+        "events_ever_eligible": 459,
+        "sources_ever_eligible": 8,
+        "peak_capturing_eligible_events": 256,
+        "peak_capturing_candidate_pairs": 7541,
+        "exact_slot_beat_pairs": 3873,
+        "beat_distance_frames": {
+          "count": 13188,
+          "mean": 3.174628450106157,
+          "median": 3.0,
+          "p95": 8.0,
+          "max": 10.0
+        },
+        "linear_displacement_frames": {
+          "count": 13188,
+          "mean": 3.4195480740066726,
+          "median": 4.0,
+          "p95": 7.0,
+          "max": 10.0
+        },
+        "per_music_frames": {
+          "150": 453,
+          "225": 318,
+          "450": 1418,
+          "3601": 10999
+        },
+        "per_recording": [
+          {
+            "recording_index": 1,
+            "events": 135,
+            "legal_pairs": 3362
+          },
+          {
+            "recording_index": 2,
+            "events": 83,
+            "legal_pairs": 1900
+          },
+          {
+            "recording_index": 3,
+            "events": 68,
+            "legal_pairs": 2245
+          },
+          {
+            "recording_index": 4,
+            "events": 69,
+            "legal_pairs": 2252
+          },
+          {
+            "recording_index": 5,
+            "events": 41,
+            "legal_pairs": 971
+          },
+          {
+            "recording_index": 6,
+            "events": 40,
+            "legal_pairs": 988
+          },
+          {
+            "recording_index": 7,
+            "events": 28,
+            "legal_pairs": 619
+          },
+          {
+            "recording_index": 8,
+            "events": 35,
+            "legal_pairs": 851
+          }
+        ]
+      },
+      "T3": {
+        "legal_candidate_pairs": 12969,
+        "empty_slots": 0,
+        "events_ever_eligible": 448,
+        "sources_ever_eligible": 8,
+        "peak_capturing_eligible_events": 364,
+        "peak_capturing_candidate_pairs": 10782,
+        "exact_slot_beat_pairs": 4373,
+        "beat_distance_frames": {
+          "count": 12969,
+          "mean": 2.799830364715861,
+          "median": 2.0,
+          "p95": 8.0,
+          "max": 24.0
+        },
+        "linear_displacement_frames": {
+          "count": 12969,
+          "mean": 2.6160074022669444,
+          "median": 2.0,
+          "p95": 7.0,
+          "max": 10.0
+        },
+        "per_music_frames": {
+          "150": 442,
+          "225": 320,
+          "450": 1390,
+          "3601": 10817
+        },
+        "per_recording": [
+          {
+            "recording_index": 1,
+            "events": 135,
+            "legal_pairs": 3281
+          },
+          {
+            "recording_index": 2,
+            "events": 83,
+            "legal_pairs": 1851
+          },
+          {
+            "recording_index": 3,
+            "events": 68,
+            "legal_pairs": 2228
+          },
+          {
+            "recording_index": 4,
+            "events": 69,
+            "legal_pairs": 2206
+          },
+          {
+            "recording_index": 5,
+            "events": 41,
+            "legal_pairs": 919
+          },
+          {
+            "recording_index": 6,
+            "events": 40,
+            "legal_pairs": 988
+          },
+          {
+            "recording_index": 7,
+            "events": 28,
+            "legal_pairs": 653
+          },
+          {
+            "recording_index": 8,
+            "events": 35,
+            "legal_pairs": 843
+          }
+        ]
+      }
+    },
+    "changes": {
+      "T0_to_T2": {
+        "common_beat_distance_improved": 8733,
+        "common_beat_distance_unchanged": 2565,
+        "common_beat_distance_worsened": 0,
+        "recovered_pairs": 1890,
+        "lost_pairs": 0,
+        "common_pairs": 11298,
+        "changed_ticks_on_common_pairs": 8733,
+        "absolute_tick_change_frames": {
+          "count": 11298,
+          "mean": 3.3595326606479023,
+          "median": 4.0,
+          "p95": 7.0,
+          "max": 10.0
+        }
+      },
+      "T1_to_T3": {
+        "common_beat_distance_improved": 4490,
+        "common_beat_distance_unchanged": 4150,
+        "common_beat_distance_worsened": 0,
+        "recovered_pairs": 4329,
+        "lost_pairs": 0,
+        "common_pairs": 8640,
+        "changed_ticks_on_common_pairs": 4490,
+        "absolute_tick_change_frames": {
+          "count": 8640,
+          "mean": 2.337037037037037,
+          "median": 1.0,
+          "p95": 7.0,
+          "max": 10.0
+        }
+      },
+      "center_conflict": {
+        "old_center_only_under_legacy": 3064,
+        "recovered_old_center_only_by_T3": 2837,
+        "T0_pairs_still_unavailable_to_T3": 227,
+        "T3_pairs_not_in_T0": 1898,
+        "net_T0_minus_T1": 2658
+      }
+    },
+    "rejection_reasons": {
+      "T0": {
+        "LOCAL_RATE_LIMIT": 5963,
+        "DURATION_RATIO": 7190,
+        "PASS": 11298
+      },
+      "T1": {
+        "LOCAL_RATE_LIMIT": 7766,
+        "MUSIC_CONTEXT": 520,
+        "DURATION_RATIO": 7142,
+        "PASS": 8640,
+        "ZERO_OR_NONMONOTONE_WARP": 285,
+        "NO_SAFE_ANCHOR": 98
+      },
+      "T2": {
+        "EMPTY_CONTINUOUS_DOMAIN": 3675,
+        "PASS": 13188,
+        "DURATION_RATIO": 7190,
+        "NO_INTEGER_TICK": 398
+      },
+      "T3": {
+        "EMPTY_CONTINUOUS_DOMAIN": 3570,
+        "ZERO_OR_NONMONOTONE_WARP": 328,
+        "PASS": 12969,
+        "DURATION_RATIO": 7142,
+        "NO_INTEGER_TICK": 344,
+        "NO_SAFE_ANCHOR": 98
+      }
+    },
+    "exhaustive_domain_checks": 48902,
+    "stage_order_checks": 46095,
+    "stage_order_inversions": 0,
+    "phase_inverse_max_error_frames": 4.547473508864641e-13,
+    "source_peak_coverage_unchanged": {
+      "E0": 288,
+      "E1": 398
+    },
+    "source_anchor_context_unchanged": true,
+    "rate_bounds_relaxed": false,
+    "default_planning_changed": false,
+    "gates": {
+      "E2_started": false,
+      "A2_new_split_candidates_rebuilt": false,
+      "A2_training_started": false,
+      "G2_previously_qualified": false,
+      "G2_training_started": false,
+      "G3_started": false,
+      "FineDance_admitted": false
+    },
+    "optimizer_calls": 0,
+    "statistics_fit_calls": 0,
+    "edge_forward_calls": 0,
+    "native_calls": 0,
+    "operational_qualified": false
+  },
+  "replay": {
+    "status": "FRESH_RAW_SOURCE_WARP_REPLAY_VERIFIED",
+    "optimizer_calls": 0,
+    "raw_source_decodes": 8,
+    "event_ids": 499,
+    "source_audit_replay": {
+      "status": "FRESH_DATA_V3_CHANGE_E1_REPLAY_VERIFIED",
+      "optimizer_calls": 0,
+      "source_raw_decodes": 8,
+      "array_fields_verified": 1066,
+      "all_event_ids_replayed": 499,
+      "source_dependencies_replayed": true
+    },
+    "array_fields_verified": 8,
+    "exhaustive_domain_checks": 48902,
+    "stage_order_inversions": 0
+  },
+  "tests": {
+    "main": "196 passed, 1 skipped",
+    "edge": "33 passed"
+  },
+  "config": {
+    "schema": "primitive_warp_registered_v1",
+    "source_study": "outputs/data_event_v3_04",
+    "expected_events": 499,
+    "expected_sources": 8,
+    "expected_slots": 49,
+    "arms": [
+      "T0",
+      "T1",
+      "T2",
+      "T3"
+    ],
+    "rate_limits": [
+      0.75,
+      1.33
+    ],
+    "radius": 12,
+    "optimizer_calls": 0,
+    "statistics_fit_calls": 0,
+    "allow_generation": false,
+    "selection": "min slot-beat distance, then linear displacement, then earlier integer tick",
+    "source_audit": "fresh_raw_decode_and_replay_against_frozen_data_v3"
+  },
+  "evidence": {
+    "main/protocol.json": "6aed5b763cecde1d8fb9bb829b8e5e6d82d78d4fbafc22e65c6333c8d1e729ab",
+    "main/maps.npz": "b1bab58b7b0008b16738171ea4268b5e3b8ae4eb36c7a9e5302b6022bbab6b84",
+    "main/result.json": "d4ba2b66c4fdda06e0d49ad612a185d20697a4c2d1e8f7647b086d3486847335",
+    "main/certificates.json": "d406ea52d73f907b6ba6b9c8cd2a10fe741f481eda359e39ff34e832947090ff",
+    "main/source_audit/protocol.json": "1fa7a0509eecc6873fea4c77d208e5de34356a59641db4f99ce7424adcfc08eb",
+    "main/source_audit/source_seals.json": "11ff5c3f36c40f43e1acfe2424d14a30c6902ee553f60443ad1c9ca9ab398a1c",
+    "main/source_audit/replay.json": "8293b454e7fa4d9f6414f25335088b95828f8b9f459be095d35c122c6612bf52",
+    "replay/protocol.json": "6aed5b763cecde1d8fb9bb829b8e5e6d82d78d4fbafc22e65c6333c8d1e729ab",
+    "replay/maps.npz": "b1bab58b7b0008b16738171ea4268b5e3b8ae4eb36c7a9e5302b6022bbab6b84",
+    "replay/result.json": "d4ba2b66c4fdda06e0d49ad612a185d20697a4c2d1e8f7647b086d3486847335",
+    "replay/certificates.json": "d406ea52d73f907b6ba6b9c8cd2a10fe741f481eda359e39ff34e832947090ff",
+    "replay/replay.json": "aa717dd90671f841576d955b3cb9ffb4fe64844024053f43a0edb4d4f36a09c3",
+    "replay/source_audit/replay.json": "8293b454e7fa4d9f6414f25335088b95828f8b9f459be095d35c122c6612bf52"
+  },
+  "operational_qualified": false
+}

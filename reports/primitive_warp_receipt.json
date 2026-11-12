@@ -1,0 +1,30 @@
+{
+  "schema": "primitive_warp_final_receipt",
+  "execution_commit": "a62b23f149230bef98dfbcd70150d4dc599066e2",
+  "verifier_commit": "a62b23f149230bef98dfbcd70150d4dc599066e2",
+  "exit_status": 0,
+  "started_utc": "2026-11-12T14:00:32Z",
+  "finished_utc": "2026-11-12T14:05:34Z",
+  "baseline_commit": "685ad0bcf13b9e7be085e1df3d3d580040f068c5",
+  "all_preexisting_source_and_config_files_unchanged": true,
+  "summary_sha256": "edf0cff32831802c895e84761a7787e48525a62147be72c63be6c618aab670b3",
+  "launcher_sha256": "8d0f8685dfb8245593f0a039078fe408f47d69f26e4308a5c0b59d77e4ab9a55",
+  "receipt_evidence": {
+    "pytest.log": "22adfa2ea9d3a05d7f11171b9a0dc0713146e5f5c3a2bb8e17ea0ffa8c0b7e4a",
+    "edge_check.log": "2996655c856aa776ae64d4168b98689b2a254a65c22bae59eb35dae19c380328",
+    "execution_commit.txt": "47a8d7d8f169d7b8d8dca3f7d3ced1fda219ca2da8ca6e9270ca30c2f0a66321",
+    "exit_status.txt": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "started_utc.txt": "2c3db4a006626895c67f519f6a5f4f1b4060e78cefd7caa0bbca9113b5011427",
+    "finished_utc.txt": "a25d607dec1594233008ed89e5539cd9759912154a5b615e5863f263b37b4e10"
+  },
+  "raw_source_decodes_per_process": 8,
+  "source_audit_arrays_replayed_per_process": 1066,
+  "independent_integer_domain_checks_per_process": 48902,
+  "optimizer_calls": 0,
+  "statistics_fit_calls": 0,
+  "edge_forward_calls": 0,
+  "native_calls": 0,
+  "temporary_ssh_files_created": 0,
+  "temporary_ssh_files_remaining": 0,
+  "operational_qualified": false
+}
