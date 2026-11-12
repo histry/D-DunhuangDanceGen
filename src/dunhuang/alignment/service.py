@@ -40,6 +40,8 @@ class Reranker:
                 or saved.get('operational_qualified') is not False):
                 raise ValueError('Shadow transport identity, clock or qualification differs')
             cfg=saved['config']
+            if receipt.get('extractor',{}).get('librosa_version')!=cfg.get('librosa_version'):
+                raise ValueError('Query audio extractor version differs from transport training')
             self.transport=ClockNullTransport(band_seconds=cfg['band_seconds'],epsilon=cfg['epsilon'],iterations=cfg['sinkhorn_iterations']).eval()
             self.transport.load_state_dict(saved['state'],strict=True)
             self.identity['transport_sha256']=assets['transport']['sha256']

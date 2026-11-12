@@ -51,9 +51,11 @@ def prepare(assets,global_ref,sync_ref,out):
         if runtime.get('schema')!='isolated_audio_runtime_v1' or runtime.get('version')!='0.5.0.post1':
             raise ValueError('Unregistered isolated audio runtime')
         checked(runtime['wheel'])
+        for wheel in runtime.get('wheels',[]):checked(wheel)
         for item in runtime['files']:checked(item)
         sys.path.insert(0,str(Path(runtime['import_root']).resolve()))
-    import soxr
+    import soxr,librosa
+    if librosa.__version__!='0.11.0':raise ValueError('Frozen global encoder audio reference requires librosa0.11.0')
     if runtime and soxr.__version__!=runtime['version']:raise ValueError('Imported resampler differs')
     rows=sorted([r for r in manifest['rows'] if r['role'] in ('train','val')],key=lambda r:r['window_uid'])
     legacy=pinned(assets['legacy_root'],assets['legacy_commit']);sys.path.insert(0,str(legacy))
