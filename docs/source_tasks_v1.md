@@ -16,7 +16,9 @@ Use the official pinned EDGE beta operator AND its float32 torch cumulative prod
 
 For each real normalized pair compute the total conditional Gaussian mean KL:
 KL_t = alpha_t * ||X_A-X_B||^2 / (2*(1-alpha_t)).
-Only actual50-step DDIM times >=899 with SNR<=.02 and KL<=.5 are eligible. Require >=2 eligible times per admitted pair; never change thresholds or replace the fixed Val cases after failure.
+Only actual50-step DDIM times >=899 with SNR<=.02 and KL<=.5 are eligible. Require >=2 eligible times per admitted TRAIN pair. Val is measured by free generation, never by this corrupted-target task, so its original fixed cases require source/clock/music/observability qualification rather than training-corruption support. Record its noise diagnostic without filtering or replacing the fixed cases. Never change the numerical thresholds.
+
+The first preflight implementation wrongly applied training-corruption eligibility to Val as well. It was stopped before training and preserved; a role-scope regression test corrects this without changing KL/SNR thresholds, sources, cases or budgets.
 
 A shared state is sampled by choosing H in {A,B} using a fixed random schedule and drawing q(x_t|X_H) with the official forward operator. Both model branches receive the identical realized tensor and identical music. This is a mixture of two real-target forward distributions; it is not an arbitrary pure-noise input. Conditional KL is a registered support diagnostic, not proof that the task has the original denoising conditional distribution.
 

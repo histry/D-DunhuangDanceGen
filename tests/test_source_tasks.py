@@ -69,3 +69,10 @@ def test_paired_content_delta_and_pessimistic_ties():
     scores=np.tile([2.,1.],(30,1));base=np.tile([0.,0.],(30,1))
     r=metrics(scores,base,c,rows,dict(bootstrap_seed=17,bootstrap_replicates=100))
     assert r["delta_R1"]==1 and r["delta_MRR"]==.5 and r["gain_lower_bounds_positive"]
+
+def test_training_corruption_support_does_not_filter_fixed_free_generation_cases():
+    from dunhuang.research.source_tasks.math import role_noise_admitted
+    assert not role_noise_admitted("train",[999],2)
+    assert role_noise_admitted("val",[999],2)
+    assert role_noise_admitted("train",[979,999],2)
+    with pytest.raises(ValueError):role_noise_admitted("test",[979,999],2)

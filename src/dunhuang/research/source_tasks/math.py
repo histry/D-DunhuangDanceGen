@@ -37,3 +37,7 @@ def cf_loss(predicted,reference,mask,scale,bias,cfg):
     margin=(cfg["cf_margin_fraction"]*geodesic_squared(rr[0],rr[1])[mask].mean()).clamp(max=cfg["cf_margin_max_squared_rad"]).detach()
     value=((margin+d[0,0]-d[0,1]).relu()+(margin+d[1,1]-d[1,0]).relu())/2
     return value,margin
+
+def role_noise_admitted(role,support,minimum):
+    if role not in ("train","val"):raise ValueError("Only explicit Train/Val roles admitted")
+    return role=="val" or len(support)>=minimum

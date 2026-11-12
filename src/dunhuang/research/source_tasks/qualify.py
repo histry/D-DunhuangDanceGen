@@ -9,7 +9,7 @@ from dunhuang.generation.targets import phase_target
 from dunhuang.generation.source_pairs import validate_pair
 from dunhuang.alignment.sampling import group_schedule,coverage
 from .common import read,commit,fresh,source_protocol,same_arrays
-from .math import angles,noise_support
+from .math import angles,noise_support,role_noise_admitted
 
 def run(config,out,replay_from=None):
     out=fresh(out);root,p,m=source_protocol(config);cfg=config["g2"];assets=read(config["assets"])
@@ -48,9 +48,9 @@ def run(config,out,replay_from=None):
             if separation<cfg["min_reference_separation_rad"]:rejections["source_not_separated"]+=1;continue
             if ra["jukebox"]["sha256"]!=rb["jukebox"]["sha256"]:rejections["actual_music_differs"]+=1;continue
             support,proof=noise_support(ta,tb,alpha,cfg)
-            if len(support)<cfg["min_noise_support"]:rejections["insufficient_common_q_support"]+=1;continue
+            if not role_noise_admitted(ra["role"],support,cfg["min_noise_support"]):rejections["insufficient_train_common_q_support"]+=1;continue
             pairs.append(dict(a=a,b=b,role=ra["role"],source_group=ra["source_group"],music_uid=ra["music_uid"],
-                separation_rad=separation,ddim_support=support.tolist(),noise_proof=proof))
+                separation_rad=separation,ddim_support=support.tolist(),noise_proof=proof,training_q_eligible=len(support)>=cfg["min_noise_support"]))
     train=[r for r in pairs if r["role"]=="train"];val=[r for r in pairs if r["role"]=="val"]
     tr_records={index[u]["recording_uid"] for r in train for u in (r["a"],r["b"])}
     val_records={index[u]["recording_uid"] for r in val for u in (r["a"],r["b"])}
@@ -78,7 +78,7 @@ def run(config,out,replay_from=None):
     result=dict(qualification=gate,train_pairs=len(train),val_pairs=len(val),train_recordings=len(tr_records),val_recordings=len(val_records),
         train_music=len({r["music_uid"] for r in train}),val_music=len({r["music_uid"] for r in val}),pair_rejections=dict(rejections),
         schedule_coverage=cov,hash_checked_assets=len(verified),noise_support_sizes=dict(collections.Counter(str(len(r["ddim_support"])) for r in train)),
-        max_accepted_mean_kl=max([r["noise_proof"]["max_selected_kl"] for r in pairs],default=0),test_tensor_reads=0,optimizer_calls=0,operational_qualified=False)
+        max_accepted_mean_kl=max([r["noise_proof"]["max_selected_kl"] for r in train],default=0),test_tensor_reads=0,optimizer_calls=0,operational_qualified=False)
     write(out/"result.json",result)
     if replay_from:
         old=Path(replay_from)
