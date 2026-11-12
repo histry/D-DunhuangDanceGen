@@ -69,3 +69,17 @@ def test_clipped_trajectory_record_is_independent_of_common_state_cfg_variables(
     assert result["A_preference"]>0 and result["B_preference"]>0
     assert "guided_response" not in result
     with pytest.raises(ValueError):trajectory_entry(0,"C2",50,a,b,a,b,known)
+
+
+def test_gated_injection_constrains_learned_random_and_oracle_with_equal_norm():
+    torch=pytest.importorskip("torch")
+    from dunhuang.research.source_capacity.numerics import support_value,normalized_supported
+    support=torch.zeros(1,150,1,dtype=torch.bool);support[:,20:80]=True
+    for kind in ("learned","random","oracle"):
+        x=torch.randn(1,150,512);x[:,~support[0,:,0]]=float("nan")
+        d=normalized_supported(x,support,torch.tensor(2.))
+        assert torch.isfinite(d).all() and not d[:,~support[0,:,0]].any()
+        assert torch.allclose(d.norm(),torch.tensor(2.))
+    x=torch.randn(1,150,512,requires_grad=True)
+    y=support_value(x,support).square().sum();g=torch.autograd.grad(y,x)[0]
+    assert not g[:,~support[0,:,0]].any()

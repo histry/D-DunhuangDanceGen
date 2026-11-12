@@ -14,7 +14,7 @@ from dunhuang.research.source_identifiability.g2 import Runtime,physical,source_
 from dunhuang.research.transfer_audit.instrument import ForwardObserver
 from dunhuang.sampling import constrained_ddim
 from .common import read,commit,fresh,forbid_optimizers,same_arrays,frozen,weight
-from .numerics import check_derivatives,trusted,cosine,trajectory_entry
+from .numerics import check_derivatives,trusted,cosine,trajectory_entry,support_value,normalized_supported
 
 def rms(value):return float(np.sqrt(np.square(np.asarray(value,dtype=float)).mean()))
 
@@ -89,12 +89,11 @@ def probes(rt,uids,x,music,t,states,sites,config,label,stored):
     with sdpa_kernel(SDPBackend.MATH):
         for site in sites:
             gated=site.endswith("_gated");where=site.replace("_gated","")
-            direction=raw.clone()
-            if gated:direction=direction*mask.any(-1)[None,:,None]
-            direction=direction*(desired/direction.square().mean().sqrt().clamp_min(1e-12))
+            support=mask.any(-1)[None,:,None] if gated else torch.ones((1,150,1),device="cuda",dtype=torch.bool)
+            direction=normalized_supported(raw,support,desired*np.sqrt(raw.numel()))
             zero=torch.zeros_like(direction)
             def f(z):
-                with injection(rt,where,z):
+                with injection(rt,where,support_value(z,support)):
                     return project(rt,rt.model(x,music,t,cond_drop_prob=0.),mask)
             try:
                 jvp,vjp,check=check_derivatives(f,zero,direction,target,config["probe"]["fd_steps"])
@@ -105,14 +104,14 @@ def probes(rt,uids,x,music,t,states,sites,config,label,stored):
             if not torch.isfinite(jvp).all() or not torch.isfinite(vjp).all():
                 records.append(dict(site=site,status="NONFINITE_DERIVATIVE",numeric_trusted=False));continue
             with torch.no_grad():
-                oracle=vjp*(direction.norm()/vjp.norm().clamp_min(1e-12))
+                oracle=normalized_supported(vjp,support,direction.norm())
                 generator=torch.Generator(device="cuda").manual_seed(config["seed"]+int(t.item()))
-                random=torch.randn(direction.shape,device="cuda",generator=generator);random*=direction.norm()/random.norm().clamp_min(1e-12)
+                random=normalized_supported(torch.randn(direction.shape,device="cuda",generator=generator),support,direction.norm())
                 controls={}
                 for kind,d in (("learned",direction),("oracle_target_dependent",oracle),("random",random)):
                     samples=[]
                     for sign in (-1,1):
-                        with injection(rt,where,sign*d):samples.append(native(rt,rt.model(x,music,t,cond_drop_prob=0.)))
+                        with injection(rt,where,support_value(sign*d,support)):samples.append(native(rt,rt.model(x,music,t,cond_drop_prob=0.)))
                     a,b=samples;region=mask.cpu().numpy()
                     controls[kind]=dict(toward_B=source_error(a,refb,region)-source_error(b,refb,region),
                         toward_A=source_error(b,refa,region)-source_error(a,refa,region),

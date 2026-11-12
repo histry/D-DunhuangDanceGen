@@ -36,3 +36,13 @@ def trajectory_entry(case,arm,step,a,b,ra,rb,known):
         source_response=response(a,b,ra,rb,known),
         A_preference=float(angles(a,rb,known).mean()-angles(a,ra,known).mean()),
         B_preference=float(angles(b,ra,known).mean()-angles(b,rb,known).mean()))
+
+
+def support_value(value,support):
+    import torch
+    if support.dtype!=torch.bool:raise ValueError("Boolean injection support required")
+    return torch.where(support,value,0)
+
+def normalized_supported(value,support,target_norm):
+    clean=support_value(value,support)
+    return clean*(target_norm/clean.norm().clamp_min(1e-12))
