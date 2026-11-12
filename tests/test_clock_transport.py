@@ -39,3 +39,20 @@ def test_position_weights_stop_gradient_and_associated_sources_are_not_negatives
     assert r['plan'].grad is None
     assert head.music.weight.grad.isfinite().all()
     assert position_contrastive(r,['shared']*3)==0
+
+def test_real_source_derivatives_precede_window_selection():
+    import numpy as np
+    from scipy.spatial.transform import Rotation
+    from dunhuang.contracts import sixd
+    from dunhuang.alignment.clock_data import window_motion_features
+    from dunhuang.planning.time_map import motion_features74
+    n=240;t=np.arange(n)/30
+    x=np.zeros((n,151),np.float32)
+    x[:,7:]=np.tile([1,0,0,0,1,0],24)
+    x[:,7:13]=sixd(Rotation.from_rotvec(np.column_stack((t*t*.02,np.zeros(n),np.zeros(n)))).as_matrix())
+    complete,_=motion_features74(x)
+    actual,mask=window_motion_features(x,60)
+    np.testing.assert_array_equal(actual,complete[60:210])
+    sliced,_=motion_features74(x[60:210])
+    assert not np.allclose(actual[0,:3],sliced[0,:3])
+    assert mask.shape==(150,74)

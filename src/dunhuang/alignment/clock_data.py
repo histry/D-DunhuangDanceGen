@@ -24,6 +24,14 @@ def metadata(assets):
         raise ValueError('Verified identities and exposed-data status required')
     return manifest
 
+
+def window_motion_features(native,start,frames=150):
+    # Derivatives precede window selection; do not create a new numerical origin per halo.
+    if type(start) is not int or start<0 or start+frames>len(native):
+        raise ValueError('Continuous source support required')
+    values,mask=motion_features74(native)
+    return values[start:start+frames].copy(),mask[start:start+frames].copy()
+
 def prepare(assets,global_ref,sync_ref,out):
     out=Path(out);out.mkdir();(out/'audio').mkdir();(out/'windows').mkdir()
     manifest=metadata(assets)
@@ -50,7 +58,7 @@ def prepare(assets,global_ref,sync_ref,out):
     for branch in ('music','motion'):
         if any(not torch.equal(v,getattr(sync_model,branch).state_dict()[k]) for k,v in getattr(global_model,branch).state_dict().items()):
             raise ValueError('Global/sync encoder identities differ')
-    norm=global_payload['norm'];audio_cache={};features={k:[] for k in ('music','motion','mm','dm','energy_music','energy_motion')}
+    norm=global_payload['norm'];audio_cache={};motion_cache={};features={k:[] for k in ('music','motion','mm','dm','energy_music','energy_motion')}
     for i,r in enumerate(rows):
         e=read(checked(r['alignment_attestation']))
         if (e['status']!='verified' or e['window_uid']!=r['window_uid'] or e['audio_sha256']!=r['audio']['sha256']
@@ -69,7 +77,17 @@ def prepare(assets,global_ref,sync_ref,out):
         music=values[left]*(1-alpha)+values[right]*alpha;mm=mask[left]&mask[right]
         native=np.load(checked(r['motion']));observed=np.load(checked(r['observed']))
         if not observed[:,7:139].all():raise ValueError('Unobserved body rotations cannot become alignment truth')
-        motion,dm=motion_features74(native)
+        raw_key=r['raw_motion']['sha256']
+        if raw_key not in motion_cache:
+            from dunhuang.data.conversion import decode
+            full_native,_=decode(checked(r['raw_motion']),r['dataset'])
+            continuous,continuous_mask=motion_features74(full_native)
+            motion_cache[raw_key]=(full_native,continuous,continuous_mask)
+        full_native,continuous,continuous_mask=motion_cache[raw_key]
+        start=r['start_frame'];stop=start+150
+        if stop>len(full_native) or not np.array_equal(full_native[start:stop,7:],native[:,7:]):
+            raise ValueError('Cached native window differs from its continuous raw recording')
+        motion=continuous[start:stop].copy();dm=continuous_mask[start:stop].copy()
         arrays=dict(music=music.astype(np.float32),motion=motion,mm=mm,dm=dm,
             energy_music=music[:,0].astype(np.float32),energy_motion=motion[:,66])
         file=out/'windows'/('%05d.npz'%i);np.savez_compressed(file,**arrays)
@@ -85,7 +103,8 @@ def prepare(assets,global_ref,sync_ref,out):
         extractor_commit=assets['legacy_commit'],extractor_sha256=sha(legacy/'evaluation/paired_alignment_observations_v3.py'),
         global_checkpoint=global_ref,sync_checkpoint=sync_ref,norm=norm,
         train_rows=sum(r['role']=='train' for r in rows),val_rows=sum(r['role']=='val' for r in rows),
-        test_rows_extracted=0,negative_shift_labels_in_inputs=False,clock='source30Hz then real120-frame core and150-frame halo'))
+        test_rows_extracted=0,negative_shift_labels_in_inputs=False,clock='source30Hz then real120-frame core and150-frame halo',
+        motion_derivative_context='entire decoded recording before window/halo selection; initial source increment copied only at true recording origin'))
     return rows,arrays
 
 def encode(model,arrays,out,device):
