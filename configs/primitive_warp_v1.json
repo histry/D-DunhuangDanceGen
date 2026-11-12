@@ -1,0 +1,23 @@
+{
+  "schema": "primitive_warp_registered_v1",
+  "source_study": "outputs/data_event_v3_04",
+  "expected_events": 499,
+  "expected_sources": 8,
+  "expected_slots": 49,
+  "arms": [
+    "T0",
+    "T1",
+    "T2",
+    "T3"
+  ],
+  "rate_limits": [
+    0.75,
+    1.33
+  ],
+  "radius": 12,
+  "optimizer_calls": 0,
+  "statistics_fit_calls": 0,
+  "allow_generation": false,
+  "selection": "min slot-beat distance, then linear displacement, then earlier integer tick",
+  "source_audit": "fresh_raw_decode_and_replay_against_frozen_data_v3"
+}

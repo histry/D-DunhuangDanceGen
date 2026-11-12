@@ -10,6 +10,8 @@
 
 新增 [Data Split V3 / ChangE-E1 离线协议](docs/data_event_v3.md)及[服务器实验报告](reports/数据划分V3与ChangE事件E1实验报告.md)：严格官方曲目划分48/6/6、ChangE源留出8折索引，499个事件峰覆盖288→398，但合法候选对11298→8640。完整回归181通过+1依赖跳过，EDGE补充18通过，全新进程重解码与复验通过。FineDance音频203条仍为LFS指针；零模型训练/生成，旧Catalog、权重及Native门限保持冻结，新协议未获训练或生成资格。
 
+新增 [E1-W 固定原语时间映射协议](docs/primitive_warp_v1.md)：单独求解合法音乐时刻，比较T0/T1/T2/T3；不修改旧Planner或默认生成，也不授予A2/G2/G3资格。
+
 ## 正式入口
 
 公开 profile 与运行机器资产分离。从 configs/assets.example.json 填入真实绝对路径、SHA256、固定依赖版本，保存到忽略目录 inputs/runtime_assets.json，占位值不能直接运行。目录源清单沿用 source_records/events，raw SMPL 文件名与哈希必须匹配。EDGE / Native 使用各自环境；prepare 导出原权重 Normalizer 后解码事件目录。
