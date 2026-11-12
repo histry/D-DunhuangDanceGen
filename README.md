@@ -174,3 +174,10 @@ R1服务器审计与独立重放已完成，严格条件候选Train/Val均为0�
 ## Dense A1 / G1 research audit (2026-11-12)
 
 See [experiment report](reports/dense_condition_20261112.md) and [registered protocol](docs/DENSE_CONDITION_PROTOCOL.md). Real source coverage: 936 recordings / 8,510 windows; strict Train 18 queries / 10 recordings, Val 0; training was not started. Frozen EDGE audit: 14 real generations plus 14 exact recomputations, Native 0/14 and source-follow gate failed. Explicit research visibility passes the six matched unknown-storage and six bypass invariants; legacy remains the default. No bilateral generation or SQP qualification is claimed.
+
+
+## G2 / A2 source-identifiability study (2026-11-12)
+
+[Report](reports/source_identifiability_20261112.md) · [receipt](reports/source_id_03_receipt.json) · [code boundaries](research/README.md) · [registered protocol](docs/G2_A2_PROTOCOL.md).
+
+New studies are isolated in research/source_identifiability; historical generation trainers moved to research/legacy, and four duplicate script wrappers were removed. Three matched 357,424-parameter Adapters completed 400 updates each. All model arms failed source-following qualification (0/4); Native 0/52. All44 diffusion outputs and8 nonlearned controls were independently recomputed exactly. New A2 population: Train69 queries/63 recordings/6 groups, Val0; no A2 training. Final regression164 passed +1 dependency skip; supplemental EDGE13 passed. Default generation and Native remain unchanged, and observed-trained checkpoints require a matching research runtime.
