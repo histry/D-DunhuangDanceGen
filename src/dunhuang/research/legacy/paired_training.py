@@ -5,7 +5,7 @@ import numpy as np
 from dunhuang.io import checked,pinned,write,sha
 from dunhuang.contracts import MotionAdapter
 from dunhuang.generation.probe import upperbody_probe_target
-from dunhuang.generation.split import split_training_rows
+from dunhuang.research.legacy.split import split_training_rows
 from dunhuang.generation.soft_reference import resample_native,SCHEMA
 
 SEED=20261111

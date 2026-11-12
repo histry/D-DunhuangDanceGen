@@ -1,5 +1,5 @@
 import pytest
-from dunhuang.generation.split import split_training_rows
+from dunhuang.research.legacy.split import split_training_rows
 
 
 def test_probe_and_motion_hold_out_whole_recordings():

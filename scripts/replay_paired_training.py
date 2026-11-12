@@ -8,7 +8,7 @@ from dunhuang.data.sources import read,ref
 from dunhuang.data.paired_manifest import inspect
 from dunhuang.generation.targets import phase_target,digest
 from dunhuang.generation.adapter import PrimitiveAdapter,masked_reference
-from dunhuang.generation.split import split_training_rows
+from dunhuang.research.legacy.split import split_training_rows
 
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('--assets',required=True);ap.add_argument('--training',required=True);ap.add_argument('--out',required=True)

@@ -1,18 +1,9 @@
-"""Disjoint recording-level supervision splits; never split overlapping windows."""
-
-
-def split_training_rows(windows, task, roles):
-    groups = sorted({row[0] for row in windows})
-    if task == 'paired':
-        if any(g not in roles for g in groups):
-            raise ValueError('Paired groups require explicit train/val roles')
-        training = [row for row in windows if roles[row[0]] == 'train']
-        validation = [row for row in windows if roles[row[0]] == 'val']
-        return training, validation, sorted({row[0] for row in validation})
-    if task not in ('motion', 'upperbody_probe'):
-        raise ValueError('Unknown training task')
-    if not groups:
-        return [], [], None
-    validation_group = groups[-1]
-    return ([row for row in windows if row[0] != validation_group],
-            [row for row in windows if row[0] == validation_group], validation_group)
+"""New task splits consume explicit recording roles; historical heuristics live in research."""
+def split_training_rows(windows,task,roles):
+    if task not in ("paired","motion","upperbody_probe"):raise ValueError("Unknown training task")
+    groups={row[0] for row in windows}
+    if not groups:return [],[],[]
+    if any(g not in roles or roles[g] not in ("train","val","test") for g in groups):
+        raise ValueError("Split V3 requires explicit recording roles")
+    return ([r for r in windows if roles[r[0]]=="train"],[r for r in windows if roles[r[0]]=="val"],
+        sorted(g for g in groups if roles[g]=="val"))
