@@ -3,6 +3,7 @@ set -euo pipefail
 study="$1"
 receipt="$2"
 export OPENBLAS_NUM_THREADS=4 MKL_NUM_THREADS=4 OMP_NUM_THREADS=4
+export PYTHONPATH="$PWD/src:${PYTHONPATH:-}"
 native=/home/disk/lsm/conda_envs/dance-rag/bin/python
 edge=/home/disk/lsm/conda_envs/edge/bin/python
 mkdir -p "$receipt" "$study"

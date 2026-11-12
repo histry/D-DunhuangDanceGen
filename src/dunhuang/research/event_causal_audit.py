@@ -1,5 +1,5 @@
 """G1 matched source/visibility intervention, real frozen EDGE, no training."""
-import argparse,copy,json,subprocess,hashlib
+import argparse,copy,json,subprocess,hashlib,os
 from pathlib import Path
 import numpy as np
 import torch
@@ -171,7 +171,7 @@ def run(assets_file,root_protocol,output,config,replay_from=None):
                     assembled(rt,sample,music,gen)
                 request=dict(assets,frames=150,output=str(gen),anchors=[],beat_frames=[],audio=audio_ref)
                 write(gen/"physical_request.json",request)
-                subprocess.run([assets["native_python"],"-m","dunhuang.physical",str(gen/"physical_request.json")],check=True,stdout=subprocess.DEVNULL)
+                subprocess.run([assets["native_python"],"-m","dunhuang.physical",str(gen/"physical_request.json")],check=True,stdout=subprocess.DEVNULL,env=dict(os.environ,PYTHONPATH=str(Path(__file__).resolve().parents[2])+os.pathsep+os.environ.get("PYTHONPATH","")))
                 native=np.load(gen/"native.npy");fk=np.load(gen/"native_fk.npy");physical=read(gen/"physical.json")
                 audit=physical["audit"];continuous={k:float(v) for k,v in audit.items() if isinstance(v,(int,float))}
                 generated.append(dict(case=case,control=control,seed=config["seed"],sampler=sampler,
