@@ -20,4 +20,3 @@ def digest(model):
     for name,value in sorted(model.state_dict().items()):
         h.update(name.encode());h.update(value.detach().cpu().contiguous().numpy().tobytes())
     return h.hexdigest()
-
