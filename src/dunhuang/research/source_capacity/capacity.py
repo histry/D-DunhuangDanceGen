@@ -14,7 +14,7 @@ from dunhuang.research.source_identifiability.g2 import Runtime,physical,source_
 from dunhuang.research.transfer_audit.instrument import ForwardObserver
 from dunhuang.sampling import constrained_ddim
 from .common import read,commit,fresh,forbid_optimizers,same_arrays,frozen,weight
-from .numerics import check_derivatives,trusted,cosine
+from .numerics import check_derivatives,trusted,cosine,trajectory_entry
 
 def rms(value):return float(np.sqrt(np.square(np.asarray(value,dtype=float)).mean()))
 
@@ -200,14 +200,7 @@ def run(config,out,replay_from=None):
                 aseq,bseq=[predictions[(case,arm,s)] for s in (0,1)]
                 for step,(a,b) in enumerate(zip(aseq,bseq)):
                     a=native(rt,torch.from_numpy(a[None]).cuda());b=native(rt,torch.from_numpy(b[None]).cuda())
-                    trajectories.append(dict(case=case,arm=arm,step=step,timestep=999-step*20,
-                        source_response=response(a,b,refs[0],refs[1],known),
-        guided_response=response(native(rt,guided[0]),native(rt,guided[1]),refs[0],refs[1],known),
-        clipped_response=response(native(rt,clipped[0]),native(rt,clipped[1]),refs[0],refs[1],known),
-        clipping_retention=float((clipped[1]-clipped[0]).norm()/(guided[1]-guided[0]).norm().clamp_min(1e-12)),
-        unconditional_source_invariant=True,
-                        A_preference=source_error(a,refs[1],known)-source_error(a,refs[0],known),
-                        B_preference=source_error(b,refs[0],known)-source_error(b,refs[1],known)))
+                    trajectories.append(trajectory_entry(case,arm,step,a,b,refs[0],refs[1],known))
             for tick in config["times"]:
                 x=torch.from_numpy(latents[str(case)+"__"+str(tick)]).cuda();t=torch.tensor([tick],device="cuda")
                 for arm in config["arms"]:

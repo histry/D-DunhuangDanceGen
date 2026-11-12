@@ -55,3 +55,17 @@ def test_target_dependent_oracle_cannot_admit_site_with_wrong_source_direction()
         oracle_target_dependent=dict(toward_A=1,toward_B=1)))
     r=gate([record],cfg)
     assert not r["train_directional_probe_pass"]["cond"] and not r["train_improved_sites"]["cond"]
+
+
+def test_clipped_trajectory_record_is_independent_of_common_state_cfg_variables():
+    from scipy.spatial.transform import Rotation
+    from dunhuang.contracts import sixd
+    from dunhuang.research.source_capacity.numerics import trajectory_entry
+    a=np.zeros((150,151),np.float32);a[:,7:]=np.tile([1,0,0,0,1,0],(150,24));b=a.copy()
+    b[:,79:127]=np.tile(sixd(Rotation.from_euler("x",.3).as_matrix()),(150,8))
+    known=np.ones((150,8),bool)
+    result=trajectory_entry(0,"C2",49,a,b,a,b,known)
+    assert result["timestep"]==19 and abs(result["source_response"]["normalized_response"]-1)<1e-9
+    assert result["A_preference"]>0 and result["B_preference"]>0
+    assert "guided_response" not in result
+    with pytest.raises(ValueError):trajectory_entry(0,"C2",50,a,b,a,b,known)

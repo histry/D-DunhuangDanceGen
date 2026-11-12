@@ -27,3 +27,12 @@ def trusted(record,cfg):
     fd=record["finite_differences"]
     return bool(record["adjoint_relative_error"]<=cfg["max_adjoint_relative_error"] and
         sum(v["relative_error"]<=cfg["max_fd_relative_error"] and v["cosine"] is not None and v["cosine"]>=cfg["min_fd_cosine"] for v in fd)>=2)
+
+
+def trajectory_entry(case,arm,step,a,b,ra,rb,known):
+    from dunhuang.research.source_tasks.math import response,angles
+    if not 0<=step<50:raise ValueError("Registered50-step trajectory required")
+    return dict(case=case,arm=arm,step=step,timestep=999-step*20,
+        source_response=response(a,b,ra,rb,known),
+        A_preference=float(angles(a,rb,known).mean()-angles(a,ra,known).mean()),
+        B_preference=float(angles(b,ra,known).mean()-angles(b,rb,known).mean()))
