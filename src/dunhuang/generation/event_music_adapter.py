@@ -25,11 +25,16 @@ class EventMusicAdapter(nn.Module):
 
 
 
-def authorize_event_adapter(payload,base_sha256,research=False):
+def authorize_event_adapter(payload,base_sha256,research=False,visibility_policy="legacy"):
     if payload.get('base_sha256')!=base_sha256 or payload.get('condition_schema') not in ('native_event_music_v1','root_contact_event_music_v1'):
         raise ValueError('Event/music base or geometry schema differs')
     if payload.get('mode') not in ('cross','additive'):
         raise ValueError('Unknown saved fusion mode')
+    saved_visibility=payload.get('visibility_policy','legacy')
+    if saved_visibility not in ('legacy','observed') or visibility_policy not in ('legacy','observed'):
+        raise ValueError('Unknown saved/runtime event visibility')
+    if saved_visibility!=visibility_policy:
+        raise ValueError('Checkpoint visibility requires a matching research runtime')
     if research is not True:
         raise ValueError('Event/music Adapter is research-only, lacks generation qualification')
     return dict(research_unqualified=True,qualified=False)

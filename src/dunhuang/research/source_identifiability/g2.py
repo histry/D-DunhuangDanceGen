@@ -1,11 +1,12 @@
 """Pre-registered G2: same architecture, exact-source supervision, frozen EDGE."""
-import argparse,copy,json,subprocess,os,hashlib
+import argparse,copy,json,subprocess,os
 from pathlib import Path
 import numpy as np
 import torch
 from dunhuang.io import checked,sha,write
 from dunhuang.contracts import MotionAdapter
 from dunhuang.generation.targets import phase_target,digest
+from dunhuang.generation.event_music_adapter import authorize_event_adapter
 from dunhuang.generation.source_following import consume,following_loss,interpolate_observed,hard_keyframe_inputs
 from dunhuang.generation.event_geometry import event_geometry
 from dunhuang.planning.primitive_contract import build
@@ -16,11 +17,10 @@ from dunhuang.alignment.sampling import group_schedule,coverage
 from dunhuang.research.legacy.event_transfer import TransferRuntime
 from dunhuang.research.mechanism import assembled
 from dunhuang.research.event_causal_audit import layer_delta,tensor_hash
-from dunhuang.research.event_metrics import event_margin,dynamics,event_timing
+from dunhuang.research.event_metrics import dynamics,event_timing
 from dunhuang.sampling import constrained_ddim
 
 def read(p):return json.loads(Path(p).read_text())
-def ref(p):return dict(path=str(Path(p).resolve()),sha256=sha(p))
 
 def make_condition(row,event_source):
     event=dict(event_uid="self_reference",source_uid=row["window_uid"],reference=row["motion"],source_interval=[0,150],music_interval=[0,150],
@@ -128,9 +128,9 @@ def preflight(assets,index,out,config,initial,registered):
     np.save(out/"training_schedule.npy",schedule);np.save(out/"donor_schedule.npy",donors)
     return train,chosen,contrasts,coverage(train,schedule)
 
-def train(rt,train_rows,out,config,initial,replay=False):
+def train(rt,train_rows,out,config):
     schedule=np.load(out/"training_schedule.npy");donors=np.load(out/"donor_schedule.npy")
-    weights=read("configs/g2_source_identifiability.json")["original_loss_weights"]
+    weights=config["original_loss_weights"]
     if weights!=dict(velocity=.1,rotation=.02,source_reconstruction=.05):raise ValueError("Original reconstruction objective changed")
     scale=torch.as_tensor(rt.scale,device="cuda");bias=torch.as_tensor(rt.bias,device="cuda")
     base_initial=digest(rt.adapter);states={"g2_0":copy.deepcopy(rt.initial)};initials=[]
@@ -259,11 +259,23 @@ def evaluate(rt,states,index,chosen,contrasts,out,config):
         actual_joint_scope=list(range(12,20)),new_root_contact_or_wrist_control=False,
         g3_started=False,sqp_started=False,operational_qualified=False)
 
+def validate_config(config):
+    if config["condition_policy"]!="completion_upper8" or config["visibility_policy"]!="observed" or config["train_scope"]!="same_recording_pose_exact":
+        raise ValueError("G2 registered conditioning/supervision differs")
+    if config["original_loss_weights"]!=dict(velocity=.1,rotation=.02,source_reconstruction=.05):
+        raise ValueError("G2 original reconstruction objective differs")
+    if config["test_tensor_reads"]!=0 or config["selection"]!="fixed_last_no_validation_selection":
+        raise ValueError("G2 data roles or checkpoint selection differs")
+    if type(config["steps"]) is not int or config["steps"]<1 or config["following_weight"]<=0:
+        raise ValueError("G2 positive registered training budget required")
+
 def run(assets_file,out,config,root_protocol,replay_from=None):
+    validate_config(config)
     out=Path(out).resolve();out.mkdir(parents=True,exist_ok=False);assets=read(assets_file)
     manifest=metadata(assets);index={r["window_uid"]:r for r in manifest["rows"] if r["role"] in ("train","val")}
     initial=read(root_protocol)["initial_adapter"];saved=torch.load(checked(initial),map_location="cpu",weights_only=True)
     if saved["mode"]!="cross" or saved["condition_schema"]!="native_event_music_v1":raise ValueError("Frozen G2 baseline differs")
+    authorize_event_adapter(saved,assets["checkpoint"]["sha256"],True)
     registered=read(Path(initial["path"]).parent/"protocol.json")["validation_pairs"]
     train_rows,chosen,contrasts,cov=preflight(assets,index,out,config,initial,registered)
     protocol=dict(schema="g2_source_identifiability_v1",code_commit=subprocess.check_output(["git","rev-parse","HEAD"],text=True).strip(),config=config,
@@ -286,7 +298,7 @@ def run(assets_file,out,config,root_protocol,replay_from=None):
                 if p["protocol_sha256"]!=sha(Path(replay_from)/"protocol.json"):raise ValueError("Saved G2 protocol seal differs")
                 states[arm]=p["state"]
             if any(not np.array_equal(np.load(Path(replay_from)/name),np.load(out/name)) for name in ("training_schedule.npy","donor_schedule.npy")):raise ValueError("G2 schedule replay differs")
-        else:states=train(rt,train_rows,out,config,initial)
+        else:states=train(rt,train_rows,out,config)
         rt.adapter.requires_grad_(False);rt.adapter.zero_grad(set_to_none=True);rt.adapter.eval()
         result=evaluate(rt,states,index,chosen,contrasts,out,config)
         write(out/"result.json",result)

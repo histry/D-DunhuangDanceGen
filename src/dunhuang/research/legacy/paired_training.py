@@ -1,5 +1,5 @@
 """Frozen-EDGE completion probes; partial targets never imply 151D qualification."""
-import argparse,json,sys,hashlib,subprocess,traceback
+import argparse,json,sys,subprocess,traceback
 from pathlib import Path
 import numpy as np
 from dunhuang.io import checked,pinned,write,sha

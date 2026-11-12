@@ -1,4 +1,3 @@
-import copy,ast
 from pathlib import Path
 import numpy as np
 import pytest
@@ -147,3 +146,22 @@ def test_corrupted_identity_preserves_exact_source_occurrence_marginal():
     assert all(rows[a]["source_group"]!=rows[b]["source_group"] for a,b in zip(schedule.flatten(),donors.flatten()))
     np.testing.assert_array_equal(donors,source_derangement(schedule,rows,13))
     with pytest.raises(ValueError):source_derangement(np.zeros((3,2),int),rows,13)
+
+def test_observed_training_checkpoints_cannot_silently_enter_legacy_consumers():
+    pytest.importorskip("torch")
+    from dunhuang.generation.event_music_adapter import authorize_event_adapter
+    legacy=dict(base_sha256="base",mode="cross",condition_schema="native_event_music_v1")
+    assert authorize_event_adapter(legacy,"base",True)["qualified"] is False
+    observed=dict(legacy,visibility_policy="observed")
+    with pytest.raises(ValueError,match="matching research runtime"):authorize_event_adapter(observed,"base",True)
+    assert authorize_event_adapter(observed,"base",True,visibility_policy="observed")["qualified"] is False
+    with pytest.raises(ValueError,match="Unknown"):authorize_event_adapter(dict(legacy,visibility_policy="invalid"),"base",True)
+
+def test_g2_cannot_misdeclare_visibility_supervision_or_training_objective():
+    pytest.importorskip("torch")
+    import json
+    from dunhuang.research.source_identifiability.g2 import validate_config
+    c=json.loads(Path("configs/g2_source_identifiability.json").read_text())
+    validate_config(c)
+    for key,value in (("visibility_policy","legacy"),("train_scope","cross_recording_weak"),("test_tensor_reads",1),("selection","best_val"),("original_loss_weights",{})):
+        with pytest.raises(ValueError):validate_config(dict(c,**{key:value}))

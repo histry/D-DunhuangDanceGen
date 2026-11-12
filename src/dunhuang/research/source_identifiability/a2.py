@@ -4,20 +4,20 @@ from pathlib import Path
 import numpy as np
 import torch
 from dunhuang.io import checked,sha,write
-from dunhuang.alignment.audio_clock import music_sample,same_music_time,music_seconds
+from dunhuang.alignment.audio_clock import music_sample,same_music_time
 from dunhuang.alignment.conditional_candidates import validate_roles,nuisance_statistics
 from dunhuang.alignment.dense_study import evaluate,VIEWS
 from dunhuang.alignment.local_identifiability import frozen_head
 from dunhuang.alignment.event_study import make_head
 from dunhuang.alignment.content_discrimination import pair_result,template_paths,fixed_score,metrics
 from dunhuang.alignment.event_metrics import multi_positive_loss
-from dunhuang.alignment.sampling import group_schedule,coverage
+from dunhuang.alignment.sampling import group_schedule
 from dunhuang.planning.time_map import motion_features74
 
 def read(p):return json.loads(Path(p).read_text())
 def ref(p):return dict(path=str(Path(p).resolve()),sha256=sha(p))
 
-def stats_for(source,rows,bank,manifest):
+def stats_for(rows,bank,manifest):
     events={};audio={};motion={};em=[];ed=[]
     event_root=Path(manifest["source_population"]["path"]).parent.parent
     clock_root=Path(manifest["source_clock_manifest"]["path"]).parent/"audio"
@@ -154,7 +154,7 @@ def run(source,out,config,replay_from=None):
         if sha(source.parent/name)!=summary["evidence"][name]:raise ValueError("Frozen dense input seal differs")
     manifest=read(source/"data/manifest.json");rows=manifest["rows"];validate_roles(rows)
     bank=dict(np.load(source/"data/nodes.npz"));old=read(source/"data/candidate_evidence.json")
-    audit,coverage_rows=clock_audit(rows,old);stats=stats_for(source,rows,bank,manifest);c,e=candidates(rows,bank,stats,config["strict"])
+    audit,coverage_rows=clock_audit(rows,old);stats=stats_for(rows,bank,manifest);c,e=candidates(rows,bank,stats,config["strict"])
     write(out/"clock_coverage.json",coverage_rows);write(out/"candidate_evidence.json",e);np.savez_compressed(out/"candidates.npz",**c);np.savez_compressed(out/"nuisance.npz",**stats)
     protocol=dict(schema="content_identifiability_v2",code_commit=subprocess.check_output(["git","rev-parse","HEAD"],text=True).strip(),config=config,source_manifest=ref(source/"data/manifest.json"),source_nodes=ref(source/"data/nodes.npz"),populations=e["populations"],new_blind_source=False,label_scope="source association, not artistic incompatibility")
     write(out/"protocol.json",protocol)
