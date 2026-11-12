@@ -1,0 +1,59 @@
+{
+  "schema": "source_capacity_v1",
+  "baseline": "6fb5bdbc2e721b054e249dd4469ec20add6f7e85",
+  "source": "outputs/source_tasks_02",
+  "seed": 20261113,
+  "arms": [
+    "C0",
+    "C1",
+    "C2",
+    "C3"
+  ],
+  "times": [
+    999,
+    499,
+    19
+  ],
+  "generation_seed": 20261113,
+  "probe": {
+    "sites": [
+      "cond",
+      "decoder_1",
+      "decoder_3",
+      "decoder_6"
+    ],
+    "train_music_cases": 4,
+    "relative_rms": 0.01,
+    "fd_steps": [
+      0.25,
+      0.125,
+      0.0625
+    ],
+    "max_fd_relative_error": 0.1,
+    "min_fd_cosine": 0.99,
+    "max_adjoint_relative_error": 0.0001,
+    "min_direction_rad": 0.001,
+    "min_direction_cosine": 0.0,
+    "min_relative_gain": 1.1
+  },
+  "local": {
+    "models": [
+      "15",
+      "30",
+      "dual",
+      "dual_shuffle"
+    ],
+    "band_seconds": 0.5,
+    "time_weight": 0.2,
+    "null_cost": 0.5,
+    "epsilon": 0.05,
+    "local_weight": 0.5,
+    "batch": 256,
+    "bootstrap_seed": 20261113,
+    "bootstrap_replicates": 1000
+  },
+  "optimizer_updates": 0,
+  "operational_qualified": false,
+  "test_tensor_reads": 0,
+  "human_reviewed": false
+}
