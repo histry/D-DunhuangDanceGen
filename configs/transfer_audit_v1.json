@@ -1,0 +1,52 @@
+{
+  "schema": "transfer_audit_v1",
+  "baseline": "4adee590d810c5dedc928be7b2a21258166ff86e",
+  "seed": 20261112,
+  "registry": "outputs/data_event_v3_04/main/source_registry_v3.json",
+  "source_study": "outputs/source_id_03",
+  "old_event_source": "outputs/event_id_02",
+  "a2_protocol": "AIST_strict_unseen_song",
+  "stride_frames": 15,
+  "sparse_stride_frames": 60,
+  "strict": {
+    "count_tolerance": 0,
+    "time_w1_seconds": 0.15,
+    "histogram_l1": 0.25,
+    "energy_log_ratio": 0.22314355131420976,
+    "onset_density_per_second": 0.25,
+    "min_queries": 30,
+    "min_recordings": 15,
+    "min_train_components": 3,
+    "min_val_components": 2
+  },
+  "g2_timesteps": [
+    100,
+    500,
+    900,
+    999
+  ],
+  "g2_sampler_steps": [
+    0,
+    24,
+    49
+  ],
+  "g2_models": [
+    "g2_0",
+    "g2_1",
+    "g2_2",
+    "g2_3"
+  ],
+  "generation_models": [
+    "g2_0",
+    "g2_2"
+  ],
+  "generation_seeds": [
+    20261112,
+    20261113
+  ],
+  "g2_music_cases": 2,
+  "allow_new_training": false,
+  "selection": "frozen_outputs_and_fixed_cases_no_validation_tuning",
+  "test_tensor_reads": 0,
+  "operational_qualified": false
+}

@@ -34,8 +34,8 @@ def stats_for(rows,bank,manifest):
         em.append(audio[ak][a:a+120]);ed.append(motion[rk][r["start_frame"]:r["start_frame"]+150])
     return nuisance_statistics(rows,bank,dict(energy_music=np.stack(em),energy_motion=np.stack(ed)),events)
 
-def candidates(rows,bank,stats,strict):
-    validate_roles(rows);n=len(rows);c=np.repeat(np.arange(n)[:,None],4,axis=1);p=np.zeros((n,4),bool);v=p.copy();eligible=np.zeros(n,bool)
+def candidates(rows,bank,stats,strict,*,role_validator=validate_roles):
+    role_validator(rows);n=len(rows);c=np.repeat(np.arange(n)[:,None],4,axis=1);p=np.zeros((n,4),bool);v=p.copy();eligible=np.zeros(n,bool)
     ticks=np.array([music_sample(r) for r in rows]);role=np.array([r["role"] for r in rows]);groups=np.array([r["source_group"] for r in rows])
     songs=np.array([r["music_uid"] for r in rows]);choreo=np.array([r["choreography_uid"] for r in rows]);available=bank["mv"].any(-1)&bank["dv"].any(-1)
     evidence=[];intersections=collections.Counter()
