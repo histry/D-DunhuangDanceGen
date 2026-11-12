@@ -1,0 +1,68 @@
+{
+  "schema": "source_necessity_registered_v1",
+  "baseline": "c7257d26a1881438eb6ee38e399f9c3d26c789ae",
+  "seed": 20261113,
+  "source_a2": "outputs/transfer_audit_01/a2",
+  "source_a2_replay": "outputs/transfer_audit_01/a2_replay",
+  "registry": "outputs/data_event_v3_04/main/source_registry_v3.json",
+  "task": "AIST_strict_unseen_song",
+  "a2": {
+    "scope": "train_support_and_operator_comparison_only",
+    "shrinkage": 0.1,
+    "nearest_quantile": 0.9,
+    "radial_quantile": 0.99,
+    "donor_music_groups": 3,
+    "per_music_cap": 16,
+    "min_time_difference_frames": 60,
+    "min_queries": 30,
+    "min_recordings": 15,
+    "min_train_groups": 3,
+    "min_val_groups": 2,
+    "bootstrap_seed": 20261113,
+    "bootstrap_replicates": 1000
+  },
+  "g2": {
+    "scope": "exposed_development_same_recording_pose_exact_mechanism",
+    "steps": 400,
+    "batch": 2,
+    "learning_rate": 0.0001,
+    "following_weight": 2.0,
+    "phase_radius": 2,
+    "min_phase_frames": 6,
+    "min_reference_separation_rad": 0.05,
+    "min_train_windows": 30,
+    "min_train_recordings": 15,
+    "min_train_music": 3,
+    "min_val_music": 4,
+    "min_val_recordings": 8,
+    "music_cases": 4,
+    "generation_seeds": [
+      20261113
+    ],
+    "arms": [
+      "M0",
+      "M1",
+      "M2",
+      "M3",
+      "M3_shuffle"
+    ],
+    "validation_selection": "stable_sha256_before_model_evaluation",
+    "checkpoint_selection": "fixed_last",
+    "phase_config": {
+      "minimum_peak_distance": 6,
+      "speed_prominence_floor_radps": 0.05,
+      "acceleration_prominence_floor_radps2": 1.0,
+      "hold_quantile": 0.2,
+      "hold_max_speed_radps": 0.2,
+      "hold_min_frames": 6
+    },
+    "original_loss_weights": {
+      "velocity": 0.1,
+      "rotation": 0.02,
+      "source_reconstruction": 0.05
+    }
+  },
+  "encoder_training": false,
+  "test_tensor_reads": 0,
+  "operational_qualified": false
+}
