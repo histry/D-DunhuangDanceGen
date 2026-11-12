@@ -1,0 +1,32 @@
+{
+  "schema": "dense_coverage_and_causal_v1",
+  "frozen_baseline": "54c1f9bd45b4529a8a29e8910a24c06fa84475a8",
+  "stride_frames": 15,
+  "strict": {
+    "count_tolerance": 0,
+    "time_w1_seconds": 0.15,
+    "histogram_l1": 0.25,
+    "energy_log_ratio": 0.22314355131420976,
+    "onset_density_per_second": 0.25,
+    "min_queries": 30,
+    "min_recordings": 15,
+    "min_train_components": 3,
+    "min_val_components": 2
+  },
+  "seed": 20261123,
+  "steps": 400,
+  "batch": 12,
+  "learning_rate": 0.0005,
+  "score_temperature": 0.1,
+  "arms": [
+    "tcn30",
+    "tcn15",
+    "transformer15",
+    "tcn30_random"
+  ],
+  "selection": "fixed_last_no_validation_selection",
+  "test_evaluations": 0,
+  "encoder_training": false,
+  "planner_routing": false,
+  "new_blind_source": false
+}

@@ -1,0 +1,23 @@
+{
+  "schema": "frozen_edge_g1_v1",
+  "music_cases": 2,
+  "timesteps": [
+    100,
+    500,
+    900
+  ],
+  "seed": 20261123,
+  "vjp_probes": 2,
+  "fd_epsilons": [
+    0.01,
+    0.003,
+    0.001
+  ],
+  "minimum_preference_radians": 0.001,
+  "minimum_activity_retention": 0.9,
+  "event_source": "outputs/event_id_02",
+  "optimizer_calls": 0,
+  "sampler": "DDIM50_no_hard_guidance",
+  "selection": "first_two_distinct_registered_validation_music",
+  "operational_qualified": false
+}

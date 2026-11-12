@@ -19,19 +19,10 @@ class EventMusicAdapter(nn.Module):
         self.output=nn.Linear(128,512)
         nn.init.zeros_(self.output.weight);nn.init.zeros_(self.output.bias)
 
-    def forward(self,geometry,music,return_aux=False):
-        if geometry.ndim!=3 or geometry.shape[1:]!=(150,153) or music.shape!=(len(geometry),150,512):
-            raise ValueError('Native event/music token contract differs')
-        if not torch.isfinite(geometry).all() or not torch.isfinite(music).all():
-            raise ValueError('Nonfinite event/music tokens')
-        event=self.encoder(self.input(geometry))
-        musical=self.music(music)
-        # Both variants use all trainable modules and exactly the same parameters.
-        query=musical if self.mode=='cross' else event
-        attended=self.attention(query,event,event,need_weights=False)[0]
-        fused=self.norm(event+musical+attended)
-        residual=self.output(fused)
-        return (residual,self.reconstruct(event)) if return_aux else residual
+    def forward(self,geometry,music,return_aux=False,visibility_policy="legacy",return_trace=False):
+        from .event_visibility import forward_event
+        return forward_event(self,geometry,music,return_aux,visibility_policy,return_trace)
+
 
 
 def authorize_event_adapter(payload,base_sha256,research=False):
