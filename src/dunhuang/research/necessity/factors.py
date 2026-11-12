@@ -32,3 +32,10 @@ def donors(schedule,rows,seed):
     result=flat[j]
     if sorted(result.tolist())!=sorted(flat.tolist()):raise AssertionError("Source occurrence marginal changed")
     return result.reshape(np.asarray(schedule).shape)
+
+
+def visible_source_distance(a,b,known_a,known_b):
+    from dunhuang.research.source_identifiability.g2 import source_error
+    x,y=np.asarray(known_a),np.asarray(known_b)
+    if x.shape!=(150,8) or y.shape!=x.shape or x.dtype!=bool or y.dtype!=bool or not (x&y).any():raise ValueError("Actual visible reference masks required")
+    return source_error(a,b,x&y)

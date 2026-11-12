@@ -10,10 +10,10 @@ from dunhuang.data.change_event_phases import motion_profiles,detect
 from dunhuang.research.transfer_audit.contracts import validate_song_task
 from dunhuang.generation.targets import phase_target
 from dunhuang.generation.source_pairs import source_pairs
-from dunhuang.research.source_identifiability.g2 import make_condition,source_error
+from dunhuang.research.source_identifiability.g2 import make_condition
 from dunhuang.alignment.audio_clock import music_seconds
 from dunhuang.alignment.sampling import group_schedule,coverage
-from .factors import phase_mask,donors,timesteps
+from .factors import phase_mask,donors,timesteps,visible_source_distance
 
 def read(p):return json.loads(Path(p).read_text(encoding="utf-8"))
 
@@ -64,7 +64,7 @@ def run(assets_file,config,out,replay_from=None):
         condition,keys,_,_=make_condition(r,bridge)
         known=condition.known[0,:,79:127].reshape(150,8,6).all(-1).numpy();original=keys[0].numpy()
         expanded=phase_mask(phases,a,known,original,cfg["phase_radius"])
-        masks[r["window_uid"]]=dict(original=original,expanded=expanded)
+        masks[r["window_uid"]]=dict(original=original,expanded=expanded,known=known)
         status=int(expanded.any(-1).sum())>=cfg["min_phase_frames"]
         statuses[(r["role"],"phase_admitted" if status else "insufficient_phase")]+=1
         if status:admitted.append(r)
@@ -76,8 +76,7 @@ def run(assets_file,config,out,replay_from=None):
         key=tuple(sorted((a,b)))
         if key in unique:continue
         na=np.load(check(ra["motion"]));nb=np.load(check(rb["motion"]))
-        mask=(np.load(check(ra["observed"]))[:,79:127].reshape(150,8,6).all(-1)&np.load(check(rb["observed"]))[:,79:127].reshape(150,8,6).all(-1))
-        distance=source_error(na,nb,mask)
+        distance=visible_source_distance(na,nb,masks[a]["known"],masks[b]["known"])
         if distance<cfg["min_reference_separation_rad"]:comparison_counts[(ra["role"],"below_source_separation")]+=1;continue
         if not np.array_equal(np.load(check(ra["jukebox"])),np.load(check(rb["jukebox"]))):comparison_counts[(ra["role"],"music_tensor_differs")]+=1;continue
         unique[key]=dict(a=min(a,b),b=max(a,b),role=ra["role"],music_uid=ra["music_uid"],separation_rad=distance)

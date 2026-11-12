@@ -57,3 +57,25 @@ def test_observed_null_centering_is_exact_identity_with_nonzero_output_weights()
         a=adapter(geometry,music,visibility_policy="observed")
         null=adapter(torch.zeros_like(geometry),music,visibility_policy="observed")
     assert torch.count_nonzero(null)==0 and torch.equal(a-null,a)
+
+
+def test_indexed_candidate_pools_equal_full_scan_for_both_registered_tasks():
+    from dunhuang.research.necessity.support import candidate_pool
+    rows=[dict(role="train" if i<12 else "val",music_uid="m"+str(i%3),choreography_uid="c"+str(i%4),window_uid="w"+str(i)) for i in range(24)]
+    ticks=np.array([i//4*1470 for i in range(24)]);cfg=dict(min_time_difference_frames=1,donor_music_groups=3,per_music_cap=16)
+    for task in ("time","association"):
+        for i,r in enumerate(rows):
+            pool=[j for j,v in enumerate(rows) if v["role"]==r["role"] and (v["music_uid"]==r["music_uid"] and v["choreography_uid"]==r["choreography_uid"] if task=="time" else ticks[j]==ticks[i])]
+            assert candidate_pool(rows,ticks,i,task,cfg)==candidate_pool(rows,ticks,i,task,cfg,pool)
+
+def test_hidden_only_source_difference_cannot_qualify_reference_pair():
+    pytest.importorskip("torch")
+    from scipy.spatial.transform import Rotation
+    from dunhuang.contracts import sixd
+    from dunhuang.research.necessity.factors import visible_source_distance
+    a=np.zeros((150,151),np.float32);a[:,7:]=np.tile([1,0,0,0,1,0],(150,24));b=a.copy()
+    known=np.ones((150,8),bool);known[25:40]=False;known[90:115]=False
+    for j in range(8):
+        b[~known[:,j],79+6*j:85+6*j]=sixd(Rotation.from_euler("x",1).as_matrix())
+    assert visible_source_distance(a,b,known,known)<1e-8
+    assert visible_source_distance(a,b,np.ones_like(known),np.ones_like(known))>.05

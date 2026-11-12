@@ -20,20 +20,24 @@ def fit(z,train,shrinkage):
 
 def transform(z,model):return ((z-model["mean"])/model["scale"])@model["matrix"]
 
-def candidate_pool(rows,ticks,i,task,config):
-    r=rows[i]
+def candidate_pool(rows,ticks,i,task,config,pool_ids=None):
+    r=rows[i];pool_ids=range(len(rows)) if pool_ids is None else pool_ids
     if task=="time":
-        return [j for j,s in enumerate(rows) if s["role"]==r["role"] and s["music_uid"]==r["music_uid"] and
+        return [j for j in pool_ids if (s:=rows[j])["role"]==r["role"] and s["music_uid"]==r["music_uid"] and
             s["choreography_uid"]==r["choreography_uid"] and abs(ticks[j]-ticks[i])>=config["min_time_difference_frames"]*1470]
     bucket={}
-    for j,s in enumerate(rows):
+    for j in pool_ids:
+        s=rows[j]
         if s["role"]==r["role"] and ticks[j]==ticks[i] and s["music_uid"]!=r["music_uid"] and s["choreography_uid"]!=r["choreography_uid"]:
             bucket.setdefault(s["music_uid"],[]).append(j)
     groups=sorted(bucket,key=lambda song:key((r["window_uid"],song)))[:config["donor_music_groups"]]
     return [j for song in groups for j in sorted(bucket[song],key=lambda j:key(rows[j]["window_uid"]))[:config["per_music_cap"]]]
 
 def build(rows,ticks,z,model,config,task,available):
-    n=len(rows);white=transform(z,model);pools=[candidate_pool(rows,ticks,i,task,config) if available[i] else [] for i in range(n)]
+    n=len(rows);white=transform(z,model);index={}
+    bucket=lambda i:(rows[i]["role"],rows[i]["music_uid"],rows[i]["choreography_uid"]) if task=="time" else (rows[i]["role"],ticks[i])
+    for i in range(n):index.setdefault(bucket(i),[]).append(i)
+    pools=[candidate_pool(rows,ticks,i,task,config,index[bucket(i)]) if available[i] else [] for i in range(n)]
     pools=[[j for j in pool if available[j]] for pool in pools]
     nearest=[]
     for i,r in enumerate(rows):
