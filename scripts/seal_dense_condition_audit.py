@@ -40,7 +40,7 @@ def seal(out,receipt):
             if limits is None:limits=p["limits"]
             if p["limits"]!=limits:raise ValueError("Native limits differ across interventions")
             native.update(p["absolute"]["reasons"])
-    rows=read(out/"a1/data/manifest.json")["rows"];bank=np.load(out/"a1/data/nodes.npz");c=np.load(out/"a1/data/conditional.npz")
+    rows=read(out/"a1/data/manifest.json")["rows"];bank=dict(np.load(out/"a1/data/nodes.npz"));c=dict(np.load(out/"a1/data/conditional.npz"))
     for i in np.flatnonzero(c["eligible"]):
         for j in c["candidates"][i][c["positive"][i]]:
             if not bank["mv"][j].any() or not bank["dv"][j].any():raise ValueError("Frozen candidate has unobserved positive")
