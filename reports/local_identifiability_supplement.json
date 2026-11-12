@@ -1,0 +1,296 @@
+{
+  "schema": "local_identifiability_supplement_v1",
+  "execution_commit": "de562c0731e0f4669e1e6cf5aa245255e781d901",
+  "candidate_populations": {
+    "train": {
+      "comparisons": 774,
+      "queries_with_nonoverlap_candidates": 389,
+      "individual_rule_pass_counts": {
+        "count": 602,
+        "time_distribution": 2,
+        "histogram": 30,
+        "energy": 506,
+        "onset": 774
+      },
+      "joint_pass_count": 0,
+      "window_start_frame_counts": {
+        "0": 712,
+        "75": 573,
+        "150": 195
+      }
+    },
+    "val": {
+      "comparisons": 288,
+      "queries_with_nonoverlap_candidates": 150,
+      "individual_rule_pass_counts": {
+        "count": 208,
+        "time_distribution": 0,
+        "histogram": 0,
+        "energy": 174,
+        "onset": 222
+      },
+      "joint_pass_count": 0,
+      "window_start_frame_counts": {
+        "0": 222,
+        "75": 184,
+        "150": 75
+      }
+    }
+  },
+  "failed_rule_counts": {
+    "count": 252,
+    "time_distribution": 1060,
+    "histogram": 1032,
+    "energy": 382,
+    "onset": 66
+  },
+  "gradient_blocks": {
+    "retrieval": {
+      "original_loss_weight": 1.0,
+      "mean_raw_total_norm": 0.2291473001241684,
+      "mean_weighted_total_norm": 0.2291473001241684,
+      "mean_input_block_norms": {
+        "music": {
+          "token128": 0.17640429735183716,
+          "descriptor16": 0.02516740746796131
+        },
+        "motion": {
+          "token128": 0.1410609483718872,
+          "descriptor16": 0.026938147842884064
+        }
+      }
+    },
+    "shift": {
+      "original_loss_weight": 0.25,
+      "mean_raw_total_norm": 0.24834519624710083,
+      "mean_weighted_total_norm": 0.06208630092442036,
+      "mean_input_block_norms": {
+        "music": {
+          "token128": 0.18061670660972595,
+          "descriptor16": 0.0
+        },
+        "motion": {
+          "token128": 0.17019328474998474,
+          "descriptor16": 0.0
+        }
+      }
+    },
+    "partial": {
+      "original_loss_weight": 0.25,
+      "mean_raw_total_norm": 0.037638455629348755,
+      "mean_weighted_total_norm": 0.009409614256583154,
+      "mean_input_block_norms": {
+        "music": {
+          "token128": 0.020572900772094727,
+          "descriptor16": 0.0
+        },
+        "motion": {
+          "token128": 0.031479284167289734,
+          "descriptor16": 0.0
+        }
+      }
+    },
+    "null": {
+      "original_loss_weight": 0.1,
+      "mean_raw_total_norm": 0.2861819565296173,
+      "mean_weighted_total_norm": 0.028618195652961732,
+      "mean_input_block_norms": {
+        "music": {
+          "token128": 0.13038122653961182,
+          "descriptor16": 0.0
+        },
+        "motion": {
+          "token128": 0.2539308965206146,
+          "descriptor16": 0.0
+        }
+      }
+    },
+    "weak": {
+      "original_loss_weight": 0.1,
+      "mean_raw_total_norm": 1.7299792766571045,
+      "mean_weighted_total_norm": 0.172997921705246,
+      "mean_input_block_norms": {
+        "music": {
+          "token128": 1.2733086347579956,
+          "descriptor16": 0.25992655754089355
+        },
+        "motion": {
+          "token128": 1.0802431106567383,
+          "descriptor16": 0.35679876804351807
+        }
+      }
+    }
+  },
+  "hubness_occupancy_null": {
+    "train": {
+      "raw128": {
+        "query_tokens": 515,
+        "candidate_tokens": 4096,
+        "uniform_occupancy_mean": [
+          0.13879611650485435,
+          0.881708984375,
+          0.8882823261149874
+        ],
+        "uniform_occupancy_95": [
+          [
+            0.11844660194174757,
+            0.879150390625,
+            0.8836539555521845
+          ],
+          [
+            0.1553398058252427,
+            0.8837890625,
+            0.8919386187803398
+          ]
+        ],
+        "metrics": [
+          "top_one_percent_share",
+          "unused_fraction",
+          "gini"
+        ],
+        "scope": "finite-count uniform occupancy context, not a learned baseline or semantic truth"
+      },
+      "raw144": {
+        "query_tokens": 836,
+        "candidate_tokens": 4096,
+        "uniform_occupancy_mean": [
+          0.10434210526315757,
+          0.81524169921875,
+          0.831116259999253
+        ],
+        "uniform_occupancy_95": [
+          [
+            0.10044856459330144,
+            0.81201171875,
+            0.8257264935799191
+          ],
+          [
+            0.11007775119617226,
+            0.818365478515625,
+            0.8362777344918138
+          ]
+        ],
+        "metrics": [
+          "top_one_percent_share",
+          "unused_fraction",
+          "gini"
+        ],
+        "scope": "finite-count uniform occupancy context, not a learned baseline or semantic truth"
+      },
+      "projected144": {
+        "query_tokens": 836,
+        "candidate_tokens": 4096,
+        "uniform_occupancy_mean": [
+          0.10449162679425805,
+          0.8155126953125,
+          0.8315586801921353
+        ],
+        "uniform_occupancy_95": [
+          [
+            0.10044856459330144,
+            0.811993408203125,
+            0.8256609026895185
+          ],
+          [
+            0.11007775119617226,
+            0.818603515625,
+            0.8365163410679576
+          ]
+        ],
+        "metrics": [
+          "top_one_percent_share",
+          "unused_fraction",
+          "gini"
+        ],
+        "scope": "finite-count uniform occupancy context, not a learned baseline or semantic truth"
+      }
+    },
+    "val": {
+      "raw128": {
+        "query_tokens": 185,
+        "candidate_tokens": 4096,
+        "uniform_occupancy_mean": [
+          0.24375675675675637,
+          0.955833740234375,
+          0.9567785446579378
+        ],
+        "uniform_occupancy_95": [
+          [
+            0.22702702702702704,
+            0.955078125,
+            0.9553196262668919
+          ],
+          [
+            0.26500000000000007,
+            0.956793212890625,
+            0.9585824007601351
+          ]
+        ],
+        "metrics": [
+          "top_one_percent_share",
+          "unused_fraction",
+          "gini"
+        ],
+        "scope": "finite-count uniform occupancy context, not a learned baseline or semantic truth"
+      },
+      "raw144": {
+        "query_tokens": 291,
+        "candidate_tokens": 4096,
+        "uniform_occupancy_mean": [
+          0.17558419243986226,
+          0.931419677734375,
+          0.9337041670022552
+        ],
+        "uniform_occupancy_95": [
+          [
+            0.15807560137457044,
+            0.93017578125,
+            0.9313545358140034
+          ],
+          [
+            0.1958762886597938,
+            0.932861328125,
+            0.9363631939969932
+          ]
+        ],
+        "metrics": [
+          "top_one_percent_share",
+          "unused_fraction",
+          "gini"
+        ],
+        "scope": "finite-count uniform occupancy context, not a learned baseline or semantic truth"
+      },
+      "projected144": {
+        "query_tokens": 291,
+        "candidate_tokens": 4096,
+        "uniform_occupancy_mean": [
+          0.17419243986254268,
+          0.93132080078125,
+          0.9335167324420106
+        ],
+        "uniform_occupancy_95": [
+          [
+            0.15807560137457044,
+            0.93017578125,
+            0.9313545358140034
+          ],
+          [
+            0.1958762886597938,
+            0.932861328125,
+            0.9363637393282862
+          ]
+        ],
+        "metrics": [
+          "top_one_percent_share",
+          "unused_fraction",
+          "gini"
+        ],
+        "scope": "finite-count uniform occupancy context, not a learned baseline or semantic truth"
+      }
+    }
+  },
+  "gradient_scope": "same final F checkpoint across four Train batches; raw Euclidean gradients; virtual SGD does not reproduce historical AdamW",
+  "source_gradients_sha256": "51fb9ba917e74d661f20f7cacab807edd4e33400d6f75dddd460ad357adc28d0",
+  "optimizer_calls": 0,
+  "operational_qualified": false
+}

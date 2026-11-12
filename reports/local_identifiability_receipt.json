@@ -1,0 +1,44 @@
+{
+  "schema": "local_identifiability_delivery_receipt_v1",
+  "status": "R1_COMPLETED_AND_FRESH_REPLAY_VERIFIED",
+  "execution_commit": "de562c0731e0f4669e1e6cf5aa245255e781d901",
+  "replay_commit": "de562c0731e0f4669e1e6cf5aa245255e781d901",
+  "baseline": "01c051521b0b3baf1b3f01085b40f73a6e02174a",
+  "launcher_exit_status": 0,
+  "pytest": "144 passed, 1 skipped",
+  "supplemental_edge_test": "1 passed",
+  "strict_population": {
+    "train": {
+      "queries": 0,
+      "components": 0,
+      "recordings": 0,
+      "population_sufficient": false
+    },
+    "val": {
+      "queries": 0,
+      "components": 0,
+      "recordings": 0,
+      "population_sufficient": false
+    }
+  },
+  "r2_status": "NOT_STARTED_INSUFFICIENT_CONDITIONAL_POPULATION",
+  "r2_optimizer_updates": 0,
+  "replay_optimizer_calls": 0,
+  "diagnostic_virtual_clone_updates": 20,
+  "closed_form_probe_fits": 10,
+  "scientific_array_fields_verified": 180,
+  "started_utc": "2026-11-12T08:30:45Z",
+  "finished_utc": "2026-11-12T08:38:46Z",
+  "public_summary_sha256": "01f0af6f8eccb759dde9619bc29ce318b81f6ba8a7b30ef923f46d17d065d0dc",
+  "scientific_result_sha256": "048271e785160ab76796ec38d4f76a8057c03e13b3f82e18caa2628e8cde8dad",
+  "replay_result_sha256": "34a4a43345b906b22f92044851046a49f5bd8cfa58827b74506ee40173699a52",
+  "preflight_sha256": "16b73b470abffc81a6472f703ebab9ff49beb4f9a3419460085b652c02306892",
+  "source_assets_retained_on_server": true,
+  "public_delivery_scope": "aggregate JSON and status receipt only",
+  "temporary_ssh_files_created": 0,
+  "temporary_ssh_files_remaining": 0,
+  "true_event_semantics": "UNKNOWN",
+  "encoder_generation_native_unchanged": true,
+  "test_evaluations": 0,
+  "operational_qualified": false
+}
