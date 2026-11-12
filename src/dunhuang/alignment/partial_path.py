@@ -99,7 +99,7 @@ class StrictPartialPath(nn.Module):
         cost=result["cost"][index].detach().cpu().numpy()[np.ix_(mi,di)]
         allowed=result["allowed"][index].detach().cpu().numpy()[np.ix_(mi,di)]
         r=exact_path(cost,float(result["null_cost"].detach()),float(result["null_cost"].detach()),allowed)
-        r["matches"]=[(int(mi[i]),int(di[j])) for i,j in r["matches"]]
+        r["matches"]=[[int(mi[i]),int(di[j])] for i,j in r["matches"]]
         r["music_drops"]=[int(mi[i]) for i in r["music_drops"]]
         r["motion_drops"]=[int(di[i]) for i in r["motion_drops"]]
         r["crossings"]=0

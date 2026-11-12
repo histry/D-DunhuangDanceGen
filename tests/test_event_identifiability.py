@@ -42,7 +42,9 @@ def test_hard_crossing_null_masks_and_padding_equivalence():
     x=head(m,d,v,w,t,u);z=head(m[:,v[0]],d[:,w[0]],v[:,v[0]],w[:,w[0]],t[v[0]],u[w[0]])
     assert torch.allclose(x["score"],z["score"],atol=1e-6)
     bad=m.clone();bad[~v]=float("nan");assert torch.equal(x["score"],head(bad,d,v,w,t,u)["score"])
-    assert head.decode(x)["crossings"]==0
+    import json
+    decoded=head.decode(x)
+    assert decoded["crossings"]==0 and json.loads(json.dumps(decoded))==decoded
     x["score"].sum().backward();assert head.music.weight.grad.isfinite().all()
 
 def test_full_rotations_cover_more_groups_than_batch_and_train_only():

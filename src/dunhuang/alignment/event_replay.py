@@ -68,6 +68,7 @@ def run(source,out,replay_out):
         execution_commit=protocol["code_commit"],replay_commit=subprocess.check_output(["git","rev-parse","HEAD"],text=True).strip(),
         protocol_sha256=sha(out/"protocol.json"),source_observations_rebuilt=True,array_fields_verified=array_fields,
         head_predictions=validation,probe_predictions="EXACT",optimizer_calls=0,test_evaluations=0,operational_qualified=False))
+    write(out/"replay_verified.json",dict(path=str(replay_out/"result.json"),sha256=sha(replay_out/"result.json")))
     print("EVENT_REPLAY_VERIFIED",flush=True)
 
 def main():

@@ -2,12 +2,12 @@
 from pathlib import Path
 import sys,argparse,json
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/"src"))
-from dunhuang.io import sha,write
+from dunhuang.io import sha,write,checked
 def export(out,receipt,dest):
     out=Path(out);receipt=Path(receipt)
     result=json.loads((out/"result.json").read_text());protocol=json.loads((out/"protocol.json").read_text())
     pre=json.loads((out/"preflight.json").read_text());data=json.loads((out/"data/manifest.json").read_text())
-    replay=json.loads((out/"replay/result.json").read_text())
+    replay=json.loads(checked(json.loads((out/"replay_verified.json").read_text())).read_text()) if (out/"replay_verified.json").exists() else json.loads((out/"replay/result.json").read_text())
     if replay["status"]!="FRESH_EVENT_IDENTIFIABILITY_REPLAY_VERIFIED":raise ValueError("Fresh replay incomplete")
     operator=result["operator"]
     safe_operator={k:v for k,v in operator.items() if k!="frozen_heads"}
