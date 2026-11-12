@@ -88,6 +88,7 @@ def test_v2_candidates_are_new_data_associations_with_inherited_roles():
     b=dict(mv=np.ones((4,2),bool),dv=np.ones((4,2),bool))
     s=dict(counts=np.ones((4,2),int)*2,quantiles=np.ones((4,2,16)),hist=np.ones((4,2,4))*.25,energy=np.ones((4,2)),onset_density=np.ones(4))
     c,e=candidates(rows,b,s,cfg)
+    __import__("json").dumps(e,allow_nan=False)
     assert c["eligible"].all() and (c["positive"].sum(-1)==1).all() and not e["populations"]["train"]["population_sufficient"]
     rows[1]["audio_offset_seconds"]=1
     c,e=candidates(rows,b,s,cfg)
@@ -104,3 +105,34 @@ def test_hard_control_only_observes_supported_upper8_key_values():
     assert mask.sum()==6 and value.isfinite().all()
     assert value[:,75,79:85].eq(1).all() and not value[~mask].any()
     assert not mask[:,:,:79].any() and not mask[:,:,127:].any()
+
+def test_a2_small_source_audit_completes_without_starting_ineligible_training(tmp_path):
+    pytest.importorskip("torch")
+    import json
+    from dunhuang.io import write,sha
+    from dunhuang.research.source_identifiability.a2 import run
+    source=tmp_path/"study/a1";data=source/"data";data.mkdir(parents=True)
+    event=tmp_path/"events/data/sidecars";event.mkdir(parents=True)
+    cache=tmp_path/"clock/data/audio";cache.mkdir(parents=True)
+    rows=[];seals={}
+    for i,role in enumerate(("train","val")):
+        p=data/(str(i)+".npy");x=native();x[:,4]=i;np.save(p,x)
+        sidecar=event/(str(i)+".json");write(sidecar,{"events":[]});seals["data/sidecars/"+sidecar.name]=sha(sidecar)
+        np.savez(cache/(str(i)+".npz"),values=np.ones((150,50),np.float32))
+        rows.append(dict(role=role,window_uid=str(i),source_group=str(i),recording_uid=str(i),music_uid=str(i),choreography_uid=str(i),
+            start_frame=0,audio_offset_seconds=0.,fps=30,audio={"sha256":str(i)},raw_motion={"sha256":str(i)},source_native={"path":str(p),"sha256":sha(p)}))
+    write(event.parent.parent/"preflight.json",{"files":seals})
+    write(data/"manifest.json",dict(rows=rows,source_population={"path":str(event.parent/"manifest.json")},source_clock_manifest={"path":str(cache.parent/"manifest.json")}))
+    np.savez(data/"nodes.npz",music=np.ones((2,12,144),np.float32),motion=np.ones((2,20,144),np.float32),mv=np.ones((2,12),bool),dv=np.ones((2,20),bool),
+        mt=np.tile(np.arange(12)/3,(2,1)),dt=np.tile(np.arange(20)/5,(2,1)))
+    np.savez(data/"conditional.npz",eligible=np.zeros(2,bool))
+    write(data/"candidate_evidence.json",{"evidence":[]})
+    write(source.parent/"public_summary.json",{"evidence":{str(p.relative_to(source.parent)):sha(p) for p in (data/"manifest.json",data/"nodes.npz",data/"conditional.npz")}})
+    cfg=json.loads(Path("configs/content_identifiability_v2.json").read_text())
+    cfg["event_source"]=str(event.parent.parent)
+    out=tmp_path/"audit"
+    run(source,out,cfg)
+    result=json.loads((out/"result.json").read_text())
+    assert result["training"]["optimizer_updates"]==0
+    assert result["training"]["status"]=="NOT_STARTED_INSUFFICIENT_V2_POPULATION"
+    assert result["clock"]["old_positive_actual_clock_disagreements"]==0

@@ -51,7 +51,7 @@ def candidates(rows,bank,stats,strict):
         codes=(~rules).astype(int)@np.array([1,2,4,8,16]);intersections.update(map(int,codes))
         ok=pool[rules.all(-1)];distance=w1.sum(-1)+hist.sum(-1)+energy.sum(-1)+onset
         if len(ok):
-            rank=pool[np.argsort(distance,kind="stable")];accepted=set(ok);chosen=[j for j in rank if j in accepted][:3]
+            rank=pool[np.argsort(distance,kind="stable")];accepted=set(ok);chosen=[int(j) for j in rank if j in accepted][:3]
             c[i,0]=i;c[i,1:1+len(chosen)]=chosen;p[i,0]=True;v[i,:1+len(chosen)]=True;eligible[i]=True
             evidence.append(dict(query=i,negative_indices=chosen,scope="different verified data association; artistic suitability UNKNOWN"))
     populations={}
@@ -72,9 +72,17 @@ def clock_audit(rows,old_evidence):
         failures[rows[e["query"]]["role"]][str(code)]+=1
     for key in ("music_uid","choreography_uid","source_group"):
         buckets={}
-        for r in rows:buckets.setdefault(r[key],[]).append(r)
-        for identity,values in buckets.items():
-            times=sorted({music_sample(r) for r in values});coverage_rows.append(dict(kind=key,identity=identity,role=values[0]["role"],unique_audible_starts=len(times),start_seconds=times[0]/44100,end_seconds=times[-1]/44100+5))
+        for r in rows:buckets.setdefault((r[key],r["music_uid"]),[]).append(r)
+        for (identity,music_uid),values in buckets.items():
+            times=sorted({music_sample(r) for r in values});merged=[]
+            for t in times:
+                end=t+5*44100
+                if not merged or t>merged[-1][1]:merged.append([t,end])
+                else:merged[-1][1]=max(merged[-1][1],end)
+            covered=sum(b-a for a,b in merged)/44100
+            coverage_rows.append(dict(kind=key,identity=identity,music_uid=music_uid,role=values[0]["role"],
+                unique_audible_starts=len(times),start_seconds=times[0]/44100,end_seconds=times[-1]/44100+5,
+                covered_seconds=covered,gap_seconds=(times[-1]-times[0])/44100+5-covered,intervals_seconds=[[a/44100,b/44100] for a,b in merged]))
     return dict(old_positive_actual_clock_disagreements=bad_positive,old_negative_same_actual_music_time=bad_negative,
         offset_seconds_min=min(offsets),offset_seconds_max=max(offsets),old_rule_failure_intersections={k:dict(v) for k,v in failures.items()},
         codebook=dict(count=1,time_distribution=2,histogram=4,energy=8,onset=16),new_blind_source=False),coverage_rows
@@ -146,7 +154,7 @@ def run(source,out,config,replay_from=None):
         if sha(source.parent/name)!=summary["evidence"][name]:raise ValueError("Frozen dense input seal differs")
     manifest=read(source/"data/manifest.json");rows=manifest["rows"];validate_roles(rows)
     bank=dict(np.load(source/"data/nodes.npz"));old=read(source/"data/candidate_evidence.json")
-    audit,coverage_rows=clock_audit(rows,old);stats,_=stats_for(source,rows,bank,manifest);c,e=candidates(rows,bank,stats,config["strict"])
+    audit,coverage_rows=clock_audit(rows,old);stats=stats_for(source,rows,bank,manifest);c,e=candidates(rows,bank,stats,config["strict"])
     write(out/"clock_coverage.json",coverage_rows);write(out/"candidate_evidence.json",e);np.savez_compressed(out/"candidates.npz",**c);np.savez_compressed(out/"nuisance.npz",**stats)
     protocol=dict(schema="content_identifiability_v2",code_commit=subprocess.check_output(["git","rev-parse","HEAD"],text=True).strip(),config=config,source_manifest=ref(source/"data/manifest.json"),source_nodes=ref(source/"data/nodes.npz"),populations=e["populations"],new_blind_source=False,label_scope="source association, not artistic incompatibility")
     write(out/"protocol.json",protocol)
