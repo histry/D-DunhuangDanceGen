@@ -56,11 +56,10 @@ def build(assets,population,config,out):
     snapshots=[ref(population_file),assets["paired_generation_manifest"],assets["catalog_source"],ref(roster_path),ref(fd_path),ref(fd_meta_path)]
     snapshots+=[ref(official_root/("crossmodal_"+r+".txt")) for r in official]
     sources=[];asset_cache={}
-    def resolve(asset,required=True):
+    def resolve(asset,required=True,candidates=None):
         # Motion/audio roots are independent; an LFS pointer is not asset content.
         states=[]
-        for root in (Path("assets/datasets"),datasets):
-            path=root/relative(asset)
+        for path in candidates or [root/relative(asset) for root in (Path("assets/datasets"),datasets)]:
             if not path.is_file():continue
             stamp=(path.stat().st_size,path.stat().st_mtime_ns)
             key=(str(path.resolve()),asset["sha256"])
@@ -119,10 +118,14 @@ def build(assets,population,config,out):
                 representation_blockers=["two unobserved canonical hand joints","units/coordinate and source-clock admission incomplete"],
                 val_status="PENDING_VERIFIED_WORK_IDENTITY_WITHIN_OFFICIAL_TRAIN")
         row["admission"]=admit(row);sources.append(row)
-    selected_source_shas={r["source_sha256"] for r in source_catalog["source_records"]}
+    selected_source_ids={r["source_sha256"]:r["source_uid"] for r in source_catalog["source_records"]}
+    selected_source_shas=set(selected_source_ids)
     for record in roster["sources"]:
-        raw_file=reference/"assets/motion/smpl_official_14"/record["file"];checked(dict(path=str(raw_file),sha256=record["sha256"]))
-        row=dict(source_uid="change:"+record["sha256"],dataset_id="change",source_sha256=record["sha256"],raw_source=ref(raw_file),
+        candidate=reference/"assets/motion/smpl_official_14"/record["file"]
+        raw_file,integrity=resolve(dict(path=record["file"],sha256=record["sha256"]),required=record["sha256"] in selected_source_shas,
+            candidates=[Path(assets["motion_root"])/record["file"],candidate])
+        row=dict(source_uid=selected_source_ids.get(record["sha256"],"change:"+record["sha256"]),dataset_id="change",source_sha256=record["sha256"],
+            raw_source=dict(path=str(raw_file or candidate),sha256=record["sha256"]),asset_integrity=dict(motion=integrity,audio="UNPAIRED_NO_AUDIO"),
             sequence_id=record["source_id"],recording_uid=record["recording_uid"],performer_uid=None,
             performer_count=record["recording_performer_count"],solo_verified=record["solo_compatible"] is True and record["recording_performer_count"]==1,
             solo_evidence=dict(method="upstream_solo_aware_manifest_v3",manifest=ref(roster_path),review_status=record["solo_review_status"]),

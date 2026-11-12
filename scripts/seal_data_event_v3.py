@@ -38,6 +38,13 @@ def seal(out,receipt):
         if roles and attest([lookup[uid] for uid in roles],roles,task)["forbidden_identity_overlaps"]:raise ValueError("Task source leakage")
     for f in registry["protocols"]["ChangE_Source_Heldout"]["folds"]:
         if attest([lookup[uid] for uid in f["roles"]],f["roles"],"unseen_motion_source")["forbidden_identity_overlaps"]:raise ValueError("Fold leakage")
+    for f in registry["protocols"]["ChangE_Source_Heldout"]["folds"]:
+        sets=[]
+        for role in ("train","val","test"):
+            index=read(main/"fold_indexes"/("fold_"+str(f["fold"])+"_"+role+".json"))
+            if not index["entries"] or any(f["roles"].get(e["source_uid"])!=role for e in index["entries"]):raise ValueError("Fold feature index leaks sources")
+            sets.append({e["event_uid"] for e in index["entries"]})
+        if len(set.union(*sets))!=499 or any(sets[i]&sets[j] for i in range(3) for j in range(i)):raise ValueError("Fold event population differs")
     if any(p["ready_for_new_training"] for p in registry["protocols"].values()):raise ValueError("Audit promoted into training qualification")
     result=dict(schema="data_event_v3_final_seal",status="SEALED_DATA_V3_CHANGE_E1_REPLAY",execution_commit=commit,
         verifier_commit=subprocess.check_output(["git","rev-parse","HEAD"],text=True).strip(),exit_status=0,

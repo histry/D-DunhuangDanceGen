@@ -4,7 +4,7 @@ from pathlib import Path
 import numpy as np
 from dunhuang.io import checked,write,sha,pinned
 from dunhuang.data.sources import ref
-from dunhuang.data.split_registry import stable
+from dunhuang.data.split_registry import stable,catalog_subset
 from dunhuang.data.change_event_phases import motion_profiles,detect
 from dunhuang.data.change_event_audit import audit_event,slot_eligibility,summarize
 from dunhuang.planning.time_map import motion_features74
@@ -133,6 +133,19 @@ def run(assets_file,population,config,out,replay_from=None):
         baseline_catalog_sha256=assets["catalog"]["sha256"],source_registry_identity=registry["identity_digest"],
         segmentation_version="UNCHANGED_V1",center_version="UPPER8_ACTUAL_PHASE_E1",source_only=True,can_route=False,
         full_record_discovery_dependencies=True,model_training_qualified=False,operational_qualified=False)
+    folds_dir=out/"fold_indexes";folds_dir.mkdir();fold_index_counts=[]
+    for fold in registry["protocols"]["ChangE_Source_Heldout"]["folds"]:
+        counts={}
+        for role in ("train","val","test"):
+            index=catalog_subset(shadow,fold["roles"],role)
+            if not index["entries"]:raise ValueError("Fold source identity does not resolve Catalog entries")
+            index.update(schema="change_v3_source_filtered_feature_index",fold=fold["fold"],role=role,
+                learned_embeddings_built=False,train_only_statistics_pending=True)
+            write(folds_dir/("fold_"+str(fold["fold"])+"_"+role+".json"),index)
+            counts[role]=len(index["entries"])
+        if sum(counts.values())!=len(events):raise ValueError("Fold does not partition frozen event population")
+        fold_index_counts.append(dict(fold=fold["fold"],role_events=counts))
+    report["source_filtered_fold_indexes"]=fold_index_counts
     write(out/"event_catalog_v2_shadow.json",shadow);write(out/"change_event_e1_report.json",report)
     write(out/"event_diagnostics.json",diagnostics);write(out/"source_seals.json",source_seals);write(out/"music_slots.json",slots)
     result=dict(status="COMPLETED_DATA_V3_CHANGE_E1_SHADOW",registry_identity=registry["identity_digest"],
@@ -146,6 +159,9 @@ def run(assets_file,population,config,out,replay_from=None):
         def semantic(catalog):
             return [dict({k:v for k,v in e.items() if k not in ("reference","motion_features")},reference_sha256=e["reference"]["sha256"],motion_features_sha256=e["motion_features"]["sha256"]) for e in catalog["entries"]]
         if semantic(read(original/"event_catalog_v2_shadow.json"))!=semantic(shadow):raise ValueError("Fresh primitive identity differs")
+        for path in (original/"fold_indexes").glob("*.json"):
+            target=out/"fold_indexes"/path.name
+            if semantic(read(path))!=semantic(read(target)):raise ValueError("Source-filtered fold index differs")
         old_registry=read(original/"source_registry_v3.json")
         if old_registry!=registry:raise ValueError("Fresh task registry differs")
         arrays=0
