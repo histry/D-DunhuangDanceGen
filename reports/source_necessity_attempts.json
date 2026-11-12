@@ -1,0 +1,67 @@
+{
+  "schema": "source_necessity_attempt_history",
+  "attempts": [
+    {
+      "attempt": "01",
+      "execution_commit": "8b1bde0ae98f0c28c32207922bf89f291334e52c",
+      "started_utc": "2026-11-12T17:34:46Z",
+      "finished_utc": "2026-11-12T17:38:25Z",
+      "exit_status": 130,
+      "optimizer_updates": 0,
+      "generations": 0,
+      "g2_directory_exists": false,
+      "reason": "Stopped before G2 after review found that source separation must use visible reference frames; corrected in the next published commit.",
+      "outputs_preserved": true,
+      "receipt_sha256": {
+        "edge_check.log": "f7ce3ce97a47e6cbd4d40c8e3b322920a823d5662bdd089b7b01622bee6b8611",
+        "execution_commit.txt": "3783460888c4bbf2fe8e93c8c34dc5f426f7698bd4ab57b9f30ad9ae7ff820a4",
+        "exit_status.txt": "f5bde7eb9f6c71611dc5726e8aca3eb4eba3e386da49e0a4ed5c295a90a73a0d",
+        "finished_utc.txt": "9f200f62d08734ad6fc2b539c12899396fc85a96683305fc34c8ce25bfaad9ab",
+        "pytest.log": "5404a5d5f2e540ebf7fd99f44ca5faa72f07c85477e853d943cb35aee6c111a6",
+        "started_utc.txt": "630d3c8f29e4745e3ccc452efcfe57ee133780b472fb9219ff7a73985a1d8a0b"
+      }
+    },
+    {
+      "attempt": "02",
+      "execution_commit": "6033b51c83ebf17240b87b70a3a6ba0a07589806",
+      "started_utc": "2026-11-12T17:40:54Z",
+      "finished_utc": "2026-11-12T17:54:04Z",
+      "exit_status": 1,
+      "optimizer_updates": 0,
+      "generations": 0,
+      "g2_directory_exists": false,
+      "reason": "G2 qualification passed but fresh replay stopped at integer versus serialized string histogram key comparison; corrected without changing data thresholds or weights.",
+      "outputs_preserved": true,
+      "receipt_sha256": {
+        "edge_check.log": "f33ec4bd109f68a11203d70ef3b97b12c7f984e656909fcb0c89cdd79e0ed335",
+        "execution_commit.txt": "c95f8aa793e75db5ab7538832959fe178672aeeb867a8bbb670527c87ab2c031",
+        "exit_status.txt": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+        "finished_utc.txt": "3e0f3b8cdb161ea94ff4c2628d973ae9d8eec57ca5660432b1375695be0f5c2c",
+        "pytest.log": "db7955a285234b46be1564857eac7e9c6258f06287aeedf54dc2862c1e25e6e6",
+        "started_utc.txt": "ef5292ce9afe8a69a54f66607d52e9d39d2b3a7e8c3f1aca6229ca69d009314d"
+      }
+    },
+    {
+      "attempt": "03",
+      "execution_commit": "3e1cf43e3cb03393a5ab818614954fc1ec544bc4",
+      "started_utc": "2026-11-12T18:00:31Z",
+      "finished_utc": "2026-11-12T18:35:38Z",
+      "exit_status": 0,
+      "optimizer_updates": 2000,
+      "generations": 52,
+      "g2_directory_exists": true,
+      "reason": "Registered full run and independent replays completed.",
+      "outputs_preserved": true,
+      "receipt_sha256": {
+        "edge_check.log": "ec6d35f2266a7845f58874efc690e74987b4f2d10d002e28ddcd47864dc060e9",
+        "execution_commit.txt": "5263d67de4d3b1a598ff23f8cf186466eae3ebf6b91e8463a4eec5d6bb50eba5",
+        "exit_status.txt": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+        "finished_utc.txt": "be75e7c98e6ea45ccfd947b778b4e660a5e0ded965f92e70f557fb36ecae4bad",
+        "pytest.log": "4f282538113d0a133dc033aca4b51420f209ecfad627f987d11162f057ba46b9",
+        "started_utc.txt": "a2589ecd197a89f5c3a1292ee344b02bbcd3e099f9aeba4dfc1a5a78b5376499"
+      }
+    }
+  ],
+  "temporary_ssh_files_created": 0,
+  "temporary_ssh_files_remaining": 0
+}

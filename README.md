@@ -187,3 +187,8 @@ See [experiment report](reports/dense_condition_20261112.md) and [registered pro
 [Report](reports/source_identifiability_20261112.md) · [receipt](reports/source_id_03_receipt.json) · [code boundaries](research/README.md) · [registered protocol](docs/G2_A2_PROTOCOL.md).
 
 New studies are isolated in research/source_identifiability; historical generation trainers moved to research/legacy, and four duplicate script wrappers were removed. Three matched 357,424-parameter Adapters completed 400 updates each. All model arms failed source-following qualification (0/4); Native 0/52. All44 diffusion outputs and8 nonlearned controls were independently recomputed exactly. New A2 population: Train69 queries/63 recordings/6 groups, Val0; no A2 training. Final regression164 passed +1 dependency skip; supplemental EDGE13 passed. Default generation and Native remain unchanged, and observed-trained checkpoints require a matching research runtime.
+
+
+## A2-V3 candidate support / G2-M mechanism study (2026-11-13)
+
+See [report](reports/A2V3候选支持域与G2M机制对照报告.md), [registered protocol](docs/source_necessity_v1.md), and [sealed receipt](reports/source_necessity_receipt.json). New separately registered A2 tasks have 1,023/885 Val queries; the historical strict task remains unchanged. Five matched Adapters completed 400 updates each. All source-following arms remain 0/4; Native 11/52 overall (bypass 1/4, learned arms 2/8 each). All52 generations and156 motion/FK arrays were independently replayed exactly with zero optimizer calls. Production retrieval/generation and G3 remain unqualified.
