@@ -2,7 +2,7 @@
 import ast,collections,json,re
 from pathlib import Path
 from dunhuang.io import checked,sha,write
-from dunhuang.data.sources import raw_path
+from dunhuang.data.sources import relative
 from dunhuang.data.split_registry import partition,attest,leave_one_recording_out,stable
 from dunhuang.data.single_person_admission import admit
 
@@ -55,16 +55,22 @@ def build(assets,population,config,out):
     fd=official_finedance(fd_path)
     snapshots=[ref(population_file),assets["paired_generation_manifest"],assets["catalog_source"],ref(roster_path),ref(fd_path),ref(fd_meta_path)]
     snapshots+=[ref(official_root/("crossmodal_"+r+".txt")) for r in official]
-    sources=[]
+    sources=[];asset_cache={}
+    def resolve(asset):
+        # Motion and audio may be independently materialized under different roots.
+        for root in (Path("assets/datasets"),datasets):
+            path=root/relative(asset)
+            if not path.exists():continue
+            stamp=(path.stat().st_size,path.stat().st_mtime_ns)
+            key=(str(path.resolve()),asset["sha256"])
+            if asset_cache.get(key)==stamp:return path
+            try:checked(dict(path=str(path),sha256=asset["sha256"]))
+            except ValueError:continue
+            asset_cache[key]=stamp;return path
+        raise ValueError("Registered raw asset missing or SHA differs: "+relative(asset).parts[0])
     for old in sorted(raw,key=lambda r:(r["dataset_id"],r["sequence_id"])):
-        dataset=old["dataset_id"];raw_file=None;audio_file=None
-        for candidate_root in (Path("assets/datasets"),datasets):
-            try:
-                raw_file=raw_path(candidate_root,old["motion_asset"],required=True)
-                audio_file=raw_path(candidate_root,old["audio_asset"],required=True)
-                break
-            except (ValueError,FileNotFoundError):raw_file=None;audio_file=None;continue
-        if raw_file is None or audio_file is None:raise ValueError("Registered raw assets are not materialized")
+        dataset=old["dataset_id"]
+        raw_file=resolve(old["motion_asset"]);audio_file=resolve(old["audio_asset"])
         raw_sha=old["motion_asset"]["sha256"];windows=pair_by_sha.get(raw_sha,[])
         if windows:
             sample=windows[0]

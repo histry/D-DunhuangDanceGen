@@ -35,7 +35,7 @@ planning/ 实现事件目录、节拍/能量时间线、单调时间映射及 To
 
 alignment/ 是 50D 音乐 / 74D 动作双编码器与局部同步头。heuristic 默认启用；learned_shadow 需要显式绑定全局/同步 checkpoint、对应编码器和查询收据，只记录两级评分；learned_qualified 还需验证资格。历史 Test 已暴露，只作为开发回归。同歌检索与同歌时段检索分开评估。
 
-generation/adapter.py 提供零初始化、掩码条件 Adapter，冻结 EDGE 主干，复用原 CFG。generation/train.py 提供真实 151D/4800D 配对、来源分离、目标支持域预检；尚无获完整生成资格的训练权重。以下训练命令需 EDGE 环境：
+generation/adapter.py 提供零初始化、掩码条件 Adapter，冻结 EDGE 主干，复用原 CFG。research/legacy/paired_training.py 保留历史真实 151D/4800D 配对、来源分离与支持域预检；scripts/train.py 为历史重放入口，不消费新的 Split V3，也不授予新协议资格。尚无获完整生成资格的训练权重。以下历史命令需 EDGE 环境：
 ```bash
 python scripts/train.py --assets outputs/new_prepare/assets.json --out outputs/new_motion_training --task motion --steps 300
 python scripts/train.py --assets inputs/paired_assets.json --out outputs/new_paired_training --task paired --steps 300
