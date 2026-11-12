@@ -25,3 +25,7 @@ Task qualification is limited to exposed development mechanism research; it does
 New study drivers are in src/dunhuang/research/source_tasks. They reuse the existing frozen EDGE runtime, sampler, source condition and Native implementation. P0 reads saved generation outputs; P1 binds real paired performances and training-only q support; CF compares shared-state source objectives; the independent A2 comparison shares encoder parameters across rate choices and binds fresh Train-only statistics.
 
 Only one existing production file changes: pipeline.py rejects legacy anchor selection in Dunhuang whole-song requests, so the Planner cannot silently overwrite an earlier learned selection. The research checkpoints remain unqualified and require explicit research consumers. See [registered contract](../docs/source_tasks_v1.md).
+
+## Frozen source capacity and local paths
+
+The no-optimizer study in research/source_capacity replays the frozen C0-C3 trajectories, checks layer responses and JVP/VJP/finite differences, and compares parameter-free injection probes on fixed Train pairs. Its oracle directions use true targets and are not deployable source conditions. The independent local-path study preserves all four content checkpoints, Normalizer and candidate populations, and separates global/temporal content from DTW/NULL freedom. See [contract](../docs/source_capacity_v1.md). No existing baseline source or configuration is modified.

@@ -197,3 +197,8 @@ See [report](reports/A2V3候选支持域与G2M机制对照报告.md), [registere
 ## Real source CF and fixed-candidate content tasks (2026-11-13)
 
 [Report](reports/来源效应与G2CF及A2内容对照报告.md) · [protocol](docs/source_tasks_v1.md) · [receipt](reports/source_tasks_receipt.json). Saved-source response was independently measured; real paired high-noise source qualification and four matched CF arms completed. All CF source-follow gates remain 0/4 (Native9/44). Four equal-parameter15/30/dual/shuffle content models were trained on the same frozen offline A2 candidates and independently replayed. Default retrieval/generation, Native and G3 remain unqualified. The pipeline now rejects legacy anchor selection which a whole-song Planner would overwrite.
+
+
+## Frozen capacity / local path audit (2026-11-13)
+
+[Report](reports/冻结来源控制容量与局部路径审计报告.md) · [protocol](docs/source_capacity_v1.md) · [receipt](reports/source_capacity_receipt.json). Zero optimizer updates. All72 derivative probes passed numeric checks; no site passed directional control qualification.32 frozen controls and96 motion/FK arrays were exactly regenerated in an independent process. All4 frozen content encoders were compared on fixed candidates using same-frame, banded DTW, partial NULL and content controls, then independently replayed. Group intervals do not support a reliable local-path gain. No production or G3/R4 promotion.

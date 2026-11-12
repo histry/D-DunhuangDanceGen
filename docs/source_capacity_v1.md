@@ -14,7 +14,7 @@ The learned source residual direction is normalized to1% of the base cond_encode
 
 ## R2: train-only injection sensitivity
 
-Choose4 Train music groups/pairs by stableSHA before any model evaluation from the190 qualified real Train pairs. Probe q(X_A) at the same999/499/19 with common pre-registered Gaussian, not an assertion that low-noise states support joint two-target CF training. Compare the identical numerical512D direction at cond_encoder output and decoder outputs1/3/6, plus decoder3 gated to actual provided frames. Layer coordinate spaces differ, so a larger numerical response alone is not semantic equivalence or usable control.
+The choice rule is registered before execution: deterministically select4 Train music groups/pairs by stableSHA from the190 qualified real Train pairs, without reading Val scores. Probe q(X_A) at the same999/499/19 with common pre-registered Gaussian, not an assertion that low-noise states support joint two-target CF training. Compare the identical numerical512D direction at cond_encoder output and decoder outputs1/3/6, plus decoder3 gated to actual provided frames. Layer coordinate spaces differ, so a larger numerical response alone is not semantic equivalence or usable control.
 
 All controls have matched full-tensor RMS; gated active-frame peak amplitudes differ and are not equal-peak comparisons. The legal time map for these same-clock paired recordings is identity. I3 phase alignment therefore equals I2 gating exactly; no arbitrary warp is introduced to manufacture a benefit.
 
@@ -33,7 +33,7 @@ S3: same S2 with zero content and only physical clock. On equal full grids this 
 
 For S0/S1/S2 retain identical global cosine +.5 local weight, and separately report global-only/local-only. A fixed motion-token time permutation preserves token values and marginal statistics while breaking correspondence; labels are held as a counterfactual diagnostic, not invented semantic truth. Compare joint S2 against S0, global-only, nuisance, scrambled-content and frozen shuffled encoder; group-level paired R1/MRR with1000 bootstraps/seed20261113. Only6 known exposed Val groups exist, with no new blind or online retrieval claim. Full DTW fails closed for incomplete grids instead of silently filtering candidates.
 
-Vectorized DTW is a bounded recurrence; partial matching reuses the existing solver. Torch validation checks diagonal-only DTW, synthetic shifts, content-independent S3 and existing exact partial-path agreement at low temperature. No new OT/encoder is introduced.
+Vectorized DTW is a bounded recurrence; partial matching reuses the existing solver. Torch validation checks diagonal-only DTW, synthetic shifts, content-independent S3 and existing exact partial-path agreement at low temperature. No new OT/encoder is introduced. These correspondence paths are not executable E1-W retiming maps with motion-rate guarantees.
 
 ## Execution
 

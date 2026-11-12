@@ -1,0 +1,25 @@
+{
+  "schema": "source_capacity_sealed_receipt",
+  "baseline": "6fb5bdbc2e721b054e249dd4469ec20add6f7e85",
+  "execution_commit": "30cf5ab293588e0fd2ce5f5e58907b1ae5ecf9f7",
+  "exit_status": 0,
+  "verifier_commit": "30cf5ab293588e0fd2ce5f5e58907b1ae5ecf9f7",
+  "baseline_existing_source_and_configs_unchanged": true,
+  "summary_sha256": "fe1197b3c9c13ba2251b7c7f796bb0762c38f9ba025dda0886eabdc1be67dabf",
+  "launcher_sha256": "f82ed44862325fb2028252bad11a5d7e1a7433f09532d52077cff6970149475f",
+  "started_utc": "2026-11-12T21:14:26Z",
+  "finished_utc": "2026-11-12T21:37:13Z",
+  "receipt_sha256": {
+    "edge_check.log": "d118e9fdbadfd69c65c536bf7ee1133285b7033819aac2cd3f8d2d219caf6ca4",
+    "execution_commit.txt": "b4323c297d7bb766299eeae7331186b6c3ec4735317cd4d4c414ddc47c8527b2",
+    "started_utc.txt": "602ff2a94465e704f47e59169bafeaa66e9012f60820ab976377524f078a1679",
+    "pytest.log": "6713b24f82513964f4bcd1a750722ad8d760f6d50424dd3db3867c8c37887bee",
+    "exit_status.txt": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "finished_utc.txt": "9f0a80d7d024a4bddd44278902bd57f50a36309c6c22b46fee35164dd91d6bc4"
+  },
+  "optimizer_updates": 0,
+  "replay_optimizer_calls": 0,
+  "temporary_ssh_files_created": 0,
+  "temporary_ssh_files_remaining": 0,
+  "operational_qualified": false
+}
