@@ -19,7 +19,10 @@ def build(plan,observed,beat_frames=(),radius=12):
         candidates=[e["primitive"]["music_frame"]]+[int(t) for t in beat_frames if a+radius<=t<b-radius]
         # Up to three source-only keys; no claim of learned music interpretation.
         ticks=sorted(set(candidates))
-        if len(ticks)>3:ticks=[ticks[0],ticks[len(ticks)//2],ticks[-1]]
+        if len(ticks)>3:
+            center=e["primitive"]["music_frame"]
+            beats=[t for t in ticks if t!=center]
+            ticks=sorted(set([center,beats[0],beats[-1]]))
         keys=[]
         for tick in ticks:
             source=float(source_positions(e,np.array([tick]))[0])
@@ -47,6 +50,8 @@ def identity(contract):
     return hashlib.sha256(json.dumps(payload,sort_keys=True,separators=(",",":")).encode()).hexdigest()
 
 def verify(contract,plan):
+    validate(plan,plan["audio_sha256"],plan["frames"])
+    if contract.get("fps")!=30 or contract.get("time_map_schema")!="event_time_warp_motion74_v1":raise ValueError("Primitive clock schema differs")
     if contract["schema"]!=SCHEMA or contract["can_route"] is not False or contract["frames"]!=plan["frames"] or contract["audio_sha256"]!=plan["audio_sha256"]:raise ValueError("Primitive condition identity differs")
     by_id={e["event_uid"]:e for e in plan["events"]}
     if len(contract["events"])!=len(by_id):raise ValueError("Primitive contract event population differs")

@@ -90,3 +90,27 @@ def test_contract_binds_source_clock_observations_and_shadow(tmp_path):
         else:v["expression"]["learned"]=True
         bad["semantic_digest"]=identity(bad)
         with pytest.raises(ValueError):verify(bad,plan)
+
+def test_candidate_population_rejects_test_and_empty_music_positive():
+    rows=[dict(role="test",source_group="g",recording_uid="r",music_uid="m",choreography_uid="c",start_frame=0)]
+    cfg=json.loads(Path("configs/local_identifiability.json").read_text())["strict"]
+    with pytest.raises(ValueError,match="Test"):fast_candidates(rows,{},None,cfg)
+    rows[0]["role"]="train"
+    rows.append(dict(rows[0],recording_uid="r2"))
+    rows.append(dict(rows[0],recording_uid="r3",start_frame=150))
+    b=dict(mv=np.array([[True],[False],[True]]),dv=np.ones((3,1),bool))
+    st=dict(counts=np.ones((3,2),int),quantiles=np.ones((3,2,16)),hist=np.ones((3,2,4))*.25,energy=np.ones((3,2)),onset_density=np.ones(3))
+    a,_=build_candidates(rows,b,st,cfg);c,_=fast_candidates(rows,b,st,cfg)
+    assert all(np.array_equal(a[k],c[k]) for k in a)
+
+def test_contract_requires_declared_clock_and_keeps_registered_center(tmp_path):
+    data=np.zeros((150,151),np.float32);mask=np.ones_like(data,bool)
+    p=tmp_path/"motion.npy";q=tmp_path/"mask.npy";np.save(p,data);np.save(q,mask)
+    ref=lambda p:dict(path=str(p),sha256=sha(p))
+    e=dict(event_uid="e",source_uid="s",reference=ref(p),source_interval=[0,150],music_interval=[0,150],time_warp=[[0,0],[150,150]],
+        primitive=dict(source_frame=75,music_frame=75,joints=[12],radius=12),feasibility=dict(native="UNKNOWN"))
+    plan=dict(schema="event_plan_v1",fps=30,frames=150,audio_sha256="x",time_scale_limits=[.75,1.33],events=[e])
+    c=build(plan,{"s":ref(q)},beat_frames=[15,20,30,40,50,60,100,130])
+    assert 75 in [k["music_frame"] for k in c["events"][0]["key_motion"]]
+    c["fps"]=60
+    with pytest.raises(ValueError,match="clock"):verify(c,plan)

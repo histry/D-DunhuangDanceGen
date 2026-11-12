@@ -175,7 +175,7 @@ def run(assets_file,root_protocol,output,config,replay_from=None):
                 native=np.load(gen/"native.npy");fk=np.load(gen/"native_fk.npy");physical=read(gen/"physical.json")
                 audit=physical["audit"];continuous={k:float(v) for k,v in audit.items() if isinstance(v,(int,float))}
                 generated.append(dict(case=case,control=control,seed=config["seed"],sampler=sampler,
-                    native_ok=physical["absolute"]["ok"],native_failed=physical["absolute"].get("failed",physical["absolute"].get("failures",[])),
+                    native_ok=physical["absolute"]["ok"],native_failed=physical["absolute"]["reasons"],
                     continuous=continuous,dynamics=dynamics(native,fk)))
                 print("G1_GENERATED",case,control,flush=True)
             for policy in ("legacy","observed"):

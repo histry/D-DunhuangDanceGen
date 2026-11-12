@@ -25,6 +25,7 @@ def sample_tokens(tokens,times,fps):
     return (tokens[lo]*(1-a)+tokens[hi]*a).astype(np.float32)
 
 def fast_candidates(rows,bank,stats,config):
+    validate_roles(rows)
     groups={}
     for i,r in enumerate(rows):groups.setdefault((r["role"],r["music_uid"],r["choreography_uid"]),[]).append(i)
     n=len(rows);c=np.repeat(np.arange(n)[:,None],4,axis=1);positive=np.zeros((n,4),bool);valid=positive.copy();eligible=np.zeros(n,bool)
@@ -32,7 +33,7 @@ def fast_candidates(rows,bank,stats,config):
     for i,r in enumerate(rows):
         if not bank["mv"][i].any() or not bank["dv"][i].any():continue
         pool=groups[(r["role"],r["music_uid"],r["choreography_uid"])]
-        pos=[i]+[j for j in pool if j!=i and rows[j]["start_frame"]==r["start_frame"] and bank["dv"][j].any()]
+        pos=[i]+[j for j in pool if j!=i and rows[j]["start_frame"]==r["start_frame"] and bank["mv"][j].any() and bank["dv"][j].any()]
         negatives=[]
         for j in pool:
             if abs(rows[j]["start_frame"]-r["start_frame"])<120 or not bank["mv"][j].any() or not bank["dv"][j].any():continue
