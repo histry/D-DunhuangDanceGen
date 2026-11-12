@@ -11,12 +11,14 @@ def export(out,receipt,seal=False):
     ar=read(out/"a2_replay/replay.json");gr=read(out/"g2_replay/replay.json");commit=(receipt/"execution_commit.txt").read_text().strip()
     if g["generations"]!=32 or gr["regenerated"]!=32 or g["legacy_predictions_and_generations_exactly_replayed"]!=76:raise ValueError("Frozen G2 reproduction incomplete")
     if any(r["optimizer_calls"] for r in (a,g,ar,gr)) or a["test_tensor_reads"]:raise ValueError("Optimizer/Test boundary violated")
+    a2_commit=read(out/"a2_reuse.json")["source_execution_commit"] if (out/"a2_reuse.json").exists() else commit
     for sub in ("a2","a2_replay","g2","g2_replay"):
-        if read(out/sub/"protocol.json")["code_commit"]!=commit:raise ValueError("Execution identity differs")
+        expected=a2_commit if sub.startswith("a2") else commit
+        if read(out/sub/"protocol.json")["code_commit"]!=expected:raise ValueError("Execution identity differs")
     counts=lambda name:(re.findall(r"\d+ passed(?:, \d+ skipped)?",(receipt/name).read_text()) or [None])[-1]
     names=("a2/protocol.json","a2/result.json","a2/manifest.json","a2/source_seals.json","a2/train_statistics.json","a2/nodes.npz","a2/nuisance.npz","a2/candidates.npz","a2/sparse_candidates.npz","a2_replay/replay.json",
         "g2/protocol.json","g2/result.json","g2/traces.npz","g2/latents.npz","g2_replay/replay.json")
-    public=dict(schema="public_transfer_audit_v1",execution_commit=commit,a2=a,g2=g,replay=dict(a2=ar,g2=gr),
+    public=dict(schema="public_transfer_audit_v1",execution_commit=commit,a2_execution_commit=a2_commit,a2=a,g2=g,replay=dict(a2=ar,g2=gr),
         tests=dict(main=counts("pytest.log"),edge=counts("edge_check.log")),evidence={name:sha(out/name) for name in names},
         temporary_ssh_files_created=0,temporary_ssh_files_remaining=0,operational_qualified=False)
     text=json.dumps(public)

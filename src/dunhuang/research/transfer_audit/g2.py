@@ -12,6 +12,7 @@ from dunhuang.generation.source_following import following_loss,hard_keyframe_in
 from dunhuang.research.source_identifiability.g2 import Runtime,physical,source_error
 from dunhuang.research.event_causal_audit import layer_delta,tensor_hash
 from dunhuang.sampling import constrained_ddim
+from .instrument import ForwardObserver
 
 def read(p):return json.loads(Path(p).read_text(encoding="utf-8"))
 
@@ -107,7 +108,7 @@ def run(assets_file,config,out,replay_from=None):
         forward_calls[0]+=1
         if rt.state.get("collect_latent") and kwargs.get("cond_drop_prob")==0 and int(args[2][0]) in selected_times:
             key=rt.state["trajectory_label"]+"_"+str(int(args[2][0]));latents[key]=args[0].detach().cpu().numpy().copy()
-    handle=rt.model.register_forward_pre_hook(prehook,with_kwargs=True)
+    observer=ForwardObserver(rt.model,prehook)
     protocol=dict(schema="g2_frozen_failure_attribution",code_commit=subprocess.check_output(["git","rev-parse","HEAD"],text=True).strip(),
         config=config,source_protocol=ref(source/"protocol.json"),weights=weights,initial_adapter=old["initial_adapter"],
         base=assets["checkpoint"],scaler=assets["scaler"],historical_cases_not_independent_blind=True,
@@ -194,7 +195,7 @@ def run(assets_file,config,out,replay_from=None):
                     if not np.array_equal(np.load(p.parent/name),np.load(out/p.parent.relative_to(original)/name)):raise ValueError("G2 regenerated motion differs")
                     arrays+=1
             write(out/"replay.json",dict(status="FRESH_G2_ATTRIBUTION_AND_GENERATION_REPLAY",optimizer_calls=0,arrays_verified=arrays,trace_fields_verified=fields,regenerated=len(generations)))
-    finally:handle.remove();rt.close()
+    finally:observer.close();rt.close()
     print("G2_ATTRIBUTION_COMPLETED",flush=True)
 
 def main():

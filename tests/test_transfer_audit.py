@@ -38,3 +38,18 @@ def test_historical_default_candidate_validation_stays_strict():
     pytest.importorskip("torch")
     from dunhuang.research.source_identifiability.a2 import candidates
     with pytest.raises(ValueError,match="crosses roles"):candidates(rows(),{}, {}, {})
+
+
+def test_forward_observer_captures_guided_direct_calls_and_restores_module():
+    torch=pytest.importorskip("torch")
+    from dunhuang.research.transfer_audit.instrument import ForwardObserver
+    class Model(torch.nn.Module):
+        def forward(self,x,scale=1):return x*scale
+        def guided_forward(self,x):return self.forward(x,scale=2)+self.forward(x,scale=3)
+    model=Model();value=torch.tensor([1.,2.]);calls=[];before=model.guided_forward(value)
+    observer=ForwardObserver(model,lambda module,args,kw:calls.append(kw["scale"]))
+    try:assert torch.equal(model.guided_forward(value),before)
+    finally:observer.close()
+    assert calls==[2,3] and "forward" not in model.__dict__
+    assert torch.equal(model.guided_forward(value),before)
+    observer.close()

@@ -35,3 +35,6 @@
     python scripts/export_transfer_audit.py --out outputs/transfer_audit_01 --receipt outputs/transfer_audit_01_receipt --seal
 
 原始身份/资产/梯度与层张量留服务器，公开仅聚合统计、哈希与回执。失败目录不可覆盖；只清理本轮创建的临时SSH辅助文件。FineDance、E2人工边界、G3与整曲/SQP不被本轮审查自动准入。
+
+
+补充修正：EDGE guided_forward直接调用self.forward，Module前置钩子无法捕获这些调用。研究observer临时包装实际forward、返回原函数结果，finally恢复；不改采样数值。若独立完成的A2阶段之后仅G2诊断失败，可给launcher第三个参数传原研究目录。reuse_a2_audit.py须先验证A2代码/数据政策未改、输入哈希、原始来源与独立重建数组一致，再建立只读使用的符号链接；不把原失败launcher说成完整成功。新回执分别标明A2执行提交与G2执行提交。
