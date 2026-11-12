@@ -28,7 +28,14 @@ def run(source,out,replay_from=None):
             previous=next(x for x in old_result["records"] if x["case"]==case and x["seed"]==seed and x["control"]==name)
             if any(metric[k]!=previous[k] for k in metric):raise ValueError("Historical region errors differ")
             legacy_fields+=len(metric)
-        records.append(dict(case=case,seed=seed,control=name,**metric,provided_pose_frames=int(known.any(-1).sum()),
+        cross={}
+        for label,reference_uid in zip(("A","B"),uids):
+            rr=index[reference_uid];ref_native=np.load(checked(rr["motion"]))
+            ref_condition,ref_keys,_,_=make_condition(rr,saved["config"]["old_event_source"])
+            mask=ref_condition.known[0,:,79:127].reshape(150,8,6).all(-1).numpy()
+            cross["error_to_"+label]=dict(known=source_error(motion,ref_native,mask),
+                hidden=source_error(motion,ref_native,~mask),keys=source_error(motion,ref_native,ref_keys[0].numpy()))
+        records.append(dict(case=case,seed=seed,control=name,**metric,**cross,provided_pose_frames=int(known.any(-1).sum()),
             hidden_frames=int((~known).any(-1).sum()),key_frames=int(key.any(-1).sum()),
             key_joint_observations=int(key.sum()),upper8_joint_observations=int(known.sum())))
         seals[str(p.relative_to(source))]=sha(p)
