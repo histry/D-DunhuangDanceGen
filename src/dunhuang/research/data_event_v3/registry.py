@@ -56,21 +56,29 @@ def build(assets,population,config,out):
     snapshots=[ref(population_file),assets["paired_generation_manifest"],assets["catalog_source"],ref(roster_path),ref(fd_path),ref(fd_meta_path)]
     snapshots+=[ref(official_root/("crossmodal_"+r+".txt")) for r in official]
     sources=[];asset_cache={}
-    def resolve(asset):
-        # Motion and audio may be independently materialized under different roots.
+    def resolve(asset,required=True):
+        # Motion/audio roots are independent; an LFS pointer is not asset content.
+        states=[]
         for root in (Path("assets/datasets"),datasets):
             path=root/relative(asset)
-            if not path.exists():continue
+            if not path.is_file():continue
             stamp=(path.stat().st_size,path.stat().st_mtime_ns)
             key=(str(path.resolve()),asset["sha256"])
-            if asset_cache.get(key)==stamp:return path
+            if asset_cache.get(key)==stamp:return path,"SHA256_VERIFIED"
+            if stamp[0]<1024 and path.read_bytes().startswith(b"version https://git-lfs.github.com"):
+                pointer=path.read_text().splitlines()
+                if "oid sha256:"+asset["sha256"] not in pointer:raise ValueError("LFS declaration differs from source ledger")
+                states.append("NOT_MATERIALIZED_LFS");continue
             try:checked(dict(path=str(path),sha256=asset["sha256"]))
-            except ValueError:continue
-            asset_cache[key]=stamp;return path
-        raise ValueError("Registered raw asset missing or SHA differs: "+relative(asset).parts[0])
+            except ValueError:states.append("HASH_MISMATCH");continue
+            asset_cache[key]=stamp;return path,"SHA256_VERIFIED"
+        if "HASH_MISMATCH" in states:raise ValueError("Materialized source hash differs")
+        if required:raise ValueError("Required raw asset not materialized")
+        return None,"NOT_MATERIALIZED_LFS" if states else "MISSING"
     for old in sorted(raw,key=lambda r:(r["dataset_id"],r["sequence_id"])):
         dataset=old["dataset_id"]
-        raw_file=resolve(old["motion_asset"]);audio_file=resolve(old["audio_asset"])
+        raw_file,raw_integrity=resolve(old["motion_asset"])
+        audio_file,audio_integrity=resolve(old["audio_asset"],required=dataset!="finedance")
         raw_sha=old["motion_asset"]["sha256"];windows=pair_by_sha.get(raw_sha,[])
         if windows:
             sample=windows[0]
@@ -80,6 +88,8 @@ def build(assets,population,config,out):
                 if proof["status"]!="verified" or proof["motion_sha256"]!=raw_sha or proof["audio_sha256"]!=w["audio"]["sha256"]:raise ValueError("Paired clock evidence differs")
         row=dict(source_uid=dataset+":"+raw_sha,dataset_id=dataset,source_sha256=raw_sha,
             raw_source=dict(path=str(raw_file),sha256=raw_sha),audio_sha256=old["audio_asset"]["sha256"],
+            asset_integrity=dict(motion=raw_integrity,audio=audio_integrity),
+            audio_materialization_verified=audio_file is not None,
             audio_version_uid="sha256:"+old["audio_asset"]["sha256"],recording_uid=old.get("recording_uid"),
             sequence_id=old["sequence_id"],performer_uid=None,performer_count=None,solo_verified=False,solo_evidence=None,
             music_work_uid=None,music_work_aliases=[],choreography_uid=None,genre=old.get("style","UNKNOWN"),

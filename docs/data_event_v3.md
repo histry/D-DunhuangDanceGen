@@ -6,7 +6,7 @@
 
 - 私有 source_registry_v3.json 同时保留 historical_role/exposure 与独立 roles；单人准入必须有外部来源证据，单轨数组不能证明单人表演。
 - AIST++ 取官方 crossmodal 清单与已通过来源时钟、完整目标/Jukebox 核验来源的交集，分别报告标称列表数与实际人口。官方 Val/Test 允许共享音乐；录制/编舞不跨角色。另建 strict_unseen_song / unseen_choreography / unseen_performer 协议，分别按对应身份、原始 SHA 与录制闭包；不以共同舞者合并所有音乐。作品范围限于 publisher canonical track ID，跨 ID 同作品别名仍未知。
-- FineDance 用哈希绑定的官方代码 AST 读取 cross_genre/cross_dancer Test 与 ignore，绝不执行供应商代码。原始20 Test 与 ignore 相交后应按实际可用人口计数。没有官方 Val；缺少可靠作品身份、单人来源与表示/时钟准入时不构造内层 Val，也不把缺失手部补零当完整151D真值。
+- FineDance 用哈希绑定的官方代码 AST 读取 cross_genre/cross_dancer Test 与 ignore，绝不执行供应商代码。原始20 Test 与 ignore 相交后应按实际可用人口计数。仅有LFS指针的音频单独记为NOT_MATERIALIZED_LFS；不视为真实音频，也不阻断其他已核验数据集的只读审计。实体文件哈希不符仍阻断。没有官方 Val；缺少可靠作品身份、单人来源与表示/时钟准入时不构造内层 Val，也不把缺失手部补零当完整151D真值。
 - ChangE 保留8个单人来源的共享 Catalog，与源留出8折分开。每折6 Train / 1 Val / 1 Test，只登记重建索引及 Train-only 统计义务；本阶段不拟合或授予任何旧权重资格。6个双人录制轨道只保留盘点，排除单人资源。
 - 新角色不是新的盲测：历史数据角色/开发曝光和预训练暴露 UNKNOWN 均保留。所有协议 ready_for_new_training=false。下次训练须单独绑定清单、Train-only 统计和 checkpoint_binding，禁止继承旧模型资格。
 

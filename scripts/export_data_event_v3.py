@@ -19,6 +19,7 @@ def export(out,receipt):
         populations[dataset]=dict(sources=len(rows),solo_admitted=sum(s["admission"]["solo_admitted"] for s in rows),
             unknown_performer=sum(not s.get("performer_uid") for s in rows),unknown_music_work=sum(not s.get("music_work_uid") for s in rows),
             full151_windows=sum(s.get("windows_with_full151_and_jukebox",0) for s in rows),
+            raw_audio_integrity=dict(collections.Counter(s.get("asset_integrity",{}).get("audio","UNPAIRED_NO_AUDIO") for s in rows)),
             admission_status=dict(collections.Counter(s["admission"]["solo_status"] for s in rows)))
     protocols={}
     lookup={s["source_uid"]:s for s in registry["sources"]}
