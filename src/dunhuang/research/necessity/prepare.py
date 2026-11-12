@@ -122,7 +122,7 @@ def run(assets_file,config,out,replay_from=None):
     write(out/"result.json",report)
     if replay_from:
         old=Path(replay_from)
-        if read(old/"result.json")!=report:raise ValueError("G2M source qualification replay differs")
+        if read(old/"result.json")!=read(out/"result.json"):raise ValueError("G2M source qualification replay differs")
         for name in ("schedule.npz","supervision.npz"):
             a=dict(np.load(old/name));b=dict(np.load(out/name))
             if set(a)!=set(b) or any(not np.array_equal(a[k],b[k]) for k in a):raise ValueError("G2M supervision/schedule replay differs")
