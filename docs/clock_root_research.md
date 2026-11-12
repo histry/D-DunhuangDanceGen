@@ -32,12 +32,12 @@ RootContactAdapter adds a zero-initialized condition projection to the existing 
 Publish before server execution. Use a new output directory and tmux. Actual paths belong to private runtime assets.
 
     python scripts/root_responsibility.py --assets outputs/aist_features_01/assets.json --prior outputs/native_calibration_03 --out outputs/root_responsibility_new
-    python scripts/clock_alignment_experiment.py --assets outputs/aist_features_01/assets.json --global-checkpoint outputs/sdmr_full_02/retrieval.pt --sync-checkpoint outputs/sync_frozen_01/sync.pt --config configs/clock_alignment.json --out outputs/clock_alignment_new
+    python scripts/clock_alignment_experiment.py --assets inputs/clock_assets_v2.json --global-checkpoint outputs/sdmr_full_02/retrieval.pt --sync-checkpoint outputs/sync_frozen_01/sync.pt --config configs/clock_alignment.json --out outputs/clock_alignment_new
     python scripts/root_condition_experiment.py --assets outputs/aist_features_01/assets.json --initial-adapter outputs/event_transfer_01/cross/train/adapter.pt --steps 400 --generate --out outputs/root_condition_new
 
 EDGE training/generation uses the pinned EDGE Python; diagnosis/alignment/Native replay use their appropriate pinned runtime.
 
-    python scripts/verify_clock_root.py --assets outputs/aist_features_01/assets.json --clock outputs/clock_alignment_new --root outputs/root_condition_new --diagnosis outputs/root_responsibility_new --out outputs/clock_root_replay_new
+    python scripts/verify_clock_root.py --assets inputs/clock_assets_v2.json --clock outputs/clock_alignment_new --root outputs/root_condition_new --diagnosis outputs/root_responsibility_new --out outputs/clock_root_replay_new
 
 The fresh verifier re-extracts observations, recomputes frozen encodings and A/B/C measurements, reconstructs Root/body diagnostics, and invokes the real Native worker on saved new generations. It never retrains or resamples. Keep full logs, input/output hashes, launch/exit receipts and failed attempts. Public Git receives code and aggregate results only; raw source identities, waveform/model data and server paths remain private. Remove only SSH helpers and transfer archives created for this run.
 
@@ -50,3 +50,10 @@ A code review found a per-window derivative boundary cue in the first implementa
 Observation-provenance clarification: the legacy extractor exposes a combined audio/motion CONTRACT even when only its audio function is called. Early prepared manifests copied that object wholesale. Actual new motion74 uses the canonical decoded native30 recording and the execution-side body22 derivative, not the legacy native60 derivative-before-resampling branch. The corrected composed contract distinguishes these operators and records possible distribution shift against the frozen prior encoder/normalizer. No numeric observations or trained weights are altered by this metadata clarification; original manifests remain preserved and the public aggregate carries the erratum. The bounded results cannot establish the performance of jointly retrained encoders.
 
 The frozen global audio archive and real nonpaired query were extracted with librosa0.11.0, while the initial Native environment supplied0.9.2. This runtime mismatch is not accepted as the final comparison. The final isolated runtime additionally pins librosa0.11.0,lazy_loader0.4,msgpack1.1.0 alongside the same SoXR wheel; no shared installation is modified. Preparation rejects another librosa version before extraction, and Shadow serving verifies the query extractor version against the saved head configuration. The full-recording motion fix, same population,800-update arms and fixed-final selection remain unchanged. Earlier runtime-mismatched results are retained as superseded attempts, without promotion or selection.
+
+Rebuild the private audio runtime with the pinned Native CPython3.9/Linux interpreter:
+
+    python scripts/prepare_clock_audio_runtime.py --out inputs/new_clock_audio_runtime --base-assets outputs/aist_features_01/assets.json --assets-out inputs/new_clock_assets.json
+    python scripts/prepare_clock_audio_runtime.py --verify inputs/new_clock_audio_runtime/receipt.json
+
+Use the generated private assets JSON for alignment and fresh replay. The provisioner downloads only four exact official wheel hashes, rejects archive path escapes, imports from the isolated root and verifies module versions/identities. It does not install into a shared environment. NumPy/SciPy/Numba and other pre-existing Native dependencies still belong to the pinned server runtime; package-version equality alone does not prove bitwise equivalence of old feature archives.
