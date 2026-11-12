@@ -1,0 +1,786 @@
+{
+  "schema": "public_data_event_v3_e1",
+  "execution_commit": "75649c485f065894f4e1dbc09de88fe917fea1c6",
+  "config": {
+    "schema": "data_event_v3_change_e1",
+    "seed": 20261112,
+    "expected_events": 499,
+    "expected_sources": 8,
+    "timeline_frames": [
+      150,
+      225,
+      450,
+      3601
+    ],
+    "optimizer_calls": 0,
+    "statistics_fit_calls": 0,
+    "allow_generation": false,
+    "protocol_scope": "P0_DATA_SPLIT_V3_AND_CHANGE_E1_ONLY",
+    "phases": {
+      "minimum_peak_distance": 6,
+      "speed_prominence_floor_radps": 0.05,
+      "acceleration_prominence_floor_radps2": 1.0,
+      "hold_quantile": 0.2,
+      "hold_max_speed_radps": 0.2,
+      "hold_min_frames": 6
+    }
+  },
+  "populations": {
+    "aistpp": {
+      "sources": 1363,
+      "solo_admitted": 1156,
+      "unknown_performer": 207,
+      "unknown_music_work": 207,
+      "full151_windows": 2418,
+      "raw_motion_integrity": {
+        "SHA256_VERIFIED": 1363
+      },
+      "raw_audio_integrity": {
+        "SHA256_VERIFIED": 1363
+      },
+      "admission_status": {
+        "VERIFIED_SINGLE_PERSON_METADATA": 1156,
+        "UNKNOWN_SINGLE_PERSON_CAPTURE": 207
+      }
+    },
+    "finedance": {
+      "sources": 203,
+      "solo_admitted": 0,
+      "unknown_performer": 203,
+      "unknown_music_work": 203,
+      "full151_windows": 0,
+      "raw_motion_integrity": {
+        "SHA256_VERIFIED": 203
+      },
+      "raw_audio_integrity": {
+        "NOT_MATERIALIZED_LFS": 203
+      },
+      "admission_status": {
+        "UNKNOWN_SINGLE_PERSON_CAPTURE": 203
+      }
+    },
+    "change": {
+      "sources": 14,
+      "solo_admitted": 8,
+      "unknown_performer": 14,
+      "unknown_music_work": 14,
+      "full151_windows": 0,
+      "raw_motion_integrity": {
+        "NOT_MATERIALIZED_LFS": 6,
+        "SHA256_VERIFIED": 8
+      },
+      "raw_audio_integrity": {
+        "UNPAIRED_NO_AUDIO": 14
+      },
+      "admission_status": {
+        "EXCLUDED_MULTI_PERFORMER": 6,
+        "VERIFIED_SINGLE_PERSON_METADATA": 8
+      }
+    }
+  },
+  "protocols": {
+    "AIST_Official_Crossmodal": {
+      "identity_scope": "official music/choreography; Val/Test music sharing allowed",
+      "ready_for_new_training": false,
+      "role_sources": {
+        "val": 20,
+        "test": 20,
+        "train": 778
+      },
+      "attestation": {
+        "status": "PASSED_KNOWN_IDENTITY_ISOLATION",
+        "forbidden_identity_overlaps": 0,
+        "violations": [],
+        "role_sources": {
+          "val": 20,
+          "test": 20,
+          "train": 778
+        },
+        "role_music": {
+          "train": 50,
+          "val": 10,
+          "test": 10
+        },
+        "fresh_blind_claimed": false,
+        "checkpoint_qualification_inherited": false
+      },
+      "role_windows": {
+        "train": 1629,
+        "val": 41,
+        "test": 40
+      }
+    },
+    "AIST_strict_unseen_song": {
+      "identity_scope": "strict_unseen_song within verified publisher identities",
+      "ready_for_new_training": false,
+      "role_sources": {
+        "test": 119,
+        "val": 118,
+        "train": 919
+      },
+      "attestation": {
+        "status": "PASSED_KNOWN_IDENTITY_ISOLATION",
+        "forbidden_identity_overlaps": 0,
+        "violations": [],
+        "role_sources": {
+          "train": 919,
+          "test": 119,
+          "val": 118
+        },
+        "role_music": {
+          "train": 48,
+          "val": 6,
+          "test": 6
+        },
+        "fresh_blind_claimed": false,
+        "checkpoint_qualification_inherited": false,
+        "groups": 60,
+        "seed": 20261112,
+        "algorithm": "sha256_stratified_group_round_robin_v1",
+        "target_group_counts": {
+          "test": 6,
+          "val": 6
+        }
+      },
+      "role_windows": {
+        "train": 1833,
+        "val": 273,
+        "test": 312
+      }
+    },
+    "AIST_unseen_choreography": {
+      "identity_scope": "unseen_choreography within verified publisher identities",
+      "ready_for_new_training": false,
+      "role_sources": {
+        "test": 119,
+        "val": 118,
+        "train": 919
+      },
+      "attestation": {
+        "status": "PASSED_KNOWN_IDENTITY_ISOLATION",
+        "forbidden_identity_overlaps": 0,
+        "violations": [],
+        "role_sources": {
+          "train": 919,
+          "test": 119,
+          "val": 118
+        },
+        "role_music": {
+          "train": 60,
+          "val": 60,
+          "test": 60
+        },
+        "fresh_blind_claimed": false,
+        "checkpoint_qualification_inherited": false,
+        "groups": 100,
+        "seed": 20261112,
+        "algorithm": "sha256_stratified_group_round_robin_v1",
+        "target_group_counts": {
+          "test": 10,
+          "val": 10
+        }
+      },
+      "role_windows": {
+        "train": 1920,
+        "val": 247,
+        "test": 251
+      }
+    },
+    "AIST_unseen_performer": {
+      "identity_scope": "unseen_performer within verified publisher identities",
+      "ready_for_new_training": false,
+      "role_sources": {
+        "test": 118,
+        "val": 116,
+        "train": 922
+      },
+      "attestation": {
+        "status": "PASSED_KNOWN_IDENTITY_ISOLATION",
+        "forbidden_identity_overlaps": 0,
+        "violations": [],
+        "role_sources": {
+          "train": 922,
+          "test": 118,
+          "val": 116
+        },
+        "role_music": {
+          "train": 60,
+          "val": 12,
+          "test": 12
+        },
+        "fresh_blind_claimed": false,
+        "checkpoint_qualification_inherited": false,
+        "groups": 30,
+        "seed": 20261112,
+        "algorithm": "sha256_stratified_group_round_robin_v1",
+        "target_group_counts": {
+          "test": 3,
+          "val": 3
+        }
+      },
+      "role_windows": {
+        "train": 1910,
+        "val": 227,
+        "test": 281
+      }
+    },
+    "FineDance_cross_genre": {
+      "identity_scope": "publisher source ID membership only; song/dancer identities pending",
+      "ready_for_new_training": false,
+      "role_sources": {
+        "train": 183,
+        "test": 18,
+        "excluded": 2
+      },
+      "attestation": {
+        "status": "NOT_EVALUABLE_UNVERIFIED_SOLO_WORK_CLOCK",
+        "official_membership_counts": {
+          "train": 183,
+          "test": 18,
+          "excluded": 2
+        }
+      },
+      "role_windows": {
+        "train": 0,
+        "val": 0,
+        "test": 0
+      }
+    },
+    "FineDance_cross_dancer": {
+      "identity_scope": "publisher source ID membership only; song/dancer identities pending",
+      "ready_for_new_training": false,
+      "role_sources": {
+        "test": 17,
+        "train": 175,
+        "excluded": 11
+      },
+      "attestation": {
+        "status": "NOT_EVALUABLE_UNVERIFIED_SOLO_WORK_CLOCK",
+        "official_membership_counts": {
+          "test": 17,
+          "train": 175,
+          "excluded": 11
+        }
+      },
+      "role_windows": {
+        "train": 0,
+        "val": 0,
+        "test": 0
+      }
+    },
+    "ChangE_Catalog": {
+      "identity_scope": "fixed shared eight-source resource, not unseen-source evaluation",
+      "ready_for_new_training": false,
+      "role_sources": {
+        "CATALOG": 8
+      },
+      "attestation": null,
+      "role_windows": {
+        "train": 0,
+        "val": 0,
+        "test": 0
+      }
+    },
+    "ChangE_Source_Heldout": {
+      "identity_scope": "whole recording and raw SHA, eight outer folds",
+      "ready_for_new_training": false,
+      "role_sources": {},
+      "attestation": null,
+      "role_windows": {
+        "train": 0,
+        "val": 0,
+        "test": 0
+      },
+      "folds": [
+        {
+          "fold": 0,
+          "role_sources": {
+            "train": 6,
+            "val": 1,
+            "test": 1
+          },
+          "forbidden_identity_overlaps": 0,
+          "index_rebuild_required": true,
+          "train_only_statistics_required": true,
+          "existing_checkpoint_qualified": false
+        },
+        {
+          "fold": 1,
+          "role_sources": {
+            "train": 6,
+            "test": 1,
+            "val": 1
+          },
+          "forbidden_identity_overlaps": 0,
+          "index_rebuild_required": true,
+          "train_only_statistics_required": true,
+          "existing_checkpoint_qualified": false
+        },
+        {
+          "fold": 2,
+          "role_sources": {
+            "train": 6,
+            "val": 1,
+            "test": 1
+          },
+          "forbidden_identity_overlaps": 0,
+          "index_rebuild_required": true,
+          "train_only_statistics_required": true,
+          "existing_checkpoint_qualified": false
+        },
+        {
+          "fold": 3,
+          "role_sources": {
+            "train": 6,
+            "test": 1,
+            "val": 1
+          },
+          "forbidden_identity_overlaps": 0,
+          "index_rebuild_required": true,
+          "train_only_statistics_required": true,
+          "existing_checkpoint_qualified": false
+        },
+        {
+          "fold": 4,
+          "role_sources": {
+            "train": 6,
+            "val": 1,
+            "test": 1
+          },
+          "forbidden_identity_overlaps": 0,
+          "index_rebuild_required": true,
+          "train_only_statistics_required": true,
+          "existing_checkpoint_qualified": false
+        },
+        {
+          "fold": 5,
+          "role_sources": {
+            "val": 1,
+            "train": 6,
+            "test": 1
+          },
+          "forbidden_identity_overlaps": 0,
+          "index_rebuild_required": true,
+          "train_only_statistics_required": true,
+          "existing_checkpoint_qualified": false
+        },
+        {
+          "fold": 6,
+          "role_sources": {
+            "test": 1,
+            "train": 6,
+            "val": 1
+          },
+          "forbidden_identity_overlaps": 0,
+          "index_rebuild_required": true,
+          "train_only_statistics_required": true,
+          "existing_checkpoint_qualified": false
+        },
+        {
+          "fold": 7,
+          "role_sources": {
+            "train": 6,
+            "val": 1,
+            "test": 1
+          },
+          "forbidden_identity_overlaps": 0,
+          "index_rebuild_required": true,
+          "train_only_statistics_required": true,
+          "existing_checkpoint_qualified": false
+        }
+      ]
+    }
+  },
+  "result": {
+    "status": "COMPLETED_DATA_V3_CHANGE_E1_SHADOW",
+    "registry_identity": "813b8ede33fdfce40293b6feaf282e4fb01ca34d9f8bc6f9bdb5f9729ba7bf7b",
+    "data": {
+      "schema": "data_exposure_audit_v3",
+      "all_sources_preserve_prior_exposure_or_unknown": true,
+      "fresh_blind_claimed": false,
+      "old_roles_rewritten": false,
+      "old_checkpoint_qualification_inherited": false,
+      "pretrained_backbone_exposure": "UNKNOWN_NOT_CERTIFIED",
+      "source_counts": {
+        "aistpp": 1363,
+        "finedance": 203,
+        "change": 14
+      },
+      "unknown_performer_sources": 424,
+      "unknown_music_work_sources": 424,
+      "optimizer_calls": 0
+    },
+    "split": {
+      "schema": "split_attestation_v3",
+      "forbidden_identity_overlaps": 0,
+      "protocol_status": {
+        "AIST_Official_Crossmodal": "PASSED_KNOWN_IDENTITY_ISOLATION",
+        "AIST_strict_unseen_song": "PASSED_KNOWN_IDENTITY_ISOLATION",
+        "AIST_unseen_choreography": "PASSED_KNOWN_IDENTITY_ISOLATION",
+        "AIST_unseen_performer": "PASSED_KNOWN_IDENTITY_ISOLATION",
+        "FineDance_cross_genre": "NOT_EVALUABLE_UNVERIFIED_SOLO_WORK_CLOCK",
+        "FineDance_cross_dancer": "NOT_EVALUABLE_UNVERIFIED_SOLO_WORK_CLOCK",
+        "ChangE_Catalog": "CATALOG_OR_FOLD_METADATA_ONLY",
+        "ChangE_Source_Heldout": "CATALOG_OR_FOLD_METADATA_ONLY"
+      },
+      "all_tasks_ready_for_training": false,
+      "statistics_refitted": false,
+      "source_identity_digest": "813b8ede33fdfce40293b6feaf282e4fb01ca34d9f8bc6f9bdb5f9729ba7bf7b",
+      "reason": "Per-task isolation and unknown identities remain explicit; this stage performs zero fitting"
+    },
+    "e1": {
+      "events": 499,
+      "sources": 8,
+      "recordings": 8,
+      "old_peak_clamped": 348,
+      "joint_set_peak_changed": 204,
+      "old_center_abs_shift_mean_frames": 10.014028056112224,
+      "controlled_peak_abs_shift_mean_frames": 5.124248496993988,
+      "e0": {
+        "source_safe": 499,
+        "controlled_peak_captured": 288,
+        "normalized_support": 499
+      },
+      "e1": {
+        "source_safe": 497,
+        "controlled_peak_captured": 398,
+        "normalized_support": 497
+      },
+      "boundary_proxy": {
+        "active_boundaries": 358,
+        "events_with_truncated_phase_span": 212
+      },
+      "real_music_slot_count": 49,
+      "planner": {
+        "e0_temporal": {
+          "legal_candidate_pairs": 11298,
+          "mean_candidates_per_slot": 230.57142857142858,
+          "empty_slots": 0,
+          "events_ever_eligible": 423,
+          "sources_ever_eligible": 8
+        },
+        "e1_temporal": {
+          "legal_candidate_pairs": 8640,
+          "mean_candidates_per_slot": 176.3265306122449,
+          "empty_slots": 0,
+          "events_ever_eligible": 388,
+          "sources_ever_eligible": 8
+        },
+        "e0_adapter": {
+          "legal_candidate_pairs": 11298,
+          "mean_candidates_per_slot": 230.57142857142858,
+          "empty_slots": 0,
+          "events_ever_eligible": 423,
+          "sources_ever_eligible": 8
+        },
+        "e1_adapter": {
+          "legal_candidate_pairs": 8640,
+          "mean_candidates_per_slot": 176.3265306122449,
+          "empty_slots": 0,
+          "events_ever_eligible": 388,
+          "sources_ever_eligible": 8
+        }
+      },
+      "human_event_truth": false,
+      "optimizer_calls": 0,
+      "operational_qualified": false,
+      "e2_boundary_resegmentation_started": false,
+      "e3_generation_started": false,
+      "e1_controlled_peak_coverage_improved": true,
+      "duration_histogram": {
+        "45": 5,
+        "46": 4,
+        "47": 4,
+        "48": 6,
+        "49": 2,
+        "50": 3,
+        "51": 2,
+        "52": 1,
+        "53": 3,
+        "54": 6,
+        "55": 4,
+        "56": 2,
+        "57": 8,
+        "58": 4,
+        "59": 4,
+        "60": 8,
+        "61": 6,
+        "62": 5,
+        "63": 1,
+        "64": 3,
+        "65": 14,
+        "66": 10,
+        "67": 5,
+        "68": 4,
+        "69": 5,
+        "70": 7,
+        "71": 7,
+        "72": 9,
+        "73": 5,
+        "74": 11,
+        "75": 7,
+        "76": 12,
+        "77": 11,
+        "78": 8,
+        "79": 8,
+        "80": 13,
+        "81": 11,
+        "82": 19,
+        "83": 12,
+        "84": 11,
+        "85": 7,
+        "86": 15,
+        "87": 12,
+        "88": 12,
+        "89": 13,
+        "90": 10,
+        "91": 7,
+        "92": 8,
+        "93": 8,
+        "94": 13,
+        "95": 4,
+        "96": 5,
+        "97": 3,
+        "98": 6,
+        "99": 7,
+        "100": 3,
+        "101": 7,
+        "102": 1,
+        "103": 5,
+        "104": 9,
+        "105": 5,
+        "106": 6,
+        "107": 3,
+        "108": 5,
+        "109": 5,
+        "110": 9,
+        "111": 4,
+        "112": 6,
+        "113": 5,
+        "114": 3,
+        "115": 2,
+        "116": 1,
+        "117": 3,
+        "118": 4,
+        "119": 4,
+        "120": 9
+      },
+      "planner_rejection_reasons": {
+        "e0_temporal": {
+          "LOCAL_RATE_LIMIT": 5963,
+          "DURATION_RATIO": 7190,
+          "PASS": 11298
+        },
+        "e1_temporal": {
+          "LOCAL_RATE_LIMIT": 7766,
+          "MUSIC_CONTEXT": 520,
+          "DURATION_RATIO": 7142,
+          "PASS": 8640,
+          "ZERO_OR_NONMONOTONE_WARP": 285,
+          "NO_SAFE_ANCHOR": 98
+        },
+        "e0_adapter": {
+          "LOCAL_RATE_LIMIT": 5963,
+          "DURATION_RATIO": 7190,
+          "PASS": 11298
+        },
+        "e1_adapter": {
+          "LOCAL_RATE_LIMIT": 7766,
+          "MUSIC_CONTEXT": 520,
+          "DURATION_RATIO": 7142,
+          "PASS": 8640,
+          "ZERO_OR_NONMONOTONE_WARP": 285,
+          "NO_SAFE_ANCHOR": 98
+        }
+      },
+      "schema": "change_event_e1_audit_v1",
+      "baseline_centers_replayed": true,
+      "baseline_support_replayed": true,
+      "all_original_event_uids_preserved": true,
+      "all_original_core_bounds_preserved": true,
+      "raw_source_decodes_match_v1": true,
+      "raw_source_copies": 8,
+      "complete_record_discovery_dependencies_preserved": true,
+      "effective_semantic_motif_count": null,
+      "latent_encoder_forward_calls": 0,
+      "model_normalization_refits": 0,
+      "g2_qualification": 0,
+      "g3_started": false,
+      "phase_match_training_started": false,
+      "source_filtered_fold_indexes": [
+        {
+          "fold": 0,
+          "role_events": {
+            "train": 389,
+            "val": 69,
+            "test": 41
+          }
+        },
+        {
+          "fold": 1,
+          "role_events": {
+            "train": 402,
+            "val": 28,
+            "test": 69
+          }
+        },
+        {
+          "fold": 2,
+          "role_events": {
+            "train": 388,
+            "val": 83,
+            "test": 28
+          }
+        },
+        {
+          "fold": 3,
+          "role_events": {
+            "train": 376,
+            "val": 40,
+            "test": 83
+          }
+        },
+        {
+          "fold": 4,
+          "role_events": {
+            "train": 391,
+            "val": 68,
+            "test": 40
+          }
+        },
+        {
+          "fold": 5,
+          "role_events": {
+            "train": 296,
+            "val": 135,
+            "test": 68
+          }
+        },
+        {
+          "fold": 6,
+          "role_events": {
+            "train": 329,
+            "val": 35,
+            "test": 135
+          }
+        },
+        {
+          "fold": 7,
+          "role_events": {
+            "train": 423,
+            "val": 41,
+            "test": 35
+          }
+        }
+      ]
+    },
+    "optimizer_calls": 0,
+    "statistics_fit_calls": 0,
+    "edge_forward_calls": 0,
+    "native_calls": 0,
+    "operational_qualified": false
+  },
+  "per_recording": [
+    {
+      "events": 135,
+      "old_clamps": 93,
+      "e0_peak_coverage": 82,
+      "e1_peak_coverage": 103,
+      "e0_support": 135,
+      "e1_support": 135,
+      "no_safe_anchor": 0
+    },
+    {
+      "events": 83,
+      "old_clamps": 62,
+      "e0_peak_coverage": 46,
+      "e1_peak_coverage": 69,
+      "e0_support": 83,
+      "e1_support": 83,
+      "no_safe_anchor": 0
+    },
+    {
+      "events": 68,
+      "old_clamps": 40,
+      "e0_peak_coverage": 42,
+      "e1_peak_coverage": 58,
+      "e0_support": 68,
+      "e1_support": 67,
+      "no_safe_anchor": 1
+    },
+    {
+      "events": 69,
+      "old_clamps": 45,
+      "e0_peak_coverage": 38,
+      "e1_peak_coverage": 56,
+      "e0_support": 69,
+      "e1_support": 68,
+      "no_safe_anchor": 1
+    },
+    {
+      "events": 41,
+      "old_clamps": 30,
+      "e0_peak_coverage": 21,
+      "e1_peak_coverage": 31,
+      "e0_support": 41,
+      "e1_support": 41,
+      "no_safe_anchor": 0
+    },
+    {
+      "events": 40,
+      "old_clamps": 34,
+      "e0_peak_coverage": 24,
+      "e1_peak_coverage": 30,
+      "e0_support": 40,
+      "e1_support": 40,
+      "no_safe_anchor": 0
+    },
+    {
+      "events": 28,
+      "old_clamps": 24,
+      "e0_peak_coverage": 14,
+      "e1_peak_coverage": 19,
+      "e0_support": 28,
+      "e1_support": 28,
+      "no_safe_anchor": 0
+    },
+    {
+      "events": 35,
+      "old_clamps": 20,
+      "e0_peak_coverage": 21,
+      "e1_peak_coverage": 32,
+      "e0_support": 35,
+      "e1_support": 35,
+      "no_safe_anchor": 0
+    }
+  ],
+  "replay": {
+    "status": "FRESH_DATA_V3_CHANGE_E1_REPLAY_VERIFIED",
+    "optimizer_calls": 0,
+    "source_raw_decodes": 8,
+    "array_fields_verified": 1066,
+    "all_event_ids_replayed": 499,
+    "source_dependencies_replayed": true
+  },
+  "tests": {
+    "main": "181 passed, 1 skipped",
+    "edge": "18 passed"
+  },
+  "evidence": {
+    "main/protocol.json": "22e39443335218ee5ddefe8c707e386ba06741b59ff551e01db042781c2e6e8f",
+    "main/source_registry_v3.json": "5049a132c4005da1b9fd41821f712ae0ad55e0e7bf86b66231a5ecfeb67edc6f",
+    "main/split_attestation_v3.json": "c5759899ffec8f9920195eec065332aea3a2b3b54ed9b5c633944e6a6a2c2b6d",
+    "main/data_exposure_audit.json": "42e2a5def3dd3cb284d7e7c81f02e97c0f9df4e9bc9cff124d4141a76194e051",
+    "main/source_seals.json": "c3e139b153c069f0891c42391b09f8ce2cca8ce98e2d5cb1eb027efcff900d56",
+    "main/event_catalog_v2_shadow.json": "bd3b74b1a98a1f116fdfb16a103a41ff6ad13a7db0370e7e6e618b69a8340899",
+    "main/change_event_e1_report.json": "a18c0401f8f90f612ee8533992dd1215970309de93a289d2caa10704a4f405a7",
+    "main/event_diagnostics.json": "6b062d7aa97e6a9c870a23284191e9c76cd8d1c0b5059f6d6672ccf8a33c7db5",
+    "main/planner_eligibility.npz": "48fcc168616345ebec0b4ded8b97aa71aef21b73c5db60c77380a4dcd7b1131b",
+    "main/music_slots.json": "1a21f50e75cee4d612f1a1a474fb7a2e47eb4784015c665175a29775070df8ee",
+    "main/result.json": "c7174879944f60eae813d893b9dfe8b49d8f4c7ec96a455bff69dd22699a78dc",
+    "replay/replay.json": "8293b454e7fa4d9f6414f25335088b95828f8b9f459be095d35c122c6612bf52"
+  },
+  "temporary_ssh_files_created": 0,
+  "temporary_ssh_files_remaining": 0,
+  "operational_qualified": false
+}

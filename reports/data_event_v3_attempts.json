@@ -1,0 +1,71 @@
+{
+  "schema": "data_event_v3_attempt_receipts",
+  "attempts": [
+    {
+      "attempt": 1,
+      "execution_commit": "92bceea2a871356020f88dcefd97026a887f107a",
+      "exit_status": 1,
+      "started_utc": "2026-11-12T13:14:19Z",
+      "finished_utc": "2026-11-12T13:16:27Z",
+      "receipt_sha256": {
+        "edge_check.log": "09d5ae1fe8315f8fc070f920cd2eeab9c5f7d660faacf6e5c788c0fb654f3309",
+        "execution_commit.txt": "644cd653c7e0c61f9e9a9487452bbb9465a76334df030feae903e42d19588968",
+        "exit_status.txt": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+        "finished_utc.txt": "d976abcad8e5cb3263ebf779fd39eedf39e2230eec213963c1f7a58cbb7f173e",
+        "pytest.log": "7420725f7a0d4f4dc384571bb61dfd87856b9bb8ab19db3c0de84cc716feef47",
+        "started_utc.txt": "f325fc6791f256b7fae605c16a93139c4e9a825a58078bfb9def4e6d7211b4f0"
+      },
+      "run_log_sha256": "1a30609294f4ff35c4aaa388f0c9bd9d4c2b7470af427675df7d2619d2dd03b3"
+    },
+    {
+      "attempt": 2,
+      "execution_commit": "9d334cf18071888b6ab6c7a50d7da5f0262838c9",
+      "exit_status": 1,
+      "started_utc": "2026-11-12T13:20:39Z",
+      "finished_utc": "2026-11-12T13:21:10Z",
+      "receipt_sha256": {
+        "edge_check.log": "eebd66c7aee5316b8eb44295097190800168e36fa1487d89033e4f2682633bd0",
+        "execution_commit.txt": "8d1fb5c7186e1e74a929abceeb74a5029e189e380e5c7e7af0a6489379eab0dd",
+        "exit_status.txt": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+        "finished_utc.txt": "1e7febf32d1a2091f13737182261713134d0ca217f82fc41a38b88b0d8a79331",
+        "pytest.log": "aad75c8bf36879e29fa5d547f90fc215ce9a58c022d12aad888ee3be51b8d214",
+        "started_utc.txt": "fb86800ca448c468e3e21bffcda73b52bd7fcd718e483fdc7e9a7c1dce511249"
+      },
+      "run_log_sha256": "bacebcc7c8b5077aa4eaee2083e4b6c6a1f14f23a1f084d8588bf1d6d38721ea"
+    },
+    {
+      "attempt": 3,
+      "execution_commit": "f606be1a0eb360dff366f468d79c85ab91997b47",
+      "exit_status": 1,
+      "started_utc": "2026-11-12T13:23:47Z",
+      "finished_utc": "2026-11-12T13:24:26Z",
+      "receipt_sha256": {
+        "edge_check.log": "f703f8af80b2149f0e090bd9b886e04f8b5b317fb5c4ff9af0ab2d17c865770d",
+        "execution_commit.txt": "1e4bc19b891a79b0fa04015537c90935e000f83988f78c3acf3286fba9395aad",
+        "exit_status.txt": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+        "finished_utc.txt": "35248ebfe5ea21924d0b41bd6f21fe6aaefdf3a63ce2e638ca95ef28af0a7064",
+        "pytest.log": "4300ac0709e5a80e23275f3f600eca8b3d762f2cb0e4f1c759f719abd9238f30",
+        "started_utc.txt": "b6cfc74b1f12706e7b3e7a9f8440ecc56f7fd724cc0018640671fa0bd331b693"
+      },
+      "run_log_sha256": "4913dfec3f3365a4fa465abbf264d613b08d3047924c72660cb6dccd9ebbebe7"
+    },
+    {
+      "attempt": 4,
+      "execution_commit": "75649c485f065894f4e1dbc09de88fe917fea1c6",
+      "exit_status": 0,
+      "started_utc": "2026-11-12T13:25:52Z",
+      "finished_utc": "2026-11-12T13:28:38Z",
+      "receipt_sha256": {
+        "edge_check.log": "ec3df2e2ad3efadfd271e6305ea16fefb7beb12bc03a910b349d1f99d56d7a04",
+        "execution_commit.txt": "464f0cc3306dd2356653522303776be3b8e56d8f29f0827abb63c711260afb89",
+        "exit_status.txt": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+        "finished_utc.txt": "17454b0d83a80db35a2f328740f994e5d9c0fe9403afe6019816cd7d2be8cf49",
+        "pytest.log": "6621d790dc8033d6336e55cc5d46bba96b4ac8edd39c8c154af5eed3f328dd9c",
+        "started_utc.txt": "152cb691201f1f72bb1db14e5f5d0e1eb25122f77c32751440f0f58209216145"
+      },
+      "run_log_sha256": "11a5a42713e45212d504e4582eda2cacdfca13636c337cfded6dd1aa28d91053"
+    }
+  ],
+  "temporary_ssh_files_created": 0,
+  "temporary_ssh_files_remaining": 0
+}

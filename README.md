@@ -8,7 +8,7 @@
 
 新增[Native物理评价可靠性报告](reports/Native物理评价可靠性报告.md)与[机器汇总](reports/native_reliability_summary.json)：本轮只读重放1,468个目标和42次历史生成执行，并完成地面/骨架/噪声及23个合成测试；服务器117项回归通过，独立复核通过。旧31项限制与判决不变。Native-Calib-v2仍为未获准的Shadow，真实静态接触、误拒率与专家一致性因缺少独立标注保持未知；本轮没有训练或新采样。
 
-新增 [Data Split V3 / ChangE-E1 离线协议](docs/data_event_v3.md)：任务化来源角色、单人准入和受控上身阶段审计与正式生成分离；旧 Catalog、权重及 Native 门限保持冻结。新数据角色尚不授予训练或生成资格。
+新增 [Data Split V3 / ChangE-E1 离线协议](docs/data_event_v3.md)及[服务器实验报告](reports/数据划分V3与ChangE事件E1实验报告.md)：严格官方曲目划分48/6/6、ChangE源留出8折索引，499个事件峰覆盖288→398，但合法候选对11298→8640。完整回归181通过+1依赖跳过，EDGE补充18通过，全新进程重解码与复验通过。FineDance音频203条仍为LFS指针；零模型训练/生成，旧Catalog、权重及Native门限保持冻结，新协议未获训练或生成资格。
 
 ## 正式入口
 
