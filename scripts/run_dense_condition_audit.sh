@@ -7,7 +7,7 @@ native=/home/disk/lsm/conda_envs/dance-rag/bin/python
 edge=/home/disk/lsm/conda_envs/edge/bin/python
 mkdir -p "$receipt" "$study"
 success=0
-finish() { code=$?; if [ "$success" -ne 1 ] && [ "$code" -eq 0 ]; then code=125; fi; printf '%s\\n' "$code" > "$receipt/exit_status.txt"; date -u +%FT%TZ > "$receipt/finished_utc.txt"; }
+finish() { code=$?; if [ "$success" -ne 1 ] && [ "$code" -eq 0 ]; then code=125; fi; printf '%s\n' "$code" > "$receipt/exit_status.txt"; date -u +%FT%TZ > "$receipt/finished_utc.txt"; }
 trap finish EXIT
 trap 'exit 130' INT
 trap 'exit 143' TERM

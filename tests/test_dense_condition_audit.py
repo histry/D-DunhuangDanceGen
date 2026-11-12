@@ -30,7 +30,7 @@ def test_default_is_exact_legacy_forward_and_state_keys_unchanged():
         actual=a(g,m)
     assert torch.equal(actual,expected)
     assert list(a.state_dict())==keys
-    assert torch.equal(actual,a(g,m,visibility_policy="legacy"))
+    with torch.no_grad():assert torch.equal(actual,a(g,m,visibility_policy="legacy"))
 
 def test_observed_visibility_safe_all_missing_and_unknown_storage_invariance():
     a=nonzero_adapter();g,m=fixture_geometry()

@@ -9,7 +9,7 @@ def export(out,receipt,dest):
     out=Path(out);receipt=Path(receipt);g=read(out/"g1/result.json");d=read(out/"a1/result.json")
     # config carries a private event-source location; publish only registered scalar settings.
     cfg=read(out/"g1/protocol.json")["config"];cfg={k:v for k,v in cfg.items() if k!="event_source"}
-    tests=re.findall(r"\\d+ passed(?:, \\d+ skipped)?",(receipt/"pytest.log").read_text())
+    tests=re.findall(r"\d+ passed(?:, \d+ skipped)?",(receipt/"pytest.log").read_text())
     if not tests or "7 passed" not in (receipt/"edge_check.log").read_text():raise ValueError("Required test evidence absent")
     public=dict(schema="public_dense_condition_v1",execution_commit=(receipt/"execution_commit.txt").read_text().strip(),
         g1_config=cfg,a1_config=read(out/"a1/protocol.json")["config"],a1=d,
