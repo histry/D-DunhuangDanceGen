@@ -169,3 +169,8 @@ python scripts/verify_v08.py --root outputs/v08_new --out outputs/v08_new/readou
 在01c0515上冻结编码器、旧头与默认生成，新增统一网格的信息可访问性探针、Token谱/Hubness、固定路径内容重评分及五类损失梯度审计。严格控制候选人口足够时才执行等参数R2；不足不放宽。见 [预注册协议](docs/局部表征可辨识性研究协议.md)。
 
 R1服务器审计与独立重放已完成，严格条件候选Train/Val均为0，R2按门限未启动。详见 [局部表征可辨识性报告](reports/local_identifiability_report.md) 与脱敏回执；没有新检索模型或生成质量提升声明。
+
+
+## Dense A1 / G1 research audit (2026-11-12)
+
+See [experiment report](reports/dense_condition_20261112.md) and [registered protocol](docs/DENSE_CONDITION_PROTOCOL.md). Real source coverage: 936 recordings / 8,510 windows; strict Train 18 queries / 10 recordings, Val 0; training was not started. Frozen EDGE audit: 14 real generations plus 14 exact recomputations, Native 0/14 and source-follow gate failed. Explicit research visibility passes the six matched unknown-storage and six bypass invariants; legacy remains the default. No bilateral generation or SQP qualification is claimed.

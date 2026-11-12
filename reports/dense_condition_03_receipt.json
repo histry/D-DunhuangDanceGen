@@ -1,0 +1,67 @@
+{
+  "schema": "dense_condition_completed_receipt_v1",
+  "execution_commit": "613497b2016cc212e110aef2a7e71d6c1b1ef3c3",
+  "readout_commit": "447bd55095b04d591284159694c3379ea8f2655b",
+  "exit_status": 0,
+  "started_utc": "2026-11-12T10:15:22Z",
+  "finished_utc": "2026-11-12T10:26:25Z",
+  "g1_generation_count": 14,
+  "g1_fresh_generation_replays": 14,
+  "real_edge_unknown_storage_invariance_passes": 6,
+  "real_edge_removed_equals_bypass_passes": 6,
+  "legacy_unknown_storage_sensitive_cases": 6,
+  "native_passes": 0,
+  "native_failure_histogram": {
+    "foot_support_drift_m_p95_too_high": 14,
+    "foot_support_drift_m_max_too_high": 7,
+    "foot_skate_mps_p95_too_high": 9,
+    "foot_skate_mps_max_too_high": 7
+  },
+  "native_limits_constant": true,
+  "native_limits_sha256": "77a3754ff7388acb58efd5c59686d0346111bcf57af5c0c279dff7609584d171",
+  "derivative_fd_confirmed": false,
+  "derivative_status": "NOT_QUALIFIED_FINITE_DIFFERENCE_SIGNAL_TOO_WEAK",
+  "a1_windows": 8510,
+  "a1_recordings": 936,
+  "a1_population": {
+    "train": {
+      "queries": 18,
+      "recordings": 10,
+      "components": 4,
+      "population_sufficient": false
+    },
+    "val": {
+      "queries": 0,
+      "recordings": 0,
+      "components": 0,
+      "population_sufficient": false
+    }
+  },
+  "a1_optimizer_updates": 0,
+  "thresholds_relaxed": false,
+  "original_scientific_files_unchanged": true,
+  "current_candidate_code_exact_replay": true,
+  "logs": {
+    "pytest.log": "dc8ff9c8364edd4df830880e3e35922c90c5c56dd6e74a7a3378ff82ccc01a84",
+    "edge_check.log": "6f673c30867f8d99304a3f634cd82fe893e813b5b13ddde73da22154dd2bade4",
+    "exit_status.txt": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "started_utc.txt": "df6dbbd2e09485444f4fed46cfde9940f7c282ca31938beb7f355bdd38dc8b62",
+    "finished_utc.txt": "8e08a76879cfb955fa694469b8af0ccc921c868c7bb975c629c1e052f707e40d",
+    "execution_commit.txt": "1d565e6c34ddc959b6cb2c36f15f51121586b7c6d22b46c7839fd48bfad8c14a"
+  },
+  "final_validation": {
+    "validation_pytest.log": "152 passed, 1 skipped",
+    "validation_edge.log": "9 passed"
+  },
+  "evidence_sha256": {
+    "public_summary.json": "ca3d02c5d256c3240913a296af85a014993cedc6ca14fd08ce59ae431ab19446",
+    "g1/result.json": "99bb9cf68450a204e5c8b165e9bdfe4807e640df7b07e44353ebb67b39e663ff",
+    "g1_replay/replay.json": "f563073f20d856bfb8e3bfd0c714a8ca0e91b067fab25362b4da4831a6e3cf12",
+    "a1/result.json": "c3822a09cbb592baf9be6848390957d552dbcf54054b2c4877e9a5512e080483",
+    "a1_replay/replay.json": "cf6dea1ea2684ce1f9f9f275e17e05a65454d68c673f7223fb9367a57e0d98d6"
+  },
+  "temporary_ssh_files_created": 0,
+  "temporary_ssh_files_remaining": 0,
+  "new_blind_source": false,
+  "operational_qualified": false
+}
