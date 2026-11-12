@@ -1,0 +1,58 @@
+{
+  "schema": "source_tasks_v1",
+  "baseline": "acce669df14f21c1780412ca54b61acfd2e2ccf0",
+  "seed": 20261113,
+  "source": "outputs/source_necessity_03",
+  "source_a2": "outputs/transfer_audit_01/a2",
+  "assets": "inputs/clock_assets_v2.json",
+  "g2": {
+    "steps": 400,
+    "batch": 2,
+    "learning_rate": 0.0001,
+    "following_weight": 2.0,
+    "cf_weight": 2.0,
+    "arms": [
+      "C0",
+      "C1",
+      "C2",
+      "C3"
+    ],
+    "min_train_pairs": 30,
+    "min_train_recordings": 15,
+    "min_train_music": 3,
+    "min_val_music": 4,
+    "min_val_recordings": 8,
+    "min_reference_separation_rad": 0.05,
+    "minimum_ddim_t": 899,
+    "max_snr": 0.02,
+    "max_mean_kl": 0.5,
+    "min_noise_support": 2,
+    "cf_margin_fraction": 0.25,
+    "cf_margin_max_squared_rad": 0.01,
+    "generation_seeds": [
+      20261113
+    ],
+    "scope": "exposed_development_exact_own_targets_shared_clock_pair"
+  },
+  "content": {
+    "steps": 400,
+    "batch": 4,
+    "learning_rate": 0.0001,
+    "arms": [
+      "15",
+      "30",
+      "dual",
+      "dual_shuffle"
+    ],
+    "local_weight": 0.5,
+    "temperature": 0.07,
+    "bootstrap_replicates": 1000,
+    "bootstrap_seed": 20261113,
+    "scope": "exposed_development_fixed_offline_a2_candidates",
+    "normalizer": "fresh_bound_train_full_source_statistics"
+  },
+  "test_tensor_reads": 0,
+  "human_reviewed": false,
+  "operational_qualified": false,
+  "g3_started": false
+}
