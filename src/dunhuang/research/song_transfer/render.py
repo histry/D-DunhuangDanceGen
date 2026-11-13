@@ -40,8 +40,13 @@ def run(generation,features,out):
         records.append(dict(case=case,arm=arm,name=name,frames=len(joints),video=ref(path),physical=binding["physical"],plane_y_m=plane_y,
             native_ok=row["native_ok"],jerk_p95_mps3=physical["audit"]["joint_jerk_mps3_p95"],foot_skate_p95_mps=physical["audit"]["foot_skate_mps_p95"]))
         print("R7_FULL_VIDEO",case,arm,len(joints),flush=True)
-    links="".join('<h2>'+r["name"]+' / '+r["arm"]+'</h2><p>Native: '+str(r["native_ok"])+'; Jerk P95: '+format(r["jerk_p95_mps3"],".2f")+' m/s^3; foot skate P95: '+format(r["foot_skate_p95_mps"],".3f")+' m/s</p><video controls preload="metadata" width="800" src="'+Path(r["video"]["path"]).name+'"></video>' for r in records)
-    (out/"index.html").write_text('<!doctype html><meta charset="utf-8"><title>Full-song development</title><h1>Full-song development — unqualified</h1><p>Complete songs; no human preference or cultural correctness conclusion.</p>'+links,encoding="utf-8")
+    def card(r):
+        title=r["name"]+" / "+r["arm"]
+        return '<section><h2>'+title+'</h2><p>Native: '+str(r["native_ok"])+'; Jerk P95: '+format(r["jerk_p95_mps3"],".2f")+' m/s³; foot skate P95: '+format(r["foot_skate_p95_mps"],".3f")+' m/s</p><video controls preload="metadata" src="'+Path(r["video"]["path"]).name+'"></video></section>'
+    primary="".join(card(r) for r in records if r["arm"]=="temporal_A")
+    controls="".join(card(r) for r in records if r["arm"]!="temporal_A")
+    page='<p>三首完整长音乐的开发结果。主计划A使用既有Temporal关键姿态条件，学习式Adapter尚未接入；动作质量未获准。本页展示诊断视频，不采集盲审评分。参考平面来自Native估计，不是观测地面真值。</p><h1>主计划A：三首完整动作</h1>'+primary+'<h1>其余固定对照</h1>'+controls
+    (out/"index.html").write_text('<!doctype html><meta charset="utf-8"><title>整曲开发结果（未合格）</title><style>body{max-width:1000px;margin:24px auto;padding:0 18px;font:16px sans-serif;background:#f3f5f8;color:#182b43}section{background:white;padding:16px;margin:20px 0;border-radius:8px}video{width:100%;max-width:960px}p{line-height:1.6}</style>'+page,encoding="utf-8")
     write(out/"protocol.json",dict(code_commit=commit(),generation=ref(Path(generation)/"protocol.json"),records=records,full_song=True,plane_policy="saved Native floor estimate, not observed contact; no motion change or smoothing",human_reviewed=False,operational_qualified=False))
 if __name__=="__main__":
     p=argparse.ArgumentParser();p.add_argument("--generation",required=True);p.add_argument("--features",required=True);p.add_argument("--out",required=True);a=p.parse_args();run(a.generation,a.features,a.out)
