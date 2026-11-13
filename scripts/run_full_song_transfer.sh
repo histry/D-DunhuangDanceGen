@@ -24,4 +24,5 @@ cfg=configs/exposed_full_song_r7_v1.json
 "$native" -m dunhuang.research.song_transfer.generation --config "$cfg" --music "$study/music" --features "$study/features" --out "$study/generation"
 "$native" -m dunhuang.research.song_transfer.generation --config "$cfg" --music "$study/music" --features "$study/features" --out "$study/generation_replay" --replay-from "$study/generation"
 "$native" -m dunhuang.research.song_transfer.render --generation "$study/generation" --features "$study/features" --out "$study/videos"
+"$native" scripts/check_full_song_transfer.py --out "$study" > "$receipt/independent_checks.log" 2>&1
 success=1
