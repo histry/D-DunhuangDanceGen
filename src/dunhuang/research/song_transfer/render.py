@@ -2,7 +2,8 @@
 import argparse,subprocess,math,shutil
 from pathlib import Path
 import numpy as np
-from PIL import Image,ImageDraw
+from PIL import Image,ImageDraw,ImageFont
+from concurrent.futures import ProcessPoolExecutor
 from dunhuang.io import checked,write
 from dunhuang.data.sources import ref
 from dunhuang.research.source_capacity.common import read,commit,fresh
@@ -12,7 +13,8 @@ def video(joints,audio,path,label,plane_y):
     width,height=960,640;scale=160.;yaw=-.45;cy=float(np.median(joints[:,0,1]));c,s=math.cos(yaw),math.sin(yaw)
     command=["ffmpeg","-v","error","-f","rawvideo","-pix_fmt","rgb24","-s",str(width)+"x"+str(height),"-r","30","-i","-","-i",str(audio),
         "-map","0:v:0","-map","1:a:0","-c:v","libx264","-preset","veryfast","-crf","20","-c:a","aac","-shortest",str(path)]
-    process=subprocess.Popen(command,stdin=subprocess.PIPE)
+    command[-1:-1]=["-threads","2"]
+    process=subprocess.Popen(command,stdin=subprocess.PIPE);font=ImageFont.load_default()
     try:
         for t,points in enumerate(joints):
             image=Image.new("RGB",(width,height),"#f3f5f8");draw=ImageDraw.Draw(image)
@@ -25,21 +27,25 @@ def video(joints,audio,path,label,plane_y):
             coords=[project(p) for p in points]
             for j in range(1,24):draw.line([coords[PARENTS[j]],coords[j]],fill="#255f9b" if j%2 else "#9b4a25",width=4)
             for a,b in coords:draw.ellipse((a-3,b-3,a+3,b+3),fill="#24344b")
-            draw.text((18,18),label,fill="#182b43");draw.text((18,40),f"frame {t+1}/{len(joints)}  {t/30:.2f} s",fill="#182b43")
-            draw.text((18,height-36),"Root-follow camera; Native-estimated plane; no observed ground/contact truth.",fill="#40536c")
+            draw.text((18,18),label,fill="#182b43",font=font);draw.text((18,40),f"frame {t+1}/{len(joints)}  {t/30:.2f} s",fill="#182b43",font=font)
+            draw.text((18,height-36),"Root-follow camera; Native-estimated plane; no observed ground/contact truth.",fill="#40536c",font=font)
             process.stdin.write(np.asarray(image).tobytes())
     finally:process.stdin.close()
     if process.wait()!=0:raise RuntimeError("Full video encoder failed")
+def render_record(args):
+    row,binding,song,out=args;case=row["case"];arm=row["arm"];out=Path(out)
+    joints=np.load(checked(binding["fk"]));audio=checked(song["audio"]);path=out/(str(case)+"_"+arm+".mp4")
+    if len(joints)!=row["frames"]:raise ValueError("Video is not the full song")
+    physical=read(checked(binding["physical"]));plane_y=physical["audit"]["floor_y_m"];name=Path(song["audio"]["path"]).name
+    video(joints,audio,path,"UNQUALIFIED DEVELOPMENT / "+name+" / "+arm,plane_y)
+    print("R7_FULL_VIDEO",case,arm,len(joints),flush=True)
+    return dict(case=case,arm=arm,name=name,frames=len(joints),video=ref(path),physical=binding["physical"],plane_y_m=plane_y,
+        native_ok=row["native_ok"],jerk_p95_mps3=physical["audit"]["joint_jerk_mps3_p95"],foot_skate_p95_mps=physical["audit"]["foot_skate_mps_p95"])
+
 def run(generation,features,out):
-    out=fresh(out);protocol=read(Path(generation)/"protocol.json");result=read(Path(generation)/"result.json");songs=read(Path(features)/"protocol.json")["songs"];records=[]
-    for row,binding in zip(result["records"],protocol["bindings"]):
-        case=row["case"];arm=row["arm"];joints=np.load(checked(binding["fk"]));audio=checked(songs[case]["audio"]);path=out/(str(case)+"_"+arm+".mp4")
-        if len(joints)!=row["frames"]:raise ValueError("Video is not the full song")
-        physical=read(checked(binding["physical"]));plane_y=physical["audit"]["floor_y_m"];name=Path(songs[case]["audio"]["path"]).name
-        video(joints,audio,path,"UNQUALIFIED DEVELOPMENT / "+name+" / "+arm,plane_y)
-        records.append(dict(case=case,arm=arm,name=name,frames=len(joints),video=ref(path),physical=binding["physical"],plane_y_m=plane_y,
-            native_ok=row["native_ok"],jerk_p95_mps3=physical["audit"]["joint_jerk_mps3_p95"],foot_skate_p95_mps=physical["audit"]["foot_skate_mps_p95"]))
-        print("R7_FULL_VIDEO",case,arm,len(joints),flush=True)
+    out=fresh(out);protocol=read(Path(generation)/"protocol.json");result=read(Path(generation)/"result.json");songs=read(Path(features)/"protocol.json")["songs"]
+    jobs=[(r,b,songs[r["case"]],str(out)) for r,b in zip(result["records"],protocol["bindings"])]
+    with ProcessPoolExecutor(max_workers=3) as pool:records=list(pool.map(render_record,jobs))
     def card(r):
         title=r["name"]+" / "+r["arm"]
         return '<section><h2>'+title+'</h2><p>Native: '+str(r["native_ok"])+'; Jerk P95: '+format(r["jerk_p95_mps3"],".2f")+' m/s³; foot skate P95: '+format(r["foot_skate_p95_mps"],".3f")+' m/s</p><video controls preload="metadata" src="'+Path(r["video"]["path"]).name+'"></video></section>'
@@ -47,6 +53,6 @@ def run(generation,features,out):
     controls="".join(card(r) for r in records if r["arm"]!="temporal_A")
     page='<p>三首完整长音乐的开发结果。主计划A使用既有Temporal关键姿态条件，学习式Adapter尚未接入；动作质量未获准。本页展示诊断视频，不采集盲审评分。参考平面来自Native估计，不是观测地面真值。</p><h1>主计划A：三首完整动作</h1>'+primary+'<h1>其余固定对照</h1>'+controls
     (out/"index.html").write_text('<!doctype html><meta charset="utf-8"><title>整曲开发结果（未合格）</title><style>body{max-width:1000px;margin:24px auto;padding:0 18px;font:16px sans-serif;background:#f3f5f8;color:#182b43}section{background:white;padding:16px;margin:20px 0;border-radius:8px}video{width:100%;max-width:960px}p{line-height:1.6}</style>'+page,encoding="utf-8")
-    write(out/"protocol.json",dict(code_commit=commit(),generation=ref(Path(generation)/"protocol.json"),records=records,full_song=True,plane_policy="saved Native floor estimate, not observed contact; no motion change or smoothing",human_reviewed=False,operational_qualified=False))
+    write(out/"protocol.json",dict(code_commit=commit(),generation=ref(Path(generation)/"protocol.json"),records=records,full_song=True,parallel_renderers=3,encoder_threads=2,plane_policy="saved Native floor estimate, not observed contact; no motion change or smoothing",human_reviewed=False,operational_qualified=False))
 if __name__=="__main__":
     p=argparse.ArgumentParser();p.add_argument("--generation",required=True);p.add_argument("--features",required=True);p.add_argument("--out",required=True);a=p.parse_args();run(a.generation,a.features,a.out)
