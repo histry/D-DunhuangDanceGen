@@ -109,6 +109,11 @@ def check(root):
         secrets.update([b["source_uid"],b["event_uid"],b["raw_motion_sha256"]])
         assert sha(checked(b["media"]))==b["media_sha256"]
         for key in ("raw","native"):checked(b[key])
+        with np.load(checked(b["raw"]),allow_pickle=False) as raw:
+            assert float(raw["mocap_framerate"])==b["fps"]==30
+            assert len(raw["poses"])==len(np.load(checked(b["native"]),mmap_mode="r"))
+            assert 0<=b["start_frame"]<b["end_frame"]<=len(raw["poses"])
+            assert 0<=b["display_interval"][0]<b["display_interval"][1]<=len(raw["poses"])
         if b.get("audio"):checked(b["audio"])
     for file in (root/"review/reviewer").iterdir():
         if file.suffix not in (".html",".json",".txt"):continue
@@ -121,7 +126,7 @@ def check(root):
         max_condition_fraction=budget,max_common_norm_relative_error=norm_error,common_dose_groups=len(dose_buckets),exact_replay_arrays=exact_arrays,
         old_numeric_trusted_unchanged=93,frozen_model_files_rechecked=models,known_train_source_and_music_group_overlap=0,
         distinct_real_pcm_assets=3,plans_verified=plans,consumed_events=events,independent_slerp_max_error_rad=pose_error,phase_clock_max_error=phase_error,
-        blind_items=35,original_human_records=0,public_review_identity_scan_passed=True,human_reviewed=False,semantic_event_truth="UNKNOWN",optimizer_calls=0,edge_forward_calls=0,
+        blind_items=35,raw_native_frame_clock_checks=35,source_stage_support_counts=[dict(cohort=c,case=i,source=s,stage_joint_frames=int(v.sum()),stage_frames=int(v.any(-1).sum())) for (c,i,s),v in sorted(stages.items())],original_human_records=0,public_review_identity_scan_passed=True,human_reviewed=False,semantic_event_truth="UNKNOWN",optimizer_calls=0,edge_forward_calls=0,
         temporary_ssh_files_created=0,temporary_ssh_files_remaining=0,operational_qualified=False)
     write(root/"public_checks.json",result);print("INDEPENDENT_R6_CHECKS",checked_predictions,plans,len(items))
 if __name__=="__main__":
