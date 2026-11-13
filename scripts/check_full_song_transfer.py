@@ -81,7 +81,10 @@ def check(root):
         assert len(videos)==1 and len(audio)==1 and int(videos[0]["nb_read_frames"])==row["frames"]
         assert videos[0]["r_frame_rate"]=="30/1"
         video_counts.append(dict(case=row["case"],arm=row["arm"],frames=int(videos[0]["nb_read_frames"]),video_sha256=sha(file)))
-    write(root/"public_checks.json",dict(code_commit=subprocess.check_output(["git","rev-parse","HEAD"],text=True).strip(),
+    changed=subprocess.check_output(["git","diff","--name-only",mp["config"]["baseline"],"--","src/dunhuang","configs"],text=True).splitlines()
+    formal=[p for p in changed if not p.startswith("src/dunhuang/research/") and p not in ("configs/exposed_full_song_r7_v1.json","configs/source_contrast_r7_v1.json")]
+    assert formal==[]
+    write(root/"public_checks.json",dict(formal_baseline_changed_paths=formal,code_commit=subprocess.check_output(["git","rev-parse","HEAD"],text=True).strip(),
         verifier_sha256=sha(__file__),full_songs=len(inventory),plans_verified=plans,exact_generation_replay_arrays=arrays,
         videos=video_counts,fresh_generation_replay=read(root/"generation_replay/replay.json"),
         optimizer_calls=0,operational_qualified=False,human_reviewed=False))
