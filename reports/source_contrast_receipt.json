@@ -1,0 +1,31 @@
+{
+  "schema": "r7_sealed_execution_receipt",
+  "execution_commit": "5e7f4f2e60aecda86599fec3349ebd2fc8529955",
+  "verifier_commit": "5e4de645c692c6126ead7fae82f0656e193e74ec",
+  "stage_execution_commits": {
+    "preflight": "5e7f4f2e60aecda86599fec3349ebd2fc8529955",
+    "preflight_replay": "5e7f4f2e60aecda86599fec3349ebd2fc8529955",
+    "control": "5e7f4f2e60aecda86599fec3349ebd2fc8529955",
+    "control_replay": "5e7f4f2e60aecda86599fec3349ebd2fc8529955"
+  },
+  "summary_sha256": "0b386e4d65a9b5dbe439cc2eaabb792e31fab8c6724490a3b5b078d09a3474ef",
+  "root": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/source_contrast_02",
+  "exit_status": 0,
+  "receipt_sha256": {
+    "edge_check.log": "c7c62c592362a90831299391d3b2b4aa7020cabd1734a44905a5634bf47b8baa",
+    "independent_exit_status.txt": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "execution_commit.txt": "ffd01b45bc3602f98058fce68ab8e841f6b2404fcf7de905bae14c1f6fc0ed97",
+    "started_utc.txt": "7d9cf51a5bd53c06174cdb3e5ffaf954dbcbd136891c63b59302c3ea4486c1e8",
+    "independent_checks.log": "cde2570d00742b8d33a9302e479ebc163317594da58023018663b8abd15b4ce2",
+    "pytest.log": "b3339a4060c71cd2fbd210ca7d34e39ad707ae0a85f0df5ab1ea83aa4c8eb21b",
+    "exit_status.txt": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "finished_utc.txt": "42f10d6432c99bd8edea3f5e849a8c285cceb06e5a4704796b8a67778fdaf73f"
+  },
+  "started_utc": "2026-11-13T15:15:04Z",
+  "finished_utc": "2026-11-13T15:45:04Z",
+  "prior_failed_roots_retained": true,
+  "optimizer_updates": 0,
+  "temporary_ssh_files_created": 0,
+  "temporary_ssh_files_remaining": 0,
+  "operational_qualified": false
+}

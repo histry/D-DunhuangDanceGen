@@ -2,6 +2,8 @@
 
 当前默认路径：**Event Catalog → Music Timeline → Event Plan → 冻结 EDGE（Temporal V0.5）→ 原 Native 验收**。学习检索保留shadow。研究路径已完成真实151D配对补全，以及原生SO(3)跨录制条件的Cross/Additive同参数量训练（各1,200步）；事件跟随与完整生成质量仍未合格。
 
+新增 [R7来源辨识实验报告](reports/R7来源辨识实验报告.md)：固定曝光Train人口中，A2两人口均20/24；零剂量保留原分母，未取得完整来源控制资格。144次投影完整重放及1,704数组一致，独立核验通过。[整曲开发协议](docs/exposed_full_song_r7_v1.md)固定dunhuangwu2/3/4为完整音乐输入，区分全局事件槽与EDGE重叠窗口；不因缺少人工标签阻断客观实验。
+
 上一轮事件机制实验共40次150帧执行、32个不同动作哈希，Native0/40；两种融合效果近似。对1,468个Train目标的只读Native审计有40窗通过，未据此过滤数据或重选权重。详见[事件机制与跨来源训练报告](reports/事件机制与跨来源训练报告.md)、[机器汇总](reports/event_mechanism_summary.json)及[运行合同](docs/event_mechanism.md)。
 
 新增[时钟约束对齐与Root联合条件实验报告](reports/时钟约束对齐与Root联合条件实验报告.md)及[机器汇总](reports/clock_root_summary.json)：实现带NULL的时钟OT/位置对比、37D来源Root–Contact软条件和责任诊断，完成A/B/C固定预算训练、Root掩码消融、六例150帧生成与独立复核，服务器128项测试通过。时间辨别未建立稳定优势，Root条件收益仍未成立，Native0/6；新路径保持Shadow研究模式，默认检索与31项门限不变。

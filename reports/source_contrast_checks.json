@@ -1,0 +1,26 @@
+{
+  "code_commit": "5e4de645c692c6126ead7fae82f0656e193e74ec",
+  "verifier_sha256": "1eabdcc630199cce26c1f17d60f776eebf1907ee4d7923c5172f13cda5599dde",
+  "saved_predictions_verified": 480,
+  "exact_replay_arrays": 1704,
+  "source_readout_max_error_rad": 2.510235130870342e-09,
+  "physical_readout_max_error": 0.0,
+  "max_budget_fraction": 1.0000000520586398,
+  "common_dose_groups": 48,
+  "zero_common_dose_groups": 8,
+  "small_projections_verified": 144,
+  "frozen_prediction_parities": 96,
+  "frozen_models_verified": {
+    "cf/C0": "cf42aa7fd2c58a53f9d8b645190e0441b39bd33f68df1663d9ce923508cd9028",
+    "cf/C1": "2951a5be0bbaf868c2cc63d0c85bfbaccf44f1307697bde576735d16321d7e9c",
+    "cf/C2": "d272d0f6a0f100125ae632438bc87e6cf0edf0046b35116bef70970d979722d9",
+    "cf/C3": "85cd80754481221c00f53dae8f3f8807fe7fcf94e4e2c990decf4b13889b6bd9",
+    "content/15": "7b7f7b779756b9a2f89a4afc0e7572614bcf4829dbf7b7479bb82107eff0067a",
+    "content/30": "86f694abb3dd6f15b7fabb477a6238f1e9b9a3eb810b112e10094ab92e7a5a21",
+    "content/dual": "77953217c62d9b982fe3988ffc912517540b0009da018c5af1ca825b8a4cc08e",
+    "content/dual_shuffle": "5074c52676e8177536d9e4494c541b9f6796d496a73269ef8f028077d93d9241"
+  },
+  "independent_evaluation": "NOT_EVALUABLE_EXPOSED_TRAIN",
+  "optimizer_calls": 0,
+  "operational_qualified": false
+}
