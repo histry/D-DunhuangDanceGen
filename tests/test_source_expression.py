@@ -25,9 +25,10 @@ def test_review_rejects_broken_identity_and_automatic_truth(field,value):
 def test_review_disagreement_requires_third_original_vote():
     rs=[record(),record("r2","INVALID")]
     s,_,_=summarize([binding()],rs,roster(),"roster");assert s["states"]=={"PARTIAL_REVIEW":1}
-    rs.append(record("r3","UNSURE"));adj=[dict(blind_item_id="opaque",original_review_ids=["r1","r2"],adjudicator_review_id="r3")]
+    rs.append(record("r3","UNSURE"));adj=[dict(adjudication_id="adj1",adjudicated_at="2026-11-13T13:00:00+08:00",blind_item_id="opaque",original_review_ids=["r1","r2"],adjudicator_review_id="r3")]
     s,d,a=summarize([binding()],rs,roster(),"roster",adj)
-    assert len(a)==3 and s["initial_disagreements"]==1 and d[0]["decision"]=="UNSURE"
+    assert len(a)==3 and s["initial_disagreements"]==1 and d[0]["decision"]=="UNSURE" and d[0]["adjudication_id"]=="adj1"
+    assert all(r["adjudication_id"]=="adj1" for r in a)
     adj[0]["adjudicator_review_id"]="r1"
     with pytest.raises(ValueError):summarize([binding()],rs,roster(),"roster",adj)
 def test_music_compatibility_never_crossmodal_event_truth():

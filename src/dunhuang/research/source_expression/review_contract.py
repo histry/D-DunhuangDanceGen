@@ -48,6 +48,8 @@ def summarize(bindings,records,roster,roster_ref,adjudications=()):
     decisions=[];conflicts=0;agreements=0;reasons=Counter();states=Counter()
     adjudication_index={a["blind_item_id"]:a for a in adjudications}
     if len(adjudication_index)!=len(adjudications) or set(adjudication_index)-set(index):raise ValueError("Invalid duplicate/unknown adjudication")
+    adj_ids=[a.get("adjudication_id") for a in adjudications]
+    if any(not isinstance(i,str) or not i for i in adj_ids) or len(set(adj_ids))!=len(adj_ids):raise ValueError("Unique adjudication IDs required")
     for item in bindings:
         reviews=by_item.get(item["blind_item_id"],[]);ids=[r["reviewer_id"] for r in reviews]
         if len(ids)!=len(set(ids)):raise ValueError("One reviewer cannot cast duplicate task votes")
@@ -64,12 +66,14 @@ def summarize(bindings,records,roster,roster_ref,adjudications=()):
                     if set(adj.get("original_review_ids",[]))!={a["review_id"],b["review_id"]}:raise ValueError("Adjudication lost original opinions")
                     third=next((r for r in reviews if r["review_id"]==adj.get("adjudicator_review_id")),None)
                     if not third or third["reviewer_id"] in (a["reviewer_id"],b["reviewer_id"]):raise ValueError("Independent third review required")
+                    if time_valid(adj.get("adjudicated_at"))<max(time_valid(r["reviewed_at"]) for r in (a,b,third)):raise ValueError("Adjudication precedes its original evidence")
                     decision=third["decision"]
+                    for r in reviews:r["adjudication_id"]=adj["adjudication_id"]
             state="UNSURE" if decision=="UNSURE" else "HUMAN_REVIEW_VERIFIED" if decision is not None else "PARTIAL_REVIEW"
         states[state]+=1
         for r in reviews:
             if r["decision"]=="UNSURE":reasons[r["reason_code"]]+=1
-        decisions.append(dict(blind_item_id=item["blind_item_id"],task_type=item["task_type"],state=state,decision=decision,original_review_ids=[r["review_id"] for r in reviews]))
+        decisions.append(dict(blind_item_id=item["blind_item_id"],task_type=item["task_type"],state=state,decision=decision,original_review_ids=[r["review_id"] for r in reviews],adjudication_id=adjudication_index.get(item["blind_item_id"],{}).get("adjudication_id")))
     return dict(states=dict(states),original_records=len(accepted),reviewers=len({r["reviewer_id"] for r in accepted}),initial_agreements=agreements,initial_disagreements=conflicts,
         unsure_reasons=dict(reasons),data_review_verified=bool(bindings) and states["HUMAN_REVIEW_VERIFIED"]==len(bindings),
         model_evaluation_independence=False,semantic_event_truth="UNKNOWN",crossmodal_event_correspondence="NOT_EVALUABLE",operational_qualified=False),decisions,accepted
