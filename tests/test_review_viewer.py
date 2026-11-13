@@ -24,3 +24,10 @@ def test_old_parser_requires_fixed_root_and_valid_frame_shape():
     text="const xyz="+json.dumps(np.zeros((4,22,3)).tolist())+",parents=[]"
     assert old_points(text).shape==(4,22,3)
     with pytest.raises(ValueError):old_points(text.replace("const xyz=","other="))
+
+def test_parent_review_instructions_are_native_chinese_with_exact_decision_codes():
+    from dunhuang.research.source_expression.viewer_v2 import index_page
+    html=index_page([])
+    assert "每人使用独立副本" in html and "UNSURE 表示无法判断" in html
+    assert "Use your assigned private copy" not in html and "__ITEMS__" not in html
+    assert "independent_dance_review_v1" in html and "model_predictions_shown:false" in html

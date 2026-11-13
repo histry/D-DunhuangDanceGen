@@ -27,6 +27,15 @@ def page(relative,root,task,audio=None):
     payload=json.dumps(dict(pose=values["pose"].tolist(),world=np.round(values["world"],6).tolist()),separators=(",",":"))
     template=Path(__file__).with_name("viewer_v2.html").read_text(encoding="utf-8")
     return template.replace("__DATA__",payload).replace("__PARENTS__",json.dumps(PARENTS)).replace("__TASK__",task).replace("__AUDIO__",'<audio controls preload="metadata" src="'+audio+'"></audio>' if audio else "")
+def index_page(manifest):
+    template=Path(__file__).with_name("review_ui.html").read_text(encoding="utf-8")
+    template=template.replace("<!doctype html>","<!doctype html><html lang='zh-CN' translate='no'><meta name='google' content='notranslate'>")
+    template=template.replace("Independent review V1 — Preparation only","独立盲审 · 播放修正版（仅准备）")
+    template=template.replace("Use your assigned private copy. Work independently. No actual human labels exist in this package.","每人使用独立副本，独立判断。当前没有真实人工审核记录。")
+    template=template.replace("UNSURE is an allowed result; add a reason. EVENT and POSE are separate from MUSIC_MATCH compatibility.","UNSURE 表示无法判断，须填写原因；EVENT、POSE 与 MUSIC_MATCH 分开审核。")
+    template=template.replace("Reviewer ID","审核人编号").replace("Private roster reference","私有名册引用").replace("Save original review","保存本人的审核记录").replace("Download original submissions","下载原始审核记录")
+    return template.replace("__ITEMS__",json.dumps(manifest)).replace("__VERSION__","independent_dance_review_v1")
+
 def build(source,catalog,out,replay_from=None):
     source=Path(source);catalog=Path(catalog);out=fresh(out);public=out/"reviewer";admin=out/"administrator";public.mkdir();admin.mkdir()
     if sha(catalog)!=EXPECTED_CATALOG:raise ValueError("Frozen Catalog differs")
@@ -79,12 +88,7 @@ def build(source,catalog,out,replay_from=None):
             start_frame=a,end_frame=b,display_interval=[lo,hi],fps=30,media_sha256=sha(media),previous_media_sha256=item["media_sha256"],media=ref(media),
             fitted_root_observation="UNVERIFIED_FIT_NOT_WORLD_OR_CONTACT_TRUTH",presentation_version="viewer_v2",audio_sha256=sha(public/audio) if audio else None,audio=ref(public/audio) if audio else None)))
     write(public/"items.json",manifest)
-    template=Path(__file__).with_name("review_ui.html").read_text(encoding="utf-8")
-    template=template.replace("<!doctype html>","<!doctype html><html lang='zh-CN' translate='no'><meta name='google' content='notranslate'>")
-    template=template.replace("Independent review V1 — Preparation only","独立盲审 · 播放修正版（仅准备）")
-    template=template.replace("Use your assigned private copy. Work independently. No actual human labels exist in this package.\\nUNSURE is an allowed result; add a reason. EVENT and POSE are separate from MUSIC_MATCH compatibility.","每人使用独立副本，独立判断。当前没有真实人工审核记录。UNSURE 表示无法判断，须填写原因；EVENT、POSE 与 MUSIC_MATCH 分开审核。")
-    template=template.replace("Reviewer ID","审核人编号").replace("Private roster reference","私有名册引用").replace("Save original review","保存本人的审核记录").replace("Download original submissions","下载原始审核记录")
-    (public/"index.html").write_text(template.replace("__ITEMS__",json.dumps(manifest)).replace("__VERSION__","independent_dance_review_v1"),encoding="utf-8")
+    (public/"index.html").write_text(index_page(manifest),encoding="utf-8")
     (public/"README.txt").write_text("PREPARATION_ONLY / viewer_v2. Original discrete frames, no smoothing, no automatic loop. World view includes unverified fitted Root, not contact ground truth. Pose view fixes Root and cannot establish foot sliding. Old viewer packet is retained. Reviewer identity and evidence admission remain required.\n",encoding="utf-8")
     write(admin/"bindings.json",bindings);write(out/"diagnostics.json",diagnostics)
     result=dict(schema="blind_viewer_presentation_v2",items=len(manifest),unique_events=len(diagnostics),all_pose_frames_unchanged=True,
