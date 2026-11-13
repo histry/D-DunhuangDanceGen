@@ -22,11 +22,11 @@ invisible details must be marked UNSURE. Mouse drag rotates the view.</p>
 <input id="frame" type="range" min="0" max="LAST" value="0"><span id="time"></span>AUDIO
 <script>
 const xyz=DATA,parents=PARENTS,c=document.querySelector('canvas'),g=c.getContext('2d');
-let f=0,playing=true,angle=0,drag=false;
+let f=0,playing=false,angle=0,drag=false,audio=document.querySelector('audio');
 c.onpointerdown=()=>drag=true;c.onpointerup=()=>drag=false;c.onpointermove=e=>{if(drag)angle+=e.movementX*.01};
-document.querySelector('#play').onclick=()=>playing=!playing;
-document.querySelector('#frame').oninput=e=>{f=+e.target.value;playing=false};
-setInterval(()=>{if(playing)f=(f+1)%xyz.length;
+document.querySelector('#play').onclick=()=>{playing=!playing;if(audio){if(playing)audio.play();else audio.pause()}};
+document.querySelector('#frame').oninput=e=>{f=+e.target.value;playing=false;if(audio){audio.pause();audio.currentTime=f/30}};
+setInterval(()=>{if(audio)f=Math.min(xyz.length-1,Math.floor(audio.currentTime*30));else if(playing)f=(f+1)%xyz.length;
 g.clearRect(0,0,800,500);const pts=xyz[f].map(p=>[400+150*(Math.cos(angle)*p[0]+Math.sin(angle)*p[2]),470-150*p[1]]);
 for(let j=1;j<pts.length;j++){g.beginPath();g.moveTo(...pts[parents[j]]);g.lineTo(...pts[j]);g.stroke()}
 document.querySelector('#frame').value=f;document.querySelector('#time').textContent=(f/30).toFixed(2)+' s';},1000/30);
