@@ -1,12 +1,12 @@
 """Full-length M1/M2 and fixed-encoder M3 Shadow; zero generation calls."""
-import argparse,copy,sys
+import argparse,sys
 from pathlib import Path
 import numpy as np
 import torch
 from dunhuang.io import checked,sha,write,pinned
 from dunhuang.data.sources import ref
 from dunhuang.music import clock_plan
-from dunhuang.planning.planner import timeline as legacy_timeline,_search
+from dunhuang.planning.planner import timeline as legacy_timeline,_search,plan as default_plan
 from dunhuang.planning.event_plan import semantic_plan_id
 from dunhuang.planning.feasible_time_map import solve
 from dunhuang.planning.time_map import source_positions,motion_features74
@@ -87,6 +87,9 @@ def run(config,out,replay_from=None):
                 cost,sequence=chosen
                 plan=_search(old,t,item["audio"]["sha256"],top_k=5,beam_width=3,fixed_events={i:e for i,e in enumerate(sequence)})[0]
                 if plan["planning_cost"]!=cost or plan["frames"]!=frames:raise ValueError("Whole-plan consumer differs")
+                if arm=="E0_legacy":
+                    baseline=default_plan(old,t,item["audio"]["sha256"],top_k=5,beam_width=3)
+                    if semantic_plan_id(baseline)!=semantic_plan_id(plan) or baseline["planning_cost"]!=cost:raise ValueError("Full-song frozen baseline parity differs")
                 folder=out/(str(case)+"_"+timing_name+"_"+arm);folder.mkdir();write(folder/"event_plan.json",plan);write(folder/"candidate_uids.json",uids)
                 condition,checks=inspect_conditions(plan,new,scale["scale"],scale["bias"]);np.savez_compressed(folder/"condition.npz",**condition)
                 bindings.append(dict(case=case,timeline=timing_name,arm=arm,plan=ref(folder/"event_plan.json"),condition=ref(folder/"condition.npz")))

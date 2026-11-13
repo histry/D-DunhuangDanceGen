@@ -1,5 +1,6 @@
 """Whole-song official Layer66 extraction, frozen cache binding and endpoint replay."""
 import argparse,sys,hashlib
+import importlib.metadata
 from pathlib import Path
 import numpy as np
 import soundfile as sf
@@ -11,8 +12,15 @@ def run(config,music,out,verify=False):
     inventory=read(checked(read(Path(music)/"protocol.json")["inventory"]));assets=read(config["assets"])
     root=pinned(assets["edge_root"],assets["edge_commit"]);sys.path.insert(0,str(root))
     from data.audio_extraction.jukebox_features import extract
+    import jukemirlib
+    from jukemirlib.constants import CACHE_DIR
+    producer=dict(package_version=importlib.metadata.version("jukemirlib"),
+        package_sources=[ref(p) for p in sorted(Path(jukemirlib.__file__).parent.glob("*.py"))],
+        weights=[ref(Path(CACHE_DIR)/n) for n in ("vqvae.pth.tar","prior_level_2.pth.tar")],
+        official_extractor=ref(root/"data/audio_extraction/jukebox_features.py"),publisher_provenance_verified=False)
     if verify:
         out=Path(out);receipt=read(out/"protocol.json");calls=0
+        if receipt["producer_runtime"]!=producer:raise ValueError("Jukebox producer weights or runtime differ")
         for song in receipt["songs"]:
             values=np.load(checked(song["features"]))
             for record in song["slices"]:
@@ -40,7 +48,7 @@ def run(config,music,out,verify=False):
             print("R7_JUKEBOX_WINDOW",song["case"],i+1,clock["windows"],flush=True)
         file=folder/"features.npy";np.save(file,np.stack(values))
         songs.append(dict(case=song["case"],audio=song["audio"],features=ref(file),clock=clock,producer="NEW_OFFICIAL_LAYER66",slices=slices))
-    write(out/"protocol.json",dict(code_commit=commit(),config=config,music_protocol=ref(Path(music)/"protocol.json"),layer=66,fps=30,songs=songs,scope=config["scope"]))
+    write(out/"protocol.json",dict(code_commit=commit(),config=config,music_protocol=ref(Path(music)/"protocol.json"),producer_runtime=producer,layer=66,fps=30,songs=songs,scope=config["scope"]))
     print("R7_WHOLE_JUKEBOX_COMPLETED",flush=True)
 if __name__=="__main__":
     p=argparse.ArgumentParser();p.add_argument("--config",required=True);p.add_argument("--music",required=True);p.add_argument("--out",required=True);p.add_argument("--verify",action="store_true");a=p.parse_args();run(read(a.config),a.music,a.out,a.verify)
