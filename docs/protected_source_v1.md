@@ -88,3 +88,24 @@ hashes and receipts; private arrays, identifiers and raw data stay off Git.
 Credentials, SSH clients and loopback GitHub relay stay in RAM and close in finally;
 no SSH helper files are required. Existing modified reference-repository documents
 must remain untouched. Operational qualification stays false.
+
+## Additional independent saved-output checks
+scripts/check_protected_source.py separately recomputes saved source errors,
+condition budgets and matched norms, Train-bank/song isolation, neighbour scores
+and group AP/F1 intervals. It uses whole-source SciPy SLERP independently of the
+prompt resampling helper to verify consumed poses, phase clocks and candidate IDs.
+
+The old60 linear-head scores are also re-evaluated under both centre and interval
+targets without refitting. This is a target-definition audit, not an architecture
+gain; group support and prevalence can change. New F0 nearest-neighbour readouts
+are not presented as the same estimator as those historical linear heads.
+
+An analytic reconstruction applies the frozen kinematic proxy rules directly to
+raw74 velocity sequences. Agreement diagnoses information recoverability, not
+independently reviewed semantic truth, because the rules share the proxy detector.
+No new detector threshold, head or encoder is fitted by these checks.
+
+The independent checker additionally constructs the real153D event_geometry and
+observed visibility interface from every saved plan. Poisoning all unknown storage
+with NaN must leave geometry identical. This verifies condition support, not
+production loading qualification for observed-trained research weights.
