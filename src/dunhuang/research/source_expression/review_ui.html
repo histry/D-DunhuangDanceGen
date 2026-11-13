@@ -1,0 +1,26 @@
+<!doctype html><meta charset="utf-8"><title>Independent review V1</title>
+<style>body{font:18px sans-serif;max-width:1100px;margin:24px auto}input,select,textarea,button{font:inherit;margin:8px}iframe{width:100%;height:760px;border:1px solid #ccc}</style>
+<h1>Independent review V1 — Preparation only</h1>
+<p>Use your assigned private copy. Work independently. No actual human labels exist in this package.
+UNSURE is an allowed result; add a reason. EVENT and POSE are separate from MUSIC_MATCH compatibility.</p>
+<label>Reviewer ID <input id="reviewer"></label><label>Private roster reference <input id="roster"></label>
+<select id="item"></select><iframe></iframe>
+<select id="decision"></select><select id="confidence"><option>LOW</option><option>MEDIUM</option><option>HIGH</option></select>
+<select id="reason"><option>JUDGMENT_SUPPORTED</option><option>VISIBILITY_INSUFFICIENT</option><option>BOUNDARY_AMBIGUOUS</option><option>SOURCE_INCOMPLETE</option><option>CULTURAL_SEMANTICS_UNKNOWN</option><option>MUSIC_CONTEXT_INSUFFICIENT</option><option>TECHNICAL_FAILURE</option><option>OTHER</option></select>
+<textarea id="notes" placeholder="Evidence and event times in seconds; OTHER requires explanation"></textarea>
+<button id="save">Save original review</button><button id="download">Download original submissions</button><p id="status"></p>
+<script>
+const items=__ITEMS__,records=[],q=id=>document.getElementById(id),sel=q('item');
+items.forEach((x,i)=>sel.add(new Option(x.blind_item_id+' / '+x.task_type,i)));
+function show(){let x=items[+sel.value];document.querySelector('iframe').src=x.media;q('decision').replaceChildren();
+(x.task_type==='MUSIC_MATCH'?['UNSURE','COMPATIBLE','INCOMPATIBLE']:['UNSURE','VALID','INVALID']).forEach(v=>q('decision').add(new Option(v,v)))}
+sel.onchange=show;show();
+q('save').onclick=()=>{let x=items[+sel.value],reviewer=q('reviewer').value.trim(),roster=q('roster').value.trim();
+if(!reviewer||!roster)return alert('Verified private reviewer and roster references required.');
+if(q('decision').value==='UNSURE'&&q('reason').value==='JUDGMENT_SUPPORTED')return alert('UNSURE needs a specific reason.');
+if(q('reason').value==='OTHER'&&!q('notes').value.trim())return alert('OTHER needs an explanation.');
+if(records.some(r=>r.blind_item_id===x.blind_item_id))return alert('Original vote already saved; retain it and submit a separate correction record through administrator.');
+records.push({review_id:crypto.randomUUID(),blind_item_id:x.blind_item_id,task_type:x.task_type,reviewer_id:reviewer,reviewer_roster_ref:roster,media_sha256:x.media_sha256,reviewed_at:new Date().toISOString(),decision:q('decision').value,confidence:q('confidence').value,reason_code:q('reason').value,notes:q('notes').value,review_protocol_version:'__VERSION__',model_predictions_shown:false,label_origin:'independent_human_review'});
+q('status').textContent=records.length+' original reviews held locally. Download before closing this page.'};
+q('download').onclick=()=>{let a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(records,null,2)],{type:'application/json'}));a.download='original_reviews.json';a.click();URL.revokeObjectURL(a.href)};
+</script>

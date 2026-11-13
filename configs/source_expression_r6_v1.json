@@ -1,0 +1,91 @@
+{
+  "schema": "source_expression_r6_v1",
+  "baseline": "0265485e20442684fac2edaf9758bc982507f79e",
+  "source": "outputs/source_tasks_02",
+  "capacity": "outputs/source_capacity_03",
+  "protected_source": "outputs/protected_source_01",
+  "reference_control": "outputs/reference_guidance_03",
+  "data_v3": "outputs/data_event_v3_04",
+  "source_a2": "outputs/transfer_audit_01/a2",
+  "warp": "outputs/primitive_warp_01",
+  "seed": 20261113,
+  "selection_seed": 20261114,
+  "times": [
+    999,
+    499,
+    19
+  ],
+  "protected": {
+    "rank": 6,
+    "max_solver_iterations": 200,
+    "solver_ftol": 1e-10,
+    "linear_safety_fraction": 0.9,
+    "linear_tolerance": 1e-06,
+    "relative_rms": 0.01,
+    "min_direction_rad": 0.001,
+    "fd_steps": [
+      0.25,
+      0.125,
+      0.0625
+    ],
+    "max_fd_relative_error": 0.1,
+    "min_fd_cosine": 0.99,
+    "max_adjoint_relative_error": 0.0001
+  },
+  "protection": {
+    "non_target_mean_rad": 0.01,
+    "root_rms_m": 0.01,
+    "contact_max": 0.05,
+    "activity_ratio": [
+      0.9,
+      1.1
+    ],
+    "acceleration_ratio": 1.1,
+    "jerk_ratio": 1.1
+  },
+  "probe": {
+    "arms": [
+      "D0",
+      "D1",
+      "D2",
+      "D3",
+      "D4"
+    ],
+    "new_train_music_pairs": 4,
+    "pose_floor_squared_rad": 0.0001,
+    "velocity_floor_squared_radps": 0.0001,
+    "velocity_weight": 1.0,
+    "event_weight": 1.0,
+    "equal_norm_policy": "shrink all projected directions to the minimum source-specific norm; never enlarge",
+    "run_val_objective_probes": false
+  },
+  "music": {
+    "count": 3,
+    "frames": 450,
+    "top_k": 5,
+    "beam_width": 3,
+    "role": "train",
+    "identity_scope": "verified publisher work identities; not unseen encoder exposure"
+  },
+  "review": {
+    "status": "PREPARATION_ONLY",
+    "events_per_source": 2,
+    "context_frames": 12,
+    "tasks": [
+      "EVENT",
+      "POSE",
+      "MUSIC_MATCH"
+    ],
+    "confidence_levels": [
+      "LOW",
+      "MEDIUM",
+      "HIGH"
+    ],
+    "actual_records": null
+  },
+  "encoder_training_registered": false,
+  "full_chain_registered": false,
+  "test_tensor_reads": 0,
+  "human_reviewed": false,
+  "operational_qualified": false
+}
