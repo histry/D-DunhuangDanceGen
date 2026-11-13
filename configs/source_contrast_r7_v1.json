@@ -1,0 +1,63 @@
+{
+  "schema": "source_contrast_r7_v1",
+  "baseline": "791939dc32d1e115a6e8dca1d82902e6a9b7d07f",
+  "frozen_config": "configs/source_expression_r6_v1.json",
+  "source_expression": "outputs/source_expression_04",
+  "arms": [
+    "A0",
+    "A1",
+    "A2",
+    "A3",
+    "A4"
+  ],
+  "cohorts": [
+    "calibration",
+    "disjoint_probe"
+  ],
+  "times": [
+    999,
+    499,
+    19
+  ],
+  "own_margin_rad": 0.001,
+  "relative_margin_rad": 0.001,
+  "relative_pose_scale": "sqrt(frozen R6 Train pose squared scale)",
+  "dynamic_weight": 1.0,
+  "new_projection_solves": 144,
+  "common_dose": "minimum across all five directions; zero invalidates response, retained in original denominator",
+  "independent_population": null,
+  "new_music_registry": null,
+  "historical_music_root": "/home/disk/lsm/storage/danceRAG/assets/music/test/audio",
+  "human_record_registry": null,
+  "training_allowed": false,
+  "full_generation_allowed": true,
+  "operational_qualified": false,
+  "transfer_scope": "EXPOSED_DUNHUANG_TRANSFER_TEST",
+  "music": {
+    "files": [
+      "dunhuangwu2.wav",
+      "dunhuangwu3.wav",
+      "dunhuangwu4.wav"
+    ],
+    "timelines": [
+      "legacy3s",
+      "acoustic_v1"
+    ],
+    "frames": "FULL_AUDIO_CEIL_30HZ",
+    "shortlist_per_source": 1,
+    "top_k": 5,
+    "beam_width": 3
+  },
+  "whole_generation": {
+    "arms": [
+      "baseline",
+      "temporal_A",
+      "temporal_B"
+    ],
+    "permuted_baseline_music_case": 0,
+    "seed": 20261115,
+    "full_generation_budget": 10,
+    "learned_adapter_enabled": false,
+    "paired_R7_guidance_enabled": false
+  }
+}
