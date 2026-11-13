@@ -61,3 +61,12 @@ def test_worker_environment_survives_legacy_native_policy_namespace(monkeypatch)
     env=worker_environment()
     assert Path(env["PYTHONPATH"]).name=="src" and (Path(env["PYTHONPATH"])/"dunhuang").is_dir()
     assert env["NATIVE_POLICY_TEST"]=="preserved" and "unrelated" not in env["PYTHONPATH"]
+
+
+def test_phase_proxy_partial_path_preserves_order_and_allows_null():
+    from dunhuang.research.primitive_reperformance.phase_analysis import partial
+    e=[dict(frame=10,type="onset"),dict(frame=20,type="hold"),dict(frame=30,type="turn")]
+    a=[dict(frame=11,type="onset"),dict(frame=18,type="unrelated"),dict(frame=33,type="turn")]
+    p=partial(e,a)
+    assert len(p)==2 and [v["generated_frame"] for v in p]==[11,33]
+    assert partial(e,[])==[]
