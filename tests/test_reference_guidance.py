@@ -69,3 +69,16 @@ def test_kinematic_phase_detection_reads_no_hidden_values_or_gap_derivatives():
     a=phase_reference(x,m,k,cfg);x[~m]=np.nan;b=phase_reference(x,m,k,cfg)
     assert all(np.array_equal(v,w) for v,w in zip(a,b))
     assert a[2].any() and not a[2][40:60].any()
+
+def test_song_role_audit_keeps_registry_scope_and_exposes_shared_choreography():
+    from dunhuang.research.reference_guidance.core import song_roles
+    sources=[];rows=[];roles={}
+    for i,role in enumerate(["train","val"]):
+        uid="aistpp:"+str(i);roles[uid]=role
+        sources.append(dict(source_uid=uid,recording_uid="record"+str(i),source_sha256=str(i),audio_sha256="audio"+str(i),music_work_uid="work"+str(i),choreography_uid="shared"))
+        rows.append(dict(role=role,raw_motion={"sha256":str(i)},recording_uid="record"+str(i),audio={"sha256":"audio"+str(i)},source_group="work"+str(i),choreography_uid="shared"))
+    registry=dict(sources=sources,protocols={"AIST_strict_unseen_song":dict(roles=roles,ready_for_new_training=False)})
+    result=song_roles(rows,registry,"AIST_strict_unseen_song")
+    assert result["cross_role_choreography_identities"]==1 and not result["unseen_choreography_claimed"]
+    rows[1]["role"]="train"
+    with pytest.raises(ValueError):song_roles(rows,registry,"AIST_strict_unseen_song")

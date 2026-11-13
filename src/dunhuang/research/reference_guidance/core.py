@@ -105,3 +105,29 @@ def canonical(rows,modality,cap):
             frame=frames[pos];_,_,i,t=bank[frame]
             selected.append((key,frame,i,t))
     return selected
+
+def song_roles(rows,registry,protocol):
+    from dunhuang.data.split_registry import attest
+    if protocol!="AIST_strict_unseen_song":raise ValueError("Registered unseen-song protocol required")
+    task=registry["protocols"][protocol]
+    selected={};observed={}
+    for r in rows:
+        if r["role"] not in ("train","val"):raise ValueError("Test tensors forbidden")
+        uid="aistpp:"+r["raw_motion"]["sha256"]
+        if task["roles"].get(uid)!=r["role"]:raise ValueError("Window role differs from frozen registry")
+        observed[uid]=r["role"]
+        selected[uid]=r
+    sources={r["source_uid"]:r for r in registry["sources"]}
+    if not set(selected)<=set(sources):raise ValueError("Raw source absent from registry")
+    chosen=[]
+    for uid,r in selected.items():
+        src=sources[uid]
+        if src["recording_uid"]!=r["recording_uid"] or src["audio_sha256"]!=r["audio"]["sha256"] or src["music_work_uid"]!=r["source_group"] or src["choreography_uid"]!=r["choreography_uid"]:raise ValueError("Raw/song/recording identity differs")
+        chosen.append(src)
+    audit=attest(chosen,observed,"strict_unseen_song")
+    if audit["status"]!="PASSED_KNOWN_IDENTITY_ISOLATION":raise ValueError("Registered song isolation failed")
+    memberships={}
+    for r in rows:memberships.setdefault(r["choreography_uid"],set()).add(r["role"])
+    return dict(known_song_recording_audio_source_isolation=audit["status"],forbidden_identity_overlaps=audit["forbidden_identity_overlaps"],
+        cross_role_choreography_identities=sum(len(v)>1 for v in memberships.values()),unseen_choreography_claimed=False,new_blind_claimed=False,
+        registry_ready_for_new_training=task["ready_for_new_training"],diagnostic_linear_readout_only=True,operational_qualified=False)

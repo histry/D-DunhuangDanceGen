@@ -98,3 +98,20 @@ beats, not independently detected source kinematic phases. No metric or paramete
 selection was made from that attempt. B2 was corrected to detect phases from
 visible contiguous reference blocks only, with unknown-poison invariance tested.
 Earlier key-gating outputs are excluded from the corrected registered comparison.
+
+Attempt reference_guidance_03 completed control plus exact fresh-process replay
+(132 motion/FK arrays), then stopped before A2 fits because a generic role checker
+also required choreography isolation. The frozen registry declares
+AIST_strict_unseen_song, whose prohibited axes are music-work, recording, raw
+motion SHA and audio SHA. Those have zero overlap; choreography has 60 shared
+identities and is explicitly exposed. This does not qualify unseen choreography
+or a new blind source. The registry still disallows operational encoder training.
+
+The independent diagnostic readout now binds every window back to that exact
+registry and re-attests its declared axes, retains Train-only task normalizer
+binding, and reports choreography exposure. No split/population/threshold changed.
+A new event-readout config seals all successful control03 hashes and its execution
+commit; run_reference_events.sh runs only new readouts and regression in fresh
+roots. Export records separate control/event execution commits. Control is reused
+immutably rather than represented as a newly generated result. The old launcher
+exit=1 and its receipts remain available.

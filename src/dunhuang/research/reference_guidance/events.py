@@ -9,7 +9,7 @@ from dunhuang.data.change_event_phases import motion_profiles,detect
 from dunhuang.generation.targets import digest
 from dunhuang.research.source_tasks.content_model import ContentModel
 from dunhuang.research.source_capacity.common import read,commit,fresh,forbid_optimizers,same_arrays,frozen,weight
-from .core import canonical,ridge_fit,ridge_predict,group_scores
+from .core import canonical,ridge_fit,ridge_predict,group_scores,song_roles
 
 KINDS={"music":["onset","beat"],"motion":["upper_motion_onset","upper_speed_peak","upper_direction_turn","upper_pose_hold"]}
 
@@ -57,10 +57,11 @@ def run(config,out,replay_from=None):
     out=fresh(out);root,pub,_,_=frozen(config);data=read(root/"content_data/protocol.json")
     rows=read(checked(data["manifest"]))["rows"];checked(data["normalizer"]);arrays=dict(np.load(checked(data["observations"])))
     source=Path(config["source_a2"]);transfer=read("reports/transfer_audit_summary.json")
-    for name in ("source_seals.json","manifest.json","train_statistics.json"):
+    for name in ("protocol.json","source_seals.json","manifest.json","train_statistics.json"):
         if sha(source/name)!=transfer["evidence"]["a2/"+name]:raise ValueError("Data V3 source seal differs")
-    from dunhuang.alignment.conditional_candidates import validate_roles
-    validate_roles(rows)
+    source_protocol=read(source/"protocol.json");registry=read(checked(source_protocol["registry"]))
+    role_audit=song_roles(rows,registry,"AIST_strict_unseen_song")
+    if data["normalizer"]["sha256"]!=read(root/"content/protocol.json")["normalizer"]["sha256"]:raise ValueError("Diagnostic readout normalizer differs")
     phase_cfg=read("configs/data_event_v3.json")["phases"];cfg=config["events"];points={};truth={};inputs={};provenance={}
     # No model or score participates in choosing this unique physical-frame population.
     for branch in KINDS:
@@ -134,13 +135,13 @@ def run(config,out,replay_from=None):
                     tasks[name]["vs_val_feature_swap"]=compare(g,swapped,cfg)
             results[branch][kind]=tasks
     np.savez_compressed(out/"scores.npz",**all_scores);np.savez_compressed(out/"fits.npz",**fits)
-    result=dict(population=population,probes=results,linear_fit_calls=read(Path(replay_from)/"result.json")["linear_fit_calls"] if replay_from else fit_calls,
+    result=dict(population=population,role_audit=role_audit,probes=results,linear_fit_calls=read(Path(replay_from)/"result.json")["linear_fit_calls"] if replay_from else fit_calls,
         replay_fit_calls=0,optimizer_calls=0,encoder_updates=0,human_reviewed=False,semantic_event_truth=False,
         cross_modal_event_correspondence="NOT_EVALUABLE_WITHOUT_INDEPENDENT_EVENT_TRUTH",full_timeline_localization="NOT_EVALUABLE_SAMPLED_FRAME_PROTOCOL",
         development_exposed=True,operational_qualified=False)
     write(out/"result.json",result)
     write(out/"protocol.json",dict(code_commit=commit(),config=config,prepared=ref(root/"content_data/protocol.json"),weights=weights,provenance=provenance,
-        phases=phase_cfg,phase_config=ref("configs/data_event_v3.json"),population_selection="unique physical frames, uniform per-asset caps, nearest-context centre, no labels/scores",
+        role_registry=source_protocol["registry"],role_audit=role_audit,phases=phase_cfg,phase_config=ref("configs/data_event_v3.json"),population_selection="unique physical frames, uniform per-asset caps, nearest-context centre, no labels/scores",
         probe_fit="Train-only source-group and class-balanced ridge; fixed lambda and threshold",
         proxy_limit="music50 contains audio-derived controls; motion74 contains kinematics; decoding these proxy labels is not semantic understanding"))
     if replay_from:
