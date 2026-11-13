@@ -9,10 +9,13 @@ from dunhuang.generation.targets import digest
 from dunhuang.generation.event_geometry import _matrix,event_geometry
 from dunhuang.generation.source_following import geodesic_squared
 from dunhuang.research.source_identifiability.g2 import Runtime,physical,source_error
-from dunhuang.research.source_capacity.capacity import native,injection,rms
+from dunhuang.research.source_capacity.capacity import native,injection
 from dunhuang.research.source_capacity.common import read,commit,fresh,forbid_optimizers,same_arrays,frozen,weight
 from dunhuang.research.source_capacity.numerics import check_derivatives,trusted,normalized_supported
 from .core import reference,protection
+
+def control_norm(base_condition,relative_rms):
+    return float(base_condition.detach().double().norm())*relative_rms
 
 def reference_loss(rt,pred,safe,weights):
     raw=(pred-torch.as_tensor(rt.bias,device="cuda"))/torch.as_tensor(rt.scale,device="cuda")
@@ -28,7 +31,7 @@ def directions(predict,zero,available,base_condition,adapter,geometry,config,see
     weighted=torch.from_numpy(weights.astype(np.float32)).cuda()
     full=torch.ones((1,150,1),device="cuda",dtype=torch.bool)
     gate=torch.from_numpy(stage.any(-1)[None,:,None]).cuda()
-    desired=config["probe"]["relative_rms"]*rms(base_condition)*np.sqrt(zero.numel())
+    desired=control_norm(base_condition,config["probe"]["relative_rms"])
     rt=predict.runtime
     objectives={"B1":known,"B2":weighted};result={};checks={}
     for name,w in objectives.items():

@@ -50,3 +50,9 @@ def test_qualification_cannot_use_val_or_own_loss_alone():
     random=dict(good,arm="B3",own_gain_rad=.01)
     assert not qualification([good,random],cfg)["train_all_cases_all_times_pass"]["B1"]
     assert not qualification([dict(good,scope="val")],cfg)["train_all_cases_all_times_pass"]["B1"]
+
+def test_condition_norm_accepts_tensors_without_numpy_device_conversion():
+    torch=pytest.importorskip("torch")
+    from dunhuang.research.reference_guidance.control import control_norm
+    x=torch.ones(1,150,512,requires_grad=True)
+    assert abs(control_norm(x,.01)-.01*np.sqrt(150*512))<1e-12

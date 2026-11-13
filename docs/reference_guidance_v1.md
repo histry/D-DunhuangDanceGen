@@ -80,3 +80,10 @@ Preserve any failed attempt directory and its receipt.
 Public outputs are aggregated; private inputs, poses, identities, weights and fits
 remain outside Git. SSH credentials and relay channels stay in RAM; no temporary
 SSH helper files are needed.
+
+## Preserved execution attempts
+Attempt reference_guidance_01 reached full regression 230 passed/1 skipped and
+EDGE checks 14 passed, then stopped before any probe: the norm helper attempted
+NumPy conversion of a CUDA tensor. The correction computes the equivalent 1%
+L2 norm on the tensor device and adds a regression test. No budget, data, gate,
+random seed or control amplitude changed; the failed root/receipt remain intact.
