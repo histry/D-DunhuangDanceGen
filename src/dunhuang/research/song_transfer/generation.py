@@ -1,9 +1,9 @@
 """Existing matched sampler and Temporal V0.5 only, on complete songs."""
-import argparse,copy,subprocess,sys
+import argparse,subprocess
 from pathlib import Path
 import numpy as np
 from scipy.spatial.transform import Rotation
-from dunhuang.io import checked,write,sha
+from dunhuang.io import checked,write
 from dunhuang.data.sources import ref
 from dunhuang.contracts import matrices
 from dunhuang.planning.event_plan import anchors

@@ -1,0 +1,100 @@
+{
+  "formal_baseline_changed_paths": [],
+  "code_commit": "6d9dafa8b1b415d95c8cdc0864da434bd4f8adf9",
+  "verifier_sha256": "a20298ad99d508f77da13c35d05214dbc8a03fe3c282e121c43f6747501a9142",
+  "full_songs": 3,
+  "plans_verified": 18,
+  "exact_generation_replay_arrays": 60,
+  "videos": [
+    {
+      "case": 0,
+      "arm": "baseline",
+      "frames": 3601,
+      "video_sha256": "c3a1481c7100d32752c2ac524051289d45cfcfb7351c0ac3920781dc4cff43c1"
+    },
+    {
+      "case": 0,
+      "arm": "temporal_A",
+      "frames": 3601,
+      "video_sha256": "4cf5c8fc420fe4b8d9c5062266e0732294cac9b33249171363b9c0734295f36c"
+    },
+    {
+      "case": 0,
+      "arm": "temporal_B",
+      "frames": 3601,
+      "video_sha256": "a2adcda80093e66b7eba2b3b8cb99438e3185a169686a0cf7ab5b2291712787c"
+    },
+    {
+      "case": 0,
+      "arm": "music_order_control",
+      "frames": 3601,
+      "video_sha256": "06ee291d35904a21504bff4812075b13b1149d77ca6e57af84e62da770bb5152"
+    },
+    {
+      "case": 1,
+      "arm": "baseline",
+      "frames": 3598,
+      "video_sha256": "a4a0f1bcfd37d91606be32d1a838abe2fa1427e8078f46870bcb2ffc33e30494"
+    },
+    {
+      "case": 1,
+      "arm": "temporal_A",
+      "frames": 3598,
+      "video_sha256": "e9029290372c59b5bfe8de2a0e9b90224e2ef0ddc36c73bf426751600ba35673"
+    },
+    {
+      "case": 1,
+      "arm": "temporal_B",
+      "frames": 3598,
+      "video_sha256": "be9ec6cbf28384b49c6c703e1090025f3e32482a3dd1d19ef7c422a12aa23fbd"
+    },
+    {
+      "case": 2,
+      "arm": "baseline",
+      "frames": 3601,
+      "video_sha256": "c165bd8a8ef89e8bc7c236bf5550f42ec86de17804c953a1b6d99cb5cbae8aa2"
+    },
+    {
+      "case": 2,
+      "arm": "temporal_A",
+      "frames": 3601,
+      "video_sha256": "e8da86bf2251a9bf7421f5562a6c9952fcc526455e9e176574997dee4c82c4b5"
+    },
+    {
+      "case": 2,
+      "arm": "temporal_B",
+      "frames": 3601,
+      "video_sha256": "b261f762af04887bde77ec6898d0f6df08f910413e26172cbbd664e715dfabaf"
+    }
+  ],
+  "within_song_noise_matched": true,
+  "cross_music_controls": [
+    {
+      "case_a": 1,
+      "case_b": 0,
+      "same_noise_and_batch": false,
+      "interpretation": "BATCH_NOISE_CONFOUND_NOT_MUSIC_ATTRIBUTION"
+    },
+    {
+      "case_a": 2,
+      "case_b": 0,
+      "same_noise_and_batch": true,
+      "interpretation": "CONDITION_RESPONSE_NOT_MUSICAL_QUALITY"
+    },
+    {
+      "case_a": 2,
+      "case_b": 1,
+      "same_noise_and_batch": false,
+      "interpretation": "BATCH_NOISE_CONFOUND_NOT_MUSIC_ATTRIBUTION"
+    }
+  ],
+  "fresh_generation_replay": {
+    "status": "FRESH_COMPLETE_SONG_GENERATION_AND_NATIVE_REPLAY",
+    "optimizer_calls": 0,
+    "full_generations_rerun": 10,
+    "motion_arrays_exact": 60
+  },
+  "optimizer_calls": 0,
+  "operational_qualified": false,
+  "human_reviewed": false
+}

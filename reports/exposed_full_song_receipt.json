@@ -1,0 +1,43 @@
+{
+  "schema": "r7_sealed_execution_receipt",
+  "execution_commit": "5e4de645c692c6126ead7fae82f0656e193e74ec",
+  "verifier_commit": "6d9dafa8b1b415d95c8cdc0864da434bd4f8adf9",
+  "stage_execution_commits": {
+    "music": "5e4de645c692c6126ead7fae82f0656e193e74ec",
+    "music_replay": "5e4de645c692c6126ead7fae82f0656e193e74ec",
+    "features": "5e4de645c692c6126ead7fae82f0656e193e74ec",
+    "generation": "5e4de645c692c6126ead7fae82f0656e193e74ec",
+    "generation_replay": "5e4de645c692c6126ead7fae82f0656e193e74ec",
+    "videos": "5e4de645c692c6126ead7fae82f0656e193e74ec",
+    "videos_native_plane": "6d9dafa8b1b415d95c8cdc0864da434bd4f8adf9",
+    "diagnosis": "6d9dafa8b1b415d95c8cdc0864da434bd4f8adf9",
+    "diagnosis_replay": "6d9dafa8b1b415d95c8cdc0864da434bd4f8adf9"
+  },
+  "summary_sha256": "55cf61ba64262c4a676ce139b2fae5c20e1180a0bceaf3c76867ef24999c5770",
+  "root": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/exposed_full_song_01",
+  "exit_status": 0,
+  "receipt_sha256": {
+    "execution_commit.txt": "a2b0607f33f09417305d1a6afc7898473e3ccda6668c8085b87ee68d41c1a7ab",
+    "started_utc.txt": "9a1520649aa0598930727d3bf9771b40f930940f7b9ca121bbd5b770b0ccc34b",
+    "independent_checks.log": "d206a01c4f71ab724173e1e1e383508d154d680ca5b5bf6f783935c60f7e39f5",
+    "pytest.log": "6226a894b6fde6cc475ef7ee364db1f0ac922623f3c1f48f35bee26d0e57e886",
+    "exit_status.txt": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "finished_utc.txt": "7bcc8715ce2ff89a83385317c5c834d5defb0a9f1b0cea430c1aa4b8cd730f63"
+  },
+  "started_utc": "2026-11-13T15:47:09Z",
+  "finished_utc": "2026-11-13T16:56:38Z",
+  "prior_failed_roots_retained": true,
+  "optimizer_updates": 0,
+  "temporary_ssh_files_created": 0,
+  "temporary_ssh_files_remaining": 0,
+  "operational_qualified": false,
+  "postprocess_receipts": {
+    "execution_commit.txt": "276fb665383638f232b2569df8323b7a9029309c2014969d9509c179302c92d6",
+    "started_utc.txt": "cc50b32130ec2140085591cd4efc2dc8a9e7363465bbd2a25884a132282291aa",
+    "independent_checks.log": "d206a01c4f71ab724173e1e1e383508d154d680ca5b5bf6f783935c60f7e39f5",
+    "previous_public_checks.json": "6a53bda2216ca6e72a8a1d96657659bbda234c867811ee21f5d872051429470f",
+    "exit_status.txt": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "finished_utc.txt": "ffddd3be24f0d5c110d6fb3ab6a28ee5537ce2d0c0d58cacd894b07202ca8498"
+  },
+  "postprocess_execution_commit": "6d9dafa8b1b415d95c8cdc0864da434bd4f8adf9"
+}

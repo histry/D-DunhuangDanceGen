@@ -3,7 +3,7 @@ import argparse,sys
 from pathlib import Path
 import numpy as np
 import torch
-from dunhuang.io import checked,sha,write,pinned
+from dunhuang.io import checked,write,pinned
 from dunhuang.data.sources import ref
 from dunhuang.music import clock_plan
 from dunhuang.planning.planner import timeline as legacy_timeline,_search,plan as default_plan

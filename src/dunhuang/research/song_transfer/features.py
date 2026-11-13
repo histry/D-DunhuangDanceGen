@@ -4,7 +4,7 @@ import importlib.metadata
 from pathlib import Path
 import numpy as np
 import soundfile as sf
-from dunhuang.io import checked,pinned,sha,write
+from dunhuang.io import checked,pinned,write
 from dunhuang.data.sources import ref
 from dunhuang.research.source_capacity.common import read,commit,fresh
 from dunhuang.research.source_expression.review import audio_clip
