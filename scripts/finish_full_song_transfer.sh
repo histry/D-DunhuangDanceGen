@@ -12,6 +12,7 @@ finish() { code=$?; if [ "$success" -ne 1 ] && [ "$code" -eq 0 ]; then code=125;
 trap finish EXIT
 date -u +%FT%TZ > "$receipt/started_utc.txt"
 git rev-parse HEAD > "$receipt/execution_commit.txt"
+cp "$study/public_checks.json" "$receipt/previous_public_checks.json"
 "$native" -m dunhuang.research.song_transfer.diagnosis --generation "$study/generation" --out "$study/diagnosis"
 "$native" -m dunhuang.research.song_transfer.diagnosis --generation "$study/generation" --out "$study/diagnosis_replay" --replay-from "$study/diagnosis"
 "$native" -m dunhuang.research.song_transfer.render --generation "$study/generation" --features "$study/features" --out "$study/videos_native_plane"
