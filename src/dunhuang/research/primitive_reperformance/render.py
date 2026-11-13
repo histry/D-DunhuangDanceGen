@@ -76,8 +76,9 @@ def run(cfg,diagnosis,prepared,single,out,wrist_glyphs=False):
     for v in videos:
         caption=v["kind"]+" / "+v["name"]
         if "native_ok" in v:caption+=" / Native="+str(v["native_ok"])+" / source="+format(v["source"]["mean_source_rad"],".3f")+" rad"
-        cards.append('<section><h2>'+caption+'</h2><video controls preload="metadata" src="'+Path(v["video"]["path"]).name+'"></video></section>')
-    text='<h1>ChangE → E1-W → EDGE 三方诊断</h1><p>前组展示旧R7；后组展示新S3。原始拟合骨架、重定时参考、生成结果使用相同骨架和相机。Root为相对视图，手指没有观测；自动阶段与风格真实性尚未获得人工真值。不同长度的面板结束后保持最后一帧，原始动作不改速。</p>'
+        native_link='<p><a href="../single/'+v["name"]+'/physical.json">完整世界坐标 Native 报告</a></p>' if v["kind"]=="R8-S3" else ""
+        cards.append('<section><h2>'+caption+'</h2><video controls preload="metadata" src="'+Path(v["video"]["path"]).name+'"></video>'+native_link+'</section>')
+    text='<h1>ChangE → E1-W → EDGE 三方诊断</h1><p>前组展示旧R7；后组展示新S3。原始拟合骨架、重定时参考、生成结果使用相同骨架和相机。Root为相对视图，手指没有观测；自动阶段与风格真实性尚未获得人工真值。不同长度的面板结束后保持最后一帧，原始动作不改速。该页用于来源姿态对照，骨盆相对视图移除了世界Root平移；足滑与接触质量以各条完整Native报告为准，动作未为展示做平滑。</p>'
     if wrist_glyphs:text+='<p>橙色虚线仅表示已观测腕旋转与固定SMPL偏移给出的手部方向；末端关节旋转和手指仍未观测。</p>'
     text+='<p>单事件联合门：'+str(result["single_event_gate_passed"])+'；新整曲必须同时通过来源与Bridge检查。</p>'
     (out/"index.html").write_text('<!doctype html><meta charset="utf-8"><title>R8三方诊断</title><style>body{max-width:1200px;margin:24px auto;padding:16px;background:#f3f5f8;font:16px sans-serif;color:#182b43}video{width:100%}section{background:white;padding:16px;margin:20px 0}p{line-height:1.6}</style>'+text+"".join(cards),encoding="utf-8")
