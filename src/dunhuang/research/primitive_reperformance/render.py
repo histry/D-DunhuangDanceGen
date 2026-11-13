@@ -12,6 +12,10 @@ from .diagnosis import canonical
 PARENTS=(-1,0,0,0,1,2,3,4,5,6,7,8,9,9,9,12,13,14,16,17,18,19,20,21)
 def movie(arrays,audio,file,title,wrist_glyphs=False):
     N=max(len(a) for a in arrays);font=ImageFont.load_default();width,height=1200,520
+    allpoints=np.concatenate([a[:,:24 if wrist_glyphs else 22].reshape(-1,3) for a in arrays])
+    px=.9*allpoints[:,0]-.44*allpoints[:,2];py=-allpoints[:,1]+(20/115)*allpoints[:,2]
+    scale=min(360/max(float(np.ptp(px)),1e-6),350/max(float(np.ptp(py)),1e-6),220.)
+    center_x=float((px.max()+px.min())/2);center_y=float((py.max()+py.min())/2)
     cmd=["ffmpeg","-v","error","-f","rawvideo","-pix_fmt","rgb24","-s","1200x520","-r","30","-i","-","-i",str(audio),"-c:v","libx264","-preset","veryfast","-crf","22","-c:a","aac","-shortest","-threads","2",str(file)]
     process=subprocess.Popen(cmd,stdin=subprocess.PIPE)
     try:
@@ -19,7 +23,7 @@ def movie(arrays,audio,file,title,wrist_glyphs=False):
             im=Image.new("RGB",(width,height),"#f3f5f8");draw=ImageDraw.Draw(im)
             for panel,(label,x) in enumerate(zip(("RAW FITTED CHANGE","LEGAL E1-W REFERENCE","EDGE OUTPUT"),arrays)):
                 points=x[min(t,len(x)-1)];origin=200+400*panel
-                def project(p):return (round(origin+115*(.9*p[0]-.44*p[2])),round(280-115*p[1]+20*p[2]))
+                def project(p):return (round(origin+scale*(.9*p[0]-.44*p[2]-center_x)),round(275+scale*(-p[1]+(20/115)*p[2]-center_y)))
                 pts=[project(p) for p in points]
                 for j in range(1,22):draw.line([pts[PARENTS[j]],pts[j]],fill="#ab562f" if j in (20,21) else "#265f95",width=3)
                 if wrist_glyphs:
@@ -77,7 +81,7 @@ def run(cfg,diagnosis,prepared,single,out,wrist_glyphs=False):
     if wrist_glyphs:text+='<p>橙色虚线仅表示已观测腕旋转与固定SMPL偏移给出的手部方向；末端关节旋转和手指仍未观测。</p>'
     text+='<p>单事件联合门：'+str(result["single_event_gate_passed"])+'；新整曲必须同时通过来源与Bridge检查。</p>'
     (out/"index.html").write_text('<!doctype html><meta charset="utf-8"><title>R8三方诊断</title><style>body{max-width:1200px;margin:24px auto;padding:16px;background:#f3f5f8;font:16px sans-serif;color:#182b43}video{width:100%}section{background:white;padding:16px;margin:20px 0}p{line-height:1.6}</style>'+text+"".join(cards),encoding="utf-8")
-    write(out/"protocol.json",dict(code_commit=commit(),videos=videos,frame_rate=30,wrist_direction_glyphs=wrist_glyphs,finger_geometry_observed=False,neural_generation_calls=0,human_reviewed=False,operational_qualified=False))
+    write(out/"protocol.json",dict(code_commit=commit(),videos=videos,frame_rate=30,wrist_direction_glyphs=wrist_glyphs,finger_geometry_observed=False,camera="one shared fixed fit to all three complete trajectories per clip",neural_generation_calls=0,human_reviewed=False,operational_qualified=False))
     print("R8_THREE_WAY_VIDEOS",len(videos),flush=True)
 if __name__=="__main__":
     p=argparse.ArgumentParser();p.add_argument("--config",required=True);p.add_argument("--diagnosis",required=True);p.add_argument("--prepared",required=True);p.add_argument("--single",required=True);p.add_argument("--out",required=True);p.add_argument("--wrist-glyphs",action="store_true");a=p.parse_args();run(read(a.config),a.diagnosis,a.prepared,a.single,a.out,a.wrist_glyphs)

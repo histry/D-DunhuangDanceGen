@@ -22,7 +22,7 @@ def run(root):
             values=[r["native_audit"][key] for r in rows];groups[arm][key]=dict(mean=float(np.mean(values)),minimum=float(np.min(values)),maximum=float(np.max(values)))
     evidence={};commits={}
     phases=["style_audit","boundary_audit","prepared","single","single_replay","bridge","bridge_replay","whole","whole_replay","joint","joint_replay","videos"]
-    if (root/"phase_proxy/result.json").is_file():phases.append("phase_proxy")
+    if (root/"phase_proxy/result.json").is_file():phases+=["phase_proxy","phase_proxy_replay"]
     if (root/"videos_wrist_axes/protocol.json").is_file():phases.append("videos_wrist_axes")
     for phase in phases:
         commits[phase]=read(root/phase/"protocol.json")["code_commit"]
