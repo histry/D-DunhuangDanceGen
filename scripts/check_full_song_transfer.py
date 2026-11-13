@@ -1,5 +1,5 @@
 """Fresh-process checks for full-song lineage, saved arrays, plans and media."""
-import argparse,json,subprocess,sys
+import argparse,json,subprocess,sys,hashlib
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/"src"))
 import numpy as np
@@ -8,7 +8,7 @@ from dunhuang.io import checked,sha,write
 from dunhuang.music import clock_plan
 from dunhuang.research.source_capacity.common import read,same_arrays
 from dunhuang.planning.time_map import source_positions
-from dunhuang.planning.event_plan import validate
+from dunhuang.planning.event_plan import validate,anchors
 
 def check(root):
     root=Path(root);music=root/"music";mp=read(music/"protocol.json")
@@ -37,15 +37,37 @@ def check(root):
         same_arrays(checked(binding["condition"]),other.parent/"condition.npz");plans+=1
     fp=read(root/"features/protocol.json");gp=read(root/"generation/protocol.json");gr=read(root/"generation/result.json")
     assert len(fp["songs"])==3 and len(gr["records"])==10
+    for asset in fp["producer_runtime"]["weights"]+fp["producer_runtime"]["package_sources"]+[fp["producer_runtime"]["official_extractor"]]:checked(asset)
+    plans_index=read(checked(mp["generation_plans"]));replayed_index=read(root/"music_replay/generation_plans.json");sideplans={}
+    for item,other in zip(plans_index,replayed_index):
+        assert item["status"]==other["status"]=="FULL_EVENT_PLANS_BOUND"
+        for label in ("A","B"):
+            plan=read(checked(item["plans"][label]));assert plan==read(checked(other["plans"][label]))
+            case=item["case"];validate(plan,inventory[case]["audio"]["sha256"],inventory[case]["clock"]["frames"]);sideplans[(case,label)]=plan
+        assert all(a["reference"]["sha256"]!=b["reference"]["sha256"] for a,b in zip(sideplans[(item["case"],"A")]["events"],sideplans[(item["case"],"B")]["events"]))
     assert gr==read(root/"generation_replay/result.json")
     for song,item in zip(fp["songs"],inventory):
         assert song["audio"]["sha256"]==item["audio"]["sha256"] and song["clock"]==item["clock"]
         v=np.load(checked(song["features"]));assert v.shape==(item["clock"]["windows"],150,4800) and np.isfinite(v).all()
-        if song.get("feature_receipt"):checked(song["feature_receipt"])
-        for sl in song["slices"]:checked(sl["audio"])
+        if song.get("feature_receipt"):
+            old=read(checked(song["feature_receipt"]));assert old.get("original_audio",old.get("audio"))["sha256"]==item["audio"]["sha256"] and old["clock"]==item["clock"] and old["layer"]==66
+        wave,sr=sf.read(checked(item["audio"]),dtype="float32",always_2d=True);mono=wave.mean(1)
+        for i,sl in enumerate(song["slices"]):
+            clip,rate=sf.read(checked(sl["audio"]),dtype="float32",always_2d=True);start=round(i*2.5*sr)
+            expected=np.pad(mono,(0,item["clock"]["silence_samples"]))[start:start+5*sr,None]
+            assert rate==sr and np.array_equal(clip,expected) and sl["source_start_sample"]==start
+            assert hashlib.sha256(v[i].tobytes()).hexdigest()==sl["features_sha256"]
     for row,b in zip(gr["records"],gp["bindings"]):
         folder=Path(checked(b["native"])).parent;T=inventory[row["case"]]["clock"]["frames"]
-        checked(b["physical"]);checked(b["fk"]);checked(b["request"])
+        checked(b["physical"]);checked(b["fk"]);request=read(checked(b["request"]));arm=row["arm"]
+        expected=anchors(sideplans[(row["case"],"A" if arm=="temporal_A" else "B")]) if arm in ("temporal_A","temporal_B") else []
+        assert request["anchors"]==expected and request["frames"]==T and request["audio"]["sha256"]==inventory[row["case"]]["audio"]["sha256"]
+        gen=read(folder/"generation.json");assert gen["weights_before"]==gen["weights_after"] and gen["adapter"] is None and gen["training"] is False
+        assert not row["sampler"]["post_generation_pose_paste"]
+        if arm=="music_order_control":
+            original=np.load(checked(fp["songs"][row["case"]]["features"]));order=read(folder.parent/"permuted_music_order.json")
+            assert np.array_equal(np.load(checked(request["features"])),original[order])
+        else:assert request["features"]["sha256"]==fp["songs"][row["case"]]["features"]["sha256"]
         assert np.load(folder/"native.npy").shape==(T,151) and np.load(folder/"native_fk.npy").shape==(T,24,3)
         assert read(folder/"physical.json")==read(root/"generation_replay"/folder.name/"physical.json")
         for name in ("normalized.npy","windows.npy","edge.npy","native.npy","native_fk.npy","official_fk.npy"):
