@@ -17,6 +17,27 @@ def reference(value,known,keys,radius=2,phase_weight=3.):
     weights=np.where(stage,phase_weight,1.)*visible
     return safe,visible,stage,weights
 
+def phase_reference(value,known,keys,phase_cfg,radius=2,phase_weight=3.):
+    from dunhuang.data.change_event_phases import motion_profiles,detect
+    safe,visible,_,_=reference(value,known,keys,radius,phase_weight)
+    stage=np.zeros_like(visible);whole=visible.all(-1)
+    edges=np.diff(np.r_[False,whole,False].astype(int))
+    for a,b in zip(np.flatnonzero(edges==1),np.flatnonzero(edges==-1)):
+        if b-a<2*radius+3:continue
+        x=np.zeros((b-a,151),dtype=safe.dtype)
+        x[:,7:]=np.tile([1,0,0,0,1,0],(b-a,24))
+        x[:,79:127]=safe[a:b].reshape(b-a,48)
+        events=detect(motion_profiles(x,list(range(12,20))),phase_cfg)
+        for event in events:
+            t=event["frame"]
+            # Never differentiate across a visibility gap or use its artificial edge.
+            if radius<t<b-a-radius-1:
+                lo=max(a,a+t-radius);hi=min(b,a+t+radius+1)
+                stage[lo:hi]=True
+    stage&=visible
+    weights=np.where(stage,phase_weight,1.)*visible
+    return safe,visible,stage,weights
+
 def protection(base,output,cfg):
     br=matrices(base[:,7:].reshape(150,24,6));rr=matrices(output[:,7:].reshape(150,24,6))
     delta=Rotation.from_matrix((br.swapaxes(-1,-2)@rr).reshape(-1,3,3)).magnitude().reshape(150,24)

@@ -56,3 +56,16 @@ def test_condition_norm_accepts_tensors_without_numpy_device_conversion():
     from dunhuang.research.reference_guidance.control import control_norm
     x=torch.ones(1,150,512,requires_grad=True)
     assert abs(control_norm(x,.01)-.01*np.sqrt(150*512))<1e-12
+
+def test_kinematic_phase_detection_reads_no_hidden_values_or_gap_derivatives():
+    from dunhuang.research.reference_guidance.core import phase_reference
+    from scipy.spatial.transform import Rotation
+    from dunhuang.contracts import sixd
+    x=np.zeros((150,151),np.float32);x[:,7:]=np.tile([1,0,0,0,1,0],(150,24))
+    x[:,79:85]=sixd(Rotation.from_euler("z",np.sin(np.arange(150)/8)*.3).as_matrix())
+    m=np.zeros_like(x,bool);m[:,79:127]=True;m[40:60]=False
+    k=np.zeros((150,8),bool);k[20]=True
+    cfg=dict(minimum_peak_distance=6,speed_prominence_floor_radps=.05,acceleration_prominence_floor_radps2=1.,hold_quantile=.2,hold_max_speed_radps=.2,hold_min_frames=6)
+    a=phase_reference(x,m,k,cfg);x[~m]=np.nan;b=phase_reference(x,m,k,cfg)
+    assert all(np.array_equal(v,w) for v,w in zip(a,b))
+    assert a[2].any() and not a[2][40:60].any()

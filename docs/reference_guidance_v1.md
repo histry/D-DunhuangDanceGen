@@ -13,8 +13,11 @@ No new case or time is selected using results.
 The actuation space is the existing 512D condition, not a new latent/Root network.
 Use the actual CFG2 clipped x0 prediction. B0 is the frozen C2 Adapter direction
 for the provided source, B1 is the negative observed-reference SO(3) loss gradient,
-B2 weights actual legal provided source key phases by 3 and limits injection to
-their radius-two visible frames. B3 is an equal-norm random direction;
+B2 weights source-only kinematic phases by 3 and limits injection to their
+radius-two visible frames. Detect phases independently in each fully visible
+contiguous block with the frozen Data V3 detector; discard block-edge proposals.
+No derivative is computed across a missing interval. Legal provided keys validate
+the source contract but are not treated as kinematic phase labels. B3 is an equal-norm random direction;
 B3_stage additionally uses the B2 support for a fair phase-information control.
 Every direction has norm 1% of the base condition RMS over all 150x512 entries.
 This is not a line search. The original target-dependent Oracle is excluded.
@@ -87,3 +90,11 @@ EDGE checks 14 passed, then stopped before any probe: the norm helper attempted
 NumPy conversion of a CUDA tensor. The correction computes the equivalent 1%
 L2 norm on the tensor device and adds a regression test. No budget, data, gate,
 random seed or control amplitude changed; the failed root/receipt remain intact.
+
+
+Attempt reference_guidance_02 was deliberately interrupted during the first Val
+case after static contract review: the inherited keys combine a centre and music
+beats, not independently detected source kinematic phases. No metric or parameter
+selection was made from that attempt. B2 was corrected to detect phases from
+visible contiguous reference blocks only, with unknown-poison invariance tested.
+Earlier key-gating outputs are excluded from the corrected registered comparison.

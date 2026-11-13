@@ -12,7 +12,7 @@ from dunhuang.research.source_identifiability.g2 import Runtime,physical,source_
 from dunhuang.research.source_capacity.capacity import native,injection
 from dunhuang.research.source_capacity.common import read,commit,fresh,forbid_optimizers,same_arrays,frozen,weight
 from dunhuang.research.source_capacity.numerics import check_derivatives,trusted,normalized_supported
-from .core import reference,protection
+from .core import phase_reference,protection
 
 def control_norm(base_condition,relative_rms):
     return float(base_condition.detach().double().norm())*relative_rms
@@ -42,7 +42,7 @@ def directions(predict,zero,available,base_condition,adapter,geometry,config,see
             grad=torch.autograd.grad(f(z).sum(),z)[0]
         direction=normalized_supported(-grad,support,desired)
         j,g,check=check_derivatives(f,zero,direction,torch.ones(1,device="cuda"),config["probe"]["fd_steps"])
-        check.update(numeric_trusted=trusted(check,config["probe"]),zero_direction=bool(direction.norm()==0),reference_only=True)
+        check.update(numeric_trusted=trusted(check,config["probe"]),zero_direction=bool(direction.norm()==0),reference_only=True,phase_support_frames=int(stage.any(-1).sum()))
         checks[name]=check;result[name]=direction.detach()
     with torch.no_grad():
         learned=adapter(geometry,base_condition,visibility_policy="observed")
@@ -87,7 +87,7 @@ def run(config,out,replay_from=None):
                 available=[];geometries=[];refs=[]
                 for uid in uids:
                     condition,keys,plan,contract=rt.source(uid)
-                    a=reference(condition.value[0].numpy(),condition.known[0].numpy(),keys[0].numpy(),config["probe"]["phase_radius"],config["probe"]["phase_weight"])
+                    a=phase_reference(condition.value[0].numpy(),condition.known[0].numpy(),keys[0].numpy(),read("configs/data_event_v3.json")["phases"],config["probe"]["phase_radius"],config["probe"]["phase_weight"])
                     available.append(a);refs.append(rt.self_data(uid)[2])
                     # Geometry is reconstructed from only the same provided source.
                     geometries.append(event_geometry(condition.value.cuda(),condition.known.cuda(),condition.phase.cuda()))
@@ -147,7 +147,7 @@ def run(config,out,replay_from=None):
     write(out/"protocol.json",dict(code_commit=commit(),config=config,capacity_protocol=ref(capacity/"capacity/protocol.json"),latents=ref(arrays_file),adapter=ref(file),
         contracts=ref(out/"contracts.json"),source_protocol=ref(root/"cf/protocol.json"),scope="single-step clipped CFG2 predicted-x0, condition512 only",
         inference_reads="provided source upper8+known+legal keys and identity verified map; targets evaluation only",
-        stage="radius2 around actual provided legal keys; no hidden derivatives",native_scope="Val t19 predicted-x0 only; not full sampling"))
+        stage="source-only full visible contiguous block kinematic proposals; exclude block edges; radius2",phase_config=ref("configs/data_event_v3.json"),native_scope="Val t19 predicted-x0 only; not full sampling"))
     if replay_from:
         old=Path(replay_from)
         if read(old/"result.json")!=result:raise ValueError("Reference probe readouts differ")
