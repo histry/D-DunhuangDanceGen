@@ -56,3 +56,10 @@ def test_so3_chart_cut_is_rejected_without_clipping():
     raw[75,67:73]=sixd(Rotation.from_rotvec([np.pi,0,0]).as_matrix())
     x,e=project(old,raw,config())
     assert x is None and e["status"]=="SO3_CHART_CUT_REJECTED"
+
+def test_activity_guard_values_are_json_serializable_python_scalars():
+    import json
+    from dunhuang.research.boundary_state.study import activity
+    value=activity(motion(),60,90)
+    assert type(value) is float
+    assert json.loads(json.dumps(dict(activity=value,guard=value>=0)))["guard"]
