@@ -16,7 +16,7 @@ def run(root):
         for f in ("normalized.npy","windows.npy","edge.npy","native.npy","native_fk.npy","official_fk.npy"):
             assert np.array_equal(np.load(folder/f),np.load(other/f));count+=1
         g=read(folder/"generation.json");assert g["weights_before"]==g["weights_after"] and g["adapter"] is None
-    assert count==240
+    assert count==240 and source["traced_frozen_arrays_exact"]==96
     boundary=read(root/"boundary/result.json");assert boundary==read(root/"boundary_replay/result.json");bc=0;rootresidual=0.
     for b in read(root/"boundary/protocol.json")["bindings"]:
         x=np.load(checked(b["native"]));old=np.load(checked(b["original"]));a,z=b["config"]["edit"]
@@ -27,6 +27,7 @@ def run(root):
         other=root/"boundary_replay"/b["name"]
         for f in ("native.npy","fk.npy"):
             assert np.array_equal(np.load(Path(b["native"]["path"]).parent/f),np.load(other/f));bc+=1
+    assert rootresidual<2e-6
     changed=subprocess.check_output(["git","diff","--name-only","0911637","--","src/dunhuang","configs"],text=True).splitlines()
     formal=[p for p in changed if not p.startswith("src/dunhuang/research/")]
     assert not formal

@@ -7,10 +7,12 @@
   "validation_timesteps": [
     100,
     500,
-    900
+    900,
+    999
   ],
   "generation_windows": 8,
   "checkpoint_selection": "fixed final; no Val tuning",
   "training_contact_supervision": false,
-  "operational_qualified": false
+  "operational_qualified": false,
+  "training_timesteps": "uniform all 0..999"
 }

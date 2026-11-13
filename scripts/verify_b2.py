@@ -21,8 +21,16 @@ def run(root):
             assert np.array_equal(np.load(folder/f),np.load(other/f));count+=1
         assert read(folder/"edited_physical.json")==read(other/"edited_physical.json")
     assert count==128
+    app=read(root/"application/result.json");assert app==read(root/"application_replay/result.json");app_arrays=0
+    for binding in read(root/"application/protocol.json")["bindings"]:
+        x=np.load(checked(binding["native"]));old=np.load(checked(binding["original"]))
+        assert np.array_equal(x[:60],old[:60]) and np.array_equal(x[90:],old[90:])
+        folder=Path(binding["native"]["path"]).parent;other=root/"application_replay"/folder.name
+        for file in ("normalized.npy","windows.npy","edge.npy","native.npy","native_fk.npy","official_fk.npy","edited_native.npy","edited_fk.npy"):
+            assert np.array_equal(np.load(folder/file),np.load(other/file));app_arrays+=1
+    assert app_arrays==64
     sealed=dict(code_commit=subprocess.check_output(["git","rev-parse","HEAD"],text=True).strip(),frozen_adapter_sha256=train["checkpoint"]["sha256"],
-        optimizer_training_steps=300,replay_optimizer_steps=0,exact_generation_arrays=count,protected_context_exact=True,original_native_unchanged=True,operational_qualified=False,new_whole_song_generations=0)
+        optimizer_training_steps=300,replay_optimizer_steps=0,exact_generation_arrays=count,exact_application_arrays=app_arrays,protected_context_exact=True,original_native_unchanged=True,operational_qualified=False,new_whole_song_generations=0)
     write(root/"independent_checks.json",sealed);print("B2_INDEPENDENT",sealed,flush=True)
 if __name__=="__main__":
     p=argparse.ArgumentParser();p.add_argument("--out",required=True);a=p.parse_args();run(a.out)

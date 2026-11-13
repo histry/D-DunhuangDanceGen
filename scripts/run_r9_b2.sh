@@ -23,4 +23,6 @@ cfg=src/dunhuang/research/boundary_context/config.json
 "$edge" -m dunhuang.research.boundary_context.train --config "$cfg" --preflight "$parent/training_preflight" --out "$study/train_replay" --replay-from "$study/train"
 "$native" -m dunhuang.research.boundary_context.study --config "$cfg" --preflight "$parent/training_preflight" --training "$study/train" --out "$study/generation"
 "$native" -m dunhuang.research.boundary_context.study --config "$cfg" --preflight "$parent/training_preflight" --training "$study/train" --out "$study/generation_replay" --replay-from "$study/generation"
+"$native" -m dunhuang.research.boundary_context.application --parent outputs/reperformance_r8_02 --training "$study/train" --out "$study/application"
+"$native" -m dunhuang.research.boundary_context.application --parent outputs/reperformance_r8_02 --training "$study/train" --out "$study/application_replay" --replay-from "$study/application"
 "$native" scripts/verify_b2.py --out "$study" > "$receipt/independent_checks.log" 2>&1

@@ -35,7 +35,7 @@ def run(cfg,preflight,out,replay=None):
     handle=model.cond_encoder.register_forward_hook(hook)
     scaler=(torch.tensor(export["scale"],device="cuda"),torch.tensor(export["bias"],device="cuda"))
     protocol=dict(code_commit=commit(),config=cfg,preflight=ref(Path(preflight)/"protocol.json"),rows=ref(Path(preflight)/"rows.json"),
-        training_rows=len(fit),validation_rows=val,final_checkpoint_only=True,contact_truth=False,known_context_and_unknown_target_support=True,full_window_scaler_support_claimed=False)
+        training_rows=len(fit),validation_rows=val,final_checkpoint_only=True,contact_truth=False,known_context_and_unknown_target_support=True,full_window_scaler_support_claimed=False,root_origin="protected outside-edit frame0 XZ; only local 8+8 frames enter Adapter")
     write(out/"protocol.json",protocol)
     def evaluate(control):
         values=[];adapter.eval()
@@ -61,11 +61,11 @@ def run(cfg,preflight,out,replay=None):
             target,music=data.batch(subset);a=int(rng.integers(60,67));b=int(rng.integers(84,91))
             observed=None if rng.random()<.25 else rng.random(24)<.8;known,unknown=masks(target,a,b,observed)
             state.update(value=target,known=known,enabled=True);adapter.train()
-            t=torch.randint(50,950,(len(target),),device="cuda")
+            t=torch.randint(0,1000,(len(target),),device="cuda")
             pred=model(diffusion.q_sample(target,t),music,t,cond_drop_prob=0.)
             objective=loss(pred,target,unknown,a,b,scaler)
             if not torch.isfinite(objective):raise ValueError("Nonfinite B2 masked boundary objective")
-            optimizer.zero_grad();objective.backward();torch.nn.utils.clip_grad_norm_(adapter.parameters(),1.);optimizer.step()
+            optimizer.zero_grad();objective.backward();torch.nn.utils.clip_grad_norm_(adapter.parameters(),1.,error_if_nonfinite=True);optimizer.step()
             history.append(float(objective));assert all(p.grad is None for p in model.parameters())
             if (update+1)%25==0:print("R9_B2_TRAIN",update+1,history[-1],flush=True)
         updates=cfg["steps"]
