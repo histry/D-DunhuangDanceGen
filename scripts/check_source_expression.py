@@ -29,6 +29,9 @@ def check(root):
     old={index[p[k]]["raw_motion"]["sha256"] for p in pairs["calibration"] for k in ("a","b")}
     new={index[p[k]]["raw_motion"]["sha256"] for p in pairs["disjoint_probe"] for k in ("a","b")}
     assert not old&new and not {p["source_group"] for p in pairs["calibration"]}&{p["source_group"] for p in pairs["disjoint_probe"]}
+    old_audio={index[p[k]]["audio"]["sha256"] for p in pairs["calibration"] for k in ("a","b")}
+    new_audio={index[p[k]]["audio"]["sha256"] for p in pairs["disjoint_probe"] for k in ("a","b")}
+    assert not old_audio&new_audio
     assert all(index[p[k]]["role"]=="train" for pop in pairs.values() for p in pop for k in ("a","b"))
     source=read(Path(cfg["source"])/"cf/protocol.json");q=read(checked(source["qualified"]));previous=read(checked(q["previous_preflight"]));assets=read(checked(previous["assets"]))
     scaler=np.load(checked(assets["scaler"]));scale=scaler["scale"];bias=scaler["bias"]
@@ -124,7 +127,7 @@ def check(root):
     result=dict(schema="independent_source_expression_checks",verifier_commit=subprocess.check_output(["git","rev-parse","HEAD"],text=True).strip(),verifier_sha256=sha(__file__),
         saved_predictions_verified=checked_predictions,max_source_readout_error_rad=source_error,max_protection_readout_error=protection_error,max_expression_readout_absolute_error=expression_error,max_expression_readout_relative_to_level_error=expression_relative_error,expression_numeric_audit_bound=1e-4,
         max_condition_fraction=budget,max_common_norm_relative_error=norm_error,common_dose_groups=len(dose_buckets),exact_replay_arrays=exact_arrays,
-        old_numeric_trusted_unchanged=93,frozen_model_files_rechecked=models,known_train_source_and_music_group_overlap=0,
+        old_numeric_trusted_unchanged=93,frozen_model_files_rechecked=models,known_train_source_and_music_group_overlap=0,known_train_audio_sha_overlap=0,
         distinct_real_pcm_assets=3,plans_verified=plans,consumed_events=events,independent_slerp_max_error_rad=pose_error,phase_clock_max_error=phase_error,
         blind_items=35,raw_native_frame_clock_checks=35,source_stage_support_counts=[dict(cohort=c,case=i,source=s,stage_joint_frames=int(v.sum()),stage_frames=int(v.any(-1).sum())) for (c,i,s),v in sorted(stages.items())],original_human_records=0,public_review_identity_scan_passed=True,human_reviewed=False,semantic_event_truth="UNKNOWN",optimizer_calls=0,edge_forward_calls=0,
         temporary_ssh_files_created=0,temporary_ssh_files_remaining=0,operational_qualified=False)
