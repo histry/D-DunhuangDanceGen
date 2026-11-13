@@ -72,7 +72,7 @@ for k,v in pub['model_sha256'].items():
     file=Path('outputs/source_tasks_02')/k/('adapter.pt' if k.startswith('cf/') else 'content.pt')
     assert sha(file)==v;weights[k]=v
 attempts={}
-for n in ('01','02','03','04'):
+for n in ('01','02','03','04','05'):
     receipt=Path('outputs/reference_guidance_'+n+'_receipt')
     attempts[n]=dict(execution_commit=(receipt/'execution_commit.txt').read_text().strip(),exit_status=int((receipt/'exit_status.txt').read_text()),native_arrays_present=len(list(Path('outputs/reference_guidance_'+n).rglob('native.npy'))),receipt_sha256={f.name:sha(f) for f in receipt.iterdir() if f.is_file()},log_sha256=sha('outputs/reference_guidance_'+n+'.log'))
 write(root/'public_checks.json',dict(schema='independent_reference_guidance_checks',verifier_commit=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),verifier_sha256=sha(__file__),source_direction_readouts_verified=len(errors)//2,equal_norm_relative_spread=max(norm_error),source_blind_random_invariance_cases=random_invariance,max_direction_readout_error_rad=max(errors),frame_metric_values_verified=len(event_diffs),max_frame_metric_error=max(event_diffs,default=0),frozen_model_files_rechecked=weights,derivative_records=len(c['derivatives']),trusted_derivatives=sum(r['numeric_trusted'] for r in c['derivatives']),records=240,attempts=attempts,replay_optimizer_calls=0,replay_fit_calls=0,temporary_ssh_files_created=0,temporary_ssh_files_remaining=0,operational_qualified=False))

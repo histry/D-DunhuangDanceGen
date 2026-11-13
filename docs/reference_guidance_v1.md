@@ -115,3 +115,11 @@ commit; run_reference_events.sh runs only new readouts and regression in fresh
 roots. Export records separate control/event execution commits. Control is reused
 immutably rather than represented as a newly generated result. The old launcher
 exit=1 and its receipts remain available.
+
+Attempt reference_guidance_04 was interrupted after frozen token extraction:
+the fixed motion readout has 99,552 physical frames, exposing a quadratic
+per-row group-count implementation. Group counts are now computed once with
+np.unique, preserving bit-identical weights/means/standard deviations/coefficients
+on the regression fixture. This is a performance correction, with unchanged
+head family, labels, selection, regularization and thresholds. No result was
+selected from the interrupted readout attempt.

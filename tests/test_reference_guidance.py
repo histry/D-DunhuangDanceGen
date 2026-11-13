@@ -82,3 +82,11 @@ def test_song_role_audit_keeps_registry_scope_and_exposes_shared_choreography():
     assert result["cross_role_choreography_identities"]==1 and not result["unseen_choreography_claimed"]
     rows[1]["role"]="train"
     with pytest.raises(ValueError):song_roles(rows,registry,"AIST_strict_unseen_song")
+
+def test_group_weight_vectorization_preserves_the_registered_ridge_fit():
+    rng=np.random.default_rng(123);x=rng.normal(size=(100,4));y=np.arange(100)%2;g=np.repeat(["a","b","c"],[30,20,50])
+    w=np.array([1/np.sum(g==v) for v in g]);w=np.where(y==1,w/w[y==1].sum(),w/w[y==0].sum())*.5
+    mean=(x*w[:,None]).sum(0);std=np.sqrt(((x-mean)**2*w[:,None]).sum(0)).clip(1e-6);z=np.c_[(x-mean)/std,np.ones(len(x))]
+    reg=np.eye(5)*.01;reg[-1,-1]=0;beta=np.linalg.solve(z.T@(z*w[:,None])+reg,z.T@(w*y))
+    fit=ridge_fit(x,y,g,.01)
+    assert np.array_equal(fit["mean"],mean) and np.array_equal(fit["std"],std) and np.array_equal(fit["beta"],beta)

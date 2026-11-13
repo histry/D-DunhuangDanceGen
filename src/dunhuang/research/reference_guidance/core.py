@@ -54,7 +54,8 @@ def ridge_fit(x,y,groups,penalty):
     x=np.asarray(x,float);y=np.asarray(y,float);groups=np.asarray(groups)
     if x.ndim!=2 or len(x)!=len(y) or len(y)!=len(groups) or not np.isfinite(x).all() or set(np.unique(y))!={0.,1.}:raise ValueError("Finite binary Train population required")
     # Equal source-group weight, then balanced classes; both derived from Train.
-    w=np.array([1/np.sum(groups==g) for g in groups])
+    _,inverse,counts=np.unique(groups,return_inverse=True,return_counts=True)
+    w=1./counts[inverse]
     w=np.where(y==1,w/w[y==1].sum(),w/w[y==0].sum())*.5
     mean=(x*w[:,None]).sum(0);std=np.sqrt(((x-mean)**2*w[:,None]).sum(0)).clip(1e-6)
     z=np.c_[(x-mean)/std,np.ones(len(x))]
