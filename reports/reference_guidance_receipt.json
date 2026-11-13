@@ -1,0 +1,30 @@
+{
+  "schema": "reference_guidance_sealed_receipt",
+  "baseline": "e531ea7ca8f32299c9a222ef8b6ae681ace79d1e",
+  "execution_commit": "ff3929ba37cd2396ffee9deb763fabad90e49288",
+  "verifier_commit": "ff3929ba37cd2396ffee9deb763fabad90e49288",
+  "exit_status": 0,
+  "baseline_existing_source_and_configs_unchanged": true,
+  "summary_sha256": "cc1ef072ac4f42351ecb16bb0d76ee49401c2a01c0a461e98051c2705dcf2098",
+  "stage_execution_commits": {
+    "control": "07e3c42a2ea4e7dd1718c26cd4f8f6e731427c4d",
+    "events": "ff3929ba37cd2396ffee9deb763fabad90e49288"
+  },
+  "launcher_sha256": "49cb433e7d77ef234f3ab7de86f061953c4e6f1cec9d9cc205aac0673b3379ae",
+  "started_utc": "2026-11-13T09:35:30Z",
+  "finished_utc": "2026-11-13T09:40:23Z",
+  "receipt_sha256": {
+    "edge_check.log": "d4188ff4cf57bc53428d8d9048c4a6a0f74a7441eacf8c875c3ce663f8e6f404",
+    "execution_commit.txt": "836462c76b324ff60e63480c93445a893c791ce19efc1b6e717418727945992d",
+    "started_utc.txt": "838a28c042fe186d070f9533b070368645333771ef24701b48a58728169b5b99",
+    "pytest.log": "9c8eba0a1e2595cfb4e63a7a80a2d5bc38ce8ac37dae29159187140410533373",
+    "environment.json": "81fd340f955a7d423b7b2ab5fb8806631e66ea657d63f83ac7274d8d47be12d0",
+    "exit_status.txt": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "finished_utc.txt": "537981294c6a8f992810d77a3e450e5ba1be25c89b67faf34d8724315f6a175e"
+  },
+  "replay_optimizer_calls": 0,
+  "replay_fit_calls": 0,
+  "temporary_ssh_files_created": 0,
+  "temporary_ssh_files_remaining": 0,
+  "operational_qualified": false
+}

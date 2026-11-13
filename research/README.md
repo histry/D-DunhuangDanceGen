@@ -29,3 +29,16 @@ Only one existing production file changes: pipeline.py rejects legacy anchor sel
 ## Frozen source capacity and local paths
 
 The no-optimizer study in research/source_capacity replays the frozen C0-C3 trajectories, checks layer responses and JVP/VJP/finite differences, and compares parameter-free injection probes on fixed Train pairs. Its oracle directions use true targets and are not deployable source conditions. The independent local-path study preserves all four content checkpoints, Normalizer and candidate populations, and separates global/temporal content from DTW/NULL freedom. See [contract](../docs/source_capacity_v1.md). No existing baseline source or configuration is modified.
+
+## Reference-only directions and event information
+
+New independent drivers are under src/dunhuang/research/reference_guidance.
+The controller reads only provided reference support and source-only kinematic phases;
+true hidden poses are evaluation-only. Fixed single-step controls preserve CFG/clipping,
+verify derivatives, compare equal-norm random directions and enforce protected-motion
+readouts. No full-chain or learned mapping is admitted.
+The separate event driver fits only diagnostic Train-only ridge heads over frozen
+encoders, binds roles to the declared unseen-song registry and explicitly reports
+shared choreography exposure. Fresh replay loads heads without fitting. Continuation
+uses hash-frozen successful control artifacts with separate execution commits.
+See [contract](../docs/reference_guidance_v1.md) and [results](../reports/参考动作可用引导与事件信息审计报告.md).

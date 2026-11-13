@@ -202,3 +202,8 @@ See [report](reports/A2V3候选支持域与G2M机制对照报告.md), [registere
 ## Frozen capacity / local path audit (2026-11-13)
 
 [Report](reports/冻结来源控制容量与局部路径审计报告.md) · [protocol](docs/source_capacity_v1.md) · [receipt](reports/source_capacity_receipt.json). Zero optimizer updates. All72 derivative probes passed numeric checks; no site passed directional control qualification.32 frozen controls and96 motion/FK arrays were exactly regenerated in an independent process. All4 frozen content encoders were compared on fixed candidates using same-frame, banded DTW, partial NULL and content controls, then independently replayed. Group intervals do not support a reliable local-path gain. No production or G3/R4 promotion.
+
+## Reference-only guidance / event information audit (2026-11-13)
+
+[Report](reports/参考动作可用引导与事件信息审计报告.md) · [protocol](docs/reference_guidance_v1.md) · [sealed receipt](reports/reference_guidance_receipt.json).
+All96 reference-only direction derivatives passed numeric checks; protected all-case qualification failed, so no full-chain guidance or mapping training started.44 single-step Native readouts and132 arrays were independently replayed exactly. Four frozen encoders received60 Train-only diagnostic linear readouts; all scores/heads were replayed without refitting. Source registry exposes60 shared choreography identities despite valid known-song isolation. Proxy decodability does not qualify cross-modal event semantics, production generation or a new blind benchmark.
