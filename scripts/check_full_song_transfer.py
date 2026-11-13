@@ -57,6 +57,7 @@ def check(root):
             expected=np.pad(mono,(0,item["clock"]["silence_samples"]))[start:start+5*sr,None]
             assert rate==sr and np.array_equal(clip,expected) and sl["source_start_sample"]==start
             assert hashlib.sha256(v[i].tobytes()).hexdigest()==sl["features_sha256"]
+    noise_by_case={};noise_by_arm={}
     for row,b in zip(gr["records"],gp["bindings"]):
         folder=Path(checked(b["native"])).parent;T=inventory[row["case"]]["clock"]["frames"]
         checked(b["physical"]);checked(b["fk"]);request=read(checked(b["request"]));arm=row["arm"]
@@ -64,6 +65,7 @@ def check(root):
         assert request["anchors"]==expected and request["frames"]==T and request["audio"]["sha256"]==inventory[row["case"]]["audio"]["sha256"]
         gen=read(folder/"generation.json");assert gen["weights_before"]==gen["weights_after"] and gen["adapter"] is None and gen["training"] is False
         assert not row["sampler"]["post_generation_pose_paste"]
+        noise_by_case.setdefault(row["case"],set()).add(row["sampler"]["noise_sha256"]);noise_by_arm[(row["case"],arm)]=row["sampler"]["noise_sha256"]
         if arm=="music_order_control":
             original=np.load(checked(fp["songs"][row["case"]]["features"]));order=read(folder.parent/"permuted_music_order.json")
             assert np.array_equal(np.load(checked(request["features"])),original[order])
@@ -72,6 +74,13 @@ def check(root):
         assert read(folder/"physical.json")==read(root/"generation_replay"/folder.name/"physical.json")
         for name in ("normalized.npy","windows.npy","edge.npy","native.npy","native_fk.npy","official_fk.npy"):
             assert np.array_equal(np.load(folder/name),np.load(root/"generation_replay"/folder.name/name));arrays+=1
+    assert all(len(h)==1 for h in noise_by_case.values())
+    cross_music=[]
+    for a in range(3):
+        for b in range(a):
+            same=inventory[a]["clock"]["windows"]==inventory[b]["clock"]["windows"]
+            if same:assert noise_by_arm[(a,"baseline")]==noise_by_arm[(b,"baseline")]
+            cross_music.append(dict(case_a=a,case_b=b,same_noise_and_batch=same,interpretation="CONDITION_RESPONSE_NOT_MUSICAL_QUALITY" if same else "BATCH_NOISE_CONFOUND_NOT_MUSIC_ATTRIBUTION"))
     vp=read(root/"videos/protocol.json");video_counts=[]
     assert len(vp["records"])==10
     for row in vp["records"]:
@@ -86,7 +95,7 @@ def check(root):
     assert formal==[]
     write(root/"public_checks.json",dict(formal_baseline_changed_paths=formal,code_commit=subprocess.check_output(["git","rev-parse","HEAD"],text=True).strip(),
         verifier_sha256=sha(__file__),full_songs=len(inventory),plans_verified=plans,exact_generation_replay_arrays=arrays,
-        videos=video_counts,fresh_generation_replay=read(root/"generation_replay/replay.json"),
+        videos=video_counts,within_song_noise_matched=True,cross_music_controls=cross_music,fresh_generation_replay=read(root/"generation_replay/replay.json"),
         optimizer_calls=0,operational_qualified=False,human_reviewed=False))
     print("INDEPENDENT_R7_FULL_SONG_CHECKS",plans,arrays,len(video_counts),flush=True)
 if __name__=="__main__":
