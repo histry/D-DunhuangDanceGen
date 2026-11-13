@@ -1,0 +1,77 @@
+{
+  "native": {
+    "python": "3.9.23 | packaged by conda-forge | (main, Jun  4 2025, 17:57:12) \n[GCC 13.3.0]",
+    "packages": {
+      "numpy": "1.23.5",
+      "scipy": "1.10.1",
+      "torch": "2.8.0",
+      "soundfile": "0.12.1",
+      "pytest": "8.4.2"
+    }
+  },
+  "edge": {
+    "python": "3.9.25 (main, Nov  3 2025, 22:33:05) \n[GCC 11.2.0]",
+    "packages": {
+      "numpy": "1.26.4",
+      "scipy": "1.13.1",
+      "torch": "2.8.0",
+      "pytorch3d": "0.7.9"
+    }
+  },
+  "os": "Linux-6.8.0-138-generic-x86_64-with-glibc2.35",
+  "gpu": "NVIDIA GeForce RTX 4090, 550.144.03, 24564 MiB",
+  "audio_detector": "hash-pinned librosa 0.11.0 vendor runtime",
+  "attempts": {
+    "source_expression_01": {
+      "execution_commit": "2e11d7de6a95c6b7513decfeca332ac7a0aa058f",
+      "exit_status": 130,
+      "log_sha256": "dbc9b61aff62c8a9336af9d04a9153f9955a4fad44321c45ef46e3e0ccf2b531",
+      "receipt_sha256": {
+        "edge_check.log": "26039ae511a88212ee4a57cc4df57cc8be344fd9f49793d90f374e3f1c91fb4a",
+        "execution_commit.txt": "25dbfc1574a3e0d0d6dab8952611fd90136ed4421da31f9854d439324828fdc0",
+        "started_utc.txt": "e8f798a93eaae45405e6376e6ae9bbc4abea65a6db7dab2416d739380fc856ad",
+        "pytest.log": "3ec44b17ba054ae8d966ec729508a0604ae8ed19fdf455c75e2497f7b2dba15e",
+        "exit_status.txt": "f5bde7eb9f6c71611dc5726e8aca3eb4eba3e386da49e0a4ed5c295a90a73a0d",
+        "finished_utc.txt": "8c6b2bbe97bb00fbcd50038b834e335da0eb79147578ece2374750a136ed0634"
+      }
+    },
+    "source_expression_02": {
+      "execution_commit": "2d9c48e8cf733b0fb8dbb07523ce275b8da47db8",
+      "exit_status": 130,
+      "log_sha256": "a3fc8f0fa25c10f730efdea9a66d1c73d2973b6a19f995e92697d3c3243e6104",
+      "receipt_sha256": {
+        "edge_check.log": "69d47aa7ad3606fef785d944fb887b74489cf216a6d74b358bfebcd575c2510e",
+        "execution_commit.txt": "6abb1d79219f44fa074abe6147529b60725a9fcf0de9420de13dc99a02ab7812",
+        "started_utc.txt": "f675bb1b741159e9e5c84a77b47a97781f761b7e904da91100a578be189def75",
+        "pytest.log": "08c216a0f4036b6c0ee7184cb59b43f27a4613917b6c9a3b99d90f8fff92e614",
+        "exit_status.txt": "f5bde7eb9f6c71611dc5726e8aca3eb4eba3e386da49e0a4ed5c295a90a73a0d",
+        "finished_utc.txt": "785e4b804535d7facb39b392b1ebe35298a4c59b5ad01791e145f8e48561b541"
+      }
+    },
+    "source_expression_03": {
+      "execution_commit": "41fd659011af7dec4abe00333ef1da1430bf9895",
+      "exit_status": 1,
+      "log_sha256": "2ab6ee04e2220bf6fd2a184975eb9713f61bc0900f2d7e508eeb03b8e2c08d56",
+      "receipt_sha256": {
+        "edge_check.log": "7d5ea86f8080185bd814519bf812ae6e431c3d1430a37a161627e9ea67c9550a",
+        "execution_commit.txt": "38546bbcec12ba5ab4f08515bb5e70c394d2c0b228f7d7cc6258b75e5d148cb3",
+        "started_utc.txt": "fa9ba8cb27e8117d333e43ab530ad0d6b79560e304df7845ec5aa96f087fdb55",
+        "pytest.log": "20ebeb375c8743cbdd936dc02c37db18888ad07cbc772be4af1bb021bfade21e",
+        "exit_status.txt": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+        "finished_utc.txt": "cc2a08f82a50520fdfb1e1d930f2cbacda281305c738aa42536e74638ff2f28f"
+      }
+    }
+  },
+  "independent_check_exit_status": 0,
+  "independent_check_log_sha256": "3b0a9327229fb5c6d16db239ba082ccb922adc93aa73227e290eb5d94ff1c4a8",
+  "browser_technical_qa": {
+    "full_skeleton_visible": true,
+    "event_playback_verified": true,
+    "music_driven_playback_verified": true,
+    "original_review_submit_actions": 0,
+    "automatic_translation_observed": true,
+    "formal_language_validation_required": true
+  },
+  "temporary_ssh_files_created": 0,
+  "temporary_ssh_files_remaining": 0
+}

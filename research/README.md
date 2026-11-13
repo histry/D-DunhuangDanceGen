@@ -46,3 +46,8 @@ See [contract](../docs/reference_guidance_v1.md) and [results](../reports/参考
 ## Protected source, interval/pose and Shadow planning
 
 New drivers live under research/protected_guidance, research/event_information and research/planner_integration. They isolate small matrix-free source projections, no-weight-learning information audits and E1-W condition/identity checks from production. Norm-matched shrink/random controls, explicit proxy-label scopes, Train-only statistics, actual Planner consumption and independent replay remain mandatory. See [protocol](../docs/protected_source_v1.md) and [report](../reports/受保护来源控制与事件信息及规划集成报告.md).
+
+
+## R6 source expression and private blind review
+
+The source_expression package isolates frozen failure attribution, Train-reference-only pose/dynamic scales, five common-dose protected objectives, multi-audio Shadow planning and private review preparation. Historical weights, source/config baseline and qualification thresholds are unchanged. Saved-array verification is independent of GPU replay; human data review remains separate from model admission. The media-only continuation explicitly binds prior successful stages and retains the failed floating-WAV timestamp receipt. See [protocol](../docs/source_expression_r6_v1.md) and [report](../reports/来源动态控制与独立盲审准备报告.md).

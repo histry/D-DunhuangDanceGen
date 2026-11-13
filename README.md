@@ -211,3 +211,8 @@ All96 reference-only direction derivatives passed numeric checks; protected all-
 ## Protected source and event/planner audits (2026-11-13)
 
 [Report](reports/受保护来源控制与事件信息及规划集成报告.md) · [protocol](docs/protected_source_v1.md) · [receipt](reports/protected_source_receipt.json). Fixed small-subspace source projections pass all measured relative-motion protection checks and improve joint Train readouts beyond matched shrink controls, but full source qualification fails and Native acceptance is unchanged. Interval/pose audits fit no model weights and do not support new encoder training. E1-W is consumed only by a Shadow research path. All three stages have fresh-process replay; production remains unchanged.
+
+
+## R6 source expression and independent review preparation (2026-11-13)
+
+[Report](reports/来源动态控制与独立盲审准备报告.md) · [protocol](docs/source_expression_r6_v1.md) · [receipt](reports/source_expression_receipt.json). Five fixed protected objectives completed 240 local projections and a full fresh replay; no arm passed all-case source qualification, so no new training or full generation started. Three distinct real audio assets yielded nine verified Shadow plans. Thirty-five blind-review items are PREPARATION_ONLY with zero human records. Media-only continuation preserves the original failed WAV-byte receipt and SHA-sealed scientific stages. Production remains unchanged.

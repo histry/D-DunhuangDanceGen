@@ -1,0 +1,160 @@
+{
+  "schema": "independent_source_expression_checks",
+  "verifier_commit": "6aaa8d2697f65ef9a69ac6deb48a6f4fcf39c310",
+  "verifier_sha256": "452121e07bf21216866e1b94c88f77d6c42f9515df0043c0e44d4555fac4e91a",
+  "saved_predictions_verified": 480,
+  "max_source_readout_error_rad": 1.8867748474704626e-09,
+  "max_protection_readout_error": 4.625716355094456e-10,
+  "max_expression_readout_absolute_error": 1.3433628126335861e-05,
+  "max_expression_readout_relative_to_level_error": 2.2882750574083187e-07,
+  "expression_numeric_audit_bound": 0.0001,
+  "max_condition_fraction": 1.0000000520586398,
+  "max_common_norm_relative_error": 4.796949504298536e-08,
+  "common_dose_groups": 48,
+  "zero_common_dose_groups": 1,
+  "exact_replay_arrays": 1008,
+  "old_numeric_trusted_unchanged": 93,
+  "frozen_model_files_rechecked": {
+    "cf/C0": "cf42aa7fd2c58a53f9d8b645190e0441b39bd33f68df1663d9ce923508cd9028",
+    "cf/C1": "2951a5be0bbaf868c2cc63d0c85bfbaccf44f1307697bde576735d16321d7e9c",
+    "cf/C2": "d272d0f6a0f100125ae632438bc87e6cf0edf0046b35116bef70970d979722d9",
+    "cf/C3": "85cd80754481221c00f53dae8f3f8807fe7fcf94e4e2c990decf4b13889b6bd9",
+    "content/15": "7b7f7b779756b9a2f89a4afc0e7572614bcf4829dbf7b7479bb82107eff0067a",
+    "content/30": "86f694abb3dd6f15b7fabb477a6238f1e9b9a3eb810b112e10094ab92e7a5a21",
+    "content/dual": "77953217c62d9b982fe3988ffc912517540b0009da018c5af1ca825b8a4cc08e",
+    "content/dual_shuffle": "5074c52676e8177536d9e4494c541b9f6796d496a73269ef8f028077d93d9241"
+  },
+  "frozen_backbone_sha256": "28ca4ce167bb17c36869b4d021af8762a34c6df034002f61b3bc1c1d0b1b02c7",
+  "known_train_source_and_music_group_overlap": 0,
+  "known_train_audio_sha_overlap": 0,
+  "distinct_real_pcm_assets": 3,
+  "plans_verified": 9,
+  "consumed_events": 45,
+  "independent_slerp_max_error_rad": 7.416786482960792e-08,
+  "phase_clock_max_error": 2.9773310705749623e-08,
+  "blind_items": 35,
+  "raw_native_frame_clock_checks": 35,
+  "source_stage_support_counts": [
+    {
+      "cohort": "calibration",
+      "case": 0,
+      "source": 0,
+      "stage_joint_frames": 568,
+      "stage_frames": 71
+    },
+    {
+      "cohort": "calibration",
+      "case": 0,
+      "source": 1,
+      "stage_joint_frames": 616,
+      "stage_frames": 77
+    },
+    {
+      "cohort": "calibration",
+      "case": 1,
+      "source": 0,
+      "stage_joint_frames": 728,
+      "stage_frames": 91
+    },
+    {
+      "cohort": "calibration",
+      "case": 1,
+      "source": 1,
+      "stage_joint_frames": 712,
+      "stage_frames": 89
+    },
+    {
+      "cohort": "calibration",
+      "case": 2,
+      "source": 0,
+      "stage_joint_frames": 592,
+      "stage_frames": 74
+    },
+    {
+      "cohort": "calibration",
+      "case": 2,
+      "source": 1,
+      "stage_joint_frames": 640,
+      "stage_frames": 80
+    },
+    {
+      "cohort": "calibration",
+      "case": 3,
+      "source": 0,
+      "stage_joint_frames": 704,
+      "stage_frames": 88
+    },
+    {
+      "cohort": "calibration",
+      "case": 3,
+      "source": 1,
+      "stage_joint_frames": 736,
+      "stage_frames": 92
+    },
+    {
+      "cohort": "disjoint_probe",
+      "case": 0,
+      "source": 0,
+      "stage_joint_frames": 624,
+      "stage_frames": 78
+    },
+    {
+      "cohort": "disjoint_probe",
+      "case": 0,
+      "source": 1,
+      "stage_joint_frames": 800,
+      "stage_frames": 100
+    },
+    {
+      "cohort": "disjoint_probe",
+      "case": 1,
+      "source": 0,
+      "stage_joint_frames": 688,
+      "stage_frames": 86
+    },
+    {
+      "cohort": "disjoint_probe",
+      "case": 1,
+      "source": 1,
+      "stage_joint_frames": 656,
+      "stage_frames": 82
+    },
+    {
+      "cohort": "disjoint_probe",
+      "case": 2,
+      "source": 0,
+      "stage_joint_frames": 712,
+      "stage_frames": 89
+    },
+    {
+      "cohort": "disjoint_probe",
+      "case": 2,
+      "source": 1,
+      "stage_joint_frames": 664,
+      "stage_frames": 83
+    },
+    {
+      "cohort": "disjoint_probe",
+      "case": 3,
+      "source": 0,
+      "stage_joint_frames": 616,
+      "stage_frames": 77
+    },
+    {
+      "cohort": "disjoint_probe",
+      "case": 3,
+      "source": 1,
+      "stage_joint_frames": 680,
+      "stage_frames": 85
+    }
+  ],
+  "original_human_records": 0,
+  "public_review_identity_scan_passed": true,
+  "human_reviewed": false,
+  "semantic_event_truth": "UNKNOWN",
+  "optimizer_calls": 0,
+  "edge_forward_calls": 0,
+  "temporary_ssh_files_created": 0,
+  "temporary_ssh_files_remaining": 0,
+  "operational_qualified": false
+}
