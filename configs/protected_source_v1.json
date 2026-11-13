@@ -1,0 +1,75 @@
+{
+  "schema": "protected_source_and_information_v1",
+  "baseline": "55b96a7d34bb160b13626bbd968508137cf851d6",
+  "source": "outputs/source_tasks_02",
+  "capacity": "outputs/source_capacity_03",
+  "reference_control": "outputs/reference_guidance_03",
+  "reference_events": "outputs/reference_guidance_05",
+  "source_a2": "outputs/transfer_audit_01/a2",
+  "data_v3": "outputs/data_event_v3_04",
+  "warp": "outputs/primitive_warp_01",
+  "seed": 20261113,
+  "times": [
+    999,
+    499,
+    19
+  ],
+  "protected": {
+    "rank": 6,
+    "max_solver_iterations": 200,
+    "solver_ftol": 1e-10,
+    "linear_safety_fraction": 0.9,
+    "linear_tolerance": 1e-06,
+    "relative_rms": 0.01,
+    "min_direction_rad": 0.001,
+    "fd_steps": [
+      0.25,
+      0.125,
+      0.0625
+    ],
+    "max_fd_relative_error": 0.1,
+    "min_fd_cosine": 0.99,
+    "max_adjoint_relative_error": 0.0001
+  },
+  "protection": {
+    "non_target_mean_rad": 0.01,
+    "root_rms_m": 0.01,
+    "contact_max": 0.05,
+    "activity_ratio": [
+      0.9,
+      1.1
+    ],
+    "acceleration_ratio": 1.1,
+    "jerk_ratio": 1.1
+  },
+  "information": {
+    "bank_per_train_source": 24,
+    "queries_per_train_source": 8,
+    "k": 5,
+    "targets": [
+      "upper_speed_peak",
+      "upper_pose_hold"
+    ],
+    "event_tolerance_frames": 2,
+    "phase_types": [
+      "upper_motion_onset",
+      "upper_direction_turn"
+    ],
+    "phase_time_clip_seconds": 3.0,
+    "bootstrap_replicates": 1000
+  },
+  "planner": {
+    "top_k": 5,
+    "beam_width": 3,
+    "arms": [
+      "E0_legacy",
+      "E1_legacy",
+      "E1_W"
+    ]
+  },
+  "optimizer_updates": 0,
+  "encoder_training_registered": false,
+  "full_chain_registered": false,
+  "operational_qualified": false,
+  "human_reviewed": false
+}
