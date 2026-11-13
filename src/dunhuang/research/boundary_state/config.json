@@ -1,0 +1,40 @@
+{
+  "baseline": "0911637f76372a54d3c315e3088f8d86abfeaa6a",
+  "parent": "outputs/reperformance_r8_02",
+  "projection": {
+    "edit": [
+      60,
+      90
+    ],
+    "chart_margin_rad": 0.05,
+    "root_d3_weight": 16.0,
+    "rotation_d3_weight": 16.0
+  },
+  "domains": [
+    {
+      "name": "small",
+      "root_cap_m": 0.15,
+      "rotation_cap_rad": 0.35
+    },
+    {
+      "name": "medium",
+      "root_cap_m": 0.75,
+      "rotation_cap_rad": 0.75
+    },
+    {
+      "name": "large",
+      "root_cap_m": 1.5,
+      "rotation_cap_rad": 1.5
+    }
+  ],
+  "key_policies": [
+    "state_only",
+    "source_keys"
+  ],
+  "candidates": [
+    "inpaint",
+    "event_inpaint"
+  ],
+  "neural_training": false,
+  "operational_qualified": false
+}
