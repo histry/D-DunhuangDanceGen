@@ -4,6 +4,7 @@ from pathlib import Path
 import numpy as np
 from dunhuang.io import checked,write,pinned
 from dunhuang.data.sources import ref
+from dunhuang.research.primitive_reperformance.environment import worker_environment
 from dunhuang.planning.event_plan import anchors
 from dunhuang.research.source_capacity.common import read,commit,fresh
 from .metrics import measure,response,decide
@@ -14,7 +15,7 @@ def worker(q,out,assets,full=False):
     module="dunhuang.research.primitive_reperformance.worker" if full else "dunhuang.edge_backend"
     for python,mod in ((assets["edge_python"],module),(assets["native_python"],"dunhuang.physical")):
         with (out/(mod.split(".")[-1]+".log")).open("w") as log:
-            subprocess.run([python,"-m",mod,str((out/"request.json").resolve())],stdout=log,stderr=subprocess.STDOUT,check=True)
+            subprocess.run([python,"-m",mod,str((out/"request.json").resolve())],stdout=log,stderr=subprocess.STDOUT,check=True,env=worker_environment())
 
 def run(cfg,prepared,out,replay_from=None):
     out=fresh(out);prep=read(Path(prepared)/"protocol.json")

@@ -7,6 +7,7 @@ from scipy.spatial.transform import Rotation
 from dunhuang.contracts import matrices,sixd
 from dunhuang.io import checked,write,pinned
 from dunhuang.data.sources import ref
+from dunhuang.research.primitive_reperformance.environment import worker_environment
 from dunhuang.research.source_capacity.common import read,commit,fresh
 from dunhuang.research.primitive_reperformance.metrics import measure
 
@@ -68,7 +69,7 @@ def run(cfg,rconfig,audit,out,replay_from=None):
                 request["output"]=str(folder.resolve());write(folder/"request.json",request)
                 for python,module in ((assets["edge_python"],"dunhuang.research.bridge_inpainting.worker"),(assets["native_python"],"dunhuang.physical")):
                     with (folder/(module.split(".")[-1]+".log")).open("w") as log:
-                        subprocess.run([python,"-m",module,str((folder/"request.json").resolve())],stdout=log,stderr=subprocess.STDOUT,check=True)
+                        subprocess.run([python,"-m",module,str((folder/"request.json").resolve())],stdout=log,stderr=subprocess.STDOUT,check=True,env=worker_environment())
                 local=np.load(folder/"native.npy");edited=old.copy();edited[a:b]=local[a:b]
                 context=np.load(checked(candidate["context"]));scaler=np.load(checked(assets["scaler"]));expected=context["values"]*scaler["scale"]+scaler["bias"]
                 norm=np.load(folder/"normalized.npy");mask=context["mask"]

@@ -51,3 +51,13 @@ def test_dense_joint_groups_and_no_source_root_paste(tmp_path):
         assert torch.equal(y[:,:,4:7],x[:,:,4:7]) and torch.equal(y[:,:,139:],x[:,:,139:])
         expected=group!="S1"
         assert bool((abs(y[0,:104,127:139]-x[0,:104,127:139])>1e-6).any())==expected
+
+
+def test_worker_environment_survives_legacy_native_policy_namespace(monkeypatch):
+    from pathlib import Path
+    from dunhuang.research.primitive_reperformance.environment import worker_environment
+    monkeypatch.setenv("PYTHONPATH","unrelated_legacy_package")
+    monkeypatch.setenv("NATIVE_POLICY_TEST","preserved")
+    env=worker_environment()
+    assert Path(env["PYTHONPATH"]).name=="src" and (Path(env["PYTHONPATH"])/"dunhuang").is_dir()
+    assert env["NATIVE_POLICY_TEST"]=="preserved" and "unrelated" not in env["PYTHONPATH"]

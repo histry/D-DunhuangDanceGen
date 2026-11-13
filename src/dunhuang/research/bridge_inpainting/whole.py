@@ -4,6 +4,7 @@ from pathlib import Path
 import numpy as np
 from dunhuang.io import checked,write,pinned
 from dunhuang.data.sources import ref
+from dunhuang.research.primitive_reperformance.environment import worker_environment
 from dunhuang.research.source_capacity.common import read,commit,fresh
 from .audit import context_binding
 from .study import audit_native,region,source_error
@@ -36,7 +37,7 @@ def run(cfg,rconfig,whole,out,replay_from=None):
                 generation_stage="R8_CONDITIONAL_FULL_SONG_BRIDGE")
             write(folder/"request.json",q)
             for python,module in ((assets["edge_python"],"dunhuang.research.bridge_inpainting.worker"),(assets["native_python"],"dunhuang.physical")):
-                with (folder/(module.split(".")[-1]+".log")).open("w") as log:subprocess.run([python,"-m",module,str((folder/"request.json").resolve())],stdout=log,stderr=subprocess.STDOUT,check=True)
+                with (folder/(module.split(".")[-1]+".log")).open("w") as log:subprocess.run([python,"-m",module,str((folder/"request.json").resolve())],stdout=log,stderr=subprocess.STDOUT,check=True,env=worker_environment())
             new=np.load(folder/"native.npy");trial=edited.copy();trial[a:b]=new[60:90]
             before_fk,before_audit=audit_native(edited);after_fk,after_audit=audit_native(trial);_,roi=audit_native(trial[start:start+150])
             before=region(before_fk,boundary-6,boundary+6);after=region(after_fk,boundary-6,boundary+6)
