@@ -1,0 +1,139 @@
+{
+  "schema": "primitive_reperformance_r8_v1",
+  "baseline": "2a7941859c381a0308b7288797b4f443a7b6c711",
+  "assets": "inputs/clock_assets_v2.json",
+  "data_v3": "outputs/data_event_v3_04",
+  "prior_song": "outputs/exposed_full_song_01",
+  "pairs": 4,
+  "seed": 20261117,
+  "event_duration": [
+    75,
+    150
+  ],
+  "target_frames": 90,
+  "music_cases": [
+    0,
+    1
+  ],
+  "minimum_phases": 3,
+  "arms": [
+    "baseline",
+    "S0",
+    "S1",
+    "S2",
+    "S3"
+  ],
+  "full_generation_budget": 72,
+  "guide": {
+    "base_pose_strength": 0.55,
+    "phase_pose_bonus": 0.15,
+    "phase_sigma_frames": 3.0,
+    "boundary_fade_frames": 6,
+    "groups": {
+      "S1": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "S2": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "S3": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "S3_bridge": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ]
+    }
+  },
+  "gate": {
+    "source_mean_rad": 0.35,
+    "key_pose_mean_rad": 0.35,
+    "relative_gain_rad": 0.02,
+    "own_gain_rad": 0.05,
+    "root_turn_mean_rad": 0.35,
+    "activity_ratio": [
+      0.5,
+      2.0
+    ],
+    "minimum_music_response_rad": 0.02,
+    "require_all_full_native": true,
+    "wrist_rotation_rad": 0.35,
+    "trunk_rotation_rad": 0.35,
+    "wrist_elbow_root_frame_m": 0.15,
+    "hold_proxy_coverage": 0.5
+  },
+  "whole_song": {
+    "enabled_only_after_single_gate": true,
+    "cases": [
+      0,
+      1,
+      2
+    ],
+    "arm": "full",
+    "budget": 6,
+    "arms": [
+      "baseline",
+      "S3"
+    ],
+    "requires_bridge_gate": true
+  },
+  "neural_weight_training": false,
+  "human_reviewed": false,
+  "operational_qualified": false
+}

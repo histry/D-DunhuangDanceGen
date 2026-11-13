@@ -1,0 +1,77 @@
+{
+  "schema": "bridge_inpainting_r8_v1",
+  "baseline": "2a7941859c381a0308b7288797b4f443a7b6c711",
+  "prior": "outputs/exposed_full_song_01",
+  "assets": "inputs/clock_assets_v2.json",
+  "data_v3": "outputs/data_event_v3_04",
+  "seed": 20261119,
+  "cases": [
+    "0_baseline",
+    "0_temporal_A",
+    "1_temporal_A",
+    "2_temporal_A"
+  ],
+  "boundary": 75,
+  "window": [
+    0,
+    150
+  ],
+  "edit": [
+    60,
+    90
+  ],
+  "left_context": [
+    52,
+    60
+  ],
+  "right_context": [
+    90,
+    98
+  ],
+  "arms": [
+    "smooth",
+    "inpaint",
+    "event_inpaint"
+  ],
+  "smooth_window": 9,
+  "smooth_order": 3,
+  "root_context_required": true,
+  "context_joints": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23
+  ],
+  "mask_source_contact": false,
+  "gate": {
+    "boundary_p95_reduction": 0.1,
+    "source_nonregression_rad": 1e-06,
+    "join_jerk_nonregression": 1e-06,
+    "require_local_absolute_native": true,
+    "all_registered_cases_required": true
+  },
+  "whole_generation_allowed": false,
+  "neural_weight_updates": 0,
+  "human_reviewed": false,
+  "operational_qualified": false
+}
