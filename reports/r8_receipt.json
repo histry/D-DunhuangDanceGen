@@ -1,0 +1,52 @@
+{
+  "schema": "r8_sealed_receipt",
+  "execution_commit": "caf08a2bbaee9e6c4bc453c9a73da507395cbf5c",
+  "stage_execution_commits": {
+    "style_audit": "caf08a2bbaee9e6c4bc453c9a73da507395cbf5c",
+    "boundary_audit": "caf08a2bbaee9e6c4bc453c9a73da507395cbf5c",
+    "prepared": "caf08a2bbaee9e6c4bc453c9a73da507395cbf5c",
+    "single": "caf08a2bbaee9e6c4bc453c9a73da507395cbf5c",
+    "single_replay": "caf08a2bbaee9e6c4bc453c9a73da507395cbf5c",
+    "bridge": "caf08a2bbaee9e6c4bc453c9a73da507395cbf5c",
+    "bridge_replay": "caf08a2bbaee9e6c4bc453c9a73da507395cbf5c",
+    "whole": "caf08a2bbaee9e6c4bc453c9a73da507395cbf5c",
+    "whole_replay": "caf08a2bbaee9e6c4bc453c9a73da507395cbf5c",
+    "joint": "caf08a2bbaee9e6c4bc453c9a73da507395cbf5c",
+    "joint_replay": "caf08a2bbaee9e6c4bc453c9a73da507395cbf5c",
+    "videos": "caf08a2bbaee9e6c4bc453c9a73da507395cbf5c",
+    "phase_proxy": "2e5419c6256498590f99a45d14d9ab4ce20dd107",
+    "phase_proxy_replay": "2e5419c6256498590f99a45d14d9ab4ce20dd107",
+    "videos_wrist_axes": "2e5419c6256498590f99a45d14d9ab4ce20dd107"
+  },
+  "verifier_commit": "2e5419c6256498590f99a45d14d9ab4ce20dd107",
+  "summary_sha256": "174871893c6fede967c8bc451fe2d794f63305cb0bfd4a519a114d53157940c8",
+  "root": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/reperformance_r8_02",
+  "exit_status": 0,
+  "receipts": {
+    "execution_commit.txt": "0043246f41c46fb01423dbf2ae22ef5bbfea96980f50dfe2cb3fd9a89628e7fb",
+    "started_utc.txt": "3aa6a38a9ccd023fd1bf49bbc2c6bdf4e21fa1eba56eb22d59b2efc7398f23a4",
+    "independent_checks.log": "a13b5002b093088785914369c78602ad6b06e48360033ff2c6b70a4d5dd2bde5",
+    "pytest.log": "855d5bf0f49c1819ea6188bc402ca3c45109c86be973a0f68776b02718b79913",
+    "edge_tests.log": "33cf0287e24734f1033854c35b43302e418a29201db0592b690aa8f5cf0b95ff",
+    "exit_status.txt": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "finished_utc.txt": "5b0c50978b449d89f7b739d72dd23d953ecc6cf5589d17772a9031964f84b256"
+  },
+  "started_utc": "2026-11-13T18:37:42Z",
+  "finished_utc": "2026-11-13T20:08:19Z",
+  "previous_failed_roots_retained": true,
+  "temporary_ssh_files_created": 0,
+  "temporary_ssh_files_remaining": 0,
+  "no_formal_sampling_adapter_native_changes": true,
+  "neural_weight_updates": 0,
+  "operational_qualified": false,
+  "postprocess_receipts": {
+    "execution_commit.txt": "66dc1b12324aaa5ccc933cfb0568db54ebfdf79f32ded513acde3b6ae4e2a094",
+    "started_utc.txt": "d45c4b1b9241dbf32ea97d15a9d9ec98b711d99aafad66ac957300916239aa5c",
+    "phase_tests.log": "bf798adf4523cfe05f91dabb8636e14a4fa70868dba97df4e2afff086927dd17",
+    "independent_checks.log": "a13b5002b093088785914369c78602ad6b06e48360033ff2c6b70a4d5dd2bde5",
+    "previous_independent_checks.json": "9e2bbac3ed2ff4386469506dd0a5e7c300bf8248600bb49747465421f8925992",
+    "exit_status.txt": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "finished_utc.txt": "2e2b3123702bd7bdcc34d201af1b1439a1762265fb33799124704777dcba3728"
+  },
+  "postprocess_execution_commit": "2e5419c6256498590f99a45d14d9ab4ce20dd107"
+}
