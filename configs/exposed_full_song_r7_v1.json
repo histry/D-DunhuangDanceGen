@@ -1,0 +1,59 @@
+{
+  "schema": "exposed_full_song_r7_v1",
+  "baseline": "791939dc32d1e115a6e8dca1d82902e6a9b7d07f",
+  "source_r7_config": "configs/source_contrast_r7_v1.json",
+  "assets": "inputs/clock_assets_v2.json",
+  "data_v3": "outputs/data_event_v3_04",
+  "music_root": "/home/disk/lsm/storage/danceRAG/assets/music/test/audio",
+  "files": [
+    "dunhuangwu2.wav",
+    "dunhuangwu3.wav",
+    "dunhuangwu4.wav"
+  ],
+  "scope": "EXPOSED_DUNHUANG_TRANSFER_TEST",
+  "structural_slots": {
+    "min_frames": 50,
+    "max_frames": 150,
+    "target_frames": 90,
+    "grid_frames": 30,
+    "novelty_weight": 0.5,
+    "phrase_weight": 0.75,
+    "beat_weight": 0.25,
+    "phrase_distance": 180
+  },
+  "planner": {
+    "top_k": 5,
+    "beam_width": 3,
+    "timelines": [
+      "legacy3s",
+      "acoustic_v1"
+    ],
+    "arms": [
+      "E0_legacy",
+      "E1_legacy",
+      "E1_W"
+    ]
+  },
+  "shadow": {
+    "clock_protocol": "outputs/clock_root_04/alignment/protocol.json",
+    "max_per_source": 1,
+    "route_to_production": false,
+    "global_checkpoint_sha256": "5d425b3f4aeac9267dbf0c227cd1761b1fec04a0ff907cfc8d4102a4ec8cc6ca",
+    "sync_checkpoint_sha256": "c076ffd2be75fa5ad0bccf52e7b3322b1369aa132d2d85c5d32f6a3423772677"
+  },
+  "generation": {
+    "seed": 20261115,
+    "arms": [
+      "baseline",
+      "temporal_A",
+      "temporal_B"
+    ],
+    "extra_permuted_baseline_case": 0,
+    "budget": 10,
+    "frames": "FULL_AUDIO",
+    "trajectory_radius": 12,
+    "trajectory_strength": 0.55,
+    "allow_adapter": false,
+    "allow_r7_guidance": false
+  }
+}
