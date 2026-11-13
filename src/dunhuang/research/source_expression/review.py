@@ -32,6 +32,14 @@ for(let j=1;j<pts.length;j++){g.beginPath();g.moveTo(...pts[parents[j]]);g.lineT
 document.querySelector('#frame').value=f;document.querySelector('#time').textContent=(f/30).toFixed(2)+' s';},1000/30);
 </script>""".replace("TASK",task).replace("LAST",str(len(points)-1)).replace("AUDIO",'<audio controls src="'+audio+'"></audio>' if audio else "").replace("DATA",data).replace("PARENTS",json.dumps(PARENTS))
 
+def audio_clip(path,wave,sample_rate):
+    import soundfile as sf
+    # PCM24 has no timestamp-bearing PEAK chunk. Accept only exact roundtrips.
+    sf.write(path,wave,sample_rate,subtype="PCM_24")
+    restored,sr=sf.read(path,dtype="float32",always_2d=True)
+    if sr!=sample_rate or not np.array_equal(restored,wave):
+        raise ValueError("Blind audio cannot be losslessly represented in deterministic PCM24")
+
 def run(config,prepared,out,replay_from=None):
     import soundfile as sf
     out=fresh(out);public=out/"reviewer";private=out/"administrator";public.mkdir();private.mkdir()
@@ -61,7 +69,7 @@ def run(config,prepared,out,replay_from=None):
         if m is not None:
             wave,sr=sf.read(checked(m["audio"]),dtype="float32",always_2d=True);count=round((hi-lo)*sr/30)
             if count>len(wave):raise ValueError("Real compatibility audio too short")
-            audio=bid+".wav";sf.write(public/audio,wave[:count],sr,subtype="FLOAT");audio_ref=ref(public/audio)
+            audio=bid+".wav";audio_clip(public/audio,wave[:count],sr);audio_ref=ref(public/audio)
         (public/(bid+".html")).write_text(page(fk[lo:hi,:22],task,audio),encoding="utf-8")
         media=ref(public/(bid+".html"))
         binding=dict(blind_item_id=bid,task_type=task,source_uid=event["source_uid"],raw_motion_sha256=source["raw_sha256"],
@@ -77,7 +85,7 @@ def run(config,prepared,out,replay_from=None):
     write(private/"bindings.json",bindings);write(private/"roster_template.json",dict(reviewers={},note="Private verified identities required; never publish."))
     summary,decisions,records=summarize(bindings,[],{},"PRIVATE_ROSTER_NOT_YET_REGISTERED")
     result=dict(status="PREPARATION_ONLY",items=len(items),events=len(selected),sources=len(seals),tasks={t:sum(i["task_type"]==t for i in items) for t in ("EVENT","POSE","MUSIC_MATCH")},
-        human_reviewed=False,semantic_event_truth="UNKNOWN",summary=summary,actual_records=0,fresh_blind_evaluation_population=False,
+        human_reviewed=False,semantic_event_truth="UNKNOWN",audio_encoding="deterministic PCM24 with exact FP32 sample roundtrip",summary=summary,actual_records=0,fresh_blind_evaluation_population=False,
         exposure="Previously used ChangE sources; pilot handoff only. Independent untouched evaluation population NOT established.",
         media_representation="fitted 22-joint root-relative skeleton; no reliable world Root/contact or unseen anatomy claim",operational_qualified=False)
     write(private/"decisions.json",decisions);write(out/"result.json",result)

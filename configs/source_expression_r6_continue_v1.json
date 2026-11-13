@@ -1,0 +1,29 @@
+{
+  "schema": "r6_verified_stage_continuation_v1",
+  "source_root": "outputs/source_expression_03",
+  "source_receipt": "outputs/source_expression_03_receipts",
+  "original_execution_commit": "41fd659011af7dec4abe00333ef1da1430bf9895",
+  "required_original_exit_status": 1,
+  "reuse_stages": [
+    "prepared",
+    "diagnosis",
+    "probe",
+    "music"
+  ],
+  "artifacts": {
+    "prepared/protocol.json": "ecf09d32942bbe843181cb63df69fecfc965b0581123a57bf8a422f255e9aa18",
+    "prepared/result.json": "44cc24aa2deb57b4ef339eace5787d7a0c1fc41ed36b26c54e3e33e58cc08b32",
+    "prepared_replay/replay.json": "6f533f1e797b936424c3e216a91ea0d76e5337cf402824d5a6719f02a6fa189a",
+    "diagnosis/protocol.json": "ceec0e6dee39ecf83c9e5fb4d0a16f53b8d4a07d8b5037dd59edc24172dab300",
+    "diagnosis/result.json": "44baf6af4e51004805707fe2354aff4aac9042a0ae7a0d1c4dfbc8014523963f",
+    "diagnosis_replay/replay.json": "44577a3cf2705240c106f13d6f8a54ef18f16a84ba1db0167da1699c5b3989ad",
+    "diagnosis/arrays.npz": "c47ca1858b6fe6e09644cbccccf301e843fa7c13e62c0beaafeb217ae3710fbf",
+    "probe/protocol.json": "9a511ab4a928de03846de8de1c879754729d5d33e15232b9d43943b91a3d5e40",
+    "probe/result.json": "7a9a18bb8a060b0867c36195ef299fdcadce726f8613062253b3e738d8084478",
+    "probe_replay/replay.json": "fe4a6f02ec698e2a29056148dbbd775b7609b45735400c4a76bbcba5dc563c74",
+    "probe/arrays.npz": "c646146ec7a0fc717e5c0497483d69d118f4fc8e675576c98e6fab1883e36080",
+    "music/protocol.json": "c174b0d7e51490b620bb2bcaa5954f67873bf4c46f865e66bae6c8407ba5de97",
+    "music/result.json": "69cab80131239c32ecac575a766fcd84e2176d2725c845a0612d87333eb87052",
+    "music_replay/replay.json": "e66de9cb70313554c9def485899213bbfb8e43bfa50f0917ee2ad26758873f4a"
+  }
+}

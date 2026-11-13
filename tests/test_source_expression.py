@@ -72,3 +72,13 @@ def test_blind_media_fits_entire_skeleton_and_audio_clock():
     # The spherical fit guarantees the full clip stays within canvas for every yaw.
     radius=np.linalg.norm(points,axis=-1).max();extent=points*210/radius
     assert np.abs(extent).max()<=210
+
+def test_blind_audio_bytes_and_pcm_are_both_deterministic(tmp_path):
+    sf=pytest.importorskip("soundfile")
+    from dunhuang.research.source_expression.review import audio_clip
+    wave=(np.arange(-100,100,dtype=np.float32)/(2**23)).reshape(-1,1)
+    a=tmp_path/"a.wav";b=tmp_path/"b.wav"
+    audio_clip(a,wave,24000);audio_clip(b,wave,24000)
+    assert a.read_bytes()==b.read_bytes()
+    assert np.array_equal(sf.read(a,dtype="float32",always_2d=True)[0],wave)
+    with pytest.raises(ValueError):audio_clip(tmp_path/"lossy.wav",np.array([[.123456789]],np.float32),24000)
