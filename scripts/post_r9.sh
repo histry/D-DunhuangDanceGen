@@ -12,6 +12,8 @@ finish() { code=$?; echo "$code" > "$receipt/exit_status.txt"; date -u +%FT%TZ >
 trap finish EXIT
 date -u +%FT%TZ > "$receipt/started_utc.txt"
 git rev-parse HEAD > "$receipt/execution_commit.txt"
+cp "$main/independent_checks.json" "$receipt/original_independent_checks.json"
+"$native" scripts/verify_r9.py --out "$main" > "$receipt/refreshed_main_checks.log" 2>&1
 "$native" -m dunhuang.research.feasible_reperformance.analyse --main "$main" --out "$main/analysis"
 "$native" -m dunhuang.research.feasible_reperformance.analyse --main "$main" --out "$main/analysis_replay" --no-render
 "$native" scripts/verify_r9_media.py --main "$main" > "$receipt/media_checks.log" 2>&1
