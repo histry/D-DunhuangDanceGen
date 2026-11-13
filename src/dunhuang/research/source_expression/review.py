@@ -2,7 +2,6 @@
 import argparse,hashlib,json,shutil,sys
 from pathlib import Path
 import numpy as np
-import soundfile as sf
 from dunhuang.io import checked,sha,write,pinned
 from dunhuang.data.sources import ref
 from dunhuang.data.split_registry import stable
@@ -34,6 +33,7 @@ document.querySelector('#frame').value=f;document.querySelector('#time').textCon
 </script>""".replace("TASK",task).replace("LAST",str(len(points)-1)).replace("AUDIO",'<audio controls src="'+audio+'"></audio>' if audio else "").replace("DATA",data).replace("PARENTS",json.dumps(PARENTS))
 
 def run(config,prepared,out,replay_from=None):
+    import soundfile as sf
     out=fresh(out);public=out/"reviewer";private=out/"administrator";public.mkdir();private.mkdir()
     prep=read(Path(prepared)/"protocol.json")
     if prep["config"]!=config or config["review"]["actual_records"] is not None:raise ValueError("Preparation-only protocol required")
