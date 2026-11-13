@@ -216,3 +216,7 @@ All96 reference-only direction derivatives passed numeric checks; protected all-
 ## R6 source expression and independent review preparation (2026-11-13)
 
 [Report](reports/来源动态控制与独立盲审准备报告.md) · [protocol](docs/source_expression_r6_v1.md) · [receipt](reports/source_expression_receipt.json). Five fixed protected objectives completed 240 local projections and a full fresh replay; no arm passed all-case source qualification, so no new training or full generation started. Three distinct real audio assets yielded nine verified Shadow plans. Thirty-five blind-review items are PREPARATION_ONLY with zero human records. Media-only continuation preserves the original failed WAV-byte receipt and SHA-sealed scientific stages. Production remains unchanged.
+
+
+## Blind-viewer playback correction V2
+[Report](reports/盲审骨架播放修正说明.md) · [receipt](reports/review_viewer_v2_receipt.json). Preserves original pose samples, restores a separate unverified fitted-Root view, uses elapsed/audio clocks and stops at the final frame. Viewer corrections do not establish motion-quality or contact qualification; original review artifacts remain frozen.

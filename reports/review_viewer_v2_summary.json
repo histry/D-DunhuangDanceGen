@@ -1,0 +1,263 @@
+{
+  "result": {
+    "schema": "blind_viewer_presentation_v2",
+    "items": 35,
+    "unique_events": 16,
+    "all_pose_frames_unchanged": true,
+    "fitted_root_sources_sha_verified": 8,
+    "world_rounding_max_m": 4.999885558909511e-07,
+    "fps": 30,
+    "clock": "requestAnimationFrame with elapsed wall/audio clock",
+    "automatic_loop": false,
+    "smoothing": false,
+    "root_truth": "UNKNOWN",
+    "contact_truth": "UNKNOWN",
+    "human_reviewed": false,
+    "actual_human_records": 0,
+    "operational_qualified": false,
+    "loop_jump_ratio_min": 3.714673680843377,
+    "loop_jump_ratio_max": 35.56268591984344
+  },
+  "checks": {
+    "code_commit": "0196dfc52199c0aba3e54a855c0d7241d78dcca2",
+    "verifier_sha256": "c596eb56a390ac490efa2caa9a9d353be629c93dc89cea4c8037a436bc6db262",
+    "items": 35,
+    "pose_frames_exact": 3712,
+    "audio_assets_exact": 3,
+    "world_root_reconstruction_max_m": 4.999885558909511e-07,
+    "source_manifest_sha256": "4d0fc5b837ec196aa711d868379444e78007d0059915663b2eed0fd2e8691d1c",
+    "human_reviewed": false,
+    "operational_qualified": false,
+    "smoothing": false,
+    "optimizer_calls": 0,
+    "edge_forward_calls": 0
+  },
+  "diagnostics": [
+    {
+      "blind_item_id": "80bb4bcd788979f84fec362f",
+      "frames": 136,
+      "old_loop_seam_m": 0.1506668221277393,
+      "within_clip_step_p95_m": 0.011663447736185405,
+      "seam_to_p95": 12.91786318554,
+      "fitted_root_extent_m": [
+        0.04102182388305664,
+        0.1093142032623291,
+        0.06880989670753479
+      ],
+      "kinematic_proxy_only": true
+    },
+    {
+      "blind_item_id": "bffe5f181213327c863fc700",
+      "frames": 102,
+      "old_loop_seam_m": 0.07130988099934378,
+      "within_clip_step_p95_m": 0.00200518827964999,
+      "seam_to_p95": 35.56268591984344,
+      "fitted_root_extent_m": [
+        0.017992138862609863,
+        0.016053080558776855,
+        0.025298118591308594
+      ],
+      "kinematic_proxy_only": true
+    },
+    {
+      "blind_item_id": "bfd132a7b630bacdd9880e6b",
+      "frames": 96,
+      "old_loop_seam_m": 0.2477963489019344,
+      "within_clip_step_p95_m": 0.02371770015196325,
+      "seam_to_p95": 10.44773933873276,
+      "fitted_root_extent_m": [
+        1.197512149810791,
+        0.20771372318267822,
+        0.5808622241020203
+      ],
+      "kinematic_proxy_only": true
+    },
+    {
+      "blind_item_id": "9d2c4fdd958ac96e101a235d",
+      "frames": 93,
+      "old_loop_seam_m": 0.23349289541762663,
+      "within_clip_step_p95_m": 0.012838812890949512,
+      "seam_to_p95": 18.186486352038294,
+      "fitted_root_extent_m": [
+        0.4017627239227295,
+        0.5513536036014557,
+        0.08521831035614014
+      ],
+      "kinematic_proxy_only": true
+    },
+    {
+      "blind_item_id": "d550460f01ac997d3229889e",
+      "frames": 123,
+      "old_loop_seam_m": 0.32064420916400604,
+      "within_clip_step_p95_m": 0.013643699249811124,
+      "seam_to_p95": 23.50126628366166,
+      "fitted_root_extent_m": [
+        0.1075516939163208,
+        0.2985495328903198,
+        0.2707037329673767
+      ],
+      "kinematic_proxy_only": true
+    },
+    {
+      "blind_item_id": "4f7a87ba0e28b317b11bdab5",
+      "frames": 101,
+      "old_loop_seam_m": 0.14650143205899788,
+      "within_clip_step_p95_m": 0.005014374101227169,
+      "seam_to_p95": 29.216294815966073,
+      "fitted_root_extent_m": [
+        0.06503134965896606,
+        0.11874973773956299,
+        0.10050904750823975
+      ],
+      "kinematic_proxy_only": true
+    },
+    {
+      "blind_item_id": "c1bac8614c3c661057de41fa",
+      "frames": 84,
+      "old_loop_seam_m": 0.05743584002637613,
+      "within_clip_step_p95_m": 0.004150039519353851,
+      "seam_to_p95": 13.839829659096528,
+      "fitted_root_extent_m": [
+        0.04345053434371948,
+        0.010997891426086426,
+        0.020963609218597412
+      ],
+      "kinematic_proxy_only": true
+    },
+    {
+      "blind_item_id": "c2837d32d82ce21691649d1b",
+      "frames": 128,
+      "old_loop_seam_m": 0.030983626945810392,
+      "within_clip_step_p95_m": 0.006135261396090229,
+      "seam_to_p95": 5.0500907696541,
+      "fitted_root_extent_m": [
+        0.048216819763183594,
+        0.011806130409240723,
+        0.020871400833129883
+      ],
+      "kinematic_proxy_only": true
+    },
+    {
+      "blind_item_id": "83a7b9baf065b75916e0c304",
+      "frames": 131,
+      "old_loop_seam_m": 0.3158013922700144,
+      "within_clip_step_p95_m": 0.07219049535467488,
+      "seam_to_p95": 4.374556383336465,
+      "fitted_root_extent_m": [
+        1.1362757682800293,
+        0.16235637664794922,
+        0.5540297031402588
+      ],
+      "kinematic_proxy_only": true
+    },
+    {
+      "blind_item_id": "19a7d18580e3912f879b9e25",
+      "frames": 81,
+      "old_loop_seam_m": 0.24698414368792765,
+      "within_clip_step_p95_m": 0.04804039291651717,
+      "seam_to_p95": 5.141176595227429,
+      "fitted_root_extent_m": [
+        0.48257315158843994,
+        0.16215074062347412,
+        0.18514037132263184
+      ],
+      "kinematic_proxy_only": true
+    },
+    {
+      "blind_item_id": "42ad27252b05b88c1ff96178",
+      "frames": 112,
+      "old_loop_seam_m": 0.3059354673563394,
+      "within_clip_step_p95_m": 0.08235863864275692,
+      "seam_to_p95": 3.714673680843377,
+      "fitted_root_extent_m": [
+        0.19562578201293945,
+        0.2935687303543091,
+        0.5468913018703461
+      ],
+      "kinematic_proxy_only": true
+    },
+    {
+      "blind_item_id": "cabd1013b21d25f7dc15e6a6",
+      "frames": 76,
+      "old_loop_seam_m": 0.25970348723243347,
+      "within_clip_step_p95_m": 0.0428778732702911,
+      "seam_to_p95": 6.0568182940261375,
+      "fitted_root_extent_m": [
+        0.08987823128700256,
+        0.37061822414398193,
+        0.1491687372326851
+      ],
+      "kinematic_proxy_only": true
+    },
+    {
+      "blind_item_id": "d4660a8e4714a4958d8c9496",
+      "frames": 70,
+      "old_loop_seam_m": 0.3521627484169738,
+      "within_clip_step_p95_m": 0.04914658357192155,
+      "seam_to_p95": 7.165559085131842,
+      "fitted_root_extent_m": [
+        0.8558246493339539,
+        0.3860859274864197,
+        0.3361968696117401
+      ],
+      "kinematic_proxy_only": true
+    },
+    {
+      "blind_item_id": "d8520d0b2272b3e2a4669788",
+      "frames": 85,
+      "old_loop_seam_m": 0.17483476812824322,
+      "within_clip_step_p95_m": 0.03511593937319593,
+      "seam_to_p95": 4.978786592327214,
+      "fitted_root_extent_m": [
+        0.9337623119354248,
+        0.4106583893299103,
+        0.1612592339515686
+      ],
+      "kinematic_proxy_only": true
+    },
+    {
+      "blind_item_id": "782510ed7c8323fcb2efe749",
+      "frames": 129,
+      "old_loop_seam_m": 0.22942401103880555,
+      "within_clip_step_p95_m": 0.03284446335449647,
+      "seam_to_p95": 6.985165461910248,
+      "fitted_root_extent_m": [
+        1.4875218868255615,
+        0.21426308155059814,
+        0.6053546220064163
+      ],
+      "kinematic_proxy_only": true
+    },
+    {
+      "blind_item_id": "599240a66eaebf8d49ba4a3c",
+      "frames": 142,
+      "old_loop_seam_m": 0.4716185785479542,
+      "within_clip_step_p95_m": 0.04313547706828343,
+      "seam_to_p95": 10.933426742942526,
+      "fitted_root_extent_m": [
+        1.806920051574707,
+        0.735072135925293,
+        0.38121481239795685
+      ],
+      "kinematic_proxy_only": true
+    }
+  ],
+  "replay": {
+    "status": "FRESH_VIEWER_V2_MEDIA_REPLAY",
+    "exact_media_files": 41,
+    "optimizer_calls": 0,
+    "actual_human_records": 0
+  },
+  "tests": "266 passed, 1 skipped",
+  "execution_commit": "0196dfc52199c0aba3e54a855c0d7241d78dcca2",
+  "browser_technical_qa": {
+    "non_audio_stop_observed_at_frame": 136,
+    "no_auto_loop_observed": true,
+    "pose_mode_warning_visible": true,
+    "original_review_submit_actions": 0
+  },
+  "source_frozen_code_and_configs_unchanged": true,
+  "human_reviewed": false,
+  "temporary_ssh_files_created": 0,
+  "temporary_ssh_files_remaining": 0
+}

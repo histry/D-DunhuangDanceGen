@@ -1,0 +1,22 @@
+{
+  "execution_commit": "0196dfc52199c0aba3e54a855c0d7241d78dcca2",
+  "exit_status": 0,
+  "summary_sha256": "594d7a7555ae4d49b1d2372783b91fb22b0894dd643ab90dfefe173cc50039d7",
+  "protocol_sha256": "1fa490bb3926f65a943192b0c15738dd5f142046d2111bbd1b70be0d408c0b53",
+  "main_result_sha256": "594f39afd5f785fb5bc2c1eba5d4188bb6401b650fb94a1962669c875216c984",
+  "independent_checks_sha256": "2ed01feea1150d338d3e0e195a3dbabaa8d96f434eebfaf6d5577178292b671d",
+  "launcher_sha256": "b050441028f7f3c6bb52cab7dcaaf5fdcc9a4ac5af316eeb1575cd4ff43bc6bf",
+  "receipt_sha256": {
+    "execution_commit.txt": "b98762ca1c7158e0d5d5875de17fad6811505c6a4a71e4a21ec4c679aa75fe03",
+    "started_utc.txt": "fcf8a45d8539932bcc962fb40601cbdc0aee34879cdb4622d7b2d87daf4ca295",
+    "pytest.log": "fcb5bdb5c1d5afdd9a989261e2920fbfb0b92a78ba2fd304a8a4001726b07211",
+    "exit_status.txt": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "finished_utc.txt": "3b20dfba335fbe70c81b9f9f2bf8523cb868ceb38f818b40ec5fd8354e4d9d16"
+  },
+  "source_frozen_code_and_configs_unchanged": true,
+  "world_root_truth": "UNKNOWN",
+  "contact_truth": "UNKNOWN",
+  "human_reviewed": false,
+  "temporary_ssh_files_created": 0,
+  "temporary_ssh_files_remaining": 0
+}
