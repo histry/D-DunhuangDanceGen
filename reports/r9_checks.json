@@ -1,0 +1,25 @@
+{
+  "main": {
+    "exact_new_source_arrays": 240,
+    "frozen_trace_arrays": 96,
+    "boundary_arrays": 16,
+    "independent_root_d3_stencil_max_m": 2.9802322387695312e-08,
+    "code_commit": "17522b3aadd9dde464a88e88f879adf99d24057a",
+    "formal_changed_paths": [],
+    "new_neural_weight_updates": 0,
+    "new_whole_song_generations": 0,
+    "operational_qualified": false
+  },
+  "b2": {
+    "code_commit": "17522b3aadd9dde464a88e88f879adf99d24057a",
+    "frozen_adapter_sha256": "bf315fc5ef0f95bda8e66a856edeb2052d0a3aa7b0a256c6aeb923228933a37b",
+    "optimizer_training_steps": 300,
+    "replay_optimizer_steps": 0,
+    "exact_generation_arrays": 128,
+    "exact_application_arrays": 64,
+    "protected_context_exact": true,
+    "original_native_unchanged": true,
+    "operational_qualified": false,
+    "new_whole_song_generations": 0
+  }
+}
