@@ -52,7 +52,7 @@ def run(root):
     if not single["single_event_gate_passed"] or not bridge["bridge_gate_passed"]:
         assert read(root/"whole/result.json")["new_whole_song_generations"]==0
         assert read(root/"joint/result.json")["new_local_generations"]==0
-    media=read(root/"videos/protocol.json");videos=[]
+    media=read(root/("videos_wrist_axes" if (root/"videos_wrist_axes/protocol.json").is_file() else "videos")/"protocol.json");videos=[]
     for v in media["videos"]:
         f=checked(v["video"]);probe=json.loads(subprocess.check_output(["ffprobe","-v","error","-count_frames","-show_streams","-of","json",str(f)],text=True))
         stream=next(s for s in probe["streams"] if s["codec_type"]=="video");assert int(stream["nb_read_frames"])==v["frames"] and stream["r_frame_rate"]=="30/1"
