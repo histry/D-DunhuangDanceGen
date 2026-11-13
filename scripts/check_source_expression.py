@@ -37,7 +37,7 @@ def check(root):
     checked(assets["checkpoint"]);scaler=np.load(checked(assets["scaler"]));scale=scaler["scale"];bias=scaler["bias"]
     arrays=dict(np.load(root/"probe/arrays.npz"));rs=read(root/"probe/result.json");known=np.ones((150,8),bool);known[25:40]=False;known[90:115]=False
     def native(x):return MotionAdapter.to_native(((x[0].clip(-1,1)-bias)/scale).astype(np.float32))
-    norm_error=0.;source_error=0.;protection_error=0.;budget=0.;dose_buckets={};passes={};checked_predictions=0;expression_error=0.;expression_relative_error=0.;stages={}
+    norm_error=0.;source_error=0.;protection_error=0.;budget=0.;dose_buckets={};passes={};checked_predictions=0;expression_error=0.;expression_relative_error=0.;stages={};provided={}
     for r in rs["records"]:
         c=r["cohort"];case=r["case"];tick=r["timestep"];s=r["source"];arm=r["arm"];dose=r["dose_kind"];prefix=c+"__"+str(case)+"__"+str(tick)
         pair=pairs[c][case];refs=[np.load(checked(index[pair[k]]["motion"])) for k in ("a","b")]
@@ -48,11 +48,14 @@ def check(root):
         value=native(arrays[key+"__predicted_x0"])
         if (c,case,s) not in stages:
             from dunhuang.research.reference_guidance.core import phase_reference
-            observed=np.zeros((150,151),bool);observed[:,79:127]=np.repeat(known,6,-1)
-            stages[(c,case,s)]=phase_reference(refs[s],observed,known,read("configs/data_event_v3.json")["phases"])[2]
+            from dunhuang.research.source_identifiability.g2 import make_condition
+            condition,keys,_,_=make_condition(index[pair[("a","b")[s]]],manifest["audio_contract"])
+            available=phase_reference(condition.value[0].numpy(),condition.known[0].numpy(),keys[0].numpy(),read("configs/data_event_v3.json")["phases"])
+            assert np.array_equal(available[1],known)
+            stages[(c,case,s)]=available[2];provided[(c,case,s)]=available[0]
         stage=stages[(c,case,s)]
         def expression(motion):
-            a=matrices(motion[:,79:127].reshape(150,8,6)).astype(float);b=matrices(refs[s][:,79:127].reshape(150,8,6)).astype(float)
+            a=matrices(motion[:,79:127].reshape(150,8,6)).astype(float);b=matrices(provided[(c,case,s)]).astype(float)
             pose=Rotation.from_matrix((a.swapaxes(-1,-2)@b).reshape(-1,3,3)).magnitude().reshape(150,8)**2
             ai=a[:-1].swapaxes(-1,-2)@a[1:];bi=b[:-1].swapaxes(-1,-2)@b[1:]
             velocity=Rotation.from_matrix((ai.swapaxes(-1,-2)@bi).reshape(-1,3,3)).magnitude().reshape(149,8)**2*900
