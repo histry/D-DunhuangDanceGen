@@ -61,3 +61,13 @@ def test_clip_mask_boundary_and_responsibility():
     x=torch.tensor([-2.,-1.,0.,1.,2.],requires_grad=True)
     assert torch.equal(torch.autograd.grad(x.clamp(-1,1).sum(),x)[0].bool(),clip_mask(x))
     assert responsibility(dict(own_gain_rad=.01,wrong_gain_rad=.0098,directional_gain_rad=.0002,protection={"protected":True}))==["COMMON_MODE_GAIN"]
+
+def test_blind_media_fits_entire_skeleton_and_audio_clock():
+    from dunhuang.research.source_expression.review import page
+    points=np.zeros((150,22,3));points[:,10,1]=-1.2;points[:,20,1]=1.4
+    html=page(points,"MUSIC_MATCH","opaque.wav")
+    assert "210/radius" in html and "250-scale*p[1]" in html and "audio.currentTime*30" in html
+    assert "source_uid" not in html and "event_uid" not in html
+    # The spherical fit guarantees the full clip stays within canvas for every yaw.
+    radius=np.linalg.norm(points,axis=-1).max();extent=points*210/radius
+    assert np.abs(extent).max()<=210
