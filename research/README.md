@@ -42,3 +42,7 @@ encoders, binds roles to the declared unseen-song registry and explicitly report
 shared choreography exposure. Fresh replay loads heads without fitting. Continuation
 uses hash-frozen successful control artifacts with separate execution commits.
 See [contract](../docs/reference_guidance_v1.md) and [results](../reports/参考动作可用引导与事件信息审计报告.md).
+
+## Protected source, interval/pose and Shadow planning
+
+New drivers live under research/protected_guidance, research/event_information and research/planner_integration. They isolate small matrix-free source projections, no-weight-learning information audits and E1-W condition/identity checks from production. Norm-matched shrink/random controls, explicit proxy-label scopes, Train-only statistics, actual Planner consumption and independent replay remain mandatory. See [protocol](../docs/protected_source_v1.md) and [report](../reports/受保护来源控制与事件信息及规划集成报告.md).

@@ -207,3 +207,7 @@ See [report](reports/A2V3候选支持域与G2M机制对照报告.md), [registere
 
 [Report](reports/参考动作可用引导与事件信息审计报告.md) · [protocol](docs/reference_guidance_v1.md) · [sealed receipt](reports/reference_guidance_receipt.json).
 All96 reference-only direction derivatives passed numeric checks; protected all-case qualification failed, so no full-chain guidance or mapping training started.44 single-step Native readouts and132 arrays were independently replayed exactly. Four frozen encoders received60 Train-only diagnostic linear readouts; all scores/heads were replayed without refitting. Source registry exposes60 shared choreography identities despite valid known-song isolation. Proxy decodability does not qualify cross-modal event semantics, production generation or a new blind benchmark.
+
+## Protected source and event/planner audits (2026-11-13)
+
+[Report](reports/受保护来源控制与事件信息及规划集成报告.md) · [protocol](docs/protected_source_v1.md) · [receipt](reports/protected_source_receipt.json). Fixed small-subspace source projections pass all measured relative-motion protection checks and improve joint Train readouts beyond matched shrink controls, but full source qualification fails and Native acceptance is unchanged. Interval/pose audits fit no model weights and do not support new encoder training. E1-W is consumed only by a Shadow research path. All three stages have fresh-process replay; production remains unchanged.

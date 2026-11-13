@@ -1,0 +1,267 @@
+{
+  "schema": "independent_protected_source_checks",
+  "verifier_commit": "7cf9398ea228e3b9782b4501cafbfe9f1d5ce914",
+  "verifier_sha256": "bb97f507bd12f224abe93b2e7edbcce6daea115a61cb5d107d43eb5f068997ed",
+  "max_condition_fraction": 1.0000001133163134,
+  "max_matched_norm_difference": 1.7409825812109148e-06,
+  "max_matched_norm_relative_difference": 1.2510514645358202e-07,
+  "matched_norm_relative_bound": 2.384185791015625e-07,
+  "old_B1_B2_predictions_exact": 96,
+  "source_readouts_verified": 16,
+  "max_source_readout_error_rad": 8.169247500688925e-10,
+  "neighbour_score_arrays_verified": 22,
+  "frame_metric_values_verified": 320,
+  "max_frame_metric_error": 2.220446049250313e-16,
+  "all_banks_train_only": true,
+  "all_queries_music_disjoint_from_neighbours": true,
+  "frozen_historical_head_relabel": {
+    "simple_time_signal": {
+      "centre": {
+        "groups": 3,
+        "AP": 0.32783693457124885,
+        "F1": 0.09392307946920504
+      },
+      "interval": {
+        "groups": 3,
+        "AP": 0.4326760167534343,
+        "F1": 0.1471874783863368
+      }
+    },
+    "raw_observations": {
+      "centre": {
+        "groups": 3,
+        "AP": 0.544157619138857,
+        "F1": 0.09407945561674382
+      },
+      "interval": {
+        "groups": 3,
+        "AP": 0.7261213174102604,
+        "F1": 0.14734830891103812
+      }
+    },
+    "15": {
+      "centre": {
+        "groups": 3,
+        "AP": 0.20432302748547315,
+        "F1": 0.09591380400536148
+      },
+      "interval": {
+        "groups": 3,
+        "AP": 0.2598933170060748,
+        "F1": 0.14988247873158034
+      }
+    },
+    "30": {
+      "centre": {
+        "groups": 3,
+        "AP": 0.33779095138967535,
+        "F1": 0.09876072105257261
+      },
+      "interval": {
+        "groups": 3,
+        "AP": 0.35555454558432414,
+        "F1": 0.15422249612516634
+      }
+    },
+    "dual": {
+      "centre": {
+        "groups": 3,
+        "AP": 0.21469598931510867,
+        "F1": 0.09743407382439472
+      },
+      "interval": {
+        "groups": 3,
+        "AP": 0.30120191061329665,
+        "F1": 0.152213235921141
+      }
+    },
+    "dual_shuffle": {
+      "centre": {
+        "groups": 3,
+        "AP": 0.3227006563146064,
+        "F1": 0.09460193265031891
+      },
+      "interval": {
+        "groups": 3,
+        "AP": 0.4547961233031019,
+        "F1": 0.14826442410146703
+      }
+    },
+    "15_permuted": {
+      "centre": {
+        "groups": 3,
+        "AP": 0.08768216814506348,
+        "F1": 0.08323757285025644
+      },
+      "interval": {
+        "groups": 3,
+        "AP": 0.1024470310554914,
+        "F1": 0.12597386837102856
+      }
+    },
+    "30_permuted": {
+      "centre": {
+        "groups": 3,
+        "AP": 0.0745300542012302,
+        "F1": 0.08819430030566987
+      },
+      "interval": {
+        "groups": 3,
+        "AP": 0.09612653068024231,
+        "F1": 0.12988185448394185
+      }
+    },
+    "dual_permuted": {
+      "centre": {
+        "groups": 3,
+        "AP": 0.07596290409350706,
+        "F1": 0.08410131790073565
+      },
+      "interval": {
+        "groups": 3,
+        "AP": 0.0960083407710538,
+        "F1": 0.1261324559597119
+      }
+    },
+    "dual_shuffle_permuted": {
+      "centre": {
+        "groups": 3,
+        "AP": 0.10356766809688422,
+        "F1": 0.08401389326104736
+      },
+      "interval": {
+        "groups": 3,
+        "AP": 0.12013894464636495,
+        "F1": 0.12837161877181183
+      }
+    }
+  },
+  "direct_74_kinematic_reconstruction": {
+    "speed_peak": {
+      "TP": 35998,
+      "FP": 0,
+      "FN": 0,
+      "TN": 63554,
+      "F1": 1.0,
+      "agreement": 1.0,
+      "by_role": {
+        "train": {
+          "F1": 1.0,
+          "agreement": 1.0
+        },
+        "val": {
+          "F1": 1.0,
+          "agreement": 1.0
+        }
+      },
+      "rule_shared_with_proxy_detector": true,
+      "semantic_ground_truth": false
+    },
+    "hold_interval": {
+      "TP": 820,
+      "FP": 0,
+      "FN": 0,
+      "TN": 98732,
+      "F1": 1.0,
+      "agreement": 1.0,
+      "by_role": {
+        "train": {
+          "F1": 1.0,
+          "agreement": 1.0
+        },
+        "val": {
+          "F1": 1.0,
+          "agreement": 1.0
+        }
+      },
+      "rule_shared_with_proxy_detector": true,
+      "semantic_ground_truth": false
+    }
+  },
+  "head_fit_calls": 0,
+  "normalizer_fits": 0,
+  "plans_verified": 12,
+  "candidate_identities_verified": 147,
+  "frozen_selected_map_and_anchor_parities": 147,
+  "distinct_shadow_audio_assets": 1,
+  "observed_geometry_shapes": [
+    [
+      48,
+      150,
+      153
+    ],
+    [
+      48,
+      150,
+      153
+    ],
+    [
+      2,
+      150,
+      153
+    ],
+    [
+      5,
+      150,
+      153
+    ],
+    [
+      48,
+      150,
+      153
+    ],
+    [
+      2,
+      150,
+      153
+    ],
+    [
+      1,
+      150,
+      153
+    ],
+    [
+      5,
+      150,
+      153
+    ],
+    [
+      2,
+      150,
+      153
+    ],
+    [
+      5,
+      150,
+      153
+    ],
+    [
+      1,
+      150,
+      153
+    ],
+    [
+      1,
+      150,
+      153
+    ]
+  ],
+  "actual_unknown_poison_cases_verified": 12,
+  "observed_geometry_is_not_production_weight_qualification": true,
+  "independent_slerp_max_error_rad": 8.237055824367223e-08,
+  "phase_clock_max_error": 2.9779829602283314e-08,
+  "frozen_model_files_rechecked": {
+    "cf/C0": "cf42aa7fd2c58a53f9d8b645190e0441b39bd33f68df1663d9ce923508cd9028",
+    "cf/C1": "2951a5be0bbaf868c2cc63d0c85bfbaccf44f1307697bde576735d16321d7e9c",
+    "cf/C2": "d272d0f6a0f100125ae632438bc87e6cf0edf0046b35116bef70970d979722d9",
+    "cf/C3": "85cd80754481221c00f53dae8f3f8807fe7fcf94e4e2c990decf4b13889b6bd9",
+    "content/15": "7b7f7b779756b9a2f89a4afc0e7572614bcf4829dbf7b7479bb82107eff0067a",
+    "content/30": "86f694abb3dd6f15b7fabb477a6238f1e9b9a3eb810b112e10094ab92e7a5a21",
+    "content/dual": "77953217c62d9b982fe3988ffc912517540b0009da018c5af1ca825b8a4cc08e",
+    "content/dual_shuffle": "5074c52676e8177536d9e4494c541b9f6796d496a73269ef8f028077d93d9241"
+  },
+  "optimizer_calls": 0,
+  "temporary_ssh_files_created": 0,
+  "temporary_ssh_files_remaining": 0,
+  "operational_qualified": false
+}

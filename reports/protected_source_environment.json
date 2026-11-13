@@ -1,0 +1,18 @@
+{
+  "captured_utc": "2026-11-13T11:00:44.180071+00:00",
+  "edge": {
+    "python": "3.9.25 (main, Nov  3 2025, 22:33:05) \n[GCC 11.2.0]",
+    "numpy": "1.26.4",
+    "scipy": "1.13.1",
+    "torch": "2.8.0+cu128",
+    "cuda": "12.8",
+    "gpu": "NVIDIA GeForce RTX 4090"
+  },
+  "native": {
+    "python": "3.9.23 | packaged by conda-forge | (main, Jun  4 2025, 17:57:12) \n[GCC 13.3.0]",
+    "numpy": "1.23.5",
+    "scipy": "1.10.1"
+  },
+  "code_commit": "482becf647644814a47008f69b0c9059b056181b",
+  "temporary_ssh_files_created": 0
+}
