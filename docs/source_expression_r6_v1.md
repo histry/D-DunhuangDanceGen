@@ -33,3 +33,12 @@ UNSURE 原因：VISIBILITY_INSUFFICIENT、BOUNDARY_AMBIGUOUS、SOURCE_INCOMPLETE
 私有审核导入：python scripts/import_independent_reviews.py --protocol .../review/protocol.json --roster PRIVATE_ROSTER.json --records ORIGINAL_A.json ORIGINAL_B.json --out NEW_PRIVATE_DIR。审核人先登记核实 roster，其内容 SHA 作为 roster 引用；实际身份文件绝不公开。分歧时加 --adjudications，第三方原始审核也须列入 records。人工数据通过不自动授权新训练、检索升级或发布。
 
 本轮不新增 Encoder、RootNet 或正式生成路径，不删除仍被历史冻结实验调用的代码。仅添加必要研究模块、测试与协议；不复制已有可哈希复用的大资产。
+
+## 媒体确定性修正与续跑（工程修正，科研预算不变）
+source_expression_03 的四个科研阶段及各自完整重放已完成；浮点 WAV 的 PEAK 块含写入时间戳，导致字节 SHA 不同，但三份 PCM 数组逐样本完全一致。原启动器按规则退出 1，失败目录不修改或删除。
+
+剪辑改为 PCM24，逐样本读回必须与原 FP32 音频完全一致，否则拒绝输出；本次三首原音频均为 PCM24。新增字节与样本双重确定性测试。音乐检测器、动作条件、目标、阈值、投影预算均不变。
+
+configs/source_expression_r6_continue_v1.json 封存四阶段的十四个协议／结果／数组／重放 SHA。续跑在新目录中用符号链接复用已重放产物，原执行提交为 41fd659；启动前重新核对全部 SHA、失败退出码及科研内核和配置的 Git 差异为空。仅重新生成盲审媒体和完整媒体重放。回执分别列出四阶段与媒体阶段的真实执行提交，不将原失败启动器改称成功。
+
+执行：bash scripts/run_source_expression_continuation.sh outputs/source_expression_04 outputs/source_expression_04_receipts。完成后另在新进程运行 scripts/check_source_expression.py --out outputs/source_expression_04，核对保存数组、实际源读数及媒体证据后再封存。
