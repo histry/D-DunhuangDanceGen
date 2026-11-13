@@ -1,0 +1,16 @@
+{
+  "seed": 20261114,
+  "steps": 300,
+  "batch": 2,
+  "learning_rate": 0.0001,
+  "validation_windows": 32,
+  "validation_timesteps": [
+    100,
+    500,
+    900
+  ],
+  "generation_windows": 8,
+  "checkpoint_selection": "fixed final; no Val tuning",
+  "training_contact_supervision": false,
+  "operational_qualified": false
+}
