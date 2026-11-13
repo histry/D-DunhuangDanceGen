@@ -81,10 +81,12 @@ def check(root):
             same=inventory[a]["clock"]["windows"]==inventory[b]["clock"]["windows"]
             if same:assert noise_by_arm[(a,"baseline")]==noise_by_arm[(b,"baseline")]
             cross_music.append(dict(case_a=a,case_b=b,same_noise_and_batch=same,interpretation="CONDITION_RESPONSE_NOT_MUSICAL_QUALITY" if same else "BATCH_NOISE_CONFOUND_NOT_MUSIC_ATTRIBUTION"))
-    vp=read(root/"videos/protocol.json");video_counts=[]
+    video_root=root/("videos_native_plane" if (root/"videos_native_plane/protocol.json").is_file() else "videos")
+    vp=read(video_root/"protocol.json");video_counts=[]
     assert len(vp["records"])==10
     for row in vp["records"]:
         file=checked(row["video"])
+        if "plane_y_m" in row:assert row["plane_y_m"]==read(checked(row["physical"]))["audit"]["floor_y_m"]
         probe=json.loads(subprocess.check_output(["ffprobe","-v","error","-count_frames","-show_streams","-of","json",str(file)],text=True))
         videos=[s for s in probe["streams"] if s["codec_type"]=="video"];audio=[s for s in probe["streams"] if s["codec_type"]=="audio"]
         assert len(videos)==1 and len(audio)==1 and int(videos[0]["nb_read_frames"])==row["frames"]

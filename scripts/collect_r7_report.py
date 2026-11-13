@@ -26,6 +26,9 @@ def run(root,receipts,kind):
             music=read(root/"music/result.json"),generation=r,features_replay=read(root/"features/replay.json"),
             optimizer_updates=0,human_reviewed=False,operational_qualified=False)
         phases=["music","music_replay","features","generation","generation_replay","videos"]
+        if (root/"videos_native_plane/protocol.json").is_file():phases.append("videos_native_plane")
+        if (root/"diagnosis/result.json").is_file():
+            summary["saved_output_diagnosis"]=read(root/"diagnosis/result.json");phases+=["diagnosis","diagnosis_replay"]
     evidence={}
     execution={}
     for phase in phases:
@@ -44,6 +47,11 @@ def run(root,receipts,kind):
         started_utc=(receipts/"started_utc.txt").read_text().strip(),finished_utc=(receipts/"finished_utc.txt").read_text().strip(),
         prior_failed_roots_retained=True,optimizer_updates=0,temporary_ssh_files_created=0,temporary_ssh_files_remaining=0,
         operational_qualified=False)
+    post=Path(str(root)+"_post_receipts")
+    if post.is_dir():
+        assert (post/"exit_status.txt").read_text().strip()=="0"
+        receipt["postprocess_receipts"]={p.name:sha(p) for p in post.iterdir() if p.is_file()}
+        receipt["postprocess_execution_commit"]=(post/"execution_commit.txt").read_text().strip()
     write(str(target)+"_receipt.json",receipt);write(str(target)+"_checks.json",checks)
     print("R7_SEALED_REPORT",kind,sha(str(target)+"_summary.json"),flush=True)
 if __name__=="__main__":
