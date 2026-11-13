@@ -7,6 +7,7 @@ from scipy.spatial.transform import Rotation,Slerp
 from dunhuang.io import sha,checked,write
 from dunhuang.contracts import matrices
 def read(p):return json.loads(Path(p).read_text())
+def norm_relative_error(reference,value):return abs(reference-value)/max(abs(reference),1e-12)
 def angle(a,b,mask):
     ar=matrices(a[:,79:127].reshape(150,8,6)).astype(float);br=matrices(b[:,79:127].reshape(150,8,6)).astype(float)
     return float(Rotation.from_matrix((ar.swapaxes(-1,-2)@br)[mask]).magnitude().mean())
@@ -26,7 +27,7 @@ def aggregate(y,p,groups,recordings):
 def check(root):
     root=Path(root);c=read(root/"protected/result.json");e=read(root/"information/result.json");pp=read(root/"planner/result.json")
     arrays=dict(np.load(root/"protected/arrays.npz"));control_cfg=read(root/"protected/protocol.json")["config"];control=Path(control_cfg["reference_control"])
-    old=dict(np.load(control/"control/arrays.npz"));errors=[];budget=0.;matched=0.;baselines=0
+    old=dict(np.load(control/"control/arrays.npz"));errors=[];budget=0.;matched=0.;matched_relative=0.;baselines=0
     for scope in ("train","val"):
         for case in range(4):
             for tick in (999,499,19):
@@ -43,8 +44,9 @@ def check(root):
                             assert np.array_equal(arrays[label+"__"+str(source)+"__"+arm+"__predicted_x0"],old[label+"__"+str(source)+"__"+arm+"__predicted_x0"]);baselines+=1
                     for suffix in ("1","2"):
                         norm=values["PB"+suffix]["input_norm"]
-                        for arm in ("shrink_B"+suffix,"random_PB"+suffix):matched=max(matched,abs(norm-values[arm]["input_norm"]))
-    assert budget<=1+1e-6 and matched<1e-6 and baselines==96
+                        for arm in ("shrink_B"+suffix,"random_PB"+suffix):
+                            matched=max(matched,abs(norm-values[arm]["input_norm"]));matched_relative=max(matched_relative,norm_relative_error(norm,values[arm]["input_norm"]))
+    assert budget<=1+1e-6 and matched_relative<=2*np.finfo(np.float32).eps and baselines==96
     cf=read("outputs/source_tasks_02/cf/protocol.json");q=read(checked(cf["qualified"]));pre=read(checked(q["previous_preflight"]));manifest=read(checked(pre["manifest"]));index={r["window_uid"]:r for r in manifest["rows"]}
     known=np.ones((150,8),bool);known[25:40]=False;known[90:115]=False
     for case,pair in enumerate(manifest["validation_pairs"]):
@@ -165,7 +167,7 @@ def check(root):
     for name,expected in frozen["model_sha256"].items():
         file=Path("outputs/source_tasks_02")/name/("adapter.pt" if name.startswith("cf/") else "content.pt");assert sha(file)==expected;models[name]=expected
     checks=dict(schema="independent_protected_source_checks",verifier_commit=subprocess.check_output(["git","rev-parse","HEAD"],text=True).strip(),verifier_sha256=sha(__file__),
-        max_condition_fraction=budget,max_matched_norm_difference=matched,old_B1_B2_predictions_exact=baselines,source_readouts_verified=len(errors)//2,max_source_readout_error_rad=max(errors),
+        max_condition_fraction=budget,max_matched_norm_difference=matched,max_matched_norm_relative_difference=matched_relative,matched_norm_relative_bound=2*float(np.finfo(np.float32).eps),old_B1_B2_predictions_exact=baselines,source_readouts_verified=len(errors)//2,max_source_readout_error_rad=max(errors),
         neighbour_score_arrays_verified=count,frame_metric_values_verified=len(metric_errors),max_frame_metric_error=max(metric_errors,default=0),all_banks_train_only=True,all_queries_music_disjoint_from_neighbours=True,
         frozen_historical_head_relabel=frozen_heads,direct_74_kinematic_reconstruction=reconstruction,head_fit_calls=0,normalizer_fits=0,plans_verified=plan_count,candidate_identities_verified=candidate_count,frozen_selected_map_and_anchor_parities=candidate_count,
         distinct_shadow_audio_assets=len(music_hashes),observed_geometry_shapes=geometry_shapes,actual_unknown_poison_cases_verified=len(geometry_shapes),observed_geometry_is_not_production_weight_qualification=True,independent_slerp_max_error_rad=max_pose,phase_clock_max_error=phase_error,frozen_model_files_rechecked=models,optimizer_calls=0,

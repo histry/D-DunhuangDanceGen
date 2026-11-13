@@ -109,3 +109,10 @@ The independent checker additionally constructs the real153D event_geometry and
 observed visibility interface from every saved plan. Poisoning all unknown storage
 with NaN must leave geometry identical. This verifies condition support, not
 production loading qualification for observed-trained research weights.
+
+Verifier attempt1 stopped at an unscaled absolute1e-6 norm-matching assertion:
+actual maximum difference1.741e-6 occurred at condition norm15.393; maximum relative
+spread1.251e-7 is FP32 rounding scale. The verifier now uses a natural relative
+bound of2*float32 epsilon and a scale-invariance regression fixture. Scientific
+records, nonlinear protection bounds, solver settings and the existing relative
+condition-budget tolerance remain unchanged. The failed verifier log is retained.
