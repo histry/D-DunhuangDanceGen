@@ -13,6 +13,7 @@ trap finish EXIT
 date -u +%FT%TZ > "$receipt/started_utc.txt"
 git rev-parse HEAD > "$receipt/execution_commit.txt"
 cp "$study/independent_checks.json" "$receipt/previous_independent_checks.json"
+"$native" -m pytest -q -rs tests/test_primitive_reperformance.py -k phase_proxy > "$receipt/phase_tests.log" 2>&1
 "$native" -m dunhuang.research.primitive_reperformance.phase_analysis --single "$study/single" --out "$study/phase_proxy"
 "$native" -m dunhuang.research.primitive_reperformance.phase_analysis --single "$study/single" --out "$study/phase_proxy_replay"
 "$native" -m dunhuang.research.primitive_reperformance.render --config src/dunhuang/research/primitive_reperformance/config.json --diagnosis "$study/style_audit" --prepared "$study/prepared" --single "$study/single" --out "$study/videos_wrist_axes" --wrist-glyphs
