@@ -32,3 +32,10 @@ A0正确双侧，A1移除右，A2移除左，A3错配右，A4错配左，A5双�
 CondMDI官方TrainLoop显式传递obs_x0和obs_mask（随机帧/关节），并非仅写一条代数上不变的x_t覆盖公式；本轮不把模式借鉴称为复现该论文。原实现见[官方训练循环](https://github.com/setarehc/diffusion-motion-inbetweening/blob/main/train/training_loop.py)和[项目说明](https://github.com/setarehc/diffusion-motion-inbetweening)。BADM和FlowMDM的后续结构不在本轮无资格时盲目迁入。
 
 只读检查器输出独立HTML：0起始索引/截图1起始帧编号并列；原始/zero/C1/C2使用固定世界相机，交互显示完整150帧、两处接缝、RootXYZ、Root转角与足速。显示FK坐标仅保留6位小数，科学指标仍由原全精度数组计算；不将显示量化用来改变Native。另列50步共享状态的A0..A5曲线，明确不是6条新动作。原始数据和完整迹线保留outputs，公开仓库仅发布代码、紧凑摘要及封存哈希。
+
+
+## 完成后的阶段链核验
+
+进一步只读取最后一步原始x0、硬覆盖后的normalized窗口、windows、official装配、Native、原点恢复及graft。要求未观测区与原始x0逐位相同，硬覆盖可逐张量重建最终窗口；反归一化、单窗装配、坐标变换、恢复与回接分别以5e-6m检查。新增chain/chain_replay零采样、零训练，不能把算子对照解释为独立Hard-Off完整轨迹实验。
+
+本轮完成结果见[报告](../reports/R11状态衔接与双侧条件审计报告.md)和[封存回执](../reports/r11_receipt.json)。浏览器工具未获file://协议预览权限；检查器仅完成脚本语法、帧数据、结构和链接核验，浏览器交互验收保持未执行。

@@ -2,7 +2,7 @@
 import argparse,subprocess
 from pathlib import Path
 import numpy as np
-from dunhuang.io import write,checked
+from dunhuang.io import write
 from dunhuang.data.sources import ref
 from dunhuang.research.source_capacity.common import read,commit,fresh
 from dunhuang.research.primitive_reperformance.environment import worker_environment

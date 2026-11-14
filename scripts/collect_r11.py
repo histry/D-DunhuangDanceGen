@@ -1,5 +1,5 @@
 """Compact published evidence; full traces and per-frame data stay under outputs."""
-import argparse,subprocess,sys
+import argparse,sys
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/"src"))
 import numpy as np
