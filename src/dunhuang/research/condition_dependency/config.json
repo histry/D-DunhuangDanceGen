@@ -1,0 +1,14 @@
+{
+  "baseline": "44235357b9763bc8b047e4cda1579035faa3d7b9",
+  "main": "outputs/feasible_r9_02",
+  "b2": "outputs/boundary_context_r9_01",
+  "r8": "outputs/reperformance_r8_02",
+  "val_cases": 8,
+  "timesteps": [
+    100,
+    500,
+    900,
+    999
+  ],
+  "seed": 20261115
+}

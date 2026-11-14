@@ -1,0 +1,19 @@
+{
+  "parent": "outputs/feasible_r9_02",
+  "arms": [
+    "T0",
+    "T1",
+    "T2R",
+    "T4"
+  ],
+  "radii_m": [
+    0.05,
+    0.15,
+    0.3
+  ],
+  "delta_speed_cap_mps": 0.75,
+  "root_l2": 0.01,
+  "root_d3": 16.0,
+  "support_population": "frozen T0 Native final_fail_closed proxy; no label edits",
+  "operational_qualified": false
+}

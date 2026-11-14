@@ -1,0 +1,21 @@
+{
+  "r8": "outputs/reperformance_r8_02",
+  "domains": [
+    {
+      "name": "small",
+      "root_cap_m": 0.15,
+      "rotation_cap_rad": 0.35
+    },
+    {
+      "name": "medium",
+      "root_cap_m": 0.75,
+      "rotation_cap_rad": 0.75
+    },
+    {
+      "name": "large",
+      "root_cap_m": 1.5,
+      "rotation_cap_rad": 1.5
+    }
+  ],
+  "operational_qualified": false
+}
