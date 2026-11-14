@@ -1,0 +1,88 @@
+{
+  "code_commit": "5e527fa9a23824b902941ef49b59ac36d12a3e11",
+  "summary_sha256": "c0b82ea59017e7e17b41fbc8248722973789697f72643f266199639337ec8fd8",
+  "evidence": {
+    "data/protocol.json": "537652857d6bba9d48df27d868510635777a0406b7528c0dca5302c2e68e0fd9",
+    "data/result.json": "5e6fb9713973468b5fde5c43478f38cd017d97ea716fa7ddb603f1bace54c919",
+    "data_replay/protocol.json": "87b5f0b252622ec057e33c9f6c6a71806dc26c57d33b8e0468f1d694cf602f48",
+    "data_replay/result.json": "82293ca45a4f61945ea00e8aafd0b2ef7130b2b652c38d8feb24b9acc44e8032",
+    "audit/protocol.json": "4a75e24906af1b15c0a539fc1e9d291f35ddbae4ef98abfeb3eec8ad4df9ebac",
+    "audit/result.json": "96c0ee9f292d1b4883906540d770a2f1f2172ba8731962d4ef98d0a2375d05cd",
+    "audit_replay/protocol.json": "4a75e24906af1b15c0a539fc1e9d291f35ddbae4ef98abfeb3eec8ad4df9ebac",
+    "audit_replay/result.json": "cd748e3adddcd3a911a6d144b95bd237b2aed770aa205b75f6c7ed190fbb46d9",
+    "audit_native/protocol.json": "caef5a6169835878e18925e74a57b69d1c13b4a85ebe855335fc5e94e5db47aa",
+    "audit_native/result.json": "c78566a9a0b1d13001536c1b5fb00c3c2c8de756a1207cc7013c443b6c4c3f2a",
+    "audit_native_replay/protocol.json": "8cbc5e5381918570f82c87b8157d4c6f4ca3152152ffc9d1ceb1c2b89b903227",
+    "audit_native_replay/result.json": "c78566a9a0b1d13001536c1b5fb00c3c2c8de756a1207cc7013c443b6c4c3f2a",
+    "models/cross/protocol.json": "99aa0cb2008bda8c0f772ffdffdb2ab21a0936b335121e25ed1198be90085599",
+    "models/cross/result.json": "beb50b43e86abb55bbd2bd23fce318511327041a6a1ac1931eb326eab6c960c5",
+    "models/cross_replay/protocol.json": "99aa0cb2008bda8c0f772ffdffdb2ab21a0936b335121e25ed1198be90085599",
+    "models/cross_replay/result.json": "7d188848ed662fcfe47ff14f621649299ce3d944c044cb0e014c59b899a4b01e",
+    "models/self/protocol.json": "99aa0cb2008bda8c0f772ffdffdb2ab21a0936b335121e25ed1198be90085599",
+    "models/self/result.json": "89d3bd6f94453078c90930e690f653ecfd5be2de58bb08da2429fac8cba5c918",
+    "models/self_replay/protocol.json": "99aa0cb2008bda8c0f772ffdffdb2ab21a0936b335121e25ed1198be90085599",
+    "models/self_replay/result.json": "b8b1b6aa4092ba7ea6ca456aa9fc16e61f55984dd5b2e52d20fe3fe0313e832e",
+    "rollout/protocol.json": "4be0e713d68670e1163fbcf12809512d5cb444d962307524e45d8750bf051616",
+    "rollout/result.json": "e5717d0cd838777c2dd9f1ef350ad219ee64a4e2436514b6f091419c1f069494",
+    "rollout_replay/protocol.json": "4be0e713d68670e1163fbcf12809512d5cb444d962307524e45d8750bf051616",
+    "rollout_replay/result.json": "cd36769545907b6288ecc94c317bd8bdbf4db10582fc2b6f710b3d701f2d286e",
+    "native/protocol.json": "58c987cf8f51e3eaeeb83ed084f6568aa01e1f02968b6b53e6323102e17bc4a6",
+    "native/result.json": "c86fc4eca78549076aab933f9369b5736a845dd19b0259f700662675dc2f5800",
+    "native_replay/protocol.json": "d97511747bad1aee7d56f4f8f268061ba7b350932d0c4c8d27d54fa46e9c64d2",
+    "native_replay/result.json": "c86fc4eca78549076aab933f9369b5736a845dd19b0259f700662675dc2f5800",
+    "videos/protocol.json": "92426ec5e5934cac3b94f38c974a2d84e1512a308c9ad2864caf5f993e66715d"
+  },
+  "receipts": {
+    "global_clock_r17_02_audit_receipts": {
+      "code_commit": "0842e4dd201b5d87b00e7d0511ac8cddde0eef55",
+      "exit_status": "0",
+      "files": {
+        "execution_commit.txt": "e6a6eec244300be272644af518d7e0afc02d52a3015d0f811934a6999ffa8ff4",
+        "started_utc.txt": "016ae040b711c131ef6be602df5c2625be30d0534593b376a8226cf157752bf0",
+        "pytest.log": "bf81a64a25878aa96e4bf4663b2d3504478edbcfb68f2900fd85562a7a638d8f",
+        "edge_tests.log": "a6c0954fe526aead938945807a18f064d0ad0f17e8aeea33d809051cbe03abdc",
+        "exit_status.txt": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+        "finished_utc.txt": "5b454c2018ebb5c9d49241458c091ddb5a2c02207c59e441b0bf89bfa1d088b5"
+      }
+    },
+    "global_clock_r17_02_train_receipts": {
+      "code_commit": "206b26d23343a72f3f9ee0f657bd5451bf5889f1",
+      "exit_status": "0",
+      "files": {
+        "execution_commit.txt": "be1026afe6a59625c1320565dabeaec24d61e39ec54a2a3ee52f58431c7ad42a",
+        "started_utc.txt": "87f0e631746dcde84ea18c18727760aa171643538e91cbb9944e7c72be08219e",
+        "edge_tests.log": "2ed6e787e41901c94c775b06cd6251c3cdb019d4a46e94c39027242cbdfbe662",
+        "exit_status.txt": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+        "finished_utc.txt": "be097d943ffb51eff777b3890f2c5227d81af3f79ef95b1600174a8757504abc"
+      }
+    },
+    "global_clock_r17_02_final_receipts": {
+      "code_commit": "551dcafafb66d61091dbb048a36633d931ebc96a",
+      "exit_status": "0",
+      "files": {
+        "execution_commit.txt": "a2e079dcbff0f516978cdd7f24c3202b7c54a859f83f09f78852b77f76953352",
+        "started_utc.txt": "41c29a0d45d6ad7866614dc75d0d8f359ca87911144ddb45650eef518521fdc9",
+        "pytest.log": "0f660a3ac99c3084f3cef09ba4be90be7939ebcc477537761a2a475ad835e699",
+        "edge_tests.log": "048f1bb2edb3fd2cdbebceec667909248a071ef092e73d9de1a8930367f68401",
+        "exit_status.txt": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+        "finished_utc.txt": "d542967981327d1b0dc72286a9b0b4eff74ca6a5ea1dd697b444429bc3fab5ba"
+      }
+    },
+    "global_clock_r17_01_audit_receipts": {
+      "code_commit": "3f4bfefa5baafdf28cabbb50dbb070ab54b564e2",
+      "exit_status": "1",
+      "files": {
+        "execution_commit.txt": "9afc39cd6653c091b54d622250cd89fd38ca8d654ef379f16a37f74bccd4cf15",
+        "started_utc.txt": "e7678f9e5852a6fdb30ce7b7e3044176d7484ecdae9aeedcb1c64d54af862ead",
+        "pytest.log": "2fdec029ce274d2175f25d7f63e10fe4168c236b7f2c8b3cd3471a0f79ed274e",
+        "edge_tests.log": "15de1e23b73c25abf705bed62dfb94b506fba7b67b2c9925556f21ef4afa125a",
+        "exit_status.txt": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+        "finished_utc.txt": "98b4c5b80993a9638131a45a52c95e5c42cc45a771427701f7db340a99488bcd"
+      }
+    }
+  },
+  "temporary_ssh_files_created": 0,
+  "temporary_ssh_files_remaining": 0,
+  "new_whole_song_generations": 0,
+  "operational_qualified": false
+}

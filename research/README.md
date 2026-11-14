@@ -113,3 +113,7 @@ No C2 state model or full-song promotion is claimed. Four fixed-world diagnostic
 videos compare real paired AIST, C0 and C1 without smoothing or Root recentering.
 See [protocol](../docs/R16_CONTINUOUS_PROTOCOL.md) and
 [report](../reports/R16连续事件生成与真实窗口对照报告.md).
+
+## R17 global-clock dual-view state research
+
+Independent package: src/dunhuang/research/global_clock_r17. A 225-frame state is read through two 150-frame frozen R13 views. Matched cross-window and self-window heads each train for exactly 240 updates; global Root/FK losses do not supply future Root at FREE/PROGRESSIVE inference. Hard/soft factor traces and full sampler/Native replays are saved separately. Mechanism qualification is 0/4 and Native 0/36; production and R13–R16 remain frozen. See [protocol](../docs/R17_GLOBAL_CLOCK_PROTOCOL.md) and [results](../reports/R17全局时钟双窗口训练与Mask归因报告.md).

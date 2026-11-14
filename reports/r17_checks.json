@@ -1,0 +1,26 @@
+{
+  "code_commit": "551dcafafb66d61091dbb048a36633d931ebc96a",
+  "array_bundles_exact": 91,
+  "native_arrays_exact": 360,
+  "physical_reports_exact": 180,
+  "first_sampler_calls": 76,
+  "replay_sampler_calls_exact": 76,
+  "fit_music_groups": 8,
+  "adapter_heldout_exposed_music_groups": 4,
+  "models_parameters": 97728,
+  "matched_initialization_and_ledger": true,
+  "music_and_base_frozen": true,
+  "training_optimizer_steps": 480,
+  "replay_optimizer_steps": 0,
+  "optimizer_steps": 0,
+  "global_noise_clock_verified": true,
+  "free_future_root_truth_not_observed": true,
+  "generated_prefix_hash_and_preservation_verified": true,
+  "frozen_changed_paths": [],
+  "receipts": {
+    "audit": "0842e4dd201b5d87b00e7d0511ac8cddde0eef55",
+    "train": "206b26d23343a72f3f9ee0f657bd5451bf5889f1"
+  },
+  "new_whole_song_generations": 0,
+  "operational_qualified": false
+}

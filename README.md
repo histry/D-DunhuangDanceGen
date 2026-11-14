@@ -2,6 +2,8 @@
 
 当前默认路径：**Event Catalog → Music Timeline → Event Plan → 冻结 EDGE（Temporal V0.5）→ 原 Native 验收**。学习检索保留shadow。研究路径已完成真实151D配对补全，以及原生SO(3)跨录制条件的Cross/Additive同参数量训练（各1,200步）；事件跟随与完整生成质量仍未合格。
 
+新增 [R17全局时钟双窗口训练与Mask归因报告](reports/R17全局时钟双窗口训练与Mask归因报告.md)及[封存回执](reports/r17_receipt.json)：真实225帧全局条件、硬软Mask因子及同参数量跨窗口/窗口内状态头各训练240步。16对硬软实验raw轨迹及未覆盖输出完全一致；跨窗口机制0/4、Native0/36，未启动ChangE接入或三首整曲。76次采样独立重放、91数组包及360份Native/FK数组一致，337回归通过、8依赖跳过，EDGE专项8通过；提供12段固定世界视角并排视频。
+
 新增 [R16连续事件生成与真实窗口对照报告](reports/R16连续事件生成与真实窗口对照报告.md)及[封存回执](reports/r16_receipt.json)：完成4组真实225帧连续AIST数据、4份E1-W全局条件合同及24次C0/C1采样。C1来源响应4/4、上下文响应3/4，中心Jerk均值降低约86.4%，但新外接缝全失败、整体门0/4、Native0/24；C2训练与新整曲未启动。24次完整独立重采样、96份Native/FK数组与32个数组包一致，329回归通过、8依赖跳过，EDGE专项9通过；提供4段固定世界视角Source/C0/C1视频。视频属于AIST机制诊断，不是敦煌舞风格成果。
 
 新增 [R15联合RootPose容量与物理编辑域报告](reports/R15联合RootPose容量与物理编辑域报告.md)及[封存回执](reports/r15_receipt.json)：12原始窗中6个编辑域外Jerk严格排除，其余UNKNOWN。固定8个Train音乐组16状态，J0–J4同总输入预算、256有限候选全部验收；J3受保护3/16、组资格0/8，Native0/256，不启动反馈分支训练或整曲。544个Native/FK数组、10个数组包及选择记录独立复验一致，320回归通过、8依赖跳过，EDGE专项13通过；路径预检失败回执原样保留。
@@ -66,7 +68,7 @@ generation/adapter.py 提供零初始化、掩码条件 Adapter，冻结 EDGE �
 python scripts/train.py --assets outputs/new_prepare/assets.json --out outputs/new_motion_training --task motion --steps 300
 python scripts/train.py --assets inputs/paired_assets.json --out outputs/new_paired_training --task paired --steps 300
 ```
-配对资产额外给 paired_generation_manifest 哈希引用。清单 rows 每行给 role(train/val/test)、source_group、start_frame、pairing_evidence=real_aligned_audio_motion、fps=30、frames=150，以及 SHA256 绑定的 motion[150,151]、jukebox[150,4800] 文件引用。训练本身不授予 music_qualified。双向两遍生成、225 帧训练和新 PFG/SQP 实验尚未完成。
+配对资产额外给 paired_generation_manifest 哈希引用。清单 rows 每行给 role(train/val/test)、source_group、start_frame、pairing_evidence=real_aligned_audio_motion、fps=30、frames=150，以及 SHA256 绑定的 motion[150,151]、jukebox[150,4800] 文件引用。训练本身不授予 music_qualified。独立 R17 已完成全局 225 帧损失下的双视图状态头最小训练，未获得生成资格；正式双向连续生成及新 PFG/SQP 尚未完成。
 
 ## 审计与复核
 
