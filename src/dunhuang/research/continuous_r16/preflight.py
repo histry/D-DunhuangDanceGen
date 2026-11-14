@@ -10,7 +10,7 @@ from dunhuang.data.conversion import decode as decode_raw
 from dunhuang.generation.soft_reference import build_soft_reference,build_native_event_reference
 from dunhuang.research.source_capacity.common import read,commit,fresh,same_arrays
 from dunhuang.research.masked_denoiser.common import assets_and_population
-from .contract import views,continuous_pair,proxy_plan,plan_grid,observations
+from .contract import views,continuous_pair,proxy_plan,plan_grid,observations,condition_payload
 
 def run(cfg,out,replay=None):
     out=fresh(out)
@@ -82,8 +82,7 @@ def run(cfg,out,replay=None):
         if mask[:,:,:79].any() or mask[:,:,127:].any():raise ValueError("Invented ChangE Root/contact/wrist support")
         if len(native)>1:
             assert np.array_equal(native[:-1,75:],native[1:,:75]) and np.array_equal(mask[:-1,75:],mask[1:,:75])
-        file=out/("change_"+str(b["case"])+".npz");np.savez_compressed(file,native=native,mask=mask,phase=phase,
-            normalized=normalized,known=known,**grid)
+        file=out/("change_"+str(b["case"])+".npz");np.savez_compressed(file,**condition_payload(native,mask,phase,normalized,known,grid))
         plan_bindings.append(dict(case=b["case"],plan=b["plan"],arrays=ref(file)))
         contracts.append(dict(case=b["case"],frames=plan["frames"],windows=len(native),events=len(plan["events"]),
             global_event_clock_consistent=True,root_contact_observed=False,full_body_source_truth=False))

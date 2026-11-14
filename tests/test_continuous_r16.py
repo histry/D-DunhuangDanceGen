@@ -82,3 +82,14 @@ def test_new_outer_seam_failure_cannot_be_hidden_by_old_center_improvement():
         if r["arm"]=="C1_correct":r["external_joins"]=[dict(root_step_m=.4,foot_step_max_m=.02,crossing_jerk_max_mps3=500)]*2
     assert not qualification(records,c,1620)["cross_window_training_admitted"]
     with pytest.raises(ValueError):qualification(records[:-1],c,1620)
+
+
+def test_condition_archive_preserves_global_and_window_phase(tmp_path):
+    from dunhuang.research.continuous_r16.contract import condition_payload
+    native=np.zeros((2,150,151),np.float32);mask=np.zeros_like(native,bool)
+    phase=np.arange(225,dtype=np.float32)/225;grid=dict(event_ids=np.zeros(225,int),source_positions=np.arange(225),phase=phase)
+    wp=views(phase[:,None])
+    payload=condition_payload(native,mask,wp,native,mask,grid)
+    file=tmp_path/"conditions.npz";np.savez_compressed(file,**payload);saved=np.load(file)
+    assert np.array_equal(saved["phase"],phase) and np.array_equal(saved["window_phase"],wp)
+    assert np.array_equal(saved["window_phase"][0,75:],saved["window_phase"][1,:75])

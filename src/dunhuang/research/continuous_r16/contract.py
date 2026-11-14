@@ -56,3 +56,9 @@ def align_donor(donor,recipient):
     d=donor.copy();A=matrices(recipient[0,7:13]);B=matrices(d[0,7:13]);turn=A@B.T
     d[:,4:7]=recipient[0,4:7]+(donor[:,4:7]-d[0,4:7])@turn.T
     d[:,7:13]=sixd(turn@matrices(donor[:,7:13]));return d
+
+
+def condition_payload(native,mask,window_phase,normalized,known,grid):
+    if len(grid["phase"]) not in (150,225,450):raise ValueError("Registered plan horizon required")
+    if window_phase.shape!=native.shape[:2]+(1,) or mask.shape!=native.shape:raise ValueError("Window condition shape differs")
+    return dict(native=native,mask=mask,window_phase=window_phase,normalized=normalized,known=known,**grid)
