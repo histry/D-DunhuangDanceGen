@@ -45,6 +45,8 @@ def run(root):
     for folder in (root/"teacher_native").iterdir():
         if folder.is_dir():
             for file in ("native.npy","fk.npy"):assert np.array_equal(np.load(folder/file),np.load(root/"teacher_native_replay"/folder.name/file))
+    assert read(root/"inspection/result.json")==read(root/"inspection_replay/result.json")
+    assert read(root/"inspection/result.json")["own_policy_prediction_recomputed_exact"]
     tiny=read(root/"tiny_native/result.json")
     assert "main" not in stages or tiny["tiny_training_admitted"]
     assert tiny["tiny_training_admitted"] or not (root/"main").exists()

@@ -17,4 +17,6 @@ date -u +%FT%TZ > "$receipt/started_utc.txt"
 cfg=src/dunhuang/research/masked_denoiser/config.json
 "$native" -m dunhuang.research.masked_denoiser.native_detail --config "$cfg" --root "$study" --out "$study/native_detail"
 "$native" -m dunhuang.research.masked_denoiser.native_detail --config "$cfg" --root "$study" --out "$study/native_detail_replay" --replay-from "$study/native_detail"
+"$edge" -m dunhuang.research.masked_denoiser.inspect --config "$cfg" --root "$study" --out "$study/inspection"
+"$edge" -m dunhuang.research.masked_denoiser.inspect --config "$cfg" --root "$study" --out "$study/inspection_replay" --replay-from "$study/inspection"
 "$native" scripts/verify_r13.py --root "$study"
