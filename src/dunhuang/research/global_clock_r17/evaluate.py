@@ -61,6 +61,8 @@ def run(cfg,root,out,replay=None,audit_only=False):
                         p=trace[str(timestep)+"_"+control]
                         result["context_controls"].append(dict(t=timestep,control=control,
                             reconstruction=float(np.mean((p[:,4:]-z["encoded"][:,4:])**2))))
+                if binding["task"]=="inbetween":
+                    result["fixed_observation_jerk_bound"]=immutable_jerk_bound(fk,PhysicalQualityLimits.from_environment().joint_jerk_mps3_max,edit=(8,217))
                 if binding["task"]=="progressive":
                     receipt=read(checked(binding["sampler"]));prefix=np.load(checked(receipt["prefix"]))["sample"][:75]
                     assert np.array_equal(trace["sample"][:75,4:],prefix[:,4:])
