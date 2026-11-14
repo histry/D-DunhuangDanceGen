@@ -1,0 +1,55 @@
+{
+  "schema": "event_continuous_r16_v1",
+  "baseline": "da412faebec3d05332d3abf8ec439c493a9c38cc",
+  "r13_config": "src/dunhuang/research/masked_denoiser/config.json",
+  "r13_root": "outputs/mask_denoiser_r13_01",
+  "r14_config": "src/dunhuang/research/boundary_state_r14/config.json",
+  "r15_root": "outputs/root_pose_r15_02",
+  "planner_root": "outputs/protected_source_01/planner",
+  "seed": 16041,
+  "cases": 4,
+  "event_boundaries": [
+    50,
+    75,
+    100,
+    75
+  ],
+  "window": 150,
+  "hop": 75,
+  "pair_frames": 225,
+  "source_joints": [
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "context_frames": 8,
+  "arms": [
+    "C0",
+    "C1_correct",
+    "C1_removed",
+    "C1_wrong_event",
+    "C1_wrong_context",
+    "C1_wrong_music"
+  ],
+  "gate": {
+    "minimum_cases": 3,
+    "center_jerk_gain": 0.1,
+    "source_nonregression_rad": 0.05,
+    "edge_root_rmse_m": 0.1,
+    "external_root_step_m": 0.05,
+    "external_foot_step_m": 0.15,
+    "activity_ratio": [
+      0.5,
+      1.5
+    ]
+  },
+  "c2_training_admitted": false,
+  "neural_optimizer_steps": 0,
+  "new_whole_song_generations": 0,
+  "operational_qualified": false
+}
