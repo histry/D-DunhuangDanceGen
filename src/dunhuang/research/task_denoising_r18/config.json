@@ -1,0 +1,52 @@
+{
+  "schema": "r18_task_matched_denoising_v1",
+  "baseline": "2b73f6104709fa229849a275150a059f2331dd5f",
+  "parent": "outputs/global_clock_r17_02",
+  "seed": 18041,
+  "frames": 225,
+  "window": 150,
+  "hop": 75,
+  "state_width": 64,
+  "tasks": [
+    "free",
+    "inbetween",
+    "progressive"
+  ],
+  "controls": [
+    "correct",
+    "content",
+    "clock",
+    "phase",
+    "key_order",
+    "removed",
+    "observation"
+  ],
+  "tiny_cases": [
+    0,
+    1
+  ],
+  "tiny_steps": 120,
+  "main_steps": 240,
+  "learning_rate": 0.0001,
+  "context_margin": 0.001,
+  "loss_weights": {
+    "reconstruction": 1,
+    "boundary": 0.1,
+    "world_fk": 0.1,
+    "amplitude": 0.1,
+    "context": 0.05
+  },
+  "tiny_gate": {
+    "minimum_tasks": 4,
+    "unknown_ratio": 0.9,
+    "minimum_content_wins": 4
+  },
+  "qualification": {
+    "minimum_cases": 3,
+    "relative_gain": 0.02,
+    "minimum_activity_ratio": 0.8
+  },
+  "generated_history_training": false,
+  "whole_song_generations": 0,
+  "operational_qualified": false
+}
