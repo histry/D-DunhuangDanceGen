@@ -67,3 +67,15 @@ operational_qualified=false。人工审核不阻断客观算法实验。
 
 代码先发布 GitHub，再以精确 SHA 在 tmux 运行；新进程重放零 optimizer；
 完整数组留 outputs，公开精简报告/哈希/回执。仅清理本轮临时 SSH 辅助物。
+
+## 训练开始后的预冻结读出细则（尚未读取本轮 DEV）
+
+生成固定 8 个旧案例，B0/B3/B2 各 8 次，匹配原种子；B1 为已冻结 C2。
+B0 的 normalized 数组必须与历史 zero 逐位相等。完整采样与 Native 新进程重放。
+4 个 Val 的 soft 正确/移除/单侧移除/左右错配在同一 correct-driven x_t 上比较；
+它们不是独立反事实完整采样。报告误差、Root 已知区误差两套胜率。
+
+单窗准入：左右错配对照中两套胜率分别至少 3/4；8 例原绝对 Native 与
+150 帧 ROI Native 全过；每例姿态误差不超过 C2+0.01rad，历史 R8 来源姿态
+误差也不超过 C2+0.01rad；左右接缝各自 Jerk maximum 不超过对应 C2+1e-6。
+这些是研究资格而非新 Native 阈值。未全部通过时整曲仍为 0。

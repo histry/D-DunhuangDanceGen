@@ -55,7 +55,17 @@ def test_neighbour_bank_excludes_entire_query_music_group():
 
 def test_static_pose_information_witness_does_not_change_hold_state():
     w=static_witness()
-    assert w["dynamic_features_identical"] and w["upper8_rotation_difference_rad"]>.5 and w["both_are_holds"]
+    # Some BLAS builds leave ~4e-15 in R.T@R; the witness is numerical,
+    # not a platform-independent assertion of identical floating-point bytes.
+    from scipy.spatial.transform import Rotation
+    from dunhuang.contracts import sixd
+    from dunhuang.planning.time_map import motion_features74
+    a=np.zeros((30,151),np.float32);a[:,7:]=np.tile([1,0,0,0,1,0],(30,24));b=a.copy()
+    b[:,79:127]=np.tile(sixd(Rotation.from_euler("z",45,degrees=True).as_matrix()),(30,8))
+    av,am=motion_features74(a);bv,bm=motion_features74(b)
+    assert np.array_equal(am,bm) and np.allclose(av,bv,atol=1e-12,rtol=0)
+    assert w["dynamic_features_identical"]==bool(np.array_equal(av,bv))
+    assert w["upper8_rotation_difference_rad"]>.5 and w["both_are_holds"]
     assert w["static_identity_is_not_hold_state"] and not w["semantic_claim"]
 
 def test_shadow_search_consumes_actual_planner_without_changing_default(tmp_path):

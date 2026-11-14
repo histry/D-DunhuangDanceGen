@@ -126,7 +126,7 @@ def test_a2_small_source_audit_completes_without_starting_ineligible_training(tm
         mt=np.tile(np.arange(12)/3,(2,1)),dt=np.tile(np.arange(20)/5,(2,1)))
     np.savez(data/"conditional.npz",eligible=np.zeros(2,bool))
     write(data/"candidate_evidence.json",{"evidence":[]})
-    write(source.parent/"public_summary.json",{"evidence":{str(p.relative_to(source.parent)):sha(p) for p in (data/"manifest.json",data/"nodes.npz",data/"conditional.npz")}})
+    write(source.parent/"public_summary.json",{"evidence":{p.relative_to(source.parent).as_posix():sha(p) for p in (data/"manifest.json",data/"nodes.npz",data/"conditional.npz")}})
     cfg=json.loads(Path("configs/content_identifiability_v2.json").read_text())
     cfg["event_source"]=str(event.parent.parent)
     out=tmp_path/"audit"

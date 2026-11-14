@@ -17,4 +17,3 @@ cfg=src/dunhuang/research/motion_bridge/config.json
 "$edge" -m dunhuang.research.motion_bridge.generate --config "$cfg" --training "$study" --out "$study/generation_replay" --replay-from "$study/generation"
 "$native" -m dunhuang.research.motion_bridge.analyze --config "$cfg" --generation "$study/generation" --out "$study/analysis"
 "$native" -m dunhuang.research.motion_bridge.analyze --config "$cfg" --generation "$study/generation_replay" --out "$study/analysis_replay" --replay-from "$study/analysis"
-
