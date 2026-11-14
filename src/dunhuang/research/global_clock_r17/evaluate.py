@@ -22,13 +22,13 @@ def score(x,target,fk,target_fk,keys,observed_mask=None):
         root_velocity_error_mps=float(np.sqrt(np.mean((np.diff(x[:,4:7],axis=0)-np.diff(target[:,4:7],axis=0))**2)))*30,
         root_acceleration_error_mps2=float(np.sqrt(np.mean((np.diff(x[:,4:7],n=2,axis=0)-np.diff(target[:,4:7],n=2,axis=0))**2)))*900)
 
-def run(cfg,root,out,replay=None):
+def run(cfg,root,out,replay=None,audit_only=False):
     root=Path(root);out=fresh(out);forbid_optimizers();pre=read(root/"data/protocol.json");native_environment(pre["assets"])
     from motion.geometry import fk_24_np
     from contracts.physical_quality import PhysicalQualityLimits
     scaler=np.load(checked(pre["assets"]["scaler"]));data=read(root/"data/result.json")
     rows={r["case"]:r for r in data["records"] if r["role"]=="eval"};factor=[];music=[];full=[]
-    audit=read(root/"audit/result.json");roll=read(root/"rollout/result.json");saved={}
+    audit=read(root/"audit/result.json");roll=dict(bindings=[]) if audit_only else read(root/"rollout/result.json");saved={}
     def evaluate(binding,kind):
         case=binding["case"];z=np.load(checked(rows[case]["arrays"]));trace=np.load(checked(binding["trace"]))
         target=z["native"][:len(trace["sample"])];x=decode(trace["sample"],scaler,target)
@@ -37,7 +37,7 @@ def run(cfg,root,out,replay=None):
         np.save(folder/"native.npy",x);np.save(folder/"fk.npy",fk);write(folder/"physical.json",physical)
         known=trace["known"];root_known=known[:,4:7];raw=decode(trace["raw_final"],scaler,target)
         common=dict(case=case,kind=kind,source_frame_start=rows[case]["left"]["start_frame"],native_ok=physical["absolute"]["ok"],
-            raw_known_root_rmse_m=float(np.sqrt(np.mean((raw[:,4:7]-target[:,4:7])[root_known]**2))) if root_known.any() else None,
+            raw_known_root_rmse_m=float(np.sqrt(np.mean(((trace["raw_final"][:,4:7]-trace["condition"][:,4:7])/scaler["scale"][4:7])[root_known]**2))) if root_known.any() else None,
             contact_truth="UNKNOWN")
         if kind=="factor":
             old=read(Path(cfg["r16_root"])/"preflight/protocol.json")["pairs"][case];oldz=np.load(checked(old["arrays"]))
@@ -86,7 +86,7 @@ def run(cfg,root,out,replay=None):
         y=decode(np.load(checked(b["trace"]))["sample"],scaler,z["native"])
         response.append(dict(case=i,pose_response_rad=angular(x,y),root_response_rmse_m=float(np.sqrt(np.mean((x[:,4:7]-y[:,4:7])**2)))))
     by={(r["case"],r["arm"],r["task"]):r for r in full};g=cfg["qualification"];cases=[]
-    for i in range(4):
+    for i in ([] if audit_only else range(4)):
         conditions=[]
         for task in ("free","inbetween"):
             b=by[i,"B_cross",task]
@@ -98,7 +98,7 @@ def run(cfg,root,out,replay=None):
         cases.append(dict(case=i,qualified=all(conditions)))
     result=dict(factors=factor,music=music,music_response=response,rollouts=full,
         qualification=dict(cases=cases,qualified_cases=sum(r["qualified"] for r in cases),
-            mechanism_qualified=sum(r["qualified"] for r in cases)>=g["minimum_wins"],operational_qualified=False),
+            mechanism_qualified=None if audit_only else sum(r["qualified"] for r in cases)>=g["minimum_wins"],operational_qualified=False),
         optimizer_steps=0,new_whole_song_generations=0,operational_qualified=False)
     write(out/"result.json",result);write(out/"protocol.json",dict(code_commit=commit(),config=cfg,saved=saved,
         free_scope="No future external full motion or halo acceptance imposed",
@@ -108,5 +108,5 @@ def run(cfg,root,out,replay=None):
     print("R17_MECHANISM",result["qualification"],flush=True)
 
 if __name__=="__main__":
-    p=argparse.ArgumentParser();p.add_argument("--config",required=True);p.add_argument("--root",required=True);p.add_argument("--out",required=True);p.add_argument("--replay-from");a=p.parse_args()
-    run(read(a.config),a.root,a.out,a.replay_from)
+    p=argparse.ArgumentParser();p.add_argument("--config",required=True);p.add_argument("--root",required=True);p.add_argument("--out",required=True);p.add_argument("--replay-from");p.add_argument("--audit-only",action="store_true");a=p.parse_args()
+    run(read(a.config),a.root,a.out,a.replay_from,a.audit_only)

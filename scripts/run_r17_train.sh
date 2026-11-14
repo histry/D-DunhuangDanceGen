@@ -14,6 +14,8 @@ git rev-parse HEAD > "$receipt/execution_commit.txt"
 date -u +%FT%TZ > "$receipt/started_utc.txt"
 "$edge" -m pytest -q tests/test_global_clock_r17.py > "$receipt/edge_tests.log" 2>&1
 cfg=src/dunhuang/research/global_clock_r17/config.json
+"$native" -m dunhuang.research.global_clock_r17.evaluate --config "$cfg" --root "$study" --out "$study/audit_native" --audit-only
+"$native" -m dunhuang.research.global_clock_r17.evaluate --config "$cfg" --root "$study" --out "$study/audit_native_replay" --audit-only --replay-from "$study/audit_native"
 for mode in cross self;do
  "$edge" -m dunhuang.research.global_clock_r17.train --config "$cfg" --data "$study/data" --mode "$mode" --out "$study/models/$mode"
  "$edge" -m dunhuang.research.global_clock_r17.train --config "$cfg" --data "$study/data" --mode "$mode" --out "$study/models/${mode}_replay" --replay-from "$study/models/$mode"
