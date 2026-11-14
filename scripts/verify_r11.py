@@ -37,7 +37,9 @@ def run(root):
     assert (n,trace,steps)==(48,16,400)
     formal=subprocess.check_output(["git","diff","--name-only","4496e43","--","src/dunhuang","configs"],text=True).splitlines()
     formal=[v for v in formal if not v.startswith("src/dunhuang/research/")];assert not formal
-    result=dict(code_commit=commit(),oracle_arrays=oracle,full_motion_arrays=n,trace_arrays=trace,shared_trajectory_steps=steps,
+    frozen=subprocess.check_output(["git","diff","--name-only","4496e43","--","src/dunhuang/research/condition_dependency","reports/r10_summary.json","reports/r10_checks.json","reports/r10_receipt.json"],text=True).splitlines()
+    assert not frozen
+    result=dict(code_commit=commit(),frozen_r10_files_changed=frozen,oracle_arrays=oracle,full_motion_arrays=n,trace_arrays=trace,shared_trajectory_steps=steps,
         original_C2_a0_arrays_equal=True,analysis_exact_replay=True,cached_analysis_exact=(root/"analysis_cached/result.json").is_file(),rng_unchanged=True,a0_features_exact=True,formal_changed_paths=formal,
         optimizer_steps=0,new_whole_song_generations=0,operational_qualified=False)
     write(root/"independent_checks.json",result);print("R11_VERIFIED",result,flush=True)

@@ -29,6 +29,9 @@ def run(root):
         for file in ("protocol.json","result.json","checks.json"):
             p=root/phase/file
             if p.is_file():evidence[phase+"/"+file]=sha(p)
+    local_qa=root/"inspector/local_static_checks.json"
+    inspector_qa=read(local_qa) if local_qa.exists() else dict(browser_visual_qa="NOT_RUN")
+    if local_qa.exists():evidence["inspector/local_static_checks.json"]=sha(local_qa)
     curves=[]
     for name in dict.fromkeys(r["case"] for r in b["records"]):
         rows=[r for r in b["records"] if r["case"]==name and r["arm"]=="A0"]
@@ -36,7 +39,7 @@ def run(root):
     p1=read(root/"trace/protocol.json");traces=[dict(case=x["case"],trace=x["trace"],trace_info=x["trace_info"],reference=x["reference"]) for x in p1["bindings"]]
     summary=dict(schema="r11_frozen_state_and_shared_trajectory_evidence",baseline="4496e435c4f8d4333d4d888b67be2875bf1d8e2b",
         config=read(root/"audit/protocol.json")["config"],state_groups=groups,oracles=a["oracles"],qualification=b["qualification"],conditions=conditions,
-        case_condition_means=b["case_means"],a0_first_last=curves,traces=traces,checks=checks,stage_commits=stages,evidence=evidence,receipts=receipts,
+        case_condition_means=b["case_means"],inspector_validation=inspector_qa,a0_first_last=curves,traces=traces,checks=checks,stage_commits=stages,evidence=evidence,receipts=receipts,
         optimizer_steps=0,new_neural_generations=16,new_counterfactual_complete_rollouts=0,shared_state_predictions=4800,new_whole_song_generations=0,
         human_reviewed=False,operational_qualified=False,
         interpretation=["seam decomposition is numerical, not causal","A0 drives sampling; other arms are fixed-state forward interventions","soft incremental effect does not identify the entire hard-context pathway","single-side masks and fixed gauge replacements can be outside original training support","four Val and four exposed R8 cases; 400 timesteps are not independent samples","Oracle floating geometry pass is not byte identity or physical admission"])
