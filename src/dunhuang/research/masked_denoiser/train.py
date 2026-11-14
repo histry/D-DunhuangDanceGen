@@ -25,6 +25,15 @@ def run(cfg,out,stage="tiny",gate=None,replay=None):
     for j,timestep in enumerate(cfg["timesteps"]):
         torch.manual_seed(cfg["seed"]+300+j);torch.cuda.manual_seed_all(cfg["seed"]+300+j)
         t=torch.full((4,),timestep,device="cuda",dtype=torch.long);fixed.append((diffusion.q_sample(y,t),t))
+    with torch.no_grad():
+        xt,t=fixed[0]
+        reference=diffusion.model_predictions(xt,music,t,weight=2,clip_x_start=True)[1]
+        empty=wrapper(xt,music,t,y,torch.zeros_like(known))
+        assert torch.equal(reference,empty)
+        poisoned=y.clone();poisoned[~known]=float("nan")
+        assert torch.equal(wrapper(xt,music,t,y,known),wrapper(xt,music,t,poisoned,known))
+    write(out/"interface.json",dict(real_edge_empty_mask_initialization_exact=True,hidden_observation_poison_exact=True,
+        trainable_parameters=sum(p.numel() for p in wrapper.selected()),frozen_parameter_digest=frozen_before))
     initial_scores=[];initial_arrays={}
     with torch.no_grad():
         for j,(xt,t) in enumerate(fixed):
@@ -83,8 +92,13 @@ def run(cfg,out,stage="tiny",gate=None,replay=None):
             if not torch.isfinite(objective):raise ValueError("Nonfinite R13 direct-denoiser loss")
             opt.zero_grad();objective.backward()
             assert all(p.grad is None for p in wrapper.net.parameters() if not p.requires_grad)
+            module_gradients={}
+            if step in (0,count-1):
+                for prefix in cfg["trainable_prefixes"]:
+                    values=[p.grad.detach().square().sum() for n,p in wrapper.net.named_parameters() if n.startswith(prefix) and p.grad is not None]
+                    module_gradients[prefix]=float(torch.stack(values).sum().sqrt()) if values else 0.
             grad=float(torch.nn.utils.clip_grad_norm_(wrapper.selected(),1.,error_if_nonfinite=True));opt.step()
-            history.append(dict(step=step,loss=float(objective.detach()),parts={n:float(v.detach()) for n,v in parts.items()},gradient_norm=grad))
+            history.append(dict(step=step,loss=float(objective.detach()),parts={n:float(v.detach()) for n,v in parts.items()},gradient_norm=grad,module_gradient_norm=module_gradients))
             ledger.append(dict(step=step,rows=[dict(raw_sha256=r["raw_motion"]["sha256"],start=r["start_frame"],group=r["source_group"]) for r in identity],
                 x_t_sha256=tensor_hash(xt),t=t.cpu().tolist(),observed_sha256=tensor_hash(target[k]),self_cache=use_cache))
             if (step+1)%20==0:print("R13_TRAIN",stage,step+1,history[-1],flush=True)
