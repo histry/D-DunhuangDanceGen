@@ -30,11 +30,11 @@ def run(cfg,training,out,replay=None):
         f=out/(item["name"]+"_context.npz");np.savez_compressed(f,values=values[None],mask=mask)
         item.update(context=ref(f),origin=o);contexts[item["name"]]=ref(f)
         f=out/(item["name"]+"_features.npy");np.save(f,item["feature"]);item["features"]=ref(f)
-    checkpoints={arm:read(Path(training)/arm/"result.json")["checkpoint"] for arm in ("C0","C1")}
+    checkpoints={arm:read(Path(training)/arm/"result.json")["checkpoint"] for arm in cfg.get("checkpoint_arms",["C0","C1"])}
     records=[];bindings=[]
     for i,item in enumerate(items):
         old=item["native"];truth_fk,truth_physical=audit_native(old);noise=set()
-        arms=["zero","C0","C1"]+(["C1_removed","C1_wrong"] if item["name"].startswith("val_") else [])
+        arms=cfg.get("generation_arms") or (["zero","C0","C1"]+(["C1_removed","C1_wrong"] if item["name"].startswith("val_") else []))
         for arm in arms:
             folder=out/(item["name"]+"_"+arm);folder.mkdir();wrong=items[(i+1)%4] if item["name"].startswith("val_") else items[4+(i-3)%4]
             q=dict(assets,context=item["context"],features=item["features"],audio=item["audio"],audio_start_frame=item["start"],mode="anchored",anchors=[],frames=150,windows=1,
@@ -54,6 +54,9 @@ def run(cfg,training,out,replay=None):
             row["rotation_error_rad"]=float(Rotation.from_matrix((A.swapaxes(-1,-2)@B).reshape(-1,3,3)).magnitude().mean())
             if not item["name"].startswith("val_"):row["source_error_rad"]=source_error(x,read(checked(item["target"]["event_plan"])),60,90)
             g=read(folder/"generation.json");assert g["weights_before"]==g["weights_after"];noise.add(g["sampler"]["noise_sha256"])
+            if cfg.get("comparison_generation"):
+                original=read(Path(cfg["comparison_generation"])/(item["name"]+"_C1")/"generation.json")
+                assert g["sampler"]["noise_sha256"]==original["sampler"]["noise_sha256"]
             records.append(row);bindings.append(dict(case=item["name"],arm=arm,native=ref(folder/"edited_native.npy"),fk=ref(folder/"edited_fk.npy"),target=item["target"]))
             if replay:
                 other=Path(replay)/folder.name

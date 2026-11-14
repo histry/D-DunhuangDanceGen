@@ -26,7 +26,14 @@ def run(cfg,audit,out,arm,replay=None):
     assert set(r["source_group"] for r in fit).isdisjoint(r["source_group"] for r in val)
     model,diffusion,norm=load_model(assets);before=digest(model);scale=torch.tensor(data.scale,device="cuda");bias=torch.tensor(data.bias,device="cuda")
     torch.manual_seed(cfg["seed"]);torch.cuda.manual_seed_all(cfg["seed"])
-    adapter=ContentContextAdapter(data.scale,data.bias).cuda();state={}
+    if arm=="C2":
+        from .balanced import BalancedContextAdapter
+        stats=read(Path(cfg["units"])/"result.json")
+        assert stats["role"]=="train" and stats["training_windows"]==1833 and stats["validation_tensor_reads"]==0
+        inv=np.load(Path(cfg["units"])/"inv_rms.npy");assert np.array_equal(inv,np.asarray(stats["inv_rms"],np.float32))
+        adapter=BalancedContextAdapter(data.scale,data.bias,inv).cuda()
+    else:adapter=ContentContextAdapter(data.scale,data.bias).cuda()
+    state={}
     def hook(module,args,music):
         return music+adapter(state["value"],state["known"],music,state["t"]) if state["enabled"] else music
     handle=model.cond_encoder.register_forward_hook(hook)
@@ -40,8 +47,14 @@ def run(cfg,audit,out,arm,replay=None):
         conditional=model(xt,music,t,cond_drop_prob=0.)
         return (unc+2*(conditional-unc)).clamp(-1,1)
     protocol=dict(code_commit=commit(),config=cfg,arm=arm,preflight=ref(pf/"protocol.json"),rows=ref(pf/"rows.json"),audit=ref(audit/"p0/protocol.json"),
-        objective="real masked Root/rotation + boundary loss; C1 adds explicitly synthetic horizontal Root state response only",
+        objective="real masked Root/rotation + boundary loss; C1/C2 add explicitly synthetic horizontal Root state response only",
         synthetic_response_is_not_artistic_or_contact_truth=True,validation_selection=False,full_backbone_frozen=True,cfg_weight=2)
+    if arm=="C2":
+        parent=Path(cfg["frozen_parent"]);pc=read(parent/"protocol.json")["config"]
+        for key in ("seed","data_seed","steps","learning_rate","validation_windows","timesteps","root_shift_m","response_weight","preflight"):
+            assert cfg[key]==pc[key]
+        protocol["frozen_parent"]=ref(parent/"result.json")
+        protocol["feature_units"]=dict(result=ref(Path(cfg["units"])/"result.json"),array=ref(Path(cfg["units"])/"inv_rms.npy"))
     write(out/"protocol.json",protocol)
     # Engineering admission is not a claim of learned quality.
     test,music=data.batch(val[:2]);known,unknown=masks(test,60,90);t=torch.tensor([900,999],device="cuda")
@@ -66,7 +79,7 @@ def run(cfg,audit,out,arm,replay=None):
             pert,expected,valid=shifted_context(target,known,a,b,scale,step%2,cfg["root_shift_m"]*(1 if step%4<2 else -1))
             cf=torch.zeros((),device="cuda")
             if not valid:skips+=1
-            elif arm=="C1":
+            elif arm in ("C1","C2"):
                 ppred=predict(xt,music,t,pert,known,unc)
                 denom=float(abs(expected).max().detach())+1e-6
                 cf=(((ppred[:,a:b,4:7]-pred[:,a:b,4:7]-expected)/denom)**2).mean()
@@ -98,9 +111,9 @@ def run(cfg,audit,out,arm,replay=None):
     if replay:
         old=read(Path(replay)/"result.json");assert old["validation"]==scores;checkpoint=old["checkpoint"]
     else:
-        torch.save(dict(schema="r10_content_context_v1",state=adapter.state_dict(),config=cfg,arm=arm,base_sha256=assets["checkpoint"]["sha256"],code_commit=commit(),operational_qualified=False),out/"adapter.pt");checkpoint=ref(out/"adapter.pt")
+        torch.save(dict(schema="r10_balanced_context_v1" if arm=="C2" else "r10_content_context_v1",state=adapter.state_dict(),config=cfg,arm=arm,base_sha256=assets["checkpoint"]["sha256"],code_commit=commit(),operational_qualified=False),out/"adapter.pt");checkpoint=ref(out/"adapter.pt")
     result=dict(arm=arm,history=history,optimizer_steps=updates,checkpoint=checkpoint,validation=scores,cf_support_skips=skips,
         parameters=sum(p.numel() for p in adapter.parameters()),backbone_digest=before,backbone_updated=False,operational_qualified=False,new_whole_song_generations=0)
     write(out/"result.json",result);handle.remove();print("R10_TRAIN_DONE",arm,updates,flush=True)
 if __name__=="__main__":
-    p=argparse.ArgumentParser();p.add_argument("--config",required=True);p.add_argument("--audit",required=True);p.add_argument("--out",required=True);p.add_argument("--arm",choices=["C0","C1"],required=True);p.add_argument("--replay-from");a=p.parse_args();run(read(a.config),a.audit,a.out,a.arm,a.replay_from)
+    p=argparse.ArgumentParser();p.add_argument("--config",required=True);p.add_argument("--audit",required=True);p.add_argument("--out",required=True);p.add_argument("--arm",choices=["C0","C1","C2"],required=True);p.add_argument("--replay-from");a=p.parse_args();run(read(a.config),a.audit,a.out,a.arm,a.replay_from)

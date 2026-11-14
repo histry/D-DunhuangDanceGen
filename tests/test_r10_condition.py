@@ -26,3 +26,22 @@ def test_world_window_codec_roundtrip_preserves_actual_root_velocity():
     edge,o=encode(x);y=restore(MotionAdapter.to_native(edge),o)
     assert np.allclose(x,y,atol=1e-6)
     assert np.allclose(np.diff(y[:,4:7],axis=0),np.diff(x[:,4:7],axis=0),atol=1e-6)
+
+
+def test_balanced_units_preserve_identity_and_null_contract():
+    torch=pytest.importorskip("torch");pytest.importorskip("pytorch3d")
+    from dunhuang.research.condition_dependency.adapter import ContentContextAdapter
+    from dunhuang.research.condition_dependency.balanced import BalancedContextAdapter,make
+    torch.manual_seed(31);plain=ContentContextAdapter(np.ones(151),np.zeros(151)).eval()
+    torch.nn.init.normal_(plain.output.weight,std=.01)
+    scaled=BalancedContextAdapter(np.ones(151),np.zeros(151),np.ones(606)).eval()
+    missing=scaled.load_state_dict(plain.state_dict(),strict=False)
+    assert missing.missing_keys==["feature_inv_rms"] and not missing.unexpected_keys
+    x=torch.zeros(2,150,151);x[:,:,7:]=torch.tensor([1,0,0,0,1,0]*24)
+    k=torch.zeros_like(x,dtype=torch.bool);k[:,52:60,4:]=True;k[:,90:98,4:]=True
+    music=torch.randn(2,150,512);t=torch.tensor([900,999])
+    assert torch.equal(plain(x,k,music,t),scaled(x,k,music,t))
+    assert type(make(dict(schema="r10_content_context_v1"),np.ones(151),np.zeros(151))) is ContentContextAdapter
+    with pytest.raises(ValueError):BalancedContextAdapter(np.ones(151),np.zeros(151),np.zeros(606))
+    inv=torch.ones(606);inv[306:453]=.1;scaled.feature_inv_rms.copy_(inv)
+    assert torch.equal(scaled(x,torch.zeros_like(k),music,t),torch.zeros(2,150,512))

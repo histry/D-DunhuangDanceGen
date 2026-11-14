@@ -4,7 +4,7 @@ import numpy as np
 import torch
 from dunhuang.io import checked,pinned,write
 from dunhuang.research.source_capacity.common import read
-from .adapter import ContentContextAdapter
+from .balanced import make
 
 def main():
     q=read(sys.argv[1])
@@ -19,8 +19,8 @@ def main():
     backend.normalize_constraints=normalize
     if q.get("r10_adapter"):
         payload=torch.load(checked(q["r10_adapter"]),map_location="cpu",weights_only=True)
-        if payload["schema"]!="r10_content_context_v1" or payload["base_sha256"]!=q["checkpoint"]["sha256"]:raise ValueError("Context model lineage differs")
-        scaler=np.load(checked(q["scaler"]));adapter=ContentContextAdapter(scaler["scale"],scaler["bias"]).cuda().eval();adapter.load_state_dict(payload["state"],strict=True)
+        if payload["base_sha256"]!=q["checkpoint"]["sha256"]:raise ValueError("Context model lineage differs")
+        scaler=np.load(checked(q["scaler"]));adapter=make(payload,scaler["scale"],scaler["bias"]).cuda().eval();adapter.load_state_dict(payload["state"],strict=True)
         from model.diffusion import GaussianDiffusion
         init=GaussianDiffusion.__init__;prediction=GaussianDiffusion.model_predictions
         def attach(self,*args,**kwargs):
