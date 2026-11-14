@@ -100,3 +100,10 @@ GitHub发布后精确SHA同步服务器，tmux运行；先Tiny门，再可选Mai
 临时SSH辅助不落盘；传输zip验证哈希后两端删除。
 方法参考：[CondMDI官方项目](https://setarehc.github.io/CondMDI/)。
 仅借鉴观察/Mask原则，不声称复现该论文或Diffusion/Self Forcing。
+
+## 固定训练失败后的只读目标诊断
+
+Tiny门未通过后，追加登记Fit0/1×三任务×t519/19、两组最终权重的局部梯度读出。
+保存各加权损失在selected motion/head两类参数上的梯度Gram、范数及与未知误差方向的夹角；
+不读Eval、不施加梯度、不生成候选、不做参数或预算修正。新进程完整复算。
+它只解释指定终态附近的敏感性，不证明整个训练失败的因果来源。原Tiny门和结果不变。

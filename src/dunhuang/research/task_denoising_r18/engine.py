@@ -1,11 +1,9 @@
 """R13 selected layers adapt; frozen music and unselected weights remain sealed."""
 from pathlib import Path
-import numpy as np
 import torch
 from dunhuang.io import checked
 from dunhuang.research.source_capacity.common import read
 from dunhuang.research.global_clock_r17.engine import load as parent_load
-from dunhuang.research.global_clock_r17.model import Predictor as OldPredictor
 from .model import State,Predictor
 
 def parent_config(cfg):return read(Path(cfg["parent"])/"data/protocol.json")["config"]

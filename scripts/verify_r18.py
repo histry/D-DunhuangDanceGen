@@ -8,13 +8,13 @@ from dunhuang.research.source_capacity.common import read,commit,forbid_optimize
 from dunhuang.research.task_denoising_r18.engine import population
 from dunhuang.research.task_denoising_r18.gate import assess
 
-def run(root):
+def run(root,out=None):
     root=Path(root);forbid_optimizers();cfg=read(root/"p0/protocol.json")["config"];pre,fit,ev=population(cfg)
     arrays=0;bundles=0;reports=0;samplers=0;updates=0
     assert read(root/"p0/result.json")==read(root/"p0_replay/result.json")
     same_arrays(root/"p0/predictions.npz",root/"p0_replay/predictions.npz");bundles+=1
     gate=read(root/"tiny_gate.json");main=(root/"main").exists();assert main==gate["main_admitted"]
-    initial={}
+    initial={};noise_groups={}
     for phase in ["tiny"]+(["main"] if main else []):
         models={}
         for mode in ("self","unique"):
@@ -39,6 +39,8 @@ def run(root):
             same_arrays(path,other);bundles+=1;samplers+=1
             r=read(checked(binding["sampler"]));rr=read(root/(phase+"_rollout_replay")/name/"sampler.json")
             p=r.pop("prefix");pp=rr.pop("prefix");assert r==rr
+            noise_groups.setdefault((phase,binding["case"],binding["task"]),set()).add(r["noise_sha256"])
+            assert r["all_edge_calls_local150"] and not r["output_pose_paste"]
             if p:assert p["sha256"]==pp["sha256"]
             tr=np.load(path);assert tr["sample"].shape==(225,151)
             assert np.array_equal(tr["sample"][tr["hard"]],tr["condition"][tr["hard"]])
@@ -46,6 +48,7 @@ def run(root):
             if p:
                 prefix=np.load(checked(p))["sample"][:75]
                 assert np.array_equal(tr["sample"][:75,4:],prefix[:,4:]) and not tr["known"][75:,:13].any()
+    assert all(len(group)==1 for group in noise_groups.values()),"Matched-noise contract differs across arms"
     if main:assert initial["tiny"]==initial["main"],"Main must restart, not select/warm-start Tiny"
     assert read(root/"native/result.json")==read(root/"native_replay/result.json")
     for folder in (root/"native").iterdir():
@@ -54,13 +57,21 @@ def run(root):
             other=root/"native_replay"/folder.name/f.name
             if f.suffix==".npy":assert np.array_equal(np.load(f),np.load(other));arrays+=1
             else:assert read(f)==read(other);reports+=1
+    diagnostics=root/"objective_diagnostic"
+    if diagnostics.exists():
+        assert read(diagnostics/"result.json")==read(root/"objective_diagnostic_replay/result.json")
+        same_arrays(diagnostics/"gradient_grams.npz",root/"objective_diagnostic_replay/gradient_grams.npz");bundles+=1
+        assert read(diagnostics/"result.json")["optimizer_steps"]==0
     frozen=subprocess.check_output(["git","diff","--name-only",cfg["baseline"],"--","src","configs","reports/r17_summary.json","reports/r17_receipt.json"],text=True).splitlines()
     frozen=[p for p in frozen if not p.startswith("src/dunhuang/research/task_denoising_r18/")];assert not frozen,frozen
     result=dict(code_commit=commit(),array_bundles_exact=bundles,native_arrays_exact=arrays,physical_reports_exact=reports,
         first_sampler_calls=samplers,replay_sampler_calls_exact=samplers,training_optimizer_steps=updates,replay_optimizer_steps=0,
-        fit_music_groups=8,exposed_eval_groups=4,tiny_is_generalization=False,main_executed=main,
-        matched_initialization_and_ledger=True,unselected_and_music_frozen=True,frozen_changed_paths=frozen,
+        registered_fit_music_groups=8,actual_trained_music_groups=8 if main else 2,
+        p0_exposed_eval_groups=4,heldout_actual_generation_groups=4 if main else 0,tiny_is_generalization=False,main_executed=main,
+        matched_initialization_and_ledger=True,matched_sampler_noise_verified=True,unselected_and_music_frozen=True,frozen_changed_paths=frozen,
         generated_history_training=False,D3_executed=False,new_whole_song_generations=0,operational_qualified=False)
-    write(root/"independent_checks.json",result);print("R18_VERIFIED",result,flush=True)
+    target=Path(out) if out else root/"independent_checks.json"
+    assert not target.exists(),"Independent checks must use a fresh output"
+    write(target,result);print("R18_VERIFIED",result,flush=True)
 if __name__=="__main__":
-    p=argparse.ArgumentParser();p.add_argument("--root",required=True);a=p.parse_args();run(a.root)
+    p=argparse.ArgumentParser();p.add_argument("--root",required=True);p.add_argument("--out");a=p.parse_args();run(a.root,a.out)
