@@ -1,0 +1,53 @@
+{
+  "schema": "r19_reconstruction_first_v1",
+  "baseline": "83dd9206878a98a6653a023b535840b31377c23c",
+  "parent": "outputs/task_denoising_r18_01",
+  "seed": 19041,
+  "steps": 240,
+  "timesteps": [
+    999,
+    519,
+    119,
+    19
+  ],
+  "cases": [
+    0,
+    1
+  ],
+  "arms": [
+    "N0",
+    "N1",
+    "N2"
+  ],
+  "learning_rate": 0.0001,
+  "observed_weight": 0.1,
+  "snapshots": [
+    0,
+    23,
+    119,
+    239
+  ],
+  "physics_scales": {
+    "seam_velocity": 3,
+    "seam_acceleration": 30,
+    "foot_position": 0.1,
+    "foot_velocity": 1
+  },
+  "calibration_budget_ratio": 0.1,
+  "calibration_reference_floor": 1e-12,
+  "qualification": {
+    "unknown_ratio": 0.8,
+    "calibrated_unknown_tolerance": 1.1
+  },
+  "optional_unique": true,
+  "optional_gradnorm": false,
+  "controls": [
+    "correct",
+    "observation",
+    "typed_content",
+    "content",
+    "removed"
+  ],
+  "whole_song_generations": 0,
+  "operational_qualified": false
+}
