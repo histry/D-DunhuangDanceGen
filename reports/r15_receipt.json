@@ -1,0 +1,59 @@
+{
+  "code_commit": "05856196c48e124bccdbeba06e312c593748eabd",
+  "summary_sha256": "7f46064251912d5524dc6db6b8e6b3ea311f81cbe02d424c625c81b7fcc8c759",
+  "evidence": {
+    "preflight/protocol.json": "77f7944078e8c886c654a5104c392fd3309fa3985ee5dcc8305eb644089c8ef0",
+    "preflight/result.json": "d452dd76af2d57ddc0dc9c7b8a35dd9abd51e1a936f21ba2c6806d3117a9e022",
+    "preflight_replay/protocol.json": "a2420baa2b490d538286f1dada40b2b538ffb2c4f5dfa19f3062c795827b1115",
+    "preflight_replay/result.json": "d452dd76af2d57ddc0dc9c7b8a35dd9abd51e1a936f21ba2c6806d3117a9e022",
+    "probes/protocol.json": "ef78815380008f8b7aa003784db5a0e95a99543c33f063f6e7ea1300df7541f7",
+    "probes/result.json": "652a82eba1cdf4d7c9c352a08ad1b615bc9989d95500e733392269cd80427d82",
+    "probes_replay/protocol.json": "ef78815380008f8b7aa003784db5a0e95a99543c33f063f6e7ea1300df7541f7",
+    "probes_replay/result.json": "0994d9466918b186ac498aefb081231a0e60a056108e3df5637bb4b67acdbc72",
+    "native/protocol.json": "87d4a73e44038b917c6ecf4a156da16cafe110a39f004cc7afc0472ec337e4ae",
+    "native/result.json": "8b1dfd0ae88c3bd4710b15389c62b680761daecfbc0db89d58415ab5f2c5a861",
+    "native_replay/protocol.json": "87d4a73e44038b917c6ecf4a156da16cafe110a39f004cc7afc0472ec337e4ae",
+    "native_replay/result.json": "8b1dfd0ae88c3bd4710b15389c62b680761daecfbc0db89d58415ab5f2c5a861"
+  },
+  "receipts": {
+    "root_pose_r15_02_receipts": {
+      "code_commit": "fdb42545095f6f8af6d8d3f3fca6c6ad161a51e0",
+      "files": {
+        "execution_commit.txt": "f0c96f12f434c3711586e514bec182a65e47c6275f76f466a7594b7cb34add68",
+        "started_utc.txt": "e3b20ea66d570a2ff96c30c9e730e4998309e5767f2272af7fa85e1d6323343b",
+        "pytest.log": "5fa9e7f75d39e12f835ece5f3e76fdc266b334982ec7b2c9a941cc9d198037a1",
+        "edge_tests.log": "3ac7c3125ee4bbd0bf88fdf22f0f9b51fa33db51a53981f4e58b08ea2036075d",
+        "exit_status.txt": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+        "finished_utc.txt": "57de6c2b22588a16d1acd6b43468b61f144dfbfaf7f941699a6b4dd56e664529"
+      }
+    },
+    "root_pose_r15_02_final_receipts": {
+      "code_commit": "05856196c48e124bccdbeba06e312c593748eabd",
+      "files": {
+        "execution_commit.txt": "29e2f8eb3a21e39c1ab0a8cd2ddc8a6efadb0288943a081abe8c9bad9e15dbe7",
+        "started_utc.txt": "973c20287d07212981b555cebcb9dab54088f907d3d2e6d6c201f8434e03997d",
+        "pytest.log": "260899df3d80eac379023017271cf7e9ed71a127400de84b0f2b411753687f53",
+        "edge_tests.log": "cec059c7b5dd5a4c8c5f3f9917a87c28fc47191e11275111f9d172e69fdcb7c4",
+        "exit_status.txt": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+        "finished_utc.txt": "f28cbfd270e50cd554ca8144f0fb18d7bad951a9c9c9d10edac1e3486e99e240"
+      }
+    },
+    "root_pose_r15_01_receipts": {
+      "code_commit": "dc477fcd37f2f2aca15704e6e2571db293904497",
+      "exit_status": "1",
+      "files": {
+        "execution_commit.txt": "163f5e7e99a67fed6dee4019311a46fc6675af77387ef2677c0a88f98c78a6fc",
+        "started_utc.txt": "30c4ec0c061c2011f2ce791dffc2b6eb87ad890cb75f7ae2ea22c0cfe1e362a5",
+        "pytest.log": "a48ad9bd4836f727fb0b6ac424c36994e581f18d6f6c10a10fae380475974e59",
+        "edge_tests.log": "44228cea4f97155b54048e559a00cf5e755200086a70ec7fedc22cf357c7666d",
+        "exit_status.txt": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+        "finished_utc.txt": "995755e7547e94ce6094881ad9555e0ef9b551739abfac1b36aa7fe36b734503"
+      },
+      "reason": "Pre-GPU absolute/relative manifest path mismatch, corrected without changing scientific population or budgets"
+    }
+  },
+  "temporary_ssh_files_created": 0,
+  "temporary_ssh_files_remaining": 0,
+  "new_whole_song_generations": 0,
+  "operational_qualified": false
+}

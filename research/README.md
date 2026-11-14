@@ -87,3 +87,16 @@ capacity fails; no new population training, output Root writer or full songs.
 Saved models, trajectories and Native arrays have independent exact replay.
 See [protocol](../docs/R14_BOUNDARY_STATE_PROTOCOL.md) and
 [report](../reports/R14边界状态表示与冻结条件容量报告.md).
+
+
+## R15 protected Root–Pose capacity
+
+src/dunhuang/research/root_pose_r15 separates strict immutable-template exclusions from
+local mechanism qualification. Frozen R14 self-policy states compare Root-only,
+Root-plus-lower-limb and world-FK-guided input interventions under the same total budget.
+Paired hidden targets are Train-capacity oracles, never inference conditions.
+All finite candidates receive actual output trust/protection checks and full Native reports.
+The registered local gate fails; no feedback neural branch, population training or full songs.
+544 Native/FK arrays and 10 array bundles have exact independent replay.
+See [protocol](../docs/R15_ROOT_POSE_PROTOCOL.md) and
+[report](../reports/R15联合RootPose容量与物理编辑域报告.md).
