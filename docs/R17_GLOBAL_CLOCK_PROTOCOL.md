@@ -52,7 +52,7 @@ removed/reversed时间反事实只改变共享状态内容，主音乐/源观察
 
 各学习模型固定240更新、AdamW lr0.0003、grad clip1、每步一对。
 不做Val选模/早停/学习率扫描，只保存最后权重。
-随机Train任务含free、inbetween及额外稀疏关节观察；边界硬软各半，
+随机Train任务含free、inbetween、真实过去前缀的progressive teacher forcing及额外稀疏关节观察；边界硬软各半，
 事件交界随机80..144；不永远训练60:90。
 每步从统一225真值q_sample噪声，再切视图；不同视图相同帧具有相同噪声。
 三种真实任务的语义不因训练随机Mask而互换。
@@ -80,3 +80,9 @@ B优于A与同预算C、正确邻域优于反事实，才支持额外跨窗口�
 连续组合参考FlowMDM/DanceFusion的公开方法，不声称权重或架构复现。
 ChangE完整演法与三首整曲仅在后续独立资格后接入；human_reviewed=false，
 semantic_event_truth=UNKNOWN，operational_qualified=false。
+
+训练前补充：progressive训练是已有真实过去75帧的teacher forcing，评价前缀严格取A的实际FREE生成；不称训练已使用完全on-policy生成历史。
+
+数据预检修正：R16要求真实外侧8帧的限制不适用于新FREE/内部225训练。
+Fit可从源第0帧开始，缺少的外侧Halo存空数组并标记未观测，不补零真值；
+四个固定Eval仍使用原R16真实外侧帧。此次只修正任务资格，未查看模型输出选人口。

@@ -55,3 +55,11 @@ def test_variable_horizon_fk_root_gradient():
     parents=[-1]+list(range(23));offsets=torch.zeros(24,3);offsets[1:,1]=.1
     p=fk(x,scale,bias,origin,parents,offsets);assert p.shape==(1,225,24,3)
     p[:,:,:,0].sum().backward();assert torch.isfinite(x.grad).all() and x.grad[:,:,4].abs().sum()>0
+
+
+def test_free_training_pairs_do_not_require_an_external_true_halo():
+    from dunhuang.research.global_clock_r17.contract import pair_candidates
+    rows=[dict(recording_uid="one",start_frame=t) for t in (0,75,150)]
+    assert len(pair_candidates(rows))==2
+    assert len(pair_candidates(rows,minimum_start=8))==1
+    assert pair_candidates(rows)[0][0]["start_frame"]==0

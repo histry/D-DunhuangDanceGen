@@ -44,3 +44,9 @@ def feature_distance(x,y):
     denom=np.maximum(np.linalg.norm(a,axis=-1)*np.linalg.norm(b,axis=-1),1e-12)
     return dict(max_abs=float(abs(a-b).max()),relative_l2=float(np.linalg.norm(a-b)/max(np.linalg.norm(a),1e-12)),
         cosine_distance=float(np.mean(1-(a*b).sum(-1)/denom)))
+
+
+def pair_candidates(rows,minimum_start=0):
+    by={(r["recording_uid"],r["start_frame"]):r for r in rows}
+    return [(l,by[l["recording_uid"],l["start_frame"]+75]) for l in rows
+        if l["start_frame"]>=minimum_start and (l["recording_uid"],l["start_frame"]+75) in by]

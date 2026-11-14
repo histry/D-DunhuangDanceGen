@@ -11,13 +11,13 @@ from dunhuang.research.source_capacity.common import read,commit,fresh,same_arra
 from dunhuang.research.masked_denoiser.common import assets_and_population
 from dunhuang.research.continuous_r16.contract import continuous_pair
 from dunhuang.research.state_bridge.common import native_environment
-from .contract import views,feature_distance,metadata
+from .contract import views,feature_distance,metadata,pair_candidates
 
 def audit_pair(left,right,assets,path):
     continuous_pair(left,right);full=np.load(checked(left["source_native"]));raw,_=decode(checked(left["raw_motion"]),"aistpp")
     assert np.array_equal(raw,full)
     a=left["start_frame"];x=full[a:a+225]
-    if len(x)!=225 or a<8 or a+158>len(full):raise ValueError("Missing real continuous source")
+    if len(x)!=225 or a<0:raise ValueError("Missing real continuous source")
     clock=read(checked(left["clock"]));cal=clock["calibration"]
     assert clock["status"]=="VERIFIED_PAIR" and cal["verified"]
     assert clock["raw_motion"]["sha256"]==left["raw_motion"]["sha256"] and clock["raw_audio"]["sha256"]==left["audio"]["sha256"]
@@ -36,10 +36,10 @@ def audit_pair(left,right,assets,path):
     encoded=MotionAdapter.to_edge(x,origin)*scaler["scale"]+scaler["bias"]
     if (abs(encoded[:,4:])>1+32*np.finfo(np.float32).eps).any():raise ValueError("Selected225 target outside frozen support; do not replace population")
     np.savez_compressed(path,native=x,encoded=encoded,music=m,original_music=np.stack(features),meta=metadata(),
-        halo150=full[a-8:a+158],origin=origin)
+        halo150=full[a-8:a+158] if a>=8 and a+158<=len(full) else np.empty((0,151),np.float32),origin=origin)
     wavfile=path.with_suffix(".wav");sf.write(wavfile,np.concatenate((audio[0],audio[1][half:])),sr,subtype="FLOAT")
     return dict(left=left,right=right,arrays=ref(path),audio225=ref(wavfile),producer=producer,
-        fresh_raw_decode_exact=True,audio_overlap_exact=True,feature_overlap=feature_distance(features[0][75:],features[1][:75]),
+        fresh_raw_decode_exact=True,audio_overlap_exact=True,halo150_observed=bool(a>=8 and a+158<=len(full)),feature_overlap=feature_distance(features[0][75:],features[1][:75]),
         music_policy="Earlier authenticated crop owns repeated global time, not full-context extraction",global_scaler_support=True)
 
 def run(cfg,out,replay=None):
@@ -48,11 +48,8 @@ def run(cfg,out,replay=None):
     for name in ("preflight/protocol.json","preflight/result.json"):assert sha(r16/name)==pub["evidence"][name]
     prior=read(r16/"preflight/protocol.json");eval_pairs=[(b["left"],b["right"]) for b in prior["pairs"]]
     assets,rows,_,_,_=assets_and_population(read(cfg["r13_config"]))
-    by={(r["recording_uid"],r["start_frame"]):r for r in rows}
-    oldgroups={l["source_group"] for l,r in eval_pairs};pairs=[]
-    for l in rows:
-        r=by.get((l["recording_uid"],l["start_frame"]+75))
-        if r and l["start_frame"]>=8 and l["source_group"] not in oldgroups:pairs.append((l,r))
+    oldgroups={l["source_group"] for l,r in eval_pairs}
+    pairs=[(l,r) for l,r in pair_candidates(rows) if l["source_group"] not in oldgroups]
     groups=sorted({l["source_group"] for l,r in pairs},key=lambda g:hashlib.sha256((str(cfg["seed"])+g).encode()).hexdigest())[:cfg["fit_groups"]]
     selected=[min((p for p in pairs if p[0]["source_group"]==g),key=lambda p:hashlib.sha256((str(cfg["seed"])+p[0]["raw_motion"]["sha256"]+str(p[0]["start_frame"])).encode()).hexdigest()) for g in groups]
     assert len(groups)==8 and len(eval_pairs)==4 and not set(groups)&oldgroups
