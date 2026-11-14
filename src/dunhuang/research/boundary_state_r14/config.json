@@ -1,0 +1,39 @@
+{
+  "schema": "r14_boundary_state_v1",
+  "baseline": "e0b7100b9097e7f68b7639742298326990e94f00",
+  "r13_root": "outputs/mask_denoiser_r13_01",
+  "r13_config": "src/dunhuang/research/masked_denoiser/config.json",
+  "seed": 14041,
+  "edit": [
+    60,
+    90
+  ],
+  "fps": 30,
+  "head_holdout_groups": 8,
+  "head_ridge": 0.01,
+  "head_families": [
+    "A0",
+    "A1",
+    "A2",
+    "A3",
+    "A4"
+  ],
+  "representation_gate": {
+    "minimum_group_wins": 6,
+    "root_improvement": 0.02,
+    "orientation_nonregression_rad": 0.01,
+    "shuffle_improvement": 0.02
+  },
+  "conflict_cases": 8,
+  "conflict_timesteps": [
+    519,
+    19
+  ],
+  "parameter_probe_rms": [
+    0.00001,
+    0.00005
+  ],
+  "neural_optimizer_steps": 0,
+  "operational_qualified": false,
+  "new_whole_song_generations": 0
+}
