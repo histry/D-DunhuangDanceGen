@@ -1,0 +1,29 @@
+{
+  "code_commit": "2df65c13b709e191611eab461626d5a4349adb22",
+  "frozen_r12_changed_paths": [],
+  "formal_changed_paths": [],
+  "teacher_probe_exact": true,
+  "teacher_rollouts_exact": 4,
+  "denoiser_rollouts_exact": 28,
+  "native_arrays_exact": 56,
+  "native_results_exact": true,
+  "supplemental_native_arrays_exact": 144,
+  "q_eval_exact": true,
+  "matched_sampler_noise_verified": true,
+  "self_policy_caches_replayed": 16,
+  "training_optimizer_steps": 640,
+  "replay_optimizer_steps": 0,
+  "optimizer_steps": 0,
+  "music_encoder_frozen": true,
+  "stages": [
+    "tiny",
+    "main"
+  ],
+  "new_whole_song_generations": 0,
+  "operational_qualified": false,
+  "receipts": {
+    "audit": "5bc44592cb8564c2cdfec9a40b0cc287ecc97b1c",
+    "tiny": "92d0df0a8949fb3684c3754c0c75a91f68ceeceb",
+    "main": "13f0d07bef7f4ccad5788110a842003ec7f7448d"
+  }
+}

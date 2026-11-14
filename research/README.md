@@ -62,3 +62,15 @@ parameter-matched pointwise block. Checkpoints remain unqualified; no production
 or default-profile change is introduced. Frozen C2/R11 artifacts remain comparison baselines.
 See [protocol](../docs/R12_MOTION_BRIDGE_PROTOCOL.md) and
 [results](../reports/R12显式动作Bridge与双侧状态实验报告.md).
+
+
+## R13 direct mask-conditioned denoising
+
+src/dunhuang/research/masked_denoiser directly conditions motion input and finetunes
+5,040,279 selected EDGE motion parameters. Music and unselected layers stay frozen;
+this is not a bounded residual Adapter. Tiny-fit admission precedes population training,
+with replayable self-policy snapshots and separately reported q/rollout/Native diagnostics.
+The pretrained official DanceFusion baseline is audited, not claimed runnable with missing
+data modules. Checkpoints remain research-only and do not feed the production pipeline.
+See [protocol](../docs/R13_MASKED_DENOISER_PROTOCOL.md) and
+[results](../reports/R13条件去噪与双侧Bridge实验报告.md).
