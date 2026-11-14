@@ -1,0 +1,70 @@
+<!doctype html><html lang="zh"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>R11 动作状态诊断</title>
+<style>body{margin:24px auto;max-width:1600px;padding:0 16px;background:#f4f6f9;color:#1c3049;font:16px "Segoe UI","Microsoft YaHei",sans-serif}h1{font-size:27px}p{line-height:1.7}.panel{background:white;border-radius:10px;padding:18px;margin:16px 0;box-shadow:0 1px 7px #172c4410}.controls{display:flex;gap:12px;align-items:center;flex-wrap:wrap}select,button{font:inherit;padding:7px 10px;border:1px solid #ccd5e0;border-radius:6px;background:#fff;color:inherit}button{cursor:pointer}input[type=range]{flex:1;min-width:220px}canvas{width:100%;display:block}.bad{color:#a53d35;font-weight:600}.small{font-size:14px;color:#53677c}.labels{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;font-weight:600}.cols{display:grid;grid-template-columns:1fr 1fr;gap:20px}a{color:#205f97}table{border-collapse:collapse;width:100%}td,th{text-align:left;padding:9px;border-bottom:1px solid #e0e6ed}.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:14px}@media(max-width:900px){.cols{grid-template-columns:1fr}.labels{font-size:12px}}</style>
+<h1>R11：动作从哪种状态开始，又接回哪里？</h1>
+<p>这里展示保存的原始动作和 R10 实际结果，不是本轮生成了更好的舞蹈。保留世界 Root，共用固定相机和0.5米网格；不平滑、不重新居中每一帧。足迹是近9帧世界运动，不能独立充当接触或滑步真值。</p>
+<div class="panel controls"><label>固定案例 <select id="case"></select></label><button id="play">播放 30fps</button><label id="frameLabel"></label><input id="frame" type="range" min="0" max="149" value="64"><div id="keys"></div></div>
+<div class="panel"><div id="kind" class="small"></div><div class="labels"><span>原始目标 / 冻结上下文</span><span>ZERO</span><span>C1</span><span>C2</span></div><canvas id="world" width="1600" height="600"></canvas><p class="small">橙色区间 [60,90) 为唯一重新生成区；索引从0开始，“第65帧”对应索引64。原始帧数据直接绘制；只展示22关节，不补造手指或文化语义。</p><table><thead><tr><th>方法</th><th>Root单步位移 m</th><th>Root转角 rad</th><th>足端水平速度均值 m/s</th><th>原 Native</th></tr></thead><tbody id="numbers"></tbody></table></div>
+<div class="cols"><div class="panel"><div class="controls"><strong>实际动作的 Root 时间线</strong><select id="axis"><option value="0">X / m</option><option value="1" selected>Y / m</option><option value="2">Z / m</option></select></div><canvas id="timeline" width="760" height="300"></canvas><div class="legend" id="rootLegend"></div></div><div class="panel"><div class="controls"><strong>冻结 C2 的去噪预测</strong><select id="metric"><option value="root_rmse_m">Root RMSE / m</option><option value="pose_error_rad">姿态误差 / rad</option><option value="feet_rmse_m">足端 RMSE / m</option><option value="mse">147D 遮蔽 MSE</option></select></div><canvas id="denoise" width="760" height="300"></canvas><div class="legend" id="sideLegend"></div><p class="small">A0正确双侧；A1移除右；A2移除左；A3错配右；A4错配左；A5双侧移除。各曲线在完全相同的 A0 轨迹状态 x_t 上前向计算，只有 A0 驱动真实采样；其余曲线不是独立生成的视频。</p></div></div>
+<div class="panel"><strong>资格结果：</strong><span id="gate" class="bad"></span><p id="scope"></p><p><a id="auditLink">逐帧原始审计 JSON</a> · <a id="analysisLink">固定状态条件读数 JSON</a></p></div>
+<script type="application/json" id="data">__DATA__</script>
+<script>
+"use strict";
+const D=JSON.parse(document.getElementById("data").textContent),$=id=>document.getElementById(id);
+const names=Object.keys(D.cases),arms=["original","zero","C1","C2"],cols=["#2673a3","#7a8390","#d08c36","#7857a5"],scols=["#193650","#c85b5b","#3c8d6a","#4f72c6","#c78132","#9a6c92"];
+const parent=[-1,0,0,0,1,2,3,4,5,6,7,8,9,9,9,12,13,14,16,17,18,19],feet=[7,8,10,11];
+let frame=64,playing=false,last=0,scene=null;
+names.forEach(n=>{let o=document.createElement("option");o.value=n;o.textContent=n;$("case").append(o)});
+$("case").value=names.includes("1_temporal_A")?"1_temporal_A":names[0];
+[59,60,64,65,89,90].forEach(n=>{let b=document.createElement("button");b.textContent=n===64?"64（第65帧）":n;b.onclick=()=>{playing=false;$("play").textContent="播放 30fps";setFrame(n)};$("keys").append(b)});
+function fmt(x){return x==null?"—":Number(x).toFixed(5)}
+function legend(el,labels,colors){$(el).replaceChildren();labels.forEach((v,i)=>{let e=document.createElement("span");e.textContent="● "+v;e.style.color=colors[i];$(el).append(e)})}
+legend("rootLegend",arms,cols);legend("sideLegend",["A0","A1","A2","A3","A4","A5"],scols);
+function selectCase(){
+ const item=D.cases[$("case").value],all=arms.flatMap(a=>item.arms[a].fk.flat());
+ let xy=all.map(p=>[.9*p[0]-.44*p[2],-p[1]+.18*p[2]]),xmin=Infinity,xmax=-Infinity,ymin=Infinity,ymax=-Infinity;
+ let lo=[Infinity,Infinity,Infinity],hi=[-Infinity,-Infinity,-Infinity];
+ all.forEach(p=>p.forEach((v,j)=>{lo[j]=Math.min(lo[j],v);hi[j]=Math.max(hi[j],v)}));
+ xy.forEach(p=>{xmin=Math.min(xmin,p[0]);xmax=Math.max(xmax,p[0]);ymin=Math.min(ymin,p[1]);ymax=Math.max(ymax,p[1])});
+ scene={item,center:[(xmin+xmax)/2,(ymin+ymax)/2],scale:Math.min(350/(xmax-xmin||1),385/(ymax-ymin||1),200),lo,hi};
+ $("kind").textContent=item.kind+"；地面高度为原始面板足高的5%分位代理，不是人工测量。";
+ $("auditLink").href=D.audit_link;$("analysisLink").href=D.analysis_link;
+ draw();drawDenoise()
+}
+function point(p,col){return [col*400+200+scene.scale*(.9*p[0]-.44*p[2]-scene.center[0]),285+scene.scale*(-p[1]+.18*p[2]-scene.center[1])]}
+function line(c,pts,color,width){c.strokeStyle=color;c.lineWidth=width;c.beginPath();pts.forEach((p,i)=>i?c.lineTo(...p):c.moveTo(...p));c.stroke()}
+function draw(){
+ const c=$("world").getContext("2d");c.clearRect(0,0,1600,600);$("frameLabel").textContent="索引 "+frame+" / 第"+(frame+1)+"/150帧"+(frame>=60&&frame<90?" · 编辑区":" · 保护区");
+ $("numbers").replaceChildren();
+ arms.forEach((arm,col)=>{
+  const v=scene.item.arms[arm],p=v.fk[frame],floor=scene.item.floor;
+  for(let x=Math.floor(scene.lo[0]*2)/2;x<=scene.hi[0]+.5;x+=.5)line(c,[point([x,floor,scene.lo[2]-.2],col),point([x,floor,scene.hi[2]+.2],col)],"#dce3eb",1);
+  for(let z=Math.floor(scene.lo[2]*2)/2;z<=scene.hi[2]+.5;z+=.5)line(c,[point([scene.lo[0]-.2,floor,z],col),point([scene.hi[0]+.2,floor,z],col)],"#dce3eb",1);
+  for(let j=1;j<22;j++)line(c,[point(p[parent[j]],col),point(p[j],col)],j>=20?"#ab602d":cols[col],3);
+  feet.forEach(j=>line(c,v.fk.slice(Math.max(0,frame-8),frame+1).map(f=>point(f[j],col)),"#bf5949",2));
+  p.slice(0,22).forEach(p=>{let [x,y]=point(p,col);c.fillStyle="#263e55";c.beginPath();c.arc(x,y,2.5,0,Math.PI*2);c.fill()});
+  c.font='17px "Segoe UI",sans-serif';c.fillStyle="#334f69";c.fillText("Root ["+v.root[frame].map(x=>x.toFixed(3)).join(", ")+"] m",col*400+12,545);
+  c.fillStyle=frame>=60&&frame<90?"#ad5b25":"#536d85";c.fillText(frame>=60&&frame<90?"重新生成 [60,90)":"保留原始时间线",col*400+12,573);
+  const tr=document.createElement("tr");[arm,fmt(v.root_step[frame]),fmt(v.root_angle[frame]),fmt(v.foot_speed[frame]),v.native_ok?"通过":"未通过"].forEach((text,i)=>{let td=document.createElement("td");td.textContent=text;if(i===4&&!v.native_ok)td.className="bad";tr.append(td)});$("numbers").append(tr)
+ });
+ drawTimeline()
+}
+function chart(id,series,colors,zero,highlight,cursor){
+ let canvas=$(id),c=canvas.getContext("2d"),W=canvas.width,H=canvas.height;c.clearRect(0,0,W,H);
+ let vals=series.flat(),mn=zero?0:Math.min(...vals),mx=Math.max(...vals);if(mx<=mn)mx=mn+1e-6;let pad=.08*(mx-mn);mn-=zero?0:pad;mx+=pad;
+ const px=i=>65+i*(W-90)/(series[0].length-1),py=v=>H-40-(v-mn)*(H-75)/(mx-mn);
+ if(highlight){c.fillStyle="#f6e4d5";c.fillRect(px(60),20,px(90)-px(60),H-60)}
+ c.fillStyle="#587085";c.font="14px sans-serif";for(let i=0;i<4;i++){let v=mn+i*(mx-mn)/3,y=py(v);line(c,[[65,y],[W-25,y]],"#e5eaf0",1);c.fillText(v.toPrecision(4),2,y+5)}
+ series.forEach((s,j)=>line(c,s.map((v,i)=>[px(i),py(v)]),colors[j],2));
+ if(cursor!=null)line(c,[[px(cursor),20],[px(cursor),H-40]],"#344b63",1);
+ c.fillStyle="#587085";c.fillText("0",65,H-14);c.fillText(String(series[0].length-1),W-45,H-14)
+}
+function drawTimeline(){let axis=Number($("axis").value);chart("timeline",arms.map(a=>scene.item.arms[a].root.map(v=>v[axis])),cols,false,true,frame)}
+function drawDenoise(){let key=$("metric").value;chart("denoise",["A0","A1","A2","A3","A4","A5"].map(a=>scene.item.curves[a].map(v=>v[key])),scols,true,false,null)}
+function setFrame(n){frame=n;$("frame").value=n;draw()}
+$("case").onchange=selectCase;$("frame").oninput=()=>{playing=false;$("play").textContent="播放 30fps";setFrame(Number($("frame").value))};
+$("axis").onchange=drawTimeline;$("metric").onchange=drawDenoise;$("play").onclick=()=>{playing=!playing;last=performance.now();$("play").textContent=playing?"暂停":"播放 30fps"};
+function tick(now){if(playing&&now-last>=1000/30){let steps=Math.floor((now-last)/(1000/30));last+=steps*1000/30;setFrame((frame+steps)%150)}requestAnimationFrame(tick)}requestAnimationFrame(tick);
+$("gate").textContent=D.training_admitted?"仅允许另行登记 P2，不等于来源或物理合格":"未取得新训练资格；不启动 Root 联合修正或整曲";
+$("scope").textContent="Oracle 是浮点几何往返核验，不等于逐字节一致或物理通过。原 Native 和相对原动作误差分别报告；本轮没有人工风格真值。";
+selectCase();
+</script></html>

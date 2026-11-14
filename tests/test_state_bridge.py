@@ -68,3 +68,16 @@ def test_side_gauge_matches_parent_and_does_not_leak_removed_left():
     hidden=v.clone();hidden[~m]=100
     assert torch.equal(side(v,m,music,t),side(hidden,m,music,t))
     v,m=soft_control(x,k,x,"A5");assert torch.equal(side(v,m,music,t),torch.zeros(2,150,512))
+
+
+def test_training_gate_uses_only_registered_val_and_requires_direction():
+    from dunhuang.research.state_bridge.analyze import qualification
+    cfg={"gate":dict(val_cases=4,paired_wins_minimum=3,minimum_directional_gain=.01,nonzero_target_delta_m=1e-4)}
+    rows=[dict(case="val_"+str(i),arm=arm,correct_mse=.5,mse=1.,root_gain=.02,foot_gain=.02,root_target_norm=.2,foot_target_norm=.3) for arm in ("A3","A4") for i in range(4)]
+    assert qualification(rows,cfg,True)["training_admitted"]
+    # Historical application examples cannot rescue failed validation direction.
+    rows[0]["root_gain"]=0;rows[1]["root_gain"]=0;rows[2]["root_gain"]=0
+    extra=[dict(r,case="old_r8",root_gain=100,foot_gain=100) for r in rows]
+    result=qualification(rows+extra,cfg,True)
+    assert not result["training_admitted"] and not result["whole_song_admitted"] and not result["root_joint_capacity_admitted"]
+    assert not qualification(rows,cfg,False)["training_admitted"]
