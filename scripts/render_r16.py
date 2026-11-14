@@ -25,7 +25,7 @@ def run(root,out):
         scale=min(370/max(float(span[0]),1e-6),470/max(float(span[1]),1e-6));center=(lo+hi)/2
         audio=checked(read(checked(b["producer"][0]))["crop"]);file=out/("case_"+str(case)+".mp4")
         proc=subprocess.Popen(["ffmpeg","-v","error","-f","rawvideo","-pix_fmt","rgb24","-s","1260x600","-r","30","-i","-","-i",str(audio),
-            "-map","0:v:0","-map","1:a:0","-c:v","libx264","-preset","veryfast","-crf","20","-threads","2","-c:a","aac","-shortest",str(file)],stdin=subprocess.PIPE)
+            "-map","0:v:0","-map","1:a:0","-c:v","libx264","-pix_fmt","yuv420p","-preset","veryfast","-crf","20","-threads","2","-c:a","aac","-shortest",str(file)],stdin=subprocess.PIPE)
         try:
             for t in range(150):
                 image=Image.new("RGB",(1260,600),"#f2f4f7");draw=ImageDraw.Draw(image)
