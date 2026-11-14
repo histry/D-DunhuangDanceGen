@@ -14,4 +14,7 @@ git rev-parse HEAD > "$receipt/execution_commit.txt"
 date -u +%FT%TZ > "$receipt/started_utc.txt"
 "$native" -m pytest -q -rs > "$receipt/pytest.log" 2>&1
 "$edge" -m pytest -q tests/test_masked_denoiser.py > "$receipt/edge_tests.log" 2>&1
+cfg=src/dunhuang/research/masked_denoiser/config.json
+"$native" -m dunhuang.research.masked_denoiser.native_detail --config "$cfg" --root "$study" --out "$study/native_detail"
+"$native" -m dunhuang.research.masked_denoiser.native_detail --config "$cfg" --root "$study" --out "$study/native_detail_replay" --replay-from "$study/native_detail"
 "$native" scripts/verify_r13.py --root "$study"

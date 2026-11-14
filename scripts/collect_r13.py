@@ -11,7 +11,7 @@ def run(root):
     for stage in ["audit","tiny"]+(["main"] if "main" in stages else [])+["final"]:
         p=Path(str(root)+"_"+stage+"_receipts");assert (p/"exit_status.txt").read_text().strip()=="0"
         receipts[stage]=dict(code_commit=(p/"execution_commit.txt").read_text().strip(),files={f.name:sha(f) for f in p.iterdir() if f.is_file()})
-    phases=["official","official_replay","teacher","teacher_replay","teacher_native","teacher_native_replay"]
+    phases=["official","official_replay","teacher","teacher_replay","teacher_native","teacher_native_replay","native_detail","native_detail_replay"]
     for stage in stages:
         phases.extend([stage,stage+"_replay",stage+"_rollout",stage+"_rollout_replay",stage+"_native",stage+"_native_replay"])
         r=read(root/stage/"result.json");training[stage]=dict(checkpoint=r["checkpoint"],parameters=r["parameters"],optimizer_steps=r["optimizer_steps"],
@@ -35,7 +35,7 @@ def run(root):
         config=read(root/"teacher/protocol.json")["config"],official=read(root/"official/result.json"),teacher=read(root/"teacher_native/result.json"),
         teacher_feature_probes=read(root/"teacher/result.json")["records"],training=training,groups=groups,
         tiny=read(root/"tiny_native/result.json"),main=read(root/"main_native/result.json") if "main" in stages else None,
-        checks=check,evidence=evidence,receipts=receipts,new_whole_song_generations=0,human_reviewed=False,operational_qualified=False,
+        native_detail=read(root/"native_detail/result.json"),checks=check,evidence=evidence,receipts=receipts,new_whole_song_generations=0,human_reviewed=False,operational_qualified=False,
         limitations=["Tiny fit is memorization, not generalization","Historical B3 is not a matched parameter or training-data ablation",
             "Self-policy snapshots are stale after subsequent updates, not fully on-policy","Official DanceFusion runtime was not reconstructed",
             "No new ChangE style training or whole-song qualification"])

@@ -35,6 +35,16 @@ def run(root):
             for f in ("native.npy","fk.npy"):
                 assert np.array_equal(np.load(root/(stage+"_native")/name/f),np.load(root/(stage+"_native_replay")/name/f));native_arrays+=1
             assert read(root/(stage+"_native")/name/"physical.json")==read(root/(stage+"_native_replay")/name/"physical.json")
+    assert read(root/"native_detail/result.json")==read(root/"native_detail_replay/result.json")
+    supplemental=0
+    for folder in (root/"native_detail").iterdir():
+        if folder.is_dir():
+            for file in ("native.npy","fk.npy"):
+                assert np.array_equal(np.load(folder/file),np.load(root/"native_detail_replay"/folder.name/file));supplemental+=1
+            assert read(folder/"physical.json")==read(root/"native_detail_replay"/folder.name/"physical.json")
+    for folder in (root/"teacher_native").iterdir():
+        if folder.is_dir():
+            for file in ("native.npy","fk.npy"):assert np.array_equal(np.load(folder/file),np.load(root/"teacher_native_replay"/folder.name/file))
     tiny=read(root/"tiny_native/result.json")
     assert "main" not in stages or tiny["tiny_training_admitted"]
     assert tiny["tiny_training_admitted"] or not (root/"main").exists()
@@ -46,7 +56,7 @@ def run(root):
         p=Path(str(root)+"_"+stage+"_receipts");assert (p/"exit_status.txt").read_text().strip()=="0"
         receipts[stage]=(p/"execution_commit.txt").read_text().strip()
     result=dict(code_commit=commit(),frozen_r12_changed_paths=frozen,formal_changed_paths=formal,teacher_probe_exact=True,
-        teacher_rollouts_exact=4,denoiser_rollouts_exact=rollouts,native_arrays_exact=native_arrays,native_results_exact=True,
+        teacher_rollouts_exact=4,denoiser_rollouts_exact=rollouts,native_arrays_exact=native_arrays,native_results_exact=True,supplemental_native_arrays_exact=supplemental,
         q_eval_exact=True,self_policy_caches_replayed=sum(len(read(root/stage/"result.json")["self_caches"]) for stage in stages),
         training_optimizer_steps=train_steps,replay_optimizer_steps=0,optimizer_steps=0,music_encoder_frozen=True,stages=stages,
         new_whole_song_generations=0,operational_qualified=False,receipts=receipts)
