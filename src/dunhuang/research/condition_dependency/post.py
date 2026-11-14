@@ -1,5 +1,5 @@
 """Saved-artifact visualization only: fixed world camera, no smoothing or new sampling."""
-import argparse,html,subprocess,sys
+import argparse,html,subprocess,sys,os
 from pathlib import Path
 import numpy as np
 import soundfile as sf
@@ -55,28 +55,37 @@ def movie(arrays,labels,audio,file,title):
     if proc.wait():raise RuntimeError("World comparison encoding failed")
     return N
 
-def run(training,out):
+def run(training,out,comparison=None):
     training=Path(training);out=fresh(out);p=read(training/"generation/protocol.json");assets=read("inputs/clock_assets_v2.json")
     sys.path.insert(0,str(pinned(assets["legacy_root"],assets["legacy_commit"])))
     from data_pipeline.prepare_domains import _baseline_environment
     _baseline_environment()
     from motion.geometry import fk_24_np
+    base=read(Path(comparison)/"protocol.json")["bindings"] if comparison else None
     data=Data(np.load(checked(assets["scaler"])));names=list(dict.fromkeys(b["case"] for b in p["bindings"]));videos=[]
     for name in names:
         bindings=[b for b in p["bindings"] if b["case"]==name];target=bindings[0]["target"]
         old=data.native(target) if name.startswith("val_") else np.load(checked(target["native"]))[:150]
-        arrays=[fk_24_np(old)]+[np.load(checked(next(b for b in bindings if b["arm"]==arm)["fk"]))[:150] for arm in ("zero","C0","C1")]
+        if comparison:
+            frozen=[b for b in base if b["case"]==name and b["arm"] in ("zero","C1")]
+            assert all(b["target"]==target for b in frozen)
+            arrays=[fk_24_np(old)]+[np.load(checked(next(b for b in frozen if b["arm"]==arm)["fk"]))[:150] for arm in ("zero","C1")]+[np.load(checked(bindings[0]["fk"]))[:150]]
+            bindings=frozen+bindings
+        else:arrays=[fk_24_np(old)]+[np.load(checked(next(b for b in bindings if b["arm"]==arm)["fk"]))[:150] for arm in ("zero","C0","C1")]
         audio=out/(name+".wav");wave,sr=sf.read(checked(target["audio"]),dtype="float32",always_2d=True)
         start=target["start_frame"] if name.startswith("val_") else 0
         audio_for(wave,sr,start,150,audio);file=out/(name+".mp4")
-        frames=movie(arrays,["PAIRED TARGET" if name.startswith("val_") else "FROZEN R8 CONTEXT","ZERO / FROZEN EDGE","C0 / REAL TARGET LOSS","C1 / + ROOT RESPONSE"],audio,file,"R10 actual window / "+name)
+        frames=movie(arrays,["PAIRED TARGET" if name.startswith("val_") else "FROZEN R8 CONTEXT","ZERO / FROZEN EDGE","FROZEN C1" if comparison else "C0 / REAL TARGET LOSS","C2 / TRAIN RMS" if comparison else "C1 / + ROOT RESPONSE"],audio,file,"R10 actual window / "+name)
         videos.append(dict(name=name,frames=frames,video=ref(file),audio_clip=ref(audio),audio_sample_roundtrip=True,bindings=bindings,world_root_preserved=True))
     intro="""<h1>R10 单窗实际生成：固定世界坐标对照</h1><p>全部8个注册案例，不按成绩筛选。每行从左到右：真实配对AIST目标或冻结R8上下文、无Adapter、C0、C1。仅[60,90)中间30帧被替换，其他帧逐位保留。红色足迹是近9帧轨迹；不做平滑。诊断音频切片以FLOAT WAV保留原始解码采样，视频AAC音轨为有损呈现，不作为盲审封存证据。固定相机保留Root世界移动，网格0.5米，地面是首栏足高代理，并非人工地面真值。</p><p>C0/C1是双侧上下文条件实验，不能据此声称已实现完整ChangE来源演绎或敦煌舞风格。人类文化真值未知；来源与完整Native必须分别查看，不能凭姿态好看代替足滑验收。</p>"""
+    if comparison:intro=intro.replace("无Adapter、C0、C1","无Adapter、冻结C1、C2的Train尺度修正").replace("C0/C1是","C1/C2是")
     cards=[]
     for v in videos:
         cards.append("<section><h2>"+html.escape(v["name"])+"</h2><video controls preload=metadata src="+html.escape(Path(v["video"]["path"]).name)+"></video><p>")
         for b in v["bindings"]:
-            cards.append('<a href="../generation/'+html.escape(Path(b["native"]["path"]).parent.name)+'/edited_physical.json">'+html.escape(b["arm"])+' Native</a> ')
+            target_file=Path(b["native"]["path"]).parent/"edited_physical.json"
+            relative=Path(os.path.relpath(target_file,out.resolve())).as_posix()
+            cards.append('<a href="'+html.escape(relative)+'">'+html.escape(b["arm"])+' Native</a> ')
         cards.append("</p></section>")
     (out/"index.html").write_text('<!doctype html><meta charset="utf-8"><title>R10单窗生成</title><style>body{font:16px sans-serif;background:#f4f6f9;max-width:1600px;margin:24px auto}p{line-height:1.65}section{background:white;padding:16px;margin:16px 0}video{width:100%}</style>'+intro+"".join(cards),encoding="utf8")
     checks=[]
@@ -84,9 +93,9 @@ def run(training,out):
         file=checked(v["video"]);probe=__import__("json").loads(subprocess.check_output(["ffprobe","-v","error","-count_frames","-select_streams","v:0","-show_entries","stream=nb_read_frames,width,height,r_frame_rate","-of","json",str(file)],text=True))
         stream=probe["streams"][0];assert int(stream["nb_read_frames"])==150 and stream["r_frame_rate"]=="30/1"
         checks.append(dict(name=v["name"],video=v["video"],stream=stream))
-    write(out/"protocol.json",dict(code_commit=commit(),training=ref(training/"generation/protocol.json"),videos=videos,neural_generations=0,no_smoothing=True,world_camera=True))
+    write(out/"protocol.json",dict(code_commit=commit(),training=ref(training/"generation/protocol.json"),comparison=comparison,videos=videos,neural_generations=0,no_smoothing=True,world_camera=True))
     write(out/"media_checks.json",checks)
     print("R10_MEDIA",len(videos),flush=True)
 
 if __name__=="__main__":
-    p=argparse.ArgumentParser();p.add_argument("--training",required=True);p.add_argument("--out",required=True);a=p.parse_args();run(a.training,a.out)
+    p=argparse.ArgumentParser();p.add_argument("--training",required=True);p.add_argument("--out",required=True);p.add_argument("--comparison");a=p.parse_args();run(a.training,a.out,a.comparison)

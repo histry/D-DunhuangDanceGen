@@ -10,7 +10,7 @@ def mean(rows,key):
     values=[r[key] for r in rows if key in r and r[key] is not None]
     return float(np.mean(values)) if values else None
 
-def run(audit,training,post_attempt):
+def run(audit,training,post_attempt,balanced=None):
     audit=Path(audit);training=Path(training);receipts={}
     for label,root in (("audit",audit),("training",training)):
         folder=Path(str(root)+"_receipts");assert (folder/"exit_status.txt").read_text().strip()=="0"
@@ -66,6 +66,33 @@ def run(audit,training,post_attempt):
         feature_probe=read(training/("feature_probe_"+post_attempt)/"result.json"),removed_equals_zero_arrays=identity_arrays,checks=checks,evidence=evidence,stage_commits=stages,receipts=receipts,adapter_optimizer_steps=400,backbone_optimizer_steps=0,
         new_neural_generations=neural["new_neural_generations"]*2,new_whole_song_generations=0,operational_qualified=False,human_reviewed=False,cultural_authenticity="UNKNOWN",
         limits=["C0/C1 isolate only synthetic Root response loss; shared geometry/interface changes not individually isolated","Synthetic state response is not physical contact or artistic truth","Context-only bridge is not full ChangE source replay","Finite Root/quintic proposals are not global impossibility proofs"])
+    if balanced:
+        br=Path(balanced)
+        for label,folder in (("c2",Path(str(br)+"_receipts")),("c2_post",Path(str(br)+"_post_01_receipts"))):
+            assert (folder/"exit_status.txt").read_text().strip()=="0"
+            receipts[label]=dict(code_commit=(folder/"execution_commit.txt").read_text().strip(),files={p.name:sha(p) for p in folder.iterdir() if p.is_file()})
+        for phase in ("units","units_replay","C2","C2_replay","generation","generation_replay","feature_probe_01","media_01"):
+            stages["balanced/"+phase]=read(br/phase/"protocol.json")["code_commit"]
+            for name in ("protocol.json","result.json","interface_gate.json","media_checks.json","inv_rms.npy"):
+                file=br/phase/name
+                if file.is_file():evidence["balanced/"+phase+"/"+name]=sha(file)
+        bt=read(br/"C2/result.json");bg=read(br/"generation/result.json");bc=read(br/"independent_checks.json")
+        assert bt["optimizer_steps"]==200 and bc["neural_arrays"]==64 and bc["units_val_test_tensor_reads"]==0
+        bscore={}
+        for control in ("zero","observed","removed","wrong","shifted"):
+            rows=[r for r in bt["validation"] if r["control"]==control]
+            bscore[control]={k:mean(rows,k) for k in ("masked_cfg_mse","response_root_error_m","response_root_rms_m")}
+        bgroup={}
+        for population in ("val","r8"):
+            rows=[r for r in bg["records"] if r["case"].startswith("val_")==(population=="val")]
+            rois=[read(br/"generation"/(r["case"]+"_C2")/"roi_physical.json") for r in rows]
+            bgroup[population]=dict(cases=len(rows),native_roi=sum(r["roi_native_ok"] for r in rows),native_global=sum(r["global_native_ok"] for r in rows),
+                root_rmse_m=mean(rows,"root_rmse_m"),rotation_error_rad=mean(rows,"rotation_error_rad"),source_error_rad=mean(rows,"source_error_rad"),
+                roi_joint_jerk_mps3_p95=mean([r["audit"] for r in rois],"joint_jerk_mps3_p95"),roi_foot_skate_mps_p95=mean([r["audit"] for r in rois],"foot_skate_mps_p95"),
+                both_joins_nonregression=sum(all(v["maximum"]<=u["maximum"]+1e-6 for v,u in zip(r["joins"],r["original_joins"])) for r in rows))
+        summary["balanced_correction"]=dict(training=bt,validation_scores=bscore,generation_groups=bgroup,generation=bg,units=read(br/"units/result.json"),checks=bc,feature_probe=read(br/"feature_probe_01/result.json"))
+        summary["adapter_optimizer_steps"]+=200;summary["new_neural_generations"]+=2*len(bg["records"])
+        checks["balanced_correction"]=bc;checks["total_neural_arrays"]=checks["neural_arrays"]+bc["neural_arrays"]
     write("reports/r10_summary.json",summary);write("reports/r10_checks.json",checks)
     write("reports/r10_receipt.json",dict(code_commit=subprocess.check_output(["git","rev-parse","HEAD"],text=True).strip(),summary_sha256=sha("reports/r10_summary.json"),
         stage_commits=stages,receipts=receipts,temporary_ssh_files_created=0,temporary_ssh_files_remaining=0,formal_changed_paths=checks["formal_changed_paths"],
@@ -73,4 +100,4 @@ def run(audit,training,post_attempt):
     print("R10_SEALED",sha("reports/r10_summary.json"),flush=True)
 
 if __name__=="__main__":
-    p=argparse.ArgumentParser();p.add_argument("--audit",required=True);p.add_argument("--training",required=True);p.add_argument("--post",required=True);a=p.parse_args();run(a.audit,a.training,a.post)
+    p=argparse.ArgumentParser();p.add_argument("--audit",required=True);p.add_argument("--training",required=True);p.add_argument("--post",required=True);p.add_argument("--balanced");a=p.parse_args();run(a.audit,a.training,a.post,a.balanced)

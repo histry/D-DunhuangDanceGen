@@ -22,4 +22,8 @@ for environment in "$native" "$edge"; do
  "$environment" -c 'import sys,json,torch,numpy;print(json.dumps(dict(python=sys.version,torch=torch.__version__,numpy=numpy.__version__,cuda=torch.version.cuda,executable=sys.executable)))' > "$receipt/$label.json"
 done
 "$edge" -m dunhuang.research.condition_dependency.probe --training "$study" --out "$study/feature_probe_$attempt"
-"$native" -m dunhuang.research.condition_dependency.post --training "$study" --out "$study/media_$attempt"
+if test -f "$study/C2/result.json"; then
+ "$native" -m dunhuang.research.condition_dependency.post --training "$study" --out "$study/media_$attempt" --comparison outputs/content_r10_01/generation
+else
+ "$native" -m dunhuang.research.condition_dependency.post --training "$study" --out "$study/media_$attempt"
+fi

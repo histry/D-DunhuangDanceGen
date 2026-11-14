@@ -6,11 +6,11 @@ import torch
 from dunhuang.io import checked,write
 from dunhuang.research.source_capacity.common import read,commit,fresh
 from dunhuang.research.boundary_context.common import Data,fixed_rows,load_model,digest,masks
-from .adapter import ContentContextAdapter
+from .balanced import make
 from .train import shifted_context
 
 def run(training,out):
-    training=Path(training);out=fresh(out);cfg=read(training/"C0/protocol.json")["config"];pf=Path(cfg["preflight"])
+    training=Path(training);out=fresh(out);arms=["C0","C1"] if (training/"C0").exists() else ["C2"];cfg=read(training/arms[0]/"protocol.json")["config"];pf=Path(cfg["preflight"])
     assets=read(checked(read(pf/"protocol.json")["assets"]));data=Data(np.load(checked(assets["scaler"])))
     rows=fixed_rows(read(pf/"rows.json"),"train",2,cfg["data_seed"]);target,music=data.batch(rows)
     model,diffusion,_=load_model(assets);before=digest(model);known,_=masks(target,60,90);t=torch.tensor([900,999],device="cuda")
@@ -21,9 +21,9 @@ def run(training,out):
         encoded=model.cond_encoder(model.abs_pos_encoding(model.cond_projection(music)))
         xt=diffusion.q_sample(target,t)
         unconditional=model(xt,music,t,cond_drop_prob=1.)
-        for arm in ("C0","C1"):
+        for arm in arms:
             payload=torch.load(checked(read(training/arm/"result.json")["checkpoint"]),map_location="cpu",weights_only=True)
-            adapter=ContentContextAdapter(data.scale,data.bias).cuda().eval();adapter.load_state_dict(payload["state"],strict=True)
+            adapter=make(payload,data.scale,data.bias).cuda().eval();adapter.load_state_dict(payload["state"],strict=True)
             features,_=adapter.features(target,known,t);scales={}
             for name,(a,b) in blocks.items():
                 f=features[:,:,a:b];part=f@adapter.input.weight[:,a:b].T
