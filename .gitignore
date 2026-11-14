@@ -12,3 +12,7 @@ third_party/danceRAG/
 inputs/
 
 /assets/datasets/
+
+# Retained partial R20 collection attempt; canonical evidence lives in reports/r20_release/.
+/reports/r20_summary.json
+/reports/r20_checks.json
