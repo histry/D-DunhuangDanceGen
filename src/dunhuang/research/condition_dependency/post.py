@@ -18,7 +18,7 @@ def movie(arrays,labels,audio,file,title):
     floor=float(np.percentile(arrays[0][:,[7,8,10,11],1],5))
     low=points.min(0);high=points.max(0)
     cmd=["ffmpeg","-v","error","-f","rawvideo","-pix_fmt","rgb24","-s",str(width)+"x"+str(height),"-r","30","-i","-","-i",str(audio),
-        "-c:v","libx264","-preset","veryfast","-crf","22","-c:a","aac","-shortest","-threads","2",str(file)]
+        "-c:v","libx264","-pix_fmt","yuv420p","-movflags","+faststart","-preset","veryfast","-crf","22","-c:a","aac","-shortest","-threads","2",str(file)]
     proc=subprocess.Popen(cmd,stdin=subprocess.PIPE)
     try:
         for t in range(N):
