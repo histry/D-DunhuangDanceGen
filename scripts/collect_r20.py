@@ -4,6 +4,7 @@ from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/"src"))
 import numpy as np
 from dunhuang.io import write,sha
+from dunhuang.data.sources import ref
 from dunhuang.research.source_capacity.common import read,commit
 
 def run(root):
@@ -20,6 +21,12 @@ def run(root):
         models[arm].update(first=r["history"][0],last=r["history"][-1],
             cache_bindings=[{k:v for k,v in b.items() if k!="receipt"} for b in r["cache_bindings"]])
     native={part:read(root/(part+"_native")/"result.json")["records"] for part in ("p0","structure","final")}
+    for part,rows in native.items():
+        for index,row in enumerate(rows):
+            path=root/(part+"_native")/str(index)/"physical.json"
+            report=read(path)["absolute"]
+            assert row["native_ok"]==report["ok"]
+            row.update(native_report=ref(path),native_reasons=report["reasons"],native_audit=report["audit"])
     means=[]
     for role in ("train","dev_exposed"):
         for arm in ["S0","S1","A0","A1","A2"]+(["A3"] if checks["A3_executed"] else []):
@@ -29,6 +36,8 @@ def run(root):
                 metrics={k:float(np.mean([r[k] for r in rows])) for k in ("root_rmse_m","foot_rmse_m","jerk_max_mps3","jerk_p95_mps3",
                     "activity_mps","pose_error_rad","root_orientation_error_rad")},
                 interior_jerk_p95_mean=float(np.mean([r["temporal_domains"]["interior"]["p95"] for r in rows])),
+                foot_skate_p95_mean_mps=float(np.mean([r["native_audit"]["foot_skate_mps_p95"] for r in rows])),
+                foot_support_drift_p95_mean_m=float(np.mean([r["native_audit"]["foot_support_drift_m_p95"] for r in rows])),
                 actual_unknown_mean=float(np.mean([r["raw_losses"]["unknown"] for r in rows]))))
     stages=[]
     for part in ("p0","structure","final"):
