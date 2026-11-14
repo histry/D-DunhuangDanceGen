@@ -93,3 +93,16 @@ def test_condition_archive_preserves_global_and_window_phase(tmp_path):
     file=tmp_path/"conditions.npz";np.savez_compressed(file,**payload);saved=np.load(file)
     assert np.array_equal(saved["phase"],phase) and np.array_equal(saved["window_phase"],wp)
     assert np.array_equal(saved["window_phase"][0,75:],saved["window_phase"][1,:75])
+
+
+def test_long_plan_tail_is_unobserved_not_an_extra_motion_event():
+    from dunhuang.research.continuous_r16.contract import condition_payload
+    n=3601;w=48;native=np.zeros((w,150,151),np.float32);mask=np.zeros_like(native,bool)
+    phase=np.arange(n,dtype=np.float32)/n;wp=np.zeros((w,150,1),np.float32)
+    for i in range(w):
+        count=min(150,n-75*i);wp[i,:count,0]=phase[75*i:75*i+count]
+    grid=dict(phase=phase,event_ids=np.zeros(n,int),source_positions=np.arange(n))
+    p=condition_payload(native,mask,wp,native,mask,grid)
+    assert p["native"].shape[0]==48 and not p["mask"][-1,76:].any()
+    mask[-1,149,79]=True
+    with pytest.raises(ValueError):condition_payload(native,mask,wp,native,mask,grid)

@@ -59,6 +59,11 @@ def align_donor(donor,recipient):
 
 
 def condition_payload(native,mask,window_phase,normalized,known,grid):
-    if len(grid["phase"]) not in (150,225,450):raise ValueError("Registered plan horizon required")
-    if window_phase.shape!=native.shape[:2]+(1,) or mask.shape!=native.shape:raise ValueError("Window condition shape differs")
+    n=len(grid["phase"]);windows=max(1,(max(0,n-150)+74)//75+1)
+    if n<1 or native.shape!=(windows,150,151):raise ValueError("Plan/window horizon mismatch")
+    if window_phase.shape!=native.shape[:2]+(1,) or mask.shape!=native.shape or normalized.shape!=native.shape or known.shape!=native.shape:raise ValueError("Window condition shape differs")
+    for i in range(windows):
+        count=min(150,n-i*75)
+        if not np.allclose(window_phase[i,:count,0],grid["phase"][i*75:i*75+count],atol=1e-7,rtol=0):raise ValueError("Global/window phase mismatch")
+        if mask[i,count:].any() or known[i,count:].any():raise ValueError("Padding cannot be promoted to observations")
     return dict(native=native,mask=mask,window_phase=window_phase,normalized=normalized,known=known,**grid)
