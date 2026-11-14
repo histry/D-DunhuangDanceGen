@@ -7,7 +7,7 @@ from dunhuang.io import checked,write,sha
 from dunhuang.research.source_capacity.common import read,commit,forbid_optimizers,same_arrays
 from dunhuang.research.objective_r19.gate import assess
 
-def run(root):
+def run(root,out=None):
     root=Path(root);forbid_optimizers();cfg=read(root/"calibration/protocol.json")["config"]
     assert read(root/"calibration/result.json")==read(root/"calibration_replay/result.json")
     same_arrays(root/"calibration/norms.npz",root/"calibration_replay/norms.npz");bundles=1
@@ -49,6 +49,17 @@ def run(root):
             other=root/"native_replay"/folder.name/f.name
             if f.suffix==".npy":assert np.array_equal(np.load(f),np.load(other));arrays+=1
             else:assert read(f)==read(other);reports+=1
+    readouts=root/"aligned_readouts"
+    if readouts.exists():
+        a=read(readouts/"result.json");b=read(root/"aligned_readouts_replay/result.json")
+        assert a["records"]==b["records"] and a["unique_full_responses"]==b["unique_full_responses"]
+        assert a["optimizer_steps"]==b["optimizer_steps"]==0
+        for folder in readouts.iterdir():
+            if not folder.is_dir():continue
+            for f in folder.iterdir():
+                other=root/"aligned_readouts_replay"/folder.name/f.name
+                if f.suffix==".npy":assert np.array_equal(np.load(f),np.load(other));arrays+=1
+                else:assert read(f)==read(other);reports+=1
     frozen=subprocess.check_output(["git","diff","--name-only",cfg["baseline"],"--","src","configs","reports/r18_summary.json","reports/r18_receipt.json"],text=True).splitlines()
     frozen=[p for p in frozen if not p.startswith("src/dunhuang/research/objective_r19/")];assert not frozen,frozen
     result=dict(code_commit=commit(),array_bundles_exact=bundles,native_arrays_exact=arrays,physical_reports_exact=reports,
@@ -56,6 +67,6 @@ def run(root):
         training_optimizer_steps=steps,replay_optimizer_steps=0,actual_train_source_groups=2,heldout_generation_groups=0,
         matched_initialization_ledger_and_noise=True,frozen_changed_paths=frozen,unique_executed="U" in models,
         whole_song_generations=0,operational_qualified=False)
-    target=root/"independent_checks.json";assert not target.exists();write(target,result);print("R19_VERIFIED",result,flush=True)
+    target=Path(out) if out else root/"independent_checks.json";assert not target.exists();write(target,result);print("R19_VERIFIED",result,flush=True)
 if __name__=="__main__":
-    p=argparse.ArgumentParser();p.add_argument("--root",required=True);a=p.parse_args();run(a.root)
+    p=argparse.ArgumentParser();p.add_argument("--root",required=True);p.add_argument("--out");a=p.parse_args();run(a.root,a.out)

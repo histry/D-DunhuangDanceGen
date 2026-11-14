@@ -94,3 +94,9 @@ Native、全段max/P95 Jerk、Root/FK、来源阶段、幅度/运动范围/停�
 
 参考：[GradNorm原论文](https://proceedings.mlr.press/v80/chen18a.html)仅说明动态配重研究背景；
 本轮为静态校准，未声称实现GradNorm、PCGrad或Min-SNR。
+
+## 报告补充读出
+
+首轮训练/门/采样结束后，只读保存样本，补齐与训练相同的balanced未知/已知Root及旋转指标；
+另对两段原始配对目标做Native控制，完整内容干预的实际动作响应单列。
+新进程独立重算，不用于任何训练、门、权重或样本选择，原首轮回执保留。

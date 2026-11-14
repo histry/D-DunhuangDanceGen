@@ -9,7 +9,7 @@ from dunhuang.research.source_capacity.common import read,commit
 def run(root):
     root=Path(root);receipt=Path(str(root)+"_receipts")
     assert (receipt/"exit_status.txt").read_text().strip()=="0"
-    cfg=read(root/"calibration/protocol.json")["config"];checks=read(root/"independent_checks.json");gate=read(root/"gate.json")
+    cfg=read(root/"calibration/protocol.json")["config"];checks=read(root/("independent_checks_after_readouts.json" if (root/"independent_checks_after_readouts.json").exists() else "independent_checks.json"));gate=read(root/"gate.json")
     arms=cfg["arms"]+(["U"] if gate["unique_admitted"] else []);models={}
     for arm in arms:
         m=read(root/"models"/arm/"result.json")
@@ -26,15 +26,19 @@ def run(root):
         if p.name in ("protocol.json","result.json","gate.json","independent_checks.json")}
     result=dict(schema=cfg["schema"],code_commit=commit(),config=cfg,calibration=read(root/"calibration/result.json"),
         training=models,gate=gate,means=means,records=native["records"],checks=checks,
+        aligned_readouts=read(root/"aligned_readouts/result.json") if (root/"aligned_readouts/result.json").exists() else None,
         videos=read(root/"videos/protocol.json")["records"],actual_train_groups=2,heldout_generation_groups=0,
         human_reviewed=False,semantic_event_truth="UNKNOWN",whole_song_generations=0,operational_qualified=False,
         limitations=["Only two Train sources; no generalization claim","N0 vs N1 is an objective-package ablation",
             "Four training timesteps, not full noise coverage","Paired FK targets need not pass Native",
             "Local gradient/finite-update evidence is not a unique causal decomposition","No generated-history or new ChangE training"])
+    supplementary=Path(str(root)+"_readout_receipts");assert (supplementary/"exit_status.txt").read_text().strip()=="0"
     p=Path("reports/r19_summary.json");write(p,result);write("reports/r19_checks.json",checks)
     write("reports/r19_receipt.json",dict(code_commit=commit(),summary_sha256=sha(p),evidence=evidence,
         execution_commit=(receipt/"execution_commit.txt").read_text().strip(),exit_status=0,
         receipt_files={p.name:sha(p) for p in receipt.iterdir() if p.is_file()},
+        supplementary_execution_commit=(supplementary/"execution_commit.txt").read_text().strip(),
+        supplementary_exit_status=0,supplementary_receipt_files={p.name:sha(p) for p in supplementary.iterdir() if p.is_file()},
         temporary_ssh_files_created=0,temporary_ssh_files_remaining=0,whole_song_generations=0,operational_qualified=False))
     print("R19_COLLECTED",sha(p),flush=True)
 if __name__=="__main__":
