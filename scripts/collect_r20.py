@@ -43,8 +43,8 @@ def run(root,receipt_root=None):
     for part in ("p0","structure","final"):
         for b in read(root/(part+"_rollout")/"result.json")["bindings"]:
             if b["case"]!=0 or b["seed"]!=0 or b["control"]!="correct":continue
-            receipt=read(b["sampler"]["path"])
-            selected=[r for r in receipt["records"] if r["t"] in cfg["stage_snapshots"] and "stages" in r]
+            trace_receipt=read(b["sampler"]["path"])
+            selected=[r for r in trace_receipt["records"] if r["t"] in cfg["stage_snapshots"] and "stages" in r]
             if selected:stages.append(dict(part=part,arm=b["arm"],layout=b["layout"],records=selected))
     result=dict(schema=cfg["schema"],code_commit=commit(),config=cfg,interface=read(root/"interface/result.json"),
         structure_gate=read(root/"structure_gate.json"),cache_gate=read(root/"cache_gate.json"),
