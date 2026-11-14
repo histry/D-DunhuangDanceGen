@@ -2,7 +2,9 @@
 set -euo pipefail
 audit="$1"
 study="$2"
-receipt="$study"_post_receipts
+attempt="${3:?fresh post attempt required}"
+[[ "$attempt" =~ ^[0-9][0-9]$ ]]
+receipt="$study"_post_"$attempt"_receipts
 native=/home/disk/lsm/conda_envs/dance-rag/bin/python
 edge=/home/disk/lsm/conda_envs/edge/bin/python
 export PYTHONPATH="$PWD/src" OPENBLAS_NUM_THREADS=4 MKL_NUM_THREADS=4 OMP_NUM_THREADS=4
@@ -19,5 +21,5 @@ for environment in "$native" "$edge"; do
  label=$(basename "$(dirname "$(dirname "$environment")")")
  "$environment" -c 'import sys,json,torch,numpy;print(json.dumps(dict(python=sys.version,torch=torch.__version__,numpy=numpy.__version__,cuda=torch.version.cuda,executable=sys.executable)))' > "$receipt/$label.json"
 done
-"$edge" -m dunhuang.research.condition_dependency.probe --training "$study" --out "$study/feature_probe"
-"$native" -m dunhuang.research.condition_dependency.post --training "$study" --out "$study/media"
+"$edge" -m dunhuang.research.condition_dependency.probe --training "$study" --out "$study/feature_probe_$attempt"
+"$native" -m dunhuang.research.condition_dependency.post --training "$study" --out "$study/media_$attempt"

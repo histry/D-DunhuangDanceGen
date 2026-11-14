@@ -7,8 +7,17 @@ from PIL import Image,ImageDraw,ImageFont
 from dunhuang.io import checked,write,pinned
 from dunhuang.data.sources import ref
 from dunhuang.research.source_capacity.common import read,commit,fresh
-from dunhuang.research.primitive_reperformance.render import audio_for,PARENTS
+from dunhuang.research.primitive_reperformance.render import PARENTS
 from dunhuang.research.boundary_context.common import Data
+
+def audio_for(wave,sr,start,frames,out):
+    # Diagnostic media, not the independently sealed blind-review PCM24 protocol.
+    first=round(start*sr/30);count=(frames*sr+29)//30
+    clip=wave[first:first+count].copy()
+    if len(clip)<count:clip=np.pad(clip,((0,count-len(clip)),(0,0)))
+    sf.write(out,clip,sr,subtype="FLOAT")
+    restored,rate=sf.read(out,dtype="float32",always_2d=True)
+    if rate!=sr or not np.array_equal(clip,restored):raise ValueError("Float WAV diagnostic sample roundtrip differs")
 
 def movie(arrays,labels,audio,file,title):
     width=400*len(arrays);height=540;N=max(map(len,arrays));font=ImageFont.load_default()
@@ -61,8 +70,8 @@ def run(training,out):
         start=target["start_frame"] if name.startswith("val_") else 0
         audio_for(wave,sr,start,150,audio);file=out/(name+".mp4")
         frames=movie(arrays,["PAIRED TARGET" if name.startswith("val_") else "FROZEN R8 CONTEXT","ZERO / FROZEN EDGE","C0 / REAL TARGET LOSS","C1 / + ROOT RESPONSE"],audio,file,"R10 actual window / "+name)
-        videos.append(dict(name=name,frames=frames,video=ref(file),bindings=bindings,world_root_preserved=True))
-    intro="""<h1>R10 单窗实际生成：固定世界坐标对照</h1><p>全部8个注册案例，不按成绩筛选。每行从左到右：真实配对AIST目标或冻结R8上下文、无Adapter、C0、C1。仅[60,90)中间30帧被替换，其他帧逐位保留。红色足迹是近9帧轨迹；不做平滑。固定相机保留Root世界移动，网格0.5米，地面是首栏足高代理，并非人工地面真值。</p><p>C0/C1是双侧上下文条件实验，不能据此声称已实现完整ChangE来源演绎或敦煌舞风格。人类文化真值未知；来源与完整Native必须分别查看，不能凭姿态好看代替足滑验收。</p>"""
+        videos.append(dict(name=name,frames=frames,video=ref(file),audio_clip=ref(audio),audio_sample_roundtrip=True,bindings=bindings,world_root_preserved=True))
+    intro="""<h1>R10 单窗实际生成：固定世界坐标对照</h1><p>全部8个注册案例，不按成绩筛选。每行从左到右：真实配对AIST目标或冻结R8上下文、无Adapter、C0、C1。仅[60,90)中间30帧被替换，其他帧逐位保留。红色足迹是近9帧轨迹；不做平滑。诊断音频切片以FLOAT WAV保留原始解码采样，视频AAC音轨为有损呈现，不作为盲审封存证据。固定相机保留Root世界移动，网格0.5米，地面是首栏足高代理，并非人工地面真值。</p><p>C0/C1是双侧上下文条件实验，不能据此声称已实现完整ChangE来源演绎或敦煌舞风格。人类文化真值未知；来源与完整Native必须分别查看，不能凭姿态好看代替足滑验收。</p>"""
     cards=[]
     for v in videos:
         cards.append("<section><h2>"+html.escape(v["name"])+"</h2><video controls preload=metadata src="+html.escape(Path(v["video"]["path"]).name)+"></video><p>")

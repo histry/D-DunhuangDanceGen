@@ -10,16 +10,19 @@ def mean(rows,key):
     values=[r[key] for r in rows if key in r and r[key] is not None]
     return float(np.mean(values)) if values else None
 
-def run(audit,training):
+def run(audit,training,post_attempt):
     audit=Path(audit);training=Path(training);receipts={}
     for label,root in (("audit",audit),("training",training)):
         folder=Path(str(root)+"_receipts");assert (folder/"exit_status.txt").read_text().strip()=="0"
         receipts[label]=dict(code_commit=(folder/"execution_commit.txt").read_text().strip(),started=(folder/"started_utc.txt").read_text().strip(),finished=(folder/"finished_utc.txt").read_text().strip(),
             files={p.name:sha(p) for p in folder.iterdir() if p.is_file()})
-    post=Path(str(training)+"_post_receipts");assert (post/"exit_status.txt").read_text().strip()=="0"
+    post=Path(str(training)+"_post_"+post_attempt+"_receipts");assert (post/"exit_status.txt").read_text().strip()=="0"
     receipts["post"]=dict(code_commit=(post/"execution_commit.txt").read_text().strip(),files={p.name:sha(p) for p in post.iterdir() if p.is_file()})
+    failed=Path(str(training)+"_post_receipts")
+    assert (failed/"exit_status.txt").read_text().strip()=="1"
+    receipts["post_01_failed"]=dict(code_commit=(failed/"execution_commit.txt").read_text().strip(),files={p.name:sha(p) for p in failed.iterdir() if p.is_file()})
     evidence={};stages={}
-    for label,root,phases in (("audit",audit,["p0","p0_replay","root","root_replay","hermite","hermite_replay"]),("training",training,["C0","C0_replay","C1","C1_replay","generation","generation_replay","media","feature_probe"])):
+    for label,root,phases in (("audit",audit,["p0","p0_replay","root","root_replay","hermite","hermite_replay"]),("training",training,["C0","C0_replay","C1","C1_replay","generation","generation_replay","media_"+post_attempt,"feature_probe_"+post_attempt])):
         for phase in phases:
             stages[label+"/"+phase]=read(root/phase/"protocol.json")["code_commit"]
             for name in ("protocol.json","result.json","interface_gate.json","media_checks.json"):
@@ -60,7 +63,7 @@ def run(audit,training):
     summary=dict(schema="r10_condition_dependency_root_foot_summary",baseline="44235357b9763bc8b047e4cda1579035faa3d7b9",p0=p0,
         root_capacity=dict(population=root["population"],research_passes=root["research_passes"],native_passes=root["native_passes"],records=root["records"]),
         hermite_capacity=h,training=arms,generation_groups=groups,generation_records=neural["records"],synthetic_zero_response_error_m=float(zero_cf_error),
-        feature_probe=read(training/"feature_probe/result.json"),removed_equals_zero_arrays=identity_arrays,checks=checks,evidence=evidence,stage_commits=stages,receipts=receipts,adapter_optimizer_steps=400,backbone_optimizer_steps=0,
+        feature_probe=read(training/("feature_probe_"+post_attempt)/"result.json"),removed_equals_zero_arrays=identity_arrays,checks=checks,evidence=evidence,stage_commits=stages,receipts=receipts,adapter_optimizer_steps=400,backbone_optimizer_steps=0,
         new_neural_generations=neural["new_neural_generations"]*2,new_whole_song_generations=0,operational_qualified=False,human_reviewed=False,cultural_authenticity="UNKNOWN",
         limits=["C0/C1 isolate only synthetic Root response loss; shared geometry/interface changes not individually isolated","Synthetic state response is not physical contact or artistic truth","Context-only bridge is not full ChangE source replay","Finite Root/quintic proposals are not global impossibility proofs"])
     write("reports/r10_summary.json",summary);write("reports/r10_checks.json",checks)
@@ -70,4 +73,4 @@ def run(audit,training):
     print("R10_SEALED",sha("reports/r10_summary.json"),flush=True)
 
 if __name__=="__main__":
-    p=argparse.ArgumentParser();p.add_argument("--audit",required=True);p.add_argument("--training",required=True);a=p.parse_args();run(a.audit,a.training)
+    p=argparse.ArgumentParser();p.add_argument("--audit",required=True);p.add_argument("--training",required=True);p.add_argument("--post",required=True);a=p.parse_args();run(a.audit,a.training,a.post)
