@@ -23,6 +23,16 @@ def run(root):
         assert first["selected_motion_backbone_updated"] and first["music_encoder_frozen"]
         assert read(root/stage/"interface.json")==read(root/(stage+"_replay")/"interface.json")
         same_arrays(root/stage/"q_eval.npz",root/(stage+"_replay")/"q_eval.npz");same_arrays(root/stage/"initial.npz",root/(stage+"_replay")/"initial.npz")
+        protocol=read(root/stage/"protocol.json")
+        assert protocol["config"]==read(root/"teacher/protocol.json")["config"]
+        allowed={(r["raw_motion"]["sha256"],r["start_frame"],r["source_group"]) for r in protocol["fit_population"]}
+        assert len(first["ledger"])==first["optimizer_steps"]
+        for entry in first["ledger"]:
+            assert all((r["raw_sha256"],r["start"],r["group"]) in allowed for r in entry["rows"])
+        if stage=="main":
+            assert [s["update"] for s in first["self_snapshots"]]==[100,250]
+            for snapshot in first["self_snapshots"]:checked(snapshot["checkpoint"])
+            assert len(first["self_caches"])==16
         train_steps+=first["optimizer_steps"]
         g=read(root/(stage+"_rollout")/"result.json");gr=read(root/(stage+"_rollout_replay")/"result.json")
         for left,right in zip(g["bindings"],gr["bindings"]):
