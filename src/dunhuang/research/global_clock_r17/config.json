@@ -1,0 +1,50 @@
+{
+  "schema": "global_clock_r17_v1",
+  "baseline": "70988d94fafa55b1615fb3f863798cd103d1e60a",
+  "r16_root": "outputs/continuous_r16_03",
+  "r13_root": "outputs/mask_denoiser_r13_01",
+  "r13_config": "src/dunhuang/research/masked_denoiser/config.json",
+  "seed": 17041,
+  "fit_groups": 8,
+  "eval_groups": 4,
+  "frames": 225,
+  "window": 150,
+  "hop": 75,
+  "context": 8,
+  "joints": [
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "tasks": [
+    "free",
+    "inbetween",
+    "progressive"
+  ],
+  "models": [
+    "A_numeric",
+    "B_cross",
+    "C_self"
+  ],
+  "training_steps": 240,
+  "learning_rate": 0.0003,
+  "state_width": 64,
+  "context_margin": 0.01,
+  "loss_weights": {
+    "reconstruction": 1,
+    "boundary": 0.1,
+    "world_fk": 0.1,
+    "context": 0.05
+  },
+  "qualification": {
+    "minimum_wins": 3,
+    "relative_gain": 0.02
+  },
+  "whole_song_generations": 0,
+  "operational_qualified": false
+}
