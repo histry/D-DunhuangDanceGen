@@ -1,0 +1,27 @@
+{
+  "code_commit": "6e30777865957af8b302b947d6f860b3efe90b60",
+  "capacity_arrays": {
+    "root": 192,
+    "hermite": 2
+  },
+  "neural_arrays": 256,
+  "p0_exact_replay": true,
+  "training_steps_per_arm": 200,
+  "replay_optimizer_steps": 0,
+  "formal_changed_paths": [],
+  "whole_song_generations": 0,
+  "operational_qualified": false,
+  "balanced_correction": {
+    "code_commit": "3541f17919920d5fb604cad0ec56080a6031df16",
+    "neural_arrays": 64,
+    "train_units_exact_replay": true,
+    "units_val_test_tensor_reads": 0,
+    "training_steps": 200,
+    "replay_optimizer_steps": 0,
+    "parameters": 341888,
+    "backbone_updated": false,
+    "whole_song_generations": 0,
+    "operational_qualified": false
+  },
+  "total_neural_arrays": 320
+}
