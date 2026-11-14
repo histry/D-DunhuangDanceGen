@@ -1,0 +1,45 @@
+{
+  "code_commit": "bc2c78868682c921935c21e28b3eb398b5483fbe",
+  "summary_sha256": "2349d842e6f5a3fac4b74fe4afebbc65e4413fcacdf1e364e010e85c43d1db3f",
+  "evidence": {
+    "independent_checks.json": "16be5281b7ee6c08fe7324a7ce37015914d78380c729e4e21b943e570ebe71c2",
+    "native/protocol.json": "5dc6f98eab0db9b8aaf8693f3ee94adf307a4ba7682c3faf301178b5a92a6906",
+    "native/result.json": "68efab5a6471e4e44d252cb5b09d7a5c2780dd25dfd3dd084fbe271d3cc2b852",
+    "objective_diagnostic/protocol.json": "fef8a2d3b1669af421dc983b6e3c30d91ce3ec8c7f62d465fe82c393afadeafd",
+    "objective_diagnostic/result.json": "d8fd27c4fedd6224cc93b9e8403a7789fd2f2073fe73c7006588c40609a5b74c",
+    "p0/protocol.json": "abb7f1478e0c69a7501d6ef3f57612e1a6798b82a48284f237cb52b1eaa0faa5",
+    "p0/result.json": "37431b62c55bbbcab15a743132948df6c2bd339e025059877c64ada347c6ab16",
+    "tiny/self/protocol.json": "c4c45e2818d1653af2bda694c226e56fb5c30f8706b3745964a15bd01ca2155f",
+    "tiny/self/result.json": "b96bb1d63036c2f3ef3df8489832badf4b15235c443f415a136e68271fd5947d",
+    "tiny/unique/protocol.json": "c4c45e2818d1653af2bda694c226e56fb5c30f8706b3745964a15bd01ca2155f",
+    "tiny/unique/result.json": "4ed44fba7086c14a6b4980f13883a5ee7922568cd4e6542b8759fc7f0b38ceda",
+    "tiny_gate.json": "1dc17acd84b8b6f9f3bf0d88b9c4c798796e821d3eb4093a1f125fff1f071939",
+    "tiny_rollout/protocol.json": "0dda31820d74d912c289f15f4102c2f213b65095ef4723da6bcd28aa25592e20",
+    "tiny_rollout/result.json": "8615e26c3544013eccfaec483021338fb1140e75b074111de4a9802a36787fac",
+    "videos/protocol.json": "df0604990ec59befffd32d8d071817017310d2b28e405596a5d5c75752fbb136"
+  },
+  "execution_commit": "6d9d784b029581ddd6d2d335495e0ba9ac066a18",
+  "exit_status": 0,
+  "receipt_files": {
+    "edge_tests.log": "5e8f037f3ca553c306ac37dac56a5c77c55eaaaa73e27ad98b230bc4017071a5",
+    "execution_commit.txt": "6c5ba0cff74f7b8cb4a82f79730676ef3abec7da9ffe62e7e7fcedfb50bea7c8",
+    "exit_status.txt": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "finished_utc.txt": "8c1541e89be688a530eeb9bf0d764faec914f0e12c97227f451e6271e8657825",
+    "main_skipped.txt": "88054f2f0c4837d6b07971224bbceec2ebc800ba5e95ff334ee1746d2f652b79",
+    "phase.txt": "d3be030801b90ea8057d3997d9845c7f850cc7b784450645d5ec2811cc927d7a",
+    "pytest.log": "19fe5f9000dc560764639b90edb6fa70f2688d174a72842035092de2833f37e8",
+    "started_utc.txt": "0bc23897b708a7cda3ca3f5f98be0d4a41371fff61c657bec06a5ba803f7f1e7"
+  },
+  "diagnostic_execution_commit": "bc2c78868682c921935c21e28b3eb398b5483fbe",
+  "diagnostic_exit_status": 0,
+  "diagnostic_receipt_files": {
+    "execution_commit.txt": "e16dd28921a492d4e8ee0a0ee69c491182f4a6d5095ba131b214f144431d69ba",
+    "exit_status.txt": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "finished_utc.txt": "58de082a3494440eb3dac3e1b2031a663b1b642dfa3645ac0306c2896dda0921",
+    "started_utc.txt": "7b1992ac91a4d720fd52967d28eb467f5eb23884891965379d4fb020fd31b8d4"
+  },
+  "temporary_ssh_files_created": 0,
+  "temporary_ssh_files_remaining": 0,
+  "new_whole_song_generations": 0,
+  "operational_qualified": false
+}

@@ -117,3 +117,7 @@ See [protocol](../docs/R16_CONTINUOUS_PROTOCOL.md) and
 ## R17 global-clock dual-view state research
 
 Independent package: src/dunhuang/research/global_clock_r17. A 225-frame state is read through two 150-frame frozen R13 views. Matched cross-window and self-window heads each train for exactly 240 updates; global Root/FK losses do not supply future Root at FREE/PROGRESSIVE inference. Hard/soft factor traces and full sampler/Native replays are saved separately. Mechanism qualification is 0/4 and Native 0/36; production and R13–R16 remain frozen. See [protocol](../docs/R17_GLOBAL_CLOCK_PROTOCOL.md) and [results](../reports/R17全局时钟双窗口训练与Mask归因报告.md).
+
+## R18 task-matched denoising
+
+Independent package: src/dunhuang/research/task_denoising_r18. Exclusive cross-view keys and disentangled content/clock/phase controls are compared with a matched self-view model. Both selected R13 motion layers and the state head adapt for120 updates on two Train sequences; all three tasks receive ranking supervision. Tiny admission failed, so eight-group training, D3 and new whole songs were skipped. Full22 sampler replays and read-only objective-gradient replays are exact; Native0/22. See [protocol](../docs/R18_TASK_DENOISING_PROTOCOL.md) and [report](../reports/R18任务匹配去噪与独有内容训练报告.md).
