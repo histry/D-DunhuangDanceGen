@@ -1,0 +1,25 @@
+{
+  "code_commit": "667c700f08882c502f883632481a8af524cbd072",
+  "science_arrays_exact": 154,
+  "frozen_changed_paths": [],
+  "frozen_audit_states": 400,
+  "train_conflict_states": 16,
+  "readout_fit_windows": 1116,
+  "readout_holdout_windows": 283,
+  "group_roles_disjoint": true,
+  "donors_same_role_cross_group": true,
+  "readout_models_exact": 5,
+  "capacity_baseline_rollouts_exact": 8,
+  "capacity_state_readouts_exact": 64,
+  "analytical_heads_fitted": 0,
+  "replay_optimizer_steps": 0,
+  "optimizer_steps": 0,
+  "model_weights_restored": true,
+  "new_whole_song_generations": 0,
+  "operational_qualified": false,
+  "receipts": {
+    "audit": "15947b808c3fef7a835800290def6ba0e91fa503",
+    "readout": "15947b808c3fef7a835800290def6ba0e91fa503",
+    "capacity": "1493c08b1be3973efcc8ff1192c517125a124db6"
+  }
+}

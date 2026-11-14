@@ -1,0 +1,76 @@
+{
+  "code_commit": "667c700f08882c502f883632481a8af524cbd072",
+  "summary_sha256": "75976c94776d2ec7f48b28da483d2fa8a217903208b4c8514e77f03e8bd090a3",
+  "evidence": {
+    "audit/protocol.json": "7a549182e513cbdf8fbf81ce5d80bdbfdf9bd4714fe13eb821429c78b45c318f",
+    "audit/result.json": "0324b8c6ecac67e59133603eb3973d990de184ae37b04a4d6a41994feb1dbbd7",
+    "audit_replay/protocol.json": "78cdca0fdb20647f663c8bf7f16e61d61cf2aa9ff74e5ae8cb4bff86f0cb9bd8",
+    "audit_replay/result.json": "0324b8c6ecac67e59133603eb3973d990de184ae37b04a4d6a41994feb1dbbd7",
+    "conflict/protocol.json": "339ab559eff3fef567c163d4c85c0bb72cf97b4ed7a112c26a826a1f04cf83f6",
+    "conflict/result.json": "727b404fa0315cc89566168546909ffa816c04b8e1eb6be64ab05ee5f65b7fcc",
+    "conflict_replay/protocol.json": "339ab559eff3fef567c163d4c85c0bb72cf97b4ed7a112c26a826a1f04cf83f6",
+    "conflict_replay/result.json": "727b404fa0315cc89566168546909ffa816c04b8e1eb6be64ab05ee5f65b7fcc",
+    "readout/protocol.json": "4896e623f0d4923139fbd17876d4a95875cf02e0a236f494dcccfc403025a746",
+    "readout/result.json": "9d4f42c4d1b73f7d8f0b395b83198f2fe743fd509012e96ebd1ba2a5073f7623",
+    "readout_replay/protocol.json": "4896e623f0d4923139fbd17876d4a95875cf02e0a236f494dcccfc403025a746",
+    "readout_replay/result.json": "86fe6fd92704dc7def58b2fd21428271d3cce8392e1f104f418c52f204d07076",
+    "turn/protocol.json": "0d0e1e99832cfc0229f4870b1e71887a9f5fe0f6ccbf9501c9ec399a438a4dc7",
+    "turn/result.json": "8f59eeb0838e6e24036f11261ef620ecb4809c7e9a022dc947123e423da86756",
+    "turn_replay/protocol.json": "0d0e1e99832cfc0229f4870b1e71887a9f5fe0f6ccbf9501c9ec399a438a4dc7",
+    "turn_replay/result.json": "8f59eeb0838e6e24036f11261ef620ecb4809c7e9a022dc947123e423da86756",
+    "capacity/protocol.json": "54a9ad431157201f62a9f29ecd792c24eac3eca8f21561e5852cee2c0e21f01c",
+    "capacity/result.json": "179a4202dd7c45dee8e8bb4b973222c76d609dc67979ae9373dadb53afd3b7ff",
+    "capacity_replay/protocol.json": "54a9ad431157201f62a9f29ecd792c24eac3eca8f21561e5852cee2c0e21f01c",
+    "capacity_replay/result.json": "91e2e4de80c4bd69180bd401e3875997fe20c0971c0fffba795ba6e07aa7f043",
+    "capacity_native/protocol.json": "f5aa4f448f9f8840dc71ab130404cad9166e9bb54adb141e3f0f4f9bda748aa7",
+    "capacity_native/result.json": "d202ea27bad157fc059fbbae97e418e4c3bfd68b224eb5689481535c56947b39",
+    "capacity_native_replay/protocol.json": "f5aa4f448f9f8840dc71ab130404cad9166e9bb54adb141e3f0f4f9bda748aa7",
+    "capacity_native_replay/result.json": "d202ea27bad157fc059fbbae97e418e4c3bfd68b224eb5689481535c56947b39"
+  },
+  "receipts": {
+    "audit": {
+      "code_commit": "15947b808c3fef7a835800290def6ba0e91fa503",
+      "files": {
+        "execution_commit.txt": "02d156443b324df50d45205a76eb0dba2714d46f86398df0409b8538151f69af",
+        "started_utc.txt": "7d4f8ebf077d0114876d44fe70a478967b2eb9def1493457918390992c12513f",
+        "pytest.log": "4c0633934b25c9203f80228b6d20fa216fbb7f6050ab501ea057ebbe0fcdef72",
+        "edge_tests.log": "70c95ab2a06daa189eb88db0c71149237b1a6a20131819ce353cec7aa9f7fc19",
+        "exit_status.txt": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+        "finished_utc.txt": "3a0cc5775da9f6cc6309508661b75450750156429726bcfc53b9ce1c36816e2f"
+      }
+    },
+    "readout": {
+      "code_commit": "15947b808c3fef7a835800290def6ba0e91fa503",
+      "files": {
+        "execution_commit.txt": "02d156443b324df50d45205a76eb0dba2714d46f86398df0409b8538151f69af",
+        "started_utc.txt": "6d089c1317eebaaa5323ab4db45561f72f78fb676b1bf4236c00301bce9b2119",
+        "exit_status.txt": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+        "finished_utc.txt": "43d39c26914771a3f71605383b89096e554ac34841dce8392077b3e1ae09691f"
+      }
+    },
+    "capacity": {
+      "code_commit": "1493c08b1be3973efcc8ff1192c517125a124db6",
+      "files": {
+        "execution_commit.txt": "9a863524ce4c6f262b0f17fabcc687215b545a1cb11dc4714e2d2f7a62c7d01a",
+        "started_utc.txt": "e4fe0a2835b4572ebc779496869428b8d0e6e891e5a43c7420c2578e6fa64587",
+        "exit_status.txt": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+        "finished_utc.txt": "eacd03df4ec1cd5ab28999ea9fe7a5e952cc9ef79dcdee6ed2ece4e6b3a30f69"
+      }
+    },
+    "final": {
+      "code_commit": "667c700f08882c502f883632481a8af524cbd072",
+      "files": {
+        "execution_commit.txt": "58c8660d142c759e89c1b49308acc265bc45b6aae2ae6b7bbd131dc8eec494e7",
+        "started_utc.txt": "099f233086e3feddf645b464ead60dd6d9095833fcf00f3a73bd9b8c01f3f146",
+        "pytest.log": "0df1b062067637f4292c4b25102058d0772d8575fe1297b746488a5b21981c2f",
+        "edge_tests.log": "675cb86ed9bbb69e79ac7ea5cc73b1b7d98e02b6cfef21a4848498ec9af68cd6",
+        "exit_status.txt": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+        "finished_utc.txt": "e3c290a80fda66bb730df4bfe7b2529a718890688c7b9321e98ca25f6db7a58a"
+      }
+    }
+  },
+  "temporary_ssh_files_created": 0,
+  "temporary_ssh_files_remaining": 0,
+  "new_whole_song_generations": 0,
+  "operational_qualified": false
+}

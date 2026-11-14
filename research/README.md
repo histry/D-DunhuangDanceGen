@@ -74,3 +74,16 @@ The pretrained official DanceFusion baseline is audited, not claimed runnable wi
 data modules. Checkpoints remain research-only and do not feed the production pipeline.
 See [protocol](../docs/R13_MASKED_DENOISER_PROTOCOL.md) and
 [results](../reports/R13条件去噪与双侧Bridge实验报告.md).
+
+
+## R14 boundary-state representation and frozen input capacity
+
+src/dunhuang/research/boundary_state_r14 isolates immutable-template necessary bounds,
+full-step frozen R13 responsibility readouts, selected-parameter gradient diagnostics,
+five matched analytical readouts and reference-only input-space capacity probes.
+Legacy boundary_state (R9) and masked_denoiser (R13) remain frozen.
+A2 passes the registered predictive representation gate, but single-state Native/FK
+capacity fails; no new population training, output Root writer or full songs.
+Saved models, trajectories and Native arrays have independent exact replay.
+See [protocol](../docs/R14_BOUNDARY_STATE_PROTOCOL.md) and
+[report](../reports/R14边界状态表示与冻结条件容量报告.md).
