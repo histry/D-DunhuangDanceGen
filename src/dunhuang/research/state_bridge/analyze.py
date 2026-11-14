@@ -38,13 +38,14 @@ def run(cfg,audit,traces,out,replay=None):
         assert binding["case"]==item["name"];q=item["request"];old=item["original"];target=old[50:100];tfk=fk_24_np(target)
         encoded,o=encode(old[:150]);s=np.load(checked(q["scaler"]));target_norm=encoded[50:100]*s["scale"]+s["bias"]
         wrong=restore(MotionAdapter.to_native(np.load(checked(item["wrong_context"]))["values"][0]),o);wfk=fk_24_np(wrong)
-        data=np.load(checked(binding["trace"]));steps=read(checked(binding["trace_info"]))["steps"]
+        with np.load(checked(binding["trace"])) as archive:predictions=archive["prediction"]
+        steps=read(checked(binding["trace_info"]))["steps"]
         case_rows=[]
         for step,info in enumerate(steps):
             assert info["a0_features_exact"] and info["rng_unchanged"]
             base=None;base_fk=None
             for a,arm in enumerate(cfg["arms"]):
-                z=data["prediction"][step,a];native=restore(MotionAdapter.to_native(((z-s["bias"])/s["scale"]).astype(np.float32)),o)
+                z=predictions[step,a];native=restore(MotionAdapter.to_native(((z-s["bias"])/s["scale"]).astype(np.float32)),o)
                 hybrid=target.copy();hybrid[10:40]=native[10:40];fk=fk_24_np(hybrid)
                 mse=float(np.mean((z[10:40,4:]-target_norm[10:40,4:])**2))
                 row=dict(case=item["name"],arm=arm,step=step,t=info["t"],mse=mse,**pair_quality(hybrid,target,fk,tfk))
