@@ -10,10 +10,10 @@ def run(root):
     root=Path(root);checks=read(root/"independent_checks.json");assert checks["optimizer_steps"]==0
     capacity=read(root/"capacity/result.json");analysis=read(root/"analysis/result.json");cache=read(root/"cache/result.json")
     receipts={};evidence={};models={}
-    for name in ("capacity","train","generate","final"):
+    for name in ("capacity","train","generate","final","chain"):
         p=Path(str(root)+"_"+name+"_receipts");assert (p/"exit_status.txt").read_text().strip()=="0"
         receipts[name]=dict(code_commit=(p/"execution_commit.txt").read_text().strip(),files={f.name:sha(f) for f in p.iterdir() if f.is_file()})
-    for phase in ("capacity","capacity_replay","cache","cache_replay","B3","B2","B3_replay","B2_replay","generation","generation_replay","analysis","analysis_replay","diagnosis","diagnosis_replay"):
+    for phase in ("capacity","capacity_replay","cache","cache_replay","B3","B2","B3_replay","B2_replay","generation","generation_replay","analysis","analysis_replay","diagnosis","diagnosis_replay","chain","chain_replay"):
         for name in ("protocol.json","result.json","interface_gate.json"):
             p=root/phase/name
             if p.exists():evidence[phase+"/"+name]=sha(p)
@@ -33,7 +33,7 @@ def run(root):
         selected_site=capacity["selected_site"],capacity_scores=capacity["scores"],config=read(root/"capacity/protocol.json")["config"],
         training_windows=cache["statistics_training_windows"],training_groups=len(cache["statistics_groups"]),monitor_groups=len(cache["monitor_groups"]),
         models=models,groups=groups,case_results=analysis["records"],control_results=analysis["controls"],qualification=analysis["qualification"],
-        checks=checks,evidence=evidence,receipts=receipts,diagnosis=read(root/"diagnosis/result.json"),optimizer_steps=800,
+        checks=checks,evidence=evidence,receipts=receipts,diagnosis=read(root/"diagnosis/result.json"),root_stage_chain=read(root/"chain/result.json"),optimizer_steps=800,
         new_neural_generations=24+24+12+12,new_whole_song_generations=0,human_reviewed=False,operational_qualified=False,
         limitations=["P0 is one matched finite feature step, not global entry incapacity","B0 cache is off-policy for trained Bridge; 12 windows and four saved steps only",
         "same-state soft controls do not measure independent counterfactual rollout quality","4 exposed Val and 4 exposed R8 cases; no new independent test",
