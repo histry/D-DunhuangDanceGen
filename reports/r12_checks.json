@@ -1,0 +1,23 @@
+{
+  "code_commit": "29a98d7327690ab1700e1eb2a8d4b9da05da693a",
+  "capacity_exact_replay": true,
+  "cache_trajectory_arrays": 48,
+  "monitor_arrays": 192,
+  "generation_arrays": 72,
+  "generation_trace_arrays": 48,
+  "native_fk_arrays": 40,
+  "native_jsons_exact": true,
+  "root_stage_chain_exact": true,
+  "optimizer_steps": 0,
+  "replay_optimizer_steps": 0,
+  "original_backbone_unchanged": true,
+  "formal_changed_paths": [],
+  "frozen_changed_paths": [],
+  "receipts": {
+    "capacity": "64c0ccedebb9ad44d355677663eb91d70522abae",
+    "train": "21938fa8cc900655f78720b3fb333a0fe91ee750",
+    "generate": "f438e0950665d72741c9ffa7d42052de2cc807ff"
+  },
+  "new_whole_song_generations": 0,
+  "operational_qualified": false
+}

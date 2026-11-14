@@ -1,0 +1,97 @@
+{
+  "code_commit": "29a98d7327690ab1700e1eb2a8d4b9da05da693a",
+  "summary_sha256": "ca56b19ee6d007ba0992fe46232fbb017a3e207672f3d23c653dfea4d8ed58a5",
+  "receipts": {
+    "capacity": {
+      "code_commit": "64c0ccedebb9ad44d355677663eb91d70522abae",
+      "files": {
+        "execution_commit.txt": "4fe7960052d8902b0c5e6c696a68cc3daf725853212a5d9c235d7a271828886b",
+        "started_utc.txt": "b78916b8871bc75848097542f3f3277dd9d9f0d0136ba1fdf328011d83d7aaaf",
+        "pytest.log": "5e9e7b8771974b693ec5e74cd933aa3dfcd23eae05d9e9034c0d1581743d6fe6",
+        "edge_tests.log": "ed7082a1990b0a9bbd44926535424ffdea6b705036ff4015f8ea44d7cd9588f1",
+        "exit_status.txt": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+        "finished_utc.txt": "1127065e02785c8118a58211be0c54186f7da60b4faa971ae4bb34d98acbdc3f"
+      }
+    },
+    "train": {
+      "code_commit": "21938fa8cc900655f78720b3fb333a0fe91ee750",
+      "files": {
+        "execution_commit.txt": "ec91f38ec65c964ff9dde2aac8fc409453155152d03ee56b48446c29a7ff6e16",
+        "started_utc.txt": "c403d5f42d9b487d1f4564f0cafc2358b7fcb3a7a20856af0356f489190f3840",
+        "exit_status.txt": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+        "finished_utc.txt": "578c2e71af7a502b66008239c2e9d82bf153c0f4c49b21f6933f7fae373e43ea"
+      }
+    },
+    "generate": {
+      "code_commit": "f438e0950665d72741c9ffa7d42052de2cc807ff",
+      "files": {
+        "execution_commit.txt": "1234f44f74bcae3f34456b4470c92339544b5cbbd66aa27743e9846f84f6022d",
+        "started_utc.txt": "f49cc8985260289ce08eed06a602742d7a5b83403776f9c4b8cc1b4106e8ed91",
+        "exit_status.txt": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+        "finished_utc.txt": "4cc21c4eca139ff8199898ca30228d1f44501f62f577f74a62e0b86503ef09f6"
+      }
+    },
+    "final": {
+      "code_commit": "e246e91b9fe6b55421df5537ce4eda28819f795f",
+      "files": {
+        "execution_commit.txt": "4f3372824ab3dc2e263d8840d94d914d501b13c4f7898710e4db59a5a3aa712d",
+        "started_utc.txt": "73d8fdd5ad597ea05adc0d7ceab8254d6c98d581999725acd9bd42d99b4d1310",
+        "pytest.log": "aa748ffaa5816a5e69e08d1e4154a8f7fc93e79c40c7a65d3cd3eb23d070899c",
+        "edge_tests.log": "a0cdb21897a99a380b308bd061074d40792f408259ce2b443335b7ef76e1e0dc",
+        "exit_status.txt": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+        "finished_utc.txt": "4ead46be9beea751db73b79577aa7ea34e53dfda5143a343d0f61278a5f7875b"
+      }
+    },
+    "chain": {
+      "code_commit": "29a98d7327690ab1700e1eb2a8d4b9da05da693a",
+      "files": {
+        "execution_commit.txt": "fc2f4aaab527ab2821a57d419e59300196465bc222480973c6734b298c799886",
+        "started_utc.txt": "b4c45b3249f0aea2e08a69a8ff5521936e8f94863a741a19307277bd9ffc341b",
+        "exit_status.txt": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+        "finished_utc.txt": "ba983960411aaab472f8666849679692844e6c6e30ebb2db6d72f093ac64fd2b"
+      }
+    }
+  },
+  "evidence": {
+    "capacity/protocol.json": "ab54fd808d583b5156399efeac15580ad8773093ceba35dff66913e9b62ac70f",
+    "capacity/result.json": "899c431fbd916ed925957c295d6cb5220b8eaaaca59050dd7f2496b2d2db1051",
+    "capacity_replay/protocol.json": "ab54fd808d583b5156399efeac15580ad8773093ceba35dff66913e9b62ac70f",
+    "capacity_replay/result.json": "899c431fbd916ed925957c295d6cb5220b8eaaaca59050dd7f2496b2d2db1051",
+    "cache/protocol.json": "8974e138280212ea0042e34718297c5b551c70ca8361e2851dcae3a3d5c42f43",
+    "cache/result.json": "54def668101785650a3942baa7c66206ebbb01db3db7259e175980afa6c4d0a9",
+    "cache_replay/protocol.json": "8974e138280212ea0042e34718297c5b551c70ca8361e2851dcae3a3d5c42f43",
+    "cache_replay/result.json": "cc169209cc021d110d6add03d68feb62ca484519761ead3c4c38ea01d3468c68",
+    "B3/protocol.json": "2ec390e66dfc88772243b5b19ba0af0037150588547b6185d9225dbe3247aae3",
+    "B3/result.json": "79bdf315bba9fcfc5aa805a66ac4ef963a15fb51011cd1637f491107c1cde1c4",
+    "B3/interface_gate.json": "3bfae5705b70e0ca287f88c8a1978fceaab74a508820e73ac23994ab274f19ac",
+    "B2/protocol.json": "73ac41e7b591ee319cf8345f9e58c126b49941f6f1ec94ffd37d5ae6b90b2be0",
+    "B2/result.json": "5bb809483604d738c2e74fd06c17253bc8ff8f8626a068e8837ee20bd4821d64",
+    "B2/interface_gate.json": "b5ad7856b883330e61a57401e15eef389a87dc61d3ec1b0b783ec2dab1048f99",
+    "B3_replay/protocol.json": "2ec390e66dfc88772243b5b19ba0af0037150588547b6185d9225dbe3247aae3",
+    "B3_replay/result.json": "d8c01bfcc35b22be6c70b4e4c86e976652e7227f33d02fe51bf073723caec59f",
+    "B3_replay/interface_gate.json": "3bfae5705b70e0ca287f88c8a1978fceaab74a508820e73ac23994ab274f19ac",
+    "B2_replay/protocol.json": "73ac41e7b591ee319cf8345f9e58c126b49941f6f1ec94ffd37d5ae6b90b2be0",
+    "B2_replay/result.json": "b9399a3566b583616911418a361c414d4d95ecf622e2edbf5832ab1b4debecf0",
+    "B2_replay/interface_gate.json": "b5ad7856b883330e61a57401e15eef389a87dc61d3ec1b0b783ec2dab1048f99",
+    "generation/protocol.json": "4af6c3cf24decc3c86e34de58118e883d1aa09ca449327fe83ff58a435475121",
+    "generation/result.json": "3f911025cb094f060496d60620aee024bf8508e115f1b899d05b3d20457b3b46",
+    "generation_replay/protocol.json": "4af6c3cf24decc3c86e34de58118e883d1aa09ca449327fe83ff58a435475121",
+    "generation_replay/result.json": "50995ea0b68e7641757f81bd078da95eec29efee72e4a575867310134a172ad8",
+    "analysis/protocol.json": "693159fdbd5b94f8f8ae4f2d498b1772fd7c4028cfd7bb7ffd2e02e670234b04",
+    "analysis/result.json": "b961dd43c7ba9a5eb19e970341841b148b251de7485a5cc5c261830c072a15ab",
+    "analysis_replay/protocol.json": "5a58f19a5bb6aa82b8c5714d37446e32f1c73914cd7a89a1229dab104d9fd389",
+    "analysis_replay/result.json": "b961dd43c7ba9a5eb19e970341841b148b251de7485a5cc5c261830c072a15ab",
+    "diagnosis/protocol.json": "ab3278cc87269808de2e8278babe5276b2de20ce0cc3be6dbcf83c50ff7a05a0",
+    "diagnosis/result.json": "add61279ba1919fac1e37571c47c7f26774804ad15ff2712aa82f3f0f413fd36",
+    "diagnosis_replay/protocol.json": "ab3278cc87269808de2e8278babe5276b2de20ce0cc3be6dbcf83c50ff7a05a0",
+    "diagnosis_replay/result.json": "add61279ba1919fac1e37571c47c7f26774804ad15ff2712aa82f3f0f413fd36",
+    "chain/protocol.json": "f08459f0f8485985971133cde4e4279c7814083516d0026a21649340c29629ff",
+    "chain/result.json": "a709f455bb43f90167d23722507b8920da02d9f4d63d28bb2ce15ae9982c14e9",
+    "chain_replay/protocol.json": "98eea1e0bebdd9054965d8940d1db755b20465fa40a069e21aca2583d09a8189",
+    "chain_replay/result.json": "a709f455bb43f90167d23722507b8920da02d9f4d63d28bb2ce15ae9982c14e9"
+  },
+  "temporary_ssh_files_created": 0,
+  "temporary_ssh_files_remaining": 0,
+  "new_whole_song_generations": 0,
+  "operational_qualified": false
+}

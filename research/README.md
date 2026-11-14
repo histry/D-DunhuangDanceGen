@@ -51,3 +51,14 @@ New drivers live under research/protected_guidance, research/event_information a
 ## R6 source expression and private blind review
 
 The source_expression package isolates frozen failure attribution, Train-reference-only pose/dynamic scales, five common-dose protected objectives, multi-audio Shadow planning and private review preparation. Historical weights, source/config baseline and qualification thresholds are unchanged. Saved-array verification is independent of GPU replay; human data review remains separate from model admission. The media-only continuation explicitly binds prior successful stages and retains the failed floating-WAV timestamp receipt. See [protocol](../docs/source_expression_r6_v1.md) and [report](../reports/来源动态控制与独立盲审准备报告.md).
+
+
+## R12 explicit motion-state Bridge
+
+The research-only package src/dunhuang/research/motion_bridge compares matched Train-only
+music/motion/Decoder injection directions, then trains two 311,808-parameter observed-state
+Bridges with raw-anchor and raw-seam objectives. B3 adds bidirectional attention; B2 uses a
+parameter-matched pointwise block. Checkpoints remain unqualified; no production consumer
+or default-profile change is introduced. Frozen C2/R11 artifacts remain comparison baselines.
+See [protocol](../docs/R12_MOTION_BRIDGE_PROTOCOL.md) and
+[results](../reports/R12显式动作Bridge与双侧状态实验报告.md).
