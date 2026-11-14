@@ -100,3 +100,16 @@ The registered local gate fails; no feedback neural branch, population training 
 544 Native/FK arrays and 10 array bundles have exact independent replay.
 See [protocol](../docs/R15_ROOT_POSE_PROTOCOL.md) and
 [report](../reports/R15联合RootPose容量与物理编辑域报告.md).
+
+
+## R16 event-synchronous continuous-window research
+
+continuous_r16 creates one global event/motion/music clock, verifies real same-recording
+AIST window pairs and source-only ChangE E1-W contracts, then compares frozen C0
+30-frame grafts against fully generated 150-frame C1 windows. Source keys remain soft;
+all new outer joins and full Native results are measured. Independent exact sampling
+replay passes; the joint mechanism gate fails despite positive source response.
+No C2 state model or full-song promotion is claimed. Four fixed-world diagnostic
+videos compare real paired AIST, C0 and C1 without smoothing or Root recentering.
+See [protocol](../docs/R16_CONTINUOUS_PROTOCOL.md) and
+[report](../reports/R16连续事件生成与真实窗口对照报告.md).

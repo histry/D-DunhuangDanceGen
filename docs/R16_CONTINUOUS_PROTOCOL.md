@@ -93,3 +93,9 @@ human_reviewed=false，semantic_event_truth=UNKNOWN，operational_qualified=fals
 [DanceFusion正式论文](https://openaccess.thecvf.com/content/ACCV2024/html/Truong-Thuy_Rethinking_Sampling_for_Music-Driven_Long-Term_Dance_Generation_ACCV_2024_paper.html)
 研究音乐和前后动作条件。
 本轮仍为R13权重的独立合同实验，不声称新的长序列骨干已实现。
+
+
+执行后记号澄清：中心Jerk的冻结实现为第三差分起点索引44:105，
+模板中点45.5–105.5帧；上文[45,105]是近似中心带记号。
+未改动计算代码、候选、数据人口或门槛；C0/C1_correct的8个最大值
+去掉末端半帧模板也逐值不变。正式Native绝对指标未改变。
