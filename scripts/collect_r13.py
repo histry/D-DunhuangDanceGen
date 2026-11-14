@@ -17,7 +17,10 @@ def run(root):
         r=read(root/stage/"result.json");training[stage]=dict(checkpoint=r["checkpoint"],parameters=r["parameters"],optimizer_steps=r["optimizer_steps"],
             initial_digest=r["initial_digest"],final_digest=r["final_digest"],frozen_digest=r["frozen_digest"],ledger_sha256=sha(root/stage/"result.json"),
             first=r["history"][0],last=r["history"][-1],self_policy_snapshots=r["self_snapshots"],
-            training_population_windows=len(read(root/stage/"protocol.json")["fit_population"]))
+            training_population_windows=len(read(root/stage/"protocol.json")["fit_population"]),
+            distinct_supervised_windows=len({(x["raw_sha256"],x["start"]) for h in r["ledger"] for x in h["rows"]}),
+            sampled_music_groups=len({x["group"] for h in r["ledger"] for x in h["rows"]}),
+            actual_self_cache_updates=sum(h["self_cache"] for h in r["ledger"]))
         nr=read(root/(stage+"_native")/"result.json");g={}
         for arm in ("MCD","R12B3"):
             rows=[r for r in nr["records"] if r["arm"]==arm and r["driver"]=="correct"]
@@ -49,8 +52,13 @@ def run(root):
                     totals[key]+=int(a<b)
             wins[control]=totals
         main["heldout_shared_state_control_wins"]=wins
+    official=read(root/"official/result.json")
+    official["official_pretrained_args"]={k:v for k,v in official["official_pretrained_args"].items() if k in
+        ("batch_size","cond_drop_prob","diffusion_steps","feature_type","guidance_param","inpainting_frames","lambda_cycle","lambda_fc",
+         "lambda_mse","lambda_rcxyz","lambda_vel","latent_dim","layers","lr","motion_mask","noise_schedule","num_frames","num_heads","sigma_small","seed","weight_decay")}
+    official["feature_metadata_note"]="Published args feature_type=baseline, while source music projection is hardcoded 4800x90; checkpoint tensor shapes not verified"
     result=dict(schema="r13_motion_mask_conditioned_denoiser_evidence",baseline="04f817b73487d85b6408a5af0ce32180a5ffb835",
-        config=read(root/"teacher/protocol.json")["config"],official=read(root/"official/result.json"),teacher=read(root/"teacher_native/result.json"),
+        config=read(root/"teacher/protocol.json")["config"],official=official,teacher=read(root/"teacher_native/result.json"),
         teacher_feature_probes=read(root/"teacher/result.json")["records"],training=training,groups=groups,
         tiny=read(root/"tiny_native/result.json"),main=main,
         native_detail=read(root/"native_detail/result.json"),inspection=read(root/"inspection/result.json"),checks=check,evidence=evidence,receipts=receipts,new_whole_song_generations=0,human_reviewed=False,operational_qualified=False,

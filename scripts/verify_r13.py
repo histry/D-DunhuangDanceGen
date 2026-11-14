@@ -35,6 +35,11 @@ def run(root):
             assert len(first["self_caches"])==16
         train_steps+=first["optimizer_steps"]
         g=read(root/(stage+"_rollout")/"result.json");gr=read(root/(stage+"_rollout_replay")/"result.json")
+        matched_noise={}
+        for binding in g["bindings"]:
+            receipt=read(Path(checked(binding["trace"])).parent/"sampler.json")
+            matched_noise.setdefault(binding["case"],set()).add(receipt["noise_sha256"])
+        assert all(len(v)==1 for v in matched_noise.values())
         for left,right in zip(g["bindings"],gr["bindings"]):
             assert left["case"]==right["case"] and left["arm"]==right["arm"] and left["driver"]==right["driver"]
             same_arrays(checked(left["trace"]),checked(right["trace"]));rollouts+=1
@@ -69,7 +74,7 @@ def run(root):
         receipts[stage]=(p/"execution_commit.txt").read_text().strip()
     result=dict(code_commit=commit(),frozen_r12_changed_paths=frozen,formal_changed_paths=formal,teacher_probe_exact=True,
         teacher_rollouts_exact=4,denoiser_rollouts_exact=rollouts,native_arrays_exact=native_arrays,native_results_exact=True,supplemental_native_arrays_exact=supplemental,
-        q_eval_exact=True,self_policy_caches_replayed=sum(len(read(root/stage/"result.json")["self_caches"]) for stage in stages),
+        q_eval_exact=True,matched_sampler_noise_verified=True,self_policy_caches_replayed=sum(len(read(root/stage/"result.json")["self_caches"]) for stage in stages),
         training_optimizer_steps=train_steps,replay_optimizer_steps=0,optimizer_steps=0,music_encoder_frozen=True,stages=stages,
         new_whole_song_generations=0,operational_qualified=False,receipts=receipts)
     write(root/"independent_checks.json",result);print("R13_VERIFIED",result,flush=True)
