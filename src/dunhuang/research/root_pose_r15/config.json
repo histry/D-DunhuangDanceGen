@@ -1,0 +1,60 @@
+{
+  "schema": "root_pose_capacity_r15_v1",
+  "baseline": "bfb269dfb5714a2c012d10d57f4511509c82a621",
+  "r14_root": "outputs/boundary_state_r14_01",
+  "r14_config": "src/dunhuang/research/boundary_state_r14/config.json",
+  "seed": 15041,
+  "edit": [
+    60,
+    90
+  ],
+  "fps": 30,
+  "timesteps": [
+    519,
+    19
+  ],
+  "arms": [
+    "J0",
+    "J1",
+    "J2",
+    "J3",
+    "J4"
+  ],
+  "leg_joints": [
+    1,
+    2,
+    4,
+    5,
+    7,
+    8
+  ],
+  "root_input_l2": 0.3286335345030997,
+  "line_fractions": [
+    1,
+    0.25,
+    0.0625,
+    0.015625
+  ],
+  "derivative_epsilon": 0.001,
+  "physical_radius": {
+    "root_translation_m": 0.02,
+    "root_angle_rad": 0.05,
+    "leg_angle_rad": 0.05,
+    "other_angle_rad": 0.005
+  },
+  "protection": {
+    "source_pose_rad": 0.005,
+    "upperbody_pose_rad": 0.001,
+    "activity_relative": 0.05,
+    "seam_relative": 0.00001
+  },
+  "gate": {
+    "groups": 8,
+    "minimum_qualified_groups": 6,
+    "minimum_gain": 0.02
+  },
+  "neural_optimizer_steps": 0,
+  "new_full_window_generations": 0,
+  "new_whole_song_generations": 0,
+  "operational_qualified": false
+}
