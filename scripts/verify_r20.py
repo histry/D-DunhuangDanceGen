@@ -7,7 +7,7 @@ from dunhuang.io import checked,write
 from dunhuang.research.source_capacity.common import read,commit,forbid_optimizers,same_arrays
 
 def run(root):
-    root=Path(root);forbid_optimizers();cfg=read(root/"interface/protocol.json")["config"]
+    root=Path(root).resolve();forbid_optimizers();cfg=read(root/"interface/protocol.json")["config"]
     assert read(root/"interface/result.json")==read(root/"interface_replay/result.json")
     same_arrays(root/"interface/predictions.npz",root/"interface_replay/predictions.npz");bundles=1
     assert read(root/"temporal_calibration/result.json")==read(root/"temporal_calibration_replay/result.json")

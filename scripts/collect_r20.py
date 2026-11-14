@@ -7,8 +7,8 @@ from dunhuang.io import write,sha
 from dunhuang.data.sources import ref
 from dunhuang.research.source_capacity.common import read,commit
 
-def run(root):
-    root=Path(root);receipt=Path(str(root)+"_receipts")
+def run(root,receipt_root=None):
+    root=Path(root);original_receipt=Path(str(root)+"_receipts");receipt=Path(receipt_root) if receipt_root else original_receipt
     assert (receipt/"exit_status.txt").read_text().strip()=="0"
     cfg=read(root/"interface/protocol.json")["config"];checks=read(root/"independent_checks.json")
     arms=["S0","S1","A0","A1","A2"]+(["A3"] if checks["A3_executed"] else [])
@@ -59,9 +59,12 @@ def run(root):
         ("protocol.json","result.json","structure_gate.json","cache_gate.json","independent_checks.json")}
     p=Path("reports/r20_summary.json");write(p,result);write("reports/r20_checks.json",checks)
     write("reports/r20_receipt.json",dict(code_commit=commit(),summary_sha256=sha(p),evidence=evidence,
-        execution_commit=(receipt/"execution_commit.txt").read_text().strip(),exit_status=0,
+        execution_commit=(original_receipt/"execution_commit.txt").read_text().strip(),exit_status=0,
+        completion_receipt_root=str(receipt),completion_commit=(receipt/"execution_commit.txt").read_text().strip(),
+        original_launcher_exit_status=int((original_receipt/"exit_status.txt").read_text().strip()),
+        original_receipt_files={p.name:sha(p) for p in original_receipt.iterdir() if p.is_file()},
         receipt_files={p.name:sha(p) for p in receipt.iterdir() if p.is_file()},
         temporary_ssh_files_created=0,temporary_ssh_files_remaining=0,whole_song_generations=0,operational_qualified=False))
     print("R20_COLLECTED",sha(p),flush=True)
 if __name__=="__main__":
-    p=argparse.ArgumentParser();p.add_argument("--root",required=True);a=p.parse_args();run(a.root)
+    p=argparse.ArgumentParser();p.add_argument("--root",required=True);p.add_argument("--receipt-root");a=p.parse_args();run(a.root,a.receipt_root)
