@@ -63,3 +63,17 @@ def test_free_training_pairs_do_not_require_an_external_true_halo():
     assert len(pair_candidates(rows))==2
     assert len(pair_candidates(rows,minimum_start=8))==1
     assert pair_candidates(rows)[0][0]["start_frame"]==0
+
+
+def test_global_training_loss_has_no_contact_truth_and_finite_root_gradients():
+    from dunhuang.research.global_clock_r17.objective import losses
+    y=torch.zeros(1,225,151);y[:,:,7:]=torch.tensor([1.,0,0,0,1,0]).repeat(24)
+    p=y.clone();p[:,:,0:4]=.8;p[:,100,4]=.01;p.requires_grad_(True)
+    v,k,h=conditions(y[0].numpy(),"free")
+    args=(torch.tensor(v[None]),torch.tensor(k[None]),torch.tensor(h[None]),torch.ones(151),torch.zeros(151),
+        torch.zeros(1,3),[-1]+list(range(23)),torch.zeros(24,3))
+    a=losses(p,y,*args)
+    assert a["world_fk"]>0 and a["reconstruction"]>0
+    sum(a.values()).backward()
+    assert torch.isfinite(p.grad).all() and p.grad[:,:,4:7].abs().sum()>0
+    assert not p.grad[:,:,:4].any()
