@@ -1,0 +1,23 @@
+{
+  "baseline": "44235357b9763bc8b047e4cda1579035faa3d7b9",
+  "preflight": "outputs/feasible_r9_02/training_preflight",
+  "seed": 20261115,
+  "data_seed": 20261114,
+  "steps": 200,
+  "learning_rate": 0.0001,
+  "validation_windows": 16,
+  "timesteps": [
+    100,
+    500,
+    900,
+    999
+  ],
+  "root_shift_m": 0.15,
+  "response_weight": 0.1,
+  "arms": [
+    "C0",
+    "C1"
+  ],
+  "validation_selection": false,
+  "operational_qualified": false
+}
