@@ -121,3 +121,7 @@ Independent package: src/dunhuang/research/global_clock_r17. A 225-frame state i
 ## R18 task-matched denoising
 
 Independent package: src/dunhuang/research/task_denoising_r18. Exclusive cross-view keys and disentangled content/clock/phase controls are compared with a matched self-view model. Both selected R13 motion layers and the state head adapt for120 updates on two Train sequences; all three tasks receive ranking supervision. Tiny admission failed, so eight-group training, D3 and new whole songs were skipped. Full22 sampler replays and read-only objective-gradient replays are exact; Native0/22. See [protocol](../docs/R18_TASK_DENOISING_PROTOCOL.md) and [report](../reports/R18任务匹配去噪与独有内容训练报告.md).
+
+## R19 reconstruction-first objective ablation
+
+Independent objective_r19 package: matched single-task N0/N1/N2, then conditional U. Each uses240 updates on two Train sources with an identical ledger. Loss masks/counts align with the gate, physical units stay30Hz, and static gradient-budget weights freeze before training. Saved pre/post states independently reproduce16 actual AdamW update observations without optimizers. Basic reconstruction passes2/2; Native remains0/12 and unique-content benefit is unproven. See [protocol](../docs/R19_OBJECTIVE_PROTOCOL.md) and [report](../reports/R19重建优先目标校准与实际更新报告.md).

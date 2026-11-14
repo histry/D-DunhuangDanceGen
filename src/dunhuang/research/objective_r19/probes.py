@@ -1,5 +1,4 @@
 """Aligned unknown/observed Root/rotation readouts, stratified by diffusion time."""
-import numpy as np
 import torch
 from .common import state,coverage
 from .objective import reconstruction,geometry
