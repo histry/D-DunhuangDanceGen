@@ -3,6 +3,12 @@ from dunhuang.io import sha,checked
 from dunhuang.research.source_capacity.common import read
 from dunhuang.research.boundary_state_r14.common import population
 
+def manifest_ref(path,hashes,root=None):
+    root=Path.cwd().resolve() if root is None else Path(root).resolve()
+    p=Path(path);p=(root/p).resolve() if not p.is_absolute() else p.resolve()
+    key=p.relative_to(root).as_posix()
+    return dict(path=str(p),sha256=hashes[key])
+
 def source(cfg,*,manifest=False):
     root=Path(cfg["r14_root"]);seal=read("reports/r14_summary.json")
     assert sha("reports/r14_summary.json")==read("reports/r14_receipt.json")["summary_sha256"]
@@ -17,5 +23,5 @@ def source(cfg,*,manifest=False):
     assert set(groups)<={r["source_group"] for r in hold}
     assert not set(groups)&{r["row"]["source_group"] for r in monitors}
     for b in rows:
-        path=b["trace"];checked(dict(path=path,sha256=hashes[path]))
+        checked(manifest_ref(b["trace"],hashes))
     return assets,rows,monitors,hashes

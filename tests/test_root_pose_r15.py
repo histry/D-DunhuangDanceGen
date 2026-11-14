@@ -63,3 +63,16 @@ def test_bad_right_seam_cannot_hide_in_means():
     bad=json.loads(json.dumps(m));bad["joins"][0]["root_step_m"]=.5;bad["joins"][1]["root_step_m"]=1.1
     assert not protected(bad,m,cfg)["both_seams_nonregression"]
     assert not protected(m,m,cfg)["root_improved"]
+
+
+def test_manifest_absolute_relative_and_outside_paths(tmp_path):
+    from dunhuang.research.root_pose_r15.common import manifest_ref
+    from dunhuang.io import checked,sha
+    file=tmp_path/"trace.npz";file.write_bytes(b"frozen trace")
+    hashes={"trace.npz":sha(file)}
+    a=manifest_ref(file,hashes,tmp_path);b=manifest_ref("trace.npz",hashes,tmp_path)
+    assert a==b and checked(a)==file
+    with pytest.raises(ValueError):manifest_ref(tmp_path.parent/"outside.npz",hashes,tmp_path)
+    with pytest.raises(KeyError):manifest_ref("unknown.npz",hashes,tmp_path)
+    file.write_bytes(b"changed trace")
+    with pytest.raises(ValueError):checked(a)
