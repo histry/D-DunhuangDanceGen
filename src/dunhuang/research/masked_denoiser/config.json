@@ -1,0 +1,71 @@
+{
+  "schema": "r13_mask_conditioned_denoiser_v1",
+  "baseline": "04f817b73487d85b6408a5af0ce32180a5ffb835",
+  "r12_root": "outputs/motion_bridge_r12_01",
+  "r12_config": "src/dunhuang/research/motion_bridge/config.json",
+  "preflight": "outputs/feasible_r9_02/training_preflight",
+  "seed": 13041,
+  "edit": [
+    60,
+    90
+  ],
+  "observed_intervals": [
+    [
+      52,
+      60
+    ],
+    [
+      90,
+      98
+    ]
+  ],
+  "tiny_windows": 4,
+  "tiny_steps": 240,
+  "tiny_batch": 4,
+  "main_steps": 400,
+  "main_batch": 2,
+  "learning_rate": 0.0001,
+  "timesteps": [
+    999,
+    519,
+    119,
+    19
+  ],
+  "teacher_rms": 0.1,
+  "teacher_site": "decoder",
+  "trainable_prefixes": [
+    "input_projection.",
+    "seqTransDecoder.stack.0.",
+    "final_layer."
+  ],
+  "music_cfg": 2,
+  "motion_context_in_both_cfg_branches": true,
+  "dropout": 0,
+  "self_cache_updates": [
+    100,
+    250
+  ],
+  "self_cache_windows": 8,
+  "self_cache_steps": [
+    0,
+    24,
+    44,
+    49
+  ],
+  "self_cache_fraction": 0.5,
+  "loss_weights": {
+    "reconstruction": 1,
+    "anchor_root": 1,
+    "anchor_pose": 1,
+    "seam_velocity": 0.1,
+    "seam_acceleration": 0.01,
+    "seam_rotation": 0.1
+  },
+  "tiny_gate": {
+    "minimum_cases": 3,
+    "maximum_ratio": 0.75,
+    "minimum_control_wins": 3
+  },
+  "operational_qualified": false,
+  "whole_song_generations": 0
+}
