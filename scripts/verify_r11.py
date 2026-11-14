@@ -12,6 +12,7 @@ def run(root):
     assert read(root/"analysis/result.json")==read(root/"analysis_replay/result.json")
     if (root/"analysis_cached").exists():assert read(root/"analysis/result.json")==read(root/"analysis_cached/result.json")
     assert read(root/"audit/result.json")["oracle_passed"]
+    if (root/"chain").exists():assert read(root/"chain/result.json")==read(root/"chain_replay/result.json")
     oracle=0
     for b in read(root/"audit/protocol.json")["bindings"]:
         folder=Path(checked(b["oracle"])).parent
@@ -40,7 +41,7 @@ def run(root):
     frozen=subprocess.check_output(["git","diff","--name-only","4496e43","--","src/dunhuang/research/condition_dependency","reports/r10_summary.json","reports/r10_checks.json","reports/r10_receipt.json"],text=True).splitlines()
     assert not frozen
     result=dict(code_commit=commit(),frozen_r10_files_changed=frozen,oracle_arrays=oracle,full_motion_arrays=n,trace_arrays=trace,shared_trajectory_steps=steps,
-        original_C2_a0_arrays_equal=True,analysis_exact_replay=True,cached_analysis_exact=(root/"analysis_cached/result.json").is_file(),rng_unchanged=True,a0_features_exact=True,formal_changed_paths=formal,
+        original_C2_a0_arrays_equal=True,analysis_exact_replay=True,cached_analysis_exact=(root/"analysis_cached/result.json").is_file(),stage_chain_exact_replay=(root/"chain/result.json").is_file(),rng_unchanged=True,a0_features_exact=True,formal_changed_paths=formal,
         optimizer_steps=0,new_whole_song_generations=0,operational_qualified=False)
     write(root/"independent_checks.json",result);print("R11_VERIFIED",result,flush=True)
 if __name__=="__main__":

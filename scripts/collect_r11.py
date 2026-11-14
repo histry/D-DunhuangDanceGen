@@ -9,7 +9,7 @@ from dunhuang.research.source_capacity.common import read,commit
 def run(root):
     root=Path(root);a=read(root/"audit/result.json");b=read(root/"analysis/result.json");checks=read(root/"independent_checks.json")
     receipts={}
-    for label in ("audit","trace","post","final"):
+    for label in ("audit","trace","post","final","chain"):
         folder=Path(str(root)+"_"+label+"_receipts");assert (folder/"exit_status.txt").read_text().strip()=="0"
         receipts[label]=dict(code_commit=(folder/"execution_commit.txt").read_text().strip(),files={p.name:sha(p) for p in folder.iterdir() if p.is_file()})
     groups={}
@@ -24,7 +24,7 @@ def run(root):
             rows=[r for r in b["case_means"] if r["arm"]==arm and r["case"].startswith("val_")==(population=="val")]
             conditions[population+"/"+arm]=dict(cases=len(rows),**{k:float(np.mean([r[k] for r in rows])) for k in ("mse","root_rmse_m","pose_error_rad","feet_rmse_m","boundary_root_rmse_m","boundary_feet_rmse_m","root_response_rms_m","pose_response_rad")})
     evidence={};stages={}
-    for phase in ("audit","audit_replay","trace","trace_replay","analysis","analysis_replay","analysis_cached","inspector"):
+    for phase in ("audit","audit_replay","trace","trace_replay","analysis","analysis_replay","analysis_cached","inspector","chain","chain_replay"):
         protocol=read(root/phase/"protocol.json");stages[phase]=protocol["code_commit"]
         for file in ("protocol.json","result.json","checks.json"):
             p=root/phase/file
@@ -38,7 +38,7 @@ def run(root):
         curves.append(dict(case=name,first=rows[0],last=rows[-1],root_error_nonmonotone_steps=sum(v["root_rmse_m"]>u["root_rmse_m"] for u,v in zip(rows,rows[1:]))))
     p1=read(root/"trace/protocol.json");traces=[dict(case=x["case"],trace=x["trace"],trace_info=x["trace_info"],reference=x["reference"]) for x in p1["bindings"]]
     summary=dict(schema="r11_frozen_state_and_shared_trajectory_evidence",baseline="4496e435c4f8d4333d4d888b67be2875bf1d8e2b",
-        config=read(root/"audit/protocol.json")["config"],state_groups=groups,oracles=a["oracles"],qualification=b["qualification"],conditions=conditions,
+        config=read(root/"audit/protocol.json")["config"],stage_chain=read(root/"chain/result.json"),state_groups=groups,oracles=a["oracles"],qualification=b["qualification"],conditions=conditions,
         case_condition_means=b["case_means"],inspector_validation=inspector_qa,a0_first_last=curves,traces=traces,checks=checks,stage_commits=stages,evidence=evidence,receipts=receipts,
         optimizer_steps=0,new_neural_generations=16,new_counterfactual_complete_rollouts=0,shared_state_predictions=4800,new_whole_song_generations=0,
         human_reviewed=False,operational_qualified=False,
