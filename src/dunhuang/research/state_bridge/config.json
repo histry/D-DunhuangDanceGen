@@ -1,0 +1,41 @@
+{
+  "baseline": "4496e435c4f8d4333d4d888b67be2875bf1d8e2b",
+  "parent": "outputs/balanced_r10_01",
+  "comparison": "outputs/content_r10_01",
+  "trace_interval": [
+    50,
+    100
+  ],
+  "edit": [
+    60,
+    90
+  ],
+  "key_frames": [
+    59,
+    60,
+    65,
+    89,
+    90
+  ],
+  "oracle_native_atol": 2e-06,
+  "oracle_fk_atol_m": 5e-06,
+  "oracle_angle_atol_rad": 2e-06,
+  "decomposition_atol_m": 2e-05,
+  "arms": [
+    "A0",
+    "A1",
+    "A2",
+    "A3",
+    "A4",
+    "A5"
+  ],
+  "gate": {
+    "val_cases": 4,
+    "paired_wins_minimum": 3,
+    "minimum_directional_gain": 0.01,
+    "nonzero_target_delta_m": 0.0001
+  },
+  "optimizer_steps": 0,
+  "new_whole_song_generations": 0,
+  "operational_qualified": false
+}
