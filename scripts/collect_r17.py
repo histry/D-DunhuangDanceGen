@@ -3,7 +3,7 @@ import argparse,sys
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/"src"))
 import numpy as np
-from dunhuang.io import write,sha
+from dunhuang.io import write,sha,checked
 from dunhuang.research.source_capacity.common import read,commit
 
 def run(root):
@@ -31,6 +31,19 @@ def run(root):
                 factor.append(dict(position=position,hard=hard,event=event,cases=len(rr),native_passes=sum(r["native_ok"] for r in rr),halo_native_passes=sum(r["halo_native_ok"] for r in rr),
                     global_jerk_max_mean=float(np.mean([r["jerk_max_mps3"] for r in rr])),edge_root_mean=float(np.mean([r["edge_root_rmse_m"] for r in rr])),
                     raw_observed_root_mean=float(np.mean([r["raw_known_root_rmse_m"] for r in rr]))))
+    hard_soft=[]
+    audit=read(root/"audit/result.json")
+    by={(r["case"],r["position"],r["hard"],r["event"]):r for r in audit["factors"]}
+    for case in range(4):
+        for position in ("mid","ends"):
+            for event in (False,True):
+                a=by[case,position,False,event];b=by[case,position,True,event]
+                x=np.load(checked(a["trace"]));y=np.load(checked(b["trace"]))
+                aa=read(checked(a["sampler"]))["steps"];bb=read(checked(b["sampler"]))["steps"]
+                hard_soft.append(dict(case=case,position=position,event=event,
+                    observation_masks_identical=bool(np.array_equal(x["known"],y["known"])),
+                    all50_raw_predictions_exact=all(u["raw"]==v["raw"] for u,v in zip(aa,bb)),
+                    final_nonhard_coordinates_exact=bool(np.array_equal(x["sample"][~y["hard"]],y["sample"][~y["hard"]]))))
     arms=[]
     for arm in ("A_numeric","B_cross","C_self"):
         for task in ("free","inbetween","progressive"):
@@ -40,7 +53,7 @@ def run(root):
     result=dict(schema="r17_global_clock_evidence_v1",baseline="70988d94fafa55b1615fb3f863798cd103d1e60a",
         config=read(root/"data/protocol.json")["config"],data=dict(fit_groups=data["fit_groups"],eval_groups=data["eval_groups"],
             records=[{k:r[k] for k in ("case","role","left","right","fresh_raw_decode_exact","audio_overlap_exact","halo150_observed","feature_overlap","music_policy")} for r in data["records"]]),
-        training=training,factor_summary=factor,factor_records=native["factors"],music_records=native["music"],music_response=native["music_response"],
+        training=training,hard_soft_pairs=hard_soft,factor_summary=factor,factor_records=native["factors"],music_records=native["music"],music_response=native["music_response"],
         arms=arms,rollouts=native["rollouts"],qualification=native["qualification"],checks=checks,evidence=evidence,receipts=receipts,
         videos=read(root/"videos/protocol.json")["records"],sampler_calls=76,replay_sampler_calls=76,neural_optimizer_steps=480,
         human_reviewed=False,semantic_event_truth="UNKNOWN",new_whole_song_generations=0,operational_qualified=False,
