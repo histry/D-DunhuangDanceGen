@@ -1,0 +1,67 @@
+{
+  "schema": "r12_explicit_motion_bridge_v1",
+  "baseline": "75868e812e31adf2173e4f62c564c56c4c13d219",
+  "preflight": "outputs/feasible_r9_02/training_preflight",
+  "seed": 12041,
+  "data_seed": 901,
+  "edit": [
+    60,
+    90
+  ],
+  "sites": [
+    "music",
+    "motion",
+    "decoder"
+  ],
+  "capacity_cases": 8,
+  "capacity_timesteps": [
+    999,
+    519,
+    119,
+    19
+  ],
+  "perturbation_rms": 0.1,
+  "capacity_gate": {
+    "minimum_positive_cases": 3,
+    "heldout_cases": 4,
+    "minimum_correct_vs_wrong_cases": 3
+  },
+  "site_preference": [
+    "motion",
+    "decoder"
+  ],
+  "training_steps": 400,
+  "batch": 2,
+  "learning_rate": 0.0003,
+  "rollout_windows": 8,
+  "rollout_monitor_windows": 4,
+  "rollout_steps": [
+    0,
+    24,
+    44,
+    49
+  ],
+  "rollout_fraction": 0.5,
+  "arms": [
+    "B3",
+    "B2"
+  ],
+  "final_checkpoint_only": true,
+  "loss_weights": {
+    "reconstruction": 1,
+    "anchor_root": 1,
+    "anchor_pose": 1,
+    "seam_velocity": 0.1,
+    "seam_acceleration": 0.01,
+    "seam_rotation": 0.1
+  },
+  "units": {
+    "root_m": 0.1,
+    "rotation_rad": 0.3,
+    "velocity_m_s": 1,
+    "acceleration_m_s2": 10,
+    "angular_velocity_rad_s": 3
+  },
+  "whole_song_generations": 0,
+  "operational_qualified": false
+}
