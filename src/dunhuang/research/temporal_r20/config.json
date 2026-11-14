@@ -1,0 +1,88 @@
+{
+  "schema": "r20_sampling_temporal_v1",
+  "baseline": "9c2100ca455bd2a23204640e22f4bb1794663b81",
+  "parent": "outputs/objective_r19_01",
+  "seed": 20041,
+  "steps": 240,
+  "learning_rate": 0.0001,
+  "train_cases": [
+    0,
+    1
+  ],
+  "dev_cases": [
+    2,
+    3
+  ],
+  "eval_seeds": [
+    0,
+    1
+  ],
+  "arms": [
+    "A0",
+    "A1",
+    "A2"
+  ],
+  "snapshot_steps": [
+    0,
+    119,
+    239
+  ],
+  "cache_refresh": [
+    0,
+    120
+  ],
+  "time_distribution": "half stratified U{0..999}, half shuffled 50-step inference grid",
+  "temporal_scales": {
+    "body_velocity": 3,
+    "body_acceleration": 30
+  },
+  "temporal_budget": 0.1,
+  "calibration_times": [
+    999,
+    859,
+    719,
+    579,
+    439,
+    299,
+    159,
+    19
+  ],
+  "layer_trace_cases": [
+    0
+  ],
+  "stage_snapshots": [
+    999,
+    519,
+    119,
+    19
+  ],
+  "gate": {
+    "q_retention": 1.25,
+    "minimum_gap": 2
+  },
+  "blend_intervention": "quintic feature partition, frozen Common only",
+  "train_blend": "mean",
+  "whole_song_generations": 0,
+  "operational_qualified": false,
+  "structure_arms": [
+    "S0",
+    "S1"
+  ],
+  "structure_controls": [
+    "correct",
+    "left_wrong",
+    "right_wrong",
+    "left_absent",
+    "right_absent",
+    "both_absent"
+  ],
+  "structure_gate": {
+    "q_tolerance": 1.1,
+    "raw_edge_tolerance": 1.1,
+    "jerk_p95_tolerance": 1.1,
+    "minimum_activity_ratio": 0.8,
+    "pose_tolerance": 1.1,
+    "root_tolerance": 1.1
+  },
+  "structure_first": true
+}
