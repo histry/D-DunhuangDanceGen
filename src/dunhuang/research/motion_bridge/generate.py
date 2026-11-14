@@ -35,7 +35,7 @@ def run(cfg,training,out,replay=None):
         adapter=None;hook=None
         if arm!="B0":
             payload=torch.load(checked(source[arm]["checkpoint"]),map_location="cpu",weights_only=True)
-            assert payload["base_sha256"]==q["checkpoint"]["sha256"] and payload["schema"]==cfg["schema"]
+            assert payload["base_sha256"]==q["checkpoint"]["sha256"] and payload["schema"]==cfg["schema"] and payload["config"]==cfg
             adapter=MotionBridge(payload["state"]["scale"],payload["state"]["bias"],payload["state"]["inv_rms"],arm,cfg["perturbation_rms"]).cuda().eval()
             adapter.load_state_dict(payload["state"],strict=True)
             for p in adapter.parameters():p.requires_grad_(False)

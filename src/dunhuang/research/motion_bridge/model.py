@@ -50,7 +50,9 @@ class MotionBridge(nn.Module):
         self.register_buffer("scale",torch.as_tensor(scale,dtype=torch.float32))
         self.register_buffer("bias",torch.as_tensor(bias,dtype=torch.float32))
         self.register_buffer("inv_rms",torch.as_tensor(inv_rms,dtype=torch.float32))
-        if self.scale.shape!=(151,) or self.inv_rms.shape!=(222,) or (self.scale<=0).any() or not torch.isfinite(self.inv_rms).all():
+        if (self.scale.shape!=(151,) or self.bias.shape!=(151,) or self.inv_rms.shape!=(222,)
+            or any(not torch.isfinite(x).all() for x in (self.scale,self.bias,self.inv_rms))
+            or (self.scale<=0).any() or (self.inv_rms<=0).any() or not math.isfinite(self.cap) or self.cap<=0):
             raise ValueError("Invalid scaler or Train-only feature statistics")
         self.observed=nn.Linear(444,128)
         self.noisy=nn.Linear(151,128);self.music=nn.Linear(512,128);self.time=nn.Linear(32,128)

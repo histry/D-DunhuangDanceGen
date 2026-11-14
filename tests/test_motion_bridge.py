@@ -62,3 +62,10 @@ def test_conditional_injection_never_touches_unconditional_and_removes_hook():
     assert torch.allclose(hook.predict(x,m,torch.tensor([0]),x+.2),x+.6)
     assert not hook.enabled;hook.close()
     assert not model.input_projection._forward_hooks
+
+
+def test_invalid_units_or_residual_budget_are_rejected():
+    for cap in (0,-1,float("nan"),float("inf")):
+        with pytest.raises(ValueError):MotionBridge(np.ones(151),np.zeros(151),np.ones(222),cap=cap)
+    with pytest.raises(ValueError):MotionBridge(np.ones(151),np.full(151,np.nan),np.ones(222))
+    with pytest.raises(ValueError):MotionBridge(np.ones(151),np.zeros(151),np.zeros(222))

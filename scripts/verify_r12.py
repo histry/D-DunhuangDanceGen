@@ -42,6 +42,7 @@ def run(root):
     formal=subprocess.check_output(["git","diff","--name-only","75868e8","--","src/dunhuang","configs"],text=True).splitlines()
     formal=[p for p in formal if not p.startswith("src/dunhuang/research/")];assert not formal
     frozen=subprocess.check_output(["git","diff","--name-only","75868e8","--","src/dunhuang/research/condition_dependency","src/dunhuang/research/state_bridge","reports/r10_summary.json","reports/r11_summary.json"],text=True).splitlines();assert not frozen
+    assert read(root/"diagnosis/result.json")==read(root/"diagnosis_replay/result.json")
     receipts={}
     for phase in ("capacity","train","generate"):
         p=Path(str(root)+"_"+phase+"_receipts")
