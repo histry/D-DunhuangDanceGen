@@ -44,6 +44,7 @@ def timing_proxy(motion,reference,music,core=(64,160)):
     beats=np.flatnonzero(music[:,-1]>.5)
     return dict(phase_landmarks_source=target,phase_matched_generated_proxy=nearest,
         phase_timing_proxy_mae_frames=float(np.mean(abs(np.array(nearest)-target))) if nearest else None,
-        phase_order_proxy_inversions=sum(nearest[i]>nearest[j] for i in range(len(nearest)) for j in range(i+1,len(nearest))),
+        phase_order_proxy_inversions=sum((target[i]-target[j])*(nearest[i]-nearest[j])<0 for i in range(len(nearest)) for j in range(i+1,len(nearest))),
+        phase_order_proxy_collapses=sum(target[i]!=target[j] and nearest[i]==nearest[j] for i in range(len(nearest)) for j in range(i+1,len(nearest))),
         beat_distance_proxy_frames=float(np.mean(np.min(abs((a+peaks)[:,None]-beats),axis=1))) if len(peaks) and len(beats) else None,
         scope="Kinematic proxy peaks, not semantic event truth; no perceptual music coordination claim")

@@ -16,13 +16,14 @@ def run(cfg,root,out,replay=None):
         row=dict(meta,quality=motion_metrics(motion,points,cue),source_retention_scope="Retimed reference proxy, not paired truth for new music",
             errors=[{name:source_metrics(motion,ref,points,rp,mask) for name,mask in (("unprompted",unknown),("cue",cue),("core",core))} for ref,rp in zip(references,reference_points)],
             timing=[timing_proxy(motion,ref,music) for ref in references])
+        row["root_rmse_source_m"]=float(np.sqrt(np.mean((motion[:,4:7]-references[0][:,4:7])**2))) if meta["dataset"]=="paired" else None
         row["diagnostic_partition"]="Frozen R24 cue neighborhoods; new adapters have NO actual state-write cues"
         records.append(row)
     for row in receipt["receipts"]:
         motion=z[row["stem"]+"_139"];points=z[row["stem"]+"_22"]
         if row["dataset"]=="change":
             for i,(music,event) in enumerate(row["conditions"]):
-                measure(motion[i],points[i],old["source139"],old["source22"],old["music"][music],dict(dataset="change",arm=row["arm"],mode=row["mode"],seed=row["seed"],music=music,event=event))
+                measure(motion[i],points[i],z["music_plan_reference139"][music] if row["mode"]=="music_plan" else old["source139"],z["music_plan_reference22"][music] if row["mode"]=="music_plan" else old["source22"],old["music"][music],dict(dataset="change",arm=row["arm"],mode=row["mode"],seed=row["seed"],music=music,event=event))
         else:
             for i,case in enumerate(row["cases"]):
                 d=paired[case];measure(motion[i],points[i],[d["raw139"]],[d["source22"]],d["music"],dict(dataset="paired",arm=row["arm"],mode=row["mode"],seed=row["seed"],case=case,role=roles[case]))
