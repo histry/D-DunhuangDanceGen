@@ -87,7 +87,7 @@ def run(cfg,root,out,replay=None):
         print("R25_PAIRED_SAMPLE",arm,mode,flush=True)
     assert digest(d.model)==frozen and calls==21
     path=out/"arrays.npz";np.savez_compressed(path,**arrays)
-    result=dict(receipts=receipts,sampler_calls=calls,change_trajectories=72,paired_trajectories=72,total_trajectories=144,music_plans=music_plans,
+    result=dict(receipts=receipts,sampler_calls=calls,change_trajectories=72,paired_trajectories=9*len(cases),total_trajectories=72+9*len(cases),music_plans=music_plans,
         null_reference_exact=True,frozen_model_unchanged=True,optimizer_steps=0,whole_song_generations=0,full_native_status="NOT_EVALUABLE")
     if replay:assert result==read(Path(replay)/"result.json");same_arrays(path,Path(replay)/"arrays.npz")
     write(out/"result.json",result);write(out/"protocol.json",dict(config=cfg,code_commit=commit(),data=str(root/"data/result.json"),arrays_sha256=sha(path),checkpoint=info))

@@ -17,8 +17,14 @@ def run(cfg,out,replay=None):
     receipt=read("reports/r22_release/r22_receipt.json")
     for name in ("data/result.json","data/protocol.json"):assert sha(parent/name)==receipt["evidence"][name]
     pop=read(parent/"data/result.json");pc=read("src/dunhuang/research/branch_r22/config.json")
-    diffusion,norm,skeleton,fk,extract,info,manifest=load(pc);records=[]
+    eligibility=[];available=[]
     for row in pop["records"]:
+        source=np.load(checked(row["left"]["source_native"]),mmap_mode="r")
+        valid=len(source)>=256
+        eligibility.append(dict(case=row["case"],role=row["role"],source_group=row["left"]["source_group"],native_frames=len(source),status="ELIGIBLE" if valid else "EXCLUDED_SHORT_NATIVE_RECORDING"))
+        if valid:available.append(row)
+    diffusion,norm,skeleton,fk,extract,info,manifest=load(pc);records=[]
+    for row in available:
         l=row["left"];full=np.load(checked(l["source_native"]));original,_=decode(checked(l["raw_motion"]),"aistpp");assert np.array_equal(full,original)
         a=min(l["start_frame"],len(full)-256);assert a>=0
         native=full[a:a+256];assert native.shape==(256,151)
@@ -56,7 +62,7 @@ def run(cfg,out,replay=None):
     for base in paths:
         waves=list(base.rglob("*.wav"));pointers=sum(p.stat().st_size<1024 and p.read_bytes().startswith(b"version https://git-lfs.github.com/spec/v1") for p in waves)
         fd.append(dict(root=str(base),wav_files=len(waves),LFS_pointers=pointers,real_audio=len(waves)-pointers))
-    result=dict(records=records,train_cases=[r["case"] for r in train],dev_cases=[r["case"] for r in dev],train_groups=pop["train_groups"],dev_groups=pop["dev_groups"],
+    result=dict(records=records,eligibility_ledger=eligibility,train_cases=[r["case"] for r in train],dev_cases=[r["case"] for r in dev],train_groups=sorted({r["source_group"] for r in train}),dev_groups=sorted({r["source_group"] for r in dev}),
         target_frames=256,music_dim=35,FineDance_audio_audit=fd,FineDance_admitted=False,paired_clock_verified=True,
         split="Fixed R22 adaptation music groups; recording/motion/audio disjoint; historical DEV and pretraining exposure not independent",
         source_clock_adjustment="Shift backward within same recording only if original225 crop lacks31 additional true frames; no padding",
