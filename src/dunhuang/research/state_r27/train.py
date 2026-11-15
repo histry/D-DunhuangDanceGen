@@ -4,7 +4,7 @@ from pathlib import Path
 import numpy as np
 import torch
 from .common import *
-from .trace import sample,trace_arrays,row_noise
+from .trace import row_noise
 from .qualification import fitting_gate
 
 def dataset(root):
@@ -53,36 +53,22 @@ def curves(cfg,d,a,n,s,f,z,step,out):
 def run(cfg,root,out,arm,replay=None):
     root=Path(root);out=fresh(out)
     if replay:forbid_optimizers()
-    capacity=arm=="P2";start=root/"models/P/adapter.pt" if arm in ("Q0","Q1") else None
-    d,n,s,f,e,info,a=runtime(cfg,capacity,start);z=dataset(root)
+    assert arm=="P"
+    d,n,s,f,e,info,a=runtime(cfg);z=dataset(root)
     y=torch.tensor(z["target"],device="cuda");music=torch.tensor(z["music"],device="cuda")
     ref=packet(list(z["raw139"][:,64:160,7:]))
     initial=digest(a);frozen=digest(d.model);observations=[];actual=[];checks=[];history=[];curve_rows=[];caches=[]
     initial_curve=curves(cfg,d,a,n,s,f,z,0,out);curve_rows.append(initial_curve)
-    budget=cfg["positive_max_steps"] if arm=="P" else read(root/"models/P/result.json")["optimizer_steps"] if arm=="P2" else cfg["continuation_steps"]
+    budget=cfg["positive_max_steps"]
     steps_to_watch=cfg["snapshot_steps"];started=time.monotonic()
     cache=None;cache_name=None
     if not replay:
         (out/"snapshots").mkdir();checkpoint(a,out/"initial.pt",cfg,arm,0)
         opt=torch.optim.AdamW(a.parameters(),lr=cfg["learning_rate"])
         for i in range(budget):
-            # Both continuation arms pay the same frozen refresh budget; Q0 caches remain shadow only.
-            if arm in ("Q0","Q1") and i in cfg["cache_refresh_steps"]:
-                cache_name=f"cache_{i}.npz";state=digest(a)
-                checkpoint(a,out/f"cache_{i}_weights.pt",cfg,arm,i)
-                seeds=[cfg["cache_seed"]+i+j//2 for j in range(4)]
-                value,noise,trace=sample(d,a,ref,music,seeds,trace=True,selected=cfg["cache_times"],target=y)
-                raw=trace_arrays(trace);indices=[raw["times"].tolist().index(t) for t in cfg["cache_times"]]
-                cache=raw["xt"][indices];np.savez_compressed(out/cache_name,xt=cache,times=np.array(cfg["cache_times"]))
-                caches.append(dict(step=i,file=cache_name,weights=f"cache_{i}_weights.pt",weights_sha256=sha(out/f"cache_{i}_weights.pt"),sha256=sha(out/cache_name),model_digest=state,noise=noise,state_kind="ACTUAL_REVERSE_XT",used_for_loss=arm=="Q1"))
-            t=cfg["cache_times"][i%len(cfg["cache_times"])] if arm in ("Q0","Q1") else cfg["sampler_times"][(i*17)%len(cfg["sampler_times"])]
+            t=cfg["sampler_times"][(i*17)%len(cfg["sampler_times"])]
             seed=cfg["training_noise_seed"]+i;torch.manual_seed(seed);torch.cuda.manual_seed_all(seed)
             xt=None;origins=["FORWARD_Q_PROXY"]*4
-            if arm=="Q1":
-                ts=torch.full((4,),t,device="cuda",dtype=torch.long);xt=d.q_sample(y,ts,torch.randn_like(y))
-                state=torch.tensor(cache[cfg["cache_times"].index(t)],device="cuda")
-                rows=torch.tensor([(i+j)%2==0 for j in range(4)],device="cuda")
-                xt=torch.where(rows[:,None,None],state,xt);origins=["ACTUAL_REVERSE_XT" if b else "FORWARD_Q_PROXY" for b in rows.tolist()]
             watch=i in steps_to_watch;before=vector(a).clone() if watch else None
             if watch:checkpoint(a,out/f"snapshots/{i}_pre.pt",cfg,arm,i)
             opt.zero_grad(set_to_none=True);loss,parts=objective(d,a,n,s,y,music,ref,t,seed,xt)
@@ -106,11 +92,6 @@ def run(cfg,root,out,arm,replay=None):
         for name,h in old["files"].items():assert sha(Path(replay)/name)==h
         for item in old["observations"]:
             i=item["step"];row=old["history"][i];t=row["t"];seed=row["seed"];xt=None
-            if arm=="Q1":
-                torch.manual_seed(seed);torch.cuda.manual_seed_all(seed);ts=torch.full((4,),t,device="cuda",dtype=torch.long)
-                xt=d.q_sample(y,ts,torch.randn_like(y));cache=dict(np.load(Path(replay)/row["cache"]))
-                state=torch.tensor(cache["xt"][cache["times"].tolist().index(t)],device="cuda");rows=torch.tensor([x=="ACTUAL_REVERSE_XT" for x in row["input_state_origins"]],device="cuda")
-                xt=torch.where(rows[:,None,None],state,xt)
             restore(a,Path(replay)/f"snapshots/{i}_pre.pt");before=vector(a).clone();a.zero_grad(set_to_none=True)
             loss,parts=objective(d,a,n,s,y,music,ref,t,seed,xt);loss.backward();g=gradient_norms(a)
             restore(a,Path(replay)/f"snapshots/{i}_post.pt")
@@ -122,7 +103,7 @@ def run(cfg,root,out,arm,replay=None):
         history=old["history"];observations=old["observations"];caches=old["caches"];steps=0;restore(a,Path(replay)/"adapter.pt")
     gate=fitting_gate(curve_rows[-1]["records"],initial_curve["records"])
     assert digest(d.model)==frozen and all(p.grad is None for p in d.model.parameters())
-    result=dict(arm=arm,capacity=capacity,initial_digest=initial,final_digest=digest(a),frozen_digest=frozen,
+    result=dict(arm=arm,capacity=False,initial_digest=initial,final_digest=digest(a),frozen_digest=frozen,
         parameters=sum(p.numel() for p in a.parameters()),optimizer_steps=steps,curves=curve_rows,fit=gate,history=history,observations=observations,actual_readouts=actual,replay_checks=checks,caches=caches,
         files=old["files"] if replay else {str(p.relative_to(out)):sha(p) for p in out.rglob("*") if p.is_file() and p.suffix in (".pt",".npz")},
         wall_seconds=time.monotonic()-started,operational_qualified=False)
@@ -131,5 +112,5 @@ def run(cfg,root,out,arm,replay=None):
     a.close();print("R27_TRAIN_DONE",arm,steps,gate,flush=True)
 
 if __name__=="__main__":
-    p=argparse.ArgumentParser();p.add_argument("--config",required=True);p.add_argument("--root",required=True);p.add_argument("--out",required=True);p.add_argument("--arm",choices=["P","P2","Q0","Q1"],required=True);p.add_argument("--replay-from");a=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument("--config",required=True);p.add_argument("--root",required=True);p.add_argument("--out",required=True);p.add_argument("--arm",choices=["P"],required=True);p.add_argument("--replay-from");a=p.parse_args()
     run(read(a.config),a.root,a.out,a.arm,a.replay_from)
