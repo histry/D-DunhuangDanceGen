@@ -156,3 +156,8 @@ Independent `local_r23` research authenticates R22 seals;32 CFG1 samples and fou
 ## R24: main research route, Lodge Local with ChangE
 
 `lodge_reference_r24` uses the original native35D music and139D body interface, fixed R8 full-Core pair0, E1-W phases and Dunhuang music2/3. Twelve zero-training outputs use one identical soft sampler/ramp and common Gaussian draws across conditions. No Lodge Global, FK rewiring, fabricated fingers or default replacement. Source-only compiler, normalization diagnostics and unprompted-Core control metrics precede any future reference-adapter training. EDGE/R23 remain baseline research. See [protocol](../docs/R24_LODGE_PROTOCOL.md).
+
+
+## R25: actually trained Lodge reference adapters
+
+Independent `lodge_adapter_r25` trains full-event and explicit-phase variants on real source-clock AIST music/body targets. Both use part/sequence memory and zero-initialized residual controls on actual decoder layers1/4/7, with the same600-step budget. R24 sparse writeback stays frozen; new sampling writes no reference into the diffusion state. Wrist-aware, phase, region and music controls are separately reported. See [protocol](../docs/R25_PROTOCOL.md) and [call paths](../docs/R25_CALL_PATHS.md).

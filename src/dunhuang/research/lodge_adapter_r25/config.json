@@ -1,0 +1,67 @@
+{
+  "schema": "lodge_adapter_r25_v1",
+  "baseline": "665cd5a6bb45eb896f50cecf99f1f688b7cdf2c2",
+  "parent": "outputs/lodge_reference_r24_01",
+  "paired_parent": "outputs/branch_r22_03",
+  "arms": [
+    "event",
+    "phase"
+  ],
+  "seed": 25041,
+  "steps": 600,
+  "batch_size": 2,
+  "learning_rate": 0.0002,
+  "width": 64,
+  "part_width": 16,
+  "injection_layers": [
+    1,
+    4,
+    7
+  ],
+  "core": [
+    64,
+    160
+  ],
+  "music_dropout": 0.2,
+  "reference_dropout_second_row_every": 5,
+  "reference_occlusion_frames": 24,
+  "curve_updates": [
+    0,
+    300,
+    600
+  ],
+  "snapshot_steps": [
+    0,
+    1,
+    299,
+    599
+  ],
+  "loss_weights": {
+    "core_body": 1,
+    "core_velocity": 0.1,
+    "root_preservation": 0.1,
+    "outside_preservation": 0.25
+  },
+  "eval_seeds": [
+    24041,
+    24042
+  ],
+  "paired_eval_seed": 25041,
+  "paired_eval_cases": [
+    0,
+    2,
+    4,
+    7,
+    24,
+    25,
+    26,
+    27
+  ],
+  "required_train_groups": 12,
+  "required_dev_groups": 4,
+  "min_gain": 0.05,
+  "max_quality_ratio": 1.1,
+  "human_reviewed": false,
+  "whole_song_generations": 0,
+  "operational_qualified": false
+}
