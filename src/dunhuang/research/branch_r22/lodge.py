@@ -29,12 +29,13 @@ def load(cfg):
     from dld.data.utils.audio import extract
     from dld.data.utils.preprocess import Normalizer,MinMaxScaler
     # Official public Normalizer contains only these reviewed classes and torch tensors.
-    normalizer=torch.load(base/"official/data/Normalizer.pth",map_location="cpu")
+    with torch.serialization.safe_globals([Normalizer,MinMaxScaler]):
+        normalizer=torch.load(base/"official/data/Normalizer.pth",map_location="cpu",weights_only=True)
     config=yaml.safe_load((base/manifest["config"]).read_text())
     model_args=dict(config["model"]["DanceDecoder"]["params"]);model_args.update(nfeats=139,seq_len=256)
     skeleton=SMPLX_Skeleton(Jpath=str(official/"data/smplx_neu_J_1.npy"))
     model=Refine_DanceDecoder(smplx_model=skeleton,normalizer=normalizer,genre_num=16,**model_args).cuda().eval()
-    ckpt=torch.load(base/manifest["checkpoint"],map_location="cpu");states=ckpt["state_dict"]
+    ckpt=torch.load(base/manifest["checkpoint"],map_location="cpu",weights_only=True);states=ckpt["state_dict"]
     selected={k[len("DanceDecoder."):]:v for k,v in states.items() if k.startswith("DanceDecoder.")}
     assert all(torch.equal(v,states["diffusion.model."+k]) for k,v in selected.items())
     model.load_state_dict(selected,strict=True)
@@ -45,7 +46,7 @@ def load(cfg):
     for p in diffusion.parameters():p.requires_grad_(False)
     checkpoint_info=dict(epoch=ckpt["epoch"],global_step=ckpt["global_step"],decoder_tensors=len(selected),
         decoder_layers=len(model.seqTransDecoder.stack),refinement_attention_layers=len(model.refine_seqTransDecoder1.stack),
-        sampling_weights="DanceDecoder == diffusion.model; EMA not selected",strict_load=True,
+        sampling_weights="DanceDecoder == diffusion.model; EMA not selected",strict_load=True,checkpoint_load_weights_only=True,normalizer_safe_globals=["Normalizer","MinMaxScaler"],
         checkpoint_sha256=sha(base/manifest["checkpoint"]),source_commit=manifest["source_commit"],
         compat_alias=["pickle5 -> Python standard pickle","numpy.float -> builtin float, external worker only; no model mathematics patch"])
     del ckpt,states
