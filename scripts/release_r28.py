@@ -5,7 +5,7 @@ import numpy as np
 from dunhuang.io import sha,write,checked
 from dunhuang.data.sources import ref
 from dunhuang.research.source_capacity.common import read,commit,fresh,forbid_optimizers,same_arrays
-from dunhuang.research.state_r27.common import readout_check
+from dunhuang.research.state_r27.common import readout_check,metrics
 from render_r23 import video
 
 def verify(root):
@@ -38,8 +38,19 @@ def verify(root):
     assert {k:v for k,v in audit.items() if k!="code_commit"}=={k:v for k,v in replay.items() if k!="code_commit"}
     paths=["src/dunhuang/research/reference_r26","src/dunhuang/research/state_r27","src/dunhuang/research/lodge_adapter_r25","src/dunhuang/research/branch_r22","src/dunhuang/research/local_r23","src/dunhuang/research/lodge_reference_r24","src/dunhuang/edge_backend.py","src/dunhuang/planning","src/dunhuang/sampling.py"]
     assert not subprocess.check_output(["git","diff","a870ed2c0888049923fa42c0f8056a4162ed4e0b","--"]+paths,text=True)
+    # New random seeds alone are not a physical novelty certificate; compare every new reference to both old same-music references.
+    cfg=read(root/"data/protocol.json")["config"];old=np.load(Path(cfg["r27"])/"teachers/teacher.npz");fac=np.load(root/"factorial_02/arrays.npz")
+    novelty=[]
+    for i in range(4):
+        angles=[metrics(fac["new_raw139"][i],fac["new_points22"][i],old["raw139"][j],old["points22"][j])["body22_rad"] for j in range(2*(i//2),2*(i//2)+2)]
+        novelty.append(dict(teacher=i,nearest_seen_same_music_body_rad=min(angles),distinct_from_seen=min(angles)>.05))
+    assert all(x["distinct_from_seen"] for x in novelty)
+    gauge=[]
+    for pop in ("seen","new_reference"):
+        x=fac[f"{pop}_P_raw_correct_points"][:,64:160];y=fac[f"{pop}_P_canonical_correct_points"][:,64:160]
+        gauge.append(dict(population=pop,final_root_relative_FK_difference_rms_m=float(np.sqrt(np.mean(((x-x[:,:,:1])-(y-y[:,:,:1]))**2)))))
     stages=[read(root/s/"result.json") for s in ("factorial_02","evaluation","change")]
-    write(out,dict(code_commit=commit(),array_bundles_exact=bundles,actual_update_pairs_verified=8,training_optimizer_steps=2400,replay_optimizer_steps=0,
+    write(out,dict(code_commit=commit(),array_bundles_exact=bundles,new_reference_physical_novelty=novelty,canonical_reference_final_response_diagnostic=gauge,actual_update_pairs_verified=8,training_optimizer_steps=2400,replay_optimizer_steps=0,
         matched_training_initialization_and_step_noise_clock=True,Core_C4_supervision=False,
         gradient_checks=checks,gradient_norm_rtol=1e-5,gradient_norm_atol=0,non_gradient_readouts_exact=True,
         successful_sampler_calls=sum(x["sampler_calls"] for x in stages),successful_generated_trajectories=sum(x["generated_trajectories"] for x in stages),
