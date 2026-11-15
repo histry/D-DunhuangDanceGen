@@ -1,0 +1,133 @@
+{
+  "code_commit": "c4e3f5d9de3f774c776736cbe27c0563daba6de9",
+  "array_bundles_exact": 13,
+  "matched_diagnostic_readouts": 256,
+  "actual_update_pairs_verified": 4,
+  "gradient_norm_rtol": 1e-05,
+  "gradient_norm_atol": 0,
+  "gradient_checks": [
+    {
+      "encoder": {
+        "actual": 0.045775219798088074,
+        "expected": 0.04577522352337837,
+        "relative_error": 8.13822415647917e-08
+      },
+      "input": {
+        "actual": 0.039769284427165985,
+        "expected": 0.03976928070187569,
+        "relative_error": 9.36725503644518e-08
+      },
+      "sequence": {
+        "actual": 0.02392680011689663,
+        "expected": 0.02392680011689663,
+        "relative_error": 0.0
+      },
+      "projections": {
+        "actual": 0.06861540675163269,
+        "expected": 0.06861540675163269,
+        "relative_error": 0.0
+      },
+      "lowrank": {
+        "actual": 0.0,
+        "expected": 0.0,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "encoder": {
+        "actual": 0.03207568824291229,
+        "expected": 0.03207568824291229,
+        "relative_error": 0.0
+      },
+      "input": {
+        "actual": 0.029633400961756706,
+        "expected": 0.029633400961756706,
+        "relative_error": 0.0
+      },
+      "sequence": {
+        "actual": 0.01920037530362606,
+        "expected": 0.01920037530362606,
+        "relative_error": 0.0
+      },
+      "projections": {
+        "actual": 0.04454464092850685,
+        "expected": 0.04454464092850685,
+        "relative_error": 0.0
+      },
+      "lowrank": {
+        "actual": 0.0,
+        "expected": 0.0,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "encoder": {
+        "actual": 0.003106137039139867,
+        "expected": 0.0031061358749866486,
+        "relative_error": 3.747913255597115e-07
+      },
+      "input": {
+        "actual": 0.0024301286321133375,
+        "expected": 0.002430128399282694,
+        "relative_error": 9.581000798768037e-08
+      },
+      "sequence": {
+        "actual": 0.001341542461887002,
+        "expected": 0.001341542461887002,
+        "relative_error": 0.0
+      },
+      "projections": {
+        "actual": 0.004300455562770367,
+        "expected": 0.004300455562770367,
+        "relative_error": 0.0
+      },
+      "lowrank": {
+        "actual": 0.0,
+        "expected": 0.0,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "encoder": {
+        "actual": 0.0017612073570489883,
+        "expected": 0.0017612080555409193,
+        "relative_error": 3.965981922261202e-07
+      },
+      "input": {
+        "actual": 0.001754743279889226,
+        "expected": 0.001754743279889226,
+        "relative_error": 0.0
+      },
+      "sequence": {
+        "actual": 0.0009391213534399867,
+        "expected": 0.0009391212952323258,
+        "relative_error": 6.198097902923159e-08
+      },
+      "projections": {
+        "actual": 0.003993418999016285,
+        "expected": 0.003993418999016285,
+        "relative_error": 0.0
+      },
+      "lowrank": {
+        "actual": 0.0,
+        "expected": 0.0,
+        "relative_error": 0.0
+      }
+    }
+  ],
+  "non_gradient_readouts_exact": true,
+  "training_optimizer_steps": 1200,
+  "replay_optimizer_steps": 0,
+  "unexecuted_capacity_continuation_unroll_steps": 0,
+  "sampler_calls": 24,
+  "replay_sampler_calls": 24,
+  "generated_trajectories": 82,
+  "replay_generated_trajectories": 82,
+  "reused_transfer_trajectories": 24,
+  "coupled_teacher_target_exact": true,
+  "teacher_eval_seeds_disjoint": true,
+  "historical_and_formal_paths_unchanged": true,
+  "full_native_status": "NOT_EVALUABLE",
+  "whole_song_generations": 0,
+  "operational_qualified": false
+}

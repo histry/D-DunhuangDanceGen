@@ -1,0 +1,79 @@
+{
+  "collection_commit": "8471f82050a4a62e173bf8f56d6b32fd9e7831d2",
+  "summary_sha256": "5041ece2792e16d5b954c8f8bfee9f37cdd36aed357c5386850072bf2bacf4e2",
+  "evidence": {
+    "independent_checks.json": "4333b427f318e77109fa71eb3e17253545b3c23391da6b5929325232366d2e62",
+    "release_admission.json": "c5728112b7ae9550f48d0309734a63315d563f16965989a75293f12e42ec9337",
+    "branch_summary.json": "c80cb9ea975d95ac2d0d50afd7605548c68e24b53373acc76aa85b292bdc5bcd",
+    "pruned_replay_receipt.json": "a58b4e85a5454a882887e91121754855efced0aa21090f731cb1733ae921e181",
+    "decision.json": "e509d13d35560d79879aab6e0707542ce0d2aeb53be774c55edd2870b5dbda6a",
+    "artifacts_manifest.json": "a0d98ea3cf67ddb1ca8cd0d5c42c7fac9521aad83ff48b5141b097305a351923",
+    "videos/protocol.json": "a00d0ebb155af9abe3d260501ef0ea50c9c3945e3c9feb773e335948abca1480",
+    "positive/result.json": "c168ef6cf3ca03b4694c4f383b0b8ca58be64d74a6e214bb7952013491653bb1",
+    "positive/protocol.json": "ea5cdf19679035ef1148183657f650670af28c1406bf6a7f2b0e8bd2ebaa7341",
+    "teachers_replay/result.json": "bb84ef5236cb8972cc85e38847b92305baac6e09bc60f717787b015b001a00cd",
+    "teachers_replay/protocol.json": "742ff3d721f45a648e68072c46aa73e0102e89b38b83a398b366fcc760342a82",
+    "diagnostic/result.json": "ce4782f67bc5e83a5ae29dc063d05ac30639651bad84266f66f942d383d684eb",
+    "diagnostic/protocol.json": "66c903a06b62b4a677546ca7018fc4363bb2cf942d97f8bd87b80e2f32a53638",
+    "transfer/result.json": "1ba384cecf98d6bde3bc6d77df356db8ccada7e675104b21021fb417171ac2ec",
+    "transfer/protocol.json": "8284345d6cee3b053ecd0d2db96d3e20e6c7a31889ee4f4b1f1b36e54634a7a0",
+    "teachers/result.json": "bb84ef5236cb8972cc85e38847b92305baac6e09bc60f717787b015b001a00cd",
+    "teachers/protocol.json": "742ff3d721f45a648e68072c46aa73e0102e89b38b83a398b366fcc760342a82",
+    "diagnostic_replay/result.json": "ce4782f67bc5e83a5ae29dc063d05ac30639651bad84266f66f942d383d684eb",
+    "diagnostic_replay/protocol.json": "66c903a06b62b4a677546ca7018fc4363bb2cf942d97f8bd87b80e2f32a53638",
+    "models/P_replay/result.json": "307f0fc2d83f440263d65ab4786be18dc49538ea36e351a938db195f78f3002b",
+    "models/P_replay/actual_0.json": "8e78293e3cd38c510d179e7c3983853f6af17b8ddf7db415f270fb9ea8297934",
+    "models/P_replay/actual_1.json": "85e6266e90220a7bfd5a9d575c1e496827f013f76a9dba13008db545aad8e134",
+    "models/P_replay/protocol.json": "056ac43d9a0ed26d9d3ff85739c83ec65cb505b0104cc59cf3a7d3f05a23c484",
+    "models/P_replay/actual_599.json": "c7237ba65cdc0ec061713720d720ad5f50507cc46440e4b0efd28af1119c0eda",
+    "models/P_replay/actual_1199.json": "1019738eb1c06d8f9a7d9fe84d1fbde7e9c3687c792bb2b77656f872e339ec4b",
+    "models/P/result.json": "c15f6796c58dcd3314c13eebde0f879a3f0f95224a380f4d26eb9fe51c4c4d16",
+    "models/P/protocol.json": "056ac43d9a0ed26d9d3ff85739c83ec65cb505b0104cc59cf3a7d3f05a23c484",
+    "models/P_pruned_replay/result.json": "db24a55644f32a1620e57188a9b95a9c2f6508c1380dfbe30d3d06fa0849c2ea",
+    "models/P_pruned_replay/actual_0.json": "7814f0174658b32a77c1346253a6fcd9eb13c6a863c4949a4e272046b06f7c6a",
+    "models/P_pruned_replay/actual_1.json": "463f41024d5379f7036ca201db67b6bdcd3ca9c17d4337e985bfce4ab605eac6",
+    "models/P_pruned_replay/protocol.json": "5e7fdae284075f6b44eb2de6a2590543006dca6d8fcae8116a9d52bc9894494b",
+    "models/P_pruned_replay/actual_599.json": "74695bc6a37b0bdb5bc71b200ecefbb52ceeea3b9039508e437a26a25b4aaf57",
+    "models/P_pruned_replay/actual_1199.json": "f7fdc90dc52f0d2b23add279e822f7a5b1f1c437111be41cbf4457f88f57f28d",
+    "transfer_replay/result.json": "1ba384cecf98d6bde3bc6d77df356db8ccada7e675104b21021fb417171ac2ec",
+    "transfer_replay/protocol.json": "8284345d6cee3b053ecd0d2db96d3e20e6c7a31889ee4f4b1f1b36e54634a7a0",
+    "positive_replay/result.json": "c168ef6cf3ca03b4694c4f383b0b8ca58be64d74a6e214bb7952013491653bb1",
+    "positive_replay/protocol.json": "ea5cdf19679035ef1148183657f650670af28c1406bf6a7f2b0e8bd2ebaa7341"
+  },
+  "receipts": {
+    "outputs/state_r27_01_initial_receipts": {
+      "execution_commit.txt": "65bb7aa8cf3091b203392360933a1e6ef08cd182a91b2a761ab36ce8ddb77ae0",
+      "phase.txt": "d3be030801b90ea8057d3997d9845c7f850cc7b784450645d5ec2811cc927d7a",
+      "started_utc.txt": "c9c768bfc0946da3fa6f07fdeab1df3b674c92dcda0bb37da6d5bbc8b296fc2e",
+      "pytest.log": "ce12aca9b02192bcbb27535013d0721cbe80bcb114829eeb61480eda8c8ca40f",
+      "edge_tests.log": "3445ce9a0f3e81ae84decc44e079e24d8de9a781405e65593c33ec3e42bcb58d",
+      "exit_status.txt": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "finished_utc.txt": "61484822980338c7179d3079d4af98f5833f229d2eba5bed26e8fb58ce02cb6f"
+    },
+    "outputs/state_r27_01_followup_receipts": {
+      "execution_commit.txt": "ae51a8ec6326de4222289ab160d28f8f92f25dd6abb010fbcfebc26d4717259f",
+      "phase.txt": "d3be030801b90ea8057d3997d9845c7f850cc7b784450645d5ec2811cc927d7a",
+      "started_utc.txt": "5ef1ba16661a8dd1ab54b8304489d89f9dfbefb0e66f75c1f4e1abdf12a3f010",
+      "exit_status.txt": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "finished_utc.txt": "da44ea919ddcc40c9b3765f20eefe92312b549b70ebf82b5f81e04f83ee4c8bb"
+    },
+    "outputs/state_r27_01_transfer_receipts": {
+      "execution_commit.txt": "7255e2ce84609e56a44995db78278139e34390dd9d1f43e14417fef5542c76cd",
+      "phase.txt": "d3be030801b90ea8057d3997d9845c7f850cc7b784450645d5ec2811cc927d7a",
+      "started_utc.txt": "ff632635ae3a6f55a99dfc881424770fe580f55d0285adb910420f9491ca0c8e",
+      "exit_status.txt": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "finished_utc.txt": "21028f8e8e421c382b00faa5b399439828e7fe4c9ffc5a1fdcd763249c7b1fb3"
+    }
+  },
+  "launcher_logs": {
+    "outputs/state_r27_01_initial_launcher.log": "c23392f4ce7378c6519053cb6967d40070881e62896e0cdaa1dd254ebc2bfbf2",
+    "outputs/state_r27_01_followup_launcher.log": "bb6416cd78609e159b1beda29d3c3d2c998f32d12b83b57c76d8cbdf0d9651fd",
+    "outputs/state_r27_01_transfer_launcher.log": "ddac0790566a03d50b27017168c4cb08af3803ff88cb8770ee0b4ee62b5fccd4"
+  },
+  "temporary_ssh_files_created": 0,
+  "temporary_ssh_files_remaining": 0,
+  "training_optimizer_steps": 1200,
+  "replay_optimizer_steps": 0,
+  "operational_qualified": false,
+  "whole_song_generations": 0
+}
