@@ -9,7 +9,7 @@ from dunhuang.research.local_r23.common import read,fresh,inputs,commit
 from dunhuang.research.state_bridge.common import native_environment
 
 def video(path,points,parents,label,ok,center,scale,audio=None):
-    cmd=["ffmpeg","-v","error","-f","rawvideo","-pix_fmt","rgb24","-s","600x600","-r","30","-i","-"]
+    cmd=["ffmpeg","-nostdin","-threads","2","-v","error","-f","rawvideo","-pix_fmt","rgb24","-s","600x600","-r","30","-i","-"]
     if audio:cmd+=["-i",str(audio),"-map","0:v:0","-map","1:a:0"]
     cmd+=["-c:v","libx264","-pix_fmt","yuv420p","-preset","veryfast","-crf","20","-threads","2"]
     if audio:cmd+=["-c:a","aac","-shortest"]
@@ -26,8 +26,8 @@ def video(path,points,parents,label,ok,center,scale,audio=None):
             proc.stdin.write(np.asarray(image).tobytes())
     finally:proc.stdin.close()
     assert proc.wait()==0
-    n=int(subprocess.check_output(["ffprobe","-v","error","-count_frames","-select_streams","v:0","-show_entries","stream=nb_read_frames","-of","csv=p=0",str(path)],text=True).strip())
-    assert n==225;subprocess.run(["ffmpeg","-v","error","-i",str(path),"-f","null","-"],check=True)
+    n=int(subprocess.check_output(["ffprobe","-v","error","-count_frames","-select_streams","v:0","-show_entries","stream=nb_read_frames","-of","csv=p=0",str(path)],text=True,stdin=subprocess.DEVNULL,timeout=60).strip())
+    assert n==225;subprocess.run(["ffmpeg","-nostdin","-threads","2","-v","error","-i",str(path),"-f","null","-"],check=True,stdin=subprocess.DEVNULL,timeout=60)
 
 def run(cfg,study,out):
     study=Path(study);out=fresh(out);root,pc,pop=inputs(cfg);native_environment(read(root/"data/protocol.json")["assets"])
