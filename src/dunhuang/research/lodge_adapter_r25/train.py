@@ -6,13 +6,14 @@ import torch
 from dunhuang.io import write,sha
 from .common import runtime,dataset,ledger,batch,objective,checkpoint,restore,vector,read,fresh,commit,forbid_optimizers,same_arrays
 from .model import digest,grad_readout
+from .replay import verify_readout
 
 def run(cfg,root,out,arm,replay=None):
     out=fresh(out)
     if replay:forbid_optimizers()
     d,n,s,f,e,info,adapter=runtime(cfg);adapter.phase=arm=="phase";adapter.attach(d.model)
     pop,data=dataset(root);rows=ledger(cfg,pop["train_cases"]);frozen=digest(d.model);initial=digest(adapter)
-    steps=[];curves=[];observations=[];started=time.monotonic()
+    steps=[];curves=[];observations=[];replay_readouts=[];replay_checks=[];started=time.monotonic()
     if not replay:(out/"snapshots").mkdir();checkpoint(adapter,out/"initial.pt",cfg,arm,0)
     def curve(update):
         values={};scores=[]
@@ -50,8 +51,10 @@ def run(cfg,root,out,arm,replay=None):
             adapter.zero_grad(set_to_none=True);loss,pred,parts,layers=objective(d,adapter,y,m,p,row["t"],row["seed"],cfg,True);loss.backward();grads=grad_readout(adapter)
             torch.nn.utils.clip_grad_norm_(adapter.parameters(),1.);restore(adapter,Path(replay)/f"snapshots/{i}_post.pt",cfg,arm)
             actual=dict(step=i,before_loss=float(loss.detach()),parts=parts,gradient_norms=grads,layers=layers,update_norm=float((vector(adapter)-before).norm()))
-            if actual!=item:write(out/"replay_mismatch.json",dict(arm=arm,step=i,actual=actual,expected=item,code_commit=commit(),optimizer_steps=0))
-            assert actual==item,("Actual update replay",arm,i)
+            try:check=verify_readout(actual,item)
+            except AssertionError:
+                write(out/"replay_mismatch.json",dict(arm=arm,step=i,actual=actual,expected=item,code_commit=commit(),optimizer_steps=0));raise
+            replay_readouts.append(actual);replay_checks.append(dict(step=i,**check))
         # Curves after0 correspond to immutable saved checkpoints.
         for update in cfg["curve_updates"][1:]:
             restore(adapter,Path(replay)/("snapshots/299_post.pt" if update==300 else "adapter.pt"),cfg,arm);curve(update)
@@ -59,7 +62,7 @@ def run(cfg,root,out,arm,replay=None):
         restore(adapter,Path(replay)/"adapter.pt",cfg,arm)
     assert digest(d.model)==frozen and not any(p.grad is not None for p in d.model.parameters())
     result=dict(arm=arm,initial_digest=initial,final_digest=digest(adapter),frozen_digest=frozen,parameters=sum(p.numel() for p in adapter.parameters()),
-        curves=curves,observations=observations,history=steps,ledger=rows,checkpoint_hashes=old["checkpoint_hashes"] if replay else {str(p.relative_to(out)):sha(p) for p in out.rglob("*.pt")},optimizer_steps=optimizer_steps,wall_seconds=time.monotonic()-started,
+        curves=curves,observations=observations,replay_readouts=replay_readouts,replay_checks=replay_checks,history=steps,ledger=rows,checkpoint_hashes=old["checkpoint_hashes"] if replay else {str(p.relative_to(out)):sha(p) for p in out.rglob("*.pt")},optimizer_steps=optimizer_steps,wall_seconds=time.monotonic()-started,
         operational_qualified=False,whole_song_generations=0)
     if replay:assert result["final_digest"]==old["final_digest"] and rows==old["ledger"]
     write(out/"result.json",result);write(out/"protocol.json",dict(config=cfg,code_commit=commit(),checkpoint=info,data=str(Path(root)/"data/result.json"),selection="Fixed final step; no DEV selection"))

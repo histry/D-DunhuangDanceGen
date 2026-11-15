@@ -7,6 +7,7 @@ from dunhuang.data.sources import ref
 from dunhuang.research.source_capacity.common import read,commit,fresh,forbid_optimizers,same_arrays
 from dunhuang.research.context_r21.data import same_audio_pcm
 from render_r23 import video
+from dunhuang.research.lodge_adapter_r25.replay import verify_readout
 
 def verify(root):
     root=Path(root);out=root/"independent_checks.json";assert not out.exists();forbid_optimizers();bundles=0
@@ -18,14 +19,17 @@ def verify(root):
         assert same_audio_pcm(root/"data"/row["crop_audio"],root/"data_replay"/row["crop_audio"])
     models=[]
     for arm in ("event","phase"):
-        main=read(root/f"models/{arm}/result.json");other=read(root/f"models/{arm}_replay/result.json")
+        replay_folder=read(root/"resume_inputs.json")["replay_locations"][arm] if (root/"resume_inputs.json").exists() else f"models/{arm}_replay"
+        main=read(root/f"models/{arm}/result.json");other=read(root/replay_folder/"result.json")
         assert main["initial_digest"]==other["initial_digest"] and main["final_digest"]==other["final_digest"]
-        assert main["observations"]==other["observations"] and main["curves"]==other["curves"] and main["ledger"]==other["ledger"]
+        assert main["curves"]==other["curves"] and main["ledger"]==other["ledger"]
+        assert len(other["replay_readouts"])==len(main["observations"])
+        for expected,actual in zip(main["observations"],other["replay_readouts"]):verify_readout(actual,expected)
         assert main["optimizer_steps"]==600 and other["optimizer_steps"]==0
         assert all(o["update_norm"]>0 for o in main["observations"])
         assert main["observations"][0]["gradient_norms"]["projections"]>0
         assert any(o["gradient_norms"]["joint"]>0 for o in main["observations"][1:])
-        for p in (root/f"models/{arm}").glob("curve_*.npz"):same_arrays(p,root/f"models/{arm}_replay"/p.name);bundles+=1
+        for p in (root/f"models/{arm}").glob("curve_*.npz"):same_arrays(p,root/replay_folder/p.name);bundles+=1
         models.append(main)
     assert models[0]["initial_digest"]==models[1]["initial_digest"] and models[0]["ledger"]==models[1]["ledger"]
     assert models[0]["parameters"]==models[1]["parameters"] and models[0]["frozen_digest"]==models[1]["frozen_digest"]
@@ -38,7 +42,7 @@ def verify(root):
     frozen=["src/dunhuang/research/branch_r22","src/dunhuang/research/local_r23","src/dunhuang/research/lodge_reference_r24","src/dunhuang/edge_backend.py","src/dunhuang/planning","src/dunhuang/sampling.py"]
     assert not subprocess.check_output(["git","diff","665cd5a6bb45eb896f50cecf99f1f688b7cdf2c2","--"]+frozen,text=True)
     write(out,dict(code_commit=commit(),array_bundles_exact=bundles,source_recordings=21,audio_pcm_exact=21,train_groups=9,dev_exposed_groups=3,
-        training_optimizer_steps=1200,replay_optimizer_steps=0,actual_update_pairs_exact=8,curve_checkpoints_exact=6,
+        training_optimizer_steps=1200,replay_optimizer_steps=0,actual_update_pairs_verified=8,non_gradient_update_fields_exact=True,gradient_norm_relative_precision=1e-6,gradient_norm_bitwise_claimed=False,curve_checkpoints_exact=6,
         sampler_calls=21,replay_sampler_calls=21,generated_trajectories=135,replay_generated_trajectories=135,
         frozen_R24_baseline_trajectories_reused=12,metric_records_exact=147,null_reference_sampler_exact=True,
         full_native_status="NOT_EVALUABLE",whole_song_generations=0,operational_qualified=False))
@@ -96,7 +100,7 @@ def collect(root,receipts,media_receipts,out,failed_receipts):
     root=Path(root);receipts=Path(receipts);media_receipts=Path(media_receipts);out=Path(out);assert not out.exists(),"Preserve previous publication"
     for folder in (receipts,media_receipts):assert (folder/"exit_status.txt").read_text().strip()=="0" and (folder/"phase.txt").read_text().strip()=="completed"
     result=dict(data=read(root/"data/result.json"),models={a:read(root/f"models/{a}/result.json") for a in ("event","phase")},
-        initial_graph=read(root/"sanity/result.json"),trained_graph=read(root/"trained_graph/result.json"),sampling=read(root/"samples/result.json"),
+        gradient_replay_precision={a:read(root/(read(root/"resume_inputs.json")["replay_locations"][a] if (root/"resume_inputs.json").exists() else f"models/{a}_replay")/"result.json")["replay_checks"] for a in ("event","phase")},initial_graph=read(root/"sanity/result.json"),trained_graph=read(root/"trained_graph/result.json"),sampling=read(root/"samples/result.json"),
         evaluation=read(root/"evaluation/result.json"),checks=read(root/"independent_checks.json"),media=read(root/"videos/protocol.json"),
         human_reviewed=False,operational_qualified=False,whole_song_generations=0)
     out.mkdir(parents=True);write(out/"r25_summary.json",result);write(out/"r25_checks.json",result["checks"])

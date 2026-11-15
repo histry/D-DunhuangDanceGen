@@ -82,3 +82,16 @@ def test_timing_proxy_is_zero_for_identical_motion_regardless_of_type_order():
     x[64:160,7+6*20:13+6*20]=R[:,:2,:].reshape(96,6)
     score=timing_proxy(x,x,np.zeros((256,35)))
     assert score["phase_timing_proxy_mae_frames"]==0 and score["phase_order_proxy_inversions"]==0
+
+
+def test_replay_precision_applies_only_to_gradient_norms():
+    from dunhuang.research.lodge_adapter_r25.replay import verify_readout
+    x={"loss":1.,"update_norm":.1,"gradient_norms":{"sequence":.00018606454250402749,"zero":0.}}
+    y={"loss":1.,"update_norm":.1,"gradient_norms":{"sequence":.00018606452795211226,"zero":0.}}
+    assert not verify_readout(x,y)["gradient_norms_bitwise_exact"]
+    z=dict(y,update_norm=.10000000000001)
+    with pytest.raises(AssertionError):verify_readout(x,z)
+    z=dict(y,gradient_norms={"sequence":.000187,"zero":0.})
+    with pytest.raises(AssertionError):verify_readout(x,z)
+    z=dict(y,gradient_norms={"sequence":y["gradient_norms"]["sequence"],"zero":1e-12})
+    with pytest.raises(AssertionError):verify_readout(x,z)
