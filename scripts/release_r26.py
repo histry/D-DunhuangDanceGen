@@ -11,6 +11,10 @@ from render_r23 import video
 
 def verify(root):
     root=Path(root);out=root/"independent_checks.json";assert not out.exists();forbid_optimizers();bundles=0
+    if (root/"recovery_inputs.json").exists():
+        recovery=read(root/"recovery_inputs.json")
+        for name,h in recovery["sealed_inputs"].items():assert sha(root/name)==h
+        for name,h in recovery["failed_evidence"].items():assert sha(name)==h
     data=read(root/"data/result.json");assert data==read(root/"data_replay/result.json")
     for folder in ("data","data_replay"):
         for name,h in read(root/folder/"protocol.json")["files"].items():assert sha(root/folder/name)==h

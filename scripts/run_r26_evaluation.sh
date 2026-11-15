@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 study="${1:?study}";receipt="${2:?fresh receipts}"
-test "$(cat ${study}_training_receipts/exit_status.txt)" = 0
+training_receipt="${3:-${study}_training_receipts}"
+test "$(cat "$training_receipt/exit_status.txt")" = 0
 test ! -e "$receipt";mkdir "$receipt"
 export PYTHONPATH=src OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1
 cfg=src/dunhuang/research/reference_r26/config.json
