@@ -161,3 +161,8 @@ Independent `local_r23` research authenticates R22 seals;32 CFG1 samples and fou
 ## R25: actually trained Lodge reference adapters
 
 Independent `lodge_adapter_r25` trains full-event and explicit-phase variants on real source-clock AIST music/body targets. Both use part/sequence memory and zero-initialized residual controls on actual decoder layers1/4/7, with the same600-step budget. R24 sparse writeback stays frozen; new sampling writes no reference into the diffusion state. Wrist-aware, phase, region and music controls are separately reported. See [protocol](../docs/R25_PROTOCOL.md) and [call paths](../docs/R25_CALL_PATHS.md).
+
+
+## R26 reference_r26
+
+关节身份保留、可表示配对几何监督、已知时钟读取的独立研究包；正式EDGE及R22–R25冻结。协议在docs/R26_PROTOCOL.md，实际调用在docs/R26_CALL_PATHS.md，结果在reports/R26关节身份与来源几何实验报告.md。C1/C2综合门0/4，原始权重/轨迹保留服务器；不升级正式生成或检索。

@@ -1,0 +1,59 @@
+{
+  "code_commit": "3e60b1fcb4350179d7272587b10db36b15adad4d",
+  "base_receipt_sha256": "83b69c13fdfec6c3ce007dc973a21331ce8c68d7d2cf1482d7ea464c0f627efb",
+  "recovery_inputs_sha256": "9110b1d1d9274570ad6fb09f60a6fdab8d155b4caa3b76e343f22b314eeba3e7",
+  "recovery_inputs": {
+    "code_commit": "25e3b34d8aa9da97cf9f963b52802dd1625d36a2",
+    "preflight": "preflight_02",
+    "training_optimizer_steps_before_resume": 0,
+    "sealed_inputs": {
+      "data/result.json": "e52a7493737e749500db3f1893fab9bbcc7cc3b2bb0387072aeb393cc02ba116",
+      "data/protocol.json": "8faf64612869a13e7f16ac125f5c0548ec70b6d71df55477ed9e3970050ff6a3",
+      "data_replay/result.json": "e52a7493737e749500db3f1893fab9bbcc7cc3b2bb0387072aeb393cc02ba116",
+      "data_replay/protocol.json": "bbec186114cf4572a7f1f60b68485667388fda8572c17aa9dc0be42d1c707bfc",
+      "identity_precision_diagnostic.json": "73ad8f28d9c9c9a8c52409e0cce4009c641a3455e2249c1d8fd3c0704679201c"
+    },
+    "failed_evidence": {
+      "outputs/reference_r26_01_training_receipts/execution_commit.txt": "def0efb155b59ad21a7453c79c90455424ce820ee162af47514db8ac74d41adf",
+      "outputs/reference_r26_01_training_receipts/phase.txt": "a2e9e7acd9d0f321f8b9026b2c5c95101e46186316e2541406a8ed8baadad951",
+      "outputs/reference_r26_01_training_receipts/started_utc.txt": "ce1c51309ca5cfc8b75e080b7fd0039448a738549ce09ba2bb49373763f11842",
+      "outputs/reference_r26_01_training_receipts/pytest.log": "664f70c864e968983baa8c4c5a217c07114a9ecc4f7146a4577cc6a67552d3a1",
+      "outputs/reference_r26_01_training_receipts/edge_tests.log": "6f9db160abc7ccec84eb610f3f2d9fab4e7a7046d890c850ac164a6c1dc7ade3",
+      "outputs/reference_r26_01_training_receipts/exit_status.txt": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "outputs/reference_r26_01_training_receipts/finished_utc.txt": "1bd6b591aa64a52b0682d9496d1bf24cdb636ef7d8ff66484efd209720a3fd53",
+      "outputs/reference_r26_01_training_launcher.log": "a0d606c70c0dbb8596a2db1dbe8442a085517c755e74d389697f0f81f4704c64"
+    }
+  },
+  "identity_diagnostic": {
+    "code_commit": "25e3b34d8aa9da97cf9f963b52802dd1625d36a2",
+    "case": 92,
+    "records": [
+      {
+        "ordered": false,
+        "dtype": "torch.float32",
+        "max_delta": 1.2755393981933594e-05
+      },
+      {
+        "ordered": false,
+        "dtype": "torch.float64",
+        "max_delta": 1.3322676295501878e-15
+      },
+      {
+        "ordered": true,
+        "dtype": "torch.float32",
+        "max_delta": 1.1323213577270508
+      },
+      {
+        "ordered": true,
+        "dtype": "torch.float64",
+        "max_delta": 1.1323582486511705
+      }
+    ],
+    "optimizer_steps": 0,
+    "network_training_precision_changed": false
+  },
+  "original_exit_status": 1,
+  "original_optimizer_steps": 0,
+  "recovery_exit_status": 0,
+  "threshold_scope": "float64 structural formula test only; actual training float32 and quality gates unchanged"
+}
