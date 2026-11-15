@@ -3,6 +3,8 @@
 当前默认路径：**Event Catalog → Music Timeline → Event Plan → 冻结 EDGE（Temporal V0.5）→ 原 Native 验收**。学习检索保留shadow。研究路径已完成真实151D配对补全，以及原生SO(3)跨录制条件的Cross/Additive同参数量训练（各1,200步）；事件跟随与完整生成质量仍未合格。
 
 
+新增 [R27完整状态与参考学习一致性报告](reports/R27完整状态与参考学习一致性实验报告.md)及[回执](reports/r27_release/r27_receipt.json)：保留Lodge＋C1，记录真实50步逆扩散状态并完成完整139D模型教师正对照。P训练1200步，新噪声来源控制8/8，冻结C1为0/8；真实AIST/ChangE迁移未通过，历史ChangE子集综合门0/2，不跑整曲。13数组包、4对更新、82条新执行轨迹及82条独立重放一致，复验优化器0；437回归通过、8依赖跳过，EDGE专项6通过。未触发容量/缓存续训执行代码已清理；完整Native仍不可评，14段服务器视频待本批回传授权。见[预登记](docs/R27_PROTOCOL.md)及[固定迁移协议](docs/R27_TRANSFER_PROTOCOL.md)。
+
 新增 [R26关节身份与来源几何报告](reports/R26关节身份与来源几何实验报告.md)及[回执](reports/r26_release/r26_receipt.json)：96Train/24音乐组、6曝光DEV/3组；C0原编码、C1有序关节槽、C2加配对几何，各1200步。强制置换不变性修复，但两候选来源综合门仍0/4；C2腕部距离/Jerk部分降低伴随活动收缩，正确参考腕指标0/8胜交换。113数组包/102PCM/12对更新/166生成条件独立复验，431回归通过、8依赖跳过，专项8通过。42段视频及观看页已获授权回传并核验（outputs/reference_r26_01/videos/index.html）；C3/整曲0，完整Native不可评价。研究与冻结基线分开，见[协议](docs/R26_PROTOCOL.md)。
 
 新增 [R25完整事件与阶段参考适配器报告](reports/R25完整事件与阶段参考适配器实验报告.md)及[回执](reports/r25_release/r25_receipt.json)：冻结Lodge Local，在真实主干三层训练完整事件/阶段参考适配器，各256720参数、600步。135条注册轨迹独立重放，31数组包/21份PCM/147条评价一致；保留失败重放后实际63次采样405轨迹，复验优化器0。阶段模型部分上身/Jerk改善，但来源综合门两模型均0/4、正确阶段仅1/8胜错置，完整Native不可评价、整曲0。423回归通过、8依赖跳过，EDGE专项11通过；40段视频与观看页已获授权回传本地并核验（outputs/lodge_adapter_r25_02/videos/index.html）。研究与冻结基线分开，见[协议](docs/R25_PROTOCOL.md)。

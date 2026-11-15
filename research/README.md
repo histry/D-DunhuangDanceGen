@@ -166,3 +166,8 @@ Independent `lodge_adapter_r25` trains full-event and explicit-phase variants on
 ## R26 reference_r26
 
 关节身份保留、可表示配对几何监督、已知时钟读取的独立研究包；正式EDGE及R22–R25冻结。协议在docs/R26_PROTOCOL.md，实际调用在docs/R26_CALL_PATHS.md，结果在reports/R26关节身份与来源几何实验报告.md。C1/C2综合门0/4，原始权重/轨迹保留服务器；不升级正式生成或检索。
+
+
+## R27 full-state reference consistency
+
+The isolated state_r27 study traces the official Lodge sampler without changing its update, CFG, Normalizer or historical R22-R26 code. Four coupled model-generated139D targets provide a Train-only reference positive control; generated C4 is not measured contact truth. The registered P model passed new-noise source control, so untriggered capacity/cache training drivers were removed. Fixed exposed AIST/ChangE transfer failed to establish real-source qualification. Default generation, complete Native and whole-song admission remain unchanged. See [report](../reports/R27完整状态与参考学习一致性实验报告.md) and [fixed transfer](../docs/R27_TRANSFER_PROTOCOL.md).

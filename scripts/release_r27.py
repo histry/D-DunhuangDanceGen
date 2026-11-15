@@ -19,6 +19,7 @@ def verify(root):
     assert a["initial_digest"]==b["initial_digest"] and a["final_digest"]==b["final_digest"]
     assert a["curves"]==b["curves"] and a["history"]==b["history"] and a["frozen_digest"]==b["frozen_digest"]
     for name,h in a["files"].items():assert sha(root/"models/P"/name)==h
+    clean=read(root/"pruned_replay_receipt.json");assert clean["observed_process_exit_status"]==0 and clean["optimizer_steps"]==0
     differences=[]
     for actual,expected in zip(b["actual_readouts"],a["observations"]):differences.append(readout_check(actual,expected))
     assert len(differences)==4 and all(x["update_norm"]>0 for x in a["observations"])
@@ -96,6 +97,11 @@ def collect(root,out,receipts):
         positive=read(root/"positive/result.json"),decision=read(root/"decision.json"),admission=read(root/"release_admission.json"),
         transfer=read(root/"transfer/result.json"),checks=read(root/"independent_checks.json"),media=read(root/"videos/protocol.json"),
         human_reviewed=False,operational_qualified=False,whole_song_generations=0,full_native_status="NOT_EVALUABLE")
+    assert read(root/"pruned_replay_receipt.json")["optimizer_steps"]==0
+    manifest=root/"artifacts_manifest.json";assert not manifest.exists()
+    files={str(p.relative_to(root)):dict(sha256=sha(p),bytes=p.stat().st_size) for p in root.rglob("*") if p.is_file()}
+    write(manifest,dict(code_commit=commit(),files=files,file_count=len(files),total_bytes=sum(p["bytes"] for p in files.values()),temporary_ssh_files=0))
+    result["scientific_manifest"]=ref(manifest);result["pruned_replay"]=read(root/"pruned_replay_receipt.json")
     write(out/"r27_summary.json",result);write(out/"r27_checks.json",result["checks"])
     write(out/"r27_receipt.json",dict(collection_commit=commit(),summary_sha256=sha(out/"r27_summary.json"),
         evidence={str(p.relative_to(root)):sha(p) for p in root.rglob("*.json")},
