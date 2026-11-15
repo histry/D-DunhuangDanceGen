@@ -130,3 +130,12 @@ Independent objective_r19 package: matched single-task N0/N1/N2, then conditiona
 ## R20 joint225 visibility and sampling temporal research
 
 Independent temporal_r20 package. S0 split150 and S1 genuine joint225 share the R19 N2 selected weights and train240 updates each with the unchanged objective. Direct bilateral visibility is verified, but S1 fails the fixed Train-only retention rule. A0/A1/A2 then share one selected endpoint and fresh optimizers; A3 is skipped by its retention gate. Final Native is0/40 across Train2 and exposed DEV2 with two seeds; no whole songs or operational promotion. Independent checks reproduce90 array bundles,136 Native/FK arrays,68 physical reports,15 saved actual-update observations and78 evaluation/cache trajectories without optimization. The verifier path fix retains the original failure receipt and all prior scientific outputs. See [protocol](../docs/R20_PROTOCOL.md), [call paths](../docs/R20_CALL_PATHS.md) and [report](../reports/R20双端联合视野与采样时序实验报告.md).
+
+
+## R21: context, boundary risk and fixed source support
+
+`src/dunhuang/research/context_r21` contains the separately registered split/joint × pooled/boundary-separated comparison, followed by Q/M/F continuation from the fixed B3 checkpoint. The formal pipeline, R13–R20, music weights, Scaler and all original Native limits remain frozen. See [protocol](../docs/R21_PROTOCOL.md), [call paths](../docs/R21_CALL_PATHS.md) and [R20 label errata](../docs/R20_LABEL_ERRATA.md).
+
+Train uses 24 real continuous AIST recordings from 12 Data V3 Train music groups; four exposed DEV groups are held out from this adaptation. Each case binds raw source/audio identities, the real 225-frame music clock and independent full-recording FK support proxies. This is known-future INBETWEEN research, with no independent human contact truth, ChangE style qualification or whole-song release.
+
+`scripts/run_r21.sh` launches fresh runs; each stochastic output and cache has a separate optimizer-free replay. `scripts/verify_r21.py` compares arrays, actual-update snapshots, fixed proxy populations, original Native reports and frozen paths. `scripts/collect_r21.py` rejects existing public result filenames; partial reports and failure receipts must be preserved. Media use a common fixed world camera and scale without motion smoothing or frame-by-frame root recentering.

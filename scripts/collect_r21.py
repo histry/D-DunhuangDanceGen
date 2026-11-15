@@ -92,10 +92,12 @@ def run(root,destination,receipt_root=None):
         contrasts=contrasts(cfg,native,q_scores),checks=checks,
         support_calibration=read(root/"support_calibration/result.json") if data["support_admitted"] else None,
         videos=read(root/"videos/protocol.json")["records"],human_reviewed=False,contact_truth="UNKNOWN",
-        branch_training_comparison_executed=False,free_future_root_tested=False,whole_song_generations=0,operational_qualified=False)
+        branch_training_comparison_executed=False,branch_metric_scope="Standalone branch predictions are clamped before layout blend; guided-output training unchanged",free_future_root_tested=False,whole_song_generations=0,operational_qualified=False)
     summary=destination/"r21_summary.json";write(summary,result);write(destination/"r21_checks.json",checks)
     evidence={str(p.relative_to(root)):sha(p) for p in sorted(root.rglob("*.json")) if p.name in ("result.json","protocol.json","independent_checks.json")}
-    write(destination/"r21_receipt.json",dict(code_commit=commit(),execution_commit=(original_path/"execution_commit.txt").read_text().strip(),
+    write(destination/"r21_receipt.json",dict(code_commit=commit(),initial_launcher_commit=(original_path/"execution_commit.txt").read_text().strip(),
+        model_execution_commits=sorted({read(root/"models"/a/"protocol.json")["code_commit"] for a in arms}),
+        data_execution_commit=read(root/"data/protocol.json")["code_commit"],completion_launcher_commit=(completion_path/"execution_commit.txt").read_text().strip(),
         summary_sha256=sha(summary),exit_status=0,original_exit_status=int((original_path/"exit_status.txt").read_text()),
         completion_receipt_root=str(completion_path),evidence=evidence,
         original_receipt_files={p.name:sha(p) for p in original_path.iterdir() if p.is_file()},
