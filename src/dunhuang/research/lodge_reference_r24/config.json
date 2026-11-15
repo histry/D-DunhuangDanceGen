@@ -1,0 +1,35 @@
+{
+  "schema": "lodge_change_r24_v1",
+  "baseline": "7012b1d36b60f953cef92a6387453b4e306d99b5",
+  "r8_root": "outputs/reperformance_r8_02",
+  "pair": 0,
+  "music_cases": [
+    0,
+    1
+  ],
+  "audio_start_seconds": 0,
+  "core_start": 64,
+  "phase_types": [
+    "upper_motion_onset",
+    "upper_speed_peak",
+    "upper_direction_turn",
+    "root_turn_proxy"
+  ],
+  "cue_radius": 1,
+  "seeds": [
+    24041,
+    24042
+  ],
+  "frames": 256,
+  "fps": 30,
+  "feature_dim": 35,
+  "output_dim": 139,
+  "observed_body_joints": 22,
+  "relative_retention_gain": 0.05,
+  "max_jerk_ratio": 1.1,
+  "full_native_status": "NOT_EVALUABLE",
+  "human_reviewed": false,
+  "operational_qualified": false,
+  "whole_song_generations": 0,
+  "min_upper_source_distance_rad": 0.15
+}

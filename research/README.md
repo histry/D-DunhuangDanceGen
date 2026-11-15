@@ -151,3 +151,8 @@ Lodge runs from a separately hashed official source/config/checkpoint under igno
 ## R23: guidance and continuous representation
 
 Independent `local_r23` research authenticates R22 seals;32 CFG1 samples and four detailed CFG2 reproductions are replayed without optimizers. Nine saved pre states diagnose gradient direction. Six already selected physical sources test a fixed continuous full24 decoder using per-instance full-target latent fits, explicitly not a learned prior or conditional generator. Lodge stays9+0; incomplete rotations remain unknown. PHC exports and readiness are separate from actual simulation. See [protocol](../docs/R23_PROTOCOL.md) and [call paths](../docs/R23_CALL_PATHS.md).
+
+
+## R24: main research route, Lodge Local with ChangE
+
+`lodge_reference_r24` uses the original native35D music and139D body interface, fixed R8 full-Core pair0, E1-W phases and Dunhuang music2/3. Twelve zero-training outputs use one identical soft sampler/ramp and common Gaussian draws across conditions. No Lodge Global, FK rewiring, fabricated fingers or default replacement. Source-only compiler, normalization diagnostics and unprompted-Core control metrics precede any future reference-adapter training. EDGE/R23 remain baseline research. See [protocol](../docs/R24_LODGE_PROTOCOL.md).
