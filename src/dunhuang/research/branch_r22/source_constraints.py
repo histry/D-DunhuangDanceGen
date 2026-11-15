@@ -5,6 +5,8 @@ import numpy as np
 from dunhuang.io import checked,write
 from dunhuang.research.source_capacity.common import read,commit,forbid_optimizers
 from dunhuang.research.masked_denoiser.metrics import decode
+from dunhuang.research.state_bridge.common import native_environment
+from dunhuang.research.bridge_inpainting.study import audit_native
 
 def root_bounds(native,hard,limits,fps=30):
     x=np.asarray(native);h=np.asarray(hard,dtype=bool);assert x.ndim==2 and x.shape[1]==151 and h.shape==x.shape
@@ -24,18 +26,24 @@ def root_bounds(native,hard,limits,fps=30):
 def run(root,out,replay=None):
     root=Path(root);out=Path(out);assert not out.exists();forbid_optimizers()
     pre=read(root/"data/protocol.json");data=read(root/"data/result.json");cfg=pre["config"]
+    native_environment(pre["assets"])
     scaler=np.load(checked(pre["assets"]["scaler"]));rows=[]
     for r in data["records"]:
         z=np.load(checked(r["arrays"]));represented=decode(z["encoded"],scaler,z["native"])
         physical=read(checked(r["source_physical"]))["absolute"];variants={}
+        _,represented_report=audit_native(represented);rp=represented_report["absolute"]
+        assert rp["limits"]==physical["limits"]
         for variant,(left,right) in enumerate(cfg["contexts"]):
             h=np.zeros((225,151),bool);h[:left,4:]=True;h[225-right:,4:]=True
             original=root_bounds(z["native"],h,physical["limits"])
             assert abs(original["net_drift_speed_mps"]-physical["audit"]["root_horizontal_drift_speed_mps"])<1e-6
             variants[str(variant)]=root_bounds(represented,h,physical["limits"])
-        rows.append(dict(case=r["case"],role=r["role"],source_group=r["left"]["source_group"],variants=variants))
+        rows.append(dict(case=r["case"],role=r["role"],source_group=r["left"]["source_group"],variants=variants,
+            represented_source_native_ok=rp["ok"],represented_source_reasons=rp["reasons"],
+            represented_source_readouts={k:rp["audit"][k] for k in ("joint_jerk_mps3_max","joint_jerk_window_p95_max_mps3","foot_skate_mps_p95","foot_support_drift_m_p95","root_horizontal_drift_speed_mps")},
+            exact_encoded_target_is_feasible_witness=bool(rp["ok"])))
     result=dict(records=rows,scope="SUPPLEMENTAL_SOURCE_ONLY_DIAGNOSTIC; no generation read, no population or threshold changes",
-        optimizer_steps=0,code_commit=commit(),whole_song_generations=0,operational_qualified=False)
+        represented_source_native_reports=28,optimizer_steps=0,code_commit=commit(),whole_song_generations=0,operational_qualified=False)
     if replay:assert result==read(replay)
     write(out,result);print("R22_FIXED_ROOT_AUDIT",[(r["case"],r["role"]) for r in rows if any(v["unavoidable_failures"] for v in r["variants"].values())],flush=True)
 if __name__=="__main__":
