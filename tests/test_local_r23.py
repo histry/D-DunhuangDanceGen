@@ -73,3 +73,9 @@ def test_modules_import_without_launching_experiments():
     import importlib
     for name in ["sample","gradients","represent","evaluate","physical_tracking","external"]:
         importlib.import_module("dunhuang.research.local_r23."+name)
+
+
+def test_fk_intervention_survives_layernorm_shift_invariance():
+    from dunhuang.research.local_r23.external import fk_perturbation
+    torch.manual_seed(9);x=torch.randn(2,16,32);norm=torch.nn.LayerNorm(32)
+    assert not torch.allclose(norm(fk_perturbation(x)),norm(x),atol=1e-3)

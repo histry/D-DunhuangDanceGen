@@ -10,6 +10,10 @@ from dunhuang.research.branch_r22.local_contract import require_native24
 from dunhuang.research.state_bridge.common import native_environment
 from .common import inputs,finish,arrays,read,fresh,forbid_optimizers
 
+def fk_perturbation(value):
+    # Nonconstant across features: a scalar offset would be canceled by LayerNorm.
+    return value+100*torch.linspace(-1,1,value.shape[-1],device=value.device,dtype=value.dtype)
+
 def positions24(root,local22,parents,offsets):
     if local22.shape!=(len(root),22,3,3) or len(parents)!=24:raise ValueError("Mapped complete first22 required")
     if any(j in parents for j in (22,23)):raise ValueError("Missing rotations must be terminal leaves")
@@ -45,7 +49,7 @@ def run(cfg,out,replay=None):
     model=diffusion.model
     torch.manual_seed(23041);x=torch.randn_like(raw);m=torch.tensor(z["music"],device="cuda");t=torch.tensor([519,519],device="cuda")
     with torch.no_grad():before=model(x,m,None,t,cond_drop_prob=0)
-    handle=model.refine_cond_projection1.register_forward_hook(lambda mod,args,value:value+100.)
+    handle=model.refine_cond_projection1.register_forward_hook(lambda mod,args,value:fk_perturbation(value))
     try:
         with torch.no_grad():perturbed=model(x,m,None,t,cond_drop_prob=0)
     finally:handle.remove()
@@ -75,7 +79,7 @@ def run(cfg,out,replay=None):
                 terminal_hand_jerk_p95=float(np.percentile(jerk[:,22:],95)),source_fk_parity_max_m=float(np.max(abs(derived-expected))),
                 complete_rotations24=False,full_native_status="NOT_EVALUABLE"))
     arrays(out,"external_arrays.npz",values,replay)
-    finish(out,dict(checkpoint=info,normalizer_roundtrip=details,FK_condition_perturbation_output_exact=True,
+    finish(out,dict(checkpoint=info,normalizer_roundtrip=details,FK_condition_perturbation_output_exact=True,FK_perturbation="nonconstant channel ramp; not removable by LayerNorm shift invariance",
         FK_projection_gradient_unused=g is None,missing_leaf_rotations_unknown=True,retargeted_positions=position_rows,
         strict_architecture_unmodified=True,new_external_sampler_calls=0,full_native_status="NOT_EVALUABLE",optimizer_steps=0),cfg,replay)
 if __name__=="__main__":
