@@ -95,3 +95,14 @@ def test_replay_precision_applies_only_to_gradient_norms():
     with pytest.raises(AssertionError):verify_readout(x,z)
     z=dict(y,gradient_norms={"sequence":y["gradient_norms"]["sequence"],"zero":1e-12})
     with pytest.raises(AssertionError):verify_readout(x,z)
+
+
+
+def test_sampler_condition_receipt_survives_json_roundtrip():
+    import json
+    from dunhuang.research.lodge_adapter_r25.replay import change_conditions
+    grid=change_conditions()
+    assert json.loads(json.dumps(grid))==grid
+    assert grid[0]==[0,-1] and grid[3]==[1,-1]
+    assert len(grid)==6 and len({tuple(x) for x in grid})==6
+    assert [x for x in grid if x[1]>=0]==[[0,0],[0,1],[1,0],[1,1]]

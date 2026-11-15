@@ -15,3 +15,8 @@ def verify_readout(actual,expected):
         deltas[name]=dict(actual=x,expected=y,absolute_error=abs(x-y),relative_error=abs(x-y)/max(abs(x),abs(y)) if x or y else 0.)
     return dict(non_gradient_fields_exact=True,gradient_norms_bitwise_exact=ga==gb,
         gradient_norm_rtol=GRADIENT_NORM_RTOL,gradient_norm_atol=0.,gradient_norm_deltas=deltas)
+
+
+def change_conditions():
+    """JSON-stable condition grid; null rows remain0 and3."""
+    return [[m,event] for m in range(2) for event in (-1,0,1)]

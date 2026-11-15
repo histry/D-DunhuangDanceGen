@@ -8,6 +8,7 @@ from dunhuang.research.source_capacity.common import read,commit,fresh,forbid_op
 from dunhuang.research.lodge_reference_r24.noise import common_noise
 from .common import runtime,dataset,packet,install,restore
 from .model import digest
+from .replay import change_conditions
 from .reference import phase_features,landmarks
 from dunhuang.planning.feasible_time_map import solve
 from dunhuang.planning.time_map import source_positions
@@ -31,7 +32,7 @@ def run(cfg,root,out,replay=None):
     r24=read(parent/"main/result.json");z=dict(np.load(checked(read(parent/"main/protocol.json")["arrays"])))
     pop,data=dataset(root);d,n,s,fk,e,info,adapter=runtime(cfg);frozen=digest(d.model);adapter.attach(d.model)
     arrays={};receipts=[];calls=0
-    conditions=[(m,event) for m in range(2) for event in (-1,0,1)]
+    conditions=change_conditions()
     oldplans=[read(checked(read(parent/"main/protocol.json")["plans"][key]))["events"][0] for key in ("A","B")]
     music_plans=[];new_references=np.repeat(z["source139"][None],2,axis=0);phase_packets={}
     for m in range(2):
@@ -89,8 +90,8 @@ def run(cfg,root,out,replay=None):
     path=out/"arrays.npz";np.savez_compressed(path,**arrays)
     result=dict(receipts=receipts,sampler_calls=calls,change_trajectories=72,paired_trajectories=9*len(cases),total_trajectories=72+9*len(cases),music_plans=music_plans,
         null_reference_exact=True,frozen_model_unchanged=True,optimizer_steps=0,whole_song_generations=0,full_native_status="NOT_EVALUABLE")
-    if replay:assert result==read(Path(replay)/"result.json");same_arrays(path,Path(replay)/"arrays.npz")
     write(out/"result.json",result);write(out/"protocol.json",dict(config=cfg,code_commit=commit(),data=str(root/"data/result.json"),arrays_sha256=sha(path),checkpoint=info))
+    if replay:assert result==read(Path(replay)/"result.json");same_arrays(path,Path(replay)/"arrays.npz")
     adapter.close()
 if __name__=="__main__":
     p=argparse.ArgumentParser();p.add_argument("--config",required=True);p.add_argument("--root",required=True);p.add_argument("--out",required=True);p.add_argument("--replay-from");a=p.parse_args()
