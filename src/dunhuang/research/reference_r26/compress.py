@@ -3,7 +3,7 @@ import argparse
 from pathlib import Path
 import numpy as np
 import torch
-from dunhuang.io import sha,write
+from dunhuang.io import sha,write,checked
 from dunhuang.research.lodge_adapter_r25.metrics import source_metrics
 from .common import *
 from .geometry import fk22
@@ -11,6 +11,17 @@ from .geometry import fk22
 def run(cfg,root,out,replay=None):
     out=fresh(out);root=Path(root);forbid_optimizers();pop,data=dataset(root)
     d,n,s,f,e,info,adapter=runtime(cfg,"C0");rows=[];arrays={}
+    historical=np.load(checked(read(Path(cfg["r24"])/"main/protocol.json")["arrays"]))
+    source_support=[]
+    with torch.no_grad():
+        raw=torch.tensor(historical["source139"],device="cuda")
+        back=n.unnormalize(n.normalize(raw.clone()))
+        before=fk22(raw,s);after=fk22(back,s)
+        assert float((before-torch.tensor(historical["source22"],device="cuda")).abs().max())<2e-5
+        for event in range(2):
+            mask=np.zeros(256,bool);mask[64:160]=True
+            metrics=source_metrics(back[event].cpu().numpy(),raw[event].cpu().numpy(),after[event].cpu().numpy(),before[event].cpu().numpy(),mask)
+            source_support.append(dict(event=event,roundtrip_metrics=metrics,raw_source_truth_changed=False,scope="Single official encoding roundtrip distortion; NOT global pose-infeasibility certificate"))
     for arm in cfg["arms"]:
         torch.manual_seed(cfg["seed"]);torch.cuda.manual_seed_all(cfg["seed"])
         a=Adapter(arm!="C0",width=64,part_width=16,layers=(1,4,7),hidden=512).cuda()
@@ -37,7 +48,7 @@ def run(cfg,root,out,replay=None):
         arrays[arm+"_identity_swap_delta"]=np.array(swap)
         print("R26_COMPRESS",arm,swap,flush=True)
     path=out/"arrays.npz";np.savez_compressed(path,**arrays)
-    result=dict(records=rows,ridge=1e-3,training_only_fit=True,readout_neural_optimizer_steps=0,optimizer_steps=0,
+    result=dict(records=rows,ChangE_source_roundtrip_probe=source_support,ridge=1e-3,training_only_fit=True,readout_neural_optimizer_steps=0,optimizer_steps=0,
         decoder_is_a_diagnostic_not_a_generator=True,operational_qualified=False)
     write(out/"result.json",result);write(out/"protocol.json",dict(code_commit=commit(),config=cfg,arrays_sha256=sha(path)))
     if replay:assert result==read(Path(replay)/"result.json");same_arrays(path,Path(replay)/"arrays.npz")
