@@ -4,7 +4,7 @@ from pathlib import Path
 import numpy as np
 import torch
 from .representation import packet
-from dunhuang.research.state_r27.common import *
+from dunhuang.research.state_r27.common import read,write,sha,fresh,forbid_optimizers,runtime,restore,metrics,commit,same_arrays
 from dunhuang.research.state_r27.trace import row_noise
 
 def run(cfg,root,out,replay=None):

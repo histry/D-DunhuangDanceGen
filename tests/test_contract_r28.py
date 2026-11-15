@@ -39,3 +39,14 @@ def test_fixed_translation_roundtrip_preserves_rotations_and_C4():
     y=translate(x,offset);back=translate(y,-offset)
     assert np.allclose(x,back,atol=5e-7)
     assert np.array_equal(x[:,:4],y[:,:4]) and np.array_equal(x[:,7:],y[:,7:])
+
+
+def test_unknown_C4_is_not_supervised_as_contact_truth_inside_Core():
+    import torch
+    from dunhuang.research.contract_r28.train import loss_terms
+    pred=torch.ones(1,256,139,requires_grad=True)
+    loss,_=loss_terms(pred,torch.zeros_like(pred),torch.zeros_like(pred))
+    loss.backward()
+    assert torch.count_nonzero(pred.grad[:,64:160,:4])==0
+    assert pred.grad[:,64:160,4:7].norm()>0 and pred.grad[:,64:160,7:].norm()>0
+    assert pred.grad[:,:64,:4].norm()>0

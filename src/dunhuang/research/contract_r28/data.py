@@ -5,7 +5,7 @@ import numpy as np
 import torch
 from .input_contract import alignment_height,height_features,translate
 from .representation import rotations
-from dunhuang.research.state_r27.common import *
+from dunhuang.research.state_r27.common import read,sha,checked,write,fresh,forbid_optimizers,matrices,metrics,commit,same_arrays
 from dunhuang.research.state_r27.common import runtime as old_runtime
 
 def originals(cfg):
