@@ -1,0 +1,142 @@
+{
+  "schema": "state_r27_v1",
+  "baseline": "dabfd297de027a7b50ffe8ef28c461a4491425f4",
+  "r26": "outputs/reference_r26_01",
+  "r26_manifest_sha256": "838f925378f664b85598ed795f5541070967b90eb2e9c965cf074b3ac6c31818",
+  "r24": "outputs/lodge_reference_r24_01",
+  "seed": 27041,
+  "teacher_seeds": [
+    270011,
+    270012,
+    270021,
+    270022
+  ],
+  "teacher_diversity_mse": 0.0001,
+  "teacher_diversity_angle": 0.05,
+  "diagnostic_seeds": [
+    272001,
+    272002
+  ],
+  "diagnostic_times": [
+    999,
+    519,
+    119,
+    19
+  ],
+  "curve_times": [
+    999,
+    519,
+    119,
+    19
+  ],
+  "curve_noise_seeds": [
+    284001,
+    284001,
+    284002,
+    284002
+  ],
+  "eval_noise_seeds": [
+    [
+      271011,
+      271011,
+      271021,
+      271021
+    ],
+    [
+      271111,
+      271111,
+      271121,
+      271121
+    ]
+  ],
+  "training_noise_seed": 280000,
+  "learning_rate": 0.0002,
+  "positive_min_steps": 1200,
+  "positive_max_steps": 2400,
+  "continuation_steps": 600,
+  "snapshot_steps": [
+    0,
+    1,
+    599,
+    1199,
+    2399
+  ],
+  "curve_updates": [
+    200,
+    600,
+    1200,
+    2400
+  ],
+  "sampler_times": [
+    999,
+    979,
+    959,
+    939,
+    919,
+    899,
+    879,
+    859,
+    839,
+    819,
+    799,
+    779,
+    759,
+    739,
+    719,
+    699,
+    679,
+    659,
+    639,
+    619,
+    599,
+    579,
+    559,
+    539,
+    519,
+    499,
+    479,
+    459,
+    439,
+    419,
+    399,
+    379,
+    359,
+    339,
+    319,
+    299,
+    279,
+    259,
+    239,
+    219,
+    199,
+    179,
+    159,
+    139,
+    119,
+    99,
+    79,
+    59,
+    39,
+    19
+  ],
+  "cache_times": [
+    999,
+    799,
+    599,
+    399,
+    199,
+    19
+  ],
+  "cache_seed": 273001,
+  "cache_refresh_steps": [
+    0,
+    200,
+    400
+  ],
+  "nonlinear_steps": 600,
+  "nonlinear_learning_rate": 0.001,
+  "transfer_seed": 24041,
+  "human_reviewed": false,
+  "operational_qualified": false,
+  "whole_song_generations": 0
+}
