@@ -139,3 +139,10 @@ Independent temporal_r20 package. S0 split150 and S1 genuine joint225 share the 
 Train uses 24 real continuous AIST recordings from 12 Data V3 Train music groups; four exposed DEV groups are held out from this adaptation. Each case binds raw source/audio identities, the real 225-frame music clock and independent full-recording FK support proxies. This is known-future INBETWEEN research, with no independent human contact truth, ChangE style qualification or whole-song release.
 
 `scripts/run_r21.sh` launches fresh runs; each stochastic output and cache has a separate optimizer-free replay. `scripts/verify_r21.py` compares arrays, actual-update snapshots, fixed proxy populations, original Native reports and frozen paths. `scripts/collect_r21.py` rejects existing public result filenames; partial reports and failure receipts must be preserved. Media use a common fixed world camera and scale without motion smoothing or frame-by-frame root recentering.
+
+
+## R22: branch supervision and external Local baseline
+
+`src/dunhuang/research/branch_r22` reuses the frozen R21 data, motion interface, sampler and physical losses. G0/G1/G2 all continue the same B3 values over the full 24-source ledger with 1,200 updates each. Only reconstruction switches from guided-clipped to independently weighted clipped/raw branches. Raw branch tensors retain gradients. Source permission audits and a prospective physical inventory run before optimization. See [protocol](../docs/R22_PROTOCOL.md) and [call paths](../docs/R22_CALL_PATHS.md).
+
+Lodge runs from a separately hashed official source/config/checkpoint under ignored `inputs/lodge_r22`, without vendoring its training system into production. Native 139D/22-joint/35D-music output is explicitly incomplete for the project's 151D/24-joint Native contract. No fabricated joints or full-quality admission; common-skeleton diagnostics stay separate. All training, sampler outputs and external baseline outputs have optimizer-free fresh-process replays.

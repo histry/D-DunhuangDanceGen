@@ -1,0 +1,135 @@
+{
+  "schema": "r22_branch_contract_v1",
+  "baseline": "9566f6f6312f436bbdf782f22d9432cccd5ac7c3",
+  "r20_root": "outputs/temporal_r20_01",
+  "r20_config": "src/dunhuang/research/temporal_r20/config.json",
+  "seed": 22041,
+  "train_groups": 12,
+  "train_recordings_per_group": 2,
+  "dev_groups": 4,
+  "dev_recordings_per_group": 1,
+  "steps": 1200,
+  "learning_rate": 5e-05,
+  "arms": [
+    "G0",
+    "G1",
+    "G2"
+  ],
+  "contexts": [
+    [
+      8,
+      8
+    ],
+    [
+      16,
+      24
+    ],
+    [
+      24,
+      16
+    ],
+    [
+      8,
+      24
+    ]
+  ],
+  "observation_joints": [
+    [
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    [
+      13,
+      16,
+      18
+    ],
+    [
+      14,
+      17,
+      19
+    ]
+  ],
+  "curve_updates": [
+    0,
+    600,
+    1200
+  ],
+  "snapshot_steps": [
+    0,
+    599,
+    1199
+  ],
+  "eval_variants": [
+    0,
+    2
+  ],
+  "eval_seed": 0,
+  "stage_snapshots": [
+    999,
+    519,
+    119,
+    19
+  ],
+  "fixed_jerk_limit": 1620,
+  "scaler_epsilon": 32,
+  "proxy": {
+    "foot_joints": [
+      10,
+      11
+    ],
+    "floor_quantile": 0.02,
+    "static_speed_mps": 0.25,
+    "static_height_m": 0.04,
+    "static_min_frames": 6,
+    "swing_height_m": 0.1,
+    "swing_speed_mps": 0.15,
+    "swing_min_frames": 3
+  },
+  "support_scales": {
+    "support_velocity": 0.18,
+    "support_anchor": 0.06,
+    "swing_clearance": 0.02
+  },
+  "source_qualification": "necessary fixed-prefix/suffix jerk exclusion only; full Native unchanged",
+  "whole_song_generations": 0,
+  "human_reviewed": false,
+  "operational_qualified": false,
+  "training_hard_context": true,
+  "probe_selection": "Source geometry presence stratified; all selected before model outputs",
+  "qualification": {
+    "max_pose_ratio": 1.1,
+    "min_activity_ratio": 0.8,
+    "max_root_ratio": 1.1,
+    "max_internal_jerk_ratio": 1.1,
+    "required_improved_dev_groups": 3,
+    "min_gain": 0.05,
+    "max_q_ratio": 1.25,
+    "min_actual_gain": 0.05,
+    "min_boundary_gain": 0.05,
+    "min_foot_skate_gain": 0.05,
+    "max_drift_ratio": 1.1,
+    "source_pose_mean_max_rad": 0.3,
+    "source_root_rmse_max_m": 0.15,
+    "min_source_activity_ratio": 0.8,
+    "min_source_range_ratio": 0.8
+  },
+  "parent": "outputs/context_r21_02",
+  "branch_weights": {
+    "conditional_music": 0.75,
+    "unconditional_music": 0.25
+  },
+  "mechanism_activity_min_mps": 0.15,
+  "mechanism_joint_range_min_rad": 0.05,
+  "lodge_source_commit": "f38642ad67bc3402444f5f914010a911e5bd5c89",
+  "lodge_cases": [
+    1,
+    24
+  ],
+  "lodge_manifest_sha256": "978a423a43908194adaa3abc83877209f31d4c27844dd9d5793b3cfccfb27785"
+}
