@@ -63,9 +63,11 @@ def run(cfg,out,replay=None):
                 value=torch.tensor(raw[None],device="cuda");target=n.normalize(value.clone());back=n.unnormalize(target.clone())
                 xyz=f(value,s)[0,:,:22];q=f(back,s)[0,:,:22]
             arrays[mode+"_raw"]=raw;arrays[mode+"_target"]=target[0].cpu().numpy();arrays[mode+"_points"]=xyz.cpu().numpy()
+            affine=value*n.scaler.scale_.to(value.device)+n.scaler.min_.to(value.device)
             statistics[mode]=dict(root_roundtrip_rmse_m=float((back[:,:,4:7]-value[:,:,4:7]).square().mean().sqrt()),
                 body_roundtrip_mse=float((back[:,:,7:]-value[:,:,7:]).square().mean()),
-                clipping={k:float((target[:,:,lo:hi].abs()>1).float().mean()) for k,lo,hi in (("C4",0,4),("Root",4,7),("body",7,139))},
+                affine_preclip_outside={k:float((affine[:,:,lo:hi].abs()>1).float().mean()) for k,lo,hi in (("C4",0,4),("Root",4,7),("body",7,139))},
+                normalized_outside_fraction=float((target.abs()>1).float().mean()),
                 normalized_C4_mean=float(target[:,:,:4].mean()),C4_feature_rate=raw[:,:4].mean(0).tolist(),
                 original_target_vs_official_roundtrip=metrics(back[0].cpu().numpy(),q.cpu().numpy(),raw,xyz.cpu().numpy()))
         assert np.allclose(translate(model,-offset)[:,4:],original[:,4:],atol=2e-6)

@@ -16,3 +16,5 @@ Root/足部仅作分层读出：全局及Core Jerk、Root速度<=NoRef1.1，模�
 
 
 补充输入审计：官方MinMaxScaler.transform的clip标志也可能开启，故data/result历史statistics.clipping字段只表示归一化后输出是否越界，不能解释为原输入被裁剪比例。训练前另以原始输入×scale+min计算input_domain_audit.json的affine_preclip_outside，保存旧字段作用域和两条精确重算。该补充不改Normalizer或已封存数据。FineDance另由四份认证真实波形重提固定官方35D特征、验证帧数与共同裁切，记录原特征与当前librosa结果差异；不把形状相同当生产版本相同。
+
+当前data.py的新构建已将越界读出改为affine_preclip_outside及normalized_outside_fraction，避免继续产生误名字段；既有数据归档不重写，依其记录提交复现，补充审计给出正确解释。此元数据修正不改变任何训练数组、目标或预算。
