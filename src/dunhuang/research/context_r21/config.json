@@ -1,0 +1,138 @@
+{
+  "schema": "r21_context_physics_v1",
+  "baseline": "5695eb0e781bb01427135aa371356637816fb021",
+  "r20_root": "outputs/temporal_r20_01",
+  "r20_config": "src/dunhuang/research/temporal_r20/config.json",
+  "seed": 21041,
+  "train_groups": 12,
+  "train_recordings_per_group": 2,
+  "dev_groups": 4,
+  "dev_recordings_per_group": 1,
+  "steps": 1200,
+  "follow_steps": 600,
+  "learning_rate": 5e-05,
+  "arms": [
+    "B0",
+    "B1",
+    "B2",
+    "B3",
+    "Q",
+    "M",
+    "F"
+  ],
+  "contexts": [
+    [
+      8,
+      8
+    ],
+    [
+      16,
+      24
+    ],
+    [
+      24,
+      16
+    ],
+    [
+      8,
+      24
+    ]
+  ],
+  "observation_joints": [
+    [
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    [
+      13,
+      16,
+      18
+    ],
+    [
+      14,
+      17,
+      19
+    ]
+  ],
+  "curve_updates": [
+    0,
+    300,
+    600,
+    1200
+  ],
+  "follow_curve_updates": [
+    0,
+    300,
+    600
+  ],
+  "snapshot_steps": [
+    0,
+    599,
+    1199
+  ],
+  "follow_snapshot_steps": [
+    0,
+    299,
+    599
+  ],
+  "cache_refresh": [
+    0,
+    300
+  ],
+  "eval_variants": [
+    0,
+    2
+  ],
+  "eval_seed": 0,
+  "stage_snapshots": [
+    999,
+    519,
+    119,
+    19
+  ],
+  "fixed_jerk_limit": 1620,
+  "scaler_epsilon": 32,
+  "proxy": {
+    "foot_joints": [
+      10,
+      11
+    ],
+    "floor_quantile": 0.02,
+    "static_speed_mps": 0.25,
+    "static_height_m": 0.04,
+    "static_min_frames": 6,
+    "swing_height_m": 0.1,
+    "swing_speed_mps": 0.15,
+    "swing_min_frames": 3
+  },
+  "support_scales": {
+    "support_velocity": 0.18,
+    "support_anchor": 0.06,
+    "swing_clearance": 0.02
+  },
+  "support_gradient_budget": 0.1,
+  "maximum_support_weight": 0.03,
+  "source_qualification": "necessary fixed-prefix/suffix jerk exclusion only; full Native unchanged",
+  "follow_source": "B3 last; fixed by protocol, no DEV selection",
+  "whole_song_generations": 0,
+  "human_reviewed": false,
+  "operational_qualified": false,
+  "training_hard_context": true,
+  "probe_selection": "Source geometry presence stratified; all selected before model outputs",
+  "follow_gate": "New R21 protocol: finite eligible data and model gradients; R20 A3 admission unchanged",
+  "qualification": {
+    "max_pose_ratio": 1.1,
+    "min_activity_ratio": 0.8,
+    "max_root_ratio": 1.1,
+    "max_internal_jerk_ratio": 1.1,
+    "required_improved_dev_groups": 3,
+    "min_gain": 0.05,
+    "max_q_ratio": 1.25
+  }
+}
