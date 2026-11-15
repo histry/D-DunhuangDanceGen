@@ -99,3 +99,13 @@ def test_branch_capture_does_not_change_cfg_and_supports_gradient_readouts():
     branches=branch_readout(p,y,k,w,h);assert all(np.isfinite(x["unknown"]) for x in branches.values())
     poison=v.clone();poison[~k]=float("nan");assert torch.equal(after.detach(),p(y,args[1],poison,k,args[4],args[5])[0].detach())
     p.close()
+
+
+def test_audio_replay_checks_samples_and_authenticates_container_separately(tmp_path):
+    import soundfile as sf
+    from dunhuang.research.context_r21.data import same_audio_pcm
+    signal=np.linspace(-.3,.3,100,dtype=np.float32)
+    a=tmp_path/"a.wav";b=tmp_path/"b.wav";sf.write(a,signal,48000,subtype="FLOAT");sf.write(b,signal,48000,subtype="FLOAT")
+    raw=bytearray(b.read_bytes());offset=raw.index(b"PEAK")+12;raw[offset]^=1;b.write_bytes(raw)
+    assert a.read_bytes()!=b.read_bytes() and same_audio_pcm(a,b)
+    sf.write(b,signal+.01,48000,subtype="FLOAT");assert not same_audio_pcm(a,b)

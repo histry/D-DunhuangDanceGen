@@ -3,6 +3,7 @@ import argparse,hashlib
 from pathlib import Path
 from collections import Counter,defaultdict
 import numpy as np
+import soundfile as sf
 from dunhuang.io import checked,write,sha
 from dunhuang.data.sources import ref
 from dunhuang.contracts import MotionAdapter
@@ -13,6 +14,10 @@ from dunhuang.research.global_clock_r17.data import audit_pair
 from dunhuang.research.state_bridge.common import native_environment
 from dunhuang.research.bridge_inpainting.study import audit_native
 from .contract import support_proxy
+
+def same_audio_pcm(a,b):
+    x,sr=sf.read(a,dtype="float32",always_2d=True);y,other=sf.read(b,dtype="float32",always_2d=True)
+    return sr==other and x.shape==y.shape and np.array_equal(x,y)
 
 def rank(cfg,text):return hashlib.sha256((str(cfg["seed"])+text).encode()).hexdigest()
 
@@ -86,7 +91,7 @@ def run(cfg,out,replay=None):
         if replay:
             old=read(Path(replay)/"result.json")["records"][case]
             same_arrays(checked(row["arrays"]),checked(old["arrays"]))
-            assert sha(checked(row["audio225"]))==sha(checked(old["audio225"]))
+            assert same_audio_pcm(checked(row["audio225"]),checked(old["audio225"]))
             assert physical==read(checked(old["source_physical"]))
     np.savez_compressed(out/"parity.npz",parents=PARENTS,offsets=OFFSETS,**parity)
     for field in ("audio","raw_motion","source_native"):
@@ -111,7 +116,7 @@ def run(cfg,out,replay=None):
         train_groups=train,dev_groups=dev,candidate_counts=dict(counts),candidate_ledger=ledger,
         support_admitted=support_cases>=2,proxy_support_cases=support_cases,probe_selection="Pre-model source-proxy-presence stratification; one recording per first four eligible Train groups; no generated metrics",paired_data_ready=True,
         source_native_passes=sum(read(checked(r["source_physical"]))["absolute"]["ok"] for r in records),
-        optimizer_steps=0,whole_song_generations=0,operational_qualified=False)
+        audio_replay_contract="Each container hash authenticated independently; rate/channels/PCM exact; WAV PEAK write timestamps may differ",optimizer_steps=0,whole_song_generations=0,operational_qualified=False)
     if replay:
         old=read(Path(replay)/"result.json")
         for n in ("candidate_ledger","train_cases","dev_cases","train_probe","support_admitted","train_groups","dev_groups"):assert result[n]==old[n],n

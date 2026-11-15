@@ -143,3 +143,5 @@ DEV每来源两布局均需：姿态/Root≤1.1倍，活动度与平均关节运
 机制参考：CondMDI https://setarehc.github.io/CondMDI/；
 Input Perturbation https://proceedings.mlr.press/v202/ning23a.html。
 仅借鉴条件分布/输入偏移问题，不是这两篇论文的模型或效果复现。
+
+音频重建补充：每份WAV容器以自身SHA验证；独立重建比较采样率/声道/PCM逐值一致。IEEE_FLOAT容器的PEAK写入时间戳不是音频内容，不要求该字段相同。初次容器哈希断言失败保留，训练未启动；未更改声音、来源或超参数。

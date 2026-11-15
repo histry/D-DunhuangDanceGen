@@ -14,7 +14,8 @@ def run(root,out=None):
     for a,b in zip(data["records"],other["records"]):
         same_arrays(checked(a["arrays"]),checked(b["arrays"]));bundles+=1
         assert read(checked(a["source_physical"]))==read(checked(b["source_physical"]))
-        assert a["audio225"]["sha256"]==b["audio225"]["sha256"]
+        from dunhuang.research.context_r21.data import same_audio_pcm
+        assert same_audio_pcm(checked(a["audio225"]),checked(b["audio225"]))
     same_arrays(root/"data/parity.npz",root/"data_replay/parity.npz");bundles+=1
     for case in (0,1):
         same_arrays(root/"neutrality"/(str(case)+".npz"),root/"neutrality_replay"/(str(case)+".npz"));bundles+=1
@@ -84,7 +85,7 @@ def run(root,out=None):
         source_records=len(data["records"]),train_groups=len(data["train_groups"]),dev_exposed_groups=len(data["dev_groups"]),
         first_evaluation_sampler_calls=len(a["bindings"])+2,cache_sampler_calls=cache_calls,
         replay_sampler_calls_exact=len(a["bindings"])+2+cache_calls,native_arrays_exact=native_arrays,physical_reports_exact=reports,
-        source_arrays_rebuilt=len(data["records"]),frozen_changed_paths=frozen,F_executed="F" in models,
+        source_arrays_rebuilt=len(data["records"]),source_audio_pcm_exact=len(data["records"]),frozen_changed_paths=frozen,F_executed="F" in models,
         whole_song_generations=0,operational_qualified=False)
     write(out,result);print("R21_VERIFIED",result,flush=True)
 if __name__=="__main__":
