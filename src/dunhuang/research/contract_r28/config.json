@@ -1,0 +1,130 @@
+{
+  "schema": "r28_input_reference_v1",
+  "baseline": "a870ed2c0888049923fa42c0f8056a4162ed4e0b",
+  "r26": "outputs/reference_r26_01",
+  "r27": "outputs/state_r27_01",
+  "r24": "outputs/lodge_reference_r24_01",
+  "r26_manifest_sha256": "838f925378f664b85598ed795f5541070967b90eb2e9c965cf074b3ac6c31818",
+  "r27_manifest_sha256": "a0d98ea3cf67ddb1ca8cd0d5c42c7fac9521aad83ff48b5141b097305a351923",
+  "train_cases": [
+    92,
+    48,
+    32,
+    0
+  ],
+  "holdout_cases": [
+    4,
+    8,
+    12,
+    16
+  ],
+  "seed": 28041,
+  "new_teacher_seeds": [
+    280011,
+    280012,
+    280021,
+    280022
+  ],
+  "factorial_noise_seeds": [
+    281011,
+    281011,
+    281021,
+    281021
+  ],
+  "real_eval_seeds": [
+    [
+      282011,
+      282021,
+      282031,
+      282041
+    ],
+    [
+      282111,
+      282121,
+      282131,
+      282141
+    ]
+  ],
+  "times": [
+    999,
+    519,
+    119,
+    19
+  ],
+  "train_steps": 1200,
+  "learning_rate": 0.0002,
+  "curve_updates": [
+    0,
+    600,
+    1200
+  ],
+  "snapshot_steps": [
+    0,
+    1,
+    599,
+    1199
+  ],
+  "training_noise_seed": 283000,
+  "sampler_times": [
+    999,
+    979,
+    959,
+    939,
+    919,
+    899,
+    879,
+    859,
+    839,
+    819,
+    799,
+    779,
+    759,
+    739,
+    719,
+    699,
+    679,
+    659,
+    639,
+    619,
+    599,
+    579,
+    559,
+    539,
+    519,
+    499,
+    479,
+    459,
+    439,
+    419,
+    399,
+    379,
+    359,
+    339,
+    319,
+    299,
+    279,
+    259,
+    239,
+    219,
+    199,
+    179,
+    159,
+    139,
+    119,
+    99,
+    79,
+    59,
+    39,
+    19
+  ],
+  "finedance_ids": [
+    "001",
+    "002",
+    "003",
+    "004"
+  ],
+  "asset_root": "inputs/contract_r28",
+  "human_reviewed": false,
+  "operational_qualified": false,
+  "whole_song_generations": 0
+}
