@@ -96,3 +96,11 @@ human_reviewed=false、contact_truth=UNKNOWN、whole_song_generations=0、operat
 官方依据：
 - EDGE固定训练：https://github.com/Stanford-TML/EDGE/blob/17c3428669ed6733edd9d8c66f7dc62060b8e46d/model/diffusion.py
 - Lodge源码、权重与原生入口：https://github.com/li-ronghui/LODGE/tree/f38642ad67bc3402444f5f914010a911e5bd5c89
+
+
+## 补充只读来源端点审查（不改变主比较）
+
+在R22模型DEV成绩读取前，原始来源报告提示Root净漂移与固定首尾可能冲突。新增source_constraints仅读取封存来源与原Native限制，不读取生成输出。
+首尾Root均为硬观察时，水平净位移及其除以真实时长的净漂移速度是精确不变量；完全固定相邻Root的垂直速度最大值是全局最大值的必要下界。
+审查使用原Scaler表示往返后的真实硬观察，先验证原来源计算与Native已有Root漂移数值一致；未来Root未知时不伪造端点下界。
+新进程重复该只读审查。它仅解释已有合同的不可编辑失败，不过滤历史人口、不改变训练、门限或研究比较，也不将没有排除的条目标成可行。

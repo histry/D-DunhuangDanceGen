@@ -66,7 +66,7 @@ def run(root,out,receipt_root,failed_receipts=()):
                     foot_skate_p95_mean=float(np.mean([r["native_audit"]["foot_skate_mps_p95"] for r in rows])),
                     support_drift_p95_mean=float(np.mean([r["native_audit"]["foot_support_drift_m_p95"] for r in rows]))))
     checks=read(root/"independent_checks.json")
-    result=dict(schema=cfg["schema"],code_commit=commit(),config=cfg,data_audit=read(root/"data/audit.json"),
+    result=dict(schema=cfg["schema"],code_commit=commit(),config=cfg,data_audit=read(root/"data/audit.json"),source_constraints=read(root/"source_constraints.json") if (root/"source_constraints.json").exists() else None,
         data=dict(records=data["records"],train_groups=data["train_groups"],dev_groups=data["dev_groups"],train_cases=data["train_cases"],dev_cases=data["dev_cases"],train_probe=data["train_probe"]),
         training=models,means=means,native=native,final_q={a:qsummary(rows) for a,rows in q.items()},raw_final_q=q,
         contrasts=compare(cfg,native,q,data),lodge=read(root/"lodge/result.json"),checks=checks,videos=read(root/"videos/protocol.json")["records"],
