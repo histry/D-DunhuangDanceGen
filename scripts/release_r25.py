@@ -110,10 +110,12 @@ def collect(root,receipts,media_receipts,out,failed_receipts):
         human_reviewed=False,operational_qualified=False,whole_song_generations=0)
     out.mkdir(parents=True);write(out/"r25_summary.json",result);write(out/"r25_checks.json",result["checks"])
     folders=[receipts,media_receipts]+[Path(p) for p in failed_receipts]
+    logs=[Path(str(folder).removesuffix("_receipts")+"_launcher.log") for folder in folders]+[Path("outputs/r25_replay_diag_01.log"),Path("outputs/r25_replay_diag_01_exit.txt")]
     write(out/"r25_receipt.json",dict(collection_commit=commit(),execution_commit=(receipts/"execution_commit.txt").read_text().strip(),
         summary_sha256=sha(out/"r25_summary.json"),evidence={str(p.relative_to(root)):sha(p) for p in root.rglob("*.json") if p.name in ("protocol.json","result.json","independent_checks.json","resume_inputs.json","sampling_resume_inputs.json","replay_mismatch.json")},
         checkpoint_hashes={arm:result["models"][arm]["checkpoint_hashes"] for arm in ("event","phase")},
         receipts={str(folder):{p.name:sha(p) for p in folder.iterdir() if p.is_file()} for folder in folders},
+        launcher_and_diagnostic_evidence={str(p):sha(p) for p in logs if p.is_file()},
         exit_status=0,training_optimizer_steps=1200,replay_optimizer_steps=0,temporary_ssh_files_created=0,temporary_ssh_files_remaining=0,
         operational_qualified=False,whole_song_generations=0))
     print("R25_STATISTICS_PUBLISHED",sha(out/"r25_summary.json"),flush=True)
