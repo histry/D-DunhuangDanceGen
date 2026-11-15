@@ -50,6 +50,7 @@ def run(cfg,root,out,arm,replay=None):
             adapter.zero_grad(set_to_none=True);loss,pred,parts,layers=objective(d,adapter,y,m,p,row["t"],row["seed"],cfg,True);loss.backward();grads=grad_readout(adapter)
             torch.nn.utils.clip_grad_norm_(adapter.parameters(),1.);restore(adapter,Path(replay)/f"snapshots/{i}_post.pt",cfg,arm)
             actual=dict(step=i,before_loss=float(loss.detach()),parts=parts,gradient_norms=grads,layers=layers,update_norm=float((vector(adapter)-before).norm()))
+            if actual!=item:write(out/"replay_mismatch.json",dict(arm=arm,step=i,actual=actual,expected=item,code_commit=commit(),optimizer_steps=0))
             assert actual==item,("Actual update replay",arm,i)
         # Curves after0 correspond to immutable saved checkpoints.
         for update in cfg["curve_updates"][1:]:
