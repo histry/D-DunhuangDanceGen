@@ -69,11 +69,12 @@ def run(cfg,root,out,arm,replay=None):
             # Both continuation arms pay the same frozen refresh budget; Q0 caches remain shadow only.
             if arm in ("Q0","Q1") and i in cfg["cache_refresh_steps"]:
                 cache_name=f"cache_{i}.npz";state=digest(a)
+                checkpoint(a,out/f"cache_{i}_weights.pt",cfg,arm,i)
                 seeds=[cfg["cache_seed"]+i+j//2 for j in range(4)]
                 value,noise,trace=sample(d,a,ref,music,seeds,trace=True,selected=cfg["cache_times"],target=y)
                 raw=trace_arrays(trace);indices=[raw["times"].tolist().index(t) for t in cfg["cache_times"]]
                 cache=raw["xt"][indices];np.savez_compressed(out/cache_name,xt=cache,times=np.array(cfg["cache_times"]))
-                caches.append(dict(step=i,file=cache_name,sha256=sha(out/cache_name),model_digest=state,noise=noise,state_kind="ACTUAL_REVERSE_XT",used_for_loss=arm=="Q1"))
+                caches.append(dict(step=i,file=cache_name,weights=f"cache_{i}_weights.pt",weights_sha256=sha(out/f"cache_{i}_weights.pt"),sha256=sha(out/cache_name),model_digest=state,noise=noise,state_kind="ACTUAL_REVERSE_XT",used_for_loss=arm=="Q1"))
             t=cfg["cache_times"][i%len(cfg["cache_times"])] if arm in ("Q0","Q1") else cfg["sampler_times"][(i*17)%len(cfg["sampler_times"])]
             seed=cfg["training_noise_seed"]+i;torch.manual_seed(seed);torch.cuda.manual_seed_all(seed)
             xt=None;origins=["FORWARD_Q_PROXY"]*4
