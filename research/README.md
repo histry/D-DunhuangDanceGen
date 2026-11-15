@@ -146,3 +146,8 @@ Train uses 24 real continuous AIST recordings from 12 Data V3 Train music groups
 `src/dunhuang/research/branch_r22` reuses the frozen R21 data, motion interface, sampler and physical losses. G0/G1/G2 all continue the same B3 values over the full 24-source ledger with 1,200 updates each. Only reconstruction switches from guided-clipped to independently weighted clipped/raw branches. Raw branch tensors retain gradients. Source permission audits and a prospective physical inventory run before optimization. See [protocol](../docs/R22_PROTOCOL.md) and [call paths](../docs/R22_CALL_PATHS.md).
 
 Lodge runs from a separately hashed official source/config/checkpoint under ignored `inputs/lodge_r22`, without vendoring its training system into production. Native 139D/22-joint/35D-music output is explicitly incomplete for the project's 151D/24-joint Native contract. No fabricated joints or full-quality admission; common-skeleton diagnostics stay separate. All training, sampler outputs and external baseline outputs have optimizer-free fresh-process replays.
+
+
+## R23: guidance and continuous representation
+
+Independent `local_r23` research authenticates R22 seals;32 CFG1 samples and four detailed CFG2 reproductions are replayed without optimizers. Nine saved pre states diagnose gradient direction. Six already selected physical sources test a fixed continuous full24 decoder using per-instance full-target latent fits, explicitly not a learned prior or conditional generator. Lodge stays9+0; incomplete rotations remain unknown. PHC exports and readiness are separate from actual simulation. See [protocol](../docs/R23_PROTOCOL.md) and [call paths](../docs/R23_CALL_PATHS.md).

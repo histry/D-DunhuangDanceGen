@@ -1,0 +1,67 @@
+{
+  "schema": "r23_local_contract_v1",
+  "baseline": "c6bebeb1603f2b3d1cf35170d7d3de044fadbb31",
+  "parent": "outputs/branch_r22_03",
+  "parent_config": "src/dunhuang/research/branch_r22/config.json",
+  "arms": [
+    "G0",
+    "G2"
+  ],
+  "guidance": [
+    1,
+    2
+  ],
+  "eval_variants": [
+    0,
+    2
+  ],
+  "diagnostic_cases": [
+    0,
+    24
+  ],
+  "gradient_arms": [
+    "G0",
+    "G1",
+    "G2"
+  ],
+  "gradient_steps": [
+    0,
+    599,
+    1199
+  ],
+  "representation": {
+    "coefficients": 48,
+    "degree": 3,
+    "contexts": [
+      [
+        8,
+        8
+      ],
+      [
+        24,
+        16
+      ]
+    ],
+    "max_pose_rad": 0.02,
+    "max_root_m": 0.01,
+    "min_activity_ratio": 0.95,
+    "max_activity_ratio": 1.05,
+    "min_range_ratio": 0.95,
+    "max_range_ratio": 1.05
+  },
+  "cfg_gate": {
+    "dev_sources_required": 3,
+    "min_gain": 0.05,
+    "max_pose_ratio": 1.1,
+    "max_root_ratio": 1.1,
+    "min_activity_ratio": 0.8,
+    "min_range_ratio": 0.8,
+    "max_internal_ratio": 1.1,
+    "max_drift_ratio": 1.1
+  },
+  "conditional_training_allowed": false,
+  "apg_settings_registered": false,
+  "whole_song_generations": 0,
+  "human_reviewed": false,
+  "operational_qualified": false
+}
