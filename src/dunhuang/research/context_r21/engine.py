@@ -4,7 +4,8 @@ import numpy as np
 import torch
 from dunhuang.io import checked,sha
 from dunhuang.research.source_capacity.common import read
-from dunhuang.research.temporal_r20.common import load as old_load,grid
+from dunhuang.research.temporal_r20.common import load as old_load,grid,selected_digest,frozen_except_null
+from dunhuang.research.global_clock_r17.train import digest
 from dunhuang.research.temporal_r20.trace import TracedPredictor,blend
 from dunhuang.research.objective_r19.common import restore,parameters,gradient,group_norm
 from dunhuang.research.objective_r19.objective import reconstruction
@@ -22,6 +23,9 @@ class Predictor(TracedPredictor):
     def __call__(self,*a,**kw):
         self.branches=[];return super().__call__(*a,**kw)
     def close(self):self.branch_handle.remove();super().close()
+
+def model_meta(w,h):
+    return dict(selected=selected_digest(w),head=digest(h),frozen=w.digest(True),frozen_except_null=frozen_except_null(w))
 
 def layout(arm):return "split" if arm in ("B0","B2") else "joint"
 def balanced(arm):return arm not in ("B0","B1")

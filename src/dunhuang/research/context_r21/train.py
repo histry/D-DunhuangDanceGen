@@ -11,7 +11,7 @@ from dunhuang.research.temporal_r20.common import selected_digest,frozen_except_
 from dunhuang.research.temporal_r20.training import backward,observe_before,observe_after
 from dunhuang.research.global_clock_r17.train import digest
 from dunhuang.research.masked_denoiser.common import tensor_hash
-from .engine import load,cache_data,state,schedule,source,layout,balanced,weights,probes,branch_readout
+from .engine import load,cache_data,state,schedule,source,layout,balanced,weights,probes,branch_readout,model_meta
 from .objective import build
 from .sampler import sample
 
@@ -39,9 +39,6 @@ def input_state(cfg,cache,row,values=None,bindings=None):
             b=next(b for b in bindings if b["refresh"]==refresh and b["case"]==row["case"])
             with np.load(checked(b["trace"])) as z:s[-1]=torch.tensor(z["xt_"+str(row["t"])][None],device="cuda")
     return s,proxy
-
-def model_meta(w,h):
-    return dict(selected=selected_digest(w),head=digest(h),frozen=w.digest(True),frozen_except_null=frozen_except_null(w))
 
 def run(cfg,root,out,arm,replay=None):
     out=fresh(out);root=Path(root);follow=arm in ("Q","M","F")

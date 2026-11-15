@@ -109,3 +109,9 @@ def test_audio_replay_checks_samples_and_authenticates_container_separately(tmp_
     raw=bytearray(b.read_bytes());offset=raw.index(b"PEAK")+12;raw[offset]^=1;b.write_bytes(raw)
     assert a.read_bytes()!=b.read_bytes() and same_audio_pcm(a,b)
     sf.write(b,signal+.01,48000,subtype="FLOAT");assert not same_audio_pcm(a,b)
+
+
+@pytest.mark.parametrize("name",["data","neutrality","train","calibrate","rollout","evaluate"])
+def test_all_cli_entrypoints_import_before_server_execution(name):
+    import importlib
+    assert callable(importlib.import_module("dunhuang.research.context_r21."+name).run)
