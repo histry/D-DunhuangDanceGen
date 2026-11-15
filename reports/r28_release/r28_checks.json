@@ -1,0 +1,274 @@
+{
+  "code_commit": "8cf1169eba8d0498226dd6b016de857e23132b93",
+  "array_bundles_exact": 30,
+  "new_reference_physical_novelty": [
+    {
+      "teacher": 0,
+      "nearest_seen_same_music_body_rad": 0.2467565569324891,
+      "distinct_from_seen": true
+    },
+    {
+      "teacher": 1,
+      "nearest_seen_same_music_body_rad": 0.26566316339737117,
+      "distinct_from_seen": true
+    },
+    {
+      "teacher": 2,
+      "nearest_seen_same_music_body_rad": 0.32397603619945703,
+      "distinct_from_seen": true
+    },
+    {
+      "teacher": 3,
+      "nearest_seen_same_music_body_rad": 0.312526188738733,
+      "distinct_from_seen": true
+    }
+  ],
+  "canonical_reference_final_response_diagnostic": [
+    {
+      "population": "seen",
+      "final_root_relative_FK_difference_rms_m": 0.0011965070152655244
+    },
+    {
+      "population": "new_reference",
+      "final_root_relative_FK_difference_rms_m": 0.0009540467872284353
+    }
+  ],
+  "actual_update_pairs_verified": 8,
+  "training_optimizer_steps": 2400,
+  "replay_optimizer_steps": 0,
+  "matched_training_initialization_and_step_noise_clock": true,
+  "Core_C4_supervision": false,
+  "gradient_checks": [
+    {
+      "encoder": {
+        "actual": 0.025034815073013306,
+        "expected": 0.025034813210368156,
+        "relative_error": 7.440219325761372e-08
+      },
+      "input": {
+        "actual": 0.018656929954886436,
+        "expected": 0.018656929954886436,
+        "relative_error": 0.0
+      },
+      "sequence": {
+        "actual": 0.010163956321775913,
+        "expected": 0.010163956321775913,
+        "relative_error": 0.0
+      },
+      "projections": {
+        "actual": 0.07946325838565826,
+        "expected": 0.07946325838565826,
+        "relative_error": 0.0
+      },
+      "lowrank": {
+        "actual": 0.0,
+        "expected": 0.0,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "encoder": {
+        "actual": 0.016300827264785767,
+        "expected": 0.016300827264785767,
+        "relative_error": 0.0
+      },
+      "input": {
+        "actual": 0.014876777306199074,
+        "expected": 0.014876777306199074,
+        "relative_error": 0.0
+      },
+      "sequence": {
+        "actual": 0.008671960793435574,
+        "expected": 0.008671959862112999,
+        "relative_error": 1.0739469386444448e-07
+      },
+      "projections": {
+        "actual": 0.09191734343767166,
+        "expected": 0.09191734343767166,
+        "relative_error": 0.0
+      },
+      "lowrank": {
+        "actual": 0.0,
+        "expected": 0.0,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "encoder": {
+        "actual": 0.005743542220443487,
+        "expected": 0.0057435417547822,
+        "relative_error": 8.107562710173362e-08
+      },
+      "input": {
+        "actual": 0.005561985075473785,
+        "expected": 0.005561985075473785,
+        "relative_error": 0.0
+      },
+      "sequence": {
+        "actual": 0.003197855083271861,
+        "expected": 0.003197855083271861,
+        "relative_error": 0.0
+      },
+      "projections": {
+        "actual": 0.010576152242720127,
+        "expected": 0.010576152242720127,
+        "relative_error": 0.0
+      },
+      "lowrank": {
+        "actual": 0.0,
+        "expected": 0.0,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "encoder": {
+        "actual": 0.007418530527502298,
+        "expected": 0.007418530061841011,
+        "relative_error": 6.277001699749291e-08
+      },
+      "input": {
+        "actual": 0.0073044453747570515,
+        "expected": 0.0073044453747570515,
+        "relative_error": 0.0
+      },
+      "sequence": {
+        "actual": 0.00486792903393507,
+        "expected": 0.00486792903393507,
+        "relative_error": 0.0
+      },
+      "projections": {
+        "actual": 0.011366762220859528,
+        "expected": 0.011366762220859528,
+        "relative_error": 0.0
+      },
+      "lowrank": {
+        "actual": 0.0,
+        "expected": 0.0,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "encoder": {
+        "actual": 0.018577901646494865,
+        "expected": 0.01857789419591427,
+        "relative_error": 4.010453246386707e-07
+      },
+      "input": {
+        "actual": 0.014970078133046627,
+        "expected": 0.01497007254511118,
+        "relative_error": 3.732736327780038e-07
+      },
+      "sequence": {
+        "actual": 0.00886598788201809,
+        "expected": 0.008865989744663239,
+        "relative_error": 2.1008880033412523e-07
+      },
+      "projections": {
+        "actual": 0.03833085671067238,
+        "expected": 0.03833085671067238,
+        "relative_error": 0.0
+      },
+      "lowrank": {
+        "actual": 0.0,
+        "expected": 0.0,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "encoder": {
+        "actual": 0.004160677548497915,
+        "expected": 0.004160677548497915,
+        "relative_error": 0.0
+      },
+      "input": {
+        "actual": 0.003612472442910075,
+        "expected": 0.003612472442910075,
+        "relative_error": 0.0
+      },
+      "sequence": {
+        "actual": 0.002381123835220933,
+        "expected": 0.0023811240680515766,
+        "relative_error": 9.778181942631406e-08
+      },
+      "projections": {
+        "actual": 0.020188460126519203,
+        "expected": 0.020188460126519203,
+        "relative_error": 0.0
+      },
+      "lowrank": {
+        "actual": 0.0,
+        "expected": 0.0,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "encoder": {
+        "actual": 0.006399389822036028,
+        "expected": 0.00639939121901989,
+        "relative_error": 2.1829949351606843e-07
+      },
+      "input": {
+        "actual": 0.004841851070523262,
+        "expected": 0.004841851070523262,
+        "relative_error": 0.0
+      },
+      "sequence": {
+        "actual": 0.002414233284071088,
+        "expected": 0.002414233284071088,
+        "relative_error": 0.0
+      },
+      "projections": {
+        "actual": 0.00552331330254674,
+        "expected": 0.00552331330254674,
+        "relative_error": 0.0
+      },
+      "lowrank": {
+        "actual": 0.0,
+        "expected": 0.0,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "encoder": {
+        "actual": 0.007541748229414225,
+        "expected": 0.007541746366769075,
+        "relative_error": 2.46977901220077e-07
+      },
+      "input": {
+        "actual": 0.007999856024980545,
+        "expected": 0.00799985509365797,
+        "relative_error": 1.1641741697691909e-07
+      },
+      "sequence": {
+        "actual": 0.004065372981131077,
+        "expected": 0.004065372981131077,
+        "relative_error": 0.0
+      },
+      "projections": {
+        "actual": 0.00846684630960226,
+        "expected": 0.00846684630960226,
+        "relative_error": 0.0
+      },
+      "lowrank": {
+        "actual": 0.0,
+        "expected": 0.0,
+        "relative_error": 0.0
+      }
+    }
+  ],
+  "gradient_norm_rtol": 1e-05,
+  "gradient_norm_atol": 0,
+  "non_gradient_readouts_exact": true,
+  "successful_sampler_calls": 57,
+  "successful_generated_trajectories": 240,
+  "replay_sampler_calls": 57,
+  "replay_generated_trajectories": 240,
+  "failed_sampler_calls": 2,
+  "failed_generated_trajectories": 8,
+  "failed_optimizer_steps": 0,
+  "historical_formal_and_R27_paths_unchanged": true,
+  "source_holdout_scope": "ADAPTATION_ONLY_EXPOSED_TO_R26_NOT_INDEPENDENT_BLIND",
+  "full_native_status": "NOT_EVALUABLE",
+  "whole_song_generations": 0,
+  "operational_qualified": false
+}

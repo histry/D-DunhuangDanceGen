@@ -171,3 +171,8 @@ Independent `lodge_adapter_r25` trains full-event and explicit-phase variants on
 ## R27 full-state reference consistency
 
 The isolated state_r27 study traces the official Lodge sampler without changing its update, CFG, Normalizer or historical R22-R26 code. Four coupled model-generated139D targets provide a Train-only reference positive control; generated C4 is not measured contact truth. The registered P model passed new-noise source control, so untriggered capacity/cache training drivers were removed. Fixed exposed AIST/ChangE transfer failed to establish real-source qualification. Default generation, complete Native and whole-song admission remain unchanged. See [report](../reports/R27完整状态与参考学习一致性实验报告.md) and [fixed transfer](../docs/R27_TRANSFER_PROTOCOL.md).
+
+
+## R28 input contract and real-source adaptation
+
+The isolated contract_r28 study binds the released Lodge floor0 and height-derived C4 feature definition, canonicalizes reference6D only, and separates original, normalizer-roundtrip and affine diagnostic readouts. Frozen P recovers seen teacher references but fails the registered new-reference composite check with both representations. Equal-dose T0/T1 real-source adaptation preserves the common C1 initialization and reference input; the fixed held-out population remains historically R26 exposed. T1 fixes input support and improves over the old input recipe, but real-source/physics and ChangE gates fail. No population expansion, Q1/Q2, backbone replacement or whole-song promotion. Real FineDance waveforms and preprocessing features were reconstructed without admitting new training. The original failed import-collision receipt and all scientific files are retained. See [report](../reports/R28模型输入合同与真实来源适配实验报告.md).
