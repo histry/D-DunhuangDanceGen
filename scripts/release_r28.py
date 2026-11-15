@@ -7,12 +7,13 @@ from dunhuang.data.sources import ref
 from dunhuang.research.source_capacity.common import read,commit,fresh,forbid_optimizers,same_arrays
 from dunhuang.research.state_r27.common import readout_check,metrics
 from render_r23 import video
+from dunhuang.research.contract_r28.evidence import factorial_dir
 
-def verify(root):
-    root=Path(root);out=root/"independent_checks.json";assert not out.exists();forbid_optimizers();bundles=0
-    recovery=read(root/"recovery_inputs.json")
+def verify(root,out=None):
+    root=Path(root);out=Path(out) if out else root/"independent_checks.json";assert not out.exists();forbid_optimizers();bundles=0
+    recovery=read(root/"recovery_inputs.json") if (root/"recovery_inputs.json").exists() else dict(sealed_files={},failed_sampler_calls=0,failed_generated_trajectories=0)
     for p,h in recovery["sealed_files"].items():assert sha(p)==h
-    for stage in ("data","factorial_02","readout","fine_audio","evaluation","change"):
+    for stage in ("data",factorial_dir(root).name,"readout","fine_audio","evaluation","change"):
         a=read(root/stage/"result.json");b=read(root/(stage+"_replay")/"result.json");assert a==b
         assert b["optimizer_steps"]==0
         for p in list((root/stage).rglob("*.npz"))+list((root/stage).rglob("*.npy")):
@@ -39,7 +40,13 @@ def verify(root):
     paths=["src/dunhuang/research/reference_r26","src/dunhuang/research/state_r27","src/dunhuang/research/lodge_adapter_r25","src/dunhuang/research/branch_r22","src/dunhuang/research/local_r23","src/dunhuang/research/lodge_reference_r24","src/dunhuang/edge_backend.py","src/dunhuang/planning","src/dunhuang/sampling.py"]
     assert not subprocess.check_output(["git","diff","a870ed2c0888049923fa42c0f8056a4162ed4e0b","--"]+paths,text=True)
     # New random seeds alone are not a physical novelty certificate; compare every new reference to both old same-music references.
-    cfg=read(root/"data/protocol.json")["config"];old=np.load(Path(cfg["r27"])/"teachers/teacher.npz");fac=np.load(root/"factorial_02/arrays.npz")
+    cfg=read(root/"data/protocol.json")["config"]
+    for key in ("r26","r27"):
+        parent=Path(cfg[key]);assert sha(parent/"artifacts_manifest.json")==cfg[key+"_manifest_sha256"]
+        manifest=read(parent/"artifacts_manifest.json")["files"]
+        for name in (("models/C1/adapter.pt","samples/arrays.npz") if key=="r26" else ("models/P/adapter.pt","teachers/teacher.npz")):
+            assert sha(parent/name)==manifest[name]["sha256"]
+    old=np.load(Path(cfg["r27"])/"teachers/teacher.npz");fac=np.load(factorial_dir(root)/"arrays.npz")
     novelty=[]
     for i in range(4):
         angles=[metrics(fac["new_raw139"][i],fac["new_points22"][i],old["raw139"][j],old["points22"][j])["body22_rad"] for j in range(2*(i//2),2*(i//2)+2)]
@@ -49,7 +56,7 @@ def verify(root):
     for pop in ("seen","new_reference"):
         x=fac[f"{pop}_P_raw_correct_points"][:,64:160];y=fac[f"{pop}_P_canonical_correct_points"][:,64:160]
         gauge.append(dict(population=pop,final_root_relative_FK_difference_rms_m=float(np.sqrt(np.mean(((x-x[:,:,:1])-(y-y[:,:,:1]))**2)))))
-    stages=[read(root/s/"result.json") for s in ("factorial_02","evaluation","change")]
+    stages=[read(root/s/"result.json") for s in (factorial_dir(root).name,"evaluation","change")]
     write(out,dict(code_commit=commit(),array_bundles_exact=bundles,new_reference_physical_novelty=novelty,canonical_reference_final_response_diagnostic=gauge,actual_update_pairs_verified=8,training_optimizer_steps=2400,replay_optimizer_steps=0,
         matched_training_initialization_and_step_noise_clock=True,Core_C4_supervision=False,
         gradient_checks=checks,gradient_norm_rtol=1e-5,gradient_norm_atol=0,non_gradient_readouts_exact=True,
@@ -62,7 +69,7 @@ def verify(root):
 
 def render(root,out):
     root=Path(root);out=fresh(out);cfg=read(root/"data/protocol.json")["config"]
-    fac=np.load(root/"factorial_02/arrays.npz");ev=np.load(root/"evaluation/arrays.npz");ch=np.load(root/"change/arrays.npz")
+    fac=np.load(factorial_dir(root)/"arrays.npz");ev=np.load(root/"evaluation/arrays.npz");ch=np.load(root/"change/arrays.npz")
     old=np.load(checked(read(Path(cfg["r24"])/"main/protocol.json")["arrays"]))
     seen=np.load(Path(cfg["r27"])/"teachers/teacher.npz")
     parent=np.load(checked(read("outputs/branch_r22_03/data/protocol.json")["parity"]))["parents"][:22].tolist()
@@ -123,11 +130,22 @@ def collect(root,out,receipts):
         models[arm]={k:v for k,v in a.items() if k!="history"}
         models[arm]["history_sha256"]=hashlib.sha256(json.dumps(a["history"],sort_keys=True).encode()).hexdigest()
         models[arm]["original_result"]=ref(root/f"models/{arm}/result.json");models[arm]["replay_checks"]=b["replay_checks"]
-    result=dict(data=read(root/"data/result.json"),factorial=read(root/"factorial_02/result.json"),P_readout=read(root/"readout/result.json"),
+    evaluation_arrays=np.load(root/"evaluation/arrays.npz");cfg=read(root/"data/protocol.json")["config"];axis_rows=[]
+    pop=read(root/"data/result.json")["records"]
+    for row in read(root/"evaluation/result.json")["records"]:
+        case=row["case"];source=next(r for r in pop if r["case"]==case)
+        truth=np.load(root/"data"/source["arrays"])["model_raw"]
+        stem=f'{row["role"]}_{row["arm"]}_{row["mode"]}_{row["seed_index"]}_139'
+        i=(cfg["train_cases"] if row["role"]=="train" else cfg["holdout_cases"]).index(case)
+        delta=evaluation_arrays[stem][i,64:160,4:7]-truth[64:160,4:7]
+        axes=np.sqrt(np.mean(delta**2,axis=0))
+        assert np.isclose(float(np.sqrt(np.mean(axes**2))),row["root_rmse_m"],rtol=1e-6,atol=1e-7)
+        axis_rows.append(dict(case=case,role=row["role"],arm=row["arm"],mode=row["mode"],seed_index=row["seed_index"],root_xyz_rmse_m=axes.tolist(),scope="DESCRIPTIVE_FIXED_COMMON_MODEL0_SOURCE_REFERENCE_NOT_NEW_QUALIFICATION"))
+    result=dict(root_axis_readouts=axis_rows,data=read(root/"data/result.json"),factorial=read(factorial_dir(root)/"result.json"),P_readout=read(root/"readout/result.json"),
         preclip_audit=read(root/"input_domain_audit.json"),fine_audio=read(root/"fine_audio/result.json"),models=models,
         training_admission=read(root/"training_admission.json"),population_admission=read(root/"population_admission.json"),
         evaluation=read(root/"evaluation/result.json"),change=read(root/"change/result.json"),
-        checks=read(root/"independent_checks.json"),media=read(root/"videos/protocol.json"),recovery=read(root/"recovery_inputs.json"),
+        checks=read(root/("independent_checks_final.json" if (root/"independent_checks_final.json").exists() else "independent_checks.json")),media=read(root/"videos/protocol.json"),recovery=read(root/"recovery_inputs.json") if (root/"recovery_inputs.json").exists() else None,
         operational_qualified=False,full_native_status="NOT_EVALUABLE",whole_song_generations=0)
     manifest=root/"artifacts_manifest.json";assert not manifest.exists()
     files={str(p.relative_to(root)):dict(bytes=p.stat().st_size,sha256=sha(p)) for p in root.rglob("*") if p.is_file()}
@@ -143,6 +161,6 @@ def collect(root,out,receipts):
 
 if __name__=="__main__":
     p=argparse.ArgumentParser();p.add_argument("--task",required=True,choices=["verify","render","collect"]);p.add_argument("--root",required=True);p.add_argument("--out");p.add_argument("--receipts",nargs="*");a=p.parse_args()
-    if a.task=="verify":verify(a.root)
+    if a.task=="verify":verify(a.root,a.out)
     elif a.task=="render":render(a.root,a.out)
     else:collect(a.root,a.out,a.receipts)

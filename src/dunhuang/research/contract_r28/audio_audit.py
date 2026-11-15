@@ -2,7 +2,6 @@
 import argparse
 from pathlib import Path
 import numpy as np
-import torch
 import soundfile as sf
 from dunhuang.research.state_r27.common import read,write,sha,fresh,commit,forbid_optimizers,runtime
 

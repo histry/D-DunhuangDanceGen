@@ -1,9 +1,8 @@
 """Read-only pre-transform domain audit: normalized outputs can already have been clipped."""
 import argparse
 from pathlib import Path
-import numpy as np
 import torch
-from dunhuang.research.state_r27.common import read,write,sha,commit,forbid_optimizers,runtime
+from dunhuang.research.state_r27.common import read,write,commit,forbid_optimizers,runtime
 from .train import dataset
 
 def run(cfg,root,out,replay=None):

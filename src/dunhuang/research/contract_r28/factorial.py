@@ -6,7 +6,6 @@ import torch
 from .representation import packet,rotations
 from dunhuang.research.state_r27.common import read,sha,write,fresh,forbid_optimizers,runtime,digest,restore,decoded_metrics,commit,same_arrays
 from dunhuang.research.state_r27.trace import sample
-from dunhuang.research.state_r27.qualification import sampling_gate
 from .input_contract import foot_proxy
 
 def run(cfg,root,out,replay=None):
