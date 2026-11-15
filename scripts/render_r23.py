@@ -8,7 +8,7 @@ from dunhuang.data.sources import ref
 from dunhuang.research.local_r23.common import read,fresh,inputs,commit
 from dunhuang.research.state_bridge.common import native_environment
 
-def video(path,points,parents,label,ok,center,scale,audio=None):
+def video(path,points,parents,label,ok,center,scale,audio=None,annotations=None):
     cmd=["ffmpeg","-nostdin","-threads","2","-v","error","-f","rawvideo","-pix_fmt","rgb24","-s","600x600","-r","30","-i","-"]
     if audio:cmd+=["-i",str(audio),"-map","0:v:0","-map","1:a:0"]
     cmd+=["-c:v","libx264","-pix_fmt","yuv420p","-preset","veryfast","-crf","20","-threads","2"]
@@ -17,17 +17,18 @@ def video(path,points,parents,label,ok,center,scale,audio=None):
     try:
         for t,frame in enumerate(points):
             image=Image.new("RGB",(600,600),"#f2f4f7");draw=ImageDraw.Draw(image)
-            draw.text((12,12),label,fill="#173249");draw.text((12,34),"Native "+("PASS" if ok else "FAIL")+" | AIST mechanism, not Dunhuang artwork",fill="#70402e")
+            draw.text((12,12),label,fill="#173249");draw.text((12,34),("Native "+("PASS" if ok else "FAIL")+" | AIST mechanism, not Dunhuang artwork") if ok is not None else "Native24 NOT EVALUABLE | ChangE / Dunhuang transfer",fill="#70402e")
+            if annotations:draw.text((12,56),annotations[t],fill="#70402e")
             pts=[(round(300+(v[0]-center[0])*scale),round(310-(v[1]-center[1])*scale)) for v in frame]
-            for j in range(1,24):draw.line([pts[parents[j]],pts[j]],fill="#285e99" if j%2 else "#9c5133",width=4)
+            for j in range(1,points.shape[1]):draw.line([pts[parents[j]],pts[j]],fill="#285e99" if j%2 else "#9c5133",width=4)
             for x,y in pts:draw.ellipse((x-3,y-3,x+3,y+3),fill="#22394c")
-            draw.text((12,553),f"{t+1}/225 | fixed world camera, common scale",fill="#415b6b")
+            draw.text((12,553),f"{t+1}/{len(points)} | fixed world camera, common scale",fill="#415b6b")
             draw.text((12,576),"No smoothing / no frame recentering / unqualified research",fill="#415b6b")
             proc.stdin.write(np.asarray(image).tobytes())
     finally:proc.stdin.close()
     assert proc.wait()==0
     n=int(subprocess.check_output(["ffprobe","-v","error","-count_frames","-select_streams","v:0","-show_entries","stream=nb_read_frames","-of","csv=p=0",str(path)],text=True,stdin=subprocess.DEVNULL,timeout=60).strip())
-    assert n==225;subprocess.run(["ffmpeg","-nostdin","-threads","2","-v","error","-i",str(path),"-f","null","-"],check=True,stdin=subprocess.DEVNULL,timeout=60)
+    assert n==len(points);subprocess.run(["ffmpeg","-nostdin","-threads","2","-v","error","-i",str(path),"-f","null","-"],check=True,stdin=subprocess.DEVNULL,timeout=60)
 
 def run(cfg,study,out):
     study=Path(study);out=fresh(out);root,pc,pop=inputs(cfg);native_environment(read(root/"data/protocol.json")["assets"])
