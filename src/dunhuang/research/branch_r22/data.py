@@ -18,7 +18,7 @@ from .engine import parent
 def domains(points,left,right):
     hard=np.zeros((225,151),bool);hard[:left,4:]=True;hard[225-right:,4:]=True
     jerk=np.linalg.norm(np.diff(points,n=3,axis=0)*30**3,axis=-1);out={}
-    for name,mask in numpy_regions(hard,3).items():
+    for name,mask in numpy_regions(hard[None],3).items():
         a=jerk[mask];out[name]=dict(templates=int(mask.sum()),max=float(a.max()),p95=float(np.percentile(a,95)))
     assert sum(x["templates"] for x in out.values())==222
     return out

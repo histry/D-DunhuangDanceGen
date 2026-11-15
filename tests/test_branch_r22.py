@@ -17,7 +17,7 @@ def test_branch_loss_resolves_guided_output_compensation():
     u2=u+.3;c2=c+.15;g2=(2*c2-u2).clamp(-1,1)
     assert torch.allclose(g,g2,atol=1e-7)
     a=supervise("G0",u,c,g,y,k)["unknown"];b=supervise("G0",u2,c2,g2,y,k)["unknown"]
-    assert abs(float(a-b))<1e-12
+    assert abs(float((a-b).detach()))<1e-12
     assert supervise("G1",u2,c2,g2,y,k)["unknown"]>supervise("G1",u,c,g,y,k)["unknown"]
 
 def test_raw_branch_gradient_survives_saturation_and_both_branches_train():
@@ -67,3 +67,12 @@ def test_external_yaml_dependency_is_lazy_for_native_imports(monkeypatch):
         return original(name,*args,**kwargs)
     monkeypatch.setattr(builtins,"__import__",block)
     importlib.reload(importlib.import_module("dunhuang.research.branch_r22.lodge"))
+
+
+def test_source_domain_audit_has_explicit_batch_and_analytic_si_jerk():
+    from dunhuang.research.branch_r22.data import domains
+    points=np.zeros((225,24,3),dtype=float);points[:,1,0]=(np.arange(225)/30.)**3
+    for left,right,expected in [(8,8,(10,6,206)),(24,16,(34,6,182))]:
+        r=domains(points,left,right)
+        assert tuple(r[n]["templates"] for n in ("fixed","crossing","editable"))==expected
+        assert all(abs(r[n]["max"]-6.)<1e-5 for n in r)
