@@ -1,0 +1,328 @@
+{
+  "delivered_at_utc": "2026-11-15T19:39:18.796134+00:00",
+  "publication_commit": "2db1dd908694e6dfce474ca70174e5cb57ad23d4",
+  "authorization": {
+    "user_reply": "授权回传上述 R27 视频与页面",
+    "question_id": "call_cf067d665a8c41b6926a3bd4ffddbf8d",
+    "scope": "14 videos, viewer and protocol only; embedded audio included"
+  },
+  "source_publication_receipt_sha256": "5cb89e8acf26ab9e9f1bc9b2dce973cf2e62ba82a03053b53c1e2b0b00d1903e",
+  "files": 16,
+  "bytes": 3976861,
+  "records": [
+    {
+      "file": "ChangE_P_e0.mp4",
+      "bytes": 313115,
+      "sha256": "9ba605422e108ac0ac60175cc1095bbc2aebdb5c06f9ba54b8a52829622db77f"
+    },
+    {
+      "file": "ChangE_P_e1.mp4",
+      "bytes": 344804,
+      "sha256": "cd890e1e8db269c1054f4b435ea720d7d21667c5e684359b777df4b51998493b"
+    },
+    {
+      "file": "ChangE_R26_C1_e0.mp4",
+      "bytes": 307147,
+      "sha256": "8fd7b0579738546af52c6cbca112fe014c3b93cce156815d8f7f1a5eb4d108a5"
+    },
+    {
+      "file": "ChangE_R26_C1_e1.mp4",
+      "bytes": 313831,
+      "sha256": "28798991fd46ac14e221c2022c2489dff8186cdd84de4fb6c8bb63f460755e3d"
+    },
+    {
+      "file": "ChangE_none.mp4",
+      "bytes": 362323,
+      "sha256": "70d80dc313a390fe21cab4d96a2debc13fef9ccddebfbafe58ac9ac6e33f0a9c"
+    },
+    {
+      "file": "ChangE_source0.mp4",
+      "bytes": 96156,
+      "sha256": "b43d46fc40606e1e0356352dee10314a8c6b8b7c4b29d865168be3cc1ee450e3"
+    },
+    {
+      "file": "ChangE_source1.mp4",
+      "bytes": 138839,
+      "sha256": "3e8fa0ad5adbd8c758dc1e36ec15b5ace0d7a885d60b3db88c5af76e98b123b0"
+    },
+    {
+      "file": "Teacher_P_e0.mp4",
+      "bytes": 337513,
+      "sha256": "4bc4cc2f26d65ddb9720eb0438d1846ae450fa5ec1be029b6e82b5f7546530b0"
+    },
+    {
+      "file": "Teacher_P_e1.mp4",
+      "bytes": 361331,
+      "sha256": "7a7873b4f510ee2a5232ed11cdda32a03b60e8b2c3c88d31c689c68b3d104861"
+    },
+    {
+      "file": "Teacher_R26_C1_e0.mp4",
+      "bytes": 292722,
+      "sha256": "888b0562c7a5e093d3e371d85471dc249de21e152758e873896f5206d2fbc47d"
+    },
+    {
+      "file": "Teacher_R26_C1_e1.mp4",
+      "bytes": 309989,
+      "sha256": "ba07e9b1f8d41d7d39084c525b72963d44b9ec7c787889275912e8d774f945a3"
+    },
+    {
+      "file": "Teacher_none.mp4",
+      "bytes": 359092,
+      "sha256": "06ad7a3f749ee72680500976febfe4ae06367ac1104549cd9fb97d7f02b34c17"
+    },
+    {
+      "file": "Teacher_source0.mp4",
+      "bytes": 204818,
+      "sha256": "39b9d4f57762eeadfadd2ede0a90434ed723fa3ab19ebc2f20c167905a3189a3"
+    },
+    {
+      "file": "Teacher_source1.mp4",
+      "bytes": 223575,
+      "sha256": "1d852e88d5ea63f340ade119719cf0226518f155cce6e7a6561f7697d8d3090b"
+    },
+    {
+      "file": "index.html",
+      "bytes": 6166,
+      "sha256": "91383198fb4352462962f5e2bac18afc7a79b8c90b51b3395444bf2170f00e42"
+    },
+    {
+      "file": "protocol.json",
+      "bytes": 5440,
+      "sha256": "a00d0ebb155af9abe3d260501ef0ea50c9c3945e3c9feb773e335948abca1480"
+    }
+  ],
+  "all_sizes_sha256_exact": true,
+  "viewer_embedded_records_exact": true,
+  "viewer_video_links_verified": 14,
+  "viewer_script_syntax_passed": true,
+  "default_comparison": [
+    "ChangE_R26_C1_e0.mp4",
+    "ChangE_P_e0.mp4"
+  ],
+  "local_ffprobe": [
+    {
+      "file": "Teacher_source0.mp4",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 600,
+          "height": 600,
+          "nb_frames": "256"
+        }
+      ]
+    },
+    {
+      "file": "Teacher_source1.mp4",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 600,
+          "height": 600,
+          "nb_frames": "256"
+        }
+      ]
+    },
+    {
+      "file": "Teacher_none.mp4",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 600,
+          "height": 600,
+          "nb_frames": "256"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "nb_frames": "401"
+        }
+      ]
+    },
+    {
+      "file": "Teacher_R26_C1_e0.mp4",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 600,
+          "height": 600,
+          "nb_frames": "256"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "nb_frames": "401"
+        }
+      ]
+    },
+    {
+      "file": "Teacher_R26_C1_e1.mp4",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 600,
+          "height": 600,
+          "nb_frames": "256"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "nb_frames": "401"
+        }
+      ]
+    },
+    {
+      "file": "Teacher_P_e0.mp4",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 600,
+          "height": 600,
+          "nb_frames": "256"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "nb_frames": "401"
+        }
+      ]
+    },
+    {
+      "file": "Teacher_P_e1.mp4",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 600,
+          "height": 600,
+          "nb_frames": "256"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "nb_frames": "401"
+        }
+      ]
+    },
+    {
+      "file": "ChangE_source0.mp4",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 600,
+          "height": 600,
+          "nb_frames": "256"
+        }
+      ]
+    },
+    {
+      "file": "ChangE_source1.mp4",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 600,
+          "height": 600,
+          "nb_frames": "256"
+        }
+      ]
+    },
+    {
+      "file": "ChangE_none.mp4",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 600,
+          "height": 600,
+          "nb_frames": "256"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "nb_frames": "135"
+        }
+      ]
+    },
+    {
+      "file": "ChangE_R26_C1_e0.mp4",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 600,
+          "height": 600,
+          "nb_frames": "256"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "nb_frames": "135"
+        }
+      ]
+    },
+    {
+      "file": "ChangE_R26_C1_e1.mp4",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 600,
+          "height": 600,
+          "nb_frames": "256"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "nb_frames": "135"
+        }
+      ]
+    },
+    {
+      "file": "ChangE_P_e0.mp4",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 600,
+          "height": 600,
+          "nb_frames": "256"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "nb_frames": "135"
+        }
+      ]
+    },
+    {
+      "file": "ChangE_P_e1.mp4",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 600,
+          "height": 600,
+          "nb_frames": "256"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "nb_frames": "135"
+        }
+      ]
+    }
+  ],
+  "remote_complete_decodes_verified": 14,
+  "live_browser_controls_verified": false,
+  "temporary_ssh_files_created": 0,
+  "temporary_ssh_files_remaining": 0,
+  "training_optimizer_steps_during_delivery": 0,
+  "experiment_outputs_modified": false
+}
