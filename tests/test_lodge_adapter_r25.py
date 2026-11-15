@@ -72,3 +72,13 @@ def test_occlusion_does_not_leak_velocity_at_hidden_predecessor():
     rot=np.tile([1,0,0,0,1,0],(96,22)).astype(np.float32)
     p=view(rot,9,True);valid=p["valid"]
     affected=~(valid[1:]&valid[:-1]);assert np.count_nonzero(p["features"][1:,:,6:][affected])==0
+
+
+def test_timing_proxy_is_zero_for_identical_motion_regardless_of_type_order():
+    from dunhuang.research.lodge_adapter_r25.metrics import timing_proxy
+    from scipy.spatial.transform import Rotation
+    x=np.zeros((256,139),np.float32);x[:,7:]=np.tile([1,0,0,0,1,0],22)
+    angles=.5*np.sin(np.linspace(0,3*np.pi,96));R=Rotation.from_euler("z",angles).as_matrix()
+    x[64:160,7+6*20:13+6*20]=R[:,:2,:].reshape(96,6)
+    score=timing_proxy(x,x,np.zeros((256,35)))
+    assert score["phase_timing_proxy_mae_frames"]==0 and score["phase_order_proxy_inversions"]==0
