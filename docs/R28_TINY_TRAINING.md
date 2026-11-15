@@ -13,3 +13,6 @@ Root/足部仅作分层读出：全局及Core Jerk、Root速度<=NoRef1.1，模�
 最后固定历史ChangE两来源、两音乐、seed24041；比较P与T0/T1以及R26 C1旧基线，不按结果选模。仅用于曝光的非配对迁移，保留旋转、局部几何、幅度、固定floor0足部代理与Jerk，不造新音乐配对标签，不升级正式检索/生成。
 
 失败初始回执保留。已定位的同名导入覆盖以显式导入修复；预处理与重建文件46份由recovery_inputs.json封存，恢复到factorial_02，不改种子/人口。失败前两次采样8轨迹与成功主任务、独立复验分开计数，失败阶段训练0。
+
+
+补充输入审计：官方MinMaxScaler.transform的clip标志也可能开启，故data/result历史statistics.clipping字段只表示归一化后输出是否越界，不能解释为原输入被裁剪比例。训练前另以原始输入×scale+min计算input_domain_audit.json的affine_preclip_outside，保存旧字段作用域和两条精确重算。该补充不改Normalizer或已封存数据。FineDance另由四份认证真实波形重提固定官方35D特征、验证帧数与共同裁切，记录原特征与当前librosa结果差异；不把形状相同当生产版本相同。
