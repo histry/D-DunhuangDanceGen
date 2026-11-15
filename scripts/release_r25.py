@@ -11,6 +11,8 @@ from dunhuang.research.lodge_adapter_r25.replay import verify_readout
 
 def verify(root):
     root=Path(root);out=root/"independent_checks.json";assert not out.exists();forbid_optimizers();bundles=0
+    resume=read(root/"resume_inputs.json")
+    for name,h in resume["sealed_inputs"].items():assert sha(root/name)==h,name
     a=read(root/"data/result.json");b=read(root/"data_replay/result.json");assert a==b
     for folder in ["data","data_replay"]:
         for name,h in read(root/folder/"protocol.json")["files"].items():assert sha(root/folder/name)==h
@@ -41,7 +43,7 @@ def verify(root):
     assert len(read(root/"evaluation/result.json")["records"])==147
     frozen=["src/dunhuang/research/branch_r22","src/dunhuang/research/local_r23","src/dunhuang/research/lodge_reference_r24","src/dunhuang/edge_backend.py","src/dunhuang/planning","src/dunhuang/sampling.py"]
     assert not subprocess.check_output(["git","diff","665cd5a6bb45eb896f50cecf99f1f688b7cdf2c2","--"]+frozen,text=True)
-    write(out,dict(code_commit=commit(),array_bundles_exact=bundles,source_recordings=21,audio_pcm_exact=21,train_groups=9,dev_exposed_groups=3,
+    write(out,dict(code_commit=commit(),resume_inputs_sha256=sha(root/"resume_inputs.json"),sealed_inputs_verified=len(resume["sealed_inputs"]),array_bundles_exact=bundles,source_recordings=21,audio_pcm_exact=21,train_groups=9,dev_exposed_groups=3,
         training_optimizer_steps=1200,replay_optimizer_steps=0,actual_update_pairs_verified=8,non_gradient_update_fields_exact=True,gradient_norm_relative_precision=1e-6,gradient_norm_bitwise_claimed=False,curve_checkpoints_exact=6,
         sampler_calls=21,replay_sampler_calls=21,generated_trajectories=135,replay_generated_trajectories=135,
         frozen_R24_baseline_trajectories_reused=12,metric_records_exact=147,null_reference_sampler_exact=True,
@@ -106,7 +108,7 @@ def collect(root,receipts,media_receipts,out,failed_receipts):
     out.mkdir(parents=True);write(out/"r25_summary.json",result);write(out/"r25_checks.json",result["checks"])
     folders=[receipts,media_receipts]+[Path(p) for p in failed_receipts]
     write(out/"r25_receipt.json",dict(collection_commit=commit(),execution_commit=(receipts/"execution_commit.txt").read_text().strip(),
-        summary_sha256=sha(out/"r25_summary.json"),evidence={str(p.relative_to(root)):sha(p) for p in root.rglob("*.json") if p.name in ("protocol.json","result.json","independent_checks.json")},
+        summary_sha256=sha(out/"r25_summary.json"),evidence={str(p.relative_to(root)):sha(p) for p in root.rglob("*.json") if p.name in ("protocol.json","result.json","independent_checks.json","resume_inputs.json","replay_mismatch.json")},
         checkpoint_hashes={arm:result["models"][arm]["checkpoint_hashes"] for arm in ("event","phase")},
         receipts={str(folder):{p.name:sha(p) for p in folder.iterdir() if p.is_file()} for folder in folders},
         exit_status=0,training_optimizer_steps=1200,replay_optimizer_steps=0,temporary_ssh_files_created=0,temporary_ssh_files_remaining=0,
