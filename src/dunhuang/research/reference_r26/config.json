@@ -1,0 +1,67 @@
+{
+  "schema": "reference_r26_v1",
+  "baseline": "046c52605f53154f737c43bc7d895d1365771592",
+  "r25": "outputs/lodge_adapter_r25_02",
+  "r24": "outputs/lodge_reference_r24_01",
+  "preflight": "outputs/feasible_r9_02/training_preflight",
+  "rows_sha256": "33f7f9b929bba90ff8421e2bdad7f6d351e48df4d97a58bfcc701ab31619d6e0",
+  "preflight_sha256": "082bc39eb02cc7df75269b9bb5f27880bf82142aa8d9298b4a31fc08ea5903ca",
+  "seed": 26041,
+  "steps": 1200,
+  "batch": 2,
+  "learning_rate": 0.0002,
+  "core": [
+    64,
+    160
+  ],
+  "arms": [
+    "C0",
+    "C1",
+    "C2"
+  ],
+  "geometry_weight": 1,
+  "geometry_velocity_weight": 0.05,
+  "geometry_support_m": 0.05,
+  "geometry_support_min_fraction": 0.8,
+  "curve_updates": [
+    0,
+    600,
+    1200
+  ],
+  "snapshot_steps": [
+    0,
+    1,
+    599,
+    1199
+  ],
+  "eval_seeds": [
+    24041,
+    24042
+  ],
+  "min_gain": 0.05,
+  "min_activity_ratio": 0.8,
+  "max_quality_ratio": 1.1,
+  "synthetic_warp_control_points": [
+    [
+      0,
+      0
+    ],
+    [
+      32,
+      24
+    ],
+    [
+      64,
+      64
+    ],
+    [
+      95,
+      95
+    ]
+  ],
+  "time_bias_strength": 4,
+  "C3_training_admitted": false,
+  "whole_song_generations": 0,
+  "human_reviewed": false,
+  "operational_qualified": false
+}
