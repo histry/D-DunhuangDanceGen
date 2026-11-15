@@ -22,8 +22,13 @@ def run(cfg,root,out,replay=None):
         install(adapter,p);memory=adapter.context[0].detach().clone()
         swapped={k:v.clone() for k,v in p.items()};swapped["features"][:,:,[16,20]]=swapped["features"][:,:,[20,16]]
         install(adapter,swapped);delta=float((adapter.context[0]-memory).abs().max())
-        assert delta<2e-6 if arm=="C0" else delta>1e-5
-        tests.append(dict(arm=arm,shoulder_wrist_swap_memory_max=delta,parameters=sum(v.numel() for v in adapter.parameters())))
+        adapter.double()
+        dp={k:v if v.dtype==torch.bool else v.double() for k,v in p.items()}
+        install(adapter,dp);before64=adapter.context[0].detach().clone()
+        sp={k:v.clone() for k,v in dp.items()};sp["features"][:,:,[16,20]]=sp["features"][:,:,[20,16]]
+        install(adapter,sp);delta64=float((adapter.context[0]-before64).abs().max())
+        assert delta64<1e-12 if arm=="C0" else delta64>1e-5
+        tests.append(dict(arm=arm,shoulder_wrist_swap_memory_max_float32=delta,shoulder_wrist_swap_memory_max_float64=delta64,parameters=sum(v.numel() for v in adapter.parameters())))
     assert states["C1"].keys()==states["C2"].keys()
     assert all(torch.equal(v,states["C2"][k]) for k,v in states["C1"].items())
     common=[k for k in states["C0"] if k in states["C1"]]
