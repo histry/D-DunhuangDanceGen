@@ -34,7 +34,7 @@ def verify(root):
     assert models[0]["ledger"]==models[1]["ledger"]==models[2]["ledger"]
     assert models[1]["initial_digest"]==models[2]["initial_digest"]
     assert models[0]["frozen_digest"]==models[1]["frozen_digest"]==models[2]["frozen_digest"]
-    for stage in ("preflight","compress","samples","evaluation"):
+    for stage in (("preflight_02" if (root/"recovery_inputs.json").exists() else "preflight"),"compress","samples","evaluation"):
         assert read(root/stage/"result.json")==read(root/(stage+"_replay")/"result.json")
         for p in (root/stage).glob("*.npz"):same_arrays(p,root/(stage+"_replay")/p.name);bundles+=1
     assert read(root/"samples/result.json")["sampler_calls"]==26 and read(root/"samples/result.json")["generated_trajectories"]==166
@@ -103,12 +103,12 @@ def collect(root,out,receipts):
         for k in ("history","ledger"):models[arm][k+"_sha256"]=hashlib.sha256(json.dumps(a[k],sort_keys=True).encode()).hexdigest()
         models[arm]["original_result"]=ref(root/f"models/{arm}/result.json")
         models[arm]["replay_checks"]=b["replay_checks"]
-    result=dict(data=read(root/"data/result.json"),preflight=read(root/"preflight/result.json"),models=models,compress=read(root/"compress/result.json"),
+    result=dict(data=read(root/"data/result.json"),preflight=read(root/("preflight_02" if (root/"recovery_inputs.json").exists() else "preflight")/"result.json"),models=models,compress=read(root/"compress/result.json"),
         samples=read(root/"samples/result.json"),evaluation=read(root/"evaluation/result.json"),checks=read(root/"independent_checks.json"),media=read(root/"videos/protocol.json"),
         human_reviewed=False,operational_qualified=False,whole_song_generations=0)
     write(out/"r26_summary.json",result);write(out/"r26_checks.json",result["checks"])
     write(out/"r26_receipt.json",dict(collection_commit=commit(),summary_sha256=sha(out/"r26_summary.json"),
-        evidence={str(p.relative_to(root)):sha(p) for p in root.rglob("*.json") if p.name in ("result.json","protocol.json","independent_checks.json") or p.name.startswith("actual_")},
+        evidence={str(p.relative_to(root)):sha(p) for p in root.rglob("*.json") if p.name in ("result.json","protocol.json","independent_checks.json","recovery_inputs.json","identity_precision_diagnostic.json") or p.name.startswith("actual_")},
         receipts={folder:{p.name:sha(p) for p in Path(folder).iterdir() if p.is_file()} for folder in receipts},
         launcher_logs={str(p):sha(p) for folder in receipts for p in [Path(folder.removesuffix("_receipts")+"_launcher.log")] if p.exists()},
         temporary_ssh_files_created=0,temporary_ssh_files_remaining=0,training_optimizer_steps=3600,replay_optimizer_steps=0,operational_qualified=False,whole_song_generations=0))

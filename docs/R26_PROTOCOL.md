@@ -37,3 +37,6 @@ ChangE沿用R24完整飞天/琵琶Core、两个曝光音乐和24041/24042种子�
 12对真实pre/post更新读出、6/9曲线以及全部采样/评价新进程复核，重放优化器0，不是重训3600步。前向/损失/参数摘要/数组精确；仅FP32梯度范数聚合事前规定rtol1e-5、atol0并记录实际差异，禁止称全读出逐位一致。所有输入/权重/来源哈希、代码SHA、成功失败回执保留。代码先GitHub再服务器tmux，科学产物不上传Git。只回传公开统计；新媒体/原始权重归档按具体授权范围执行。临时SSH辅助文件只清理本轮创建内容。新整曲0，operational_qualified=false。
 
 参考机制为项目适配，不是完整MoST或SALAD复现：[MoST官方](https://github.com/Boeun-Kim/MoST)，[SALAD官方](https://github.com/seokhyeonhong/salad)。
+
+
+训练前精度纠正：原preflight在FP32的C0不变性绝对阈值2e-6处失败，优化器更新0。真实输入上float32差1.27554e-5，float64差1.33227e-15；C1 float64差1.13236。保留原失败回执与诊断，改用同权重float64验证公式不变性(C0<1e-12)，另保留实际FP32差值。仅结构诊断采用float64，模型/训练仍float32，质量门不变。102份数据/重建封存后在preflight_02重新核验，复用已验证数据，不重新择人口。

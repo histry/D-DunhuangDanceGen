@@ -76,3 +76,13 @@ def test_common_ledger_has_full_occluded_and_dropped_presentations():
     assert len(rows)==1200 and set(x for r in rows for x in r["cases"])==set(range(96))
     assert sum(not v for r in rows for v in r["occluded"])==1200
     assert sum(r["reference_drop"][1] for r in rows)==240
+
+
+
+def test_structural_invariance_uses_double_for_large_realistic_dynamic_features():
+    p=packet();p["features"][:,:,:,6:]*=100
+    a=make(False).double()
+    dp={k:v if v.dtype==torch.bool else v.double() for k,v in p.items()}
+    a.set_reference(**dp);before=a.context[0].clone()
+    dp["features"][:,:,[16,20]]=dp["features"][:,:,[20,16]]
+    a.set_reference(**dp);assert (a.context[0]-before).abs().max()<1e-12
