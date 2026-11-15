@@ -4,6 +4,7 @@ from pathlib import Path
 import numpy as np
 from dunhuang.io import checked,write
 from dunhuang.contracts import matrices,Q
+from dunhuang.research.masked_denoiser.metrics import decode
 from .common import inputs,finish,arrays,read,fresh,forbid_optimizers
 
 def run(cfg,out,replay=None):
@@ -11,7 +12,11 @@ def run(cfg,out,replay=None):
     source=next(r for r in pop["records"] if r["case"]==24);z=np.load(checked(source["arrays"]))
     oldnative=read(root/"native/protocol.json")["saved"]
     index=next(k for k,b in oldnative.items() if (b["arm"],b["case"],b["variant"],b["control"])==("G2",24,0,"correct"))
-    generated=np.load(root/"native"/index/"native.npy")
+    binding=oldnative[index]
+    scaler=np.load(checked(read(root/"data/protocol.json")["assets"]["scaler"]))
+    trace=np.load(checked(binding["trace"]))
+    generated=decode(trace["sample"],scaler,z["native"])
+    assert np.array_equal(generated,np.load(root/"native"/index/"native.npy"))
     pairs={}
     for name,x in (("source",z["native"]),("G2",generated)):
         R=matrices(x[:,7:].reshape(225,24,6));R=R.copy();R[:,0]=Q@R[:,0]
