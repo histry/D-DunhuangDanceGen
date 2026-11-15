@@ -69,7 +69,7 @@ G1/G0、G2/G1各按DEV来源两布局同时检查：
 
 用官方Refine_DanceDecoder、GaussianDiffusion和原生采样函数，严格加载所有推理Decoder参数，核对DanceDecoder与diffusion.model别名张量一致、beta网格一致。
 保留官方实现细节与实际层数，不私自修补脚本结构。
-Python>=3.8以标准pickle协议5兼容旧pickle5模块名，记录兼容别名；不替换模型数学。
+Python>=3.8以标准pickle协议5兼容旧pickle5模块名；专用外部进程将已移除的numpy.float恢复为原本等价的builtin float，均记录别名，不替换模型数学。YAML只在专用Lodge运行时导入，通用模块导入不要求该外部依赖。
 原生合同256×139、22关节、30Hz、35D音乐；与R22的225×151、24关节、4800D不同。
 固定历史case1 Train、case24曝光DEV，两条原始连续256帧动作和真实时钟音频，不补帧、不拉伸音乐。
 官方35D特征仅裁掉居中STFT多出的最后帧；源旋转columns→PyTorch3D rows，Root水平原点与垂直地面对齐变换记录。

@@ -1,10 +1,10 @@
 """Pinned official Local decoder and samplers, with explicit incomplete contract."""
-import argparse,sys,pickle,json,hashlib
+import argparse,sys,pickle
 from pathlib import Path
 from types import SimpleNamespace
 import numpy as np
 import soundfile as sf
-import torch,yaml
+import torch
 from scipy.spatial.transform import Rotation
 from dunhuang.io import checked,sha,write
 from dunhuang.data.sources import ref
@@ -14,6 +14,8 @@ from dunhuang.research.context_r21.data import same_audio_pcm
 from .local_contract import common22,require_native24
 
 def load(cfg):
+    import yaml
+    if "float" not in np.__dict__:np.float=float  # Exact legacy alias; external worker only.
     base=Path("inputs/lodge_r22");manifest=read(base/"runtime_manifest.json")
     assert sha(base/"runtime_manifest.json")==cfg["lodge_manifest_sha256"]
     assert manifest["source_commit"]==cfg["lodge_source_commit"]
@@ -45,7 +47,7 @@ def load(cfg):
         decoder_layers=len(model.seqTransDecoder.stack),refinement_attention_layers=len(model.refine_seqTransDecoder1.stack),
         sampling_weights="DanceDecoder == diffusion.model; EMA not selected",strict_load=True,
         checkpoint_sha256=sha(base/manifest["checkpoint"]),source_commit=manifest["source_commit"],
-        compat_alias="pickle5 -> Python standard pickle; no model mathematics patch")
+        compat_alias=["pickle5 -> Python standard pickle","numpy.float -> builtin float, external worker only; no model mathematics patch"])
     del ckpt,states
     return diffusion,normalizer,skeleton,do_smplxfk,extract,checkpoint_info,manifest
 

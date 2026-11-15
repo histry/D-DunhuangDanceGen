@@ -57,3 +57,13 @@ def test_incomplete_external_skeleton_cannot_be_padded_into_full_native():
 @pytest.mark.parametrize("module",["engine","data","train","rollout","sanity","lodge"])
 def test_registered_command_modules_import_without_running_experiments(module):
     importlib.import_module("dunhuang.research.branch_r22."+module)
+
+
+def test_external_yaml_dependency_is_lazy_for_native_imports(monkeypatch):
+    import builtins
+    original=builtins.__import__
+    def block(name,*args,**kwargs):
+        if name=="yaml":raise ModuleNotFoundError("Native environment intentionally lacks yaml")
+        return original(name,*args,**kwargs)
+    monkeypatch.setattr(builtins,"__import__",block)
+    importlib.reload(importlib.import_module("dunhuang.research.branch_r22.lodge"))
