@@ -1,0 +1,51 @@
+{
+  "records": [
+    {
+      "event_uid": "evt_8d8b702c4fcdd8773c30e13d",
+      "source_interval": [
+        11010,
+        11129
+      ],
+      "target_core": [
+        64,
+        160
+      ],
+      "mapped_pose_max_rad": 6.925296512220799e-08,
+      "mapped_pose_mean_rad": 1.1734162902816098e-08,
+      "unique_full_phase_frames": 26,
+      "phase_order_preserved": true,
+      "time_map_rate_bounds": [
+        0.75,
+        1.0
+      ],
+      "Root_translation_and_C4_prompted": false,
+      "terminal22_23_rotations_observed": false
+    },
+    {
+      "event_uid": "evt_ffa5a1585b111af31985a68e",
+      "source_interval": [
+        1605,
+        1698
+      ],
+      "target_core": [
+        64,
+        160
+      ],
+      "mapped_pose_max_rad": 7.554799643012665e-08,
+      "mapped_pose_mean_rad": 1.2072777946188935e-08,
+      "unique_full_phase_frames": 16,
+      "phase_order_preserved": true,
+      "time_map_rate_bounds": [
+        0.8636363636363636,
+        1.127659574468085
+      ],
+      "Root_translation_and_C4_prompted": false,
+      "terminal22_23_rotations_observed": false
+    }
+  ],
+  "main_protocol_sha256": "c0b4363a797c1be5218b80c20b9864c7dec75da2078e01a8792ae5e3d33cddbe",
+  "input_arrays_sha256": "6dbf2e3f976baa0809f8c59499043bba955cb7a8bdfa887204655cd42801786c",
+  "read_only": true,
+  "optimizer_steps": 0,
+  "model_outputs_changed": false
+}

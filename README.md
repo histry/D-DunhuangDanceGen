@@ -3,6 +3,10 @@
 当前默认路径：**Event Catalog → Music Timeline → Event Plan → 冻结 EDGE（Temporal V0.5）→ 原 Native 验收**。学习检索保留shadow。研究路径已完成真实151D配对补全，以及原生SO(3)跨录制条件的Cross/Additive同参数量训练（各1,200步）；事件跟随与完整生成质量仍未合格。
 
 
+新增 [R24 Lodge敦煌原语与音乐控制报告](reports/R24Lodge敦煌原语与音乐控制实验报告.md)及[回执](reports/r24_release/r24_receipt.json)：主研究转向Lodge Local，真实ChangE飞天／琵琶完整Core与dunhuangwu2/3，两个种子12轨迹及独立重放。未提示来源误差8/8改善，但双向来源与Jerk保留0/4，完整Native不可评价；不替换正式生成器。412回归通过、8依赖跳过，专项15通过，14段服务器视频；训练0、整曲0。
+
+新增 [R23固定引导与连续表示报告](reports/R23固定引导与连续全身表示实验报告.md)：G0/G2 CFG对照均0/4、Native0/64。五Train正例的15解码条件保持保真并通过Native，曝光DEV短边界仍失败。144数组包／88物理报告独立一致，9梯度pre读出。提供18段本地观看对照（outputs/local_r23_01/videos_02/index.html），原媒体失败回执保留。
+
 新增 [R22分支去噪训练与Lodge局部基线实验报告](reports/R22分支去噪训练与Lodge局部基线实验报告.md)及[封存回执](reports/r22_release/r22_receipt.json)：固定R21 B3起点，G0/G1/G2各1,200步，分支拟合改善未转化为固定引导采样收益，两项研究对照均0/4、Native0/72。118数组包、9对实际更新、72条最终轨迹及144份Native/FK数组独立一致；397回归通过、8依赖跳过，EDGE专项18通过。Lodge官方Local实际执行六条轨迹并重放，完整Native24因关节合同不完整保持NOT_EVALUABLE。补充审查发现三条来源硬Root冲突及一条表示域内Native可行见证，不能用来源矛盾解释全部生成失败。提供24段服务器视频；原始归档回传待具体载荷授权，新整曲0。研究与正式路径分开，见[预登记](docs/R22_PROTOCOL.md)。
 
 新增 [R21联合上下文边界与支撑实验报告](reports/R21联合上下文边界与支撑实验报告.md)及[封存回执](reports/r21_release/r21_receipt.json)：12个Train音乐组24段真实225帧动作、4个曝光DEV组，split/joint×混合/分区目标各1,200步，固定B3起点Q/M/F各600步。六项研究对比均未达3/4来源门，Native0/124；M的Train采样收益未迁移至DEV，F未形成稳定足部协调。6,600更新、219数组包、21对实际更新读出、150次采样/缓存重放、248份Native/FK数组及124份物理报告独立一致；379回归通过、8依赖跳过，EDGE专项16通过。32段固定世界视角视频，保留原失败与恢复回执，新整曲0；研究实现与正式路径分离，见[预登记协议](docs/R21_PROTOCOL.md)。

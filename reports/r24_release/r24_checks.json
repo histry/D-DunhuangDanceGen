@@ -1,0 +1,16 @@
+{
+  "code_commit": "4c89eed74ba9930d573a913fe810c1f5c054f3cb",
+  "arrays_exact": true,
+  "metrics_exact": true,
+  "audio_pcm_exact": 2,
+  "generated_trajectories": 12,
+  "replay_trajectories": 12,
+  "batched_sampler_calls": 2,
+  "replay_batched_sampler_calls": 2,
+  "common_noise_draws_per_seed": 50,
+  "masks_matched": true,
+  "optimizer_steps": 0,
+  "full_native_status": "NOT_EVALUABLE",
+  "operational_qualified": false,
+  "whole_song_generations": 0
+}

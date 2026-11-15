@@ -1,0 +1,1767 @@
+{
+  "records": [
+    {
+      "seed": 24041,
+      "index": 0,
+      "music": 0,
+      "event": -1,
+      "event_uid": null,
+      "source_pose_unprompted_rad": [
+        0.6132373054030592,
+        0.6646705832462174
+      ],
+      "source_pose_cue_rad": [
+        0.645185858135206,
+        0.7544866801614344
+      ],
+      "source_upper_unprompted_rad": [
+        0.8852945364675305,
+        0.9771811925562524
+      ],
+      "activity_mps": 0.44507548213005066,
+      "jerk_p95_mps3": 355.1925506591797,
+      "jerk_max_mps3": 7061.64208984375,
+      "full_native_status": "NOT_EVALUABLE",
+      "representation": "SMPLX22_COMMON_GEOMETRY_ONLY",
+      "operational_qualified": false,
+      "frequency": {
+        "low_frequency_velocity_energy_fraction": 0.9061426276528367,
+        "high_frequency_velocity_energy_fraction": 0.007856264334620106,
+        "bands_hz": {
+          "low": [
+            0,
+            3
+          ],
+          "high": [
+            6,
+            15
+          ]
+        },
+        "root_relative": true,
+        "window": "Hann after temporal mean removal",
+        "motion_modified": false
+      },
+      "root_observed": false,
+      "C4_observed": false
+    },
+    {
+      "seed": 24041,
+      "index": 1,
+      "music": 0,
+      "event": 0,
+      "event_uid": "evt_8d8b702c4fcdd8773c30e13d",
+      "source_pose_unprompted_rad": [
+        0.5253017437951655,
+        0.6435919258862155
+      ],
+      "source_pose_cue_rad": [
+        0.2639645338451472,
+        0.6241708544110323
+      ],
+      "source_upper_unprompted_rad": [
+        0.7534886669729942,
+        0.8949887123883867
+      ],
+      "activity_mps": 0.6092178821563721,
+      "jerk_p95_mps3": 570.9600830078125,
+      "jerk_max_mps3": 6547.16259765625,
+      "full_native_status": "NOT_EVALUABLE",
+      "representation": "SMPLX22_COMMON_GEOMETRY_ONLY",
+      "operational_qualified": false,
+      "frequency": {
+        "low_frequency_velocity_energy_fraction": 0.8832656692691652,
+        "high_frequency_velocity_energy_fraction": 0.017650869968523226,
+        "bands_hz": {
+          "low": [
+            0,
+            3
+          ],
+          "high": [
+            6,
+            15
+          ]
+        },
+        "root_relative": true,
+        "window": "Hann after temporal mean removal",
+        "motion_modified": false
+      },
+      "root_observed": false,
+      "C4_observed": false
+    },
+    {
+      "seed": 24041,
+      "index": 2,
+      "music": 0,
+      "event": 1,
+      "event_uid": "evt_ffa5a1585b111af31985a68e",
+      "source_pose_unprompted_rad": [
+        0.582148508800664,
+        0.5702102008366081
+      ],
+      "source_pose_cue_rad": [
+        0.5533302512031677,
+        0.3407235111189226
+      ],
+      "source_upper_unprompted_rad": [
+        0.7884021327344272,
+        0.822647272704268
+      ],
+      "activity_mps": 0.6304600834846497,
+      "jerk_p95_mps3": 560.3899536132812,
+      "jerk_max_mps3": 6726.78271484375,
+      "full_native_status": "NOT_EVALUABLE",
+      "representation": "SMPLX22_COMMON_GEOMETRY_ONLY",
+      "operational_qualified": false,
+      "frequency": {
+        "low_frequency_velocity_energy_fraction": 0.8370575457776402,
+        "high_frequency_velocity_energy_fraction": 0.026239588606903553,
+        "bands_hz": {
+          "low": [
+            0,
+            3
+          ],
+          "high": [
+            6,
+            15
+          ]
+        },
+        "root_relative": true,
+        "window": "Hann after temporal mean removal",
+        "motion_modified": false
+      },
+      "root_observed": false,
+      "C4_observed": false
+    },
+    {
+      "seed": 24041,
+      "index": 3,
+      "music": 1,
+      "event": -1,
+      "event_uid": null,
+      "source_pose_unprompted_rad": [
+        0.6135908962631521,
+        0.6816620766344735
+      ],
+      "source_pose_cue_rad": [
+        0.6626245273675002,
+        0.7642188095547059
+      ],
+      "source_upper_unprompted_rad": [
+        0.93620330886914,
+        1.0356816517108376
+      ],
+      "activity_mps": 0.3042142987251282,
+      "jerk_p95_mps3": 205.43682861328125,
+      "jerk_max_mps3": 2247.18603515625,
+      "full_native_status": "NOT_EVALUABLE",
+      "representation": "SMPLX22_COMMON_GEOMETRY_ONLY",
+      "operational_qualified": false,
+      "frequency": {
+        "low_frequency_velocity_energy_fraction": 0.9069320927176231,
+        "high_frequency_velocity_energy_fraction": 0.0034900118725189125,
+        "bands_hz": {
+          "low": [
+            0,
+            3
+          ],
+          "high": [
+            6,
+            15
+          ]
+        },
+        "root_relative": true,
+        "window": "Hann after temporal mean removal",
+        "motion_modified": false
+      },
+      "root_observed": false,
+      "C4_observed": false
+    },
+    {
+      "seed": 24041,
+      "index": 4,
+      "music": 1,
+      "event": 0,
+      "event_uid": "evt_8d8b702c4fcdd8773c30e13d",
+      "source_pose_unprompted_rad": [
+        0.4996258919595385,
+        0.6336271319823912
+      ],
+      "source_pose_cue_rad": [
+        0.26785143116612004,
+        0.620492931029739
+      ],
+      "source_upper_unprompted_rad": [
+        0.7851387984419717,
+        0.9177879467411091
+      ],
+      "activity_mps": 0.4581727385520935,
+      "jerk_p95_mps3": 455.8084259033203,
+      "jerk_max_mps3": 5228.51220703125,
+      "full_native_status": "NOT_EVALUABLE",
+      "representation": "SMPLX22_COMMON_GEOMETRY_ONLY",
+      "operational_qualified": false,
+      "frequency": {
+        "low_frequency_velocity_energy_fraction": 0.8338453548872184,
+        "high_frequency_velocity_energy_fraction": 0.02300373110347429,
+        "bands_hz": {
+          "low": [
+            0,
+            3
+          ],
+          "high": [
+            6,
+            15
+          ]
+        },
+        "root_relative": true,
+        "window": "Hann after temporal mean removal",
+        "motion_modified": false
+      },
+      "root_observed": false,
+      "C4_observed": false
+    },
+    {
+      "seed": 24041,
+      "index": 5,
+      "music": 1,
+      "event": 1,
+      "event_uid": "evt_ffa5a1585b111af31985a68e",
+      "source_pose_unprompted_rad": [
+        0.588222109160057,
+        0.6005145283842783
+      ],
+      "source_pose_cue_rad": [
+        0.5634697328524096,
+        0.3546678997853338
+      ],
+      "source_upper_unprompted_rad": [
+        0.8530787502475959,
+        0.8921823949646183
+      ],
+      "activity_mps": 0.49546319246292114,
+      "jerk_p95_mps3": 563.8188781738281,
+      "jerk_max_mps3": 23753.673828125,
+      "full_native_status": "NOT_EVALUABLE",
+      "representation": "SMPLX22_COMMON_GEOMETRY_ONLY",
+      "operational_qualified": false,
+      "frequency": {
+        "low_frequency_velocity_energy_fraction": 0.5914231923146335,
+        "high_frequency_velocity_energy_fraction": 0.20170210692219237,
+        "bands_hz": {
+          "low": [
+            0,
+            3
+          ],
+          "high": [
+            6,
+            15
+          ]
+        },
+        "root_relative": true,
+        "window": "Hann after temporal mean removal",
+        "motion_modified": false
+      },
+      "root_observed": false,
+      "C4_observed": false
+    },
+    {
+      "seed": 24042,
+      "index": 0,
+      "music": 0,
+      "event": -1,
+      "event_uid": null,
+      "source_pose_unprompted_rad": [
+        0.5902696771803703,
+        0.6467226980333102
+      ],
+      "source_pose_cue_rad": [
+        0.6212689775392204,
+        0.729975420781503
+      ],
+      "source_upper_unprompted_rad": [
+        0.7969440652094955,
+        0.8939379818576529
+      ],
+      "activity_mps": 0.4495733380317688,
+      "jerk_p95_mps3": 327.793212890625,
+      "jerk_max_mps3": 1839.5662841796875,
+      "full_native_status": "NOT_EVALUABLE",
+      "representation": "SMPLX22_COMMON_GEOMETRY_ONLY",
+      "operational_qualified": false,
+      "frequency": {
+        "low_frequency_velocity_energy_fraction": 0.908078758896301,
+        "high_frequency_velocity_energy_fraction": 0.006685071481368947,
+        "bands_hz": {
+          "low": [
+            0,
+            3
+          ],
+          "high": [
+            6,
+            15
+          ]
+        },
+        "root_relative": true,
+        "window": "Hann after temporal mean removal",
+        "motion_modified": false
+      },
+      "root_observed": false,
+      "C4_observed": false
+    },
+    {
+      "seed": 24042,
+      "index": 1,
+      "music": 0,
+      "event": 0,
+      "event_uid": "evt_8d8b702c4fcdd8773c30e13d",
+      "source_pose_unprompted_rad": [
+        0.5031226611348418,
+        0.6202296263970627
+      ],
+      "source_pose_cue_rad": [
+        0.2623595623294449,
+        0.6246289153694907
+      ],
+      "source_upper_unprompted_rad": [
+        0.6874084029401564,
+        0.8285290114280327
+      ],
+      "activity_mps": 0.6584196090698242,
+      "jerk_p95_mps3": 563.5456390380859,
+      "jerk_max_mps3": 4740.65966796875,
+      "full_native_status": "NOT_EVALUABLE",
+      "representation": "SMPLX22_COMMON_GEOMETRY_ONLY",
+      "operational_qualified": false,
+      "frequency": {
+        "low_frequency_velocity_energy_fraction": 0.8857300944516662,
+        "high_frequency_velocity_energy_fraction": 0.014892010288531035,
+        "bands_hz": {
+          "low": [
+            0,
+            3
+          ],
+          "high": [
+            6,
+            15
+          ]
+        },
+        "root_relative": true,
+        "window": "Hann after temporal mean removal",
+        "motion_modified": false
+      },
+      "root_observed": false,
+      "C4_observed": false
+    },
+    {
+      "seed": 24042,
+      "index": 2,
+      "music": 0,
+      "event": 1,
+      "event_uid": "evt_ffa5a1585b111af31985a68e",
+      "source_pose_unprompted_rad": [
+        0.5711909223797674,
+        0.5475955091766901
+      ],
+      "source_pose_cue_rad": [
+        0.5559390919514564,
+        0.34007167319278875
+      ],
+      "source_upper_unprompted_rad": [
+        0.7294587141351067,
+        0.7556332069945363
+      ],
+      "activity_mps": 0.6560607552528381,
+      "jerk_p95_mps3": 726.0875549316406,
+      "jerk_max_mps3": 11863.072265625,
+      "full_native_status": "NOT_EVALUABLE",
+      "representation": "SMPLX22_COMMON_GEOMETRY_ONLY",
+      "operational_qualified": false,
+      "frequency": {
+        "low_frequency_velocity_energy_fraction": 0.7369006655352223,
+        "high_frequency_velocity_energy_fraction": 0.09171569892128946,
+        "bands_hz": {
+          "low": [
+            0,
+            3
+          ],
+          "high": [
+            6,
+            15
+          ]
+        },
+        "root_relative": true,
+        "window": "Hann after temporal mean removal",
+        "motion_modified": false
+      },
+      "root_observed": false,
+      "C4_observed": false
+    },
+    {
+      "seed": 24042,
+      "index": 3,
+      "music": 1,
+      "event": -1,
+      "event_uid": null,
+      "source_pose_unprompted_rad": [
+        0.6228172639158369,
+        0.697050438052062
+      ],
+      "source_pose_cue_rad": [
+        0.6475502855370061,
+        0.730951884024666
+      ],
+      "source_upper_unprompted_rad": [
+        0.9270407246775296,
+        1.040376006043141
+      ],
+      "activity_mps": 0.290021687746048,
+      "jerk_p95_mps3": 191.08350372314453,
+      "jerk_max_mps3": 4459.8740234375,
+      "full_native_status": "NOT_EVALUABLE",
+      "representation": "SMPLX22_COMMON_GEOMETRY_ONLY",
+      "operational_qualified": false,
+      "frequency": {
+        "low_frequency_velocity_energy_fraction": 0.9534349126350323,
+        "high_frequency_velocity_energy_fraction": 0.0023921903252817397,
+        "bands_hz": {
+          "low": [
+            0,
+            3
+          ],
+          "high": [
+            6,
+            15
+          ]
+        },
+        "root_relative": true,
+        "window": "Hann after temporal mean removal",
+        "motion_modified": false
+      },
+      "root_observed": false,
+      "C4_observed": false
+    },
+    {
+      "seed": 24042,
+      "index": 4,
+      "music": 1,
+      "event": 0,
+      "event_uid": "evt_8d8b702c4fcdd8773c30e13d",
+      "source_pose_unprompted_rad": [
+        0.5155039440428245,
+        0.6464048970280685
+      ],
+      "source_pose_cue_rad": [
+        0.2655533338904576,
+        0.6183305373155445
+      ],
+      "source_upper_unprompted_rad": [
+        0.7582040302722373,
+        0.9089566289745493
+      ],
+      "activity_mps": 0.5335489511489868,
+      "jerk_p95_mps3": 443.18272399902344,
+      "jerk_max_mps3": 6997.73095703125,
+      "full_native_status": "NOT_EVALUABLE",
+      "representation": "SMPLX22_COMMON_GEOMETRY_ONLY",
+      "operational_qualified": false,
+      "frequency": {
+        "low_frequency_velocity_energy_fraction": 0.8985182012980638,
+        "high_frequency_velocity_energy_fraction": 0.005333365742125165,
+        "bands_hz": {
+          "low": [
+            0,
+            3
+          ],
+          "high": [
+            6,
+            15
+          ]
+        },
+        "root_relative": true,
+        "window": "Hann after temporal mean removal",
+        "motion_modified": false
+      },
+      "root_observed": false,
+      "C4_observed": false
+    },
+    {
+      "seed": 24042,
+      "index": 5,
+      "music": 1,
+      "event": 1,
+      "event_uid": "evt_ffa5a1585b111af31985a68e",
+      "source_pose_unprompted_rad": [
+        0.5918981766596036,
+        0.6099601427679405
+      ],
+      "source_pose_cue_rad": [
+        0.5618023573581049,
+        0.35671962386253453
+      ],
+      "source_upper_unprompted_rad": [
+        0.8465442200602602,
+        0.8870591266902282
+      ],
+      "activity_mps": 0.49752405285835266,
+      "jerk_p95_mps3": 496.8088684082031,
+      "jerk_max_mps3": 32425.134765625,
+      "full_native_status": "NOT_EVALUABLE",
+      "representation": "SMPLX22_COMMON_GEOMETRY_ONLY",
+      "operational_qualified": false,
+      "frequency": {
+        "low_frequency_velocity_energy_fraction": 0.5613320238417121,
+        "high_frequency_velocity_energy_fraction": 0.21549589722037124,
+        "bands_hz": {
+          "low": [
+            0,
+            3
+          ],
+          "high": [
+            6,
+            15
+          ]
+        },
+        "root_relative": true,
+        "window": "Hann after temporal mean removal",
+        "motion_modified": false
+      },
+      "root_observed": false,
+      "C4_observed": false
+    }
+  ],
+  "controls": [
+    {
+      "seed": 24041,
+      "music": 0,
+      "tests": [
+        {
+          "event": 0,
+          "closer_to_assigned": true,
+          "upper_closer_to_assigned": true,
+          "improves_over_no_reference": true,
+          "common22_jerk_retained": false
+        },
+        {
+          "event": 1,
+          "closer_to_assigned": true,
+          "upper_closer_to_assigned": false,
+          "improves_over_no_reference": true,
+          "common22_jerk_retained": false
+        }
+      ],
+      "bidirectional_retention_pass": false
+    },
+    {
+      "seed": 24041,
+      "music": 1,
+      "tests": [
+        {
+          "event": 0,
+          "closer_to_assigned": true,
+          "upper_closer_to_assigned": true,
+          "improves_over_no_reference": true,
+          "common22_jerk_retained": false
+        },
+        {
+          "event": 1,
+          "closer_to_assigned": false,
+          "upper_closer_to_assigned": false,
+          "improves_over_no_reference": true,
+          "common22_jerk_retained": false
+        }
+      ],
+      "bidirectional_retention_pass": false
+    },
+    {
+      "seed": 24042,
+      "music": 0,
+      "tests": [
+        {
+          "event": 0,
+          "closer_to_assigned": true,
+          "upper_closer_to_assigned": true,
+          "improves_over_no_reference": true,
+          "common22_jerk_retained": false
+        },
+        {
+          "event": 1,
+          "closer_to_assigned": true,
+          "upper_closer_to_assigned": false,
+          "improves_over_no_reference": true,
+          "common22_jerk_retained": false
+        }
+      ],
+      "bidirectional_retention_pass": false
+    },
+    {
+      "seed": 24042,
+      "music": 1,
+      "tests": [
+        {
+          "event": 0,
+          "closer_to_assigned": true,
+          "upper_closer_to_assigned": true,
+          "improves_over_no_reference": true,
+          "common22_jerk_retained": false
+        },
+        {
+          "event": 1,
+          "closer_to_assigned": false,
+          "upper_closer_to_assigned": false,
+          "improves_over_no_reference": true,
+          "common22_jerk_retained": false
+        }
+      ],
+      "bidirectional_retention_pass": false
+    }
+  ],
+  "music_response": [
+    {
+      "seed": 24041,
+      "event": -1,
+      "pose_change_rad": 0.2563179730759193,
+      "root_change_rmse_m": 0.025736629962921143,
+      "perceptual_music_adaptation_proven": false
+    },
+    {
+      "seed": 24041,
+      "event": 0,
+      "pose_change_rad": 0.20073250326960898,
+      "root_change_rmse_m": 0.03001977503299713,
+      "perceptual_music_adaptation_proven": false
+    },
+    {
+      "seed": 24041,
+      "event": 1,
+      "pose_change_rad": 0.19853146417974588,
+      "root_change_rmse_m": 0.02878202125430107,
+      "perceptual_music_adaptation_proven": false
+    },
+    {
+      "seed": 24042,
+      "event": -1,
+      "pose_change_rad": 0.29825764931143006,
+      "root_change_rmse_m": 0.020732611417770386,
+      "perceptual_music_adaptation_proven": false
+    },
+    {
+      "seed": 24042,
+      "event": 0,
+      "pose_change_rad": 0.19600964491467274,
+      "root_change_rmse_m": 0.020583124831318855,
+      "perceptual_music_adaptation_proven": false
+    },
+    {
+      "seed": 24042,
+      "event": 1,
+      "pose_change_rad": 0.20773461293461595,
+      "root_change_rmse_m": 0.023463932797312737,
+      "perceptual_music_adaptation_proven": false
+    }
+  ],
+  "normalizer_roundtrip": [
+    {
+      "event": "evt_8d8b702c4fcdd8773c30e13d",
+      "cue_mean_pose_rad": 0.01782267752388897,
+      "core_mean_pose_rad": 0.016623268337898248,
+      "cue_rot6_clipped_fraction": 0.06554677337408066,
+      "source_root_observed": false
+    },
+    {
+      "event": "evt_ffa5a1585b111af31985a68e",
+      "cue_mean_pose_rad": 0.028476227829216553,
+      "core_mean_pose_rad": 0.023364917038332243,
+      "cue_rot6_clipped_fraction": 0.07476943731307983,
+      "source_root_observed": false
+    }
+  ],
+  "source_distinction_mean_rad": 0.49859575441713394,
+  "source_upper_distinction_mean_rad": 0.5282072132266187,
+  "common_cue_frames": 23,
+  "unprompted_core_frames": 73,
+  "core_interval": [
+    64,
+    160
+  ],
+  "selected_events": [
+    {
+      "event_uid": "evt_8d8b702c4fcdd8773c30e13d",
+      "source_uid": "female_FeiTian",
+      "source_interval": [
+        11010,
+        11129
+      ],
+      "reference": {
+        "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/event_plan_01/prepare/catalog/female_FeiTian.npy",
+        "sha256": "50436001fab4f0aa45610b0723cebd7ee93592f3039adc133c270902b3c9fab4"
+      },
+      "time_warp": [
+        [
+          11010,
+          0
+        ],
+        [
+          11029,
+          15
+        ],
+        [
+          11053,
+          39
+        ],
+        [
+          11129,
+          96
+        ]
+      ],
+      "phases": [
+        {
+          "frame": 11033,
+          "type": "upper_motion_onset",
+          "observed_joints": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19
+          ],
+          "score": 0.8876337656651131,
+          "score_scope": "uncalibrated_kinematic_candidate",
+          "evidence_span": [
+            11032,
+            11035
+          ],
+          "semantic_status": "UNKNOWN",
+          "evidence_truncated_by_core": false,
+          "target_frame": 83,
+          "label_scope": "KINEMATIC_PROXY_NOT_SEMANTIC_TRUTH"
+        },
+        {
+          "frame": 11041,
+          "type": "upper_speed_peak",
+          "observed_joints": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19
+          ],
+          "score": 0.6328010616908899,
+          "score_scope": "uncalibrated_kinematic_candidate",
+          "evidence_span": [
+            11040,
+            11043
+          ],
+          "semantic_status": "UNKNOWN",
+          "evidence_truncated_by_core": false,
+          "target_frame": 91,
+          "label_scope": "KINEMATIC_PROXY_NOT_SEMANTIC_TRUTH"
+        },
+        {
+          "frame": 11100,
+          "type": "upper_direction_turn",
+          "observed_joints": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19
+          ],
+          "score": 0.5806821420734365,
+          "score_scope": "uncalibrated_kinematic_candidate",
+          "evidence_span": [
+            11099,
+            11102
+          ],
+          "semantic_status": "UNKNOWN",
+          "evidence_truncated_by_core": false,
+          "target_frame": 138,
+          "label_scope": "KINEMATIC_PROXY_NOT_SEMANTIC_TRUTH"
+        },
+        {
+          "frame": 11087,
+          "type": "root_turn_proxy",
+          "observed_joints": [
+            0
+          ],
+          "score": 0.869570939484975,
+          "score_scope": "uncalibrated_kinematic_candidate",
+          "evidence_span": [
+            11086,
+            11089
+          ],
+          "semantic_status": "UNKNOWN",
+          "evidence_truncated_by_core": false,
+          "target_frame": 128,
+          "label_scope": "KINEMATIC_PROXY_NOT_SEMANTIC_TRUTH"
+        }
+      ],
+      "source_rotation_joints": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "source_root_translation_observed": false,
+      "semantic_event_truth": "UNKNOWN"
+    },
+    {
+      "event_uid": "evt_ffa5a1585b111af31985a68e",
+      "source_uid": "male_pipa_1",
+      "source_interval": [
+        1605,
+        1698
+      ],
+      "reference": {
+        "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/event_plan_01/prepare/catalog/male_pipa_1.npy",
+        "sha256": "59f14fedc9b7c89e269a7cd5f2cf23807080d9f6f980127c4b19d9487a413788"
+      },
+      "time_warp": [
+        [
+          1605,
+          0
+        ],
+        [
+          1652,
+          53
+        ],
+        [
+          1676,
+          77
+        ],
+        [
+          1698,
+          96
+        ]
+      ],
+      "phases": [
+        {
+          "frame": 1625,
+          "type": "upper_motion_onset",
+          "observed_joints": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19
+          ],
+          "score": 0.9744101124473266,
+          "score_scope": "uncalibrated_kinematic_candidate",
+          "evidence_span": [
+            1624,
+            1627
+          ],
+          "semantic_status": "UNKNOWN",
+          "evidence_truncated_by_core": false,
+          "target_frame": 87,
+          "label_scope": "KINEMATIC_PROXY_NOT_SEMANTIC_TRUTH"
+        },
+        {
+          "frame": 1664,
+          "type": "upper_speed_peak",
+          "observed_joints": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19
+          ],
+          "score": 0.7295352373341443,
+          "score_scope": "uncalibrated_kinematic_candidate",
+          "evidence_span": [
+            1663,
+            1666
+          ],
+          "semantic_status": "UNKNOWN",
+          "evidence_truncated_by_core": false,
+          "target_frame": 129,
+          "label_scope": "KINEMATIC_PROXY_NOT_SEMANTIC_TRUTH"
+        },
+        {
+          "frame": 1671,
+          "type": "upper_direction_turn",
+          "observed_joints": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19
+          ],
+          "score": 0.746482356807056,
+          "score_scope": "uncalibrated_kinematic_candidate",
+          "evidence_span": [
+            1670,
+            1673
+          ],
+          "semantic_status": "UNKNOWN",
+          "evidence_truncated_by_core": false,
+          "target_frame": 136,
+          "label_scope": "KINEMATIC_PROXY_NOT_SEMANTIC_TRUTH"
+        },
+        {
+          "frame": 1630,
+          "type": "root_turn_proxy",
+          "observed_joints": [
+            0
+          ],
+          "score": 0.9060563059011847,
+          "score_scope": "uncalibrated_kinematic_candidate",
+          "evidence_span": [
+            1629,
+            1632
+          ],
+          "semantic_status": "UNKNOWN",
+          "evidence_truncated_by_core": false,
+          "target_frame": 92,
+          "label_scope": "KINEMATIC_PROXY_NOT_SEMANTIC_TRUTH"
+        }
+      ],
+      "source_rotation_joints": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "source_root_translation_observed": false,
+      "semantic_event_truth": "UNKNOWN"
+    }
+  ],
+  "music": [
+    {
+      "index": 0,
+      "full_original_audio": {
+        "path": "/home/disk/lsm/storage/danceRAG/assets/music/test/audio/dunhuangwu2.wav",
+        "sha256": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c"
+      },
+      "start_sample": 0,
+      "end_sample": 136533,
+      "sample_rate": 16000,
+      "feature_dim": 35,
+      "file": "music0.wav",
+      "exposure": "EXPOSED_DUNHUANG_TRANSFER_DEVELOPMENT; not independent test"
+    },
+    {
+      "index": 1,
+      "full_original_audio": {
+        "path": "/home/disk/lsm/storage/danceRAG/assets/music/test/audio/dunhuangwu3.wav",
+        "sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f"
+      },
+      "start_sample": 0,
+      "end_sample": 136533,
+      "sample_rate": 16000,
+      "feature_dim": 35,
+      "file": "music1.wav",
+      "exposure": "EXPOSED_DUNHUANG_TRANSFER_DEVELOPMENT; not independent test"
+    }
+  ],
+  "checkpoint": {
+    "epoch": 299,
+    "global_step": 13200,
+    "decoder_tensors": 350,
+    "decoder_layers": 9,
+    "refinement_attention_layers": 0,
+    "sampling_weights": "DanceDecoder == diffusion.model; EMA not selected",
+    "strict_load": true,
+    "checkpoint_load_weights_only": true,
+    "normalizer_safe_globals": [
+      "Normalizer",
+      "MinMaxScaler"
+    ],
+    "checkpoint_sha256": "70acb4c18b6afb9d3bab825143dce42443d381f8262d8c1c84e84e0dbc6231a7",
+    "source_commit": "f38642ad67bc3402444f5f914010a911e5bd5c89",
+    "compat_alias": [
+      "pickle5 -> Python standard pickle",
+      "numpy.float -> builtin float, external worker only; no model mathematics patch"
+    ]
+  },
+  "noise_receipts": [
+    {
+      "seed": 24041,
+      "draws": 50,
+      "sha256": "c180258dd91345277c98f4777cb6fac6738ffe7e941647cd0fb568b6d39e8439",
+      "all_rows_equal": true
+    },
+    {
+      "seed": 24042,
+      "draws": 50,
+      "sha256": "79c94087e9defae741e504a5190bbb01a8177fff92bc53a696af8b9082534f16",
+      "all_rows_equal": true
+    }
+  ],
+  "generated_trajectories": 12,
+  "batched_sampler_calls": 2,
+  "all_conditions_same_soft_sampler": true,
+  "all_conditions_same_guidance_ramp": true,
+  "common_random_numbers_all_conditions": true,
+  "training_updates": 0,
+  "full_native_status": "NOT_EVALUABLE",
+  "operational_qualified": false,
+  "whole_song_generations": 0,
+  "qualification": {
+    "bidirectional_retention_groups_passed": 0,
+    "groups": 4,
+    "adapter_training_started": false,
+    "reason": "Zero-training mechanism first; no unpaired warped-source music targets or post-result budget selection"
+  },
+  "independent_checks": {
+    "code_commit": "4c89eed74ba9930d573a913fe810c1f5c054f3cb",
+    "arrays_exact": true,
+    "metrics_exact": true,
+    "audio_pcm_exact": 2,
+    "generated_trajectories": 12,
+    "replay_trajectories": 12,
+    "batched_sampler_calls": 2,
+    "replay_batched_sampler_calls": 2,
+    "common_noise_draws_per_seed": 50,
+    "masks_matched": true,
+    "optimizer_steps": 0,
+    "full_native_status": "NOT_EVALUABLE",
+    "operational_qualified": false,
+    "whole_song_generations": 0
+  },
+  "media": {
+    "code_commit": "4c89eed74ba9930d573a913fe810c1f5c054f3cb",
+    "records": [
+      {
+        "file": "SourceA.mp4",
+        "key": "SourceA",
+        "video": {
+          "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/lodge_reference_r24_01/videos/SourceA.mp4",
+          "sha256": "823c3e9d0b85a28d07ce2bd64594c8d13218e934a8b32274d52dd550036d374d"
+        },
+        "record": null,
+        "frames": 256,
+        "full_decode_passed": true,
+        "source_root_translation_observed": false
+      },
+      {
+        "file": "SourceB.mp4",
+        "key": "SourceB",
+        "video": {
+          "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/lodge_reference_r24_01/videos/SourceB.mp4",
+          "sha256": "ae37aafa80cc58f94c7c25c46f844e83c1294726eb7160c89b03625e1d72d5f0"
+        },
+        "record": null,
+        "frames": 256,
+        "full_decode_passed": true,
+        "source_root_translation_observed": false
+      },
+      {
+        "file": "s24041_m0_e-1.mp4",
+        "key": "s24041_m0_e-1",
+        "video": {
+          "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/lodge_reference_r24_01/videos/s24041_m0_e-1.mp4",
+          "sha256": "e7aee0f829b05e7d524744fb946ef5b4f3f43bdedae67a615d15e1695d683449"
+        },
+        "record": {
+          "seed": 24041,
+          "index": 0,
+          "music": 0,
+          "event": -1,
+          "event_uid": null,
+          "source_pose_unprompted_rad": [
+            0.6132373054030592,
+            0.6646705832462174
+          ],
+          "source_pose_cue_rad": [
+            0.645185858135206,
+            0.7544866801614344
+          ],
+          "source_upper_unprompted_rad": [
+            0.8852945364675305,
+            0.9771811925562524
+          ],
+          "activity_mps": 0.44507548213005066,
+          "jerk_p95_mps3": 355.1925506591797,
+          "jerk_max_mps3": 7061.64208984375,
+          "full_native_status": "NOT_EVALUABLE",
+          "representation": "SMPLX22_COMMON_GEOMETRY_ONLY",
+          "operational_qualified": false,
+          "frequency": {
+            "low_frequency_velocity_energy_fraction": 0.9061426276528367,
+            "high_frequency_velocity_energy_fraction": 0.007856264334620106,
+            "bands_hz": {
+              "low": [
+                0,
+                3
+              ],
+              "high": [
+                6,
+                15
+              ]
+            },
+            "root_relative": true,
+            "window": "Hann after temporal mean removal",
+            "motion_modified": false
+          },
+          "root_observed": false,
+          "C4_observed": false
+        },
+        "frames": 256,
+        "full_decode_passed": true,
+        "source_root_translation_observed": false
+      },
+      {
+        "file": "s24041_m0_e0.mp4",
+        "key": "s24041_m0_e0",
+        "video": {
+          "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/lodge_reference_r24_01/videos/s24041_m0_e0.mp4",
+          "sha256": "24afd7f52020bb7c094e636688ef93a48fb8ab39fa2a0dc35be57f896868167d"
+        },
+        "record": {
+          "seed": 24041,
+          "index": 1,
+          "music": 0,
+          "event": 0,
+          "event_uid": "evt_8d8b702c4fcdd8773c30e13d",
+          "source_pose_unprompted_rad": [
+            0.5253017437951655,
+            0.6435919258862155
+          ],
+          "source_pose_cue_rad": [
+            0.2639645338451472,
+            0.6241708544110323
+          ],
+          "source_upper_unprompted_rad": [
+            0.7534886669729942,
+            0.8949887123883867
+          ],
+          "activity_mps": 0.6092178821563721,
+          "jerk_p95_mps3": 570.9600830078125,
+          "jerk_max_mps3": 6547.16259765625,
+          "full_native_status": "NOT_EVALUABLE",
+          "representation": "SMPLX22_COMMON_GEOMETRY_ONLY",
+          "operational_qualified": false,
+          "frequency": {
+            "low_frequency_velocity_energy_fraction": 0.8832656692691652,
+            "high_frequency_velocity_energy_fraction": 0.017650869968523226,
+            "bands_hz": {
+              "low": [
+                0,
+                3
+              ],
+              "high": [
+                6,
+                15
+              ]
+            },
+            "root_relative": true,
+            "window": "Hann after temporal mean removal",
+            "motion_modified": false
+          },
+          "root_observed": false,
+          "C4_observed": false
+        },
+        "frames": 256,
+        "full_decode_passed": true,
+        "source_root_translation_observed": false
+      },
+      {
+        "file": "s24041_m0_e1.mp4",
+        "key": "s24041_m0_e1",
+        "video": {
+          "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/lodge_reference_r24_01/videos/s24041_m0_e1.mp4",
+          "sha256": "98ad9ee6e27d93a4a28675ee648c3728d0d2a3ed2b23a4dc63f9700df292fda1"
+        },
+        "record": {
+          "seed": 24041,
+          "index": 2,
+          "music": 0,
+          "event": 1,
+          "event_uid": "evt_ffa5a1585b111af31985a68e",
+          "source_pose_unprompted_rad": [
+            0.582148508800664,
+            0.5702102008366081
+          ],
+          "source_pose_cue_rad": [
+            0.5533302512031677,
+            0.3407235111189226
+          ],
+          "source_upper_unprompted_rad": [
+            0.7884021327344272,
+            0.822647272704268
+          ],
+          "activity_mps": 0.6304600834846497,
+          "jerk_p95_mps3": 560.3899536132812,
+          "jerk_max_mps3": 6726.78271484375,
+          "full_native_status": "NOT_EVALUABLE",
+          "representation": "SMPLX22_COMMON_GEOMETRY_ONLY",
+          "operational_qualified": false,
+          "frequency": {
+            "low_frequency_velocity_energy_fraction": 0.8370575457776402,
+            "high_frequency_velocity_energy_fraction": 0.026239588606903553,
+            "bands_hz": {
+              "low": [
+                0,
+                3
+              ],
+              "high": [
+                6,
+                15
+              ]
+            },
+            "root_relative": true,
+            "window": "Hann after temporal mean removal",
+            "motion_modified": false
+          },
+          "root_observed": false,
+          "C4_observed": false
+        },
+        "frames": 256,
+        "full_decode_passed": true,
+        "source_root_translation_observed": false
+      },
+      {
+        "file": "s24041_m1_e-1.mp4",
+        "key": "s24041_m1_e-1",
+        "video": {
+          "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/lodge_reference_r24_01/videos/s24041_m1_e-1.mp4",
+          "sha256": "500a18b30f99819a990812b22f65067bf6327fc28e252c173b4bd27728daefbb"
+        },
+        "record": {
+          "seed": 24041,
+          "index": 3,
+          "music": 1,
+          "event": -1,
+          "event_uid": null,
+          "source_pose_unprompted_rad": [
+            0.6135908962631521,
+            0.6816620766344735
+          ],
+          "source_pose_cue_rad": [
+            0.6626245273675002,
+            0.7642188095547059
+          ],
+          "source_upper_unprompted_rad": [
+            0.93620330886914,
+            1.0356816517108376
+          ],
+          "activity_mps": 0.3042142987251282,
+          "jerk_p95_mps3": 205.43682861328125,
+          "jerk_max_mps3": 2247.18603515625,
+          "full_native_status": "NOT_EVALUABLE",
+          "representation": "SMPLX22_COMMON_GEOMETRY_ONLY",
+          "operational_qualified": false,
+          "frequency": {
+            "low_frequency_velocity_energy_fraction": 0.9069320927176231,
+            "high_frequency_velocity_energy_fraction": 0.0034900118725189125,
+            "bands_hz": {
+              "low": [
+                0,
+                3
+              ],
+              "high": [
+                6,
+                15
+              ]
+            },
+            "root_relative": true,
+            "window": "Hann after temporal mean removal",
+            "motion_modified": false
+          },
+          "root_observed": false,
+          "C4_observed": false
+        },
+        "frames": 256,
+        "full_decode_passed": true,
+        "source_root_translation_observed": false
+      },
+      {
+        "file": "s24041_m1_e0.mp4",
+        "key": "s24041_m1_e0",
+        "video": {
+          "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/lodge_reference_r24_01/videos/s24041_m1_e0.mp4",
+          "sha256": "2dedc73ce8ffc40dc39d357e32e6ef7d220e6e0928d5c72faed93029f9fdd813"
+        },
+        "record": {
+          "seed": 24041,
+          "index": 4,
+          "music": 1,
+          "event": 0,
+          "event_uid": "evt_8d8b702c4fcdd8773c30e13d",
+          "source_pose_unprompted_rad": [
+            0.4996258919595385,
+            0.6336271319823912
+          ],
+          "source_pose_cue_rad": [
+            0.26785143116612004,
+            0.620492931029739
+          ],
+          "source_upper_unprompted_rad": [
+            0.7851387984419717,
+            0.9177879467411091
+          ],
+          "activity_mps": 0.4581727385520935,
+          "jerk_p95_mps3": 455.8084259033203,
+          "jerk_max_mps3": 5228.51220703125,
+          "full_native_status": "NOT_EVALUABLE",
+          "representation": "SMPLX22_COMMON_GEOMETRY_ONLY",
+          "operational_qualified": false,
+          "frequency": {
+            "low_frequency_velocity_energy_fraction": 0.8338453548872184,
+            "high_frequency_velocity_energy_fraction": 0.02300373110347429,
+            "bands_hz": {
+              "low": [
+                0,
+                3
+              ],
+              "high": [
+                6,
+                15
+              ]
+            },
+            "root_relative": true,
+            "window": "Hann after temporal mean removal",
+            "motion_modified": false
+          },
+          "root_observed": false,
+          "C4_observed": false
+        },
+        "frames": 256,
+        "full_decode_passed": true,
+        "source_root_translation_observed": false
+      },
+      {
+        "file": "s24041_m1_e1.mp4",
+        "key": "s24041_m1_e1",
+        "video": {
+          "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/lodge_reference_r24_01/videos/s24041_m1_e1.mp4",
+          "sha256": "06eb3c7dd6bd9b92c4721917c9eee4412b8260c09786c3362688fe358c2f1fe8"
+        },
+        "record": {
+          "seed": 24041,
+          "index": 5,
+          "music": 1,
+          "event": 1,
+          "event_uid": "evt_ffa5a1585b111af31985a68e",
+          "source_pose_unprompted_rad": [
+            0.588222109160057,
+            0.6005145283842783
+          ],
+          "source_pose_cue_rad": [
+            0.5634697328524096,
+            0.3546678997853338
+          ],
+          "source_upper_unprompted_rad": [
+            0.8530787502475959,
+            0.8921823949646183
+          ],
+          "activity_mps": 0.49546319246292114,
+          "jerk_p95_mps3": 563.8188781738281,
+          "jerk_max_mps3": 23753.673828125,
+          "full_native_status": "NOT_EVALUABLE",
+          "representation": "SMPLX22_COMMON_GEOMETRY_ONLY",
+          "operational_qualified": false,
+          "frequency": {
+            "low_frequency_velocity_energy_fraction": 0.5914231923146335,
+            "high_frequency_velocity_energy_fraction": 0.20170210692219237,
+            "bands_hz": {
+              "low": [
+                0,
+                3
+              ],
+              "high": [
+                6,
+                15
+              ]
+            },
+            "root_relative": true,
+            "window": "Hann after temporal mean removal",
+            "motion_modified": false
+          },
+          "root_observed": false,
+          "C4_observed": false
+        },
+        "frames": 256,
+        "full_decode_passed": true,
+        "source_root_translation_observed": false
+      },
+      {
+        "file": "s24042_m0_e-1.mp4",
+        "key": "s24042_m0_e-1",
+        "video": {
+          "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/lodge_reference_r24_01/videos/s24042_m0_e-1.mp4",
+          "sha256": "c743dba7929d67bf6d6d6d5fb84997ef0dfbd9e6ebe238e885936de92a616c83"
+        },
+        "record": {
+          "seed": 24042,
+          "index": 0,
+          "music": 0,
+          "event": -1,
+          "event_uid": null,
+          "source_pose_unprompted_rad": [
+            0.5902696771803703,
+            0.6467226980333102
+          ],
+          "source_pose_cue_rad": [
+            0.6212689775392204,
+            0.729975420781503
+          ],
+          "source_upper_unprompted_rad": [
+            0.7969440652094955,
+            0.8939379818576529
+          ],
+          "activity_mps": 0.4495733380317688,
+          "jerk_p95_mps3": 327.793212890625,
+          "jerk_max_mps3": 1839.5662841796875,
+          "full_native_status": "NOT_EVALUABLE",
+          "representation": "SMPLX22_COMMON_GEOMETRY_ONLY",
+          "operational_qualified": false,
+          "frequency": {
+            "low_frequency_velocity_energy_fraction": 0.908078758896301,
+            "high_frequency_velocity_energy_fraction": 0.006685071481368947,
+            "bands_hz": {
+              "low": [
+                0,
+                3
+              ],
+              "high": [
+                6,
+                15
+              ]
+            },
+            "root_relative": true,
+            "window": "Hann after temporal mean removal",
+            "motion_modified": false
+          },
+          "root_observed": false,
+          "C4_observed": false
+        },
+        "frames": 256,
+        "full_decode_passed": true,
+        "source_root_translation_observed": false
+      },
+      {
+        "file": "s24042_m0_e0.mp4",
+        "key": "s24042_m0_e0",
+        "video": {
+          "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/lodge_reference_r24_01/videos/s24042_m0_e0.mp4",
+          "sha256": "cab9a81b6157528738a5fe31443ee9083181bf929a4057d540b0c7e52295c84c"
+        },
+        "record": {
+          "seed": 24042,
+          "index": 1,
+          "music": 0,
+          "event": 0,
+          "event_uid": "evt_8d8b702c4fcdd8773c30e13d",
+          "source_pose_unprompted_rad": [
+            0.5031226611348418,
+            0.6202296263970627
+          ],
+          "source_pose_cue_rad": [
+            0.2623595623294449,
+            0.6246289153694907
+          ],
+          "source_upper_unprompted_rad": [
+            0.6874084029401564,
+            0.8285290114280327
+          ],
+          "activity_mps": 0.6584196090698242,
+          "jerk_p95_mps3": 563.5456390380859,
+          "jerk_max_mps3": 4740.65966796875,
+          "full_native_status": "NOT_EVALUABLE",
+          "representation": "SMPLX22_COMMON_GEOMETRY_ONLY",
+          "operational_qualified": false,
+          "frequency": {
+            "low_frequency_velocity_energy_fraction": 0.8857300944516662,
+            "high_frequency_velocity_energy_fraction": 0.014892010288531035,
+            "bands_hz": {
+              "low": [
+                0,
+                3
+              ],
+              "high": [
+                6,
+                15
+              ]
+            },
+            "root_relative": true,
+            "window": "Hann after temporal mean removal",
+            "motion_modified": false
+          },
+          "root_observed": false,
+          "C4_observed": false
+        },
+        "frames": 256,
+        "full_decode_passed": true,
+        "source_root_translation_observed": false
+      },
+      {
+        "file": "s24042_m0_e1.mp4",
+        "key": "s24042_m0_e1",
+        "video": {
+          "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/lodge_reference_r24_01/videos/s24042_m0_e1.mp4",
+          "sha256": "b50bde2bd0f53861afc39f6dedf5ac1418bbc6eee2b9e1174729deafc235b657"
+        },
+        "record": {
+          "seed": 24042,
+          "index": 2,
+          "music": 0,
+          "event": 1,
+          "event_uid": "evt_ffa5a1585b111af31985a68e",
+          "source_pose_unprompted_rad": [
+            0.5711909223797674,
+            0.5475955091766901
+          ],
+          "source_pose_cue_rad": [
+            0.5559390919514564,
+            0.34007167319278875
+          ],
+          "source_upper_unprompted_rad": [
+            0.7294587141351067,
+            0.7556332069945363
+          ],
+          "activity_mps": 0.6560607552528381,
+          "jerk_p95_mps3": 726.0875549316406,
+          "jerk_max_mps3": 11863.072265625,
+          "full_native_status": "NOT_EVALUABLE",
+          "representation": "SMPLX22_COMMON_GEOMETRY_ONLY",
+          "operational_qualified": false,
+          "frequency": {
+            "low_frequency_velocity_energy_fraction": 0.7369006655352223,
+            "high_frequency_velocity_energy_fraction": 0.09171569892128946,
+            "bands_hz": {
+              "low": [
+                0,
+                3
+              ],
+              "high": [
+                6,
+                15
+              ]
+            },
+            "root_relative": true,
+            "window": "Hann after temporal mean removal",
+            "motion_modified": false
+          },
+          "root_observed": false,
+          "C4_observed": false
+        },
+        "frames": 256,
+        "full_decode_passed": true,
+        "source_root_translation_observed": false
+      },
+      {
+        "file": "s24042_m1_e-1.mp4",
+        "key": "s24042_m1_e-1",
+        "video": {
+          "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/lodge_reference_r24_01/videos/s24042_m1_e-1.mp4",
+          "sha256": "885af57a19721a9bae6aa4893f9b4c96a6739607231248d12f571e83878f02ab"
+        },
+        "record": {
+          "seed": 24042,
+          "index": 3,
+          "music": 1,
+          "event": -1,
+          "event_uid": null,
+          "source_pose_unprompted_rad": [
+            0.6228172639158369,
+            0.697050438052062
+          ],
+          "source_pose_cue_rad": [
+            0.6475502855370061,
+            0.730951884024666
+          ],
+          "source_upper_unprompted_rad": [
+            0.9270407246775296,
+            1.040376006043141
+          ],
+          "activity_mps": 0.290021687746048,
+          "jerk_p95_mps3": 191.08350372314453,
+          "jerk_max_mps3": 4459.8740234375,
+          "full_native_status": "NOT_EVALUABLE",
+          "representation": "SMPLX22_COMMON_GEOMETRY_ONLY",
+          "operational_qualified": false,
+          "frequency": {
+            "low_frequency_velocity_energy_fraction": 0.9534349126350323,
+            "high_frequency_velocity_energy_fraction": 0.0023921903252817397,
+            "bands_hz": {
+              "low": [
+                0,
+                3
+              ],
+              "high": [
+                6,
+                15
+              ]
+            },
+            "root_relative": true,
+            "window": "Hann after temporal mean removal",
+            "motion_modified": false
+          },
+          "root_observed": false,
+          "C4_observed": false
+        },
+        "frames": 256,
+        "full_decode_passed": true,
+        "source_root_translation_observed": false
+      },
+      {
+        "file": "s24042_m1_e0.mp4",
+        "key": "s24042_m1_e0",
+        "video": {
+          "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/lodge_reference_r24_01/videos/s24042_m1_e0.mp4",
+          "sha256": "348994fdf9c7f413d59ffcd2f7c0ff55066f4cc470003f2a28b8e69df8c42779"
+        },
+        "record": {
+          "seed": 24042,
+          "index": 4,
+          "music": 1,
+          "event": 0,
+          "event_uid": "evt_8d8b702c4fcdd8773c30e13d",
+          "source_pose_unprompted_rad": [
+            0.5155039440428245,
+            0.6464048970280685
+          ],
+          "source_pose_cue_rad": [
+            0.2655533338904576,
+            0.6183305373155445
+          ],
+          "source_upper_unprompted_rad": [
+            0.7582040302722373,
+            0.9089566289745493
+          ],
+          "activity_mps": 0.5335489511489868,
+          "jerk_p95_mps3": 443.18272399902344,
+          "jerk_max_mps3": 6997.73095703125,
+          "full_native_status": "NOT_EVALUABLE",
+          "representation": "SMPLX22_COMMON_GEOMETRY_ONLY",
+          "operational_qualified": false,
+          "frequency": {
+            "low_frequency_velocity_energy_fraction": 0.8985182012980638,
+            "high_frequency_velocity_energy_fraction": 0.005333365742125165,
+            "bands_hz": {
+              "low": [
+                0,
+                3
+              ],
+              "high": [
+                6,
+                15
+              ]
+            },
+            "root_relative": true,
+            "window": "Hann after temporal mean removal",
+            "motion_modified": false
+          },
+          "root_observed": false,
+          "C4_observed": false
+        },
+        "frames": 256,
+        "full_decode_passed": true,
+        "source_root_translation_observed": false
+      },
+      {
+        "file": "s24042_m1_e1.mp4",
+        "key": "s24042_m1_e1",
+        "video": {
+          "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/lodge_reference_r24_01/videos/s24042_m1_e1.mp4",
+          "sha256": "387f9546af718170ca2c74aa4e497a7acbf71c8e974e1db697d8b6e52b198574"
+        },
+        "record": {
+          "seed": 24042,
+          "index": 5,
+          "music": 1,
+          "event": 1,
+          "event_uid": "evt_ffa5a1585b111af31985a68e",
+          "source_pose_unprompted_rad": [
+            0.5918981766596036,
+            0.6099601427679405
+          ],
+          "source_pose_cue_rad": [
+            0.5618023573581049,
+            0.35671962386253453
+          ],
+          "source_upper_unprompted_rad": [
+            0.8465442200602602,
+            0.8870591266902282
+          ],
+          "activity_mps": 0.49752405285835266,
+          "jerk_p95_mps3": 496.8088684082031,
+          "jerk_max_mps3": 32425.134765625,
+          "full_native_status": "NOT_EVALUABLE",
+          "representation": "SMPLX22_COMMON_GEOMETRY_ONLY",
+          "operational_qualified": false,
+          "frequency": {
+            "low_frequency_velocity_energy_fraction": 0.5613320238417121,
+            "high_frequency_velocity_energy_fraction": 0.21549589722037124,
+            "bands_hz": {
+              "low": [
+                0,
+                3
+              ],
+              "high": [
+                6,
+                15
+              ]
+            },
+            "root_relative": true,
+            "window": "Hann after temporal mean removal",
+            "motion_modified": false
+          },
+          "root_observed": false,
+          "C4_observed": false
+        },
+        "frames": 256,
+        "full_decode_passed": true,
+        "source_root_translation_observed": false
+      }
+    ],
+    "common_camera_all_conditions": true,
+    "motion_smoothing": false,
+    "live_controls_verified": false
+  }
+}

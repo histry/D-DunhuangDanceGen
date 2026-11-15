@@ -1,0 +1,36 @@
+{
+  "collection_commit": "4c89eed74ba9930d573a913fe810c1f5c054f3cb",
+  "execution_commit": "8184273d838a6c998ac56406cef3351a8fd71a85",
+  "evidence": {
+    "independent_checks.json": "804ab9abbbcb25553c6b7baba9a1c479f450c33b37a897cc4716967a04d10865",
+    "videos/protocol.json": "ad47ecf7e4d27b5857a6e7928676b54c3f65f505013b3e805264969eb5b6f189",
+    "main/result.json": "b2dce913b8446a2873067241355c62dbc7b88bc86fe6aefcb5cf62fc5756e856",
+    "main/protocol.json": "c0b4363a797c1be5218b80c20b9864c7dec75da2078e01a8792ae5e3d33cddbe",
+    "replay/result.json": "b2dce913b8446a2873067241355c62dbc7b88bc86fe6aefcb5cf62fc5756e856",
+    "replay/protocol.json": "10f4880ff435b7d8304d951d054e2cbcd653c674b38714d14223e03743bd1ed1"
+  },
+  "summary_sha256": "b61548a9fa2fbe5e6d7c31df269e8ceec1cd04e6c8218034f598bf99d26e971b",
+  "receipts": {
+    "outputs/lodge_reference_r24_01_receipts": {
+      "execution_commit.txt": "4398426793e842a249c00f278d523d553a27e913447d1cd2ca0baee421621061",
+      "phase.txt": "d3be030801b90ea8057d3997d9845c7f850cc7b784450645d5ec2811cc927d7a",
+      "started_utc.txt": "1fecb6b8faed5b0b06394e4eb3f1d7060d03c1ae5913b761ea1be9e2c6f7726c",
+      "pytest.log": "5d0aed43fdd34bbf1d2b3ac316164b23a57e3b8d39e70376c07f6888fb77df9f",
+      "edge_tests.log": "59d59ec09a35ac7c589e44b6c2f55b3f2a2091017437c76532bdcb41d32ea4cd",
+      "exit_status.txt": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "finished_utc.txt": "8be0d69d968ba5ed4bd2141244ef62b06fff7590fa46ea650f315b13f4440f13"
+    },
+    "outputs/lodge_reference_r24_01_media_receipts": {
+      "execution_commit.txt": "15141e289f9d6ebef945f4c0c51f8c76ce53433a59942df3bf258e40d8e4cb66",
+      "phase.txt": "d3be030801b90ea8057d3997d9845c7f850cc7b784450645d5ec2811cc927d7a",
+      "started_utc.txt": "52e9bc21950c552cc2aeee7000c3c20d9dba708070e94c422c47326980b5df76",
+      "exit_status.txt": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "finished_utc.txt": "76ecc9934388798b9e20295652fda0c29c795282ef29c0eaa61a27fc3359ef7d"
+    }
+  },
+  "exit_status": 0,
+  "optimizer_steps": 0,
+  "whole_song_generations": 0,
+  "temporary_ssh_files_created": 0,
+  "temporary_ssh_files_remaining": 0
+}
