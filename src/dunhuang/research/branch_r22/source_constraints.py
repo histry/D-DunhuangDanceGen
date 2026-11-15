@@ -41,7 +41,8 @@ def run(root,out,replay=None):
         rows.append(dict(case=r["case"],role=r["role"],source_group=r["left"]["source_group"],variants=variants,
             represented_source_native_ok=rp["ok"],represented_source_reasons=rp["reasons"],
             represented_source_readouts={k:rp["audit"][k] for k in ("joint_jerk_mps3_max","joint_jerk_window_p95_max_mps3","foot_skate_mps_p95","foot_support_drift_m_p95","root_horizontal_drift_speed_mps")},
-            exact_encoded_target_is_feasible_witness=bool(rp["ok"])))
+            encoded_target_inside_sampler_clip=bool((abs(z["encoded"])<=1).all()),
+            exact_encoded_target_is_feasible_witness=bool(rp["ok"] and (abs(z["encoded"])<=1).all()),network_reachability_proven=False))
     result=dict(records=rows,scope="SUPPLEMENTAL_SOURCE_ONLY_DIAGNOSTIC; no generation read, no population or threshold changes",
         represented_source_native_reports=28,optimizer_steps=0,code_commit=commit(),whole_song_generations=0,operational_qualified=False)
     if replay:assert result==read(replay)
