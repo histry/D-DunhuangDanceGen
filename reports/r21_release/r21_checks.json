@@ -1,0 +1,21 @@
+{
+  "code_commit": "4d4441eeea805229377e5e3f4eaa6f8d6fa3f788",
+  "array_bundles_exact": 219,
+  "update_pairs_exact": 21,
+  "training_optimizer_steps": 6600,
+  "replay_optimizer_steps": 0,
+  "source_records": 28,
+  "train_groups": 12,
+  "dev_exposed_groups": 4,
+  "first_evaluation_sampler_calls": 126,
+  "cache_sampler_calls": 24,
+  "replay_sampler_calls_exact": 150,
+  "native_arrays_exact": 248,
+  "physical_reports_exact": 124,
+  "source_arrays_rebuilt": 28,
+  "source_audio_pcm_exact": 28,
+  "frozen_changed_paths": [],
+  "F_executed": true,
+  "whole_song_generations": 0,
+  "operational_qualified": false
+}
