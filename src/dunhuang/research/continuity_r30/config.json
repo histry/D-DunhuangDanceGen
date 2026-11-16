@@ -1,0 +1,52 @@
+{
+  "schema": "r30_continuous_reference_v1",
+  "baseline": "ff07a2201a5569a1931cdb31632e34f5ad8b7561",
+  "r29": "outputs/time_r29_01",
+  "r29_manifest_sha256": "45cae7a710c033a47100394af4297bac81a4a5429bdd5b2f47b46e6e2fe969be",
+  "times": [
+    999,
+    519,
+    119,
+    19
+  ],
+  "fps": 30,
+  "train_steps": 1200,
+  "learning_rate": 0.0002,
+  "snapshot_steps": [
+    0,
+    1,
+    599,
+    1199
+  ],
+  "curve_updates": [
+    0,
+    600,
+    1200
+  ],
+  "train_cases": [
+    92,
+    48,
+    32,
+    0
+  ],
+  "holdout_cases": [
+    4,
+    8,
+    12,
+    16
+  ],
+  "temporal_calibration_steps": [
+    0,
+    1,
+    599,
+    1199
+  ],
+  "temporal_loss_fraction_per_family": 0.1,
+  "temporal_weight_bounds": [
+    0.000001,
+    1
+  ],
+  "whole_song_generations": 0,
+  "operational_qualified": false,
+  "human_reviewed": false
+}
