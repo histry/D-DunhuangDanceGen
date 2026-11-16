@@ -58,7 +58,26 @@ def test_region_mask_keeps_unknowns_out_of_truth_and_counts_boundary_templates()
     (loss+dyn).backward();assert torch.isfinite(pred.grad).all()
     assert pred.grad[:,10,7:].abs().sum()==0
 
-@pytest.mark.parametrize("name",["common","model","data","objective","prepare","train","metrics","evaluate"])
+@pytest.mark.parametrize("name",["common","model","data","objective","prepare","train","metrics","evaluate","context_contract","context_train","context_eval"])
 def test_imports(name):
     import importlib
     importlib.import_module("dunhuang.research.coverage_r34."+name)
+
+def test_context_never_reads_gap_and_preserves_global_clock():
+    from dunhuang.research.coverage_r34.context_contract import context
+    x=torch.rand(2,256,139)*.5;y=x.clone();y[:,80:144]=100
+    a=context(x,[80,144],window_origin=[1000,2000]);b=context(y,[80,144],window_origin=[1000,2000])
+    assert torch.equal(a.encoded_input(),b.encoded_input())
+    assert a.encoded_input().shape==(2,16,285)
+    assert torch.equal(a.global_frame_index,a.frame_index+torch.tensor([1000,2000])[:,None])
+    a.frame_index[0,0]=100
+    with pytest.raises(ValueError):a.validate()
+
+def test_partial_and_wrong_context_root_does_not_become_observed():
+    from dunhuang.research.coverage_r34.context_contract import context
+    x=torch.rand(2,256,139)
+    p=context(x,[64,160],partial_body=True);assert not p.valid[:,:,:7].any()
+    assert torch.isnan(p.values[:,:,:7]).all() and torch.isfinite(p.encoded_input()).all()
+    q=context(x,[64,160],"wrong");assert not q.valid[:,:,:7].any()
+    assert torch.equal(q.values[0,:,7:],x[1,q.frame_index[0],7:])
+    left=context(x,[64,160],"no_left");assert not left.valid[:,:8].any() and left.valid[:,8:].all()

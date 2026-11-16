@@ -16,7 +16,7 @@ class WindowSource:
     def branch(self):return "change"
     def validate(self):
         x=self.values["features"];valid=self.values["valid"]
-        if x.ndim!=4 or x.shape[1:]!=(256,22,9) or valid.shape!=x.shape[:-1] or valid.dtype!=torch.bool:raise ValueError("Full observed body packet required")
+        if x.ndim!=4 or x.shape[2:]!=(22,9) or x.shape[1]<2 or valid.shape!=x.shape[:-1] or valid.dtype!=torch.bool:raise ValueError("Explicit-length observed body packet required")
         if len(self.source_uids)!=len(x) or not all(self.source_uids) or not torch.isfinite(x[valid]).all():raise ValueError("Source identities/finite observations required")
         return self
 

@@ -48,5 +48,7 @@
   "context_training_requires_coverage": true,
   "human_reviewed": false,
   "operational_qualified": false,
-  "whole_song_generations": 0
+  "whole_song_generations": 0,
+  "visual_first": true,
+  "defer_context_training_for_visual_review": true
 }
