@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>敦煌舞 · 规划与生成对照</title><link rel="stylesheet" href="style.css"></head>
+<body><header><div class="eyebrow">DUNHUANG DANCE · RESEARCH VIEWER</div><h1>从编排意图，到实际动作</h1><p>听同一段音乐，比较选中的来源与模型真正生成的动作。研究候选尚未获得整曲或完整物理资格。</p></header>
+<main><section class="transport"><div class="row"><label>音乐 / 研究片段 <select id="case" aria-label="音乐或研究片段"></select></label>
+<button id="play">播放音乐</button><button id="prev">前一帧</button><button id="next">后一帧</button>
+<label>倍速 <select id="rate" aria-label="播放倍速"><option value=".25">0.25×</option><option value=".5">0.5×</option><option value="1" selected>1×</option><option value="1.5">1.5×</option><option value="2">2×</option></select></label>
+<label>跳转帧 <input id="frameInput" aria-label="跳转音乐帧" type="number" min="0" step="1" value="0"></label><button id="jump">跳转</button><span id="clock" aria-live="off">加载真实数据…</span></div>
+<input id="scrub" aria-label="音乐时间线帧" type="range" min="0" max="255" value="0" step="1">
+<audio id="audio" preload="metadata"></audio><p id="clockInfo"></p></section>
+<nav role="tablist" aria-label="两个模块"><button id="tabPlan" role="tab">Module I · 编排计划</button><button id="tabGen" role="tab">Module II · 实际生成</button></nav>
+<div id="notice" class="notice">正在解压本地骨架显示数据；不连接外部网络。</div>
+<section class="timelineBox"><div class="row spread"><h2>共同音乐时间线</h2><span id="eventNow"></span></div>
+<canvas id="timeline" width="1400" height="150" aria-label="整曲波形拍点与事件槽位"></canvas><p class="hint">点击波形或色块定位音乐帧。色块是计划事件；细线是检测拍点；选中边框与当前音乐游标分别显示。</p></section>
+<section id="planning"><div class="planGrid"><article><h2>编排计划预演</h2><canvas id="rehearsal" width="600" height="450" aria-label="整曲计划骨架预演"></canvas><p id="rehearsalCaption"></p><p class="warning">这是来源参考的时间安排。事件边界保留切换，没有把片段排列当作已连续生成。</p></article>
+<article><h2 id="selectedTitle">选中事件</h2><div class="row"><label>事件 <select id="event" aria-label="选择计划事件"></select></label><button id="showGen">查看同事件生成</button></div>
+<div id="candidates"></div><details><summary>时间不可行原因与候选覆盖</summary><pre id="rejections"></pre></details>
+<h3>E1-W · 来源帧到音乐帧</h3><canvas id="warp" width="650" height="190" aria-label="来源音乐时间映射"></canvas><p id="warpCaption"></p></article></div>
+<div class="row"><label>候选预览 <select id="candidate" aria-label="候选动作预览"></select></label><button id="originalPlay">独立原速播放</button><span class="hint">原速为30 FPS，暂停主音乐后独立播放，不随音乐变速。</span></div>
+<div class="twocol"><article><h3>原始来源 · 原速独立时钟</h3><canvas id="original" width="600" height="360"></canvas><p id="originalFrame"></p></article>
+<article><h3>按音乐映射的候选参考</h3><canvas id="aligned" width="600" height="360"></canvas><p id="alignedFrame"></p></article></div></section>
+<section id="generation" hidden><div class="row spread"><h2>同一计划、音乐与时钟的真实输出</h2><div><label>视图 <select id="view" aria-label="骨架坐标视图"><option value="world">固定世界视角</option><option value="local">局部姿态（Root-relative）</option></select></label>
+<label>基线 <select id="baseline" aria-label="冻结或历史基线"></select></label></div></div>
+<p id="genStatus" class="warning"></p><div class="threecol"><article><h3>音乐对齐的来源参考</h3><canvas id="reference" width="540" height="440"></canvas><p id="refFrame"></p></article>
+<article><h3 id="baselineTitle">冻结 R33</h3><canvas id="baselineMotion" width="540" height="440"></canvas><p id="baseFrame"></p></article>
+<article><h3>R34 · 连续覆盖候选</h3><canvas id="candidateMotion" width="540" height="440"></canvas><p id="candidateFrame"></p></article></div>
+<div id="scopeBand" class="scope"></div><p class="hint">绿色=真实来源身体观察；蓝色=来源控制；紫色=planned身体上下文。未知Root/接触不填成真值。三栏同一整数音乐帧；来源世界Root未知时只显示局部身体。</p>
+<div class="row"><label>诊断 <select id="metric" aria-label="逐帧诊断曲线"><option value="source_error">肩腕向量差 / m</option><option value="body_D2">身体 D2 / m·s⁻²</option><option value="body_jerk">身体 Jerk / m·s⁻³</option><option value="root_speed">生成 Root 速度 / m·s⁻¹</option><option value="foot_proxy">近地足部水平速度代理 / m·s⁻¹</option></select></label><span id="metricValue"></span></div>
+<canvas id="diagnostic" width="1400" height="190" aria-label="可点击逐帧诊断时间线"></canvas>
+<p class="hint">诊断可点击定位。动力学差分显示在模板末帧；无来源观测的区间不填构形误差。足部仅固定地面几何代理，静态接触UNKNOWN；Native24 NOT EVALUABLE。</p></section>
+<details class="details"><summary>实验详情、事件身份与资格</summary><pre id="details"></pre></details><footer>单一 Lodge 研究主干 · Source 与 Context 分开 · Context 本轮未训练 · 无动作平滑、贴地或逐帧世界重居中 · 三首音乐为历史曝光开发曲</footer></main>
+<script src="data.js"></script><script src="viewer.js"></script></body></html>

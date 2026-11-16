@@ -51,8 +51,8 @@ def run(cfg,root,out,replay=None):
         context_trained=False,full_song_generations=0,adjacent_event_connection_qualified=False,full_native_status="NOT_EVALUABLE_22_OF24",operational_qualified=False)
     write(out/"result.json",result);write(out/"protocol.json",dict(code_commit=commit(),config=cfg,planning=ref_file(root/"planning/songs.json"),arrays_sha256=sha(out/"arrays.npz")))
     if replay:
-        left=json.dumps(result,sort_keys=True).replace(str(out.resolve()),"<RUN>");right=json.dumps(read(Path(replay)/"result.json"),sort_keys=True).replace(str(Path(replay).resolve()),"<RUN>");assert left==right
-        same_arrays(out/"arrays.npz",Path(replay)/"arrays.npz")
+        from .verify import verify_generation
+        write(out/"replay_verification.json",verify_generation(Path(replay),out))
 
 def ref_file(p):
     from dunhuang.data.sources import ref
