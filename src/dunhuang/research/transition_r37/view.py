@@ -6,7 +6,7 @@ from dunhuang.research.complete_r36.core import read,write,sha,Library,relative_
 from .clock import source_positions
 from .evaluate import decode,curves
 
-def run(cfg,root,out,generated=None):
+def run(cfg,root,out,generated=None,source_only=False):
     root=Path(root);out=Path(out)
     if out.exists():raise ValueError('Fresh viewer directory required')
     (out/'audio').mkdir(parents=True);tracks={};cases=[];lib=Library(read('src/dunhuang/research/complete_r36/config.json')['catalog'])
@@ -15,7 +15,7 @@ def run(cfg,root,out,generated=None):
         p=np.ascontiguousarray(p,dtype='<f4');h=hashlib.sha256(p.tobytes()).hexdigest();tracks[h]=dict(shape=list(p.shape),data=base64.b64encode(p.tobytes()).decode());return h
     def body(e,ticks):return rotation_sample(lib.rotations[e['source_uid']],source_positions(e,ticks))
     def render_plan(plan):return np.concatenate([relative_fk(body(e,np.arange(*e['music_interval'])),J,parents) for e in plan['events']])
-    for s in read(root/'planning/result.json')['songs']:
+    for s in ([] if source_only else read(root/'planning/result.json')['songs']):
         plan=read(s['new_plan']);old=read(s['old_plan']);music=read(Path(cfg['r36'])/'planning'/(s['id']+'_music.json'));audio=out/'audio'/s['name'];shutil.copyfile(s['audio']['path'],audio)
         cases.append(dict(id=s['id'],kind='plan',name=s['name']+' · 内容记忆规划预演',frames=plan['frames'],audio='audio/'+audio.name,
             panels=[dict(title='R36 · 固定候选基线 · 未生成',track=track(render_plan(old))),dict(title='R37 · 来源区间记忆 · 未生成',track=track(render_plan(plan)))],
@@ -55,8 +55,8 @@ def run(cfg,root,out,generated=None):
     payload=dict(schema='r37_watchable_v1',cases=cases,tracks=tracks,parents=parents.tolist(),human_reviewed=False,operational_qualified=False)
     raw=json.dumps(payload,ensure_ascii=False,separators=(',',':'),allow_nan=False).encode();(out/'data.js').write_text('window.R36_B64="'+base64.b64encode(gzip.compress(raw,mtime=0)).decode()+'";\n',encoding='utf8')
     for f in ('index.html','viewer.js','style.css'):shutil.copyfile(Path(__file__).parent/'web'/f,out/f)
-    write(out/'protocol.json',dict(cases=len(cases),fps=30,display='ACTUAL_SAVED_STATE_FK; SOURCES_AND_PLANS_UNSMOOTHED',source_loop_default=False,whole_song_generated=False,
+    write(out/'protocol.json',dict(cases=len(cases),fps=30,display='ACTUAL_SAVED_STATE_FK; SOURCES_AND_PLANS_UNSMOOTHED',planning_included=not source_only,source_loop_default=False,whole_song_generated=False,
         files=[dict(name=str(p.relative_to(out)),bytes=p.stat().st_size,sha256=sha(p)) for p in sorted(out.rglob('*')) if p.is_file()]))
     print('R37_VIEW',len(cases),out,flush=True)
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('--root',required=True);p.add_argument('--out',required=True);p.add_argument('--generated');a=p.parse_args();run(read('src/dunhuang/research/transition_r37/config.json'),a.root,a.out,a.generated)
+    p=argparse.ArgumentParser();p.add_argument('--root',required=True);p.add_argument('--out',required=True);p.add_argument('--generated');p.add_argument('--source-and-smoothing-only',action='store_true');a=p.parse_args();run(read('src/dunhuang/research/transition_r37/config.json'),a.root,a.out,a.generated,a.source_and_smoothing_only)
