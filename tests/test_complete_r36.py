@@ -48,3 +48,23 @@ def test_training_factors_are_not_the_old_locked_pairings():
     for t in (999,519,119,19):
         assert {r['state'] for r in paired if r['t']==t}=={'actual','q_sample'}
     assert all(len(set(r['cases']))==4 for r in rows)
+
+def test_viewer_packages_multiple_generation_cases_and_both_seeds(tmp_path,monkeypatch):
+    import json,base64,gzip
+    from dunhuang.research.complete_r36 import view
+    root=tmp_path/'run';(root/'planning').mkdir(parents=True);(root/'planning/result.json').write_text('{"songs": []}');(root/'planning/catalog.json').write_text('{"units": []}')
+    parent=tmp_path/'baseline/generation';parent.mkdir(parents=True);np.savez(parent/'arrays.npz',skeleton_J22=np.zeros((22,3)),parents=np.array([-1]+[0]*21))
+    generated=tmp_path/'gen';generated.mkdir();records=[];arrays={}
+    for i in range(3):
+        key=f'case{i}';arrays[key+'_reference22']=np.zeros((256,22,3))
+        for j,arm in enumerate(('Frozen','Context','Edit')):arrays[key+'_'+arm+'_22']=np.full((2,256,22,3),i+j*.1)
+        (generated/(key+'.wav')).write_bytes(b'fixture-audio')
+        binding=dict(window_start=0,music_interval=[64,160],source_uid='fixture',source_interval=[0,96],source_memory_frames=96,context_intervals=[[56,64],[160,168]])
+        records.append(dict(key=key,name=key,binding=binding,responsible_interval=[52,172],diagnostics={},all_seed_metrics={'Edit':[{},{}]}))
+    np.savez(generated/'arrays.npz',**arrays);(generated/'result.json').write_text(json.dumps({'records':records}))
+    class EmptyLibrary:rows={}
+    monkeypatch.setattr(view,'Library',lambda _:EmptyLibrary())
+    out=tmp_path/'viewer';view.run(dict(catalog='fixture',r35=str(parent.parent)),root,out,generated)
+    text=(out/'data.js').read_text();payload=json.loads(gzip.decompress(base64.b64decode(text.split('"')[1])))
+    assert len(payload['cases'])==3
+    assert all(len(c['panels'])==4 and len(c['panels'][3]['variants'])==2 for c in payload['cases'])

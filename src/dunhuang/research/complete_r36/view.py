@@ -41,12 +41,12 @@ def run(cfg,root,out,generated=None):
             events=[dict(e,music_interval=[a-lo,b-lo])],old_events=[dict(r,music_interval=[max(0,r['source_interval'][0]-lo),min(len(full),r['source_interval'][1]-lo)]) for r in lib.rows[uid] if max(lo,r['source_interval'][0])<min(hi,r['source_interval'][1])],
             beats=[],phrases=[],repetitions=[],scope='上下文原速30FPS；绿色为新候选，橙色为旧切口；完整性仍是运动学候选',summary=dict(source_start=lo,unit=e)))
     if generated:
-        g=Path(generated);a=np.load(g/'arrays.npz');meta=read(g/'result.json')
+        g=Path(generated);generated_arrays=np.load(g/'arrays.npz');meta=read(g/'result.json')
         for row in meta['records']:
             key=row['key'];wav=out/'audio'/(key+'.wav');shutil.copyfile(g/(key+'.wav'),wav)
-            panels=[dict(title='按音乐对齐的身体参考 · Root未知',track=track(a[key+'_reference22']))]
+            panels=[dict(title='按音乐对齐的身体参考 · Root未知',track=track(generated_arrays[key+'_reference22']))]
             for arm in ('Frozen','Context','Edit'):
-                panels.append(dict(title=arm+' · 实际模型输出',track=track(a[key+'_'+arm+'_22'][0]),variants=[track(x) for x in a[key+'_'+arm+'_22']]))
+                panels.append(dict(title=arm+' · 实际模型输出',track=track(generated_arrays[key+'_'+arm+'_22'][0]),variants=[track(x) for x in generated_arrays[key+'_'+arm+'_22']]))
             binding=row['binding'];start=binding['window_start'];a,b=binding['music_interval']
             event=dict(source_uid=binding['source_uid'],source_interval=binding['source_interval'],duration_frames=binding['source_memory_frames'],music_interval=[a-start,b-start],family_uid='R35_UNKNOWN')
             cases.append(dict(id=key,kind='generation',name=row['name'],frames=256,audio='audio/'+wav.name,panels=panels,events=[event],old_events=[dict(music_interval=[x-start for x in row['responsible_interval']])],beats=[],phrases=[],repetitions=[],
