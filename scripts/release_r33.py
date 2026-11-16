@@ -126,6 +126,20 @@ def comparison(ev):
                 rows.append(row)
     return rows
 
+def source_control(ev):
+    result=[]
+    for role in ("train","held"):
+        for arm in ("Frozen","Extra","Dyn"):
+            for music in range(2):
+                for event in range(2):
+                    records={r["mode"]:r for r in ev["records"] if r["role"]==role and r["arm"]==arm and r["music"]==music and r["event"]==event}
+                    own=lambda mode:records[mode]["errors"][event]["geometry"]["body22_rad"]
+                    other=lambda mode:records[mode]["errors"][1-event]["geometry"]["body22_rad"]
+                    result.append(dict(role=role,arm=arm,music=music,event=event,correct_own_rad=own("correct"),wrong_clock_own_rad=own("wrong_clock"),swapped_own_rad=own("swapped"),
+                        correct_nearer_own_source=own("correct")<other("correct"),swapped_nearer_injected_source=other("swapped")<own("swapped"),correct_better_than_wrong_clock=own("correct")<own("wrong_clock"),
+                        correct_better_than_swap=own("correct")<own("swapped"),scope="DESCRIPTIVE_MATHEMATICAL_RANKS_NOT_INDEPENDENT_SEMANTIC_LABELS"))
+    return result
+
 def collect(root,out,receipts):
     root=Path(root);out=fresh(out)
     for name in receipts:
@@ -140,7 +154,7 @@ def collect(root,out,receipts):
         models[arm]["replay_checks"]=read(root/f"replay/{arm}/result.json")["replay_checks"]
     summary=dict(config=read("src/dunhuang/research/control_r33/config.json"),data=read(root/"data/result.json"),held=read(root/"held_compilation_v2/result.json"),
         calibration=read(root/"calibration/result.json"),models=models,evaluation=read(root/"evaluation/result.json"),checks=read(root/"independent_checks.json"),
-        media=read(root/"videos/protocol.json"),comparison=comparison(read(root/"evaluation/result.json")),scientific_manifest=ref(manifest),human_reviewed=False,operational_qualified=False,whole_song_generations=0,full_native_status="NOT_EVALUABLE_22_OF24")
+        media=read(root/"videos/protocol.json"),comparison=comparison(read(root/"evaluation/result.json")),source_control=source_control(read(root/"evaluation/result.json")),scientific_manifest=ref(manifest),human_reviewed=False,operational_qualified=False,whole_song_generations=0,full_native_status="NOT_EVALUABLE_22_OF24")
     write(out/"r33_summary.json",summary);write(out/"r33_checks.json",summary["checks"])
     failed=Path(str(root)+"_train_receipts")
     write(out/"r33_receipt.json",dict(collection_commit=commit(),summary_sha256=sha(out/"r33_summary.json"),scientific_manifest=ref(manifest),
