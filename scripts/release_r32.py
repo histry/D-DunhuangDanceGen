@@ -45,7 +45,7 @@ def verify(root):
     same_arrays(root/"evaluation/arrays.npz",root/"evaluation_replay/arrays.npz");exact+=1;calls+=ev["sampler_calls"];trajectories+=ev["generated_trajectories"]
     music=read(root/"music_probe/result.json");assert music==read(root/"music_probe_replay/result.json")
     same_arrays(root/"music_probe/arrays.npz",root/"music_probe_replay/arrays.npz");exact+=1;calls+=music["sampler_calls"];trajectories+=music["generated_trajectories"]
-    for oldroot in (Path("outputs/geometry_r31_02"),):
+    for oldroot in (Path("outputs/geometry_r31_02"),Path("outputs/content_r32_01")):
         m=read(oldroot/"artifacts_manifest.json")
         for name,x in m["files"].items():assert sha(oldroot/name)==x["sha256"]
     lineage=[]
