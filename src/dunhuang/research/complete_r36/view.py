@@ -48,7 +48,7 @@ def run(cfg,root,out,generated=None):
             for arm in ('Frozen','Context','Edit'):
                 panels.append(dict(title=arm+' · 实际模型输出',track=track(generated_arrays[key+'_'+arm+'_22'][0]),variants=[track(x) for x in generated_arrays[key+'_'+arm+'_22']]))
             binding=row['binding'];start=binding['window_start'];a,b=binding['music_interval']
-            event=dict(source_uid=binding['source_uid'],source_interval=binding['source_interval'],duration_frames=binding['source_memory_frames'],music_interval=[a-start,b-start],family_uid='R35_UNKNOWN')
+            event=dict(source_uid=binding['source_uid'],source_interval=binding['source_interval'],duration_frames=binding['source_interval'][1]-binding['source_interval'][0],target_duration_frames=b-a,music_interval=[a-start,b-start],family_uid='R35_UNKNOWN')
             cases.append(dict(id=key,kind='generation',name=row['name'],frames=256,audio='audio/'+wav.name,panels=panels,events=[event],old_events=[dict(music_interval=[x-start for x in row['responsible_interval']])],beats=[],phrases=[],repetitions=[],
                 contexts=[[x-start for x in interval] for interval in binding['context_intervals']],
                 scope='同一R35计划：绿为当前事件、橙为编辑范围、蓝为读取上下文；Edit含显式身体保持约束，尚未取得音乐重演或完整物理资格',summary=row,diagnostics=row['diagnostics'],

@@ -65,7 +65,7 @@ def test_viewer_packages_multiple_generation_cases_and_both_seeds(tmp_path,monke
         key=f'case{i}';arrays[key+'_reference22']=np.zeros((256,22,3))
         for j,arm in enumerate(('Frozen','Context','Edit')):arrays[key+'_'+arm+'_22']=np.full((2,256,22,3),i+j*.1)
         (generated/(key+'.wav')).write_bytes(b'fixture-audio')
-        binding=dict(window_start=0,music_interval=[64,160],source_uid='fixture',source_interval=[0,96],source_memory_frames=96,context_intervals=[[56,64],[160,168]])
+        binding=dict(window_start=0,music_interval=[64,160],source_uid='fixture',source_interval=[0,120],source_memory_frames=96,context_intervals=[[56,64],[160,168]])
         records.append(dict(key=key,name=key,binding=binding,responsible_interval=[52,172],diagnostics={},all_seed_metrics={'Edit':[{},{}]}))
     np.savez(generated/'arrays.npz',**arrays);(generated/'result.json').write_text(json.dumps({'records':records}))
     class EmptyLibrary:rows={}
@@ -74,3 +74,5 @@ def test_viewer_packages_multiple_generation_cases_and_both_seeds(tmp_path,monke
     text=(out/'data.js').read_text();payload=json.loads(gzip.decompress(base64.b64decode(text.split('"')[1])))
     assert len(payload['cases'])==3
     assert all(len(c['panels'])==4 and len(c['panels'][3]['variants'])==2 for c in payload['cases'])
+    assert payload['cases'][0]['events'][0]['duration_frames']==120
+    assert payload['cases'][0]['events'][0]['target_duration_frames']==96
