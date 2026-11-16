@@ -65,11 +65,16 @@ def run(cfg,root,out,replay=None):
     root=Path(root);out=Path(out)
     if out.exists():raise ValueError('Fresh generation directory required')
     out.mkdir(parents=True);forbid_optimizers();lib=Library(read('src/dunhuang/research/complete_r36/config.json')['catalog'])
-    parent=Path(cfg['r36']);r35=Path(cfg['r35']);old=read(r35/'generation/result.json');songs=read(root/'planning/result.json')['songs']
+    parent=Path(cfg['r36']);r35=Path(cfg['r35']);old=read(r35/'generation/result.json')
     failed=next(r for r in old['records'] if r['key']=='song1_Graph')
     old_song=next(s for s in read(r35/'planning/songs.json') if s['id']==failed['song_id'])
     old_plan=read(old_song['plan']['path']);old_boundary=old_plan['events'][failed['selected_slot']]['music_interval'][1]
-    new_song=songs[0];new_plan=read(new_song['new_plan']);legal=[e['music_interval'][0] for e in new_plan['events'][1:] if 128<=e['music_interval'][0]<=new_plan['frames']-128]
+    # Song0 can be consumed as soon as its complete plan is sealed; other songs need not block this short preview.
+    new_song=dict(read(parent/'planning/result.json')['songs'][0]);new_song['new_plan']=str(root/'planning'/(new_song['id']+'_plan.json'))
+    new_plan=read(new_song['new_plan'])
+    from .generate_contract import verify_plan
+    verify_plan(new_plan,lib)
+    legal=[e['music_interval'][0] for e in new_plan['events'][1:] if 128<=e['music_interval'][0]<=new_plan['frames']-128]
     if not legal:raise ValueError('No new-plan complete two-event boundary')
     cases=[dict(key='old_failed',song=old_song,plan=old_plan,boundary=old_boundary,selection='R36_SONG1_FIXED_FAILED_EXIT_BOUNDARY; PARENT_JERK4498.4556_VS_ENTRY970.1243'),
            dict(key='new_plan',song=new_song,plan=new_plan,boundary=legal[0],selection='FIRST_INTERNAL_BOUNDARY_WITH_COMPLETE256_MUSIC_STATIC_RULE')]
