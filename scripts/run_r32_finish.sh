@@ -11,6 +11,9 @@ trap 'code=$?;echo "$code" > "$receipt/exit_status.txt";date -u +%FT%TZ > "$rece
 echo tests > "$receipt/phase.txt"
 "$native" -m pytest -q -rs > "$receipt/pytest.log" 2>&1
 "$edge" -m pytest tests/test_content_r32.py -q > "$receipt/edge_tests.log" 2>&1
+echo matched_noise_music_probe > "$receipt/phase.txt"
+"$edge" -m dunhuang.research.content_r32.music_probe --config src/dunhuang/research/content_r32/config.json --root "$root" --out "$root/music_probe"
+"$edge" -m dunhuang.research.content_r32.music_probe --config src/dunhuang/research/content_r32/config.json --root "$root" --out "$root/music_probe_replay" --replay-from "$root/music_probe"
 echo independent_checks > "$receipt/phase.txt"
 "$native" scripts/release_r32.py --task verify --root "$root"
 echo render > "$receipt/phase.txt"

@@ -43,6 +43,8 @@ def verify(root):
     assert [x["seed"] for x in a["history"] if x["task"]=="partial"]==[x["seed"] for x in b["history"] if x["task"]=="partial"]
     ev=read(root/"evaluation/result.json");rep=read(root/"evaluation_replay/result.json");assert ev==rep and ev["fixed_Canonical_NoRef_exact"]
     same_arrays(root/"evaluation/arrays.npz",root/"evaluation_replay/arrays.npz");exact+=1;calls+=ev["sampler_calls"];trajectories+=ev["generated_trajectories"]
+    music=read(root/"music_probe/result.json");assert music==read(root/"music_probe_replay/result.json")
+    same_arrays(root/"music_probe/arrays.npz",root/"music_probe_replay/arrays.npz");exact+=1;calls+=music["sampler_calls"];trajectories+=music["generated_trajectories"]
     for oldroot in (Path("outputs/geometry_r31_02"),):
         m=read(oldroot/"artifacts_manifest.json")
         for name,x in m["files"].items():assert sha(oldroot/name)==x["sha256"]
@@ -53,7 +55,7 @@ def verify(root):
     assert len({x["source_sha256"] for x in lineage})==2 and len({x["recording_uid"] for x in lineage})==2
     changed=subprocess.check_output(["git","diff",cfg["baseline"],"--name-only","--","src/dunhuang"],text=True).splitlines()
     assert all(x.startswith("src/dunhuang/research/content_r32/") for x in changed)
-    assert exact==12 and len(checks)==23 and decoder_steps==2400 and generator_steps==1320 and calls==50 and trajectories==218
+    assert exact==13 and len(checks)==23 and decoder_steps==2400 and generator_steps==1320 and calls==53 and trajectories==236
     write(out,dict(code_commit=commit(),array_bundles_exact=exact,actual_update_pairs=23,update_checks=checks,
         decoder_optimizer_steps=decoder_steps,generator_optimizer_steps=generator_steps,replay_optimizer_steps=0,
         sampler_calls=calls,generated_trajectories=trajectories,replay_sampler_calls=calls,replay_generated_trajectories=trajectories,
@@ -93,7 +95,11 @@ def render(root,out):
         tracks[prefix+"_Source"]=data[case]["model_points"];audio[prefix+"_Source"]=wav;notes[prefix+"_Source"]="OBSERVED AIST | HISTORICAL EXPOSED SOURCE"
         for arm in ("CanonicalIO","AIST","ChangE"):
             key=prefix+"_"+arm;tracks[key]=(prior[f"{role}_CanonicalIO_correct_0_22"] if arm=="CanonicalIO" else ev[f"{role}_{arm}_correct_0_22"])[index];audio[key]=wav;notes[key]="GENERATED | SAME MUSIC / SEED / ACTION IO"
-    assert len(tracks)==36 and len(audio)==30
+    music_probe=np.load(root/"music_probe/arrays.npz")
+    for arm in ("CanonicalIO","AIST","ChangE"):
+        for m in range(2):
+            key=f"MatchedNoiseMusic_m{m}_e0_{arm}";tracks[key]=music_probe[arm+"_22"][3*m+1];audio[key]=Path(f"outputs/lodge_reference_r24_01/main/music{m}.wav");notes[key]="MUSIC INTERVENTION | SAME NOISE ACROSS TWO MUSIC | NOT COORDINATION TRUTH"
+    assert len(tracks)==42 and len(audio)==36
     c,sn=math.cos(-.45),math.sin(-.45)
     def project(p):return np.stack((c*p[...,0]+sn*p[...,2],p[...,1]-.18*(-sn*p[...,0]+c*p[...,2])),-1)
     xy=np.concatenate([project(p).reshape(-1,2) for p in tracks.values()],0);lo=xy.min(0);hi=xy.max(0);center=(lo+hi)/2
@@ -129,7 +135,7 @@ def collect(root,out,receipts):
     for arm in ("pilot","AIST","ChangE"):
         a=read(root/f"models/{arm}/result.json");models[arm]={k:v for k,v in a.items() if k!="history"};models[arm]["history_sha256"]=hashlib.sha256(json.dumps(a["history"],sort_keys=True).encode()).hexdigest();models[arm]["replay_checks"]=read(root/f"models/{arm}_replay/result.json")["replay_checks"]
     summary=dict(config=read("src/dunhuang/research/content_r32/config.json"),data=read(root/"data/result.json"),readout=read(root/"readout/result.json"),
-        models=models,evaluation=read(root/"evaluation/result.json"),checks=read(root/"independent_checks.json"),media=read(root/"videos/protocol.json"),
+        models=models,evaluation=read(root/"evaluation/result.json"),music_probe=read(root/"music_probe/result.json"),checks=read(root/"independent_checks.json"),media=read(root/"videos/protocol.json"),
         scientific_manifest=ref(manifest),human_reviewed=False,operational_qualified=False,whole_song_generations=0,full_native_status="NOT_EVALUABLE")
     write(out/"r32_summary.json",summary);write(out/"r32_checks.json",summary["checks"])
     write(out/"r32_receipt.json",dict(collection_commit=commit(),summary_sha256=sha(out/"r32_summary.json"),scientific_manifest=ref(manifest),
