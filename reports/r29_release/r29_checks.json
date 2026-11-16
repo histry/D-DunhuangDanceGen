@@ -1,0 +1,414 @@
+{
+  "code_commit": "2d00f7a94af3dc4ef6a02228c0d1f6851d671b1a",
+  "array_bundles_exact": 43,
+  "decoder_optimizer_steps": 1800,
+  "generator_optimizer_steps": 3600,
+  "replay_optimizer_steps": 0,
+  "actual_decoder_update_pairs_verified": 9,
+  "actual_generator_update_pairs_verified": 12,
+  "gradient_checks": [
+    {
+      "decoder": {
+        "actual": 0.46517089009284973,
+        "expected": 0.46517089009284973,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "decoder": {
+        "actual": 0.0010404660133644938,
+        "expected": 0.0010404660133644938,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "decoder": {
+        "actual": 0.00501579325646162,
+        "expected": 0.00501579325646162,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "decoder": {
+        "actual": 0.41388311982154846,
+        "expected": 0.41388311982154846,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "decoder": {
+        "actual": 0.09029993414878845,
+        "expected": 0.09029993414878845,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "decoder": {
+        "actual": 0.024390166625380516,
+        "expected": 0.024390166625380516,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "decoder": {
+        "actual": 0.3457537293434143,
+        "expected": 0.3457537293434143,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "decoder": {
+        "actual": 0.0016990473959594965,
+        "expected": 0.0016990473959594965,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "decoder": {
+        "actual": 0.015630509704351425,
+        "expected": 0.015630509704351425,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "encoder": {
+        "actual": 0.016535112634301186,
+        "expected": 0.016535114496946335,
+        "relative_error": 1.1264785312342081e-07
+      },
+      "input": {
+        "actual": 0.01352668646723032,
+        "expected": 0.01352668832987547,
+        "relative_error": 1.3770149084584586e-07
+      },
+      "sequence": {
+        "actual": 0.008154966868460178,
+        "expected": 0.008154967799782753,
+        "relative_error": 1.1420309650275857e-07
+      },
+      "projections": {
+        "actual": 0.0346224419772625,
+        "expected": 0.0346224419772625,
+        "relative_error": 0.0
+      },
+      "lowrank": {
+        "actual": 0.0,
+        "expected": 0.0,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "encoder": {
+        "actual": 0.0061549656093120575,
+        "expected": 0.006154964677989483,
+        "relative_error": 1.5131239290865392e-07
+      },
+      "input": {
+        "actual": 0.0055611589923501015,
+        "expected": 0.0055611589923501015,
+        "relative_error": 0.0
+      },
+      "sequence": {
+        "actual": 0.0035096625797450542,
+        "expected": 0.0035096625797450542,
+        "relative_error": 0.0
+      },
+      "projections": {
+        "actual": 0.018822938203811646,
+        "expected": 0.018822938203811646,
+        "relative_error": 0.0
+      },
+      "lowrank": {
+        "actual": 0.0,
+        "expected": 0.0,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "encoder": {
+        "actual": 0.005173621699213982,
+        "expected": 0.0051736230961978436,
+        "relative_error": 2.7002041624367217e-07
+      },
+      "input": {
+        "actual": 0.004339925944805145,
+        "expected": 0.004339927341789007,
+        "relative_error": 3.2189107141765013e-07
+      },
+      "sequence": {
+        "actual": 0.002745560836046934,
+        "expected": 0.002745561534538865,
+        "relative_error": 2.5440767659899677e-07
+      },
+      "projections": {
+        "actual": 0.003992109559476376,
+        "expected": 0.003992109559476376,
+        "relative_error": 0.0
+      },
+      "lowrank": {
+        "actual": 0.0,
+        "expected": 0.0,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "encoder": {
+        "actual": 0.006399163510650396,
+        "expected": 0.006399163976311684,
+        "relative_error": 7.276908187249401e-08
+      },
+      "input": {
+        "actual": 0.004701950121670961,
+        "expected": 0.004701950121670961,
+        "relative_error": 0.0
+      },
+      "sequence": {
+        "actual": 0.00258885370567441,
+        "expected": 0.0025888539385050535,
+        "relative_error": 8.993579753221568e-08
+      },
+      "projections": {
+        "actual": 0.005418675020337105,
+        "expected": 0.005418675020337105,
+        "relative_error": 0.0
+      },
+      "lowrank": {
+        "actual": 0.0,
+        "expected": 0.0,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "encoder": {
+        "actual": 0.03241164609789848,
+        "expected": 0.03241165354847908,
+        "relative_error": 2.2987351095123153e-07
+      },
+      "input": {
+        "actual": 0.02702927030622959,
+        "expected": 0.02702927775681019,
+        "relative_error": 2.7564852690326176e-07
+      },
+      "sequence": {
+        "actual": 0.01735386997461319,
+        "expected": 0.01735387183725834,
+        "relative_error": 1.0733311659199323e-07
+      },
+      "projections": {
+        "actual": 0.08071255683898926,
+        "expected": 0.08071255683898926,
+        "relative_error": 0.0
+      },
+      "lowrank": {
+        "actual": 0.0,
+        "expected": 0.0,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "encoder": {
+        "actual": 0.018692636862397194,
+        "expected": 0.018692636862397194,
+        "relative_error": 0.0
+      },
+      "input": {
+        "actual": 0.01663956418633461,
+        "expected": 0.01663956232368946,
+        "relative_error": 1.1194074125815572e-07
+      },
+      "sequence": {
+        "actual": 0.011221793480217457,
+        "expected": 0.011221792548894882,
+        "relative_error": 8.299231101136173e-08
+      },
+      "projections": {
+        "actual": 0.02945210412144661,
+        "expected": 0.02945210412144661,
+        "relative_error": 0.0
+      },
+      "lowrank": {
+        "actual": 0.0,
+        "expected": 0.0,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "encoder": {
+        "actual": 0.0024591756518930197,
+        "expected": 0.002459176117554307,
+        "relative_error": 1.8935662394560315e-07
+      },
+      "input": {
+        "actual": 0.0024181813932955265,
+        "expected": 0.002418181858956814,
+        "relative_error": 1.925666945118107e-07
+      },
+      "sequence": {
+        "actual": 0.0011714039137586951,
+        "expected": 0.0011714039137586951,
+        "relative_error": 0.0
+      },
+      "projections": {
+        "actual": 0.001655770931392908,
+        "expected": 0.001655770931392908,
+        "relative_error": 0.0
+      },
+      "lowrank": {
+        "actual": 0.0,
+        "expected": 0.0,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "encoder": {
+        "actual": 0.002809274010360241,
+        "expected": 0.0028092735446989536,
+        "relative_error": 1.6575858588035213e-07
+      },
+      "input": {
+        "actual": 0.002428014762699604,
+        "expected": 0.0024280145298689604,
+        "relative_error": 9.589342174962534e-08
+      },
+      "sequence": {
+        "actual": 0.001186029869131744,
+        "expected": 0.001186029869131744,
+        "relative_error": 0.0
+      },
+      "projections": {
+        "actual": 0.0015161223709583282,
+        "expected": 0.0015161223709583282,
+        "relative_error": 0.0
+      },
+      "lowrank": {
+        "actual": 0.0,
+        "expected": 0.0,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "encoder": {
+        "actual": 0.020662451162934303,
+        "expected": 0.020662454888224602,
+        "relative_error": 1.802927250713531e-07
+      },
+      "input": {
+        "actual": 0.01678243651986122,
+        "expected": 0.01678244024515152,
+        "relative_error": 2.2197548413962969e-07
+      },
+      "sequence": {
+        "actual": 0.010002809576690197,
+        "expected": 0.010002809576690197,
+        "relative_error": 0.0
+      },
+      "projections": {
+        "actual": 0.05053053796291351,
+        "expected": 0.05053053796291351,
+        "relative_error": 0.0
+      },
+      "lowrank": {
+        "actual": 0.0,
+        "expected": 0.0,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "encoder": {
+        "actual": 0.008526342920958996,
+        "expected": 0.008526342920958996,
+        "relative_error": 0.0
+      },
+      "input": {
+        "actual": 0.006973247975111008,
+        "expected": 0.006973247975111008,
+        "relative_error": 0.0
+      },
+      "sequence": {
+        "actual": 0.004076202400028706,
+        "expected": 0.004076202400028706,
+        "relative_error": 0.0
+      },
+      "projections": {
+        "actual": 0.021695468574762344,
+        "expected": 0.021695468574762344,
+        "relative_error": 0.0
+      },
+      "lowrank": {
+        "actual": 0.0,
+        "expected": 0.0,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "encoder": {
+        "actual": 0.004261320922523737,
+        "expected": 0.0042613185942173,
+        "relative_error": 5.463813871027985e-07
+      },
+      "input": {
+        "actual": 0.0034095479641109705,
+        "expected": 0.0034095454029738903,
+        "relative_error": 7.511661684044896e-07
+      },
+      "sequence": {
+        "actual": 0.0018445090390741825,
+        "expected": 0.0018445090390741825,
+        "relative_error": 0.0
+      },
+      "projections": {
+        "actual": 0.007270854897797108,
+        "expected": 0.007270854897797108,
+        "relative_error": 0.0
+      },
+      "lowrank": {
+        "actual": 0.0,
+        "expected": 0.0,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "encoder": {
+        "actual": 0.0051659150049090385,
+        "expected": 0.0051659164018929005,
+        "relative_error": 2.7042324212047515e-07
+      },
+      "input": {
+        "actual": 0.004089345224201679,
+        "expected": 0.004089345224201679,
+        "relative_error": 0.0
+      },
+      "sequence": {
+        "actual": 0.0023985980078577995,
+        "expected": 0.0023985980078577995,
+        "relative_error": 0.0
+      },
+      "projections": {
+        "actual": 0.00735892727971077,
+        "expected": 0.00735892727971077,
+        "relative_error": 0.0
+      },
+      "lowrank": {
+        "actual": 0.0,
+        "expected": 0.0,
+        "relative_error": 0.0
+      }
+    }
+  ],
+  "gradient_norm_rtol": 1e-05,
+  "gradient_norm_atol": 0,
+  "non_gradient_readouts_exact": true,
+  "successful_sampler_calls": 76,
+  "successful_generated_trajectories": 322,
+  "replay_sampler_calls": 76,
+  "replay_generated_trajectories": 322,
+  "B0_exact_original_R28": true,
+  "unique_reused_frozen_trajectories": 60,
+  "frozen_row_reuses": 120,
+  "B1_original_R28_clock_noise_ledger_exact": true,
+  "actual_reverse_state_predictions_exact": true,
+  "frozen_baseline_and_formal_code_unchanged": true,
+  "whole_song_generations": 0,
+  "full_native_status": "NOT_EVALUABLE",
+  "operational_qualified": false
+}
