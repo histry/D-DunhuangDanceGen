@@ -31,6 +31,8 @@ def run(cfg,root,out,arm,replay=None):
     aux_music=musicA if arm!="ChangE" else z["music"][[0,0,1,1]]
     aux_ref=reference(list(aux_body));music=torch.tensor(aux_music,device="cuda");body=torch.tensor(aux_body,device="cuda");points=torch.tensor(aux_points,device="cuda")
     source_cache=root/("models/pilot/change_aux_states.npz" if arm=="ChangE" else "data/aist_states.npz")
+    expected_sha=read(root/"models/pilot/result.json")["files"]["change_aux_states.npz"] if arm=="ChangE" else read(root/"data/protocol.json")["files"]["aist_states.npz"]
+    assert sha(source_cache)==expected_sha
     states=dict(np.load(source_cache));initial_state_sha=sha(source_cache)
     initial_states={k:v.copy() for k,v in states.items()}
     steps=cfg["pilot_steps"] if arm=="pilot" else cfg["train_steps"];snapshots=[0,1,steps-1] if arm=="pilot" else cfg["snapshot_steps"]

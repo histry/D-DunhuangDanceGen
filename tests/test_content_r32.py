@@ -9,7 +9,7 @@ def test_core_extraction_keeps_all_observed_rotations():
     assert np.array_equal(core_body({"model_raw":x[:96]}),x[:96,7:])
     points=np.zeros((256,22,3));assert core_points({"model_points":points}).shape==(96,22,3)
 
-@pytest.mark.parametrize("name",["common","prepare","readout","partial","train"])
+@pytest.mark.parametrize("name",["common","prepare","readout","partial","train","evaluate"])
 def test_cli_imports(name):
     importlib.import_module("dunhuang.research.content_r32."+name)
 
