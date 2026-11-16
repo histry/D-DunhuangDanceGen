@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 root="${1:?root}";receipt="${2:?fresh receipt}"
-test "$(cat ${root}_evaluation_receipts/exit_status.txt)" = 0
+test "$(cat ${root}_evaluation_recovery_receipts/exit_status.txt)" = 0
 test ! -e "$receipt";mkdir "$receipt"
 export PYTHONPATH=src OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1
 native=/home/disk/lsm/conda_envs/dance-rag/bin/python

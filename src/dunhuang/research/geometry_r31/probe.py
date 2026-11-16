@@ -1,5 +1,7 @@
 """No-update task-gradient diagnosis on q_t and each model's real reverse states."""
 import argparse
+import os
+os.environ.setdefault("CUBLAS_WORKSPACE_CONFIG", ":4096:8")
 from pathlib import Path
 import numpy as np
 import torch
@@ -55,7 +57,9 @@ def run(cfg,root,out,replay=None):
                     losses[f"body_D{k}"]=torch.stack([F.smooth_l1_loss(p[:,:,g],q[:,:,g],beta=beta) for g in PARTS]).mean()
                 gradients={}
                 for j,(name,loss) in enumerate(losses.items()):
-                    g=torch.autograd.grad(loss,params,allow_unused=True,retain_graph=j<len(losses)-1)
+                    torch.use_deterministic_algorithms(True)
+                    try:g=torch.autograd.grad(loss,params,allow_unused=True,retain_graph=j<len(losses)-1)
+                    finally:torch.use_deterministic_algorithms(False)
                     flat=torch.cat([torch.zeros_like(p).flatten() if x is None else x.flatten() for p,x in zip(params,g)]).detach().cpu().numpy()
                     assert np.isfinite(flat).all()
                     vectors[f"{arm}_{kind}_{t}_{name}"]=flat;gradients[name]=flat
@@ -97,6 +101,7 @@ def run(cfg,root,out,replay=None):
             assert relative<=1e-5;checks.append(dict(name=name,relative_l2_error=relative))
     result=dict(records=old["records"] if replay else records,actual_gradient_readouts=records if replay else [],gradient_replay_checks=checks,
         gradient_vector_relative_l2_tolerance=1e-5,gradient_cosine_atol=1e-5,prediction_arrays_exact=True,
+        backward_deterministic_algorithms=True,cublas_workspace_config=os.environ["CUBLAS_WORKSPACE_CONFIG"],
         optimizer_steps=0,sampler_calls=0,generated_trajectories=0,new_physical_training_admitted=False,
         operational_qualified=False,whole_song_generations=0)
     write(out/"result.json",result);write(out/"protocol.json",dict(config=cfg,code_commit=commit(),files={p.name:sha(p) for p in out.glob("*.npz")}))
