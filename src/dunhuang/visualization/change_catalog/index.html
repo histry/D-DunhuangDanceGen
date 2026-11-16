@@ -1,0 +1,14 @@
+<!doctype html><html lang="zh"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ChangE 来源与切分事件库</title><link rel="stylesheet" href="style.css"><body>
+<header><p>CH​ANGE · SOURCE & EVENT CATALOG</p><h1>来源动作与切分事件</h1><p id="inventory">正在读取本地动作…</p><p>原始30FPS身体旋转，仅按帧切分。没有扩散生成、E1-W变速、平滑或贴地。22关节局部姿态，不包含可信世界Root轨迹。</p></header>
+<div class="transport"><label>来源录制 <select id="source" aria-label="来源录制"></select></label><label>事件 <select id="event" aria-label="切分事件"></select></label><br>
+<button id="playSource">播放来源整段</button><button id="playCut">播放当前事件</button><button id="pause">暂停</button><button id="prevFrame">前一帧</button><button id="nextFrame">后一帧</button>
+<label>倍速 <select id="rate" aria-label="播放倍速"><option value=".5">0.5×</option><option value="1" selected>1×</option><option value="2">2×</option></select></label><label><input type="checkbox" id="loop" checked>循环当前事件</label><label><input type="checkbox" id="follow" checked>整段播放时跟随切分</label><br>
+<button id="prevEvent">上一事件</button><button id="nextEvent">下一事件</button><button id="startSource">来源开头</button><button id="startCut">事件起点</button><label>来源帧 <input id="frameInput" aria-label="来源帧" type="number" min="0"></label><button id="jump">跳转</button><strong id="clock"></strong><input id="scrub" aria-label="来源时间轴" type="range" min="0" value="0" step="1"></div>
+<main><h2>整段来源的切分分布</h2><canvas id="timeline" width="1400" height="75" aria-label="全来源事件分布"></canvas><p class="hint">彩色为真实登记事件；灰色为没有登记候选的来源帧。点击时间线选择帧或对应事件。</p>
+<div class="pair"><article><h2>连续来源录制</h2><canvas id="sourceMotion" width="600" height="500"></canvas><p id="sourceFrame"></p></article><article><h2>选中的切分事件</h2><canvas id="cutMotion" width="600" height="500"></canvas><p id="cutFrame"></p></article></div>
+<label>视角 <select id="camera" aria-label="骨架视角"><option value="front">斜前方</option><option value="side">侧面</option><option value="straight">正面</option></select></label>
+<h2>切分边界与前后来源上下文</h2><canvas id="zoom" width="1400" height="100" aria-label="事件边界放大时间轴"></canvas><p id="interval"></p>
+<div class="legend">绿线：E1安全锚候选；红点：受控运动峰候选；橙点：原运动峰；下方阶段均为运动学检测候选，并非人工语义真值。</div><div id="phases"></div>
+<h2>本来源事件列表</h2><label>筛选 <input id="filter" placeholder="事件编号、UID或来源帧" aria-label="筛选事件"></label><div class="tablebox"><table><thead><tr><th>事件</th><th>来源帧 [开始,结束)</th><th>时长</th><th>锚状态</th></tr></thead><tbody id="rows"></tbody></table></div>
+<details><summary>当前来源与事件身份／显示协议</summary><pre id="details"></pre></details><p class="hint">左、右使用同一份来源姿态数据。事件内相同来源帧应完全一致；事件之外右栏留空，不用冻结姿态冒充连续动作。无配对音频，不添加假背景音乐。</p></main>
+<script src="data.js"></script><script src="viewer.js"></script></body></html>

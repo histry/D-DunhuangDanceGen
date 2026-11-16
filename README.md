@@ -73,6 +73,10 @@
 
 新增 [A2新划分资格与G2来源归因报告](reports/A2新划分资格与G2来源归因实验报告.md)：1,037来源/54音频的独立原始数据重建得到9,199窗，Train合格106、Val仍0，未启动新训练。冻结G2的32次生成及新进程复验完成，来源跟随0/4、Native0/32；补齐自由轨迹观察与提供/隐藏/关键帧诊断。回归202通过+1依赖跳过，EDGE补充19通过。正式路径与门限不变。
 
+## 来源与切分事件查看
+
+[ChangE 来源／切分事件库](outputs/change_catalog_view_01/index.html)显示8条连续来源、499个实际事件，左右同帧对照、来源切分时间轴、阶段候选、逐帧／倍速和原速片段循环。仅展示原身体旋转的22关节局部姿态，不含生成动作或E1-W重定时；世界Root未知。离线观看文件在忽略目录中。构建入口为 scripts/build_change_catalog_view.py，显式传入原Catalog、E1 sidecar、经校核的common22 rig和全新输出目录；逐项检查来源SHA、499个半开区间和骨长。
+
 ## 正式入口
 
 公开 profile 与运行机器资产分离。从 configs/assets.example.json 填入真实绝对路径、SHA256、固定依赖版本，保存到忽略目录 inputs/runtime_assets.json，占位值不能直接运行。目录源清单沿用 source_records/events，raw SMPL 文件名与哈希必须匹配。EDGE / Native 使用各自环境；prepare 导出原权重 Normalizer 后解码事件目录。
