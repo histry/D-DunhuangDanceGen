@@ -27,8 +27,10 @@ def run(cfg,root,out):
         if row['consumes_new_r37_plan']:
             import json,hashlib
             new=read(root/'planning/song0_plan.json');assert hashlib.sha256(json.dumps(new,sort_keys=True).encode()).hexdigest()==row['plan_sha256']
-        record['methods']['Reference']=[metrics(reference,reference,np.zeros((256,3)),J,parents,[128],row['gap'])]
-        G=z[key+'_Geometry_R'];record['methods']['Geometry']=[metrics(G,reference,np.zeros((256,3)),J,parents,[128],row['gap'])]
+        boundaries=[e['local_interval'][1] for e in row['binding']['events'][:-1]]
+        record['all_reference_boundaries_local']=boundaries;record['selected_boundary_local']=128
+        record['methods']['Reference']=[metrics(reference,reference,np.zeros((256,3)),J,parents,boundaries,row['gap'],128)]
+        G=z[key+'_Geometry_R'];record['methods']['Geometry']=[metrics(G,reference,np.zeros((256,3)),J,parents,boundaries,row['gap'],128)]
         for arm in ('R36Like','Joint'):
             stats=[]
             anchor=reference if arm=='R36Like' else G
@@ -36,7 +38,7 @@ def run(cfg,root,out):
                 R,Root=decode(raw);P=world_fk(R,Root,J,parents);assert np.allclose(P,stored,atol=2e-5)
                 error=Rotation.from_matrix((anchor.swapaxes(-1,-2)@R).reshape(-1,3,3)).magnitude().reshape(256,22)
                 assert (error<=z[key+'_'+arm+'_budget'][:,None]+2e-5).all()
-                stats.append(metrics(R,reference,Root,J,parents,[128],row['gap']))
+                stats.append(metrics(R,reference,Root,J,parents,boundaries,row['gap'],128))
             record['methods'][arm]=stats
             # Four-frame raw-x0 vs projected-x0 uses identical state and stencil.
             trace=z[key+'_'+arm+'_trace'];v=[]

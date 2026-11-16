@@ -4,7 +4,7 @@ from scipy.spatial.transform import Rotation
 from dunhuang.research.complete_r36.core import relative_fk
 from dunhuang.contracts import matrices
 
-def metrics(R,reference,root,J,parents,boundaries=(),gap=None):
+def metrics(R,reference,root,J,parents,boundaries=(),gap=None,selected_boundary=None):
     p=relative_fk(R,J,parents);q=relative_fk(reference,J,parents)
     angle=Rotation.from_matrix((reference.swapaxes(-1,-2)@R).reshape(-1,3,3)).magnitude().reshape(len(R),22)
     velocity=np.linalg.norm(np.diff(p,axis=0)*30,axis=-1).mean(-1)
@@ -13,6 +13,10 @@ def metrics(R,reference,root,J,parents,boundaries=(),gap=None):
     for b in boundaries:edges[max(0,b-3):min(len(edges),b)]=True
     protected=np.ones(len(R),bool)
     if gap:protected[gap[0]:gap[1]]=False
+    interior=np.zeros(len(jerk),bool)
+    if gap:interior[max(0,gap[0]):max(0,gap[1]-3)]=True
+    selected=np.zeros(len(jerk),bool)
+    if selected_boundary is not None:selected[max(0,selected_boundary-3):min(len(jerk),selected_boundary)]=True
     world=p+root[:,None]+np.asarray(J)[None,:1];foot_speed=np.linalg.norm(np.diff(world[:,[7,8,10,11]],axis=0)*30,axis=-1)
     reference_velocity=np.linalg.norm(np.diff(q,axis=0)*30,axis=-1).mean(-1)
     arm_rel=np.stack([p[:,20]-p[:,16],p[:,21]-p[:,17],p[:,20]-p[:,21]],1)
@@ -24,6 +28,8 @@ def metrics(R,reference,root,J,parents,boundaries=(),gap=None):
         largest_body_speed_peak_shift_frames=int(velocity.argmax()-reference_velocity.argmax()),
         local_fk_rmse_m=float(np.sqrt(np.mean((p-q)**2))),jerk_mean=float(jerk.mean()),jerk_p95=float(np.percentile(jerk,95)),
         jerk_peak=float(jerk.max()),jerk_area=float(jerk.sum()/30),boundary_jerk_peak=float(jerk[edges].max()) if edges.any() else None,
+        selected_boundary_jerk_peak=float(jerk[selected].max()) if selected.any() else None,
+        transition_region_jerk_mean=float(jerk[interior].mean()) if interior.any() else None,
         internal_jerk_mean=float(jerk[~edges].mean()) if (~edges).any() else None,
         body_speed_m_s=float(velocity.mean()),peak_speed_m_s=float(velocity.max()),peak_speed_frame=int(velocity.argmax()+1),
         arm_extent_rms_m=float(np.sqrt(np.mean(np.ptp(p[:,[16,17,18,19,20,21]],axis=0)**2))),
