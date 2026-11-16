@@ -56,3 +56,10 @@ def fingerprint(d,b):
 def assert_frozen(d,b,expected):
     assert fingerprint(d,b)==expected
     assert all(p.grad is None for p in d.model.parameters()) and all(p.grad is None for p in b.io.parameters())
+
+
+def paired_schedule(ledger,cases,seed):
+    """Exactly75 presentations for each of16 sources in300 batches, without DEV input."""
+    if len(cases)!=16 or len(set(cases))!=16 or len(ledger)<300:raise ValueError("Sixteen unique training recordings and300 fixed ledger rows required")
+    rng=np.random.default_rng(seed);order=np.concatenate([rng.permutation(cases) for _ in range(75)])
+    return [dict(ledger[i],cases=[int(c) for c in order[4*i:4*i+4]]) for i in range(300)]

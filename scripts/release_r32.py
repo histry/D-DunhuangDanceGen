@@ -59,7 +59,11 @@ def verify(root):
     write(out,dict(code_commit=commit(),array_bundles_exact=exact,actual_update_pairs=23,update_checks=checks,
         decoder_optimizer_steps=decoder_steps,generator_optimizer_steps=generator_steps,replay_optimizer_steps=0,
         sampler_calls=calls,generated_trajectories=trajectories,replay_sampler_calls=calls,replay_generated_trajectories=trajectories,
-        reused_evaluation_trajectories=246,fixed_NoRef_exact=True,action_io_and_backbone_unchanged=True,
+        reused_evaluation_trajectories=246,fixed_NoRef_exact=True,
+        accounting_scope="QUALIFIED_LINEAGE_INCLUDES_REUSED_EARLY_QUALIFICATIONS; EXECUTED_TOTALS_SEPARATE",
+        current_run_decoder_steps=0,current_run_generator_steps=1200,current_run_sampler_calls=43,current_run_generated_trajectories=190,
+        task_total_decoder_steps=2400,task_total_generator_steps=2520,task_total_sampler_calls=96,task_total_generated_trajectories=426,task_total_update_pairs=31,task_replay_optimizer_steps=0,
+        reused_qualification_receipt=ref(root/"reuse_receipt.json"),action_io_and_backbone_unchanged=True,
         parent_scientific_seal_files_unchanged=True,paired_replay_ledger_identical=True,paired_presentations_per_source=75,
         auxiliary_sources=dict(AIST=4,ChangE=2),change_source_lineage=lineage,source_independence_scope="TWO_DISTINCT_HASHES_AND_REGISTERED_RECORDING_UIDS; NOT_NEW_OR_POPULATION_GENERALIZATION",full_native_status="NOT_EVALUABLE",operational_qualified=False,whole_song_generations=0))
     print("R32_INDEPENDENT_CHECKS",exact,23,calls,trajectories,flush=True)
@@ -136,12 +140,14 @@ def collect(root,out,receipts):
         a=read(root/f"models/{arm}/result.json");models[arm]={k:v for k,v in a.items() if k!="history"};models[arm]["history_sha256"]=hashlib.sha256(json.dumps(a["history"],sort_keys=True).encode()).hexdigest();models[arm]["replay_checks"]=read(root/f"models/{arm}_replay/result.json")["replay_checks"]
     summary=dict(config=read("src/dunhuang/research/content_r32/config.json"),data=read(root/"data/result.json"),readout=read(root/"readout/result.json"),
         models=models,evaluation=read(root/"evaluation/result.json"),music_probe=read(root/"music_probe/result.json"),checks=read(root/"independent_checks.json"),media=read(root/"videos/protocol.json"),
-        scientific_manifest=ref(manifest),human_reviewed=False,operational_qualified=False,whole_song_generations=0,full_native_status="NOT_EVALUABLE")
+        scientific_manifest=ref(manifest),reuse_receipt=read(root/"reuse_receipt.json"),human_reviewed=False,operational_qualified=False,whole_song_generations=0,full_native_status="NOT_EVALUABLE")
     write(out/"r32_summary.json",summary);write(out/"r32_checks.json",summary["checks"])
     write(out/"r32_receipt.json",dict(collection_commit=commit(),summary_sha256=sha(out/"r32_summary.json"),scientific_manifest=ref(manifest),
         receipts={name:{p.name:sha(p) for p in Path(name).iterdir() if p.is_file()} for name in receipts},
         evidence={str(p.relative_to(root)):sha(p) for p in root.rglob("*.json")},
         launcher_logs={str(p):sha(p) for p in Path("outputs").glob("content_r32_*_launcher.log")},
+        superseded_run_manifest=read(root/"reuse_receipt.json")["superseded_manifest"],
+        superseded_failed_finish_receipt={p.name:sha(p) for p in Path("outputs/content_r32_01_finish_receipts").iterdir() if p.is_file()},
         temporary_ssh_files_created=0,temporary_ssh_files_remaining=0,operational_qualified=False,whole_song_generations=0))
     print("R32_PUBLIC_STATS",sha(out/"r32_summary.json"),flush=True)
 if __name__=="__main__":

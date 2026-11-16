@@ -59,10 +59,11 @@ def run(cfg,root,out,arm,replay=None):
             return paired_objective(d,b,y,m,packet(rows),row["t"],row["seed"])
         xt=torch.tensor(states["xt"][states["times"].tolist().index(row["t"])],device="cuda")
         return partial_objective(d,b,xt,music,aux_ref,row["t"],row["seed"],body,points,n,s,cfg)
+    paired_ledger=paired_schedule(ledger,[r["case"] for r in pop if r["domain"]=="aist" and r["role"]=="train"],cfg["seed"])
     schedule=[]
     for i in range(steps):
         if arm!="pilot" and i%2==0:
-            row=ledger[i//2];schedule.append(dict(step=i,task="paired",cases=row["cases"],t=row["t"],seed=row["seed"]))
+            row=paired_ledger[i//2];schedule.append(dict(step=i,task="paired",cases=row["cases"],t=row["t"],seed=row["seed"]))
         else:
             j=i if arm=="pilot" else i//2
             schedule.append(dict(step=i,task="partial",domain="aist" if arm!="ChangE" else "change",t=int(states["times"][(j*17)%50]),seed=cfg["seed"]+90000+j,source_count=4 if arm!="ChangE" else 2))

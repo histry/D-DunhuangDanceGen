@@ -33,3 +33,15 @@ def test_partial_observation_rejects_fabricated_full_targets_and_unknowns():
     moved=x.clone();moved[:,:,4:7]=3.
     value,_=partial_loss(moved,body,local,moved.clone(),n,skel,weights)
     assert float(value)<1e-10 # global translation is absent from local observed truth
+
+
+def test_paired_schedule_is_exactly_balanced_and_preserves_noise_clock():
+    from collections import Counter
+    from dunhuang.research.content_r32.common import paired_schedule
+    ledger=[dict(step=i,cases=[0,0,0,0],seed=100+i,t=i%1000) for i in range(1200)]
+    rows=paired_schedule(ledger,list(range(16)),32041)
+    assert len(rows)==300 and set(Counter(c for r in rows for c in r["cases"]).values())=={75}
+    assert all(len(set(r["cases"]))==4 for r in rows)
+    assert [(r["seed"],r["t"]) for r in rows]==[(r["seed"],r["t"]) for r in ledger[:300]]
+    assert rows==paired_schedule(ledger,list(range(16)),32041)
+    with pytest.raises(ValueError):paired_schedule(ledger,list(range(15)),32041)

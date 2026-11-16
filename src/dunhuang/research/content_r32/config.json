@@ -53,5 +53,6 @@
   "main_required_readout": true,
   "whole_song_generations": 0,
   "human_reviewed": false,
-  "operational_qualified": false
+  "operational_qualified": false,
+  "paired_ledger_policy": "SEEDED_PERMUTATIONS_OF_16_RECORDINGS; 75_FULL_CYCLES; ORIGINAL_FIRST300_TIMES_AND_SEEDS"
 }
