@@ -3,7 +3,7 @@ import argparse
 from pathlib import Path
 import numpy as np
 import torch
-from .common import sources
+from .common import sources,parent_config
 from .interface import runtime,CanonicalNormalizer
 from .audit import derivatives
 from dunhuang.research.time_r29.common import packet
@@ -49,7 +49,7 @@ def run(cfg,root,out,replay=None):
             witness_scope="Any positive alpha violates an actual raw coordinate bound; frame/joint/component indices, tolerance1e-7",
             legacy_roundtrip_max_displacement_m=float(displacement[where]),legacy_worst_window_frame=int(where[0]),legacy_worst_joint=int(where[1])) )
     # Compatibility of added zero residual I/O is established with real COVER sampling.
-    from dunhuang.research.continuity_r30.common import checked_parent,parent_config,values
+    from dunhuang.research.continuity_r30.common import checked_parent,values
     restore(bundle.reference,checked_parent(parent_config(),"models/COVER/adapter.pt"))
     rows,cases=values(parent_config(),"aist","train");music=torch.tensor(np.stack([r["music"] for r in rows]),device="cuda")
     old=np.load(checked_parent(parent_config(),"evaluation_coverage/arrays.npz"))

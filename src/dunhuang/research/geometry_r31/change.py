@@ -4,13 +4,14 @@ from pathlib import Path
 import numpy as np
 import torch
 from .interface import runtime
+from .common import parent_config
 from dunhuang.research.contract_r28.representation import packet
 from dunhuang.research.time_r29.model import mapping
 from dunhuang.research.continuity_r30.metrics import geometry,absolute,paired
 from dunhuang.research.time_r29.dynamics import decomposition
 from dunhuang.research.lodge_adapter_r25.sample import sample
 from dunhuang.research.lodge_adapter_r25.replay import change_conditions
-from dunhuang.research.continuity_r30.common import checked_parent,parent_config
+from dunhuang.research.continuity_r30.common import checked_parent
 from dunhuang.research.state_r27.common import read,write,sha,checked,fresh,commit,forbid_optimizers,motion_metrics,digest,same_arrays
 from dunhuang.research.contract_r28.input_contract import foot_proxy
 

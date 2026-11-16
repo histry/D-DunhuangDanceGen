@@ -85,3 +85,8 @@ def test_action_bundle_does_not_register_or_optimize_backbone():
     assert sum(p.numel() for p in bundle.parameters())==35112
     x=torch.randn(2,4,139);assert torch.equal(prior(x,None,None,torch.tensor([9,9])),x)
     bundle.close();assert prior.forward==old
+
+@pytest.mark.parametrize("module",["qualify","train","evaluate","change"])
+def test_research_cli_modules_import(module):
+    import importlib
+    importlib.import_module("dunhuang.research.geometry_r31."+module)

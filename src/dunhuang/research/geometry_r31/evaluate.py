@@ -3,11 +3,11 @@ import argparse
 from pathlib import Path
 import numpy as np
 import torch
-from .common import sources
+from .common import sources,parent_config
 from .interface import runtime
 from dunhuang.research.continuity_r30.metrics import measure
 from dunhuang.research.continuity_r30.evaluate import gates
-from dunhuang.research.continuity_r30.common import checked_parent,parent_config
+from dunhuang.research.continuity_r30.common import checked_parent
 from dunhuang.research.time_r29.common import packet
 from dunhuang.research.state_r27.common import read,write,sha,fresh,commit,motion_metrics,digest,forbid_optimizers,same_arrays
 from dunhuang.research.state_r27.trace import sample,trace_arrays
