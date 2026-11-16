@@ -36,3 +36,15 @@ def test_search_keeps_baseline_and_rejects_music_budget_violation():
 
 def test_mismatched_or_nonfinite_body_is_rejected():
     with pytest.raises(ValueError):descriptor(np.zeros((2,22,3,3)),np.zeros((2,22,3)))
+
+def test_context_schedule_source_balance_and_cache_conditions():
+    pytest.importorskip("torch")
+    from dunhuang.research.transition_r35.train import schedule
+    from collections import Counter
+    cfg=dict(seed=35041,train_steps=600,times=[999,519,119,19],gap_intervals=[[64,160],[64,146],[80,168],[64,154]])
+    rows=schedule(cfg,list(range(16)))
+    count=Counter(c for r in rows if r["task"]=="paired" for c in r["cases"])
+    assert set(count.values())=={100}
+    assert sum(r["task"]=="change" for r in rows)==200
+    actual=[r for r in rows if r.get("state")=="actual"]
+    assert len(actual)==200 and all(r["mask"]=="both" and r["source"]=="none" and r["gap"]==[64,160] for r in actual)
