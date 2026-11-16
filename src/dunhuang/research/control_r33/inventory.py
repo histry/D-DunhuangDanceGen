@@ -9,6 +9,12 @@ from dunhuang.generation.soft_reference import resample_native
 from dunhuang.planning.feasible_time_map import solve
 from dunhuang.planning.time_map import source_positions
 
+def core_beat_positions(music):
+    x=np.asarray(music)
+    if x.ndim!=3 or x.shape[1]<160 or not np.isfinite(x[0,64:160,-1]).all():raise ValueError("Finite full-window Core beat channel required")
+    return np.flatnonzero(x[0,64:160,-1]>.5).tolist()
+
+
 def compile_holdouts(cfg,rt,music):
     assets=read("outputs/event_plan_01/prepare/assets.json");catalog=read(checked(assets["catalog"]));source=read(checked(assets["catalog_source"]))
     entries=catalog["entries"];records=[];bodies=[];local=[]
@@ -18,7 +24,7 @@ def compile_holdouts(cfg,rt,music):
         if not candidates:raise ValueError("Registered held recording lacks complete duration; no replacement")
         event=candidates[0];assert event["source_sha256"] not in excluded
         origin=next(r for r in source["source_records"] if r["source_uid"]==event["source_uid"]);checked(origin["raw_receipt"])
-        beats=np.flatnonzero(music[0,64:160,-1]>.5).tolist()
+        beats=core_beat_positions(music)
         solution=solve(dict(source_interval=event["source_interval"],center=event["center"],normalization_support=True),dict(start=0,end=96),beats)
         if solution["status"]!="PASS":raise ValueError("Registered holdout map failed; no best-output replacement")
         mapped=dict(event,music_interval=[0,96],time_warp=solution["time_warp"])

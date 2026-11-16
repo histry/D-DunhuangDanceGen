@@ -96,3 +96,11 @@ def test_dynamic_derivative_uses_thirty_hertz_vector_error():
     _,parts,_=body_dynamics(p,target,torch.ones(1,96,22,dtype=torch.bool),torch.ones(2,5))
     assert float(parts['D1'])==pytest.approx(1/120,abs=1e-12)
     assert float(parts['D2'])<1e-20
+
+
+def test_held_beats_use_core_window_then_local_clock():
+    from dunhuang.research.control_r33.inventory import core_beat_positions
+    import numpy as np
+    music=np.zeros((2,256,35));music[0,[17,70,159,160],-1]=1
+    assert core_beat_positions(music)==[6,95]
+    with pytest.raises(ValueError):core_beat_positions(music[:,:96])

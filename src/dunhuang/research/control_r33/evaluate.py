@@ -48,7 +48,7 @@ def run(cfg,root,out,replay=None):
                 pred,nr,_=sample(rt,music,source_packet=packet,seeds=seeds);calls+=1
                 expected=generalarr[f"{role}_CanonicalIO_{mode}_0_normalized"];assert np.array_equal(pred.cpu().numpy(),expected)
                 arrays[f"aist_{arm}_{role}_{mode}"]=pred.cpu().numpy()
-                retention.append(dict(arm=arm,role=role,mode=mode,trajectories=4,exact_R31=True))
+                retention.append(dict(arm=arm,role=role,mode=mode,trajectories=4,cases=cases,exact_R31=True))
                 noise.append(nr)
         for role in ("train","held"):
             music=torch.tensor(np.stack([z["music"][m] for m,e in conditions]),device="cuda")
@@ -66,7 +66,7 @@ def run(cfg,root,out,replay=None):
                 arrays[stem+"_normalized"]=normalized;arrays[stem+"_139"]=raw;arrays[stem+"_22"]=p
                 for i,(m,e) in enumerate(conditions):
                     q=motion_metrics(raw[i],p[i],np.zeros(256,bool));q.pop("foot_geometry_proxy",None)
-                    records.append(dict(arm=arm,role=role,mode=mode,music=m,event=e,source_uid=None if e<0 else ids[role][e],
+                    records.append(dict(arm=arm,role=role,mode=mode,music=m,event=e,source_uid=None if e<0 else ids[role][e],injected_source_uid=None if e<0 else ids[role][selected[i]],
                         errors=[source_metrics(raw[i],p[i],body,target) for body,target in zip(bodies[role],points[role])],
                         quality=q,floor=foot_proxy(p[i])))
                 if mode=="correct":
