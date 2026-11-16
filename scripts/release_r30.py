@@ -64,10 +64,8 @@ def render(root,out):
     root=Path(root);out=fresh(out);cfg=read("src/dunhuang/research/continuity_r30/config.json")
     oldcfg=read("src/dunhuang/research/time_r29/config.json")
     oldpop=read(Path(oldcfg["r28"])/"data/result.json")["records"]
-    parents=np.load("outputs/branch_r22_03/data/arrays.npz")["parents"][:22].tolist() if Path("outputs/branch_r22_03/data/arrays.npz").exists() else None
-    if parents is None:
-        from dunhuang.io import checked
-        parents=np.load(checked(read("outputs/branch_r22_03/data/protocol.json")["parity"]))["parents"][:22].tolist()
+    from dunhuang.io import checked
+    parents=np.load(checked(read("outputs/branch_r22_03/data/protocol.json")["parity"]))["parents"][:22].tolist()
     temporal=np.load(root/"temporal_evaluation/arrays.npz");change=np.load(root/"change/arrays.npz")
     tracks={};audio={};hasR2=(root/"models/R2/result.json").exists()
     for role,case in (("train",92),("holdout",4)):

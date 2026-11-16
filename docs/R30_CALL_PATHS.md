@@ -1,0 +1,21 @@
+# R30 实现、合同与证据边界
+
+正式pipeline/EDGE/Planner/Native和历史研究模块冻结。continuity_r30只通过独立脚本运行，不把研究权重交给旧正式消费者。
+
+model.Reference继承R29 TimeReference，保持同一265328参数字典。原读取模式完整调用原数学路径；启用detail时在相同运算中保存attention、weighted V与隐藏残差，已对真实逆扩散预测及完整COVER轨迹验证精确相同。aligned模式只在Core[64,160)按外部phi插值局部memory，和全局token做两项门控，复用Q/K/V/out。Core外原读法不变；隐藏残差仍可经Lodge影响全部通道/全窗口，不能把Core-only时间入口误称输出隔离。缺失支持时局部项拒绝，以全局项回退；完全NoRef旁路不变。
+
+audit先对共同model0、官方22骨架中的未裁剪来源和实际Normalizer往返求同模板D1/2/3，再测原B0/B1/COVER/F0/F1。FineDance同录制相邻窗口保持依赖。物理分解用向量，不对分位数范数做可加归因。固定case92/t19/层7/帧130–131读取干预验证变化可传播，不直接证明最终Jerk原因。
+
+train的每条来源/时刻/噪声账本来自封存R29 COVER，起点仍同R26 C1、16录制/8组、1200步、每来源300呈现。R0冻结，不重训。R1只变读取算子。reading_train仅运行原四Train来源、两噪声和四种条件；calibrate只允许读取该Train结果做结构保留及权重冻结，不使用新持出结果。
+
+objective复用原R28目标并捕获同一次真实参考预测。新增损失经实际裁剪Normalizer和可微官方22 FK计算，Root平移速度/加速度与五部位平衡的Root-relative速度/加速度分别训练。30Hz、SmoothL1 beta .5m/s及5m/s²；原body6D一阶差分保持原定义，不能改称物理速度。calibrate验证可微FK等于官方FK并记录裁剪区零梯度，在四个固定Train批次冻结两个权重。R2从同初始权重重新训练，不承接R1继续训练。
+
+support单独核对归一化前affine支持域、已经裁剪的训练目标和来源FK往返。归一化输出不越界不代表原来源无需裁剪；原Normalizer保持不变，不用未裁剪诊断FK代替实际采样几何。评价始终相对原来源，往返误差下限单列。
+
+evaluate保留历史五项来源门和四项代理门，并在R0逐项复核旧值不变；新增配对Root/身体时序误差与绝对活动/幅度。旧world_wrist字段是世界朝向的肩→腕向量，pelvis_wrist为R0转置乘肩→腕向量，double_wrist为世界朝向双腕差向量；metrics增加明确别名，旧数值不重写。新持出仍为历史R26曝光的适配持出，不称独立盲测。
+
+RootDelta0在每个采样访问状态、每个音乐CFG分支计算相同输入的Ref与NoRef，保留Ref的C4/body，只替换其直接Root预测增量。RNG恢复以免改变后续噪声账本。此项是诊断性输出增量抑制，后续Root仍受改变的身体状态影响，不是独立NoRef Root轨迹，也不授权RootNet。
+
+probe在R1/R2真实采样状态上检查局部/全局门控与注入步差；change只评价两历史ChangE原语/两音乐，Root世界平移和静态接触仍UNKNOWN。paired_root_relative_proxy是按既定参考时钟的来源运动保持代理，不是新音乐配对真值。完整Native24仍NOT_EVALUABLE，新整曲0。
+
+release_r30在新进程汇总数组、真实更新/校准梯度读出、封存来源和冻结代码，然后渲染固定世界相机/比例的对照。原始权重、张量、数据和音频不进Git；新媒体单批授权后回传。回执目录命名修正须保留原内容哈希并另记更名回执；科学归档和历史失败均保留，临时SSH仅清理本轮实际创建项。
