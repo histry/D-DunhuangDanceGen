@@ -1,5 +1,4 @@
 """Hierarchical source proposals; old atomic candidates and raw arrays remain unchanged."""
-from collections import defaultdict
 import numpy as np
 from dunhuang.data.change_event_phases import motion_profiles,detect
 from .core import components,identity,rotation_sample

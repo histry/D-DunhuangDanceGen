@@ -1,7 +1,6 @@
 """Build visible Module I effect before any additional training or ablation."""
-import argparse,copy,subprocess
+import argparse,subprocess
 from pathlib import Path
-import numpy as np
 from .core import Library,read,write,sha
 from .catalog import build
 from .music import analyze

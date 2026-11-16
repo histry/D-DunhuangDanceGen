@@ -45,7 +45,7 @@ def run(cfg,root,out,generated=None):
             key=row['key'];wav=out/'audio'/(key+'.wav');shutil.copyfile(g/(key+'.wav'),wav)
             panels=[dict(title='按音乐对齐的身体参考 · Root未知',track=track(a[key+'_reference22']))]
             for arm in ('Frozen','Context','Edit'):
-                panels.append(dict(title=arm+' · 实际模型输出',track=track(a[key+'_'+arm+'_22'][0])))
+                panels.append(dict(title=arm+' · 实际模型输出',track=track(a[key+'_'+arm+'_22'][0]),variants=[track(x) for x in a[key+'_'+arm+'_22']]))
             cases.append(dict(id=key,kind='generation',name=row['name'],frames=256,audio='audio/'+wav.name,panels=panels,events=[],old_events=[],beats=[],phrases=[],repetitions=[],
                 scope='固定同一计划和音乐的短窗；Edit为有界SO(3)来源编辑，非新训练能力或完整物理合格',summary=row,diagnostics=row['diagnostics']))
     import json

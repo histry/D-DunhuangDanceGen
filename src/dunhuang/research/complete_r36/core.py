@@ -2,7 +2,7 @@
 import hashlib,json
 from pathlib import Path
 import numpy as np
-from scipy.spatial.transform import Rotation,Slerp
+from scipy.spatial.transform import Rotation
 from dunhuang.contracts import matrices
 
 def identity(x):return hashlib.sha256(json.dumps(x,sort_keys=True,separators=(',',':')).encode()).hexdigest()[:24]

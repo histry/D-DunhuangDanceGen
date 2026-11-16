@@ -30,3 +30,14 @@ def test_source_read_cannot_extrapolate():
     with pytest.raises(ValueError):rotation_sample(r,[4.1])
     budget=smooth_budget(256)
     assert budget[0]==budget[-1]==.6 and np.isclose(budget[128],.2)
+
+def test_training_factors_are_not_the_old_locked_pairings():
+    pytest.importorskip('torch')
+    from dunhuang.research.complete_r36.train import schedule
+    rows=schedule(list(range(16)),36041)
+    assert len(rows)==160 and sum(r['task']=='change' for r in rows)==40
+    assert {r['provenance'] for r in rows}=={0,1,2}
+    paired=[r for r in rows if r['task']=='paired']
+    for t in (999,519,119,19):
+        assert {r['state'] for r in paired if r['t']==t}=={'actual','q_sample'}
+    assert all(len(set(r['cases']))==4 for r in rows)
