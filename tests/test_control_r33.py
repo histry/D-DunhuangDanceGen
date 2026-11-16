@@ -61,3 +61,38 @@ def test_explicit_time_binding_supports_keyword_and_positional():
     f=explicit_forward(IO(),original);x=torch.zeros(2,4,139);t=torch.tensor([1,2])
     assert torch.equal(f(x,None,None,t),f(x,cond=None,genre=None,t=t))
     with pytest.raises(ValueError):f(x,None,None,t.float())
+
+
+def test_paired_dynamics_keeps_real_motion_and_translation_invariance():
+    from dunhuang.research.control_r33.objective import body_dynamics
+    t=torch.arange(96,dtype=torch.float64)/30
+    target=torch.zeros(2,96,22,3,dtype=torch.float64);target[:,:,:,0]=torch.sin(t*5)[None,:,None]*torch.arange(22)[None,None,:]
+    observed=torch.ones(2,96,22,dtype=torch.bool)
+    loss,_,counts=body_dynamics(target.clone()+3,target,observed,torch.ones(2,5))
+    assert float(loss)<1e-18 and counts['D2_part1']==2*94*4
+    shifted=target.clone();shifted[:,40,20,1]+=.2;shifted.requires_grad_(True)
+    value,parts,_=body_dynamics(shifted,target,observed,torch.ones(2,5));assert value>0
+    value.backward();assert torch.isfinite(shifted.grad).all()
+
+
+def test_dynamic_unknown_frames_do_not_become_zero_targets():
+    from dunhuang.research.control_r33.objective import derivative_support,body_dynamics
+    valid=torch.ones(1,96,22,dtype=torch.bool);valid[:,40]=False
+    m=derivative_support(valid,2);assert not m[:,38:41].any() and m[:,:38].all()
+    target=torch.zeros(1,96,22,3);target[:,40]=float('nan');pred=torch.zeros_like(target);pred[:,40]=100.
+    value,_,_=body_dynamics(pred,target,valid,torch.ones(2,5));assert value==0
+    with pytest.raises(ValueError):body_dynamics(pred,target,torch.zeros_like(valid),torch.ones(2,5))
+
+
+@pytest.mark.parametrize('name',['contracts','context','controller','runtime','preflight','objective','calibrate'])
+def test_r33_cli_modules_import(name):
+    import importlib
+    importlib.import_module('dunhuang.research.control_r33.'+name)
+
+
+def test_dynamic_derivative_uses_thirty_hertz_vector_error():
+    from dunhuang.research.control_r33.objective import body_dynamics
+    target=torch.zeros(1,96,22,3,dtype=torch.float64);p=target.clone();p[0,:,20,0]=torch.arange(96,dtype=torch.float64)/30
+    _,parts,_=body_dynamics(p,target,torch.ones(1,96,22,dtype=torch.bool),torch.ones(2,5))
+    assert float(parts['D1'])==pytest.approx(1/120,abs=1e-12)
+    assert float(parts['D2'])<1e-20
