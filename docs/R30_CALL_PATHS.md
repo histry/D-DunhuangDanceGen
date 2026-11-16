@@ -14,7 +14,7 @@ support单独核对归一化前affine支持域、已经裁剪的训练目标和�
 
 evaluate保留历史五项来源门和四项代理门，并在R0逐项复核旧值不变；新增配对Root/身体时序误差与绝对活动/幅度。旧world_wrist字段是世界朝向的肩→腕向量，pelvis_wrist为R0转置乘肩→腕向量，double_wrist为世界朝向双腕差向量；metrics增加明确别名，旧数值不重写。新持出仍为历史R26曝光的适配持出，不称独立盲测。
 
-RootDelta0在每个采样访问状态、每个音乐CFG分支计算相同输入的Ref与NoRef，保留Ref的C4/body，只替换其直接Root预测增量。RNG恢复以免改变后续噪声账本。此项是诊断性输出增量抑制，后续Root仍受改变的身体状态影响，不是独立NoRef Root轨迹，也不授权RootNet。
+RootDelta0在每个采样访问状态、每个音乐CFG分支计算相同输入的Ref与NoRef，保留Ref的C4/body，只替换平移通道[4:7]的直接Root预测增量；骨盆朝向旋转仍在body通道，不在此诊断中直接抑制。RNG恢复以免改变后续噪声账本。此项是诊断性输出增量抑制，后续Root仍受改变的身体状态影响，不是独立NoRef Root轨迹，也不授权RootNet。
 
 probe在R1/R2真实采样状态上检查局部/全局门控与注入步差；change只评价两历史ChangE原语/两音乐，Root世界平移和静态接触仍UNKNOWN。paired_root_relative_proxy是按既定参考时钟的来源运动保持代理，不是新音乐配对真值。完整Native24仍NOT_EVALUABLE，新整曲0。
 

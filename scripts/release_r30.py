@@ -122,7 +122,7 @@ def collect(root,out,receipts):
         models[arm]={k:v for k,v in a.items() if k!="history"}
         models[arm]["history_sha256"]=hashlib.sha256(json.dumps(a["history"],sort_keys=True).encode()).hexdigest()
         models[arm]["replay_checks"]=read(root/f"models/{arm}_replay/result.json")["replay_checks"]
-    result.update(models=models,calibration_replay_checks=read(root/"calibration_replay/result.json")["replay_checks"],
+    result.update(config=read("src/dunhuang/research/continuity_r30/config.json"),training_population=read(parent(read("src/dunhuang/research/continuity_r30/config.json"))/"coverage_data/result.json"),models=models,calibration_replay_checks=read(root/"calibration_replay/result.json")["replay_checks"],
         source_support=read(root/"support/result.json"),checks=read(root/"independent_checks.json"),media=read(root/"videos/protocol.json"),
         full_native_status="NOT_EVALUABLE",operational_qualified=False,whole_song_generations=0)
     manifest=root/"artifacts_manifest.json";assert not manifest.exists()
