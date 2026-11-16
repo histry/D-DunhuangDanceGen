@@ -59,8 +59,10 @@ def run(cfg,root):
             'Planned context training uses same-recording references, not cross-source paired target truth.',
             'Historical music and adaptation sources are exposed development populations.'])
     write(public/'r36_summary.json',summary);write(public/'r36_checks.json',checks)
-    files={str(p.relative_to(root)):dict(bytes=p.stat().st_size,sha256=sha(p)) for p in sorted(root.rglob('*')) if p.is_file() and not p.is_relative_to(public) and p.name!='artifacts_manifest.json'}
-    write(root/'artifacts_manifest.json',dict(schema='r36_archive_sha256',files=files))
+    frozen={'planning','planning_replay','context','context_replay','generation','generation_replay'}
+    frozen.update(p.name for p in root.glob('viewer*') if (p/'protocol.json').exists())
+    files={str(p.relative_to(root)):dict(bytes=p.stat().st_size,sha256=sha(p)) for p in sorted(root.rglob('*')) if p.is_file() and (p.relative_to(root).parts[0] in frozen or p.name=='independent_checks.json')}
+    write(root/'artifacts_manifest.json',dict(schema='r36_archive_sha256',scope='FROZEN_SCIENTIFIC_ARTIFACTS; ACTIVE_RELEASE_LOGS_EXCLUDED',files=files))
     write(public/'r36_receipt.json',dict(archive_manifest_sha256=sha(root/'artifacts_manifest.json'),file_count=len(files),receipts=receipts,
         inputs=dict(source_catalog_sha256=sha(cfg['catalog']),parent_generation_sha256=generation['parent_arrays_sha256']),
         failed_initial_view_retained=True,code_sync='PUBLISHED_GITHUB_SHA_VERIFIED; SSH_GIT_BUNDLE_RELAY_AFTER_SERVER_TLS_FAILURE',
