@@ -5,13 +5,13 @@ from collections import Counter
 import numpy as np
 from dunhuang.io import sha,write,checked
 from dunhuang.data.sources import ref
-from dunhuang.research.content_r32.common import population,runtime,read,core_body,core_points
+from dunhuang.research.content_r32.common import population,runtime,read,core_body,core_points,paired_schedule
 from dunhuang.research.state_r27.common import fresh,commit,forbid_optimizers,same_arrays,readout_check
 from release_r29 import video
 
 def verify(root):
     root=Path(root);out=root/"independent_checks.json";assert not out.exists();forbid_optimizers()
-    cfg=read("src/dunhuang/research/content_r32/config.json");population(cfg);exact=0;checks=[];decoder_steps=0;generator_steps=0;calls=0;trajectories=0
+    cfg=read("src/dunhuang/research/content_r32/config.json");pop,ledger,_,_=population(cfg);exact=0;checks=[];decoder_steps=0;generator_steps=0;calls=0;trajectories=0
     for stage in ("data","readout"):
         a=read(root/stage/"result.json");b=read(root/(stage+"_replay")/"result.json")
         if stage=="data":assert a==b;calls+=a["sampler_calls"];trajectories+=a["generated_trajectories"]
@@ -39,7 +39,9 @@ def verify(root):
     assert a["initial_digest"]==b["initial_digest"] and a["frozen"]==b["frozen"]
     paired=lambda r:[{k:x[k] for k in ("step","cases","seed","t")} for x in r["history"] if x["task"]=="paired"]
     assert paired(a)==paired(b) and len(paired(a))==300
-    assert set(Counter(c for x in paired(a) for c in x["cases"]).values())=={75}
+    counts=Counter(c for x in paired(a) for c in x["cases"]);assert len(counts)==16 and set(counts.values())=={75}
+    expected=paired_schedule(ledger,[x["case"] for x in pop if x["domain"]=="aist" and x["role"]=="train"],cfg["seed"])
+    assert [{k:r[k] for k in ("cases","seed","t")} for r in paired(a)]==[{k:r[k] for k in ("cases","seed","t")} for r in expected]
     assert [x["seed"] for x in a["history"] if x["task"]=="partial"]==[x["seed"] for x in b["history"] if x["task"]=="partial"]
     ev=read(root/"evaluation/result.json");rep=read(root/"evaluation_replay/result.json");assert ev==rep and ev["fixed_Canonical_NoRef_exact"]
     same_arrays(root/"evaluation/arrays.npz",root/"evaluation_replay/arrays.npz");exact+=1;calls+=ev["sampler_calls"];trajectories+=ev["generated_trajectories"]
@@ -55,6 +57,15 @@ def verify(root):
     assert len({x["source_sha256"] for x in lineage})==2 and len({x["recording_uid"] for x in lineage})==2
     changed=subprocess.check_output(["git","diff",cfg["baseline"],"--name-only","--","src/dunhuang"],text=True).splitlines()
     assert all(x.startswith("src/dunhuang/research/content_r32/") for x in changed)
+    oldroot=Path("outputs/content_r32_01");oldmodels=[read(oldroot/f"models/{arm}/result.json") for arm in ("pilot","AIST","ChangE")]
+    prior_calls=sum(read(oldroot/stage/"result.json")["sampler_calls"] for stage in ("data","evaluation","music_probe"))+sum(x["sampler_calls"] for x in oldmodels)
+    prior_trajectories=sum(read(oldroot/stage/"result.json")["generated_trajectories"] for stage in ("data","evaluation","music_probe"))+sum(x["generated_trajectories"] for x in oldmodels)
+    assert prior_calls==53 and prior_trajectories==236 and sum(x["optimizer_steps"] for x in oldmodels)==1320
+    superseded_update_checks=[]
+    for arm in ("AIST","ChangE"):
+        oldmodel=read(oldroot/f"models/{arm}/result.json");replayed=read(oldroot/f"models/{arm}_replay/result.json");assert replayed["optimizer_steps"]==0
+        for actual,original in zip(replayed["actual_readouts"],oldmodel["observations"]):superseded_update_checks.append(readout_check(actual,original))
+    assert len(superseded_update_checks)==8
     assert exact==13 and len(checks)==23 and decoder_steps==2400 and generator_steps==1320 and calls==53 and trajectories==236
     write(out,dict(code_commit=commit(),array_bundles_exact=exact,actual_update_pairs=23,update_checks=checks,
         decoder_optimizer_steps=decoder_steps,generator_optimizer_steps=generator_steps,replay_optimizer_steps=0,
@@ -62,7 +73,7 @@ def verify(root):
         reused_evaluation_trajectories=246,fixed_NoRef_exact=True,
         accounting_scope="QUALIFIED_LINEAGE_INCLUDES_REUSED_EARLY_QUALIFICATIONS; EXECUTED_TOTALS_SEPARATE",
         current_run_decoder_steps=0,current_run_generator_steps=1200,current_run_sampler_calls=43,current_run_generated_trajectories=190,
-        task_total_decoder_steps=2400,task_total_generator_steps=2520,task_total_sampler_calls=96,task_total_generated_trajectories=426,task_total_update_pairs=31,task_replay_optimizer_steps=0,
+        task_total_decoder_steps=2400,task_total_generator_steps=2520,task_total_sampler_calls=96,task_total_generated_trajectories=426,task_total_update_pairs=31,task_replay_optimizer_steps=0,superseded_update_checks=superseded_update_checks,paired_presentation_counts=dict(counts),
         reused_qualification_receipt=ref(root/"reuse_receipt.json"),action_io_and_backbone_unchanged=True,
         parent_scientific_seal_files_unchanged=True,paired_replay_ledger_identical=True,paired_presentations_per_source=75,
         auxiliary_sources=dict(AIST=4,ChangE=2),change_source_lineage=lineage,source_independence_scope="TWO_DISTINCT_HASHES_AND_REGISTERED_RECORDING_UIDS; NOT_NEW_OR_POPULATION_GENERALIZATION",full_native_status="NOT_EVALUABLE",operational_qualified=False,whole_song_generations=0))
