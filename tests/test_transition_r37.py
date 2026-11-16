@@ -71,3 +71,14 @@ def test_world_fk_keeps_lodge_rest_pelvis_offset():
     R=np.broadcast_to(np.eye(3),(5,22,3,3));root=np.ones((5,3));J=np.c_[np.arange(22)*.01,np.arange(22)*.02-.35,np.zeros(22)]
     points=world_fk(R,root,J,np.r_[-1,np.arange(21)])
     assert np.allclose(points,root[:,None]+J[None])
+
+def test_batched_boundary_cost_is_identical_to_scalar_definition():
+    from dunhuang.research.transition_r37.planning import edge,edge_cost_matrix
+    rng=np.random.default_rng(5)
+    def item():
+        d={k:rng.normal(size=(22,3)) for k in ('entry_P','exit_P','entry_v','exit_v','entry_a','exit_a')}
+        d.update({k:Rotation.from_rotvec(rng.normal(size=(22,3))).as_matrix() for k in ('entry_R','exit_R')})
+        return dict(_desc=d)
+    left=[item() for _ in range(5)];right=[item() for _ in range(7)]
+    scalar=np.array([[edge(a,b)['cost'] for b in right] for a in left])
+    assert np.array_equal(edge_cost_matrix(left,right),scalar)

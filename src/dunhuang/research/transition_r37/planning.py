@@ -35,6 +35,17 @@ def diverse(rows,width):
         if len(kept)>=width:break
     return kept
 
+def edge_cost_matrix(left,right):
+    """Same per-pair arithmetic as edge(), one SciPy rotation batch instead of Python pair loops."""
+    stack=lambda items,key:np.stack([e['_desc'][key] for e in items])
+    A=stack(left,'exit_R');B=stack(right,'entry_R');rel=A[:,None].swapaxes(-1,-2)@B[None]
+    angle=Rotation.from_matrix(rel.reshape(-1,3,3)).magnitude().reshape(len(left),len(right),22).mean(-1)
+    gap=stack(left,'exit_P')[:,None]-stack(right,'entry_P')[None]
+    rms=lambda x:np.sqrt((x*x).reshape(len(left),len(right),-1).mean(-1))
+    pos=rms(gap);wrist=rms(gap[:,:,[20,21]]);lower=rms(gap[:,:,[0,1,2,4,5,7,8,10,11]])
+    velocity=rms(stack(left,'exit_v')[:,None]-stack(right,'entry_v')[None]);acc=rms(stack(left,'exit_a')[:,None]-stack(right,'entry_a')[None])
+    return angle+.5*pos/.2+.25*wrist/.2+.15*lower/.2+.2*velocity/.5+.1*acc/5+.1*pos/(48/30)
+
 def search(catalog,music,lib,cfg,J,parents):
     units=catalog['units'];N=music['frames'];energy=np.asarray(music['energy_percentile']);novel=np.asarray(music['novelty'])
     duration=np.array([u['duration_frames']-1 for u in units]);activity=np.array([u['activity_percentile'] for u in units])
@@ -65,14 +76,14 @@ def search(catalog,music,lib,cfg,J,parents):
             bank=options(a,b)
             if not bank:continue
             expanded=list(states.get(b,[]))
-            transitions={}
+            previous={path[-1]['candidate_uid']:path[-1] for _,path in current if path}
+            left=list(previous.values());left_ids={e['candidate_uid']:i for i,e in enumerate(left)}
+            transitions=edge_cost_matrix(left,[e for _,e in bank]) if left else None
             for cost,path in current:
-                for local,e in bank:
+                for j,(local,e) in enumerate(bank):
                     memory=incremental(path,e,music);trans=0.
                     if path:
-                        pair=(path[-1]['candidate_uid'],e['candidate_uid'])
-                        if pair not in transitions:transitions[pair]=edge(path[-1],e)['cost']
-                        trans=transitions[pair]
+                        trans=float(transitions[left_ids[path[-1]['candidate_uid']],j])
                     extra=cfg['reuse_weight']*memory['overlap_fraction']*memory['theme_discount']+cfg['backtrack_weight']*memory['backtrack']*memory['theme_discount']
                     total=cost+local*(b-a)/180+.18+cfg['transition_weight']*trans+extra-.15*novel[min(b,N-1)]
                     expanded.append((float(total),path+[e]))

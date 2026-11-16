@@ -2,21 +2,32 @@
 import argparse,subprocess
 from pathlib import Path
 import numpy as np
+from concurrent.futures import ProcessPoolExecutor
 from dunhuang.research.complete_r36.core import read,write,sha,Library,relative_fk
 from .planning import search
 from .memory import reuse
 from .clock import source_positions
 from .content import observations,mapped_observations
 
-def run(cfg,out,replay=None):
+def compute_plan(payload):
+    base,cfg,song,out,resume=payload;out=Path(out);parent=Path(cfg['r36'])/'planning';lib=Library(base['catalog']);p=out/(song['id']+'_plan.json')
+    if resume and p.exists():
+        from .generate_contract import verify_plan
+        plan=read(p);verify_plan(plan,lib);return plan
+    catalog=read(parent/'catalog.json');music=read(parent/(song['id']+'_music.json'));z=np.load(Path(cfg['r35'])/'generation/arrays.npz')
+    plan=search(catalog,music,lib,{**base,**cfg},z['skeleton_J22'],z['parents']);write(p,plan);return plan
+
+def run(cfg,out,replay=None,resume=False):
     out=Path(out)
-    if out.exists():raise ValueError('Fresh result directory required')
-    out.mkdir(parents=True);parent=Path(cfg['r36'])/'planning';base=read('src/dunhuang/research/complete_r36/config.json');lib=Library(base['catalog'])
+    if out.exists() and (not resume or (out/'result.json').exists()):raise ValueError('Fresh output, or explicit incomplete-plan resume only')
+    out.mkdir(parents=True,exist_ok=resume);parent=Path(cfg['r36'])/'planning';base=read('src/dunhuang/research/complete_r36/config.json');lib=Library(base['catalog'])
     catalog=read(parent/'catalog.json');z=np.load(Path(cfg['r35'])/'generation/arrays.npz');J=z['skeleton_J22'];parents=z['parents']
-    config={**base,**cfg};songs=[];content=[]
-    for old in read(parent/'result.json')['songs']:
-        music=read(parent/(old['id']+'_music.json'));plan=search(catalog,music,lib,config,J,parents);before=read(old['new_plan'])
-        write(out/(old['id']+'_plan.json'),plan)
+    songs=[];content=[];old_songs=read(parent/'result.json')['songs']
+    # Independent songs share no optimization state. Parallelism changes no arithmetic within any search.
+    with ProcessPoolExecutor(max_workers=min(3,len(old_songs))) as pool:
+        plans=list(pool.map(compute_plan,[(base,cfg,s,str(out),resume) for s in old_songs]))
+    for old,plan in zip(old_songs,plans):
+        before=read(old['new_plan'])
         # Same retimed source positions are consumed by content, display and generator.
         for e in plan['events']:
             (values,mask),q=mapped_observations(e,lib.rotations[e['source_uid']],J,parents)
@@ -46,4 +57,4 @@ def run(cfg,out,replay=None):
             a=p.read_text().replace(str(out),'<RUN>');b=(Path(replay)/p.name).read_text().replace(str(Path(replay)),'<RUN>');assert a==b,p.name
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('--out',required=True);p.add_argument('--replay-from');a=p.parse_args();run(read('src/dunhuang/research/transition_r37/config.json'),a.out,a.replay_from)
+    p=argparse.ArgumentParser();p.add_argument('--out',required=True);p.add_argument('--replay-from');p.add_argument('--resume-incomplete-plans',action='store_true');a=p.parse_args();run(read('src/dunhuang/research/transition_r37/config.json'),a.out,a.replay_from,a.resume_incomplete_plans)
