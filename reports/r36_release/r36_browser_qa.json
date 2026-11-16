@@ -1,0 +1,23 @@
+{
+  "checked_at": "2026-11-17T03:16:05.744641+08:00",
+  "browser": "Chrome",
+  "viewer_protocol_sha256": "63c7d884d57a16bdbb0f6dce60f45c8e1bb9cf120ea827c015e011ad429f9b88",
+  "passed": [
+    "whole-song plan and source-cut tabs",
+    "actual four-panel generation display",
+    "common audio play/pause",
+    "range seek and one-frame stepping",
+    "half-speed playback",
+    "both registered seed selection",
+    "local/world view selection",
+    "seed-bound diagnostic selection",
+    "source92 vs target84 frame labels"
+  ],
+  "cases": 14,
+  "all_motion_tracks_equal_to_scientific_presentation": true,
+  "media_duration_seconds": 8.533313,
+  "full_page_screenshot": "CDP_TIMEOUT; VIEWPORT_CAPTURE_VERIFIED",
+  "diagnostic_canvas_click_positions": "NOT_EXHAUSTIVELY_TESTED",
+  "artistic_quality": "NOT_CERTIFIED",
+  "full_native": "NOT_EVALUABLE_22_OF24"
+}

@@ -1,0 +1,30 @@
+{
+  "stages": [
+    {
+      "stage": "original_main_full_regression",
+      "code_commit": "8592f31",
+      "passed": 537,
+      "skipped": 8,
+      "log_sha256": "98f322fa3ecda05c31394ef214294650ef8bc067a9655e8680903a2da607567a",
+      "log_path": "outputs\\complete_r36_01\\receipts\\complete_r36_preview_receipt_01\\tests.log"
+    },
+    {
+      "stage": "final_numeric_repair_full_regression",
+      "code_commit": "865b78b",
+      "passed": 539,
+      "skipped": 8,
+      "log_sha256": "f00cf1436b6c9823ee179886a4d8cdfbdb1de1b71b0477897167dfdbcbf646f8",
+      "log_path": "outputs\\complete_r36_01\\receipts\\complete_r36_repair_receipt_01\\final_regression.log"
+    },
+    {
+      "stage": "final_presentation_contracts",
+      "code_commit": "e14ca97",
+      "passed": 8,
+      "skipped": 0,
+      "log_sha256": "f2952331c679f0cfbf04f41c3431ab12c2a1571e2f4cdbc9415089b32771f9e9",
+      "log_path": "outputs\\complete_r36_01\\receipts\\complete_r36_repair_receipt_01\\presentation_contract_tests.log"
+    }
+  ],
+  "scientific_summary_preserves_original_main_regression_field": true,
+  "all_executed_tests_passed": true
+}

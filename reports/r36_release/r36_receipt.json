@@ -1,0 +1,139 @@
+{
+  "archive_manifest_sha256": "2bbda7e9f0c0e6e0e6e7883e7c4999d2911cf28821e9c2099c820b9ea42a21a4",
+  "file_count": 90,
+  "receipts": {
+    "complete_r36_plan_receipt_01": {
+      "execution_commit.txt": {
+        "sha256": "33b17f48360e5bf73d435112603660d61385a7603546c82a950f3028dfe1da2f",
+        "bytes": 41
+      },
+      "exit_status.txt": {
+        "sha256": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+        "bytes": 2
+      },
+      "finished_utc.txt": {
+        "sha256": "d7fe809aae431cac783b106a891409003448aced6f01534eda45826bbbe2da79",
+        "bytes": 21
+      },
+      "phase.txt": {
+        "sha256": "e31d7415373540ad701e59239e9f76fad08e8f89a355db78884217df6d0406dc",
+        "bytes": 7
+      },
+      "planning.log": {
+        "sha256": "e9480f2e5384e33dbfe8f80db753d7b1fb4c294b4802936ab59d2220f228d594",
+        "bytes": 63
+      },
+      "replay.log": {
+        "sha256": "e9480f2e5384e33dbfe8f80db753d7b1fb4c294b4802936ab59d2220f228d594",
+        "bytes": 63
+      },
+      "started_utc.txt": {
+        "sha256": "e5451d895608b0ee01b34ca7171ae831ef9ff8e79b0d2512539415011c4a3228",
+        "bytes": 21
+      },
+      "tests.log": {
+        "sha256": "af0016b6a7804ed794847e0b6ff79861c3d4b7aadb21b46c39218574de15bb84",
+        "bytes": 98
+      },
+      "viewer.log": {
+        "sha256": "3baa4a8cd41f58c101da40398f6b7e3bfc000c095bcb87673bb4b64a2e80af82",
+        "bytes": 1226
+      },
+      "exit_status": "1"
+    },
+    "complete_r36_dispatch_receipt_01": {
+      "bundle_verify.txt": {
+        "sha256": "ea545241b08a55a4a7df78c20896dfdd8127bfe8ed5d531608c010fa08f4a0b8",
+        "bytes": 285
+      },
+      "execution_commit.txt": {
+        "sha256": "12662c90ef5f841e3f895999383414ac6989b8a212555a3bd7a0ec60ee01264b",
+        "bytes": 41
+      },
+      "exit_status.txt": {
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+        "bytes": 2
+      },
+      "fast_forward.txt": {
+        "sha256": "9d042a7616a865bcd97550ed7c2368017c5c372d29f34e4d5c03d58a729f7da1",
+        "bytes": 1292
+      },
+      "finished_utc.txt": {
+        "sha256": "c312e2086942bff40bf114a9d56efc9e6a1ca1b438fecd6993bab2f67ed6c055",
+        "bytes": 21
+      },
+      "first_view.log": {
+        "sha256": "f8a4f22980b41df62c97046f8c0645010f0d51425d11c445e24e2c817537a3fc",
+        "bytes": 50
+      },
+      "phase.txt": {
+        "sha256": "d3be030801b90ea8057d3997d9845c7f850cc7b784450645d5ec2811cc927d7a",
+        "bytes": 10
+      },
+      "started_utc.txt": {
+        "sha256": "3ec8d0e2db6defeda61ac19f015063f7d2674bf8d38c57f8f4260d22ce677ca9",
+        "bytes": 21
+      },
+      "exit_status": "0"
+    },
+    "complete_r36_preview_receipt_01": {
+      "execution_commit.txt": {
+        "sha256": "12662c90ef5f841e3f895999383414ac6989b8a212555a3bd7a0ec60ee01264b",
+        "bytes": 41
+      },
+      "exit_status.txt": {
+        "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+        "bytes": 2
+      },
+      "finished_utc.txt": {
+        "sha256": "c312e2086942bff40bf114a9d56efc9e6a1ca1b438fecd6993bab2f67ed6c055",
+        "bytes": 21
+      },
+      "generation.log": {
+        "sha256": "0da54cbfa1e7fea80e6d100c82e0c5c26ace6f9ffd3a428157fd1be36d6eed7d",
+        "bytes": 486
+      },
+      "phase.txt": {
+        "sha256": "d3be030801b90ea8057d3997d9845c7f850cc7b784450645d5ec2811cc927d7a",
+        "bytes": 10
+      },
+      "replay.log": {
+        "sha256": "0da54cbfa1e7fea80e6d100c82e0c5c26ace6f9ffd3a428157fd1be36d6eed7d",
+        "bytes": 486
+      },
+      "started_utc.txt": {
+        "sha256": "75d82c4dd147db97737bfacec895923e08057e1752fa5fe11f4aaf74468f0bc6",
+        "bytes": 21
+      },
+      "tests.log": {
+        "sha256": "98f322fa3ecda05c31394ef214294650ef8bc067a9655e8680903a2da607567a",
+        "bytes": 2414
+      },
+      "train.log": {
+        "sha256": "8472cbb466a29dd8355b1ecbb138c91440106de624347a0a97b735ed579da8d4",
+        "bytes": 17542
+      },
+      "train_replay.log": {
+        "sha256": "a0e301223e9103fe0e13a8f1cea66a97637385519a171c2ae90dd9835ef2f6d2",
+        "bytes": 17396
+      },
+      "verify.log": {
+        "sha256": "ded45de294a7b124bd5a39bb46eb029d0182b567a00e610d5738a18b6af251c5",
+        "bytes": 1562
+      },
+      "viewer.log": {
+        "sha256": "6e8857d095e79c491686185bad5b4f247b7b59a9b8e191bdb679fc663688e749",
+        "bytes": 43
+      },
+      "exit_status": "0"
+    }
+  },
+  "inputs": {
+    "source_catalog_sha256": "d33cd546ae746227cfc6e5cad1dee2923c88742631a3c69433b63f4dfa85421a",
+    "parent_generation_sha256": "3d87e130814fc6eb6926d1e4e7acdbbfdbf2e5e598541d135297e47fb75820e2"
+  },
+  "failed_initial_view_retained": true,
+  "code_sync": "PUBLISHED_GITHUB_SHA_VERIFIED; SSH_GIT_BUNDLE_RELAY_AFTER_SERVER_TLS_FAILURE",
+  "ssh_temp_cleanup": "VERIFY_AFTER_FINAL_SYNC",
+  "media_copy_status_at_release": "NOT_YET_COLLECTED"
+}

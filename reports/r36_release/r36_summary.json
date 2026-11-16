@@ -1,0 +1,238 @@
+{
+  "schema": "r36_public_release",
+  "release_code_commit": "865b78ba8cfd7344b091342ab8a54451ea701d26",
+  "planning_execution_commit": "8a6612fd7f325680415bc9ce6a1f46b0179edc78",
+  "main_execution_commit": "865b78ba8cfd7344b091342ab8a54451ea701d26",
+  "units": 1955,
+  "families": 1642,
+  "source_counts": {
+    "female_FeiTian": 537,
+    "female_lotus": 325,
+    "female_meditation": 273,
+    "male_meditation": 271,
+    "male_pipa_1": 145,
+    "male_pipa_2": 160,
+    "male_ribbon": 105,
+    "male_ribbon_FenHe": 139
+  },
+  "planning": [
+    {
+      "id": "song0",
+      "old_units": 42,
+      "new_units": 13,
+      "old_activity": {
+        "mean_body_speed_m_s": 0.13675898066554718,
+        "arm_extent_rms_m": 0.24981989766108112,
+        "scope": "WITHIN_EVENT_TEMPLATES_ONLY; DESCRIPTIVE_NOT_GATE"
+      },
+      "new_activity": {
+        "mean_body_speed_m_s": 0.116014418585798,
+        "arm_extent_rms_m": 0.4167577615486693,
+        "scope": "WITHIN_EVENT_TEMPLATES_ONLY; DESCRIPTIVE_NOT_GATE"
+      }
+    },
+    {
+      "id": "song1",
+      "old_units": 40,
+      "new_units": 15,
+      "old_activity": {
+        "mean_body_speed_m_s": 0.16184534972604003,
+        "arm_extent_rms_m": 0.3306067077919366,
+        "scope": "WITHIN_EVENT_TEMPLATES_ONLY; DESCRIPTIVE_NOT_GATE"
+      },
+      "new_activity": {
+        "mean_body_speed_m_s": 0.12215282500804582,
+        "arm_extent_rms_m": 0.43154513675974804,
+        "scope": "WITHIN_EVENT_TEMPLATES_ONLY; DESCRIPTIVE_NOT_GATE"
+      }
+    },
+    {
+      "id": "song2",
+      "old_units": 40,
+      "new_units": 14,
+      "old_activity": {
+        "mean_body_speed_m_s": 0.2079064955789895,
+        "arm_extent_rms_m": 0.3312324263365114,
+        "scope": "WITHIN_EVENT_TEMPLATES_ONLY; DESCRIPTIVE_NOT_GATE"
+      },
+      "new_activity": {
+        "mean_body_speed_m_s": 0.12112725478675353,
+        "arm_extent_rms_m": 0.44025205445879473,
+        "scope": "WITHIN_EVENT_TEMPLATES_ONLY; DESCRIPTIVE_NOT_GATE"
+      }
+    }
+  ],
+  "effects": [
+    {
+      "key": "song0_Graph",
+      "source_uid": "male_meditation",
+      "seeds": [
+        35041,
+        35042
+      ],
+      "arms": {
+        "Frozen": {
+          "mean_angle_rad_editable": 0.32075013838402194,
+          "mean_angle_rad_current_event": 0.3083661870314732,
+          "body_jerk_internal_mean": 86.03963470458984,
+          "body_jerk_boundary_peak": 1684.0489501953125,
+          "generated_foot_horizontal_speed_proxy_m_s": 0.25058406591415405,
+          "local_position_rmse_m": 0.20364819467067719,
+          "jerk_inside_responsibility": 127.09993743896484,
+          "activity_inside_responsibility": 0.25623321533203125
+        },
+        "Context": {
+          "mean_angle_rad_editable": 0.3189723554288208,
+          "mean_angle_rad_current_event": 0.30844321958589,
+          "body_jerk_internal_mean": 70.7699203491211,
+          "body_jerk_boundary_peak": 1462.705322265625,
+          "generated_foot_horizontal_speed_proxy_m_s": 0.22940273582935333,
+          "local_position_rmse_m": 0.20426391065120697,
+          "jerk_inside_responsibility": 111.44949340820312,
+          "activity_inside_responsibility": 0.21560747921466827
+        },
+        "Edit": {
+          "mean_angle_rad_editable": 0.2189863272554236,
+          "mean_angle_rad_current_event": 0.22955847686289796,
+          "body_jerk_internal_mean": 68.03465270996094,
+          "body_jerk_boundary_peak": 1463.404052734375,
+          "generated_foot_horizontal_speed_proxy_m_s": 0.2888046205043793,
+          "local_position_rmse_m": 0.10511000454425812,
+          "jerk_inside_responsibility": 130.21774291992188,
+          "activity_inside_responsibility": 0.2708486020565033
+        }
+      },
+      "direct_world_xyz_rmse_vs_frozen_m": {
+        "Context": 0.03690571337938309,
+        "Edit": 0.14542116224765778
+      },
+      "context_and_edit_combined": true,
+      "source_retention_partly_enforced": true,
+      "not_causal_ablation": true,
+      "foot_proxy_is_not_contact_ground_truth": true
+    },
+    {
+      "key": "song1_Graph",
+      "source_uid": "female_meditation",
+      "seeds": [
+        35041,
+        35042
+      ],
+      "arms": {
+        "Frozen": {
+          "mean_angle_rad_editable": 0.47347863902192266,
+          "mean_angle_rad_current_event": 0.4695054037207584,
+          "body_jerk_internal_mean": 83.90604400634766,
+          "body_jerk_boundary_peak": 1404.485107421875,
+          "generated_foot_horizontal_speed_proxy_m_s": 0.2405429482460022,
+          "local_position_rmse_m": 0.2182171791791916,
+          "jerk_inside_responsibility": 123.53107452392578,
+          "activity_inside_responsibility": 0.19217923283576965
+        },
+        "Context": {
+          "mean_angle_rad_editable": 0.46285878496045885,
+          "mean_angle_rad_current_event": 0.45771268510931296,
+          "body_jerk_internal_mean": 84.74332427978516,
+          "body_jerk_boundary_peak": 1326.849365234375,
+          "generated_foot_horizontal_speed_proxy_m_s": 0.22190086543560028,
+          "local_position_rmse_m": 0.20855572819709778,
+          "jerk_inside_responsibility": 118.75505065917969,
+          "activity_inside_responsibility": 0.18052923679351807
+        },
+        "Edit": {
+          "mean_angle_rad_editable": 0.25484236428370916,
+          "mean_angle_rad_current_event": 0.2713469656224335,
+          "body_jerk_internal_mean": 70.70471954345703,
+          "body_jerk_boundary_peak": 4498.45556640625,
+          "generated_foot_horizontal_speed_proxy_m_s": 0.23896844685077667,
+          "local_position_rmse_m": 0.11179754137992859,
+          "jerk_inside_responsibility": 197.1109619140625,
+          "activity_inside_responsibility": 0.3755340874195099
+        }
+      },
+      "direct_world_xyz_rmse_vs_frozen_m": {
+        "Context": 0.030815035104751587,
+        "Edit": 0.1605999618768692
+      },
+      "context_and_edit_combined": true,
+      "source_retention_partly_enforced": true,
+      "not_causal_ablation": true,
+      "foot_proxy_is_not_contact_ground_truth": true
+    },
+    {
+      "key": "song2_Graph",
+      "source_uid": "male_meditation",
+      "seeds": [
+        35041,
+        35042
+      ],
+      "arms": {
+        "Frozen": {
+          "mean_angle_rad_editable": 0.42896351624454426,
+          "mean_angle_rad_current_event": 0.4062886348980352,
+          "body_jerk_internal_mean": 81.1678695678711,
+          "body_jerk_boundary_peak": 1314.59326171875,
+          "generated_foot_horizontal_speed_proxy_m_s": 0.2248314768075943,
+          "local_position_rmse_m": 0.1869053989648819,
+          "jerk_inside_responsibility": 115.33667755126953,
+          "activity_inside_responsibility": 0.1685093641281128
+        },
+        "Context": {
+          "mean_angle_rad_editable": 0.4332497377490394,
+          "mean_angle_rad_current_event": 0.41149567183275043,
+          "body_jerk_internal_mean": 83.20491790771484,
+          "body_jerk_boundary_peak": 1304.4461669921875,
+          "generated_foot_horizontal_speed_proxy_m_s": 0.207435742020607,
+          "local_position_rmse_m": 0.1754358559846878,
+          "jerk_inside_responsibility": 118.51094055175781,
+          "activity_inside_responsibility": 0.16614395380020142
+        },
+        "Edit": {
+          "mean_angle_rad_editable": 0.23666915713670827,
+          "mean_angle_rad_current_event": 0.24642937412529312,
+          "body_jerk_internal_mean": 32.941200256347656,
+          "body_jerk_boundary_peak": 1355.8760986328125,
+          "generated_foot_horizontal_speed_proxy_m_s": 0.1976948231458664,
+          "local_position_rmse_m": 0.11016836762428284,
+          "jerk_inside_responsibility": 113.0888442993164,
+          "activity_inside_responsibility": 0.3018617630004883
+        }
+      },
+      "direct_world_xyz_rmse_vs_frozen_m": {
+        "Context": 0.03014925681054592,
+        "Edit": 0.140681192278862
+      },
+      "context_and_edit_combined": true,
+      "source_retention_partly_enforced": true,
+      "not_causal_ablation": true,
+      "foot_proxy_is_not_contact_ground_truth": true
+    }
+  ],
+  "training": {
+    "optimizer_steps": 160,
+    "replay_optimizer_steps": 0,
+    "snapshots_verified": 3,
+    "final_digest": "d9b1a5cf22038cf73393419e1e25940ce7386926a81a03862a315dfae85ac38a",
+    "task_contract": "ALL_OBSERVED_BODY_TARGETS; INDEPENDENT_FACTOR_GRID; ACTUAL_GENERATED_CONTEXT; PLANNED_IS_REFERENCE_NOT_TRUTH",
+    "cache_policy": "INITIAL_CANDIDATE_ACTUAL_PLANNED_PAIRED_STATES; FROZEN_PARENT_CHANGE_STATES; NOT_FULLY_ON_POLICY"
+  },
+  "regression_summary": "537 passed, 8 skipped, 5 warnings in 22.79s",
+  "new_main_trajectories": 6,
+  "seeds_per_case": 2,
+  "additional_ablation_calls": 0,
+  "whole_song_generations": 0,
+  "sdmr_route": false,
+  "raw_deletions": 0,
+  "generation_folder": "generation_repair01",
+  "original_main_trajectories_retained": 6,
+  "source_semantic_completeness": "UNVERIFIED_KINEMATIC_PROPOSALS",
+  "full_native_status": "NOT_EVALUABLE_22_OF24",
+  "operational_qualified": false,
+  "limitations": [
+    "New long-unit plans are previews; main generation keeps the exact R35 plan for attribution.",
+    "Rotation retention is explicitly bounded, not evidence of learned music reinterpretation.",
+    "Lower planning speed remains a tradeoff; larger extent is affected by longer unit duration.",
+    "Planned context training uses same-recording references, not cross-source paired target truth.",
+    "Historical music and adaptation sources are exposed development populations."
+  ]
+}
