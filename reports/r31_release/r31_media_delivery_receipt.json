@@ -1,0 +1,434 @@
+{
+  "schema": "r31_authorized_media_delivery_v1",
+  "authorization": "授权回传上述 R31 视频与页面",
+  "authorization_question_id": "call_a00e38bed62f402e90af3748e481f7be",
+  "authorized_scope": {
+    "files": 35,
+    "videos": 33,
+    "bytes": 10641325,
+    "audio_videos": 27
+  },
+  "verified_at_utc": "2026-11-16T08:20:37.757642+00:00",
+  "source_publication_commit": "1cbc6c59756e7cbcfaa86a374cb9ccf8a27e7af0",
+  "source_publication_receipt_sha256": "6e68ea9b988e2a20e53d0e0e88a37217aeaa186f59c4a04450d7cb4d5fcca651",
+  "source_scientific_manifest_sha256": "ea7b2fe1937f94d12afd0939251b07d9a1115648126bf4ddc5e50f62ac5fdc07",
+  "destination": "D:/DunhuangDanceGen/outputs/geometry_r31_02/videos",
+  "files": {
+    "AIST_train_case48_R0_correct.mp4": {
+      "bytes": 362637,
+      "sha256": "5e261c068ce62e9e009a74078a266d8bf688efedd7daf862975c35e0333ed9f5"
+    },
+    "AIST_holdout_case4_CanonicalIO_none.mp4": {
+      "bytes": 359701,
+      "sha256": "0bdb519afb46b651977cd0cf54ef9611134c324438043ac721bee2eab829c0eb"
+    },
+    "ChangE_CanonicalIO_wrong_clock_e0.mp4": {
+      "bytes": 355590,
+      "sha256": "2b7828be08e858be3bccf930414a8c8b6f22043bc25a3b4f67599a829c0f0545"
+    },
+    "AIST_holdout_case4_CanonicalRoundtrip.mp4": {
+      "bytes": 349733,
+      "sha256": "06a7185091d12d052bfe496e5c1caa5f2bd758eb32220672ba2a3a0f6a675b3e"
+    },
+    "ChangE_CanonicalRoundtrip0_RootUnknown.mp4": {
+      "bytes": 97203,
+      "sha256": "baee681408ffc292bc47c30086380b3e3a4601594615abff67532bb35b19b450"
+    },
+    "ChangE_Source1_RootUnknown.mp4": {
+      "bytes": 138986,
+      "sha256": "f06d2e783c8d8a5041cd787c5fcd8088c6c84439822ac9a60832c92d2a9aff4b"
+    },
+    "AIST_holdout_case4_CanonicalIO_wrong_clock.mp4": {
+      "bytes": 351736,
+      "sha256": "cff84c5ac7eb85e6ab97ce521f3c0decf08f905b8b180d1110efb18b73ba8dce"
+    },
+    "AIST_holdout_case4_LegacyIO_none.mp4": {
+      "bytes": 362861,
+      "sha256": "d2dc08d2200580d3994951725916c5fadcf053807de9ad06ea95db6f005fbd3f"
+    },
+    "ChangE_CanonicalIO_e0.mp4": {
+      "bytes": 358325,
+      "sha256": "41d21ebf176c578d21639e9506f00125f8363dc57bacec162f0087d6f6e2f2d3"
+    },
+    "ChangE_LegacyIO_e0.mp4": {
+      "bytes": 358470,
+      "sha256": "106389b6aac5641eee4d668a0e93e4f16fb9649c8bd73a601d58632136a14cbd"
+    },
+    "AIST_holdout_case4_R0_correct.mp4": {
+      "bytes": 331619,
+      "sha256": "64a486ec5f8a29a319242c9ac38c9d513028e959cbf98b8c12ad580dbd8a0180"
+    },
+    "protocol.json": {
+      "bytes": 17824,
+      "sha256": "79bb8e0aff417251c824bd8367b89119b326c1a2f4db07e42ef62fa59e70c603"
+    },
+    "AIST_train_case48_Source.mp4": {
+      "bytes": 406663,
+      "sha256": "1a5525e364469fbb52ffd225c8628e27bce68baee2ee1d0a09ae4d98980bb246"
+    },
+    "AIST_holdout_case4_LegacyIO_correct.mp4": {
+      "bytes": 353753,
+      "sha256": "bb3fe32c29a55d0a4c38d5f664e2ee91dd501503f88bf9d174705a09279c92b9"
+    },
+    "ChangE_R0_e0.mp4": {
+      "bytes": 304478,
+      "sha256": "5dab9fca690b1db1344f3ceb3fe10a04b676d2c196a297e6a069fda322d67cd5"
+    },
+    "ChangE_OldRoundtrip1_RootUnknown.mp4": {
+      "bytes": 137226,
+      "sha256": "f84bd591de676edd6050e08e419e243a693e74193b2ec05c1e97b90660dc5cad"
+    },
+    "ChangE_LegacyIO_NoRef.mp4": {
+      "bytes": 390351,
+      "sha256": "5fa4bc3fea08d4d821f5501b58c594da38e912d5e55b7a2bdda07635c297361b"
+    },
+    "AIST_train_case48_CanonicalIO_correct.mp4": {
+      "bytes": 382716,
+      "sha256": "96319bd3b98474fbdcec84a1abc2312ba32da3272b56e7b0b55ed64dc217614b"
+    },
+    "AIST_train_case48_LegacyIO_correct.mp4": {
+      "bytes": 388488,
+      "sha256": "1472f7f5feab03e8e67bfef6900da7683dfd40f67f499aa8e57f548836b5ad39"
+    },
+    "ChangE_R0_e1.mp4": {
+      "bytes": 340947,
+      "sha256": "dafd7f5ffcf4c4945b0b2e901ced0aa8729a8ccc432701d1193141dacc12124a"
+    },
+    "ChangE_LegacyIO_e1.mp4": {
+      "bytes": 362248,
+      "sha256": "3330d490ae71135994d9030c24e69a4ba36e43cfca49bc12082ec0fab4f3d623"
+    },
+    "AIST_train_case48_CanonicalIO_none.mp4": {
+      "bytes": 380628,
+      "sha256": "519284482b3a51ee1f9365b78e95a67e4e7c9cc5c4ee272b735cc9fc0c687627"
+    },
+    "ChangE_CanonicalIO_NoRef.mp4": {
+      "bytes": 389759,
+      "sha256": "115612fb2962fe19907385bdfc3793ff8eae2358551b0e50efb620023b3a058b"
+    },
+    "AIST_holdout_case4_CanonicalIO_correct.mp4": {
+      "bytes": 357559,
+      "sha256": "27bbd3fa1e9c4f9f881383a64da3dc8e8c7c3ce5b730be4ed3235c175e7400a3"
+    },
+    "AIST_train_case48_CanonicalRoundtrip.mp4": {
+      "bytes": 407519,
+      "sha256": "253ad575848d3caf1ee0b487b43352cb44c5b3c8de02da905d290a83a7f6bc25"
+    },
+    "ChangE_Source0_RootUnknown.mp4": {
+      "bytes": 96205,
+      "sha256": "9c88b08bf40791967e8e14bce6217f0c749deb47afee8951b134abf468b3ba60"
+    },
+    "AIST_holdout_case4_OldRoundtrip.mp4": {
+      "bytes": 352593,
+      "sha256": "344a756cee59dfc7cf33c480bd80d33b2df15c8f1d88c848a37046dfe51d1a35"
+    },
+    "AIST_train_case48_CanonicalIO_wrong_clock.mp4": {
+      "bytes": 380927,
+      "sha256": "8708a9a4f23d40fb4b5827b5abd3333a3fb237648e897566af02808577e2dd66"
+    },
+    "AIST_holdout_case4_Source.mp4": {
+      "bytes": 348894,
+      "sha256": "b8848d04b353eda8ea65d0cfd9af24573ea8a5a4f2b65820904f79f20ee6f40d"
+    },
+    "ChangE_CanonicalRoundtrip1_RootUnknown.mp4": {
+      "bytes": 139861,
+      "sha256": "7b78a9e21f485ecf4ec7065bb05b272242ab950e3b3913c713f7f14c9a96203f"
+    },
+    "ChangE_CanonicalIO_e1.mp4": {
+      "bytes": 369715,
+      "sha256": "cc73c5a1fab7757b3d53e1dbb4422333eb5f04ceace06dab1acf5156989a50bd"
+    },
+    "AIST_train_case48_OldRoundtrip.mp4": {
+      "bytes": 412544,
+      "sha256": "83bd61b4c04089acdedad48faa93d721e363fe3db2e7a19d1f2273d9ad02a538"
+    },
+    "index.html": {
+      "bytes": 16922,
+      "sha256": "b79d6b466dbe5c5c3306163b22b0835553565c181ee7ead56811753c7891e2f8"
+    },
+    "AIST_train_case48_LegacyIO_none.mp4": {
+      "bytes": 380932,
+      "sha256": "9b70630169b4999e797b94ae37e3e00011265ccc8a2f931d895bf2412fbcabbb"
+    },
+    "ChangE_OldRoundtrip0_RootUnknown.mp4": {
+      "bytes": 95712,
+      "sha256": "a203cfadcc77e4f25d6f66977b45d490474bb090ee33b7d8bd8816da845d7a38"
+    }
+  },
+  "streams": [
+    {
+      "file": "AIST_train_case48_Source.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 1
+    },
+    {
+      "file": "AIST_train_case48_OldRoundtrip.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 1
+    },
+    {
+      "file": "AIST_train_case48_CanonicalRoundtrip.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 1
+    },
+    {
+      "file": "AIST_train_case48_R0_correct.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 1
+    },
+    {
+      "file": "AIST_train_case48_LegacyIO_correct.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 1
+    },
+    {
+      "file": "AIST_train_case48_CanonicalIO_correct.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 1
+    },
+    {
+      "file": "AIST_train_case48_CanonicalIO_wrong_clock.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 1
+    },
+    {
+      "file": "AIST_train_case48_LegacyIO_none.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 1
+    },
+    {
+      "file": "AIST_train_case48_CanonicalIO_none.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 1
+    },
+    {
+      "file": "AIST_holdout_case4_Source.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 1
+    },
+    {
+      "file": "AIST_holdout_case4_OldRoundtrip.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 1
+    },
+    {
+      "file": "AIST_holdout_case4_CanonicalRoundtrip.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 1
+    },
+    {
+      "file": "AIST_holdout_case4_R0_correct.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 1
+    },
+    {
+      "file": "AIST_holdout_case4_LegacyIO_correct.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 1
+    },
+    {
+      "file": "AIST_holdout_case4_CanonicalIO_correct.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 1
+    },
+    {
+      "file": "AIST_holdout_case4_CanonicalIO_wrong_clock.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 1
+    },
+    {
+      "file": "AIST_holdout_case4_LegacyIO_none.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 1
+    },
+    {
+      "file": "AIST_holdout_case4_CanonicalIO_none.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 1
+    },
+    {
+      "file": "ChangE_Source0_RootUnknown.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 0
+    },
+    {
+      "file": "ChangE_OldRoundtrip0_RootUnknown.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 0
+    },
+    {
+      "file": "ChangE_CanonicalRoundtrip0_RootUnknown.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 0
+    },
+    {
+      "file": "ChangE_Source1_RootUnknown.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 0
+    },
+    {
+      "file": "ChangE_OldRoundtrip1_RootUnknown.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 0
+    },
+    {
+      "file": "ChangE_CanonicalRoundtrip1_RootUnknown.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 0
+    },
+    {
+      "file": "ChangE_R0_e0.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 1
+    },
+    {
+      "file": "ChangE_R0_e1.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 1
+    },
+    {
+      "file": "ChangE_LegacyIO_e0.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 1
+    },
+    {
+      "file": "ChangE_LegacyIO_e1.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 1
+    },
+    {
+      "file": "ChangE_CanonicalIO_e0.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 1
+    },
+    {
+      "file": "ChangE_CanonicalIO_e1.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 1
+    },
+    {
+      "file": "ChangE_LegacyIO_NoRef.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 1
+    },
+    {
+      "file": "ChangE_CanonicalIO_NoRef.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 1
+    },
+    {
+      "file": "ChangE_CanonicalIO_wrong_clock_e0.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 1
+    }
+  ],
+  "all_file_sizes_and_sha256_match": true,
+  "all_33_video_frames_locally_decoded": true,
+  "all_page_media_links_exist": true,
+  "page_script_node_syntax_passed": true,
+  "live_browser_controls_verified": false,
+  "delivery_status": "DELIVERED_VERIFIED",
+  "new_training_steps": 0,
+  "new_sampling_calls": 0,
+  "temporary_ssh_files_created": 0,
+  "temporary_ssh_files_remaining": 0
+}
