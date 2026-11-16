@@ -1,0 +1,668 @@
+{
+  "delivered_at_utc": "2026-11-16T01:39:25.165723+00:00",
+  "publication_commit": "fcf3138d984db6efa4efe114ed5e49c4ea6938ee",
+  "authorization": {
+    "user_reply": "授权回传上述 R28 视频与页面",
+    "question_id": "call_2703062657c64954b7507c072b96fc07",
+    "scope": "29 videos, viewer and protocol only; embedded music included"
+  },
+  "source_publication_receipt_sha256": "d8f3d5727c4facfcefd6ef5ef2d98481c931d0c8b93bbcfeacd258e7a86b3ce8",
+  "files": 31,
+  "bytes": 9540191,
+  "records": [
+    {
+      "file": "AIST_Holdout4_NoRef.mp4",
+      "bytes": 338939,
+      "sha256": "be848349d838d5fb2bbb8bc1d91ad9916821a0f3683593149e6d342008602828"
+    },
+    {
+      "file": "AIST_Holdout4_R26_C1.mp4",
+      "bytes": 315033,
+      "sha256": "c85153a0d21e0d587c4e059b3a419184ef52a7b49dbc4b60e59f680ad84a1186"
+    },
+    {
+      "file": "AIST_Holdout4_Source.mp4",
+      "bytes": 353790,
+      "sha256": "d178dc6f68a638d955475f1565e5f4e77f5853768afc541c5fb4d18f0657bea1"
+    },
+    {
+      "file": "AIST_Holdout4_T0.mp4",
+      "bytes": 361607,
+      "sha256": "4527a88f09d80451f990c0c7fc6f023eb59c703e6e1d7dcc9733a59ea665ce19"
+    },
+    {
+      "file": "AIST_Holdout4_T1.mp4",
+      "bytes": 335818,
+      "sha256": "7aa7adf9fccb1b63d8800cdb81ffd1cdd9579ed89ed472989ef29419d6f7df4c"
+    },
+    {
+      "file": "AIST_Train92_NoRef.mp4",
+      "bytes": 365537,
+      "sha256": "71bdc116835ad08933e1c6b95978175e5813d2ac167a6e9524963c95f7ad0642"
+    },
+    {
+      "file": "AIST_Train92_R26_C1.mp4",
+      "bytes": 329013,
+      "sha256": "a74a80b3b9566b5cda46d96bc98a3d5c5d5d7594591d2ea695064b9a23fe4ee8"
+    },
+    {
+      "file": "AIST_Train92_Source.mp4",
+      "bytes": 436634,
+      "sha256": "62932c1a8ecc705c01a8981d23b09e0067d43688444816c8b1161819486db81c"
+    },
+    {
+      "file": "AIST_Train92_T0.mp4",
+      "bytes": 341188,
+      "sha256": "0ccbe43bd4935a832f0596260e2cd14f13a9b03eda9acaf684036d96fbfe43c5"
+    },
+    {
+      "file": "AIST_Train92_T1.mp4",
+      "bytes": 376096,
+      "sha256": "e62566bce35627b326197839fd4a834d76b1c844ddb3d31fa8883e8511cf8882"
+    },
+    {
+      "file": "ChangE_NoRef.mp4",
+      "bytes": 363637,
+      "sha256": "95324497fef1a1e4b817c56b02d01bc2817244f18b4841b194cf0ae95e46499d"
+    },
+    {
+      "file": "ChangE_P_e0.mp4",
+      "bytes": 313844,
+      "sha256": "e5799b2d6a6b4b8535d149ffdded63f1f431526650923596e581b9c2e3381a18"
+    },
+    {
+      "file": "ChangE_P_e1.mp4",
+      "bytes": 343969,
+      "sha256": "afa3456738363a8ccd6d7ae176ebc710b89eff2208d59089f6d1c3e330c4230d"
+    },
+    {
+      "file": "ChangE_R26_C1_e0.mp4",
+      "bytes": 306807,
+      "sha256": "d12e589520bf6a12494f9278ece2dbe8b047c51cd3bb9da27266a578fea7bb44"
+    },
+    {
+      "file": "ChangE_R26_C1_e1.mp4",
+      "bytes": 314313,
+      "sha256": "3d3f0411eaaf75dd5741f7caae8b6ca9d8c7798d2ec07155a16af687602a3740"
+    },
+    {
+      "file": "ChangE_Source0_RootUnknown.mp4",
+      "bytes": 96564,
+      "sha256": "31b8bc38e605edf9961d0e5faf63d3dfde1193ce1a298e8a8e370d0fd77af406"
+    },
+    {
+      "file": "ChangE_Source1_RootUnknown.mp4",
+      "bytes": 141087,
+      "sha256": "7b6b8e5c9e692f18a54b688afa6ff5e0906bf171625acb1d0f9822768597c672"
+    },
+    {
+      "file": "ChangE_T0_e0.mp4",
+      "bytes": 310743,
+      "sha256": "a47e984080430489700aefbc20e41b53ba23ec329ee0605b4562907d2f96ec10"
+    },
+    {
+      "file": "ChangE_T0_e1.mp4",
+      "bytes": 350444,
+      "sha256": "b0df1969cdd3497e1edfd919893671251de4aed931365e124119c30a2dc7ddca"
+    },
+    {
+      "file": "ChangE_T1_e0.mp4",
+      "bytes": 278516,
+      "sha256": "921fabc832106d4ce35e1770425e0a2f01b8be68384c6d97a764db1ef6826d68"
+    },
+    {
+      "file": "ChangE_T1_e1.mp4",
+      "bytes": 374701,
+      "sha256": "1a96d840f7eaa63c1655ae79058a7d03942527e08b3b7c078739b8f91f09922d"
+    },
+    {
+      "file": "NewTeacher_NoRef.mp4",
+      "bytes": 366664,
+      "sha256": "7a8d2241f4ceded0735690a77a114a7f5d8a3c0779f730927b32442e123dabaf"
+    },
+    {
+      "file": "NewTeacher_P_canonical.mp4",
+      "bytes": 331955,
+      "sha256": "ce897652b8670b4652b5b9122408ce1461292672ce1a9abdf3d4903eaa7d1c8c"
+    },
+    {
+      "file": "NewTeacher_P_raw.mp4",
+      "bytes": 332827,
+      "sha256": "7fe7b32c8282e6efdd40c9c2385dc5c9ab9b9123ba98e50a83c8915917217639"
+    },
+    {
+      "file": "NewTeacher_Source.mp4",
+      "bytes": 353273,
+      "sha256": "3a81addd67c55a3a64b8c0a10030d8e7f2bb1a18bc181ee322e0ad6bec545088"
+    },
+    {
+      "file": "SeenTeacher_NoRef.mp4",
+      "bytes": 366358,
+      "sha256": "ec24da8d69e4b7795bab19de825ba8f4386b1b911e9a155cd6d69f8ab4b46c35"
+    },
+    {
+      "file": "SeenTeacher_P_canonical.mp4",
+      "bytes": 333255,
+      "sha256": "6648b826b9ddfb3bdb32c042ac2ca595cdc1b9ca8f7c8cba370743f2c80e18f4"
+    },
+    {
+      "file": "SeenTeacher_P_raw.mp4",
+      "bytes": 333590,
+      "sha256": "13d67c36f292cbc08c70d3e3978aed55daafef1070fa33914d91b4e1b0bea021"
+    },
+    {
+      "file": "SeenTeacher_Source.mp4",
+      "bytes": 351264,
+      "sha256": "114367dca1e75dd1a98b3c0015581c2b1d4b9736e54bf5150192882baf9a3a49"
+    },
+    {
+      "file": "index.html",
+      "bytes": 11219,
+      "sha256": "c2cbd7c8ef8590dcf254a9183cb9994064ac00210e9c5c14fa736d3ad9eaf42c"
+    },
+    {
+      "file": "protocol.json",
+      "bytes": 11506,
+      "sha256": "eee58845ca625e514a898da628b997264db2fbb152ab800b51d11ecc2d7034cf"
+    }
+  ],
+  "all_sizes_sha256_exact": true,
+  "viewer_embedded_records_exact": true,
+  "viewer_video_links_verified": 29,
+  "viewer_script_syntax_passed": true,
+  "default_comparison": [
+    "AIST_Train92_T0.mp4",
+    "AIST_Train92_T1.mp4"
+  ],
+  "local_ffprobe": [
+    {
+      "file": "SeenTeacher_Source.mp4",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 600,
+          "height": 600,
+          "nb_frames": "256"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "nb_frames": "401"
+        }
+      ]
+    },
+    {
+      "file": "SeenTeacher_NoRef.mp4",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 600,
+          "height": 600,
+          "nb_frames": "256"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "nb_frames": "401"
+        }
+      ]
+    },
+    {
+      "file": "SeenTeacher_P_raw.mp4",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 600,
+          "height": 600,
+          "nb_frames": "256"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "nb_frames": "401"
+        }
+      ]
+    },
+    {
+      "file": "SeenTeacher_P_canonical.mp4",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 600,
+          "height": 600,
+          "nb_frames": "256"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "nb_frames": "401"
+        }
+      ]
+    },
+    {
+      "file": "NewTeacher_Source.mp4",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 600,
+          "height": 600,
+          "nb_frames": "256"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "nb_frames": "401"
+        }
+      ]
+    },
+    {
+      "file": "NewTeacher_NoRef.mp4",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 600,
+          "height": 600,
+          "nb_frames": "256"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "nb_frames": "401"
+        }
+      ]
+    },
+    {
+      "file": "NewTeacher_P_raw.mp4",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 600,
+          "height": 600,
+          "nb_frames": "256"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "nb_frames": "401"
+        }
+      ]
+    },
+    {
+      "file": "NewTeacher_P_canonical.mp4",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 600,
+          "height": 600,
+          "nb_frames": "256"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "nb_frames": "401"
+        }
+      ]
+    },
+    {
+      "file": "AIST_Train92_Source.mp4",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 600,
+          "height": 600,
+          "nb_frames": "256"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "nb_frames": "401"
+        }
+      ]
+    },
+    {
+      "file": "AIST_Train92_NoRef.mp4",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 600,
+          "height": 600,
+          "nb_frames": "256"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "nb_frames": "401"
+        }
+      ]
+    },
+    {
+      "file": "AIST_Train92_R26_C1.mp4",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 600,
+          "height": 600,
+          "nb_frames": "256"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "nb_frames": "401"
+        }
+      ]
+    },
+    {
+      "file": "AIST_Train92_T0.mp4",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 600,
+          "height": 600,
+          "nb_frames": "256"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "nb_frames": "401"
+        }
+      ]
+    },
+    {
+      "file": "AIST_Train92_T1.mp4",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 600,
+          "height": 600,
+          "nb_frames": "256"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "nb_frames": "401"
+        }
+      ]
+    },
+    {
+      "file": "AIST_Holdout4_Source.mp4",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 600,
+          "height": 600,
+          "nb_frames": "256"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "nb_frames": "401"
+        }
+      ]
+    },
+    {
+      "file": "AIST_Holdout4_NoRef.mp4",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 600,
+          "height": 600,
+          "nb_frames": "256"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "nb_frames": "401"
+        }
+      ]
+    },
+    {
+      "file": "AIST_Holdout4_R26_C1.mp4",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 600,
+          "height": 600,
+          "nb_frames": "256"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "nb_frames": "401"
+        }
+      ]
+    },
+    {
+      "file": "AIST_Holdout4_T0.mp4",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 600,
+          "height": 600,
+          "nb_frames": "256"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "nb_frames": "401"
+        }
+      ]
+    },
+    {
+      "file": "AIST_Holdout4_T1.mp4",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 600,
+          "height": 600,
+          "nb_frames": "256"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "nb_frames": "401"
+        }
+      ]
+    },
+    {
+      "file": "ChangE_Source0_RootUnknown.mp4",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 600,
+          "height": 600,
+          "nb_frames": "256"
+        }
+      ]
+    },
+    {
+      "file": "ChangE_Source1_RootUnknown.mp4",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 600,
+          "height": 600,
+          "nb_frames": "256"
+        }
+      ]
+    },
+    {
+      "file": "ChangE_NoRef.mp4",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 600,
+          "height": 600,
+          "nb_frames": "256"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "nb_frames": "135"
+        }
+      ]
+    },
+    {
+      "file": "ChangE_R26_C1_e0.mp4",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 600,
+          "height": 600,
+          "nb_frames": "256"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "nb_frames": "135"
+        }
+      ]
+    },
+    {
+      "file": "ChangE_R26_C1_e1.mp4",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 600,
+          "height": 600,
+          "nb_frames": "256"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "nb_frames": "135"
+        }
+      ]
+    },
+    {
+      "file": "ChangE_P_e0.mp4",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 600,
+          "height": 600,
+          "nb_frames": "256"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "nb_frames": "135"
+        }
+      ]
+    },
+    {
+      "file": "ChangE_P_e1.mp4",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 600,
+          "height": 600,
+          "nb_frames": "256"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "nb_frames": "135"
+        }
+      ]
+    },
+    {
+      "file": "ChangE_T0_e0.mp4",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 600,
+          "height": 600,
+          "nb_frames": "256"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "nb_frames": "135"
+        }
+      ]
+    },
+    {
+      "file": "ChangE_T0_e1.mp4",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 600,
+          "height": 600,
+          "nb_frames": "256"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "nb_frames": "135"
+        }
+      ]
+    },
+    {
+      "file": "ChangE_T1_e0.mp4",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 600,
+          "height": 600,
+          "nb_frames": "256"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "nb_frames": "135"
+        }
+      ]
+    },
+    {
+      "file": "ChangE_T1_e1.mp4",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 600,
+          "height": 600,
+          "nb_frames": "256"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "nb_frames": "135"
+        }
+      ]
+    }
+  ],
+  "remote_complete_decodes_verified": 29,
+  "live_browser_controls_verified": false,
+  "temporary_ssh_files_created": 0,
+  "temporary_ssh_files_remaining": 0,
+  "training_optimizer_steps_during_delivery": 0,
+  "experiment_outputs_modified": false
+}
