@@ -1,0 +1,328 @@
+{
+  "code_commit": "b94ab7574786a4c6740af0e886b0abd809cfdac9",
+  "array_bundles_exact": 16,
+  "optimizer_steps": 2400,
+  "replay_optimizer_steps": 0,
+  "generator_update_pairs": 8,
+  "calibration_gradient_readouts": 4,
+  "gradient_checks": [
+    {
+      "root": {
+        "actual": 170.44003295898438,
+        "expected": 170.44003295898438,
+        "relative_error": 0.0
+      },
+      "body": {
+        "actual": 44.764671325683594,
+        "expected": 44.764671325683594,
+        "relative_error": 0.0
+      },
+      "saturated_root_max": {
+        "actual": 0.0,
+        "expected": 0.0,
+        "relative_error": 0.0
+      },
+      "saturated_body_max": {
+        "actual": 0.0,
+        "expected": 0.0,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "root": {
+        "actual": 145.64984130859375,
+        "expected": 145.64984130859375,
+        "relative_error": 0.0
+      },
+      "body": {
+        "actual": 15.754618644714355,
+        "expected": 15.754618644714355,
+        "relative_error": 0.0
+      },
+      "saturated_root_max": {
+        "actual": 0.0,
+        "expected": 0.0,
+        "relative_error": 0.0
+      },
+      "saturated_body_max": {
+        "actual": 0.0,
+        "expected": 0.0,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "root": {
+        "actual": 144.65138244628906,
+        "expected": 144.65138244628906,
+        "relative_error": 0.0
+      },
+      "body": {
+        "actual": 47.14320373535156,
+        "expected": 47.14320373535156,
+        "relative_error": 0.0
+      },
+      "saturated_root_max": {
+        "actual": 0.0,
+        "expected": 0.0,
+        "relative_error": 0.0
+      },
+      "saturated_body_max": {
+        "actual": 0.0,
+        "expected": 0.0,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "root": {
+        "actual": 143.64459228515625,
+        "expected": 143.64459228515625,
+        "relative_error": 0.0
+      },
+      "body": {
+        "actual": 15.920897483825684,
+        "expected": 15.920897483825684,
+        "relative_error": 0.0
+      },
+      "saturated_root_max": {
+        "actual": 0.0,
+        "expected": 0.0,
+        "relative_error": 0.0
+      },
+      "saturated_body_max": {
+        "actual": 0.0,
+        "expected": 0.0,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "encoder": {
+        "actual": 0.02260030433535576,
+        "expected": 0.022600308060646057,
+        "relative_error": 1.6483360706701014e-07
+      },
+      "input": {
+        "actual": 0.018770527094602585,
+        "expected": 0.018770527094602585,
+        "relative_error": 0.0
+      },
+      "sequence": {
+        "actual": 0.011320053599774837,
+        "expected": 0.011320054531097412,
+        "relative_error": 8.227191592205098e-08
+      },
+      "projections": {
+        "actual": 0.052695877850055695,
+        "expected": 0.052695874124765396,
+        "relative_error": 7.069415010149559e-08
+      },
+      "lowrank": {
+        "actual": 0.0,
+        "expected": 0.0,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "encoder": {
+        "actual": 0.008383339270949364,
+        "expected": 0.008383339270949364,
+        "relative_error": 0.0
+      },
+      "input": {
+        "actual": 0.006859973073005676,
+        "expected": 0.006859974004328251,
+        "relative_error": 1.357618227165099e-07
+      },
+      "sequence": {
+        "actual": 0.004154574126005173,
+        "expected": 0.004154574126005173,
+        "relative_error": 0.0
+      },
+      "projections": {
+        "actual": 0.021575547754764557,
+        "expected": 0.021575547754764557,
+        "relative_error": 0.0
+      },
+      "lowrank": {
+        "actual": 0.0,
+        "expected": 0.0,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "encoder": {
+        "actual": 0.004982213955372572,
+        "expected": 0.004982214421033859,
+        "relative_error": 9.346472230135568e-08
+      },
+      "input": {
+        "actual": 0.0036872043274343014,
+        "expected": 0.003687204560264945,
+        "relative_error": 6.314557270919071e-08
+      },
+      "sequence": {
+        "actual": 0.0017933796625584364,
+        "expected": 0.0017933796625584364,
+        "relative_error": 0.0
+      },
+      "projections": {
+        "actual": 0.007211070042103529,
+        "expected": 0.007211070042103529,
+        "relative_error": 0.0
+      },
+      "lowrank": {
+        "actual": 0.0,
+        "expected": 0.0,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "encoder": {
+        "actual": 0.0041079348884522915,
+        "expected": 0.0041079348884522915,
+        "relative_error": 0.0
+      },
+      "input": {
+        "actual": 0.003318857867270708,
+        "expected": 0.0033188581001013517,
+        "relative_error": 7.0153841059598e-08
+      },
+      "sequence": {
+        "actual": 0.0020305358339101076,
+        "expected": 0.0020305358339101076,
+        "relative_error": 0.0
+      },
+      "projections": {
+        "actual": 0.007473990321159363,
+        "expected": 0.007473990321159363,
+        "relative_error": 0.0
+      },
+      "lowrank": {
+        "actual": 0.0,
+        "expected": 0.0,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "encoder": {
+        "actual": 0.02264251559972763,
+        "expected": 0.02264251559972763,
+        "relative_error": 0.0
+      },
+      "input": {
+        "actual": 0.018723683431744576,
+        "expected": 0.018723683431744576,
+        "relative_error": 0.0
+      },
+      "sequence": {
+        "actual": 0.011292138136923313,
+        "expected": 0.011292138136923313,
+        "relative_error": 0.0
+      },
+      "projections": {
+        "actual": 0.05074210464954376,
+        "expected": 0.05074210464954376,
+        "relative_error": 0.0
+      },
+      "lowrank": {
+        "actual": 0.0,
+        "expected": 0.0,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "encoder": {
+        "actual": 0.00864662230014801,
+        "expected": 0.00864662230014801,
+        "relative_error": 0.0
+      },
+      "input": {
+        "actual": 0.0070193372666835785,
+        "expected": 0.0070193372666835785,
+        "relative_error": 0.0
+      },
+      "sequence": {
+        "actual": 0.0042092157527804375,
+        "expected": 0.0042092157527804375,
+        "relative_error": 0.0
+      },
+      "projections": {
+        "actual": 0.021489448845386505,
+        "expected": 0.021489448845386505,
+        "relative_error": 0.0
+      },
+      "lowrank": {
+        "actual": 0.0,
+        "expected": 0.0,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "encoder": {
+        "actual": 0.006660411134362221,
+        "expected": 0.00666040787473321,
+        "relative_error": 4.894035736528608e-07
+      },
+      "input": {
+        "actual": 0.0048323641531169415,
+        "expected": 0.004832359962165356,
+        "relative_error": 8.672673360235966e-07
+      },
+      "sequence": {
+        "actual": 0.0024417226668447256,
+        "expected": 0.002441722434014082,
+        "relative_error": 9.535507320933424e-08
+      },
+      "projections": {
+        "actual": 0.015312562696635723,
+        "expected": 0.015312562696635723,
+        "relative_error": 0.0
+      },
+      "lowrank": {
+        "actual": 0.0,
+        "expected": 0.0,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "encoder": {
+        "actual": 0.007322187535464764,
+        "expected": 0.007322185672819614,
+        "relative_error": 2.5438369888906823e-07
+      },
+      "input": {
+        "actual": 0.005098673515021801,
+        "expected": 0.005098672118037939,
+        "relative_error": 2.739896676669725e-07
+      },
+      "sequence": {
+        "actual": 0.003041749820113182,
+        "expected": 0.0030417493544518948,
+        "relative_error": 1.530899366636314e-07
+      },
+      "projections": {
+        "actual": 0.008559447713196278,
+        "expected": 0.008559447713196278,
+        "relative_error": 0.0
+      },
+      "lowrank": {
+        "actual": 0.0,
+        "expected": 0.0,
+        "relative_error": 0.0
+      }
+    }
+  ],
+  "gradient_norm_rtol": 1e-05,
+  "gradient_norm_atol": 0,
+  "non_gradient_readouts_exact": true,
+  "sampler_calls": 45,
+  "generated_trajectories": 192,
+  "replay_sampler_calls": 45,
+  "replay_generated_trajectories": 192,
+  "reused_frozen_rows": 146,
+  "original_source_and_proxy_gate_exact": true,
+  "immutable_R29_manifest_sha256": "45cae7a710c033a47100394af4297bac81a4a5429bdd5b2f47b46e6e2fe969be",
+  "frozen_code_unchanged": true,
+  "whole_song_generations": 0,
+  "full_native_status": "NOT_EVALUABLE",
+  "operational_qualified": false
+}
