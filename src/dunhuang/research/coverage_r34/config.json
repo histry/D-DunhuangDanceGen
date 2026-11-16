@@ -1,0 +1,52 @@
+{
+  "schema": "r34_continuous_coverage_v1",
+  "baseline": "db0d121a48f7aa212f2ddfb5e6d6e26f58a751d4",
+  "r33": "outputs/control_r33_01",
+  "r33_manifest_sha256": "279f5949d42335c3ce2120a885fbee0c68193cf9d86cb02790aa93391f90074e",
+  "dyn_checkpoint_sha256": "cf3107286ed9e602def871c7b36670f0b9c811837d1c59f95ad46b5d30b74462",
+  "seed": 34041,
+  "train_steps": 600,
+  "learning_rate": 0.0002,
+  "snapshot_steps": [
+    0,
+    1,
+    299,
+    599
+  ],
+  "times": [
+    999,
+    519,
+    119,
+    19
+  ],
+  "context_train_steps": 600,
+  "context_seed": 34141,
+  "context_learning_rate": 0.0002,
+  "coverage_gate": {
+    "core_error_max_ratio": 1.1,
+    "core_activity_extent_ratio": [
+      0.8,
+      1.25
+    ],
+    "outside_error_max_extra_ratio": 0.9,
+    "cross_D2_max_extra_ratio": 1
+  },
+  "context_gap_intervals": [
+    [
+      64,
+      160
+    ],
+    [
+      80,
+      144
+    ],
+    [
+      96,
+      128
+    ]
+  ],
+  "context_training_requires_coverage": true,
+  "human_reviewed": false,
+  "operational_qualified": false,
+  "whole_song_generations": 0
+}
