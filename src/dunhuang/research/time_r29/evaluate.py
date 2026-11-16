@@ -6,13 +6,13 @@ import torch
 from .common import runtime,rows,packet
 from .dynamics import decomposition,rotation_groups
 from dunhuang.research.state_r27.common import read,write,sha,fresh,commit,restore,digest,metrics,motion_metrics,forbid_optimizers,same_arrays
-from dunhuang.research.state_r27.trace import sample
+from dunhuang.research.state_r27.trace import sample,trace_arrays
 from dunhuang.research.contract_r28.input_contract import foot_proxy
 from dunhuang.research.reference_r26.evaluate import timing
 
 def run(cfg,root,out,domain,replay=None):
     root=Path(root);out=fresh(out);forbid_optimizers()
-    d,n,s,f,e,info,a=runtime(cfg,0);frozen=digest(d.model);initial=a.state_dict()
+    d,n,s,f,e,info,a=runtime(cfg,0);frozen=digest(d.model);
     arrays={};records=[];noises=[];calls=0;reused=0;baseline={}
     def measure(role,arm,mode,k,raw,points,normalized,values,items,reuse=False):
         stem=f"{role}_{arm}_{mode}_{k}"
@@ -49,7 +49,9 @@ def run(cfg,root,out,domain,replay=None):
         values,items=rows(cfg,root,domain,role);music=torch.tensor(np.stack([x["music"] for x in values]),device="cuda")
         for mode in ("correct","wrong_clock","swapped","none"):
             for k,seeds in enumerate(cfg["real_eval_seeds"]):
-                pred,noise,_=sample(d,a,None if mode=="none" else packet(values,mode),music,seeds);calls+=1
+                watch=domain=="aist" and role=="train" and mode=="correct" and k==0
+                pred,noise,trace=sample(d,a,None if mode=="none" else packet(values,mode),music,seeds,trace=watch,selected=cfg["times"]);calls+=1
+                if watch:np.savez_compressed(out/"actual_B1.npz",final=pred.cpu().numpy(),**trace_arrays(trace))
                 if mode=="none":assert np.array_equal(pred.cpu().numpy(),baseline[role,k])
                 raw=n.unnormalize(pred.clone());p=f(raw,s)[:,:,:22]
                 measure(role,arm,mode,k,raw.cpu().numpy(),p.cpu().numpy(),pred.cpu().numpy(),values,items)
@@ -83,7 +85,7 @@ def run(cfg,root,out,domain,replay=None):
                 source_pass=passed>=3 if domain=="aist" else passed==len(groups),independence_scope="4 exposed AIST recordings" if domain=="aist" else "2 FineDance recordings, 4 dependent windows"))
     result=dict(domain=domain,records=records,gates=gates,noise=noises,sampler_calls=calls,generated_trajectories=4*calls,reused_trajectories=reused,
         optimizer_steps=0,NoRef_original_exact=True,reference_state_write=False,operational_qualified=False,full_native_status="NOT_EVALUABLE",whole_song_generations=0)
-    path=out/"arrays.npz";np.savez_compressed(path,**arrays);write(out/"result.json",result);write(out/"protocol.json",dict(config=cfg,code_commit=commit(),checkpoint=info,arrays_sha256=sha(path)))
+    path=out/"arrays.npz";np.savez_compressed(path,**arrays);write(out/"result.json",result);write(out/"protocol.json",dict(config=cfg,code_commit=commit(),checkpoint=info,arrays_sha256=sha(path),trace_files={p.name:sha(p) for p in out.glob("actual_*.npz")}))
     if replay:assert result==read(Path(replay)/"result.json");same_arrays(path,Path(replay)/path.name)
     a.close();print("R29_SOURCE_GATES",domain,[(x["arm"],x["role"],x["recordings_passed"],x["recordings"]) for x in gates],flush=True)
 if __name__=="__main__":
