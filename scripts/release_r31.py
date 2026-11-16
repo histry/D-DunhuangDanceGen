@@ -159,6 +159,8 @@ def collect(root,out,receipts):
         evidence={str(p.relative_to(root)):sha(p) for p in root.rglob("*.json")},
         receipts={name:{p.name:sha(p) for p in Path(name).iterdir() if p.is_file()} for name in receipts},
         failed_qualification_receipts={p.name:sha(p) for p in failed.iterdir() if p.is_file()},
+        failed_evaluation_receipts={p.name:sha(p) for p in Path(str(root)+"_evaluation_receipts").iterdir() if p.is_file()},
+        gradient_recovery=ref(Path(str(root)+"_gradient_recovery.json")),
         initial_superseded_receipts={p.name:sha(p) for p in Path("outputs/geometry_r31_01_initial_receipts").iterdir() if p.is_file()},
         qualification_recovery=ref(Path(str(root)+"_qualification_recovery.json")),
         launcher_logs={str(p):sha(p) for p in Path("outputs").glob("geometry_r31_*_launcher.log")},
