@@ -25,7 +25,7 @@ def run(root,out):
         for p in sorted(folder.rglob('*')):
             if p.is_file():receipts.append(dict(path=str(p),bytes=p.stat().st_size,sha256=sha(p)))
     summary=dict(schema='r37_evidence_release_v1',release_code_commit=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),
-        planning=songs,generation=verified['generation'],smoothing=smooth,
+        planning=songs,planning_geometric_comparison=verified['planning_comparison'],generation=verified['generation'],smoothing=smooth,
         content=dict(counts=content['counts'],train_groups=content['train_groups'],val_groups=content['val_groups'],
                      main=model,diagnostics=read(root/'content_diagnostics.json')),
         checks=verified['checks'],full_regression_log_sha256=sha(root/'receipts/finalize/regression.log'),

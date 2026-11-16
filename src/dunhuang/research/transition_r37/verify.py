@@ -19,7 +19,25 @@ def run(cfg,root,out):
             x=p.read_text().replace(str(root/name),'<RUN>');y=(root/(name+'_replay')/p.name).read_text().replace(str(root/(name+'_replay')),'<RUN>');assert x==y,p.name
         checks[name+'_fresh_process_exact_replay']=True
     lib=Library(read('src/dunhuang/research/complete_r36/config.json')['catalog'])
-    for song in read(root/'planning/result.json')['songs']:verify_plan(read(song['new_plan']),lib)
+    planning_comparison=[]
+    from .planning import boundary_descriptor,edge
+    rig=np.load(Path(cfg['r35'])/'generation/arrays.npz');J0=rig['skeleton_J22'];P0=rig['parents']
+    def describe_plan(plan):
+        descriptors=[];speeds=[];points=[]
+        from .clock import source_positions
+        from dunhuang.research.complete_r36.core import rotation_sample
+        for e in plan['events']:
+            descriptors.append(dict(e,_desc=boundary_descriptor(e,lib,J0,P0)))
+            R=rotation_sample(lib.rotations[e['source_uid']],source_positions(e,np.arange(*e['music_interval'])));p=relative_fk(R,J0,P0);points.append(p)
+            speeds.extend(np.linalg.norm(np.diff(p,axis=0)*30,axis=-1).ravel().tolist())
+        p=np.concatenate(points)
+        return dict(mean_within_event_body_speed_m_s=float(np.mean(speeds)),global_arm_extent_rms_m=float(np.sqrt(np.mean(np.ptp(p[:,[16,17,18,19,20,21]],axis=0)**2))),
+                    source_count=len({e['source_uid'] for e in plan['events']}),family_count=len({e['family_uid'] for e in plan['events']}),
+                    unified_mean_boundary_proxy=float(np.mean([edge(a,b)['cost'] for a,b in zip(descriptors,descriptors[1:])])),
+                    scope='GEOMETRIC_DESCRIPTORS_NOT_INDEPENDENT_ARTISTIC_OR_PHYSICAL_QUALITY')
+    for song in read(root/'planning/result.json')['songs']:
+        plan=read(song['new_plan']);verify_plan(plan,lib)
+        planning_comparison.append(dict(id=song['id'],before=describe_plan(read(song['old_plan'])),after=describe_plan(plan)))
     checks['source_support_maps_no_padding']=True
     z=np.load(root/'generation/arrays.npz');J=z['skeleton_J22'];parents=z['parents'];meta=read(root/'generation/result.json')
     for row in meta['records']:
@@ -89,7 +107,7 @@ def run(cfg,root,out):
         assert np.array_equal(M,u['music']) and np.array_equal(audio['mask'][lo]&audio['mask'][hi],u['music_mask'])
     checks['all_variable_pair_hashes_and_train_only_statistics']=True;checks['four_preregistered_units_rebuilt_from_continuous_sources']=True
     checks['retrieval_weight_evaluation_exact_replay_zero_updates']=True
-    result=dict(code_commit=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),checks=checks,generation=summary,
+    result=dict(code_commit=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),checks=checks,generation=summary,planning_comparison=planning_comparison,
                 optimizer_steps=0,verified_main_optimizer_updates=80,content_units=len(rows),reconstructed_unit_indices=chosen,
                 training_reproduction_claim=False,whole_song_generations=0,operational_qualified=False,sdmr_can_route=False,native24='NOT_EVALUABLE_22_OF24')
     write(out,result)
