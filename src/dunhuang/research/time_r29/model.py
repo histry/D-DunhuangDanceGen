@@ -27,6 +27,8 @@ class TimeReference(ReferenceModel):
         core_bias(mapped_source,self.beta) # Validate even when neutral; never silently clamp caller maps.
         super().set_reference(features,valid,clock,ref_phase,query_phase,mapped_source)
         self.attention_readouts={}
+    def clear(self):
+        super().clear();self.attention_readouts={}
     def inject(self,index,hidden):
         if self.context is None:return hidden
         memory,keys,present,qp=self.context

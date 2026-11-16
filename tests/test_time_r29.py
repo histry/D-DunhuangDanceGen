@@ -38,3 +38,14 @@ def test_core_clock_changes_only_present_reference_query_injection():
     assert torch.equal(correct[1],x[1]) and torch.equal(wrong[1],x[1])
     assert (correct[0,64:160]-wrong[0,64:160]).norm()>0
     a.clear();assert torch.equal(a.inject(0,x),x)
+
+
+def test_Root_and_body_jerk_vectors_cancel_but_norms_do_not_add():
+    import numpy as np
+    from dunhuang.research.time_r29.dynamics import decomposition
+    t=np.arange(256,dtype=np.float64);p=np.zeros((256,22,3))
+    p[:,0,0]=t**3*1e-9
+    result=decomposition(p);r=result["regions"]["core_interior"]
+    assert result["vector_closure_max_mps3"]<1e-9 and r["templates"]==93
+    assert r["Root_translation"]>0 and r["Root_relative_body"]>0
+    assert r["world"]<r["Root_translation"]+r["Root_relative_body"]
