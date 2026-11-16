@@ -83,8 +83,10 @@
  $("case").replaceChildren(...data.cases.map(c=>option(c.id,c.name)));$("case").value=data.initial_case;
  $("case").onchange=setCase;$("tabPlan").onclick=()=>setTab("plan");$("tabGen").onclick=()=>setTab("generation");
  $("play").onclick=()=>{origPlaying=false;if(audio.paused)audio.play().catch(e=>{$("notice").textContent="音频播放失败："+e.message;});else audio.pause();};
- audio.onplay=()=>$("play").textContent="暂停音乐";audio.onpause=()=>$("play").textContent="播放音乐";
- audio.onseeked=()=>{frame=Math.floor(audio.currentTime*30+1e-5);refresh();};
+ audio.onplay=()=>$("play").textContent="暂停音乐";audio.onpause=()=>{$("play").textContent="播放音乐";frame=Math.floor(audio.currentTime*30+1e-4);refresh();};
+ audio.onended=()=>{frame=Math.min(current.frames-1,Math.floor(audio.currentTime*30+1e-4));refresh();};
+ audio.ontimeupdate=()=>{if(!audio.paused){frame=Math.floor(audio.currentTime*30+1e-4);refresh();}};
+ audio.onseeked=()=>{frame=audio.paused?Math.round(audio.currentTime*30):Math.floor(audio.currentTime*30+1e-4);refresh();};
  $("prev").onclick=()=>seek(frame-1);$("next").onclick=()=>seek(frame+1);$("jump").onclick=()=>seek(Number($("frameInput").value));$("frameInput").onkeydown=e=>{if(e.key==="Enter")seek(Number(e.target.value));};
  $("scrub").oninput=e=>seek(Number(e.target.value));$("rate").onchange=e=>audio.playbackRate=Number(e.target.value);
  $("event").onchange=e=>{selected=Number(e.target.value);selectedEvent();seek(slot().start);};
@@ -93,6 +95,6 @@
  $("originalPlay").onclick=()=>{audio.pause();if(origPlaying){origPlaying=false;return;}origPlaying=true;originalIndex=0;origStart=performance.now();};
  $("timeline").onclick=e=>{const r=e.currentTarget.getBoundingClientRect(),f=Math.floor((e.clientX-r.left)/r.width*current.frames);if(e.clientY-r.top>r.height*.65){const i=current.slots.findIndex(s=>s.start<=f&&f<s.end);if(i>=0){selected=i;$("event").value=String(i);selectedEvent();}}seek(f);};
  $("diagnostic").onclick=e=>{const g=generation();if(!g)return;const r=e.currentTarget.getBoundingClientRect();seek(g.window_start+Math.round((e.clientX-r.left)/r.width*(g.frames-1)));};
- function tick(time){if(!audio.paused){const f=Math.floor(audio.currentTime*30+1e-5);if(f!==frame){frame=f;refresh();}}else if(origPlaying){const n=get(data.originals[candidate().original].track).frames;originalIndex=Math.min(n-1,Math.floor((time-origStart)/1000*30));if(originalIndex===n-1)origPlaying=false;refresh();}requestAnimationFrame(tick);}
+ function tick(time){if(!audio.paused){const f=Math.floor(audio.currentTime*30+1e-4);if(f!==frame){frame=f;refresh();}}else if(origPlaying){const n=get(data.originals[candidate().original].track).frames;originalIndex=Math.min(n-1,Math.floor((time-origStart)/1000*30));if(originalIndex===n-1)origPlaying=false;refresh();}requestAnimationFrame(tick);}
  setCase();requestAnimationFrame(tick);
 })().catch(e=>{document.getElementById("notice").textContent="本地数据加载失败："+e.message;console.error(e);});

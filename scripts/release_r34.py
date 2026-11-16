@@ -70,6 +70,8 @@ def comparison(result):
 def collect(root,out):
     root=Path(root);out=fresh(out);manifest=root/"artifacts_manifest.json";assert not manifest.exists()
     required=("preflight","train02","preview","viewbundle")
+    qa=read(root/"browser_qa.json");assert qa["live_browser_interaction_verified"] and qa["service_closed"]["listener_closed"]
+    for name,h in qa["ui_files"].items():assert sha(root/"viewer"/name)==h
     for phase in required:
         p=Path(str(root)+"_"+phase+"_receipts");assert (p/"exit_status.txt").read_text().strip()=="0" and (p/"phase.txt").read_text().strip()=="completed"
     files={str(p.relative_to(root)):dict(sha256=sha(p),bytes=p.stat().st_size) for p in root.rglob("*") if p.is_file()}
@@ -78,7 +80,7 @@ def collect(root,out):
         models={arm:{k:v for k,v in read(root/f"models/{arm}/result.json").items() if k!="history"} for arm in ("Extra","Coverage")},
         comparison=comparison(read(root/"preview/result.json")),coverage_gate=read(root/"preview/result.json")["gate"],
         context=read(root/"context_deferred.json"),planning=read(root/"planning/result.json"),plan_generation=read(root/"plan_generation/result.json"),
-        checks=read(root/"independent_checks.json"),viewer=read(root/"viewer/protocol.json"),scientific_manifest=ref(manifest),
+        checks=read(root/"independent_checks.json"),viewer=read(root/"viewer/protocol.json"),browser_qa=qa,scientific_manifest=ref(manifest),
         human_reviewed=False,operational_qualified=False,full_native_status="NOT_EVALUABLE_22_OF24",whole_song_generations=0)
     write(out/"r34_summary.json",summary);write(out/"r34_checks.json",summary["checks"])
     write(out/"r34_receipt.json",dict(collection_commit=commit(),summary_sha256=sha(out/"r34_summary.json"),scientific_manifest=ref(manifest),
