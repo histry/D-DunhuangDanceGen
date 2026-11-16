@@ -1,0 +1,118 @@
+{
+  "collection_commit": "e9af473b8f12aac3e7c3ece07fc540a0c77a4306",
+  "summary_sha256": "739029428fec446b914f1001c7d84690810e21827eda4a87cce97891847e4f0e",
+  "scientific_manifest": {
+    "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/coverage_r34_01/artifacts_manifest.json",
+    "sha256": "a2c3f8a5afe7e673debcf7ecdb5afe30c12096c022fad7940fb047e4f5b72728"
+  },
+  "receipts": {
+    "preflight": {
+      "execution_commit.txt": "2eeb3ea4a9557be37e5d5ba8e95b11d74e79b002cf09d6217f37dda72ef03aba",
+      "phase.txt": "d3be030801b90ea8057d3997d9845c7f850cc7b784450645d5ec2811cc927d7a",
+      "started_utc.txt": "efed06bc93d84e23ea9d73571bea3bedabd0147b77432decbefce53a0b0e405c",
+      "pytest.log": "0df57702f3d4792f80395cc8f6e818999d7110d3dfe4ae429e3e3dbbbbe00af6",
+      "edge_tests.log": "f8ec0d9595d15e71dc845eadf47914fb534c6fa3d82c1b1656e998d1390f168e",
+      "exit_status.txt": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "finished_utc.txt": "1c72eaf9a2e91528d0ae0b7900bd1e8b06ed3fc9bdc85ac2e3c8f83431b1f8f2"
+    },
+    "train02": {
+      "execution_commit.txt": "c490306d2b963d17b6ca078472948ddeeced693992bfc9c1d896989e85739252",
+      "phase.txt": "d3be030801b90ea8057d3997d9845c7f850cc7b784450645d5ec2811cc927d7a",
+      "started_utc.txt": "ca75cd4422c6b893a64402267525f3ace00c92d04fd9a064e6afba73ef6bda04",
+      "edge_tests.log": "ee8ca1dbc3048666575b795fb614035a999ef3e324370218468186a7c133cfa1",
+      "exit_status.txt": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "finished_utc.txt": "c67642812477c34358b1ba76d965c89b303eae695b061cce83551f840dc7059d"
+    },
+    "preview": {
+      "execution_commit.txt": "c5e6ab90af839a0a63aff69a12fa4e03f82686d4889c4b21ad24d2a5aa52ffd9",
+      "phase.txt": "d3be030801b90ea8057d3997d9845c7f850cc7b784450645d5ec2811cc927d7a",
+      "started_utc.txt": "4b4b10365a7301c83c62688e86cb7dd9bc6626c6e5a984dbbe43a203e1799890",
+      "edge_tests.log": "e63e0756326b9ec50399d5feb02c2b552b9387bfef47911f242ce6964d383652",
+      "exit_status.txt": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "finished_utc.txt": "b11ee224c277965ed2b768dcfea1f823ddddf345cd749fbdd86774877d37ff6c"
+    },
+    "viewbundle": {
+      "execution_commit.txt": "8fff42ac6cf195af5452355fe3cccda3cddb257d227386b354d0b7da7207aee4",
+      "phase.txt": "d3be030801b90ea8057d3997d9845c7f850cc7b784450645d5ec2811cc927d7a",
+      "started_utc.txt": "f4dd511913db204282b33a3e764ef4b54e42799267d380fcbb277ad54db8bfcf",
+      "pytest.log": "446c8e3b1d7bbfe8749d9206dbaebe9d16cf8bc80e65ffc3e987dddd9781003b",
+      "edge_tests.log": "53a79e8d00a3861c4701910a4ee77dced5bde5e784f63447ab72377bd16dc425",
+      "exit_status.txt": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "finished_utc.txt": "79ca7109e4646bdb9458c8205c1b875ee905081406a431ae931efd7287a678ba"
+    }
+  },
+  "failed_receipts": {
+    "train": {
+      "execution_commit.txt": "e9e95a2621d4a6d94e94fc113fd9e08c24e068f84e4b923cdade3c746ecb0e33",
+      "phase.txt": "11d5bbdbcdf1fa5aff71bba2bd6f088fb00d00ff9927db0bb482d0b1e10fc578",
+      "started_utc.txt": "1cc95075d768721b951f718fd088392515039b3f96b8d0edceaa2e54082ee487",
+      "edge_tests.log": "d889f8f4b068941c84c66526b0c4f3ae7f1fc77f66a27394be04c13c01b32d5e",
+      "exit_status.txt": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "finished_utc.txt": "75c2458966cb209761798579c7835b3b917c15b95002f12de1de715df157caa2"
+    },
+    "planview": {
+      "execution_commit.txt": "245a544f77360ee8ad6b33f1744dbd96d5196652d4a0b4e79a881b1e70b25b86",
+      "phase.txt": "db05d0f68c48c6c9a11322af27034bf01a907b7e57c95260d231fc1361a10158",
+      "started_utc.txt": "8ffa375161d1894a1e00dadb2be358d5835fbc88f81dc115abf36e28d9048833",
+      "edge_tests.log": "3f85637807af7955d4903ce76e7e2f89afeff3322268fb0412a5101ec6312c90",
+      "exit_status.txt": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+      "finished_utc.txt": "055de353a950c15b20e9e933d710b1317a3fcff25aade03ce4d9adc8cf1fd4c3"
+    }
+  },
+  "evidence": {
+    "independent_checks.json": "ae27b1bcfc858ab5340905195f632bb24061f0f8fa94c3d60f3bc7b0a689f999",
+    "viewer_ui_patch.json": "c6d121fb87b45784eb134f0d62b87c10c595a80489679f670c39d062a9dc5ab6",
+    "browser_patch_02.json": "09d6b15f4b84e626f3564eba4de5f0d22acc756e255881efd4466cc2d0602af6",
+    "browser_qa.json": "177b1cf5a0fd6aa1fa292e2580502b13d0e7fdac35a73d20268baa2dfc4ba500",
+    "browser_patch_01.json": "71c55301379d64d97e6634d5a566b69cf05f0ac111c3c89e8fdac365eb4bb3ec",
+    "artifacts_manifest.json": "a2c3f8a5afe7e673debcf7ecdb5afe30c12096c022fad7940fb047e4f5b72728",
+    "context_deferred.json": "4e528d23d1b2b9fc9f019df77883c9253ac8da03f51bfe9a68960203162b40c6",
+    "plan_generation/result.json": "2fa49c56af67d5e40b7d5d0b3837c88d8b1d3d52beaa23b57866c9bdfe20c8d1",
+    "plan_generation/protocol.json": "a45bc970261c1d3aad1168be48a94018e10923c319b15695b9ceedbef406db6c",
+    "plan_generation_replay/result.json": "fbd6fe0dfee4e0b2d0ba9685ba9d2198cdfd244965a07761c79dcbdb9e737d11",
+    "plan_generation_replay/protocol.json": "a45bc970261c1d3aad1168be48a94018e10923c319b15695b9ceedbef406db6c",
+    "preview/result.json": "76c1af9b9a34efe72f92e135a0a0eca37e864b188675cb26eaee1ffa9519a977",
+    "preview/protocol.json": "4de7ac93d25bd228568d75a1790b95691c9f1cf9044126af4f25741763b5e243",
+    "data_replay/result.json": "a3786475d37a42f16200c01c356d66567ddb20e2afa90b94c9e3e6c105c4a7de",
+    "data_replay/protocol.json": "5c1aa0ba0f7debe4bfecd0a58e6022462adf814f6e6865d870f677201c9f7df7",
+    "viewer/protocol.json": "5a99cadc4b5ac9c9a0f6ebbbe98508a1671a6ab35df1b3cc8439782826191abc",
+    "models/Coverage/result.json": "c0e2551843836dc78f23e8dcbe93e806d9f5ed301912bb2f5985bc42e52729db",
+    "models/Coverage/protocol.json": "f02241e023951bb8b5e5c78edc70272ed4ec37a5ce09a84dbc13a169a532279b",
+    "models/Extra/result.json": "dd8ea3b666bae1e54b152a92789dcbad0972f8d2f390d439db7cc974365cb7d9",
+    "models/Extra/protocol.json": "f02241e023951bb8b5e5c78edc70272ed4ec37a5ce09a84dbc13a169a532279b",
+    "planning_replay/result.json": "163db3b94cf69378e1bc42ce19f6186c622d3efd091e1e3f92041127293be32c",
+    "planning_replay/protocol.json": "9f8aa64685fb03ebd23fbfd820b82f8ac45e5b5ea477f6fa7294bf4b9364531b",
+    "planning_replay/songs.json": "fe7f685dad6cc5f5732cc430e49c183755094a11924ed618dd4bbcf44c8b2a51",
+    "planning_replay/candidate_banks.json": "bdfb5a2d608be64a0c141a918c20e9ab99563bfe796b700f0433a314e088becb",
+    "planning_replay/song2/event_plan.json": "9b8f17bfb7f855627bb3eb40057f4bb95ec9b78be898807376280ae3bc34447f",
+    "planning_replay/song1/event_plan.json": "59ef9b019d4abd45fd6405462a03c0d087eb06a532aa3141a1421119f05501b1",
+    "planning_replay/song0/event_plan.json": "3222598c30893fbc3062c8d1f344a0c7abd73d6b7b2060663f04175c1f34ef24",
+    "plan_generation_validation/result.json": "cb8f96661b7bb87275cfd66acfd93ced09f2e9938307412332ae53c00810460e",
+    "plan_generation_validation/protocol.json": "bbc5785cb3a162ee5c7bd116dd8da48ab15ddedcf34ee78ed9a66e35b0b5cbd3",
+    "preview_replay/result.json": "76c1af9b9a34efe72f92e135a0a0eca37e864b188675cb26eaee1ffa9519a977",
+    "preview_replay/protocol.json": "4de7ac93d25bd228568d75a1790b95691c9f1cf9044126af4f25741763b5e243",
+    "data/result.json": "525b31fa73e1fee1e133821149e3c80f6fc96b87b8dbee690da597fcf4c6d924",
+    "data/protocol.json": "5c1aa0ba0f7debe4bfecd0a58e6022462adf814f6e6865d870f677201c9f7df7",
+    "replay/Coverage/result.json": "47587b2e1df978c984cb7f9f052abfd8b97eb08a8ba2eb4d96e5e7bd7dd12e18",
+    "replay/Coverage/protocol.json": "f02241e023951bb8b5e5c78edc70272ed4ec37a5ce09a84dbc13a169a532279b",
+    "replay/Extra/result.json": "02061ecb74134cd68d82713d139580ab636b88043ba5023864cc0c2cd3ad47ea",
+    "replay/Extra/protocol.json": "f02241e023951bb8b5e5c78edc70272ed4ec37a5ce09a84dbc13a169a532279b",
+    "planning/result.json": "163db3b94cf69378e1bc42ce19f6186c622d3efd091e1e3f92041127293be32c",
+    "planning/protocol.json": "9f8aa64685fb03ebd23fbfd820b82f8ac45e5b5ea477f6fa7294bf4b9364531b",
+    "planning/songs.json": "b164ed5b6f453fe2dab0fdeb4a5f33aa50103d5ba7f263ce97a526fb7d56c14c",
+    "planning/candidate_banks.json": "bdfb5a2d608be64a0c141a918c20e9ab99563bfe796b700f0433a314e088becb",
+    "planning/song2/event_plan.json": "9b8f17bfb7f855627bb3eb40057f4bb95ec9b78be898807376280ae3bc34447f",
+    "planning/song1/event_plan.json": "59ef9b019d4abd45fd6405462a03c0d087eb06a532aa3141a1421119f05501b1",
+    "planning/song0/event_plan.json": "3222598c30893fbc3062c8d1f344a0c7abd73d6b7b2060663f04175c1f34ef24"
+  },
+  "launcher_logs": {
+    "outputs/coverage_r34_01_preflight_launcher.log": "c97ec5df5b4130f8b1191c39826a8c61df9452fb8151ff336b2384180e0e3379",
+    "outputs/coverage_r34_01_train02_launcher.log": "2acaca24143d2b255f192a1ed2b3a677fc16624151d3d7085562bf89d84c5316",
+    "outputs/coverage_r34_01_preview_launcher.log": "490e2d539d44e2111c364064f566f27a217d4ce7c3157186c3d18169f7948679",
+    "outputs/coverage_r34_01_planview_launcher.log": "38d30215ac77c1be504daeefc3f33bd8894f50c291b5b19bd79b1326a761d379",
+    "outputs/coverage_r34_01_train_launcher.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outputs/coverage_r34_01_viewbundle_launcher.log": "fe34cad123a69a0e2e13f6dcbdbd3e24ec6321da060a07b2c41cd986d4d20914"
+  },
+  "temporary_ssh_files_created": 0,
+  "temporary_ssh_files_remaining": 0
+}

@@ -1,0 +1,203 @@
+{
+  "code_commit": "2b1e614219c48b7938df343ebe1ef0db0e8c79d4",
+  "array_bundles_exact": 9,
+  "actual_update_pairs": 10,
+  "update_checks": [
+    {
+      "all": {
+        "actual": 0.1700533926486969,
+        "expected": 0.1700533926486969,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "all": {
+        "actual": 0.11885645985603333,
+        "expected": 0.11885645985603333,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "encoder": {
+        "actual": 0.026482826098799706,
+        "expected": 0.026482826098799706,
+        "relative_error": 0.0
+      },
+      "injection": {
+        "actual": 0.012172318994998932,
+        "expected": 0.012172318994998932,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "encoder": {
+        "actual": 0.1268237978219986,
+        "expected": 0.1268237978219986,
+        "relative_error": 0.0
+      },
+      "injection": {
+        "actual": 0.025107435882091522,
+        "expected": 0.025107435882091522,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "encoder": {
+        "actual": 0.07125744968652725,
+        "expected": 0.07125744968652725,
+        "relative_error": 0.0
+      },
+      "injection": {
+        "actual": 0.014336556196212769,
+        "expected": 0.014336556196212769,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "encoder": {
+        "actual": 0.10370778292417526,
+        "expected": 0.10370778292417526,
+        "relative_error": 0.0
+      },
+      "injection": {
+        "actual": 0.020520959049463272,
+        "expected": 0.020520959049463272,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "encoder": {
+        "actual": 0.026482826098799706,
+        "expected": 0.026482826098799706,
+        "relative_error": 0.0
+      },
+      "injection": {
+        "actual": 0.012172318994998932,
+        "expected": 0.012172318994998932,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "encoder": {
+        "actual": 0.21181008219718933,
+        "expected": 0.21181008219718933,
+        "relative_error": 0.0
+      },
+      "injection": {
+        "actual": 0.052421603351831436,
+        "expected": 0.052421603351831436,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "encoder": {
+        "actual": 0.08675520122051239,
+        "expected": 0.08675520122051239,
+        "relative_error": 0.0
+      },
+      "injection": {
+        "actual": 0.015154476277530193,
+        "expected": 0.015154476277530193,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "encoder": {
+        "actual": 0.04460660740733147,
+        "expected": 0.04460660740733147,
+        "relative_error": 0.0
+      },
+      "injection": {
+        "actual": 0.008943225257098675,
+        "expected": 0.008943225257098675,
+        "relative_error": 0.0
+      }
+    }
+  ],
+  "optimizer_steps": 1202,
+  "replay_optimizer_steps": 0,
+  "sampler_calls": 18,
+  "generated_trajectories": 76,
+  "replay_sampler_calls": 18,
+  "replay_generated_trajectories": 76,
+  "components": {
+    "preflight": [
+      4,
+      20
+    ],
+    "training": [
+      2,
+      12
+    ],
+    "primary_preview": [
+      6,
+      32
+    ],
+    "plan_windows": [
+      6,
+      12
+    ]
+  },
+  "paired_presentations": {
+    "51": 75,
+    "26": 75,
+    "27": 75,
+    "92": 75,
+    "37": 75,
+    "95": 75,
+    "38": 75,
+    "76": 75,
+    "35": 75,
+    "78": 75,
+    "1": 75,
+    "32": 75,
+    "21": 75,
+    "0": 75,
+    "48": 75,
+    "23": 75
+  },
+  "PCM_generation_replay": {
+    "all_non_container_fields_exact": true,
+    "audio_PCM_exact": true,
+    "music35_and_motion_arrays_exact": true,
+    "noise_and_model_and_time_bindings_exact": true,
+    "optimizer_steps": 0,
+    "original_WAV_containers": [
+      {
+        "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/coverage_r34_01/plan_generation/song0_window.wav",
+        "sha256": "29d3e115f7d0b4470f31a5c48c3409e292f395df889cf3f01f3c36caad6f1349"
+      },
+      {
+        "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/coverage_r34_01/plan_generation/song1_window.wav",
+        "sha256": "a9e32ffe0cefb917ef172fdf5e6c7ef3ac4c6ce942106b70813775166fc7e0ea"
+      },
+      {
+        "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/coverage_r34_01/plan_generation/song2_window.wav",
+        "sha256": "5921e0c008bcd9f6c2c8e3c85506f662fb4abef0693f63a83221f4a390c898e7"
+      }
+    ],
+    "replay_WAV_containers": [
+      {
+        "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/coverage_r34_01/plan_generation_replay/song0_window.wav",
+        "sha256": "b010de350c753f4061368a78a95701934823a31e2b6542ceb383577ffa13abc0"
+      },
+      {
+        "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/coverage_r34_01/plan_generation_replay/song1_window.wav",
+        "sha256": "35517196484cd6aee08edd43bd5b31f975790c73992ecec401f427d326805dc8"
+      },
+      {
+        "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/coverage_r34_01/plan_generation_replay/song2_window.wav",
+        "sha256": "cbaaaf24680769adcac3734d6489f976e7983643003880be780a3f9ff00d1789"
+      }
+    ],
+    "explanation": "libsndfile FLOAT WAV PEAK chunk stores creation timestamp. File-byte SHA remains audited per file; scientific comparison uses exact decoded PCM, feature35 and all generated arrays."
+  },
+  "legacy_96_exact_R33": true,
+  "general_and_NoRef_exact": true,
+  "old_scientific_seal_unchanged": true,
+  "context_optimizer_steps": 0,
+  "additional_ablation_calls": 0,
+  "full_song_generations": 0,
+  "operational_qualified": false,
+  "full_native_status": "NOT_EVALUABLE_22_OF24"
+}
