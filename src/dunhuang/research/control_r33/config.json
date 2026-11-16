@@ -1,0 +1,42 @@
+{
+  "schema": "r33_routed_source_dynamics_v1",
+  "baseline": "7a207915daf33d6fc9839fc088055d27b3a39e86",
+  "r32": "outputs/content_r32_02",
+  "r32_manifest_sha256": "197610082363e94e287ab200b02188ee8ea26cdc672d17a8764eafb8a371015f",
+  "change_checkpoint_sha256": "238a152a2c6aa0e630126c3025497cd5e5a9c44b275d728739388b028bb54639",
+  "r31": "outputs/geometry_r31_02",
+  "seed": 33041,
+  "train_steps": 600,
+  "learning_rate": 0.0002,
+  "snapshot_steps": [
+    0,
+    1,
+    299,
+    599
+  ],
+  "times": [
+    999,
+    519,
+    119,
+    19
+  ],
+  "dynamic_gradient_fraction": 0.1,
+  "scale_floors": [
+    0.05,
+    0.5
+  ],
+  "gradient_groups": [
+    "encoder",
+    "injection"
+  ],
+  "held_recordings": [
+    "female_lotus_sequence",
+    "female_meditation_sequence"
+  ],
+  "held_selection": "FIRST_TWO_LEXICOGRAPHIC_REGISTERED_RECORDINGS_EXCLUDING_BOTH_TRAIN_UIDS_AND_SHAS; MIN_EVENT_UID_AMONG_STATIC_DURATION_GE96; NO_GENERATED_PERFORMANCE",
+  "context_training_admitted": false,
+  "stage_inputs_zero": true,
+  "whole_song_generations": 0,
+  "human_reviewed": false,
+  "operational_qualified": false
+}
