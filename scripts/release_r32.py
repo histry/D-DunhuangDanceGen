@@ -46,6 +46,11 @@ def verify(root):
     for oldroot in (Path("outputs/geometry_r31_02"),):
         m=read(oldroot/"artifacts_manifest.json")
         for name,x in m["files"].items():assert sha(oldroot/name)==x["sha256"]
+    lineage=[]
+    for key,entry in read("outputs/lodge_reference_r24_01/main/protocol.json")["plans"].items():
+        plan=read(checked(entry));ev=plan["events"][0];checked(ev["reference"])
+        lineage.append(dict(plan=key,plan_ref=entry,**{k:ev[k] for k in ("event_uid","source_uid","recording_uid","source_sha256","source_interval","time_warp","root_translation_observed","contact_observed")}))
+    assert len({x["source_sha256"] for x in lineage})==2 and len({x["recording_uid"] for x in lineage})==2
     changed=subprocess.check_output(["git","diff",cfg["baseline"],"--name-only","--","src/dunhuang"],text=True).splitlines()
     assert all(x.startswith("src/dunhuang/research/content_r32/") for x in changed)
     assert exact==12 and len(checks)==23 and decoder_steps==2400 and generator_steps==1320 and calls==50 and trajectories==218
@@ -54,7 +59,7 @@ def verify(root):
         sampler_calls=calls,generated_trajectories=trajectories,replay_sampler_calls=calls,replay_generated_trajectories=trajectories,
         reused_evaluation_trajectories=246,fixed_NoRef_exact=True,action_io_and_backbone_unchanged=True,
         parent_scientific_seal_files_unchanged=True,paired_replay_ledger_identical=True,paired_presentations_per_source=75,
-        auxiliary_sources=dict(AIST=4,ChangE=2),full_native_status="NOT_EVALUABLE",operational_qualified=False,whole_song_generations=0))
+        auxiliary_sources=dict(AIST=4,ChangE=2),change_source_lineage=lineage,source_independence_scope="TWO_DISTINCT_HASHES_AND_REGISTERED_RECORDING_UIDS; NOT_NEW_OR_POPULATION_GENERALIZATION",full_native_status="NOT_EVALUABLE",operational_qualified=False,whole_song_generations=0))
     print("R32_INDEPENDENT_CHECKS",exact,23,calls,trajectories,flush=True)
 
 def render(root,out):

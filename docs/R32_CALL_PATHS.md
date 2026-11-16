@@ -1,0 +1,19 @@
+# R32 实现、调用与证据边界
+
+正式EDGE/Planner/Native、R31及更早研究代码冻结；新消费者全部在content_r32，独立脚本run_r32_initial/pilot/main/finish.sh执行，默认生成路径未改。没有删除仍被历史复验和本轮复用的基线代码，没有把原权重、原始数据和训练张量发布到Git。
+
+common.runtime先用R31公开封存SHA核对CanonicalIO检查点与manifest，复用R31完整Normalizer、I/O、Lodge和音乐权重，只将io.requires_grad置False。优化器显式仅接收b.reference.parameters，265328参数；动作I/O及主干前后digest一致，梯度缺席。完整NoRef、正确/错时钟/交换参考的初始结果先与R31逐位比较，不重新定义无参考基线。
+
+prepare运行7个固定初始采样调用，34条轨迹并独立重放，保存实际50步完整139D状态及时间。AIST初始实际状态引用原R31哈希封存，ChangE完整状态由固定平台访问产生。partial_observations只有身体96×132及Root-relative22几何，未创建带未知Root/C4的完整x0。采样器的全零value配合全零观察mask表示没有硬条件，不是把未知来源Root设为零真值。
+
+readout复用R29 Decoder/save/restore/objective，冻结R31参考编码，比较raw有序输入和memory（局部token加重复全局token）。AIST16与两条ChangE分别训练600步有限读出，同宽128、同目标/预算，输入通道不同所以头参数量不同。零平移只作为局部FK诊断规范，不进入扩散训练，不作世界Root证据；观察肩腕、双腕、肘角、旋转和幅度。两ChangE拟合结果不得叫新来源泛化；AIST训练读出在持出/ChangE上的误差另列。没有因为memory仍含可学内容便宣称注入和完整采样已经成功。
+
+partial只接受完整模型预测/同平台NoRef预测，加96×132已观测身体和96×22×3局部几何。禁止把139D来源数组作为部分目标，拒绝NaN观察及带世界平移的几何目标。身体6D差分仍称坐标差分，不叫物理速度；局部几何通过当前Canonical解码和官方同构可微FK计算，没有D1/D2物理项。第一7通道和Core外只蒸馏固定平台NoRef，不赋予来源真值。AIST的原完整Root只在可信配对q回放及独立评价中使用。
+
+train的pilot120步只用AIST四来源模拟缺失Root/C4；在固定真实访问状态上训练和测损失，再以完整采样检验，满足登记门才准入主比较。主臂AIST/ChangE都重新从R31开始，不能承接pilot。每臂600步，300可信AIST16来源回放（每来源75呈现）加300部分观察辅助；AIST辅助四来源，ChangE辅助两来源×两历史音乐，同录制不因两音乐变成四独立来源。两臂在第300步用当前参考权重重新采样刷新辅助状态，并用同样的冻结采样器和噪声协议；属于两阶段访问状态覆盖，不是每个更新的on-policy采样。
+
+真实更新pre/post保存pilot3对、两主臂各4对，加四读出头各3对，共23对。新进程只重算冻结pre下的损失/梯度，并载入已保存post比较有限更新量；复验不调用optimizer。decoder与generator步数分开记录。主臂刷新轨迹、最终完整采样、NoRef及所有数组独立重放；梯度范数原容差rtol1e-5，不用新增指标改写旧失败。
+
+evaluate使用原四Train/四历史适配持出、两个种子，以及两ChangE×两音乐×正确/错时钟/交换。主臂NoRef必须逐位等于R31 CanonicalIO；旧R0、LegacyIO与CanonicalIO来源/无参考/物理读数保留，同臂固定分母与R0分母分开。ChangE的世界Root和真实接触UNKNOWN，配对身体动力学是按既定参考时钟的内容代理，不是任意音乐下的语义真值。完整Native24仍NOT_EVALUABLE；本轮不跑整曲、不升级正式生成器。
+
+release_r32独立核验原R31完整科学封存、12数组包、23对实际更新、匹配回放账本、NoRef与生成物，然后以同一世界相机和尺度渲染。Source/readout只有96帧观察，外侧显示定格并明确DISPLAY HOLD ONLY，不能把定格当训练或评价帧；readout不是扩散生成。所有生成不平滑、不重居中、不贴地。视频按R32本批载荷另行授权后回传，浏览器交互实测与模板语法检查分开标记。
