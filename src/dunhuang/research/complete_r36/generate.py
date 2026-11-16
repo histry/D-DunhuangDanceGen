@@ -9,7 +9,7 @@ from dunhuang.research.coverage_r34.common import Runtime,forbid_optimizers,same
 from dunhuang.research.coverage_r34.context_train import restore_context
 from dunhuang.research.transition_r35.compiler import compile,make_packets
 from dunhuang.research.transition_r35.planning import Sources
-from .core import read,write,sha,smooth_budget
+from .core import read,write,sha,smooth_budget,responsibility_budget
 from .edit import sample_edit
 
 def diagnosis(p,q):
@@ -45,7 +45,7 @@ def run(cfg,root,out,replay=None):
         allowed=[max(now['write_interval'][0],left['protected_core'][1]),min(now['write_interval'][1],right['protected_core'][0])]
         if not allowed[0]<allowed[1]:raise ValueError('No legal edit responsibility')
         editable=(np.arange(256)+start>=allowed[0])&(np.arange(256)+start<allowed[1])
-        budget[~editable]=0
+        budget=responsibility_budget(budget,[allowed[0]-start,allowed[1]-start],ramp=12)
         pred,nr,edit=sample_edit(rt,music,torch.tensor(np.repeat(body[None],2,axis=0),device='cuda'),base,binding['seeds'],budget,cfg['edit_start_t'],packet,context)
         raw=rt.n.unnormalize(pred.clone())
         with torch.no_grad():points=rt.f(raw,rt.s)[:,:,:22].cpu().numpy()
@@ -64,7 +64,7 @@ def run(cfg,root,out,replay=None):
             assert (error<=budget[:,None]+2e-5).all()
             angular.append(dict(mean_rad=float(error.mean()),maximum_rad=float(error.max())))
         row=dict(key=key,name=song['name']+' · 同一R35计划的来源编辑',binding=binding,edit=edit,noise=nr,angle=angular,
-            responsible_interval=allowed,body_read_only_outside_responsibility=True,
+            responsible_interval=allowed,body_read_only_outside_responsibility=True,responsibility_envelope='C2_QUINTIC_ZERO_AT_READ_ONLY_BOUNDARIES',
             body_retention_is_enforced_not_learned=True,
             candidate_context_sha256=sha(root/'context/context.pt'),candidate_includes_context_task_correction=True,causal_ablation_claim=False,
             common_row_noise_matches_saved_baseline=any(x.get('row_sha256')==nr['row_sha256'] and x.get('seeds')==nr['seeds'] for x in old['noise']),

@@ -8,9 +8,9 @@ from dunhuang.planning.time_map import source_positions
 from dunhuang.generation.soft_reference import resample_native
 from .core import Library,read,write,sha
 
-def run(cfg,root):
-    root=Path(root);public=root/'public';public.mkdir(exist_ok=False);lib=Library(cfg['catalog'])
-    plan=read(root/'planning/result.json');checks=read(root/'independent_checks.json');train=read(root/'context/result.json');replay=read(root/'context_replay/result.json');generation=read(root/'generation/result.json');arrays=np.load(root/'generation/arrays.npz')
+def run(cfg,root,generation_dir='generation',checks_file='independent_checks.json',public_dir='public',manifest_name='artifacts_manifest.json'):
+    root=Path(root);public=root/public_dir;public.mkdir(exist_ok=False);lib=Library(cfg['catalog'])
+    plan=read(root/'planning/result.json');checks=read(root/checks_file);train=read(root/'context/result.json');replay=read(root/'context_replay/result.json');generation=read(root/generation_dir/'result.json');arrays=np.load(root/generation_dir/'arrays.npz')
     assert all(checks['checks'].values()) and train['optimizer_steps']==160 and replay['optimizer_steps']==0
     effects=[]
     for row in generation['records']:
@@ -52,6 +52,7 @@ def run(cfg,root):
         planning=checks['songs'],effects=effects,training=dict(optimizer_steps=160,replay_optimizer_steps=0,snapshots_verified=len(train['observations']),final_digest=train['final_digest'],task_contract=train['task_contract'],cache_policy=train['cache_policy']),
         regression_summary=test_log.splitlines()[-1],new_main_trajectories=generation['new_generated_trajectories'],seeds_per_case=2,
         additional_ablation_calls=0,whole_song_generations=0,sdmr_route=False,raw_deletions=0,
+        generation_folder=generation_dir,original_main_trajectories_retained=6 if generation_dir!='generation' else 0,
         source_semantic_completeness='UNVERIFIED_KINEMATIC_PROPOSALS',full_native_status='NOT_EVALUABLE_22_OF24',operational_qualified=False,
         limitations=['New long-unit plans are previews; main generation keeps the exact R35 plan for attribution.',
             'Rotation retention is explicitly bounded, not evidence of learned music reinterpretation.',
@@ -59,14 +60,14 @@ def run(cfg,root):
             'Planned context training uses same-recording references, not cross-source paired target truth.',
             'Historical music and adaptation sources are exposed development populations.'])
     write(public/'r36_summary.json',summary);write(public/'r36_checks.json',checks)
-    frozen={'planning','planning_replay','context','context_replay','generation','generation_replay'}
+    frozen={'planning','planning_replay','context','context_replay','generation','generation_replay','generation_repair01','generation_repair_replay01'}
     frozen.update(p.name for p in root.glob('viewer*') if (p/'protocol.json').exists())
-    files={str(p.relative_to(root)):dict(bytes=p.stat().st_size,sha256=sha(p)) for p in sorted(root.rglob('*')) if p.is_file() and (p.relative_to(root).parts[0] in frozen or p.name=='independent_checks.json')}
-    write(root/'artifacts_manifest.json',dict(schema='r36_archive_sha256',scope='FROZEN_SCIENTIFIC_ARTIFACTS; ACTIVE_RELEASE_LOGS_EXCLUDED',files=files))
-    write(public/'r36_receipt.json',dict(archive_manifest_sha256=sha(root/'artifacts_manifest.json'),file_count=len(files),receipts=receipts,
+    files={str(p.relative_to(root)):dict(bytes=p.stat().st_size,sha256=sha(p)) for p in sorted(root.rglob('*')) if p.is_file() and (p.relative_to(root).parts[0] in frozen or p.name in ('independent_checks.json',checks_file))}
+    write(root/manifest_name,dict(schema='r36_archive_sha256',scope='FROZEN_SCIENTIFIC_ARTIFACTS; ACTIVE_RELEASE_LOGS_EXCLUDED',files=files))
+    write(public/'r36_receipt.json',dict(archive_manifest_sha256=sha(root/manifest_name),file_count=len(files),receipts=receipts,
         inputs=dict(source_catalog_sha256=sha(cfg['catalog']),parent_generation_sha256=generation['parent_arrays_sha256']),
         failed_initial_view_retained=True,code_sync='PUBLISHED_GITHUB_SHA_VERIFIED; SSH_GIT_BUNDLE_RELAY_AFTER_SERVER_TLS_FAILURE',
         ssh_temp_cleanup='VERIFY_AFTER_FINAL_SYNC',media_copy_status_at_release='NOT_YET_COLLECTED'))
     print('R36_PUBLIC',summary['regression_summary'],len(files),flush=True)
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('--root',required=True);a=p.parse_args();run(read('src/dunhuang/research/complete_r36/config.json'),a.root)
+    p=argparse.ArgumentParser();p.add_argument('--root',required=True);p.add_argument('--generation',default='generation');p.add_argument('--checks',default='independent_checks.json');p.add_argument('--public-dir',default='public');p.add_argument('--manifest',default='artifacts_manifest.json');a=p.parse_args();run(read('src/dunhuang/research/complete_r36/config.json'),a.root,a.generation,a.checks,a.public_dir,a.manifest)

@@ -72,6 +72,13 @@ def smooth_budget(n,edge=24,core=.2,boundary=.6):
     u=np.clip(t,0,1);u=u*u*(3-2*u)
     return boundary+(core-boundary)*u
 
+def responsibility_budget(base,interval,ramp=12):
+    """C2 envelope reaches zero before the read-only source; no hard budget step."""
+    base=np.asarray(base,float);lo,hi=map(int,interval)
+    if not 0<=lo<hi<=len(base) or ramp<1:raise ValueError('Actual editable interval and positive ramp required')
+    i=np.arange(len(base));distance=np.minimum(i-lo,hi-1-i);u=np.clip(distance/ramp,0,1)
+    return base*u**3*(10-15*u+6*u*u)
+
 def bounded_rotations(reference,proposal,budget):
     """Geodesic residual, not 6D addition. Zero budget exactly preserves reference."""
     if reference.shape!=proposal.shape or reference.shape[-2:]!=(3,3):raise ValueError('Matching rotation matrices required')

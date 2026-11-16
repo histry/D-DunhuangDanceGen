@@ -4,7 +4,7 @@ from pathlib import Path
 import numpy as np
 from .core import read,write,sha,Library,components,relative_fk
 
-def run(cfg,root,out):
+def run(cfg,root,out,generation='generation',generation_replay='generation_replay'):
     root=Path(root);lib=Library(cfg['catalog']);catalog=read(root/'planning/catalog.json');checks={}
     for e in catalog['units']:
         a,b=e['source_interval'];runs=components([x['source_interval'] for x in lib.rows[e['source_uid']]])
@@ -37,16 +37,16 @@ def run(cfg,root,out):
     for f in (root/'planning').glob('*.json'):
         original=f.read_text().replace(str(root/'planning'),'<RUN>');replay=(root/'planning_replay'/f.name).read_text().replace(str(root/'planning_replay'),'<RUN>');assert original==replay
     checks['independent_planning_replay_exact']=True
-    if (root/'generation/result.json').exists():
+    if (root/generation/'result.json').exists():
         train=read(root/'context/result.json');tr=read(root/'context_replay/result.json')
         assert train['optimizer_steps']==160 and tr['optimizer_steps']==0 and train['final_digest']==tr['final_digest']
         for n,h in train['files'].items():assert sha(root/'context'/n)==h
         checks['independent_training_gradient_readouts_and_weight_hashes']=True
-        a=np.load(root/'generation/arrays.npz');b=np.load(root/'generation_replay/arrays.npz');assert set(a.files)==set(b.files)
+        a=np.load(root/generation/'arrays.npz');b=np.load(root/generation_replay/'arrays.npz');assert set(a.files)==set(b.files)
         for k in a.files:assert np.array_equal(a[k],b[k]),k
-        assert read(root/'generation/result.json')==read(root/'generation_replay/result.json')
+        assert read(root/generation/'result.json')==read(root/generation_replay/'result.json')
         checks['independent_generation_replay_exact']=True
     result=dict(checks=checks,songs=songs,units=len(catalog['units']),families=catalog['family_count'],optimizer_steps=0,whole_song_generations=0,operational_qualified=False)
     write(out,result);print(json.dumps(result),flush=True)
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('--root',required=True);p.add_argument('--out',required=True);a=p.parse_args();run(read('src/dunhuang/research/complete_r36/config.json'),a.root,a.out)
+    p=argparse.ArgumentParser();p.add_argument('--root',required=True);p.add_argument('--out',required=True);p.add_argument('--generation',default='generation');p.add_argument('--generation-replay',default='generation_replay');a=p.parse_args();run(read('src/dunhuang/research/complete_r36/config.json'),a.root,a.out,a.generation,a.generation_replay)

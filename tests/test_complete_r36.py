@@ -1,7 +1,7 @@
 import numpy as np
 import pytest
 from scipy.spatial.transform import Rotation
-from dunhuang.research.complete_r36.core import components,multi_warp,bounded_rotations,smooth_budget,rotation_sample
+from dunhuang.research.complete_r36.core import components,multi_warp,bounded_rotations,smooth_budget,rotation_sample,responsibility_budget
 
 def test_source_gaps_cannot_be_merged():
     assert components([[0,80],[80,180],[190,250]])==[[0,180],[190,250]]
@@ -37,6 +37,12 @@ def test_source_read_cannot_extrapolate():
     with pytest.raises(ValueError):rotation_sample(r,[4.1])
     budget=smooth_budget(256)
     assert budget[0]==budget[-1]==.6 and np.isclose(budget[128],.2)
+
+def test_edit_responsibility_has_no_hard_budget_step():
+    value=responsibility_budget(np.full(256,.6),[52,168])
+    assert np.all(value[:53]==0) and np.all(value[167:]==0)
+    assert value[64]==.6 and value[155]==.6 and value[53]<.005
+    assert abs(value[53]-value[52])<.005 and abs(value[166]-value[167])<.005
 
 def test_training_factors_are_not_the_old_locked_pairings():
     pytest.importorskip('torch')
