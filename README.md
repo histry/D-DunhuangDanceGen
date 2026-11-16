@@ -275,3 +275,8 @@ All96 reference-only direction derivatives passed numeric checks; protected all-
 
 ## Blind-viewer playback correction V2
 [Report](reports/盲审骨架播放修正说明.md) · [receipt](reports/review_viewer_v2_receipt.json). Preserves original pose samples, restores a separate unverified fitted-Root view, uses elapsed/audio clocks and stops at the final frame. Viewer corrections do not establish motion-quality or contact qualification; original review artifacts remain frozen.
+
+
+### R33 来源路由与相对动态监督
+
+已完成单一 Lodge 主干上的冻结通用参考路由、ChangE 参考600步等预算对照及独立重放。Dyn改善训练琵琶的Core动态误差，额外来源构形和全窗物理仍未合格，整曲0。详见[实验报告](reports/R33来源路由与相对动态实验报告.md)及[公开统计](reports/r33_release/r33_summary.json)。

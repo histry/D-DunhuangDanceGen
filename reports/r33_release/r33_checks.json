@@ -1,0 +1,219 @@
+{
+  "code_commit": "c6e5dcb77443f2e435fedbdf2d948fec87461142",
+  "array_bundles_exact": 10,
+  "update_pairs": 16,
+  "update_checks": [
+    {
+      "all": {
+        "actual": 0.09980671107769012,
+        "expected": 0.09980671107769012,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "all": {
+        "actual": 0.10199649631977081,
+        "expected": 0.10199649631977081,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "all": {
+        "actual": 0.09711901843547821,
+        "expected": 0.09711901843547821,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "all": {
+        "actual": 0.09850020706653595,
+        "expected": 0.09850020706653595,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "all": {
+        "actual": 0.08046268671751022,
+        "expected": 0.08046268671751022,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "all": {
+        "actual": 0.08053223043680191,
+        "expected": 0.08053223043680191,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "all": {
+        "actual": 0.10893771052360535,
+        "expected": 0.10893771052360535,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "all": {
+        "actual": 0.109798863530159,
+        "expected": 0.109798863530159,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "encoder": {
+        "actual": 0.026155972853302956,
+        "expected": 0.026155972853302956,
+        "relative_error": 0.0
+      },
+      "injection": {
+        "actual": 0.015072155743837357,
+        "expected": 0.015072155743837357,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "encoder": {
+        "actual": 0.13739076256752014,
+        "expected": 0.13739076256752014,
+        "relative_error": 0.0
+      },
+      "injection": {
+        "actual": 0.027983730658888817,
+        "expected": 0.027983730658888817,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "encoder": {
+        "actual": 0.07873055338859558,
+        "expected": 0.07873055338859558,
+        "relative_error": 0.0
+      },
+      "injection": {
+        "actual": 0.018142633140087128,
+        "expected": 0.018142633140087128,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "encoder": {
+        "actual": 0.085051529109478,
+        "expected": 0.085051529109478,
+        "relative_error": 0.0
+      },
+      "injection": {
+        "actual": 0.016124403104186058,
+        "expected": 0.016124403104186058,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "encoder": {
+        "actual": 0.026155972853302956,
+        "expected": 0.026155972853302956,
+        "relative_error": 0.0
+      },
+      "injection": {
+        "actual": 0.015072155743837357,
+        "expected": 0.015072155743837357,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "encoder": {
+        "actual": 0.13860972225666046,
+        "expected": 0.13860972225666046,
+        "relative_error": 0.0
+      },
+      "injection": {
+        "actual": 0.0285638440400362,
+        "expected": 0.0285638440400362,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "encoder": {
+        "actual": 0.07879576086997986,
+        "expected": 0.07879576086997986,
+        "relative_error": 0.0
+      },
+      "injection": {
+        "actual": 0.018358156085014343,
+        "expected": 0.018358156085014343,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "encoder": {
+        "actual": 0.09222310781478882,
+        "expected": 0.09222310781478882,
+        "relative_error": 0.0
+      },
+      "injection": {
+        "actual": 0.018132049590349197,
+        "expected": 0.018132049590349197,
+        "relative_error": 0.0
+      }
+    }
+  ],
+  "generator_optimizer_steps": 1200,
+  "calibration_optimizer_steps": 8,
+  "replay_optimizer_steps": 0,
+  "sampler_calls": 54,
+  "generated_trajectories": 264,
+  "replay_sampler_calls": 54,
+  "replay_generated_trajectories": 264,
+  "components": {
+    "preflight": [
+      22,
+      96
+    ],
+    "calibration": [
+      0,
+      0
+    ],
+    "training": [
+      2,
+      12
+    ],
+    "evaluation": [
+      30,
+      156
+    ]
+  },
+  "paired_counts": {
+    "51": 75,
+    "26": 75,
+    "27": 75,
+    "92": 75,
+    "37": 75,
+    "95": 75,
+    "38": 75,
+    "76": 75,
+    "35": 75,
+    "78": 75,
+    "1": 75,
+    "32": 75,
+    "21": 75,
+    "0": 75,
+    "48": 75,
+    "23": 75
+  },
+  "gradient_replay_relative_l2": {
+    "base_999": 0.0,
+    "dyn_999": 0.0,
+    "base_519": 0.0,
+    "dyn_519": 0.0,
+    "base_119": 0.0,
+    "dyn_119": 0.0,
+    "base_19": 0.0,
+    "dyn_19": 0.0
+  },
+  "fixed_general_and_NoRef_exact": true,
+  "parent_scientific_files_unchanged": true,
+  "single_backbone": true,
+  "context_trained": false,
+  "full_native_status": "NOT_EVALUABLE_22_OF24",
+  "operational_qualified": false,
+  "whole_song_generations": 0
+}
