@@ -1,0 +1,546 @@
+{
+  "schema": "r32_authorized_media_delivery_v1",
+  "authorization": "授权回传上述 R32 视频与页面",
+  "authorization_question_id": "call_9866d9ecf8a54a879a2233f083e11eb1",
+  "authorized_scope": {
+    "files": 44,
+    "videos": 42,
+    "audio_videos": 36,
+    "bytes": 13707100
+  },
+  "verified_at_utc": "2026-11-16T10:16:41.331826+00:00",
+  "source_publication_commit": "629e63a81b9d02a9b4a2fa7b40f4fa61c61309ff",
+  "source_publication_receipt_sha256": "871e0770f64efb5974e179b11b2b944c37ca5341e4e4754aa1a824179341edc2",
+  "source_scientific_seals_sha256": {
+    "outputs/content_r32_02": "197610082363e94e287ab200b02188ee8ea26cdc672d17a8764eafb8a371015f",
+    "outputs/content_r32_01": "da76bafcfee3dead667753bc22e5ec90f9c33ab5b3620f76e87826f867ed6c57",
+    "outputs/geometry_r31_02": "ea7b2fe1937f94d12afd0939251b07d9a1115648126bf4ddc5e50f62ac5fdc07"
+  },
+  "destination": "D:/DunhuangDanceGen/outputs/content_r32_02/videos",
+  "files": {
+    "ChangE_raw_readout1.mp4": {
+      "bytes": 143391,
+      "sha256": "93b1b73216bfba2b4b97c5fdf60c690fd28ed871630b8770b844accd2408f8ec"
+    },
+    "ChangE_m1_e0_CanonicalIO.mp4": {
+      "bytes": 338843,
+      "sha256": "aba88e6fb7b4425052770865df4908269758633c80ee3ecb8536292e0b79120d"
+    },
+    "ChangE_m1_e0_wrong_clock.mp4": {
+      "bytes": 347763,
+      "sha256": "8795d329a99e8fff01b246cb12f4b8e3da60f4cd67bf105e7850462974f41eb8"
+    },
+    "ChangE_m1_e1_wrong_clock.mp4": {
+      "bytes": 377135,
+      "sha256": "e27ddbc2a069b915ac17d26ab9884d33a3009517abfc896f0e385a613fcda963"
+    },
+    "ChangE_Source1_RootUnknown.mp4": {
+      "bytes": 141078,
+      "sha256": "b65217cc764f27eb2751b28249c442dedc2c0ceadd57d7e419d81e6b095503bd"
+    },
+    "ChangE_raw_readout0.mp4": {
+      "bytes": 99786,
+      "sha256": "a611cd39c0e0215a7469a4c572f676f04a1c318a107d152af57b115b72d039ae"
+    },
+    "MatchedNoiseMusic_m1_e0_ChangE.mp4": {
+      "bytes": 358839,
+      "sha256": "9fc94aa2d80d31fdb24c008403fbfefae86d3cdc5a269af2e3b4c37cd5b87e6c"
+    },
+    "ChangE_m1_e1_AIST.mp4": {
+      "bytes": 346903,
+      "sha256": "267099ce08f4a64b4eb35d2891112346325ef082cfa31f1bc348b15cef15d713"
+    },
+    "ChangE_m1_e0_AIST.mp4": {
+      "bytes": 311791,
+      "sha256": "0dbda30a79444439430969b4cb51357987373e263bd41d77c1b6e0d3a81a3d4b"
+    },
+    "AIST_train_case48_ChangE.mp4": {
+      "bytes": 384434,
+      "sha256": "e50cb21404bd5eadc5b404c404fb10a1d049912e6ab9e3afb18df2801e74e559"
+    },
+    "ChangE_m1_e1_ChangE.mp4": {
+      "bytes": 392235,
+      "sha256": "8bbdfdd82bb25fd5f8868661b6d8c14ea5245634888dc298ad0669707a272de4"
+    },
+    "AIST_holdout_case4_AIST.mp4": {
+      "bytes": 332609,
+      "sha256": "211255a0faddb4bae062f4d31cd4547025930316ea667e72c6527136f3b637b4"
+    },
+    "protocol.json": {
+      "bytes": 21713,
+      "sha256": "54a771cf52c57bb75fd466cf75aac5f979b77582ec7b063da98b4e530a2a5922"
+    },
+    "ChangE_m0_e1_ChangE.mp4": {
+      "bytes": 395442,
+      "sha256": "e1006ac1444a4b98abc5e70bb2c3ba3f5d6a067769139ef06cb6ce585abbd814"
+    },
+    "AIST_train_case48_Source.mp4": {
+      "bytes": 408714,
+      "sha256": "9418d1bc0cb7a9225f66e7f64c3646a461d2369df06107e87d9541b16a24fa8c"
+    },
+    "ChangE_memory_readout1.mp4": {
+      "bytes": 143866,
+      "sha256": "a73aba01c5eec68eaf618f847c0b41f9b500a666fca8e2ac2031116f40f69049"
+    },
+    "ChangE_m0_e0_CanonicalIO.mp4": {
+      "bytes": 359580,
+      "sha256": "04924f9b24588e1300dda6f5caa5aed81a203bb9f2444b74f29c82701c499db7"
+    },
+    "ChangE_m0_e0_wrong_clock.mp4": {
+      "bytes": 352199,
+      "sha256": "bd5a80e61a665326a38a4f7550f7cd663db9cde144bfb5b30be4521054b1efce"
+    },
+    "ChangE_m1_e1_CanonicalIO.mp4": {
+      "bytes": 374653,
+      "sha256": "ecf690012821299a7d2bbefad5f287364900f1304856cab7ce5fc81f6fbf04c8"
+    },
+    "ChangE_memory_readout0.mp4": {
+      "bytes": 102486,
+      "sha256": "005e3c0ce0e664f62947d48563daa360ecc2b3b3cef5e9064dcdc60f583c326e"
+    },
+    "MatchedNoiseMusic_m0_e0_CanonicalIO.mp4": {
+      "bytes": 348816,
+      "sha256": "fccb51cf356c91c2fa9abbade0222d4c7acac5db35a9b8379f2ed757a8cf8ce0"
+    },
+    "ChangE_m1_FixedNoRef.mp4": {
+      "bytes": 346240,
+      "sha256": "6dbe766240236a8daaec7985d77c128a6cdf974b040f772908d594babbcc4e3b"
+    },
+    "ChangE_m0_e0_AIST.mp4": {
+      "bytes": 313386,
+      "sha256": "bde0ee12b7de956018097b58b36e98894c88e7de8bf8ae26cd40a0cc093b6247"
+    },
+    "ChangE_m0_FixedNoRef.mp4": {
+      "bytes": 391830,
+      "sha256": "4b6d7cf3da13035cebd763a053f76c697104690d47c56dcf46eb07fb3e1f0fcf"
+    },
+    "ChangE_m0_e1_CanonicalIO.mp4": {
+      "bytes": 373573,
+      "sha256": "d7bc5c509cf33c16c3e35ab2a567dc703909ce39504f2a1cd05f411e207b75d1"
+    },
+    "ChangE_m0_e1_wrong_clock.mp4": {
+      "bytes": 383161,
+      "sha256": "6313e48de51452dbb882f194b724cc829b6ef6fdb24451894b49d15e9a911cae"
+    },
+    "AIST_holdout_case4_ChangE.mp4": {
+      "bytes": 335847,
+      "sha256": "99446d557e0537533d834a387c77d388b3de678ca031baa5444ef46276f1a112"
+    },
+    "ChangE_m0_e1_swapped.mp4": {
+      "bytes": 356721,
+      "sha256": "29ad52b07ba746bc103d2ca6ef47275300ab86a4cda8dc4dca19fcd5cff63ee3"
+    },
+    "ChangE_Source0_RootUnknown.mp4": {
+      "bytes": 98768,
+      "sha256": "4154b00c1b181220e0c88576680ef7cef78c68da86f02f3c00542a72ce9a5fbc"
+    },
+    "AIST_holdout_case4_Source.mp4": {
+      "bytes": 351791,
+      "sha256": "08eb3c31f21992d38f5b271a42dfe329f48b2644b7730b650eab5f1a439cde53"
+    },
+    "ChangE_m1_e0_ChangE.mp4": {
+      "bytes": 353268,
+      "sha256": "168235b835d82abb1cf380b8d180b42307527f34ba7383d5fdb39546984e435b"
+    },
+    "index.html": {
+      "bytes": 20224,
+      "sha256": "cdfe2e90a1fbb562d330274b8751c45799341b547b82faf61032b2fda2c69387"
+    },
+    "ChangE_m0_e0_swapped.mp4": {
+      "bytes": 393642,
+      "sha256": "3482a57f42c81712f6636c902c05e26c1dd9f49cf37e589b1d8a969adb74c984"
+    },
+    "ChangE_m0_e1_AIST.mp4": {
+      "bytes": 335885,
+      "sha256": "7b2627deebafe0f9d30807826ec50c35881f2478e9a941cdf6e744ac8f1f10dc"
+    },
+    "MatchedNoiseMusic_m0_e0_ChangE.mp4": {
+      "bytes": 367257,
+      "sha256": "950d6fd8b4e160884039321d544cd1cbc3b7f61186e74092d34c433080b6cbcc"
+    },
+    "MatchedNoiseMusic_m0_e0_AIST.mp4": {
+      "bytes": 316677,
+      "sha256": "1e8eb9b2d6ee4346baf75f721199699620fabcdb7495a9ee0a1dedb31c12d054"
+    },
+    "AIST_train_case48_AIST.mp4": {
+      "bytes": 372533,
+      "sha256": "c7342483e793887c6fca298673f3dd1f47a52aad6424da6a9c13377bb98cee74"
+    },
+    "ChangE_m0_e0_ChangE.mp4": {
+      "bytes": 358514,
+      "sha256": "4792e45e20cfe85d3346094ced575645601360b3df6884bccbb888ad9b7b4cc0"
+    },
+    "ChangE_m1_e0_swapped.mp4": {
+      "bytes": 390030,
+      "sha256": "47d4ffc15edfefa9585c474210ccb2f0511623f1232cb6ddcb4939019618ded0"
+    },
+    "MatchedNoiseMusic_m1_e0_AIST.mp4": {
+      "bytes": 313455,
+      "sha256": "870db1a94c56f0343c9c241ce5f459cd72228bdcb6ef81394a0583765ce39449"
+    },
+    "AIST_train_case48_CanonicalIO.mp4": {
+      "bytes": 383808,
+      "sha256": "26cca752e5120ebe2b9fb234f8fd60b66554386bd24722911d322a1ff5b74075"
+    },
+    "MatchedNoiseMusic_m1_e0_CanonicalIO.mp4": {
+      "bytes": 358251,
+      "sha256": "216deefc8c3270ae42e24fa995cc6f879eede1fcc4fc4eae618cc5538e71bc58"
+    },
+    "AIST_holdout_case4_CanonicalIO.mp4": {
+      "bytes": 358922,
+      "sha256": "6ec3d39e4010abdd02380d721d8b9b4712cb59e1e2d48989bc7567269a78fdb3"
+    },
+    "ChangE_m1_e1_swapped.mp4": {
+      "bytes": 351041,
+      "sha256": "f5c8ef389cd399105235d6008d558a48993b0d30277932b9b43125133918d418"
+    }
+  },
+  "streams": [
+    {
+      "file": "ChangE_Source0_RootUnknown.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 0
+    },
+    {
+      "file": "ChangE_raw_readout0.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 0
+    },
+    {
+      "file": "ChangE_memory_readout0.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 0
+    },
+    {
+      "file": "ChangE_Source1_RootUnknown.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 0
+    },
+    {
+      "file": "ChangE_raw_readout1.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 0
+    },
+    {
+      "file": "ChangE_memory_readout1.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 0
+    },
+    {
+      "file": "ChangE_m0_e0_CanonicalIO.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 1
+    },
+    {
+      "file": "ChangE_m0_e0_AIST.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 1
+    },
+    {
+      "file": "ChangE_m0_e0_ChangE.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 1
+    },
+    {
+      "file": "ChangE_m0_e0_wrong_clock.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 1
+    },
+    {
+      "file": "ChangE_m0_e0_swapped.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 1
+    },
+    {
+      "file": "ChangE_m0_e1_CanonicalIO.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 1
+    },
+    {
+      "file": "ChangE_m0_e1_AIST.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 1
+    },
+    {
+      "file": "ChangE_m0_e1_ChangE.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 1
+    },
+    {
+      "file": "ChangE_m0_e1_wrong_clock.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 1
+    },
+    {
+      "file": "ChangE_m0_e1_swapped.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 1
+    },
+    {
+      "file": "ChangE_m0_FixedNoRef.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 1
+    },
+    {
+      "file": "ChangE_m1_e0_CanonicalIO.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 1
+    },
+    {
+      "file": "ChangE_m1_e0_AIST.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 1
+    },
+    {
+      "file": "ChangE_m1_e0_ChangE.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 1
+    },
+    {
+      "file": "ChangE_m1_e0_wrong_clock.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 1
+    },
+    {
+      "file": "ChangE_m1_e0_swapped.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 1
+    },
+    {
+      "file": "ChangE_m1_e1_CanonicalIO.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 1
+    },
+    {
+      "file": "ChangE_m1_e1_AIST.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 1
+    },
+    {
+      "file": "ChangE_m1_e1_ChangE.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 1
+    },
+    {
+      "file": "ChangE_m1_e1_wrong_clock.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 1
+    },
+    {
+      "file": "ChangE_m1_e1_swapped.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 1
+    },
+    {
+      "file": "ChangE_m1_FixedNoRef.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 1
+    },
+    {
+      "file": "AIST_train_case48_Source.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 1
+    },
+    {
+      "file": "AIST_train_case48_CanonicalIO.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 1
+    },
+    {
+      "file": "AIST_train_case48_AIST.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 1
+    },
+    {
+      "file": "AIST_train_case48_ChangE.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 1
+    },
+    {
+      "file": "AIST_holdout_case4_Source.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 1
+    },
+    {
+      "file": "AIST_holdout_case4_CanonicalIO.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 1
+    },
+    {
+      "file": "AIST_holdout_case4_AIST.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 1
+    },
+    {
+      "file": "AIST_holdout_case4_ChangE.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 1
+    },
+    {
+      "file": "MatchedNoiseMusic_m0_e0_CanonicalIO.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 1
+    },
+    {
+      "file": "MatchedNoiseMusic_m1_e0_CanonicalIO.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 1
+    },
+    {
+      "file": "MatchedNoiseMusic_m0_e0_AIST.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 1
+    },
+    {
+      "file": "MatchedNoiseMusic_m1_e0_AIST.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 1
+    },
+    {
+      "file": "MatchedNoiseMusic_m0_e0_ChangE.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 1
+    },
+    {
+      "file": "MatchedNoiseMusic_m1_e0_ChangE.mp4",
+      "frames": 256,
+      "width": 600,
+      "height": 600,
+      "frame_rate": "30/1",
+      "audio_streams": 1
+    }
+  ],
+  "all_file_sizes_and_sha256_match": true,
+  "all_42_video_frames_locally_decoded": true,
+  "all_page_media_links_exist": true,
+  "page_script_node_syntax_passed": true,
+  "live_browser_controls_verified": false,
+  "delivery_status": "DELIVERED_VERIFIED",
+  "new_training_steps": 0,
+  "new_sampling_calls": 0,
+  "temporary_ssh_files_created": 0,
+  "temporary_ssh_files_remaining": 0
+}
