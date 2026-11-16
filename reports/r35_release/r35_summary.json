@@ -1,0 +1,780 @@
+{
+  "config": {
+    "schema": "r35_transition_context_v1",
+    "baseline": "b8d8e8176a2642858150ec307ec37a756c98e525",
+    "r33": "outputs/control_r33_01",
+    "r33_manifest_sha256": "279f5949d42335c3ce2120a885fbee0c68193cf9d86cb02790aa93391f90074e",
+    "dyn_checkpoint_sha256": "cf3107286ed9e602def871c7b36670f0b9c811837d1c59f95ad46b5d30b74462",
+    "r34": "outputs/coverage_r34_01",
+    "r34_manifest_sha256": "a2c3f8a5afe7e673debcf7ecdb5afe30c12096c022fad7940fb047e4f5b72728",
+    "seed": 35041,
+    "train_steps": 600,
+    "lr": 0.0002,
+    "snapshots": [
+      0,
+      1,
+      299,
+      599
+    ],
+    "times": [
+      999,
+      519,
+      119,
+      19
+    ],
+    "gap_intervals": [
+      [
+        64,
+        160
+      ],
+      [
+        64,
+        146
+      ],
+      [
+        80,
+        168
+      ],
+      [
+        64,
+        154
+      ],
+      [
+        52,
+        172
+      ],
+      [
+        52,
+        166
+      ]
+    ],
+    "per_source_candidates": 3,
+    "beam": 24,
+    "music_slot_regret_max": 0.05,
+    "music_mean_regret_max": 0.02,
+    "transition_weight": 0.25,
+    "edge_edit_max": 12,
+    "edge_observed_frames": 12,
+    "additional_ablation_calls": 0,
+    "whole_song_generations": 0,
+    "operational_qualified": false
+  },
+  "planning": {
+    "code_commit": "b931e383f4c8347365bddd7c6d220b03043196d1",
+    "songs": [
+      {
+        "song": "song0",
+        "slots": 42,
+        "boundaries": 41,
+        "retained_per_slot": [
+          15,
+          18,
+          17,
+          20,
+          18,
+          17,
+          15,
+          20,
+          18,
+          16,
+          16,
+          17,
+          17,
+          17,
+          15,
+          18,
+          19,
+          18,
+          18,
+          18,
+          18,
+          13,
+          16,
+          17,
+          20,
+          18,
+          17,
+          17,
+          15,
+          16,
+          14,
+          17,
+          18,
+          18,
+          16,
+          16,
+          16,
+          12,
+          19,
+          16,
+          19,
+          14
+        ],
+        "same_source_multiple_candidates": 42,
+        "original_music_cost": 0.28977418215050926,
+        "new_music_cost": 0.7205974933543827,
+        "music_mean_regret": 0.010257697885806513,
+        "old_graph_cost": 23.518691996818962,
+        "new_graph_cost": 15.188407775191838,
+        "changed_slots": 38,
+        "old_mean_edge": 1.8486749087481416,
+        "new_mean_edge": 0.8944205153012152,
+        "proxy_selection_metric_not_independent_quality": true
+      },
+      {
+        "song": "song1",
+        "slots": 40,
+        "boundaries": 39,
+        "retained_per_slot": [
+          15,
+          17,
+          12,
+          17,
+          18,
+          18,
+          17,
+          15,
+          18,
+          17,
+          15,
+          18,
+          16,
+          16,
+          17,
+          19,
+          18,
+          18,
+          17,
+          17,
+          14,
+          15,
+          20,
+          18,
+          18,
+          15,
+          13,
+          18,
+          18,
+          16,
+          18,
+          16,
+          16,
+          18,
+          14,
+          15,
+          17,
+          18,
+          19,
+          14
+        ],
+        "same_source_multiple_candidates": 40,
+        "original_music_cost": 0.3013448559599114,
+        "new_music_cost": 0.8102545247088504,
+        "music_mean_regret": 0.012722741718723476,
+        "old_graph_cost": 20.91797992978111,
+        "new_graph_cost": 14.574979106914578,
+        "changed_slots": 35,
+        "old_mean_edge": 1.7288856485970474,
+        "new_mean_edge": 0.9974076494569974,
+        "proxy_selection_metric_not_independent_quality": true
+      },
+      {
+        "song": "song2",
+        "slots": 40,
+        "boundaries": 39,
+        "retained_per_slot": [
+          13,
+          20,
+          15,
+          18,
+          18,
+          16,
+          15,
+          19,
+          18,
+          19,
+          19,
+          15,
+          19,
+          19,
+          19,
+          20,
+          18,
+          15,
+          17,
+          17,
+          15,
+          17,
+          15,
+          16,
+          19,
+          19,
+          20,
+          18,
+          14,
+          18,
+          15,
+          18,
+          15,
+          17,
+          17,
+          19,
+          19,
+          16,
+          21,
+          18
+        ],
+        "same_source_multiple_candidates": 40,
+        "original_music_cost": 0.23616342386177827,
+        "new_music_cost": 0.7730299952221047,
+        "music_mean_regret": 0.01342166428400816,
+        "old_graph_cost": 22.840596646788132,
+        "new_graph_cost": 14.848045665534054,
+        "changed_slots": 35,
+        "old_mean_edge": 1.9225059715821897,
+        "new_mean_edge": 1.0333349405448153,
+        "proxy_selection_metric_not_independent_quality": true
+      }
+    ],
+    "source_count": 8,
+    "boundary_count": 119,
+    "optimizer_steps": 0,
+    "sampler_calls": 0,
+    "Root_contact_unknown": true,
+    "operational_qualified": false,
+    "whole_song_generations": 0
+  },
+  "training": {
+    "code_commit": "99126fb50e5bfcb0f5c3081b2f37e85b64ad29ff",
+    "optimizer_steps": 600,
+    "initial_digest": "59b4388be285f66d50e35a6f96261454fadbe342b68a397a70834b81b6f14782",
+    "final_digest": "4ed46d5502f5dbf4817c2c981518c4b322203b41eac67cc848ad4288f9c80d1a",
+    "frozen": {
+      "backbone": "79a287a3868452cfe99a0f13b806ee598927cd20faabab8177a053380536ae2f",
+      "io": "5c05257014e113d002b9d52f18921d3168a49f7a93d1822806daebd043623524",
+      "general": "62439a79d075477f2f16d82189801a4dcb54152259ba446f93881fdfc4e3b2b4",
+      "change": "f4c87c99e08b7df48d1f98ca427ff7396174266f0362c10971cac7fdb10c26b6"
+    },
+    "replay_checks": [],
+    "paired_presentations": {
+      "37": 100,
+      "78": 100,
+      "95": 100,
+      "48": 100,
+      "38": 100,
+      "21": 100,
+      "76": 100,
+      "1": 100,
+      "27": 100,
+      "0": 100,
+      "51": 100,
+      "23": 100,
+      "32": 100,
+      "35": 100,
+      "26": 100,
+      "92": 100
+    },
+    "context_trainable_parameters": 268160,
+    "source_updated": false,
+    "io_updated": false,
+    "backbone_updated": false,
+    "sampler_calls": 10,
+    "generated_trajectories": 44,
+    "noise": [
+      {
+        "seeds": [
+          35041,
+          35042,
+          35062,
+          35064
+        ],
+        "draws": 50,
+        "row_sha256": [
+          "dcf64e34e2eb394a636605b1f504c0d34bab19cc4584bd70bbd8e6db02abbd1e",
+          "0a52f0e802cd62fbaffa077f2a04cc3526155884f156ea928f4e235dce60110e",
+          "03eece213f85df043541df4fd2f2fa4a43ce2f0f5abe9467073b225748a2a357",
+          "7dcdc6f62589596fdf403c9f8de50c3dc6278359726b5fa1d7785f63a4a7bcf1"
+        ]
+      },
+      {
+        "seeds": [
+          35067,
+          35068,
+          35073,
+          35076
+        ],
+        "draws": 50,
+        "row_sha256": [
+          "0f1d3476ea62c7f3bd7ae7350eabaf8baa92af5a75d607bb1bdf03515fe6494c",
+          "0aa2f834b69e9fa6059cd860897d787167f72b6fe819479e37ece8a4e91ee4e0",
+          "7e229581708d92e2a10e5e0f34553ec4840a4cbf3efe8e98ad6bc94b0c31da40",
+          "3b21eb6477b9f035603507380b974cb5a5ded6ef66f8874860ad31ba113f7596"
+        ]
+      },
+      {
+        "seeds": [
+          35078,
+          35079,
+          35089,
+          35092
+        ],
+        "draws": 50,
+        "row_sha256": [
+          "817ee1860f2f7e3ef79ddfeb8d43fc399c9b6b53db75c728faf446d1f8c893b6",
+          "dc89bb87da31868178aadfe45aac67f367b08277ac2eaea45dbf4c71082f0148",
+          "633586a0cd93ea46a6a0eabf249cc0d699a4b562e75ea7b500d7e970ad5bea93",
+          "f155e0fcb24db6f24dfaffca3f60894bca09f65ba9e2c2efb8f91d036c659964"
+        ]
+      },
+      {
+        "seeds": [
+          35117,
+          35119,
+          35133,
+          35136
+        ],
+        "draws": 50,
+        "row_sha256": [
+          "0e5b286ccdefa2d01f26ae826ce67de52c143c244d5c02cca10db7e6f128128a",
+          "44b8ae0c7e6eef59c934ed1b4f444afa6054e53fab8441d32dfd1fd80fc60200",
+          "2a6631a7dba9d36069a22a8028238cd77c884ffb62ea0d42bc2c0a1c28a973ca",
+          "d823700b59ce99836ad1db27c8bf3846e0f3c5bd5e94891c52c17abe59d93c93"
+        ]
+      },
+      {
+        "draws": 50,
+        "sha256": "c180258dd91345277c98f4777cb6fac6738ffe7e941647cd0fb568b6d39e8439",
+        "all_rows_equal": true
+      },
+      {
+        "seeds": [
+          35041,
+          35042,
+          35062,
+          35064
+        ],
+        "draws": 50,
+        "row_sha256": [
+          "dcf64e34e2eb394a636605b1f504c0d34bab19cc4584bd70bbd8e6db02abbd1e",
+          "0a52f0e802cd62fbaffa077f2a04cc3526155884f156ea928f4e235dce60110e",
+          "03eece213f85df043541df4fd2f2fa4a43ce2f0f5abe9467073b225748a2a357",
+          "7dcdc6f62589596fdf403c9f8de50c3dc6278359726b5fa1d7785f63a4a7bcf1"
+        ]
+      },
+      {
+        "seeds": [
+          35067,
+          35068,
+          35073,
+          35076
+        ],
+        "draws": 50,
+        "row_sha256": [
+          "0f1d3476ea62c7f3bd7ae7350eabaf8baa92af5a75d607bb1bdf03515fe6494c",
+          "0aa2f834b69e9fa6059cd860897d787167f72b6fe819479e37ece8a4e91ee4e0",
+          "7e229581708d92e2a10e5e0f34553ec4840a4cbf3efe8e98ad6bc94b0c31da40",
+          "3b21eb6477b9f035603507380b974cb5a5ded6ef66f8874860ad31ba113f7596"
+        ]
+      },
+      {
+        "seeds": [
+          35078,
+          35079,
+          35089,
+          35092
+        ],
+        "draws": 50,
+        "row_sha256": [
+          "817ee1860f2f7e3ef79ddfeb8d43fc399c9b6b53db75c728faf446d1f8c893b6",
+          "dc89bb87da31868178aadfe45aac67f367b08277ac2eaea45dbf4c71082f0148",
+          "633586a0cd93ea46a6a0eabf249cc0d699a4b562e75ea7b500d7e970ad5bea93",
+          "f155e0fcb24db6f24dfaffca3f60894bca09f65ba9e2c2efb8f91d036c659964"
+        ]
+      },
+      {
+        "seeds": [
+          35117,
+          35119,
+          35133,
+          35136
+        ],
+        "draws": 50,
+        "row_sha256": [
+          "0e5b286ccdefa2d01f26ae826ce67de52c143c244d5c02cca10db7e6f128128a",
+          "44b8ae0c7e6eef59c934ed1b4f444afa6054e53fab8441d32dfd1fd80fc60200",
+          "2a6631a7dba9d36069a22a8028238cd77c884ffb62ea0d42bc2c0a1c28a973ca",
+          "d823700b59ce99836ad1db27c8bf3846e0f3c5bd5e94891c52c17abe59d93c93"
+        ]
+      },
+      {
+        "draws": 50,
+        "sha256": "c180258dd91345277c98f4777cb6fac6738ffe7e941647cd0fb568b6d39e8439",
+        "all_rows_equal": true
+      }
+    ],
+    "cache": "ACTUAL_NOMINAL_BOTH_NO_SOURCE_PAIRED_AND_BODY_ONLY_CG; REFRESH300; NOT_EVERY_STEP",
+    "hard_observation_override": false,
+    "unknown_Root_C4_formed_x0": false,
+    "additional_ablation_calls": 0,
+    "files": {
+      "initial_states.npz": "f01701d6f9cf0bcc90fe89d7cd0c3f1b07ff08ed87fb50ff635924c44eda7065",
+      "context.pt": "bb9978f44dc155559125324b909ef371b346428884c8fbf6a76541a095775bf8",
+      "refresh_300.npz": "6adc1fd0e98556344f6b3016fb8450bf07e30214eb94226b9cef73f50ab0c276",
+      "weights_300.pt": "f12d15329a7d90e90c249e9f2741d0ccad4a230930001bcb3430980849dd2c50",
+      "initial.pt": "4a7a56498f3b031b68c566b33a552e07a85216bc696168ce6846839fd45a7dac",
+      "snapshots/0_pre.pt": "4d440db6bfd331fcb186f906b95f10b121a65fe8b38dad6939e568bd7c524a19",
+      "snapshots/299_pre.pt": "1493630dde831961f7aa1952cc2327954e388b22151e9f85b60c89efc9dbc095",
+      "snapshots/1_post.pt": "d6367140b75573e5540d20362279c80f5fba8c8300e688a6b5113ee0b914c80c",
+      "snapshots/599_pre.pt": "bbac311321792c563797a8f9fd712849162a8b005e006630c60ba329b7686681",
+      "snapshots/599_post.pt": "e5a9ce6daa7a352c280e7581b04db9876382c4c72e91d199d739cbecd8c7e225",
+      "snapshots/1_pre.pt": "6b33bf9a345a447e250b9033374c4187047dbe7164ad0dcebf60bd85594f8b8a",
+      "snapshots/0_post.pt": "47262f4435a3e16e985f96feaa1aec5582e3475a09414b76ce23a8f8b901f3ff",
+      "snapshots/299_post.pt": "a0e7a60faf791f8653331d554f64896b7a1569a211224c5ef127746b64410af5"
+    },
+    "whole_song_generations": 0,
+    "operational_qualified": false
+  },
+  "checks": {
+    "code_commit": "6d9c0f27e46b40b945d763110250864b43db5bb3",
+    "scientific_array_bundles_exact": 4,
+    "actual_update_pairs": 4,
+    "update_checks": [
+      {
+        "all": {
+          "actual": 0.007343367673456669,
+          "expected": 0.007343367673456669,
+          "relative_error": 0.0
+        }
+      },
+      {
+        "all": {
+          "actual": 0.0026939844246953726,
+          "expected": 0.0026939844246953726,
+          "relative_error": 0.0
+        }
+      },
+      {
+        "all": {
+          "actual": 0.008778700605034828,
+          "expected": 0.008778700605034828,
+          "relative_error": 0.0
+        }
+      },
+      {
+        "all": {
+          "actual": 0.0033287371043115854,
+          "expected": 0.0033287371043115854,
+          "relative_error": 0.0
+        }
+      }
+    ],
+    "successful_optimizer_steps": 600,
+    "replay_optimizer_steps": 0,
+    "successful_sampler_calls": 28,
+    "successful_trajectories": 92,
+    "replay_sampler_calls": 28,
+    "replay_trajectories": 92,
+    "failed_original_sampler_calls": 11,
+    "failed_original_trajectories": 44,
+    "failed_optimizer_steps": 0,
+    "frozen_R33_R34_seals_unchanged": true,
+    "source_backbone_IO_frozen": true,
+    "context_only": true,
+    "additional_ablation_calls": 0,
+    "whole_song_generations": 0,
+    "comparison": {
+      "paired": [
+        {
+          "role": "train",
+          "arm": "Frozen",
+          "n": 4,
+          "body_rad": 0.5891275575383446,
+          "root_rmse_m": 0.33235709369182587,
+          "cross_D2": 13.938210546970367,
+          "gap_jerk": 397.549373626709
+        },
+        {
+          "role": "train",
+          "arm": "Context",
+          "n": 4,
+          "body_rad": 0.3571810581523478,
+          "root_rmse_m": 0.3097691722214222,
+          "cross_D2": 13.326349377632141,
+          "gap_jerk": 277.07661533355713
+        },
+        {
+          "role": "holdout",
+          "arm": "Frozen",
+          "n": 4,
+          "body_rad": 0.5030892953063589,
+          "root_rmse_m": 0.3911687023937702,
+          "cross_D2": 13.111757636070251,
+          "gap_jerk": 430.6962471008301
+        },
+        {
+          "role": "holdout",
+          "arm": "Context",
+          "n": 4,
+          "body_rad": 0.34426099546937533,
+          "root_rmse_m": 0.38778166845440865,
+          "cross_D2": 7.493344932794571,
+          "gap_jerk": 345.5175533294678
+        }
+      ],
+      "source_protection": [
+        {
+          "event": 0,
+          "ratios": {
+            "body22_rad": 1.0338179653079855,
+            "world_wrist_rmse_m": 0.8909757894346485,
+            "body_activity_ratio": 1.0164220415655179,
+            "arm_range_ratio": 0.9866456938885787
+          },
+          "passed": true
+        },
+        {
+          "event": 1,
+          "ratios": {
+            "body22_rad": 1.0073972159937106,
+            "world_wrist_rmse_m": 0.9202759359000567,
+            "body_activity_ratio": 1.0181549350888202,
+            "arm_range_ratio": 0.9898035013957037
+          },
+          "passed": true
+        }
+      ],
+      "finite_primary_gate": true,
+      "scope": "HISTORICALLY_EXPOSED_SMALL_MAIN_EFFECT; SIDE_NECESSITY_ABLATIONS_DEFERRED; NOT_NATIVE_OR_POPULATION_GENERALIZATION"
+    },
+    "operational_qualified": false,
+    "full_native_status": "NOT_EVALUABLE_22_OF24"
+  },
+  "viewer": {
+    "code_commit": "da1171f27c7567456ef30e18a0ab5828082ee409",
+    "cases": 15,
+    "display_only": true,
+    "trained_context": true,
+    "common_music_frame": true,
+    "files": [
+      {
+        "name": "audio/aist_0.wav",
+        "bytes": 3276888,
+        "sha256": "eb02abdd51fcdf2013326904cabf39fadfff238c136387b28dec169323e4975f"
+      },
+      {
+        "name": "audio/aist_12.wav",
+        "bytes": 3276888,
+        "sha256": "70fb192d006fbcc47081336520c86ad52db663d5106174ddf1ed0526667274b2"
+      },
+      {
+        "name": "audio/aist_16.wav",
+        "bytes": 3276888,
+        "sha256": "962ccc7665b2001ef808318bf0a6ca48161622fecb6d65f6678cb3869656847f"
+      },
+      {
+        "name": "audio/aist_32.wav",
+        "bytes": 3276888,
+        "sha256": "1fbcc8c80392a013854083053e3684d9f9ad59f8227755ad2c55a311a66b2551"
+      },
+      {
+        "name": "audio/aist_4.wav",
+        "bytes": 3276888,
+        "sha256": "2ed1a236060f93c4d28b0d45ee615f213df7edb0333cc0f6c12f02b69bd8bfcb"
+      },
+      {
+        "name": "audio/aist_48.wav",
+        "bytes": 3276888,
+        "sha256": "7c9b8061424397f9a0c6817dd4256a73414bca2eff18b6e830d0cc6f0ec924a1"
+      },
+      {
+        "name": "audio/aist_8.wav",
+        "bytes": 3276888,
+        "sha256": "bf1db82907ff18d3267653c21aaa353ed594eb0f3b69553c37388cda5ceecc9a"
+      },
+      {
+        "name": "audio/aist_92.wav",
+        "bytes": 3276888,
+        "sha256": "3e33ae04ba85d9b886de325920da9367fbfbf4c4dfa4e32d8965298e54ed26db"
+      },
+      {
+        "name": "audio/change_music0.wav",
+        "bytes": 1092352,
+        "sha256": "5d0919d4735498ef2451e11cdb0da1f56e52045164759e80ead24e3d7e09f636"
+      },
+      {
+        "name": "audio/change_music1.wav",
+        "bytes": 1092352,
+        "sha256": "ab248b29ca07c937bfb8696fbd536a8e531ebe7dab05b8349c76fedbfbe70fa8"
+      },
+      {
+        "name": "audio/dunhuangwu2.wav",
+        "bytes": 7682170,
+        "sha256": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c"
+      },
+      {
+        "name": "audio/dunhuangwu3.wav",
+        "bytes": 7673810,
+        "sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f"
+      },
+      {
+        "name": "audio/dunhuangwu4.wav",
+        "bytes": 7682170,
+        "sha256": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33"
+      },
+      {
+        "name": "data.js",
+        "bytes": 23298836,
+        "sha256": "233c6087262b5699ce415a2487270e815b415ed4174effba4df29c75e90154c8"
+      },
+      {
+        "name": "index.html",
+        "bytes": 4496,
+        "sha256": "3aeb49feaf4d46a4929f185aa4f44455b87ff233ae458137572075080b829799"
+      },
+      {
+        "name": "plan_activity.json",
+        "bytes": 1524,
+        "sha256": "ca8835597ecb28c4e0155ea90f49af87b033891aa204e21fadd8a26a76741c4a"
+      },
+      {
+        "name": "style.css",
+        "bytes": 1654,
+        "sha256": "d4e65844c788e73369d258e1d48659e82f3bc02970723ebd184a560cc192ecb5"
+      },
+      {
+        "name": "viewer.js",
+        "bytes": 13618,
+        "sha256": "dbac9fe26b03af53e28860aaba7bc24236af1ca22e16edeebb4c23d75e47ffb5"
+      }
+    ],
+    "audio_count": 13,
+    "generated_sequences": "REGISTERED_SHORT_WINDOWS_ONLY; NO_COMPLETE_THREE_EVENT_OR_WHOLE_SONG",
+    "live_browser_verified": false
+  },
+  "planning_activity": {
+    "song0": {
+      "Old": {
+        "body_speed_within_events_m_s": 0.187622363364737,
+        "arm_extent_weighted_rms_m": 0.26250832711192046,
+        "boundary_derivative_templates_excluded": true,
+        "descriptive_not_selection_or_posthoc_gate": true
+      },
+      "Graph": {
+        "body_speed_within_events_m_s": 0.13675898151679794,
+        "arm_extent_weighted_rms_m": 0.24981989829018153,
+        "boundary_derivative_templates_excluded": true,
+        "descriptive_not_selection_or_posthoc_gate": true
+      }
+    },
+    "song1": {
+      "Old": {
+        "body_speed_within_events_m_s": 0.20047525979677105,
+        "arm_extent_weighted_rms_m": 0.3654453672860553,
+        "boundary_derivative_templates_excluded": true,
+        "descriptive_not_selection_or_posthoc_gate": true
+      },
+      "Graph": {
+        "body_speed_within_events_m_s": 0.1618453529288123,
+        "arm_extent_weighted_rms_m": 0.33060670722707725,
+        "boundary_derivative_templates_excluded": true,
+        "descriptive_not_selection_or_posthoc_gate": true
+      }
+    },
+    "song2": {
+      "Old": {
+        "body_speed_within_events_m_s": 0.23988976470907533,
+        "arm_extent_weighted_rms_m": 0.3462639137279057,
+        "boundary_derivative_templates_excluded": true,
+        "descriptive_not_selection_or_posthoc_gate": true
+      },
+      "Graph": {
+        "body_speed_within_events_m_s": 0.20790649241300177,
+        "arm_extent_weighted_rms_m": 0.3312324197376827,
+        "boundary_derivative_templates_excluded": true,
+        "descriptive_not_selection_or_posthoc_gate": true
+      }
+    }
+  },
+  "browser_qa": {
+    "verified": true,
+    "checked_utc": "2026-11-16T16:37:04.021908+00:00",
+    "viewer_directory": "viewer02",
+    "method": "Chrome real DOM and viewport screenshots; loopback-only read-only server; 19-file whitelist",
+    "viewport": {
+      "width": 1536,
+      "height": 695
+    },
+    "shared_music_clock": true,
+    "three_columns_same_integer_frame": true,
+    "checks": {
+      "plan_window_G3236_L64": true,
+      "next_G3237_L65_previous_G3236_L64": true,
+      "paired_100_101_100": true,
+      "old_and_graph_plan_same_music_frame": true,
+      "tabs_keep_frame": true,
+      "unregistered_event_not_generated": true,
+      "song1_G2895_L64": true,
+      "song2_G2793_L64": true,
+      "half_speed_playback": true,
+      "complete_song_pause_G1330": true,
+      "seek_music_midpoint_G1800": true,
+      "diagnostic_G3298_L126": true,
+      "paired_end_all_frame255": true,
+      "world_local_view_switch": true,
+      "alternative_source_preview_visible": true,
+      "actual_clock_maps_visible": true,
+      "short_window_object_fit_contain": true,
+      "original_motion_arrays_unchanged": true
+    },
+    "ui_hashes": {
+      "index.html": "3aeb49feaf4d46a4929f185aa4f44455b87ff233ae458137572075080b829799",
+      "viewer.js": "dbac9fe26b03af53e28860aaba7bc24236af1ca22e16edeebb4c23d75e47ffb5",
+      "style.css": "99788619b1e86d2d2162b3fd0e2a01466309f4f3077ccb303d5ee73999b03f48",
+      "data.js": "233c6087262b5699ce415a2487270e815b415ed4174effba4df29c75e90154c8",
+      "protocol.json": "2e2d726563b71d9cd9463edba8c83744b5d71ac281a98e9d88488a8c186eaf62"
+    },
+    "screenshots": {
+      "generation.jpg": {
+        "sha256": "c524539be9e09d96dcb497e7103cb769b37bd2ea799f8889951a21061c9f8b14",
+        "bytes": 62938
+      },
+      "planning.jpg": {
+        "sha256": "8fdddb9cd2fee87da6e47bc376209ccbb1c661b3b6bb22ba9545f9f6e1bd2639",
+        "bytes": 73051
+      }
+    },
+    "console_errors": 0,
+    "human_quality_review": false,
+    "operational_qualified": false,
+    "localhost_closed": true,
+    "service_closed": {
+      "host": "127.0.0.1",
+      "temporary_ssh_files_created": 0,
+      "pid": 41972,
+      "listener_closed": true,
+      "port": 56806,
+      "closed_at_utc": "2026-11-16T16:35:32.9431243Z",
+      "target_checked": true
+    },
+    "automation_limitations": [
+      "Full-page CDP capture timed out; saved actual viewport captures",
+      "Nonfocusable-heading keyboard action unavailable; no UI change inferred"
+    ],
+    "style_patch": {
+      "patched_utc": "2026-11-16T16:32:20.274583+00:00",
+      "file": "style.css",
+      "before_sha256": "d4e65844c788e73369d258e1d48659e82f3bc02970723ebd184a560cc192ecb5",
+      "after_sha256": "99788619b1e86d2d2162b3fd0e2a01466309f4f3077ccb303d5ee73999b03f48",
+      "reason": "Fit all22 joints in short browser window; object-fit preserves pose aspect and common scale; no motion edits"
+    }
+  },
+  "scientific_manifest": {
+    "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/transition_r35_01/artifacts_manifest.json",
+    "sha256": "93bf660e823eaa3b554a1c079b70704a96f39c2cff82eb585d9aa5a24fff4340"
+  },
+  "human_reviewed": false,
+  "operational_qualified": false,
+  "whole_song_generations": 0,
+  "complete_three_event_sequences": 0,
+  "full_native_status": "NOT_EVALUABLE_22_OF24"
+}

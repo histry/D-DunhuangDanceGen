@@ -1,0 +1,115 @@
+{
+  "code_commit": "6d9c0f27e46b40b945d763110250864b43db5bb3",
+  "scientific_array_bundles_exact": 4,
+  "actual_update_pairs": 4,
+  "update_checks": [
+    {
+      "all": {
+        "actual": 0.007343367673456669,
+        "expected": 0.007343367673456669,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "all": {
+        "actual": 0.0026939844246953726,
+        "expected": 0.0026939844246953726,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "all": {
+        "actual": 0.008778700605034828,
+        "expected": 0.008778700605034828,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "all": {
+        "actual": 0.0033287371043115854,
+        "expected": 0.0033287371043115854,
+        "relative_error": 0.0
+      }
+    }
+  ],
+  "successful_optimizer_steps": 600,
+  "replay_optimizer_steps": 0,
+  "successful_sampler_calls": 28,
+  "successful_trajectories": 92,
+  "replay_sampler_calls": 28,
+  "replay_trajectories": 92,
+  "failed_original_sampler_calls": 11,
+  "failed_original_trajectories": 44,
+  "failed_optimizer_steps": 0,
+  "frozen_R33_R34_seals_unchanged": true,
+  "source_backbone_IO_frozen": true,
+  "context_only": true,
+  "additional_ablation_calls": 0,
+  "whole_song_generations": 0,
+  "comparison": {
+    "paired": [
+      {
+        "role": "train",
+        "arm": "Frozen",
+        "n": 4,
+        "body_rad": 0.5891275575383446,
+        "root_rmse_m": 0.33235709369182587,
+        "cross_D2": 13.938210546970367,
+        "gap_jerk": 397.549373626709
+      },
+      {
+        "role": "train",
+        "arm": "Context",
+        "n": 4,
+        "body_rad": 0.3571810581523478,
+        "root_rmse_m": 0.3097691722214222,
+        "cross_D2": 13.326349377632141,
+        "gap_jerk": 277.07661533355713
+      },
+      {
+        "role": "holdout",
+        "arm": "Frozen",
+        "n": 4,
+        "body_rad": 0.5030892953063589,
+        "root_rmse_m": 0.3911687023937702,
+        "cross_D2": 13.111757636070251,
+        "gap_jerk": 430.6962471008301
+      },
+      {
+        "role": "holdout",
+        "arm": "Context",
+        "n": 4,
+        "body_rad": 0.34426099546937533,
+        "root_rmse_m": 0.38778166845440865,
+        "cross_D2": 7.493344932794571,
+        "gap_jerk": 345.5175533294678
+      }
+    ],
+    "source_protection": [
+      {
+        "event": 0,
+        "ratios": {
+          "body22_rad": 1.0338179653079855,
+          "world_wrist_rmse_m": 0.8909757894346485,
+          "body_activity_ratio": 1.0164220415655179,
+          "arm_range_ratio": 0.9866456938885787
+        },
+        "passed": true
+      },
+      {
+        "event": 1,
+        "ratios": {
+          "body22_rad": 1.0073972159937106,
+          "world_wrist_rmse_m": 0.9202759359000567,
+          "body_activity_ratio": 1.0181549350888202,
+          "arm_range_ratio": 0.9898035013957037
+        },
+        "passed": true
+      }
+    ],
+    "finite_primary_gate": true,
+    "scope": "HISTORICALLY_EXPOSED_SMALL_MAIN_EFFECT; SIDE_NECESSITY_ABLATIONS_DEFERRED; NOT_NATIVE_OR_POPULATION_GENERALIZATION"
+  },
+  "operational_qualified": false,
+  "full_native_status": "NOT_EVALUABLE_22_OF24"
+}
