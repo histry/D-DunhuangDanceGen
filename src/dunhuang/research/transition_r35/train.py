@@ -63,10 +63,18 @@ def run(cfg,root,out,replay=None):
             idx=[tr["times"].index(t) for t in cfg["times"]];xt=np.stack([tr["states"][i] for i in idx])
             stored[f"paired{n}"]=xt;stored[f"paired{n}_output"]=pred.cpu().numpy()
             noise.append(nr);calls+=1;trajectories+=4
-        pred,nr,tr=sample(rt,cmusic,source_packet=cpkt,context_packet=cctx,common_seed=24041,trace=True)
-        idx=[tr["times"].index(t) for t in cfg["times"]];stored["change"]=np.stack([tr["states"][i] for i in idx])
-        stored["change_output"]=pred.cpu().numpy();stored["times"]=np.array(cfg["times"]);stored["cases"]=np.array(cases)
-        noise.append(nr);calls+=1;trajectories+=4
+        conditions=[(m,e) for m in range(2) for e in (-1,0,1)];selected=[1,2,4,5]
+        pkt=source([z["source139"][max(e,0),64:160,7:] for m,e in conditions],"change",
+            uids=[("female_FeiTian" if max(e,0)==0 else "male_pipa_1") for m,e in conditions],drops=[e<0 for m,e in conditions])
+        values=torch.full((6,256,139),float("nan"),device="cuda")
+        values[:,:,7:]=torch.tensor(a["body"][[max(e,0) for m,e in conditions]],device="cuda")
+        ctx=context(values,[64,160],partial_body=True);ctx.valid[[0,3]]=False
+        mus=torch.tensor(z["music"][[m for m,e in conditions]],device="cuda")
+        pred,nr,tr=sample(rt,mus,source_packet=pkt,context_packet=ctx,common_seed=24041,trace=True)
+        idx=[tr["times"].index(t) for t in cfg["times"]]
+        stored["change"]=np.stack([tr["states"][i][selected] for i in idx])
+        stored["change_output"]=pred[selected].cpu().numpy();stored["times"]=np.array(cfg["times"]);stored["cases"]=np.array(cases)
+        noise.append(nr);calls+=1;trajectories+=6
         np.savez_compressed(path,**stored);return stored
     states=refresh(out/"initial_states.npz")
     # Initial zero Context must exactly preserve pinned R33 main output.
