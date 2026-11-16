@@ -1,0 +1,52 @@
+{
+  "schema": "r35_transition_context_v1",
+  "baseline": "b8d8e8176a2642858150ec307ec37a756c98e525",
+  "r33": "outputs/control_r33_01",
+  "r33_manifest_sha256": "279f5949d42335c3ce2120a885fbee0c68193cf9d86cb02790aa93391f90074e",
+  "dyn_checkpoint_sha256": "cf3107286ed9e602def871c7b36670f0b9c811837d1c59f95ad46b5d30b74462",
+  "r34": "outputs/coverage_r34_01",
+  "r34_manifest_sha256": "a2c3f8a5afe7e673debcf7ecdb5afe30c12096c022fad7940fb047e4f5b72728",
+  "seed": 35041,
+  "train_steps": 600,
+  "lr": 0.0002,
+  "snapshots": [
+    0,
+    1,
+    299,
+    599
+  ],
+  "times": [
+    999,
+    519,
+    119,
+    19
+  ],
+  "gap_intervals": [
+    [
+      64,
+      160
+    ],
+    [
+      64,
+      146
+    ],
+    [
+      80,
+      168
+    ],
+    [
+      64,
+      154
+    ]
+  ],
+  "per_source_candidates": 3,
+  "beam": 24,
+  "music_slot_regret_max": 0.05,
+  "music_mean_regret_max": 0.02,
+  "transition_weight": 0.25,
+  "edge_edit_max": 12,
+  "edge_observed_frames": 12,
+  "additional_ablation_calls": 0,
+  "whole_song_generations": 0,
+  "operational_qualified": false
+}
