@@ -66,7 +66,7 @@ def collect(root,out):
     assert qa["viewer_directory"]=="viewer02"
     viewer=root/qa["viewer_directory"]
     for n,h in qa["ui_hashes"].items():assert sha(viewer/n)==h
-    required=("plan","train02","preview02")
+    required=("plan","train02","preview02","viewer")
     for phase in required:assert Path(str(root)+"_"+phase+"_receipts/exit_status.txt").read_text().strip()=="0"
     files={str(p.relative_to(root)):dict(sha256=sha(p),bytes=p.stat().st_size) for p in root.rglob("*") if p.is_file()}
     write(manifest,dict(code_commit=commit(),files=files,file_count=len(files),total_bytes=sum(x["bytes"] for x in files.values())))
