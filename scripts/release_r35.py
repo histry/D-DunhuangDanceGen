@@ -50,12 +50,12 @@ def verify(root):
         for n,v in read(p/"artifacts_manifest.json")["files"].items():assert sha(p/n)==v["sha256"]
     changed=subprocess.check_output(["git","diff",cfg["baseline"],"--name-only","--","src/dunhuang"],text=True).splitlines()
     assert all(n.startswith("src/dunhuang/research/transition_r35/") for n in changed)
-    fail=read(root/"context_failed01/failure_accounting.json")
+    failures=[read(root/n/"failure_accounting.json") for n in ("context_failed01","generation_failed01")]
     result=dict(code_commit=commit(),scientific_array_bundles_exact=4,actual_update_pairs=4,update_checks=checks,
         successful_optimizer_steps=600,replay_optimizer_steps=0,
         successful_sampler_calls=a["sampler_calls"]+x["sampler_calls"],successful_trajectories=a["generated_trajectories"]+x["generated_trajectories"],
         replay_sampler_calls=b["sampler_calls"]+y["sampler_calls"],replay_trajectories=b["generated_trajectories"]+y["generated_trajectories"],
-        failed_original_sampler_calls=fail["sampler_calls"],failed_original_trajectories=fail["generated_trajectories"],failed_optimizer_steps=0,
+        failed_original_sampler_calls=sum(f["sampler_calls"] for f in failures),failed_original_trajectories=sum(f["generated_trajectories"] for f in failures),failed_optimizer_steps=0,
         frozen_R33_R34_seals_unchanged=True,source_backbone_IO_frozen=True,context_only=True,additional_ablation_calls=0,whole_song_generations=0,
         comparison=aggregate(x),operational_qualified=False,full_native_status="NOT_EVALUABLE_22_OF24")
     write(out,result);print("R35_INDEPENDENT",result["successful_trajectories"],flush=True)
@@ -64,7 +64,7 @@ def collect(root,out):
     root=Path(root);out=fresh(out);manifest=root/"artifacts_manifest.json";assert not manifest.exists()
     qa=read(root/"browser_qa.json");assert qa["verified"] and qa["localhost_closed"]
     for n,h in qa["ui_hashes"].items():assert sha(root/"viewer"/n)==h
-    required=("plan","train02","preview")
+    required=("plan","train02","preview02")
     for phase in required:assert Path(str(root)+"_"+phase+"_receipts/exit_status.txt").read_text().strip()=="0"
     files={str(p.relative_to(root)):dict(sha256=sha(p),bytes=p.stat().st_size) for p in root.rglob("*") if p.is_file()}
     write(manifest,dict(code_commit=commit(),files=files,file_count=len(files),total_bytes=sum(x["bytes"] for x in files.values())))
@@ -74,7 +74,7 @@ def collect(root,out):
         human_reviewed=False,operational_qualified=False,whole_song_generations=0,complete_three_event_sequences=0,full_native_status="NOT_EVALUABLE_22_OF24")
     write(out/"r35_summary.json",summary);write(out/"r35_checks.json",summary["checks"])
     write(out/"r35_receipt.json",dict(code_commit=commit(),scientific_manifest=ref(manifest),summary_sha256=sha(out/"r35_summary.json"),
-        receipts={phase:{p.name:sha(p) for p in Path(str(root)+"_"+phase+"_receipts").iterdir() if p.is_file()} for phase in (*required,"train")},
+        receipts={phase:{p.name:sha(p) for p in Path(str(root)+"_"+phase+"_receipts").iterdir() if p.is_file()} for phase in (*required,"train","preview")},
         temporary_ssh_files_created=0,temporary_ssh_files_remaining=0))
     print("R35_COLLECTED",len(files),flush=True)
 if __name__=="__main__":

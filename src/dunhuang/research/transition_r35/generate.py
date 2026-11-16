@@ -6,6 +6,7 @@ import numpy as np
 import soundfile as sf
 import torch
 from dunhuang.research.coverage_r34.common import *
+from dunhuang.io import checked
 from dunhuang.research.coverage_r34.context_contract import context
 from dunhuang.research.coverage_r34.context_train import restore_context
 from dunhuang.research.coverage_r34.context_eval import paired_metrics
@@ -30,6 +31,8 @@ def run(cfg,root,out,replay=None):
             raw=rt.n.unnormalize(pred.clone())
             with torch.no_grad():p=rt.f(raw,rt.s)[:,:,:22]
             arrays[key+"_"+arm+"_normalized"]=pred.cpu().numpy();arrays[key+"_"+arm+"_139"]=raw.cpu().numpy();arrays[key+"_"+arm+"_22"]=p.cpu().numpy()
+            np.savez_compressed(out/"arrays.npz",**arrays)
+            write(out/"progress.json",dict(status="IN_PROGRESS",code_commit=commit(),sampler_calls=calls,generated_trajectories=trajectories,noise=noise,last_key=key+"_"+arm))
             print("R35_MAIN_PREVIEW",key,arm,flush=True)
     _,_,data,z=population_data();cfg32=read("src/dunhuang/research/content_r32/config.json")
     paired=[]
