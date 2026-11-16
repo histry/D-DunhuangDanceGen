@@ -15,9 +15,10 @@ def run(cfg,root,out,generated=None):
     def oldbody(plan):
         from dunhuang.generation.soft_reference import resample_native
         from dunhuang.contracts import matrices
+        from dunhuang.planning.time_map import source_positions
         out=[]
         for e in plan['events']:
-            w=np.array(e['time_warp']);pos=np.interp(np.arange(*e['music_interval']),w[:,1],w[:,0])
+            pos=source_positions(e,np.arange(*e['music_interval']))
             r=matrices(resample_native(lib.native[e['source_uid']],pos)[:,7:].reshape(-1,24,6))[:,:22]
             out.append(relative_fk(r,J,parents))
         return np.concatenate(out)

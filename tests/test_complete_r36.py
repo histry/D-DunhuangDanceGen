@@ -15,6 +15,13 @@ def test_multi_phase_clock_is_monotone_and_in_bounds():
     assert len(a)>3 and (d>0).all() and (d[:,1]/d[:,0]>=.75).all() and (d[:,1]/d[:,0]<=1.33).all()
     assert multi_warp([0,100],[0,300],phases,[]) is None
 
+def test_old_and_new_half_open_endpoint_contracts_stay_distinct():
+    from dunhuang.planning.time_map import source_positions
+    old=dict(source_interval=[0,30],music_interval=[0,36],time_warp=[[0,0],[30,36]])
+    positions=source_positions(old,np.arange(36));assert positions.max()==29
+    new=multi_warp([0,30],[0,36],[],[])['time_warp']
+    assert new[-1]==[29,35.] and np.interp(35,np.array(new)[:,1],np.array(new)[:,0])==29
+
 def test_residual_rotation_contract_and_zero_budget():
     r=np.tile(np.eye(3),(12,22,1,1));v=np.zeros((12,22,3));v[...,1]=1.
     p=Rotation.from_rotvec(v.reshape(-1,3)).as_matrix().reshape(r.shape)

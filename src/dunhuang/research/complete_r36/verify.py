@@ -15,13 +15,14 @@ def run(cfg,root,out):
     songs=[];oldnative=np.load(Path(cfg['r35'])/'generation/arrays.npz');J=oldnative['skeleton_J22'];parents=oldnative['parents']
     from dunhuang.generation.soft_reference import resample_native
     from dunhuang.contracts import matrices
+    from dunhuang.planning.time_map import source_positions
     def activity(plan,new):
         values=[];extent=[]
         for e in plan['events']:
             t=np.arange(*e['music_interval'])
             if new:r=lib.sample(e,t)
             else:
-                w=np.array(e['time_warp']);q=np.interp(t,w[:,1],w[:,0]);r=matrices(resample_native(lib.native[e['source_uid']],q)[:,7:].reshape(-1,24,6))[:,:22]
+                q=source_positions(e,t);r=matrices(resample_native(lib.native[e['source_uid']],q)[:,7:].reshape(-1,24,6))[:,:22]
             p=relative_fk(r,J,parents);values.extend(np.linalg.norm(np.diff(p,axis=0)*30,axis=-1).ravel().tolist())
             extent.append((len(p),float(np.sqrt(np.mean(np.ptp(p[:,[16,17,18,19,20,21]],axis=0)**2)))))
         return dict(mean_body_speed_m_s=float(np.mean(values)),arm_extent_rms_m=sum(n*v for n,v in extent)/sum(n for n,v in extent),scope='WITHIN_EVENT_TEMPLATES_ONLY; DESCRIPTIVE_NOT_GATE')
