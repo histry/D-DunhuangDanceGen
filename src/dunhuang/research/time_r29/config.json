@@ -1,0 +1,134 @@
+{
+  "schema": "r29_time_reference_v1",
+  "baseline": "dcbb50981ad290754d5c520dc33697d45f00e6b3",
+  "r28": "outputs/contract_r28_01",
+  "r26": "outputs/reference_r26_01",
+  "r24": "outputs/lodge_reference_r24_01",
+  "r28_manifest_sha256": "73bd2a17502bfa5e467f378b75ab2023ec632000f451485a4fa63c88dda02dc5",
+  "seed": 29041,
+  "beta": 4,
+  "sigma_frames": 4,
+  "wrong_clock_shift": 24,
+  "train_cases": [
+    92,
+    48,
+    32,
+    0
+  ],
+  "holdout_cases": [
+    4,
+    8,
+    12,
+    16
+  ],
+  "train_steps": 1200,
+  "learning_rate": 0.0002,
+  "training_noise_seed": 283000,
+  "times": [
+    999,
+    519,
+    119,
+    19
+  ],
+  "real_eval_seeds": [
+    [
+      282011,
+      282021,
+      282031,
+      282041
+    ],
+    [
+      282111,
+      282121,
+      282131,
+      282141
+    ]
+  ],
+  "sampler_times": [
+    999,
+    979,
+    959,
+    939,
+    919,
+    899,
+    879,
+    859,
+    839,
+    819,
+    799,
+    779,
+    759,
+    739,
+    719,
+    699,
+    679,
+    659,
+    639,
+    619,
+    599,
+    579,
+    559,
+    539,
+    519,
+    499,
+    479,
+    459,
+    439,
+    419,
+    399,
+    379,
+    359,
+    339,
+    319,
+    299,
+    279,
+    259,
+    239,
+    219,
+    199,
+    179,
+    159,
+    139,
+    119,
+    99,
+    79,
+    59,
+    39,
+    19
+  ],
+  "curve_updates": [
+    0,
+    600,
+    1200
+  ],
+  "snapshot_steps": [
+    0,
+    1,
+    599,
+    1199
+  ],
+  "readout_steps": 600,
+  "readout_lr": 0.001,
+  "readout_width": 128,
+  "readout_snapshots": [
+    0,
+    299,
+    599
+  ],
+  "fine_train_recordings": [
+    "001",
+    "002"
+  ],
+  "fine_holdout_recordings": [
+    "003",
+    "004"
+  ],
+  "fine_offsets": [
+    0,
+    256
+  ],
+  "human_reviewed": false,
+  "operational_qualified": false,
+  "whole_song_generations": 0,
+  "coverage_policy": "One registered16-record/8-group run allowed if B1 Train source gate passes and heldout source gate fails; physical/Native gates do not block source coverage research; no whole songs"
+}
