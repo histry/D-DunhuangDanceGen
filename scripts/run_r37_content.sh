@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 set -euo pipefail
-root="${1:?root}";test -f "$root/viewer_first/protocol.json";r="$root/receipts/content";test ! -e "$r";mkdir -p "$r"
+root="${1:?root}";first_media="${2:-$root/viewer_first}";test -f "$first_media/protocol.json";r="$root/receipts/content";test ! -e "$r";mkdir -p "$r"
 export PYTHONPATH=src OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1
 cpu=/home/disk/lsm/conda_envs/dance-rag/bin/python;gpu=/home/disk/lsm/conda_envs/edge/bin/python
-git rev-parse HEAD > "$r/code_commit.txt";date -u +%FT%TZ > "$r/started_utc.txt"
+sha256sum "$first_media/protocol.json" > "$r/first_media_protocol.txt";git rev-parse HEAD > "$r/code_commit.txt";date -u +%FT%TZ > "$r/started_utc.txt"
 trap 'code=$?;echo "$code" > "$r/exit_status.txt";date -u +%FT%TZ > "$r/finished_utc.txt";exit "$code"' EXIT
 echo verified_variable_pair_population > "$r/phase.txt"
 "$cpu" -m dunhuang.research.transition_r37.content_prepare --out "$root/content_data" > "$r/data.log" 2>&1
