@@ -46,6 +46,10 @@ def run(cfg,root,out):
             import json,hashlib
             new=read(root/'planning/song0_plan.json');assert hashlib.sha256(json.dumps(new,sort_keys=True).encode()).hexdigest()==row['plan_sha256']
         boundaries=[e['local_interval'][1] for e in row['binding']['events'][:-1]]
+        invalid=[e['local_interval'][0] for e in row['binding']['events']]
+        valid=z[key+'_source_feature_token_valid'];assert not valid[:,invalid].any()
+        expected=np.ones_like(valid);expected[:,invalid]=False;assert np.array_equal(valid,expected)
+        assert row['context_provenance'].startswith('PLANNED_BODY_ONLY_ENUM2')
         record['all_reference_boundaries_local']=boundaries;record['selected_boundary_local']=128
         record['methods']['Reference']=[metrics(reference,reference,np.zeros((256,3)),J,parents,boundaries,row['gap'],128)]
         G=z[key+'_Geometry_R'];record['methods']['Geometry']=[metrics(G,reference,np.zeros((256,3)),J,parents,boundaries,row['gap'],128)]
@@ -112,7 +116,7 @@ def run(cfg,root,out):
                 training_reproduction_claim=False,whole_song_generations=0,operational_qualified=False,sdmr_can_route=False,native24='NOT_EVALUABLE_22_OF24')
     write(out,result)
     files=[]
-    for name in ('planning','planning_replay','smoothing','smoothing_replay','generation','generation_replay'):
+    for name in ('planning','planning_replay','smoothing','smoothing_replay','generation','generation_replay','generation_before_condition_fix','generation_replay_before_condition_fix'):
         for p in sorted((root/name).rglob('*')):
             if p.is_file():files.append(dict(path=str(p.relative_to(root)),bytes=p.stat().st_size,sha256=sha(p)))
     for name in ('content_model','content_replay'):
