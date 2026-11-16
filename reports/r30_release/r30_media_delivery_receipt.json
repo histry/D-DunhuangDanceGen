@@ -1,0 +1,695 @@
+{
+  "delivered_at_utc": "2026-11-16T06:07:22.813463+00:00",
+  "explicit_user_batch_authorization": true,
+  "scope": "R30 27 comparison videos including embedded music, viewer page and protocol; no weights, logs, training tensors, datasets or raw audio files",
+  "source_commit": "91271cd158ab93bd1ff63fe61ca416bac41e6ee6",
+  "destination": "D:\\DunhuangDanceGen\\outputs\\continuity_r30_01\\videos",
+  "files": {
+    "AIST_train_R1_correct.mp4": {
+      "bytes": 396366,
+      "sha256": "16463d2278e2c707e0d082c1e26ab649583a3f1d0f424784bc5f1ffaec890f92"
+    },
+    "ChangE_R2_e0.mp4": {
+      "bytes": 309292,
+      "sha256": "8a3f28f5fc2ff875ed3f25fdef1028fa434b55b8095c02c3f2915fcc5dd33a2f"
+    },
+    "AIST_train_R0_correct.mp4": {
+      "bytes": 373555,
+      "sha256": "5ea598cbc9080aa3c601ee04383b4fa706112e1d48b5ed0da82973ad0e359897"
+    },
+    "ChangE_NoRef.mp4": {
+      "bytes": 368188,
+      "sha256": "90a70d9521763a5e738b64668c05d9c17d1469334bb1b994d70f4a7fcd9720b2"
+    },
+    "AIST_holdout_RootDelta0_correct.mp4": {
+      "bytes": 338538,
+      "sha256": "42f8b8dc4d3a070584a8b459f26da145e4eaf1a3abc8533cde6c949ecfecedab"
+    },
+    "AIST_train_Source.mp4": {
+      "bytes": 445305,
+      "sha256": "df38e08b1057f4bf350dafe57e47eefb4a4f4d77b5e556b8c33f5aa2177a5dd2"
+    },
+    "ChangE_Source1_RootUnknown.mp4": {
+      "bytes": 143700,
+      "sha256": "6978a21ab9295f5f3db975c7a94f2371cc00ea4fe7bf8b9527a8525f42e81fdd"
+    },
+    "ChangE_R2_e1.mp4": {
+      "bytes": 348371,
+      "sha256": "5023e0e85debc516c9afa33cf44984ab8d07a4bfccc82fd95455ae160bda9607"
+    },
+    "protocol.json": {
+      "bytes": 11062,
+      "sha256": "4e1245a258651760ad29b7e4729b2e58d1fb9e196c134c5f42b695ea15dcc826"
+    },
+    "AIST_train_R2_wrong_clock.mp4": {
+      "bytes": 362977,
+      "sha256": "8a2ccd3a9379e3491abf2c05a87e3c15d0e98b49c2cd914eb93d759f637176e8"
+    },
+    "AIST_holdout_R0_correct.mp4": {
+      "bytes": 339657,
+      "sha256": "4ca01889c4142a328bca3eb56e91d476546c32ab9916f7bb40c91de81f766ffa"
+    },
+    "ChangE_R0_e0.mp4": {
+      "bytes": 306354,
+      "sha256": "850bf0941d39c31ad70c7b5d274bc32c8ddb024b2b576fd36f9e90daa07cc561"
+    },
+    "AIST_train_RootDelta0_correct.mp4": {
+      "bytes": 375485,
+      "sha256": "bf61f9c7cc715d3c2cacc7845729930e5bd2be739e08cf98eb9fc65603c4d358"
+    },
+    "ChangE_R2_wrong_clock_e0.mp4": {
+      "bytes": 308602,
+      "sha256": "c7a6d70e29a3ad5fce68e53dccf6c98ff0ce6e81464b906c34a3b8d81b676af4"
+    },
+    "AIST_train_NoRef_none.mp4": {
+      "bytes": 373056,
+      "sha256": "77801040d10ea864ef75cf2c4dc8293a1047ee0de90b2eba24085d26d8b6d331"
+    },
+    "ChangE_R1_e0.mp4": {
+      "bytes": 325697,
+      "sha256": "c55d2c5d5d5679df372e3fdabf2a051d2c9a2a33c9fac24c5a8ef89b86a32030"
+    },
+    "ChangE_R0_e1.mp4": {
+      "bytes": 346908,
+      "sha256": "2ed5604b3f3c3b9372f4615a85577af6f310f98cea6f217fe329d9f563becb05"
+    },
+    "AIST_holdout_R1_wrong_clock.mp4": {
+      "bytes": 325768,
+      "sha256": "3dc6cca061fa0f93bf478719995e70e6113f852a91fb50baf28501cf105e5a4c"
+    },
+    "AIST_holdout_NoRef_none.mp4": {
+      "bytes": 340888,
+      "sha256": "bdaa878608562498dbd3959bce4c7b6913e5b39759c7a491c2913162162b999c"
+    },
+    "AIST_train_R2_correct.mp4": {
+      "bytes": 371372,
+      "sha256": "711146a6a06adad9231cfcf6372ad67e5ba05ec0116235bb25d852e90366126e"
+    },
+    "ChangE_Source0_RootUnknown.mp4": {
+      "bytes": 97048,
+      "sha256": "4e2a9125c4db40d107c257daeed92a67b9a0616748366d14752e5ca0ca7253a7"
+    },
+    "AIST_train_R1_wrong_clock.mp4": {
+      "bytes": 388826,
+      "sha256": "e41d16df361efb30278a557da3e1811b0068dedd348720cb6361dec863f7d5a1"
+    },
+    "AIST_holdout_R1_correct.mp4": {
+      "bytes": 319274,
+      "sha256": "f474310a8c839aa776d440eab1dc79540b71f42a40ba02c7d8a35539a9d3736c"
+    },
+    "index.html": {
+      "bytes": 10970,
+      "sha256": "3aef468102a6cd626e38301d2bcfc7479191ac7ef8394b114e948921ae6b7dae"
+    },
+    "AIST_holdout_Source.mp4": {
+      "bytes": 357729,
+      "sha256": "a3a55475d54f8c4961d829fbd752312f875e9d712c7f6e2aa6d0deb580e1f562"
+    },
+    "ChangE_R1_e1.mp4": {
+      "bytes": 341369,
+      "sha256": "a77468fa910dd470ee636dc69eee05e59b6b5f763198bebe633633d722dc65bf"
+    },
+    "AIST_holdout_R2_wrong_clock.mp4": {
+      "bytes": 340395,
+      "sha256": "4844602d923f2b0223889c8cc32f132d1d735ebc2aca4dce1a78c5af83dd6931"
+    },
+    "AIST_holdout_R2_correct.mp4": {
+      "bytes": 340026,
+      "sha256": "b40bd9c4bacdedc5cd8a2187270a32907dee718e8c945127aa1ba136528777fc"
+    },
+    "ChangE_R1_wrong_clock_e0.mp4": {
+      "bytes": 316008,
+      "sha256": "0c77ca344fdd327276507bf60fc3c3f3c11888d5d2968ca754e90af0bd1780bb"
+    }
+  },
+  "file_count": 29,
+  "total_bytes": 9022786,
+  "video_count": 27,
+  "embedded_music_video_count": 25,
+  "all_size_sha256_exact": true,
+  "sealed_scientific_manifest_sha256": "8250433a3260df23f4310ffe7b4a043bb856284e0af3bdd89b306e3ab2cd4014",
+  "protocol_sha256": "4e1245a258651760ad29b7e4729b2e58d1fb9e196c134c5f42b695ea15dcc826",
+  "stream_checks": [
+    {
+      "file": "AIST_train_Source.mp4",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 600,
+          "height": 600,
+          "r_frame_rate": "30/1",
+          "nb_read_frames": "256"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "sample_rate": "48000",
+          "r_frame_rate": "0/0",
+          "nb_read_frames": "400"
+        }
+      ],
+      "local_stream_check_passed": true
+    },
+    {
+      "file": "AIST_train_NoRef_none.mp4",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 600,
+          "height": 600,
+          "r_frame_rate": "30/1",
+          "nb_read_frames": "256"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "sample_rate": "48000",
+          "r_frame_rate": "0/0",
+          "nb_read_frames": "400"
+        }
+      ],
+      "local_stream_check_passed": true
+    },
+    {
+      "file": "AIST_train_R0_correct.mp4",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 600,
+          "height": 600,
+          "r_frame_rate": "30/1",
+          "nb_read_frames": "256"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "sample_rate": "48000",
+          "r_frame_rate": "0/0",
+          "nb_read_frames": "400"
+        }
+      ],
+      "local_stream_check_passed": true
+    },
+    {
+      "file": "AIST_train_R1_correct.mp4",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 600,
+          "height": 600,
+          "r_frame_rate": "30/1",
+          "nb_read_frames": "256"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "sample_rate": "48000",
+          "r_frame_rate": "0/0",
+          "nb_read_frames": "400"
+        }
+      ],
+      "local_stream_check_passed": true
+    },
+    {
+      "file": "AIST_train_R1_wrong_clock.mp4",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 600,
+          "height": 600,
+          "r_frame_rate": "30/1",
+          "nb_read_frames": "256"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "sample_rate": "48000",
+          "r_frame_rate": "0/0",
+          "nb_read_frames": "400"
+        }
+      ],
+      "local_stream_check_passed": true
+    },
+    {
+      "file": "AIST_train_RootDelta0_correct.mp4",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 600,
+          "height": 600,
+          "r_frame_rate": "30/1",
+          "nb_read_frames": "256"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "sample_rate": "48000",
+          "r_frame_rate": "0/0",
+          "nb_read_frames": "400"
+        }
+      ],
+      "local_stream_check_passed": true
+    },
+    {
+      "file": "AIST_train_R2_correct.mp4",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 600,
+          "height": 600,
+          "r_frame_rate": "30/1",
+          "nb_read_frames": "256"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "sample_rate": "48000",
+          "r_frame_rate": "0/0",
+          "nb_read_frames": "400"
+        }
+      ],
+      "local_stream_check_passed": true
+    },
+    {
+      "file": "AIST_train_R2_wrong_clock.mp4",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 600,
+          "height": 600,
+          "r_frame_rate": "30/1",
+          "nb_read_frames": "256"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "sample_rate": "48000",
+          "r_frame_rate": "0/0",
+          "nb_read_frames": "400"
+        }
+      ],
+      "local_stream_check_passed": true
+    },
+    {
+      "file": "AIST_holdout_Source.mp4",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 600,
+          "height": 600,
+          "r_frame_rate": "30/1",
+          "nb_read_frames": "256"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "sample_rate": "48000",
+          "r_frame_rate": "0/0",
+          "nb_read_frames": "400"
+        }
+      ],
+      "local_stream_check_passed": true
+    },
+    {
+      "file": "AIST_holdout_NoRef_none.mp4",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 600,
+          "height": 600,
+          "r_frame_rate": "30/1",
+          "nb_read_frames": "256"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "sample_rate": "48000",
+          "r_frame_rate": "0/0",
+          "nb_read_frames": "400"
+        }
+      ],
+      "local_stream_check_passed": true
+    },
+    {
+      "file": "AIST_holdout_R0_correct.mp4",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 600,
+          "height": 600,
+          "r_frame_rate": "30/1",
+          "nb_read_frames": "256"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "sample_rate": "48000",
+          "r_frame_rate": "0/0",
+          "nb_read_frames": "400"
+        }
+      ],
+      "local_stream_check_passed": true
+    },
+    {
+      "file": "AIST_holdout_R1_correct.mp4",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 600,
+          "height": 600,
+          "r_frame_rate": "30/1",
+          "nb_read_frames": "256"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "sample_rate": "48000",
+          "r_frame_rate": "0/0",
+          "nb_read_frames": "400"
+        }
+      ],
+      "local_stream_check_passed": true
+    },
+    {
+      "file": "AIST_holdout_R1_wrong_clock.mp4",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 600,
+          "height": 600,
+          "r_frame_rate": "30/1",
+          "nb_read_frames": "256"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "sample_rate": "48000",
+          "r_frame_rate": "0/0",
+          "nb_read_frames": "400"
+        }
+      ],
+      "local_stream_check_passed": true
+    },
+    {
+      "file": "AIST_holdout_RootDelta0_correct.mp4",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 600,
+          "height": 600,
+          "r_frame_rate": "30/1",
+          "nb_read_frames": "256"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "sample_rate": "48000",
+          "r_frame_rate": "0/0",
+          "nb_read_frames": "400"
+        }
+      ],
+      "local_stream_check_passed": true
+    },
+    {
+      "file": "AIST_holdout_R2_correct.mp4",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 600,
+          "height": 600,
+          "r_frame_rate": "30/1",
+          "nb_read_frames": "256"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "sample_rate": "48000",
+          "r_frame_rate": "0/0",
+          "nb_read_frames": "400"
+        }
+      ],
+      "local_stream_check_passed": true
+    },
+    {
+      "file": "AIST_holdout_R2_wrong_clock.mp4",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 600,
+          "height": 600,
+          "r_frame_rate": "30/1",
+          "nb_read_frames": "256"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "sample_rate": "48000",
+          "r_frame_rate": "0/0",
+          "nb_read_frames": "400"
+        }
+      ],
+      "local_stream_check_passed": true
+    },
+    {
+      "file": "ChangE_Source0_RootUnknown.mp4",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 600,
+          "height": 600,
+          "r_frame_rate": "30/1",
+          "nb_read_frames": "256"
+        }
+      ],
+      "local_stream_check_passed": true
+    },
+    {
+      "file": "ChangE_Source1_RootUnknown.mp4",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 600,
+          "height": 600,
+          "r_frame_rate": "30/1",
+          "nb_read_frames": "256"
+        }
+      ],
+      "local_stream_check_passed": true
+    },
+    {
+      "file": "ChangE_NoRef.mp4",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 600,
+          "height": 600,
+          "r_frame_rate": "30/1",
+          "nb_read_frames": "256"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "sample_rate": "16000",
+          "r_frame_rate": "0/0",
+          "nb_read_frames": "134"
+        }
+      ],
+      "local_stream_check_passed": true
+    },
+    {
+      "file": "ChangE_R0_e0.mp4",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 600,
+          "height": 600,
+          "r_frame_rate": "30/1",
+          "nb_read_frames": "256"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "sample_rate": "16000",
+          "r_frame_rate": "0/0",
+          "nb_read_frames": "134"
+        }
+      ],
+      "local_stream_check_passed": true
+    },
+    {
+      "file": "ChangE_R0_e1.mp4",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 600,
+          "height": 600,
+          "r_frame_rate": "30/1",
+          "nb_read_frames": "256"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "sample_rate": "16000",
+          "r_frame_rate": "0/0",
+          "nb_read_frames": "134"
+        }
+      ],
+      "local_stream_check_passed": true
+    },
+    {
+      "file": "ChangE_R1_e0.mp4",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 600,
+          "height": 600,
+          "r_frame_rate": "30/1",
+          "nb_read_frames": "256"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "sample_rate": "16000",
+          "r_frame_rate": "0/0",
+          "nb_read_frames": "134"
+        }
+      ],
+      "local_stream_check_passed": true
+    },
+    {
+      "file": "ChangE_R1_e1.mp4",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 600,
+          "height": 600,
+          "r_frame_rate": "30/1",
+          "nb_read_frames": "256"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "sample_rate": "16000",
+          "r_frame_rate": "0/0",
+          "nb_read_frames": "134"
+        }
+      ],
+      "local_stream_check_passed": true
+    },
+    {
+      "file": "ChangE_R2_e0.mp4",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 600,
+          "height": 600,
+          "r_frame_rate": "30/1",
+          "nb_read_frames": "256"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "sample_rate": "16000",
+          "r_frame_rate": "0/0",
+          "nb_read_frames": "134"
+        }
+      ],
+      "local_stream_check_passed": true
+    },
+    {
+      "file": "ChangE_R2_e1.mp4",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 600,
+          "height": 600,
+          "r_frame_rate": "30/1",
+          "nb_read_frames": "256"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "sample_rate": "16000",
+          "r_frame_rate": "0/0",
+          "nb_read_frames": "134"
+        }
+      ],
+      "local_stream_check_passed": true
+    },
+    {
+      "file": "ChangE_R1_wrong_clock_e0.mp4",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 600,
+          "height": 600,
+          "r_frame_rate": "30/1",
+          "nb_read_frames": "256"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "sample_rate": "16000",
+          "r_frame_rate": "0/0",
+          "nb_read_frames": "134"
+        }
+      ],
+      "local_stream_check_passed": true
+    },
+    {
+      "file": "ChangE_R2_wrong_clock_e0.mp4",
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 600,
+          "height": 600,
+          "r_frame_rate": "30/1",
+          "nb_read_frames": "256"
+        },
+        {
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "sample_rate": "16000",
+          "r_frame_rate": "0/0",
+          "nb_read_frames": "134"
+        }
+      ],
+      "local_stream_check_passed": true
+    }
+  ],
+  "viewer_script_node_syntax_passed": true,
+  "viewer_all_27_local_video_links_valid": true,
+  "live_browser_controls_verified": false,
+  "server_full_decode_checks_preserved": true,
+  "new_training_steps": 0,
+  "new_generations": 0,
+  "temporary_ssh_files_created": 0,
+  "temporary_ssh_files_remaining": 0
+}
