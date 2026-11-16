@@ -2,6 +2,13 @@
 import itertools
 import numpy as np
 
+def scaler_box(scale,offset,training_min,training_max,margin):
+    scale=np.asarray(scale);offset=np.asarray(offset)
+    if scale.shape!=(139,) or offset.shape!=(139,) or (scale<=0).any():raise ValueError("139D positive affine scaler required")
+    constant=np.asarray(training_min)[7:]==np.asarray(training_max)[7:]
+    interior=np.where(constant,0.,margin)
+    return (-1+interior-offset[7:])/scale[7:],(1-interior-offset[7:])/scale[7:],constant
+
 def _project(q,A,c,vertices,vertex_valid):
     norm=(A*A).sum(-1)
     violations=np.einsum("nkd,nd->nk",A,q)-c

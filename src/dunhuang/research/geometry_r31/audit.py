@@ -4,7 +4,7 @@ from pathlib import Path
 import numpy as np
 import torch
 from .common import sources,runtime
-from .gauge import solve
+from .gauge import solve,scaler_box
 from dunhuang.research.state_r27.common import read,write,sha,fresh,commit,forbid_optimizers,same_arrays,matrices
 
 def derivatives(points,target,valid):
@@ -20,9 +20,9 @@ def run(cfg,out,replay=None):
     out=fresh(out);forbid_optimizers();rows,ledger,old=sources(cfg);d,n,s,f,e,info,a=runtime(cfg);a.close()
     scale=n.scaler.scale_.detach().cpu().numpy();offset=n.scaler.min_.detach().cpu().numpy()
     assert (scale>0).all() and n.scaler.clip and list(n.scaler.feature_range)==[-1,1]
-    margin=cfg["normalized_box_margin"];lower=(-1+margin-offset[7:])/scale[7:];upper=(1-margin-offset[7:])/scale[7:]
+    margin=cfg["normalized_box_margin"];lower,upper,constant=scaler_box(scale,offset,n.scaler.data_min_.cpu().numpy(),n.scaler.data_max_.cpu().numpy(),margin)
     rawlower=(-1-offset[7:])/scale[7:];rawupper=(1-offset[7:])/scale[7:]
-    np.savez_compressed(out/"bounds.npz",scale=scale,offset=offset,lower=lower,upper=upper,actual_lower=rawlower,actual_upper=rawupper)
+    np.savez_compressed(out/"bounds.npz",scale=scale,offset=offset,constant_training_components=constant,lower=lower,upper=upper,actual_lower=rawlower,actual_upper=rawupper)
     records=[]
     for row in rows:
         source=row["data"];raw=source["model_raw"].copy();T=len(raw);R=matrices(raw[:,7:].reshape(T,22,6),row=True)
@@ -87,7 +87,7 @@ def run(cfg,out,replay=None):
         gauge_training_admitted=admitted,all_observed_geometry_qualified=admitted,
         required_branch="GAUGE_TARGET_ONLY" if admitted else "NEW_ACTION_CONTRACT_QUALIFICATION",
         failure_scope="REGISTERED_MINIMUM_NORMS_AND_INTERIOR_MARGIN; NOT_PROOF_NO_POSITIVE_6D_GAUGE_EXISTS",
-        normalizer_unchanged=True,neural_optimizer_steps=0,operational_qualified=False,full_native_status="NOT_EVALUABLE",whole_song_generations=0)
+        normalizer_unchanged=True,constant_training_components_exempt_from_interior_margin=int(constant.sum()),neural_optimizer_steps=0,operational_qualified=False,full_native_status="NOT_EVALUABLE",whole_song_generations=0)
     if replay:assert result==read(Path(replay)/"result.json");same_arrays(out/"bounds.npz",Path(replay)/"bounds.npz")
     write(out/"result.json",result);write(out/"protocol.json",dict(config=cfg,code_commit=commit(),checkpoint=info,ledger_cases=old["recordings"]))
     print("R31_GAUGE_ADMISSION",admitted,flush=True)

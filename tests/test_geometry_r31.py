@@ -36,3 +36,13 @@ def test_narrow_feasible_box_keeps_geometry_while_changing_coordinates():
 def test_invalid_boxes_and_nonrotations_fail():
     with pytest.raises(ValueError):solve(rotations(),np.ones(132),np.zeros(132))
     with pytest.raises(ValueError):solve(np.ones((4,22,3,3)),np.full(132,-1),np.ones(132))
+
+def test_constant_scaler_components_do_not_exclude_exact_identity():
+    from dunhuang.research.geometry_r31.gauge import scaler_box
+    source=np.tile(np.array([1.,0,0,0,1,0]),22)
+    scale=np.ones(139)*2;offset=np.r_[np.zeros(7),-1-2*source]
+    low,high,constant=scaler_box(scale,offset,np.r_[np.zeros(7),source],np.r_[np.ones(7),source],1e-5)
+    assert constant.all()
+    r=np.broadcast_to(np.eye(3),(3,22,3,3)).copy()
+    x=solve(r,low,high,iterations=2)
+    assert x["feasible"].all()
