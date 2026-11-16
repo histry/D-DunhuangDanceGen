@@ -13,7 +13,7 @@ def verify(root):
     root=Path(root);out=root/"independent_checks.json";assert not out.exists();forbid_optimizers()
     cfg=read("src/dunhuang/research/continuity_r30/config.json");previous=parent(cfg)
     model_names=["R1"]+(["R2"] if (root/"models/R2/result.json").exists() else [])
-    bundles=0;checks=[];stages=["audit","reading_train","reading_holdout","temporal_evaluation","probe","change"]
+    bundles=0;checks=[];stages=["audit","reading_train","reading_holdout","temporal_evaluation","support","probe","change"]
     for stage in stages:
         a=read(root/stage/"result.json");b=read(root/(stage+"_replay")/"result.json")
         assert a==b and a["optimizer_steps"]==0
@@ -47,17 +47,6 @@ def verify(root):
                 for k in ("tests","source_pass","proxy","proxy_pass","correct_clock_better"):assert x[k]==y[k]
     changed=subprocess.check_output(["git","diff",cfg["baseline"],"--name-only","--","src/dunhuang"],text=True).splitlines()
     assert all(p.startswith("src/dunhuang/research/continuity_r30/") for p in changed)
-    source=read(root/"audit/result.json");z=np.load(root/"audit/arrays.npz");support=[]
-    for domain in ("aist","fine"):
-        for role in ("train","holdout"):
-            data,items=values(cfg,domain,role)
-            for i,row in enumerate(data):
-                stem=f"{domain}_{role}_{i}";p=z[stem+"_source22"];q=z[stem+"_roundtrip22"];delta=q[64:160]-p[64:160]
-                target=row["model_target"][64:160]
-                support.append(dict(domain=domain,role=role,item=items[i],roundtrip_position_rmse_m=float(np.sqrt(np.mean(delta**2))),
-                    roundtrip_joint_displacement_max_m=float(np.linalg.norm(delta,axis=-1).max()),
-                    target_outside_normalized_support={name:float(np.mean(abs(target[:,sl])>1)) for name,sl in (("C4",slice(0,4)),("Root",slice(4,7)),("body",slice(7,139)))}))
-    write(root/"source_support.json",dict(records=support,scope="FIXED_MODEL0_SOURCE_COMMON22; POSITION_AND_DERIVATIVE_ROUNDTRIP_ARE_DIFFERENT_TESTS",optimizer_steps=0))
     stage_results=[read(root/s/"result.json") for s in stages]
     calls=sum(s["sampler_calls"] for s in stage_results);trajectories=sum(s["generated_trajectories"] for s in stage_results)
     assert bundles==(16 if "R2" in model_names else 12)
@@ -136,7 +125,7 @@ def collect(root,out,receipts):
         models[arm]["history_sha256"]=hashlib.sha256(json.dumps(a["history"],sort_keys=True).encode()).hexdigest()
         models[arm]["replay_checks"]=read(root/f"models/{arm}_replay/result.json")["replay_checks"]
     result.update(models=models,calibration_replay_checks=read(root/"calibration_replay/result.json")["replay_checks"],
-        source_support=read(root/"source_support.json"),checks=read(root/"independent_checks.json"),media=read(root/"videos/protocol.json"),
+        source_support=read(root/"support/result.json"),checks=read(root/"independent_checks.json"),media=read(root/"videos/protocol.json"),
         full_native_status="NOT_EVALUABLE",operational_qualified=False,whole_song_generations=0)
     manifest=root/"artifacts_manifest.json";assert not manifest.exists()
     files={str(p.relative_to(root)):dict(bytes=p.stat().st_size,sha256=sha(p)) for p in root.rglob("*") if p.is_file()}

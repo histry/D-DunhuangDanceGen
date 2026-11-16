@@ -15,6 +15,9 @@ echo temporal_and_Root_delta > "$receipt/phase.txt"
 arms=();if test -f "$root/models/R2/result.json";then arms=(R2);fi
 "$edge" -m dunhuang.research.continuity_r30.evaluate --config "$cfg" --root "$root" --out "$root/temporal_evaluation" --arms "${arms[@]}" --root-diagnostic
 "$edge" -m dunhuang.research.continuity_r30.evaluate --config "$cfg" --root "$root" --out "$root/temporal_evaluation_replay" --arms "${arms[@]}" --root-diagnostic --replay-from "$root/temporal_evaluation"
+echo preclip_support > "$receipt/phase.txt"
+"$edge" -m dunhuang.research.continuity_r30.support --config "$cfg" --root "$root" --out "$root/support"
+"$edge" -m dunhuang.research.continuity_r30.support --config "$cfg" --root "$root" --out "$root/support_replay" --replay-from "$root/support"
 echo actual_gate_probe > "$receipt/phase.txt"
 "$edge" -m dunhuang.research.continuity_r30.probe --config "$cfg" --root "$root" --out "$root/probe"
 "$edge" -m dunhuang.research.continuity_r30.probe --config "$cfg" --root "$root" --out "$root/probe_replay" --replay-from "$root/probe"
