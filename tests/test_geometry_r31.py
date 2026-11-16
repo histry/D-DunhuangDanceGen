@@ -46,3 +46,21 @@ def test_constant_scaler_components_do_not_exclude_exact_identity():
     r=np.broadcast_to(np.eye(3),(3,22,3,3)).copy()
     x=solve(r,low,high,iterations=2)
     assert x["feasible"].all()
+
+def test_new_normalizer_preserves_canonical_geometry_and_io_noise_limits():
+    import torch
+    from types import SimpleNamespace
+    from dunhuang.research.geometry_r31.interface import ActionIO,CanonicalNormalizer
+    class Legacy:
+        scaler=SimpleNamespace(scale_=torch.linspace(1,3,139),min_=torch.linspace(-.3,.3,139))
+        def normalize(self,x):return (x*self.scaler.scale_+self.scaler.min_).clamp(-1,1)
+        def unnormalize(self,x):return (x.clamp(-1,1)-self.scaler.min_)/self.scaler.scale_
+    n=Legacy();new=CanonicalNormalizer(n);x=torch.zeros(2,8,139)
+    x[:,:,7:]=torch.tensor(rotations(8)[...,:2,:].reshape(8,132),dtype=torch.float32)[None]
+    assert torch.allclose(new.unnormalize(new.normalize(x)),x,atol=1e-7)
+    io=ActionIO(n,True,torch.tensor([0.,1.]))
+    mapped=io.encode(x,torch.tensor([0,1]))
+    assert torch.allclose(mapped[0],x[0])
+    assert torch.allclose(mapped[1,:,7:],x[1,:,7:]*n.scaler.scale_[7:]+n.scaler.min_[7:])
+    io2=ActionIO(n,False,torch.tensor([0.,1.]))
+    assert torch.equal(io2.decode(io2.encode(x,torch.tensor([0,1]))),x)
