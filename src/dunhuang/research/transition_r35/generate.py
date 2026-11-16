@@ -58,8 +58,13 @@ def run(cfg,root,out,replay=None):
         oldplan=read(checked(song["old_plan"]));newplan=read(checked(song["plan"]))
         possible=[]
         for i in range(1,len(oldplan["events"])-1):
-            try:compile(oldplan,i,song["audio"]["sha256"]);compile(newplan,i,song["audio"]["sha256"])
-            except ValueError:continue
+            from .graph import zones
+            legal=True
+            for candidate_plan in (oldplan,newplan):
+                e=candidate_plan["events"][i];a,b=e["music_interval"];start=a-64;zone=zones(e)
+                left=zone["entry_edit"][1]-a;right=b-zone["exit_edit"][0]
+                if start<0 or start+256>candidate_plan["frames"] or b+right+8>start+256:legal=False
+            if not legal:continue
             score=sum(song["boundaries"][j]["old"]["cost"] for j in (i-1,i))
             possible.append((score,i))
         if not possible:raise ValueError("No complete fixed two-boundary window")

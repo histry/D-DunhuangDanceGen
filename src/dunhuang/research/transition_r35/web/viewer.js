@@ -87,6 +87,7 @@
  $("prev").onclick=()=>seek(frame-1);$("next").onclick=()=>seek(frame+1);$("jump").onclick=()=>seek(Number($("frameInput").value));
  $("scrub").oninput=e=>seek(Number(e.target.value));$("rate").onchange=e=>audio.playbackRate=Number(e.target.value);
  $("boundary").onchange=e=>{selected=Number(e.target.value);selection();seek(current.slots[selected].start);};
+ $("boundWindow").onclick=()=>{if(current.type==="plan"){selected=current.generations[$("planChoice").value].selected_slot;$("boundary").value=String(selected);selection();seek(current.slots[selected].start);}else seek(64);setTab("gen");};
  $("planChoice").onchange=selection;$("view").onchange=()=>{cameras();refresh();};$("alternative").onchange=refresh;$("metric").onchange=refresh;
  $("timeline").onclick=e=>{const r=e.currentTarget.getBoundingClientRect(),t=Math.floor((e.clientX-r.left)/r.width*current.frames);if(current.type==="plan"){const i=current.slots.findIndex(s=>s.start<=t&&t<s.end);if(i>0){selected=i;$("boundary").value=String(i);selection();}}seek(t);};
  $("diagnostic").onclick=e=>{const g=generation();if(!g)return;const r=e.currentTarget.getBoundingClientRect();const f=((e.clientX-r.left)/r.width*1200-30)/1155;seek(g.start+Math.round(Math.max(0,Math.min(1,f))*255));};

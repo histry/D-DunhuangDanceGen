@@ -6,9 +6,9 @@ from http.server import ThreadingHTTPServer,BaseHTTPRequestHandler
 from urllib.parse import urlsplit,unquote
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument("--root",required=True);p.add_argument("--manifest",required=True);p.add_argument("--receipt",required=True);a=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument("--root",required=True);p.add_argument("--manifest",required=True);p.add_argument("--receipt",required=True);p.add_argument("--expected-files",type=int,default=10);a=p.parse_args()
     root=Path(a.root).resolve();source=json.loads(Path(a.manifest).read_text(encoding="utf8"));files=source["payload"]["files"]
-    allowed={r["name"]:r for r in files};assert len(allowed)==10
+    allowed={r["name"]:r for r in files};assert len(allowed)==len(files)==a.expected_files and a.expected_files>0
     for name,row in allowed.items():
         f=(root/name).resolve();assert f.is_relative_to(root) and f.is_file()
         assert hashlib.sha256(f.read_bytes()).hexdigest()==row["sha256"]
