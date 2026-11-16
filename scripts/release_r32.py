@@ -128,7 +128,7 @@ def render(root,out):
         rows.append(dict(key=key,file=path.name,video=ref(path),frames=256,has_audio=key in audio,full_decode_passed=True,display_holds_only=display,notes=notes[key]));print("R32_VIDEO",key,flush=True)
     page="""<!doctype html><html lang="zh"><meta charset="utf-8"><title>R32 ChangE内容保持对照</title>
 <style>body{font:16px system-ui;margin:24px;background:#f3f4f8;color:#163249}select,button{padding:8px;margin:5px}video{width:48%}p{line-height:1.7}</style>
-<h1>R32：冻结动作I/O后的来源内容保持</h1><p>CanonicalIO=R31固定平台；AIST=回放+部分AIST辅助；ChangE=相同回放+部分ChangE辅助。两主臂各600步、只训练参考支路，NoRef逐位固定。Source是原观察，raw/memory readout是600步有限读出而不是扩散生成。两原语已用于适配，不是新来源盲测。</p>
+<h1>R32：冻结动作I/O后的来源内容保持</h1><p>CanonicalIO=R31固定平台；AIST=回放+部分AIST辅助；ChangE=相同回放+部分ChangE辅助。两主臂各600步、只训练参考支路，NoRef逐位固定。Source是原观察，raw/memory readout来自R31初始编码器的600步有限读出，而不是适配后编码器或扩散生成。两原语已用于适配，不是新来源盲测。</p>
 <p>所有生成采用相同世界相机和比例，无平滑、重居中或贴地。Source/readout只有96帧Core，外侧仅显示定格并标DISPLAY HOLD；未知Root只在展示中置于相同来源原点，不是真实世界轨迹。Native24 NOT EVALUABLE，研究候选未晋升，整曲0。MatchedNoiseMusic项目用于相同来源与相同噪声下比较两首音乐，只表示音乐响应，不等于协调性正确。右侧静音。</p>
 <select id="left"></select><select id="right"></select><button id="play">同步播放／暂停</button><p id="detail"></p><video id="a" controls preload="metadata"></video><video id="b" controls muted preload="metadata"></video>
 <script>const rows=PAYLOAD,l=document.querySelector('#left'),r=document.querySelector('#right'),a=document.querySelector('#a'),b=document.querySelector('#b');
