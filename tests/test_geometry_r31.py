@@ -64,3 +64,24 @@ def test_new_normalizer_preserves_canonical_geometry_and_io_noise_limits():
     assert torch.allclose(mapped[1,:,7:],x[1,:,7:]*n.scaler.scale_[7:]+n.scaler.min_[7:])
     io2=ActionIO(n,False,torch.tensor([0.,1.]))
     assert torch.equal(io2.decode(io2.encode(x,torch.tensor([0,1]))),x)
+
+def test_action_bundle_does_not_register_or_optimize_backbone():
+    import torch
+    from torch import nn
+    from types import SimpleNamespace
+    from dunhuang.research.geometry_r31.interface import ActionIO,Bundle
+    class Ref(nn.Module):
+        def clear(self):pass
+        def set_reference(self,**kwargs):pass
+        def close(self):pass
+    class Prior(nn.Module):
+        def __init__(self):
+            super().__init__();self.large=nn.Linear(139,512)
+        def forward(self,x,*args,**kwargs):return x
+    prior=Prior();old=prior.forward
+    norm=SimpleNamespace(scaler=SimpleNamespace(scale_=torch.ones(139),min_=torch.zeros(139)))
+    io=ActionIO(norm,False,torch.ones(1000));bundle=Bundle(Ref(),io,prior)
+    assert "model_object" not in bundle._modules
+    assert sum(p.numel() for p in bundle.parameters())==35112
+    x=torch.randn(2,4,139);assert torch.equal(prior(x,None,None,torch.tensor([9,9])),x)
+    bundle.close();assert prior.forward==old
