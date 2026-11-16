@@ -50,13 +50,53 @@ def run(cfg,root,out):
             record[arm+'_same_state_pre_post_boundary_jerk']=v
         summary.append(record)
     checks['saved_motion_fk_matches_viewer_tracks']=True;checks['budgets_satisfied']=True;checks['same_state_projection_diagnostics_saved']=True
+    # Real retrieval inputs and Train-only normalization, independent of the optimization process.
+    from .content_prepare import CONFIG
+    from .content import observations
+    import torch
+    data=root/'content_data';manifest=read(data/'manifest.json');rows=manifest['rows'];normalization=read(data/'normalization.json')
+    checkpoint=torch.load(root/'content_model/model.pt',map_location='cpu',weights_only=True)
+    assert checkpoint['manifest_sha256']==sha(data/'manifest.json')
+    assert read(root/'content_model/result.json')['optimizer_steps']==80 and read(root/'content_replay/result.json')['optimizer_steps']==0
+    exact(root/'content_model/evaluation.npz',root/'content_replay/evaluation.npz')
+    moments={name:dict(sum=np.zeros(n),square=np.zeros(n),count=np.zeros(n)) for name,n in [('motion',274),('music',50)]}
+    for r in rows:
+        assert r['role'] in ('train','val') and r['paired_clock_verified']
+        assert sha(r['path'])==r['sha256'];unit=np.load(r['path'])
+        if r['role']=='train':
+            for name,m in moments.items():
+                valid=unit[name+'_mask'];v=np.where(valid,unit[name],0).astype(float);m['sum']+=v.sum(0);m['square']+=(v*v).sum(0);m['count']+=valid.sum(0)
+    for name,m in moments.items():
+        count=np.maximum(m['count'],1);mean=m['sum']/count;std=np.sqrt(np.maximum(m['square']/count-mean*mean,1e-4));old=normalization['statistics'][name]
+        assert np.array_equal(mean,np.array(old['mean'])) and np.array_equal(std,np.array(old['std'])) and np.array_equal(m['count'],np.array(old['observed_count']))
+    original=Path(CONFIG['source']);sealed={r['raw_motion']['sha256']:r for r in read(original/'source_seals.json')}
+    from dunhuang.io import checked
+    chosen=[]
+    for role in ('train','val'):
+        ids=[i for i,r in enumerate(rows) if r['role']==role];chosen.extend([ids[0],ids[-1]])
+    for i in chosen:
+        r=rows[i];s=sealed[r['raw_motion_sha256']];cal=read(checked(s['source_clock']));assert cal['calibration']['verified']
+        native=np.load(checked(s['native']));from dunhuang.contracts import matrices
+        values,mask=observations(matrices(native[:,7:139].reshape(-1,22,6)),J,parents);a,b=r['source_interval'];x=values[a:b].copy();x[:,-2]=np.linspace(0,1,b-a);x[:,-1]=(b-a)/30
+        u=np.load(r['path']);assert np.array_equal(x,u['motion']) and np.array_equal(mask[a:b],u['motion_mask'])
+        audio=np.load(original/'audio'/(r['audio_sha256']+'.npz'));t=r['audio_frame_interval'][0]+np.arange(b-a);lo=np.floor(t).astype(int);hi=np.ceil(t).astype(int);alpha=(t-lo)[:,None]
+        M=(audio['values'][lo]*(1-alpha)+audio['values'][hi]*alpha).astype(np.float32)
+        assert np.array_equal(M,u['music']) and np.array_equal(audio['mask'][lo]&audio['mask'][hi],u['music_mask'])
+    checks['all_variable_pair_hashes_and_train_only_statistics']=True;checks['four_preregistered_units_rebuilt_from_continuous_sources']=True
+    checks['retrieval_weight_evaluation_exact_replay_zero_updates']=True
     result=dict(code_commit=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),checks=checks,generation=summary,
-                optimizer_steps=0,training_reproduction_claim=False,whole_song_generations=0,operational_qualified=False,sdmr_can_route=False,native24='NOT_EVALUABLE_22_OF24')
+                optimizer_steps=0,verified_main_optimizer_updates=80,content_units=len(rows),reconstructed_unit_indices=chosen,
+                training_reproduction_claim=False,whole_song_generations=0,operational_qualified=False,sdmr_can_route=False,native24='NOT_EVALUABLE_22_OF24')
     write(out,result)
     files=[]
     for name in ('planning','planning_replay','smoothing','smoothing_replay','generation','generation_replay'):
         for p in sorted((root/name).rglob('*')):
             if p.is_file():files.append(dict(path=str(p.relative_to(root)),bytes=p.stat().st_size,sha256=sha(p)))
+    for name in ('content_model','content_replay'):
+        for p in sorted((root/name).rglob('*')):
+            if p.is_file():files.append(dict(path=str(p.relative_to(root)),bytes=p.stat().st_size,sha256=sha(p)))
+    for name in ('manifest.json','normalization.json'):
+        p=data/name;files.append(dict(path=str(p.relative_to(root)),bytes=p.stat().st_size,sha256=sha(p)))
     write(root/'artifacts_manifest.json',dict(files=files,optimizer_steps=0,operational_qualified=False))
     print('R37_VERIFIED',len(files),checks,flush=True)
 if __name__=='__main__':

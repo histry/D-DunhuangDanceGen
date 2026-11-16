@@ -16,18 +16,18 @@ def run(root,out):
     for task in ('all_verified_val','same_music_time'):
         result={}
         for name,score in scores.items():
-            groups=collections.defaultdict(list);recordings=collections.defaultdict(list);ties=[]
+            groups=collections.defaultdict(list);recordings=collections.defaultdict(list);ties=[];uniform=[]
             for i,r in enumerate(val):
                 valid=p[i]|n[i]
                 if task=='same_music_time':valid&=np.array([r['audio_sha256']==x['audio_sha256'] for x in val])
                 if not (p[i]&valid).any() or not (n[i]&valid).any():continue
                 ids=np.flatnonzero(valid);best=ids[np.argmax(score[i,ids])];correct=bool(p[i,best])
                 groups[r['source_group']].append(correct);recordings[r['recording_uid']].append(correct)
-                top=ids[score[i,ids]==score[i,best]];ties.append(len(top))
+                top=ids[score[i,ids]==score[i,best]];ties.append(len(top));uniform.append(float(p[i,top].mean()))
             result[name]=dict(query_micro=float(np.mean([v for g in groups.values() for v in g])),music_group_macro=float(np.mean([np.mean(g) for g in groups.values()])),
                               recording_macro=float(np.mean([np.mean(g) for g in recordings.values()])),
                               per_music_group={k:dict(queries=len(g),recall_at_1=float(np.mean(g))) for k,g in sorted(groups.items())},
-                              mean_top_ties=float(np.mean(ties)),tie_rule='FIRST_FROZEN_CANDIDATE_INDEX')
+                              mean_top_ties=float(np.mean(ties)),uniform_top_tie_expected_recall=float(np.mean(uniform)),tie_rule='FIRST_FROZEN_CANDIDATE_INDEX; UNIFORM_EXPECTATION_ALSO_REPORTED')
         results[task]=result
     write(out,dict(results=results,evaluation_replay_exact=True,optimizer_steps=0,weight_sha256=sha(root/'content_model/model.pt'),
         population_sha256=sha(d/'manifest.json'),controls_use_metadata_not_artistic_truth=True,
