@@ -58,7 +58,7 @@ def test_region_mask_keeps_unknowns_out_of_truth_and_counts_boundary_templates()
     (loss+dyn).backward();assert torch.isfinite(pred.grad).all()
     assert pred.grad[:,10,7:].abs().sum()==0
 
-@pytest.mark.parametrize("name",["common","model","data","objective","prepare"])
+@pytest.mark.parametrize("name",["common","model","data","objective","prepare","train","metrics","evaluate"])
 def test_imports(name):
     import importlib
     importlib.import_module("dunhuang.research.coverage_r34."+name)
