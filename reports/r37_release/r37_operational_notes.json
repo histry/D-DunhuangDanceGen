@@ -1,0 +1,24 @@
+{
+  "initial_sh_pipefail_call_started_science": false,
+  "github_direct_fetch_exit": 128,
+  "transport": "PUBLISHED_SHA_VERIFIED_GIT_BUNDLE_OVER_KNOWN_HOST_SSH; CERTIFICATE_VALIDATION_NOT_DISABLED",
+  "serial_search01_exit": 143,
+  "serial_search02_exit": 143,
+  "original_replay_label_check_exit": 1,
+  "strict_numeric_blob_recovery_exit": 0,
+  "finalizer_exit": 0,
+  "input_condition_correction": {
+    "status": "SUPERSEDED_INPUT_CONTRACT_ATTEMPT_PRESERVED",
+    "problems": [
+      "source splice difference incorrectly observed as velocity",
+      "planned context incorrectly tagged provenance0 instead of2"
+    ],
+    "changed_weights": false,
+    "changed_seeds": false,
+    "changed_plans": false,
+    "repair_commit": "161e0c00898fa199b855f0407fb30ee71b432eb9"
+  },
+  "full_watch_extra_launcher": "NOT_STARTED_EXISTING_SMOOTHING_GUARD",
+  "archived_label_check_not_removed": true,
+  "old_condition_attempt_not_promoted": true
+}

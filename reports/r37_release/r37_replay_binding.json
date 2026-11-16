@@ -1,0 +1,19 @@
+{
+  "status": "ALL_SCIENTIFIC_JSON_EXACT; SOURCE_BLOBS_IDENTICAL",
+  "original_execution_label": "161e0c00898fa199b855f0407fb30ee71b432eb9",
+  "replay_execution_label": "6e5013fd4675fe40559d04b45abec47a2efdbaff",
+  "ignored_fields": [
+    "result.json.code_commit"
+  ],
+  "scientific_git_blobs": {
+    "src/dunhuang/research/transition_r37/planning.py": "2cfff1f92b4c0d0d98f2d87389baf35a1e683ac3",
+    "src/dunhuang/research/transition_r37/memory.py": "a006de1ade94e430751a4c1075792464d449f2c8",
+    "src/dunhuang/research/transition_r37/clock.py": "5a4dc7fa28fc8c00a02d510da787d553e1a28b9b",
+    "src/dunhuang/research/transition_r37/content.py": "07307a73c09254574013baaaee849e6a3c1d813f",
+    "src/dunhuang/research/complete_r36/core.py": "d1fac78510b11ffb3c223b3a0fbe2c4d30d6c6b7",
+    "src/dunhuang/research/complete_r36/music.py": "3413e58e85f6f837f7b071b88d9f63614245f7d0",
+    "src/dunhuang/planning/time_map.py": "860e1c49ed31101121c83911cd6111318868596c",
+    "src/dunhuang/contracts.py": "b58b70ad8edf516931253f1725b7fae5d29f147e"
+  },
+  "optimizer_steps": 0
+}

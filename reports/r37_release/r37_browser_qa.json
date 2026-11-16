@@ -1,0 +1,24 @@
+{
+  "status": "PASSED_SCOPED_BROWSER_INTERACTION",
+  "cases": 16,
+  "browser": "CHROME_REAL_UI",
+  "source_default_end_stop_observed": true,
+  "full_feitian_last_frame_observed": 11818,
+  "candidate_jump_observed": true,
+  "plan_frame331_to_generation_frame128": true,
+  "generation_frame129_back_to_plan_frame332": true,
+  "audio_time_at_generation_frame128": 4.266666,
+  "rate_half_confirmed": true,
+  "both_saved_seeds_selectable": true,
+  "local_and_world_views_checked": true,
+  "diagnostic_timeline_jump_checked": true,
+  "duration_label_example": {
+    "source_frames": 311,
+    "full_target_frames": 328,
+    "visible_target_frames": 128
+  },
+  "final_viewer_protocol_sha256": "2b85476c959b4cf95e4d35c7bf093b666cf016842f142fc883e786a83e510bcd",
+  "old_script_error_preserved": "INVALID_LEFT_HAND_SIDE; PRESENTATION_ONLY_FIX",
+  "scope": "SELECTED_CONTROLS_AND_CASES_NOT_EXHAUSTIVE_WATCH_OR_ARTISTIC_QUALIFICATION",
+  "human_reviewed": false
+}
