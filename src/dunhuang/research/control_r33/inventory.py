@@ -18,7 +18,7 @@ def compile_holdouts(cfg,rt,music):
         if not candidates:raise ValueError("Registered held recording lacks complete duration; no replacement")
         event=candidates[0];assert event["source_sha256"] not in excluded
         origin=next(r for r in source["source_records"] if r["source_uid"]==event["source_uid"]);checked(origin["raw_receipt"])
-        beats=np.flatnonzero(music[0,:96,-1]>.5).tolist()
+        beats=np.flatnonzero(music[0,64:160,-1]>.5).tolist()
         solution=solve(dict(source_interval=event["source_interval"],center=event["center"],normalization_support=True),dict(start=0,end=96),beats)
         if solution["status"]!="PASS":raise ValueError("Registered holdout map failed; no best-output replacement")
         mapped=dict(event,music_interval=[0,96],time_warp=solution["time_warp"])
@@ -30,7 +30,7 @@ def compile_holdouts(cfg,rt,music):
         bodies.append(body);local.append(p-p[:,:1])
         records.append(dict(event_uid=event["event_uid"],source_uid=event["source_uid"],recording_uid=recording,source_sha256=event["source_sha256"],
             raw_receipt=origin["raw_receipt"],reference=event["reference"],source_interval=event["source_interval"],time_warp=solution["time_warp"],
-            map_certificate=solution,historical_usage_count=origin.get("historical_usage_count"),historical_split=origin.get("historical_recording_split"),
+            map_certificate=solution,music_clock_basis=dict(window_interval=[64,160],local_interval=[0,96],music_index=0),historical_usage_count=origin.get("historical_usage_count"),historical_split=origin.get("historical_recording_split"),
             adaptation_role="NOT_IN_R33_TRAIN; HISTORICALLY_EXPOSED_CATALOG_NOT_NEW_BLIND_TEST",Root_truth="UNKNOWN",C4_truth="UNKNOWN"))
     assert len({r["recording_uid"] for r in records})==2 and len({r["source_sha256"] for r in records})==2
     return dict(body=np.stack(bodies),local_points=np.stack(local)),records,dict(catalog=assets["catalog"],source=assets["catalog_source"])
