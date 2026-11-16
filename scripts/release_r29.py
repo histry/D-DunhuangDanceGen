@@ -7,7 +7,33 @@ from dunhuang.io import sha,write,checked
 from dunhuang.data.sources import ref
 from dunhuang.research.source_capacity.common import read,fresh,commit,forbid_optimizers,same_arrays
 from dunhuang.research.state_r27.common import readout_check
-from render_r23 import video
+from PIL import Image,ImageDraw
+
+def video(path,points,parents,label,ok,center,scale,audio,annotations):
+    """R29 shared world camera; captions retain actual dataset identity."""
+    assert ok is None and not path.exists()
+    cmd=["ffmpeg","-nostdin","-threads","2","-v","error","-f","rawvideo","-pix_fmt","rgb24","-s","600x600","-r","30","-i","-"]
+    if audio:cmd += ["-i",str(audio),"-map","0:v:0","-map","1:a:0"]
+    cmd += ["-c:v","libx264","-pix_fmt","yuv420p","-preset","veryfast","-crf","20","-threads","2"]
+    if audio:cmd += ["-c:a","aac","-shortest"]
+    proc=subprocess.Popen(cmd+[str(path)],stdin=subprocess.PIPE)
+    try:
+        for t,frame in enumerate(points):
+            im=Image.new("RGB",(600,600),"#f2f4f7");draw=ImageDraw.Draw(im)
+            draw.text((12,12),label,fill="#173249")
+            draw.text((12,34),"Native24 NOT EVALUABLE | 22-joint research window",fill="#70402e")
+            draw.text((12,56),annotations[t],fill="#70402e")
+            pts=[(round(300+(v[0]-center[0])*scale),round(310-(v[1]-center[1])*scale)) for v in frame]
+            for j in range(1,len(frame)):draw.line([pts[parents[j]],pts[j]],fill="#285e99" if j%2 else "#9c5133",width=4)
+            for x,y in pts:draw.ellipse((x-3,y-3,x+3,y+3),fill="#22394c")
+            draw.text((12,553),f"{t+1}/{len(points)} | fixed world camera, common scale",fill="#415b6b")
+            draw.text((12,576),"No smoothing / no recentering / unqualified research",fill="#415b6b")
+            proc.stdin.write(np.asarray(im).tobytes())
+    finally:proc.stdin.close()
+    assert proc.wait()==0
+    count=subprocess.check_output(["ffprobe","-v","error","-count_frames","-select_streams","v:0","-show_entries","stream=nb_read_frames","-of","csv=p=0",str(path)],text=True,timeout=60)
+    assert int(count.strip())==256
+    subprocess.run(["ffmpeg","-nostdin","-threads","2","-v","error","-i",str(path),"-f","null","-"],check=True,timeout=60)
 
 def verify(root):
     root=Path(root);out=root/"independent_checks.json";assert not out.exists();forbid_optimizers();bundles=0;checks=[]
