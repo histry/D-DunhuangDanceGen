@@ -89,8 +89,13 @@ def run(cfg,root,out,replay=None):
         music,_=rt.e(str(out/(key+'.wav')),skip_completed=False);music=np.asarray(music[:256],np.float32)
         if music.shape!=(256,35):raise ValueError('Actual music feature support')
         M=torch.tensor(np.repeat(music[None],2,0),device='cuda');packet=full_packet(np.repeat(body[None],2,0),[key]*2)
+        # A splice is not an observed angular velocity. This token mask applies to both arms.
+        invalid=[e['local_interval'][0] for e in binding['events']]
+        packet.values['valid'][:,invalid]=False
+        arrays[key+'_source_feature_token_valid']=packet.values['valid'].cpu().numpy()
         base,_,_=sample(rt,M,seeds=cfg['seeds'])
         values=base.clone();values[:,:,7:]=torch.tensor(body,device='cuda')[None];ctx=context(values,gap,partial_body=True,window_origin=[binding['window_start']]*2)
+        ctx.provenance.fill_(2);ctx.coordinate_uid='COMMON_CANONICAL_AXES_BODY_ONLY_NO_WORLD_ROOT';ctx.validate()
         arrays[key+'_reference_R']=R;arrays[key+'_reference22']=relative_fk(R,arrays['skeleton_J22'],arrays['parents'])
         arrays[key+'_Geometry_R']=geometry;arrays[key+'_Geometry22']=relative_fk(geometry,arrays['skeleton_J22'],arrays['parents'])
         arrays[key+'_music35']=music;arrays[key+'_Frozen_normalized']=base.cpu().numpy();variants={}
@@ -110,6 +115,9 @@ def run(cfg,root,out,replay=None):
             print('R37_SAMPLE',key,arm,flush=True)
         records.append(dict(key=key,song=c['song']['name'],binding=binding,gap=gap,seeds=cfg['seeds'],selection=c['selection'],
                             plan_sha256=__import__('hashlib').sha256(__import__('json').dumps(c['plan'],sort_keys=True).encode()).hexdigest(),
+                            plan_hash_kind='SORTED_JSON_CONTENT_SHA256_NOT_RAW_FILE_BYTES',
+                            reference_velocity_at_event_cuts='UNKNOWN; FIRST_FEATURE_TOKEN_MASKED_COMMON_TO_BOTH_ARMS',
+                            context_provenance='PLANNED_BODY_ONLY_ENUM2; WORLD_ROOT_AND_C4_MASKED',
                             consumes_new_r37_plan=key=='new_plan',variants=variants,lower_bound=necessary_jump(R,arrays[key+'_R36Like_budget'],128)))
         np.savez_compressed(out/'arrays.npz',**arrays)
     rt.check();rt.close();result=dict(code_commit=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),records=records,
