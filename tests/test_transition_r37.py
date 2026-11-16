@@ -65,3 +65,9 @@ def test_content_reconstruction_uses_shared_tokens_and_finite_gradients():
     loss=multi_positive_loss(scores,positive,~positive)+(rec-x[:,:,:198]).square().mean();loss.backward()
     assert torch.isfinite(loss) and model.motion[0].weight.grad.abs().sum()>0 and model.music[0].weight.grad.abs().sum()>0
     with pytest.raises(ValueError):multi_positive_loss(scores,np.zeros((3,3),bool),~positive)
+
+def test_world_fk_keeps_lodge_rest_pelvis_offset():
+    from dunhuang.research.transition_r37.evaluate import world_fk
+    R=np.broadcast_to(np.eye(3),(5,22,3,3));root=np.ones((5,3));J=np.c_[np.arange(22)*.01,np.arange(22)*.02-.35,np.zeros(22)]
+    points=world_fk(R,root,J,np.r_[-1,np.arange(21)])
+    assert np.allclose(points,root[:,None]+J[None])

@@ -5,7 +5,7 @@ import numpy as np
 from scipy.spatial.transform import Rotation
 from dunhuang.research.complete_r36.core import read,write,sha,Library,relative_fk
 from .generate_contract import verify_plan
-from .evaluate import decode,metrics
+from .evaluate import decode,metrics,world_fk
 
 def exact(a,b):
     x=np.load(a);y=np.load(b);assert set(x.files)==set(y.files)
@@ -30,7 +30,7 @@ def run(cfg,root,out):
             stats=[]
             anchor=reference if arm=='R36Like' else G
             for raw,stored in zip(z[key+'_'+arm+'_139'],z[key+'_'+arm+'_22']):
-                R,Root=decode(raw);P=relative_fk(R,J,parents)+Root[:,None];assert np.allclose(P,stored,atol=2e-5)
+                R,Root=decode(raw);P=world_fk(R,Root,J,parents);assert np.allclose(P,stored,atol=2e-5)
                 error=Rotation.from_matrix((anchor.swapaxes(-1,-2)@R).reshape(-1,3,3)).magnitude().reshape(256,22)
                 assert (error<=z[key+'_'+arm+'_budget'][:,None]+2e-5).all()
                 stats.append(metrics(R,reference,Root,J,parents,[128],row['gap']))

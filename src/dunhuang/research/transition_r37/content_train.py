@@ -19,7 +19,11 @@ def run(data,out,replay=None):
     for i,r in enumerate(rows):
         if r['role']=='train':groups[r['audio_sha256']].append(i)
         elif r['role']!='val':raise ValueError('Test forbidden')
-    groups={k:v for k,v in groups.items() if len({tuple(rows[i]['audio_frame_interval']) for i in v})>=2}
+    def disjoint(i,j):
+        A=rows[i]['audio_frame_interval'];B=rows[j]['audio_frame_interval']
+        return max(A[0],B[0])>=min(A[1],B[1])
+    query_options={k:[i for i in v if any(disjoint(i,j) for j in v)] for k,v in groups.items()}
+    groups={k:v for k,v in groups.items() if query_options[k]}
     if len(groups)<cfg['batch_music_groups']:raise ValueError('Insufficient trusted multi-time music groups')
     def batch(ids):
         n=max(rows[i]['frames'] for i in ids);m=np.zeros((len(ids),n,50),np.float32);x=np.zeros((len(ids),n,274),np.float32);mm=np.zeros_like(m,bool);xm=np.zeros_like(x,bool)
@@ -37,8 +41,8 @@ def run(data,out,replay=None):
     for step in range(cfg['updates']):
         ids=[]
         for ak in rng.choice(sorted(groups),cfg['batch_music_groups'],replace=False):
-            options=groups[ak];i=int(rng.choice(options));A=rows[i]['audio_frame_interval']
-            alternatives=[j for j in options if max(A[0],rows[j]['audio_frame_interval'][0])>=min(A[1],rows[j]['audio_frame_interval'][1])]
+            options=groups[ak];i=int(rng.choice(query_options[ak]));A=rows[i]['audio_frame_interval']
+            alternatives=[j for j in options if disjoint(i,j)]
             if not alternatives:raise ValueError('No same-music nonoverlapping competition')
             ids.extend([i,int(rng.choice(alternatives))])
         schedule.append(ids)

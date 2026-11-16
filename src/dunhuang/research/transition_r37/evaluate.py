@@ -13,7 +13,7 @@ def metrics(R,reference,root,J,parents,boundaries=(),gap=None):
     for b in boundaries:edges[max(0,b-3):min(len(edges),b)]=True
     protected=np.ones(len(R),bool)
     if gap:protected[gap[0]:gap[1]]=False
-    world=p+root[:,None];foot_speed=np.linalg.norm(np.diff(world[:,[7,8,10,11]],axis=0)*30,axis=-1)
+    world=p+root[:,None]+np.asarray(J)[None,:1];foot_speed=np.linalg.norm(np.diff(world[:,[7,8,10,11]],axis=0)*30,axis=-1)
     reference_velocity=np.linalg.norm(np.diff(q,axis=0)*30,axis=-1).mean(-1)
     arm_rel=np.stack([p[:,20]-p[:,16],p[:,21]-p[:,17],p[:,20]-p[:,21]],1)
     target_rel=np.stack([q[:,20]-q[:,16],q[:,21]-q[:,17],q[:,20]-q[:,21]],1)
@@ -33,6 +33,10 @@ def metrics(R,reference,root,J,parents,boundaries=(),gap=None):
 
 def decode(raw):
     return matrices(raw[:,7:].reshape(-1,22,6),row=True),np.asarray(raw[:,4:7])
+
+def world_fk(R,root,J,parents):
+    # Lodge's SMPL-X rest pelvis is J0, not zero. Relative figures subtract this separately.
+    return relative_fk(R,J,parents)+np.asarray(root)[:,None]+np.asarray(J)[None,:1]
 
 def curves(R,reference,root,J,parents):
     p=relative_fk(R,J,parents);q=relative_fk(reference,J,parents)

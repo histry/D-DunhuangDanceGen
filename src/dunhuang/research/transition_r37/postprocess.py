@@ -5,7 +5,7 @@ import numpy as np
 from dunhuang.research.complete_r36.core import read,write,sha,Library,relative_fk,rotation_sample
 from .smoothing import linear,rotation_filter,residual_rts
 from .clock import source_positions
-from .evaluate import decode,metrics,curves
+from .evaluate import decode,metrics,curves,world_fk
 
 def run(cfg,out,replay=None):
     out=Path(out)
@@ -37,7 +37,8 @@ def run(cfg,out,replay=None):
                 motion[:,7:]=R[...,:2,:].reshape(256,132);motion[:,4:7]=root
                 values.append(motion);stats.append(metrics(R,reference,root,J,parents,boundaries))
                 diag.append(curves(R,reference,root,J,parents))
-            arrays[key+'_'+arm+'_139']=np.stack(values);arrays[key+'_'+arm+'_22']=np.stack([relative_fk(decode(v)[0],J,parents)+decode(v)[1][:,None] for v in values])
+            arrays[key+'_'+arm+'_139']=np.stack(values);arrays[key+'_'+arm+'_22']=np.stack([world_fk(*decode(v),J,parents) for v in values])
+            if arm=='Raw':assert np.allclose(arrays[key+'_Raw_22'],raw[key+'_Edit_22'],atol=2e-5)
             record['methods'][arm]=dict(metrics=stats,diagnostics=diag,body_budget_enforced=arm=='ResidualRTS',contact_values='COPIED_MODEL_OUTPUT_NOT_CONTACT_TRUTH')
         records.append(record)
     np.savez_compressed(out/'arrays.npz',**arrays);result=dict(code_commit=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),parent_sha256=sha(parent/'generation_repair01/arrays.npz'),
