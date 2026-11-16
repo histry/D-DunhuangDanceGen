@@ -1,0 +1,23 @@
+{
+  "baseline_commit": "a04cd53bb361af093f1069fd0c2397346c9dcf5f",
+  "r36": "outputs/complete_r36_01",
+  "r35": "outputs/transition_r35_01",
+  "beam": 24,
+  "candidates_per_arc": 24,
+  "reuse_weight": 3.0,
+  "backtrack_weight": 0.8,
+  "transition_weight": 0.18,
+  "bridge_halfwidth": 24,
+  "edit_start_t": 119,
+  "bridge_residual_rad": 0.6,
+  "seeds": [35041, 35042],
+  "kalman_angle_sigma_rad": 0.035,
+  "kalman_angular_accel_sigma": 8.0,
+  "kalman_root_sigma_m": 0.01,
+  "kalman_root_accel_sigma": 1.5,
+  "sdmr_training_updates": 0,
+  "whole_song_generations": 0,
+  "operational_qualified": false,
+  "human_reviewed": false,
+  "sdmr_can_route": false
+}
