@@ -133,6 +133,7 @@ def collect(root,out,receipts):
         evidence={str(p.relative_to(root)):sha(p) for p in root.rglob("*.json")},
         receipts={name:{p.name:sha(p) for p in Path(name).iterdir() if p.is_file()} for name in receipts},
         launcher_logs={str(p):sha(p) for p in Path("outputs").glob(root.name+"*_launcher.log")},
+        receipt_directory_relocation=ref(Path(str(root)+"_receipt_relocation.json")),
         temporary_ssh_files_created=0,temporary_ssh_files_remaining=0,whole_song_generations=0,operational_qualified=False))
     print("R30_PUBLIC_STATS",sha(out/"r30_summary.json"),flush=True)
 if __name__=="__main__":
