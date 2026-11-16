@@ -1,0 +1,57 @@
+{
+  "schema": "r32_frozen_platform_content_v1",
+  "baseline": "22ccc36f4c1c8e8dfe5e9131a8ca2056598c2b1d",
+  "r31": "outputs/geometry_r31_02",
+  "r31_manifest_sha256": "ea7b2fe1937f94d12afd0939251b07d9a1115648126bf4ddc5e50f62ac5fdc07",
+  "canonical_checkpoint_sha256": "15b733d59f6ed1c8f5449a09cecaf07990fbd9ee2376918eac45de1c812a5922",
+  "seed": 32041,
+  "readout_steps": 600,
+  "readout_width": 128,
+  "readout_lr": 0.001,
+  "readout_snapshots": [
+    0,
+    299,
+    599
+  ],
+  "pilot_steps": 120,
+  "train_steps": 600,
+  "learning_rate": 0.0002,
+  "snapshot_steps": [
+    0,
+    1,
+    299,
+    599
+  ],
+  "train_cases": [
+    92,
+    48,
+    32,
+    0
+  ],
+  "holdout_cases": [
+    4,
+    8,
+    12,
+    16
+  ],
+  "times": [
+    999,
+    519,
+    119,
+    19
+  ],
+  "partial_weights": {
+    "body": 1,
+    "coordinate_difference": 0.1,
+    "local_geometry": 0.2,
+    "prior_first7": 0.1,
+    "outside": 0.25
+  },
+  "partial_geometry_beta_m": 0.05,
+  "pilot_loss_ratio_max": 0.9,
+  "pilot_min_improved_sources": 3,
+  "main_required_readout": true,
+  "whole_song_generations": 0,
+  "human_reviewed": false,
+  "operational_qualified": false
+}
