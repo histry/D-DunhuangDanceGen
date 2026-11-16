@@ -1,0 +1,447 @@
+{
+  "code_commit": "4020a54e9600b7505a008b96cea4ab1fe20a0599",
+  "array_bundles_exact": 13,
+  "actual_update_pairs": 23,
+  "update_checks": [
+    {
+      "decoder": {
+        "actual": 0.41745874285697937,
+        "expected": 0.41745874285697937,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "decoder": {
+        "actual": 0.008425104431807995,
+        "expected": 0.008425104431807995,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "decoder": {
+        "actual": 0.006129540968686342,
+        "expected": 0.006129540968686342,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "decoder": {
+        "actual": 0.3378792405128479,
+        "expected": 0.3378792405128479,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "decoder": {
+        "actual": 0.0015119476011022925,
+        "expected": 0.0015119476011022925,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "decoder": {
+        "actual": 0.006051922682672739,
+        "expected": 0.006051922682672739,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "decoder": {
+        "actual": 0.3587186932563782,
+        "expected": 0.3587186932563782,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "decoder": {
+        "actual": 0.0005336788017302752,
+        "expected": 0.0005336788017302752,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "decoder": {
+        "actual": 0.00019157803035341203,
+        "expected": 0.00019157803035341203,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "decoder": {
+        "actual": 0.4275451600551605,
+        "expected": 0.4275451600551605,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "decoder": {
+        "actual": 0.0006403868901543319,
+        "expected": 0.0006403868901543319,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "decoder": {
+        "actual": 0.0003131162084173411,
+        "expected": 0.0003131162084173411,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "encoder": {
+        "actual": 0.10649870336055756,
+        "expected": 0.10649870336055756,
+        "relative_error": 0.0
+      },
+      "injection": {
+        "actual": 0.082573302090168,
+        "expected": 0.082573302090168,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "encoder": {
+        "actual": 0.05562841147184372,
+        "expected": 0.05562841147184372,
+        "relative_error": 0.0
+      },
+      "injection": {
+        "actual": 0.02837250754237175,
+        "expected": 0.02837250754237175,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "encoder": {
+        "actual": 0.022716868668794632,
+        "expected": 0.022716868668794632,
+        "relative_error": 0.0
+      },
+      "injection": {
+        "actual": 0.012521508149802685,
+        "expected": 0.012521508149802685,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "encoder": {
+        "actual": 0.022832732647657394,
+        "expected": 0.022832732647657394,
+        "relative_error": 0.0
+      },
+      "injection": {
+        "actual": 0.012865972705185413,
+        "expected": 0.012865972705185413,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "encoder": {
+        "actual": 0.1252405345439911,
+        "expected": 0.1252405345439911,
+        "relative_error": 0.0
+      },
+      "injection": {
+        "actual": 0.08670647442340851,
+        "expected": 0.08670647442340851,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "encoder": {
+        "actual": 0.024846989661455154,
+        "expected": 0.024846989661455154,
+        "relative_error": 0.0
+      },
+      "injection": {
+        "actual": 0.011777963489294052,
+        "expected": 0.011777963489294052,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "encoder": {
+        "actual": 0.023300249129533768,
+        "expected": 0.023300249129533768,
+        "relative_error": 0.0
+      },
+      "injection": {
+        "actual": 0.009783042594790459,
+        "expected": 0.009783042594790459,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "encoder": {
+        "actual": 0.022832732647657394,
+        "expected": 0.022832732647657394,
+        "relative_error": 0.0
+      },
+      "injection": {
+        "actual": 0.012865972705185413,
+        "expected": 0.012865972705185413,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "encoder": {
+        "actual": 0.4283158779144287,
+        "expected": 0.4283158779144287,
+        "relative_error": 0.0
+      },
+      "injection": {
+        "actual": 0.24582326412200928,
+        "expected": 0.24582326412200928,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "encoder": {
+        "actual": 0.04112386703491211,
+        "expected": 0.04112386703491211,
+        "relative_error": 0.0
+      },
+      "injection": {
+        "actual": 0.014123826287686825,
+        "expected": 0.014123826287686825,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "encoder": {
+        "actual": 0.06236384063959122,
+        "expected": 0.06236384063959122,
+        "relative_error": 0.0
+      },
+      "injection": {
+        "actual": 0.014256628230214119,
+        "expected": 0.014256628230214119,
+        "relative_error": 0.0
+      }
+    }
+  ],
+  "decoder_optimizer_steps": 2400,
+  "generator_optimizer_steps": 1320,
+  "replay_optimizer_steps": 0,
+  "sampler_calls": 53,
+  "generated_trajectories": 236,
+  "replay_sampler_calls": 53,
+  "replay_generated_trajectories": 236,
+  "reused_evaluation_trajectories": 246,
+  "fixed_NoRef_exact": true,
+  "accounting_scope": "QUALIFIED_LINEAGE_INCLUDES_REUSED_EARLY_QUALIFICATIONS; EXECUTED_TOTALS_SEPARATE",
+  "current_run_decoder_steps": 0,
+  "current_run_generator_steps": 1200,
+  "current_run_sampler_calls": 43,
+  "current_run_generated_trajectories": 190,
+  "task_total_decoder_steps": 2400,
+  "task_total_generator_steps": 2520,
+  "task_total_sampler_calls": 96,
+  "task_total_generated_trajectories": 426,
+  "task_total_update_pairs": 31,
+  "task_replay_optimizer_steps": 0,
+  "superseded_update_checks": [
+    {
+      "encoder": {
+        "actual": 0.030200492590665817,
+        "expected": 0.030200492590665817,
+        "relative_error": 0.0
+      },
+      "injection": {
+        "actual": 0.013972785323858261,
+        "expected": 0.013972785323858261,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "encoder": {
+        "actual": 0.1299750953912735,
+        "expected": 0.1299750953912735,
+        "relative_error": 0.0
+      },
+      "injection": {
+        "actual": 0.08635680377483368,
+        "expected": 0.08635680377483368,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "encoder": {
+        "actual": 0.024153774604201317,
+        "expected": 0.024153774604201317,
+        "relative_error": 0.0
+      },
+      "injection": {
+        "actual": 0.011783692985773087,
+        "expected": 0.011783692985773087,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "encoder": {
+        "actual": 0.02227410115301609,
+        "expected": 0.02227410115301609,
+        "relative_error": 0.0
+      },
+      "injection": {
+        "actual": 0.009961528703570366,
+        "expected": 0.009961528703570366,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "encoder": {
+        "actual": 0.030200492590665817,
+        "expected": 0.030200492590665817,
+        "relative_error": 0.0
+      },
+      "injection": {
+        "actual": 0.013972785323858261,
+        "expected": 0.013972785323858261,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "encoder": {
+        "actual": 0.43991491198539734,
+        "expected": 0.43991491198539734,
+        "relative_error": 0.0
+      },
+      "injection": {
+        "actual": 0.25466203689575195,
+        "expected": 0.25466203689575195,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "encoder": {
+        "actual": 0.049681730568408966,
+        "expected": 0.049681730568408966,
+        "relative_error": 0.0
+      },
+      "injection": {
+        "actual": 0.017418423667550087,
+        "expected": 0.017418423667550087,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "encoder": {
+        "actual": 0.0636749416589737,
+        "expected": 0.0636749416589737,
+        "relative_error": 0.0
+      },
+      "injection": {
+        "actual": 0.014920210465788841,
+        "expected": 0.014920210465788841,
+        "relative_error": 0.0
+      }
+    }
+  ],
+  "paired_presentation_counts": {
+    "51": 75,
+    "26": 75,
+    "27": 75,
+    "92": 75,
+    "37": 75,
+    "95": 75,
+    "38": 75,
+    "76": 75,
+    "35": 75,
+    "78": 75,
+    "1": 75,
+    "32": 75,
+    "21": 75,
+    "0": 75,
+    "48": 75,
+    "23": 75
+  },
+  "reused_qualification_receipt": {
+    "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/content_r32_02/reuse_receipt.json",
+    "sha256": "e3dd925511466ace9d1b197b428035bcb91ec4d0ffc759e4c04bc37ee534de69"
+  },
+  "action_io_and_backbone_unchanged": true,
+  "parent_scientific_seal_files_unchanged": true,
+  "paired_replay_ledger_identical": true,
+  "paired_presentations_per_source": 75,
+  "auxiliary_sources": {
+    "AIST": 4,
+    "ChangE": 2
+  },
+  "change_source_lineage": [
+    {
+      "plan": "A",
+      "plan_ref": {
+        "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/reperformance_r8_02/prepared/pair_0_A.json",
+        "sha256": "ebc9d5027bf1274446a6d71c661d7289734ed6fd18cebe9d891a4c6b83a3229e"
+      },
+      "event_uid": "evt_8d8b702c4fcdd8773c30e13d",
+      "source_uid": "female_FeiTian",
+      "recording_uid": "female_feitian_sequence",
+      "source_sha256": "120e0157ccdd60d128d2973ac0682883ee178ba43ce8479100e80f56c64f37a4",
+      "source_interval": [
+        11010,
+        11129
+      ],
+      "time_warp": [
+        [
+          11010,
+          0
+        ],
+        [
+          11029,
+          15
+        ],
+        [
+          11053,
+          39
+        ],
+        [
+          11129,
+          96
+        ]
+      ],
+      "root_translation_observed": false,
+      "contact_observed": false
+    },
+    {
+      "plan": "B",
+      "plan_ref": {
+        "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/reperformance_r8_02/prepared/pair_0_B.json",
+        "sha256": "d474ed1330dca9741f351fe5c033eff5e5bd545b6479ebff08472164318e3103"
+      },
+      "event_uid": "evt_ffa5a1585b111af31985a68e",
+      "source_uid": "male_pipa_1",
+      "recording_uid": "male_pipa_sequence_1",
+      "source_sha256": "7b58c904c3b4c7f29c3fdf82ac0e0a948e4f436cf57c5e7589e424168cfb3dfd",
+      "source_interval": [
+        1605,
+        1698
+      ],
+      "time_warp": [
+        [
+          1605,
+          0
+        ],
+        [
+          1652,
+          53
+        ],
+        [
+          1676,
+          77
+        ],
+        [
+          1698,
+          96
+        ]
+      ],
+      "root_translation_observed": false,
+      "contact_observed": false
+    }
+  ],
+  "source_independence_scope": "TWO_DISTINCT_HASHES_AND_REGISTERED_RECORDING_UIDS; NOT_NEW_OR_POPULATION_GENERALIZATION",
+  "full_native_status": "NOT_EVALUABLE",
+  "operational_qualified": false,
+  "whole_song_generations": 0
+}
