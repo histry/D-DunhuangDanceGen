@@ -48,7 +48,7 @@ def run(cfg,root,out):
             alternatives.append(values)
         cases.append(dict(id=song["id"],name=song["name"]+" · 新旧完整计划",type="plan",frames=song["frames"],fps=30,
             audio=sound(checked(song["audio"]),song["name"]),audio_provenance=song["audio"],beats=song["beats"],waveform=song["waveform"],
-            Old=track(oldp),Graph=track(newp),boundaries=song["boundaries"],slots=song["slots"],alternatives=alternatives,generations=generations,
+            Old=track(oldp),Graph=track(newp),old_events=[{k:e[k] for k in ("source_uid","time_warp","music_interval","primitive")} for e in old["events"]],boundaries=song["boundaries"],slots=song["slots"],alternatives=alternatives,generations=generations,
             initial_slot=bindings[0]["selected_slot"],details=dict(old_plan=song["old_plan"],new_plan=song["plan"],semantic_id=semantic_plan_id(new),Root="UNKNOWN",contact="UNKNOWN")))
     population=read("outputs/reference_r26_01/data/result.json")["records"]
     configs=read("src/dunhuang/research/content_r32/config.json")

@@ -29,6 +29,16 @@
   for(let i=0;i<current.slots.length;i++){const s=current.slots[i],a=s.start/current.frames*w,b=(s.end-s.start)/current.frames*w;x.fillStyle=i%2?"#c1ceba":"#d6c6ad";x.fillRect(a,100,b,27);x.strokeStyle=i===selected?"#24686e":"white";x.lineWidth=i===selected?3:1;x.strokeRect(a,100,b,27);}
   const a=frame/current.frames*w;x.strokeStyle="#b75335";x.lineWidth=2;x.beginPath();x.moveTo(a,0);x.lineTo(a,h);x.stroke();
  }
+ function warp(){
+  const c=$("warp"),x=c.getContext("2d");x.clearRect(0,0,c.width,c.height);if(current.type!=="plan")return;
+  const values=[current.old_events[selected],current.slots[selected].candidates[0]];
+  values.forEach((e,k)=>{const v=e.time_warp,x0=v[0][0],x1=v[v.length-1][0],y0=v[0][1],y1=v[v.length-1][1],left=40+k*600;
+   const px=a=>left+(a-x0)/Math.max(1,x1-x0)*520,py=b=>175-(b-y0)/Math.max(1,y1-y0)*125;
+   x.strokeStyle=k?"#2d7373":"#ac7047";x.lineWidth=2;x.beginPath();v.forEach(([a,b],i)=>i?x.lineTo(px(a),py(b)):x.moveTo(px(a),py(b)));x.stroke();
+   x.fillStyle="#5c7368";x.font="13px sans-serif";x.fillText((k?"新":"旧")+" · "+e.source_uid,left,18);x.fillText("原始来源帧 "+x0.toFixed(1)+" → "+x1.toFixed(1),left,201);
+   x.fillText("音乐帧 "+y0+" → "+y1,left,36);
+  });
+ }
  function diagnostic(){
   const c=$("diagnostic"),x=c.getContext("2d"),w=c.width,h=c.height;x.clearRect(0,0,w,h);const g=generation();if(!g)return;
   const v=g.diagnostics[$("metric").value],m=Math.max(.00001,...v.filter(Number.isFinite));x.strokeStyle="#ae6341";x.beginPath();let open=false;
@@ -54,7 +64,7 @@
    [1,2].forEach(i=>$("frame"+i).textContent=g&&n>=0&&n<256?"实际动作帧 "+n+" · 音乐帧 "+frame:"此事件／音乐帧尚未生成");
    $("scope").textContent=g?(plan?"当前事件主体及编辑边缘写入责任 "+JSON.stringify(g.binding.write_interval)+"；Core保护 "+JSON.stringify(g.binding.protected_core)+"。其余预测不计为完整邻事件。":current.type==="paired"?"真实连续 AIST 缺口 [64,160)，两端各8帧观察；不硬覆盖。":"来源保持 Core [64,160)；上下文来自同录制真实身体，Root/接触未知。"):"未生成该事件。请选择有登记真实短窗的边界；不替代为其他来源输出。";
   }
-  diagnostic();window.DANCE_VIEW_STATE={caseId:current.id,frame,selectedSlot:selected,tab,paused:audio.paused,rate:audio.playbackRate,localGenerationFrame:g?frame-g.start:null,planArm:$("planChoice").value};
+  warp();diagnostic();window.DANCE_VIEW_STATE={caseId:current.id,frame,selectedSlot:selected,tab,paused:audio.paused,rate:audio.playbackRate,localGenerationFrame:g?frame-g.start:null,planArm:$("planChoice").value};
  }
  function selection(){
   if(current.type==="plan"){
