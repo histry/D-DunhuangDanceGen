@@ -47,8 +47,11 @@ def run(cfg,root,out,generated=None):
             panels=[dict(title='按音乐对齐的身体参考 · Root未知',track=track(a[key+'_reference22']))]
             for arm in ('Frozen','Context','Edit'):
                 panels.append(dict(title=arm+' · 实际模型输出',track=track(a[key+'_'+arm+'_22'][0]),variants=[track(x) for x in a[key+'_'+arm+'_22']]))
-            cases.append(dict(id=key,kind='generation',name=row['name'],frames=256,audio='audio/'+wav.name,panels=panels,events=[],old_events=[],beats=[],phrases=[],repetitions=[],
-                scope='固定同一R35计划与音乐；Edit含显式来源保持约束，不能据此证明学习式重演或完整物理合格',summary=row,diagnostics=row['diagnostics'],
+            binding=row['binding'];start=binding['window_start'];a,b=binding['music_interval']
+            event=dict(source_uid=binding['source_uid'],source_interval=binding['source_interval'],duration_frames=binding['source_memory_frames'],music_interval=[a-start,b-start],family_uid='R35_UNKNOWN')
+            cases.append(dict(id=key,kind='generation',name=row['name'],frames=256,audio='audio/'+wav.name,panels=panels,events=[event],old_events=[dict(music_interval=[x-start for x in row['responsible_interval']])],beats=[],phrases=[],repetitions=[],
+                contexts=[[x-start for x in interval] for interval in binding['context_intervals']],
+                scope='同一R35计划：绿为当前事件、橙为编辑范围、蓝为读取上下文；Edit含显式身体保持约束，尚未取得音乐重演或完整物理资格',summary=row,diagnostics=row['diagnostics'],
                 diagnostics_variants=[{arm:values[i] for arm,values in row['all_seed_metrics'].items()} for i in range(2)]))
     import json
     payload=dict(schema='r36_effect_view_v1',cases=cases,tracks=tracks,parents=parents.tolist(),human_reviewed=False,operational_qualified=False)
