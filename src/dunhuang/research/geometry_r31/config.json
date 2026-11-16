@@ -1,0 +1,53 @@
+{
+  "schema": "r31_geometry_contract_v1",
+  "baseline": "2a92c5c35d6a9dbbb5a65e8e8cb50f79489cfc66",
+  "r30": "outputs/continuity_r30_01",
+  "r30_manifest_sha256": "8250433a3260df23f4310ffe7b4a043bb856284e0af3bdd89b306e3ab2cd4014",
+  "minimum_gauge_norm": 0.05,
+  "normalized_box_margin": 0.00001,
+  "sequence_iterations": 64,
+  "coefficient_first_difference_weight": 0.25,
+  "coefficient_second_difference_weight": 0.025,
+  "angle_max_rad": 0.00002,
+  "position_max_m": 0.000005,
+  "numerical_derivative_absolute_floors": [
+    0.00001,
+    0.001,
+    0.05
+  ],
+  "numerical_baseline_multiplier": 2,
+  "train_steps": 1200,
+  "learning_rate": 0.0002,
+  "snapshot_steps": [
+    0,
+    1,
+    599,
+    1199
+  ],
+  "curve_updates": [
+    0,
+    600,
+    1200
+  ],
+  "times": [
+    999,
+    519,
+    119,
+    19
+  ],
+  "train_cases": [
+    92,
+    48,
+    32,
+    0
+  ],
+  "holdout_cases": [
+    4,
+    8,
+    12,
+    16
+  ],
+  "human_reviewed": false,
+  "operational_qualified": false,
+  "whole_song_generations": 0
+}
