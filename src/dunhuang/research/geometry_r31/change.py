@@ -19,7 +19,7 @@ def run(cfg,root,out,replay=None):
     root=Path(root);out=fresh(out);forbid_optimizers()
     old=np.load(checked(read("outputs/lodge_reference_r24_01/main/protocol.json")["arrays"]))
     frozen=np.load(checked_parent(parent_config(),"change_coverage/arrays.npz"))
-    arrays={};records=[];noise=[];calls=0;conditions=change_conditions()
+    arrays={};records=[];noise=[];calls=0;nulls={};conditions=change_conditions()
     def add(arm,mode,raw,points,pred,reused=False):
         for key,value in (("139",raw),("22",points),("normalized",pred)):arrays[arm+"_"+mode+"_"+key]=value
         for i,(m,event) in enumerate(conditions):
@@ -38,13 +38,17 @@ def run(cfg,root,out,replay=None):
         for mode in ("correct","wrong_clock","swapped"):
             ref=packet([old["source139"][1-max(event,0) if mode=="swapped" else max(event,0),64:160,7:] for m,event in conditions],drops=[event<0 for m,event in conditions])
             ref["mapped_source"]=mapping(6,"cuda",wrong=mode=="wrong_clock")
-            pred,nr=sample(d,b,ref,music,24041,arm);raw=n.unnormalize(pred.clone())
+            pred,nr=sample(d,b,ref,music,24041,arm)
+            empty=pred[[0,3]].cpu().numpy()
+            if arm in nulls:assert np.array_equal(empty,nulls[arm])
+            else:nulls[arm]=empty.copy()
+            raw=n.unnormalize(pred.clone())
             with torch.no_grad():points=f(raw,s)[:,:,:22]
             add(arm,mode,raw.cpu().numpy(),points.cpu().numpy(),pred.cpu().numpy());noise.append(dict(arm=arm,mode=mode,noise=nr));calls+=1
             print("R31_CHANGE",arm,mode,flush=True)
         assert digest(d.model)==before;b.close()
     result=dict(records=records,noise=noise,sampler_calls=calls,generated_trajectories=6*calls,reused_trajectories=18,optimizer_steps=0,
-        reference_state_write=False,NoRef_is_own_IO_contract=True,operational_qualified=False,full_native_status="NOT_EVALUABLE",whole_song_generations=0)
+        reference_state_write=False,NoRef_is_own_IO_contract=True,NoRef_own_modes_exact=True,operational_qualified=False,full_native_status="NOT_EVALUABLE",whole_song_generations=0)
     np.savez_compressed(out/"arrays.npz",**arrays);write(out/"result.json",result);write(out/"protocol.json",dict(config=cfg,code_commit=commit(),arrays_sha256=sha(out/"arrays.npz")))
     if replay:assert result==read(Path(replay)/"result.json");same_arrays(out/"arrays.npz",Path(replay)/"arrays.npz")
 if __name__=="__main__":
