@@ -47,3 +47,14 @@ def test_paired_derivatives_use_same_support_and_physical_units():
     assert x["Root_relative_body"]["1"]["rmse"]==0 and x["world"]["3"]["templates"]==93
     assert absolute(p)["root_relative_activity_mps"]==0
     with pytest.raises(ValueError):paired(p[:80],truth)
+
+def test_physical_loss_preserves_common_translation_cancellation_and_gradients():
+    from dunhuang.research.continuity_r30.objective import physical
+    t=torch.arange(256,dtype=torch.float64)/30
+    points=torch.zeros(2,256,22,3,dtype=torch.float64)
+    points[:,:,:,0]=t[None,:,None];points.requires_grad_()
+    root,body=physical(points,torch.zeros_like(points))
+    assert root>0 and body==0
+    root.backward();assert torch.isfinite(points.grad).all() and points.grad.abs().sum()>0
+    same=physical(points.detach(),points.detach())
+    assert all(x==0 for x in same)
