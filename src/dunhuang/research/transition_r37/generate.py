@@ -1,7 +1,7 @@
 """Two fixed two-event boundaries, shared Lodge denoising and saved pre/post projection state."""
 import os
 os.environ.setdefault('CUBLAS_WORKSPACE_CONFIG',':4096:8')
-import argparse,subprocess,types
+import argparse,subprocess
 from pathlib import Path
 import numpy as np
 import soundfile as sf
@@ -68,10 +68,10 @@ def run(cfg,root,out,replay=None):
     parent=Path(cfg['r36']);r35=Path(cfg['r35']);old=read(r35/'generation/result.json');songs=read(root/'planning/result.json')['songs']
     failed=next(r for r in old['records'] if r['key']=='song1_Graph')
     old_song=next(s for s in read(r35/'planning/songs.json') if s['id']==failed['song_id'])
-    old_plan=read(old_song['plan']['path']);old_boundary=old_plan['events'][failed['selected_slot']]['music_interval'][0]
+    old_plan=read(old_song['plan']['path']);old_boundary=old_plan['events'][failed['selected_slot']]['music_interval'][1]
     new_song=songs[0];new_plan=read(new_song['new_plan']);legal=[e['music_interval'][0] for e in new_plan['events'][1:] if 128<=e['music_interval'][0]<=new_plan['frames']-128]
     if not legal:raise ValueError('No new-plan complete two-event boundary')
-    cases=[dict(key='old_failed',song=old_song,plan=old_plan,boundary=old_boundary,selection='R36_FAILED_SONG1_FIXED_ENTRY_BOUNDARY'),
+    cases=[dict(key='old_failed',song=old_song,plan=old_plan,boundary=old_boundary,selection='R36_SONG1_FIXED_FAILED_EXIT_BOUNDARY; PARENT_JERK4498.4556_VS_ENTRY970.1243'),
            dict(key='new_plan',song=new_song,plan=new_plan,boundary=legal[0],selection='FIRST_INTERNAL_BOUNDARY_WITH_COMPLETE256_MUSIC_STATIC_RULE')]
     rt=Runtime(read('src/dunhuang/research/transition_r35/config.json'),context_training=True);restore_context(rt,parent/'context/context.pt')
     arrays=dict(skeleton_J22=rt.s.J[0,:22].cpu().numpy(),parents=np.array(rt.s.parents[:22]));records=[]

@@ -37,9 +37,8 @@ def diverse(rows,width):
 
 def search(catalog,music,lib,cfg,J,parents):
     units=catalog['units'];N=music['frames'];energy=np.asarray(music['energy_percentile']);novel=np.asarray(music['novelty'])
-    duration=np.array([u['duration_frames']-1 for u in units]);activity=np.array([u['activity_percentile'] for u in units]);cache={};descriptors={}
+    duration=np.array([u['duration_frames']-1 for u in units]);activity=np.array([u['activity_percentile'] for u in units])
     def options(a,b):
-        if (a,b) in cache:return cache[a,b]
         rate=(b-a-1)/duration;valid=(rate>=.75)&(rate<=1.33)
         mismatch=abs(activity-energy[a:b].mean())+.06*abs(np.log(np.maximum(rate,1e-8)))
         ordered=sorted(np.flatnonzero(valid),key=lambda j:(float(mismatch[j]),units[j]['unit_uid']))
@@ -55,24 +54,30 @@ def search(catalog,music,lib,cfg,J,parents):
             e.update(music_interval=[a,b],time_warp=w['time_warp'],time_contract=w['clock_contract'],phase_anchors=w['anchor_source_frames'],
                      scores=dict(activity_mismatch=float(mismatch[j]),time_cost=w['cost'],content_score=None,timing_score=None,sdmr=None))
             e['candidate_uid']=identity([e['unit_uid'],[a,b],e['time_warp']])
-            if e['candidate_uid'] not in descriptors:descriptors[e['candidate_uid']]=boundary_descriptor(e,lib,J,parents)
-            e['_desc']=descriptors[e['candidate_uid']];kept.append((float(mismatch[j]+.05*w['cost']),e))
+            e['_desc']=boundary_descriptor(e,lib,J,parents);kept.append((float(mismatch[j]+.05*w['cost']),e))
             if len(kept)>=cfg['candidates_per_arc']:break
-        cache[a,b]=kept;return kept
+        return kept
     states={0:[(0.,[])]}
     for a in range(N):
         if a not in states:continue
+        current=states.pop(a) # Consumed frontier can never be visited again: all arcs advance time.
         for b in next_boundaries(a,music,cfg):
             bank=options(a,b)
             if not bank:continue
             expanded=list(states.get(b,[]))
-            for cost,path in states[a]:
+            transitions={}
+            for cost,path in current:
                 for local,e in bank:
-                    memory=incremental(path,e,music);trans=edge(path[-1],e)['cost'] if path else 0.
+                    memory=incremental(path,e,music);trans=0.
+                    if path:
+                        pair=(path[-1]['candidate_uid'],e['candidate_uid'])
+                        if pair not in transitions:transitions[pair]=edge(path[-1],e)['cost']
+                        trans=transitions[pair]
                     extra=cfg['reuse_weight']*memory['overlap_fraction']*memory['theme_discount']+cfg['backtrack_weight']*memory['backtrack']*memory['theme_discount']
                     total=cost+local*(b-a)/180+.18+cfg['transition_weight']*trans+extra-.15*novel[min(b,N-1)]
                     expanded.append((float(total),path+[e]))
             states[b]=diverse(expanded,cfg['beam'])
+        if a%600==0:print('R37_SEARCH_FRAME',a,N,flush=True)
     if N not in states:raise ValueError('No legal complete plan')
     cost,path=states[N][0];events=[];boundaries=[]
     for i,e in enumerate(path):

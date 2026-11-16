@@ -14,7 +14,14 @@ def metrics(R,reference,root,J,parents,boundaries=(),gap=None):
     protected=np.ones(len(R),bool)
     if gap:protected[gap[0]:gap[1]]=False
     world=p+root[:,None];foot_speed=np.linalg.norm(np.diff(world[:,[7,8,10,11]],axis=0)*30,axis=-1)
+    reference_velocity=np.linalg.norm(np.diff(q,axis=0)*30,axis=-1).mean(-1)
+    arm_rel=np.stack([p[:,20]-p[:,16],p[:,21]-p[:,17],p[:,20]-p[:,21]],1)
+    target_rel=np.stack([q[:,20]-q[:,16],q[:,21]-q[:,17],q[:,20]-q[:,21]],1)
     return dict(source_angle_rad=float(angle.mean()),protected_source_angle_rad=float(angle[protected].mean()),
+        shoulder_wrist_relationship_rmse_m=float(np.sqrt(np.mean((arm_rel-target_rel)**2))),
+        relative_source_acceleration_error_m_s2=float(np.sqrt(np.mean((np.diff(p-q,n=2,axis=0)*900)**2))),
+        relative_source_jerk_error_m_s3=float(np.sqrt(np.mean((np.diff(p-q,n=3,axis=0)*27000)**2))),
+        largest_body_speed_peak_shift_frames=int(velocity.argmax()-reference_velocity.argmax()),
         local_fk_rmse_m=float(np.sqrt(np.mean((p-q)**2))),jerk_mean=float(jerk.mean()),jerk_p95=float(np.percentile(jerk,95)),
         jerk_peak=float(jerk.max()),jerk_area=float(jerk.sum()/30),boundary_jerk_peak=float(jerk[edges].max()) if edges.any() else None,
         internal_jerk_mean=float(jerk[~edges].mean()) if (~edges).any() else None,
