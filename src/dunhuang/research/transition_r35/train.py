@@ -3,13 +3,12 @@ import os
 os.environ.setdefault("CUBLAS_WORKSPACE_CONFIG",":4096:8")
 import argparse
 from collections import Counter
-from dunhuang.research.coverage_r34.common import *
+from dunhuang.research.coverage_r34.common import Path,np,torch,Runtime,read,fresh,forbid_optimizers,sha,digest,vector,population_data,source,core_body,sample,readout_check,write,commit,same_arrays
 from dunhuang.research.coverage_r34.context_contract import context
 from dunhuang.research.content_r32.partial import partial_loss
 from dunhuang.research.control_r33.objective import body_dynamics
 from dunhuang.research.reference_r26.geometry import fk22
 from dunhuang.research.coverage_r34.context_train import checkpoint,restore_context
-from dunhuang.research.plan_view_r34.common import ref
 
 def schedule(cfg,cases):
     if len(cases)!=16 or len(set(cases))!=16:raise ValueError("Frozen16 source population")
@@ -56,7 +55,7 @@ def run(cfg,root,out,replay=None):
     noise=[];calls=0;trajectories=0
     def refresh(path):
         nonlocal calls,trajectories
-        stored={};times=None
+        stored={}
         for n,ids in enumerate([cases[i:i+4] for i in range(0,16,4)]):
             _,y,m=targets(rt,data,ids)
             pred,nr,tr=sample(rt,m,context_packet=context(y,[64,160]),seeds=[cfg["seed"]+c for c in ids],trace=True)

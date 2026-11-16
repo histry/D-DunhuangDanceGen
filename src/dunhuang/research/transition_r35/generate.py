@@ -5,12 +5,12 @@ import argparse,json
 import numpy as np
 import soundfile as sf
 import torch
-from dunhuang.research.coverage_r34.common import *
+from dunhuang.research.coverage_r34.common import Path,Runtime,forbid_optimizers,fresh,read,sample,population_data,commit,write,same_arrays
 from dunhuang.io import checked
 from dunhuang.research.coverage_r34.context_contract import context
 from dunhuang.research.coverage_r34.context_train import restore_context
 from dunhuang.research.coverage_r34.context_eval import paired_metrics
-from dunhuang.research.plan_view_r34.common import ref,relative_fk
+from dunhuang.research.plan_view_r34.common import ref
 from dunhuang.research.context_r21.data import same_audio_pcm
 from .compiler import compile,make_packets
 from .train import targets,cg
@@ -65,7 +65,7 @@ def run(cfg,root,out,replay=None):
             legal=True
             for candidate_plan in (oldplan,newplan):
                 e=candidate_plan["events"][i];a,b=e["music_interval"];start=a-64;zone=zones(e)
-                left=zone["entry_edit"][1]-a;right=b-zone["exit_edit"][0]
+                right=b-zone["exit_edit"][0]
                 if start<0 or start+256>candidate_plan["frames"] or b+right+8>start+256:legal=False
             if not legal:continue
             score=sum(song["boundaries"][j]["old"]["cost"] for j in (i-1,i))

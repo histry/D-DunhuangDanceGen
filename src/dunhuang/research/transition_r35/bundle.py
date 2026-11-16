@@ -2,7 +2,7 @@
 import argparse,base64,gzip,json,hashlib,shutil
 import numpy as np
 import soundfile as sf
-from dunhuang.research.plan_view_r34.common import *
+from dunhuang.research.plan_view_r34.common import Path,read,fresh,checked,ref,sha,commit,write
 from .planning import Sources
 from dunhuang.planning.event_plan import semantic_plan_id
 
