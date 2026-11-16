@@ -27,6 +27,11 @@
   const peaks=current.waveform,max=Math.max(...peaks,.001);x.strokeStyle="#819f8f";x.beginPath();peaks.forEach((v,i)=>{const a=i/peaks.length*w,b=v/max*37;x.moveTo(a,42-b);x.lineTo(a,42+b);});x.stroke();
   x.strokeStyle="#c6a779";for(const t of current.beats){const a=t/current.frames*w;x.beginPath();x.moveTo(a,82);x.lineTo(a,92);x.stroke();}
   for(let i=0;i<current.slots.length;i++){const s=current.slots[i],a=s.start/current.frames*w,b=(s.end-s.start)/current.frames*w;x.fillStyle=i%2?"#c1ceba":"#d6c6ad";x.fillRect(a,100,b,27);x.strokeStyle=i===selected?"#24686e":"white";x.lineWidth=i===selected?3:1;x.strokeRect(a,100,b,27);}
+  const g=generation();if(g){
+   const b=g.binding,paint=(v,color)=>{if(!v)return;x.fillStyle=color;x.fillRect(v[0]/current.frames*w,132,(v[1]-v[0])/current.frames*w,9);};
+   paint(b.write_interval||b.gap,"#cb8f51");paint(b.protected_core,"#4a8471");
+   for(const v of b.context_intervals||b.observations||[])paint(v,"#6496ad");
+  }
   const a=frame/current.frames*w;x.strokeStyle="#b75335";x.lineWidth=2;x.beginPath();x.moveTo(a,0);x.lineTo(a,h);x.stroke();
  }
  function warp(){
@@ -69,7 +74,7 @@
  function selection(){
   if(current.type==="plan"){
    const b=current.boundaries[selected-1];$("alternative").replaceChildren(...current.alternatives[selected].map((e,i)=>opt(String(i),e.source_uid+" · 活动 "+e.music_score.toFixed(4))));
-   const stats=data.selection.songs.find(s=>s.song===current.id);$("costs").textContent="全曲平均转场代理："+stats.old_mean_edge.toFixed(4)+" → "+stats.new_mean_edge.toFixed(4)+"；平均活动匹配退步 "+stats.music_mean_regret.toFixed(5)+"（预算≤0.02）。代理下降不是独立质量证据。";
+   const stats=data.selection.songs.find(s=>s.song===current.id);$("costs").textContent="全曲平均转场代理："+stats.old_mean_edge.toFixed(4)+" → "+stats.new_mean_edge.toFixed(4)+"；平均活动匹配退步 "+stats.music_mean_regret.toFixed(5)+"（预算≤0.02）。事件内身体速度 "+current.activity.Old.body_speed_within_events_m_s.toFixed(3)+" → "+current.activity.Graph.body_speed_within_events_m_s.toFixed(3)+" m/s；不把切换跳变算作活动。代理下降不是独立质量证据。";
    const table=document.createElement("table"),head=document.createElement("tr");["边界指标","原计划","新计划"].forEach(t=>{const c=document.createElement("th");c.textContent=t;head.append(c);});table.append(head);
    const names={angle_rad:"全身角差 rad",body_gap_m:"局部FK差 m",wrist_gap_m:"双腕差 m",lower_gap_m:"下肢差 m",velocity_gap_m_s:"速度差 m/s",acceleration_gap_m_s2:"加速度差 m/s²",editable_frames:"可编辑预算 帧",cost:"综合转场代理"};
    for(const [key,name] of Object.entries(names)){const row=document.createElement("tr");[name,b.old[key].toFixed(4),b.new[key].toFixed(4)].forEach(t=>{const c=document.createElement("td");c.textContent=t;row.append(c);});table.append(row);}

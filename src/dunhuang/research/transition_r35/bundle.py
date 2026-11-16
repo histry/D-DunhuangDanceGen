@@ -23,6 +23,14 @@ def run(cfg,root,out):
         return [float(x[a:c].max()) if a<c else 0. for a,c in zip(b[:-1],b[1:])]
     def full(plan):
         return np.concatenate([src.body(e,np.arange(*e["music_interval"]))[1] for e in plan["events"]])
+    def activity(points,plan):
+        total=0.;count=0;extent=[]
+        for e in plan["events"]:
+            a,b=e["music_interval"];p=points[a:b];v=np.linalg.norm(np.diff(p,axis=0)*30,axis=-1)
+            total+=float(v.sum());count+=v.size
+            extent.append((len(p),float(np.sqrt(np.mean(np.ptp(p[:,[16,17,18,19,20,21]],axis=0)**2)))))
+        return dict(body_speed_within_events_m_s=total/count,arm_extent_weighted_rms_m=sum(n*x for n,x in extent)/sum(n for n,x in extent),
+            boundary_derivative_templates_excluded=True,descriptive_not_selection_or_posthoc_gate=True)
     def diagnosis(p,q):
         rel=p-p[:,:1];truth=q-q[:,:1]
         return dict(source_error=np.sqrt(np.mean((rel-truth)**2,axis=(1,2))).tolist(),
@@ -48,7 +56,7 @@ def run(cfg,root,out):
             alternatives.append(values)
         cases.append(dict(id=song["id"],name=song["name"]+" · 新旧完整计划",type="plan",frames=song["frames"],fps=30,
             audio=sound(checked(song["audio"]),song["name"]),audio_provenance=song["audio"],beats=song["beats"],waveform=song["waveform"],
-            Old=track(oldp),Graph=track(newp),old_events=[{k:e[k] for k in ("source_uid","time_warp","music_interval","primitive")} for e in old["events"]],boundaries=song["boundaries"],slots=song["slots"],alternatives=alternatives,generations=generations,
+            Old=track(oldp),Graph=track(newp),activity=dict(Old=activity(oldp,old),Graph=activity(newp,new)),old_events=[{k:e[k] for k in ("source_uid","time_warp","music_interval","primitive")} for e in old["events"]],boundaries=song["boundaries"],slots=song["slots"],alternatives=alternatives,generations=generations,
             initial_slot=bindings[0]["selected_slot"],details=dict(old_plan=song["old_plan"],new_plan=song["plan"],semantic_id=semantic_plan_id(new),Root="UNKNOWN",contact="UNKNOWN")))
     population=read("outputs/reference_r26_01/data/result.json")["records"]
     configs=read("src/dunhuang/research/content_r32/config.json")
@@ -66,6 +74,7 @@ def run(cfg,root,out):
             initial_slot=0,details=dict(source_body_only=True,Root="UNKNOWN",contact="UNKNOWN",not_independent_transfer=True)))
     payload=dict(schema="r35_plan_context_view_v1",cases=cases,tracks=tracks,parents=z["parents"].tolist(),selection=read(root/"planning/result.json"),
         context_model=ref(root/"context/context.pt"),generation=ref(root/"generation/result.json"),human_reviewed=False,operational_qualified=False,whole_song_generations=0,smoothing=False)
+    write(out/"plan_activity.json",{c["id"]:c["activity"] for c in cases if c["type"]=="plan"})
     raw=json.dumps(payload,ensure_ascii=False,separators=(",",":"),allow_nan=False).encode()
     (out/"data.js").write_text('window.DANCE_BUNDLE_B64="'+base64.b64encode(gzip.compress(raw,mtime=0)).decode()+'";\n')
     for n in ("index.html","viewer.js","style.css"):shutil.copyfile(Path("src/dunhuang/research/transition_r35/web")/n,out/n)

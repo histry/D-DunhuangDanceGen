@@ -63,14 +63,16 @@ def verify(root):
 def collect(root,out):
     root=Path(root);out=fresh(out);manifest=root/"artifacts_manifest.json";assert not manifest.exists()
     qa=read(root/"browser_qa.json");assert qa["verified"] and qa["localhost_closed"]
-    for n,h in qa["ui_hashes"].items():assert sha(root/"viewer"/n)==h
+    assert qa["viewer_directory"]=="viewer02"
+    viewer=root/qa["viewer_directory"]
+    for n,h in qa["ui_hashes"].items():assert sha(viewer/n)==h
     required=("plan","train02","preview02")
     for phase in required:assert Path(str(root)+"_"+phase+"_receipts/exit_status.txt").read_text().strip()=="0"
     files={str(p.relative_to(root)):dict(sha256=sha(p),bytes=p.stat().st_size) for p in root.rglob("*") if p.is_file()}
     write(manifest,dict(code_commit=commit(),files=files,file_count=len(files),total_bytes=sum(x["bytes"] for x in files.values())))
     summary=dict(config=read("src/dunhuang/research/transition_r35/config.json"),planning=read(root/"planning/result.json"),
         training={k:v for k,v in read(root/"context/result.json").items() if k not in ("history","observations","actual_readouts")},
-        checks=read(root/"independent_checks.json"),viewer=read(root/"viewer/protocol.json"),browser_qa=qa,scientific_manifest=ref(manifest),
+        checks=read(root/"independent_checks.json"),viewer=read(viewer/"protocol.json"),planning_activity=read(viewer/"plan_activity.json"),browser_qa=qa,scientific_manifest=ref(manifest),
         human_reviewed=False,operational_qualified=False,whole_song_generations=0,complete_three_event_sequences=0,full_native_status="NOT_EVALUABLE_22_OF24")
     write(out/"r35_summary.json",summary);write(out/"r35_checks.json",summary["checks"])
     write(out/"r35_receipt.json",dict(code_commit=commit(),scientific_manifest=ref(manifest),summary_sha256=sha(out/"r35_summary.json"),
