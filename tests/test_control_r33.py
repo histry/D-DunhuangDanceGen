@@ -84,7 +84,7 @@ def test_dynamic_unknown_frames_do_not_become_zero_targets():
     with pytest.raises(ValueError):body_dynamics(pred,target,torch.zeros_like(valid),torch.ones(2,5))
 
 
-@pytest.mark.parametrize('name',['contracts','context','controller','runtime','preflight','objective','calibrate'])
+@pytest.mark.parametrize('name',['contracts','context','controller','runtime','preflight','objective','calibrate','prepare_held','train','evaluate'])
 def test_r33_cli_modules_import(name):
     import importlib
     importlib.import_module('dunhuang.research.control_r33.'+name)

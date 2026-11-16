@@ -11,8 +11,8 @@ trap 'code=$?;echo "$code" > "$receipt/exit_status.txt";date -u +%FT%TZ > "$rece
 echo tests > "$receipt/phase.txt"
 "$edge" -m pytest tests/test_control_r33.py -q > "$receipt/edge_tests.log" 2>&1
 echo held_clock_recompile > "$receipt/phase.txt"
-"$edge" -m dunhuang.research.control_r33.prepare_held --config "$cfg" --root "$root" --out "$root/held_compilation"
-"$edge" -m dunhuang.research.control_r33.prepare_held --config "$cfg" --root "$root" --out "$root/held_compilation_replay" --replay-from "$root/held_compilation"
+"$edge" -m dunhuang.research.control_r33.prepare_held --config "$cfg" --root "$root" --out "$root/held_compilation_v2"
+"$edge" -m dunhuang.research.control_r33.prepare_held --config "$cfg" --root "$root" --out "$root/held_compilation_v2_replay" --replay-from "$root/held_compilation_v2"
 for arm in Extra Dyn;do
   echo "training_$arm" > "$receipt/phase.txt"
   "$edge" -m dunhuang.research.control_r33.train --config "$cfg" --root "$root" --out "$root/models/$arm" --arm "$arm"
