@@ -121,7 +121,7 @@ def run(cfg,root,out,arm,replay=None):
         auxiliary_state_policy="R34_DYN_ACTUAL_MATCHED_REFERENCE_INITIAL; CURRENT_ARM_REFRESH300; NOT_PER_STEP_ON_POLICY",
         files=old["files"] if replay else {str(p.relative_to(out)):sha(p) for p in out.rglob("*") if p.suffix in (".pt",".npz")},
         operational_qualified=False,full_native_status="NOT_EVALUABLE",whole_song_generations=0)
-    write(out/"result.json",result);write(out/"protocol.json",dict(code_commit=commit(),config=cfg,calibration_sha256=sha(Path(cfg["r33"])/"calibration/result.json"),source_data_sha256=sha(root/"data/arrays.npz"),target_point_contract="SUBTRACT_PELVIS_FROM_LEGACY_AND_FULL_FK; WORLD_ROOT_UNKNOWN")))
+    write(out/"result.json",result);write(out/"protocol.json",dict(code_commit=commit(),config=cfg,calibration_sha256=sha(Path(cfg["r33"])/"calibration/result.json"),source_data_sha256=sha(root/"data/arrays.npz"),target_point_contract="SUBTRACT_PELVIS_FROM_LEGACY_AND_FULL_FK; WORLD_ROOT_UNKNOWN"))
     print("R34_TRAIN_DONE",arm,steps,flush=True)
 if __name__=="__main__":
     p=argparse.ArgumentParser();p.add_argument("--config",required=True);p.add_argument("--root",required=True);p.add_argument("--out",required=True);p.add_argument("--arm",choices=["Extra","Coverage"],required=True);p.add_argument("--replay-from");a=p.parse_args();run(read(a.config),a.root,a.out,a.arm,a.replay_from)
