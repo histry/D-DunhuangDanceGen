@@ -15,6 +15,11 @@ def run(cfg,root,out):
     root=Path(root);checks={};summary=[]
     for name in ('planning','smoothing','generation'):
         if name!='planning':exact(root/name/'arrays.npz',root/(name+'_replay')/'arrays.npz')
+        if name=='planning':
+            from .replay_contract import compare_planning
+            compare_planning(root/name,root/(name+'_replay'),root/'planning_replay_binding.json')
+            checks[name+'_fresh_process_exact_replay']=True
+            continue
         for p in (root/name).glob('*.json'):
             x=p.read_text().replace(str(root/name),'<RUN>');y=(root/(name+'_replay')/p.name).read_text().replace(str(root/(name+'_replay')),'<RUN>');assert x==y,p.name
         checks[name+'_fresh_process_exact_replay']=True

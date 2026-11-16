@@ -53,8 +53,8 @@ def run(cfg,out,replay=None,resume=False):
                 optimizer_steps=0,whole_song_generations=0,operational_qualified=False)
     write(out/'result.json',result)
     if replay:
-        for p in out.glob('*.json'):
-            a=p.read_text().replace(str(out),'<RUN>');b=(Path(replay)/p.name).read_text().replace(str(Path(replay)),'<RUN>');assert a==b,p.name
+        from .replay_contract import compare_planning
+        compare_planning(replay,out,out/'replay_binding.json')
 
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('--out',required=True);p.add_argument('--replay-from');p.add_argument('--resume-incomplete-plans',action='store_true');a=p.parse_args();run(read('src/dunhuang/research/transition_r37/config.json'),a.out,a.replay_from,a.resume_incomplete_plans)
