@@ -1,0 +1,145 @@
+{
+  "collection_commit": "486ae788f6c61be1b95e830f226cfb77310b5c8d",
+  "summary_sha256": "0b20a924d31b1abe13f69936882e64530d74aed3b3441dd4de3215a2b3a339b2",
+  "scientific_manifest": {
+    "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/geometry_r31_02/artifacts_manifest.json",
+    "sha256": "ea7b2fe1937f94d12afd0939251b07d9a1115648126bf4ddc5e50f62ac5fdc07"
+  },
+  "superseded_audit_manifest": {
+    "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/geometry_r31_01/artifacts_manifest.json",
+    "sha256": "31d0d5cff627fc4e7bd23bce14ca5f240cb253db0549ac347209cc0f5808fa1c"
+  },
+  "evidence": {
+    "independent_checks.json": "4cdbc1eef88e713035679075e4f849de61fa72dc18138d07cf4eea7859dc2e60",
+    "artifacts_manifest.json": "ea7b2fe1937f94d12afd0939251b07d9a1115648126bf4ddc5e50f62ac5fdc07",
+    "audit_replay/result.json": "2570b08aa0d21ce5014e87735491de15ec355df11e3a296725561335147fe0f4",
+    "audit_replay/protocol.json": "25b1e7b946dddc6e87fd26d46677a6533cb5b75d8eaf2f605f181f3e2b082e83",
+    "videos/protocol.json": "79bb8e0aff417251c824bd8367b89119b326c1a2f4db07e42ef62fa59e70c603",
+    "change/result.json": "3a46f0fba90cf2e59da166e206d9820a320c9e698d0e5ad2e9d47fd9a7f2aa81",
+    "change/protocol.json": "52db8793ff76c024624109bb89c08613c13723d80bb405db6b4c6ead711d0803",
+    "qualification/result.json": "d943d989c6aceb20c122ff525b77dd7c345a5a235c7d0ec6b29b8ba342796d76",
+    "qualification/protocol.json": "83854154d56c386123617f98337798d2d48291b029ec8b7648061ff53c55a435",
+    "change_replay/result.json": "3a46f0fba90cf2e59da166e206d9820a320c9e698d0e5ad2e9d47fd9a7f2aa81",
+    "change_replay/protocol.json": "52db8793ff76c024624109bb89c08613c13723d80bb405db6b4c6ead711d0803",
+    "probe_replay/result.json": "48b8d3a45fbe8d41d4803c537322a7e3a54c0174fadea7c6484fcb92cf8b2e19",
+    "probe_replay/protocol.json": "c07f5e2d5bc1038e0871fbb5f2a3da4ddfb6ca40729055a0c9bc2931698c2134",
+    "evaluation/result.json": "72a39e5a89bc5ef683cff211a34f4ca81dd06a7e189310a25a4e169efcd1cbbf",
+    "evaluation/protocol.json": "3659cc4f95831c70b4dec43ddf31fdae49aa48ffd3c67b381fca2a045d2b5f5f",
+    "probe/result.json": "1ec6b667b5a9b13da8d44f84e5d24a27405649b82c4567bba17a3ffa6b693dac",
+    "probe/protocol.json": "c07f5e2d5bc1038e0871fbb5f2a3da4ddfb6ca40729055a0c9bc2931698c2134",
+    "models/CanonicalIO/result.json": "00683fb1b8516d7b815c3b0bca0c80714950d98e156d677805c07cbf5ac54eb1",
+    "models/CanonicalIO/protocol.json": "95d752a2eb0092a7cba8922e24d6fcdb7d1081058296d5e904a6944031184b35",
+    "models/LegacyIO_replay/result.json": "40b7c24a3ebadb0c67314e4f2a0e20e7f7e779bf6cdc4d05b7f5f6f47545caf2",
+    "models/LegacyIO_replay/actual_0.json": "419c44f38e3fff8cbb7d8b3314afacd7328a0f1219f1a6e8c78ceb2b1a8ce2a6",
+    "models/LegacyIO_replay/actual_1.json": "62910e35bd23e674c9dc8b9caeea1c91bfa6b1927e1dfd10f27f522ee7d47c2f",
+    "models/LegacyIO_replay/protocol.json": "95d752a2eb0092a7cba8922e24d6fcdb7d1081058296d5e904a6944031184b35",
+    "models/LegacyIO_replay/actual_599.json": "0755732056895c111d7fdd60e4fafaf54db2cb27b9fdaf2e7f2a6071b4f3d5bc",
+    "models/LegacyIO_replay/actual_1199.json": "e0104db18bcc4076547812ca33e4dd7ad221e5bdf9ce606c27477baac57e9804",
+    "models/CanonicalIO_replay/result.json": "9b794b08b35c6cb9d66bd09f9a541ee5117d9fc720317e7a674bb5d7092797f4",
+    "models/CanonicalIO_replay/actual_0.json": "faa01a60ae06fa601c7e2af58854329b8a8a4852c358d073d52fca41614f221d",
+    "models/CanonicalIO_replay/actual_1.json": "4a818725f75f9e82b0eb4f340a4d04e1045b5a8764da8ee25b6bd25def2b3c66",
+    "models/CanonicalIO_replay/protocol.json": "95d752a2eb0092a7cba8922e24d6fcdb7d1081058296d5e904a6944031184b35",
+    "models/CanonicalIO_replay/actual_599.json": "9020e8effb807992d911781c9829bddc973f06d4b657b5dd545d6991c175da23",
+    "models/CanonicalIO_replay/actual_1199.json": "92861571fb698c42bec2fa3646e6931c4bd4e45d147c398035ebb766a938638b",
+    "models/LegacyIO/result.json": "9afed7856be69791bbc36a6a110a2f57666f9677080f2477b1128238f3368048",
+    "models/LegacyIO/protocol.json": "95d752a2eb0092a7cba8922e24d6fcdb7d1081058296d5e904a6944031184b35",
+    "qualification_replay/result.json": "d943d989c6aceb20c122ff525b77dd7c345a5a235c7d0ec6b29b8ba342796d76",
+    "qualification_replay/protocol.json": "83854154d56c386123617f98337798d2d48291b029ec8b7648061ff53c55a435",
+    "probe_failed_nondeterministic/result.json": "23ec93925dbf020f63b72808ebe7169d7a96186e15411f909001fe118da50cd0",
+    "probe_failed_nondeterministic/protocol.json": "aadeca1d7108833139817e8f551a7a53eb180de24b2ce00adff0744d15e5a460",
+    "audit/result.json": "2570b08aa0d21ce5014e87735491de15ec355df11e3a296725561335147fe0f4",
+    "audit/protocol.json": "25b1e7b946dddc6e87fd26d46677a6533cb5b75d8eaf2f605f181f3e2b082e83",
+    "evaluation_replay/result.json": "72a39e5a89bc5ef683cff211a34f4ca81dd06a7e189310a25a4e169efcd1cbbf",
+    "evaluation_replay/protocol.json": "3659cc4f95831c70b4dec43ddf31fdae49aa48ffd3c67b381fca2a045d2b5f5f"
+  },
+  "receipts": {
+    "outputs/geometry_r31_02_initial_receipts": {
+      "execution_commit.txt": "1e895e4e525d0353f0486d1939c251da491451d95bed8175e14cefea7dde4c22",
+      "phase.txt": "d3be030801b90ea8057d3997d9845c7f850cc7b784450645d5ec2811cc927d7a",
+      "started_utc.txt": "0fe0e33c9b2d2370c81b7a9ebdd7293ef5b455af80aba477a0213b4f1410ab42",
+      "pytest.log": "4147e8fc1f00ad30fe896c945b731c4ecd1a7e71128554cf1f0d67db0202f87e",
+      "edge_tests.log": "0f18846f02505ee432787dbe3891961c1d8a1fbe2c82d1b7deb7e21dde073c5c",
+      "exit_status.txt": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "finished_utc.txt": "3015402ac721c5868ffd7a8fae9a852a378b75b7d13df6b4c516a37ae82b69e7"
+    },
+    "outputs/geometry_r31_02_qualification_recovery_receipts": {
+      "execution_commit.txt": "65b4406c0e6eda973b3ced638613e90aba2e326a770e24c8ebfdb8582674d15c",
+      "phase.txt": "d3be030801b90ea8057d3997d9845c7f850cc7b784450645d5ec2811cc927d7a",
+      "started_utc.txt": "d65c323e3f830ce65d1ddeb20660d29e844c6dca09f390896034bf51de9c1723",
+      "pytest.log": "dc986f6b06e6fbb396d56ee7a476b059fcd6f1739079192ce9cf533efab9c778",
+      "edge_tests.log": "c9a1066f22a45df682a029addb69f019344374b1fd57e5d76de3e1929fc8b330",
+      "exit_status.txt": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "finished_utc.txt": "be1a80a1fa793ba118317697851711fe2aaad08de1e4c9ce3a1544b7e4cf93e5"
+    },
+    "outputs/geometry_r31_02_training_receipts": {
+      "execution_commit.txt": "08ba964e5f10c5f536cc1cc0f95822c328d8432ed736f7d42f48d99ca30f486e",
+      "phase.txt": "d3be030801b90ea8057d3997d9845c7f850cc7b784450645d5ec2811cc927d7a",
+      "started_utc.txt": "6ee4b2f3b9c5430e6c104b6995fbdb61cd4765166dc5e8bb616bb1472af967ac",
+      "pytest.log": "e1ce251d7b71e24f3cc72a18208fb7f1c43a96febfea0e304e5fe11c08fb1f49",
+      "edge_tests.log": "2b4ba39e411cf799915c196298831a737f22d9f854a246dcb6c3c497b2f02519",
+      "exit_status.txt": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "finished_utc.txt": "43e27129143e833d4b772ef4d465f1fa949fcc2473926221be03a2584c699db2"
+    },
+    "outputs/geometry_r31_02_evaluation_recovery_receipts": {
+      "execution_commit.txt": "55f8af160f9d1f02f4e1f644d065771ef07e239a7b326087b22674ebd0b990d4",
+      "phase.txt": "d3be030801b90ea8057d3997d9845c7f850cc7b784450645d5ec2811cc927d7a",
+      "started_utc.txt": "a5f0b857bbdfedf5ecb86e5eb6549b52eec22a32020fdacb8add4d6cbf96598f",
+      "exit_status.txt": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "finished_utc.txt": "143524b32fbc0f7b35a7c4d9b9d21db2b57b5cd5b3d58679957ef3852ae3633c"
+    },
+    "outputs/geometry_r31_02_finish_receipts": {
+      "execution_commit.txt": "2b943f1be11ec6a873cfd75ecb43b2af96858005b4a677512f10ee6a82cd916c",
+      "phase.txt": "d3be030801b90ea8057d3997d9845c7f850cc7b784450645d5ec2811cc927d7a",
+      "started_utc.txt": "232d2f34643bd35af20bc934c5c11ada82d058bcf49d112b4571f2821a03240e",
+      "exit_status.txt": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "finished_utc.txt": "9c3cd5ec10b06234270cd35645d30af15e669fbdda0823ac54cb771779bd6411"
+    }
+  },
+  "failed_qualification_receipts": {
+    "execution_commit.txt": "f0fb440c3d84284d6f85245752f72007f9b24f5a71e9d9da225c161fc68e7b1e",
+    "phase.txt": "a537f3aee14d57458a77a31ffdc2ed096ae373008d623781bf4a31022cde75b9",
+    "started_utc.txt": "8fbdf4c0ceda230110c3cc8a1af4a29aee86840943d225a3c5c05dbd71a0a846",
+    "pytest.log": "7fcb92c943455fa03fe1100e54d723c36883410ba46ff4642ff103abbc340faf",
+    "edge_tests.log": "6faecb9363b754feb1dcb1207e8bd6f1835343fa769ba58cab553c6c51d160a4",
+    "exit_status.txt": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+    "finished_utc.txt": "cfeb52b3804c15d4eba271343a94aaa289359918c17c0dd787be58a4b87990e9"
+  },
+  "failed_evaluation_receipts": {
+    "execution_commit.txt": "39a6f61114bb14b1fbda84a3c5dc79d0229f0325c6044057e5fd5516e611b695",
+    "phase.txt": "1e56fb5c65ebc692f81cb474d89185dca216148821a67f9043782aa85ef665a0",
+    "started_utc.txt": "59e09ba4ced04bb77666991430f08f569434a4af48b9f1e5daad7fbe0a42fbb2",
+    "exit_status.txt": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865",
+    "finished_utc.txt": "996e8e1e35a67c376684ec82f0ddb2dd9b91dcefc13b11a9b7b44b55277c0385"
+  },
+  "gradient_recovery": {
+    "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/geometry_r31_02_gradient_recovery.json",
+    "sha256": "fa170a456ddd4abd38bf5a0dead98975b949fb26f196a812783eacfc6a6669d9"
+  },
+  "initial_superseded_receipts": {
+    "execution_commit.txt": "8274f6aae01213e9abe7f9360616c5bbd1c37ef844b7919627a0cbb188dde9c1",
+    "phase.txt": "d3be030801b90ea8057d3997d9845c7f850cc7b784450645d5ec2811cc927d7a",
+    "started_utc.txt": "654d9984bac66bd867d6262074525a565af5e6ac1da5dafad3455f676cd9ab4f",
+    "pytest.log": "182f41a5c78882ab2710a5c389cff23d019eb8ff1fb2d6409fb6fbb84ea11771",
+    "edge_tests.log": "9fe17b0188270dee55574f487842bfdc85861c7dca5c4c925b90b1f6bf41702f",
+    "exit_status.txt": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+    "finished_utc.txt": "81770acdd09cb4d39c2c8e9d0fc1d1634c6f809efb9b5ef555fd9e482929561e"
+  },
+  "qualification_recovery": {
+    "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/geometry_r31_02_qualification_recovery.json",
+    "sha256": "2226375faf013a6c2e7083755458d10a5db2207798f53574f5158f45fb793ade"
+  },
+  "launcher_logs": {
+    "outputs/geometry_r31_02_initial_launcher.log": "ab625d6b9671ac31b2c698ad4fa08017100ba40c11ea8b9f94748ef061f7b524",
+    "outputs/geometry_r31_02_qualification_launcher.log": "8e7827eef9b419806fde9016410a887653fffc91d7898a8544c37d8ac41d10ae",
+    "outputs/geometry_r31_01_initial_launcher.log": "31e38e4dac374298e232d3657bb323bcaf58cb44383b69685c0f07ee44b2b771",
+    "outputs/geometry_r31_02_training_launcher.log": "9142a0cc3232695535c3853e2fe8ff49f427b46e1063503ea66fd80584886371",
+    "outputs/geometry_r31_02_evaluation_launcher.log": "c7482351927a673716662f09ebd6d70c79ad1973aa5bfb5fa82e9d95be4b3fff",
+    "outputs/geometry_r31_02_finish_launcher.log": "acb34aca064986e8c72a44f59dfaa2c3bcb7fd523ace220fcdfcd4104bcfd1db",
+    "outputs/geometry_r31_02_qualification_recovery_launcher.log": "2b72812e736be76623afa6a64580cfd213cabfc1664e2a722708f2ec15a95620",
+    "outputs/geometry_r31_02_evaluation_recovery_launcher.log": "94d006d5fa5fb724b630fb7842aff2695165a7e6ffa1241e08dfb293a611644d"
+  },
+  "temporary_ssh_files_created": 0,
+  "temporary_ssh_files_remaining": 0,
+  "whole_song_generations": 0,
+  "operational_qualified": false
+}

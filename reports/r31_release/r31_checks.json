@@ -1,0 +1,325 @@
+{
+  "code_commit": "486ae788f6c61be1b95e830f226cfb77310b5c8d",
+  "array_bundles_exact": 74,
+  "gradient_vector_bundle_numerically_replayed": 1,
+  "gradient_vectors_replayed": 80,
+  "gradient_vector_relative_l2_tolerance": 1e-05,
+  "gradient_vector_relative_l2_errors": {
+    "LegacyIO_q_999_reconstruction": 0.0,
+    "LegacyIO_q_999_Root_D1": 0.0,
+    "LegacyIO_q_999_body_D1": 0.0,
+    "LegacyIO_q_999_Root_D2": 0.0,
+    "LegacyIO_q_999_body_D2": 0.0,
+    "LegacyIO_q_519_reconstruction": 0.0,
+    "LegacyIO_q_519_Root_D1": 0.0,
+    "LegacyIO_q_519_body_D1": 0.0,
+    "LegacyIO_q_519_Root_D2": 0.0,
+    "LegacyIO_q_519_body_D2": 0.0,
+    "LegacyIO_q_119_reconstruction": 0.0,
+    "LegacyIO_q_119_Root_D1": 0.0,
+    "LegacyIO_q_119_body_D1": 0.0,
+    "LegacyIO_q_119_Root_D2": 0.0,
+    "LegacyIO_q_119_body_D2": 0.0,
+    "LegacyIO_q_19_reconstruction": 0.0,
+    "LegacyIO_q_19_Root_D1": 0.0,
+    "LegacyIO_q_19_body_D1": 0.0,
+    "LegacyIO_q_19_Root_D2": 0.0,
+    "LegacyIO_q_19_body_D2": 0.0,
+    "LegacyIO_actual_999_reconstruction": 0.0,
+    "LegacyIO_actual_999_Root_D1": 0.0,
+    "LegacyIO_actual_999_body_D1": 0.0,
+    "LegacyIO_actual_999_Root_D2": 0.0,
+    "LegacyIO_actual_999_body_D2": 0.0,
+    "LegacyIO_actual_519_reconstruction": 0.0,
+    "LegacyIO_actual_519_Root_D1": 0.0,
+    "LegacyIO_actual_519_body_D1": 0.0,
+    "LegacyIO_actual_519_Root_D2": 0.0,
+    "LegacyIO_actual_519_body_D2": 0.0,
+    "LegacyIO_actual_119_reconstruction": 0.0,
+    "LegacyIO_actual_119_Root_D1": 0.0,
+    "LegacyIO_actual_119_body_D1": 0.0,
+    "LegacyIO_actual_119_Root_D2": 0.0,
+    "LegacyIO_actual_119_body_D2": 0.0,
+    "LegacyIO_actual_19_reconstruction": 0.0,
+    "LegacyIO_actual_19_Root_D1": 0.0,
+    "LegacyIO_actual_19_body_D1": 0.0,
+    "LegacyIO_actual_19_Root_D2": 0.0,
+    "LegacyIO_actual_19_body_D2": 0.0,
+    "CanonicalIO_q_999_reconstruction": 0.0,
+    "CanonicalIO_q_999_Root_D1": 0.0,
+    "CanonicalIO_q_999_body_D1": 0.0,
+    "CanonicalIO_q_999_Root_D2": 0.0,
+    "CanonicalIO_q_999_body_D2": 0.0,
+    "CanonicalIO_q_519_reconstruction": 0.0,
+    "CanonicalIO_q_519_Root_D1": 0.0,
+    "CanonicalIO_q_519_body_D1": 0.0,
+    "CanonicalIO_q_519_Root_D2": 0.0,
+    "CanonicalIO_q_519_body_D2": 0.0,
+    "CanonicalIO_q_119_reconstruction": 0.0,
+    "CanonicalIO_q_119_Root_D1": 0.0,
+    "CanonicalIO_q_119_body_D1": 0.0,
+    "CanonicalIO_q_119_Root_D2": 0.0,
+    "CanonicalIO_q_119_body_D2": 0.0,
+    "CanonicalIO_q_19_reconstruction": 0.0,
+    "CanonicalIO_q_19_Root_D1": 0.0,
+    "CanonicalIO_q_19_body_D1": 0.0,
+    "CanonicalIO_q_19_Root_D2": 0.0,
+    "CanonicalIO_q_19_body_D2": 0.0,
+    "CanonicalIO_actual_999_reconstruction": 0.0,
+    "CanonicalIO_actual_999_Root_D1": 0.0,
+    "CanonicalIO_actual_999_body_D1": 0.0,
+    "CanonicalIO_actual_999_Root_D2": 0.0,
+    "CanonicalIO_actual_999_body_D2": 0.0,
+    "CanonicalIO_actual_519_reconstruction": 0.0,
+    "CanonicalIO_actual_519_Root_D1": 0.0,
+    "CanonicalIO_actual_519_body_D1": 0.0,
+    "CanonicalIO_actual_519_Root_D2": 0.0,
+    "CanonicalIO_actual_519_body_D2": 0.0,
+    "CanonicalIO_actual_119_reconstruction": 0.0,
+    "CanonicalIO_actual_119_Root_D1": 0.0,
+    "CanonicalIO_actual_119_body_D1": 0.0,
+    "CanonicalIO_actual_119_Root_D2": 0.0,
+    "CanonicalIO_actual_119_body_D2": 0.0,
+    "CanonicalIO_actual_19_reconstruction": 0.0,
+    "CanonicalIO_actual_19_Root_D1": 0.0,
+    "CanonicalIO_actual_19_body_D1": 0.0,
+    "CanonicalIO_actual_19_Root_D2": 0.0,
+    "CanonicalIO_actual_19_body_D2": 0.0
+  },
+  "generator_update_pairs": 8,
+  "update_checks": [
+    {
+      "encoder": {
+        "actual": 0.028649866580963135,
+        "expected": 0.028649872168898582,
+        "relative_error": 1.9504224712593871e-07
+      },
+      "reference_output": {
+        "actual": 0.05053053796291351,
+        "expected": 0.05053053796291351,
+        "relative_error": 0.0
+      },
+      "qkv": {
+        "actual": 0.011412260122597218,
+        "expected": 0.011412259191274643,
+        "relative_error": 8.160719827717412e-08
+      },
+      "action_input": {
+        "actual": 0.03494873642921448,
+        "expected": 0.03494873642921448,
+        "relative_error": 0.0
+      },
+      "action_output": {
+        "actual": 0.1596703827381134,
+        "expected": 0.1596703827381134,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "encoder": {
+        "actual": 0.012110146693885326,
+        "expected": 0.012110145762562752,
+        "relative_error": 7.690431818515653e-08
+      },
+      "reference_output": {
+        "actual": 0.02162311226129532,
+        "expected": 0.02162311226129532,
+        "relative_error": 0.0
+      },
+      "qkv": {
+        "actual": 0.004533358849585056,
+        "expected": 0.004533358383923769,
+        "relative_error": 1.027188234503787e-07
+      },
+      "action_input": {
+        "actual": 0.021067660301923752,
+        "expected": 0.021067660301923752,
+        "relative_error": 0.0
+      },
+      "action_output": {
+        "actual": 0.11377716064453125,
+        "expected": 0.11377716064453125,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "encoder": {
+        "actual": 0.009271948598325253,
+        "expected": 0.009271948598325253,
+        "relative_error": 0.0
+      },
+      "reference_output": {
+        "actual": 0.005216821096837521,
+        "expected": 0.005216821096837521,
+        "relative_error": 0.0
+      },
+      "qkv": {
+        "actual": 0.0019161737291142344,
+        "expected": 0.001916173961944878,
+        "relative_error": 1.2150809283388403e-07
+      },
+      "action_input": {
+        "actual": 0.017221936956048012,
+        "expected": 0.01722193881869316,
+        "relative_error": 1.0815536908127855e-07
+      },
+      "action_output": {
+        "actual": 0.03147430345416069,
+        "expected": 0.03147430345416069,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "encoder": {
+        "actual": 0.009480479173362255,
+        "expected": 0.009480476379394531,
+        "relative_error": 2.9470743754142483e-07
+      },
+      "reference_output": {
+        "actual": 0.004738016985356808,
+        "expected": 0.004738016985356808,
+        "relative_error": 0.0
+      },
+      "qkv": {
+        "actual": 0.0022453386336565018,
+        "expected": 0.0022453386336565018,
+        "relative_error": 0.0
+      },
+      "action_input": {
+        "actual": 0.012585291638970375,
+        "expected": 0.01258529257029295,
+        "relative_error": 7.4000868030182e-08
+      },
+      "action_output": {
+        "actual": 0.025180594995617867,
+        "expected": 0.025180594995617867,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "encoder": {
+        "actual": 0.020175956189632416,
+        "expected": 0.020175958052277565,
+        "relative_error": 9.23200347861891e-08
+      },
+      "reference_output": {
+        "actual": 0.04230239987373352,
+        "expected": 0.04230239987373352,
+        "relative_error": 0.0
+      },
+      "qkv": {
+        "actual": 0.008267522789537907,
+        "expected": 0.008267522789537907,
+        "relative_error": 0.0
+      },
+      "action_input": {
+        "actual": 0.032942045480012894,
+        "expected": 0.032942045480012894,
+        "relative_error": 0.0
+      },
+      "action_output": {
+        "actual": 0.08671104907989502,
+        "expected": 0.08671104907989502,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "encoder": {
+        "actual": 0.006529401056468487,
+        "expected": 0.006529401522129774,
+        "relative_error": 7.131760632724098e-08
+      },
+      "reference_output": {
+        "actual": 0.017919063568115234,
+        "expected": 0.017919063568115234,
+        "relative_error": 0.0
+      },
+      "qkv": {
+        "actual": 0.003115159459412098,
+        "expected": 0.0031151592265814543,
+        "relative_error": 7.474116387538316e-08
+      },
+      "action_input": {
+        "actual": 0.016745945438742638,
+        "expected": 0.016745945438742638,
+        "relative_error": 0.0
+      },
+      "action_output": {
+        "actual": 0.05972785875201225,
+        "expected": 0.05972785875201225,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "encoder": {
+        "actual": 0.0067080850712955,
+        "expected": 0.006708088330924511,
+        "relative_error": 4.859251772412084e-07
+      },
+      "reference_output": {
+        "actual": 0.004817413631826639,
+        "expected": 0.004817413631826639,
+        "relative_error": 0.0
+      },
+      "qkv": {
+        "actual": 0.0012153168208897114,
+        "expected": 0.0012153168208897114,
+        "relative_error": 0.0
+      },
+      "action_input": {
+        "actual": 0.014442876912653446,
+        "expected": 0.014442876912653446,
+        "relative_error": 0.0
+      },
+      "action_output": {
+        "actual": 0.02726692147552967,
+        "expected": 0.02726692147552967,
+        "relative_error": 0.0
+      }
+    },
+    {
+      "encoder": {
+        "actual": 0.009570485912263393,
+        "expected": 0.009570485912263393,
+        "relative_error": 0.0
+      },
+      "reference_output": {
+        "actual": 0.0038144185673445463,
+        "expected": 0.0038144185673445463,
+        "relative_error": 0.0
+      },
+      "qkv": {
+        "actual": 0.0016490465495735407,
+        "expected": 0.0016490465495735407,
+        "relative_error": 0.0
+      },
+      "action_input": {
+        "actual": 0.008940795436501503,
+        "expected": 0.008940795436501503,
+        "relative_error": 0.0
+      },
+      "action_output": {
+        "actual": 0.02106693759560585,
+        "expected": 0.02106693759560585,
+        "relative_error": 0.0
+      }
+    }
+  ],
+  "gradient_norm_rtol": 1e-05,
+  "gradient_norm_atol": 0,
+  "optimizer_steps": 2400,
+  "replay_optimizer_steps": 0,
+  "sampler_calls": 40,
+  "generated_trajectories": 172,
+  "replay_sampler_calls": 40,
+  "replay_generated_trajectories": 172,
+  "reused_frozen_rows": 82,
+  "own_contract_and_frozen_NoRef_separated": true,
+  "old_source_proxy_gate_exact": true,
+  "superseded_audit_preserved": true,
+  "failed_qualification_preserved": true,
+  "frozen_code_unchanged": true,
+  "whole_song_generations": 0,
+  "full_native_status": "NOT_EVALUABLE",
+  "operational_qualified": false
+}
