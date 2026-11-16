@@ -45,6 +45,9 @@ def run(cfg,out,replay=None):
                 back[complete]=b[0].cpu().numpy();normalized[complete]=z[0].cpu().numpy()
                 points[complete]=f(b,s)[0,:,:22].cpu().numpy()
         target=source["model_points"]
+        if not row["Root_observed"]:
+            # The source Root/height placeholders are not geometry truth.
+            target=target-target[:,:1];points=points-points[:,:1];numerical=numerical-numerical[:,:1]
         angles=None;position=None
         if complete.any():
             decoded=matrices(back[complete,7:].reshape(-1,22,6),row=True)
@@ -59,6 +62,8 @@ def run(cfg,out,replay=None):
         tolerances={str(k):max(cfg["numerical_derivative_absolute_floors"][k-1],cfg["numerical_baseline_multiplier"]*oracle[str(k)]["rmse"]) for k in (1,2,3)}
         temporal=all(derivative[str(k)]["rmse"] is not None and derivative[str(k)]["rmse"]<=tolerances[str(k)] for k in (1,2,3))
         qualified=bool(feasible.all() and (other_support is not False) and angles is not None and angles<=cfg["angle_max_rad"] and position<=cfg["position_max_m"] and temporal)
+        if not row["Root_observed"]:
+            encoded[:,:7]=np.nan;normalized[:,:7]=np.nan;back[:,:7]=np.nan
         failure=np.argwhere(~feasible)
         path=out/(row["uid"]+".npz")
         np.savez_compressed(path,source_raw=raw,source22=target,encoded_raw=encoded,normalized_target=normalized,decoded22=points,numerical_oracle22=numerical,
@@ -71,7 +76,7 @@ def run(cfg,out,replay=None):
             weak_actual_box_joint_frames=None if weak is None else int(weak["feasible"].sum()),
             minimum_alpha=float(np.nanmin(result["coefficients"][:,:,0])) if feasible.any() else None,
             minimum_orthogonal_beta_length=float(np.nanmin(result["coefficients"][:,:,2])) if feasible.any() else None,
-            angle_max_rad=angles,position_max_m=position,derivatives=derivative,numerical_baseline=oracle,derivative_tolerances=tolerances,
+            angle_max_rad=angles,position_max_m=position,position_space="WORLD_COMMON_MODEL0" if row["Root_observed"] else "ROOT_RELATIVE_ONLY",derivatives=derivative,numerical_baseline=oracle,derivative_tolerances=tolerances,
             Root_C4_support=other_support,geometry_qualified=qualified,arrays=path.name,sha256=sha(path),
             scope="OBSERVED_COMMON22_GEOMETRY; NAN_PRESERVES_FAILURES; UNKNOWN_ROOT_CONTACT_NOT_TRAINING_TRUTH")
         records.append(record)
