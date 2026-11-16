@@ -48,7 +48,14 @@ def run(cfg,root,out,generated=None,source_only=False):
                 for arm in ('R36Like','Joint'):
                     R,Root=decode(a[key+'_'+arm+'_139'][i]);values[arm]=curves(R,ref,Root,J,parents)
                 values['Geometry']=curves(a[key+'_Geometry_R'],ref,np.zeros((256,3)),J,parents);diag.append(values)
+            linked=None
+            if row['consumes_new_r37_plan'] and not source_only:
+                for song in read(root/'planning/result.json')['songs']:
+                    plan=read(song['new_plan']);semantic=hashlib.sha256(json.dumps(plan,sort_keys=True).encode()).hexdigest()
+                    if semantic==row['plan_sha256']:linked=song['id'];break
+                if linked is None:raise ValueError('Generation does not bind to the displayed new plan')
             cases.append(dict(id='bridge_'+key,kind='bridge',name=row['song']+' · '+('真实消费新R37计划' if row['consumes_new_r37_plan'] else '保留旧失败边界'),frames=256,audio='audio/'+wav.name,
+                linked_plan_case_id=linked,window_start=row['binding']['window_start'],
                 panels=panels,events=[dict(e,music_interval=e['local_interval']) for e in row['binding']['events']],old_events=[dict(music_interval=row['gap'])],
                 contexts=[[row['gap'][0]-8,row['gap'][0]],[row['gap'][1],row['gap'][1]+8]],beats=[],phrases=[],repetitions=[],summary=row,diagnostics_variants=diag,
                 scope='绿色为实际选中事件；橙色为共同过渡区，主体只读。Joint=几何连接底座+有界Lodge修改，不能归为学会衔接或新Context训练收益。Root/接触无来源真值。'))

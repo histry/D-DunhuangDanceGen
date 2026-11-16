@@ -24,6 +24,9 @@ def run(cfg,root,out):
     z=np.load(root/'generation/arrays.npz');J=z['skeleton_J22'];parents=z['parents'];meta=read(root/'generation/result.json')
     for row in meta['records']:
         key=row['key'];reference=z[key+'_reference_R'];record=dict(key=key,new_plan_consumed=row['consumes_new_r37_plan'],methods={})
+        if row['consumes_new_r37_plan']:
+            import json,hashlib
+            new=read(root/'planning/song0_plan.json');assert hashlib.sha256(json.dumps(new,sort_keys=True).encode()).hexdigest()==row['plan_sha256']
         record['methods']['Reference']=[metrics(reference,reference,np.zeros((256,3)),J,parents,[128],row['gap'])]
         G=z[key+'_Geometry_R'];record['methods']['Geometry']=[metrics(G,reference,np.zeros((256,3)),J,parents,[128],row['gap'])]
         for arm in ('R36Like','Joint'):
