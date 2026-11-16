@@ -10,7 +10,7 @@ from dunhuang.research.state_r27.trace import sample,trace_arrays
 from dunhuang.research.contract_r28.input_contract import foot_proxy
 from dunhuang.research.reference_r26.evaluate import timing
 
-def run(cfg,root,out,domain,replay=None):
+def run(cfg,root,out,domain,replay=None,arm_override=None):
     root=Path(root);out=fresh(out);forbid_optimizers()
     d,n,s,f,e,info,a=runtime(cfg,0);frozen=digest(d.model);
     arrays={};records=[];noises=[];calls=0;reused=0;baseline={}
@@ -44,12 +44,12 @@ def run(cfg,root,out,domain,replay=None):
                     measure(role,"baseline" if mode=="none" else "F0",mode,k,raw.cpu().numpy(),p.cpu().numpy(),pred.cpu().numpy(),values,items)
                     noises.append(dict(role=role,arm="F0",mode=mode,seed_index=k,noise=noise))
                     if mode=="none":baseline[role,k]=pred.cpu().numpy()
-    arm="B1" if domain=="aist" else "F1";a.beta=cfg["beta"];restore(a,root/f"models/{arm}/adapter.pt")
+    arm=arm_override or ("B1" if domain=="aist" else "F1");a.beta=cfg["beta"];restore(a,root/f"models/{arm}/adapter.pt")
     for role in ("train","holdout"):
         values,items=rows(cfg,root,domain,role);music=torch.tensor(np.stack([x["music"] for x in values]),device="cuda")
         for mode in ("correct","wrong_clock","swapped","none"):
             for k,seeds in enumerate(cfg["real_eval_seeds"]):
-                watch=domain=="aist" and role=="train" and mode=="correct" and k==0
+                watch=arm=="B1" and domain=="aist" and role=="train" and mode=="correct" and k==0
                 pred,noise,trace=sample(d,a,None if mode=="none" else packet(values,mode),music,seeds,trace=watch,selected=cfg["times"]);calls+=1
                 if watch:np.savez_compressed(out/"actual_B1.npz",final=pred.cpu().numpy(),**trace_arrays(trace))
                 if mode=="none":assert np.array_equal(pred.cpu().numpy(),baseline[role,k])
@@ -60,7 +60,7 @@ def run(cfg,root,out,domain,replay=None):
     assert digest(d.model)==frozen
     gates=[]
     for role in ("train","holdout"):
-        for model in (("B0","B1") if domain=="aist" else ("F0","F1")):
+        for model in (("B0",arm) if domain=="aist" else ("F0",arm)):
             tests=[]
             for i in range(4):
                 for k in range(2):
@@ -89,4 +89,4 @@ def run(cfg,root,out,domain,replay=None):
     if replay:assert result==read(Path(replay)/"result.json");same_arrays(path,Path(replay)/path.name)
     a.close();print("R29_SOURCE_GATES",domain,[(x["arm"],x["role"],x["recordings_passed"],x["recordings"]) for x in gates],flush=True)
 if __name__=="__main__":
-    p=argparse.ArgumentParser();p.add_argument("--config",required=True);p.add_argument("--root",required=True);p.add_argument("--out",required=True);p.add_argument("--domain",required=True,choices=["aist","fine"]);p.add_argument("--replay-from");a=p.parse_args();run(read(a.config),a.root,a.out,a.domain,a.replay_from)
+    p=argparse.ArgumentParser();p.add_argument("--config",required=True);p.add_argument("--root",required=True);p.add_argument("--out",required=True);p.add_argument("--domain",required=True,choices=["aist","fine"]);p.add_argument("--replay-from");p.add_argument("--arm",choices=["COVER"]);a=p.parse_args();run(read(a.config),a.root,a.out,a.domain,a.replay_from,a.arm)
