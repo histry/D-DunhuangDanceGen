@@ -1,0 +1,17 @@
+{
+  "baseline": "c015f2a96e79f5f084c3f13559475547aebe83e6",
+  "r38": "outputs/bridge_r38_01",
+  "calibration_seed": 39041,
+  "root_budget_quantile": 0.99,
+  "root_budget_range_m": [0.02, 0.5],
+  "root_observation_sigma_range_m": [0.005, 0.5],
+  "body_observation_sigma_range_rad": [0.005, 0.3],
+  "root_process_jerk_range_m_s3": [0.1, 1000.0],
+  "body_process_jerk_range_rad_s3": [1.0, 3000.0],
+  "boundary_position_samples": 3,
+  "calibration_policy": "R38_REGISTERED_16_TRAIN_RECORDINGS_ONLY; ONE_FIXED_RULE_NO_VAL_SEARCH",
+  "new_training_steps": 0,
+  "whole_song_generations": 0,
+  "operational_qualified": false,
+  "sdmr_can_route": false
+}
