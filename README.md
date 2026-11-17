@@ -3,6 +3,10 @@
 当前默认路径：**Event Catalog → Music Timeline → Event Plan → 冻结 EDGE（Temporal V0.5）→ 原 Native 验收**。学习检索保留shadow。研究路径已完成真实151D配对补全，以及原生SO(3)跨录制条件的Cross/Additive同参数量训练（各1,200步）；事件跟随与完整生成质量仍未合格。
 
 
+新增 [R43音乐条件Core与SDMR-E2报告](reports/r43_release/report.md)、[机器摘要](reports/r43_release/summary.json)及[独立封存回执](reports/r43_release/seal_recheck.json)。先回传并验收真实生成/来源候选，再执行固定对照。Module II：22案例×两种子，220轨迹及220条完整采样重放；音乐门2/8、ChangE动态保持0/4，Core风险门0/44，全部Geometry回退，新生成训练/整曲均0。SDMR-E2：10,107子窗口、178查询、433有效任务；三组各240步，曝光Val困难检索Rank41.37%，未优于Frozen42.11%和Shuffled43.15%，继续Shadow。12数组包与5,024父代文件独立复验，CPU595通过/10跳过、GPU合同12通过；失败与中断回执保留。
+
+本机观看文件位于 `outputs/music_reperformance_r43_01/viewer_guarded/index.html`（实际生成）、`outputs/sdmr_event_rank_01/viewer_change_v2/index.html`（23个完整ChangE候选查询）、`outputs/sdmr_event_rank_01/viewer_NoRank/index.html`、`viewer_Rank/index.html`、`viewer_ShuffledRank/index.html`（三组真实训练排序）。观看页和音频片段已回传本机，不随Git上传。完整Native24仍不可评，阶段为运动学权限代理，未宣称音乐重演或敦煌语义已经成功。
+
 新增 [R42条件干预与真实连续补间报告](reports/R42条件干预与真实连续补间实验报告.md)及[机器摘要](reports/r42_release/summary.json)：先交付主候选[实际采样观看页](outputs/source_context_r42_01/viewer_main_v3/index.html)，再完成[同预算对照页](outputs/source_context_r42_01/viewer_final_v2/index.html)。真实连续256帧/隐藏48帧，78准入窗、四Train/四曝光留出ChangE录制；Train-only教师80动作步，Context三组各240更新。可行教师未稳定超过真实监督，身体综合门均0/4，整曲0、Native24不可评。6完整payload包、9实际更新及三组完整采样/官方FK独立精确复验，582 passed, 9 skipped, 5 warnings in 22.32s；接触代理元数据已勘误且实际C4条件/损失始终屏蔽，失败回执保留，基线冻结。
 
 新增 [R41配对事件与内容时钟报告](reports/R41配对事件与内容时钟实验报告.md)与[独立复验摘要](reports/r41_release/summary.json)：先验收[真实来源／事件与内容热图](outputs/paired_event_r41_01/viewer_final/index.html)，1037条核验AIST++录制建立1095个运动学候选（语义完整性UNKNOWN）。合成正对照和真实Train八事件拟合均100%、置零20%，通过后主模型240步、覆盖797事件。曝光Val128事件五偏移30.16%，错音乐16.25%、错动作25.16%、能量19.38%；全局R@1仍弱于时长基线，保持Shadow。Train有界搜索显示时间协调尚有改善空间，不是新生成器。六组梯度与实际更新、全部来源／事件payload及42个评价数组独立精确复验，578回归通过/9跳过；新Lodge训练与整曲0，Native24未评价。保留全部失败回执并修复写出和序列化比较，未追加训练或Val调参。

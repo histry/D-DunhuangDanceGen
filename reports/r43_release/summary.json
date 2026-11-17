@@ -1,0 +1,2079 @@
+{
+  "execution_commits": {
+    "generation_main": "1fa4e1129644edce5d7de61aab25d1afe376a63a",
+    "generation_controls": "ae8942ad865995814892589a1ea9908b514512a1",
+    "p2": {
+      "NoRank": "0b68ee8ec2bae4c67d3bd84bd1cb2369d3694f9b",
+      "Rank": "20395ab71db25140e926b6099948e8a364dca484",
+      "ShuffledRank": "20395ab71db25140e926b6099948e8a364dca484"
+    }
+  },
+  "source_commit": "ebc68e2871992fb987778d88457014959ff746fa",
+  "baseline": "5183d2078c034ed0f7cb16e590120ecdd3119dbe",
+  "generation": {
+    "cases": 22,
+    "seeds": 2,
+    "main_trajectories": 88,
+    "control_trajectories": 132,
+    "independently_replayed_trajectories": 220,
+    "generator_optimizer_steps": 0,
+    "train_music_groups_passed": 2,
+    "train_music_groups": 8,
+    "train_change_passed": 0,
+    "train_change_sources": 4,
+    "training_admitted": false,
+    "guard": {
+      "records": [
+        {
+          "key": "female_FeiTian_0__music",
+          "seed": 35041,
+          "use": "Geometry",
+          "activity_ratio": 4.973804533165667,
+          "core_D3_ratio": 2.0386992567983455,
+          "gap_D3_ratio": 2.201297815316171,
+          "candidate_passed_observable_risk_gate": false,
+          "quality_qualified": false
+        },
+        {
+          "key": "female_FeiTian_0__music",
+          "seed": 35042,
+          "use": "Geometry",
+          "activity_ratio": 4.976927919993257,
+          "core_D3_ratio": 2.0363942879598174,
+          "gap_D3_ratio": 2.1568506348083116,
+          "candidate_passed_observable_risk_gate": false,
+          "quality_qualified": false
+        },
+        {
+          "key": "female_lotus_0__music",
+          "seed": 35041,
+          "use": "Geometry",
+          "activity_ratio": 1.0935451281974244,
+          "core_D3_ratio": 1.3663497431569858,
+          "gap_D3_ratio": 3.231603420133776,
+          "candidate_passed_observable_risk_gate": false,
+          "quality_qualified": false
+        },
+        {
+          "key": "female_lotus_0__music",
+          "seed": 35042,
+          "use": "Geometry",
+          "activity_ratio": 1.093262985162611,
+          "core_D3_ratio": 1.3653700072493147,
+          "gap_D3_ratio": 3.246165664038654,
+          "candidate_passed_observable_risk_gate": false,
+          "quality_qualified": false
+        },
+        {
+          "key": "female_meditation_0__music",
+          "seed": 35041,
+          "use": "Geometry",
+          "activity_ratio": 7.297418651006539,
+          "core_D3_ratio": 3.4514097699495125,
+          "gap_D3_ratio": 39.181857176382444,
+          "candidate_passed_observable_risk_gate": false,
+          "quality_qualified": false
+        },
+        {
+          "key": "female_meditation_0__music",
+          "seed": 35042,
+          "use": "Geometry",
+          "activity_ratio": 7.284321743532315,
+          "core_D3_ratio": 3.4368208009067973,
+          "gap_D3_ratio": 38.147121789772804,
+          "candidate_passed_observable_risk_gate": false,
+          "quality_qualified": false
+        },
+        {
+          "key": "male_meditation_0__music",
+          "seed": 35041,
+          "use": "Geometry",
+          "activity_ratio": 5.387338264259672,
+          "core_D3_ratio": 3.900703904078821,
+          "gap_D3_ratio": 11.810717524198502,
+          "candidate_passed_observable_risk_gate": false,
+          "quality_qualified": false
+        },
+        {
+          "key": "male_meditation_0__music",
+          "seed": 35042,
+          "use": "Geometry",
+          "activity_ratio": 5.388590463435401,
+          "core_D3_ratio": 3.918455937140558,
+          "gap_D3_ratio": 11.641473966213407,
+          "candidate_passed_observable_risk_gate": false,
+          "quality_qualified": false
+        },
+        {
+          "key": "male_pipa_1_0__music",
+          "seed": 35041,
+          "use": "Geometry",
+          "activity_ratio": 4.610661888924896,
+          "core_D3_ratio": 3.213248284943277,
+          "gap_D3_ratio": 6.508740278918085,
+          "candidate_passed_observable_risk_gate": false,
+          "quality_qualified": false
+        },
+        {
+          "key": "male_pipa_1_0__music",
+          "seed": 35042,
+          "use": "Geometry",
+          "activity_ratio": 4.6161282030992306,
+          "core_D3_ratio": 3.222251245036672,
+          "gap_D3_ratio": 6.459842377627752,
+          "candidate_passed_observable_risk_gate": false,
+          "quality_qualified": false
+        },
+        {
+          "key": "male_pipa_2_0__music",
+          "seed": 35041,
+          "use": "Geometry",
+          "activity_ratio": 0.9702607975066234,
+          "core_D3_ratio": 1.1361165872754755,
+          "gap_D3_ratio": 1.1957750126005329,
+          "candidate_passed_observable_risk_gate": false,
+          "quality_qualified": false
+        },
+        {
+          "key": "male_pipa_2_0__music",
+          "seed": 35042,
+          "use": "Geometry",
+          "activity_ratio": 0.9702711658428465,
+          "core_D3_ratio": 1.1320858550127657,
+          "gap_D3_ratio": 1.1974906246313228,
+          "candidate_passed_observable_risk_gate": false,
+          "quality_qualified": false
+        },
+        {
+          "key": "male_ribbon_0__music",
+          "seed": 35041,
+          "use": "Geometry",
+          "activity_ratio": 1.0129108667400641,
+          "core_D3_ratio": 1.1865849226963023,
+          "gap_D3_ratio": 1.5939691379270742,
+          "candidate_passed_observable_risk_gate": false,
+          "quality_qualified": false
+        },
+        {
+          "key": "male_ribbon_0__music",
+          "seed": 35042,
+          "use": "Geometry",
+          "activity_ratio": 1.0130534376899922,
+          "core_D3_ratio": 1.18533651845541,
+          "gap_D3_ratio": 1.592487224112815,
+          "candidate_passed_observable_risk_gate": false,
+          "quality_qualified": false
+        },
+        {
+          "key": "male_ribbon_FenHe_0__music",
+          "seed": 35041,
+          "use": "Geometry",
+          "activity_ratio": 1.2803606317302894,
+          "core_D3_ratio": 1.233919764477781,
+          "gap_D3_ratio": 4.7058885435818905,
+          "candidate_passed_observable_risk_gate": false,
+          "quality_qualified": false
+        },
+        {
+          "key": "male_ribbon_FenHe_0__music",
+          "seed": 35042,
+          "use": "Geometry",
+          "activity_ratio": 1.281315757383841,
+          "core_D3_ratio": 1.232513224137159,
+          "gap_D3_ratio": 4.785179242988703,
+          "candidate_passed_observable_risk_gate": false,
+          "quality_qualified": false
+        },
+        {
+          "key": "paired_92",
+          "seed": 35041,
+          "use": "Geometry",
+          "activity_ratio": 0.9987852125090751,
+          "core_D3_ratio": 1.3958494864291735,
+          "gap_D3_ratio": 2.644265818417346,
+          "candidate_passed_observable_risk_gate": false,
+          "quality_qualified": false
+        },
+        {
+          "key": "paired_92",
+          "seed": 35042,
+          "use": "Geometry",
+          "activity_ratio": 0.9986597458946638,
+          "core_D3_ratio": 1.3973764604255925,
+          "gap_D3_ratio": 2.6442525788032145,
+          "candidate_passed_observable_risk_gate": false,
+          "quality_qualified": false
+        },
+        {
+          "key": "paired_48",
+          "seed": 35041,
+          "use": "Geometry",
+          "activity_ratio": 1.0076027945307384,
+          "core_D3_ratio": 1.1870723379168577,
+          "gap_D3_ratio": 1.617880674269108,
+          "candidate_passed_observable_risk_gate": false,
+          "quality_qualified": false
+        },
+        {
+          "key": "paired_48",
+          "seed": 35042,
+          "use": "Geometry",
+          "activity_ratio": 1.0075235029229863,
+          "core_D3_ratio": 1.186653581217554,
+          "gap_D3_ratio": 1.617922153608263,
+          "candidate_passed_observable_risk_gate": false,
+          "quality_qualified": false
+        },
+        {
+          "key": "paired_32",
+          "seed": 35041,
+          "use": "Geometry",
+          "activity_ratio": 0.9792860875868963,
+          "core_D3_ratio": 1.4896511851798677,
+          "gap_D3_ratio": 1.106702195215665,
+          "candidate_passed_observable_risk_gate": false,
+          "quality_qualified": false
+        },
+        {
+          "key": "paired_32",
+          "seed": 35042,
+          "use": "Geometry",
+          "activity_ratio": 0.9793269391365135,
+          "core_D3_ratio": 1.4930247174077154,
+          "gap_D3_ratio": 1.1065291553970544,
+          "candidate_passed_observable_risk_gate": false,
+          "quality_qualified": false
+        },
+        {
+          "key": "paired_0",
+          "seed": 35041,
+          "use": "Geometry",
+          "activity_ratio": 0.994228132036538,
+          "core_D3_ratio": 1.0474089742737431,
+          "gap_D3_ratio": 1.0894711716679413,
+          "candidate_passed_observable_risk_gate": false,
+          "quality_qualified": false
+        },
+        {
+          "key": "paired_0",
+          "seed": 35042,
+          "use": "Geometry",
+          "activity_ratio": 0.9942803019951533,
+          "core_D3_ratio": 1.047939479843671,
+          "gap_D3_ratio": 1.0894730130938834,
+          "candidate_passed_observable_risk_gate": false,
+          "quality_qualified": false
+        },
+        {
+          "key": "paired_37",
+          "seed": 35041,
+          "use": "Geometry",
+          "activity_ratio": 1.0018792589569534,
+          "core_D3_ratio": 1.2694098860410434,
+          "gap_D3_ratio": 1.196862651364171,
+          "candidate_passed_observable_risk_gate": false,
+          "quality_qualified": false
+        },
+        {
+          "key": "paired_37",
+          "seed": 35042,
+          "use": "Geometry",
+          "activity_ratio": 1.001654834689376,
+          "core_D3_ratio": 1.26910244990187,
+          "gap_D3_ratio": 1.1952835170956673,
+          "candidate_passed_observable_risk_gate": false,
+          "quality_qualified": false
+        },
+        {
+          "key": "paired_26",
+          "seed": 35041,
+          "use": "Geometry",
+          "activity_ratio": 0.9719362198402745,
+          "core_D3_ratio": 1.4058724509779847,
+          "gap_D3_ratio": 0.9591963138274592,
+          "candidate_passed_observable_risk_gate": false,
+          "quality_qualified": false
+        },
+        {
+          "key": "paired_26",
+          "seed": 35042,
+          "use": "Geometry",
+          "activity_ratio": 0.9715497247933047,
+          "core_D3_ratio": 1.4027424109991897,
+          "gap_D3_ratio": 0.9591314281362874,
+          "candidate_passed_observable_risk_gate": false,
+          "quality_qualified": false
+        },
+        {
+          "key": "paired_21",
+          "seed": 35041,
+          "use": "Geometry",
+          "activity_ratio": 0.9792413312419107,
+          "core_D3_ratio": 1.5531913273553197,
+          "gap_D3_ratio": 1.3165453723317087,
+          "candidate_passed_observable_risk_gate": false,
+          "quality_qualified": false
+        },
+        {
+          "key": "paired_21",
+          "seed": 35042,
+          "use": "Geometry",
+          "activity_ratio": 0.9796422127255546,
+          "core_D3_ratio": 1.5525566664480832,
+          "gap_D3_ratio": 1.3165505443007832,
+          "candidate_passed_observable_risk_gate": false,
+          "quality_qualified": false
+        },
+        {
+          "key": "paired_76",
+          "seed": 35041,
+          "use": "Geometry",
+          "activity_ratio": 0.9425094242465395,
+          "core_D3_ratio": 1.4816956797561653,
+          "gap_D3_ratio": 1.525232828853553,
+          "candidate_passed_observable_risk_gate": false,
+          "quality_qualified": false
+        },
+        {
+          "key": "paired_76",
+          "seed": 35042,
+          "use": "Geometry",
+          "activity_ratio": 0.9424256310079968,
+          "core_D3_ratio": 1.481465801466425,
+          "gap_D3_ratio": 1.5251294834892923,
+          "candidate_passed_observable_risk_gate": false,
+          "quality_qualified": false
+        },
+        {
+          "key": "paired_4",
+          "seed": 35041,
+          "use": "Geometry",
+          "activity_ratio": 0.9612934555863559,
+          "core_D3_ratio": 1.4215448057252287,
+          "gap_D3_ratio": 1.489582772077153,
+          "candidate_passed_observable_risk_gate": false,
+          "quality_qualified": false
+        },
+        {
+          "key": "paired_4",
+          "seed": 35042,
+          "use": "Geometry",
+          "activity_ratio": 0.9609306518379993,
+          "core_D3_ratio": 1.422493519233338,
+          "gap_D3_ratio": 1.4896203376202592,
+          "candidate_passed_observable_risk_gate": false,
+          "quality_qualified": false
+        },
+        {
+          "key": "paired_8",
+          "seed": 35041,
+          "use": "Geometry",
+          "activity_ratio": 0.979651831721072,
+          "core_D3_ratio": 1.4332052058181854,
+          "gap_D3_ratio": 3.2025714526687445,
+          "candidate_passed_observable_risk_gate": false,
+          "quality_qualified": false
+        },
+        {
+          "key": "paired_8",
+          "seed": 35042,
+          "use": "Geometry",
+          "activity_ratio": 0.9795698728390024,
+          "core_D3_ratio": 1.4306999463790742,
+          "gap_D3_ratio": 3.204779723710264,
+          "candidate_passed_observable_risk_gate": false,
+          "quality_qualified": false
+        },
+        {
+          "key": "paired_12",
+          "seed": 35041,
+          "use": "Geometry",
+          "activity_ratio": 1.0759553180981218,
+          "core_D3_ratio": 1.451577053019966,
+          "gap_D3_ratio": 1.1595115934670508,
+          "candidate_passed_observable_risk_gate": false,
+          "quality_qualified": false
+        },
+        {
+          "key": "paired_12",
+          "seed": 35042,
+          "use": "Geometry",
+          "activity_ratio": 1.0762856539784837,
+          "core_D3_ratio": 1.4524803636807928,
+          "gap_D3_ratio": 1.159587494748161,
+          "candidate_passed_observable_risk_gate": false,
+          "quality_qualified": false
+        },
+        {
+          "key": "paired_16",
+          "seed": 35041,
+          "use": "Geometry",
+          "activity_ratio": 0.9716809196991253,
+          "core_D3_ratio": 1.2584618433871575,
+          "gap_D3_ratio": 1.049138603932813,
+          "candidate_passed_observable_risk_gate": false,
+          "quality_qualified": false
+        },
+        {
+          "key": "paired_16",
+          "seed": 35042,
+          "use": "Geometry",
+          "activity_ratio": 0.9715193636267061,
+          "core_D3_ratio": 1.254032004296323,
+          "gap_D3_ratio": 1.0491212255436775,
+          "candidate_passed_observable_risk_gate": false,
+          "quality_qualified": false
+        },
+        {
+          "key": "old_failed",
+          "seed": 35041,
+          "use": "Geometry",
+          "activity_ratio": 1.0030318103890818,
+          "core_D3_ratio": 1.0042588825841683,
+          "gap_D3_ratio": 4.856648475169078,
+          "candidate_passed_observable_risk_gate": false,
+          "quality_qualified": false
+        },
+        {
+          "key": "old_failed",
+          "seed": 35042,
+          "use": "Geometry",
+          "activity_ratio": 1.0032219544885197,
+          "core_D3_ratio": 1.0043298634653384,
+          "gap_D3_ratio": 4.9150082430036175,
+          "candidate_passed_observable_risk_gate": false,
+          "quality_qualified": false
+        },
+        {
+          "key": "new_plan",
+          "seed": 35041,
+          "use": "Geometry",
+          "activity_ratio": 0.9520994293369749,
+          "core_D3_ratio": 1.182065866682651,
+          "gap_D3_ratio": 1.134872261503401,
+          "candidate_passed_observable_risk_gate": false,
+          "quality_qualified": false
+        },
+        {
+          "key": "new_plan",
+          "seed": 35042,
+          "use": "Geometry",
+          "activity_ratio": 0.952669779978025,
+          "core_D3_ratio": 1.1980222462170802,
+          "gap_D3_ratio": 1.178443906359797,
+          "candidate_passed_observable_risk_gate": false,
+          "quality_qualified": false
+        }
+      ],
+      "accepted": 0,
+      "fallback": 44,
+      "thresholds": {
+        "activity": [
+          0.85,
+          1.15
+        ],
+        "core_D3_ratio_max": 1.05,
+        "gap_D3_ratio_max": 1.05
+      },
+      "selection_uses_paired_target_errors": false,
+      "post_selection_display_errors_use_reference": true,
+      "whole_window_not_framewise_selection": true,
+      "neural_sampling_calls": 0,
+      "operational_qualified": false
+    },
+    "official_fk_executed": true
+  },
+  "ranking": {
+    "subwindows": 10107,
+    "queries": 178,
+    "valid_tasks": 433,
+    "unavailable": 101,
+    "p2_gate": {
+      "train_only": true,
+      "comparisons": {
+        "Duration": {
+          "groups": 6,
+          "mean_difference": 0.6511904761904762,
+          "cluster_ci95": [
+            0.5261904761904762,
+            0.7761904761904761
+          ],
+          "passed": true
+        },
+        "Energy": {
+          "groups": 6,
+          "mean_difference": 0.817857142857143,
+          "cluster_ci95": [
+            0.6928571428571427,
+            0.9428571428571427
+          ],
+          "passed": true
+        },
+        "Global": {
+          "groups": 6,
+          "mean_difference": 0.5523809523809524,
+          "cluster_ci95": [
+            0.28750000000000003,
+            0.8125
+          ],
+          "passed": true
+        }
+      },
+      "actual_beats_both_zero": true,
+      "admitted": true
+    },
+    "training_updates": 720,
+    "training_arms": [
+      "NoRank",
+      "Rank",
+      "ShuffledRank"
+    ],
+    "equal_initialization_and_schedule": true,
+    "comparisons": {
+      "train/same_music": {
+        "diagonal_group_macro_recall_at1": {
+          "NoRank": 0.625,
+          "Rank": 0.9,
+          "ShuffledRank": 0.3833333333333333,
+          "Frozen": 0.4166666666666667
+        },
+        "rank_minus": {
+          "Frozen": {
+            "mean": 0.48333333333333334,
+            "music_groups": 6,
+            "cluster_ci95": [
+              0.18291666666666678,
+              0.7833333333333333
+            ]
+          },
+          "NoRank": {
+            "mean": 0.27499999999999997,
+            "music_groups": 6,
+            "cluster_ci95": [
+              0.041666666666666664,
+              0.5833333333333334
+            ]
+          },
+          "ShuffledRank": {
+            "mean": 0.5166666666666667,
+            "music_groups": 6,
+            "cluster_ci95": [
+              0.34166666666666673,
+              0.6666666666666666
+            ]
+          }
+        }
+      },
+      "train/energy_matched": {
+        "diagonal_group_macro_recall_at1": {
+          "NoRank": 0.6711309523809524,
+          "Rank": 1.0,
+          "ShuffledRank": 0.5699404761904762,
+          "Frozen": 0.817857142857143
+        },
+        "rank_minus": {
+          "Frozen": {
+            "mean": 0.18214285714285716,
+            "music_groups": 6,
+            "cluster_ci95": [
+              0.05714285714285714,
+              0.30714285714285716
+            ]
+          },
+          "NoRank": {
+            "mean": 0.3288690476190476,
+            "music_groups": 6,
+            "cluster_ci95": [
+              0.16220238095238096,
+              0.4851190476190476
+            ]
+          },
+          "ShuffledRank": {
+            "mean": 0.4300595238095238,
+            "music_groups": 6,
+            "cluster_ci95": [
+              0.24553571428571427,
+              0.6145833333333334
+            ]
+          }
+        }
+      },
+      "train/cross_music": {
+        "diagonal_group_macro_recall_at1": {
+          "NoRank": 0.6711309523809524,
+          "Rank": 1.0,
+          "ShuffledRank": 0.5699404761904762,
+          "Frozen": 0.817857142857143
+        },
+        "rank_minus": {
+          "Frozen": {
+            "mean": 0.18214285714285716,
+            "music_groups": 6,
+            "cluster_ci95": [
+              0.05714285714285714,
+              0.30714285714285716
+            ]
+          },
+          "NoRank": {
+            "mean": 0.3288690476190476,
+            "music_groups": 6,
+            "cluster_ci95": [
+              0.16220238095238096,
+              0.4851190476190476
+            ]
+          },
+          "ShuffledRank": {
+            "mean": 0.4300595238095238,
+            "music_groups": 6,
+            "cluster_ci95": [
+              0.24553571428571427,
+              0.6145833333333334
+            ]
+          }
+        }
+      },
+      "val/same_music": {
+        "diagonal_group_macro_recall_at1": {
+          "NoRank": 0.22474747474747478,
+          "Rank": 0.1621212121212121,
+          "ShuffledRank": 0.16792929292929293,
+          "Frozen": 0.10656565656565657
+        },
+        "rank_minus": {
+          "Frozen": {
+            "mean": 0.05555555555555556,
+            "music_groups": 6,
+            "cluster_ci95": [
+              -0.08333333333333333,
+              0.25
+            ]
+          },
+          "NoRank": {
+            "mean": -0.06262626262626261,
+            "music_groups": 6,
+            "cluster_ci95": [
+              -0.4792929292929293,
+              0.26515151515151514
+            ]
+          },
+          "ShuffledRank": {
+            "mean": -0.005808080808080804,
+            "music_groups": 6,
+            "cluster_ci95": [
+              -0.18888888888888888,
+              0.15258838383838294
+            ]
+          }
+        }
+      },
+      "val/energy_matched": {
+        "diagonal_group_macro_recall_at1": {
+          "NoRank": 0.37946428571428575,
+          "Rank": 0.4136904761904762,
+          "ShuffledRank": 0.431547619047619,
+          "Frozen": 0.4211309523809524
+        },
+        "rank_minus": {
+          "Frozen": {
+            "mean": -0.007440476190476182,
+            "music_groups": 6,
+            "cluster_ci95": [
+              -0.3333333333333333,
+              0.3169642857142857
+            ]
+          },
+          "NoRank": {
+            "mean": 0.034226190476190486,
+            "music_groups": 6,
+            "cluster_ci95": [
+              -0.3214285714285714,
+              0.29910714285714285
+            ]
+          },
+          "ShuffledRank": {
+            "mean": -0.017857142857142867,
+            "music_groups": 6,
+            "cluster_ci95": [
+              -0.3645833333333333,
+              0.3288690476190476
+            ]
+          }
+        }
+      },
+      "val/cross_music": {
+        "diagonal_group_macro_recall_at1": {
+          "NoRank": 0.37946428571428575,
+          "Rank": 0.4136904761904762,
+          "ShuffledRank": 0.38988095238095233,
+          "Frozen": 0.4211309523809524
+        },
+        "rank_minus": {
+          "Frozen": {
+            "mean": -0.007440476190476182,
+            "music_groups": 6,
+            "cluster_ci95": [
+              -0.3333333333333333,
+              0.3169642857142857
+            ]
+          },
+          "NoRank": {
+            "mean": 0.034226190476190486,
+            "music_groups": 6,
+            "cluster_ci95": [
+              -0.3214285714285714,
+              0.29910714285714285
+            ]
+          },
+          "ShuffledRank": {
+            "mean": 0.023809523809523798,
+            "music_groups": 6,
+            "cluster_ci95": [
+              -0.27976190476190477,
+              0.3288690476190476
+            ]
+          }
+        }
+      }
+    },
+    "native_queries": 23,
+    "native_unavailable": [
+      {
+        "key": "song0_12",
+        "frames": 345,
+        "reason": "REGISTERED_FULL_EVENT_OR_COUNTERFACTUAL_SUPPORT_UNAVAILABLE_NOT_CROPPED"
+      }
+    ],
+    "native_shadow": {
+      "Global": {
+        "top_source_counts": {
+          "female_FeiTian": 23
+        },
+        "top1_changes_music_zero": 17,
+        "top1_changes_music_swap": 5,
+        "mean_top1_partial_coverage": 0.008086054728854982,
+        "semantic_accuracy": null
+      },
+      "Diagonal": {
+        "top_source_counts": {
+          "male_meditation": 9,
+          "male_ribbon_FenHe": 9,
+          "female_meditation": 1,
+          "male_pipa_2": 4
+        },
+        "top1_changes_music_zero": 13,
+        "top1_changes_music_swap": 3,
+        "mean_top1_partial_coverage": 0.0029162561108656638,
+        "semantic_accuracy": null
+      },
+      "Offset": {
+        "top_source_counts": {
+          "male_meditation": 9,
+          "male_ribbon_FenHe": 11,
+          "female_meditation": 1,
+          "male_pipa_2": 2
+        },
+        "top1_changes_music_zero": 8,
+        "top1_changes_music_swap": 0,
+        "mean_top1_partial_coverage": 0.0021398585953377137,
+        "semantic_accuracy": null
+      },
+      "Partial": {
+        "top_source_counts": {
+          "female_FeiTian": 5,
+          "female_lotus": 2,
+          "male_pipa_2": 13,
+          "female_meditation": 1,
+          "male_meditation": 1,
+          "male_pipa_1": 1
+        },
+        "top1_changes_music_zero": 14,
+        "top1_changes_music_swap": 10,
+        "mean_top1_partial_coverage": 0.016312188486920242,
+        "semantic_accuracy": null
+      },
+      "Hybrid": {
+        "top_source_counts": {
+          "male_meditation": 6,
+          "female_FeiTian": 13,
+          "female_meditation": 1,
+          "male_ribbon_FenHe": 2,
+          "male_pipa_2": 1
+        },
+        "top1_changes_music_zero": 18,
+        "top1_changes_music_swap": 6,
+        "mean_top1_partial_coverage": 0.0033411488719970735,
+        "semantic_accuracy": null
+      }
+    }
+  },
+  "token_clock": {
+    "Frozen": {
+      "train": {
+        "actual": {
+          "queries": 88,
+          "groups": {
+            "aist_publisher_track:mBR0": 0.375,
+            "aist_publisher_track:mBR1": 0.5,
+            "aist_publisher_track:mBR3": 0.42500000000000004,
+            "aist_publisher_track:mBR4": 0.34285714285714286,
+            "aist_publisher_track:mBR5": 0.64,
+            "aist_publisher_track:mHO1": 0.5625
+          },
+          "group_macro_accuracy": 0.47422619047619047
+        },
+        "both_zero": {
+          "queries": 88,
+          "groups": {
+            "aist_publisher_track:mBR0": 0.2,
+            "aist_publisher_track:mBR1": 0.2,
+            "aist_publisher_track:mBR3": 0.2,
+            "aist_publisher_track:mBR4": 0.20000000000000004,
+            "aist_publisher_track:mBR5": 0.2,
+            "aist_publisher_track:mHO1": 0.2
+          },
+          "group_macro_accuracy": 0.20000000000000004
+        }
+      },
+      "val": {
+        "actual": {
+          "queries": 90,
+          "groups": {
+            "aist_publisher_track:mJB2": 0.28750000000000003,
+            "aist_publisher_track:mJS2": 0.5375,
+            "aist_publisher_track:mKR1": 0.275,
+            "aist_publisher_track:mLO4": 0.1285714285714286,
+            "aist_publisher_track:mMH4": 0.4285714285714287,
+            "aist_publisher_track:mPO0": 0.17142857142857146
+          },
+          "group_macro_accuracy": 0.30476190476190484
+        },
+        "both_zero": {
+          "queries": 90,
+          "groups": {
+            "aist_publisher_track:mJB2": 0.2,
+            "aist_publisher_track:mJS2": 0.2,
+            "aist_publisher_track:mKR1": 0.2,
+            "aist_publisher_track:mLO4": 0.20000000000000004,
+            "aist_publisher_track:mMH4": 0.20000000000000004,
+            "aist_publisher_track:mPO0": 0.20000000000000004
+          },
+          "group_macro_accuracy": 0.20000000000000004
+        }
+      }
+    },
+    "NoRank": {
+      "train": {
+        "actual": {
+          "queries": 88,
+          "groups": {
+            "aist_publisher_track:mBR0": 0.7875,
+            "aist_publisher_track:mBR1": 0.925,
+            "aist_publisher_track:mBR3": 0.9624999999999999,
+            "aist_publisher_track:mBR4": 0.8000000000000002,
+            "aist_publisher_track:mBR5": 0.9199999999999999,
+            "aist_publisher_track:mHO1": 0.7875
+          },
+          "group_macro_accuracy": 0.8637499999999999
+        },
+        "both_zero": {
+          "queries": 88,
+          "groups": {
+            "aist_publisher_track:mBR0": 0.2,
+            "aist_publisher_track:mBR1": 0.2,
+            "aist_publisher_track:mBR3": 0.2,
+            "aist_publisher_track:mBR4": 0.20000000000000004,
+            "aist_publisher_track:mBR5": 0.2,
+            "aist_publisher_track:mHO1": 0.2
+          },
+          "group_macro_accuracy": 0.20000000000000004
+        }
+      },
+      "val": {
+        "actual": {
+          "queries": 90,
+          "groups": {
+            "aist_publisher_track:mJB2": 0.11250000000000002,
+            "aist_publisher_track:mJS2": 0.21250000000000002,
+            "aist_publisher_track:mKR1": 0.15,
+            "aist_publisher_track:mLO4": 0.27142857142857146,
+            "aist_publisher_track:mMH4": 0.18571428571428572,
+            "aist_publisher_track:mPO0": 0.3285714285714286
+          },
+          "group_macro_accuracy": 0.21011904761904765
+        },
+        "both_zero": {
+          "queries": 90,
+          "groups": {
+            "aist_publisher_track:mJB2": 0.2,
+            "aist_publisher_track:mJS2": 0.2,
+            "aist_publisher_track:mKR1": 0.2,
+            "aist_publisher_track:mLO4": 0.20000000000000004,
+            "aist_publisher_track:mMH4": 0.20000000000000004,
+            "aist_publisher_track:mPO0": 0.20000000000000004
+          },
+          "group_macro_accuracy": 0.20000000000000004
+        }
+      }
+    },
+    "Rank": {
+      "train": {
+        "actual": {
+          "queries": 88,
+          "groups": {
+            "aist_publisher_track:mBR0": 0.7749999999999999,
+            "aist_publisher_track:mBR1": 0.95,
+            "aist_publisher_track:mBR3": 0.95,
+            "aist_publisher_track:mBR4": 0.7857142857142858,
+            "aist_publisher_track:mBR5": 0.9199999999999999,
+            "aist_publisher_track:mHO1": 0.775
+          },
+          "group_macro_accuracy": 0.8592857142857143
+        },
+        "both_zero": {
+          "queries": 88,
+          "groups": {
+            "aist_publisher_track:mBR0": 0.2,
+            "aist_publisher_track:mBR1": 0.2,
+            "aist_publisher_track:mBR3": 0.2,
+            "aist_publisher_track:mBR4": 0.20000000000000004,
+            "aist_publisher_track:mBR5": 0.2,
+            "aist_publisher_track:mHO1": 0.2
+          },
+          "group_macro_accuracy": 0.20000000000000004
+        }
+      },
+      "val": {
+        "actual": {
+          "queries": 90,
+          "groups": {
+            "aist_publisher_track:mJB2": 0.15000000000000002,
+            "aist_publisher_track:mJS2": 0.3875,
+            "aist_publisher_track:mKR1": 0.22499999999999998,
+            "aist_publisher_track:mLO4": 0.31428571428571433,
+            "aist_publisher_track:mMH4": 0.4428571428571429,
+            "aist_publisher_track:mPO0": 0.17142857142857143
+          },
+          "group_macro_accuracy": 0.28184523809523815
+        },
+        "both_zero": {
+          "queries": 90,
+          "groups": {
+            "aist_publisher_track:mJB2": 0.2,
+            "aist_publisher_track:mJS2": 0.2,
+            "aist_publisher_track:mKR1": 0.2,
+            "aist_publisher_track:mLO4": 0.20000000000000004,
+            "aist_publisher_track:mMH4": 0.20000000000000004,
+            "aist_publisher_track:mPO0": 0.20000000000000004
+          },
+          "group_macro_accuracy": 0.20000000000000004
+        }
+      }
+    },
+    "ShuffledRank": {
+      "train": {
+        "actual": {
+          "queries": 88,
+          "groups": {
+            "aist_publisher_track:mBR0": 0.6875,
+            "aist_publisher_track:mBR1": 0.7875,
+            "aist_publisher_track:mBR3": 0.85,
+            "aist_publisher_track:mBR4": 0.7285714285714286,
+            "aist_publisher_track:mBR5": 0.8800000000000001,
+            "aist_publisher_track:mHO1": 0.825
+          },
+          "group_macro_accuracy": 0.7930952380952382
+        },
+        "both_zero": {
+          "queries": 88,
+          "groups": {
+            "aist_publisher_track:mBR0": 0.2,
+            "aist_publisher_track:mBR1": 0.2,
+            "aist_publisher_track:mBR3": 0.2,
+            "aist_publisher_track:mBR4": 0.20000000000000004,
+            "aist_publisher_track:mBR5": 0.2,
+            "aist_publisher_track:mHO1": 0.2
+          },
+          "group_macro_accuracy": 0.20000000000000004
+        }
+      },
+      "val": {
+        "actual": {
+          "queries": 90,
+          "groups": {
+            "aist_publisher_track:mJB2": 0.15000000000000002,
+            "aist_publisher_track:mJS2": 0.275,
+            "aist_publisher_track:mKR1": 0.25,
+            "aist_publisher_track:mLO4": 0.042857142857142864,
+            "aist_publisher_track:mMH4": 0.37142857142857144,
+            "aist_publisher_track:mPO0": 0.20000000000000004
+          },
+          "group_macro_accuracy": 0.2148809523809524
+        },
+        "both_zero": {
+          "queries": 90,
+          "groups": {
+            "aist_publisher_track:mJB2": 0.2,
+            "aist_publisher_track:mJS2": 0.2,
+            "aist_publisher_track:mKR1": 0.2,
+            "aist_publisher_track:mLO4": 0.20000000000000004,
+            "aist_publisher_track:mMH4": 0.20000000000000004,
+            "aist_publisher_track:mPO0": 0.20000000000000004
+          },
+          "group_macro_accuracy": 0.20000000000000004
+        }
+      }
+    }
+  },
+  "independent": {
+    "code_commit": "ebc68e2871992fb987778d88457014959ff746fa",
+    "payloads": [
+      {
+        "root": "outputs/music_reperformance_r43_01",
+        "first": "main",
+        "replay": "main_replay",
+        "arrays": 222
+      },
+      {
+        "root": "outputs/music_reperformance_r43_01",
+        "first": "controls",
+        "replay": "controls_replay",
+        "arrays": 266
+      },
+      {
+        "root": "outputs/music_reperformance_r43_01",
+        "first": "main_guarded",
+        "replay": "guarded_replay",
+        "arrays": 266
+      },
+      {
+        "root": "outputs/sdmr_event_rank_01",
+        "first": "features",
+        "replay": "features_replay",
+        "arrays": 29064
+      },
+      {
+        "root": "outputs/sdmr_event_rank_01",
+        "first": "evaluation",
+        "replay": "evaluation_replay",
+        "arrays": 6495
+      },
+      {
+        "root": "outputs/sdmr_event_rank_01",
+        "first": "change_shadow_v3",
+        "replay": "change_shadow_replay",
+        "arrays": 3935
+      },
+      {
+        "root": "outputs/sdmr_event_rank_01",
+        "first": "features_NoRank",
+        "replay": "features_NoRank_replay",
+        "arrays": 29064
+      },
+      {
+        "root": "outputs/sdmr_event_rank_01",
+        "first": "evaluation_NoRank_v2",
+        "replay": "evaluation_NoRank_v2_replay",
+        "arrays": 1732
+      },
+      {
+        "root": "outputs/sdmr_event_rank_01",
+        "first": "features_Rank",
+        "replay": "features_Rank_replay",
+        "arrays": 29064
+      },
+      {
+        "root": "outputs/sdmr_event_rank_01",
+        "first": "evaluation_Rank_v2",
+        "replay": "evaluation_Rank_v2_replay",
+        "arrays": 1732
+      },
+      {
+        "root": "outputs/sdmr_event_rank_01",
+        "first": "features_ShuffledRank",
+        "replay": "features_ShuffledRank_replay",
+        "arrays": 29064
+      },
+      {
+        "root": "outputs/sdmr_event_rank_01",
+        "first": "evaluation_ShuffledRank_v2",
+        "replay": "evaluation_ShuffledRank_v2_replay",
+        "arrays": 1732
+      }
+    ],
+    "trainings": [
+      {
+        "arm": "NoRank",
+        "optimizer_steps": 240,
+        "initial_digest": "b6a628cd77bc887469c43edccaf8fef00f8def843c78450876ce2111ba8da444",
+        "final_digest": "9a30dc9872daeb29cde688b64df45c26d34422fea01785df1d7c1cde8bf74bf9",
+        "model_parameters": 522632,
+        "initial_checkpoint_sha256": "212148e7cd86b482cc7734035725b1165edcd7a1c35e03fa513f6982f440e772",
+        "model_sha256": "dae8e6db0857f6393720674f267a064ffb61daa12d195ba93f38a92dd36be09e",
+        "benchmark_sha256": "1799451b7639f93b8f3ee1736eb9d70251364779cd792de4cf3b577009036d0f",
+        "schedule_sha256": "07994f2b5fa1475cc04b9be10d862955553b311487abbe0dab34b59bd288e5a2",
+        "can_route": false,
+        "operational_qualified": false
+      },
+      {
+        "arm": "Rank",
+        "optimizer_steps": 240,
+        "initial_digest": "b6a628cd77bc887469c43edccaf8fef00f8def843c78450876ce2111ba8da444",
+        "final_digest": "c509fe6a414a483ce27a6d4c611c01dd7cf6f5e33ffec56c1fea2b812282a519",
+        "model_parameters": 522632,
+        "initial_checkpoint_sha256": "212148e7cd86b482cc7734035725b1165edcd7a1c35e03fa513f6982f440e772",
+        "model_sha256": "7a4bc5cfd0dff227aa5bf5289d8d2235e00a8c96be88053367a1ffe80bf197e2",
+        "benchmark_sha256": "1799451b7639f93b8f3ee1736eb9d70251364779cd792de4cf3b577009036d0f",
+        "schedule_sha256": "07994f2b5fa1475cc04b9be10d862955553b311487abbe0dab34b59bd288e5a2",
+        "can_route": false,
+        "operational_qualified": false
+      },
+      {
+        "arm": "ShuffledRank",
+        "optimizer_steps": 240,
+        "initial_digest": "b6a628cd77bc887469c43edccaf8fef00f8def843c78450876ce2111ba8da444",
+        "final_digest": "3f8b69114e353d774c6ace3fffd374263ba0fb0e1763074cef090914bbc6f4f4",
+        "model_parameters": 522632,
+        "initial_checkpoint_sha256": "212148e7cd86b482cc7734035725b1165edcd7a1c35e03fa513f6982f440e772",
+        "model_sha256": "26114cab2267babba8d25a2cd92b8839b206cbb8ee17a943a301e35b21ff7270",
+        "benchmark_sha256": "1799451b7639f93b8f3ee1736eb9d70251364779cd792de4cf3b577009036d0f",
+        "schedule_sha256": "07994f2b5fa1475cc04b9be10d862955553b311487abbe0dab34b59bd288e5a2",
+        "can_route": false,
+        "operational_qualified": false
+      }
+    ],
+    "total_training_updates": 720,
+    "benchmark_identity_exact": true,
+    "qualification_values_exact": true,
+    "parents": [
+      {
+        "root": "bridge_r38_01",
+        "files": 60,
+        "manifest_sha256": "73ab623c89537ce8f64245406dafaa0eeb16ae37c983b8201aa531baf36c3786"
+      },
+      {
+        "root": "stabilize_r39_01",
+        "files": 73,
+        "manifest_sha256": "89b877a960a55591b915d4c2a0e1fa9b6fcfce9ea905373fa000c997cd5bdf1b"
+      },
+      {
+        "root": "contract_r40_01",
+        "files": 100,
+        "manifest_sha256": "1976d2b6bc470f53feb4b49f4af0c3d8b0c994657d7322f636b50982d115af16"
+      },
+      {
+        "root": "paired_event_r41_01",
+        "files": 4434,
+        "manifest_sha256": "7310316b0d6269e4005dc694da8c9d4c783cdda236ee1301d1db290322a39b87"
+      },
+      {
+        "root": "source_context_r42_01",
+        "files": 357,
+        "manifest_sha256": "725a672581e26837d7c90b747c3af9ab5a6450ad7c1b205cc8553565e54d32a1"
+      }
+    ],
+    "role_isolation": {
+      "raw_motion_sha256": 1037,
+      "audio_sha256": 54,
+      "source_group": 54
+    },
+    "actual_aist_lineage": [
+      {
+        "case": 92,
+        "adaptation_role": "train",
+        "original_metadata": {
+          "case": 92,
+          "role": "train",
+          "source_group": "aist_publisher_track:mBR0",
+          "recording_uid": "aist_capture:gBR_sBM_cAll_d04_mBR0_ch04",
+          "raw_motion": {
+            "path": "/home/disk/lsm/storage/DunhuangDanceGen/assets/datasets/aistpp/annotations/motions/gBR_sBM_cAll_d04_mBR0_ch04.pkl",
+            "sha256": "a44bdb31a95d472235a16d080dd36deecf2d44bcd71642be53ddcd31244d287c"
+          },
+          "source_native": {
+            "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/transfer_audit_01/a2/sources/a44bdb31a95d472235a16d080dd36deecf2d44bcd71642be53ddcd31244d287c.npy",
+            "sha256": "776c48787fd08c4bba530d92e4940325d7244e1b97c2e28612842c978179cb18"
+          },
+          "audio": {
+            "path": "/home/disk/lsm/storage/DunhuangDanceGen/assets/datasets/aistpp/music/mBR0.wav",
+            "sha256": "6bde923c8a0b374a08cab44055c60ccd9c10da75613434636b66bd51d8434767"
+          },
+          "clock": {
+            "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/aist_calibration_01/calibration/gBR_sBM_cAll_d04_mBR0_ch04.json",
+            "sha256": "a4dd10883af0954b3cdf74bb4d6da5dbbb16ab6c12c32a7d2037c198ecf14253"
+          },
+          "source_start": 0,
+          "prior_start": 0,
+          "crop_audio": "92.wav",
+          "arrays": "92.npz",
+          "root_y_shift": -1.7622381567955017,
+          "root_roundtrip_rmse_m": 0.1991453617811203,
+          "body_roundtrip_rmse": 0.014964277856051922,
+          "geometry_support_fraction": 0.815625011920929,
+          "geometry_distortion_max_m": 0.23876117169857025,
+          "matrix_fk_official_max_m": 3.5762786865234375e-07,
+          "phase_events": [
+            {
+              "kind": "speed_change_peak",
+              "frame": 27,
+              "status": "CANDIDATE",
+              "semantic_truth": false
+            },
+            {
+              "kind": "speed_peak",
+              "frame": 24,
+              "status": "CANDIDATE",
+              "semantic_truth": false
+            },
+            {
+              "kind": "speed_second_difference_peak",
+              "frame": 72,
+              "status": "CANDIDATE",
+              "semantic_truth": false
+            },
+            {
+              "kind": "low_speed",
+              "frame": 42,
+              "status": "CANDIDATE",
+              "semantic_truth": false
+            }
+          ],
+          "geometry_target": "Official normalizer roundtrip FK, masked where raw-source distortion>0.05m",
+          "C4_observed": false,
+          "Root_supervised_as_truth": false
+        },
+        "scope": "FROZEN_PARENT_TRAIN_CACHE_NOT_NEW_DATA_V3_TEST"
+      },
+      {
+        "case": 48,
+        "adaptation_role": "train",
+        "original_metadata": {
+          "case": 48,
+          "role": "train",
+          "source_group": "aist_publisher_track:mBR1",
+          "recording_uid": "aist_capture:gBR_sBM_cAll_d05_mBR1_ch10",
+          "raw_motion": {
+            "path": "/home/disk/lsm/storage/DunhuangDanceGen/assets/datasets/aistpp/annotations/motions/gBR_sBM_cAll_d05_mBR1_ch10.pkl",
+            "sha256": "f34daa95cb484213c5da18a968c77325b4698a95df21f7d457bfe39f77414e28"
+          },
+          "source_native": {
+            "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/transfer_audit_01/a2/sources/f34daa95cb484213c5da18a968c77325b4698a95df21f7d457bfe39f77414e28.npy",
+            "sha256": "130a2496831515626130c02b10cb0cc204924e6acd9fe47837f51cabcc37a13a"
+          },
+          "audio": {
+            "path": "/home/disk/lsm/storage/DunhuangDanceGen/assets/datasets/aistpp/music/mBR1.wav",
+            "sha256": "7d9a3f700836bf3ec1ccd1ee6e2543ed1514e141bf83b43ce120d1ea252f7889"
+          },
+          "clock": {
+            "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/aist_calibration_01/calibration/gBR_sBM_cAll_d05_mBR1_ch10.json",
+            "sha256": "0e3688cc58c8e0f8ef6b610d8bb7ebfbbb84912330db355d3be11fdc243c3424"
+          },
+          "source_start": 0,
+          "prior_start": 0,
+          "crop_audio": "48.wav",
+          "arrays": "48.npz",
+          "root_y_shift": -1.7789831280708313,
+          "root_roundtrip_rmse_m": 0.35876524448394775,
+          "body_roundtrip_rmse": 0.04279924929141998,
+          "geometry_support_fraction": 0.19687500596046448,
+          "geometry_distortion_max_m": 0.49483272433280945,
+          "matrix_fk_official_max_m": 4.172325134277344e-07,
+          "phase_events": [
+            {
+              "kind": "speed_change_peak",
+              "frame": 49,
+              "status": "CANDIDATE",
+              "semantic_truth": false
+            },
+            {
+              "kind": "speed_peak",
+              "frame": 53,
+              "status": "CANDIDATE",
+              "semantic_truth": false
+            },
+            {
+              "kind": "speed_second_difference_peak",
+              "frame": 50,
+              "status": "CANDIDATE",
+              "semantic_truth": false
+            },
+            {
+              "kind": "low_speed",
+              "frame": 81,
+              "status": "CANDIDATE",
+              "semantic_truth": false
+            }
+          ],
+          "geometry_target": "Official normalizer roundtrip FK, masked where raw-source distortion>0.05m",
+          "C4_observed": false,
+          "Root_supervised_as_truth": false
+        },
+        "scope": "FROZEN_PARENT_TRAIN_CACHE_NOT_NEW_DATA_V3_TEST"
+      },
+      {
+        "case": 32,
+        "adaptation_role": "train",
+        "original_metadata": {
+          "case": 32,
+          "role": "train",
+          "source_group": "aist_publisher_track:mBR3",
+          "recording_uid": "aist_capture:gBR_sBM_cAll_d06_mBR3_ch03",
+          "raw_motion": {
+            "path": "/home/disk/lsm/storage/DunhuangDanceGen/assets/datasets/aistpp/annotations/motions/gBR_sBM_cAll_d06_mBR3_ch03.pkl",
+            "sha256": "d5b77310dc07f61dc85271e9b0f57f99e96766f8eccecf9112ac7d0f1bef43fd"
+          },
+          "source_native": {
+            "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/transfer_audit_01/a2/sources/d5b77310dc07f61dc85271e9b0f57f99e96766f8eccecf9112ac7d0f1bef43fd.npy",
+            "sha256": "1ca70e5fa6aec0b8abc1af3448c9984b7b7f583cfe8d93ca9f6daebc0f43fcca"
+          },
+          "audio": {
+            "path": "/home/disk/lsm/storage/DunhuangDanceGen/assets/datasets/aistpp/music/mBR3.wav",
+            "sha256": "0d2e173c96d4c96bc2757ff89579f3029465e8ce729c51ce691d5db06b7c33d2"
+          },
+          "clock": {
+            "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/aist_calibration_01/calibration/gBR_sBM_cAll_d06_mBR3_ch03.json",
+            "sha256": "02c9a9e45705ca45f1bf46455040f3055b753ec6487d92576f4d1a8681ca4ef7"
+          },
+          "source_start": 0,
+          "prior_start": 0,
+          "crop_audio": "32.wav",
+          "arrays": "32.npz",
+          "root_y_shift": -1.801164937019348,
+          "root_roundtrip_rmse_m": 0.20748843252658844,
+          "body_roundtrip_rmse": 0.006628205068409443,
+          "geometry_support_fraction": 0.991406261920929,
+          "geometry_distortion_max_m": 0.08321411162614822,
+          "matrix_fk_official_max_m": 3.5762786865234375e-07,
+          "phase_events": [
+            {
+              "kind": "speed_change_peak",
+              "frame": 83,
+              "status": "CANDIDATE",
+              "semantic_truth": false
+            },
+            {
+              "kind": "speed_peak",
+              "frame": 82,
+              "status": "CANDIDATE",
+              "semantic_truth": false
+            },
+            {
+              "kind": "speed_second_difference_peak",
+              "frame": 83,
+              "status": "CANDIDATE",
+              "semantic_truth": false
+            },
+            {
+              "kind": "low_speed",
+              "frame": 10,
+              "status": "CANDIDATE",
+              "semantic_truth": false
+            }
+          ],
+          "geometry_target": "Official normalizer roundtrip FK, masked where raw-source distortion>0.05m",
+          "C4_observed": false,
+          "Root_supervised_as_truth": false
+        },
+        "scope": "FROZEN_PARENT_TRAIN_CACHE_NOT_NEW_DATA_V3_TEST"
+      },
+      {
+        "case": 0,
+        "adaptation_role": "train",
+        "original_metadata": {
+          "case": 0,
+          "role": "train",
+          "source_group": "aist_publisher_track:mJB0",
+          "recording_uid": "aist_capture:gJB_sBM_cAll_d07_mJB0_ch03",
+          "raw_motion": {
+            "path": "/home/disk/lsm/storage/DunhuangDanceGen/assets/datasets/aistpp/annotations/motions/gJB_sBM_cAll_d07_mJB0_ch03.pkl",
+            "sha256": "db2b95ad44519b7fccf6baee44de022964bc374dc07b74f58638a1e6944807da"
+          },
+          "source_native": {
+            "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/transfer_audit_01/a2/sources/db2b95ad44519b7fccf6baee44de022964bc374dc07b74f58638a1e6944807da.npy",
+            "sha256": "2f4cf1ae3586d5108d5cf050315d76446f03ce2915fe556a98acad7fd8f178b5"
+          },
+          "audio": {
+            "path": "/home/disk/lsm/storage/DunhuangDanceGen/assets/datasets/aistpp/music/mJB0.wav",
+            "sha256": "9b78122c3c8cb169bdff8b0e5af341f86617150f967d05462ddbe7c62b3008be"
+          },
+          "clock": {
+            "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/aist_calibration_01/calibration/gJB_sBM_cAll_d07_mJB0_ch03.json",
+            "sha256": "a822b1c391537b193c4de9428b77893a22b1e8aadf9c9654717c6e99e615c6c7"
+          },
+          "source_start": 0,
+          "prior_start": 0,
+          "crop_audio": "0.wav",
+          "arrays": "0.npz",
+          "root_y_shift": -1.7715986490249633,
+          "root_roundtrip_rmse_m": 0.1612047404050827,
+          "body_roundtrip_rmse": 0.041517000645399094,
+          "geometry_support_fraction": 0.5101562738418579,
+          "geometry_distortion_max_m": 0.4667138457298279,
+          "matrix_fk_official_max_m": 4.172325134277344e-07,
+          "phase_events": [
+            {
+              "kind": "speed_change_peak",
+              "frame": 8,
+              "status": "CANDIDATE",
+              "semantic_truth": false
+            },
+            {
+              "kind": "speed_peak",
+              "frame": 8,
+              "status": "CANDIDATE",
+              "semantic_truth": false
+            },
+            {
+              "kind": "speed_second_difference_peak",
+              "frame": 9,
+              "status": "CANDIDATE",
+              "semantic_truth": false
+            },
+            {
+              "kind": "low_speed",
+              "frame": null,
+              "status": "UNKNOWN",
+              "semantic_truth": false
+            }
+          ],
+          "geometry_target": "Official normalizer roundtrip FK, masked where raw-source distortion>0.05m",
+          "C4_observed": false,
+          "Root_supervised_as_truth": false
+        },
+        "scope": "FROZEN_PARENT_TRAIN_CACHE_NOT_NEW_DATA_V3_TEST"
+      },
+      {
+        "case": 37,
+        "adaptation_role": "train",
+        "original_metadata": {
+          "case": 37,
+          "role": "train",
+          "source_group": "aist_publisher_track:mJB1",
+          "recording_uid": "aist_capture:gJB_sBM_cAll_d08_mJB1_ch05",
+          "raw_motion": {
+            "path": "/home/disk/lsm/storage/DunhuangDanceGen/assets/datasets/aistpp/annotations/motions/gJB_sBM_cAll_d08_mJB1_ch05.pkl",
+            "sha256": "e6bd9d892379d52912cdc059b2c2f17a65e469fa3125a23725b75b58316a44a0"
+          },
+          "source_native": {
+            "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/transfer_audit_01/a2/sources/e6bd9d892379d52912cdc059b2c2f17a65e469fa3125a23725b75b58316a44a0.npy",
+            "sha256": "f7009990815be1066fb41b1056045bf491c4e96efdfe208bd495f8fab9d724ce"
+          },
+          "audio": {
+            "path": "/home/disk/lsm/storage/DunhuangDanceGen/assets/datasets/aistpp/music/mJB1.wav",
+            "sha256": "7a23ff77f70aaf9b73d17be50a8f6c95f2649f52ee5f6a3fbf0ec9c5d3caf14f"
+          },
+          "clock": {
+            "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/aist_calibration_01/calibration/gJB_sBM_cAll_d08_mJB1_ch05.json",
+            "sha256": "b9bfa4b5972b87024ed0f420f51f81e314577ff412406c95f42d72c28b8647df"
+          },
+          "source_start": 0,
+          "prior_start": 0,
+          "crop_audio": "37.wav",
+          "arrays": "37.npz",
+          "root_y_shift": -1.8088843941688537,
+          "root_roundtrip_rmse_m": 0.17708146572113037,
+          "body_roundtrip_rmse": 0.03138798475265503,
+          "geometry_support_fraction": 0.8648437857627869,
+          "geometry_distortion_max_m": 0.302586168050766,
+          "matrix_fk_official_max_m": 3.5762786865234375e-07,
+          "phase_events": [
+            {
+              "kind": "speed_change_peak",
+              "frame": 84,
+              "status": "CANDIDATE",
+              "semantic_truth": false
+            },
+            {
+              "kind": "speed_peak",
+              "frame": 93,
+              "status": "CANDIDATE",
+              "semantic_truth": false
+            },
+            {
+              "kind": "speed_second_difference_peak",
+              "frame": 74,
+              "status": "CANDIDATE",
+              "semantic_truth": false
+            },
+            {
+              "kind": "low_speed",
+              "frame": 47,
+              "status": "CANDIDATE",
+              "semantic_truth": false
+            }
+          ],
+          "geometry_target": "Official normalizer roundtrip FK, masked where raw-source distortion>0.05m",
+          "C4_observed": false,
+          "Root_supervised_as_truth": false
+        },
+        "scope": "FROZEN_PARENT_TRAIN_CACHE_NOT_NEW_DATA_V3_TEST"
+      },
+      {
+        "case": 26,
+        "adaptation_role": "train",
+        "original_metadata": {
+          "case": 26,
+          "role": "train",
+          "source_group": "aist_publisher_track:mLH0",
+          "recording_uid": "aist_capture:gLH_sBM_cAll_d17_mLH0_ch01",
+          "raw_motion": {
+            "path": "/home/disk/lsm/storage/DunhuangDanceGen/assets/datasets/aistpp/annotations/motions/gLH_sBM_cAll_d17_mLH0_ch01.pkl",
+            "sha256": "dd5945569fd10c8859943dc3d014266c2b5a5dacc0e73b687d90b35eaebe24c9"
+          },
+          "source_native": {
+            "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/transfer_audit_01/a2/sources/dd5945569fd10c8859943dc3d014266c2b5a5dacc0e73b687d90b35eaebe24c9.npy",
+            "sha256": "39578316662075cbe38e48c591a5f684c8e04ab83262553b34f200249911d73f"
+          },
+          "audio": {
+            "path": "/home/disk/lsm/storage/DunhuangDanceGen/assets/datasets/aistpp/music/mLH0.wav",
+            "sha256": "94889534012d2b7025bafe9d665968c4bbcc731d2c77f0b608002d6fd6206187"
+          },
+          "clock": {
+            "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/aist_calibration_01/calibration/gLH_sBM_cAll_d17_mLH0_ch01.json",
+            "sha256": "77cb8195d7948287ba81ba247cc34611e8127cea49646f2b77d5711bcca31fdb"
+          },
+          "source_start": 0,
+          "prior_start": 0,
+          "crop_audio": "26.wav",
+          "arrays": "26.npz",
+          "root_y_shift": -1.8264155507087707,
+          "root_roundtrip_rmse_m": 0.20605076849460602,
+          "body_roundtrip_rmse": 0.0037187994457781315,
+          "geometry_support_fraction": 1.0,
+          "geometry_distortion_max_m": 0.0109198447316885,
+          "matrix_fk_official_max_m": 3.129243850708008e-07,
+          "phase_events": [
+            {
+              "kind": "speed_change_peak",
+              "frame": 3,
+              "status": "CANDIDATE",
+              "semantic_truth": false
+            },
+            {
+              "kind": "speed_peak",
+              "frame": 2,
+              "status": "CANDIDATE",
+              "semantic_truth": false
+            },
+            {
+              "kind": "speed_second_difference_peak",
+              "frame": 12,
+              "status": "CANDIDATE",
+              "semantic_truth": false
+            },
+            {
+              "kind": "low_speed",
+              "frame": 33,
+              "status": "CANDIDATE",
+              "semantic_truth": false
+            }
+          ],
+          "geometry_target": "Official normalizer roundtrip FK, masked where raw-source distortion>0.05m",
+          "C4_observed": false,
+          "Root_supervised_as_truth": false
+        },
+        "scope": "FROZEN_PARENT_TRAIN_CACHE_NOT_NEW_DATA_V3_TEST"
+      },
+      {
+        "case": 21,
+        "adaptation_role": "train",
+        "original_metadata": {
+          "case": 21,
+          "role": "train",
+          "source_group": "aist_publisher_track:mMH1",
+          "recording_uid": "aist_capture:gMH_sBM_cAll_d22_mMH1_ch05",
+          "raw_motion": {
+            "path": "/home/disk/lsm/storage/DunhuangDanceGen/assets/datasets/aistpp/annotations/motions/gMH_sBM_cAll_d22_mMH1_ch05.pkl",
+            "sha256": "7c989a04a240e6759f577b81e7d7ecd982f1cc01e98dd8e8bb09438643001647"
+          },
+          "source_native": {
+            "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/transfer_audit_01/a2/sources/7c989a04a240e6759f577b81e7d7ecd982f1cc01e98dd8e8bb09438643001647.npy",
+            "sha256": "9ec5839b0af75da2677f632dc9941ba889f3b83a5d65f857b04782c85de30a8d"
+          },
+          "audio": {
+            "path": "/home/disk/lsm/storage/DunhuangDanceGen/assets/datasets/aistpp/music/mMH1.wav",
+            "sha256": "9d3442376028838df6538bfe843d32c5efd170397d666ebafadf8ae05ec4b271"
+          },
+          "clock": {
+            "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/aist_calibration_01/calibration/gMH_sBM_cAll_d22_mMH1_ch05.json",
+            "sha256": "93be51612687c854ec4372de69db439c5a665d66f97b17ea9259a9414d5501a7"
+          },
+          "source_start": 0,
+          "prior_start": 0,
+          "crop_audio": "21.wav",
+          "arrays": "21.npz",
+          "root_y_shift": -1.713583242893219,
+          "root_roundtrip_rmse_m": 0.2322654128074646,
+          "body_roundtrip_rmse": 0.013915110379457474,
+          "geometry_support_fraction": 0.879687488079071,
+          "geometry_distortion_max_m": 0.19023080170154572,
+          "matrix_fk_official_max_m": 3.5762786865234375e-07,
+          "phase_events": [
+            {
+              "kind": "speed_change_peak",
+              "frame": 93,
+              "status": "CANDIDATE",
+              "semantic_truth": false
+            },
+            {
+              "kind": "speed_peak",
+              "frame": 84,
+              "status": "CANDIDATE",
+              "semantic_truth": false
+            },
+            {
+              "kind": "speed_second_difference_peak",
+              "frame": 85,
+              "status": "CANDIDATE",
+              "semantic_truth": false
+            },
+            {
+              "kind": "low_speed",
+              "frame": 30,
+              "status": "CANDIDATE",
+              "semantic_truth": false
+            }
+          ],
+          "geometry_target": "Official normalizer roundtrip FK, masked where raw-source distortion>0.05m",
+          "C4_observed": false,
+          "Root_supervised_as_truth": false
+        },
+        "scope": "FROZEN_PARENT_TRAIN_CACHE_NOT_NEW_DATA_V3_TEST"
+      },
+      {
+        "case": 76,
+        "adaptation_role": "train",
+        "original_metadata": {
+          "case": 76,
+          "role": "train",
+          "source_group": "aist_publisher_track:mMH3",
+          "recording_uid": "aist_capture:gMH_sBM_cAll_d24_mMH3_ch05",
+          "raw_motion": {
+            "path": "/home/disk/lsm/storage/DunhuangDanceGen/assets/datasets/aistpp/annotations/motions/gMH_sBM_cAll_d24_mMH3_ch05.pkl",
+            "sha256": "fbb20e6cb04b79aecf0057152b491cbf683ca0fa4e6bc17131344d86120db55b"
+          },
+          "source_native": {
+            "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/transfer_audit_01/a2/sources/fbb20e6cb04b79aecf0057152b491cbf683ca0fa4e6bc17131344d86120db55b.npy",
+            "sha256": "051153b8813e51c77e886ed7f1b943284911a252119357b22ddbfdcb4747c96a"
+          },
+          "audio": {
+            "path": "/home/disk/lsm/storage/DunhuangDanceGen/assets/datasets/aistpp/music/mMH3.wav",
+            "sha256": "4615db8b31d7194a9f3a0534251489f10257971c0b5e0b20ec3d53658ba8a8f7"
+          },
+          "clock": {
+            "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/aist_calibration_01/calibration/gMH_sBM_cAll_d24_mMH3_ch05.json",
+            "sha256": "fde572362f4aef5c5fa4715522daaf40a0518eae8b143a4d6a12301fac08e677"
+          },
+          "source_start": 0,
+          "prior_start": 0,
+          "crop_audio": "76.wav",
+          "arrays": "76.npz",
+          "root_y_shift": -1.7727627873420715,
+          "root_roundtrip_rmse_m": 0.233912393450737,
+          "body_roundtrip_rmse": 0.020083293318748474,
+          "geometry_support_fraction": 0.9625000357627869,
+          "geometry_distortion_max_m": 0.11037012934684753,
+          "matrix_fk_official_max_m": 2.980232238769531e-07,
+          "phase_events": [
+            {
+              "kind": "speed_change_peak",
+              "frame": 64,
+              "status": "CANDIDATE",
+              "semantic_truth": false
+            },
+            {
+              "kind": "speed_peak",
+              "frame": 64,
+              "status": "CANDIDATE",
+              "semantic_truth": false
+            },
+            {
+              "kind": "speed_second_difference_peak",
+              "frame": 65,
+              "status": "CANDIDATE",
+              "semantic_truth": false
+            },
+            {
+              "kind": "low_speed",
+              "frame": 45,
+              "status": "CANDIDATE",
+              "semantic_truth": false
+            }
+          ],
+          "geometry_target": "Official normalizer roundtrip FK, masked where raw-source distortion>0.05m",
+          "C4_observed": false,
+          "Root_supervised_as_truth": false
+        },
+        "scope": "FROZEN_PARENT_TRAIN_CACHE_NOT_NEW_DATA_V3_TEST"
+      },
+      {
+        "case": 4,
+        "adaptation_role": "held",
+        "original_metadata": {
+          "case": 4,
+          "role": "train",
+          "source_group": "aist_publisher_track:mLO0",
+          "recording_uid": "aist_capture:gLO_sBM_cAll_d14_mLO0_ch01",
+          "raw_motion": {
+            "path": "/home/disk/lsm/storage/DunhuangDanceGen/assets/datasets/aistpp/annotations/motions/gLO_sBM_cAll_d14_mLO0_ch01.pkl",
+            "sha256": "ada9518e63a81df7b93dff98dbbe7f7a9e3a87def323570dd5f1657c0f4f65aa"
+          },
+          "source_native": {
+            "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/transfer_audit_01/a2/sources/ada9518e63a81df7b93dff98dbbe7f7a9e3a87def323570dd5f1657c0f4f65aa.npy",
+            "sha256": "564b02528e5a5457e6b1648daf53225a9710ce3923e389b9a5772c7958f15fcb"
+          },
+          "audio": {
+            "path": "/home/disk/lsm/storage/DunhuangDanceGen/assets/datasets/aistpp/music/mLO0.wav",
+            "sha256": "6bd0add6619d94e7fc3ed0287d7a75844d64be1eca0b2cae165381e4068002ff"
+          },
+          "clock": {
+            "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/aist_calibration_01/calibration/gLO_sBM_cAll_d14_mLO0_ch01.json",
+            "sha256": "db289c58aa4f15b8476f2b51e512a3121e94adb0442cc22f050c7f09ad74d104"
+          },
+          "source_start": 0,
+          "prior_start": 0,
+          "crop_audio": "4.wav",
+          "arrays": "4.npz",
+          "root_y_shift": -1.803755533695221,
+          "root_roundtrip_rmse_m": 0.19071628153324127,
+          "body_roundtrip_rmse": 0.02407454513013363,
+          "geometry_support_fraction": 0.6976562738418579,
+          "geometry_distortion_max_m": 0.19160118699073792,
+          "matrix_fk_official_max_m": 2.980232238769531e-07,
+          "phase_events": [
+            {
+              "kind": "speed_change_peak",
+              "frame": 4,
+              "status": "CANDIDATE",
+              "semantic_truth": false
+            },
+            {
+              "kind": "speed_peak",
+              "frame": 2,
+              "status": "CANDIDATE",
+              "semantic_truth": false
+            },
+            {
+              "kind": "speed_second_difference_peak",
+              "frame": 50,
+              "status": "CANDIDATE",
+              "semantic_truth": false
+            },
+            {
+              "kind": "low_speed",
+              "frame": 18,
+              "status": "CANDIDATE",
+              "semantic_truth": false
+            }
+          ],
+          "geometry_target": "Official normalizer roundtrip FK, masked where raw-source distortion>0.05m",
+          "C4_observed": false,
+          "Root_supervised_as_truth": false
+        },
+        "scope": "FROZEN_PARENT_TRAIN_CACHE_NOT_NEW_DATA_V3_TEST"
+      },
+      {
+        "case": 8,
+        "adaptation_role": "held",
+        "original_metadata": {
+          "case": 8,
+          "role": "train",
+          "source_group": "aist_publisher_track:mPO2",
+          "recording_uid": "aist_capture:gPO_sBM_cAll_d10_mPO2_ch08",
+          "raw_motion": {
+            "path": "/home/disk/lsm/storage/DunhuangDanceGen/assets/datasets/aistpp/annotations/motions/gPO_sBM_cAll_d10_mPO2_ch08.pkl",
+            "sha256": "b06e193c32310727d9ac0121325e84e24f2ea591564beeb741b92741eee27f06"
+          },
+          "source_native": {
+            "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/transfer_audit_01/a2/sources/b06e193c32310727d9ac0121325e84e24f2ea591564beeb741b92741eee27f06.npy",
+            "sha256": "dca98010414e0faf083e3d6abe491a0c1557383ae7c7b608e3ffe72cc09fa177"
+          },
+          "audio": {
+            "path": "/home/disk/lsm/storage/DunhuangDanceGen/assets/datasets/aistpp/music/mPO2.wav",
+            "sha256": "37c79f8452dca0e0001d09f5dbaf99302e770c47165d096f5f1fcfe84f2f7309"
+          },
+          "clock": {
+            "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/aist_calibration_01/calibration/gPO_sBM_cAll_d10_mPO2_ch08.json",
+            "sha256": "090aaa696e7a9cc7ab6802f0c7d89597315c7049c7eaf7efb527a8cb63931efd"
+          },
+          "source_start": 0,
+          "prior_start": 0,
+          "crop_audio": "8.wav",
+          "arrays": "8.npz",
+          "root_y_shift": -1.9220951914787292,
+          "root_roundtrip_rmse_m": 0.20899339020252228,
+          "body_roundtrip_rmse": 0.0033222115598618984,
+          "geometry_support_fraction": 1.0,
+          "geometry_distortion_max_m": 0.022590067237615585,
+          "matrix_fk_official_max_m": 2.980232238769531e-07,
+          "phase_events": [
+            {
+              "kind": "speed_change_peak",
+              "frame": 42,
+              "status": "CANDIDATE",
+              "semantic_truth": false
+            },
+            {
+              "kind": "speed_peak",
+              "frame": 11,
+              "status": "CANDIDATE",
+              "semantic_truth": false
+            },
+            {
+              "kind": "speed_second_difference_peak",
+              "frame": 43,
+              "status": "CANDIDATE",
+              "semantic_truth": false
+            },
+            {
+              "kind": "low_speed",
+              "frame": 74,
+              "status": "CANDIDATE",
+              "semantic_truth": false
+            }
+          ],
+          "geometry_target": "Official normalizer roundtrip FK, masked where raw-source distortion>0.05m",
+          "C4_observed": false,
+          "Root_supervised_as_truth": false
+        },
+        "scope": "FROZEN_PARENT_TRAIN_CACHE_NOT_NEW_DATA_V3_TEST"
+      },
+      {
+        "case": 12,
+        "adaptation_role": "held",
+        "original_metadata": {
+          "case": 12,
+          "role": "train",
+          "source_group": "aist_publisher_track:mJS0",
+          "recording_uid": "aist_capture:gJS_sBM_cAll_d01_mJS0_ch09",
+          "raw_motion": {
+            "path": "/home/disk/lsm/storage/DunhuangDanceGen/assets/datasets/aistpp/annotations/motions/gJS_sBM_cAll_d01_mJS0_ch09.pkl",
+            "sha256": "03107f0bc00f8c7d8c8b40a3981bac0cf1b689770c17fcc6045f473647cf3783"
+          },
+          "source_native": {
+            "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/transfer_audit_01/a2/sources/03107f0bc00f8c7d8c8b40a3981bac0cf1b689770c17fcc6045f473647cf3783.npy",
+            "sha256": "f23b848193e2b0eae85a25453d520abbe418b6d0cdeaaca4e70cb03229a325fa"
+          },
+          "audio": {
+            "path": "/home/disk/lsm/storage/DunhuangDanceGen/assets/datasets/aistpp/music/mJS0.wav",
+            "sha256": "f44ff12179bbc416d53240488b0997b16995fb83b2bd7516e888bc48ce0f7611"
+          },
+          "clock": {
+            "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/aist_calibration_01/calibration/gJS_sBM_cAll_d01_mJS0_ch09.json",
+            "sha256": "38bcdfae1ba5daa0eb1cc09319ab0415808353bde396aa2af811537758d1e90b"
+          },
+          "source_start": 0,
+          "prior_start": 0,
+          "crop_audio": "12.wav",
+          "arrays": "12.npz",
+          "root_y_shift": -1.7783933997154235,
+          "root_roundtrip_rmse_m": 0.18582947552204132,
+          "body_roundtrip_rmse": 0.004859106615185738,
+          "geometry_support_fraction": 0.9625000357627869,
+          "geometry_distortion_max_m": 0.2065810114145279,
+          "matrix_fk_official_max_m": 4.76837158203125e-07,
+          "phase_events": [
+            {
+              "kind": "speed_change_peak",
+              "frame": 26,
+              "status": "CANDIDATE",
+              "semantic_truth": false
+            },
+            {
+              "kind": "speed_peak",
+              "frame": 26,
+              "status": "CANDIDATE",
+              "semantic_truth": false
+            },
+            {
+              "kind": "speed_second_difference_peak",
+              "frame": 6,
+              "status": "CANDIDATE",
+              "semantic_truth": false
+            },
+            {
+              "kind": "low_speed",
+              "frame": 90,
+              "status": "CANDIDATE",
+              "semantic_truth": false
+            }
+          ],
+          "geometry_target": "Official normalizer roundtrip FK, masked where raw-source distortion>0.05m",
+          "C4_observed": false,
+          "Root_supervised_as_truth": false
+        },
+        "scope": "FROZEN_PARENT_TRAIN_CACHE_NOT_NEW_DATA_V3_TEST"
+      },
+      {
+        "case": 16,
+        "adaptation_role": "held",
+        "original_metadata": {
+          "case": 16,
+          "role": "train",
+          "source_group": "aist_publisher_track:mLH2",
+          "recording_uid": "aist_capture:gLH_sBM_cAll_d16_mLH2_ch01",
+          "raw_motion": {
+            "path": "/home/disk/lsm/storage/DunhuangDanceGen/assets/datasets/aistpp/annotations/motions/gLH_sBM_cAll_d16_mLH2_ch01.pkl",
+            "sha256": "3309e8227e914c6e5ed1cd0f1b86da0e21ead8d1bef5312483ab8d89f49cd0e1"
+          },
+          "source_native": {
+            "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/transfer_audit_01/a2/sources/3309e8227e914c6e5ed1cd0f1b86da0e21ead8d1bef5312483ab8d89f49cd0e1.npy",
+            "sha256": "b5a8e58b40d912d41cda839ffff5c1ef27cb82690f08e2e17f98a8df5064dd4c"
+          },
+          "audio": {
+            "path": "/home/disk/lsm/storage/DunhuangDanceGen/assets/datasets/aistpp/music/mLH2.wav",
+            "sha256": "faeb12bdf381e63e64f0f6e0c3af247a33cc85d0f8e3a35aa7fdbec37a236e17"
+          },
+          "clock": {
+            "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/aist_calibration_01/calibration/gLH_sBM_cAll_d16_mLH2_ch01.json",
+            "sha256": "c294a5e1f55b97887d66879a96d68958df09c35ed9273f3463a1d7684ab8dc0f"
+          },
+          "source_start": 0,
+          "prior_start": 0,
+          "crop_audio": "16.wav",
+          "arrays": "16.npz",
+          "root_y_shift": -1.895059299468994,
+          "root_roundtrip_rmse_m": 0.2096627652645111,
+          "body_roundtrip_rmse": 0.009193670935928822,
+          "geometry_support_fraction": 0.977343738079071,
+          "geometry_distortion_max_m": 0.14363016188144684,
+          "matrix_fk_official_max_m": 2.980232238769531e-07,
+          "phase_events": [
+            {
+              "kind": "speed_change_peak",
+              "frame": 27,
+              "status": "CANDIDATE",
+              "semantic_truth": false
+            },
+            {
+              "kind": "speed_peak",
+              "frame": 26,
+              "status": "CANDIDATE",
+              "semantic_truth": false
+            },
+            {
+              "kind": "speed_second_difference_peak",
+              "frame": 27,
+              "status": "CANDIDATE",
+              "semantic_truth": false
+            },
+            {
+              "kind": "low_speed",
+              "frame": 59,
+              "status": "CANDIDATE",
+              "semantic_truth": false
+            }
+          ],
+          "geometry_target": "Official normalizer roundtrip FK, masked where raw-source distortion>0.05m",
+          "C4_observed": false,
+          "Root_supervised_as_truth": false
+        },
+        "scope": "FROZEN_PARENT_TRAIN_CACHE_NOT_NEW_DATA_V3_TEST"
+      }
+    ],
+    "all_same_population_controls": true,
+    "main_delivery_preceded_controls": true,
+    "ranking_p0_delivery_preceded_scoring": true,
+    "optimizer_steps": 0,
+    "whole_song_generations": 0,
+    "operational_qualified": false,
+    "can_route": false
+  },
+  "scoring_equivalence": {
+    "exact_score_matrices": 1732,
+    "controls": 4,
+    "tasks": 433,
+    "global_and_diagonal_exact": true,
+    "optimizer_steps": 0
+  },
+  "receipts": {
+    "generation": {
+      "exits": {
+        "qualification.exit": "0",
+        "final_view.exit": "0",
+        "view.exit": "1",
+        "controls_all.exit": "0",
+        "main.exit": "0",
+        "videos.exit": "0",
+        "view_v2.exit": "0",
+        "main_all.exit": "0",
+        "contracts.exit": "0",
+        "controls.exit": "0"
+      },
+      "preserved_nonzero": {
+        "view.exit": "1"
+      }
+    },
+    "ranking": {
+      "exits": {
+        "change_shadow_v2.exit": "0",
+        "train_ShuffledRank.exit": "0",
+        "diagnostics_replay.exit": "0",
+        "population.exit": "0",
+        "evaluate_NoRank_v2.exit": "0",
+        "replay_train_NoRank.exit": "0",
+        "p2_all.exit": "0",
+        "finish_all.exit": "0",
+        "viewer_p0.exit": "0",
+        "controls_replay.exit": "0",
+        "p1_all.exit": "0",
+        "viewer_NoRank.exit": "0",
+        "evaluation_replay.exit": "0",
+        "features_replay.exit": "0",
+        "tests.exit": "0",
+        "viewer_scored.exit": "0",
+        "features.exit": "0",
+        "diagnostics.exit": "0",
+        "cpu_replay_all.exit": "0",
+        "evaluate_NoRank_replay.exit": "0",
+        "features_NoRank.exit": "0",
+        "scoring_fast.exit": "0",
+        "shadow.exit": "0",
+        "evaluate_Rank_v2.exit": "0",
+        "evaluation.exit": "0",
+        "change_view.exit": "0",
+        "native_replay.exit": "0",
+        "evaluate_ShuffledRank_replay.exit": "0",
+        "native_v3.exit": "0",
+        "train_Rank.exit": "0",
+        "guarded_view.exit": "0",
+        "replay_train_ShuffledRank.exit": "0",
+        "p0_all.exit": "0",
+        "main_replay.exit": "0",
+        "change_shadow.exit": "1",
+        "regression.exit": "0",
+        "scoring_equivalence.exit": "0",
+        "qualification_replay.exit": "0",
+        "regression_final.exit": "0",
+        "evaluate_ShuffledRank_v2.exit": "0",
+        "population_replay.exit": "0",
+        "train_NoRank.exit": "0",
+        "guard_replay.exit": "0",
+        "features_ShuffledRank.exit": "0",
+        "features_NoRank_replay.exit": "0",
+        "viewer_ShuffledRank.exit": "0",
+        "features_Rank_replay.exit": "0",
+        "guard.exit": "0",
+        "replay_train_Rank.exit": "0",
+        "native_view_v2.exit": "0",
+        "evaluate_Rank_replay.exit": "0",
+        "features_ShuffledRank_replay.exit": "0",
+        "features_Rank.exit": "0",
+        "evaluate_NoRank.exit": "143",
+        "viewer_Rank.exit": "0",
+        "independent.exit": "0",
+        "gpu_contracts.exit": "0"
+      },
+      "preserved_nonzero": {
+        "change_shadow.exit": "1",
+        "evaluate_NoRank.exit": "143"
+      }
+    }
+  },
+  "human_reviewed": false,
+  "semantic_event_truth": "UNKNOWN",
+  "native24": "NOT_EVALUABLE_22_OF24",
+  "contact_truth": "UNKNOWN",
+  "whole_song_generations": 0,
+  "can_route": false,
+  "operational_qualified": false
+}
