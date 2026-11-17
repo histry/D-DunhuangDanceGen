@@ -18,10 +18,6 @@ from dunhuang.research.paired_event_r41.train import seeded
 from pytorch3d.transforms import rotation_6d_to_matrix
 from .teacher import fk,temporal_loss
 from dunhuang.research.transition_r37.geometry import c2_envelope
-from dunhuang.research.transition_r37.geometry import c2_envelope
-from dunhuang.research.transition_r37.geometry import c2_envelope
-from dunhuang.research.transition_r37.geometry import c2_envelope
-from dunhuang.research.transition_r37.geometry import c2_envelope
 
 
 def assemble(rt,z,rows):
