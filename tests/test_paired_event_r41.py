@@ -40,3 +40,48 @@ def test_source_audio_and_music_group_cannot_cross_roles():
         a=row(0,120);b=row(150,270,role='val',raw='new',audio='other',group='different');b[key]=a[key]
         with pytest.raises(ValueError,match='crosses roles'):validate_roles([a,b])
     with pytest.raises(ValueError,match='Test tensors'):validate_roles([row(0,120,role='test')])
+
+def test_local_content_is_translation_equivariant_and_clock_channels_are_ignored():
+    import torch
+    from dunhuang.research.paired_event_r41.model import EventContent,RADIUS
+    torch.manual_seed(1);torch.set_num_threads(1);m=EventContent().eval();a=torch.randn(1,170,50);d=torch.randn(1,170,274);mask=torch.ones_like(d,dtype=torch.bool);valid=torch.ones(1,170,dtype=torch.bool)
+    with torch.no_grad():
+        x,y,*_=m.content(a,d,mask,valid);u,v,*_=m.content(a[:,25:125],d[:,25:125],mask[:,25:125],valid[:,25:125])
+        torch.testing.assert_close(x[:,50-RADIUS:90-RADIUS],u[:,25-RADIUS:65-RADIUS],rtol=1e-5,atol=1e-6)
+        torch.testing.assert_close(y[:,50-RADIUS:90-RADIUS],v[:,25-RADIUS:65-RADIUS],rtol=1e-5,atol=1e-6)
+        d[:,:,-2:]=123456;_,other,*_=m.content(a,d,mask,valid);torch.testing.assert_close(y,other)
+
+def test_zero_content_cannot_create_a_local_absolute_index_pattern():
+    import torch
+    from dunhuang.research.paired_event_r41.model import EventContent,scores_for_offsets
+    torch.manual_seed(2);model=EventContent().eval();d=torch.zeros(3,90,274);a=torch.zeros(3,90,50)
+    with torch.no_grad():
+        m,x,*_=model.content(a,d,torch.ones_like(d,dtype=torch.bool),torch.ones(3,90,dtype=torch.bool));scores=scores_for_offsets(m,x,[-15,-8,0,8,15])
+    assert torch.max(abs(scores-scores[:,:1]))<1e-6
+
+def test_shared_signal_offset_sign_and_actual_gradient_path():
+    import torch
+    from dunhuang.research.paired_event_r41.model import EventContent,scores_for_offsets,local_objective
+    torch.manual_seed(3);master=torch.nn.functional.normalize(torch.randn(200,96),dim=-1);offsets=[-15,-8,0,8,15]
+    for delta in offsets:
+        m=master[21+delta:99+delta][None];d=master[21:99][None];s=scores_for_offsets(m,d,offsets);assert offsets[int(s.argmax())]==delta
+    model=EventContent();x=torch.randn(2,90,274);music=torch.randn(2,90,50);mt,dt,*_=model.content(music,x,torch.ones_like(x,dtype=torch.bool),torch.ones(2,90,dtype=torch.bool));a,b,_=local_objective(mt,dt,[[3,9],[14,2]]);(a+b).backward()
+    assert model.music[0].weight.grad.norm()>0 and model.motion[0].weight.grad.norm()>0
+    assert model.local_music[0].weight.grad.norm()>0 and model.local_motion[0].weight.grad.norm()>0
+
+def test_full_reconstruction_support_is_not_replaced_by_crops():
+    import torch
+    from dunhuang.research.paired_event_r41.model import EventContent
+    from dunhuang.research.paired_event_r41.train import objective
+    torch.manual_seed(4)
+    class Pop:
+        rows=[dict(frames=150) for i in range(4)]
+        m=torch.randn(4,150,50);d=torch.randn(4,150,274)
+        def batch(self,ids,origins=None):
+            if origins is None:a=self.m[ids];b=self.d[ids]
+            else:a=torch.stack([self.m[i,int(o[0])+1:int(o[0])+91] for i,o in zip(ids,origins)]);b=torch.stack([self.d[i,int(o[1])+1:int(o[1])+91] for i,o in zip(ids,origins)])
+            return a,b,torch.ones_like(b,dtype=torch.bool),torch.ones(a.shape[:2],dtype=torch.bool)
+        def relations(self,ids):return np.eye(len(ids),dtype=bool),~np.eye(len(ids),dtype=bool)
+    cfg=dict(seed=41041,loss_weights=dict(global_=1.,clock=.1,local=.1,reconstruction=.1,equivariance=.05));cfg['loss_weights']['global']=cfg['loss_weights'].pop('global_');value,parts,meta=objective(EventContent(),Pop(),[0,1,2,3],cfg,0)
+    assert meta['full_reconstruction_frames']==600 and meta['reconstruction_observed_values']==600*198
+    assert torch.isfinite(value)
