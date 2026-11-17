@@ -31,13 +31,17 @@ def build(out,extra=None,videos=None):
                 panels.append(dict(name=name,tracks=[track(x) for x in a[key+'_'+name+'_22']]))
                 if name=='Frozen':
                     values=frozen_rts(a[key+'_Frozen_139'],a[key+'_Geometry_139']);panels.append(dict(name='FrozenRTS',tracks=[track(world_fk(*decode(x),J,parents)) for x in values]))
+                    curves=[]
+                    for x in values:
+                        error=relative_fk(decode(x)[0],J,parents)-relative_fk(R,J,parents);curve=np.zeros(256);curve[3:]=np.sqrt(np.mean((np.diff(error,n=3,axis=0)*27000)**2,axis=(1,2)));curves.append(curve)
+                    row['metrics']['curves']['FrozenRTS']=np.mean(curves,axis=0).tolist()
             audio=row.get('audio');target=None
             if audio:
                 src=root/audio
                 if not src.exists():src=p/'generation'/audio
                 shutil.copyfile(src,out/audio)
             cases.append(dict(id='new_'+key,name=row.get('label',key),panels=panels,audio=audio,gap=[104,152],seeds=row['seeds'],scope=row['scope'],metrics=row.get('metrics',{})))
-    if extra:cases=[c for c in cases if c['id'].startswith('new_')]+[c for c in cases if not c['id'].startswith('new_')]
+    if extra:cases=[c for c in cases if c['id'] not in ('old_failed','new_plan')]+[c for c in cases if c['id'] in ('old_failed','new_plan')]
     payload=dict(cases=cases,tracks=tracks,parents=parents.tolist(),fps=30,frames=256,source_truth='UNPAIRED_REFERENCE_OR_SAME_RECORDING_AS_LABELLED',whole_song_generated=False)
     (out/'data.js').write_text('window.R42_B64="'+base64.b64encode(gzip.compress(json.dumps(payload,ensure_ascii=False,allow_nan=False,separators=(',',':')).encode(),mtime=0)).decode()+'";',encoding='utf8')
     for f in ('index.html','viewer.js','style.css'):shutil.copyfile(Path(__file__).parent/f,out/f)

@@ -22,6 +22,7 @@ def run(viewer,controls,out):
                 for x in z[r['key']+'_'+name+'_22']:
                     a=np.asarray(x,dtype='<f4');key=str(len(tracks));tracks[key]=dict(shape=list(a.shape),data=base64.b64encode(a.tobytes()).decode());ids.append(key)
                 c['panels'].append(dict(name=name,tracks=ids));c['metrics']['values'][name]=r['metrics']['values'][name];c['metrics']['curves'][name]=r['metrics']['curves'][name]
+    payload['cases']=[c for c in payload['cases'] if c['id'] not in ('old_failed','new_plan')]+[c for c in payload['cases'] if c['id'] in ('old_failed','new_plan')]
     (out/'data.js').write_text('window.R42_B64="'+base64.b64encode(gzip.compress(json.dumps(payload,ensure_ascii=False,allow_nan=False,separators=(',',':')).encode(),mtime=0)).decode()+'";',encoding='utf8')
     write(out/'protocol.json',dict(cases=len(cases),fps=30,main_selection_preserved=True,files=[dict(name=f.name,bytes=f.stat().st_size,sha256=sha(f)) for f in sorted(out.iterdir()) if f.name!='protocol.json']));print('R42_COMPARE_VIEW',len(cases),flush=True)
 
