@@ -50,3 +50,14 @@ def test_viewer_uses_exact_case_ids_when_legacy_new_plan_prefix_collides():
     from dunhuang.research.music_reperformance_r43.view import selected_cases
     cases=[dict(id=k) for k in ['old_failed','new_plan','new_new_plan','new_paired_0']]
     assert [r['id'] for r in selected_cases(cases,['new_plan','paired_0'])]==['new_new_plan','new_paired_0']
+
+
+def test_geometry_fallback_uses_observables_not_hidden_paired_error():
+    from dunhuang.research.music_reperformance_r43.guard import decision
+    geometry=dict(core_activity=1.,core_D3=10.,gap_D3=10.,protected_exact=True)
+    candidate=dict(geometry,gap_D0_error=1000.)
+    assert decision(candidate,geometry)['use']=='Core'
+    candidate['gap_D0_error']=0.;candidate['core_D3']=20.
+    assert decision(candidate,geometry)['use']=='Geometry'
+    candidate=dict(geometry,protected_exact=False)
+    assert decision(candidate,geometry)['use']=='Geometry'

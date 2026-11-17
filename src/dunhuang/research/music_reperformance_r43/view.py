@@ -16,7 +16,7 @@ def build(main,out,controls=None,videos=None):
     script=(out/'data.js').read_text(encoding='utf8');payload=json.loads(gzip.decompress(base64.b64decode(script.split('"')[1])));data=np.load(main/'arrays.npz');meta=read(main/'result.json');lookup={r['key']:r for r in meta['records']}
     payload['cases']=selected_cases(payload['cases'],lookup)
     for c in payload['cases']:
-        key=c['id'][4:];budget=data[key+'_body_budget'];c['permissions']=np.max(budget,axis=-1).tolist();c['phase_anchors']=lookup[key]['phase_anchors'];c['music_main']=c['audio']
+        key=c['id'][4:];budget=data[key+'_body_budget'];c['permissions']=np.max(budget,axis=-1).tolist();c['phase_anchors']=lookup[key]['phase_anchors'];c['music_main']=c['audio'];c['guard_decisions']=lookup[key].get('guard_decisions')
     if controls:
         control=Path(controls);z=np.load(control/'arrays.npz');rows={r['key']:r for r in read(control/'result.json')['records']}
         for c in payload['cases']:
