@@ -28,10 +28,10 @@ def audit(root,out):
     records=read(root/'data_v2/result.json')['records'];train={r['recording_uid'] for r in records if r['role']=='train' and r['domain']=='ChangE'};held={r['recording_uid'] for r in records if r['role']=='held' and r['domain']=='ChangE'};assert len(train)==len(held)==4 and not train&held
     t=read(root/'teacher/result.json');assert all(next(r for r in records if r['key']==key)['role']=='train' for key in t['training_keys'])
     # Paired case numbers are cache identities; bind the actual recording metadata separately.
-    rows,_,_,_=population_data();lineage=[]
+    rows,_,_,_=population_data();lineage=[];original=read('outputs/reference_r26_01/data/result.json')['records'];v3={r['recording_uid']:r['role'] for r in read('outputs/paired_event_r41_01/data/manifest.json')['sources']}
     for r in records:
         if r['domain']!='AIST++':continue
-        source=[x for x in rows if x['domain']=='aist' and x['case']==r['case']][-1];lineage.append(dict(case=r['case'],role=r['role'],metadata={k:v for k,v in source.items() if k!='data'},identity_scope='FROZEN_PARENT_CASE_CACHE_NOT_NEW_RECORDING_CLAIM'))
+        source=[x for x in rows if x['domain']=='aist' and x['case']==r['case']][-1];origin=next(x for x in original if x['case']==r['case']);assert origin['role']=='train' and v3[origin['recording_uid']]=='train';lineage.append(dict(case=r['case'],role=r['role'],recording_uid=origin['recording_uid'],source_group=origin['source_group'],data_v3_role=v3[origin['recording_uid']],raw_motion=origin['raw_motion'],source_clock=origin['clock'],metadata={k:v for k,v in source.items() if k!='data'},identity_scope='FROZEN_PARENT_TRAIN_CACHE_BOUND_TO_DATA_V3_NOT_NEW_BLIND_TEST'))
     for viewer in sorted(root.glob('viewer*')):
         if viewer.is_dir():
             for r in read(viewer/'protocol.json')['files']:assert sha(viewer/r['name'])==r['sha256']
