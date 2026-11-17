@@ -30,7 +30,7 @@ def audit(root,out):
     rows,_,_,_=population_data();lineage=[]
     for r in records:
         if r['domain']!='AIST++':continue
-        source=next(x for x in rows if x['domain']=='aist' and x['case']==r['case']);lineage.append(dict(case=r['case'],role=r['role'],metadata={k:v for k,v in source.items() if k!='data'}))
+        source=[x for x in rows if x['domain']=='aist' and x['case']==r['case']][-1];lineage.append(dict(case=r['case'],role=r['role'],metadata={k:v for k,v in source.items() if k!='data'},identity_scope='FROZEN_PARENT_CASE_CACHE_NOT_NEW_RECORDING_CLAIM'))
     for name in ('viewer_baseline','viewer_diagnostic','viewer_main','viewer_final'):
         for r in read(root/name/'protocol.json')['files']:assert sha(root/name/r['name'])==r['sha256']
     assert (root/'receipts/p0_browser_acceptance.json').stat().st_mtime < (root/'main/protocol.json').stat().st_mtime

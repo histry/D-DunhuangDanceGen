@@ -29,6 +29,7 @@ def run(data,training,out,label,replay=None,frozen_from=None):
         r=min((r for r in rows if r['recording_uid']==uid),key=lambda r:r.get('start',0))
         for name in ('old_failed','new_plan'):selected.append(dict(r,key=r['key']+'__'+name,evaluation_key=r['key'],target_music=name,label=uid+' · 同来源同噪声换音乐 '+name))
     seeds=parent['seeds'];previous=np.load(Path(frozen_from)/'arrays.npz') if frozen_from else None
+    if frozen_from:assert read(Path(frozen_from)/'result.json')['data_sha256']==sha(data/'arrays.npz'),'Frozen comparison population changed'
     for row in selected:
         key=row['key'];ek=row['evaluation_key'];rr=dict(row,key=ek);working={name:z[name] for name in (ek+'_anchor',ek+'_music',ek+'_truth')}
         if row['target_music']:working[ek+'_music']=old[row['target_music']+'_music35']
@@ -45,7 +46,9 @@ def run(data,training,out,label,replay=None,frozen_from=None):
             audio=key+'.wav';shutil.copyfile(Path('outputs/transition_r37_02/generation')/(row['target_music']+'.wav'),out/audio)
         records.append(dict(key=key,label=row['label'],methods=list(variants),seeds=seeds,audio=audio,scope='同录制连续缺口；参考显示真实隐藏目标，仅用于评价，未输入模型。ChangE音乐不配对；身体及相对Root观测，接触UNKNOWN。',role=row['role'],domain=row['domain'],recording_uid=row['recording_uid'],source_interval=row['source_interval'],root_position_observed=row['root_position_observed'],target_music=row['target_music'],metrics=dict(values=metrics,curves=curves),noise=noises))
         np.savez_compressed(out/'arrays.npz',**arrays);print('R42_GENERATE',label,key,flush=True)
-    rt.check();rt.close();result=dict(records=records,label=label,training_sha256=sha(Path(training)/'context.pt'),data_sha256=sha(data/'arrays.npz'),code_commit=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),teacher_reads=0,inference_motion_optimizer_steps=0,optimizer_steps=0,hidden_gap_truth_in_conditions=False,whole_song_generations=0,native24='NOT_EVALUABLE_22_OF24',operational_qualified=False);write(out/'result.json',result)
+    rt.check();rt.close();result=dict(records=records,label=label,training_sha256=sha(Path(training)/'context.pt'),data_sha256=sha(data/'arrays.npz'),code_commit=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),teacher_reads=0,inference_motion_optimizer_steps=0,optimizer_steps=0,hidden_gap_truth_in_conditions=False,whole_song_generations=0,native24='NOT_EVALUABLE_22_OF24',operational_qualified=False)
+    if frozen_from:result['frozen_comparison_arrays_sha256']=sha(Path(frozen_from)/'arrays.npz')
+    write(out/'result.json',result)
     if replay:
         same_arrays(out/'arrays.npz',Path(replay)/'arrays.npz');old=read(Path(replay)/'result.json');new=read(out/'result.json');old.pop('code_commit');new.pop('code_commit');assert old==new
 if __name__=='__main__':
