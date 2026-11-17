@@ -3,7 +3,7 @@ import argparse,subprocess
 from pathlib import Path
 import numpy as np
 import torch
-from pytorch3d.transforms import axis_angle_to_matrix,rotation_6d_to_matrix,matrix_to_axis_angle
+from pytorch3d.transforms import axis_angle_to_matrix,rotation_6d_to_matrix,matrix_to_axis_angle,matrix_to_axis_angle
 from dunhuang.research.complete_r36.core import read,write,sha
 from dunhuang.research.transition_r37.geometry import c2_envelope
 from dunhuang.research.paired_event_r41.train import seeded
