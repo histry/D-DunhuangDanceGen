@@ -32,3 +32,27 @@ def test_source_masks_keep_known_pose_but_not_cross_cut_derivative():
     before=model.context[0].detach().clone();R[104:152]=Rotation.from_rotvec([1.,0,0]).as_matrix()
     model.set_reference(**packet(R[None],[104,152],['test'],ids[None],device='cpu').values)
     assert __import__('torch').equal(before,model.context[0])
+
+def test_ordered_music_embedding_responds_to_reversal_and_masks_padding():
+    import torch
+    from dunhuang.research.bridge_r38.content import OrderedRetrieval
+    torch.manual_seed(8);model=OrderedRetrieval().eval();music=torch.randn(2,32,50);x=torch.randn(2,32,274);mask=torch.ones_like(x,dtype=torch.bool);valid=torch.ones(2,32,dtype=torch.bool)
+    with torch.no_grad():
+        a=model.encode(music,x,mask,valid)[0];b=model.encode(music.flip(1),x,mask,valid)[0]
+        changed=x.clone();changed[:,:,-2:]=999;c=model.encode(music,changed,mask,valid)[0:2]
+        d=model.encode(music,x,mask,valid)[0:2]
+    assert not torch.allclose(a,b,atol=1e-6)
+    assert torch.equal(c[0],d[0]) and torch.equal(c[1],d[1])
+
+def test_actual_multirecording_positive_schedule_has_no_test_rows():
+    from dunhuang.research.bridge_r38.content import schedule,relations
+    rows=[]
+    for role in ('train','val'):
+        for audio in ('a','b'):
+            for t in (0,300):
+                for rec in ('one','two'):
+                    rows.append(dict(role=role,audio_sha256=audio,frames=120,audio_frame_interval=[t,t+120],raw_motion_sha256=audio+rec,paired_clock_verified=True))
+    result=schedule(rows,3,4)
+    for ids in result:
+        assert all(rows[i]['role']=='train' for i in ids)
+        p,n=relations([rows[i] for i in ids]);assert (p.sum(1)==2).all() and n.any(1).all()
