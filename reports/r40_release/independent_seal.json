@@ -1,0 +1,111 @@
+{
+  "code_commit": "67eca148cb6c77d26ab71057c86a8b439d635349",
+  "weights": {
+    "matched": {
+      "initial": "9327944cc9967dcbfdf5e5f7c23fc11d34a9f9969281074c9d34279feaa827e9",
+      "final": "f2d00eebd9066e8a81bd3366897ae638f36df7bc81145630d7dcbb473808a1aa",
+      "updates": [
+        {
+          "step": 0,
+          "update_norm": 0.05127674313124822
+        },
+        {
+          "step": 119,
+          "update_norm": 0.017111809120988617
+        },
+        {
+          "step": 239,
+          "update_norm": 0.016629200038271102
+        }
+      ],
+      "optimizer_steps": 240,
+      "replay_optimizer_steps": 0
+    },
+    "extra": {
+      "initial": "9327944cc9967dcbfdf5e5f7c23fc11d34a9f9969281074c9d34279feaa827e9",
+      "final": "c84f46c0d0781074cdc809307a411d0262cea7f965e615f623fde521d41ecf06",
+      "updates": [
+        {
+          "step": 0,
+          "update_norm": 0.05067622943582548
+        },
+        {
+          "step": 119,
+          "update_norm": 0.011645378572821448
+        },
+        {
+          "step": 239,
+          "update_norm": 0.014635353181149263
+        }
+      ],
+      "optimizer_steps": 240,
+      "replay_optimizer_steps": 0
+    }
+  },
+  "exact_array_replays": {
+    "matched_cache_0": 18,
+    "matched_cache_120": 18,
+    "extra_cache_0": 18,
+    "extra_cache_120": 18,
+    "matched_generation": 72,
+    "extra_generation": 72,
+    "content": 22,
+    "change_arrays": 96
+  },
+  "exits": {
+    "extra_generation_replay.exit": "0",
+    "content.exit": "0",
+    "generation_replay.exit": "0",
+    "matched_replay.exit": "0",
+    "generation.exit": "0",
+    "extra_replay.exit": "0",
+    "final_viewer.exit": "0",
+    "metrics.exit": "0",
+    "change_channel_preflight.exit": "0",
+    "extra.exit": "0",
+    "projection_diagnostics.exit": "0",
+    "official_fk.exit": "0",
+    "content_replay.exit": "0",
+    "change_preflight.exit": "0",
+    "viewer.exit": "0",
+    "extra_generation.exit": "0",
+    "watchable.exit": "0",
+    "matched.exit": "0",
+    "scope_tests.exit": "0",
+    "extra_metrics.exit": "0",
+    "cpu_replay.exit": "0",
+    "follow.exit": "0",
+    "extra_official_fk.exit": "0",
+    "wrap.exit": "0"
+  },
+  "parents": [
+    {
+      "name": "bridge_r38_01",
+      "files": 60,
+      "manifest_sha256": "73ab623c89537ce8f64245406dafaa0eeb16ae37c983b8201aa531baf36c3786"
+    },
+    {
+      "name": "stabilize_r39_01",
+      "files": 73,
+      "manifest_sha256": "89b877a960a55591b915d4c2a0e1fa9b6fcfce9ea905373fa000c997cd5bdf1b"
+    }
+  ],
+  "first_viewer_preceded_extra_training": true,
+  "official_fk_trajectories_checked": 96,
+  "content_optimizer_steps": 80,
+  "content_replay_optimizer_steps": 0,
+  "content_predicted_offset_index_counts": {
+    "R40_actual_scores": {
+      "2": 3240
+    },
+    "FrozenR38_actual_scores": {
+      "2": 3240
+    },
+    "R40_both_zero_scores": {
+      "2": 3240
+    }
+  },
+  "full_native": "NOT_EVALUABLE_22_OF24",
+  "operational_qualified": false,
+  "whole_song_generations": 0
+}

@@ -3,6 +3,8 @@
 当前默认路径：**Event Catalog → Music Timeline → Event Plan → 冻结 EDGE（Temporal V0.5）→ 原 Native 验收**。学习检索保留shadow。研究路径已完成真实151D配对补全，以及原生SO(3)跨录制条件的Cross/Additive同参数量训练（各1,200步）；事件跟随与完整生成质量仍未合格。
 
 
+新增 [R40执行合同训练与独立裁剪报告](reports/R40执行合同训练与独立裁剪对照实验报告.md)与[机器摘要](reports/r40_release/summary.json)：先交付[18组实际局部对照](outputs/contract_r40_01/viewer_final/index.html)，再完成同预算Extra。现有Context两组各240步，冻结Lodge、Source、R39连续Root及RTS；Matched未稳定超过Frozen/Extra，不升级整曲。SDMR独立裁剪90帧、绝对原点只构造时钟标签，固定80步后五偏移准确率仍20%，置零/错配也20%，继续Shadow。24个ChangE连续身体/相对Root窗口完成通道预检，5个Root位置超范围不否定身体和导数。两组缓存、梯度检查点与各72个采样数组、22个SDMR评价数组独立重放；官方FK检查通过，567测试通过/8跳过。保留R38/R39封存和全部回执，新整曲0、Native24仍不可评。
+
 新增 [R37内容记忆与共同过渡报告](reports/R37内容记忆与共同过渡实验报告.md)、[指标与回执](reports/r37_release/r37_summary.json)：先交付[16组联动观看页](outputs/transition_r37_02/viewer_final/index.html)，包括三首完整音乐规划、8条完整来源、KF/RTS及两个真实新旧边界；新计划331帧可跳转生成128帧并返回，完整来源默认不循环。固定候选库下，来源帧重用36.49%/26.32%/31.03%降为0%，来源覆盖2条增为6/5/5条，但不以选择指标冒充艺术质量。Joint是几何共同过渡底座上的有界Lodge修改，选定接缝峰值下降，过渡区Jerk仍弱于几何基线；保护主体含显式复制，未证明学会音乐重演。Data V3真实AIST连续单位4632 Train/648 Val、48/6音乐组，姿态/几何274D与共享token重建的80步SDMR主候选完成；Val整体R@1 20.06%、同歌39.86%，仍Shadow。三首规划、双种子生成、全部单位哈希与Train统计、四个单位重建及固定权重评价独立核验；548回归通过/8跳过。保留条件首版和发布标签检查失败回执；Native24不可评、整曲生成0。
 
 新增 [R36完整动作与来源编辑报告](reports/R36完整动作与来源编辑实验报告.md)、[指标](reports/r36_release/r36_summary.json)及[复验](reports/r36_release/r36_checks.json)：保留旧499事件，增加1,955个运动学父级候选与几何家族；三首计划42/40/40区间变为13/15/14，但平均速度降低。单一Lodge上进行160步Context任务修正及SO(3)有界来源编辑，同计划双种子保持更贴近参考，接缝仍未通过，整曲生成0、SDMR不选路、Native24不可评。最终539回归通过/8跳过，训练检查点和生成数组独立复核。先看本地 `outputs/complete_r36_01/viewer_final04/index.html`：三首计划、8来源边界、3组四栏生成；保形包含显式约束，不宣称已学会敦煌音乐重演。

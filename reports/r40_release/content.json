@@ -1,0 +1,147 @@
+{
+  "metrics": {
+    "R40": {
+      "actual": {
+        "queries": 3240,
+        "offset_accuracy": 0.2,
+        "token_clock_recall_at1": 0.1346604938271605,
+        "token_uniform_chance": 0.011111111111111112,
+        "offset_uniform_chance": 0.2,
+        "groups": {
+          "aist_publisher_track:mJB2": 0.2,
+          "aist_publisher_track:mJS2": 0.2,
+          "aist_publisher_track:mKR1": 0.2,
+          "aist_publisher_track:mLO4": 0.2,
+          "aist_publisher_track:mMH4": 0.2,
+          "aist_publisher_track:mPO0": 0.2
+        }
+      },
+      "music_zero": {
+        "queries": 3240,
+        "offset_accuracy": 0.2,
+        "token_clock_recall_at1": 0.16796296296296298,
+        "token_uniform_chance": 0.011111111111111112,
+        "offset_uniform_chance": 0.2,
+        "groups": {
+          "aist_publisher_track:mJB2": 0.2,
+          "aist_publisher_track:mJS2": 0.2,
+          "aist_publisher_track:mKR1": 0.2,
+          "aist_publisher_track:mLO4": 0.2,
+          "aist_publisher_track:mMH4": 0.2,
+          "aist_publisher_track:mPO0": 0.2
+        }
+      },
+      "both_zero": {
+        "queries": 3240,
+        "offset_accuracy": 0.2,
+        "token_clock_recall_at1": 0.1933333333333333,
+        "token_uniform_chance": 0.011111111111111112,
+        "offset_uniform_chance": 0.2,
+        "groups": {
+          "aist_publisher_track:mJB2": 0.2,
+          "aist_publisher_track:mJS2": 0.2,
+          "aist_publisher_track:mKR1": 0.2,
+          "aist_publisher_track:mLO4": 0.2,
+          "aist_publisher_track:mMH4": 0.2,
+          "aist_publisher_track:mPO0": 0.2
+        }
+      },
+      "music_swap": {
+        "queries": 3240,
+        "offset_accuracy": 0.2,
+        "token_clock_recall_at1": 0.15826131687242798,
+        "token_uniform_chance": 0.011111111111111112,
+        "offset_uniform_chance": 0.2,
+        "groups": {
+          "aist_publisher_track:mJB2": 0.2,
+          "aist_publisher_track:mJS2": 0.2,
+          "aist_publisher_track:mKR1": 0.2,
+          "aist_publisher_track:mLO4": 0.2,
+          "aist_publisher_track:mMH4": 0.2,
+          "aist_publisher_track:mPO0": 0.2
+        }
+      }
+    },
+    "FrozenR38": {
+      "actual": {
+        "queries": 3240,
+        "offset_accuracy": 0.2,
+        "token_clock_recall_at1": 0.17712962962962966,
+        "token_uniform_chance": 0.011111111111111112,
+        "offset_uniform_chance": 0.2,
+        "groups": {
+          "aist_publisher_track:mJB2": 0.2,
+          "aist_publisher_track:mJS2": 0.2,
+          "aist_publisher_track:mKR1": 0.2,
+          "aist_publisher_track:mLO4": 0.2,
+          "aist_publisher_track:mMH4": 0.2,
+          "aist_publisher_track:mPO0": 0.2
+        }
+      },
+      "music_zero": {
+        "queries": 3240,
+        "offset_accuracy": 0.2,
+        "token_clock_recall_at1": 0.1899897119341564,
+        "token_uniform_chance": 0.011111111111111112,
+        "offset_uniform_chance": 0.2,
+        "groups": {
+          "aist_publisher_track:mJB2": 0.2,
+          "aist_publisher_track:mJS2": 0.2,
+          "aist_publisher_track:mKR1": 0.2,
+          "aist_publisher_track:mLO4": 0.2,
+          "aist_publisher_track:mMH4": 0.2,
+          "aist_publisher_track:mPO0": 0.2
+        }
+      },
+      "both_zero": {
+        "queries": 3240,
+        "offset_accuracy": 0.2,
+        "token_clock_recall_at1": 0.2,
+        "token_uniform_chance": 0.011111111111111112,
+        "offset_uniform_chance": 0.2,
+        "groups": {
+          "aist_publisher_track:mJB2": 0.2,
+          "aist_publisher_track:mJS2": 0.2,
+          "aist_publisher_track:mKR1": 0.2,
+          "aist_publisher_track:mLO4": 0.2,
+          "aist_publisher_track:mMH4": 0.2,
+          "aist_publisher_track:mPO0": 0.2
+        }
+      },
+      "music_swap": {
+        "queries": 3240,
+        "offset_accuracy": 0.2,
+        "token_clock_recall_at1": 0.18553497942386832,
+        "token_uniform_chance": 0.011111111111111112,
+        "offset_uniform_chance": 0.2,
+        "groups": {
+          "aist_publisher_track:mJB2": 0.2,
+          "aist_publisher_track:mJS2": 0.2,
+          "aist_publisher_track:mKR1": 0.2,
+          "aist_publisher_track:mLO4": 0.2,
+          "aist_publisher_track:mMH4": 0.2,
+          "aist_publisher_track:mPO0": 0.2
+        }
+      }
+    }
+  },
+  "global_metrics": {
+    "R40": {
+      "queries": 648,
+      "multi_positive_full_unit_recall_at1": 0.030864197530864196
+    },
+    "FrozenR38": {
+      "queries": 648,
+      "multi_positive_full_unit_recall_at1": 0.09259259259259259
+    }
+  },
+  "optimizer_steps": 80,
+  "parameters": 337544,
+  "units": 648,
+  "population_sha256": "d9921579da56d5a66ccd09c7d36ed2bfb5a7f10dc7cc2fd519f389d97a50b580",
+  "can_route": false,
+  "operational_qualified": false,
+  "independent_crop_origins": true,
+  "global_task": "UNCHANGED_MULTI_POSITIVE_FULL_UNIT_RETRIEVAL",
+  "synthetic_clock_not_semantic_event_truth": true
+}

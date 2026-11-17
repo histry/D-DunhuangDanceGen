@@ -1,0 +1,65 @@
+{
+  "training_steps_per_arm": 240,
+  "trained_parameters": 268160,
+  "main_training_commit": "693114689ae0aa50d6eb838a99f44be72463c3ba",
+  "extra_and_content_commit": "1b8710859389ecfbdc950861359b59654976f3c2",
+  "watchable_preceded_extra": true,
+  "exposed_paired_cases": [
+    4,
+    8,
+    12,
+    16
+  ],
+  "fixed_seeds": [
+    35041,
+    35042
+  ],
+  "comparison": {
+    "Geometry": {
+      "gap_fk_rmse_m": 0.20110237120130386,
+      "whole_body_D2_error": 6.003152813016719,
+      "whole_body_D3_error": 154.3025209514011,
+      "gap_internal_jerk": 189.24598719434792
+    },
+    "Frozen": {
+      "gap_fk_rmse_m": 0.18905498632791568,
+      "whole_body_D2_error": 19.979933326897637,
+      "whole_body_D3_error": 989.2275927352346,
+      "gap_internal_jerk": 1306.219494188255
+    },
+    "Matched": {
+      "gap_fk_rmse_m": 0.19749687276590844,
+      "whole_body_D2_error": 21.609587140779155,
+      "whole_body_D3_error": 1075.4040806436706,
+      "gap_internal_jerk": 1493.895607078628
+    },
+    "ResidualRTS": {
+      "gap_fk_rmse_m": 0.19629623231004084,
+      "whole_body_D2_error": 8.96463046235218,
+      "whole_body_D3_error": 265.9447104203869,
+      "gap_internal_jerk": 474.34617614639006
+    }
+  },
+  "extra_comparison": {
+    "Matched": {
+      "gap_fk_rmse_m": 0.1898926651789965,
+      "whole_body_D2_error": 20.559163834076248,
+      "whole_body_D3_error": 1026.9473470677913,
+      "gap_internal_jerk": 1325.336942980046
+    },
+    "ResidualRTS": {
+      "gap_fk_rmse_m": 0.19069759336938724,
+      "whole_body_D2_error": 8.371401308207272,
+      "whole_body_D3_error": 247.44014323264867,
+      "gap_internal_jerk": 403.75097869369455
+    }
+  },
+  "extra_slot_mapping": {
+    "Matched": "Extra",
+    "ResidualRTS": "ExtraRTS"
+  },
+  "can_route": false,
+  "operational_qualified": false,
+  "whole_song_generations": 0,
+  "native24": "NOT_EVALUABLE_22_OF24"
+}
