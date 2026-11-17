@@ -20,6 +20,8 @@ def audit(root,out):
         replay=read(root/(name+'_replay')/'training.json');assert replay['optimizer_steps']==0 and replay['observations']==meta['observations']
         for step in (0,120,239):
             pre=torch.load(root/name/f'step{step}_pre.pt',map_location='cpu',weights_only=True)['state'];post=torch.load(root/name/f'step{step}_post.pt',map_location='cpu',weights_only=True)['state'];norm=float(sum((post[k]-pre[k]).square().sum() for k in pre).sqrt());assert norm>0;updates.append(dict(arm=name,step=step,update_norm=norm,loss_and_gradient_norm_exact=True))
+        first=read(root/(name+'_qualification.json'));second=read(root/(name+'_qualification_replay.json'))
+        for field in ('records','held_change_recording_means','registered_body_gate','body_gate_pass_recordings','official_fk_executed'):assert first[field]==second[field],(name,field)
     parents=[]
     for name in ('bridge_r38_01','stabilize_r39_01','contract_r40_01','paired_event_r41_01'):
         p=Path('outputs')/name;m=read(p/'artifacts_manifest.json')
