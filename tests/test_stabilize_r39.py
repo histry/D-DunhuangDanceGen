@@ -45,3 +45,8 @@ def test_invalid_frames_or_scales_rejected():
     with pytest.raises(ValueError):constrained_rts(np.zeros((4,3)),.01,1.)
     with pytest.raises(ValueError):constrained_rts(np.full((10,3),np.nan),.01,1.)
     with pytest.raises(ValueError):constrained_rts(np.zeros((10,3)),0.,1.)
+
+def test_relative_root_derivatives_do_not_require_unknown_constant_j0():
+    from dunhuang.research.stabilize_r39.root_contract import translation_channels
+    t=np.arange(80)/30;root=np.c_[t,t*t,.2*np.sin(t)];a=translation_channels(root,30);b=translation_channels(root+[.03,-.41,.12],30)
+    for k in a:assert np.allclose(a[k],b[k],atol=1e-10)
