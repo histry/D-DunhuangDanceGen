@@ -36,6 +36,8 @@ def sampled(rt,z,rows,parent,seeds,cal,cache=False):
 
 def run(data,teacher,out,arm,replay=None):
     out=Path(out)
+    approval=Path(data).parent/'receipts'/('p0_browser_acceptance.json' if arm=='FeasibleChangE' else 'main_browser_acceptance.json')
+    if not approval.exists() or not read(approval).get('accepted'):raise ValueError('Actual watchable delivery must precede this training phase')
     if out.exists():raise ValueError('Fresh training output')
     out.mkdir(parents=True);cfg=read(Path(__file__).with_name('config.json'));parent=read('src/dunhuang/research/bridge_r38/config.json');data=Path(data);teacher=Path(teacher);meta=read(data/'result.json');z=np.load(data/'arrays.npz');teach=np.load(teacher/'arrays.npz');rows={r['key']:r for r in meta['records'] if r['role']=='train'};teacher_keys=teach['keys'].tolist();assert set(rows)==set(teacher_keys);targets={k:teach['teacher139'][j] for j,k in enumerate(teacher_keys)};paired=[k for k,r in rows.items() if r['domain']=='AIST++'];change=[k for k,r in rows.items() if r['domain']=='ChangE'];rng=np.random.default_rng(cfg['seed']);schedule=[]
     for step in range(cfg['steps']):schedule.append(list(map(str,rng.choice(paired,4,replace=False))) if arm=='RealAIST' else list(map(str,rng.choice(change,2,replace=False)))+list(map(str,rng.choice(paired,2,replace=False))))
