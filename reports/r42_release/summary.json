@@ -1,0 +1,735 @@
+{
+  "training_commit": "09c71632d8a5bda359f89285c9c46c7cba780cd3",
+  "controls_commit": "64ac34ab209e744d2c9c9e8ac8f5be7733c429cc",
+  "independent_commit": "feeb37da302cce95bc6b0aa2a47fbb7458dc2747",
+  "observation_correction_commit": "7df4cb8bf05eaaa78cf792c60459d779a41a0413",
+  "population": {
+    "registered": 80,
+    "admitted": 78,
+    "counts": {
+      "ChangE/train": 46,
+      "ChangE/held": 12,
+      "AIST++/train": 16,
+      "AIST++/held": 4
+    },
+    "exclusions": [
+      {
+        "key": "female_FeiTian_7358",
+        "recording_uid": "female_FeiTian",
+        "role": "train",
+        "domain": "ChangE",
+        "start": 7358,
+        "raw_sha256": "120e0157ccdd60d128d2973ac0682883ee178ba43ce8479100e80f56c64f37a4",
+        "root_gauge": {
+          "gauge": "FROZEN_MODEL_BOX_MIDPOINT_AT_FIRST_VISIBLE_FRAME",
+          "absolute_world_truth": false,
+          "model_box_supported": false,
+          "clipped": false
+        },
+        "reason": "FROZEN_R39_SO3_CHART_AMBIGUOUS",
+        "selection": "OBSERVED_BOUNDARY_GEOMETRY_ONLY_NOT_MODEL_QUALITY"
+      },
+      {
+        "key": "female_FeiTian_9461",
+        "recording_uid": "female_FeiTian",
+        "role": "train",
+        "domain": "ChangE",
+        "start": 9461,
+        "raw_sha256": "120e0157ccdd60d128d2973ac0682883ee178ba43ce8479100e80f56c64f37a4",
+        "root_gauge": {
+          "gauge": "FROZEN_MODEL_BOX_MIDPOINT_AT_FIRST_VISIBLE_FRAME",
+          "absolute_world_truth": false,
+          "model_box_supported": false,
+          "clipped": false
+        },
+        "reason": "FROZEN_R39_SO3_CHART_AMBIGUOUS",
+        "selection": "OBSERVED_BOUNDARY_GEOMETRY_ONLY_NOT_MODEL_QUALITY"
+      }
+    ],
+    "change_train_recordings": [
+      "female_FeiTian",
+      "female_lotus",
+      "male_pipa_1",
+      "male_ribbon"
+    ],
+    "change_held_recordings": [
+      "female_meditation",
+      "male_meditation",
+      "male_pipa_2",
+      "male_ribbon_FenHe"
+    ],
+    "historical_exposure": true,
+    "aist_roles": "ADAPTATION_ROLES_ALL_BOUND_TO_OLD_DATA_V3_TRAIN_NOT_TEST"
+  },
+  "teacher": {
+    "code_commit": "09c71632d8a5bda359f89285c9c46c7cba780cd3",
+    "train_windows": 62,
+    "data_sha256": "29861de236ee04fb771f01e564d28b252df1aeec682c80d4b119f973e59bfe4c",
+    "network_optimizer_steps": 0,
+    "motion_optimizer_steps": 80,
+    "final_loss": 1.1966265439987183,
+    "geometry_loss": 1.8669161796569824,
+    "final_parts": {
+      "body_D0": 0.2702336013317108,
+      "body_D1": 0.19818885624408722,
+      "body_D2": 0.10407772660255432,
+      "body_D3": 0.07352660596370697,
+      "root_D0": 0.24113532900810242,
+      "root_D1": 0.2111043483018875,
+      "root_D2": 0.09835994243621826
+    },
+    "geometry_parts": {
+      "body_D0": 0.30457809567451477,
+      "body_D1": 0.2733743488788605,
+      "body_D2": 0.19981855154037476,
+      "body_D3": 0.15874482691287994,
+      "root_D0": 0.3170989155769348,
+      "root_D1": 0.33125415444374084,
+      "root_D2": 0.2820473611354828
+    },
+    "root_D0_mask": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      false,
+      false,
+      false,
+      false,
+      true,
+      false,
+      true,
+      true,
+      true,
+      true,
+      true,
+      false,
+      false,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "constraints_verified": true,
+    "scope": "TRAIN_ONLY_TARGET_INFORMED_FEASIBLE_TEACHER_NOT_GENERATOR_NOT_GLOBAL_OPTIMUM",
+    "whole_song_generations": 0
+  },
+  "training": {
+    "main": {
+      "arm": "FeasibleChangE",
+      "initial_digest": "9327944cc9967dcbfdf5e5f7c23fc11d34a9f9969281074c9d34279feaa827e9",
+      "final_digest": "253381fcc682f1fbae8583bb4444752b29b1c4175e46e5b9f85779a987f5df17",
+      "optimizer_steps": 240,
+      "unique_train_keys": 62,
+      "supervision": "TRAIN_FEASIBLE_TEACHER",
+      "contact_loss": false
+    },
+    "real": {
+      "arm": "RealChangE",
+      "initial_digest": "9327944cc9967dcbfdf5e5f7c23fc11d34a9f9969281074c9d34279feaa827e9",
+      "final_digest": "7ef5119cdeceb3b2bf2f1e08b4a830bd24f31ffcf9775f81b0cc4f3298489678",
+      "optimizer_steps": 240,
+      "unique_train_keys": 62,
+      "supervision": "TRUE_CONTINUOUS_MOTION",
+      "contact_loss": false
+    },
+    "aist": {
+      "arm": "RealAIST",
+      "initial_digest": "9327944cc9967dcbfdf5e5f7c23fc11d34a9f9969281074c9d34279feaa827e9",
+      "final_digest": "adef5c407b5c129185e91cebf33a8ee3268cc8fa7fae5882c245162f78a398c3",
+      "optimizer_steps": 240,
+      "unique_train_keys": 16,
+      "supervision": "TRUE_CONTINUOUS_MOTION",
+      "contact_loss": false
+    }
+  },
+  "paired_errors_by_recording": [
+    {
+      "recording_uid": "female_meditation",
+      "methods": {
+        "FrozenRTS": {
+          "body_D0": 0.09895489359493248,
+          "body_D1": 0.3125448244943709,
+          "body_D2": 4.240433702106629,
+          "body_D3": 104.11767726503938,
+          "root_D0": 0.20646627992391586,
+          "root_D1": 0.5589383641878763,
+          "root_D2": 4.590589682261149,
+          "activity_ratio_to_truth": 10.352192173945722,
+          "world_foot_speed_p95_mps": 1.2615874536256688
+        },
+        "FeasibleRTS": {
+          "body_D0": 0.09995809475007626,
+          "body_D1": 0.3217442306375495,
+          "body_D2": 4.306922311646105,
+          "body_D3": 103.52192226817186,
+          "root_D0": 0.20719711979230246,
+          "root_D1": 0.5597273508707682,
+          "root_D2": 4.586402018864949,
+          "activity_ratio_to_truth": 11.64659214377017,
+          "world_foot_speed_p95_mps": 1.1498188925808064
+        },
+        "RealRTS": {
+          "body_D0": 0.09730018440553834,
+          "body_D1": 0.30001718041189224,
+          "body_D2": 3.928673438514339,
+          "body_D3": 95.43791677845566,
+          "root_D0": 0.20660052200158438,
+          "root_D1": 0.5589779714743296,
+          "root_D2": 4.588186343510945,
+          "activity_ratio_to_truth": 10.252833504441645,
+          "world_foot_speed_p95_mps": 1.2822596545713922
+        },
+        "AISTRTS": {
+          "body_D0": 0.10736592155880187,
+          "body_D1": 0.34132496942814433,
+          "body_D2": 4.698018248523836,
+          "body_D3": 116.13961050748945,
+          "root_D0": 0.2064600388209025,
+          "root_D1": 0.5588895281155905,
+          "root_D2": 4.588420311609904,
+          "activity_ratio_to_truth": 12.823299957254074,
+          "world_foot_speed_p95_mps": 1.1154094398765475
+        }
+      }
+    },
+    {
+      "recording_uid": "male_meditation",
+      "methods": {
+        "FrozenRTS": {
+          "body_D0": 0.13911153631114478,
+          "body_D1": 0.4379716608053624,
+          "body_D2": 6.095519954349858,
+          "body_D3": 152.58889821615193,
+          "root_D0": 0.2091159870227178,
+          "root_D1": 0.5639526744683584,
+          "root_D2": 4.6186511516571045,
+          "activity_ratio_to_truth": 40.33442822955994,
+          "world_foot_speed_p95_mps": 1.426033160673717
+        },
+        "FeasibleRTS": {
+          "body_D0": 0.12225872200547212,
+          "body_D1": 0.39479803478359116,
+          "body_D2": 5.3427364682092415,
+          "body_D3": 133.10192934893024,
+          "root_D0": 0.20854976028203964,
+          "root_D1": 0.5627969106038412,
+          "root_D2": 4.614216645558675,
+          "activity_ratio_to_truth": 36.629423851665074,
+          "world_foot_speed_p95_mps": 1.2450027367543257
+        },
+        "RealRTS": {
+          "body_D0": 0.14392107524945497,
+          "body_D1": 0.43248913437119946,
+          "body_D2": 5.668082126354115,
+          "body_D3": 140.87885469978866,
+          "root_D0": 0.20903255293766657,
+          "root_D1": 0.5637347996234894,
+          "root_D2": 4.617084264755249,
+          "activity_ratio_to_truth": 40.65450037730093,
+          "world_foot_speed_p95_mps": 1.2719813720820605
+        },
+        "AISTRTS": {
+          "body_D0": 0.15026312789447063,
+          "body_D1": 0.46692176822779635,
+          "body_D2": 6.254806818275514,
+          "body_D3": 152.67265230231465,
+          "root_D0": 0.20915032923221588,
+          "root_D1": 0.5639343758424123,
+          "root_D2": 4.61623485883077,
+          "activity_ratio_to_truth": 46.07414394235869,
+          "world_foot_speed_p95_mps": 1.1873679337282803
+        }
+      }
+    },
+    {
+      "recording_uid": "male_pipa_2",
+      "methods": {
+        "FrozenRTS": {
+          "body_D0": 0.12176514582246023,
+          "body_D1": 0.5305288206981893,
+          "body_D2": 6.8542571021877,
+          "body_D3": 169.78232864539063,
+          "root_D0": 0.23386581987142563,
+          "root_D1": 0.3978906149665515,
+          "root_D2": 3.4358955224355063,
+          "activity_ratio_to_truth": 1.352464613278247,
+          "world_foot_speed_p95_mps": 2.23449243588241
+        },
+        "FeasibleRTS": {
+          "body_D0": 0.12715048773312485,
+          "body_D1": 0.5602200284577891,
+          "body_D2": 7.305459452649433,
+          "body_D3": 179.1508426050757,
+          "root_D0": 0.23094233870506287,
+          "root_D1": 0.5640230973561605,
+          "root_D2": 4.830355008443196,
+          "activity_ratio_to_truth": 1.3803136734476684,
+          "world_foot_speed_p95_mps": 2.2621429376012014
+        },
+        "RealRTS": {
+          "body_D0": 0.1275234199420632,
+          "body_D1": 0.5288930224182362,
+          "body_D2": 6.751958098243652,
+          "body_D3": 167.14250895334337,
+          "root_D0": 0.2338920757174492,
+          "root_D1": 0.4107852801680565,
+          "root_D2": 3.545367697874705,
+          "activity_ratio_to_truth": 1.349576300291355,
+          "world_foot_speed_p95_mps": 2.298353417899693
+        },
+        "AISTRTS": {
+          "body_D0": 0.1250539997626917,
+          "body_D1": 0.544847920040832,
+          "body_D2": 7.023721574618364,
+          "body_D3": 173.7310787088281,
+          "root_D0": 0.2345493659377098,
+          "root_D1": 0.3798825070261955,
+          "root_D2": 3.2120462556680045,
+          "activity_ratio_to_truth": 1.370153172744497,
+          "world_foot_speed_p95_mps": 2.2274139538605744
+        }
+      }
+    },
+    {
+      "recording_uid": "male_ribbon_FenHe",
+      "methods": {
+        "FrozenRTS": {
+          "body_D0": 0.14264373633887303,
+          "body_D1": 0.6855223536169986,
+          "body_D2": 11.153131685673456,
+          "body_D3": 321.70688941102253,
+          "root_D0": 0.19902963687976202,
+          "root_D1": 0.5547772645950317,
+          "root_D2": 4.80544646581014,
+          "activity_ratio_to_truth": 8.771592139913414,
+          "world_foot_speed_p95_mps": 3.135773041302144
+        },
+        "FeasibleRTS": {
+          "body_D0": 0.15413149630415093,
+          "body_D1": 0.6836745256724465,
+          "body_D2": 10.332139259278767,
+          "body_D3": 291.10669472719223,
+          "root_D0": 0.20326547076304755,
+          "root_D1": 0.562958816687266,
+          "root_D2": 4.843790292739868,
+          "activity_ratio_to_truth": 8.002993687283803,
+          "world_foot_speed_p95_mps": 3.14657853928078
+        },
+        "RealRTS": {
+          "body_D0": 0.1433476379272676,
+          "body_D1": 0.6744382073262917,
+          "body_D2": 10.7966219841381,
+          "body_D3": 311.3141699585911,
+          "root_D0": 0.19943207999070486,
+          "root_D1": 0.5551342864831289,
+          "root_D2": 4.807783762613933,
+          "activity_ratio_to_truth": 8.348466895996333,
+          "world_foot_speed_p95_mps": 3.1623080453293526
+        },
+        "AISTRTS": {
+          "body_D0": 0.14831355872373211,
+          "body_D1": 0.6952413505915773,
+          "body_D2": 11.137482275335666,
+          "body_D3": 317.54550227870794,
+          "root_D0": 0.1983119398355484,
+          "root_D1": 0.5539622157812119,
+          "root_D2": 4.798254410425822,
+          "activity_ratio_to_truth": 9.282967427418397,
+          "world_foot_speed_p95_mps": 3.1394331664427995
+        }
+      }
+    }
+  ],
+  "absolute_kinematics_by_recording": [
+    {
+      "recording_uid": "female_meditation",
+      "methods": {
+        "Truth": {
+          "activity_rms_mps": 0.053776566264080373,
+          "absolute_body_jerk_rms_mps3": 17.36267133434041
+        },
+        "FrozenRTS": {
+          "activity_rms_mps": 0.329426016807178,
+          "absolute_body_jerk_rms_mps3": 102.29329201332526
+        },
+        "FeasibleRTS": {
+          "activity_rms_mps": 0.3355593525383181,
+          "absolute_body_jerk_rms_mps3": 100.93168108843686
+        },
+        "RealRTS": {
+          "activity_rms_mps": 0.317004342456751,
+          "absolute_body_jerk_rms_mps3": 93.54782244657105
+        },
+        "AISTRTS": {
+          "activity_rms_mps": 0.36126531185164273,
+          "absolute_body_jerk_rms_mps3": 114.440461351227
+        }
+      }
+    },
+    {
+      "recording_uid": "male_meditation",
+      "methods": {
+        "Truth": {
+          "activity_rms_mps": 0.037816485899560395,
+          "absolute_body_jerk_rms_mps3": 24.523517497028326
+        },
+        "FrozenRTS": {
+          "activity_rms_mps": 0.4655223079560855,
+          "absolute_body_jerk_rms_mps3": 148.66294781788346
+        },
+        "FeasibleRTS": {
+          "activity_rms_mps": 0.41840619626708847,
+          "absolute_body_jerk_rms_mps3": 128.07369517854013
+        },
+        "RealRTS": {
+          "activity_rms_mps": 0.4601364441862749,
+          "absolute_body_jerk_rms_mps3": 136.6019804108031
+        },
+        "AISTRTS": {
+          "activity_rms_mps": 0.49611688666722625,
+          "absolute_body_jerk_rms_mps3": 148.40446287584072
+        }
+      }
+    },
+    {
+      "recording_uid": "male_pipa_2",
+      "methods": {
+        "Truth": {
+          "activity_rms_mps": 0.44166610366752224,
+          "absolute_body_jerk_rms_mps3": 106.90711979582939
+        },
+        "FrozenRTS": {
+          "activity_rms_mps": 0.4856010331584977,
+          "absolute_body_jerk_rms_mps3": 127.55043469458265
+        },
+        "FeasibleRTS": {
+          "activity_rms_mps": 0.4934611509312039,
+          "absolute_body_jerk_rms_mps3": 138.9530246622781
+        },
+        "RealRTS": {
+          "activity_rms_mps": 0.48759548964957383,
+          "absolute_body_jerk_rms_mps3": 124.3723527246028
+        },
+        "AISTRTS": {
+          "activity_rms_mps": 0.5006056566867466,
+          "absolute_body_jerk_rms_mps3": 130.44144955959746
+        }
+      }
+    },
+    {
+      "recording_uid": "male_ribbon_FenHe",
+      "methods": {
+        "Truth": {
+          "activity_rms_mps": 0.3363700732331693,
+          "absolute_body_jerk_rms_mps3": 153.60006987862664
+        },
+        "FrozenRTS": {
+          "activity_rms_mps": 0.7105207870897751,
+          "absolute_body_jerk_rms_mps3": 277.4411803821736
+        },
+        "FeasibleRTS": {
+          "activity_rms_mps": 0.6975409292420335,
+          "absolute_body_jerk_rms_mps3": 234.6519175088866
+        },
+        "RealRTS": {
+          "activity_rms_mps": 0.6987518270895742,
+          "absolute_body_jerk_rms_mps3": 265.81071310036447
+        },
+        "AISTRTS": {
+          "activity_rms_mps": 0.7207570636578694,
+          "absolute_body_jerk_rms_mps3": 271.5659008338367
+        }
+      }
+    }
+  ],
+  "qualification": {
+    "main": {
+      "registered_body_gate": {
+        "female_meditation": {
+          "body_D0": true,
+          "body_D3": true,
+          "activity": false
+        },
+        "male_meditation": {
+          "body_D0": true,
+          "body_D3": true,
+          "activity": false
+        },
+        "male_pipa_2": {
+          "body_D0": true,
+          "body_D3": false,
+          "activity": false
+        },
+        "male_ribbon_FenHe": {
+          "body_D0": false,
+          "body_D3": true,
+          "activity": false
+        }
+      },
+      "body_gate_pass_recordings": 0,
+      "body_gate_total_recordings": 4,
+      "official_fk_executed": true,
+      "whole_song_generations": 0,
+      "native24": "NOT_EVALUABLE_22_OF24",
+      "contact_truth": "UNKNOWN_FOOT_SPEED_IS_NOT_SLIDING_TRUTH",
+      "operational_qualified": false
+    },
+    "real": {
+      "registered_body_gate": {
+        "female_meditation": {
+          "body_D0": true,
+          "body_D3": true,
+          "activity": false
+        },
+        "male_meditation": {
+          "body_D0": true,
+          "body_D3": true,
+          "activity": false
+        },
+        "male_pipa_2": {
+          "body_D0": true,
+          "body_D3": true,
+          "activity": false
+        },
+        "male_ribbon_FenHe": {
+          "body_D0": true,
+          "body_D3": true,
+          "activity": false
+        }
+      },
+      "body_gate_pass_recordings": 0,
+      "body_gate_total_recordings": 4,
+      "official_fk_executed": true,
+      "whole_song_generations": 0,
+      "native24": "NOT_EVALUABLE_22_OF24",
+      "contact_truth": "UNKNOWN_FOOT_SPEED_IS_NOT_SLIDING_TRUTH",
+      "operational_qualified": false
+    },
+    "aist": {
+      "registered_body_gate": {
+        "female_meditation": {
+          "body_D0": false,
+          "body_D3": false,
+          "activity": false
+        },
+        "male_meditation": {
+          "body_D0": false,
+          "body_D3": false,
+          "activity": false
+        },
+        "male_pipa_2": {
+          "body_D0": true,
+          "body_D3": false,
+          "activity": false
+        },
+        "male_ribbon_FenHe": {
+          "body_D0": true,
+          "body_D3": true,
+          "activity": false
+        }
+      },
+      "body_gate_pass_recordings": 0,
+      "body_gate_total_recordings": 4,
+      "official_fk_executed": true,
+      "whole_song_generations": 0,
+      "native24": "NOT_EVALUABLE_22_OF24",
+      "contact_truth": "UNKNOWN_FOOT_SPEED_IS_NOT_SLIDING_TRUTH",
+      "operational_qualified": false
+    }
+  },
+  "verification": {
+    "payloads": [
+      {
+        "first": "data_v2/arrays.npz",
+        "replay": "data_replay/arrays.npz",
+        "arrays": 394
+      },
+      {
+        "first": "teacher/arrays.npz",
+        "replay": "teacher_replay/arrays.npz",
+        "arrays": 4
+      },
+      {
+        "first": "diagnostic/arrays.npz",
+        "replay": "diagnostic_replay/arrays.npz",
+        "arrays": 36
+      },
+      {
+        "first": "main_generation/arrays.npz",
+        "replay": "main_generation_replay/arrays.npz",
+        "arrays": 218
+      },
+      {
+        "first": "real_generation/arrays.npz",
+        "replay": "real_generation_replay/arrays.npz",
+        "arrays": 218
+      },
+      {
+        "first": "aist_generation/arrays.npz",
+        "replay": "aist_generation_replay/arrays.npz",
+        "arrays": 218
+      }
+    ],
+    "updates": [
+      {
+        "arm": "main",
+        "step": 0,
+        "update_norm": 0.05105716735124588,
+        "loss_and_gradient_norm_exact": true
+      },
+      {
+        "arm": "main",
+        "step": 120,
+        "update_norm": 0.022554386407136917,
+        "loss_and_gradient_norm_exact": true
+      },
+      {
+        "arm": "main",
+        "step": 239,
+        "update_norm": 0.015502587892115116,
+        "loss_and_gradient_norm_exact": true
+      },
+      {
+        "arm": "real",
+        "step": 0,
+        "update_norm": 0.05045069009065628,
+        "loss_and_gradient_norm_exact": true
+      },
+      {
+        "arm": "real",
+        "step": 120,
+        "update_norm": 0.012504948303103447,
+        "loss_and_gradient_norm_exact": true
+      },
+      {
+        "arm": "real",
+        "step": 239,
+        "update_norm": 0.009752294979989529,
+        "loss_and_gradient_norm_exact": true
+      },
+      {
+        "arm": "aist",
+        "step": 0,
+        "update_norm": 0.05135953426361084,
+        "loss_and_gradient_norm_exact": true
+      },
+      {
+        "arm": "aist",
+        "step": 120,
+        "update_norm": 0.017580822110176086,
+        "loss_and_gradient_norm_exact": true
+      },
+      {
+        "arm": "aist",
+        "step": 239,
+        "update_norm": 0.016435548663139343,
+        "loss_and_gradient_norm_exact": true
+      }
+    ],
+    "parents": [
+      {
+        "root": "bridge_r38_01",
+        "files": 60,
+        "manifest_sha256": "73ab623c89537ce8f64245406dafaa0eeb16ae37c983b8201aa531baf36c3786"
+      },
+      {
+        "root": "stabilize_r39_01",
+        "files": 73,
+        "manifest_sha256": "89b877a960a55591b915d4c2a0e1fa9b6fcfce9ea905373fa000c997cd5bdf1b"
+      },
+      {
+        "root": "contract_r40_01",
+        "files": 100,
+        "manifest_sha256": "1976d2b6bc470f53feb4b49f4af0c3d8b0c994657d7322f636b50982d115af16"
+      },
+      {
+        "root": "paired_event_r41_01",
+        "files": 4434,
+        "manifest_sha256": "7310316b0d6269e4005dc694da8c9d4c783cdda236ee1301d1db290322a39b87"
+      }
+    ],
+    "context_parameters": 268160,
+    "optimizer_steps": 0,
+    "hidden_condition_invariance": true,
+    "regression": "582 passed, 9 skipped, 5 warnings in 22.32s",
+    "observation_records": 78,
+    "all_C4_condition_masks_false": true,
+    "absolute_readout_exact_replay": true,
+    "independent_receipt_sha256": "aa79d43d8329af7d8733f0c3a4feb98a495dfe1f98e075b6c056145424fc72de"
+  },
+  "preserved_failures": {
+    "receipts/data.exit": "1"
+  },
+  "delivery": {
+    "viewer": "outputs/source_context_r42_01/viewer_final_v2/index.html",
+    "files": 16,
+    "bytes": 49373131,
+    "main_delivery_preceded_controls": true,
+    "technical_browser_acceptance": true,
+    "quality_approved": false
+  },
+  "human_reviewed": false,
+  "semantic_event_truth": "UNKNOWN",
+  "whole_song_generations": 0,
+  "operational_qualified": false,
+  "scientific_manifest": "outputs/source_context_r42_01/artifacts_manifest.json",
+  "scientific_seal": {
+    "files": 357,
+    "bytes": 1066076655,
+    "manifest_sha256": "725a672581e26837d7c90b747c3af9ab5a6450ad7c1b205cc8553565e54d32a1"
+  },
+  "local_delivery": {
+    "scientific_manifest": {
+      "path": "artifacts_manifest.json",
+      "bytes": 59293,
+      "sha256": "725a672581e26837d7c90b747c3af9ab5a6450ad7c1b205cc8553565e54d32a1"
+    },
+    "verified_local_files": 210,
+    "verified_local_bytes": 104400968,
+    "not_transferred_files": 147,
+    "raw_tensors_weights_and_caches_transferred": false,
+    "all_present_scientific_files_match": true
+  }
+}
