@@ -17,6 +17,16 @@ def support(length):
     ticks=np.arange(15,length-15)
     return ticks,np.stack([ticks+d for d in OFFSETS])
 
+def donor_population(rows):
+    registered=[i for i,r in enumerate(rows) if r['role']=='val'];donors={};excluded=[]
+    for i in registered:
+        options=[j for j in registered if rows[j]['frames']==rows[i]['frames'] and rows[j]['audio_sha256']!=rows[i]['audio_sha256']]
+        if not options:excluded.append(dict(unit_uid=rows[i]['unit_uid'],frames=rows[i]['frames'],source_group=rows[i]['source_group'],reason='NO_OTHER_VAL_AUDIO_WITH_SAME_ACTUAL_LENGTH'))
+        else:donors[i]=options[0]
+    eligible=[i for i in registered if i in donors]
+    if not eligible:raise ValueError('No common population for four content controls')
+    return registered,eligible,donors,excluded
+
 def run(data,checkpoint,out,replay=None):
     data=Path(data);out=Path(out)
     if out.exists():raise ValueError('Fresh diagnostics directory')
@@ -33,15 +43,12 @@ def run(data,checkpoint,out,replay=None):
             if sha(p)!=rows[i]['sha256']:raise ValueError('Population unit changed')
             z=np.load(p);cache[i]={k:z[k].copy() for k in z.files}
         return cache[i]
-    for i in val:
-        options=[j for j in val if rows[j]['frames']==rows[i]['frames'] and rows[j]['audio_sha256']!=rows[i]['audio_sha256']]
-        if not options:raise ValueError('No equal-length swapped content control')
-        donors[i]=options[0]
+    registered_val,val,donors,excluded=donor_population(rows)
     def batch(ids,delta,control):
         n=max(rows[i]['frames']-30 for i in ids);M=np.zeros((len(ids),n,50),np.float32);D=np.zeros((len(ids),n,274),np.float32);mask=np.zeros_like(D,bool);valid=np.zeros((len(ids),n),bool)
         for b,i in enumerate(ids):
             original=unit(i);z=unit(donors[i]) if control=='music_swap' else original;ticks,all_indices=support(rows[i]['frames']);mi=all_indices[OFFSETS.index(delta)];N=len(ticks)
-            mm=np.all(np.stack([z['music_mask'][v] for v in all_indices]),axis=0)
+            mm=np.all(np.stack([original['music_mask'][v]&unit(donors[i])['music_mask'][v] for v in all_indices]),axis=0)
             music=(z['music'][mi]-np.asarray(normal['music']['mean']))/np.asarray(normal['music']['std']);motion=(original['motion'][ticks]-np.asarray(normal['motion']['mean']))/np.asarray(normal['motion']['std'])
             observed=original['motion_mask'][ticks];M[b,:N]=np.where(mm,music,0);D[b,:N]=np.where(observed,motion,0);mask[b,:N]=observed;valid[b,:N]=mm.any(-1)&observed.any(-1)
             if control in ('music_zero','both_zero'):M[b,:N]=0
@@ -72,6 +79,7 @@ def run(data,checkpoint,out,replay=None):
     for control in CONTROLS[1:]:
         if not np.array_equal(arrays[control+'_sampled_token_counts'],arrays['actual_sampled_token_counts']):raise ValueError('Unequal support between content controls')
     np.savez_compressed(out/'arrays.npz',**arrays);result=dict(code_commit=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),checkpoint_sha256=sha(checkpoint),population_sha256=sha(data/'manifest.json'),offsets_frames=list(OFFSETS),metrics=summary,donor_unit_uids={rows[i]['unit_uid']:rows[j]['unit_uid'] for i,j in donors.items()},support_policy='REAL_MUSIC[t+delta]_AND_MOTION[t]; t=15..N-16; EQUAL_MASK_INTERSECTION_ACROSS_ALL_OFFSETS',ground_truth='PHYSICAL_RECORDING_CLOCK_NOT_ARTISTIC_EVENT_CORRESPONDENCE',validation_scope='HISTORICALLY_EXPOSED_VAL',optimizer_steps=0,can_route=False)
+    result['population_eligibility']=dict(registered_val_units=len(registered_val),eligible_for_all_controls=len(val),exclusions=excluded,selection='INPUT_AVAILABILITY_ONLY_BEFORE_SCORING; SAME_COHORT_FOR_ALL_FOUR_CONTROLS')
     write(out/'result.json',result)
     if replay:
         same=np.load(Path(replay)/'arrays.npz')

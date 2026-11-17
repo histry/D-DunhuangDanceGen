@@ -78,3 +78,10 @@ setTimeout(()=>{if(calls.length<5||!calls.every(p=>p.every(Number.isFinite))||!c
     result=subprocess.run([node,'-'],input=js,text=True,encoding='utf8',capture_output=True,timeout=20)
     assert result.returncode==0,result.stderr
     assert 'FINITE_DIAGNOSTIC_PATH' in result.stdout
+
+def test_content_controls_preserve_common_population_without_training_donors():
+    from dunhuang.research.stabilize_r39.content_diagnostics import donor_population
+    def row(uid,n,a,role='val'):return dict(unit_uid=uid,frames=n,audio_sha256=a,source_group=a,role=role)
+    registered,eligible,donors,excluded=donor_population([row('a',120,'a'),row('b',120,'b'),row('long',360,'a'),row('train',360,'b','train')])
+    assert registered==[0,1,2] and eligible==[0,1] and donors=={0:1,1:0}
+    assert len(excluded)==1 and excluded[0]['unit_uid']=='long'
