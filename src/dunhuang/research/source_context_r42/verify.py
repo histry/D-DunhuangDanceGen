@@ -31,11 +31,22 @@ def audit(root,out):
     for r in records:
         if r['domain']!='AIST++':continue
         source=[x for x in rows if x['domain']=='aist' and x['case']==r['case']][-1];lineage.append(dict(case=r['case'],role=r['role'],metadata={k:v for k,v in source.items() if k!='data'},identity_scope='FROZEN_PARENT_CASE_CACHE_NOT_NEW_RECORDING_CLAIM'))
-    for name in ('viewer_baseline','viewer_diagnostic','viewer_main','viewer_final'):
-        for r in read(root/name/'protocol.json')['files']:assert sha(root/name/r['name'])==r['sha256']
+    for viewer in sorted(root.glob('viewer*')):
+        if viewer.is_dir():
+            for r in read(viewer/'protocol.json')['files']:assert sha(viewer/r['name'])==r['sha256']
+    from dunhuang.research.bridge_r38.study import runtime
+    from .train import assemble
+    rt=runtime(read('src/dunhuang/research/bridge_r38/config.json'));z=np.load(root/'data_v2/arrays.npz');rr=[r for r in records if r['domain']=='ChangE' and r['role']=='train'][:4];a,m,ref,cp=assemble(rt,z,rr);altered={}
+    for r in rr:
+        key=r['key']
+        for suffix in ('_anchor','_music','_truth'):altered[key+suffix]=z[key+suffix].copy()
+        body=altered[key+'_truth'][104:152,7:].reshape(48,22,6).copy();altered[key+'_truth'][104:152,7:]=body[::-1].reshape(48,132);altered[key+'_truth'][104:152,4:7]+=99
+    aa,mm,rf,cc=assemble(rt,altered,rr);assert torch.equal(a,aa) and torch.equal(m,mm)
+    for key in ref.values:assert torch.equal(ref.values[key],rf.values[key]),key
+    assert torch.equal(cp.encoded_input(),cc.encoded_input());parameters=sum(p.numel() for p in rt.c.context_branch.parameters());rt.c.clear_all();rt.check();rt.close()
     assert (root/'receipts/p0_browser_acceptance.json').stat().st_mtime < (root/'main/protocol.json').stat().st_mtime
     assert (root/'receipts/main_browser_acceptance.json').stat().st_mtime < (root/'real/protocol.json').stat().st_mtime
-    result=dict(code_commit=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),arrays=checks,updates=updates,parents=parents,change_train_recordings=sorted(train),change_held_recordings=sorted(held),aist_case_lineage=lineage,teacher_train_only=True,p0_delivery_preceded_main_training=True,main_delivery_preceded_controls=True,optimizer_steps=0,whole_song_generations=0,operational_qualified=False);write(out,result);print('R42_INDEPENDENT_VERIFIED',len(checks),len(updates),flush=True)
+    result=dict(code_commit=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),arrays=checks,updates=updates,parents=parents,context_parameters=parameters,hidden_body_and_root_intervention_does_not_change_any_condition=True,change_train_recordings=sorted(train),change_held_recordings=sorted(held),aist_case_lineage=lineage,teacher_train_only=True,p0_delivery_preceded_main_training=True,main_delivery_preceded_controls=True,optimizer_steps=0,whole_song_generations=0,operational_qualified=False);write(out,result);print('R42_INDEPENDENT_VERIFIED',len(checks),len(updates),flush=True)
 
 
 if __name__=='__main__':
