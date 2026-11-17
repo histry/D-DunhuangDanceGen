@@ -34,10 +34,11 @@ def run(root,out):
     for file in ('index.html','viewer.js','style.css'):
         text=(parent/file).read_text(encoding='utf8')
         if file=='index.html':
-            text=text.replace('R38','R39').replace('几何底座与任务学习：看真实增益','Root 连续写回与端点约束减抖')
+            text=text.replace('R38','R39').replace('几何底座与任务学习：看真实增益','Root 连续写回与端点约束减抖').replace('固定世界（来源Root未知）','固定世界视角')
             text=text.replace('<option value="root_speed">生成Root速度</option>','<option value="root_speed">生成Root速度</option><option value="root_acceleration">Root加速度</option><option value="root_jerk">Root Jerk</option>')
             text=text.replace('<span id="clock">','<label><input type="checkbox" id="reference">第一栏看来源／真值</label><select id="diagnostic-arm"><option value="Raw">定位 Raw</option><option value="RootContinuous">定位 Root连续</option><option value="ResidualRTS">定位 RTS</option></select><button id="max-root">跳到最大Root加速度</button><button id="max-body">跳到最大参考差</button><span id="clock">')
         if file=='viewer.js':
+            text=text.replace("'固定世界 · 来源Root未知 · 帧 '","(current.summary.reference_is_target?'固定世界 · 配对Root参考 · 帧 ':'固定世界 · 来源Root未知 · 帧 ')")
             text=text.replace("const panelTrack=p=>p.variants?p.variants[Number($('seed').value)]:p.track;","const panelTrack=p=>p.reference_track&&$('reference').checked?p.reference_track:(p.variants?p.variants[Number($('seed').value)]:p.track);")
             text=text.replace("function draw(){if(!current)return;", "function draw(){if(!current)return;const first=$('panels').querySelector('h3');if(first&&current.panels[0].reference_track)first.textContent=$('reference').checked?(current.summary.reference_is_target?'配对来源真值':'硬切来源参考 · 不是连续真值'):current.panels[0].title;")
             text=text.replace("$('metric').onchange=draw;", "$('metric').onchange=draw;$('reference').onchange=()=>{bounds();draw();};$('max-root').onclick=()=>{if(!current.summary.r39)return;audio.pause();running=false;const d=current.diagnostics_variants[Number($('seed').value)][$('diagnostic-arm').value].root_acceleration;seek(d.indexOf(Math.max(...d)));$('metric').value='root_acceleration';draw();};$('max-body').onclick=()=>{if(!current.summary.r39)return;audio.pause();running=false;const d=current.diagnostics_variants[Number($('seed').value)][$('diagnostic-arm').value].source_error;seek(d.indexOf(Math.max(...d)));$('metric').value='source_error';draw();};")

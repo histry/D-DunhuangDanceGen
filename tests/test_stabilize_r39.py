@@ -50,3 +50,8 @@ def test_relative_root_derivatives_do_not_require_unknown_constant_j0():
     from dunhuang.research.stabilize_r39.root_contract import translation_channels
     t=np.arange(80)/30;root=np.c_[t,t*t,.2*np.sin(t)];a=translation_channels(root,30);b=translation_channels(root+[.03,-.41,.12],30)
     for k in a:assert np.allclose(a[k],b[k],atol=1e-10)
+
+def test_offset_diagnostic_uses_equal_real_non_circular_support():
+    from dunhuang.research.stabilize_r39.content_diagnostics import support,OFFSETS
+    t,m=support(120);assert m.shape==(5,90) and t[0]==15 and t[-1]==104
+    for k,d in enumerate(OFFSETS):assert np.array_equal(m[k],t+d) and m[k].min()>=0 and m[k].max()<120
