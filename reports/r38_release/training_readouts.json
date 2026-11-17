@@ -1,0 +1,26 @@
+{
+  "checks": [
+    {
+      "step": 0,
+      "loss": 0.1881132423877716,
+      "gradient": 0.061192650347948074,
+      "exact": true
+    },
+    {
+      "step": 119,
+      "loss": 0.1848171055316925,
+      "gradient": 0.037406034767627716,
+      "exact": true
+    },
+    {
+      "step": 239,
+      "loss": 0.23653757572174072,
+      "gradient": 0.02673826925456524,
+      "exact": true
+    }
+  ],
+  "optimizer_steps": 0,
+  "full_training_trajectory_replayed": false,
+  "scope": "THREE_SAVED_PRE_UPDATE_LOSS_AND_GRADIENT_READOUTS",
+  "context_sha256": "96ee316ec7c316ad446b233154a360fdc159813a0efda0dc5bd2f76620800925"
+}

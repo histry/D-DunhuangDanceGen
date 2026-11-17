@@ -292,3 +292,11 @@ All96 reference-only direction derivatives passed numeric checks; protected all-
 ### R33 来源路由与相对动态监督
 
 已完成单一 Lodge 主干上的冻结通用参考路由、ChangE 参考600步等预算对照及独立重放。Dyn改善训练琵琶的Core动态误差，额外来源构形和全窗物理仍未合格，整曲0。详见[实验报告](reports/R33来源路由与相对动态实验报告.md)及[公开统计](reports/r33_release/r33_summary.json)。
+
+## R38：观测桥任务学习与有序检索（研究）
+
+R37规划及默认EDGE路径保持冻结。R38用真实连续录制训练Context完成观测外端几何桥上的补间，并实际执行有序SDMR多正例训练。先交付可观看比较，再完成独立复验；构形有部分收益，动态与Root质量仍未通过，SDMR顺序置乱仍更高，因此不升级选路或整曲。
+
+- 实际观看：`outputs/bridge_r38_01/viewer_final/index.html`（本机交付，不托管私有媒体）。
+- [实验报告](reports/R38观测桥任务学习与有序检索实验报告.md)，[公开统计](reports/r38_release/r38_summary.json)。
+- 隔离实现：`src/dunhuang/research/bridge_r38`；完整回归554 passed、8 skipped。

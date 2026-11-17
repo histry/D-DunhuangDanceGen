@@ -1,0 +1,168 @@
+{
+  "manifest_sha256": "29dee9f39b6669ba2e1683a9581a2df4512a42c7c696b8ff09279a84dd91ae8d",
+  "records": [
+    {
+      "source_uid": "female_FeiTian",
+      "raw_sha256": "120e0157ccdd60d128d2973ac0682883ee178ba43ce8479100e80f56c64f37a4",
+      "frames": 11819,
+      "fps": 30.0,
+      "coordinates": "y_up",
+      "units": "m",
+      "root_translation_numerically_present": true,
+      "translation_range_m": [
+        3.917484760284424,
+        1.3075727224349976,
+        3.7502150535583496
+      ],
+      "root_speed_mean_m_s": 0.3362506330013275,
+      "unobserved_terminal_and_finger_max_abs_axis_angle": 0.0,
+      "native24_terminal_truth_available": false,
+      "world_floor_support": "UNKNOWN",
+      "rest_pelvis_and_shape_binding": "REQUIRES_SOURCE_SMPLX_BETAS_AND_COORDINATE_VALIDATION",
+      "current_body_only_contract_changed": false
+    },
+    {
+      "source_uid": "female_lotus",
+      "raw_sha256": "22b915af2e0fbb645acb78d7f61e58afe3f7aa40c0fc719da95f7403ed8dd47d",
+      "frames": 6948,
+      "fps": 30.0,
+      "coordinates": "y_up",
+      "units": "m",
+      "root_translation_numerically_present": true,
+      "translation_range_m": [
+        3.9553871154785156,
+        0.8747122287750244,
+        3.3206558227539062
+      ],
+      "root_speed_mean_m_s": 0.44072672724723816,
+      "unobserved_terminal_and_finger_max_abs_axis_angle": 0.0,
+      "native24_terminal_truth_available": false,
+      "world_floor_support": "UNKNOWN",
+      "rest_pelvis_and_shape_binding": "REQUIRES_SOURCE_SMPLX_BETAS_AND_COORDINATE_VALIDATION",
+      "current_body_only_contract_changed": false
+    },
+    {
+      "source_uid": "female_meditation",
+      "raw_sha256": "225ab3ffb8cd176ee138130152ec56b826cf2cc3965f13249aaf0a1103b422e7",
+      "frames": 6114,
+      "fps": 30.0,
+      "coordinates": "y_up",
+      "units": "m",
+      "root_translation_numerically_present": true,
+      "translation_range_m": [
+        0.375637948513031,
+        0.9081881642341614,
+        0.6385715007781982
+      ],
+      "root_speed_mean_m_s": 0.04922916740179062,
+      "unobserved_terminal_and_finger_max_abs_axis_angle": 0.0,
+      "native24_terminal_truth_available": false,
+      "world_floor_support": "UNKNOWN",
+      "rest_pelvis_and_shape_binding": "REQUIRES_SOURCE_SMPLX_BETAS_AND_COORDINATE_VALIDATION",
+      "current_body_only_contract_changed": false
+    },
+    {
+      "source_uid": "male_meditation",
+      "raw_sha256": "1cd10b49771226ae7f9ea962bf21e2c86324af2249d80bf08a069a881d20d165",
+      "frames": 6133,
+      "fps": 30.0,
+      "coordinates": "y_up",
+      "units": "m",
+      "root_translation_numerically_present": true,
+      "translation_range_m": [
+        0.5184640288352966,
+        0.8918001055717468,
+        0.5212856531143188
+      ],
+      "root_speed_mean_m_s": 0.038609493523836136,
+      "unobserved_terminal_and_finger_max_abs_axis_angle": 0.0,
+      "native24_terminal_truth_available": false,
+      "world_floor_support": "UNKNOWN",
+      "rest_pelvis_and_shape_binding": "REQUIRES_SOURCE_SMPLX_BETAS_AND_COORDINATE_VALIDATION",
+      "current_body_only_contract_changed": false
+    },
+    {
+      "source_uid": "male_pipa_1",
+      "raw_sha256": "7b58c904c3b4c7f29c3fdf82ac0e0a948e4f436cf57c5e7589e424168cfb3dfd",
+      "frames": 3833,
+      "fps": 30.0,
+      "coordinates": "y_up",
+      "units": "m",
+      "root_translation_numerically_present": true,
+      "translation_range_m": [
+        3.8975255489349365,
+        1.2169827222824097,
+        2.7570080757141113
+      ],
+      "root_speed_mean_m_s": 0.5403805375099182,
+      "unobserved_terminal_and_finger_max_abs_axis_angle": 0.0,
+      "native24_terminal_truth_available": false,
+      "world_floor_support": "UNKNOWN",
+      "rest_pelvis_and_shape_binding": "REQUIRES_SOURCE_SMPLX_BETAS_AND_COORDINATE_VALIDATION",
+      "current_body_only_contract_changed": false
+    },
+    {
+      "source_uid": "male_pipa_2",
+      "raw_sha256": "e300cef72d5248c2eacb6b430f17152a00af92bb4f3c04ff96c35f63d5aeaebc",
+      "frames": 3439,
+      "fps": 30.0,
+      "coordinates": "y_up",
+      "units": "m",
+      "root_translation_numerically_present": true,
+      "translation_range_m": [
+        2.100254774093628,
+        1.2445265054702759,
+        2.4485549926757812
+      ],
+      "root_speed_mean_m_s": 0.4897571802139282,
+      "unobserved_terminal_and_finger_max_abs_axis_angle": 0.0,
+      "native24_terminal_truth_available": false,
+      "world_floor_support": "UNKNOWN",
+      "rest_pelvis_and_shape_binding": "REQUIRES_SOURCE_SMPLX_BETAS_AND_COORDINATE_VALIDATION",
+      "current_body_only_contract_changed": false
+    },
+    {
+      "source_uid": "male_ribbon",
+      "raw_sha256": "7faf97974cb347b5e08107dd102c508ad3309901094f7c1822c21db83dd6addd",
+      "frames": 2366,
+      "fps": 30.0,
+      "coordinates": "y_up",
+      "units": "m",
+      "root_translation_numerically_present": true,
+      "translation_range_m": [
+        2.915235996246338,
+        1.048484444618225,
+        1.8753749132156372
+      ],
+      "root_speed_mean_m_s": 0.731532633304596,
+      "unobserved_terminal_and_finger_max_abs_axis_angle": 0.0,
+      "native24_terminal_truth_available": false,
+      "world_floor_support": "UNKNOWN",
+      "rest_pelvis_and_shape_binding": "REQUIRES_SOURCE_SMPLX_BETAS_AND_COORDINATE_VALIDATION",
+      "current_body_only_contract_changed": false
+    },
+    {
+      "source_uid": "male_ribbon_FenHe",
+      "raw_sha256": "38fa662ac4aa912d70d0c405f75a9e502e3c6d471445f8896016619b7b10357c",
+      "frames": 2885,
+      "fps": 30.0,
+      "coordinates": "y_up",
+      "units": "m",
+      "root_translation_numerically_present": true,
+      "translation_range_m": [
+        3.331526756286621,
+        0.7420871257781982,
+        2.645956516265869
+      ],
+      "root_speed_mean_m_s": 0.4815078377723694,
+      "unobserved_terminal_and_finger_max_abs_axis_angle": 0.0,
+      "native24_terminal_truth_available": false,
+      "world_floor_support": "UNKNOWN",
+      "rest_pelvis_and_shape_binding": "REQUIRES_SOURCE_SMPLX_BETAS_AND_COORDINATE_VALIDATION",
+      "current_body_only_contract_changed": false
+    }
+  ],
+  "conclusion": "RAW_TRANSLATIONS_EXIST_BUT_HAND_FACE_TAIL_IS_ZERO; NO_AUTOMATIC_NATIVE24_OR_CONTACT_ADMISSION",
+  "read_only": true,
+  "model_outputs_changed": false
+}

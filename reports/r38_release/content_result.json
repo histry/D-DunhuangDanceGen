@@ -1,0 +1,307 @@
+{
+  "optimizer_steps": 80,
+  "parameters": 337544,
+  "population_sha256": "d9921579da56d5a66ccd09c7d36ed2bfb5a7f10dc7cc2fd519f389d97a50b580",
+  "normalizer_sha256": "80a83d6f7a5f1bca62d3298cba206a871188f5c6b1519ab4a897672c7c986e35",
+  "actual_positive_counts_min": 2,
+  "batch_size": 8,
+  "paired_audio_groups_per_batch": 2,
+  "ordered_music": true,
+  "clock_duration_input_excluded": true,
+  "metrics": {
+    "correct": {
+      "all": {
+        "queries": 648,
+        "coverage": 1.0,
+        "recall_at_1": 0.09259259259259259,
+        "uniform_candidate_chance": 0.034716574991201433,
+        "groups": {
+          "aist_publisher_track:mMH4": {
+            "queries": 80,
+            "recall_at_1": 0.5
+          },
+          "aist_publisher_track:mKR1": {
+            "queries": 120,
+            "recall_at_1": 0.0
+          },
+          "aist_publisher_track:mJS2": {
+            "queries": 120,
+            "recall_at_1": 0.0
+          },
+          "aist_publisher_track:mJB2": {
+            "queries": 108,
+            "recall_at_1": 0.0
+          },
+          "aist_publisher_track:mLO4": {
+            "queries": 80,
+            "recall_at_1": 0.0
+          },
+          "aist_publisher_track:mPO0": {
+            "queries": 140,
+            "recall_at_1": 0.14285714285714285
+          }
+        }
+      },
+      "same_music": {
+        "queries": 296,
+        "coverage": 0.4567901234567901,
+        "recall_at_1": 0.5337837837837838,
+        "uniform_candidate_chance": 0.4549549549549549,
+        "groups": {
+          "aist_publisher_track:mMH4": {
+            "queries": 40,
+            "recall_at_1": 0.5
+          },
+          "aist_publisher_track:mKR1": {
+            "queries": 40,
+            "recall_at_1": 0.5
+          },
+          "aist_publisher_track:mJS2": {
+            "queries": 40,
+            "recall_at_1": 0.5
+          },
+          "aist_publisher_track:mJB2": {
+            "queries": 36,
+            "recall_at_1": 0.5
+          },
+          "aist_publisher_track:mLO4": {
+            "queries": 40,
+            "recall_at_1": 0.5
+          },
+          "aist_publisher_track:mPO0": {
+            "queries": 100,
+            "recall_at_1": 0.6
+          }
+        }
+      },
+      "same_length_near_energy": {
+        "queries": 508,
+        "coverage": 0.7839506172839507,
+        "recall_at_1": 0.2559055118110236,
+        "uniform_candidate_chance": 0.1053175526046676,
+        "groups": {
+          "aist_publisher_track:mMH4": {
+            "queries": 80,
+            "recall_at_1": 0.5
+          },
+          "aist_publisher_track:mKR1": {
+            "queries": 120,
+            "recall_at_1": 0.0
+          },
+          "aist_publisher_track:mJS2": {
+            "queries": 120,
+            "recall_at_1": 0.0
+          },
+          "aist_publisher_track:mJB2": {
+            "queries": 108,
+            "recall_at_1": 0.8333333333333334
+          },
+          "aist_publisher_track:mLO4": {
+            "queries": 80,
+            "recall_at_1": 0.0
+          }
+        }
+      }
+    },
+    "shuffle": {
+      "all": {
+        "queries": 648,
+        "coverage": 1.0,
+        "recall_at_1": 0.10802469135802469,
+        "uniform_candidate_chance": 0.034716574991201433,
+        "groups": {
+          "aist_publisher_track:mMH4": {
+            "queries": 80,
+            "recall_at_1": 0.625
+          },
+          "aist_publisher_track:mKR1": {
+            "queries": 120,
+            "recall_at_1": 0.0
+          },
+          "aist_publisher_track:mJS2": {
+            "queries": 120,
+            "recall_at_1": 0.0
+          },
+          "aist_publisher_track:mJB2": {
+            "queries": 108,
+            "recall_at_1": 0.0
+          },
+          "aist_publisher_track:mLO4": {
+            "queries": 80,
+            "recall_at_1": 0.0
+          },
+          "aist_publisher_track:mPO0": {
+            "queries": 140,
+            "recall_at_1": 0.14285714285714285
+          }
+        }
+      },
+      "same_music": {
+        "queries": 296,
+        "coverage": 0.4567901234567901,
+        "recall_at_1": 0.5743243243243243,
+        "uniform_candidate_chance": 0.4549549549549549,
+        "groups": {
+          "aist_publisher_track:mMH4": {
+            "queries": 40,
+            "recall_at_1": 0.5
+          },
+          "aist_publisher_track:mKR1": {
+            "queries": 40,
+            "recall_at_1": 0.5
+          },
+          "aist_publisher_track:mJS2": {
+            "queries": 40,
+            "recall_at_1": 0.5
+          },
+          "aist_publisher_track:mJB2": {
+            "queries": 36,
+            "recall_at_1": 0.5
+          },
+          "aist_publisher_track:mLO4": {
+            "queries": 40,
+            "recall_at_1": 0.8
+          },
+          "aist_publisher_track:mPO0": {
+            "queries": 100,
+            "recall_at_1": 0.6
+          }
+        }
+      },
+      "same_length_near_energy": {
+        "queries": 508,
+        "coverage": 0.7839506172839507,
+        "recall_at_1": 0.27755905511811024,
+        "uniform_candidate_chance": 0.1053175526046676,
+        "groups": {
+          "aist_publisher_track:mMH4": {
+            "queries": 80,
+            "recall_at_1": 0.6375
+          },
+          "aist_publisher_track:mKR1": {
+            "queries": 120,
+            "recall_at_1": 0.0
+          },
+          "aist_publisher_track:mJS2": {
+            "queries": 120,
+            "recall_at_1": 0.0
+          },
+          "aist_publisher_track:mJB2": {
+            "queries": 108,
+            "recall_at_1": 0.8333333333333334
+          },
+          "aist_publisher_track:mLO4": {
+            "queries": 80,
+            "recall_at_1": 0.0
+          }
+        }
+      }
+    },
+    "shift": {
+      "all": {
+        "queries": 648,
+        "coverage": 1.0,
+        "recall_at_1": 0.06172839506172839,
+        "uniform_candidate_chance": 0.034716574991201433,
+        "groups": {
+          "aist_publisher_track:mMH4": {
+            "queries": 80,
+            "recall_at_1": 0.25
+          },
+          "aist_publisher_track:mKR1": {
+            "queries": 120,
+            "recall_at_1": 0.0
+          },
+          "aist_publisher_track:mJS2": {
+            "queries": 120,
+            "recall_at_1": 0.0
+          },
+          "aist_publisher_track:mJB2": {
+            "queries": 108,
+            "recall_at_1": 0.0
+          },
+          "aist_publisher_track:mLO4": {
+            "queries": 80,
+            "recall_at_1": 0.0
+          },
+          "aist_publisher_track:mPO0": {
+            "queries": 140,
+            "recall_at_1": 0.14285714285714285
+          }
+        }
+      },
+      "same_music": {
+        "queries": 296,
+        "coverage": 0.4567901234567901,
+        "recall_at_1": 0.6013513513513513,
+        "uniform_candidate_chance": 0.4549549549549549,
+        "groups": {
+          "aist_publisher_track:mMH4": {
+            "queries": 40,
+            "recall_at_1": 0.5
+          },
+          "aist_publisher_track:mKR1": {
+            "queries": 40,
+            "recall_at_1": 0.5
+          },
+          "aist_publisher_track:mJS2": {
+            "queries": 40,
+            "recall_at_1": 0.5
+          },
+          "aist_publisher_track:mJB2": {
+            "queries": 36,
+            "recall_at_1": 0.5
+          },
+          "aist_publisher_track:mLO4": {
+            "queries": 40,
+            "recall_at_1": 1.0
+          },
+          "aist_publisher_track:mPO0": {
+            "queries": 100,
+            "recall_at_1": 0.6
+          }
+        }
+      },
+      "same_length_near_energy": {
+        "queries": 508,
+        "coverage": 0.7839506172839507,
+        "recall_at_1": 0.2559055118110236,
+        "uniform_candidate_chance": 0.1053175526046676,
+        "groups": {
+          "aist_publisher_track:mMH4": {
+            "queries": 80,
+            "recall_at_1": 0.5
+          },
+          "aist_publisher_track:mKR1": {
+            "queries": 120,
+            "recall_at_1": 0.0
+          },
+          "aist_publisher_track:mJS2": {
+            "queries": 120,
+            "recall_at_1": 0.0
+          },
+          "aist_publisher_track:mJB2": {
+            "queries": 108,
+            "recall_at_1": 0.8333333333333334
+          },
+          "aist_publisher_track:mLO4": {
+            "queries": 80,
+            "recall_at_1": 0.0
+          }
+        }
+      }
+    }
+  },
+  "energy_train_mean": [
+    2.410355385051902,
+    1.5469487658959198
+  ],
+  "energy_train_std": [
+    1.1511161665372003,
+    0.7894061395799844
+  ],
+  "exposed_validation": true,
+  "can_route": false,
+  "operational_qualified": false,
+  "ablation_training_runs": 0
+}

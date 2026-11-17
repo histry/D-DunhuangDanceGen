@@ -1,0 +1,25 @@
+{
+  "records": {
+    "correct": {
+      "recall_at_1": 0.09259259259259259,
+      "queries": 648,
+      "score_matmul_max_error": 2.086162567138672e-07,
+      "music_embedding_rms_change": 0.0
+    },
+    "shuffle": {
+      "recall_at_1": 0.10802469135802469,
+      "queries": 648,
+      "score_matmul_max_error": 2.384185791015625e-07,
+      "music_embedding_rms_change": 0.003348917467519641
+    },
+    "shift": {
+      "recall_at_1": 0.06172839506172839,
+      "queries": 648,
+      "score_matmul_max_error": 2.682209014892578e-07,
+      "music_embedding_rms_change": 0.008727461099624634
+    }
+  },
+  "optimizer_steps": 0,
+  "arrays_sha256": "c9c3d1b00f8a36031c5007a4726876bb945c2e71b53b59c8938ab2ef10df0233",
+  "scope": "CPU_EMBEDDING_SCORE_AND_ALL_POOL_RANK_READOUT_NOT_TRAINING_REPLAY"
+}

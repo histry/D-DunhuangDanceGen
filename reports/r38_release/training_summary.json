@@ -1,0 +1,185 @@
+{
+  "initial_digest": "d9b1a5cf22038cf73393419e1e25940ce7386926a81a03862a315dfae85ac38a",
+  "final_digest": "9327944cc9967dcbfdf5e5f7c23fc11d34a9f9969281074c9d34279feaa827e9",
+  "optimizer_steps": 240,
+  "observations": [
+    {
+      "step": 0,
+      "cases": [
+        51,
+        76,
+        78,
+        92
+      ],
+      "t": 119,
+      "state": "ACTUAL_FROZEN_INITIAL_BRIDGE",
+      "loss": 0.1881132423877716,
+      "pose": 0.06585140526294708,
+      "geometry": 0.09279295057058334,
+      "dynamic": 0.973359227180481,
+      "root": 0.06367319077253342,
+      "gradient": 0.061192650347948074
+    },
+    {
+      "step": 119,
+      "cases": [
+        23,
+        21,
+        35,
+        27
+      ],
+      "t": 1,
+      "state": "Q_GEOMETRY_NOT_Q_TRUTH",
+      "loss": 0.1848171055316925,
+      "pose": 0.02678540349006653,
+      "geometry": 0.06125310808420181,
+      "dynamic": 1.4510953426361084,
+      "root": 0.006715554278343916,
+      "gradient": 0.037406034767627716
+    },
+    {
+      "step": 239,
+      "cases": [
+        1,
+        32,
+        26,
+        95
+      ],
+      "t": 1,
+      "state": "Q_GEOMETRY_NOT_Q_TRUTH",
+      "loss": 0.23653757572174072,
+      "pose": 0.02253255620598793,
+      "geometry": 0.5563787817955017,
+      "dynamic": 0.9857558012008667,
+      "root": 0.041536733508110046,
+      "gradient": 0.02673826925456524
+    }
+  ],
+  "cache": [
+    {
+      "cases": [
+        0,
+        1,
+        21,
+        23
+      ],
+      "noise": {
+        "seeds": [
+          38041,
+          38042,
+          38062,
+          38064
+        ],
+        "draws": 50,
+        "row_sha256": [
+          "11e80b651c183998801f5d0d52ca0006586180c6f70ec7cf0d36b6a2b6a8df19",
+          "94fc6036cdaeccff5e0de9493650c27423b73b57da6238d3c7f92c71b3aea44c",
+          "a4e37c16f86b7dc737f18885ce5746862278d26b722287d84c505c23d3b6d804",
+          "2222dedfd56b648ec5c8653e22a32641c98b6f0635e3bcbed61d57c13600bc77"
+        ]
+      }
+    },
+    {
+      "cases": [
+        26,
+        27,
+        32,
+        35
+      ],
+      "noise": {
+        "seeds": [
+          38067,
+          38068,
+          38073,
+          38076
+        ],
+        "draws": 50,
+        "row_sha256": [
+          "a67188e516f07ce12d2ba99862cde4484e977cb40ab1e309f4d0155ac12aec4f",
+          "fcdadb27bfb07496f928fa95a83dedc6fe076ae7169c86f9046a8830a3f3520e",
+          "effb15dd894fb1ddfbde581b7dd75a55b9bf76d8f4aa924c4919fe5ac79e26be",
+          "cf4683aa753953818b63a067e48113695ddcd038d0a33c4a5160fb0d0f5f41fb"
+        ]
+      }
+    },
+    {
+      "cases": [
+        37,
+        38,
+        48,
+        51
+      ],
+      "noise": {
+        "seeds": [
+          38078,
+          38079,
+          38089,
+          38092
+        ],
+        "draws": 50,
+        "row_sha256": [
+          "bba0a8acb3be2585df0f6cda4f9a4875773025469708c7fc77de8e8bc52e0c96",
+          "c84de23b14a62387c03b43110eadddcdbc2096e64490ea12d5ba1620405dd196",
+          "001f5867851b1dcb6b13cf4fd2200e162644e07529bb93f5a1dfd754a10eb5d9",
+          "e2f2ce95ffcaeb4efa80477ee33e50298d31d0ab4ec24e84ac38ef68168b5c55"
+        ]
+      }
+    },
+    {
+      "cases": [
+        76,
+        78,
+        92,
+        95
+      ],
+      "noise": {
+        "seeds": [
+          38117,
+          38119,
+          38133,
+          38136
+        ],
+        "draws": 50,
+        "row_sha256": [
+          "098c1b46ebb1845f8e35b6788af5bf19ab38b3fd44b3ad06d5ee2f229631e452",
+          "85c5ca4accad95896e39645678cf772a4eeedcc3d5d0368c11c7c7c7150f9242",
+          "860cc8e1a4d12f51f504a82982257a5cf239204deeaee1be46dcde5a126bf590",
+          "50077019ff7c643d74b9826e1b6bad36c51fffd350b24e6df89b491d6d5f84bb"
+        ]
+      }
+    }
+  ],
+  "paired_train_cases": [
+    0,
+    1,
+    21,
+    23,
+    26,
+    27,
+    32,
+    35,
+    37,
+    38,
+    48,
+    51,
+    76,
+    78,
+    92,
+    95
+  ],
+  "evaluation_cases": [
+    4,
+    8,
+    12,
+    16
+  ],
+  "cache_policy": "INITIAL_MATCHED_BRIDGE_STATES_NOT_FULLY_ON_POLICY",
+  "trainable": "EXISTING_CONTEXT_ONLY",
+  "ChangE_training": false,
+  "FineDance_training": false,
+  "hidden_gap_truth_in_conditions": false,
+  "operational_qualified": false,
+  "loss_first": 0.1881132423877716,
+  "loss_last": 0.23653757572174072,
+  "loss_values_from_different_batches_not_a_controlled_learning_curve": true
+}

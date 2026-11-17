@@ -1,0 +1,8 @@
+{
+  "stage": "PRE_EXPERIMENT_LAUNCH",
+  "attempt": 1,
+  "error": "Cross-shell quoting failed before server synchronization/execution",
+  "correction": "Literal script transmission and bash -lc",
+  "credentials_saved": false,
+  "experiment_failures_removed": false
+}

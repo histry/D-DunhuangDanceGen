@@ -1,0 +1,28 @@
+{
+  "baseline": "65e3f875ff30023d316e4f9240bce2189792ea01",
+  "training_commit": "7e536eb52514a61f18f4f6732df423507b203a7e",
+  "replay_commit": "1766cd3f7023d66e4bdd28f12388a35bad088bab",
+  "bridge_train_steps": 240,
+  "content_train_steps": 80,
+  "replay_optimizer_steps": 0,
+  "paired_gap_fk_rmse_m": {
+    "Geometry": 0.20110237120130386,
+    "FrozenMatched": 0.20137173499472896,
+    "Trained": 0.18906573185635148
+  },
+  "relative_to_geometry_improvement_percent": 5.985329398679087,
+  "independent_paired_generalization_claim": false,
+  "body_dynamics_qualified": false,
+  "world_root_qualified": false,
+  "native24": "NOT_EVALUABLE_22_OF24",
+  "can_route": false,
+  "whole_song_generations": 0,
+  "operational_qualified": false,
+  "viewer": {
+    "path": "outputs/bridge_r38_01/viewer_final/index.html",
+    "cases": 22,
+    "new_cases": 6,
+    "first_media_preceded_content_training": true
+  },
+  "further_ablation_training_runs": 0
+}

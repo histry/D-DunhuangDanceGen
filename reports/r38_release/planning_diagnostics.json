@@ -1,0 +1,1774 @@
+{
+  "songs": [
+    {
+      "song": "song0",
+      "source_seconds": {
+        "female_FeiTian": 40.0,
+        "male_pipa_1": 10.933333333333334,
+        "female_lotus": 33.733333333333334,
+        "male_ribbon_FenHe": 8.2,
+        "male_meditation": 8.0,
+        "female_meditation": 19.166666666666668
+      },
+      "source_fraction": {
+        "female_FeiTian": 0.3332407664537628,
+        "male_pipa_1": 0.09108580949736185,
+        "female_lotus": 0.2810330463760067,
+        "male_ribbon_FenHe": 0.06831435712302138,
+        "male_meditation": 0.06664815329075256,
+        "female_meditation": 0.1596778672590947
+      },
+      "longest_source_run_seconds": 33.733333333333334,
+      "continuous_source_runs": [
+        {
+          "source_uid": "female_FeiTian",
+          "start": 0,
+          "end": 331
+        },
+        {
+          "source_uid": "male_pipa_1",
+          "start": 331,
+          "end": 659
+        },
+        {
+          "source_uid": "female_FeiTian",
+          "start": 659,
+          "end": 1528
+        },
+        {
+          "source_uid": "female_lotus",
+          "start": 1528,
+          "end": 2540
+        },
+        {
+          "source_uid": "male_ribbon_FenHe",
+          "start": 2540,
+          "end": 2786
+        },
+        {
+          "source_uid": "male_meditation",
+          "start": 2786,
+          "end": 3026
+        },
+        {
+          "source_uid": "female_meditation",
+          "start": 3026,
+          "end": 3601
+        }
+      ],
+      "sections": [
+        {
+          "interval": [
+            0,
+            1200
+          ],
+          "scope": "EQUAL_TIME_THIRD_NOT_SEMANTIC_SECTION",
+          "source_frames": {
+            "female_FeiTian": 872,
+            "male_pipa_1": 328,
+            "female_lotus": 0,
+            "male_ribbon_FenHe": 0,
+            "male_meditation": 0,
+            "female_meditation": 0
+          }
+        },
+        {
+          "interval": [
+            1200,
+            2400
+          ],
+          "scope": "EQUAL_TIME_THIRD_NOT_SEMANTIC_SECTION",
+          "source_frames": {
+            "female_FeiTian": 328,
+            "male_pipa_1": 0,
+            "female_lotus": 872,
+            "male_ribbon_FenHe": 0,
+            "male_meditation": 0,
+            "female_meditation": 0
+          }
+        },
+        {
+          "interval": [
+            2400,
+            3601
+          ],
+          "scope": "EQUAL_TIME_THIRD_NOT_SEMANTIC_SECTION",
+          "source_frames": {
+            "female_FeiTian": 0,
+            "male_pipa_1": 0,
+            "female_lotus": 140,
+            "male_ribbon_FenHe": 246,
+            "male_meditation": 240,
+            "female_meditation": 575
+          }
+        }
+      ],
+      "development_semantics": "UNKNOWN",
+      "theme_vs_mechanical_repetition": "NOT_SEMANTICALLY_LABELED",
+      "acoustic_phrase_proposals": [
+        {
+          "frame": 86,
+          "strength": 0.45866943066368604,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 168,
+          "strength": 0.33971539200744444,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 250,
+          "strength": 0.4081950266746322,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 331,
+          "strength": 0.49511118945518207,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 414,
+          "strength": 0.38801977346927,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 495,
+          "strength": 0.6983626916877548,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 577,
+          "strength": 0.6720363442225188,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 659,
+          "strength": 0.5223459127578713,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 863,
+          "strength": 0.3239786939151345,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 966,
+          "strength": 0.30934175444363327,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 1109,
+          "strength": 0.20797288809755785,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 1190,
+          "strength": 0.310747753690195,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 1306,
+          "strength": 0.47641285198653194,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 1385,
+          "strength": 0.33335950408483417,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 1467,
+          "strength": 0.3664286473336383,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 1569,
+          "strength": 0.39992867375929303,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 1733,
+          "strength": 0.30269302209569704,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 1814,
+          "strength": 0.2624704843805112,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 1896,
+          "strength": 0.40062440128804544,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 1968,
+          "strength": 1.0,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 2050,
+          "strength": 0.45099018537005814,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 2131,
+          "strength": 0.42783457704550387,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 2213,
+          "strength": 0.3601420692886782,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 2295,
+          "strength": 0.3506411319189813,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 2377,
+          "strength": 0.33560724632423244,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 2459,
+          "strength": 0.335048229191574,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 2540,
+          "strength": 0.41421390189972207,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 2623,
+          "strength": 0.38015722422279363,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 2745,
+          "strength": 0.22577707223265092,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 2827,
+          "strength": 0.24797415922850824,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 2929,
+          "strength": 0.20275555757486283,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 3072,
+          "strength": 0.20273302611193453,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 3154,
+          "strength": 0.19866100415908589,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 3276,
+          "strength": 0.5433598024084069,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 3359,
+          "strength": 0.334612925593107,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        }
+      ],
+      "events": [
+        {
+          "event_uid": null,
+          "source_uid": "female_FeiTian",
+          "music_interval": [
+            0,
+            331
+          ],
+          "source_interval": [
+            4108,
+            4411
+          ],
+          "body_speed_m_s": 0.2557564831611688,
+          "low_motion_frame_fraction": 0.30303030303030304,
+          "body_extent_rms_m": 0.5611981566572356,
+          "label_scope": "KINEMATIC_PROXY_NOT_HOLD_DEVELOPMENT_SEMANTIC_TRUTH"
+        },
+        {
+          "event_uid": null,
+          "source_uid": "male_pipa_1",
+          "music_interval": [
+            331,
+            659
+          ],
+          "source_interval": [
+            1219,
+            1530
+          ],
+          "body_speed_m_s": 0.33404759892792085,
+          "low_motion_frame_fraction": 0.03058103975535168,
+          "body_extent_rms_m": 0.5380112798312329,
+          "label_scope": "KINEMATIC_PROXY_NOT_HOLD_DEVELOPMENT_SEMANTIC_TRUTH"
+        },
+        {
+          "event_uid": null,
+          "source_uid": "female_FeiTian",
+          "music_interval": [
+            659,
+            899
+          ],
+          "source_interval": [
+            10747,
+            11010
+          ],
+          "body_speed_m_s": 0.2566013692525605,
+          "low_motion_frame_fraction": 0.06694560669456066,
+          "body_extent_rms_m": 0.45455120897290635,
+          "label_scope": "KINEMATIC_PROXY_NOT_HOLD_DEVELOPMENT_SEMANTIC_TRUTH"
+        },
+        {
+          "event_uid": null,
+          "source_uid": "female_FeiTian",
+          "music_interval": [
+            899,
+            1212
+          ],
+          "source_interval": [
+            11010,
+            11303
+          ],
+          "body_speed_m_s": 0.2740799785387332,
+          "low_motion_frame_fraction": 0.009615384615384616,
+          "body_extent_rms_m": 0.4995254289156518,
+          "label_scope": "KINEMATIC_PROXY_NOT_HOLD_DEVELOPMENT_SEMANTIC_TRUTH"
+        },
+        {
+          "event_uid": null,
+          "source_uid": "female_FeiTian",
+          "music_interval": [
+            1212,
+            1528
+          ],
+          "source_interval": [
+            11303,
+            11595
+          ],
+          "body_speed_m_s": 0.1570166441107289,
+          "low_motion_frame_fraction": 0.0,
+          "body_extent_rms_m": 0.2569302353943367,
+          "label_scope": "KINEMATIC_PROXY_NOT_HOLD_DEVELOPMENT_SEMANTIC_TRUTH"
+        },
+        {
+          "event_uid": null,
+          "source_uid": "female_lotus",
+          "music_interval": [
+            1528,
+            1708
+          ],
+          "source_interval": [
+            770,
+            931
+          ],
+          "body_speed_m_s": 0.1401430614489181,
+          "low_motion_frame_fraction": 0.17318435754189945,
+          "body_extent_rms_m": 0.2665327012517533,
+          "label_scope": "KINEMATIC_PROXY_NOT_HOLD_DEVELOPMENT_SEMANTIC_TRUTH"
+        },
+        {
+          "event_uid": null,
+          "source_uid": "female_lotus",
+          "music_interval": [
+            1708,
+            2050
+          ],
+          "source_interval": [
+            931,
+            1306
+          ],
+          "body_speed_m_s": 0.1621245488591812,
+          "low_motion_frame_fraction": 0.15542521994134897,
+          "body_extent_rms_m": 0.3889403080421965,
+          "label_scope": "KINEMATIC_PROXY_NOT_HOLD_DEVELOPMENT_SEMANTIC_TRUTH"
+        },
+        {
+          "event_uid": null,
+          "source_uid": "female_lotus",
+          "music_interval": [
+            2050,
+            2295
+          ],
+          "source_interval": [
+            1306,
+            1567
+          ],
+          "body_speed_m_s": 0.27444867387796523,
+          "low_motion_frame_fraction": 0.0,
+          "body_extent_rms_m": 0.3990763162509723,
+          "label_scope": "KINEMATIC_PROXY_NOT_HOLD_DEVELOPMENT_SEMANTIC_TRUTH"
+        },
+        {
+          "event_uid": null,
+          "source_uid": "female_lotus",
+          "music_interval": [
+            2295,
+            2540
+          ],
+          "source_interval": [
+            1567,
+            1850
+          ],
+          "body_speed_m_s": 0.3202709964279999,
+          "low_motion_frame_fraction": 0.0942622950819672,
+          "body_extent_rms_m": 0.4687326614982566,
+          "label_scope": "KINEMATIC_PROXY_NOT_HOLD_DEVELOPMENT_SEMANTIC_TRUTH"
+        },
+        {
+          "event_uid": null,
+          "source_uid": "male_ribbon_FenHe",
+          "music_interval": [
+            2540,
+            2786
+          ],
+          "source_interval": [
+            606,
+            890
+          ],
+          "body_speed_m_s": 0.2752423729925781,
+          "low_motion_frame_fraction": 0.08571428571428572,
+          "body_extent_rms_m": 0.41165888205274315,
+          "label_scope": "KINEMATIC_PROXY_NOT_HOLD_DEVELOPMENT_SEMANTIC_TRUTH"
+        },
+        {
+          "event_uid": null,
+          "source_uid": "male_meditation",
+          "music_interval": [
+            2786,
+            3026
+          ],
+          "source_interval": [
+            5543,
+            5826
+          ],
+          "body_speed_m_s": 0.1834838046786592,
+          "low_motion_frame_fraction": 0.16736401673640167,
+          "body_extent_rms_m": 0.3525022103769878,
+          "label_scope": "KINEMATIC_PROXY_NOT_HOLD_DEVELOPMENT_SEMANTIC_TRUTH"
+        },
+        {
+          "event_uid": null,
+          "source_uid": "female_meditation",
+          "music_interval": [
+            3026,
+            3256
+          ],
+          "source_interval": [
+            2554,
+            2792
+          ],
+          "body_speed_m_s": 0.14588834150036753,
+          "low_motion_frame_fraction": 0.25327510917030566,
+          "body_extent_rms_m": 0.19919337497651796,
+          "label_scope": "KINEMATIC_PROXY_NOT_HOLD_DEVELOPMENT_SEMANTIC_TRUTH"
+        },
+        {
+          "event_uid": null,
+          "source_uid": "female_meditation",
+          "music_interval": [
+            3256,
+            3601
+          ],
+          "source_interval": [
+            3476,
+            3860
+          ],
+          "body_speed_m_s": 0.08051668985018212,
+          "low_motion_frame_fraction": 0.2558139534883721,
+          "body_extent_rms_m": 0.2249823394801218,
+          "label_scope": "KINEMATIC_PROXY_NOT_HOLD_DEVELOPMENT_SEMANTIC_TRUTH"
+        }
+      ],
+      "closest_distinct_interval_pairs": [
+        {
+          "events": [
+            11,
+            12
+          ],
+          "angle_mean_rad": 0.29046834857455034,
+          "angle_p95_rad": 0.8383188849270498,
+          "source_intervals_distinct": true
+        },
+        {
+          "events": [
+            3,
+            4
+          ],
+          "angle_mean_rad": 0.34152517577538055,
+          "angle_p95_rad": 1.1489005620053907,
+          "source_intervals_distinct": true
+        },
+        {
+          "events": [
+            4,
+            5
+          ],
+          "angle_mean_rad": 0.3791060851729082,
+          "angle_p95_rad": 0.9007360752740713,
+          "source_intervals_distinct": true
+        },
+        {
+          "events": [
+            4,
+            7
+          ],
+          "angle_mean_rad": 0.39624316091340345,
+          "angle_p95_rad": 1.0463523859029291,
+          "source_intervals_distinct": true
+        },
+        {
+          "events": [
+            2,
+            9
+          ],
+          "angle_mean_rad": 0.4146936106552987,
+          "angle_p95_rad": 1.1611180435778863,
+          "source_intervals_distinct": true
+        },
+        {
+          "events": [
+            4,
+            6
+          ],
+          "angle_mean_rad": 0.4160748233776302,
+          "angle_p95_rad": 1.0824363764957143,
+          "source_intervals_distinct": true
+        },
+        {
+          "events": [
+            8,
+            9
+          ],
+          "angle_mean_rad": 0.42095415451408225,
+          "angle_p95_rad": 1.0831988632278284,
+          "source_intervals_distinct": true
+        },
+        {
+          "events": [
+            7,
+            9
+          ],
+          "angle_mean_rad": 0.4372301239747225,
+          "angle_p95_rad": 1.081103201345255,
+          "source_intervals_distinct": true
+        },
+        {
+          "events": [
+            4,
+            8
+          ],
+          "angle_mean_rad": 0.43767825854412784,
+          "angle_p95_rad": 1.117400918065453,
+          "source_intervals_distinct": true
+        },
+        {
+          "events": [
+            5,
+            8
+          ],
+          "angle_mean_rad": 0.45136690765053655,
+          "angle_p95_rad": 1.2202382998532373,
+          "source_intervals_distinct": true
+        }
+      ]
+    },
+    {
+      "song": "song1",
+      "source_seconds": {
+        "female_meditation": 37.3,
+        "male_meditation": 46.46666666666667,
+        "female_FeiTian": 8.0,
+        "female_lotus": 17.7,
+        "male_pipa_1": 10.466666666666667
+      },
+      "source_fraction": {
+        "female_meditation": 0.31100611450806004,
+        "male_meditation": 0.38743746525847694,
+        "female_FeiTian": 0.06670372429127293,
+        "female_lotus": 0.14758198999444136,
+        "male_pipa_1": 0.08727070594774874
+      },
+      "longest_source_run_seconds": 36.833333333333336,
+      "continuous_source_runs": [
+        {
+          "source_uid": "female_meditation",
+          "start": 0,
+          "end": 681
+        },
+        {
+          "source_uid": "male_meditation",
+          "start": 681,
+          "end": 970
+        },
+        {
+          "source_uid": "female_meditation",
+          "start": 970,
+          "end": 1150
+        },
+        {
+          "source_uid": "male_meditation",
+          "start": 1150,
+          "end": 2255
+        },
+        {
+          "source_uid": "female_meditation",
+          "start": 2255,
+          "end": 2513
+        },
+        {
+          "source_uid": "female_FeiTian",
+          "start": 2513,
+          "end": 2753
+        },
+        {
+          "source_uid": "female_lotus",
+          "start": 2753,
+          "end": 3284
+        },
+        {
+          "source_uid": "male_pipa_1",
+          "start": 3284,
+          "end": 3598
+        }
+      ],
+      "sections": [
+        {
+          "interval": [
+            0,
+            1199
+          ],
+          "scope": "EQUAL_TIME_THIRD_NOT_SEMANTIC_SECTION",
+          "source_frames": {
+            "female_meditation": 861,
+            "male_meditation": 338,
+            "female_FeiTian": 0,
+            "female_lotus": 0,
+            "male_pipa_1": 0
+          }
+        },
+        {
+          "interval": [
+            1199,
+            2398
+          ],
+          "scope": "EQUAL_TIME_THIRD_NOT_SEMANTIC_SECTION",
+          "source_frames": {
+            "female_meditation": 143,
+            "male_meditation": 1056,
+            "female_FeiTian": 0,
+            "female_lotus": 0,
+            "male_pipa_1": 0
+          }
+        },
+        {
+          "interval": [
+            2398,
+            3598
+          ],
+          "scope": "EQUAL_TIME_THIRD_NOT_SEMANTIC_SECTION",
+          "source_frames": {
+            "female_meditation": 115,
+            "male_meditation": 0,
+            "female_FeiTian": 240,
+            "female_lotus": 531,
+            "male_pipa_1": 314
+          }
+        }
+      ],
+      "development_semantics": "UNKNOWN",
+      "theme_vs_mechanical_repetition": "NOT_SEMANTICALLY_LABELED",
+      "acoustic_phrase_proposals": [
+        {
+          "frame": 230,
+          "strength": 0.4982445822845997,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 375,
+          "strength": 0.4930631775657376,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 455,
+          "strength": 0.5200337920272217,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 568,
+          "strength": 0.3646075207373985,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 681,
+          "strength": 0.4461626984981616,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 777,
+          "strength": 0.5491094573296436,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 841,
+          "strength": 0.37709567960150153,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 970,
+          "strength": 0.40074410577479824,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 1034,
+          "strength": 0.7879544486954955,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 1098,
+          "strength": 0.49128807539290087,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 1227,
+          "strength": 0.7746462315347532,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 1291,
+          "strength": 0.6145210227098076,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 1533,
+          "strength": 0.36672267515862506,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 1613,
+          "strength": 0.21542044916446862,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 1806,
+          "strength": 0.9078255949560613,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 1918,
+          "strength": 0.49242239260415327,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 1999,
+          "strength": 0.7161590813994135,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 2063,
+          "strength": 0.7332330617028325,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 2255,
+          "strength": 0.6047576074929265,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 2448,
+          "strength": 0.3918124923242487,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 2513,
+          "strength": 0.488145993012403,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 2577,
+          "strength": 0.6200513492921641,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 2754,
+          "strength": 0.6927540042577507,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 2819,
+          "strength": 0.7397107168374607,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 2882,
+          "strength": 0.3958344316964137,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 2946,
+          "strength": 0.39679463238644125,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 3027,
+          "strength": 0.5228581927097767,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 3091,
+          "strength": 0.6116248740702416,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 3220,
+          "strength": 0.545903902493753,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 3284,
+          "strength": 0.5470430511558614,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 3348,
+          "strength": 1.0,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 3444,
+          "strength": 0.32533634068405104,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        }
+      ],
+      "events": [
+        {
+          "event_uid": null,
+          "source_uid": "female_meditation",
+          "music_interval": [
+            0,
+            240
+          ],
+          "source_interval": [
+            2474,
+            2709
+          ],
+          "body_speed_m_s": 0.08761856647740751,
+          "low_motion_frame_fraction": 0.3682008368200837,
+          "body_extent_rms_m": 0.21076110913450546,
+          "label_scope": "KINEMATIC_PROXY_NOT_HOLD_DEVELOPMENT_SEMANTIC_TRUTH"
+        },
+        {
+          "event_uid": null,
+          "source_uid": "female_meditation",
+          "music_interval": [
+            240,
+            423
+          ],
+          "source_interval": [
+            2709,
+            2882
+          ],
+          "body_speed_m_s": 0.11462414594827237,
+          "low_motion_frame_fraction": 0.4230769230769231,
+          "body_extent_rms_m": 0.19058417136173658,
+          "label_scope": "KINEMATIC_PROXY_NOT_HOLD_DEVELOPMENT_SEMANTIC_TRUTH"
+        },
+        {
+          "event_uid": null,
+          "source_uid": "female_meditation",
+          "music_interval": [
+            423,
+            681
+          ],
+          "source_interval": [
+            3050,
+            3274
+          ],
+          "body_speed_m_s": 0.09951580599446812,
+          "low_motion_frame_fraction": 0.23735408560311283,
+          "body_extent_rms_m": 0.22175322965198882,
+          "label_scope": "KINEMATIC_PROXY_NOT_HOLD_DEVELOPMENT_SEMANTIC_TRUTH"
+        },
+        {
+          "event_uid": null,
+          "source_uid": "male_meditation",
+          "music_interval": [
+            681,
+            970
+          ],
+          "source_interval": [
+            4062,
+            4367
+          ],
+          "body_speed_m_s": 0.16555871820209958,
+          "low_motion_frame_fraction": 0.11805555555555555,
+          "body_extent_rms_m": 0.322943513113468,
+          "label_scope": "KINEMATIC_PROXY_NOT_HOLD_DEVELOPMENT_SEMANTIC_TRUTH"
+        },
+        {
+          "event_uid": null,
+          "source_uid": "female_meditation",
+          "music_interval": [
+            970,
+            1150
+          ],
+          "source_interval": [
+            4151,
+            4335
+          ],
+          "body_speed_m_s": 0.13788627173341822,
+          "low_motion_frame_fraction": 0.08379888268156424,
+          "body_extent_rms_m": 0.2312762696478423,
+          "label_scope": "KINEMATIC_PROXY_NOT_HOLD_DEVELOPMENT_SEMANTIC_TRUTH"
+        },
+        {
+          "event_uid": null,
+          "source_uid": "male_meditation",
+          "music_interval": [
+            1150,
+            1404
+          ],
+          "source_interval": [
+            4731,
+            5000
+          ],
+          "body_speed_m_s": 0.1697334364459237,
+          "low_motion_frame_fraction": 0.22924901185770752,
+          "body_extent_rms_m": 0.35380822847558874,
+          "label_scope": "KINEMATIC_PROXY_NOT_HOLD_DEVELOPMENT_SEMANTIC_TRUTH"
+        },
+        {
+          "event_uid": null,
+          "source_uid": "male_meditation",
+          "music_interval": [
+            1404,
+            1644
+          ],
+          "source_interval": [
+            5000,
+            5293
+          ],
+          "body_speed_m_s": 0.09529861325631814,
+          "low_motion_frame_fraction": 0.3598326359832636,
+          "body_extent_rms_m": 0.2277701880750482,
+          "label_scope": "KINEMATIC_PROXY_NOT_HOLD_DEVELOPMENT_SEMANTIC_TRUTH"
+        },
+        {
+          "event_uid": null,
+          "source_uid": "male_meditation",
+          "music_interval": [
+            1644,
+            1999
+          ],
+          "source_interval": [
+            5293,
+            5663
+          ],
+          "body_speed_m_s": 0.14592301881624722,
+          "low_motion_frame_fraction": 0.2796610169491525,
+          "body_extent_rms_m": 0.3259520611945273,
+          "label_scope": "KINEMATIC_PROXY_NOT_HOLD_DEVELOPMENT_SEMANTIC_TRUTH"
+        },
+        {
+          "event_uid": null,
+          "source_uid": "male_meditation",
+          "music_interval": [
+            1999,
+            2255
+          ],
+          "source_interval": [
+            5663,
+            5903
+          ],
+          "body_speed_m_s": 0.14724186502195294,
+          "low_motion_frame_fraction": 0.23137254901960785,
+          "body_extent_rms_m": 0.32537078387400664,
+          "label_scope": "KINEMATIC_PROXY_NOT_HOLD_DEVELOPMENT_SEMANTIC_TRUTH"
+        },
+        {
+          "event_uid": null,
+          "source_uid": "female_meditation",
+          "music_interval": [
+            2255,
+            2513
+          ],
+          "source_interval": [
+            5673,
+            5906
+          ],
+          "body_speed_m_s": 0.22496426046981358,
+          "low_motion_frame_fraction": 0.10894941634241245,
+          "body_extent_rms_m": 0.48175382728654287,
+          "label_scope": "KINEMATIC_PROXY_NOT_HOLD_DEVELOPMENT_SEMANTIC_TRUTH"
+        },
+        {
+          "event_uid": null,
+          "source_uid": "female_FeiTian",
+          "music_interval": [
+            2513,
+            2753
+          ],
+          "source_interval": [
+            3752,
+            3988
+          ],
+          "body_speed_m_s": 0.19221197621351352,
+          "low_motion_frame_fraction": 0.14644351464435146,
+          "body_extent_rms_m": 0.30097552521974763,
+          "label_scope": "KINEMATIC_PROXY_NOT_HOLD_DEVELOPMENT_SEMANTIC_TRUTH"
+        },
+        {
+          "event_uid": null,
+          "source_uid": "female_lotus",
+          "music_interval": [
+            2753,
+            2993
+          ],
+          "source_interval": [
+            1343,
+            1567
+          ],
+          "body_speed_m_s": 0.2504313206858929,
+          "low_motion_frame_fraction": 0.0,
+          "body_extent_rms_m": 0.3735488888690592,
+          "label_scope": "KINEMATIC_PROXY_NOT_HOLD_DEVELOPMENT_SEMANTIC_TRUTH"
+        },
+        {
+          "event_uid": null,
+          "source_uid": "female_lotus",
+          "music_interval": [
+            2993,
+            3284
+          ],
+          "source_interval": [
+            1567,
+            1850
+          ],
+          "body_speed_m_s": 0.26903120676817854,
+          "low_motion_frame_fraction": 0.1413793103448276,
+          "body_extent_rms_m": 0.4688127266107032,
+          "label_scope": "KINEMATIC_PROXY_NOT_HOLD_DEVELOPMENT_SEMANTIC_TRUTH"
+        },
+        {
+          "event_uid": null,
+          "source_uid": "male_pipa_1",
+          "music_interval": [
+            3284,
+            3598
+          ],
+          "source_interval": [
+            496,
+            748
+          ],
+          "body_speed_m_s": 0.13174999435450838,
+          "low_motion_frame_fraction": 0.09584664536741214,
+          "body_extent_rms_m": 0.5169616763053322,
+          "label_scope": "KINEMATIC_PROXY_NOT_HOLD_DEVELOPMENT_SEMANTIC_TRUTH"
+        }
+      ],
+      "closest_distinct_interval_pairs": [
+        {
+          "events": [
+            2,
+            4
+          ],
+          "angle_mean_rad": 0.2657809361746147,
+          "angle_p95_rad": 0.8446735536318173,
+          "source_intervals_distinct": true
+        },
+        {
+          "events": [
+            0,
+            1
+          ],
+          "angle_mean_rad": 0.27248407782879913,
+          "angle_p95_rad": 0.7700728942985025,
+          "source_intervals_distinct": true
+        },
+        {
+          "events": [
+            3,
+            6
+          ],
+          "angle_mean_rad": 0.28691781882517753,
+          "angle_p95_rad": 0.6690632775141994,
+          "source_intervals_distinct": true
+        },
+        {
+          "events": [
+            1,
+            4
+          ],
+          "angle_mean_rad": 0.28717774879322494,
+          "angle_p95_rad": 0.8573057193070475,
+          "source_intervals_distinct": true
+        },
+        {
+          "events": [
+            3,
+            5
+          ],
+          "angle_mean_rad": 0.30149223396096186,
+          "angle_p95_rad": 0.8336352884971318,
+          "source_intervals_distinct": true
+        },
+        {
+          "events": [
+            3,
+            4
+          ],
+          "angle_mean_rad": 0.31002450407063903,
+          "angle_p95_rad": 0.8362020460732507,
+          "source_intervals_distinct": true
+        },
+        {
+          "events": [
+            5,
+            6
+          ],
+          "angle_mean_rad": 0.3245822979074371,
+          "angle_p95_rad": 0.8140537100183663,
+          "source_intervals_distinct": true
+        },
+        {
+          "events": [
+            1,
+            2
+          ],
+          "angle_mean_rad": 0.327605496068606,
+          "angle_p95_rad": 1.1271758093539352,
+          "source_intervals_distinct": true
+        },
+        {
+          "events": [
+            2,
+            6
+          ],
+          "angle_mean_rad": 0.32779556175532837,
+          "angle_p95_rad": 0.8039959337533846,
+          "source_intervals_distinct": true
+        },
+        {
+          "events": [
+            2,
+            3
+          ],
+          "angle_mean_rad": 0.32854985619140725,
+          "angle_p95_rad": 0.8943409433030766,
+          "source_intervals_distinct": true
+        }
+      ]
+    },
+    {
+      "song": "song2",
+      "source_seconds": {
+        "female_meditation": 16.0,
+        "female_FeiTian": 32.1,
+        "female_lotus": 43.93333333333333,
+        "male_pipa_1": 20.0,
+        "male_ribbon_FenHe": 8.0
+      },
+      "source_fraction": {
+        "female_meditation": 0.13329630658150513,
+        "female_FeiTian": 0.2674257150791447,
+        "female_lotus": 0.3660094418217162,
+        "male_pipa_1": 0.1666203832268814,
+        "male_ribbon_FenHe": 0.06664815329075256
+      },
+      "longest_source_run_seconds": 32.1,
+      "continuous_source_runs": [
+        {
+          "source_uid": "female_meditation",
+          "start": 0,
+          "end": 480
+        },
+        {
+          "source_uid": "female_FeiTian",
+          "start": 480,
+          "end": 1443
+        },
+        {
+          "source_uid": "female_lotus",
+          "start": 1443,
+          "end": 2403
+        },
+        {
+          "source_uid": "male_pipa_1",
+          "start": 2403,
+          "end": 3003
+        },
+        {
+          "source_uid": "male_ribbon_FenHe",
+          "start": 3003,
+          "end": 3243
+        },
+        {
+          "source_uid": "female_lotus",
+          "start": 3243,
+          "end": 3601
+        }
+      ],
+      "sections": [
+        {
+          "interval": [
+            0,
+            1200
+          ],
+          "scope": "EQUAL_TIME_THIRD_NOT_SEMANTIC_SECTION",
+          "source_frames": {
+            "female_meditation": 480,
+            "female_FeiTian": 720,
+            "female_lotus": 0,
+            "male_pipa_1": 0,
+            "male_ribbon_FenHe": 0
+          }
+        },
+        {
+          "interval": [
+            1200,
+            2400
+          ],
+          "scope": "EQUAL_TIME_THIRD_NOT_SEMANTIC_SECTION",
+          "source_frames": {
+            "female_meditation": 0,
+            "female_FeiTian": 243,
+            "female_lotus": 957,
+            "male_pipa_1": 0,
+            "male_ribbon_FenHe": 0
+          }
+        },
+        {
+          "interval": [
+            2400,
+            3601
+          ],
+          "scope": "EQUAL_TIME_THIRD_NOT_SEMANTIC_SECTION",
+          "source_frames": {
+            "female_meditation": 0,
+            "female_FeiTian": 0,
+            "female_lotus": 361,
+            "male_pipa_1": 600,
+            "male_ribbon_FenHe": 240
+          }
+        }
+      ],
+      "development_semantics": "UNKNOWN",
+      "theme_vs_mechanical_repetition": "NOT_SEMANTICALLY_LABELED",
+      "acoustic_phrase_proposals": [
+        {
+          "frame": 47,
+          "strength": 0.3773384629382863,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 108,
+          "strength": 0.27758096043392133,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 348,
+          "strength": 0.2741264924100659,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 407,
+          "strength": 0.2869607286852644,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 468,
+          "strength": 0.4431943231874388,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 647,
+          "strength": 0.2811470485453872,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 708,
+          "strength": 0.3707092971407529,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 767,
+          "strength": 0.28851826568233047,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 828,
+          "strength": 0.3722401284444381,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 887,
+          "strength": 0.4440307493142317,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 948,
+          "strength": 0.4749525676736563,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 1068,
+          "strength": 0.43548891135614903,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 1128,
+          "strength": 0.3875695020231952,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 1188,
+          "strength": 0.3402747599225532,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 1248,
+          "strength": 0.4961253578501034,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 1308,
+          "strength": 0.48833949798022064,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 1368,
+          "strength": 0.42929417101804884,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 1443,
+          "strength": 0.6129912347000809,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 1668,
+          "strength": 0.33071990831552184,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 1742,
+          "strength": 0.3142067553087867,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 1802,
+          "strength": 0.28030777814498303,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 1922,
+          "strength": 0.8916408074447714,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 2028,
+          "strength": 0.23231970557150683,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 2088,
+          "strength": 0.3582927063928753,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 2148,
+          "strength": 0.33228630286166677,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 2222,
+          "strength": 0.2386452274989942,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 2328,
+          "strength": 0.3051142951141358,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 2403,
+          "strength": 1.0,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 2522,
+          "strength": 0.5086866279593507,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 2582,
+          "strength": 0.2835451292836103,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 2642,
+          "strength": 0.3707462859187067,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 2762,
+          "strength": 0.2548593237977626,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 2882,
+          "strength": 0.7862003607599677,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 3048,
+          "strength": 0.2546015783140962,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 3108,
+          "strength": 0.2831216068168288,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 3213,
+          "strength": 0.2668855300387503,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 3288,
+          "strength": 0.3032728415171668,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 3363,
+          "strength": 0.8006718931408032,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        },
+        {
+          "frame": 3468,
+          "strength": 0.2275701183850724,
+          "status": "ACOUSTIC_PHRASE_CANDIDATE"
+        }
+      ],
+      "events": [
+        {
+          "event_uid": null,
+          "source_uid": "female_meditation",
+          "music_interval": [
+            0,
+            240
+          ],
+          "source_interval": [
+            5180,
+            5481
+          ],
+          "body_speed_m_s": 0.21508850514664593,
+          "low_motion_frame_fraction": 0.200836820083682,
+          "body_extent_rms_m": 0.3480391746164522,
+          "label_scope": "KINEMATIC_PROXY_NOT_HOLD_DEVELOPMENT_SEMANTIC_TRUTH"
+        },
+        {
+          "event_uid": null,
+          "source_uid": "female_meditation",
+          "music_interval": [
+            240,
+            480
+          ],
+          "source_interval": [
+            5481,
+            5753
+          ],
+          "body_speed_m_s": 0.19551293520959317,
+          "low_motion_frame_fraction": 0.15481171548117154,
+          "body_extent_rms_m": 0.33833747730262953,
+          "label_scope": "KINEMATIC_PROXY_NOT_HOLD_DEVELOPMENT_SEMANTIC_TRUTH"
+        },
+        {
+          "event_uid": null,
+          "source_uid": "female_FeiTian",
+          "music_interval": [
+            480,
+            720
+          ],
+          "source_interval": [
+            4253,
+            4490
+          ],
+          "body_speed_m_s": 0.3135302082127098,
+          "low_motion_frame_fraction": 0.2510460251046025,
+          "body_extent_rms_m": 0.5329344110823241,
+          "label_scope": "KINEMATIC_PROXY_NOT_HOLD_DEVELOPMENT_SEMANTIC_TRUTH"
+        },
+        {
+          "event_uid": null,
+          "source_uid": "female_FeiTian",
+          "music_interval": [
+            720,
+            960
+          ],
+          "source_interval": [
+            4490,
+            4717
+          ],
+          "body_speed_m_s": 0.1492170700631417,
+          "low_motion_frame_fraction": 0.19246861924686193,
+          "body_extent_rms_m": 0.35634486593209364,
+          "label_scope": "KINEMATIC_PROXY_NOT_HOLD_DEVELOPMENT_SEMANTIC_TRUTH"
+        },
+        {
+          "event_uid": null,
+          "source_uid": "female_FeiTian",
+          "music_interval": [
+            960,
+            1140
+          ],
+          "source_interval": [
+            4717,
+            4929
+          ],
+          "body_speed_m_s": 0.3975354773203999,
+          "low_motion_frame_fraction": 0.0,
+          "body_extent_rms_m": 0.518252505071578,
+          "label_scope": "KINEMATIC_PROXY_NOT_HOLD_DEVELOPMENT_SEMANTIC_TRUTH"
+        },
+        {
+          "event_uid": null,
+          "source_uid": "female_FeiTian",
+          "music_interval": [
+            1140,
+            1443
+          ],
+          "source_interval": [
+            4929,
+            5243
+          ],
+          "body_speed_m_s": 0.3974941427378151,
+          "low_motion_frame_fraction": 0.029801324503311258,
+          "body_extent_rms_m": 0.5794801361589866,
+          "label_scope": "KINEMATIC_PROXY_NOT_HOLD_DEVELOPMENT_SEMANTIC_TRUTH"
+        },
+        {
+          "event_uid": null,
+          "source_uid": "female_lotus",
+          "music_interval": [
+            1443,
+            1742
+          ],
+          "source_interval": [
+            461,
+            770
+          ],
+          "body_speed_m_s": 0.2313533300379281,
+          "low_motion_frame_fraction": 0.33221476510067116,
+          "body_extent_rms_m": 0.43451720035099667,
+          "label_scope": "KINEMATIC_PROXY_NOT_HOLD_DEVELOPMENT_SEMANTIC_TRUTH"
+        },
+        {
+          "event_uid": null,
+          "source_uid": "female_lotus",
+          "music_interval": [
+            1742,
+            2088
+          ],
+          "source_interval": [
+            770,
+            1151
+          ],
+          "body_speed_m_s": 0.19963796520040075,
+          "low_motion_frame_fraction": 0.08695652173913043,
+          "body_extent_rms_m": 0.4015646726870464,
+          "label_scope": "KINEMATIC_PROXY_NOT_HOLD_DEVELOPMENT_SEMANTIC_TRUTH"
+        },
+        {
+          "event_uid": null,
+          "source_uid": "female_lotus",
+          "music_interval": [
+            2088,
+            2403
+          ],
+          "source_interval": [
+            5556,
+            5852
+          ],
+          "body_speed_m_s": 0.2863891196673881,
+          "low_motion_frame_fraction": 0.4426751592356688,
+          "body_extent_rms_m": 0.41239726891499506,
+          "label_scope": "KINEMATIC_PROXY_NOT_HOLD_DEVELOPMENT_SEMANTIC_TRUTH"
+        },
+        {
+          "event_uid": null,
+          "source_uid": "male_pipa_1",
+          "music_interval": [
+            2403,
+            2762
+          ],
+          "source_interval": [
+            446,
+            836
+          ],
+          "body_speed_m_s": 0.1458306243247389,
+          "low_motion_frame_fraction": 0.164804469273743,
+          "body_extent_rms_m": 0.5325523426391355,
+          "label_scope": "KINEMATIC_PROXY_NOT_HOLD_DEVELOPMENT_SEMANTIC_TRUTH"
+        },
+        {
+          "event_uid": null,
+          "source_uid": "male_pipa_1",
+          "music_interval": [
+            2762,
+            3003
+          ],
+          "source_interval": [
+            836,
+            1129
+          ],
+          "body_speed_m_s": 0.39309690580808726,
+          "low_motion_frame_fraction": 0.058333333333333334,
+          "body_extent_rms_m": 0.513086043519355,
+          "label_scope": "KINEMATIC_PROXY_NOT_HOLD_DEVELOPMENT_SEMANTIC_TRUTH"
+        },
+        {
+          "event_uid": null,
+          "source_uid": "male_ribbon_FenHe",
+          "music_interval": [
+            3003,
+            3243
+          ],
+          "source_interval": [
+            636,
+            890
+          ],
+          "body_speed_m_s": 0.2772581796651769,
+          "low_motion_frame_fraction": 0.0502092050209205,
+          "body_extent_rms_m": 0.4115091681089112,
+          "label_scope": "KINEMATIC_PROXY_NOT_HOLD_DEVELOPMENT_SEMANTIC_TRUTH"
+        },
+        {
+          "event_uid": null,
+          "source_uid": "female_lotus",
+          "music_interval": [
+            3243,
+            3601
+          ],
+          "source_interval": [
+            6347,
+            6732
+          ],
+          "body_speed_m_s": 0.15489593507926125,
+          "low_motion_frame_fraction": 0.25770308123249297,
+          "body_extent_rms_m": 0.3620020331066245,
+          "label_scope": "KINEMATIC_PROXY_NOT_HOLD_DEVELOPMENT_SEMANTIC_TRUTH"
+        }
+      ],
+      "closest_distinct_interval_pairs": [
+        {
+          "events": [
+            6,
+            12
+          ],
+          "angle_mean_rad": 0.40948979222149,
+          "angle_p95_rad": 1.1263302728290514,
+          "source_intervals_distinct": true
+        },
+        {
+          "events": [
+            8,
+            11
+          ],
+          "angle_mean_rad": 0.43328678267223447,
+          "angle_p95_rad": 1.040305601745511,
+          "source_intervals_distinct": true
+        },
+        {
+          "events": [
+            6,
+            11
+          ],
+          "angle_mean_rad": 0.44236038267629835,
+          "angle_p95_rad": 1.2069869724461233,
+          "source_intervals_distinct": true
+        },
+        {
+          "events": [
+            6,
+            8
+          ],
+          "angle_mean_rad": 0.44381506355587047,
+          "angle_p95_rad": 1.2728622100793348,
+          "source_intervals_distinct": true
+        },
+        {
+          "events": [
+            5,
+            11
+          ],
+          "angle_mean_rad": 0.44446830214520233,
+          "angle_p95_rad": 1.068117098787948,
+          "source_intervals_distinct": true
+        },
+        {
+          "events": [
+            4,
+            6
+          ],
+          "angle_mean_rad": 0.4533866588844141,
+          "angle_p95_rad": 1.2095461547765367,
+          "source_intervals_distinct": true
+        },
+        {
+          "events": [
+            7,
+            12
+          ],
+          "angle_mean_rad": 0.4568039314122226,
+          "angle_p95_rad": 1.2796970021535286,
+          "source_intervals_distinct": true
+        },
+        {
+          "events": [
+            3,
+            4
+          ],
+          "angle_mean_rad": 0.4588584641464461,
+          "angle_p95_rad": 1.3075559314590228,
+          "source_intervals_distinct": true
+        },
+        {
+          "events": [
+            5,
+            8
+          ],
+          "angle_mean_rad": 0.4656321040506388,
+          "angle_p95_rad": 1.1884454728574982,
+          "source_intervals_distinct": true
+        },
+        {
+          "events": [
+            10,
+            11
+          ],
+          "angle_mean_rad": 0.4672882264523545,
+          "angle_p95_rad": 1.5836357716406781,
+          "source_intervals_distinct": true
+        }
+      ]
+    }
+  ],
+  "plans_unchanged": true,
+  "mechanical_vs_theme_repetition": "NOT_SEMANTICALLY_IDENTIFIED",
+  "source_balancing_enforced": false,
+  "sdmr_used": false
+}

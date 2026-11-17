@@ -1,0 +1,602 @@
+{
+  "records": [
+    {
+      "key": "paired_4",
+      "methods": {
+        "Geometry": [
+          {
+            "seed": 35041,
+            "fk_max_error_m": 0.0,
+            "all_cuts_including_observation_edges": [
+              104,
+              152
+            ],
+            "world_jerk_mean": 107.08902499946092,
+            "world_jerk_p95": 240.36118641224348,
+            "all_cut_world_jerk_peak": 69.19304378930588,
+            "root_acceleration_peak_m_s2": 15.163631439208984,
+            "geometry_residual_angle_mean_rad": 0.0,
+            "budget_verified": true
+          },
+          {
+            "seed": 35042,
+            "fk_max_error_m": 0.0,
+            "all_cuts_including_observation_edges": [
+              104,
+              152
+            ],
+            "world_jerk_mean": 107.08902499946092,
+            "world_jerk_p95": 240.36118641224348,
+            "all_cut_world_jerk_peak": 69.19304378930588,
+            "root_acceleration_peak_m_s2": 15.163631439208984,
+            "geometry_residual_angle_mean_rad": 0.0,
+            "budget_verified": true
+          }
+        ],
+        "FrozenMatched": [
+          {
+            "seed": 35041,
+            "fk_max_error_m": 0.0,
+            "all_cuts_including_observation_edges": [
+              104,
+              152
+            ],
+            "world_jerk_mean": 207.89397752894314,
+            "world_jerk_p95": 617.6456631040261,
+            "all_cut_world_jerk_peak": 3564.2998160703182,
+            "root_acceleration_peak_m_s2": 60.19132614135742,
+            "geometry_residual_angle_mean_rad": 0.05453962210232706,
+            "budget_verified": true
+          },
+          {
+            "seed": 35042,
+            "fk_max_error_m": 0.0,
+            "all_cuts_including_observation_edges": [
+              104,
+              152
+            ],
+            "world_jerk_mean": 206.0553717448937,
+            "world_jerk_p95": 623.2599342590879,
+            "all_cut_world_jerk_peak": 3543.269629399198,
+            "root_acceleration_peak_m_s2": 59.91978454589844,
+            "geometry_residual_angle_mean_rad": 0.05448186677026316,
+            "budget_verified": true
+          }
+        ],
+        "Trained": [
+          {
+            "seed": 35041,
+            "fk_max_error_m": 0.0,
+            "all_cuts_including_observation_edges": [
+              104,
+              152
+            ],
+            "world_jerk_mean": 206.17933223432814,
+            "world_jerk_p95": 574.6056295756962,
+            "all_cut_world_jerk_peak": 3901.7245116476147,
+            "root_acceleration_peak_m_s2": 66.28089141845703,
+            "geometry_residual_angle_mean_rad": 0.05433858896929388,
+            "budget_verified": true
+          },
+          {
+            "seed": 35042,
+            "fk_max_error_m": 0.0,
+            "all_cuts_including_observation_edges": [
+              104,
+              152
+            ],
+            "world_jerk_mean": 206.9157799801413,
+            "world_jerk_p95": 624.1663964008844,
+            "all_cut_world_jerk_peak": 3897.3746964519264,
+            "root_acceleration_peak_m_s2": 66.23412322998047,
+            "geometry_residual_angle_mean_rad": 0.054310658740934305,
+            "budget_verified": true
+          }
+        ]
+      }
+    },
+    {
+      "key": "paired_8",
+      "methods": {
+        "Geometry": [
+          {
+            "seed": 35041,
+            "fk_max_error_m": 0.0,
+            "all_cuts_including_observation_edges": [
+              104,
+              152
+            ],
+            "world_jerk_mean": 104.71116606839438,
+            "world_jerk_p95": 182.84079065689488,
+            "all_cut_world_jerk_peak": 84.77980775157263,
+            "root_acceleration_peak_m_s2": 7.604062080383301,
+            "geometry_residual_angle_mean_rad": 0.0,
+            "budget_verified": true
+          },
+          {
+            "seed": 35042,
+            "fk_max_error_m": 0.0,
+            "all_cuts_including_observation_edges": [
+              104,
+              152
+            ],
+            "world_jerk_mean": 104.71116606839438,
+            "world_jerk_p95": 182.84079065689488,
+            "all_cut_world_jerk_peak": 84.77980775157263,
+            "root_acceleration_peak_m_s2": 7.604062080383301,
+            "geometry_residual_angle_mean_rad": 0.0,
+            "budget_verified": true
+          }
+        ],
+        "FrozenMatched": [
+          {
+            "seed": 35041,
+            "fk_max_error_m": 0.0,
+            "all_cuts_including_observation_edges": [
+              104,
+              152
+            ],
+            "world_jerk_mean": 843.6133172838508,
+            "world_jerk_p95": 2555.3314336705234,
+            "all_cut_world_jerk_peak": 40059.1521476937,
+            "root_acceleration_peak_m_s2": 672.630126953125,
+            "geometry_residual_angle_mean_rad": 0.05548335144479576,
+            "budget_verified": true
+          },
+          {
+            "seed": 35042,
+            "fk_max_error_m": 0.0,
+            "all_cuts_including_observation_edges": [
+              104,
+              152
+            ],
+            "world_jerk_mean": 849.5764461933405,
+            "world_jerk_p95": 2543.7204434387113,
+            "all_cut_world_jerk_peak": 39928.56564996688,
+            "root_acceleration_peak_m_s2": 669.7619018554688,
+            "geometry_residual_angle_mean_rad": 0.05584684724740985,
+            "budget_verified": true
+          }
+        ],
+        "Trained": [
+          {
+            "seed": 35041,
+            "fk_max_error_m": 0.0,
+            "all_cuts_including_observation_edges": [
+              104,
+              152
+            ],
+            "world_jerk_mean": 854.109238427301,
+            "world_jerk_p95": 2388.2323376563495,
+            "all_cut_world_jerk_peak": 41450.99938313493,
+            "root_acceleration_peak_m_s2": 697.0673217773438,
+            "geometry_residual_angle_mean_rad": 0.05239375439562179,
+            "budget_verified": true
+          },
+          {
+            "seed": 35042,
+            "fk_max_error_m": 0.0,
+            "all_cuts_including_observation_edges": [
+              104,
+              152
+            ],
+            "world_jerk_mean": 854.2620126942415,
+            "world_jerk_p95": 2376.6928629685594,
+            "all_cut_world_jerk_peak": 41440.73262639751,
+            "root_acceleration_peak_m_s2": 696.864990234375,
+            "geometry_residual_angle_mean_rad": 0.05241616453845687,
+            "budget_verified": true
+          }
+        ]
+      }
+    },
+    {
+      "key": "paired_12",
+      "methods": {
+        "Geometry": [
+          {
+            "seed": 35041,
+            "fk_max_error_m": 0.0,
+            "all_cuts_including_observation_edges": [
+              104,
+              152
+            ],
+            "world_jerk_mean": 241.01595301868727,
+            "world_jerk_p95": 650.0892910677369,
+            "all_cut_world_jerk_peak": 287.96307107648903,
+            "root_acceleration_peak_m_s2": 35.89792251586914,
+            "geometry_residual_angle_mean_rad": 0.0,
+            "budget_verified": true
+          },
+          {
+            "seed": 35042,
+            "fk_max_error_m": 0.0,
+            "all_cuts_including_observation_edges": [
+              104,
+              152
+            ],
+            "world_jerk_mean": 241.01595301868727,
+            "world_jerk_p95": 650.0892910677369,
+            "all_cut_world_jerk_peak": 287.96307107648903,
+            "root_acceleration_peak_m_s2": 35.89792251586914,
+            "geometry_residual_angle_mean_rad": 0.0,
+            "budget_verified": true
+          }
+        ],
+        "FrozenMatched": [
+          {
+            "seed": 35041,
+            "fk_max_error_m": 0.0,
+            "all_cuts_including_observation_edges": [
+              104,
+              152
+            ],
+            "world_jerk_mean": 2223.987061548102,
+            "world_jerk_p95": 6567.602099927898,
+            "all_cut_world_jerk_peak": 111395.87483143485,
+            "root_acceleration_peak_m_s2": 1858.32568359375,
+            "geometry_residual_angle_mean_rad": 0.06251574807186917,
+            "budget_verified": true
+          },
+          {
+            "seed": 35042,
+            "fk_max_error_m": 0.0,
+            "all_cuts_including_observation_edges": [
+              104,
+              152
+            ],
+            "world_jerk_mean": 2222.679788995075,
+            "world_jerk_p95": 6563.330190571339,
+            "all_cut_world_jerk_peak": 111365.88002194936,
+            "root_acceleration_peak_m_s2": 1858.02685546875,
+            "geometry_residual_angle_mean_rad": 0.06247016787308675,
+            "budget_verified": true
+          }
+        ],
+        "Trained": [
+          {
+            "seed": 35041,
+            "fk_max_error_m": 0.0,
+            "all_cuts_including_observation_edges": [
+              104,
+              152
+            ],
+            "world_jerk_mean": 2249.880385654096,
+            "world_jerk_p95": 6210.223600214743,
+            "all_cut_world_jerk_peak": 109939.24084528573,
+            "root_acceleration_peak_m_s2": 1834.73583984375,
+            "geometry_residual_angle_mean_rad": 0.06268641303925108,
+            "budget_verified": true
+          },
+          {
+            "seed": 35042,
+            "fk_max_error_m": 0.0,
+            "all_cuts_including_observation_edges": [
+              104,
+              152
+            ],
+            "world_jerk_mean": 2249.738779553379,
+            "world_jerk_p95": 6211.521597620122,
+            "all_cut_world_jerk_peak": 109937.1627532395,
+            "root_acceleration_peak_m_s2": 1834.729248046875,
+            "geometry_residual_angle_mean_rad": 0.06267290403828842,
+            "budget_verified": true
+          }
+        ]
+      }
+    },
+    {
+      "key": "paired_16",
+      "methods": {
+        "Geometry": [
+          {
+            "seed": 35041,
+            "fk_max_error_m": 0.0,
+            "all_cuts_including_observation_edges": [
+              104,
+              152
+            ],
+            "world_jerk_mean": 360.7839213267015,
+            "world_jerk_p95": 656.398381414746,
+            "all_cut_world_jerk_peak": 226.8078678685955,
+            "root_acceleration_peak_m_s2": 22.141714096069336,
+            "geometry_residual_angle_mean_rad": 0.0,
+            "budget_verified": true
+          },
+          {
+            "seed": 35042,
+            "fk_max_error_m": 0.0,
+            "all_cuts_including_observation_edges": [
+              104,
+              152
+            ],
+            "world_jerk_mean": 360.7839213267015,
+            "world_jerk_p95": 656.398381414746,
+            "all_cut_world_jerk_peak": 226.8078678685955,
+            "root_acceleration_peak_m_s2": 22.141714096069336,
+            "geometry_residual_angle_mean_rad": 0.0,
+            "budget_verified": true
+          }
+        ],
+        "FrozenMatched": [
+          {
+            "seed": 35041,
+            "fk_max_error_m": 0.0,
+            "all_cuts_including_observation_edges": [
+              104,
+              152
+            ],
+            "world_jerk_mean": 739.2473430016499,
+            "world_jerk_p95": 2199.4435232503806,
+            "all_cut_world_jerk_peak": 18343.719478334908,
+            "root_acceleration_peak_m_s2": 311.9214782714844,
+            "geometry_residual_angle_mean_rad": 0.06431912270451673,
+            "budget_verified": true
+          },
+          {
+            "seed": 35042,
+            "fk_max_error_m": 0.0,
+            "all_cuts_including_observation_edges": [
+              104,
+              152
+            ],
+            "world_jerk_mean": 735.9811171568151,
+            "world_jerk_p95": 2304.7192610491848,
+            "all_cut_world_jerk_peak": 18396.429033474113,
+            "root_acceleration_peak_m_s2": 312.48577880859375,
+            "geometry_residual_angle_mean_rad": 0.06433822167393803,
+            "budget_verified": true
+          }
+        ],
+        "Trained": [
+          {
+            "seed": 35041,
+            "fk_max_error_m": 0.0,
+            "all_cuts_including_observation_edges": [
+              104,
+              152
+            ],
+            "world_jerk_mean": 699.9148000147021,
+            "world_jerk_p95": 1890.8057502979366,
+            "all_cut_world_jerk_peak": 18410.77607153246,
+            "root_acceleration_peak_m_s2": 312.4861145019531,
+            "geometry_residual_angle_mean_rad": 0.06307487115277804,
+            "budget_verified": true
+          },
+          {
+            "seed": 35042,
+            "fk_max_error_m": 0.0,
+            "all_cuts_including_observation_edges": [
+              104,
+              152
+            ],
+            "world_jerk_mean": 699.9553269636051,
+            "world_jerk_p95": 1891.8764949761703,
+            "all_cut_world_jerk_peak": 18423.94447174692,
+            "root_acceleration_peak_m_s2": 312.65032958984375,
+            "geometry_residual_angle_mean_rad": 0.06307794009747124,
+            "budget_verified": true
+          }
+        ]
+      }
+    },
+    {
+      "key": "old_failed",
+      "methods": {
+        "Geometry": [
+          {
+            "seed": 35041,
+            "fk_max_error_m": 0.0,
+            "all_cuts_including_observation_edges": [
+              44,
+              104,
+              128,
+              152,
+              224
+            ],
+            "world_jerk_mean": 160.85223659181503,
+            "world_jerk_p95": 215.01782889613688,
+            "all_cut_world_jerk_peak": 9384.952072964556,
+            "root_acceleration_peak_m_s2": 11.157837867736816,
+            "geometry_residual_angle_mean_rad": 0.0,
+            "budget_verified": true
+          },
+          {
+            "seed": 35042,
+            "fk_max_error_m": 0.0,
+            "all_cuts_including_observation_edges": [
+              44,
+              104,
+              128,
+              152,
+              224
+            ],
+            "world_jerk_mean": 166.06456209193342,
+            "world_jerk_p95": 257.88467811407,
+            "all_cut_world_jerk_peak": 9380.755035822267,
+            "root_acceleration_peak_m_s2": 8.860721588134766,
+            "geometry_residual_angle_mean_rad": 0.0,
+            "budget_verified": true
+          }
+        ],
+        "FrozenMatched": [
+          {
+            "seed": 35041,
+            "fk_max_error_m": 0.0,
+            "all_cuts_including_observation_edges": [
+              44,
+              104,
+              128,
+              152,
+              224
+            ],
+            "world_jerk_mean": 398.5862982790102,
+            "world_jerk_p95": 644.7988852575074,
+            "all_cut_world_jerk_peak": 15657.55392264094,
+            "root_acceleration_peak_m_s2": 263.4994812011719,
+            "geometry_residual_angle_mean_rad": 0.06161617239902282,
+            "budget_verified": true
+          },
+          {
+            "seed": 35042,
+            "fk_max_error_m": 0.0,
+            "all_cuts_including_observation_edges": [
+              44,
+              104,
+              128,
+              152,
+              224
+            ],
+            "world_jerk_mean": 408.94215225810893,
+            "world_jerk_p95": 830.3350381096299,
+            "all_cut_world_jerk_peak": 14985.290226554485,
+            "root_acceleration_peak_m_s2": 252.35525512695312,
+            "geometry_residual_angle_mean_rad": 0.06221284398803331,
+            "budget_verified": true
+          }
+        ],
+        "Trained": [
+          {
+            "seed": 35041,
+            "fk_max_error_m": 0.0,
+            "all_cuts_including_observation_edges": [
+              44,
+              104,
+              128,
+              152,
+              224
+            ],
+            "world_jerk_mean": 299.6092460362323,
+            "world_jerk_p95": 484.6904579245914,
+            "all_cut_world_jerk_peak": 9384.952072964556,
+            "root_acceleration_peak_m_s2": 136.9197998046875,
+            "geometry_residual_angle_mean_rad": 0.060562982883610846,
+            "budget_verified": true
+          },
+          {
+            "seed": 35042,
+            "fk_max_error_m": 0.0,
+            "all_cuts_including_observation_edges": [
+              44,
+              104,
+              128,
+              152,
+              224
+            ],
+            "world_jerk_mean": 304.8632509747714,
+            "world_jerk_p95": 495.4910457561733,
+            "all_cut_world_jerk_peak": 9380.755035822267,
+            "root_acceleration_peak_m_s2": 129.64797973632812,
+            "geometry_residual_angle_mean_rad": 0.060570708327252136,
+            "budget_verified": true
+          }
+        ]
+      }
+    },
+    {
+      "key": "new_plan",
+      "methods": {
+        "Geometry": [
+          {
+            "seed": 35041,
+            "fk_max_error_m": 0.0,
+            "all_cuts_including_observation_edges": [
+              104,
+              128,
+              152
+            ],
+            "world_jerk_mean": 119.82514757866315,
+            "world_jerk_p95": 298.011469674238,
+            "all_cut_world_jerk_peak": 83.84830641859935,
+            "root_acceleration_peak_m_s2": 8.275961875915527,
+            "geometry_residual_angle_mean_rad": 0.0,
+            "budget_verified": true
+          },
+          {
+            "seed": 35042,
+            "fk_max_error_m": 0.0,
+            "all_cuts_including_observation_edges": [
+              104,
+              128,
+              152
+            ],
+            "world_jerk_mean": 124.50584728550275,
+            "world_jerk_p95": 329.1781348499139,
+            "all_cut_world_jerk_peak": 78.2649366905629,
+            "root_acceleration_peak_m_s2": 8.4292573928833,
+            "geometry_residual_angle_mean_rad": 0.0,
+            "budget_verified": true
+          }
+        ],
+        "FrozenMatched": [
+          {
+            "seed": 35041,
+            "fk_max_error_m": 0.0,
+            "all_cuts_including_observation_edges": [
+              104,
+              128,
+              152
+            ],
+            "world_jerk_mean": 301.94160055428347,
+            "world_jerk_p95": 522.7414735867324,
+            "all_cut_world_jerk_peak": 16639.08535428424,
+            "root_acceleration_peak_m_s2": 286.0098571777344,
+            "geometry_residual_angle_mean_rad": 0.0625292335864306,
+            "budget_verified": true
+          },
+          {
+            "seed": 35042,
+            "fk_max_error_m": 0.0,
+            "all_cuts_including_observation_edges": [
+              104,
+              128,
+              152
+            ],
+            "world_jerk_mean": 293.59593542724014,
+            "world_jerk_p95": 530.4404200369463,
+            "all_cut_world_jerk_peak": 13918.26789873484,
+            "root_acceleration_peak_m_s2": 241.48776245117188,
+            "geometry_residual_angle_mean_rad": 0.06228807106903494,
+            "budget_verified": true
+          }
+        ],
+        "Trained": [
+          {
+            "seed": 35041,
+            "fk_max_error_m": 0.0,
+            "all_cuts_including_observation_edges": [
+              104,
+              128,
+              152
+            ],
+            "world_jerk_mean": 234.57562329067747,
+            "world_jerk_p95": 491.63406568837036,
+            "all_cut_world_jerk_peak": 9182.4619259702,
+            "root_acceleration_peak_m_s2": 155.5724639892578,
+            "geometry_residual_angle_mean_rad": 0.06291062002860136,
+            "budget_verified": true
+          },
+          {
+            "seed": 35042,
+            "fk_max_error_m": 0.0,
+            "all_cuts_including_observation_edges": [
+              104,
+              128,
+              152
+            ],
+            "world_jerk_mean": 230.22156649590423,
+            "world_jerk_p95": 477.90681116773186,
+            "all_cut_world_jerk_peak": 6893.100105518807,
+            "root_acceleration_peak_m_s2": 117.7650375366211,
+            "geometry_residual_angle_mean_rad": 0.06293562956551023,
+            "budget_verified": true
+          }
+        ]
+      }
+    }
+  ],
+  "scope": "INDEPENDENT_LOCAL_CPU_DECODE_AND_BUDGET_AUDIT",
+  "source_arrays_sha256": "6c71405374f745c6f1a691502accdb1a0279e0e59c62dc2af3fd02c5c8867c80",
+  "full_native24": "NOT_EVALUABLE",
+  "contact_truth": "UNKNOWN"
+}

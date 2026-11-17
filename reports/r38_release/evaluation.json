@@ -1,0 +1,4133 @@
+{
+  "records": [
+    {
+      "key": "paired_4",
+      "kind": "PAIRED_CONTINUOUS_HELD_FROM_THIS_ADAPTATION",
+      "gap": [
+        104,
+        152
+      ],
+      "cuts": [
+        104,
+        152
+      ],
+      "seeds": [
+        35041,
+        35042
+      ],
+      "audio": null,
+      "methods": {
+        "Geometry": [
+          {
+            "source_angle_rad": 0.13809422706366253,
+            "protected_source_angle_rad": 6.032221165413101e-10,
+            "shoulder_wrist_relationship_rmse_m": 0.09897920997018406,
+            "relative_source_acceleration_error_m_s2": 3.401472647472578,
+            "relative_source_jerk_error_m_s3": 84.72065495086213,
+            "largest_body_speed_peak_shift_frames": -44,
+            "local_fk_rmse_m": 0.051035153299876526,
+            "jerk_mean": 99.49998344007457,
+            "jerk_p95": 222.04016108154389,
+            "jerk_peak": 382.66708738321904,
+            "jerk_area": 839.1165270112956,
+            "boundary_jerk_peak": 69.06537650188776,
+            "selected_boundary_jerk_peak": 14.634056886558131,
+            "transition_region_jerk_mean": 33.0174548542501,
+            "internal_jerk_mean": 100.92404573261202,
+            "body_speed_m_s": 0.3819961751795234,
+            "peak_speed_m_s": 1.1251639632152726,
+            "peak_speed_frame": 66,
+            "arm_extent_rms_m": 0.5157902666171787,
+            "model_root_speed_m_s": 0.2960495948791504,
+            "foot_world_speed_proxy_m_s": 0.31129423631462616,
+            "foot_slide": "NOT_EVALUABLE_NO_CONTACT_TRUTH",
+            "full_native": "NOT_EVALUABLE_22_OF24",
+            "metric_frame": "COMMON22_ROOT_RELATIVE_FK_30HZ_EXCEPT_EXPLICIT_MODEL_ROOT_AND_WORLD_FOOT_PROXY",
+            "gap_fk_rmse_m": 0.11786063798326976,
+            "gap_D1_error": 0.5651596074407931,
+            "gap_D2_error": 7.666529994125598
+          },
+          {
+            "source_angle_rad": 0.13809422706366253,
+            "protected_source_angle_rad": 6.032221165413101e-10,
+            "shoulder_wrist_relationship_rmse_m": 0.09897920997018406,
+            "relative_source_acceleration_error_m_s2": 3.401472647472578,
+            "relative_source_jerk_error_m_s3": 84.72065495086213,
+            "largest_body_speed_peak_shift_frames": -44,
+            "local_fk_rmse_m": 0.051035153299876526,
+            "jerk_mean": 99.49998344007457,
+            "jerk_p95": 222.04016108154389,
+            "jerk_peak": 382.66708738321904,
+            "jerk_area": 839.1165270112956,
+            "boundary_jerk_peak": 69.06537650188776,
+            "selected_boundary_jerk_peak": 14.634056886558131,
+            "transition_region_jerk_mean": 33.0174548542501,
+            "internal_jerk_mean": 100.92404573261202,
+            "body_speed_m_s": 0.3819961751795234,
+            "peak_speed_m_s": 1.1251639632152726,
+            "peak_speed_frame": 66,
+            "arm_extent_rms_m": 0.5157902666171787,
+            "model_root_speed_m_s": 0.2960495948791504,
+            "foot_world_speed_proxy_m_s": 0.31129423631462616,
+            "foot_slide": "NOT_EVALUABLE_NO_CONTACT_TRUTH",
+            "full_native": "NOT_EVALUABLE_22_OF24",
+            "metric_frame": "COMMON22_ROOT_RELATIVE_FK_30HZ_EXCEPT_EXPLICIT_MODEL_ROOT_AND_WORLD_FOOT_PROXY",
+            "gap_fk_rmse_m": 0.11786063798326976,
+            "gap_D1_error": 0.5651596074407931,
+            "gap_D2_error": 7.666529994125598
+          }
+        ],
+        "FrozenMatched": [
+          {
+            "source_angle_rad": 0.10970574453764591,
+            "protected_source_angle_rad": 6.032221165413101e-10,
+            "shoulder_wrist_relationship_rmse_m": 0.1087477515468449,
+            "relative_source_acceleration_error_m_s2": 6.699584224050653,
+            "relative_source_jerk_error_m_s3": 292.04748524686056,
+            "largest_body_speed_peak_shift_frames": 6,
+            "local_fk_rmse_m": 0.05558227295121993,
+            "jerk_mean": 153.1199110137508,
+            "jerk_p95": 434.05789889489216,
+            "jerk_peak": 1389.1797631040943,
+            "jerk_area": 1291.3112495492983,
+            "boundary_jerk_peak": 171.33849328894186,
+            "selected_boundary_jerk_peak": 1105.897734043532,
+            "transition_region_jerk_mean": 329.26018568605866,
+            "internal_jerk_mean": 154.8953934550063,
+            "body_speed_m_s": 0.429900072316055,
+            "peak_speed_m_s": 1.6306374516764455,
+            "peak_speed_frame": 116,
+            "arm_extent_rms_m": 0.5126485218669706,
+            "model_root_speed_m_s": 0.27633175253868103,
+            "foot_world_speed_proxy_m_s": 0.4090578403001649,
+            "foot_slide": "NOT_EVALUABLE_NO_CONTACT_TRUTH",
+            "full_native": "NOT_EVALUABLE_22_OF24",
+            "metric_frame": "COMMON22_ROOT_RELATIVE_FK_30HZ_EXCEPT_EXPLICIT_MODEL_ROOT_AND_WORLD_FOOT_PROXY",
+            "gap_fk_rmse_m": 0.12836176100223198,
+            "gap_D1_error": 0.7102665303246496,
+            "gap_D2_error": 15.100095965832152
+          },
+          {
+            "source_angle_rad": 0.10958361938274129,
+            "protected_source_angle_rad": 6.032221165413101e-10,
+            "shoulder_wrist_relationship_rmse_m": 0.10834964771712892,
+            "relative_source_acceleration_error_m_s2": 6.6661604225502415,
+            "relative_source_jerk_error_m_s3": 291.88753077855625,
+            "largest_body_speed_peak_shift_frames": 6,
+            "local_fk_rmse_m": 0.05553841961328456,
+            "jerk_mean": 152.3049764489434,
+            "jerk_p95": 412.0164225726259,
+            "jerk_peak": 1371.8728964355162,
+            "jerk_area": 1284.4386347194227,
+            "boundary_jerk_peak": 171.4397935658215,
+            "selected_boundary_jerk_peak": 1104.9162511062493,
+            "transition_region_jerk_mean": 324.7193188779905,
+            "internal_jerk_mean": 154.06811002843517,
+            "body_speed_m_s": 0.43062577383329903,
+            "peak_speed_m_s": 1.5963960358092968,
+            "peak_speed_frame": 116,
+            "arm_extent_rms_m": 0.5113503965678428,
+            "model_root_speed_m_s": 0.27564552426338196,
+            "foot_world_speed_proxy_m_s": 0.41005428033405505,
+            "foot_slide": "NOT_EVALUABLE_NO_CONTACT_TRUTH",
+            "full_native": "NOT_EVALUABLE_22_OF24",
+            "metric_frame": "COMMON22_ROOT_RELATIVE_FK_30HZ_EXCEPT_EXPLICIT_MODEL_ROOT_AND_WORLD_FOOT_PROXY",
+            "gap_fk_rmse_m": 0.1282604860563846,
+            "gap_D1_error": 0.7091744901052978,
+            "gap_D2_error": 15.024762543141792
+          }
+        ],
+        "Trained": [
+          {
+            "source_angle_rad": 0.10672065023924882,
+            "protected_source_angle_rad": 6.032221165413101e-10,
+            "shoulder_wrist_relationship_rmse_m": 0.08847448110560109,
+            "relative_source_acceleration_error_m_s2": 6.536844202340781,
+            "relative_source_jerk_error_m_s3": 298.2197493421651,
+            "largest_body_speed_peak_shift_frames": -44,
+            "local_fk_rmse_m": 0.04511633840139738,
+            "jerk_mean": 142.6712972687725,
+            "jerk_p95": 367.21152957790844,
+            "jerk_peak": 1337.5629547877327,
+            "jerk_area": 1203.194606966648,
+            "boundary_jerk_peak": 153.65072403655876,
+            "selected_boundary_jerk_peak": 505.3128377829844,
+            "transition_region_jerk_mean": 270.61281942442673,
+            "internal_jerk_mean": 144.21065061381827,
+            "body_speed_m_s": 0.37736968948771843,
+            "peak_speed_m_s": 1.1251639632152726,
+            "peak_speed_frame": 66,
+            "arm_extent_rms_m": 0.4985333247851633,
+            "model_root_speed_m_s": 0.24975092709064484,
+            "foot_world_speed_proxy_m_s": 0.33421594818411293,
+            "foot_slide": "NOT_EVALUABLE_NO_CONTACT_TRUTH",
+            "full_native": "NOT_EVALUABLE_22_OF24",
+            "metric_frame": "COMMON22_ROOT_RELATIVE_FK_30HZ_EXCEPT_EXPLICIT_MODEL_ROOT_AND_WORLD_FOOT_PROXY",
+            "gap_fk_rmse_m": 0.10419172048358769,
+            "gap_D1_error": 0.6186468703900257,
+            "gap_D2_error": 14.733298585110601
+          },
+          {
+            "source_angle_rad": 0.10651086390926477,
+            "protected_source_angle_rad": 6.032221165413101e-10,
+            "shoulder_wrist_relationship_rmse_m": 0.08862510901609293,
+            "relative_source_acceleration_error_m_s2": 6.76768312028844,
+            "relative_source_jerk_error_m_s3": 313.37056583716446,
+            "largest_body_speed_peak_shift_frames": -44,
+            "local_fk_rmse_m": 0.045090243701687294,
+            "jerk_mean": 143.37003037434195,
+            "jerk_p95": 367.21152957790844,
+            "jerk_peak": 1483.2386457160844,
+            "jerk_area": 1209.0872561569506,
+            "boundary_jerk_peak": 154.01281409736757,
+            "selected_boundary_jerk_peak": 715.8011080740953,
+            "transition_region_jerk_mean": 274.5150659929737,
+            "internal_jerk_mean": 144.9215862234726,
+            "body_speed_m_s": 0.3768901590062458,
+            "peak_speed_m_s": 1.1251639632152726,
+            "peak_speed_frame": 66,
+            "arm_extent_rms_m": 0.4984681014618631,
+            "model_root_speed_m_s": 0.249579519033432,
+            "foot_world_speed_proxy_m_s": 0.33343032803301725,
+            "foot_slide": "NOT_EVALUABLE_NO_CONTACT_TRUTH",
+            "full_native": "NOT_EVALUABLE_22_OF24",
+            "metric_frame": "COMMON22_ROOT_RELATIVE_FK_30HZ_EXCEPT_EXPLICIT_MODEL_ROOT_AND_WORLD_FOOT_PROXY",
+            "gap_fk_rmse_m": 0.10413145735597952,
+            "gap_D1_error": 0.6229266079613592,
+            "gap_D2_error": 15.253583082938347
+          }
+        ]
+      },
+      "noise": {
+        "FrozenMatched": {
+          "seeds": [
+            35041,
+            35042
+          ],
+          "draws": 50,
+          "row_sha256": [
+            "dcf64e34e2eb394a636605b1f504c0d34bab19cc4584bd70bbd8e6db02abbd1e",
+            "0a52f0e802cd62fbaffa077f2a04cc3526155884f156ea928f4e235dce60110e"
+          ]
+        },
+        "Trained": {
+          "seeds": [
+            35041,
+            35042
+          ],
+          "draws": 50,
+          "row_sha256": [
+            "dcf64e34e2eb394a636605b1f504c0d34bab19cc4584bd70bbd8e6db02abbd1e",
+            "0a52f0e802cd62fbaffa077f2a04cc3526155884f156ea928f4e235dce60110e"
+          ]
+        }
+      },
+      "reference_is_target": true,
+      "Root_truth": "OBSERVED_PAIRED",
+      "contact_truth": "UNKNOWN",
+      "binding": null,
+      "semantic_phase": "UNKNOWN_NOT_TRAINED"
+    },
+    {
+      "key": "paired_8",
+      "kind": "PAIRED_CONTINUOUS_HELD_FROM_THIS_ADAPTATION",
+      "gap": [
+        104,
+        152
+      ],
+      "cuts": [
+        104,
+        152
+      ],
+      "seeds": [
+        35041,
+        35042
+      ],
+      "audio": null,
+      "methods": {
+        "Geometry": [
+          {
+            "source_angle_rad": 0.095506477120314,
+            "protected_source_angle_rad": 8.211421105041922e-10,
+            "shoulder_wrist_relationship_rmse_m": 0.1150091613449624,
+            "relative_source_acceleration_error_m_s2": 2.35652246055555,
+            "relative_source_jerk_error_m_s3": 40.42652207745647,
+            "largest_body_speed_peak_shift_frames": 112,
+            "local_fk_rmse_m": 0.09454409734253766,
+            "jerk_mean": 96.9982481465939,
+            "jerk_p95": 165.00598913738398,
+            "jerk_peak": 199.68830338893713,
+            "jerk_area": 818.0185593696085,
+            "boundary_jerk_peak": 83.73858770408,
+            "selected_boundary_jerk_peak": 30.454774280775496,
+            "transition_region_jerk_mean": 48.44362225883149,
+            "internal_jerk_mean": 98.40884493521207,
+            "body_speed_m_s": 0.48780714771950734,
+            "peak_speed_m_s": 1.402667357305138,
+            "peak_speed_frame": 143,
+            "arm_extent_rms_m": 0.48876536139972665,
+            "model_root_speed_m_s": 0.5480784773826599,
+            "foot_world_speed_proxy_m_s": 1.0074154293112703,
+            "foot_slide": "NOT_EVALUABLE_NO_CONTACT_TRUTH",
+            "full_native": "NOT_EVALUABLE_22_OF24",
+            "metric_frame": "COMMON22_ROOT_RELATIVE_FK_30HZ_EXCEPT_EXPLICIT_MODEL_ROOT_AND_WORLD_FOOT_PROXY",
+            "gap_fk_rmse_m": 0.21834024020401707,
+            "gap_D1_error": 0.6435622565382917,
+            "gap_D2_error": 5.311331884164428
+          },
+          {
+            "source_angle_rad": 0.095506477120314,
+            "protected_source_angle_rad": 8.211421105041922e-10,
+            "shoulder_wrist_relationship_rmse_m": 0.1150091613449624,
+            "relative_source_acceleration_error_m_s2": 2.35652246055555,
+            "relative_source_jerk_error_m_s3": 40.42652207745647,
+            "largest_body_speed_peak_shift_frames": 112,
+            "local_fk_rmse_m": 0.09454409734253766,
+            "jerk_mean": 96.9982481465939,
+            "jerk_p95": 165.00598913738398,
+            "jerk_peak": 199.68830338893713,
+            "jerk_area": 818.0185593696085,
+            "boundary_jerk_peak": 83.73858770408,
+            "selected_boundary_jerk_peak": 30.454774280775496,
+            "transition_region_jerk_mean": 48.44362225883149,
+            "internal_jerk_mean": 98.40884493521207,
+            "body_speed_m_s": 0.48780714771950734,
+            "peak_speed_m_s": 1.402667357305138,
+            "peak_speed_frame": 143,
+            "arm_extent_rms_m": 0.48876536139972665,
+            "model_root_speed_m_s": 0.5480784773826599,
+            "foot_world_speed_proxy_m_s": 1.0074154293112703,
+            "foot_slide": "NOT_EVALUABLE_NO_CONTACT_TRUTH",
+            "full_native": "NOT_EVALUABLE_22_OF24",
+            "metric_frame": "COMMON22_ROOT_RELATIVE_FK_30HZ_EXCEPT_EXPLICIT_MODEL_ROOT_AND_WORLD_FOOT_PROXY",
+            "gap_fk_rmse_m": 0.21834024020401707,
+            "gap_D1_error": 0.6435622565382917,
+            "gap_D2_error": 5.311331884164428
+          }
+        ],
+        "FrozenMatched": [
+          {
+            "source_angle_rad": 0.07924191431830278,
+            "protected_source_angle_rad": 8.211421105041922e-10,
+            "shoulder_wrist_relationship_rmse_m": 0.11672149677019061,
+            "relative_source_acceleration_error_m_s2": 18.686951406262143,
+            "relative_source_jerk_error_m_s3": 939.4793726112966,
+            "largest_body_speed_peak_shift_frames": 96,
+            "local_fk_rmse_m": 0.09095846945756908,
+            "jerk_mean": 236.96064383718837,
+            "jerk_p95": 385.4742393314082,
+            "jerk_peak": 5368.611523952435,
+            "jerk_area": 1998.3680963602887,
+            "boundary_jerk_peak": 204.55931583428654,
+            "selected_boundary_jerk_peak": 5368.611523952435,
+            "transition_region_jerk_mean": 829.4839565904282,
+            "internal_jerk_mean": 240.70364268793213,
+            "body_speed_m_s": 0.5411528308523788,
+            "peak_speed_m_s": 3.956214948785082,
+            "peak_speed_frame": 127,
+            "arm_extent_rms_m": 0.5126554462356204,
+            "model_root_speed_m_s": 0.7600428462028503,
+            "foot_world_speed_proxy_m_s": 1.286663305484659,
+            "foot_slide": "NOT_EVALUABLE_NO_CONTACT_TRUTH",
+            "full_native": "NOT_EVALUABLE_22_OF24",
+            "metric_frame": "COMMON22_ROOT_RELATIVE_FK_30HZ_EXCEPT_EXPLICIT_MODEL_ROOT_AND_WORLD_FOOT_PROXY",
+            "gap_fk_rmse_m": 0.2100595873056153,
+            "gap_D1_error": 1.2700427747710192,
+            "gap_D2_error": 42.11824944757882
+          },
+          {
+            "source_angle_rad": 0.07941058394763596,
+            "protected_source_angle_rad": 8.211421105041922e-10,
+            "shoulder_wrist_relationship_rmse_m": 0.11810220148684002,
+            "relative_source_acceleration_error_m_s2": 18.672558035512928,
+            "relative_source_jerk_error_m_s3": 937.3340968051574,
+            "largest_body_speed_peak_shift_frames": 96,
+            "local_fk_rmse_m": 0.0914009458082352,
+            "jerk_mean": 240.53816872186346,
+            "jerk_p95": 481.14301475983206,
+            "jerk_peak": 5349.181384058801,
+            "jerk_area": 2028.5385562210483,
+            "boundary_jerk_peak": 208.0915276850953,
+            "selected_boundary_jerk_peak": 5349.181384058801,
+            "transition_region_jerk_mean": 849.5103601590921,
+            "internal_jerk_mean": 244.35217775104908,
+            "body_speed_m_s": 0.543248055659997,
+            "peak_speed_m_s": 3.9170855426856135,
+            "peak_speed_frame": 127,
+            "arm_extent_rms_m": 0.5124618388746092,
+            "model_root_speed_m_s": 0.7628280520439148,
+            "foot_world_speed_proxy_m_s": 1.288814960323032,
+            "foot_slide": "NOT_EVALUABLE_NO_CONTACT_TRUTH",
+            "full_native": "NOT_EVALUABLE_22_OF24",
+            "metric_frame": "COMMON22_ROOT_RELATIVE_FK_30HZ_EXCEPT_EXPLICIT_MODEL_ROOT_AND_WORLD_FOOT_PROXY",
+            "gap_fk_rmse_m": 0.21108144266628376,
+            "gap_D1_error": 1.2734063443901134,
+            "gap_D2_error": 42.08580843746286
+          }
+        ],
+        "Trained": [
+          {
+            "source_angle_rad": 0.06974650532544097,
+            "protected_source_angle_rad": 8.211421105041922e-10,
+            "shoulder_wrist_relationship_rmse_m": 0.10086241103695778,
+            "relative_source_acceleration_error_m_s2": 19.657575283499398,
+            "relative_source_jerk_error_m_s3": 1003.7672544648785,
+            "largest_body_speed_peak_shift_frames": 97,
+            "local_fk_rmse_m": 0.0867712131763287,
+            "jerk_mean": 230.13663277213962,
+            "jerk_p95": 360.393142205139,
+            "jerk_peak": 5452.730550617825,
+            "jerk_area": 1940.8189363783774,
+            "boundary_jerk_peak": 217.66547496735132,
+            "selected_boundary_jerk_peak": 5452.730550617825,
+            "transition_region_jerk_mean": 791.5302928093871,
+            "internal_jerk_mean": 233.78900758612306,
+            "body_speed_m_s": 0.49059994167069926,
+            "peak_speed_m_s": 3.6154876373443314,
+            "peak_speed_frame": 128,
+            "arm_extent_rms_m": 0.46169795166403177,
+            "model_root_speed_m_s": 0.6981632113456726,
+            "foot_world_speed_proxy_m_s": 1.2555611593944087,
+            "foot_slide": "NOT_EVALUABLE_NO_CONTACT_TRUTH",
+            "full_native": "NOT_EVALUABLE_22_OF24",
+            "metric_frame": "COMMON22_ROOT_RELATIVE_FK_30HZ_EXCEPT_EXPLICIT_MODEL_ROOT_AND_WORLD_FOOT_PROXY",
+            "gap_fk_rmse_m": 0.20038953314105493,
+            "gap_D1_error": 1.2546678292910505,
+            "gap_D2_error": 44.305924563358424
+          },
+          {
+            "source_angle_rad": 0.06975113870655138,
+            "protected_source_angle_rad": 8.211421105041922e-10,
+            "shoulder_wrist_relationship_rmse_m": 0.10081980290303737,
+            "relative_source_acceleration_error_m_s2": 19.652797569528488,
+            "relative_source_jerk_error_m_s3": 1003.5142513338878,
+            "largest_body_speed_peak_shift_frames": 97,
+            "local_fk_rmse_m": 0.08674925233098289,
+            "jerk_mean": 230.26436279661462,
+            "jerk_p95": 354.09942443461284,
+            "jerk_peak": 5454.45514616779,
+            "jerk_area": 1941.89612625145,
+            "boundary_jerk_peak": 218.1131540744731,
+            "selected_boundary_jerk_peak": 5454.45514616779,
+            "transition_region_jerk_mean": 792.216410658019,
+            "internal_jerk_mean": 233.91400881360656,
+            "body_speed_m_s": 0.49046536291523773,
+            "peak_speed_m_s": 3.6137805104502294,
+            "peak_speed_frame": 128,
+            "arm_extent_rms_m": 0.4616266737249449,
+            "model_root_speed_m_s": 0.6982131004333496,
+            "foot_world_speed_proxy_m_s": 1.255594982568124,
+            "foot_slide": "NOT_EVALUABLE_NO_CONTACT_TRUTH",
+            "full_native": "NOT_EVALUABLE_22_OF24",
+            "metric_frame": "COMMON22_ROOT_RELATIVE_FK_30HZ_EXCEPT_EXPLICIT_MODEL_ROOT_AND_WORLD_FOOT_PROXY",
+            "gap_fk_rmse_m": 0.20033881674116677,
+            "gap_D1_error": 1.254581562742707,
+            "gap_D2_error": 44.295156142954205
+          }
+        ]
+      },
+      "noise": {
+        "FrozenMatched": {
+          "seeds": [
+            35041,
+            35042
+          ],
+          "draws": 50,
+          "row_sha256": [
+            "dcf64e34e2eb394a636605b1f504c0d34bab19cc4584bd70bbd8e6db02abbd1e",
+            "0a52f0e802cd62fbaffa077f2a04cc3526155884f156ea928f4e235dce60110e"
+          ]
+        },
+        "Trained": {
+          "seeds": [
+            35041,
+            35042
+          ],
+          "draws": 50,
+          "row_sha256": [
+            "dcf64e34e2eb394a636605b1f504c0d34bab19cc4584bd70bbd8e6db02abbd1e",
+            "0a52f0e802cd62fbaffa077f2a04cc3526155884f156ea928f4e235dce60110e"
+          ]
+        }
+      },
+      "reference_is_target": true,
+      "Root_truth": "OBSERVED_PAIRED",
+      "contact_truth": "UNKNOWN",
+      "binding": null,
+      "semantic_phase": "UNKNOWN_NOT_TRAINED"
+    },
+    {
+      "key": "paired_12",
+      "kind": "PAIRED_CONTINUOUS_HELD_FROM_THIS_ADAPTATION",
+      "gap": [
+        104,
+        152
+      ],
+      "cuts": [
+        104,
+        152
+      ],
+      "seeds": [
+        35041,
+        35042
+      ],
+      "audio": null,
+      "methods": {
+        "Geometry": [
+          {
+            "source_angle_rad": 0.19012985435567362,
+            "protected_source_angle_rad": 3.3090398507578865e-10,
+            "shoulder_wrist_relationship_rmse_m": 0.19058081819845887,
+            "relative_source_acceleration_error_m_s2": 9.188237118954824,
+            "relative_source_jerk_error_m_s3": 246.88220210515183,
+            "largest_body_speed_peak_shift_frames": 67,
+            "local_fk_rmse_m": 0.10352770042269877,
+            "jerk_mean": 219.67180744185927,
+            "jerk_p95": 609.6022000921142,
+            "jerk_peak": 1091.1798194765408,
+            "jerk_area": 1852.565576093013,
+            "boundary_jerk_peak": 284.6845003170594,
+            "selected_boundary_jerk_peak": 324.89737573072625,
+            "transition_region_jerk_mean": 369.4863546488862,
+            "internal_jerk_mean": 222.18496063912204,
+            "body_speed_m_s": 0.4768230582139954,
+            "peak_speed_m_s": 2.600027126748285,
+            "peak_speed_frame": 112,
+            "arm_extent_rms_m": 0.7401538015810051,
+            "model_root_speed_m_s": 0.6480880379676819,
+            "foot_world_speed_proxy_m_s": 0.8076471827742554,
+            "foot_slide": "NOT_EVALUABLE_NO_CONTACT_TRUTH",
+            "full_native": "NOT_EVALUABLE_22_OF24",
+            "metric_frame": "COMMON22_ROOT_RELATIVE_FK_30HZ_EXCEPT_EXPLICIT_MODEL_ROOT_AND_WORLD_FOOT_PROXY",
+            "gap_fk_rmse_m": 0.23908698283051216,
+            "gap_D1_error": 1.110908851958988,
+            "gap_D2_error": 20.70923472460472
+          },
+          {
+            "source_angle_rad": 0.19012985435567362,
+            "protected_source_angle_rad": 3.3090398507578865e-10,
+            "shoulder_wrist_relationship_rmse_m": 0.19058081819845887,
+            "relative_source_acceleration_error_m_s2": 9.188237118954824,
+            "relative_source_jerk_error_m_s3": 246.88220210515183,
+            "largest_body_speed_peak_shift_frames": 67,
+            "local_fk_rmse_m": 0.10352770042269877,
+            "jerk_mean": 219.67180744185927,
+            "jerk_p95": 609.6022000921142,
+            "jerk_peak": 1091.1798194765408,
+            "jerk_area": 1852.565576093013,
+            "boundary_jerk_peak": 284.6845003170594,
+            "selected_boundary_jerk_peak": 324.89737573072625,
+            "transition_region_jerk_mean": 369.4863546488862,
+            "internal_jerk_mean": 222.18496063912204,
+            "body_speed_m_s": 0.4768230582139954,
+            "peak_speed_m_s": 2.600027126748285,
+            "peak_speed_frame": 112,
+            "arm_extent_rms_m": 0.7401538015810051,
+            "model_root_speed_m_s": 0.6480880379676819,
+            "foot_world_speed_proxy_m_s": 0.8076471827742554,
+            "foot_slide": "NOT_EVALUABLE_NO_CONTACT_TRUTH",
+            "full_native": "NOT_EVALUABLE_22_OF24",
+            "metric_frame": "COMMON22_ROOT_RELATIVE_FK_30HZ_EXCEPT_EXPLICIT_MODEL_ROOT_AND_WORLD_FOOT_PROXY",
+            "gap_fk_rmse_m": 0.23908698283051216,
+            "gap_D1_error": 1.110908851958988,
+            "gap_D2_error": 20.70923472460472
+          }
+        ],
+        "FrozenMatched": [
+          {
+            "source_angle_rad": 0.14271479681785534,
+            "protected_source_angle_rad": 3.3090398507578865e-10,
+            "shoulder_wrist_relationship_rmse_m": 0.2048389445570444,
+            "relative_source_acceleration_error_m_s2": 31.773236958652813,
+            "relative_source_jerk_error_m_s3": 1577.9684438379584,
+            "largest_body_speed_peak_shift_frames": 81,
+            "local_fk_rmse_m": 0.11038798429938239,
+            "jerk_mean": 663.8799680326914,
+            "jerk_p95": 3886.0584622417914,
+            "jerk_peak": 13223.56286341566,
+            "jerk_area": 5598.721063742365,
+            "boundary_jerk_peak": 282.3406657250859,
+            "selected_boundary_jerk_peak": 6553.861440069138,
+            "transition_region_jerk_mean": 2864.019316242188,
+            "internal_jerk_mean": 676.6545285407357,
+            "body_speed_m_s": 0.5846275960957238,
+            "peak_speed_m_s": 7.594615548318623,
+            "peak_speed_frame": 126,
+            "arm_extent_rms_m": 0.8061540474183628,
+            "model_root_speed_m_s": 0.9888542890548706,
+            "foot_world_speed_proxy_m_s": 1.3222128134299265,
+            "foot_slide": "NOT_EVALUABLE_NO_CONTACT_TRUTH",
+            "full_native": "NOT_EVALUABLE_22_OF24",
+            "metric_frame": "COMMON22_ROOT_RELATIVE_FK_30HZ_EXCEPT_EXPLICIT_MODEL_ROOT_AND_WORLD_FOOT_PROXY",
+            "gap_fk_rmse_m": 0.25493012980219426,
+            "gap_D1_error": 1.9653085849629528,
+            "gap_D2_error": 71.61323914682052
+          },
+          {
+            "source_angle_rad": 0.1425767524356928,
+            "protected_source_angle_rad": 3.3090398507578865e-10,
+            "shoulder_wrist_relationship_rmse_m": 0.20487146292908662,
+            "relative_source_acceleration_error_m_s2": 31.74995618974993,
+            "relative_source_jerk_error_m_s3": 1577.021195903228,
+            "largest_body_speed_peak_shift_frames": 81,
+            "local_fk_rmse_m": 0.11035199433149544,
+            "jerk_mean": 663.145345125259,
+            "jerk_p95": 3884.214893192745,
+            "jerk_peak": 13219.27299166817,
+            "jerk_area": 5592.525743889684,
+            "boundary_jerk_peak": 282.17379885813335,
+            "selected_boundary_jerk_peak": 6555.000876016916,
+            "transition_region_jerk_mean": 2859.9071139532734,
+            "internal_jerk_mean": 675.9053418889092,
+            "body_speed_m_s": 0.5839183530753739,
+            "peak_speed_m_s": 7.592491536098982,
+            "peak_speed_frame": 126,
+            "arm_extent_rms_m": 0.8059367019903982,
+            "model_root_speed_m_s": 0.9884774088859558,
+            "foot_world_speed_proxy_m_s": 1.3205878546129688,
+            "foot_slide": "NOT_EVALUABLE_NO_CONTACT_TRUTH",
+            "full_native": "NOT_EVALUABLE_22_OF24",
+            "metric_frame": "COMMON22_ROOT_RELATIVE_FK_30HZ_EXCEPT_EXPLICIT_MODEL_ROOT_AND_WORLD_FOOT_PROXY",
+            "gap_fk_rmse_m": 0.2548470145316037,
+            "gap_D1_error": 1.962618441498399,
+            "gap_D2_error": 71.56076695857186
+          }
+        ],
+        "Trained": [
+          {
+            "source_angle_rad": 0.14126796983360979,
+            "protected_source_angle_rad": 3.3090398507578865e-10,
+            "shoulder_wrist_relationship_rmse_m": 0.201626241928702,
+            "relative_source_acceleration_error_m_s2": 35.81685995277032,
+            "relative_source_jerk_error_m_s3": 1824.597451041052,
+            "largest_body_speed_peak_shift_frames": 83,
+            "local_fk_rmse_m": 0.10906666666960903,
+            "jerk_mean": 730.2094422297422,
+            "jerk_p95": 4037.6070948578185,
+            "jerk_peak": 15370.89395050374,
+            "jerk_area": 6158.099629470827,
+            "boundary_jerk_peak": 273.79567165629464,
+            "selected_boundary_jerk_peak": 12546.404431798057,
+            "transition_region_jerk_mean": 3238.5263396855057,
+            "internal_jerk_mean": 744.8845530547005,
+            "body_speed_m_s": 0.5895123370040481,
+            "peak_speed_m_s": 7.368238553074082,
+            "peak_speed_frame": 128,
+            "arm_extent_rms_m": 0.7984155750440022,
+            "model_root_speed_m_s": 0.9214354157447815,
+            "foot_world_speed_proxy_m_s": 1.3825224725425695,
+            "foot_slide": "NOT_EVALUABLE_NO_CONTACT_TRUTH",
+            "full_native": "NOT_EVALUABLE_22_OF24",
+            "metric_frame": "COMMON22_ROOT_RELATIVE_FK_30HZ_EXCEPT_EXPLICIT_MODEL_ROOT_AND_WORLD_FOOT_PROXY",
+            "gap_fk_rmse_m": 0.2518786774452557,
+            "gap_D1_error": 2.1065542016111514,
+            "gap_D2_error": 80.72710251787603
+          },
+          {
+            "source_angle_rad": 0.1412940428493596,
+            "protected_source_angle_rad": 3.3090398507578865e-10,
+            "shoulder_wrist_relationship_rmse_m": 0.19954275171852653,
+            "relative_source_acceleration_error_m_s2": 35.91179397632503,
+            "relative_source_jerk_error_m_s3": 1831.4252722526664,
+            "largest_body_speed_peak_shift_frames": 83,
+            "local_fk_rmse_m": 0.10888254848641374,
+            "jerk_mean": 730.3693453815205,
+            "jerk_p95": 4041.48189445237,
+            "jerk_peak": 15370.8769970765,
+            "jerk_area": 6159.448146050823,
+            "boundary_jerk_peak": 273.7673192052422,
+            "selected_boundary_jerk_peak": 12546.316337518108,
+            "transition_region_jerk_mean": 3239.42940576447,
+            "internal_jerk_mean": 745.0490792634187,
+            "body_speed_m_s": 0.589644663136962,
+            "peak_speed_m_s": 7.368131535506476,
+            "peak_speed_frame": 128,
+            "arm_extent_rms_m": 0.7984108357983885,
+            "model_root_speed_m_s": 0.9213604927062988,
+            "foot_world_speed_proxy_m_s": 1.3824110669836425,
+            "foot_slide": "NOT_EVALUABLE_NO_CONTACT_TRUTH",
+            "full_native": "NOT_EVALUABLE_22_OF24",
+            "metric_frame": "COMMON22_ROOT_RELATIVE_FK_30HZ_EXCEPT_EXPLICIT_MODEL_ROOT_AND_WORLD_FOOT_PROXY",
+            "gap_fk_rmse_m": 0.25145347471473367,
+            "gap_D1_error": 2.1071675280124387,
+            "gap_D2_error": 80.94107294024252
+          }
+        ]
+      },
+      "noise": {
+        "FrozenMatched": {
+          "seeds": [
+            35041,
+            35042
+          ],
+          "draws": 50,
+          "row_sha256": [
+            "dcf64e34e2eb394a636605b1f504c0d34bab19cc4584bd70bbd8e6db02abbd1e",
+            "0a52f0e802cd62fbaffa077f2a04cc3526155884f156ea928f4e235dce60110e"
+          ]
+        },
+        "Trained": {
+          "seeds": [
+            35041,
+            35042
+          ],
+          "draws": 50,
+          "row_sha256": [
+            "dcf64e34e2eb394a636605b1f504c0d34bab19cc4584bd70bbd8e6db02abbd1e",
+            "0a52f0e802cd62fbaffa077f2a04cc3526155884f156ea928f4e235dce60110e"
+          ]
+        }
+      },
+      "reference_is_target": true,
+      "Root_truth": "OBSERVED_PAIRED",
+      "contact_truth": "UNKNOWN",
+      "binding": null,
+      "semantic_phase": "UNKNOWN_NOT_TRAINED"
+    },
+    {
+      "key": "paired_16",
+      "kind": "PAIRED_CONTINUOUS_HELD_FROM_THIS_ADAPTATION",
+      "gap": [
+        104,
+        152
+      ],
+      "cuts": [
+        104,
+        152
+      ],
+      "seeds": [
+        35041,
+        35042
+      ],
+      "audio": null,
+      "methods": {
+        "Geometry": [
+          {
+            "source_angle_rad": 0.17576160516302766,
+            "protected_source_angle_rad": 6.414712105010316e-10,
+            "shoulder_wrist_relationship_rmse_m": 0.14717850760832044,
+            "relative_source_acceleration_error_m_s2": 9.066379025083927,
+            "relative_source_jerk_error_m_s3": 245.1807046721339,
+            "largest_body_speed_peak_shift_frames": -129,
+            "local_fk_rmse_m": 0.09921257337812187,
+            "jerk_mean": 349.8145318090385,
+            "jerk_p95": 667.6253134003713,
+            "jerk_peak": 951.7993090185038,
+            "jerk_area": 2950.102551589558,
+            "boundary_jerk_peak": 223.68529493562437,
+            "selected_boundary_jerk_peak": 122.3594478892805,
+            "transition_region_jerk_mean": 306.0365170154239,
+            "internal_jerk_mean": 354.53978007729785,
+            "body_speed_m_s": 0.8712668075158226,
+            "peak_speed_m_s": 2.0295057396587306,
+            "peak_speed_frame": 111,
+            "arm_extent_rms_m": 0.5498710514321798,
+            "model_root_speed_m_s": 0.872019350528717,
+            "foot_world_speed_proxy_m_s": 1.6404552197902185,
+            "foot_slide": "NOT_EVALUABLE_NO_CONTACT_TRUTH",
+            "full_native": "NOT_EVALUABLE_22_OF24",
+            "metric_frame": "COMMON22_ROOT_RELATIVE_FK_30HZ_EXCEPT_EXPLICIT_MODEL_ROOT_AND_WORLD_FOOT_PROXY",
+            "gap_fk_rmse_m": 0.22912162378741646,
+            "gap_D1_error": 1.1972280159024837,
+            "gap_D2_error": 20.43458052963644
+          },
+          {
+            "source_angle_rad": 0.17576160516302766,
+            "protected_source_angle_rad": 6.414712105010316e-10,
+            "shoulder_wrist_relationship_rmse_m": 0.14717850760832044,
+            "relative_source_acceleration_error_m_s2": 9.066379025083927,
+            "relative_source_jerk_error_m_s3": 245.1807046721339,
+            "largest_body_speed_peak_shift_frames": -129,
+            "local_fk_rmse_m": 0.09921257337812187,
+            "jerk_mean": 349.8145318090385,
+            "jerk_p95": 667.6253134003713,
+            "jerk_peak": 951.7993090185038,
+            "jerk_area": 2950.102551589558,
+            "boundary_jerk_peak": 223.68529493562437,
+            "selected_boundary_jerk_peak": 122.3594478892805,
+            "transition_region_jerk_mean": 306.0365170154239,
+            "internal_jerk_mean": 354.53978007729785,
+            "body_speed_m_s": 0.8712668075158226,
+            "peak_speed_m_s": 2.0295057396587306,
+            "peak_speed_frame": 111,
+            "arm_extent_rms_m": 0.5498710514321798,
+            "model_root_speed_m_s": 0.872019350528717,
+            "foot_world_speed_proxy_m_s": 1.6404552197902185,
+            "foot_slide": "NOT_EVALUABLE_NO_CONTACT_TRUTH",
+            "full_native": "NOT_EVALUABLE_22_OF24",
+            "metric_frame": "COMMON22_ROOT_RELATIVE_FK_30HZ_EXCEPT_EXPLICIT_MODEL_ROOT_AND_WORLD_FOOT_PROXY",
+            "gap_fk_rmse_m": 0.22912162378741646,
+            "gap_D1_error": 1.1972280159024837,
+            "gap_D2_error": 20.43458052963644
+          }
+        ],
+        "FrozenMatched": [
+          {
+            "source_angle_rad": 0.1318909376762456,
+            "protected_source_angle_rad": 6.414712105010316e-10,
+            "shoulder_wrist_relationship_rmse_m": 0.13735090868499775,
+            "relative_source_acceleration_error_m_s2": 21.23776015112975,
+            "relative_source_jerk_error_m_s3": 1026.7843434378408,
+            "largest_body_speed_peak_shift_frames": -113,
+            "local_fk_rmse_m": 0.09144221491211431,
+            "jerk_mean": 504.3499482126226,
+            "jerk_p95": 1459.2445855855945,
+            "jerk_peak": 6167.154887347912,
+            "jerk_area": 4253.351229926451,
+            "boundary_jerk_peak": 286.4677926840586,
+            "selected_boundary_jerk_peak": 6167.154887347912,
+            "transition_region_jerk_mean": 1172.2574521008303,
+            "internal_jerk_mean": 512.3533107608739,
+            "body_speed_m_s": 0.8716882962176379,
+            "peak_speed_m_s": 4.298187559060345,
+            "peak_speed_frame": 127,
+            "arm_extent_rms_m": 0.5317880367249274,
+            "model_root_speed_m_s": 0.7912523746490479,
+            "foot_world_speed_proxy_m_s": 1.7092422440709063,
+            "foot_slide": "NOT_EVALUABLE_NO_CONTACT_TRUTH",
+            "full_native": "NOT_EVALUABLE_22_OF24",
+            "metric_frame": "COMMON22_ROOT_RELATIVE_FK_30HZ_EXCEPT_EXPLICIT_MODEL_ROOT_AND_WORLD_FOOT_PROXY",
+            "gap_fk_rmse_m": 0.21117674957921906,
+            "gap_D1_error": 1.545969159908291,
+            "gap_D2_error": 47.8674803774253
+          },
+          {
+            "source_angle_rad": 0.1318658383640755,
+            "protected_source_angle_rad": 6.414712105010316e-10,
+            "shoulder_wrist_relationship_rmse_m": 0.13708295884560492,
+            "relative_source_acceleration_error_m_s2": 20.779718580329718,
+            "relative_source_jerk_error_m_s3": 1003.0606663883414,
+            "largest_body_speed_peak_shift_frames": -114,
+            "local_fk_rmse_m": 0.09190985106503229,
+            "jerk_mean": 500.61851195729434,
+            "jerk_p95": 1464.4509596025157,
+            "jerk_peak": 5390.791354292801,
+            "jerk_area": 4221.882784173182,
+            "boundary_jerk_peak": 286.2077328820432,
+            "selected_boundary_jerk_peak": 3969.8893163304815,
+            "transition_region_jerk_mean": 1151.425994276905,
+            "internal_jerk_mean": 508.55810589416683,
+            "body_speed_m_s": 0.8702080907336448,
+            "peak_speed_m_s": 3.3549317950387394,
+            "peak_speed_frame": 126,
+            "arm_extent_rms_m": 0.5341057746988304,
+            "model_root_speed_m_s": 0.7912871837615967,
+            "foot_world_speed_proxy_m_s": 1.700757264093167,
+            "foot_slide": "NOT_EVALUABLE_NO_CONTACT_TRUTH",
+            "full_native": "NOT_EVALUABLE_22_OF24",
+            "metric_frame": "COMMON22_ROOT_RELATIVE_FK_30HZ_EXCEPT_EXPLICIT_MODEL_ROOT_AND_WORLD_FOOT_PROXY",
+            "gap_fk_rmse_m": 0.21225670901429902,
+            "gap_D1_error": 1.5297057180889042,
+            "gap_D2_error": 46.83510710706644
+          }
+        ],
+        "Trained": [
+          {
+            "source_angle_rad": 0.12715828531139406,
+            "protected_source_angle_rad": 6.414712105010316e-10,
+            "shoulder_wrist_relationship_rmse_m": 0.135077702276472,
+            "relative_source_acceleration_error_m_s2": 17.747940654546113,
+            "relative_source_jerk_error_m_s3": 829.3735377002365,
+            "largest_body_speed_peak_shift_frames": -126,
+            "local_fk_rmse_m": 0.08663366251733076,
+            "jerk_mean": 464.31301037603106,
+            "jerk_p95": 1257.669423860004,
+            "jerk_peak": 3126.4676498120175,
+            "jerk_area": 3915.7063875045287,
+            "boundary_jerk_peak": 300.39319105040875,
+            "selected_boundary_jerk_peak": 1811.813727807469,
+            "transition_region_jerk_mean": 946.1816613138955,
+            "internal_jerk_mean": 471.16541365394244,
+            "body_speed_m_s": 0.8504157449826273,
+            "peak_speed_m_s": 2.643082249597264,
+            "peak_speed_frame": 114,
+            "arm_extent_rms_m": 0.5279942536224785,
+            "model_root_speed_m_s": 0.7525634765625,
+            "foot_world_speed_proxy_m_s": 1.6413183234565587,
+            "foot_slide": "NOT_EVALUABLE_NO_CONTACT_TRUTH",
+            "full_native": "NOT_EVALUABLE_22_OF24",
+            "metric_frame": "COMMON22_ROOT_RELATIVE_FK_30HZ_EXCEPT_EXPLICIT_MODEL_ROOT_AND_WORLD_FOOT_PROXY",
+            "gap_fk_rmse_m": 0.20007187350105624,
+            "gap_D1_error": 1.3858596438790434,
+            "gap_D2_error": 40.0018266980935
+          },
+          {
+            "source_angle_rad": 0.12715164079057087,
+            "protected_source_angle_rad": 6.414712105010316e-10,
+            "shoulder_wrist_relationship_rmse_m": 0.1350718022141621,
+            "relative_source_acceleration_error_m_s2": 17.7503656178688,
+            "relative_source_jerk_error_m_s3": 829.4447432320196,
+            "largest_body_speed_peak_shift_frames": -126,
+            "local_fk_rmse_m": 0.08663298180703978,
+            "jerk_mean": 464.31372713246896,
+            "jerk_p95": 1252.899866870652,
+            "jerk_peak": 3125.5092574746964,
+            "jerk_area": 3915.7124321504884,
+            "boundary_jerk_peak": 300.61809744518007,
+            "selected_boundary_jerk_peak": 1809.0183364221157,
+            "transition_region_jerk_mean": 946.1915675757624,
+            "internal_jerk_mean": 471.1672184384932,
+            "body_speed_m_s": 0.8505293219611253,
+            "peak_speed_m_s": 2.643995323454272,
+            "peak_speed_frame": 114,
+            "arm_extent_rms_m": 0.5279451932168132,
+            "model_root_speed_m_s": 0.7526063323020935,
+            "foot_world_speed_proxy_m_s": 1.6416595130682425,
+            "foot_slide": "NOT_EVALUABLE_NO_CONTACT_TRUTH",
+            "full_native": "NOT_EVALUABLE_22_OF24",
+            "metric_frame": "COMMON22_ROOT_RELATIVE_FK_30HZ_EXCEPT_EXPLICIT_MODEL_ROOT_AND_WORLD_FOOT_PROXY",
+            "gap_fk_rmse_m": 0.20007030146797727,
+            "gap_D1_error": 1.3861426944105288,
+            "gap_D2_error": 40.00729228784679
+          }
+        ]
+      },
+      "noise": {
+        "FrozenMatched": {
+          "seeds": [
+            35041,
+            35042
+          ],
+          "draws": 50,
+          "row_sha256": [
+            "dcf64e34e2eb394a636605b1f504c0d34bab19cc4584bd70bbd8e6db02abbd1e",
+            "0a52f0e802cd62fbaffa077f2a04cc3526155884f156ea928f4e235dce60110e"
+          ]
+        },
+        "Trained": {
+          "seeds": [
+            35041,
+            35042
+          ],
+          "draws": 50,
+          "row_sha256": [
+            "dcf64e34e2eb394a636605b1f504c0d34bab19cc4584bd70bbd8e6db02abbd1e",
+            "0a52f0e802cd62fbaffa077f2a04cc3526155884f156ea928f4e235dce60110e"
+          ]
+        }
+      },
+      "reference_is_target": true,
+      "Root_truth": "OBSERVED_PAIRED",
+      "contact_truth": "UNKNOWN",
+      "binding": null,
+      "semantic_phase": "UNKNOWN_NOT_TRAINED"
+    },
+    {
+      "key": "old_failed",
+      "kind": "CROSS_SOURCE_STRESS_NO_CONTINUOUS_TRUTH",
+      "gap": [
+        104,
+        152
+      ],
+      "cuts": [
+        44,
+        128,
+        224
+      ],
+      "seeds": [
+        35041,
+        35042
+      ],
+      "audio": "old_failed.wav",
+      "methods": {
+        "Geometry": [
+          {
+            "source_angle_rad": 0.07442024048718428,
+            "protected_source_angle_rad": 1.7475083832591928e-08,
+            "shoulder_wrist_relationship_rmse_m": 0.0722422557080523,
+            "relative_source_acceleration_error_m_s2": 18.73828838532585,
+            "relative_source_jerk_error_m_s3": 975.2907236772234,
+            "largest_body_speed_peak_shift_frames": 96,
+            "local_fk_rmse_m": 0.03305315541752253,
+            "jerk_mean": 120.71626499683921,
+            "jerk_p95": 163.05536230554915,
+            "jerk_peak": 9383.660534907796,
+            "jerk_area": 1018.0405014733441,
+            "boundary_jerk_peak": 9383.660534907796,
+            "selected_boundary_jerk_peak": 7.0644600817989645,
+            "transition_region_jerk_mean": 7.073883334601741,
+            "internal_jerk_mean": 47.77308034509903,
+            "body_speed_m_s": 0.2508848582265431,
+            "peak_speed_m_s": 5.20063490507176,
+            "peak_speed_frame": 224,
+            "arm_extent_rms_m": 0.5905328702751496,
+            "model_root_speed_m_s": 0.16583982110023499,
+            "foot_world_speed_proxy_m_s": 0.4528940714157824,
+            "foot_slide": "NOT_EVALUABLE_NO_CONTACT_TRUTH",
+            "full_native": "NOT_EVALUABLE_22_OF24",
+            "metric_frame": "COMMON22_ROOT_RELATIVE_FK_30HZ_EXCEPT_EXPLICIT_MODEL_ROOT_AND_WORLD_FOOT_PROXY",
+            "gap_fk_rmse_m": 0.07633299271147337,
+            "gap_D1_error": 0.9731373837899473,
+            "gap_D2_error": 42.23395712194332
+          },
+          {
+            "source_angle_rad": 0.07442024048718428,
+            "protected_source_angle_rad": 1.7475083832591928e-08,
+            "shoulder_wrist_relationship_rmse_m": 0.0722422557080523,
+            "relative_source_acceleration_error_m_s2": 18.73828838532585,
+            "relative_source_jerk_error_m_s3": 975.2907236772234,
+            "largest_body_speed_peak_shift_frames": 96,
+            "local_fk_rmse_m": 0.03305315541752253,
+            "jerk_mean": 120.71626499683921,
+            "jerk_p95": 163.05536230554915,
+            "jerk_peak": 9383.660534907796,
+            "jerk_area": 1018.0405014733441,
+            "boundary_jerk_peak": 9383.660534907796,
+            "selected_boundary_jerk_peak": 7.0644600817989645,
+            "transition_region_jerk_mean": 7.073883334601741,
+            "internal_jerk_mean": 47.77308034509903,
+            "body_speed_m_s": 0.2508848582265431,
+            "peak_speed_m_s": 5.20063490507176,
+            "peak_speed_frame": 224,
+            "arm_extent_rms_m": 0.5905328702751496,
+            "model_root_speed_m_s": 0.1419699788093567,
+            "foot_world_speed_proxy_m_s": 0.4262227107031098,
+            "foot_slide": "NOT_EVALUABLE_NO_CONTACT_TRUTH",
+            "full_native": "NOT_EVALUABLE_22_OF24",
+            "metric_frame": "COMMON22_ROOT_RELATIVE_FK_30HZ_EXCEPT_EXPLICIT_MODEL_ROOT_AND_WORLD_FOOT_PROXY",
+            "gap_fk_rmse_m": 0.07633299271147337,
+            "gap_D1_error": 0.9731373837899473,
+            "gap_D2_error": 42.23395712194332
+          }
+        ],
+        "FrozenMatched": [
+          {
+            "source_angle_rad": 0.07681390852147318,
+            "protected_source_angle_rad": 1.7475083832591928e-08,
+            "shoulder_wrist_relationship_rmse_m": 0.09837434555695639,
+            "relative_source_acceleration_error_m_s2": 19.087133132743414,
+            "relative_source_jerk_error_m_s3": 981.4153990231284,
+            "largest_body_speed_peak_shift_frames": 96,
+            "local_fk_rmse_m": 0.06632852367981201,
+            "jerk_mean": 164.98479463833905,
+            "jerk_p95": 374.0057419330019,
+            "jerk_peak": 9383.660534907796,
+            "jerk_area": 1391.3717681166595,
+            "boundary_jerk_peak": 9383.660534907796,
+            "selected_boundary_jerk_peak": 41.95618905251797,
+            "transition_region_jerk_mean": 245.59691823070037,
+            "internal_jerk_mean": 93.34718664068109,
+            "body_speed_m_s": 0.31759748842730945,
+            "peak_speed_m_s": 5.20063490507176,
+            "peak_speed_frame": 224,
+            "arm_extent_rms_m": 0.6566184359775644,
+            "model_root_speed_m_s": 0.23641154170036316,
+            "foot_world_speed_proxy_m_s": 0.5644035519443212,
+            "foot_slide": "NOT_EVALUABLE_NO_CONTACT_TRUTH",
+            "full_native": "NOT_EVALUABLE_22_OF24",
+            "metric_frame": "COMMON22_ROOT_RELATIVE_FK_30HZ_EXCEPT_EXPLICIT_MODEL_ROOT_AND_WORLD_FOOT_PROXY",
+            "gap_fk_rmse_m": 0.1531791640059501,
+            "gap_D1_error": 1.1173396124003565,
+            "gap_D2_error": 43.02021325173261
+          },
+          {
+            "source_angle_rad": 0.07685179138236425,
+            "protected_source_angle_rad": 1.7475083832591928e-08,
+            "shoulder_wrist_relationship_rmse_m": 0.09787706454600709,
+            "relative_source_acceleration_error_m_s2": 19.15352815530172,
+            "relative_source_jerk_error_m_s3": 982.9423739008499,
+            "largest_body_speed_peak_shift_frames": 96,
+            "local_fk_rmse_m": 0.06612744862327417,
+            "jerk_mean": 169.41520902846742,
+            "jerk_p95": 386.16307703801584,
+            "jerk_peak": 9383.660534907796,
+            "jerk_area": 1428.7349294734086,
+            "boundary_jerk_peak": 9383.660534907796,
+            "selected_boundary_jerk_peak": 40.36641645802445,
+            "transition_region_jerk_mean": 270.40274034679777,
+            "internal_jerk_mean": 97.94112882103707,
+            "body_speed_m_s": 0.32289490499329015,
+            "peak_speed_m_s": 5.20063490507176,
+            "peak_speed_frame": 224,
+            "arm_extent_rms_m": 0.6568548229546601,
+            "model_root_speed_m_s": 0.217573881149292,
+            "foot_world_speed_proxy_m_s": 0.5530033761876237,
+            "foot_slide": "NOT_EVALUABLE_NO_CONTACT_TRUTH",
+            "full_native": "NOT_EVALUABLE_22_OF24",
+            "metric_frame": "COMMON22_ROOT_RELATIVE_FK_30HZ_EXCEPT_EXPLICIT_MODEL_ROOT_AND_WORLD_FOOT_PROXY",
+            "gap_fk_rmse_m": 0.15271480105387233,
+            "gap_D1_error": 1.1288301873809077,
+            "gap_D2_error": 43.169860032601235
+          }
+        ],
+        "Trained": [
+          {
+            "source_angle_rad": 0.07179239709134154,
+            "protected_source_angle_rad": 1.7475083832591928e-08,
+            "shoulder_wrist_relationship_rmse_m": 0.0746430096469526,
+            "relative_source_acceleration_error_m_s2": 18.979519399400303,
+            "relative_source_jerk_error_m_s3": 980.6062423706967,
+            "largest_body_speed_peak_shift_frames": 96,
+            "local_fk_rmse_m": 0.05529400939694464,
+            "jerk_mean": 156.73448101962757,
+            "jerk_p95": 333.464813034429,
+            "jerk_peak": 9383.660534907796,
+            "jerk_area": 1321.7941232655257,
+            "boundary_jerk_peak": 9383.660534907796,
+            "selected_boundary_jerk_peak": 49.456954916589844,
+            "transition_region_jerk_mean": 200.09658007350097,
+            "internal_jerk_mean": 84.60355490526895,
+            "body_speed_m_s": 0.2863079568260206,
+            "peak_speed_m_s": 5.20063490507176,
+            "peak_speed_frame": 224,
+            "arm_extent_rms_m": 0.5930162332360741,
+            "model_root_speed_m_s": 0.20116786658763885,
+            "foot_world_speed_proxy_m_s": 0.5281176566986054,
+            "foot_slide": "NOT_EVALUABLE_NO_CONTACT_TRUTH",
+            "full_native": "NOT_EVALUABLE_22_OF24",
+            "metric_frame": "COMMON22_ROOT_RELATIVE_FK_30HZ_EXCEPT_EXPLICIT_MODEL_ROOT_AND_WORLD_FOOT_PROXY",
+            "gap_fk_rmse_m": 0.12769604483958719,
+            "gap_D1_error": 1.0620281266703848,
+            "gap_D2_error": 42.77766421489919
+          },
+          {
+            "source_angle_rad": 0.07178706172446409,
+            "protected_source_angle_rad": 1.7475083832591928e-08,
+            "shoulder_wrist_relationship_rmse_m": 0.0743034877081085,
+            "relative_source_acceleration_error_m_s2": 18.984873750759185,
+            "relative_source_jerk_error_m_s3": 980.8607268052898,
+            "largest_body_speed_peak_shift_frames": 96,
+            "local_fk_rmse_m": 0.055177041864206695,
+            "jerk_mean": 157.1860067308663,
+            "jerk_p95": 326.22900650359696,
+            "jerk_peak": 9383.660534907796,
+            "jerk_area": 1325.6019900969725,
+            "boundary_jerk_peak": 9383.660534907796,
+            "selected_boundary_jerk_peak": 55.444391751375136,
+            "transition_region_jerk_mean": 202.6502501846357,
+            "internal_jerk_mean": 85.05423427651702,
+            "body_speed_m_s": 0.28585363833154137,
+            "peak_speed_m_s": 5.20063490507176,
+            "peak_speed_frame": 224,
+            "arm_extent_rms_m": 0.5928066490245469,
+            "model_root_speed_m_s": 0.1756158471107483,
+            "foot_world_speed_proxy_m_s": 0.5056402751642652,
+            "foot_slide": "NOT_EVALUABLE_NO_CONTACT_TRUTH",
+            "full_native": "NOT_EVALUABLE_22_OF24",
+            "metric_frame": "COMMON22_ROOT_RELATIVE_FK_30HZ_EXCEPT_EXPLICIT_MODEL_ROOT_AND_WORLD_FOOT_PROXY",
+            "gap_fk_rmse_m": 0.12742591989353638,
+            "gap_D1_error": 1.061931258328767,
+            "gap_D2_error": 42.7897323099705
+          }
+        ]
+      },
+      "noise": {
+        "FrozenMatched": {
+          "seeds": [
+            35041,
+            35042
+          ],
+          "draws": 50,
+          "row_sha256": [
+            "dcf64e34e2eb394a636605b1f504c0d34bab19cc4584bd70bbd8e6db02abbd1e",
+            "0a52f0e802cd62fbaffa077f2a04cc3526155884f156ea928f4e235dce60110e"
+          ]
+        },
+        "Trained": {
+          "seeds": [
+            35041,
+            35042
+          ],
+          "draws": 50,
+          "row_sha256": [
+            "dcf64e34e2eb394a636605b1f504c0d34bab19cc4584bd70bbd8e6db02abbd1e",
+            "0a52f0e802cd62fbaffa077f2a04cc3526155884f156ea928f4e235dce60110e"
+          ]
+        }
+      },
+      "reference_is_target": false,
+      "Root_truth": "UNKNOWN",
+      "contact_truth": "UNKNOWN",
+      "binding": {
+        "window_start": 2851,
+        "boundary_local": 128,
+        "boundary_global": 2979,
+        "events": [
+          {
+            "motion_features": {
+              "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/event_plan_01/prepare/catalog/evt_b196469b41fd9e369b54d7dd.npz",
+              "sha256": "1bb1c8c1b853655bcb42c64bdaa65f7fe11bc6aa6a8942f7e9dfe3be19753b2b"
+            },
+            "event_uid": "evt_b196469b41fd9e369b54d7dd",
+            "source_uid": "female_meditation",
+            "recording_uid": "female_meditation_sequence",
+            "source_sha256": "225ab3ffb8cd176ee138130152ec56b826cf2cc3965f13249aaf0a1103b422e7",
+            "source_interval": [
+              4042,
+              4151
+            ],
+            "duration_frames": 109,
+            "reference": {
+              "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/event_plan_01/prepare/catalog/female_meditation.npy",
+              "sha256": "d38f5fb33507483d4b01e69d9e3bc5e738a1ecc2d3b88856d2ba8030a82ab3df"
+            },
+            "center": 4072,
+            "activity": 0.522828310300013,
+            "entry": [
+              [
+                [
+                  0.9888816475868225,
+                  0.12125416845083237,
+                  -0.08608478307723999
+                ],
+                [
+                  -0.12690050899982452,
+                  0.989884078502655,
+                  -0.06344912946224213
+                ],
+                [
+                  0.07752048224210739,
+                  0.07366787642240524,
+                  0.9942654371261597
+                ]
+              ],
+              [
+                [
+                  0.7120731472969055,
+                  -0.06220408156514168,
+                  -0.6993443965911865
+                ],
+                [
+                  0.2038196474313736,
+                  0.9714874029159546,
+                  0.1211191862821579
+                ],
+                [
+                  0.6718701124191284,
+                  -0.22878584265708923,
+                  0.7044484615325928
+                ]
+              ],
+              [
+                [
+                  0.6764838099479675,
+                  0.4430755078792572,
+                  0.5882633924484253
+                ],
+                [
+                  -0.5095259547233582,
+                  0.8583226799964905,
+                  -0.06054374575614929
+                ],
+                [
+                  -0.531745195388794,
+                  -0.2587786018848419,
+                  0.8063998818397522
+                ]
+              ],
+              [
+                [
+                  0.9256358742713928,
+                  -0.2898354232311249,
+                  0.2432975172996521
+                ],
+                [
+                  0.1423933506011963,
+                  0.8624573945999146,
+                  0.48568645119667053
+                ],
+                [
+                  -0.3506028950214386,
+                  -0.41492486000061035,
+                  0.8395920991897583
+                ]
+              ],
+              [
+                [
+                  0.9162139296531677,
+                  0.3828319311141968,
+                  -0.11828666925430298
+                ],
+                [
+                  -0.3940928280353546,
+                  0.9143158793449402,
+                  -0.09336650371551514
+                ],
+                [
+                  0.07240770012140274,
+                  0.13215962052345276,
+                  0.9885802865028381
+                ]
+              ],
+              [
+                [
+                  0.9782961010932922,
+                  0.11374736577272415,
+                  0.1732000857591629
+                ],
+                [
+                  -0.1672983020544052,
+                  0.9267710447311401,
+                  0.3363134264945984
+                ],
+                [
+                  -0.12226206064224243,
+                  -0.35799020528793335,
+                  0.925686240196228
+                ]
+              ],
+              [
+                [
+                  0.4621238708496094,
+                  -0.3991715610027313,
+                  -0.7918987274169922
+                ],
+                [
+                  -0.23559947311878204,
+                  0.8056176900863647,
+                  -0.543574333190918
+                ],
+                [
+                  0.854947030544281,
+                  0.4377695918083191,
+                  0.2782505750656128
+                ]
+              ],
+              [
+                [
+                  -0.1131611317396164,
+                  0.3556532561779022,
+                  0.927742063999176
+                ],
+                [
+                  0.2351273149251938,
+                  0.916803240776062,
+                  -0.32278019189834595
+                ],
+                [
+                  -0.9653546810150146,
+                  0.1816113442182541,
+                  -0.18737028539180756
+                ]
+              ]
+            ],
+            "exit": [
+              [
+                [
+                  0.9886579513549805,
+                  0.14972616732120514,
+                  0.011731468141078949
+                ],
+                [
+                  -0.14823448657989502,
+                  0.9602870345115662,
+                  0.2363796830177307
+                ],
+                [
+                  0.024126652628183365,
+                  -0.23543764650821686,
+                  0.971589982509613
+                ]
+              ],
+              [
+                [
+                  0.6403405070304871,
+                  0.05679473280906677,
+                  -0.7659885287284851
+                ],
+                [
+                  0.16675715148448944,
+                  0.9631962180137634,
+                  0.21082016825675964
+                ],
+                [
+                  0.7497707009315491,
+                  -0.26273074746131897,
+                  0.6073026061058044
+                ]
+              ],
+              [
+                [
+                  0.720999538898468,
+                  0.034002505242824554,
+                  0.6921008229255676
+                ],
+                [
+                  -0.16170945763587952,
+                  0.9794734120368958,
+                  0.12034071981906891
+                ],
+                [
+                  -0.6738024353981018,
+                  -0.19868485629558563,
+                  0.7116984128952026
+                ]
+              ],
+              [
+                [
+                  0.9851921200752258,
+                  -0.08442197740077972,
+                  0.14922957122325897
+                ],
+                [
+                  0.05564960092306137,
+                  0.9807037711143494,
+                  0.18741194903850555
+                ],
+                [
+                  -0.16217169165611267,
+                  -0.17633219063282013,
+                  0.9708796739578247
+                ]
+              ],
+              [
+                [
+                  0.8608300089836121,
+                  0.3084888160228729,
+                  -0.4047299921512604
+                ],
+                [
+                  -0.29744479060173035,
+                  0.9503247141838074,
+                  0.09170348942279816
+                ],
+                [
+                  0.4129143953323364,
+                  0.041443705558776855,
+                  0.909826397895813
+                ]
+              ],
+              [
+                [
+                  0.9318236112594604,
+                  -0.23002886772155762,
+                  0.2806982100009918
+                ],
+                [
+                  0.013330137357115746,
+                  0.7946343421936035,
+                  0.6069419384002686
+                ],
+                [
+                  -0.36266660690307617,
+                  -0.5618211030960083,
+                  0.7435253262519836
+                ]
+              ],
+              [
+                [
+                  -0.08956198394298553,
+                  -0.37823793292045593,
+                  -0.9213657379150391
+                ],
+                [
+                  -0.07783352583646774,
+                  0.9249122738838196,
+                  -0.3721280097961426
+                ],
+                [
+                  0.9929353594779968,
+                  0.03838462010025978,
+                  -0.11227656900882721
+                ]
+              ],
+              [
+                [
+                  0.22931192815303802,
+                  0.07399559766054153,
+                  0.9705363512039185
+                ],
+                [
+                  -0.560549795627594,
+                  0.8251968026161194,
+                  0.06952837854623795
+                ],
+                [
+                  -0.7957386374473572,
+                  -0.5599775910377502,
+                  0.23070569336414337
+                ]
+              ]
+            ],
+            "phases": {
+              "motion_peak": 104,
+              "primitive_center": 71,
+              "slowest": 8
+            },
+            "semantic": {
+              "category": "冥想",
+              "source_filename": "female_meditation",
+              "provenance": "user_authorized_filename_annotation",
+              "scope": "recording_level_coarse_action",
+              "event_specific_semantics": "UNKNOWN",
+              "music_semantic_pair_label": false
+            },
+            "feasibility": {
+              "source": "PASS",
+              "temporal8": "PASS",
+              "soft_reference": "PASS",
+              "native": "UNKNOWN"
+            },
+            "activity_percentile": 0.43286573146292584,
+            "music_interval": [
+              2802,
+              2895
+            ],
+            "time_warp": [
+              [
+                4042,
+                2802
+              ],
+              [
+                4060,
+                2820
+              ],
+              [
+                4084,
+                2844
+              ],
+              [
+                4151,
+                2895
+              ]
+            ],
+            "primitive": {
+              "source_frame": 4072,
+              "music_frame": 2832,
+              "joints": [
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19
+              ],
+              "radius": 12
+            },
+            "boundary_context": {
+              "left_source_frames": [
+                4042,
+                4046
+              ],
+              "right_source_frames": [
+                4147,
+                4151
+              ],
+              "confidence": "SOURCE_ONLY"
+            },
+            "scores": {
+              "heuristic": -0.03918940088240075,
+              "global_score": null,
+              "sync_score": null,
+              "preference": null
+            },
+            "expression": {
+              "amplitude": 1.0,
+              "mode": "identity_source_reference",
+              "learned_expression": false
+            },
+            "candidate_uid": "b7ec10e0418a69fac0ad4fb06e8557f1bcaee55e50b216839682aac42c576d36",
+            "local_interval": [
+              0,
+              44
+            ]
+          },
+          {
+            "motion_features": {
+              "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/event_plan_01/prepare/catalog/evt_b1e9065f5a4f8b937e0602bd.npz",
+              "sha256": "c7ecc26a6686d01f5b903513320e082acdc93ede3a99476a8b02a4196d775cb9"
+            },
+            "event_uid": "evt_b1e9065f5a4f8b937e0602bd",
+            "source_uid": "female_meditation",
+            "recording_uid": "female_meditation_sequence",
+            "source_sha256": "225ab3ffb8cd176ee138130152ec56b826cf2cc3965f13249aaf0a1103b422e7",
+            "source_interval": [
+              4151,
+              4243
+            ],
+            "duration_frames": 92,
+            "reference": {
+              "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/event_plan_01/prepare/catalog/female_meditation.npy",
+              "sha256": "d38f5fb33507483d4b01e69d9e3bc5e738a1ecc2d3b88856d2ba8030a82ab3df"
+            },
+            "center": 4177,
+            "activity": 0.7298532357741695,
+            "entry": [
+              [
+                [
+                  0.9887189269065857,
+                  0.14910888671875,
+                  0.014193540439009666
+                ],
+                [
+                  -0.14820663630962372,
+                  0.9602001309394836,
+                  0.2367498129606247
+                ],
+                [
+                  0.021672863513231277,
+                  -0.2361825853586197,
+                  0.9714669585227966
+                ]
+              ],
+              [
+                [
+                  0.6389193534851074,
+                  0.05380848050117493,
+                  -0.7673895359039307
+                ],
+                [
+                  0.17175307869911194,
+                  0.9623920321464539,
+                  0.2104814052581787
+                ],
+                [
+                  0.7498552799224854,
+                  -0.26628217101097107,
+                  0.6056491136550903
+                ]
+              ],
+              [
+                [
+                  0.7247952818870544,
+                  0.02578645385801792,
+                  0.6884815692901611
+                ],
+                [
+                  -0.15260985493659973,
+                  0.9804846048355103,
+                  0.12393605709075928
+                ],
+                [
+                  -0.6718497276306152,
+                  -0.1948973536491394,
+                  0.7145859003067017
+                ]
+              ],
+              [
+                [
+                  0.9859626889228821,
+                  -0.08272561430931091,
+                  0.1450313776731491
+                ],
+                [
+                  0.054527949541807175,
+                  0.9805387258529663,
+                  0.1886015385389328
+                ],
+                [
+                  -0.15781106054782867,
+                  -0.17804580926895142,
+                  0.9712854623794556
+                ]
+              ],
+              [
+                [
+                  0.8611118793487549,
+                  0.30563175678253174,
+                  -0.4062950313091278
+                ],
+                [
+                  -0.2949548661708832,
+                  0.9512238502502441,
+                  0.09041489660739899
+                ],
+                [
+                  0.4141111969947815,
+                  0.04198133945465088,
+                  0.909257709980011
+                ]
+              ],
+              [
+                [
+                  0.9312036633491516,
+                  -0.23623345792293549,
+                  0.27758514881134033
+                ],
+                [
+                  0.01848050020635128,
+                  0.7911713719367981,
+                  0.6113153100013733
+                ],
+                [
+                  -0.36403053998947144,
+                  -0.564129114151001,
+                  0.7411073446273804
+                ]
+              ],
+              [
+                [
+                  -0.08606094866991043,
+                  -0.378694623708725,
+                  -0.9215118288993835
+                ],
+                [
+                  -0.08351495862007141,
+                  0.9244301319122314,
+                  -0.37209439277648926
+                ],
+                [
+                  0.9927833676338196,
+                  0.044937219470739365,
+                  -0.1111840009689331
+                ]
+              ],
+              [
+                [
+                  0.24296404421329498,
+                  0.07626385986804962,
+                  0.9670327305793762
+                ],
+                [
+                  -0.5808183550834656,
+                  0.8098867535591125,
+                  0.08205811679363251
+                ],
+                [
+                  -0.7769289016723633,
+                  -0.5816075205802917,
+                  0.24106881022453308
+                ]
+              ]
+            ],
+            "exit": [
+              [
+                [
+                  0.9905803799629211,
+                  0.1311446875333786,
+                  0.039389822632074356
+                ],
+                [
+                  -0.13462448120117188,
+                  0.9853126406669617,
+                  0.10504889488220215
+                ],
+                [
+                  -0.02503468468785286,
+                  -0.10936220735311508,
+                  0.9936866760253906
+                ]
+              ],
+              [
+                [
+                  0.6847077012062073,
+                  0.020748907700181007,
+                  -0.7285223603248596
+                ],
+                [
+                  0.09947963058948517,
+                  0.9875785708427429,
+                  0.12162378430366516
+                ],
+                [
+                  0.7219966650009155,
+                  -0.1557498723268509,
+                  0.6741385459899902
+                ]
+              ],
+              [
+                [
+                  0.646054208278656,
+                  0.07602309435606003,
+                  0.7594962120056152
+                ],
+                [
+                  -0.1000015065073967,
+                  0.9948813319206238,
+                  -0.014519579708576202
+                ],
+                [
+                  -0.7567124366760254,
+                  -0.06657032668590546,
+                  0.6503497362136841
+                ]
+              ],
+              [
+                [
+                  0.9751100540161133,
+                  -0.1577337235212326,
+                  0.1558220386505127
+                ],
+                [
+                  0.11879138648509979,
+                  0.9650664329528809,
+                  0.2335282564163208
+                ],
+                [
+                  -0.18721388280391693,
+                  -0.20920541882514954,
+                  0.9597834348678589
+                ]
+              ],
+              [
+                [
+                  0.8327683210372925,
+                  0.4725608825683594,
+                  -0.28841492533683777
+                ],
+                [
+                  -0.500639021396637,
+                  0.8652056455612183,
+                  -0.027925066649913788
+                ],
+                [
+                  0.2363419085741043,
+                  0.1676468700170517,
+                  0.9570982456207275
+                ]
+              ],
+              [
+                [
+                  0.7915112376213074,
+                  -0.4848826825618744,
+                  0.37201979756355286
+                ],
+                [
+                  0.3660997748374939,
+                  0.8635914921760559,
+                  0.3466709852218628
+                ],
+                [
+                  -0.48936787247657776,
+                  -0.1381976157426834,
+                  0.8610578179359436
+                ]
+              ],
+              [
+                [
+                  0.26019707322120667,
+                  -0.33574551343917847,
+                  -0.9053024649620056
+                ],
+                [
+                  -0.2435077577829361,
+                  0.884473443031311,
+                  -0.39800843596458435
+                ],
+                [
+                  0.9343454837799072,
+                  0.3240087628364563,
+                  0.14838077127933502
+                ]
+              ],
+              [
+                [
+                  -0.014540532603859901,
+                  0.38614749908447266,
+                  0.9223224520683289
+                ],
+                [
+                  0.049767982214689255,
+                  0.9215561747550964,
+                  -0.38504207134246826
+                ],
+                [
+                  -0.9986549615859985,
+                  0.04030340909957886,
+                  -0.03261769935488701
+                ]
+              ]
+            ],
+            "phases": {
+              "motion_peak": 64,
+              "primitive_center": 60,
+              "slowest": 9
+            },
+            "semantic": {
+              "category": "冥想",
+              "source_filename": "female_meditation",
+              "provenance": "user_authorized_filename_annotation",
+              "scope": "recording_level_coarse_action",
+              "event_specific_semantics": "UNKNOWN",
+              "music_semantic_pair_label": false
+            },
+            "feasibility": {
+              "source": "PASS",
+              "temporal8": "PASS",
+              "soft_reference": "PASS",
+              "native": "UNKNOWN"
+            },
+            "activity_percentile": 0.5551102204408818,
+            "music_interval": [
+              2895,
+              2979
+            ],
+            "time_warp": [
+              [
+                4151,
+                2895
+              ],
+              [
+                4165,
+                2906
+              ],
+              [
+                4189,
+                2930
+              ],
+              [
+                4243,
+                2979
+              ]
+            ],
+            "primitive": {
+              "source_frame": 4177,
+              "music_frame": 2918,
+              "joints": [
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19
+              ],
+              "radius": 12
+            },
+            "boundary_context": {
+              "left_source_frames": [
+                4151,
+                4155
+              ],
+              "right_source_frames": [
+                4239,
+                4243
+              ],
+              "confidence": "SOURCE_ONLY"
+            },
+            "scores": {
+              "heuristic": -0.053809632372866845,
+              "global_score": null,
+              "sync_score": null,
+              "preference": null
+            },
+            "expression": {
+              "amplitude": 1.0,
+              "mode": "identity_source_reference",
+              "learned_expression": false
+            },
+            "candidate_uid": "fb3f60540d867d442fd990267ed0916b154d76a814b1aec0d7feacdd313984df",
+            "local_interval": [
+              44,
+              128
+            ]
+          },
+          {
+            "motion_features": {
+              "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/event_plan_01/prepare/catalog/evt_135b332fbf4764b4e7c85d09.npz",
+              "sha256": "24b847825ff4b967fccd579d23154d4591c843b674f0ab9a14bc41bff3931ce8"
+            },
+            "event_uid": "evt_135b332fbf4764b4e7c85d09",
+            "source_uid": "female_FeiTian",
+            "recording_uid": "female_feitian_sequence",
+            "source_sha256": "120e0157ccdd60d128d2973ac0682883ee178ba43ce8479100e80f56c64f37a4",
+            "source_interval": [
+              2100,
+              2182
+            ],
+            "duration_frames": 82,
+            "reference": {
+              "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/event_plan_01/prepare/catalog/female_FeiTian.npy",
+              "sha256": "50436001fab4f0aa45610b0723cebd7ee93592f3039adc133c270902b3c9fab4"
+            },
+            "center": 2152,
+            "activity": 0.6135400432661586,
+            "entry": [
+              [
+                [
+                  0.9987366795539856,
+                  0.042875759303569794,
+                  0.02620445191860199
+                ],
+                [
+                  -0.04326651245355606,
+                  0.9989579319953918,
+                  0.014531093649566174
+                ],
+                [
+                  -0.025554109364748,
+                  -0.01564651168882847,
+                  0.999550998210907
+                ]
+              ],
+              [
+                [
+                  0.9583187699317932,
+                  0.23046733438968658,
+                  -0.16884906589984894
+                ],
+                [
+                  -0.22035378217697144,
+                  0.9724054932594299,
+                  0.07662776857614517
+                ],
+                [
+                  0.18184994161128998,
+                  -0.03622729703783989,
+                  0.9826588034629822
+                ]
+              ],
+              [
+                [
+                  0.927463710308075,
+                  -0.22644191980361938,
+                  0.2975485026836395
+                ],
+                [
+                  0.2108272761106491,
+                  0.9739062190055847,
+                  0.08401507884263992
+                ],
+                [
+                  -0.3088088631629944,
+                  -0.015189599245786667,
+                  0.951002836227417
+                ]
+              ],
+              [
+                [
+                  0.9962245225906372,
+                  -0.0835890844464302,
+                  -0.023443367332220078
+                ],
+                [
+                  0.08552955090999603,
+                  0.9913040995597839,
+                  0.10000431537628174
+                ],
+                [
+                  0.014880238100886345,
+                  -0.10163185000419617,
+                  0.9947108030319214
+                ]
+              ],
+              [
+                [
+                  0.8993428945541382,
+                  0.41670921444892883,
+                  -0.13242274522781372
+                ],
+                [
+                  -0.4135838449001312,
+                  0.9090015888214111,
+                  0.05161965638399124
+                ],
+                [
+                  0.14188285171985626,
+                  0.008344133384525776,
+                  0.9898483157157898
+                ]
+              ],
+              [
+                [
+                  0.854365885257721,
+                  -0.49081501364707947,
+                  0.1707618236541748
+                ],
+                [
+                  0.489105761051178,
+                  0.8704944252967834,
+                  0.054909463971853256
+                ],
+                [
+                  -0.17559759318828583,
+                  0.03660781681537628,
+                  0.9837812185287476
+                ]
+              ],
+              [
+                [
+                  0.9934738874435425,
+                  -0.07881232351064682,
+                  -0.08245176076889038
+                ],
+                [
+                  0.08488935232162476,
+                  0.9937130808830261,
+                  0.07299445569515228
+                ],
+                [
+                  0.07618052512407303,
+                  -0.07951735705137253,
+                  0.9939182996749878
+                ]
+              ],
+              [
+                [
+                  0.9981918931007385,
+                  0.058767274022102356,
+                  0.012625615112483501
+                ],
+                [
+                  -0.05938659608364105,
+                  0.9966569542884827,
+                  0.05610855296254158
+                ],
+                [
+                  -0.009286059997975826,
+                  -0.056756895035505295,
+                  0.9983448386192322
+                ]
+              ]
+            ],
+            "exit": [
+              [
+                [
+                  0.9738739132881165,
+                  -0.07414832711219788,
+                  -0.21464300155639648
+                ],
+                [
+                  0.027239538729190826,
+                  0.9765098094940186,
+                  -0.21374419331550598
+                ],
+                [
+                  0.22544977068901062,
+                  0.2023131251335144,
+                  0.9530171751976013
+                ]
+              ],
+              [
+                [
+                  0.8261805176734924,
+                  0.06153789535164833,
+                  -0.5600347518920898
+                ],
+                [
+                  0.05789504200220108,
+                  0.979482114315033,
+                  0.193036288022995
+                ],
+                [
+                  0.5604230165481567,
+                  -0.19190604984760284,
+                  0.8056662678718567
+                ]
+              ],
+              [
+                [
+                  0.8095017671585083,
+                  0.32871755957603455,
+                  0.4864685535430908
+                ],
+                [
+                  -0.46408313512802124,
+                  0.8657791018486023,
+                  0.18722552061080933
+                ],
+                [
+                  -0.3596299886703491,
+                  -0.3773212432861328,
+                  0.8534020185470581
+                ]
+              ],
+              [
+                [
+                  0.9875811338424683,
+                  -0.11668892949819565,
+                  0.10520057380199432
+                ],
+                [
+                  0.10064107179641724,
+                  0.9840439558029175,
+                  0.14672735333442688
+                ],
+                [
+                  -0.12064343690872192,
+                  -0.13431768119335175,
+                  0.9835669994354248
+                ]
+              ],
+              [
+                [
+                  0.7564682960510254,
+                  0.45087459683418274,
+                  -0.4737803637981415
+                ],
+                [
+                  -0.43617114424705505,
+                  0.8875696659088135,
+                  0.148239403963089
+                ],
+                [
+                  0.4873504042625427,
+                  0.09451091289520264,
+                  0.8680768013000488
+                ]
+              ],
+              [
+                [
+                  0.8472828269004822,
+                  0.061036381870508194,
+                  0.5276233553886414
+                ],
+                [
+                  -0.3667742609977722,
+                  0.785738468170166,
+                  0.4980880916118622
+                ],
+                [
+                  -0.3841724395751953,
+                  -0.6155401468276978,
+                  0.6881292462348938
+                ]
+              ],
+              [
+                [
+                  0.663317859172821,
+                  -0.24642321467399597,
+                  -0.7066010236740112
+                ],
+                [
+                  0.25732603669166565,
+                  0.9617570638656616,
+                  -0.09384402632713318
+                ],
+                [
+                  0.7027038335800171,
+                  -0.11957842856645584,
+                  0.7013617753982544
+                ]
+              ],
+              [
+                [
+                  0.881897509098053,
+                  0.21497727930545807,
+                  0.4195730984210968
+                ],
+                [
+                  -0.40666818618774414,
+                  0.7971122860908508,
+                  0.44635531306266785
+                ],
+                [
+                  -0.23849059641361237,
+                  -0.5642666816711426,
+                  0.7903957366943359
+                ]
+              ]
+            ],
+            "phases": {
+              "motion_peak": 52,
+              "primitive_center": 52,
+              "slowest": 1
+            },
+            "semantic": {
+              "category": "飞天",
+              "source_filename": "female_FeiTian",
+              "provenance": "user_authorized_filename_annotation",
+              "scope": "recording_level_coarse_action",
+              "event_specific_semantics": "UNKNOWN",
+              "music_semantic_pair_label": false
+            },
+            "feasibility": {
+              "source": "PASS",
+              "temporal8": "PASS",
+              "soft_reference": "PASS",
+              "native": "UNKNOWN"
+            },
+            "activity_percentile": 0.4849699398797595,
+            "music_interval": [
+              2979,
+              3075
+            ],
+            "time_warp": [
+              [
+                2100,
+                2979
+              ],
+              [
+                2140,
+                3031
+              ],
+              [
+                2164,
+                3055
+              ],
+              [
+                2182,
+                3075
+              ]
+            ],
+            "primitive": {
+              "source_frame": 2152,
+              "music_frame": 3043,
+              "joints": [
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19
+              ],
+              "radius": 12
+            },
+            "boundary_context": {
+              "left_source_frames": [
+                2100,
+                2104
+              ],
+              "right_source_frames": [
+                2178,
+                2182
+              ],
+              "confidence": "SOURCE_ONLY"
+            },
+            "scores": {
+              "heuristic": -0.003730852412292651,
+              "global_score": null,
+              "sync_score": null,
+              "preference": null
+            },
+            "expression": {
+              "amplitude": 1.0,
+              "mode": "identity_source_reference",
+              "learned_expression": false
+            },
+            "candidate_uid": "a70e24e90f6a13ae6f0a055226d535af9cd105891dabe0543906ff4afd2270af",
+            "local_interval": [
+              128,
+              224
+            ]
+          },
+          {
+            "motion_features": {
+              "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/event_plan_01/prepare/catalog/evt_a228d3b6f3b51ae977b2b8b6.npz",
+              "sha256": "0e27a6bc2ecfcbe508172800783332f7db6f3f17722401327fa483fbfd2ddbc8"
+            },
+            "event_uid": "evt_a228d3b6f3b51ae977b2b8b6",
+            "source_uid": "female_lotus",
+            "recording_uid": "female_lotus_sequence",
+            "source_sha256": "22b915af2e0fbb645acb78d7f61e58afe3f7aa40c0fc719da95f7403ed8dd47d",
+            "source_interval": [
+              6015,
+              6087
+            ],
+            "duration_frames": 72,
+            "reference": {
+              "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/event_plan_01/prepare/catalog/female_lotus.npy",
+              "sha256": "5cebda88bce0ff6ecbff76890f6ea9c2af237aab62a7dc95f23bb40972af8675"
+            },
+            "center": 6059,
+            "activity": 0.5651499856913477,
+            "entry": [
+              [
+                [
+                  0.9888806343078613,
+                  0.04025197774171829,
+                  -0.14316055178642273
+                ],
+                [
+                  -0.07339437305927277,
+                  0.9693611264228821,
+                  -0.2344191074371338
+                ],
+                [
+                  0.12933844327926636,
+                  0.24231967329978943,
+                  0.961536705493927
+                ]
+              ],
+              [
+                [
+                  0.8410747051239014,
+                  -0.5040854215621948,
+                  -0.19619184732437134
+                ],
+                [
+                  0.5403584837913513,
+                  0.7664827704429626,
+                  0.34715545177459717
+                ],
+                [
+                  -0.02461831644177437,
+                  -0.39799758791923523,
+                  0.917056143283844
+                ]
+              ],
+              [
+                [
+                  0.7081019878387451,
+                  0.5616996884346008,
+                  0.4278844892978668
+                ],
+                [
+                  -0.6875413656234741,
+                  0.6865259408950806,
+                  0.23657774925231934
+                ],
+                [
+                  -0.16086816787719727,
+                  -0.4617094099521637,
+                  0.8723222017288208
+                ]
+              ],
+              [
+                [
+                  0.9798096418380737,
+                  -0.1959802657365799,
+                  -0.03955785557627678
+                ],
+                [
+                  0.18852870166301727,
+                  0.8397900462150574,
+                  0.5091263055801392
+                ],
+                [
+                  -0.06655841320753098,
+                  -0.5063046216964722,
+                  0.8597822785377502
+                ]
+              ],
+              [
+                [
+                  0.9983871579170227,
+                  -0.0563955195248127,
+                  -0.006533375475555658
+                ],
+                [
+                  0.05676233395934105,
+                  0.9893733263015747,
+                  0.13385969400405884
+                ],
+                [
+                  -0.0010851394617930055,
+                  -0.13401463627815247,
+                  0.9909787774085999
+                ]
+              ],
+              [
+                [
+                  0.8821874856948853,
+                  0.16013333201408386,
+                  0.442834734916687
+                ],
+                [
+                  -0.3624928891658783,
+                  0.8311911225318909,
+                  0.42156875133514404
+                ],
+                [
+                  -0.30057311058044434,
+                  -0.5324270725250244,
+                  0.7913135886192322
+                ]
+              ],
+              [
+                [
+                  0.6343392133712769,
+                  -0.09720472991466522,
+                  -0.7669191956520081
+                ],
+                [
+                  0.1493932157754898,
+                  0.9887763261795044,
+                  -0.0017573609948158264
+                ],
+                [
+                  0.7584823369979858,
+                  -0.11345776170492172,
+                  0.6417413353919983
+                ]
+              ],
+              [
+                [
+                  0.7269895672798157,
+                  0.1380426585674286,
+                  0.6726294755935669
+                ],
+                [
+                  -0.11995837837457657,
+                  0.9900519251823425,
+                  -0.07353366166353226
+                ],
+                [
+                  -0.6760888695716858,
+                  -0.02722933515906334,
+                  0.7363168001174927
+                ]
+              ]
+            ],
+            "exit": [
+              [
+                [
+                  0.9930310845375061,
+                  -0.012183801271021366,
+                  -0.11722101271152496
+                ],
+                [
+                  0.0007967770798131824,
+                  0.9953131079673767,
+                  -0.0967017188668251
+                ],
+                [
+                  0.11784979701042175,
+                  0.0959344133734703,
+                  0.9883865714073181
+                ]
+              ],
+              [
+                [
+                  0.7920582890510559,
+                  0.23374627530574799,
+                  -0.5639205574989319
+                ],
+                [
+                  -0.18047621846199036,
+                  0.9721556305885315,
+                  0.14947155117988586
+                ],
+                [
+                  0.583156943321228,
+                  -0.016615934669971466,
+                  0.8121895790100098
+                ]
+              ],
+              [
+                [
+                  0.8503435850143433,
+                  0.3052147626876831,
+                  0.4286721348762512
+                ],
+                [
+                  -0.4257153570652008,
+                  0.8778417706489563,
+                  0.21945463120937347
+                ],
+                [
+                  -0.3093254864215851,
+                  -0.36910414695739746,
+                  0.8764017224311829
+                ]
+              ],
+              [
+                [
+                  0.9402983784675598,
+                  -0.14449255168437958,
+                  0.3081572949886322
+                ],
+                [
+                  0.07017780095338821,
+                  0.9682642221450806,
+                  0.23987393081188202
+                ],
+                [
+                  -0.33303767442703247,
+                  -0.20392724871635437,
+                  0.9205974340438843
+                ]
+              ],
+              [
+                [
+                  0.6293278932571411,
+                  0.7125970721244812,
+                  -0.31008368730545044
+                ],
+                [
+                  -0.7405948042869568,
+                  0.6708433032035828,
+                  0.038582995533943176
+                ],
+                [
+                  0.2355116754770279,
+                  0.20536501705646515,
+                  0.9499260783195496
+                ]
+              ],
+              [
+                [
+                  0.9704193472862244,
+                  0.0860648974776268,
+                  0.22556425631046295
+                ],
+                [
+                  -0.10255129635334015,
+                  0.9927685856819153,
+                  0.06240003928542137
+                ],
+                [
+                  -0.21856266260147095,
+                  -0.08368610590696335,
+                  0.972227931022644
+                ]
+              ],
+              [
+                [
+                  0.9761491417884827,
+                  -0.1109987422823906,
+                  -0.18658007681369781
+                ],
+                [
+                  0.11084718257188797,
+                  0.9937735199928284,
+                  -0.011277811601758003
+                ],
+                [
+                  0.18667013943195343,
+                  -0.009673049673438072,
+                  0.9823750853538513
+                ]
+              ],
+              [
+                [
+                  -0.43769192695617676,
+                  0.14247682690620422,
+                  0.8877646923065186
+                ],
+                [
+                  -0.01471933163702488,
+                  0.9860973954200745,
+                  -0.1655152142047882
+                ],
+                [
+                  -0.8990045189857483,
+                  -0.08551197499036789,
+                  -0.429509699344635
+                ]
+              ]
+            ],
+            "phases": {
+              "motion_peak": 36,
+              "primitive_center": 36,
+              "slowest": 2
+            },
+            "semantic": {
+              "category": "莲花",
+              "source_filename": "female_lotus",
+              "provenance": "user_authorized_filename_annotation",
+              "scope": "recording_level_coarse_action",
+              "event_specific_semantics": "UNKNOWN",
+              "music_semantic_pair_label": false
+            },
+            "feasibility": {
+              "source": "PASS",
+              "temporal8": "PASS",
+              "soft_reference": "PASS",
+              "native": "UNKNOWN"
+            },
+            "activity_percentile": 0.45691382765531063,
+            "music_interval": [
+              3075,
+              3156
+            ],
+            "time_warp": [
+              [
+                6015,
+                3075
+              ],
+              [
+                6047,
+                3112
+              ],
+              [
+                6071,
+                3136
+              ],
+              [
+                6087,
+                3156
+              ]
+            ],
+            "primitive": {
+              "source_frame": 6059,
+              "music_frame": 3124,
+              "joints": [
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19
+              ],
+              "radius": 12
+            },
+            "boundary_context": {
+              "left_source_frames": [
+                6015,
+                6019
+              ],
+              "right_source_frames": [
+                6083,
+                6087
+              ],
+              "confidence": "SOURCE_ONLY"
+            },
+            "scores": {
+              "heuristic": -0.023662659976354417,
+              "global_score": null,
+              "sync_score": null,
+              "preference": null
+            },
+            "expression": {
+              "amplitude": 1.0,
+              "mode": "identity_source_reference",
+              "learned_expression": false
+            },
+            "candidate_uid": "62c93af6b6848b59cb1beef82276b1a52dde986e01b4a7c7a82625e484dd3182",
+            "local_interval": [
+              224,
+              256
+            ]
+          }
+        ],
+        "source_uids": [
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_meditation",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_lotus",
+          "female_lotus",
+          "female_lotus",
+          "female_lotus",
+          "female_lotus",
+          "female_lotus",
+          "female_lotus",
+          "female_lotus",
+          "female_lotus",
+          "female_lotus",
+          "female_lotus",
+          "female_lotus",
+          "female_lotus",
+          "female_lotus",
+          "female_lotus",
+          "female_lotus",
+          "female_lotus",
+          "female_lotus",
+          "female_lotus",
+          "female_lotus",
+          "female_lotus",
+          "female_lotus",
+          "female_lotus",
+          "female_lotus",
+          "female_lotus",
+          "female_lotus",
+          "female_lotus",
+          "female_lotus",
+          "female_lotus",
+          "female_lotus",
+          "female_lotus",
+          "female_lotus"
+        ],
+        "source_positions": [
+          4093.1960784313724,
+          4094.5098039215686,
+          4095.823529411765,
+          4097.137254901961,
+          4098.450980392156,
+          4099.764705882353,
+          4101.078431372549,
+          4102.392156862745,
+          4103.705882352941,
+          4105.019607843137,
+          4106.333333333333,
+          4107.64705882353,
+          4108.9607843137255,
+          4110.274509803921,
+          4111.588235294118,
+          4112.901960784314,
+          4114.21568627451,
+          4115.529411764706,
+          4116.843137254902,
+          4118.156862745098,
+          4119.470588235294,
+          4120.78431372549,
+          4122.098039215686,
+          4123.411764705882,
+          4124.725490196079,
+          4126.0392156862745,
+          4127.35294117647,
+          4128.666666666667,
+          4129.980392156863,
+          4131.294117647059,
+          4132.607843137255,
+          4133.921568627451,
+          4135.235294117647,
+          4136.549019607844,
+          4137.862745098039,
+          4139.176470588235,
+          4140.490196078431,
+          4141.803921568628,
+          4143.117647058823,
+          4144.431372549019,
+          4145.745098039216,
+          4147.058823529412,
+          4148.3725490196075,
+          4149.686274509804,
+          4151.0,
+          4152.272727272727,
+          4153.545454545455,
+          4154.818181818182,
+          4156.090909090909,
+          4157.363636363636,
+          4158.636363636364,
+          4159.909090909091,
+          4161.181818181818,
+          4162.454545454545,
+          4163.727272727273,
+          4165.0,
+          4166.0,
+          4167.0,
+          4168.0,
+          4169.0,
+          4170.0,
+          4171.0,
+          4172.0,
+          4173.0,
+          4174.0,
+          4175.0,
+          4176.0,
+          4177.0,
+          4178.0,
+          4179.0,
+          4180.0,
+          4181.0,
+          4182.0,
+          4183.0,
+          4184.0,
+          4185.0,
+          4186.0,
+          4187.0,
+          4188.0,
+          4189.0,
+          4190.102040816327,
+          4191.2040816326535,
+          4192.306122448979,
+          4193.408163265306,
+          4194.510204081633,
+          4195.6122448979595,
+          4196.714285714285,
+          4197.816326530612,
+          4198.918367346939,
+          4200.0204081632655,
+          4201.122448979592,
+          4202.224489795918,
+          4203.326530612245,
+          4204.428571428572,
+          4205.530612244898,
+          4206.632653061224,
+          4207.734693877551,
+          4208.836734693878,
+          4209.938775510204,
+          4211.040816326531,
+          4212.142857142857,
+          4213.244897959184,
+          4214.34693877551,
+          4215.448979591837,
+          4216.551020408163,
+          4217.65306122449,
+          4218.755102040816,
+          4219.857142857143,
+          4220.959183673469,
+          4222.061224489796,
+          4223.163265306122,
+          4224.265306122449,
+          4225.367346938776,
+          4226.469387755102,
+          4227.571428571428,
+          4228.673469387755,
+          4229.775510204082,
+          4230.877551020408,
+          4231.9795918367345,
+          4233.081632653061,
+          4234.183673469388,
+          4235.285714285715,
+          4236.3877551020405,
+          4237.489795918367,
+          4238.591836734694,
+          4239.693877551021,
+          4240.7959183673465,
+          4241.897959183673,
+          2100.0,
+          2100.769230769231,
+          2101.5384615384614,
+          2102.3076923076924,
+          2103.076923076923,
+          2103.846153846154,
+          2104.6153846153848,
+          2105.3846153846152,
+          2106.153846153846,
+          2106.923076923077,
+          2107.6923076923076,
+          2108.4615384615386,
+          2109.230769230769,
+          2110.0,
+          2110.769230769231,
+          2111.5384615384614,
+          2112.3076923076924,
+          2113.076923076923,
+          2113.846153846154,
+          2114.6153846153848,
+          2115.3846153846152,
+          2116.153846153846,
+          2116.923076923077,
+          2117.6923076923076,
+          2118.4615384615386,
+          2119.230769230769,
+          2120.0,
+          2120.769230769231,
+          2121.5384615384614,
+          2122.3076923076924,
+          2123.076923076923,
+          2123.846153846154,
+          2124.6153846153848,
+          2125.3846153846152,
+          2126.153846153846,
+          2126.923076923077,
+          2127.6923076923076,
+          2128.4615384615386,
+          2129.230769230769,
+          2130.0,
+          2130.769230769231,
+          2131.5384615384614,
+          2132.3076923076924,
+          2133.076923076923,
+          2133.846153846154,
+          2134.6153846153848,
+          2135.3846153846152,
+          2136.153846153846,
+          2136.923076923077,
+          2137.6923076923076,
+          2138.4615384615386,
+          2139.230769230769,
+          2140.0,
+          2141.0,
+          2142.0,
+          2143.0,
+          2144.0,
+          2145.0,
+          2146.0,
+          2147.0,
+          2148.0,
+          2149.0,
+          2150.0,
+          2151.0,
+          2152.0,
+          2153.0,
+          2154.0,
+          2155.0,
+          2156.0,
+          2157.0,
+          2158.0,
+          2159.0,
+          2160.0,
+          2161.0,
+          2162.0,
+          2163.0,
+          2164.0,
+          2164.9,
+          2165.8,
+          2166.7,
+          2167.6,
+          2168.5,
+          2169.4,
+          2170.3,
+          2171.2,
+          2172.1,
+          2173.0,
+          2173.9,
+          2174.8,
+          2175.7,
+          2176.6,
+          2177.5,
+          2178.4,
+          2179.3,
+          2180.2,
+          2181.0,
+          6015.0,
+          6015.864864864865,
+          6016.72972972973,
+          6017.594594594595,
+          6018.459459459459,
+          6019.324324324324,
+          6020.189189189189,
+          6021.054054054054,
+          6021.918918918919,
+          6022.783783783784,
+          6023.648648648648,
+          6024.513513513513,
+          6025.378378378378,
+          6026.243243243243,
+          6027.108108108108,
+          6027.972972972973,
+          6028.8378378378375,
+          6029.7027027027025,
+          6030.5675675675675,
+          6031.4324324324325,
+          6032.2972972972975,
+          6033.1621621621625,
+          6034.027027027027,
+          6034.891891891892,
+          6035.756756756757,
+          6036.621621621622,
+          6037.486486486487,
+          6038.351351351352,
+          6039.216216216216,
+          6040.081081081081,
+          6040.945945945946,
+          6041.810810810811
+        ],
+        "world_Root": "UNKNOWN",
+        "contact": "UNKNOWN",
+        "right_context": "ACTUAL_SELECTED_NEIGHBOR_BODY_ONLY"
+      },
+      "semantic_phase": "UNKNOWN_NOT_TRAINED"
+    },
+    {
+      "key": "new_plan",
+      "kind": "CROSS_SOURCE_STRESS_NO_CONTINUOUS_TRUTH",
+      "gap": [
+        104,
+        152
+      ],
+      "cuts": [
+        128
+      ],
+      "seeds": [
+        35041,
+        35042
+      ],
+      "audio": "new_plan.wav",
+      "methods": {
+        "Geometry": [
+          {
+            "source_angle_rad": 0.06462564417301964,
+            "protected_source_angle_rad": 1.7212898720012737e-08,
+            "shoulder_wrist_relationship_rmse_m": 0.09316955674670277,
+            "relative_source_acceleration_error_m_s2": 4.604727940724045,
+            "relative_source_jerk_error_m_s3": 229.7987943879714,
+            "largest_body_speed_peak_shift_frames": 77,
+            "local_fk_rmse_m": 0.059202076682510936,
+            "jerk_mean": 93.12916040322801,
+            "jerk_p95": 288.9876751957495,
+            "jerk_peak": 551.8315375497136,
+            "jerk_area": 785.3892527338896,
+            "boundary_jerk_peak": 8.838662553402706,
+            "selected_boundary_jerk_peak": 8.838662553402706,
+            "transition_region_jerk_mean": 22.47410710372723,
+            "internal_jerk_mean": 94.1531600239501,
+            "body_speed_m_s": 0.4895957821039007,
+            "peak_speed_m_s": 1.5793052683839441,
+            "peak_speed_frame": 205,
+            "arm_extent_rms_m": 0.8982657381824983,
+            "model_root_speed_m_s": 0.15815745294094086,
+            "foot_world_speed_proxy_m_s": 0.6300814184881883,
+            "foot_slide": "NOT_EVALUABLE_NO_CONTACT_TRUTH",
+            "full_native": "NOT_EVALUABLE_22_OF24",
+            "metric_frame": "COMMON22_ROOT_RELATIVE_FK_30HZ_EXCEPT_EXPLICIT_MODEL_ROOT_AND_WORLD_FOOT_PROXY",
+            "gap_fk_rmse_m": 0.13672133963691913,
+            "gap_D1_error": 0.4611133279639521,
+            "gap_D2_error": 10.378529692712245
+          },
+          {
+            "source_angle_rad": 0.06462564417301964,
+            "protected_source_angle_rad": 1.7212898720012737e-08,
+            "shoulder_wrist_relationship_rmse_m": 0.09316955674670277,
+            "relative_source_acceleration_error_m_s2": 4.604727940724045,
+            "relative_source_jerk_error_m_s3": 229.7987943879714,
+            "largest_body_speed_peak_shift_frames": 77,
+            "local_fk_rmse_m": 0.059202076682510936,
+            "jerk_mean": 93.12916040322801,
+            "jerk_p95": 288.9876751957495,
+            "jerk_peak": 551.8315375497136,
+            "jerk_area": 785.3892527338896,
+            "boundary_jerk_peak": 8.838662553402706,
+            "selected_boundary_jerk_peak": 8.838662553402706,
+            "transition_region_jerk_mean": 22.47410710372723,
+            "internal_jerk_mean": 94.1531600239501,
+            "body_speed_m_s": 0.4895957821039007,
+            "peak_speed_m_s": 1.5793052683839441,
+            "peak_speed_frame": 205,
+            "arm_extent_rms_m": 0.8982657381824983,
+            "model_root_speed_m_s": 0.14639082551002502,
+            "foot_world_speed_proxy_m_s": 0.6203014924330322,
+            "foot_slide": "NOT_EVALUABLE_NO_CONTACT_TRUTH",
+            "full_native": "NOT_EVALUABLE_22_OF24",
+            "metric_frame": "COMMON22_ROOT_RELATIVE_FK_30HZ_EXCEPT_EXPLICIT_MODEL_ROOT_AND_WORLD_FOOT_PROXY",
+            "gap_fk_rmse_m": 0.13672133963691913,
+            "gap_D1_error": 0.4611133279639521,
+            "gap_D2_error": 10.378529692712245
+          }
+        ],
+        "FrozenMatched": [
+          {
+            "source_angle_rad": 0.061668825628549244,
+            "protected_source_angle_rad": 1.7212898720012737e-08,
+            "shoulder_wrist_relationship_rmse_m": 0.10448522155083902,
+            "relative_source_acceleration_error_m_s2": 5.646636184989585,
+            "relative_source_jerk_error_m_s3": 247.0020193053366,
+            "largest_body_speed_peak_shift_frames": 19,
+            "local_fk_rmse_m": 0.07030525307202018,
+            "jerk_mean": 123.2646974317194,
+            "jerk_p95": 366.1785927718026,
+            "jerk_peak": 885.1792205645996,
+            "jerk_area": 1039.532281674167,
+            "boundary_jerk_peak": 48.42586707299172,
+            "selected_boundary_jerk_peak": 48.42586707299172,
+            "transition_region_jerk_mean": 186.7041561394174,
+            "internal_jerk_mean": 124.41402166866335,
+            "body_speed_m_s": 0.5024588291737961,
+            "peak_speed_m_s": 1.652502006304014,
+            "peak_speed_frame": 147,
+            "arm_extent_rms_m": 0.9123397851495475,
+            "model_root_speed_m_s": 0.2189798355102539,
+            "foot_world_speed_proxy_m_s": 0.6687529592822151,
+            "foot_slide": "NOT_EVALUABLE_NO_CONTACT_TRUTH",
+            "full_native": "NOT_EVALUABLE_22_OF24",
+            "metric_frame": "COMMON22_ROOT_RELATIVE_FK_30HZ_EXCEPT_EXPLICIT_MODEL_ROOT_AND_WORLD_FOOT_PROXY",
+            "gap_fk_rmse_m": 0.1623630271462931,
+            "gap_D1_error": 0.6525621313922996,
+            "gap_D2_error": 12.72687161222501
+          },
+          {
+            "source_angle_rad": 0.06183750522506101,
+            "protected_source_angle_rad": 1.7212898720012737e-08,
+            "shoulder_wrist_relationship_rmse_m": 0.10432742906119291,
+            "relative_source_acceleration_error_m_s2": 5.630891343918998,
+            "relative_source_jerk_error_m_s3": 247.55695049044425,
+            "largest_body_speed_peak_shift_frames": 19,
+            "local_fk_rmse_m": 0.06978559385075613,
+            "jerk_mean": 122.56169724028246,
+            "jerk_p95": 357.9575553839934,
+            "jerk_peak": 925.5202670327561,
+            "jerk_area": 1033.603646726382,
+            "boundary_jerk_peak": 22.62712697571111,
+            "selected_boundary_jerk_peak": 22.62712697571111,
+            "transition_region_jerk_mean": 182.7149973734227,
+            "internal_jerk_mean": 123.80521774047513,
+            "body_speed_m_s": 0.49455141781396383,
+            "peak_speed_m_s": 1.6600845733591134,
+            "peak_speed_frame": 147,
+            "arm_extent_rms_m": 0.9096779442003188,
+            "model_root_speed_m_s": 0.20803572237491608,
+            "foot_world_speed_proxy_m_s": 0.6630389035113308,
+            "foot_slide": "NOT_EVALUABLE_NO_CONTACT_TRUTH",
+            "full_native": "NOT_EVALUABLE_22_OF24",
+            "metric_frame": "COMMON22_ROOT_RELATIVE_FK_30HZ_EXCEPT_EXPLICIT_MODEL_ROOT_AND_WORLD_FOOT_PROXY",
+            "gap_fk_rmse_m": 0.16116292558115838,
+            "gap_D1_error": 0.6330975762554577,
+            "gap_D2_error": 12.691384542701032
+          }
+        ],
+        "Trained": [
+          {
+            "source_angle_rad": 0.05815687670408938,
+            "protected_source_angle_rad": 1.7212898720012737e-08,
+            "shoulder_wrist_relationship_rmse_m": 0.08432074341207604,
+            "relative_source_acceleration_error_m_s2": 5.223054992716931,
+            "relative_source_jerk_error_m_s3": 243.5316263858742,
+            "largest_body_speed_peak_shift_frames": 77,
+            "local_fk_rmse_m": 0.049388400810900276,
+            "jerk_mean": 118.51629004236636,
+            "jerk_p95": 353.40206501237145,
+            "jerk_peak": 618.4597379071098,
+            "jerk_area": 999.4873793572897,
+            "boundary_jerk_peak": 23.971408590416992,
+            "selected_boundary_jerk_peak": 23.971408590416992,
+            "transition_region_jerk_mean": 158.78411356989133,
+            "internal_jerk_mean": 119.70279681415789,
+            "body_speed_m_s": 0.4865121832799234,
+            "peak_speed_m_s": 1.5793052683839441,
+            "peak_speed_frame": 205,
+            "arm_extent_rms_m": 0.8919895165706827,
+            "model_root_speed_m_s": 0.18825878202915192,
+            "foot_world_speed_proxy_m_s": 0.6509828937205537,
+            "foot_slide": "NOT_EVALUABLE_NO_CONTACT_TRUTH",
+            "full_native": "NOT_EVALUABLE_22_OF24",
+            "metric_frame": "COMMON22_ROOT_RELATIVE_FK_30HZ_EXCEPT_EXPLICIT_MODEL_ROOT_AND_WORLD_FOOT_PROXY",
+            "gap_fk_rmse_m": 0.11405762601206032,
+            "gap_D1_error": 0.5121741703170358,
+            "gap_D2_error": 11.772168090488742
+          },
+          {
+            "source_angle_rad": 0.05819115972468853,
+            "protected_source_angle_rad": 1.7212898720012737e-08,
+            "shoulder_wrist_relationship_rmse_m": 0.08430629593221113,
+            "relative_source_acceleration_error_m_s2": 5.22574342702515,
+            "relative_source_jerk_error_m_s3": 243.94969258973487,
+            "largest_body_speed_peak_shift_frames": 77,
+            "local_fk_rmse_m": 0.049358450414409914,
+            "jerk_mean": 118.3456691457267,
+            "jerk_p95": 346.2135928627988,
+            "jerk_peak": 619.3365614908794,
+            "jerk_area": 998.0484764622953,
+            "boundary_jerk_peak": 22.895093879428128,
+            "selected_boundary_jerk_peak": 22.895093879428128,
+            "transition_region_jerk_mean": 157.7906874377217,
+            "internal_jerk_mean": 119.56680755919442,
+            "body_speed_m_s": 0.4866711014671592,
+            "peak_speed_m_s": 1.5793052683839441,
+            "peak_speed_frame": 205,
+            "arm_extent_rms_m": 0.8918574201362738,
+            "model_root_speed_m_s": 0.17853069305419922,
+            "foot_world_speed_proxy_m_s": 0.647232510928873,
+            "foot_slide": "NOT_EVALUABLE_NO_CONTACT_TRUTH",
+            "full_native": "NOT_EVALUABLE_22_OF24",
+            "metric_frame": "COMMON22_ROOT_RELATIVE_FK_30HZ_EXCEPT_EXPLICIT_MODEL_ROOT_AND_WORLD_FOOT_PROXY",
+            "gap_fk_rmse_m": 0.11398845853415612,
+            "gap_D1_error": 0.5120286175566111,
+            "gap_D2_error": 11.778227513685154
+          }
+        ]
+      },
+      "noise": {
+        "FrozenMatched": {
+          "seeds": [
+            35041,
+            35042
+          ],
+          "draws": 50,
+          "row_sha256": [
+            "dcf64e34e2eb394a636605b1f504c0d34bab19cc4584bd70bbd8e6db02abbd1e",
+            "0a52f0e802cd62fbaffa077f2a04cc3526155884f156ea928f4e235dce60110e"
+          ]
+        },
+        "Trained": {
+          "seeds": [
+            35041,
+            35042
+          ],
+          "draws": 50,
+          "row_sha256": [
+            "dcf64e34e2eb394a636605b1f504c0d34bab19cc4584bd70bbd8e6db02abbd1e",
+            "0a52f0e802cd62fbaffa077f2a04cc3526155884f156ea928f4e235dce60110e"
+          ]
+        }
+      },
+      "reference_is_target": false,
+      "Root_truth": "UNKNOWN",
+      "contact_truth": "UNKNOWN",
+      "binding": {
+        "window_start": 203,
+        "boundary_local": 128,
+        "boundary_global": 331,
+        "events": [
+          {
+            "unit_uid": "unit_f779bd3c8f801d0cf4ae7cd5",
+            "source_uid": "female_FeiTian",
+            "source_sha256": "120e0157ccdd60d128d2973ac0682883ee178ba43ce8479100e80f56c64f37a4",
+            "reference": {
+              "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/event_plan_01/prepare/catalog/female_FeiTian.npy",
+              "sha256": "50436001fab4f0aa45610b0723cebd7ee93592f3039adc133c270902b3c9fab4"
+            },
+            "source_interval": [
+              4108,
+              4411
+            ],
+            "duration_frames": 303,
+            "atomic_event_uids": [
+              "evt_9a38d399da209095cb0ffa1d",
+              "evt_426c91d3368463ca32a497ec",
+              "evt_3767e598b8a6f502cd65307a"
+            ],
+            "phase_crossings": 0,
+            "mean_upper_speed": 0.6400121325057679,
+            "amplitude": 0.5450592407721695,
+            "boundary_speed": 0.18705254891084933,
+            "completeness": "KINEMATIC_PROPOSAL_NOT_SEMANTIC_TRUTH",
+            "human_reviewed": false,
+            "world_Root": "UNKNOWN",
+            "contact": "UNKNOWN",
+            "support_component": [
+              1798,
+              8158
+            ],
+            "family_uid": "family_8fabf9b0a3a15dc6b194571b",
+            "family_scope": "UNCALIBRATED_GEOMETRIC_SCREEN_NOT_CULTURAL_LABEL",
+            "activity_percentile": 0.541687979539642,
+            "music_interval": [
+              0,
+              331
+            ],
+            "time_warp": [
+              [
+                4108,
+                0.0
+              ],
+              [
+                4209,
+                110.36423841059603
+              ],
+              [
+                4239,
+                148.0
+              ],
+              [
+                4317,
+                229.0
+              ],
+              [
+                4341,
+                250.0
+              ],
+              [
+                4410,
+                330.0
+              ]
+            ],
+            "time_contract": "ACTUAL_FRAME_CENTERS_WITH_HALF_OPEN_SUPPORT",
+            "phase_anchors": [
+              4209,
+              4239,
+              4317,
+              4341
+            ],
+            "scores": {
+              "activity_mismatch": 0.007960592455218799,
+              "time_cost": 0.11364581962779423,
+              "content_score": null,
+              "timing_score": null,
+              "sdmr": null
+            },
+            "candidate_uid": "1f9ef9d687324b2cb728e3c7",
+            "history_evidence": {
+              "overlap_fraction": 0.0,
+              "new_source_frames": 303,
+              "backtrack": false,
+              "theme_return_evidence": false,
+              "theme_discount": 1.0
+            },
+            "local_interval": [
+              0,
+              128
+            ]
+          },
+          {
+            "unit_uid": "unit_e8e519be4ed8096d3837102c",
+            "source_uid": "male_pipa_1",
+            "source_sha256": "7b58c904c3b4c7f29c3fdf82ac0e0a948e4f436cf57c5e7589e424168cfb3dfd",
+            "reference": {
+              "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/event_plan_01/prepare/catalog/male_pipa_1.npy",
+              "sha256": "59f14fedc9b7c89e269a7cd5f2cf23807080d9f6f980127c4b19d9487a413788"
+            },
+            "source_interval": [
+              1219,
+              1530
+            ],
+            "duration_frames": 311,
+            "atomic_event_uids": [
+              "evt_09af490fbb48f865cb858bf9",
+              "evt_fd3f4c6294ec83ccb9106232",
+              "evt_ceeb6382b347211a35616f4c",
+              "evt_31d0b6d91c3271f870c96a0d",
+              "evt_0aed178bd8ed9e3f9077c9f2"
+            ],
+            "phase_crossings": 0,
+            "mean_upper_speed": 0.8425079050337578,
+            "amplitude": 0.6603384624027786,
+            "boundary_speed": 0.2738888777513311,
+            "completeness": "KINEMATIC_PROPOSAL_NOT_SEMANTIC_TRUTH",
+            "human_reviewed": false,
+            "world_Root": "UNKNOWN",
+            "contact": "UNKNOWN",
+            "support_component": [
+              0,
+              1868
+            ],
+            "family_uid": "family_bee9021258767cc3f00e5aa2",
+            "family_scope": "UNCALIBRATED_GEOMETRIC_SCREEN_NOT_CULTURAL_LABEL",
+            "activity_percentile": 0.6634271099744246,
+            "music_interval": [
+              331,
+              659
+            ],
+            "time_warp": [
+              [
+                1219,
+                331.0
+              ],
+              [
+                1278,
+                393.0
+              ],
+              [
+                1341,
+                454.0
+              ],
+              [
+                1362,
+                474.0
+              ],
+              [
+                1473,
+                597.0
+              ],
+              [
+                1529,
+                658.0
+              ]
+            ],
+            "time_contract": "ACTUAL_FRAME_CENTERS_WITH_HALF_OPEN_SUPPORT",
+            "phase_anchors": [
+              1278,
+              1341,
+              1362,
+              1473
+            ],
+            "scores": {
+              "activity_mismatch": 0.030219929368328537,
+              "time_cost": 0.0032550780437044973,
+              "content_score": null,
+              "timing_score": null,
+              "sdmr": null
+            },
+            "candidate_uid": "ead7d2ab3a82c4ad1eaa0723",
+            "history_evidence": {
+              "overlap_fraction": 0.0,
+              "new_source_frames": 311,
+              "backtrack": false,
+              "theme_return_evidence": false,
+              "theme_discount": 1.0
+            },
+            "local_interval": [
+              128,
+              256
+            ]
+          }
+        ],
+        "source_uids": [
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "female_FeiTian",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1",
+          "male_pipa_1"
+        ],
+        "source_positions": [
+          4291.962962962963,
+          4292.925925925926,
+          4293.888888888889,
+          4294.851851851852,
+          4295.814814814815,
+          4296.777777777777,
+          4297.740740740741,
+          4298.7037037037035,
+          4299.666666666667,
+          4300.62962962963,
+          4301.592592592592,
+          4302.555555555556,
+          4303.518518518518,
+          4304.481481481482,
+          4305.444444444444,
+          4306.407407407408,
+          4307.37037037037,
+          4308.333333333333,
+          4309.2962962962965,
+          4310.259259259259,
+          4311.222222222223,
+          4312.185185185185,
+          4313.148148148148,
+          4314.111111111111,
+          4315.074074074074,
+          4316.037037037037,
+          4317.0,
+          4318.142857142857,
+          4319.285714285715,
+          4320.428571428572,
+          4321.571428571428,
+          4322.714285714285,
+          4323.857142857143,
+          4325.0,
+          4326.142857142857,
+          4327.285714285715,
+          4328.428571428572,
+          4329.571428571428,
+          4330.714285714285,
+          4331.857142857143,
+          4333.0,
+          4334.142857142857,
+          4335.285714285715,
+          4336.428571428572,
+          4337.571428571428,
+          4338.714285714285,
+          4339.857142857143,
+          4341.0,
+          4341.8625,
+          4342.725,
+          4343.5875,
+          4344.45,
+          4345.3125,
+          4346.175,
+          4347.0375,
+          4347.9,
+          4348.7625,
+          4349.625,
+          4350.4875,
+          4351.35,
+          4352.2125,
+          4353.075,
+          4353.9375,
+          4354.8,
+          4355.6625,
+          4356.525,
+          4357.3875,
+          4358.25,
+          4359.1125,
+          4359.975,
+          4360.8375,
+          4361.7,
+          4362.5625,
+          4363.425,
+          4364.2875,
+          4365.15,
+          4366.0125,
+          4366.875,
+          4367.7375,
+          4368.6,
+          4369.4625,
+          4370.325,
+          4371.1875,
+          4372.05,
+          4372.9125,
+          4373.775,
+          4374.6375,
+          4375.5,
+          4376.3625,
+          4377.225,
+          4378.0875,
+          4378.95,
+          4379.8125,
+          4380.675,
+          4381.5375,
+          4382.4,
+          4383.2625,
+          4384.125,
+          4384.9875,
+          4385.85,
+          4386.7125,
+          4387.575,
+          4388.4375,
+          4389.3,
+          4390.1625,
+          4391.025,
+          4391.8875,
+          4392.75,
+          4393.6125,
+          4394.475,
+          4395.3375,
+          4396.2,
+          4397.0625,
+          4397.925,
+          4398.7875,
+          4399.65,
+          4400.5125,
+          4401.375,
+          4402.2375,
+          4403.1,
+          4403.9625,
+          4404.825,
+          4405.6875,
+          4406.55,
+          4407.4125,
+          4408.275,
+          4409.1375,
+          4410.0,
+          1219.0,
+          1219.9516129032259,
+          1220.9032258064517,
+          1221.8548387096773,
+          1222.8064516129032,
+          1223.758064516129,
+          1224.7096774193549,
+          1225.6612903225807,
+          1226.6129032258063,
+          1227.5645161290322,
+          1228.516129032258,
+          1229.467741935484,
+          1230.4193548387098,
+          1231.3709677419354,
+          1232.3225806451612,
+          1233.274193548387,
+          1234.225806451613,
+          1235.1774193548388,
+          1236.1290322580646,
+          1237.0806451612902,
+          1238.032258064516,
+          1238.983870967742,
+          1239.9354838709678,
+          1240.8870967741937,
+          1241.8387096774193,
+          1242.7903225806451,
+          1243.741935483871,
+          1244.6935483870968,
+          1245.6451612903227,
+          1246.5967741935483,
+          1247.5483870967741,
+          1248.5,
+          1249.4516129032259,
+          1250.4032258064517,
+          1251.3548387096773,
+          1252.3064516129032,
+          1253.258064516129,
+          1254.2096774193549,
+          1255.1612903225807,
+          1256.1129032258063,
+          1257.0645161290322,
+          1258.016129032258,
+          1258.967741935484,
+          1259.9193548387098,
+          1260.8709677419356,
+          1261.8225806451612,
+          1262.774193548387,
+          1263.725806451613,
+          1264.6774193548388,
+          1265.6290322580646,
+          1266.5806451612902,
+          1267.532258064516,
+          1268.483870967742,
+          1269.4354838709678,
+          1270.3870967741937,
+          1271.3387096774193,
+          1272.2903225806451,
+          1273.241935483871,
+          1274.1935483870968,
+          1275.1451612903227,
+          1276.0967741935483,
+          1277.0483870967741,
+          1278.0,
+          1279.032786885246,
+          1280.0655737704917,
+          1281.0983606557377,
+          1282.1311475409836,
+          1283.1639344262296,
+          1284.1967213114754,
+          1285.2295081967213,
+          1286.2622950819673,
+          1287.295081967213,
+          1288.327868852459,
+          1289.360655737705,
+          1290.3934426229507,
+          1291.4262295081967,
+          1292.4590163934427,
+          1293.4918032786886,
+          1294.5245901639344,
+          1295.5573770491803,
+          1296.5901639344263,
+          1297.622950819672,
+          1298.655737704918,
+          1299.688524590164,
+          1300.72131147541,
+          1301.7540983606557,
+          1302.7868852459017,
+          1303.8196721311476,
+          1304.8524590163934,
+          1305.8852459016393,
+          1306.9180327868853,
+          1307.950819672131,
+          1308.983606557377,
+          1310.016393442623,
+          1311.049180327869,
+          1312.0819672131147,
+          1313.1147540983607,
+          1314.1475409836066,
+          1315.1803278688524,
+          1316.2131147540983,
+          1317.2459016393443,
+          1318.27868852459,
+          1319.311475409836,
+          1320.344262295082,
+          1321.377049180328,
+          1322.4098360655737,
+          1323.4426229508197,
+          1324.4754098360656,
+          1325.5081967213114,
+          1326.5409836065573,
+          1327.5737704918033,
+          1328.6065573770493,
+          1329.639344262295,
+          1330.672131147541,
+          1331.704918032787,
+          1332.7377049180327,
+          1333.7704918032787,
+          1334.8032786885246,
+          1335.8360655737706,
+          1336.8688524590164,
+          1337.9016393442623,
+          1338.9344262295083,
+          1339.967213114754,
+          1341.0,
+          1342.05,
+          1343.1,
+          1344.15,
+          1345.2
+        ],
+        "world_Root": "UNKNOWN",
+        "contact": "UNKNOWN",
+        "right_context": "ACTUAL_SELECTED_NEIGHBOR_BODY_ONLY"
+      },
+      "semantic_phase": "UNKNOWN_NOT_TRAINED"
+    }
+  ],
+  "optimizer_steps": 0,
+  "training_sha256": "96ee316ec7c316ad446b233154a360fdc159813a0efda0dc5bd2f76620800925",
+  "whole_song_generations": 0,
+  "operational_qualified": false,
+  "native24": "NOT_EVALUABLE_22_OF24"
+}
