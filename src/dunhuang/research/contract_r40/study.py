@@ -92,7 +92,7 @@ def train(cfg,out,arm,replay=None):
             else:
                 proposal=rt.d.model(xt,m,None,ts,cond_drop_prob=0);pred=project(rt,proposal,a,budget)
                 pose=(proposal[:,lo:hi,7:]-y[:,lo:hi,7:]).square().mean();root=(pred[:,lo:hi,4:7]-y[:,lo:hi,4:7]).square().mean()
-                p=fk22(rt.n.unnormalize(pred.clone()),rt.s)[:,lo-3:hi+3];q=fk22(rt.n.unnormalize(y.clone()),rt.s)[:,lo-3:hi+3];geometry=(p-q).square().mean();dyn,_,_=body_dynamics(p,q,torch.ones_like(p[...,0],dtype=torch.bool),scales)
+                p=fk22(rt.n.unnormalize(pred.clone()),rt.s)[:,lo-3:hi+3];q=fk22(rt.n.unnormalize(y.clone()),rt.s)[:,lo-3:hi+3];geometry=(p-q).square().mean();old_scales=torch.tensor(read(Path(cfg['r38'])/'training/calibration.json')['scales'],device='cuda');dyn,_,_=body_dynamics(p,q,torch.ones_like(p[...,0],dtype=torch.bool),old_scales)
                 value=pose+.2*geometry+.1*dyn+.1*root;parts=dict(pose=pose,geometry=geometry,dynamic=dyn,root=root)
             return value,{k:float(v.detach()) for k,v in parts.items()},t
         finally:rt.c.change.inject=old;rt.c.clear_all()
