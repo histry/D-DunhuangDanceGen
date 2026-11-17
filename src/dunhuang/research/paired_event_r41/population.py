@@ -28,13 +28,14 @@ class Population:
             r=self.rows[i];z=self.unit(i);a,d=r['core_slice'][0],r['core_slice'][0]
             length=r['frames']
             if origins is not None:a,d=[int(t)+1 for t in origins[b]];length=90
-            other=self.unit(donors[i]) if control=='music_swap' else z
+            other=self.unit(donors[i]) if control=='music_swap' else z;motion=self.unit(donors[i]) if control=='motion_swap' else z
             if max(a,d)+length>len(z['music']) or a+length>len(other['music']):raise ValueError('No padding or circular crop permitted')
-            M[b,:length]=other['music'][a:a+length];MM[b,:length]=other['music_mask'][a:a+length];D[b,:length]=z['motion'][d:d+length];DM[b,:length]=z['motion_mask'][d:d+length]
+            M[b,:length]=other['music'][a:a+length];MM[b,:length]=other['music_mask'][a:a+length];D[b,:length]=motion['motion'][d:d+length];DM[b,:length]=motion['motion_mask'][d:d+length]
             if origins is not None:
                 common=z['music_mask'][1:121].all(0)
                 if donors is not None:common &= self.unit(donors[i])['music_mask'][1:121].all(0)
                 dm=z['motion_mask'][1:121].all(0)
+                if donors is not None:dm &= self.unit(donors[i])['motion_mask'][1:121].all(0)
                 if not common.any() or not dm[:-2].any():raise ValueError('No shared real observation support')
                 M[b,:,~common]=0;D[b,:,~dm]=0;MM[b]=common;DM[b]=dm
             if control in ('music_zero','both_zero'):M[b]=0

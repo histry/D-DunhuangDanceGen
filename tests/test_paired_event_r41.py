@@ -85,3 +85,20 @@ def test_full_reconstruction_support_is_not_replaced_by_crops():
     cfg=dict(seed=41041,loss_weights=dict(global_=1.,clock=.1,local=.1,reconstruction=.1,equivariance=.05));cfg['loss_weights']['global']=cfg['loss_weights'].pop('global_');value,parts,meta=objective(EventContent(),Pop(),[0,1,2,3],cfg,0)
     assert meta['full_reconstruction_frames']==600 and meta['reconstruction_observed_values']==600*198
     assert torch.isfinite(value)
+
+def test_clock_metrics_separate_index_prior_from_content_recovery():
+    from dunhuang.research.paired_event_r41.evaluate import metrics
+    offsets=[-15,-8,0,8,15];rows=[dict(source_group='a'),dict(source_group='b')];correct=np.broadcast_to(np.eye(5),(2,5,5)).copy();r=metrics(correct,rows,offsets)
+    assert r['offset_accuracy']==1 and r['offset_mae_frames']==0 and r['equivariance_error_frames']==0
+    prior=np.zeros_like(correct);prior[:,:,2]=1;r=metrics(prior,rows,offsets)
+    assert r['offset_accuracy']==pytest.approx(.2) and r['equivariance_error_frames']>0
+    r=metrics(np.ones_like(correct),rows,offsets);assert r['offset_accuracy']==pytest.approx(.2)
+
+def test_failed_learnability_gate_cannot_construct_main_model_or_optimizer(tmp_path,monkeypatch):
+    import json,sys
+    from dunhuang.research.paired_event_r41 import train
+    data=tmp_path/'data';data.mkdir();(data/'manifest.json').write_text('{}');checks=tmp_path/'checks';checks.mkdir();(checks/'result.json').write_text(json.dumps(dict(admitted_main=False)));out=tmp_path/'main'
+    monkeypatch.setattr(train,'Population',lambda path:object())
+    def forbidden(*a,**kw):raise AssertionError('A failed gate attempted training')
+    monkeypatch.setattr(train,'initial',forbidden);monkeypatch.setattr(train.torch.optim,'AdamW',forbidden)
+    monkeypatch.setattr(sys,'argv',['train','main','--data',str(data),'--checks',str(checks),'--out',str(out)]);train.main();r=json.loads((out/'result.json').read_text());assert not r['admitted'] and r['optimizer_steps']==0
