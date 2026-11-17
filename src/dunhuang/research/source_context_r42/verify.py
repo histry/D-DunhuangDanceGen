@@ -5,6 +5,7 @@ import numpy as np
 import torch
 from dunhuang.research.complete_r36.core import read,write,sha
 from dunhuang.research.coverage_r34.common import same_arrays,forbid_optimizers,population_data
+from .contracts import exact_arrays
 
 
 def audit(root,out):
@@ -12,7 +13,7 @@ def audit(root,out):
     if out.exists():raise ValueError('Fresh verification')
     forbid_optimizers();checks=[]
     for a,b in [('data_v2/arrays.npz','data_replay/arrays.npz'),('teacher/arrays.npz','teacher_replay/arrays.npz'),('diagnostic/arrays.npz','diagnostic_replay/arrays.npz'),('main_generation/arrays.npz','main_generation_replay/arrays.npz'),('real_generation/arrays.npz','real_generation_replay/arrays.npz'),('aist_generation/arrays.npz','aist_generation_replay/arrays.npz')]:
-        same_arrays(root/a,root/b);checks.append(dict(first=a,replay=b,arrays=len(np.load(root/a).files)))
+        exact_arrays(root/a,root/b);checks.append(dict(first=a,replay=b,arrays=len(np.load(root/a).files)))
     updates=[]
     for name in ('main','real','aist'):
         meta=read(root/name/'training.json');assert meta['optimizer_steps']==240 and meta['initial_digest']!=meta['final_digest']

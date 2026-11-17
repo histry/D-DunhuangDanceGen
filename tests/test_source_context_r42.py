@@ -24,3 +24,10 @@ def test_context_excludes_unknown_contact_root_and_hidden_frame_observations():
     x=torch.zeros(2,256,139);x[:,104:152]=float('nan');cp=context(x,[104,152]);cp.valid[:,:,:7]=False;cp.values[:,:,:7]=float('nan');cp.validate();encoded=cp.encoded_input();assert torch.isfinite(encoded).all();assert not ((cp.frame_index>=104)&(cp.frame_index<152)).any()
     cp.frame_index[0,0]=110
     with pytest.raises(ValueError):cp.validate()
+
+
+def test_replay_compares_real_teacher_identities_and_nan_payloads(tmp_path):
+    from dunhuang.research.source_context_r42.contracts import exact_arrays
+    a=tmp_path/'a.npz';b=tmp_path/'b.npz';np.savez(a,keys=['source_a','source_b'],v=[1.,np.nan]);np.savez(b,keys=['source_a','source_b'],v=[1.,np.nan]);exact_arrays(a,b)
+    np.savez(b,keys=['source_b','source_a'],v=[1.,np.nan])
+    with pytest.raises(ValueError):exact_arrays(a,b)

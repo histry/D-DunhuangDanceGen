@@ -3,10 +3,11 @@ import argparse,subprocess
 from pathlib import Path
 import numpy as np
 import torch
-from pytorch3d.transforms import axis_angle_to_matrix,rotation_6d_to_matrix,matrix_to_axis_angle,matrix_to_axis_angle,matrix_to_axis_angle,matrix_to_axis_angle,matrix_to_axis_angle
+from pytorch3d.transforms import axis_angle_to_matrix,rotation_6d_to_matrix,matrix_to_axis_angle,matrix_to_axis_angle,matrix_to_axis_angle,matrix_to_axis_angle,matrix_to_axis_angle,matrix_to_axis_angle,matrix_to_axis_angle,matrix_to_axis_angle,matrix_to_axis_angle,matrix_to_axis_angle
 from dunhuang.research.complete_r36.core import read,write,sha
 from dunhuang.research.transition_r37.geometry import c2_envelope
 from dunhuang.research.paired_event_r41.train import seeded
+from .contracts import exact_arrays
 
 
 def fk(R,J,parents):
@@ -55,8 +56,7 @@ def run(data,out,replay=None):
     teacher=torch.tensor(raw,device=device);P=fk(rotation_6d_to_matrix(teacher[:,:,7:].reshape(len(A),256,22,6)),J,parents);value,parts=temporal_loss(P-Q,teacher[:,:,4:7]-T[:,:,4:7],mask,bs,rs);old,oldparts=temporal_loss(fk(G,J,parents)-Q,A[:,:,4:7]-T[:,:,4:7],mask,bs,rs);a=A.cpu().numpy();theta=torch.linalg.norm(matrix_to_axis_angle(G.transpose(-1,-2)@rotation_6d_to_matrix(teacher[:,:,7:].reshape(len(A),256,22,6))),dim=-1);assert (theta<=.6*w[None,:,None]+3e-6).all();assert np.array_equal(raw[:,w.cpu().numpy()==0],a[:,w.cpu().numpy()==0]);assert (torch.linalg.norm(teacher[:,:,4:7]-A[:,:,4:7],dim=-1)<=.5*w+3e-6).all()
     np.savez_compressed(out/'arrays.npz',teacher139=raw,keys=keys,body_scales=bs.cpu().numpy(),root_scales=rs.cpu().numpy());result=dict(code_commit=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),training_keys=keys,recording_uids=sorted({r['recording_uid'] for r in rows}),train_windows=len(rows),data_sha256=sha(data/'arrays.npz'),network_optimizer_steps=0,motion_optimizer_steps=updates,final_loss=float(value),geometry_loss=float(old),final_parts={k:float(v) for k,v in parts.items()},geometry_parts={k:float(v) for k,v in oldparts.items()},history=history,root_D0_mask=mask.cpu().tolist(),constraints_verified=True,scope='TRAIN_ONLY_TARGET_INFORMED_FEASIBLE_TEACHER_NOT_GENERATOR_NOT_GLOBAL_OPTIMUM',whole_song_generations=0);write(out/'result.json',result)
     if replay:
-        from dunhuang.research.coverage_r34.common import same_arrays
-        same_arrays(out/'arrays.npz',Path(replay)/'arrays.npz');prev=read(Path(replay)/'result.json');assert result['final_parts']==prev['final_parts'] and result['geometry_parts']==prev['geometry_parts']
+        exact_arrays(out/'arrays.npz',Path(replay)/'arrays.npz');prev=read(Path(replay)/'result.json');assert result['final_parts']==prev['final_parts'] and result['geometry_parts']==prev['geometry_parts']
     print('R42_TEACHER',len(rows),float(old),float(value),flush=True)
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('--data',required=True);p.add_argument('--out',required=True);p.add_argument('--replay-from');a=p.parse_args();run(a.data,a.out,a.replay_from)

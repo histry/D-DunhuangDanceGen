@@ -22,3 +22,13 @@ def role_check(rows):
         uid=r['recording_uid'];roles.setdefault(uid,set()).add(r['role'])
     if any(len(v)>1 for v in roles.values()):raise ValueError('Recording role overlap')
     return dict(recordings=len(roles),train_recordings=sum(v=={'train'} for v in roles.values()),held_recordings=sum(v=={'held'} for v in roles.values()))
+
+
+def exact_arrays(first,second):
+    with np.load(first) as a,np.load(second) as b:
+        if set(a.files)!=set(b.files):raise ValueError('Replay keys differ')
+        for key in a.files:
+            x,y=a[key],b[key]
+            if x.dtype!=y.dtype or x.shape!=y.shape:raise ValueError('Replay dtype/shape differs: '+key)
+            equal=np.array_equal(x,y,equal_nan=True) if x.dtype.kind in 'fc' else np.array_equal(x,y)
+            if not equal:raise ValueError('Replay payload differs: '+key)
