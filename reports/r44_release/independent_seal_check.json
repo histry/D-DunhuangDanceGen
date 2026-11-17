@@ -1,0 +1,23 @@
+{
+  "verified_at_utc": "2026-11-18T04:09:55.530405+08:00",
+  "fresh_process": true,
+  "all_payload_hashes_exact": true,
+  "primary_effect_delivered_before_controls": true,
+  "roots": [
+    {
+      "root": "outputs/reperformance_r44_01",
+      "files": 243,
+      "bytes": 655522546,
+      "manifest_sha256": "4b3fccf9198f85ebdccca64f5df8c73851362fbd36fe4fa43b5a8b69c2895bfc"
+    },
+    {
+      "root": "outputs/retrieval_audit_r44_01",
+      "files": 34,
+      "bytes": 897046338,
+      "manifest_sha256": "dcaed6d5797ac23ecf0fc57246eba9f4450e6c62239630b9edb4b183a7f09070"
+    }
+  ],
+  "total_files": 277,
+  "total_bytes": 1552568884,
+  "optimizer_calls": 0
+}

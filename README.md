@@ -318,3 +318,11 @@ R37规划及默认EDGE路径保持冻结。R38用真实连续录制训练Context
 - 本机观看：`outputs/stabilize_r39_01/viewer_final02/index.html`（不在Git托管私有媒体）。
 - [实验报告](reports/R39连续Root写回与端点约束RTS实验报告.md)、[公开统计](reports/r39_release/r39_summary.json)。
 - 隔离实现：`src/dunhuang/research/stabilize_r39`；562 passed、8 skipped；没有新增神经训练，默认EDGE和R37计划不变。
+
+## R44：来源保持的合法音乐时钟与检索校准审计（研究）
+
+先回传并验收22案例主候选，再完成固定对照。C²时钟保持Core姿态路径、Bridge与保护域；4/4 ChangE Train通过活动度/D3筛查，但音乐代理收益区间跨零，留出琵琶D3仍有风险。检索覆盖48个Train音乐组，Train-only拒配校准未取得可靠区分能力；正式选路与整曲资格保持关闭，本轮新增训练和神经采样均为0。
+
+- 本机视频：`outputs/reperformance_r44_01/videos/index.html`；逐帧条件对照：`outputs/reperformance_r44_01/viewer_controls/index.html`。
+- [实验报告](reports/r44_release/report.md)、[公开统计](reports/r44_release/summary.json)、[独立封存核验](reports/r44_release/independent_seal_check.json)。
+- 隔离实现：`src/dunhuang/research/reperformance_r44`、`src/dunhuang/research/retrieval_audit_r44`；606 passed、10 skipped。默认Planner/EDGE/Native继续使用原路径。
