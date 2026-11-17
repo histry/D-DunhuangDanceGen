@@ -31,10 +31,13 @@ def inputs(pop,rows,ids,zero=False):
     return [torch.tensor(np.stack(v),device='cuda') for v in (M,D,DM,MV)]
 
 
-def build(benchmark,out,replay=None):
+def build(benchmark,out,replay=None,trained=None):
     out=Path(out)
     if out.exists():raise ValueError('Fresh frozen features')
     out.mkdir(parents=True);meta=read(Path(benchmark)/'manifest.json');cfg=meta['config'];rows=meta['rows'];pop=Population(cfg['data']);forbid_optimizers();model=load_model(cfg);before=digest(model)
+    if trained:
+        training=read(Path(trained)/'result.json');assert training['optimizer_steps']==240 and training['benchmark_sha256']==sha(Path(benchmark)/'manifest.json') and training['initial_checkpoint_sha256']==sha(cfg['checkpoint']) and training['model_sha256']==sha(Path(trained)/'model.pt')
+        model.load_state_dict(torch.load(Path(trained)/'model.pt',map_location='cuda',weights_only=True)['state']);before=digest(model);cfg=dict(cfg,checkpoint=str(Path(trained)/'model.pt'))
     service=R41EventScorer(model,cfg,meta['normalizer']);used={t['query'] for t in meta['tasks']}|{i for t in meta['tasks'] for i in t['candidates']};donors={}
     bylength={}
     for i,r in enumerate(rows):bylength.setdefault((r['role'],r['frames']),[]).append(i)
@@ -60,4 +63,4 @@ def build(benchmark,out,replay=None):
 
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('--benchmark',required=True);p.add_argument('--out',required=True);p.add_argument('--replay-from');a=p.parse_args();build(a.benchmark,a.out,a.replay_from)
+    p=argparse.ArgumentParser();p.add_argument('--benchmark',required=True);p.add_argument('--out',required=True);p.add_argument('--replay-from');p.add_argument('--trained');a=p.parse_args();build(a.benchmark,a.out,a.replay_from,a.trained)
