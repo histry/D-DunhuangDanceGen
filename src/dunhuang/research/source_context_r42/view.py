@@ -4,6 +4,7 @@ from pathlib import Path
 import numpy as np
 from dunhuang.research.complete_r36.core import read,write,sha,relative_fk
 from dunhuang.research.transition_r37.evaluate import decode,world_fk
+from .post import frozen_rts
 
 
 def build(out,extra=None):
@@ -26,7 +27,10 @@ def build(out,extra=None):
         for row in e['records']:
             key=row['key'];panels=[]
             R=a[key+'_reference_R'];panels.append(dict(name='真实来源／对齐参考',tracks=[track(relative_fk(R,J,parents))]*2,reference=True))
-            for name in row['methods']:panels.append(dict(name=name,tracks=[track(x) for x in a[key+'_'+name+'_22']]))
+            for name in row['methods']:
+                panels.append(dict(name=name,tracks=[track(x) for x in a[key+'_'+name+'_22']]))
+                if name=='Frozen':
+                    values=frozen_rts(a[key+'_Frozen_139'],a[key+'_Geometry_139']);panels.append(dict(name='FrozenRTS',tracks=[track(world_fk(*decode(x),J,parents)) for x in values]))
             audio=row.get('audio');target=None
             if audio:
                 src=root/audio

@@ -4,6 +4,8 @@ from pathlib import Path
 import numpy as np
 from PIL import Image,ImageDraw,ImageFont
 from dunhuang.research.complete_r36.core import read,write,sha,relative_fk
+from dunhuang.research.transition_r37.evaluate import decode,world_fk
+from .post import frozen_rts
 
 
 def run(generation,out):
@@ -14,7 +16,7 @@ def run(generation,out):
     chosen=[min((r for r in meta['records'] if r['recording_uid']==uid and r['target_music'] is None),key=lambda r:r['source_interval'][0]) for uid in uids]
     chosen += [r for r in meta['records'] if r['recording_uid']=='female_FeiTian' and r['target_music'] is not None]
     for row in chosen:
-        key=row['key'];arrays=[relative_fk(z[key+'_reference_R'],J,parents),z[key+'_Frozen_22'][0],z[key+'_'+label+'RTS_22'][0]];arrays=[a-a[:,:1] for a in arrays];file=out/(key+'.mp4');cmd=['ffmpeg','-v','error','-f','rawvideo','-pix_fmt','rgb24','-s','1200x500','-r','30','-i','-']
+        key=row['key'];frozen=frozen_rts(z[key+'_Frozen_139'],z[key+'_Geometry_139']);arrays=[relative_fk(z[key+'_reference_R'],J,parents),world_fk(*decode(frozen[0]),J,parents),z[key+'_'+label+'RTS_22'][0]];arrays=[a-a[:,:1] for a in arrays];file=out/(key+'.mp4');cmd=['ffmpeg','-v','error','-f','rawvideo','-pix_fmt','rgb24','-s','1200x500','-r','30','-i','-']
         if row.get('audio'):cmd+=['-i',str(generation/row['audio'])]
         cmd+=['-c:v','libx264','-preset','veryfast','-crf','22','-threads','2']
         if row.get('audio'):cmd+=['-c:a','aac','-shortest']
@@ -22,7 +24,7 @@ def run(generation,out):
         try:
             for t in range(256):
                 image=Image.new('RGB',(1200,500),'#f4f7ef');d=ImageDraw.Draw(image);d.text((12,12),'R42 ACTUAL FULL SAMPLING / '+key,font=font,fill='#223d36');d.text((12,35),'FRAME '+str(t)+' / 255   '+('HIDDEN GAP' if 104<=t<152 else 'PROTECTED VISIBLE BODY'),font=font,fill='#a16c2b')
-                for j,(title,a) in enumerate(zip(['REAL TARGET (HIDDEN NOT CONDITION)','FROZEN R39 (RAW)','FEASIBLE CONTEXT + FIXED RTS'],arrays)):
+                for j,(title,a) in enumerate(zip(['REAL TARGET (HIDDEN NOT CONDITION)','FROZEN R39 + SAME FIXED RTS','FEASIBLE CONTEXT + FIXED RTS'],arrays)):
                     d.text((j*400+12,65),title,font=font,fill='#223d36');p=a[t];pts=[(round(j*400+200+(q[0]*.86-q[2]*.5)*155),round(260-q[1]*155)) for q in p]
                     for k in range(1,22):d.line([pts[int(parents[k])],pts[k]],fill='#25796e' if k%2 else '#b67c37',width=3)
                     for x,y in pts:d.ellipse((x-2,y-2,x+2,y+2),fill='#385448')
