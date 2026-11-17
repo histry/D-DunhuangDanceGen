@@ -26,7 +26,6 @@ def run(root,out):
     for file in ('index.html','viewer.js','style.css'):
         text=(parent/file).read_text(encoding='utf8').replace('R39','R40')
         if file=='index.html':text=text.replace('Root 连续写回与端点约束减抖','真实目标与执行合同训练').replace('value="Raw">定位 Raw','value="Frozen">定位 Frozen').replace('value="RootContinuous">定位 Root连续','value="Matched">定位 Matched')
-        if file=='viewer.js':text=text.replace("current.panels[0].reference_track", "current.panels[0].reference_track")
         (out/file).write_text(text,encoding='utf8')
     write(out/'protocol.json',dict(schema='r40_four_panel_v1',cases=len(new),fps=30,whole_song_generated=False,files=[dict(name=str(p.relative_to(out)),bytes=p.stat().st_size,sha256=sha(p)) for p in sorted(out.rglob('*')) if p.is_file()]));print('R40_VIEWER',len(new),flush=True)
 if __name__=='__main__':

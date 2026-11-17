@@ -5,7 +5,7 @@ import argparse,subprocess
 from pathlib import Path
 import numpy as np
 import torch
-from dunhuang.research.complete_r36.core import read,write,sha,relative_fk
+from dunhuang.research.complete_r36.core import read,write,sha
 from dunhuang.research.bridge_r38.study import runtime,setup_pair
 from dunhuang.research.bridge_r38.sampler import sample_bridge,condition,project
 from dunhuang.research.bridge_r38 import sampler as parent_sampler
@@ -76,9 +76,9 @@ def train(cfg,out,arm,replay=None):
         np.savez_compressed(out/f'cache_{step}.npz',times=times,cases=cases,**values);ledger.append(dict(step=step,weights=digest(rt.c.context_branch),samples=meta));return times
     order=np.random.default_rng(cfg['seed']);schedule=[list(map(int,order.choice(cases,4,replace=False))) for _ in range(cfg['steps'])];write(out/'schedule.json',schedule)
     budget=torch.tensor(parent['budget_rad']*c2_envelope(256,parent['gap']),device='cuda',dtype=torch.float32);weights=np.clip(np.linspace(0,rt.d.guidance_weight*2,50),None,rt.d.guidance_weight)
-    history=[];observations=[];refresh_id=0
+    history=[];observations=[]
     if replay:
-        forbid_optimizers();expected=read(Path(replay)/'training.json');checkpoint_source=Path(replay);opt=None
+        forbid_optimizers();expected=read(Path(replay)/'training.json');opt=None
     else:opt=torch.optim.AdamW(rt.c.context_branch.parameters(),lr=cfg['learning_rate']);checkpoint(rt,out/'initial.pt',cfg,0)
     def loss(step):
         ids=schedule[step];ti=step%5;t=times[ti];torch.manual_seed(cfg['seed']+step);torch.cuda.manual_seed_all(cfg['seed']+step)
