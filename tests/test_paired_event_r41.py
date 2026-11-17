@@ -102,3 +102,10 @@ def test_failed_learnability_gate_cannot_construct_main_model_or_optimizer(tmp_p
     def forbidden(*a,**kw):raise AssertionError('A failed gate attempted training')
     monkeypatch.setattr(train,'initial',forbidden);monkeypatch.setattr(train.torch.optim,'AdamW',forbidden)
     monkeypatch.setattr(sys,'argv',['train','main','--data',str(data),'--checks',str(checks),'--out',str(out)]);train.main();r=json.loads((out/'result.json').read_text());assert not r['admitted'] and r['optimizer_steps']==0
+
+def test_budget_regions_and_chain_diagnostics_use_actual_frame_support():
+    from dunhuang.research.paired_event_r41.budget import summarize
+    raw=np.zeros((1,256,139),np.float32);raw[:,:,7:]=np.tile(np.eye(3)[:2].reshape(6),22);J=np.zeros((22,3));J[:,1]=np.arange(22)*.01;parents=np.array([-1]+[0]*21)
+    r=summarize(raw,raw.copy(),raw.copy(),J,parents)[0]
+    assert r['zero_budget']['frames']==2 and r['ramp']['frames']==22 and r['central']['frames']==24
+    assert all(r[k]['outside_fraction']==0 and r[k]['fk_rmse_m']==0 for k in ('zero_budget','ramp','central'))
