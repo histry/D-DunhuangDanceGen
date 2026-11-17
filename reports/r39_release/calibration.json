@@ -1,0 +1,155 @@
+{
+  "parameters": {
+    "root_budget_m": 0.5,
+    "root_observation_sigma_m": 0.43904346227645874,
+    "body_observation_sigma_rad": 0.3,
+    "root_process_jerk_m_s3": 200.3133544921875,
+    "body_process_jerk_rad_s3": 1903.0977533934172
+  },
+  "unclipped_estimates": {
+    "root_sigma_m": 0.43904346227645874,
+    "body_sigma_rad": 0.6193706952563023,
+    "root_process_jerk_m_s3": 200.3133544921875,
+    "body_process_jerk_rad_s3": 1903.0977533934172
+  },
+  "cases": [
+    0,
+    1,
+    21,
+    23,
+    26,
+    27,
+    32,
+    35,
+    37,
+    38,
+    48,
+    51,
+    76,
+    78,
+    92,
+    95
+  ],
+  "ledger": [
+    {
+      "cases": [
+        0,
+        1,
+        21,
+        23
+      ],
+      "seeds": [
+        39041,
+        39042,
+        39062,
+        39064
+      ],
+      "noise": {
+        "seeds": [
+          39041,
+          39042,
+          39062,
+          39064
+        ],
+        "draws": 50,
+        "row_sha256": [
+          "2dd835cbbd31ccc25115d5da71b5de5422191bfe48d271935c3c6955a5beeb57",
+          "03e36b24698fbf8bf733cfe514602b6ad4e8787a33587e6ca6d813128793b39c",
+          "9daf5025ae28d0e78e89f7a6bfd886eb79e8f71bb8dd05cd5eb51d9a7b274887",
+          "824ae3ca3adc0cdabc2415965062460550d21353817b87bc300481036558baf7"
+        ]
+      }
+    },
+    {
+      "cases": [
+        26,
+        27,
+        32,
+        35
+      ],
+      "seeds": [
+        39067,
+        39068,
+        39073,
+        39076
+      ],
+      "noise": {
+        "seeds": [
+          39067,
+          39068,
+          39073,
+          39076
+        ],
+        "draws": 50,
+        "row_sha256": [
+          "5d7a5613765286a14af8044e57760f9516ddff9805234fef40d384d7ddf53aa8",
+          "1a38f6b80e78d95f57bb2c60542ca850697f40c610eebe114c18078c1c7b4c3e",
+          "d0cdf9183b7363fdb36172ecd984c0a996147954ba717b9884860d96c8c18c3c",
+          "a90648d81ad9af20f4df645a27a23c06abd8cc24c0c7b91a819053ccc49e0079"
+        ]
+      }
+    },
+    {
+      "cases": [
+        37,
+        38,
+        48,
+        51
+      ],
+      "seeds": [
+        39078,
+        39079,
+        39089,
+        39092
+      ],
+      "noise": {
+        "seeds": [
+          39078,
+          39079,
+          39089,
+          39092
+        ],
+        "draws": 50,
+        "row_sha256": [
+          "eadd60669d24fab22711f76fbaf5941649823e2b9a75a63532a53c9407ff1426",
+          "3fb8f1be26c829f1d798fc98e358ae646a496031fc3a79e216d7d51cdb4be926",
+          "afff30ff3091bdbb08da5327ebdb85236f8a81697955d9488f8e5f841b06dc33",
+          "8805f23d42683e21c08269d0312e91c346b378176ebe655c7c134c9d0f80a9ec"
+        ]
+      }
+    },
+    {
+      "cases": [
+        76,
+        78,
+        92,
+        95
+      ],
+      "seeds": [
+        39117,
+        39119,
+        39133,
+        39136
+      ],
+      "noise": {
+        "seeds": [
+          39117,
+          39119,
+          39133,
+          39136
+        ],
+        "draws": 50,
+        "row_sha256": [
+          "2de281d74fd5ae63b69a0e70a74890115689999a25414b69db4cfe880b5760f4",
+          "7552ee7d03c77f7483e9a37ac4e52581a80ae79cc0814335b392cc73ae03e8d6",
+          "d89891c7752c2ce09e3a9fb49c7c0823a53487f407040b59e8d2c1212514d368",
+          "6070fe61b8ca940cd7320fad9b78408fbbf693d95eefade80951f8b3e9b8775a"
+        ]
+      }
+    }
+  ],
+  "training_checkpoint_sha256": "96ee316ec7c316ad446b233154a360fdc159813a0efda0dc5bd2f76620800925",
+  "optimizer_steps": 0,
+  "scope": "R38_REGISTERED_16_TRAIN_RECORDINGS_ONLY; ONE_FIXED_RULE_NO_VAL_SEARCH",
+  "regularization_not_calibrated_probability": true
+}

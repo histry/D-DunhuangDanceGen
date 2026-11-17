@@ -1,0 +1,394 @@
+{
+  "records": [
+    {
+      "case": "paired_4",
+      "arm": "Geometry",
+      "seed": 35041,
+      "cpu_fk_max_error_m": 0.0,
+      "official_fk_max_error_m": 2.980232238769531e-07,
+      "root_peak_acceleration_m_s2": 15.16363130445408
+    },
+    {
+      "case": "paired_4",
+      "arm": "Geometry",
+      "seed": 35042,
+      "cpu_fk_max_error_m": 0.0,
+      "official_fk_max_error_m": 2.980232238769531e-07,
+      "root_peak_acceleration_m_s2": 15.16363130445408
+    },
+    {
+      "case": "paired_4",
+      "arm": "Raw",
+      "seed": 35041,
+      "cpu_fk_max_error_m": 0.0,
+      "official_fk_max_error_m": 2.980232238769531e-07,
+      "root_peak_acceleration_m_s2": 66.28088668505062
+    },
+    {
+      "case": "paired_4",
+      "arm": "Raw",
+      "seed": 35042,
+      "cpu_fk_max_error_m": 0.0,
+      "official_fk_max_error_m": 2.980232238769531e-07,
+      "root_peak_acceleration_m_s2": 66.23411311931014
+    },
+    {
+      "case": "paired_4",
+      "arm": "RootContinuous",
+      "seed": 35041,
+      "cpu_fk_max_error_m": 0.0,
+      "official_fk_max_error_m": 2.980232238769531e-07,
+      "root_peak_acceleration_m_s2": 15.16363130445408
+    },
+    {
+      "case": "paired_4",
+      "arm": "RootContinuous",
+      "seed": 35042,
+      "cpu_fk_max_error_m": 0.0,
+      "official_fk_max_error_m": 2.980232238769531e-07,
+      "root_peak_acceleration_m_s2": 15.16363130445408
+    },
+    {
+      "case": "paired_4",
+      "arm": "ResidualRTS",
+      "seed": 35041,
+      "cpu_fk_max_error_m": 0.0,
+      "official_fk_max_error_m": 2.980232238769531e-07,
+      "root_peak_acceleration_m_s2": 15.16363130445408
+    },
+    {
+      "case": "paired_4",
+      "arm": "ResidualRTS",
+      "seed": 35042,
+      "cpu_fk_max_error_m": 0.0,
+      "official_fk_max_error_m": 2.980232238769531e-07,
+      "root_peak_acceleration_m_s2": 15.16363130445408
+    },
+    {
+      "case": "paired_8",
+      "arm": "Geometry",
+      "seed": 35041,
+      "cpu_fk_max_error_m": 0.0,
+      "official_fk_max_error_m": 3.501772880554199e-07,
+      "root_peak_acceleration_m_s2": 7.6040627638542135
+    },
+    {
+      "case": "paired_8",
+      "arm": "Geometry",
+      "seed": 35042,
+      "cpu_fk_max_error_m": 0.0,
+      "official_fk_max_error_m": 3.501772880554199e-07,
+      "root_peak_acceleration_m_s2": 7.6040627638542135
+    },
+    {
+      "case": "paired_8",
+      "arm": "Raw",
+      "seed": 35041,
+      "cpu_fk_max_error_m": 0.0,
+      "official_fk_max_error_m": 3.098975867033005e-07,
+      "root_peak_acceleration_m_s2": 697.067306757979
+    },
+    {
+      "case": "paired_8",
+      "arm": "Raw",
+      "seed": 35042,
+      "cpu_fk_max_error_m": 0.0,
+      "official_fk_max_error_m": 3.241002559661865e-07,
+      "root_peak_acceleration_m_s2": 696.8649829402804
+    },
+    {
+      "case": "paired_8",
+      "arm": "RootContinuous",
+      "seed": 35041,
+      "cpu_fk_max_error_m": 0.0,
+      "official_fk_max_error_m": 2.868473529815674e-07,
+      "root_peak_acceleration_m_s2": 19.222431265466742
+    },
+    {
+      "case": "paired_8",
+      "arm": "RootContinuous",
+      "seed": 35042,
+      "cpu_fk_max_error_m": 0.0,
+      "official_fk_max_error_m": 2.7567148208618164e-07,
+      "root_peak_acceleration_m_s2": 19.222919880031235
+    },
+    {
+      "case": "paired_8",
+      "arm": "ResidualRTS",
+      "seed": 35041,
+      "cpu_fk_max_error_m": 0.0,
+      "official_fk_max_error_m": 2.935994416475296e-07,
+      "root_peak_acceleration_m_s2": 19.862459959227145
+    },
+    {
+      "case": "paired_8",
+      "arm": "ResidualRTS",
+      "seed": 35042,
+      "cpu_fk_max_error_m": 0.0,
+      "official_fk_max_error_m": 3.650784492492676e-07,
+      "root_peak_acceleration_m_s2": 19.86296001850918
+    },
+    {
+      "case": "paired_12",
+      "arm": "Geometry",
+      "seed": 35041,
+      "cpu_fk_max_error_m": 0.0,
+      "official_fk_max_error_m": 4.209578037261963e-07,
+      "root_peak_acceleration_m_s2": 35.89792342047058
+    },
+    {
+      "case": "paired_12",
+      "arm": "Geometry",
+      "seed": 35042,
+      "cpu_fk_max_error_m": 0.0,
+      "official_fk_max_error_m": 4.209578037261963e-07,
+      "root_peak_acceleration_m_s2": 35.89792342047058
+    },
+    {
+      "case": "paired_12",
+      "arm": "Raw",
+      "seed": 35041,
+      "cpu_fk_max_error_m": 0.0,
+      "official_fk_max_error_m": 4.917383193969727e-07,
+      "root_peak_acceleration_m_s2": 1834.735936907151
+    },
+    {
+      "case": "paired_12",
+      "arm": "Raw",
+      "seed": 35042,
+      "cpu_fk_max_error_m": 0.0,
+      "official_fk_max_error_m": 4.4362968765199184e-07,
+      "root_peak_acceleration_m_s2": 1834.7293390130658
+    },
+    {
+      "case": "paired_12",
+      "arm": "RootContinuous",
+      "seed": 35041,
+      "cpu_fk_max_error_m": 0.0,
+      "official_fk_max_error_m": 3.580935299396515e-07,
+      "root_peak_acceleration_m_s2": 28.199729495183128
+    },
+    {
+      "case": "paired_12",
+      "arm": "RootContinuous",
+      "seed": 35042,
+      "cpu_fk_max_error_m": 0.0,
+      "official_fk_max_error_m": 4.5634806156158447e-07,
+      "root_peak_acceleration_m_s2": 28.17735022483117
+    },
+    {
+      "case": "paired_12",
+      "arm": "ResidualRTS",
+      "seed": 35041,
+      "cpu_fk_max_error_m": 0.0,
+      "official_fk_max_error_m": 3.8743019104003906e-07,
+      "root_peak_acceleration_m_s2": 35.85969311801417
+    },
+    {
+      "case": "paired_12",
+      "arm": "ResidualRTS",
+      "seed": 35042,
+      "cpu_fk_max_error_m": 0.0,
+      "official_fk_max_error_m": 3.6135315895080566e-07,
+      "root_peak_acceleration_m_s2": 35.861275796431016
+    },
+    {
+      "case": "paired_16",
+      "arm": "Geometry",
+      "seed": 35041,
+      "cpu_fk_max_error_m": 0.0,
+      "official_fk_max_error_m": 3.2508978620171547e-07,
+      "root_peak_acceleration_m_s2": 22.1417132586109
+    },
+    {
+      "case": "paired_16",
+      "arm": "Geometry",
+      "seed": 35042,
+      "cpu_fk_max_error_m": 0.0,
+      "official_fk_max_error_m": 3.2508978620171547e-07,
+      "root_peak_acceleration_m_s2": 22.1417132586109
+    },
+    {
+      "case": "paired_16",
+      "arm": "Raw",
+      "seed": 35041,
+      "cpu_fk_max_error_m": 0.0,
+      "official_fk_max_error_m": 4.1583552956581116e-07,
+      "root_peak_acceleration_m_s2": 312.4861137819142
+    },
+    {
+      "case": "paired_16",
+      "arm": "Raw",
+      "seed": 35042,
+      "cpu_fk_max_error_m": 0.0,
+      "official_fk_max_error_m": 2.905726432800293e-07,
+      "root_peak_acceleration_m_s2": 312.6503034468553
+    },
+    {
+      "case": "paired_16",
+      "arm": "RootContinuous",
+      "seed": 35041,
+      "cpu_fk_max_error_m": 0.0,
+      "official_fk_max_error_m": 4.172325134277344e-07,
+      "root_peak_acceleration_m_s2": 31.962518159927534
+    },
+    {
+      "case": "paired_16",
+      "arm": "RootContinuous",
+      "seed": 35042,
+      "cpu_fk_max_error_m": 0.0,
+      "official_fk_max_error_m": 3.6135315895080566e-07,
+      "root_peak_acceleration_m_s2": 32.07767026418206
+    },
+    {
+      "case": "paired_16",
+      "arm": "ResidualRTS",
+      "seed": 35041,
+      "cpu_fk_max_error_m": 0.0,
+      "official_fk_max_error_m": 2.644956111907959e-07,
+      "root_peak_acceleration_m_s2": 22.1417132586109
+    },
+    {
+      "case": "paired_16",
+      "arm": "ResidualRTS",
+      "seed": 35042,
+      "cpu_fk_max_error_m": 0.0,
+      "official_fk_max_error_m": 3.725290298461914e-07,
+      "root_peak_acceleration_m_s2": 22.1417132586109
+    },
+    {
+      "case": "old_failed",
+      "arm": "Geometry",
+      "seed": 35041,
+      "cpu_fk_max_error_m": 0.0,
+      "official_fk_max_error_m": 2.9103830456733704e-07,
+      "root_peak_acceleration_m_s2": 11.157838039726135
+    },
+    {
+      "case": "old_failed",
+      "arm": "Geometry",
+      "seed": 35042,
+      "cpu_fk_max_error_m": 0.0,
+      "official_fk_max_error_m": 3.0687078833580017e-07,
+      "root_peak_acceleration_m_s2": 8.860721393607237
+    },
+    {
+      "case": "old_failed",
+      "arm": "Raw",
+      "seed": 35041,
+      "cpu_fk_max_error_m": 0.0,
+      "official_fk_max_error_m": 2.9103830456733704e-07,
+      "root_peak_acceleration_m_s2": 136.91979853909626
+    },
+    {
+      "case": "old_failed",
+      "arm": "Raw",
+      "seed": 35042,
+      "cpu_fk_max_error_m": 0.0,
+      "official_fk_max_error_m": 3.0687078833580017e-07,
+      "root_peak_acceleration_m_s2": 129.64797434139905
+    },
+    {
+      "case": "old_failed",
+      "arm": "RootContinuous",
+      "seed": 35041,
+      "cpu_fk_max_error_m": 0.0,
+      "official_fk_max_error_m": 2.9103830456733704e-07,
+      "root_peak_acceleration_m_s2": 11.157838039726135
+    },
+    {
+      "case": "old_failed",
+      "arm": "RootContinuous",
+      "seed": 35042,
+      "cpu_fk_max_error_m": 0.0,
+      "official_fk_max_error_m": 3.0687078833580017e-07,
+      "root_peak_acceleration_m_s2": 8.860721393607237
+    },
+    {
+      "case": "old_failed",
+      "arm": "ResidualRTS",
+      "seed": 35041,
+      "cpu_fk_max_error_m": 0.0,
+      "official_fk_max_error_m": 2.9103830456733704e-07,
+      "root_peak_acceleration_m_s2": 11.157838039726135
+    },
+    {
+      "case": "old_failed",
+      "arm": "ResidualRTS",
+      "seed": 35042,
+      "cpu_fk_max_error_m": 0.0,
+      "official_fk_max_error_m": 3.0687078833580017e-07,
+      "root_peak_acceleration_m_s2": 8.860721393607237
+    },
+    {
+      "case": "new_plan",
+      "arm": "Geometry",
+      "seed": 35041,
+      "cpu_fk_max_error_m": 0.0,
+      "official_fk_max_error_m": 3.241002559661865e-07,
+      "root_peak_acceleration_m_s2": 8.275962225809643
+    },
+    {
+      "case": "new_plan",
+      "arm": "Geometry",
+      "seed": 35042,
+      "cpu_fk_max_error_m": 0.0,
+      "official_fk_max_error_m": 3.6135315895080566e-07,
+      "root_peak_acceleration_m_s2": 8.429256875618192
+    },
+    {
+      "case": "new_plan",
+      "arm": "Raw",
+      "seed": 35041,
+      "cpu_fk_max_error_m": 0.0,
+      "official_fk_max_error_m": 4.1909515857696533e-07,
+      "root_peak_acceleration_m_s2": 155.57246171786483
+    },
+    {
+      "case": "new_plan",
+      "arm": "Raw",
+      "seed": 35042,
+      "cpu_fk_max_error_m": 0.0,
+      "official_fk_max_error_m": 4.6193599700927734e-07,
+      "root_peak_acceleration_m_s2": 117.76504085315732
+    },
+    {
+      "case": "new_plan",
+      "arm": "RootContinuous",
+      "seed": 35041,
+      "cpu_fk_max_error_m": 0.0,
+      "official_fk_max_error_m": 4.209578037261963e-07,
+      "root_peak_acceleration_m_s2": 8.275962225809643
+    },
+    {
+      "case": "new_plan",
+      "arm": "RootContinuous",
+      "seed": 35042,
+      "cpu_fk_max_error_m": 0.0,
+      "official_fk_max_error_m": 3.6135315895080566e-07,
+      "root_peak_acceleration_m_s2": 8.429256875618192
+    },
+    {
+      "case": "new_plan",
+      "arm": "ResidualRTS",
+      "seed": 35041,
+      "cpu_fk_max_error_m": 0.0,
+      "official_fk_max_error_m": 3.241002559661865e-07,
+      "root_peak_acceleration_m_s2": 8.275962225809643
+    },
+    {
+      "case": "new_plan",
+      "arm": "ResidualRTS",
+      "seed": 35042,
+      "cpu_fk_max_error_m": 0.0,
+      "official_fk_max_error_m": 3.8067810237407684e-07,
+      "root_peak_acceleration_m_s2": 8.429256875618192
+    }
+  ],
+  "trajectories": 48,
+  "official_fk_executed": true,
+  "optimizer_steps": 0,
+  "arrays_sha256": "fee0c7c6a378f51eb97b17347a3b7f4161f39774b999aa680dec1704733356d1",
+  "native24": "NOT_EVALUABLE_22_OF24",
+  "contact_truth": "UNKNOWN"
+}

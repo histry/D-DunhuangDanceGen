@@ -300,3 +300,11 @@ R37规划及默认EDGE路径保持冻结。R38用真实连续录制训练Context
 - 实际观看：`outputs/bridge_r38_01/viewer_final/index.html`（本机交付，不托管私有媒体）。
 - [实验报告](reports/R38观测桥任务学习与有序检索实验报告.md)，[公开统计](reports/r38_release/r38_summary.json)。
 - 隔离实现：`src/dunhuang/research/bridge_r38`；完整回归554 passed、8 skipped。
+
+## R39：连续Root与端点约束RTS（研究）
+
+固定R38权重，先交付四栏真实观看：Geometry／Raw／RootContinuous／ResidualRTS。连续米制Root残差修复边缘极值，约束RTS降低身体高频并保留多数构形收益；接触、完整物理和整曲资格仍未建立。原始相对Root导数已恢复，冻结SDMR的位置捷径诊断继续保持Shadow。
+
+- 本机观看：`outputs/stabilize_r39_01/viewer_final02/index.html`（不在Git托管私有媒体）。
+- [实验报告](reports/R39连续Root写回与端点约束RTS实验报告.md)、[公开统计](reports/r39_release/r39_summary.json)。
+- 隔离实现：`src/dunhuang/research/stabilize_r39`；562 passed、8 skipped；没有新增神经训练，默认EDGE和R37计划不变。

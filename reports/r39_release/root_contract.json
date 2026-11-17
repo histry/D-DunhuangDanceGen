@@ -1,0 +1,186 @@
+{
+  "records": [
+    {
+      "source_uid": "female_FeiTian",
+      "raw_sha256": "120e0157ccdd60d128d2973ac0682883ee178ba43ce8479100e80f56c64f37a4",
+      "source_fps": 30.0,
+      "frames": 11819,
+      "gender": "female",
+      "betas_sha256": "5b6fb58e61fa475939767d68a446f97f1bff02c0e5935a3ea8bb51e6515783d8",
+      "body_rotation_parity_max_rad": 9.319001045970813e-08,
+      "native_translation_offset_m": [
+        -1.3817349672317505,
+        0.14374768733978271,
+        -0.7484321594238281
+      ],
+      "native_translation_constant_offset_max_error_m": 1.1920928955078125e-07,
+      "relative_translation_derivatives_supported": true,
+      "scope": "SOURCE_SMPLX_FIT_Y_UP_METERS; RELATIVE_TRANSLATION_ONLY_NOT_WORLD_FOOT_TRUTH",
+      "absolute_pelvis_world_gauge": "UNKNOWN_REQUIRES_SHAPED_J0",
+      "source_shaped_world_fk": "NOT_ADMITTED_SOURCE_GENDER_MODEL_NOT_LOCATED",
+      "ground_and_contact": "UNKNOWN",
+      "native24": "NOT_EVALUABLE_22_OF24",
+      "missing_tail_max_abs": 0.0
+    },
+    {
+      "source_uid": "female_lotus",
+      "raw_sha256": "22b915af2e0fbb645acb78d7f61e58afe3f7aa40c0fc719da95f7403ed8dd47d",
+      "source_fps": 30.0,
+      "frames": 6948,
+      "gender": "female",
+      "betas_sha256": "5b6fb58e61fa475939767d68a446f97f1bff02c0e5935a3ea8bb51e6515783d8",
+      "body_rotation_parity_max_rad": 9.147986369757826e-08,
+      "native_translation_offset_m": [
+        -2.3751487731933594,
+        -0.04432880878448486,
+        -1.2396159172058105
+      ],
+      "native_translation_constant_offset_max_error_m": 1.1920928955078125e-07,
+      "relative_translation_derivatives_supported": true,
+      "scope": "SOURCE_SMPLX_FIT_Y_UP_METERS; RELATIVE_TRANSLATION_ONLY_NOT_WORLD_FOOT_TRUTH",
+      "absolute_pelvis_world_gauge": "UNKNOWN_REQUIRES_SHAPED_J0",
+      "source_shaped_world_fk": "NOT_ADMITTED_SOURCE_GENDER_MODEL_NOT_LOCATED",
+      "ground_and_contact": "UNKNOWN",
+      "native24": "NOT_EVALUABLE_22_OF24",
+      "missing_tail_max_abs": 0.0
+    },
+    {
+      "source_uid": "female_meditation",
+      "raw_sha256": "225ab3ffb8cd176ee138130152ec56b826cf2cc3965f13249aaf0a1103b422e7",
+      "source_fps": 30.0,
+      "frames": 6114,
+      "gender": "female",
+      "betas_sha256": "5b6fb58e61fa475939767d68a446f97f1bff02c0e5935a3ea8bb51e6515783d8",
+      "body_rotation_parity_max_rad": 8.865505929584415e-08,
+      "native_translation_offset_m": [
+        -0.4863215982913971,
+        0.14565728604793549,
+        0.5532538294792175
+      ],
+      "native_translation_constant_offset_max_error_m": 4.470348358154297e-08,
+      "relative_translation_derivatives_supported": true,
+      "scope": "SOURCE_SMPLX_FIT_Y_UP_METERS; RELATIVE_TRANSLATION_ONLY_NOT_WORLD_FOOT_TRUTH",
+      "absolute_pelvis_world_gauge": "UNKNOWN_REQUIRES_SHAPED_J0",
+      "source_shaped_world_fk": "NOT_ADMITTED_SOURCE_GENDER_MODEL_NOT_LOCATED",
+      "ground_and_contact": "UNKNOWN",
+      "native24": "NOT_EVALUABLE_22_OF24",
+      "missing_tail_max_abs": 0.0
+    },
+    {
+      "source_uid": "male_meditation",
+      "raw_sha256": "1cd10b49771226ae7f9ea962bf21e2c86324af2249d80bf08a069a881d20d165",
+      "source_fps": 30.0,
+      "frames": 6133,
+      "gender": "male",
+      "betas_sha256": "5b6fb58e61fa475939767d68a446f97f1bff02c0e5935a3ea8bb51e6515783d8",
+      "body_rotation_parity_max_rad": 8.68701924204586e-08,
+      "native_translation_offset_m": [
+        -0.12926431000232697,
+        0.031828492879867554,
+        0.2249169945716858
+      ],
+      "native_translation_constant_offset_max_error_m": 2.9802322387695312e-08,
+      "relative_translation_derivatives_supported": true,
+      "scope": "SOURCE_SMPLX_FIT_Y_UP_METERS; RELATIVE_TRANSLATION_ONLY_NOT_WORLD_FOOT_TRUTH",
+      "absolute_pelvis_world_gauge": "UNKNOWN_REQUIRES_SHAPED_J0",
+      "source_shaped_world_fk": "NOT_ADMITTED_SOURCE_GENDER_MODEL_NOT_LOCATED",
+      "ground_and_contact": "UNKNOWN",
+      "native24": "NOT_EVALUABLE_22_OF24",
+      "missing_tail_max_abs": 0.0
+    },
+    {
+      "source_uid": "male_pipa_1",
+      "raw_sha256": "7b58c904c3b4c7f29c3fdf82ac0e0a948e4f436cf57c5e7589e424168cfb3dfd",
+      "source_fps": 30.0,
+      "frames": 3833,
+      "gender": "male",
+      "betas_sha256": "5b6fb58e61fa475939767d68a446f97f1bff02c0e5935a3ea8bb51e6515783d8",
+      "body_rotation_parity_max_rad": 8.635997455446611e-08,
+      "native_translation_offset_m": [
+        -1.2261624336242676,
+        -0.06535971164703369,
+        0.7676591873168945
+      ],
+      "native_translation_constant_offset_max_error_m": 1.1920928955078125e-07,
+      "relative_translation_derivatives_supported": true,
+      "scope": "SOURCE_SMPLX_FIT_Y_UP_METERS; RELATIVE_TRANSLATION_ONLY_NOT_WORLD_FOOT_TRUTH",
+      "absolute_pelvis_world_gauge": "UNKNOWN_REQUIRES_SHAPED_J0",
+      "source_shaped_world_fk": "NOT_ADMITTED_SOURCE_GENDER_MODEL_NOT_LOCATED",
+      "ground_and_contact": "UNKNOWN",
+      "native24": "NOT_EVALUABLE_22_OF24",
+      "missing_tail_max_abs": 0.0
+    },
+    {
+      "source_uid": "male_pipa_2",
+      "raw_sha256": "e300cef72d5248c2eacb6b430f17152a00af92bb4f3c04ff96c35f63d5aeaebc",
+      "source_fps": 30.0,
+      "frames": 3439,
+      "gender": "male",
+      "betas_sha256": "5b6fb58e61fa475939767d68a446f97f1bff02c0e5935a3ea8bb51e6515783d8",
+      "body_rotation_parity_max_rad": 8.567258834374356e-08,
+      "native_translation_offset_m": [
+        0.46326783299446106,
+        -0.11526817083358765,
+        0.10842438787221909
+      ],
+      "native_translation_constant_offset_max_error_m": 5.960464477539063e-08,
+      "relative_translation_derivatives_supported": true,
+      "scope": "SOURCE_SMPLX_FIT_Y_UP_METERS; RELATIVE_TRANSLATION_ONLY_NOT_WORLD_FOOT_TRUTH",
+      "absolute_pelvis_world_gauge": "UNKNOWN_REQUIRES_SHAPED_J0",
+      "source_shaped_world_fk": "NOT_ADMITTED_SOURCE_GENDER_MODEL_NOT_LOCATED",
+      "ground_and_contact": "UNKNOWN",
+      "native24": "NOT_EVALUABLE_22_OF24",
+      "missing_tail_max_abs": 0.0
+    },
+    {
+      "source_uid": "male_ribbon",
+      "raw_sha256": "7faf97974cb347b5e08107dd102c508ad3309901094f7c1822c21db83dd6addd",
+      "source_fps": 30.0,
+      "frames": 2366,
+      "gender": "male",
+      "betas_sha256": "5b6fb58e61fa475939767d68a446f97f1bff02c0e5935a3ea8bb51e6515783d8",
+      "body_rotation_parity_max_rad": 8.447654117459877e-08,
+      "native_translation_offset_m": [
+        -0.395097553730011,
+        0.0017143487930297852,
+        0.22529160976409912
+      ],
+      "native_translation_constant_offset_max_error_m": 5.960464477539063e-08,
+      "relative_translation_derivatives_supported": true,
+      "scope": "SOURCE_SMPLX_FIT_Y_UP_METERS; RELATIVE_TRANSLATION_ONLY_NOT_WORLD_FOOT_TRUTH",
+      "absolute_pelvis_world_gauge": "UNKNOWN_REQUIRES_SHAPED_J0",
+      "source_shaped_world_fk": "NOT_ADMITTED_SOURCE_GENDER_MODEL_NOT_LOCATED",
+      "ground_and_contact": "UNKNOWN",
+      "native24": "NOT_EVALUABLE_22_OF24",
+      "missing_tail_max_abs": 0.0
+    },
+    {
+      "source_uid": "male_ribbon_FenHe",
+      "raw_sha256": "38fa662ac4aa912d70d0c405f75a9e502e3c6d471445f8896016619b7b10357c",
+      "source_fps": 30.0,
+      "frames": 2885,
+      "gender": "male",
+      "betas_sha256": "5b6fb58e61fa475939767d68a446f97f1bff02c0e5935a3ea8bb51e6515783d8",
+      "body_rotation_parity_max_rad": 9.185618519823437e-08,
+      "native_translation_offset_m": [
+        -0.5039401054382324,
+        0.02899467945098877,
+        0.22625984251499176
+      ],
+      "native_translation_constant_offset_max_error_m": 5.960464477539063e-08,
+      "relative_translation_derivatives_supported": true,
+      "scope": "SOURCE_SMPLX_FIT_Y_UP_METERS; RELATIVE_TRANSLATION_ONLY_NOT_WORLD_FOOT_TRUTH",
+      "absolute_pelvis_world_gauge": "UNKNOWN_REQUIRES_SHAPED_J0",
+      "source_shaped_world_fk": "NOT_ADMITTED_SOURCE_GENDER_MODEL_NOT_LOCATED",
+      "ground_and_contact": "UNKNOWN",
+      "native24": "NOT_EVALUABLE_22_OF24",
+      "missing_tail_max_abs": 0.0
+    }
+  ],
+  "manifest_sha256": "29dee9f39b6669ba2e1683a9581a2df4512a42c7c696b8ff09279a84dd91ae8d",
+  "source_model_inventory_scope": "REGISTERED_PROJECTS_AND_STORAGE_PATHS; NO_GENDERED_SMPLX_TEMPLATE_LOCATED",
+  "root_derivatives_can_be_used_in_separately_registered_training": true,
+  "source_world_fk_admitted": false,
+  "outputs_from_main_experiment_changed": false,
+  "optimizer_steps": 0
+}

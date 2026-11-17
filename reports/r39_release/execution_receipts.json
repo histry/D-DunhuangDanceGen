@@ -1,0 +1,27 @@
+{
+  "receipts": {
+    "calibration": "0",
+    "calibration_replay": "0",
+    "content_diagnostics": "1",
+    "content_diagnostics_v2": "0",
+    "content_diagnostics_v2_replay": "0",
+    "cpu_metrics_replay": "0",
+    "follow": "0",
+    "generation": "0",
+    "generation_replay": "0",
+    "main": "0",
+    "metrics": "0",
+    "official_fk_verify": "0",
+    "root_contract": "0",
+    "root_contract_replay": "0",
+    "view_jobs": "0",
+    "viewer": "0",
+    "viewer_final": "0",
+    "viewer_final02": "0"
+  },
+  "preserved_failed_attempts": {
+    "content_diagnostics": 1
+  },
+  "incomplete_initial_replay_orchestrator": "STOPPED_ON_MISSING_EQUAL_LENGTH_DONOR; FOLLOW_COMPLETED_REGISTERED_REMAINDER",
+  "expected_successes_verified": true
+}

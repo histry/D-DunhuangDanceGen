@@ -1,0 +1,42 @@
+{
+  "baseline": "c015f2a96e79f5f084c3f13559475547aebe83e6",
+  "science_commit": "f68e6c9010a83902cce577d319d3b8c6e67a512f",
+  "main_cases": 6,
+  "seeds": [
+    35041,
+    35042
+  ],
+  "paired_fixed_window_aggregate": {
+    "Geometry": {
+      "gap_fk_rmse_m": 0.20110237120130386,
+      "transition_region_jerk_mean": 189.24598719434792,
+      "body_gap_amplitude_rms_m": 0.38470292584785937
+    },
+    "Raw": {
+      "gap_fk_rmse_m": 0.18906573185635148,
+      "transition_region_jerk_mean": 1312.4004454030548,
+      "body_gap_amplitude_rms_m": 0.3897189793960195
+    },
+    "RootContinuous": {
+      "gap_fk_rmse_m": 0.18905498632791568,
+      "transition_region_jerk_mean": 1306.219494188255,
+      "body_gap_amplitude_rms_m": 0.3896395358746304
+    },
+    "ResidualRTS": {
+      "gap_fk_rmse_m": 0.1899365340022502,
+      "transition_region_jerk_mean": 417.81797609361973,
+      "body_gap_amplitude_rms_m": 0.38630293019700146
+    }
+  },
+  "raw_peak_templates_crossing_write_switches": 12,
+  "raw_trajectories": 12,
+  "root_relative_jerk_reduction_raw_to_rts_percent": 68.16383463163925,
+  "retained_fk_gain_vs_geometry_percent": 5.552315038531619,
+  "optimizer_steps": 0,
+  "whole_song_generations": 0,
+  "operational_qualified": false,
+  "can_route": false,
+  "native24": "NOT_EVALUABLE_22_OF24",
+  "viewer": "outputs/stabilize_r39_01/viewer_final02/index.html",
+  "baseline_source_and_plan_unchanged": true
+}
