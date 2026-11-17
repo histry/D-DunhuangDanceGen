@@ -26,7 +26,7 @@ def run(data,root,out):
         if folder=='main':
             meta=read(directory/'result.json');model.load_state_dict(torch.load(directory/'initial.pt',map_location='cuda',weights_only=True)['state']);assert digest(model)==meta['initial_digest'];model.load_state_dict(torch.load(directory/'model.pt',map_location='cuda',weights_only=True)['state']);assert digest(model)==meta['final_digest'];assert meta['initial_digest']!=meta['final_digest']
     arrays={}
-    for a,b in [('evaluation/arrays.npz','evaluation_v2/arrays.npz'),('evaluation_v2/arrays.npz','evaluation_v2_replay/arrays.npz'),('checks/synthetic_eval.npz','checks_replay/synthetic_eval.npz'),('checks/fit_eval.npz','checks_replay/fit_eval.npz'),('budget/arrays.npz','budget_replay/arrays.npz')]:
+    for a,b in [('evaluation/arrays.npz','evaluation_v2/arrays.npz'),('evaluation_v2/arrays.npz','evaluation_replay_final/arrays.npz'),('checks/synthetic_eval.npz','checks_replay/synthetic_eval.npz'),('checks/fit_eval.npz','checks_replay/fit_eval.npz'),('budget/arrays.npz','budget_replay_final/arrays.npz')]:
         if (root/a).exists() and (root/b).exists():same_arrays(root/a,root/b);arrays[a+'__'+b]=len(np.load(root/a).files)
     parents=[]
     for name in ('bridge_r38_01','stabilize_r39_01','contract_r40_01'):
