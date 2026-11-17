@@ -17,7 +17,7 @@ def build(out,extra=None,videos=None):
         key=row['key']
         if row['reference_is_target']:continue
         panels=[dict(name='来源参考 · 局部姿态；异源拼接无连续真值',tracks=[track(z[key+'_reference22'])]*2,reference=True)]
-        for title,name in [('几何桥 · 非网络','Geometry'),('冻结R39 · 实际采样','RootContinuous'),('冻结R39 · 固定RTS','ResidualRTS')]:panels.append(dict(name=title,tracks=[track(x) for x in z[key+'_'+name+'_22']]))
+        for title,name in [('几何桥 · 无新神经残差','Geometry'),('冻结R39 · 实际采样','RootContinuous'),('冻结R39 · 固定RTS','ResidualRTS')]:panels.append(dict(name=title,tracks=[track(x) for x in z[key+'_'+name+'_22']]))
         audio=None
         if row.get('audio'):
             audio=key+'.wav';shutil.copyfile(p/'generation'/row['audio'],out/audio)

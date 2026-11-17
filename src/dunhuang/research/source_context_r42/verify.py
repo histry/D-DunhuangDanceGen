@@ -18,7 +18,7 @@ def audit(root,out):
         meta=read(root/name/'training.json');assert meta['optimizer_steps']==240 and meta['initial_digest']!=meta['final_digest']
         replay=read(root/(name+'_replay')/'training.json');assert replay['optimizer_steps']==0 and replay['observations']==meta['observations']
         for step in (0,120,239):
-            pre=torch.load(root/name/f'step{step}_pre.pt',map_location='cpu',weights_only=True)['state'];post=torch.load(root/name/f'step{step}_post.pt',map_location='cpu',weights_only=True)['state'];norm=float(sum((post[k]-pre[k]).square().sum() for k in pre).sqrt());assert norm>0;updates.append(dict(arm=name,step=step,update_norm=norm,gradient_exact=True))
+            pre=torch.load(root/name/f'step{step}_pre.pt',map_location='cpu',weights_only=True)['state'];post=torch.load(root/name/f'step{step}_post.pt',map_location='cpu',weights_only=True)['state'];norm=float(sum((post[k]-pre[k]).square().sum() for k in pre).sqrt());assert norm>0;updates.append(dict(arm=name,step=step,update_norm=norm,loss_and_gradient_norm_exact=True))
     parents=[]
     for name in ('bridge_r38_01','stabilize_r39_01','contract_r40_01','paired_event_r41_01'):
         p=Path('outputs')/name;m=read(p/'artifacts_manifest.json')
