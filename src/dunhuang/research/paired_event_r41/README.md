@@ -1,0 +1,9 @@
+# R41 paired-event research
+
+This directory is isolated from the formal Planner and the frozen R38–R40 experiments. P0 derives region-aware kinematic event candidates from complete sealed AIST++ recordings, then binds their music intervals through the verified recording clock. It never attaches ChangE's event IDs or cultural labels to source-domain dance. Whole-record derivatives precede every event cut. Long holds and active root-turn spans are protected; a length preference is not proof of semantic completeness.
+
+First deliver the P0 audio/skeleton viewer, with all-event metadata and a media population fixed before model training. Default media covers one metadata-first source in each of six Train and six exposed Val music groups; `view --all-sources` can reconstruct all media. The first page contains actual source motion, not generated dance. Never label it as a new generation result.
+
+P1 is independently gated: a real-optimizer synthetic two-view timing control, followed by a fixed small genuine Train fit, then a preregistered main model if both learnability gates pass. It preserves full-core reconstruction, separates the local position-free content path from the existing ordered global encoder, and tests independent crops, known offsets, zero content and wrong music. Physical-clock pairs and cross-recording overlap positives are not semantic phase truth. No target-domain semantic qualification or operational routing follows automatically.
+
+The existing strict partial path is reused as an inference diagnostic with explicit physical clocks. It is a one-to-one partial path, not a reproduction of full Drop-DTW. Native24, true contact, cultural correctness and complete-event music reperformance remain outside this module's claims. FineDance is not admitted until actual source/clock/observation assets pass a separate audit.
