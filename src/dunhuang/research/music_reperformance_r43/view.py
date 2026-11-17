@@ -7,10 +7,14 @@ from dunhuang.research.complete_r36.core import read,write,sha
 from dunhuang.research.source_context_r42.view import build as parent_view
 
 
+def selected_cases(cases,keys):
+    return [c for c in cases if c['id'] in {'new_'+key for key in keys}]
+
+
 def build(main,out,controls=None,videos=None):
     main=Path(main);out=Path(out);parent_view(out,extra=main,videos=videos)
     script=(out/'data.js').read_text(encoding='utf8');payload=json.loads(gzip.decompress(base64.b64decode(script.split('"')[1])));data=np.load(main/'arrays.npz');meta=read(main/'result.json');lookup={r['key']:r for r in meta['records']}
-    payload['cases']=[c for c in payload['cases'] if c['id'].startswith('new_')]
+    payload['cases']=selected_cases(payload['cases'],lookup)
     for c in payload['cases']:
         key=c['id'][4:];budget=data[key+'_body_budget'];c['permissions']=np.max(budget,axis=-1).tolist();c['phase_anchors']=lookup[key]['phase_anchors'];c['music_main']=c['audio']
     if controls:

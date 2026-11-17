@@ -44,3 +44,9 @@ def test_regional_zero_residual_exact_and_large_proposal_bounded():
     assert torch.equal(out[:,c.protected_frames],a[:,c.protected_frames])
     assert ((out[:,:,4:7]-a[:,:,4:7]).norm(dim=-1)<=torch.tensor(c.root_envelope)[None]*.03+1e-6).all()
     assert torch.equal(out[:,:,:4],a[:,:,:4])
+
+
+def test_viewer_uses_exact_case_ids_when_legacy_new_plan_prefix_collides():
+    from dunhuang.research.music_reperformance_r43.view import selected_cases
+    cases=[dict(id=k) for k in ['old_failed','new_plan','new_new_plan','new_paired_0']]
+    assert [r['id'] for r in selected_cases(cases,['new_plan','paired_0'])]==['new_new_plan','new_paired_0']
