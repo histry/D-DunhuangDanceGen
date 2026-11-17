@@ -22,6 +22,10 @@ def run(root,out):
             a=base[0];truth=z[key+'_target_139'][0];B,_=decode(a);T,_=decode(truth);v=Rotation.from_matrix((B.swapaxes(-1,-2)@T).reshape(-1,3,3)).as_rotvec().reshape(256,22,3);angle=np.linalg.norm(v,axis=-1);gain=np.minimum(1,.6*w[:,None]/np.maximum(angle,1e-12));P=B@Rotation.from_rotvec((v*gain[...,None]).reshape(-1,3)).as_matrix().reshape(256,22,3,3);points=relative_fk(P,J,parents);q=relative_fk(T,J,parents)
             target_reference=dict(true_target_outside_body_budget_fraction=float((angle[live]>.6*w[live,None]+1e-6).mean()),clipped_target_gap_fk_rmse_m=float(np.sqrt(np.mean((points[lo:hi]-q[lo:hi])**2))),scope='PER_JOINT_TARGET_ROTATION_PROJECTION; NOT_CARTESIAN_OPTIMUM_OR_DYNAMICS_FEASIBILITY_BOUND')
         records.append(dict(key=key,modes=modes,actual_cfg_root_proposal_at_normalizer_box_fraction=saturated,target_reference=target_reference,source_residual_gate_at_center=float(1-w[128]),source_gate_causality='NOT_TESTED; SELF_ATTENTION_CAN_STILL_PROPAGATE_VISIBLE_SOURCE_INFORMATION'))
-    write(out,dict(records=records,optimizer_steps=0,selection_or_training_changed=False));print('R40_PROJECTION_DIAGNOSTICS',len(records),flush=True)
+    train=[];w=c2_envelope(256,[104,152]);live=w>0
+    for i,(truth,base) in enumerate(zip(s['truth139'],s['geometry139'])):
+        T,_=decode(truth);B,_=decode(base);angles=Rotation.from_matrix((B.swapaxes(-1,-2)@T).reshape(-1,3,3)).magnitude().reshape(256,22)
+        train.append(dict(calibration_row=i,true_target_outside_body_budget_fraction=float((angles[live]>.6*w[live,None]+1e-6).mean())))
+    write(out,dict(records=records,training_population_budget_audit=train,training_budget_audit_scope='FROZEN_R39_16_TRAIN_TRUE_VS_GEOMETRY_ONLY_NO_NEW_THRESHOLD',optimizer_steps=0,selection_or_training_changed=False));print('R40_PROJECTION_DIAGNOSTICS',len(records),flush=True)
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('--root',required=True);p.add_argument('--out',required=True);a=p.parse_args();run(a.root,a.out)
