@@ -41,7 +41,7 @@ def run(evaluation,out,replay=None):
             if len(pool)<2:unavailable.append(dict(key=key,frames=L,reason='NO_REAL_LEGAL_COMPETITOR'));continue
             mp=music[str(case)+'__music50'][A:B];mm=music[str(case)+'__music_mask'][A:B];sw=music[str(other)+'__music50'][A:B];sm=music[str(other)+'__music_mask'][A:B];pairs=[];provenance=[]
             for j,e in enumerate(pool):
-                ticks=np.arange(A,B);q=source_positions(e,ticks);R=rotation_sample(lib.rotations[e['source_uid']],q);values,mask=observations(R,J,parents);mask[0,198:272]=False;arrays[key+f'_c{j}_positions']=relative_fk(R,J,parents).astype(np.float32);arrays[key+f'_c{j}_source_positions']=q
+                ticks=np.arange(A,B);q=source_positions(e,ticks);R=rotation_sample(lib.rotations[e['source_uid']],q);values,mask=observations(R,J,parents);mask[0,198:272]=False;arrays[key+f'_c{j}_xyz']=relative_fk(R,J,parents).astype(np.float32);arrays[key+f'_c{j}_source_positions']=q
                 assert len(values)==L and q.min()>=e['source_interval'][0] and q.max()<=e['source_interval'][1]-1+1e-6
                 motion=normalized(values,mask,'motion');pairs.append((motion,mask));provenance.append(dict(normalizer_outlier_fraction=float(np.mean(abs(motion[mask])>5)),event_uid=e['unit_uid'],source_uid=e['source_uid'],recording_uid=e.get('recording_uid',e['source_uid']),source_interval=e['source_interval'],music_interval=[A,B],time_warp=e['time_warp'],clock_contract=e.get('clock_contract',e.get('time_contract')),reference=lib.rows[e['source_uid']][0]['reference'],phase_anchors=e.get('anchor_source_frames',e.get('phase_anchors',[])),prior_selected=j==0,semantic_truth='UNKNOWN'))
             with torch.no_grad():

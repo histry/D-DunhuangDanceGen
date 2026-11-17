@@ -1,4 +1,5 @@
 import numpy as np
+import pytest
 from dunhuang.research.sdmr_event_rank.train_rank import schedule,shuffled_labels
 
 def test_fixed_train_only_schedule_and_all_lengths():
@@ -14,3 +15,9 @@ def test_shuffled_rank_is_repeatable_count_preserving():
     assert np.array_equal(shuffled_labels(p,43),shuffled_labels(p,43))
     assert all(shuffled_labels(p,i).sum()==2 for i in range(10))
     assert any(not np.array_equal(p,shuffled_labels(p,i)) for i in range(10))
+
+def test_native_viewer_rejects_token_indices_and_truncated_tracks():
+    from dunhuang.research.sdmr_event_rank.change_view import encode_track
+    assert encode_track(np.zeros((331,22,3)),331)['shape']==[331,22,3]
+    with pytest.raises(ValueError):encode_track(np.arange(6,325),331)
+    with pytest.raises(ValueError):encode_track(np.zeros((330,22,3)),331)

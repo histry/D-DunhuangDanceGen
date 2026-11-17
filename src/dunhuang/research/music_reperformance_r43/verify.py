@@ -11,7 +11,7 @@ def run(generation,ranking,out):
     generation=Path(generation);ranking=Path(ranking);out=Path(out)
     if out.exists():raise ValueError('Fresh independent audit')
     forbid_optimizers();packs=[]
-    for root,a,b in [(generation,'main','main_replay'),(generation,'controls','controls_replay'),(generation,'main_guarded','guarded_replay'),(ranking,'features','features_replay'),(ranking,'evaluation','evaluation_replay'),(ranking,'change_shadow','change_shadow_replay')]:
+    for root,a,b in [(generation,'main','main_replay'),(generation,'controls','controls_replay'),(generation,'main_guarded','guarded_replay'),(ranking,'features','features_replay'),(ranking,'evaluation','evaluation_replay'),(ranking,'change_shadow_v3','change_shadow_replay')]:
         exact_arrays(root/a/'arrays.npz',root/b/'arrays.npz');packs.append(dict(root=str(root),first=a,replay=b,arrays=len(np.load(root/a/'arrays.npz').files)))
     assert read(ranking/'benchmark/manifest.json')==read(ranking/'benchmark_replay/manifest.json')
     first=read(generation/'qualification.json');second=read(generation/'qualification_replay.json')
@@ -39,8 +39,16 @@ def run(generation,ranking,out):
     for r in read(generation/'main/result.json')['records']:
         if r['domain']=='AIST++':aist.append(dict(case=r['case'],adaptation_role=r['role'],original_metadata=origin[r['case']],scope='FROZEN_PARENT_TRAIN_CACHE_NOT_NEW_DATA_V3_TEST'))
     feature=read(ranking/'features/result.json');assert feature['optimizer_steps']==0 and feature['model_parameters']==522632
-    native=read(ranking/'change_shadow/result.json');assert not native['semantic_ground_truth'] and not native['can_route']
-    write(out,dict(code_commit=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),payloads=packs,benchmark_identity_exact=True,qualification_values_exact=True,parents=parents,role_isolation=isolation,actual_aist_lineage=aist,all_same_population_controls=True,main_delivery_preceded_controls=True,ranking_p0_delivery_preceded_scoring=True,optimizer_steps=0,whole_song_generations=0,operational_qualified=False,can_route=False));print('R43_INDEPENDENT_VERIFIED',len(packs),sum(p['files'] for p in parents),flush=True)
+    native=read(ranking/'change_shadow_v3/result.json');assert not native['semantic_ground_truth'] and not native['can_route']
+    trainings=[];initials=set();schedules=set()
+    for arm in ('NoRank','Rank','ShuffledRank'):
+        p=ranking/('p2_'+arm);r=read(p/'result.json');initials.add(r['initial_digest']);schedules.add(r['schedule_sha256']);assert r['optimizer_steps']==240 and r['initial_digest']!=r['final_digest'] and r['model_parameters']==522632
+        replay=read(ranking/('p2_'+arm+'_replay/result.json'));assert replay['optimizer_steps']==0 and replay['exact_gradient_and_loss_steps']==[0,120,239]
+        for name in ('features_','evaluation_'):
+            first=ranking/(name+arm);second=ranking/(name+arm+'_replay');exact_arrays(first/'arrays.npz',second/'arrays.npz');packs.append(dict(root=str(ranking),first=first.name,replay=second.name,arrays=len(np.load(first/'arrays.npz').files)))
+        trainings.append(r)
+    assert len(initials)==len(schedules)==1
+    write(out,dict(code_commit=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),payloads=packs,trainings=trainings,total_training_updates=720,benchmark_identity_exact=True,qualification_values_exact=True,parents=parents,role_isolation=isolation,actual_aist_lineage=aist,all_same_population_controls=True,main_delivery_preceded_controls=True,ranking_p0_delivery_preceded_scoring=True,optimizer_steps=0,whole_song_generations=0,operational_qualified=False,can_route=False));print('R43_INDEPENDENT_VERIFIED',len(packs),sum(p['files'] for p in parents),flush=True)
 
 
 if __name__=='__main__':
