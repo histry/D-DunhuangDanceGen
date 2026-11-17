@@ -1,0 +1,22 @@
+{
+  "baseline": "5183d2078c034ed0f7cb16e590120ecdd3119dbe",
+  "seed": 43041,
+  "data": "outputs/source_context_r42_01/data_v2",
+  "gap": [104, 152],
+  "core_upper_radians": 0.1,
+  "bridge_radians": 0.06,
+  "root_bridge_meters": 0.03,
+  "outer_protected_frames": 8,
+  "phase_protection_half_width": 6,
+  "main_context": "outputs/bridge_r38_01/training/context.pt",
+  "main_source_gate": "FROZEN_1_MINUS_C2",
+  "phase_use": "OBSERVED_CORE_PROXY_PEAKS_CONTROL_EDIT_PERMISSIONS_NOT_NEW_NEURAL_PHASE_WEIGHTS",
+  "main_music": "old_failed",
+  "controls": ["new_plan", "NoMusic", "WrongSource"],
+  "whole_song_generations": 0,
+  "can_route": false,
+  "operational_qualified": false,
+  "training_gate": "TRAIN_ONLY_PAIRED_CORRECT_VS_ZERO_MUSIC_AND_GEOMETRY_DYNAMICS_BEFORE_ANY_NEW_TRAINING",
+  "new_head_initial_steps_if_admitted": 240,
+  "human_reviewed": false
+}
