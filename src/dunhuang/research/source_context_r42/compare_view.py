@@ -10,7 +10,9 @@ def run(viewer,controls,out):
     if out.exists():raise ValueError('Fresh comparison viewer')
     out.mkdir(parents=True);viewer=Path(viewer);payload=json.loads(gzip.decompress(base64.b64decode((viewer/'data.js').read_text(encoding='utf8').split('"')[1])));cases={c['id']:c for c in payload['cases']};tracks=payload['tracks']
     for f in ('index.html','viewer.js','style.css'):shutil.copyfile(viewer/f,out/f)
-    for audio in sorted({c['audio'] for c in cases.values() if c.get('audio')}):shutil.copyfile(viewer/audio,out/audio)
+    for asset in read(viewer/'protocol.json')['files']:
+        name=asset['name']
+        if name not in ('index.html','viewer.js','style.css','data.js'):shutil.copyfile(viewer/name,out/name)
     for root in controls:
         root=Path(root);meta=read(root/'result.json');z=np.load(root/'arrays.npz');label=meta['label']
         for r in meta['records']:

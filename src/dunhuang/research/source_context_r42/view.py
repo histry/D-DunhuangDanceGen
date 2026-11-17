@@ -7,7 +7,7 @@ from dunhuang.research.transition_r37.evaluate import decode,world_fk
 from .post import frozen_rts
 
 
-def build(out,extra=None):
+def build(out,extra=None,videos=None):
     out=Path(out)
     if out.exists():raise ValueError('Fresh viewer directory')
     out.mkdir(parents=True);p=Path('outputs/stabilize_r39_01');z=np.load(p/'generation/arrays.npz');meta=read(p/'generation/result.json');J=z['skeleton_J22'];parents=z['parents'];tracks={};cases=[]
@@ -41,7 +41,12 @@ def build(out,extra=None):
     payload=dict(cases=cases,tracks=tracks,parents=parents.tolist(),fps=30,frames=256,source_truth='UNPAIRED_REFERENCE_OR_SAME_RECORDING_AS_LABELLED',whole_song_generated=False)
     (out/'data.js').write_text('window.R42_B64="'+base64.b64encode(gzip.compress(json.dumps(payload,ensure_ascii=False,allow_nan=False,separators=(',',':')).encode(),mtime=0)).decode()+'";',encoding='utf8')
     for f in ('index.html','viewer.js','style.css'):shutil.copyfile(Path(__file__).parent/f,out/f)
+    if videos:
+        clips=[]
+        for row in read(Path(videos)/'protocol.json')['files']:
+            source=Path(videos)/row['name'];assert sha(source)==row['sha256'];name='video__'+source.name;shutil.copyfile(source,out/name);clips.append('<article><p>'+source.stem+'</p><video controls preload="metadata" style="width:100%" src="'+name+'"></video></article>')
+        page=(out/'index.html').read_text(encoding='utf8').replace('</main>','<h2>实际完整采样 MP4 · 固定来源与种子</h2><p>左：真实隐藏目标，仅供评价；中：冻结R39＋固定RTS；右：主候选＋相同RTS。无音频条目不代表音乐配对。</p><section style="display:grid;grid-template-columns:1fr 1fr;gap:14px">'+''.join(clips)+'</section></main>');(out/'index.html').write_text(page,encoding='utf8')
     write(out/'protocol.json',dict(cases=len(cases),fps=30,master_clock='ONE_AUDIO_CLOCK_OR_VISUAL_FRAME_CLOCK_WITHOUT_AUDIO',scope='ACTUAL_SAVED_ARRAYS_NOT_MODEL_CLAIM',files=[dict(name=f.name,bytes=f.stat().st_size,sha256=sha(f)) for f in sorted(out.iterdir()) if f.name!='protocol.json']))
     print('R42_VIEWER',len(cases),flush=True)
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('--out',required=True);p.add_argument('--extra');a=p.parse_args();build(a.out,a.extra)
+    p=argparse.ArgumentParser();p.add_argument('--out',required=True);p.add_argument('--extra');p.add_argument('--videos');a=p.parse_args();build(a.out,a.extra,a.videos)
