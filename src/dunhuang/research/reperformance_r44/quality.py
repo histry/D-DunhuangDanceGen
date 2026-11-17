@@ -28,7 +28,7 @@ def run(main,out,official=False):
                     for n in (1,2,3):v['model_root_D'+str(n)]=float(np.sqrt(np.mean((np.diff(root,n=n,axis=0)*30**n)**2)));v['world_fk_D'+str(n)]=float(np.sqrt(np.mean((np.diff(actual,n=n,axis=0)*30**n)**2)))
                     rows.append(v)
                 values[name]=rows
-            records.append(dict(key=key,methods=values,world_root_truth='UNKNOWN_FOR_CHANGE_MODEL_PRIOR_ONLY',contact_truth='UNKNOWN',full_native24='NOT_EVALUABLE_22_OF24'))
+            records.append(dict(key=key,methods=values,hidden_truth_is_continuous=r['source']['domain']!='ChangE-cross',cross_source_gap_error_scope='NO_CONTINUOUS_TRUTH_FOR_CHANGE_CROSS',world_root_truth='UNKNOWN_FOR_CHANGE_MODEL_PRIOR_ONLY',contact_truth='UNKNOWN',full_native24='NOT_EVALUABLE_22_OF24'))
         if rt:rt.check()
     finally:
         if rt:rt.close()

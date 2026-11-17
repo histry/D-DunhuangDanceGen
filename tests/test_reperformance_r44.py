@@ -25,6 +25,11 @@ def test_observed_path_integer_anchors_and_unknown_contact():
 def test_quiet_sources_are_not_given_false_peaks():
     raw=raw_motion();raw[:,7:]=raw[0,7:];R,_=decode(raw);_,q,records=maps(R,[30,60,90,180,210],CFG);assert np.array_equal(q,np.arange(256));assert all(r['static_preserved'] for r in records)
 
+def test_invalid_identity_source_is_not_silently_accepted():
+    raw=raw_motion();raw[100,12]=np.nan
+    with pytest.raises(ValueError):retime(raw,np.arange(256))
+    with pytest.raises(ValueError):retime(raw_motion(),np.arange(256)[::-1])
+
 @pytest.mark.parametrize('source,target', [([0,0],[0,1]),([0,10],[0,float('nan')]),([0,10],[0])])
 def test_invalid_maps_fail_closed(source,target):
     with pytest.raises(ValueError):smooth_map(source,target,CFG)

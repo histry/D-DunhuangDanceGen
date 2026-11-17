@@ -9,7 +9,7 @@ def decode(raw):return matrices(raw[:,7:].reshape(-1,22,6),row=True),np.asarray(
 
 def retime(raw,q):
     raw=np.asarray(raw);q=np.asarray(q,float);n=len(raw)
-    if raw.shape!=(256,139) or q.shape!=(n,) or not np.isfinite(q).all() or q.min()<0 or q.max()>n-1 or np.any(np.diff(q)<=0):raise ValueError('Real monotone 256-frame source-clock support')
+    if raw.shape!=(256,139) or not np.isfinite(raw).all() or q.shape!=(n,) or not np.isfinite(q).all() or q.min()<0 or q.max()>n-1 or np.any(np.diff(q)<=0):raise ValueError('Real monotone finite 256-frame source-clock support')
     if np.array_equal(q,np.arange(n)):return raw.copy()
     R,root=decode(raw);t=np.arange(n);out=raw.copy();sampled=np.stack([RotationSpline(t,Rotation.from_matrix(R[:,j]))(q).as_matrix() for j in range(22)],axis=1);out[:,7:]=sixd(sampled,row=True).reshape(n,132);out[:,4:7]=CubicSpline(t,root,axis=0)(q)
     integer=abs(q-np.rint(q))<1e-10;ids=np.rint(q[integer]).astype(int);out[integer,4:]=raw[ids,4:];assert np.array_equal(out[:,:4],raw[:,:4]);return out

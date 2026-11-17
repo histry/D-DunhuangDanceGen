@@ -8,7 +8,10 @@ from dunhuang.research.sdmr_event_rank.population import relation
 def build(out):
     out=Path(out)
     if out.exists():raise ValueError('Fresh population')
-    out.mkdir(parents=True);path=Path('outputs/sdmr_event_rank_01/benchmark/manifest.json');parent=read(path);rows=parent['rows'];cfg=parent['config'];groups=sorted({r['source_group'] for r in rows if r['role']=='train'});assert len(groups)==48
+    out.mkdir(parents=True);path=Path('outputs/sdmr_event_rank_01/benchmark/manifest.json');parent=read(path);rows=parent['rows'];cfg=parent['config']
+    from dunhuang.research.paired_event_r41.events import validate_roles
+    validate_roles(rows)
+    groups=sorted({r['source_group'] for r in rows if r['role']=='train'});assert len(groups)==48
     ordered=sorted(groups,key=lambda g:hashlib.sha256(('R44_44041:'+g).encode()).hexdigest());cal=ordered[:24];probe=ordered[24:];queries=[];missing=[]
     for g in groups:
         sources=sorted({r['raw_motion_sha256'] for r in rows if r['role']=='train' and r['source_group']==g})[:2]
