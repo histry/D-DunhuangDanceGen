@@ -11,7 +11,13 @@ def run(generation,ranking,out):
     assert (R/'receipts/finish_all.exit').read_text().strip()=='0'
     audit=read(R/'independent.json');assert audit['total_training_updates']==720 and audit['optimizer_steps']==0
     equivalence=read(R/'scoring_equivalence.json');assert equivalence['global_and_diagonal_exact'] and equivalence['exact_score_matrices']==1732
-    out.mkdir(parents=True);q=read(G/'qualification.json');guard=read(G/'main_guarded/guard.json');b=read(R/'benchmark/manifest.json');frozen=read(R/'evaluation/result.json');diagnostic=read(R/'diagnostics/result.json');native=read(R/'change_shadow_v3/result.json');p2={arm:read(R/('evaluation_'+arm+'_v2/result.json')) for arm in ('NoRank','Rank','ShuffledRank')};comparisons={}
+    out.mkdir(parents=True)
+    # The shared P0 template says Frozen R41. P2 pages must disclose actual trained weights.
+    label_fixes=[]
+    for arm in ('NoRank','Rank','ShuffledRank'):
+        viewer=R/('viewer_'+arm);protocol=read(viewer/'protocol.json');previous=sha(viewer/'protocol.json');html=(viewer/'index.html').read_text(encoding='utf8');html=html.replace('DUNHUANG · FROZEN R41','DUNHUANG · R41 ARCHITECTURE · P2 '+arm+' · 240 UPDATES').replace('<title>SDMR-E2 真实事件检索</title>','<title>SDMR-E2 P2 '+arm+' 训练对照</title>');(viewer/'index.html').write_text(html,encoding='utf8');protocol.update(display_model=arm,updates=240,previous_template_protocol_sha256=previous);protocol['files']=[dict(name=f.name,bytes=f.stat().st_size,sha256=sha(f)) for f in sorted(viewer.iterdir()) if f.is_file() and f.name!='protocol.json'];write(viewer/'protocol.json',protocol);label_fixes.append(dict(viewer=viewer.name,before=previous,after=sha(viewer/'protocol.json')))
+    write(R/'receipts/p2_view_label_fix.json',label_fixes)
+    q=read(G/'qualification.json');guard=read(G/'main_guarded/guard.json');b=read(R/'benchmark/manifest.json');frozen=read(R/'evaluation/result.json');diagnostic=read(R/'diagnostics/result.json');native=read(R/'change_shadow_v3/result.json');p2={arm:read(R/('evaluation_'+arm+'_v2/result.json')) for arm in ('NoRank','Rank','ShuffledRank')};comparisons={}
     for role in ('train','val'):
         for pool in ('same_music','energy_matched','cross_music'):
             key='/'.join((role,pool,'actual'));models={a:p2[a]['summary'][key]['Diagonal'] for a in p2};models['Frozen']=frozen['summary'][role][pool]['actual']['Diagonal'];table={a:v['group_macro_recall_at1'] for a,v in models.items()}
