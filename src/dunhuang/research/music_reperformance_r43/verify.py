@@ -44,10 +44,14 @@ def run(generation,ranking,out):
     for arm in ('NoRank','Rank','ShuffledRank'):
         p=ranking/('p2_'+arm);r=read(p/'result.json');initials.add(r['initial_digest']);schedules.add(r['schedule_sha256']);assert r['optimizer_steps']==240 and r['initial_digest']!=r['final_digest'] and r['model_parameters']==522632
         replay=read(ranking/('p2_'+arm+'_replay/result.json'));assert replay['optimizer_steps']==0 and replay['exact_gradient_and_loss_steps']==[0,120,239]
-        for name in ('features_','evaluation_'):
-            first=ranking/(name+arm);second=ranking/(name+arm+'_replay');exact_arrays(first/'arrays.npz',second/'arrays.npz');packs.append(dict(root=str(ranking),first=first.name,replay=second.name,arrays=len(np.load(first/'arrays.npz').files)))
+        for name in ('features_'+arm,'evaluation_'+arm+'_v2'):
+            first=ranking/name;second=ranking/(name+'_replay');exact_arrays(first/'arrays.npz',second/'arrays.npz');packs.append(dict(root=str(ranking),first=first.name,replay=second.name,arrays=len(np.load(first/'arrays.npz').files)))
         trainings.append(r)
     assert len(initials)==len(schedules)==1
+    assert read(ranking/'change_shadow_v2/result.json')==native
+    old=np.load(ranking/'change_shadow_v2/arrays.npz');new=np.load(ranking/'change_shadow_v3/arrays.npz')
+    for key in old.files:np.testing.assert_array_equal(old[key],new[key])
+    diagnostic=read(ranking/'diagnostics/result.json');assert diagnostic==read(ranking/'diagnostics_replay/result.json');exact_arrays(ranking/'diagnostics/arrays.npz',ranking/'diagnostics_replay/arrays.npz')
     write(out,dict(code_commit=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),payloads=packs,trainings=trainings,total_training_updates=720,benchmark_identity_exact=True,qualification_values_exact=True,parents=parents,role_isolation=isolation,actual_aist_lineage=aist,all_same_population_controls=True,main_delivery_preceded_controls=True,ranking_p0_delivery_preceded_scoring=True,optimizer_steps=0,whole_song_generations=0,operational_qualified=False,can_route=False));print('R43_INDEPENDENT_VERIFIED',len(packs),sum(p['files'] for p in parents),flush=True)
 
 
