@@ -37,13 +37,13 @@ def intervene(rt,m,ref,cp,a,parent,seeds,mode,budget,cache=False):
         return old
     def predict(*args,**kw):state['t']=int(args[3][0]);return oldpred(*args,**kw)
     def inject(layer,h):
-        ds=rt.c.change.inject(layer,h)-h;dc=rt.c.context_branch.delta(layer,h)
+        with_source=rt.c.change.inject(layer,h);ds=with_source-h;dc=rt.c.context_branch.delta(layer,h)
         if mode=='SourceOnly':dc=torch.zeros_like(dc)
         if mode=='ContextOnly':ds=torch.zeros_like(ds)
         row=dict(call=len(traces),t=state.get('t'),layer=layer)
         for name,sl in [('all',slice(None)),('gap',slice(104,152)),('center',slice(116,140))]:
             hv=h[:,sl];sv=ds[:,sl];cv=dc[:,sl];den=hv.norm().clamp_min(1e-9);row[name]=dict(source_ratio=float(sv.norm()/den),context_ratio=float(cv.norm()/den),cosine=float(torch.nn.functional.cosine_similarity(sv.flatten()[None],cv.flatten()[None],eps=1e-9)))
-        traces.append(row);return h+ds+dc
+        traces.append(row);return h+dc if mode=='ContextOnly' else with_source+dc
     sampler.condition=condition;sampler.project=Projector(oldproject,'RootContinuous',budget);rt.c.inject=inject;rt.d.model_predictions=predict
     try:result,noise,states=sampler.sample_bridge(rt,m,ref,cp,a,parent,seeds,cache)
     finally:sampler.condition=oldcond;sampler.project=oldproject;rt.c.inject=oldinject;rt.d.model_predictions=oldpred
