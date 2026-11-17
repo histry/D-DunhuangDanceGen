@@ -3,7 +3,7 @@ import argparse,collections
 from pathlib import Path
 import numpy as np
 from dunhuang.research.complete_r36.core import read,write,sha
-from dunhuang.research.source_context_r42.contracts import exact_arrays
+from dunhuang.research.music_reperformance_r43.replay import exact_arrays
 from .scorer import masked_diagonal,retrieval_metrics
 
 def run(benchmark,features,out,replay=None):

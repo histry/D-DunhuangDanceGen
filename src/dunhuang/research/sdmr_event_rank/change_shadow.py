@@ -10,7 +10,7 @@ from dunhuang.research.transition_r37.content import observations
 from dunhuang.research.coverage_r34.common import forbid_optimizers
 from dunhuang.research.paired_event_r41.population import Population
 from dunhuang.research.paired_event_r41.train import digest
-from dunhuang.research.source_context_r42.contracts import exact_arrays
+from dunhuang.research.music_reperformance_r43.replay import exact_arrays
 from .features import load_model
 from .scorer import R41EventScorer,scores,batch_partial
 

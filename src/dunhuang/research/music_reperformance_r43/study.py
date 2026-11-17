@@ -15,7 +15,7 @@ from dunhuang.research.coverage_r34.common import forbid_optimizers
 from dunhuang.research.stabilize_r39.projection import Projector
 from dunhuang.research.transition_r37.evaluate import decode,world_fk
 from dunhuang.research.source_context_r42.diagnose import measure
-from dunhuang.research.source_context_r42.contracts import exact_arrays
+from dunhuang.research.music_reperformance_r43.replay import exact_arrays
 from .contract import permissions
 from .projector import sample
 

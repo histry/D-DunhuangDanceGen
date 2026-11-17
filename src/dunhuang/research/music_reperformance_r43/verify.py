@@ -4,7 +4,7 @@ from pathlib import Path
 import numpy as np
 from dunhuang.research.complete_r36.core import read,write,sha
 from dunhuang.research.coverage_r34.common import forbid_optimizers
-from dunhuang.research.source_context_r42.contracts import exact_arrays
+from dunhuang.research.music_reperformance_r43.replay import exact_arrays
 
 
 def run(generation,ranking,out):
