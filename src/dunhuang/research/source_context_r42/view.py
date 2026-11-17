@@ -33,6 +33,7 @@ def build(out,extra=None):
                 if not src.exists():src=p/'generation'/audio
                 shutil.copyfile(src,out/audio)
             cases.append(dict(id='new_'+key,name=row.get('label',key),panels=panels,audio=audio,gap=[104,152],seeds=row['seeds'],scope=row['scope'],metrics=row.get('metrics',{})))
+    if extra:cases=[c for c in cases if c['id'].startswith('new_')]+[c for c in cases if not c['id'].startswith('new_')]
     payload=dict(cases=cases,tracks=tracks,parents=parents.tolist(),fps=30,frames=256,source_truth='UNPAIRED_REFERENCE_OR_SAME_RECORDING_AS_LABELLED',whole_song_generated=False)
     (out/'data.js').write_text('window.R42_B64="'+base64.b64encode(gzip.compress(json.dumps(payload,ensure_ascii=False,allow_nan=False,separators=(',',':')).encode(),mtime=0)).decode()+'";',encoding='utf8')
     for f in ('index.html','viewer.js','style.css'):shutil.copyfile(Path(__file__).parent/f,out/f)
