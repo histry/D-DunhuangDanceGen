@@ -1,0 +1,20 @@
+{
+  "baseline":"5e0506c2f29ca6fb8600620c60affed641cab34f",
+  "parent":"outputs/music_reperformance_r43_01",
+  "core_intervals":[[8,99],[158,248]],
+  "gap":[104,152],
+  "max_phase_displacement_frames":6,
+  "music_per_source_rate":[0.75,1.33],
+  "shrink_scales":[1.0,0.5,0.25,0.125,0.0625,0.0],
+  "minimum_motion_speed_radps":0.2,
+  "sample_rate":22050,
+  "hop_length":735,
+  "fps":30,
+  "seed":44041,
+  "bootstrap_draws":5000,
+  "registered_video_sources":["female_FeiTian","female_meditation","male_pipa_2"],
+  "training_steps":0,
+  "whole_song_generations":0,
+  "can_route":false,
+  "operational_qualified":false
+}
