@@ -55,3 +55,26 @@ def test_offset_diagnostic_uses_equal_real_non_circular_support():
     from dunhuang.research.stabilize_r39.content_diagnostics import support,OFFSETS
     t,m=support(120);assert m.shape==(5,90) and t[0]==15 and t[-1]==104
     for k,d in enumerate(OFFSETS):assert np.array_equal(m[k],t+d) and m[k].min()>=0 and m[k].max()<120
+
+def test_actual_diagnostic_renderer_emits_finite_curve_coordinates():
+    import base64,gzip,json,shutil,subprocess
+    from pathlib import Path
+    from dunhuang.research.stabilize_r39.view import diagnostic_script
+    node=shutil.which('node')
+    if not node:pytest.skip('Node needed for actual JavaScript renderer regression')
+    payload=dict(cases=[dict(id='fixture',kind='bridge',frames=5,audio=None,panels=[dict(title='fixture',track='t')],summary={},scope='fixture',diagnostics_variants=[{'Geometry':{'jerk':[0,1,3,1,0]}}])],tracks={'t':dict(shape=[5,22,3],data=base64.b64encode(np.zeros((5,22,3),'<f4').tobytes()).decode())},parents=[-1]+list(range(21)))
+    encoded=base64.b64encode(gzip.compress(json.dumps(payload).encode())).decode()
+    js=r'''
+const calls=[];const elements={};
+function make(id=''){const context={fillRect(){},clearRect(){},beginPath(){},stroke(){},fill(){},arc(){},fillText(){},moveTo(x,y){if(id==='diagnostic')calls.push([x,y]);},lineTo(x,y){if(id==='diagnostic')calls.push([x,y]);}};return {id,width:1400,height:150,value:'',dataset:{},selectedOptions:[{textContent:'Jerk'}],pause(){},load(){},removeAttribute(){},append(){},replaceChildren(){},getContext(){return context;}};}
+global.document={getElementById(id){return elements[id]||(elements[id]=make(id));},querySelectorAll(){return [];},createElement(){return make();}};
+for(const [id,value] of Object.entries({seed:'0',metric:'jerk',view:'local',rate:'1'}))document.getElementById(id).value=value;
+global.requestAnimationFrame=()=>{};global.window={R36_B64:ENCODED};process.on('unhandledRejection',e=>{console.error(e);process.exit(1);});
+'''.replace('ENCODED',json.dumps(encoded))
+    source=(Path(__file__).resolve().parents[1]/'src/dunhuang/research/transition_r37/web/viewer.js').read_text(encoding='utf8')
+    js+=diagnostic_script(source)+r'''
+setTimeout(()=>{if(calls.length<5||!calls.every(p=>p.every(Number.isFinite))||!calls.some(p=>p[1]<50))throw Error('Invalid diagnostic canvas path');console.log('FINITE_DIAGNOSTIC_PATH');},100);
+'''
+    result=subprocess.run([node,'-'],input=js,text=True,encoding='utf8',capture_output=True,timeout=20)
+    assert result.returncode==0,result.stderr
+    assert 'FINITE_DIAGNOSTIC_PATH' in result.stdout

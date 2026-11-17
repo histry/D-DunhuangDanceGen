@@ -5,6 +5,12 @@ import numpy as np
 from dunhuang.research.complete_r36.core import read,write,sha
 from dunhuang.research.transition_r37.evaluate import decode,world_fk
 
+def diagnostic_script(text):
+    old='v.forEach((v,i)=>{const px=i/(v.length-1)*d.width,py=130-v/m*110;'
+    new='v.forEach((value,i)=>{const px=i/Math.max(1,v.length-1)*d.width,py=130-value/m*110;'
+    if old not in text:raise ValueError('Pinned parent diagnostic renderer changed')
+    return text.replace(old,new)
+
 def run(root,out):
     root=Path(root);out=Path(out)
     if out.exists():raise ValueError('Fresh watch directory required')
@@ -38,6 +44,7 @@ def run(root,out):
             text=text.replace('<option value="root_speed">生成Root速度</option>','<option value="root_speed">生成Root速度</option><option value="root_acceleration">Root加速度</option><option value="root_jerk">Root Jerk</option>')
             text=text.replace('<span id="clock">','<label><input type="checkbox" id="reference">第一栏看来源／真值</label><select id="diagnostic-arm"><option value="Raw">定位 Raw</option><option value="RootContinuous">定位 Root连续</option><option value="ResidualRTS">定位 RTS</option></select><button id="max-root">跳到最大Root加速度</button><button id="max-body">跳到最大参考差</button><span id="clock">')
         if file=='viewer.js':
+            text=diagnostic_script(text)
             text=text.replace("'固定世界 · 来源Root未知 · 帧 '","(current.summary.reference_is_target?'固定世界 · 配对Root参考 · 帧 ':'固定世界 · 来源Root未知 · 帧 ')")
             text=text.replace("const panelTrack=p=>p.variants?p.variants[Number($('seed').value)]:p.track;","const panelTrack=p=>p.reference_track&&$('reference').checked?p.reference_track:(p.variants?p.variants[Number($('seed').value)]:p.track);")
             text=text.replace("function draw(){if(!current)return;", "function draw(){if(!current)return;const first=$('panels').querySelector('h3');if(first&&current.panels[0].reference_track)first.textContent=$('reference').checked?(current.summary.reference_is_target?'配对来源真值':'硬切来源参考 · 不是连续真值'):current.panels[0].title;")
