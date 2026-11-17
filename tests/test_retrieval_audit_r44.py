@@ -1,5 +1,6 @@
 import numpy as np
 import pytest
+pytest.importorskip("numba", reason="R44 optional CPU audit extra")
 from dunhuang.research.sdmr_event_rank.scorer import batch_partial
 from dunhuang.research.retrieval_audit_r44.path import partial
 

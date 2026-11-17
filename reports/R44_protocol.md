@@ -27,3 +27,5 @@ Do not train a new neural branch just because legal maps exist. Necessary Train-
 Publish code before each server stage. tmux launcher, exact SHA, source hashes, success/failure receipts; fresh-process numeric replay with zero optimizer calls; parent manifests unchanged. Preserve failed runs. Clean only temporary helpers created for R44. Public reports exclude private raw arrays/music/checkpoints; locally return this run's viewer files explicitly requested by user.
 
 Mechanism references: SciPy RotationSpline and BPoly.from_derivatives official docs; BeatDance ICMR2024 official https://github.com/XulongT/BeatDance ; Drop-DTW NeurIPS2021 official https://github.com/SamsungLabs/Drop-DTW . No claim to reproduce either network or full algorithm.
+
+CPU审计/视频的可选依赖可通过 `pip install -e ".[r44,test]"` 安装；默认生产依赖不引入Numba。特征提取和官方FK仍使用已核验的EDGE/Lodge运行时，音频检测仍使用资产清单中的librosa0.11.0，不应据此改动已封存实验环境。
