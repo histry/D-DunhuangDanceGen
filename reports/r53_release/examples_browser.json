@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "scope": "PLAYBACK_AND_VISIBLE_GAP_MASK_ONLY_NOT_HUMAN_OR_NATIVE_QUALIFICATION",
+  "checks": [
+    "W0 rejected gap visibly blank at transition",
+    "alternate left warp shows saved admitted skeleton at same audio frame",
+    "step 250 to251",
+    "song switch to second audio/case validated"
+  ],
+  "screenshot": "C:/Users/li/Documents/敦煌舞视频生成/outputs/r53_example_acceptance.jpg",
+  "screenshot_sha256": "4e469d9fa25ba27fcc24c6e33b233c6833760b825d53f332094d17d18f2d072d",
+  "completed_at": "2026-11-18T17:33:08.874001+00:00",
+  "temporary_http_stopped": true
+}

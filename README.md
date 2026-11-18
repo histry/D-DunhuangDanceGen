@@ -353,3 +353,13 @@ R37规划及默认EDGE路径保持冻结。R38用真实连续录制训练Context
 保留 Heuristic＋E1-W＋Geometry，修复分区时钟，将完整参考重建与真实连续缺口补间分开。两阶段共用 `EVENT_PLAN_R52_V1` 和音乐时钟；两组Source／Context适配各固定240步，Lodge／IO／General冻结。新候选尚未建立生成净收益，未进入整曲或正式物理准入。
 
 详见 [R52最终报告](reports/R52完整来源与启发式强基线实验报告.md)、[独立复验](reports/r52_release/independent.json) 和 [657项通过的完整回归](reports/r52_release/pytest_final_full.log)。本地效果入口为 `outputs/strong_baseline_r52_01/index.html`；真实媒体与权重不写入Git。
+
+
+## R53：合法演法与连接机制（研究）
+
+从原E1-W离散候选图生成K-best与同图随机K，冻结R52强基线、原G0/G1及全部筛查阈值。先交付真实FK观看，再完成18任务×9方法和独立来源重算；神经训练与整曲生成均为0。
+
+- 本机统一观看：`outputs/warp_coupling_r53_01/index.html`；包含同事件Warp矩阵、B0/B3、等K对照与局部边恢复案例。拒绝的过渡留空，无额外平滑。
+- 2,268固定事件对中38组存在局部恢复、20组存在反向丢失。原18个全局任务本就通过，失败任务恢复为0/18。
+- 联合规划开发门G3未通过；保留R52强基线，不能宣称整体质量或泛化提升。Root／Contact未知，未获得Native24资格。
+- [完整报告与成本表](reports/r53_release/report.md)、[独立复验](reports/r53_release/independent.json)、[封存核验](reports/r53_release/final_recheck.json)、[执行协议](docs/warp_coupling_r53.md)。完整回归661 passed、1 skipped；3阶段JSON全失败图与确定性NPZ字节均精确复现，R52原18轨迹不变。
