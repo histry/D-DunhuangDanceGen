@@ -31,16 +31,16 @@ def run(out):
  oldnpz=np.load(OLDROOT/'evaluation/scores.npz') if (OLDROOT/'evaluation/scores.npz').exists() else None
  if oldnpz is None:
   files=[p for p in (OLDROOT/'evaluation').glob('*.npz') if 'calibration' not in p.name];assert len(files)==1;oldnpz=np.load(files[0])
- groups=defaultdict(lambda:defaultdict(lambda:defaultdict(list)))
+ groups=defaultdict(lambda:defaultdict(lambda:defaultdict(lambda:defaultdict(list))))
  for i,t in enumerate(tasks):
   H=oldnpz[f'Heuristic_{i}'];base=oldnpz[f'Frozen_{i}'];scores=dict(Heuristic=H,Frozen=base)
   for arm in ('Conditional','NoClock'):
    legacy=oldnpz[f'{arm}_{i}'];scores[arm]=legacy;scores[arm+'_TeacherRescore']=base+(legacy-H)
   for name,values in scores.items():
-   arrays[f'{name}_{i}']=values;metric=retrieval_metrics(values,t['positive']);role=next(k for k,v in s.split.items() if t['group'] in v);groups[role+'_'+t['family']][name][t['group']].append(metric)
+   arrays[f'{name}_{i}']=values;metric=retrieval_metrics(values,t['positive']);role=next(k for k,v in s.split.items() if t['group'] in v);groups[role+'_'+t['family']][name][t['group']][t['recording']].append(metric)
  rescore={}
  for role,methods in groups.items():
-  rescore[role]={name:{g:{key:float(np.mean([v[key] for v in values])) for key in ('recall_at1','recall_at5','mrr')} for g,values in by.items()} for name,by in methods.items()}
+  rescore[role]={name:{g:{key:float(np.mean([np.mean([v[key] for v in values]) for values in recordings.values()])) for key in ('recall_at1','recall_at5','mrr')} for g,recordings in by.items()} for name,by in methods.items()}
  # Candidate pool depends only on role, frame count and available pre-existing tensors.
  # It does NOT use positive bins. UNKNOWN relations remain in ranked pool.
  available=sorted(int(k[1:]) for k in s.z.files if k.startswith('M') and k[1:].isdigit());openrows=[]
