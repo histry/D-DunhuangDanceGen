@@ -45,6 +45,12 @@ class MusicReperformanceCondition:
 
 
 class PhaseReference(WindowReference):
+    def inject(self,index,hidden):
+        proposal = super().inject(index,hidden)
+        if self.context is None:
+            return hidden
+        return torch.where(self.control_mask[:,:,None],proposal,hidden)
+
     def set_condition(self, condition):
         condition.validate()
         self.set_reference(condition.reference_features,condition.observed_mask,condition.clock,
@@ -104,6 +110,12 @@ def diagnose():
         model.set_condition(packet)
         poisoned = model.inject(0,hidden)
         assert torch.equal(masked,poisoned)
+        packet.edit_permissions[:,:8] = False
+        packet.edit_permissions[:,-8:] = False
+        model.set_condition(packet)
+        protected = model.inject(0,hidden)
+        assert torch.equal(protected[:,:8],hidden[:,:8])
+        assert torch.equal(protected[:,-8:],hidden[:,-8:])
     assert min(norms)>0 and delta>0
     return dict(reference_and_query_phase_gradient_norm=norms,phase_zero_output_rms=delta,
                 hidden_poison_invariant=True,probe="FIXED_RANDOM_WEIGHTS_NONZERO_READOUT",

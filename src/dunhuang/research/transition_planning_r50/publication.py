@@ -12,6 +12,9 @@ ROOTS = [ROOT,Path("outputs/transition_planning_r50_replay"),Path("outputs/attri
 
 
 def run():
+    from .conditions import diagnose
+    # Re-execute current condition contract, including exact protected-frame permissions.
+    diagnose()
     p = read(ROOT/"result.json")
     a = read("outputs/attribution_r50_01/result.json")
     ind = read(PUB/"independent.json")
@@ -61,7 +64,8 @@ def run():
               "固定随机权重与非零读出用于检查结构传播，尚未加载真实生成权重验证训练收益。"
               f"参考/查询阶段梯度范数 {a['condition_probe']['reference_and_query_phase_gradient_norm']}，"
               f"阶段置零输出RMS变化 {a['condition_probe']['phase_zero_output_rms']}。"
-              "无效来源改成NaN后输出逐位一致。音乐和上下文继续由现有主干与Controller路由，"
+              "无效来源改成NaN后输出逐位一致，禁编辑首尾区域精确保留输入隐藏状态。"
+              "主归因复验完成后补充的编辑许可保护在发布进程重新执行断言。音乐和上下文继续由现有主干与Controller路由，"
               "本轮结构探针不作其质量改进结论。","",
               "## 验证与发布","",f"完整回归 {summary['pytest']}。"
               "主轨迹与完整归因均由新进程重算，数组及科学JSON精确一致，R49的17个封存文件逐哈希保持。"
