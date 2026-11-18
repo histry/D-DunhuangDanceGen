@@ -1,0 +1,56 @@
+{
+  "version": "R56_MUSIC_STRUCTURE_ATTRIBUTION_V1",
+  "baseline": "aa9c831a6c71c588ace3235734aad31a902b45d5",
+  "seed": 56056,
+  "songs": [
+    0,
+    1,
+    2
+  ],
+  "main_song": 0,
+  "events": 13,
+  "gap": 48,
+  "min_core": 180,
+  "max_core": 300,
+  "beam": 128,
+  "workers": 4,
+  "source_units": 16,
+  "maximum_geometry_trials_per_layout": 3072,
+  "edge_weight": 0.01,
+  "unit_reuse_penalty": 0.1,
+  "source_reuse_penalty": 0.02,
+  "structure_weight": 0.25,
+  "length_penalty": 0.1,
+  "audio_sr": 16000,
+  "stft_window": 2048,
+  "stft_hop": 400,
+  "novelty_context_frames": [
+    45,
+    90
+  ],
+  "novelty_smoothing_frames": 6,
+  "silence_weight": 0.15,
+  "proxy_boundary_distance_frames": 150,
+  "proxy_boundary_prominence": 0.12,
+  "proxy_boundary_tolerance_frames": 15,
+  "accent_distance_frames": 8,
+  "accent_tolerances_frames": [
+    3,
+    6
+  ],
+  "source_samples": 32,
+  "arms": [
+    "B0",
+    "B1",
+    "B2",
+    "B3"
+  ],
+  "all_music_scope": "HISTORICALLY_EXPOSED_DUNHUANG_DEVELOPMENT_CASES",
+  "true_phrase_annotations": "UNAVAILABLE_NOT_EVALUABLE",
+  "human_reviewed": false,
+  "physical_qualified": false,
+  "native24": "NOT_EVALUABLE",
+  "sdmr_used": false,
+  "neural_training_steps": 0,
+  "can_route": false
+}
