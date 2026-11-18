@@ -1,7 +1,6 @@
 """Freeze measured R50 outcomes and verify them in a fresh process."""
 from pathlib import Path
 import subprocess
-import numpy as np
 from dunhuang.research.complete_r36.core import read,write
 from dunhuang.research.reperformance_r44.replay import digest
 from .common import ROOT
@@ -24,7 +23,7 @@ def run():
     assert acceptance["verified_unix"]<Path("outputs/attribution_r50_01/result.json").stat().st_mtime
     summary = dict(plan_cases=[{k:v for k,v in r.items() if k!="connections"} for r in p["cases"]],
                    attribution=a["summary"],condition_probe=phase_probe,independent=ind,
-                   pytest=(PUB/"pytest.log").read_text().strip().splitlines()[-1],
+                   pytest=(PUB/"pytest_release.log").read_text().strip().splitlines()[-1],
                    model=a["model"],can_route=False,neural_optimizer_steps=0,
                    code_commit=subprocess.check_output(["git","rev-parse","HEAD"],text=True).strip())
     write(PUB/"summary.json",summary)
@@ -85,9 +84,11 @@ def run():
 
 
 def recheck():
+    from .conditions import diagnose
+    assert diagnose()==read(PUB/"summary.json")["condition_probe"]
     files = read(PUB/"seal.json")["files"]
     for f in files:
         p = Path(f["path"])
         assert p.stat().st_size==f["bytes"] and digest(p)==f["sha256"],str(p)
-    write(PUB/"seal_recheck.json",dict(files=len(files),all_hashes_verified=True,
+    write(PUB/"seal_recheck.json",dict(files=len(files),all_hashes_verified=True,condition_probe_exact_replay=True,
           commit=subprocess.check_output(["git","rev-parse","HEAD"],text=True).strip()))
