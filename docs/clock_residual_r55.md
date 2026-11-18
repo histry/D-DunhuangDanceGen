@@ -11,3 +11,7 @@ S0 只引用封存历史；S1=8→8 池化、S2=32→32 池化为候选规模诊
 Conditional先训练及显示真实来源选择与五偏移恢复，浏览器验收回执后才执行另外三组。四组冻结后，历史Val按音乐组、录制均衡评价；置信阈值只由8个Train留组的合成注入时钟正确率制定；无足够证据则拒答。ChangE语义/文化、世界Root接触、生成质量保持未知；不接管Planner、不跑新整曲。
 
 执行：`PYTHONPATH=src python -m dunhuang.research.clock_residual_r55 <prepare|preview|qualify|train|main_view|evaluate|verify> --out <fresh-path> [--arm Conditional]`。所有训练在已发布提交的tmux任务中执行，保留命令/提交/退出状态；verify新进程禁止构造优化器，重算资格分数、真实快照梯度和最终全部评价。
+
+V2单次数据合同修正：V1虽按查询留出8个Train音乐组，435个实际训练任务中189项仍把校准动作作条件负候选，203项在Unconditional池曝光。保持V1所有模型和中断评价；不把该校准称为独立。V2在两个训练候选池均排除留组身份、匹配每任务候选数，重新生成保持多正例数量的打乱标签，无负候选时仅排除训练（不抹去评价任务），重新从R41固定预算训练。修改依据仅Train元数据，不读取Val性能选方法或阈值。V2完整记录有效人口和交集空集。
+
+隔离同时核对music group、原始动作SHA和音频SHA。留组是本次R55适配的留出，不是R41预训练从未曝光的音乐或全新盲测；报告必须保留这一边界。

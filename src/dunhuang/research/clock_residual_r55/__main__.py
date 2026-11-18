@@ -4,7 +4,7 @@ def main():
  if a.mode=='prepare':
   from .study import Study
   from .common import fresh,write,binding,CFG,sha,Path,fingerprint
-  s=Study();write(fresh(a.out)/'binding.json',dict(parent_manifest_sha256=sha(Path(CFG['data'])/'manifest.json'),parent_arrays_sha256=sha(Path(CFG['data'])/'arrays.npz'),partition=s.split,code=binding(),commit=fingerprint(),can_route=False))
+  s=Study();write(fresh(a.out)/'binding.json',dict(parent_manifest_sha256=sha(Path(CFG['data'])/'manifest.json'),parent_arrays_sha256=sha(Path(CFG['data'])/'arrays.npz'),partition=s.split,population_audit=s.population_audit,code=binding(),commit=fingerprint(),can_route=False))
  elif a.mode in ('preview','main_view'):
   from .view import run
   run(a.out,a.mode=='main_view')

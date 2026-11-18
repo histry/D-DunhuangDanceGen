@@ -32,3 +32,9 @@ def test_confidence_abstains_without_evidence():
 
 def test_candidate_order_does_not_create_positive_index_shortcut():
  x=torch.nn.functional.normalize(torch.randn(3,30,9),dim=-1);v=torch.ones(3,30,dtype=torch.bool);original=diagonal(x[:1],x,v[:1],v);permutation=torch.tensor([2,0,1]);reordered=diagonal(x[:1],x[permutation],v[:1],v[permutation]);assert torch.equal(reordered,original[permutation])
+
+
+def test_calibration_motion_cannot_enter_as_negative_candidate():
+ from dunhuang.research.clock_residual_r55.population import independent_candidates
+ meta={'rows':[{'source_group':x} for x in ['a','a','a','cal','a','a']], 'tasks':[{'uid':'t','role':'train','group':'a','query':0,'candidates':[1,2,3],'positive':[True,False,False],'heuristic':[0,0,0],'unconditional_candidates':[1,4,5],'unconditional_positive':[True,False,False],'unconditional_heuristic':[0,0,0]}]}
+ tasks,audit=independent_candidates(meta,{'calibration':['cal'],'optimization':['a']},55055);t=tasks[0];assert t['training_admitted'] and t['candidates']==[1,2] and len(t['unconditional_candidates'])==2;assert not audit['held_training_identity_intersection'];assert meta['tasks'][0]['candidates']==[1,2,3]

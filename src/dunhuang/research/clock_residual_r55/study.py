@@ -5,6 +5,8 @@ from dunhuang.research.residual_sdmr_r54.learn import Study as ParentStudy
 class Study(ParentStudy):
  def __init__(self):
   super().__init__();self.split=partition(self.meta)
+  from .population import independent_candidates
+  self.meta['tasks'],self.population_audit=independent_candidates(self.meta,self.split,CFG['seed'])
  def raw(self,net,t,mode='conditional',control='actual'):
   ids=t['unconditional_candidates'] if mode=='unconditional' else t['candidates'];q=t['donor'] if control=='wrong_music' else t['query'];m,_,mv,_=self.tokens(net,[q]);_,d,_,dv=self.tokens(net,ids)
   if control=='music_zero':
@@ -33,7 +35,7 @@ class Study(ParentStudy):
   return loss
 
 def schedule(study,steps):
- rng=np.random.default_rng(CFG['seed']);by={g:[i for i,t in enumerate(study.meta['tasks']) if t['role']=='train' and t['group']==g] for g in study.split['optimization']};order=[]
+ rng=np.random.default_rng(CFG['seed']);by={g:[i for i,t in enumerate(study.meta['tasks']) if t['role']=='train' and t['group']==g and t['training_admitted']] for g in study.split['optimization']};by={g:v for g,v in by.items() if v};order=[]
  for step in range(steps):
   batch=[]
   for g in rng.choice(sorted(by),CFG['batch_groups'],replace=False):
@@ -52,7 +54,7 @@ def fit(s,net,order,out,arm):
   if step in (0,len(order)//2,len(order)-1):save(net,out/f'step{step}_post.pt',step+1)
   history.append(dict(step=step,tasks=ids,loss=float(loss.detach()),gradient=norm))
   if (step+1)%40==0:print('R55_TRAIN',arm,step+1,history[-1]['loss'],flush=True)
- save(net,out/'model.pt',len(order));write(out/'schedule.json',order);write(out/'history.json',history);write(out/'result.json',dict(arm=arm,updates=len(order),initial_digest=initial,final_digest=digest(net),model_sha256=sha(out/'model.pt'),total_parameters=sum(p.numel() for p in net.parameters()),trainable_parameters=sum(p.numel() for p in net.parameters() if p.requires_grad),schedule_sha256=sha(out/'schedule.json'),parent_data_sha256=sha(Path(CFG['data'])/'manifest.json'),code=binding(),commit=fingerprint(),partition=s.split,Val_used_for_selection=False,can_route=False))
+ save(net,out/'model.pt',len(order));write(out/'schedule.json',order);write(out/'history.json',history);write(out/'result.json',dict(arm=arm,updates=len(order),initial_digest=initial,final_digest=digest(net),model_sha256=sha(out/'model.pt'),total_parameters=sum(p.numel() for p in net.parameters()),trainable_parameters=sum(p.numel() for p in net.parameters() if p.requires_grad),schedule_sha256=sha(out/'schedule.json'),parent_data_sha256=sha(Path(CFG['data'])/'manifest.json'),code=binding(),commit=fingerprint(),partition=s.split,population_audit=s.population_audit,Val_used_for_selection=False,can_route=False))
 
 def train(out,arm):
  assert read(ROOT/'qualification/gate.json')['admitted']

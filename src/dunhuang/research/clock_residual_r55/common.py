@@ -7,7 +7,7 @@ from torch.nn import functional as F
 from dunhuang.research.complete_r36.core import read,write,sha
 from dunhuang.research.warp_coupling_r53.common import save_arrays,array_hash
 from dunhuang.research.paired_event_r41.train import seeded,digest,save
-ROOT=Path('outputs/clock_residual_r55_01')
+ROOT=Path('outputs/clock_residual_r55_02')
 CFG=read(Path(__file__).with_name('protocol.json'))
 
 def fresh(p):
