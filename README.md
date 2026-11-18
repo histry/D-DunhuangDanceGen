@@ -3,6 +3,8 @@
 当前默认路径：**Event Catalog → Music Timeline → Event Plan → 冻结 EDGE（Temporal V0.5）→ 原 Native 验收**。学习检索保留shadow。研究路径已完成真实151D配对补全，以及原生SO(3)跨录制条件的Cross/Additive同参数量训练（各1,200步）；事件跟随与完整生成质量仍未合格。
 
 
+新增 [R51 来源集中、配对排名与真实冻结条件验证](reports/r51_release/README.md)、[自动报告](reports/r51_release/report.md)及[独立复验](reports/r51_release/independent.json)。本机统一观看 `outputs/validation_r51_01/index.html`；先回传并验收四个实际Lodge补全和六段规划，再做条件对照。取消Top4仍只选两个来源，2268边中2177边通过筛查；禁止精确重复增至5来源，但不视为音乐学习成功。历史曝光Val近活动量R@1 Full33.52%、错音乐26.94%，差值区间跨零；真实阶段对两条AIST反而退化，来源及去右Context响应仍弱。644回归通过/10跳过，五组新进程精确复算，R50的29文件保持，本轮88文件封存；原始轨迹留服务器，四组观看页已回传。新训练/整曲0，完整Native24仍不可评，正式路径及研究Shadow资格保持。
+
 新增 [R50 显式过渡预算与完整音乐归因报告](reports/r50_release/report.md)、[汇总](reports/r50_release/summary.json)与[独立复验](reports/r50_release/independent.json)。先观看本机 `outputs/transition_planning_r50_01/viewer/index.html`：三首历史音乐各两事件/三事件共六段，逐帧显示实际 Core/Transition。每个 Core 为240帧，连接真实占用24/48/72帧；18组可装配，选中连接通过既定身体相对数值筛查，全片动态另报。完整主评分换音乐改变13/95个首选，Local为2/95，排名Spearman中位0.868871；不是正确率或独立泛化证明。独立研究子类修复可变长阶段置零，实际遮住64帧和禁止编辑16帧的结构检查通过；旧掩码探针维度错误已修正并在报告说明。641回归通过、10跳过，主轨迹/评分精确复算，17个R49封存文件保持，29个产物逐SHA复核。9个观看文件已回传并实际验收，临时本机服务关闭。Core是ChangE合法重定时、连接是冻结G0/G1几何提案；本轮新神经训练/生成为0，世界Root/接触未知、完整Native24未通过，正式路径与Shadow资格保持。
 
 新增 [R49 事件级音乐对齐报告](reports/r49_release/report.md)、[机器摘要](reports/r49_release/summary.json)与[独立复验](reports/r49_release/independent.json)。本机观看入口为 `outputs/event_alignment_r49_01/viewer/index.html`，可在同一真实音乐片段下逐帧比较 R41 与活动度选中的 ChangE 来源。观看验收后才启动对照。95 个时段共 3861/4177 个变体获得评分，316 个因音乐特征支持不足排除。历史 Val 五偏移 R@1 为 25.46%，换音乐 21.20%，配对区间跨零。敦煌主评分改变 70/95 个活动度首选，局部评分换音乐仅改 2/95。独立盲测尚缺核验资产，检索保持 Shadow。639 回归通过、10 跳过，评分和资格输出精确复算，17 个本轮科学与观看文件封存。

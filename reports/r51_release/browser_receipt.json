@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "verified_unix": 1795006347.7786555,
+  "checks": [
+    "Four actual frozen Lodge cases rendered from saved outputs",
+    "Shared music play and frame104 advances to107",
+    "ChangE silent playback advances to255",
+    "Six short planning comparisons available",
+    "Plan frame240 is global1776 Transition; next frame1777",
+    "Three-event target has816 frames"
+  ],
+  "protocol_sha256": {
+    "main": "e4b3350902f847374f1d3e4307196b6b411c3ea5fbb535be93acae64e2751216",
+    "plans": "676db1a46d70a4c8e7eb5d17019510e98e3ac7a0c2fbf0e5e4f3782f6185d203"
+  },
+  "preview_sha256": "9d375e948e6f84bd0840599740a1a68d802058aacf3a721e36e048a976479f61",
+  "code_commit": "e770e2f2475e676ab76de10f0ae1ff6ae81a4854",
+  "scope": "PLAYBACK_AND_IDENTITY_ACCEPTANCE_NOT_ARTISTIC_QUALITY"
+}
