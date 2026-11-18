@@ -20,7 +20,7 @@ class Study:
    if not (np.isclose(w[0,0],a) and np.isclose(w[-1,0],b-1) and np.isclose(w[0,1],A) and np.isclose(w[-1,1],B-1)):raise ValueError('Warp support mismatch')
    q=np.interp(np.arange(A,B),w[:,1],w[:,0]);origin=A
   if (q<a-1e-9).any() or (q>b-1+1e-9).any():raise ValueError('Cannot extrapolate source')
-  key=(u['unit_uid'],kind,tuple(q.tolist()))
+  key=(u['unit_uid'],kind,origin,tuple(w.ravel().tolist()),tuple(q.tolist()))
   if key not in self.cache:
    R=raw[a:b].copy() if kind=='native' else rotation_sample(raw,q);P=relative_fk(R,self.pop.net.joints,self.pop.net.parents);m=stats(P,w[1:-1,1]-origin);self.cache[key]=dict(R=R,P=P,q=q,time_warp=w.tolist(),metrics=m)
   return self.cache[key]

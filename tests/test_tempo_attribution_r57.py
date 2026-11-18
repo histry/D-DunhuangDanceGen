@@ -28,3 +28,10 @@ def test_time_maps_refuse_out_of_domain_and_do_not_mutate_source():
  assert s.sample(node,[0,50],'linear') is None
  assert s.sample(node,[0,100])['metrics']['D3_Q95']==0
  assert np.array_equal(R,np.tile(np.eye(3),(100,22,1,1)))
+
+def test_equal_source_queries_keep_distinct_absolute_music_maps():
+ from dunhuang.research.tempo_attribution_r57.study import Study
+ from types import SimpleNamespace
+ s=object.__new__(Study);R=np.tile(np.eye(3),(100,22,1,1));s.pop=SimpleNamespace(lib=SimpleNamespace(rotations={'x':R}),net=SimpleNamespace(joints=np.zeros((22,3)),parents=np.array([-1]+[0]*21)));s.cache={}
+ a=dict(unit=dict(unit_uid='u',source_uid='x',source_interval=[0,100]),warp=dict(time_warp=[[0,0],[99,99]]));b=dict(a,warp=dict(time_warp=[[0,300],[99,399]]))
+ first=s.sample(a,[0,100]);second=s.sample(b,[300,400]);assert np.array_equal(first['R'],second['R']);assert second['time_warp'][0][1]==300 and first['time_warp'][0][1]==0
