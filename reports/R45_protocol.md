@@ -33,3 +33,5 @@ No new time/space branch unless B supplies credible net benefit and real paired 
 All stages: publish code before server execution; tmux; fresh-process replay with zero optimizer calls; exact protected frames, baseline and parent hashes; retain success/failure receipts. Private media/arrays/weights are not pushed to Git. Clean only this run's temporary SSH helpers.
 
 References checked: MotionBeat official https://motionbeat2025.github.io/ and https://github.com/wangxuanchen88/MotionBeat ; GTCC CVPR2024 https://openaccess.thecvf.com/content/CVPR2024/html/Donahue_Learning_to_Predict_Activity_Progress_by_Self-Supervised_Video_Alignment_CVPR_2024_paper.html ; no claim of full reproduction or learned semantic phases.
+
+补充固定读出定义：导数归因将连续SO(3)路径采样与实际139D编码后再FK的差异单列为representation round-trip increment，和积分/源导数残差分开；这不是一个新精度候选，也不据此更改任何门槛。检索额外保留固定EnergyHeuristic（Train归一化音乐通道0与动作通道264均值差），它不是完整Planner代价，更不是真值。
