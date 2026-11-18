@@ -59,11 +59,8 @@ def release(out):
  for directory in ROOT.glob('*/viewer'):
   shutil.copyfile(Path(__file__).with_name('viewer.html'),directory/'index.html')
   protocol=read(directory/'protocol.json');protocol['files']=[dict(name=f.name,bytes=f.stat().st_size,sha256=digest(f)) for f in sorted(directory.iterdir()) if f.name!='protocol.json'];write(directory/'protocol.json',protocol)
- fixtures=[];plans=read(ROOT/'plans/result.json')['records']
- for i,row in enumerate(n['records']):
-  plan=read(row['plan']);song=int(row['key'].replace('fixture',''));index=next(k for k,r in enumerate(plans) if r['song']==song and r['events']==2 and r['gap']==48);selected=next(iter(plans[index]['selected'].values()))['events'];assert [e['event_uid'] for e in selected]==[e['event_uid'] for e in plan['events']]
-  assert plans[index]['music_interval']==plan['target_interval'];fixtures.append(dict(label='dunhuangwu%d · 同一双事件计划'%(song+2),frames=row['frames'],origin=plan['target_interval'][0],audio='main/viewer/'+row['key']+'.wav',plan_index=index,generation_index=i))
- shutil.copyfile(Path(__file__).with_name('hub.html'),ROOT/'index.html');(ROOT/'hubdata.js').write_text('window.R52HUB='+__import__('json').dumps(fixtures,ensure_ascii=False)+';',encoding='utf8')
+ from .view import hub
+ hub(ROOT)
  lines=['# R52 Heuristic强基线与独立完整来源训练','','修复了绝对音乐帧与局部短片帧混用；原1008条空分区读数重算为882条有效区域，原计划、轨迹和whole统计不变。高D3不直接解释为不自然或Native失败。','','## 两阶段接口','','EVENT_PLAN_R52_V1绑定真实来源、完整区间、合法Warp、阶段代理/未知状态、软参考上下文、实际过渡预算和真实音乐35D。SDMR分数保留Shadow元数据，不成为ModuleII训练门槛。','','## 完整来源与补间分开','','训练FULL_REFERENCE_RECONSTRUCTION可读取完整合法来源，这是身份重建任务；HIDDEN_GAP_INBETWEENING隐藏中心48帧并使用真实连续目标。AIST++真实配对音乐与ChangE零音乐源保持任务各占半批，不伪造敦煌配对重演真值。只训练已有Source/Context，固定Lodge、CanonicalIO、General；Root/C4不入损失。两个240步训练组在主效果观看后才进行零Phase同预算对照，动态项按Train初始梯度校准，NoPhase沿用主组权重。','','## 两个完整事件','','固定R51 Heuristic的两个真实完整事件、E1-W和48帧几何桥，Core240+240，整段528帧。每个256帧计算窗都能读取同一完整528帧来源记忆；四窗对同一全局噪声轨迹共同去噪。只有整段外端16帧硬保护，Root/C4保留未知模型规范，未生成合格世界Root。来源Core可读480帧，桥区参考未知，不把几何桥当真实重演目标。采样从t119执行50步，仍属温启动局部研究。','','|案例|方法|来源Core角误差rad|来源CoreFK误差m|','|---|---|---:|---:|']
  for r in n['records']:
   for method,v in r['methods'].items():lines.append('|%s|%s|%.6f|%.6f|'%(r['key'],method,np.mean([x['source_core_angle_rad'] for x in v]),np.mean([x['source_core_fk_rmse_m'] for x in v])))

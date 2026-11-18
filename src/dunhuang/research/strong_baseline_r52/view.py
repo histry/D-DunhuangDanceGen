@@ -37,3 +37,11 @@ def generation(root):
    P=np.frombuffer(base64.b64decode(m['data']),dtype='<f4').reshape(r['frames'],22,3).astype(float);m['jerk']=np.r_[np.zeros(3),np.sqrt(np.mean((np.diff(P,n=3,axis=0)*27000)**2,axis=(1,2)))].tolist()
   cases.append(dict(label=key+' · 完整双事件',frames=r['frames'],origin=r['music_interval'][0],audio=audio,methods=methods,meta=dict(regions=plan['regions'],source_events=plan['events'],methods=r['methods'],source_visibility=r['source_visibility'],scope='完整所选Core可读；全部528帧共同去噪，只有外端16帧硬保护；展示52051，统计两种子；Root/Contact未知。')))
  finish(out,cases,z['parents'])
+
+
+def hub(root):
+ fixtures=[];plans=read(root/'plans/result.json')['records'];n=read(root/'main/result.json')
+ for i,row in enumerate(n['records']):
+  plan_path=root/'interface'/(row['key']+'.json');assert sha(plan_path)==row['plan_sha256'];plan=read(plan_path);song=int(row['key'].replace('fixture',''));index=next(k for k,r in enumerate(plans) if r['song']==song and r['events']==2 and r['gap']==48);selected=next(iter(plans[index]['selected'].values()))['events'];assert [e['event_uid'] for e in selected]==[e['event_uid'] for e in plan['events']]
+  assert plans[index]['music_interval']==plan['target_interval'];fixtures.append(dict(label='dunhuangwu%d · 同一双事件计划'%(song+2),frames=row['frames'],origin=plan['target_interval'][0],audio='main/viewer/'+row['key']+'.wav',plan_index=index,generation_index=i))
+ shutil.copyfile(Path(__file__).with_name('hub.html'),root/'index.html');(root/'hubdata.js').write_text('window.R52HUB='+json.dumps(fixtures,ensure_ascii=False)+';',encoding='utf8')
