@@ -3,6 +3,8 @@
 当前默认路径：**Event Catalog → Music Timeline → Event Plan → 冻结 EDGE（Temporal V0.5）→ 原 Native 验收**。学习检索保留shadow。研究路径已完成真实151D配对补全，以及原生SO(3)跨录制条件的Cross/Additive同参数量训练（各1,200步）；事件跟随与完整生成质量仍未合格。
 
 
+新增 [R49 事件级音乐对齐报告](reports/r49_release/report.md)、[机器摘要](reports/r49_release/summary.json)与[独立复验](reports/r49_release/independent.json)。本机观看入口为 `outputs/event_alignment_r49_01/viewer/index.html`，可在同一真实音乐片段下逐帧比较 R41 与活动度选中的 ChangE 来源。观看验收后才启动对照。95 个时段共 3861/4177 个变体获得评分，316 个因音乐特征支持不足排除。历史 Val 五偏移 R@1 为 25.46%，换音乐 21.20%，配对区间跨零。敦煌主评分改变 70/95 个活动度首选，局部评分换音乐仅改 2/95。独立盲测尚缺核验资产，检索保持 Shadow。639 回归通过、10 跳过，评分和资格输出精确复算，17 个本轮科学与观看文件封存。
+
 新增 [R48事件合同、动态桥与冻结内容报告](reports/r48_release/report.md)、[机器摘要](reports/r48_release/summary.json)、[独立复验](reports/r48_release/independent.json)与[封存复核](reports/r48_release/seal_recheck.json)。先回传32个新身份主候选与4条真实轨迹视频并实际验收，再执行G2与冻结R41内容对照。139个候选中136个能在三首历史音乐的117个真实单槽/相邻槽目标上形成合法E1-W，共4177个时钟变体；590帧长来源完整保留，旧499与2137个质量未知帧边界不变。G3固定锚点、仅六个内部jet标量的受限优化相对G1 Gap D3中位比0.999565，整体收益很小；研究数值候选保留G0 18例、G1 1例、G3 8例、拒绝5例，未升级正式Planner或物理资格。
 
 本机优先观看 `outputs/bridge_dynamics_r48_01/viewer/index.html`（来源/G0/G3，逐帧和Jerk曲线）、`outputs/bridge_dynamics_r48_01/videos/index.html`（四条256帧视频）、`outputs/event_feasibility_r48_01/viewer/index.html`（139候选、实际音乐时间图与完整来源跨窗合同）；结构对照为 `outputs/bridge_dynamics_r48_01/viewer_controls/index.html`。本轮没有新神经生成，无真实配对音乐的新连接不伪造配乐。冻结R41在48组既有Train音乐上的共同五偏移R@1为37.38%，能量16.54%、固定规则17.36%、置零20%、换音乐17.42%，必要内容检验通过；这不是独立泛化或阶段语义真值，B3Verified仍不可评，不启动新阶段监督训练或整曲。639回归通过/10跳过；全部科学输出精确重算、222条官方FK一致，16父代6830文件保持，5个R48根目录41文件重新逐SHA封存。首次FK核验的固定骨盆原点差已修正，原2e-6容差、动作和阈值不变，失败回执保留；媒体已回传验收、不随Git上传。

@@ -1,0 +1,640 @@
+{
+  "model": {
+    "checkpoint_sha256": "212148e7cd86b482cc7734035725b1165edcd7a1c35e03fa513f6982f440e772",
+    "manifest_sha256": "4b6b884550b120b685b2867996ac5bb7e2efceab127a2b7901d4001af482405e",
+    "normalizer_sha256": "80a83d6f7a5f1bca62d3298cba206a871188f5c6b1519ab4a897672c7c986e35",
+    "device": "cuda"
+  },
+  "r48_event_sha256": "33cd56db921920c70e0f7bccbdbf526277552e9f3f44745d4a8cd39d461dc04f",
+  "songs": {
+    "0": {
+      "audio_sha256": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c",
+      "structure_sha256": "7b73e0581e5ab68db730cf9fd8aa7fd31bb269b43804eeb4b95d297ee1b7e5e9"
+    },
+    "1": {
+      "audio_sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f",
+      "structure_sha256": "73cedf9754fd61c1c6cdd227ae863b504ca921bcab0c2dae3576fcabc0a6ed56"
+    },
+    "2": {
+      "audio_sha256": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33",
+      "structure_sha256": "3cf56237426c7bf6c5098b3c53f4fdc7f26feb890286961c9bce1db46006d507"
+    }
+  },
+  "ranked_slots": 95,
+  "registered_variants": 4177,
+  "scored_variants": 3861,
+  "rank_changes": {
+    "B0_activity_proxy": {
+      "common_slots": 95,
+      "changed_top": 70,
+      "candidate_count": 3861
+    },
+    "B1_linear_local": {
+      "common_slots": 95,
+      "changed_top": 10,
+      "candidate_count": 3861
+    },
+    "B2_linear_local_multi": {
+      "common_slots": 95,
+      "changed_top": 4,
+      "candidate_count": 3861
+    },
+    "B4_coverage": {
+      "common_slots": 95,
+      "changed_top": 0,
+      "candidate_count": 3861
+    },
+    "swapped_local": {
+      "common_slots": 95,
+      "changed_top": 2,
+      "candidate_count": 3861
+    }
+  },
+  "val": {
+    "phase_offsets": {
+      "tasks": 118,
+      "methods": {
+        "Content": {
+          "R1": 0.2546296296296296,
+          "ci95": [
+            0.18796296296296297,
+            0.32129629629629625
+          ],
+          "songs": 6
+        },
+        "Duration": {
+          "R1": 0.20000000000000004,
+          "ci95": [
+            0.20000000000000004,
+            0.20000000000000004
+          ],
+          "songs": 6
+        },
+        "Energy": {
+          "R1": 0.1898148148148148,
+          "ci95": [
+            0.09166666666666667,
+            0.29444444444444445
+          ],
+          "songs": 6
+        },
+        "Rule": {
+          "R1": 0.19351851851851853,
+          "ci95": [
+            0.1036574074074074,
+            0.2916666666666667
+          ],
+          "songs": 6
+        },
+        "MusicSwap": {
+          "R1": 0.21203703703703702,
+          "ci95": [
+            0.17037037037037037,
+            0.2537037037037037
+          ],
+          "songs": 6
+        },
+        "BothZero": {
+          "R1": 0.20000000000000004,
+          "ci95": [
+            0.20000000000000004,
+            0.20000000000000004
+          ],
+          "songs": 6
+        }
+      },
+      "paired_differences": {
+        "Duration": {
+          "delta": 0.054629629629629584,
+          "ci95": [
+            -0.012037037037037077,
+            0.12129629629629624
+          ],
+          "songs": 6
+        },
+        "Energy": {
+          "delta": 0.06481481481481481,
+          "ci95": [
+            -0.030555555555555555,
+            0.15833333333333333
+          ],
+          "songs": 6
+        },
+        "Rule": {
+          "delta": 0.06111111111111111,
+          "ci95": [
+            -0.0638888888888889,
+            0.1611111111111111
+          ],
+          "songs": 6
+        },
+        "MusicSwap": {
+          "delta": 0.04259259259259259,
+          "ci95": [
+            -0.04074074074074074,
+            0.1259259259259259
+          ],
+          "songs": 6
+        },
+        "BothZero": {
+          "delta": 0.054629629629629584,
+          "ci95": [
+            -0.012037037037037077,
+            0.12129629629629624
+          ],
+          "songs": 6
+        }
+      }
+    },
+    "equal_duration_near_motion_energy": {
+      "tasks": 128,
+      "methods": {
+        "Content": {
+          "R1": 0.3,
+          "ci95": [
+            0.10000000000000002,
+            0.5
+          ],
+          "songs": 6
+        },
+        "MusicSwap": {
+          "R1": 0.24444444444444446,
+          "ci95": [
+            0.061111111111111116,
+            0.4666666666666666
+          ],
+          "songs": 6
+        },
+        "Energy": {
+          "R1": 0.08287037037037037,
+          "ci95": [
+            0.024999999999999998,
+            0.1486111111111111
+          ],
+          "songs": 6
+        },
+        "Duration": {
+          "R1": 0.20000000000000004,
+          "ci95": [
+            0.20000000000000004,
+            0.20000000000000004
+          ],
+          "songs": 6
+        },
+        "BothZero": {
+          "R1": 0.20000000000000004,
+          "ci95": [
+            0.20000000000000004,
+            0.20000000000000004
+          ],
+          "songs": 6
+        }
+      },
+      "paired_differences": {
+        "MusicSwap": {
+          "delta": 0.05555555555555558,
+          "ci95": [
+            -0.1972222222222222,
+            0.34722222222222227
+          ],
+          "songs": 6
+        },
+        "Energy": {
+          "delta": 0.21712962962962967,
+          "ci95": [
+            -0.036111111111111094,
+            0.46678240740740584
+          ],
+          "songs": 6
+        },
+        "Duration": {
+          "delta": 0.09999999999999996,
+          "ci95": [
+            -0.10000000000000003,
+            0.3
+          ],
+          "songs": 6
+        },
+        "BothZero": {
+          "delta": 0.09999999999999996,
+          "ci95": [
+            -0.10000000000000003,
+            0.3
+          ],
+          "songs": 6
+        }
+      }
+    },
+    "same_song_wrong_time": {
+      "tasks": 20,
+      "methods": {
+        "Content": {
+          "R1": 0.2,
+          "ci95": [
+            null,
+            null
+          ],
+          "songs": 1
+        },
+        "MusicSwap": {
+          "R1": 0.25,
+          "ci95": [
+            null,
+            null
+          ],
+          "songs": 1
+        },
+        "Energy": {
+          "R1": 0.05,
+          "ci95": [
+            null,
+            null
+          ],
+          "songs": 1
+        },
+        "Duration": {
+          "R1": 0.2,
+          "ci95": [
+            null,
+            null
+          ],
+          "songs": 1
+        },
+        "BothZero": {
+          "R1": 0.2,
+          "ci95": [
+            null,
+            null
+          ],
+          "songs": 1
+        }
+      },
+      "paired_differences": {
+        "MusicSwap": {
+          "delta": -0.04999999999999999,
+          "ci95": [
+            null,
+            null
+          ],
+          "songs": 1
+        },
+        "Energy": {
+          "delta": 0.15000000000000002,
+          "ci95": [
+            null,
+            null
+          ],
+          "songs": 1
+        },
+        "Duration": {
+          "delta": 0.0,
+          "ci95": [
+            null,
+            null
+          ],
+          "songs": 1
+        },
+        "BothZero": {
+          "delta": 0.0,
+          "ci95": [
+            null,
+            null
+          ],
+          "songs": 1
+        }
+      }
+    }
+  },
+  "val_role": "HISTORICALLY_EXPOSED_VAL",
+  "blind": {
+    "status": "NO_VERIFIED_UNEXPOSED_MUSIC_MANIFEST",
+    "evaluated": 0,
+    "requirements": [
+      "new music work and PCM hashes",
+      "source and recording isolation",
+      "physical clock evidence",
+      "no prior training, tuning or checkpoint selection exposure"
+    ],
+    "offsets": [
+      -15,
+      -8,
+      0,
+      8,
+      15
+    ],
+    "pairwise_group_ci_lower_bound": 0
+  },
+  "phase": {
+    "pairs": 48,
+    "source_phases": 6927,
+    "accepted": 4,
+    "coverage": 0.0005774505557961599,
+    "within_15frames": 2,
+    "stage_truth": "UNKNOWN",
+    "source_sha256": "e1aa0137f5a34a597e13f1f3fb163f1f8acbf8ce683dd54fb46f67f9e9c95f77"
+  },
+  "geometry": [
+    {
+      "song": 0,
+      "left": "r47:def21393753edc7546fe51f2",
+      "right": "r47:f93ab399c9b9807782073793",
+      "left_slot": [
+        1068,
+        1713
+      ],
+      "right_slot": [
+        1713,
+        2050
+      ],
+      "choice": "G0",
+      "status": "BODY_RELATIVE_NUMERICAL_PROPOSAL",
+      "target_gap_frames": 0,
+      "fixed_bridge_fits_target": false,
+      "root_contact": "UNKNOWN"
+    },
+    {
+      "song": 0,
+      "left": "r47:def21393753edc7546fe51f2",
+      "right": "r47:82129d82c20565069e8dc36a",
+      "left_slot": [
+        1068,
+        1713
+      ],
+      "right_slot": [
+        1713,
+        2050
+      ],
+      "choice": null,
+      "status": "REJECTED",
+      "target_gap_frames": 0,
+      "fixed_bridge_fits_target": false,
+      "root_contact": "UNKNOWN"
+    },
+    {
+      "song": 0,
+      "left": "r47:def21393753edc7546fe51f2",
+      "right": "r47:41df1a852fb59bcf8cec972e",
+      "left_slot": [
+        1068,
+        1713
+      ],
+      "right_slot": [
+        1713,
+        2050
+      ],
+      "choice": "G0",
+      "status": "BODY_RELATIVE_NUMERICAL_PROPOSAL",
+      "target_gap_frames": 0,
+      "fixed_bridge_fits_target": false,
+      "root_contact": "UNKNOWN"
+    },
+    {
+      "song": 0,
+      "left": "r47:def21393753edc7546fe51f2",
+      "right": "r47:17c8550298ca627a235c1340",
+      "left_slot": [
+        1068,
+        1713
+      ],
+      "right_slot": [
+        1713,
+        2050
+      ],
+      "choice": "G0",
+      "status": "BODY_RELATIVE_NUMERICAL_PROPOSAL",
+      "target_gap_frames": 0,
+      "fixed_bridge_fits_target": false,
+      "root_contact": "UNKNOWN"
+    },
+    {
+      "song": 1,
+      "left": "r47:2ab807fa0f23e9b2f7ccd95c",
+      "right": "r47:64b8f931dfb4ad260e7f9e19",
+      "left_slot": [
+        1227,
+        1806
+      ],
+      "right_slot": [
+        1806,
+        1999
+      ],
+      "choice": "G0",
+      "status": "BODY_RELATIVE_NUMERICAL_PROPOSAL",
+      "target_gap_frames": 0,
+      "fixed_bridge_fits_target": false,
+      "root_contact": "UNKNOWN"
+    },
+    {
+      "song": 1,
+      "left": "r47:2ab807fa0f23e9b2f7ccd95c",
+      "right": "r47:a9819c8e0266a07345298c43",
+      "left_slot": [
+        1227,
+        1806
+      ],
+      "right_slot": [
+        1806,
+        1999
+      ],
+      "choice": "G0",
+      "status": "BODY_RELATIVE_NUMERICAL_PROPOSAL",
+      "target_gap_frames": 0,
+      "fixed_bridge_fits_target": false,
+      "root_contact": "UNKNOWN"
+    },
+    {
+      "song": 1,
+      "left": "r47:2ab807fa0f23e9b2f7ccd95c",
+      "right": "r47:a99c2987107c5426048e54c2",
+      "left_slot": [
+        1227,
+        1806
+      ],
+      "right_slot": [
+        1806,
+        1999
+      ],
+      "choice": "G0",
+      "status": "BODY_RELATIVE_NUMERICAL_PROPOSAL",
+      "target_gap_frames": 0,
+      "fixed_bridge_fits_target": false,
+      "root_contact": "UNKNOWN"
+    },
+    {
+      "song": 1,
+      "left": "r47:2ab807fa0f23e9b2f7ccd95c",
+      "right": "r47:d11ffe0d3b87f19f913d13f4",
+      "left_slot": [
+        1227,
+        1806
+      ],
+      "right_slot": [
+        1806,
+        1999
+      ],
+      "choice": "G0",
+      "status": "BODY_RELATIVE_NUMERICAL_PROPOSAL",
+      "target_gap_frames": 0,
+      "fixed_bridge_fits_target": false,
+      "root_contact": "UNKNOWN"
+    },
+    {
+      "song": 2,
+      "left": "r47:e8b450adf0c6d24067683b86",
+      "right": "r47:f93ab399c9b9807782073793",
+      "left_slot": [
+        1067,
+        1668
+      ],
+      "right_slot": [
+        1668,
+        2028
+      ],
+      "choice": "G0",
+      "status": "BODY_RELATIVE_NUMERICAL_PROPOSAL",
+      "target_gap_frames": 0,
+      "fixed_bridge_fits_target": false,
+      "root_contact": "UNKNOWN"
+    },
+    {
+      "song": 2,
+      "left": "r47:e8b450adf0c6d24067683b86",
+      "right": "r47:41df1a852fb59bcf8cec972e",
+      "left_slot": [
+        1067,
+        1668
+      ],
+      "right_slot": [
+        1668,
+        2028
+      ],
+      "choice": "G0",
+      "status": "BODY_RELATIVE_NUMERICAL_PROPOSAL",
+      "target_gap_frames": 0,
+      "fixed_bridge_fits_target": false,
+      "root_contact": "UNKNOWN"
+    },
+    {
+      "song": 2,
+      "left": "r47:e8b450adf0c6d24067683b86",
+      "right": "r47:17c8550298ca627a235c1340",
+      "left_slot": [
+        1067,
+        1668
+      ],
+      "right_slot": [
+        1668,
+        2028
+      ],
+      "choice": "G0",
+      "status": "BODY_RELATIVE_NUMERICAL_PROPOSAL",
+      "target_gap_frames": 0,
+      "fixed_bridge_fits_target": false,
+      "root_contact": "UNKNOWN"
+    },
+    {
+      "song": 2,
+      "left": "r47:e8b450adf0c6d24067683b86",
+      "right": "r47:82129d82c20565069e8dc36a",
+      "left_slot": [
+        1067,
+        1668
+      ],
+      "right_slot": [
+        1668,
+        2028
+      ],
+      "choice": null,
+      "status": "REJECTED",
+      "target_gap_frames": 0,
+      "fixed_bridge_fits_target": false,
+      "root_contact": "UNKNOWN"
+    }
+  ],
+  "P4": {
+    "condition_schema": [
+      "music",
+      "source_rotations",
+      "inverse_warp",
+      "phase",
+      "context_left",
+      "context_right",
+      "validity"
+    ],
+    "required_interventions": [
+      "right_music",
+      "wrong_music",
+      "zero_music",
+      "wrong_source",
+      "zero_phase",
+      "remove_left",
+      "remove_right"
+    ],
+    "same_noise_and_target_required": true,
+    "source_condition_evidence": {
+      "legacy_release_sha256": "54dc7f6f4ee695f32e1bacc7983f1d0cdc29b70cc5f92d8936cdead36d282b0a",
+      "release_fields": [
+        "baseline",
+        "can_route",
+        "contact_truth",
+        "execution_commits",
+        "generation",
+        "human_reviewed",
+        "independent",
+        "native24",
+        "operational_qualified",
+        "ranking",
+        "receipts",
+        "scoring_equivalence",
+        "semantic_event_truth",
+        "source_commit",
+        "token_clock",
+        "whole_song_generations"
+      ]
+    },
+    "stage_supervision": "UNKNOWN",
+    "training_admitted": false,
+    "native24_status": "NOT_EVALUABLE_COMMON22"
+  },
+  "independent": {
+    "exact_main_against_two_recomputations": true,
+    "exact_controls_and_val_and_qualification": true,
+    "primary_before_controls": true,
+    "verified_parent_files": 41,
+    "parent_roots": [
+      {
+        "root": "outputs/event_feasibility_r48_01",
+        "files": 4,
+        "bytes": 150590821,
+        "manifest_sha256": "a5f3b0a623d990611210f8a1fc039329dc3fab118b2c37489186e5ba8e21ea09"
+      },
+      {
+        "root": "outputs/bridge_dynamics_r48_01",
+        "files": 34,
+        "bytes": 227105402,
+        "manifest_sha256": "acd42f16a0dc08de167ad0540603ab38c36d08da9945c77001187125b9a773a3"
+      },
+      {
+        "root": "outputs/phase_discrimination_r48_01",
+        "files": 1,
+        "bytes": 4412849,
+        "manifest_sha256": "c06c3a0f741e4eb3a394519cce6755b4a64a48a9461b5ca623bd22ec806bfc06"
+      },
+      {
+        "root": "outputs/event_feasibility_r48_replay",
+        "files": 1,
+        "bytes": 105964120,
+        "manifest_sha256": "36871d4251f54751e9e3324bb3973cf23f045478b8d7e99bed1ee09729ce3c8e"
+      },
+      {
+        "root": "outputs/phase_discrimination_r48_replay",
+        "files": 1,
+        "bytes": 4412849,
+        "manifest_sha256": "c06c3a0f741e4eb3a394519cce6755b4a64a48a9461b5ca623bd22ec806bfc06"
+      }
+    ]
+  },
+  "can_route": false,
+  "test_summary": "639 passed, 10 skipped, 5 warnings in 28.69s",
+  "code_commit": "5ae9bc26d5a903c8ec6d15fdae94539e90a17371"
+}

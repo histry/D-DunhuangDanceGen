@@ -1,0 +1,38 @@
+{
+  "exact_main_against_two_recomputations": true,
+  "exact_controls_and_val_and_qualification": true,
+  "primary_before_controls": true,
+  "verified_parent_files": 41,
+  "parent_roots": [
+    {
+      "root": "outputs/event_feasibility_r48_01",
+      "files": 4,
+      "bytes": 150590821,
+      "manifest_sha256": "a5f3b0a623d990611210f8a1fc039329dc3fab118b2c37489186e5ba8e21ea09"
+    },
+    {
+      "root": "outputs/bridge_dynamics_r48_01",
+      "files": 34,
+      "bytes": 227105402,
+      "manifest_sha256": "acd42f16a0dc08de167ad0540603ab38c36d08da9945c77001187125b9a773a3"
+    },
+    {
+      "root": "outputs/phase_discrimination_r48_01",
+      "files": 1,
+      "bytes": 4412849,
+      "manifest_sha256": "c06c3a0f741e4eb3a394519cce6755b4a64a48a9461b5ca623bd22ec806bfc06"
+    },
+    {
+      "root": "outputs/event_feasibility_r48_replay",
+      "files": 1,
+      "bytes": 105964120,
+      "manifest_sha256": "36871d4251f54751e9e3324bb3973cf23f045478b8d7e99bed1ee09729ce3c8e"
+    },
+    {
+      "root": "outputs/phase_discrimination_r48_replay",
+      "files": 1,
+      "bytes": 4412849,
+      "manifest_sha256": "c06c3a0f741e4eb3a394519cce6755b4a64a48a9461b5ca623bd22ec806bfc06"
+    }
+  ]
+}
