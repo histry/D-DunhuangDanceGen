@@ -19,7 +19,7 @@ def preview(out,pop,graph,pairs):
    l=pair['lefts'][cell['left']];r=pair['rights'][cell['right']];bridge=graph.curves.get(cell['bridge_id']);valid=np.ones(b-a,bool);gap=pair['gap']
    if bridge is None:bridge=np.broadcast_to(np.eye(3),(gap,22,3,3));valid[240:240+gap]=False
    R=np.concatenate((pop.R[l],bridge,pop.R[r]));P=relative_fk(R,pop.net.joints,pop.net.parents);e=graph.records[cell['bridge_id']];cells.append(dict(**cell,data=encode(P),valid=valid.tolist(),evidence=e,left_node=pop.nodes[l],right_node=pop.nodes[r]))
-  data=dict(key=key,frames=b-a,origin=a,gap=pair['gap'],audio=key+'.wav',parents=pop.net.parents.tolist(),cells=cells,default_cell=pair['default_cell'],left_count=len(pair['lefts']),right_count=len(pair['rights']),negative_controls=pair['negative_controls'])
+  data=dict(key=key,frames=b-a,origin=a,gap=pair['gap'],audio=key+'.wav',parents=pop.net.parents.tolist(),cells=cells,default_cell=pair['default_cell'],left_count=len(pair['lefts']),right_count=len(pair['rights']),negative_controls=pair['negative_controls'],display_rule=pair.get('display_rule','默认格按边界加速度、速度变化预登记选择，并非挑选最优画面。'))
   name=f'case{i}.js';(folder/name).write_text('window.R53_CASE='+json.dumps(data,ensure_ascii=False)+';onCaseReady();',encoding='utf8');index.append(dict(label=key,file=name))
  (folder/'data.js').write_text('window.R53_INDEX='+json.dumps(index)+';',encoding='utf8');shutil.copyfile(Path(__file__).with_name('viewer.html'),folder/'index.html');manifest(folder,len(index))
 
@@ -36,3 +36,15 @@ def plans(out,pop):
    cases.append(dict(label=key,frames=np.diff(row['music_interval']).item(),origin=row['music_interval'][0],audio=key+'.wav',methods=methods,meta=dict(regions=row['regions'],plans=row['plans'],scope='R53 同一候选人口、原Heuristic及原G0/G1；只改变合法时间映射。无神经生成，Root/Contact未知。')))
   finish(folder,cases,z['parents'])
  text=(folder/'index.html').read_text(encoding='utf8').replace('R52','R53').replace('保留 Heuristic 强基线；生成比较同一完整来源与几何基线，修复评价时间坐标。','冻结 Heuristic 强基线；比较固定Warp和时间—连接联合选择。没有神经训练或Diffusion。');(folder/'index.html').write_text(text,encoding='utf8');manifest(folder,len(cases))
+
+def examples(out):
+ """Lexicographically first recovered edge per song/gap; full population stays saved."""
+ from .population import Population
+ from .bridge_graph import Graph
+ pop=Population();data=read(ROOT/'main/result.json');bycase={r['key']:r for r in data['records']};selected=[];seen=set()
+ for row in sorted(data['full_pair_mechanisms'],key=lambda r:(r['case'],r['slot'],r['left_event'],r['right_event'])):
+  base=row['cells'][0]['admitted'];recover=[i for i,c in enumerate(row['cells']) if not base and c['admitted']];case=bycase[row['case']];group=(case['song'],case['gap'])
+  if not recover or group in seen:continue
+  seen.add(group);slot=row['slot'];l=next(e for e in case['banks'][slot] if e['event_uid']==row['left_event']);r=next(e for e in case['banks'][slot+1] if e['event_uid']==row['right_event']);cores=[s['interval'] for s in case['regions'] if s['kind']=='core'];selected.append(dict(row,key=row['case']+'_recovered_edge'+str(slot),song=case['song'],gap=case['gap'],music_interval=[cores[slot][0],cores[slot+1][1]],lefts=l['sets']['top'],rights=r['sets']['top'],negative_controls=[],default_cell=recover[0],display_rule='按案例/事件ID排序的首个局部边恢复，显示首个通过格；不是最大收益样本，也不是原18个全局任务失败后的恢复。'))
+ for row in pop.old['records']:pop.banks(row)
+ graph=Graph(pop,parent=ROOT/'main');graph.close();out=fresh(out);preview(out,pop,graph,selected);write(out/'result.json',dict(selection='FIRST_LEXICOGRAPHIC_RECOVERED_EDGE_PER_MUSIC_GAP; NOT_GLOBAL_TASK_RECOVERY',cases=[{k:v for k,v in p.items() if k!='cells'} for p in selected],full_pair_population=len(data['full_pair_mechanisms']),can_route=False))
