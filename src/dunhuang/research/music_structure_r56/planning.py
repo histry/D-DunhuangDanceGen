@@ -14,6 +14,14 @@ def source_kernels(pop,bank):
    x=Rotation.from_matrix((rotations[i].swapaxes(-1,-2)@rotations[j]).reshape(-1,3,3)).magnitude();d[i,j]=d[j,i]=float(np.mean(x*x))
  v=d[np.triu_indices(len(d),1)];scale=float(np.median(v[v>1e-12]));return np.exp(-d/max(scale,1e-12)),kernel(np.asarray(fk))
 
+def guarded_edge_job(args):
+ try:return edge_job(args)
+ except ValueError as error:
+  if str(error)!='Ambiguous SO3 chart':raise
+  slot,i,j,*_=args
+  return slot,i,j,None,dict(selected=None,methods={},frames=CFG['gap'],physical_qualified=False,rejection='G0_AMBIGUOUS_SO3_CHART_CURRENT_METHOD_REJECTED',G1='NOT_ATTEMPTED_AFTER_FROZEN_G0_ERROR',global_infeasibility_claim=False)
+
+
 def build(pop,bank,spans,track):
  energy=np.array(track['structure']['energy_percentile']);frames=spans[-1]['interval'][1]
  if len(energy)<frames:assert len(energy)==frames-1;energy=np.r_[energy,energy[-1]]
@@ -34,7 +42,7 @@ def build(pop,bank,spans,track):
     jobs.append((k,i,j,left['R'],right['R'],pop.net.joints,pop.net.parents,pop.reference))
  assert len(jobs)<=CFG['maximum_geometry_trials_per_layout'];edges={};ledger=[]
  with ProcessPoolExecutor(max_workers=CFG['workers']) as executor:
-  for k,i,j,curve,evidence in executor.map(edge_job,jobs,chunksize=8):
+  for k,i,j,curve,evidence in executor.map(guarded_edge_job,jobs,chunksize=8):
    edges[k,i,j]=(curve,evidence);ledger.append(dict(slot=k,left=i,right=j,**evidence))
  return pools,edges,dict(pools=[[{k:v for k,v in n.items() if k not in ('R','source_positions')} for n in pool] for pool in pools],edges=ledger,rejections=rejections,geometry_trials=len(jobs),eligible=sum(q[0] is not None for q in edges.values()),edge_ledger_sha256=identity(ledger),candidate_counts=list(map(len,pools)))
 

@@ -11,3 +11,5 @@ B0用原算法重建dunhuangwu2并要求旋转、FK和事件ID逐值一致。B1�
 保留全片/Core/Bridge/边界D1–D3、来源误差、事件重复、完整时间图和拒绝连接；不以Jerk高直接判动作不自然。世界Root/接触UNKNOWN，Native24不可评。主视频与交互页面全120秒、共同音乐/视角/尺度，另可输出隐藏方法名的A/B准备媒体；准备协议不产生人工评价。
 
 CLI：`PYTHONPATH=src python -m dunhuang.research.music_structure_r56 <main|controls|verify|render|blind> --out <fresh-path> [--source <saved-stage>]`。verify新进程读取真实原音频和动作、重建全部图/轨迹，要求评分/数组NPZ字节完全一致；只单独记录运行提交不同，逐项核对原提交科学源码SHA，不放宽数值相等。训练和优化器调用均0。
+
+V2只处理首轮变长图实际触发的原G0 `Ambiguous SO3 chart`异常：在R56外层拒绝该边并保存方法失败原因，G1因原G0异常未执行也明确记录；不吞掉其他ValueError，不修改被冻结的G0/G1算法或阈值。01失败回执保留，02同参数重跑。

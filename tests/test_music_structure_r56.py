@@ -28,3 +28,17 @@ def test_structure_search_cannot_override_rejected_geometry():
 
 def test_kernel_preserves_equal_items_and_phase_difference():
  x=np.array([[1,2,3],[1,2,3],[3,2,1]]);k=kernel(x);assert k[0,1]==1 and k[0,2]<1 and np.array_equal(k,k.T)
+
+
+def test_ambiguous_chart_is_rejected_without_masking_other_errors(monkeypatch):
+ import dunhuang.research.music_structure_r56.planning as module
+ def ambiguous(args):raise ValueError('Ambiguous SO3 chart')
+ monkeypatch.setattr(module,'edge_job',ambiguous);k,i,j,curve,e=module.guarded_edge_job((0,1,2));assert curve is None and e['selected'] is None and not e['global_infeasibility_claim']
+ def bug(args):raise ValueError('unrelated implementation bug')
+ monkeypatch.setattr(module,'edge_job',bug)
+ with pytest.raises(ValueError,match='unrelated'):module.guarded_edge_job((0,1,2))
+
+def test_structure_content_changes_choice_on_identical_geometry():
+ make=lambda n:{'unit':{'unit_uid':str(n),'source_uid':str(n)},'bank':n,'heuristic':0}
+ pools=[[make(0)],[make(1),make(2)]];edge=(True,{'selected':'G0','methods':{'G0':{'gap_D3':1}}});edges={(0,0,0):edge,(0,0,1):edge};motion=np.array([[1,1,0],[1,1,0],[0,0,1]])
+ same,_=choose(pools,edges,{'D3':10},np.ones((2,2)),motion);different,_=choose(pools,edges,{'D3':10},np.eye(2),motion);assert same['ids']==[0,0] and different['ids']==[0,1]

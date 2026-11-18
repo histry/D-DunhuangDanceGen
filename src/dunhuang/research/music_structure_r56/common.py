@@ -3,7 +3,7 @@ import json,hashlib
 import numpy as np
 from dunhuang.research.complete_r36.core import read,write,sha,relative_fk,rotation_sample,multi_warp
 from dunhuang.research.warp_coupling_r53.common import save_arrays,array_hash
-ROOT=Path('outputs/music_structure_r56_01')
+ROOT=Path('outputs/music_structure_r56_02')
 CFG=read(Path(__file__).with_name('protocol.json'))
 SCIENCE=('common.py','music.py','slots.py','planning.py','metrics.py','study.py','protocol.json')
 
