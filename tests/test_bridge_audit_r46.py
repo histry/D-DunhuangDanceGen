@@ -15,3 +15,9 @@ def test_oracle_uses_eligible_joint_proxy_not_single_metric_or_unknown():
 
 def test_capacity_identity_reason_separates_quiet_and_score():
     p=dict(pattern_id=0,eligible=True,identity=True,ratios=dict(D1=1),source=[8,98],target=[8,98],score=0);m=dict(bank=[p],pattern_id=0,phases=[],interval=[8,99],evidence=dict(status='LOW_ACTIVITY_NO_FORCED_PHASE',maximum_speed=.01));assert capacity([m])[0]['reason']=='NO_DETECTED_STAGE';m['phases']=[dict(frame=50)];assert capacity([m])[0]['reason']=='NO_ELIGIBLE_NONIDENTITY'
+
+def test_continuous_chart_guard_uses_only_boundary_values():
+    from dunhuang.research.bridge_audit_r46.admission import certificate
+    R=np.broadcast_to(np.eye(3),(256,22,3,3)).copy();safe=certificate(R,[104,152]);assert safe['chart_eligible'] and safe['continuous_chart_maximum_rad']==0
+    for i,v in [(101,-1.2),(102,-.6),(103,0),(152,0),(153,-.6),(154,-1.2)]:R[i]=Rotation.from_rotvec([0,v,0]).as_matrix()
+    R[104:152]=np.nan;r=certificate(R,[104,152]);assert not r['chart_eligible'] and r['continuous_chart_maximum_rad']>np.pi
