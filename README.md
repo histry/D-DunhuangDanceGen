@@ -3,6 +3,9 @@
 当前默认路径：**Event Catalog → Music Timeline → Event Plan → 冻结 EDGE（Temporal V0.5）→ 原 Native 验收**。学习检索保留shadow。研究路径已完成真实151D配对补全，以及原生SO(3)跨录制条件的Cross/Additive同参数量训练（各1,200步）；事件跟随与完整生成质量仍未合格。
 
 
+新增 [R47来源覆盖、流形桥与音乐阶段报告](reports/r47_release/report.md)、[机器摘要](reports/r47_release/summary.json)、[独立复验](reports/r47_release/independent.json)和[封存复核](reports/r47_release/seal_recheck.json)。先完成来源/主桥页面与四条实际轨迹视频的浏览器验收，再运行样条、换接法与真实音频阶段对照。8条完整来源新增139个运动学候选（中位291帧、最长590帧），原499段和2137帧质量未知支持保持；飞天长保持不再按固定窗口截断。G1分段SO(3)桥22例图域通过，但飞天/冥想内部D3退化，不能统一替换；事后研究策略保留旧桥9例、提案新桥12例、拒绝1例，不代表Native或自然性通过。
+
+本机优先观看 `outputs/event_coverage_r47_01/viewer/index.html`（8条完整来源、旧切口与新候选）、`outputs/manifold_bridge_r47_01/guard/viewer/index.html`（来源/旧桥/研究选择）、`outputs/manifold_bridge_r47_01/videos/index.html`（四条真实256帧视频）；纯主候选与全部结构对照分别在 `viewer/index.html`、`viewer_controls/index.html`。这些是原始来源与几何桥实际轨迹，本轮没有新增神经生成。476条跨录制记录归并为444对、48个Train音乐组，未校准阶段代理覆盖仅4.32%，真实五偏移时钟及三个内容对照均未通过必要检验，未启动P4训练或整曲。完整回归634通过/10跳过，两个数组包与220条官方FK实算重放一致，13个父代6555文件保持封存；本轮3根目录275文件另行逐SHA复核。媒体已回传本机并验收，不随Git上传；未知世界Root/接触、完整Native24与文化语义限制保持。
 新增 [R46几何桥责任与阶段上限报告](reports/r46_release/report.md)、[机器摘要](reports/r46_release/summary.json)、[独立复验](reports/r46_release/independent.json)和[封存复核](reports/r46_release/seal_recheck.json)。先验收22案例与3条实际轨迹视频，再运行8个Train音乐组对照。发现13/22条桥超出既有SO(3)局部图范围；新增连续曲线准入sidecar，原Geometry未覆盖。来源可行集合的事后Oracle能降低时间代理误差，但固定评分仍未通过，不启动新生成训练或整曲。完整回归626通过/10跳过，两组科学输出与308条官方FK精确复验，11个父代6346文件保持。
 
 本机优先观看 `outputs/source_coverage_r46_01/main/index.html`：飞天/女冥想/琵琶2的“当前窗口—完整来源高活动窗”三条无音乐原始动作对照；它解释首256帧覆盖偏差，不能当作生成结果。桥/阶段观看入口为 `outputs/bridge_audit_r46_01/videos/index.html`、`viewer/index.html`、`viewer_oracle/index.html`。全部媒体已回传并验收，媒体不随Git上传；未知Root/接触、人工语义和完整Native24限制保留。

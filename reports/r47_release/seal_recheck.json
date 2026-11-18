@@ -1,0 +1,27 @@
+{
+  "records": [
+    {
+      "root": "outputs/event_coverage_r47_01",
+      "files": 9,
+      "bytes": 27513303,
+      "manifest_sha256": "b0096679b1d500961335b935229d9fe77815586505f7f2a7f3af921d409296c2"
+    },
+    {
+      "root": "outputs/manifold_bridge_r47_01",
+      "files": 264,
+      "bytes": 633056980,
+      "manifest_sha256": "bc79a15e2cabc09e1bcd7624f5e79049ae7147c19b3bcf5292c22faa5ef8ccbd"
+    },
+    {
+      "root": "outputs/music_phase_r47_01",
+      "files": 2,
+      "bytes": 71529936,
+      "manifest_sha256": "3d65ef06c9c57e735e8ae718c16947b1b94ab8e8aac3d1571cbff9cedb8e8e0b"
+    }
+  ],
+  "all_hashes_verified": true,
+  "fresh_process": true,
+  "optimizer_calls": 0,
+  "verified_by_commit": "111d7d36a60bd573b9cc69a4f9156f0f7d2c60f3",
+  "verified_at_utc": "2026-11-18T08:19:14.950235+00:00"
+}
