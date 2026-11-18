@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "music_cases": [
+    "dunhuangwu2",
+    "dunhuangwu3",
+    "dunhuangwu4"
+  ],
+  "panels_per_case": 4,
+  "paused_frame_1801_audio_seconds": 60.033333,
+  "last_song_frame_3599_audio_seconds": 119.966666,
+  "foreground_playback_pose_frame": 1521,
+  "audio_frame": 1522,
+  "frame_difference": 1,
+  "playback_rate": 0.5,
+  "main_acceptance_precedes_controls": true,
+  "screenshot": "controls_acceptance.png",
+  "scope": "CLOCK_AND_INTERACTION_ACCEPTANCE_NOT_PERCEPTUAL_QUALITY"
+}

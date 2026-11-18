@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "checked_at": "2026-11-18T21:02:33.569800+00:00",
+  "checks": [
+    "common_audio_clock",
+    "play_pause",
+    "600_to_601_step",
+    "half_speed",
+    "B3_event_seek_519",
+    "audio_structure_click_seek_1800",
+    "last_frame_3600"
+  ],
+  "audio_duration": 120.032688,
+  "foreground_audio_frame": 1891,
+  "foreground_pose_frame": 1891,
+  "screenshot_sha256": "7dcf0e4e8e39db46195b3b8c951df27ec0750211d37bf200899f39059f9d4f3b",
+  "qualification": "DISPLAY_ACCEPTANCE_NOT_PERCEPTUAL_QUALITY_OR_PHRASE_TRUTH"
+}
