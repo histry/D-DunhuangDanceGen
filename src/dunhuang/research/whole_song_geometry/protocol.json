@@ -1,0 +1,24 @@
+{
+  "song": 0,
+  "preferred_core_frames": 240,
+  "transition_frames": 48,
+  "beam": 128,
+  "workers": 4,
+  "unit_reuse_penalty": 0.1,
+  "source_reuse_penalty": 0.02,
+  "edge_weight": 0.01,
+  "source_bank": "FROZEN_R51_16_UNITS",
+  "rate_limits": [
+    0.75,
+    1.33
+  ],
+  "same_source_adjacent": false,
+  "geometry": "UNCHANGED_R50_G0_G1_R48_THRESHOLDS",
+  "frames_per_second": 30,
+  "model_inference_calls": 0,
+  "optimizer_calls": 0,
+  "Root": "UNKNOWN",
+  "contact": "UNKNOWN",
+  "native24": "NOT_EVALUABLE",
+  "can_route": false
+}
