@@ -29,3 +29,14 @@ def test_phase_construction_ignores_hidden_pose_and_invalid_derivatives():
     assert torch.equal(rp,r2) and torch.equal(qp,q2)
     assert not rp[:,104:152].any()
     assert torch.isfinite(qp).all()
+
+def test_untruncated_search_retains_geometrically_only_usable_candidate():
+    from dunhuang.research.validation_r51.funnel import solve
+    def candidate(i,score):
+        return dict(unit={'unit_uid':str(i),'source_uid':str(i)},scores=[score,score],parts=[{'local':score,'heuristic':score}])
+    left=[candidate(i,10-i) for i in range(5)];right=[candidate(9,1)]
+    evidence={'selected':'G0','methods':{'G0':{'gap_D3':1}}}
+    edges={(0,4,0):(True,evidence)}
+    assert solve([left,right],edges,{'D3':1},top4=True) is None
+    result=solve([left,right],edges,{'D3':1})
+    assert result['ids']==[4,0]
