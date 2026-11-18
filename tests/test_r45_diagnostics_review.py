@@ -5,6 +5,11 @@ from scipy.interpolate import PPoly
 from dunhuang.research.phase_r45.attribution import integrated_terms,stencil
 from dunhuang.research.target_review_r45.reviews import ndcg,resolve,validate
 from dunhuang.research.target_review_r45.prepare import sample_bounds
+from dunhuang.research.phase_r45.evaluate import seed_contract
+
+def test_body_repeat_does_not_falsely_require_unknown_root_contact_repeat():
+    raw=np.zeros((2,256,139));raw[1,120,4]=.08;raw[1,120,0]=1.;r=seed_contract(raw);assert r['body_identical'] and not r['root_identical'] and not r['contact_channels_identical'];raw[1,120,8]=.01
+    with pytest.raises(ValueError):seed_contract(raw)
 
 def test_partial_final_audio_bin_preserves_real_supported_pose_center():
     start,finish,r=sample_bounds([3284,3598],16000,1918433);assert finish==1918433;assert r['partial_final_audio_bin'] and r['last_pose_center_observed'];assert r['requested_sample_interval'][1]-finish==500

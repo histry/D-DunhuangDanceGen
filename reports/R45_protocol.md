@@ -37,3 +37,5 @@ References checked: MotionBeat official https://motionbeat2025.github.io/ and ht
 补充固定读出定义：导数归因将连续SO(3)路径采样与实际139D编码后再FK的差异单列为representation round-trip increment，和积分/源导数残差分开；这不是一个新精度候选，也不据此更改任何门槛。检索额外保留固定EnergyHeuristic（Train归一化音乐通道0与动作通道264均值差），它不是完整Planner代价，更不是真值。
 
 媒体边界修正（仅修正审核包导出）：两个已登记查询的末帧音频bin不满1/30秒，但最后姿态帧中心仍有真实音频。导出保留真实EOF与实际采样区间，记录partial_final_audio_bin，不补零、不移动槽位或姿态时钟。若末帧中心本身已越过EOF则拒绝导出。首次失败包与非零回执保留。
+
+种子合同澄清：全部22案例的身体6D轨迹相同，但old_failed/new_plan压力案例继承的模型Root和接触通道随种子不同。时间图筛查只使用共同身体FK；世界Root/接触仍不合格。保留逐通道差异，不把它们强制改成相同，也不把两个种子当独立来源。首次评价断言过强的失败日志保留；仅修正验证范围与页面说明，候选、音乐、权重和门槛不改。

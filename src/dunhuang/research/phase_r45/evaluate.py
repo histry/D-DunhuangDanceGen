@@ -7,17 +7,21 @@ from dunhuang.research.reperformance_r44.archive import Arrays
 from dunhuang.research.reperformance_r44.motion import decode
 from dunhuang.research.sdmr_event_rank.evaluate import group_ci
 
+def seed_contract(raw):
+    if raw.ndim!=3 or raw.shape[0]!=2 or raw.shape[-1]!=139 or not np.array_equal(raw[0,:,7:],raw[1,:,7:]):raise ValueError('The source-only phase bank requires identical body geometry across saved seeds')
+    return dict(body_identical=True,root_identical=bool(np.array_equal(raw[0,:,4:7],raw[1,:,4:7])),contact_channels_identical=bool(np.array_equal(raw[0,:,:4],raw[1,:,:4])),root_maximum_difference_m=float(np.max(abs(raw[0,:,4:7]-raw[1,:,4:7]))),scope='BODY_CLOCK_REPETITIONS_NOT_INDEPENDENT_SOURCES; MODEL_ROOT_CONTACT_PRIORS_MAY_DIFFER')
+
 def run(root,out):
     root=Path(root);meta=read(root/'result.json');cfg=meta['config'];z=Arrays(root/'arrays.npz');J=z['skeleton_J22'];parents=z['parents'];rows=[];groups=collections.defaultdict(lambda:collections.defaultdict(list));change=[]
     for r in meta['records']:
         key=r['key'];m=r['metrics']['methods'];base=m['Geometry'];p=m['Phase'];ratio=p['core_activity']/max(base['core_activity'],1e-12);d3=p['core_D3']/max(base['core_D3'],1e-12);passed=.85<=ratio<=1.15 and d3<=1.05 and p['protected_exact'];factor={}
-        assert np.array_equal(z[key+'_MatchedC2_139'],z[key+'_R44C2_139']);assert np.array_equal(z[key+'_Phase_139'],z[key+'_FixedMapMusicB_139']);assert np.array_equal(z[key+'_NoMusic_139'],z[key+'_Geometry_139']);assert np.array_equal(z[key+'_Geometry_139'][0],z[key+'_Geometry_139'][1])
+        assert np.array_equal(z[key+'_MatchedC2_139'],z[key+'_R44C2_139']);assert np.array_equal(z[key+'_Phase_139'],z[key+'_FixedMapMusicB_139']);assert np.array_equal(z[key+'_NoMusic_139'],z[key+'_Geometry_139']);seed_state=seed_contract(z[key+'_Geometry_139'])
         for method in ('MatchedLinear','MatchedC2'):
             P=relative_fk(decode(z[key+'_'+method+'_139'][0])[0],J,parents);at=[];inside=[]
             for k in r['matched_anchor_maps']:
                 a,b=k['interval'];jerk=np.diff(P[a:b],n=3,axis=0)*27000;starts=np.arange(a,b-3);knots=np.asarray(k['target'][1:-1]);mask=np.any((starts[:,None]<=knots[None])&(starts[:,None]+3>=knots[None]),axis=1) if len(knots) else np.zeros(len(starts),bool);at.extend(jerk[mask]);inside.extend(jerk[~mask])
             rms=lambda v:float(np.sqrt(np.mean(np.asarray(v)**2))) if len(v) else None;factor[method]=dict(knot_stencil_D3=rms(at),interior_D3=rms(inside),all_core_D3=m[method]['core_D3'])
-        source=r['source'];rows.append(dict(key=key,domain=source['domain'],role=source['role'],activity_ratio=ratio,D3_ratio=d3,source_feasibility_filter_passed=passed,identity_cores=sum(c['identity'] for c in r['phase_maps']),factor=factor,metrics=m))
+        source=r['source'];rows.append(dict(key=key,domain=source['domain'],role=source['role'],activity_ratio=ratio,D3_ratio=d3,source_feasibility_filter_passed=passed,seed_contract=seed_state,identity_cores=sum(c['identity'] for c in r['phase_maps']),factor=factor,metrics=m))
         if source['domain']=='ChangE' and source['role']=='train':change.append(passed)
         if source['domain']=='AIST++' and source['role']=='train':
             group=source['music_identity']['source']['sha256']

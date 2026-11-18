@@ -18,9 +18,10 @@ def verify(out):
         root=Path('outputs')/name;manifest=root/'artifacts_manifest.json';files=read(manifest)['files']
         for r in files:assert (root/r['path']).stat().st_size==r['bytes'] and digest(root/r['path'])==r['sha256'],str(root/r['path'])
         parents.append(dict(root=str(root),files=len(files),manifest_sha256=digest(manifest)))
-    for view in (G/'viewer',G/'viewer_controls',G/'videos',A/'package/reviewer'):
+    first=G/'viewer_first_delivery' if (G/'viewer_first_delivery').exists() else G/'viewer'
+    for view in (G/'viewer',first,G/'viewer_controls',G/'videos',A/'package/reviewer'):
         for r in read(view/'protocol.json')['files']:assert digest(view/r['name'])==r['sha256']
-    acceptance=read(G/'receipts/primary_browser_acceptance.json');assert datetime.datetime.fromisoformat(acceptance['observed_at_utc']).timestamp()<(G/'controls/result.json').stat().st_mtime;assert acceptance['protocol_sha256']==digest(G/'viewer/protocol.json');assert not read(G/'qualification/result.json')['conditional_training']['admitted']
+    acceptance=read(G/'receipts/primary_browser_acceptance.json');assert datetime.datetime.fromisoformat(acceptance['observed_at_utc']).timestamp()<(G/'controls/result.json').stat().st_mtime;assert acceptance['protocol_sha256']==digest(first/'protocol.json');assert not read(G/'qualification/result.json')['conditional_training']['admitted']
     write(out,dict(packs=packs,all_scientific_values_exact=True,official_fk_replayed=True,review_package_replayed=True,raw_human_reviews=0,parents=parents,primary_delivery_preceded_controls=True,optimizer_calls=0,whole_song_generations=0,can_route=False,operational_qualified=False));print('R45_INDEPENDENT_OK',len(packs),sum(p['files'] for p in parents),flush=True)
 
 if __name__=='__main__':
