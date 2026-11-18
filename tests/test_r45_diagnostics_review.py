@@ -4,6 +4,13 @@ import pytest
 from scipy.interpolate import PPoly
 from dunhuang.research.phase_r45.attribution import integrated_terms,stencil
 from dunhuang.research.target_review_r45.reviews import ndcg,resolve,validate
+from dunhuang.research.target_review_r45.prepare import sample_bounds
+
+def test_partial_final_audio_bin_preserves_real_supported_pose_center():
+    start,finish,r=sample_bounds([3284,3598],16000,1918433);assert finish==1918433;assert r['partial_final_audio_bin'] and r['last_pose_center_observed'];assert r['requested_sample_interval'][1]-finish==500
+
+def test_genuine_missing_pose_center_audio_is_not_padded():
+    with pytest.raises(ValueError):sample_bounds([3284,3599],16000,1918433)
 
 def test_integrated_chain_rule_recovers_actual_discrete_third_difference():
     poly=PPoly(np.array([[.01],[1.],[0.]]),[0,100])

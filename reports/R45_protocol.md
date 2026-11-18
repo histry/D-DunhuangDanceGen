@@ -35,3 +35,5 @@ All stages: publish code before server execution; tmux; fresh-process replay wit
 References checked: MotionBeat official https://motionbeat2025.github.io/ and https://github.com/wangxuanchen88/MotionBeat ; GTCC CVPR2024 https://openaccess.thecvf.com/content/CVPR2024/html/Donahue_Learning_to_Predict_Activity_Progress_by_Self-Supervised_Video_Alignment_CVPR_2024_paper.html ; no claim of full reproduction or learned semantic phases.
 
 补充固定读出定义：导数归因将连续SO(3)路径采样与实际139D编码后再FK的差异单列为representation round-trip increment，和积分/源导数残差分开；这不是一个新精度候选，也不据此更改任何门槛。检索额外保留固定EnergyHeuristic（Train归一化音乐通道0与动作通道264均值差），它不是完整Planner代价，更不是真值。
+
+媒体边界修正（仅修正审核包导出）：两个已登记查询的末帧音频bin不满1/30秒，但最后姿态帧中心仍有真实音频。导出保留真实EOF与实际采样区间，记录partial_final_audio_bin，不补零、不移动槽位或姿态时钟。若末帧中心本身已越过EOF则拒绝导出。首次失败包与非零回执保留。
