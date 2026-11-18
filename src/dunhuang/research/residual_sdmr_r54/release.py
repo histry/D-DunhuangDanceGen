@@ -30,9 +30,9 @@ def release(out):
    for method,v in evaluation['summary']['val_'+family]['methods'].items():
     q=v['recall_at1'];lines.append('|'+family+'|'+method+'|'+format(q['mean'],'.4f')+'|'+str(q['ci95'])+'|')
   lines+=['','A3增量门：'+str(evaluation['A3_increment_gate'])+'；A4准入：'+str(evaluation['A4_admitted'])+'；A5未启动。', '', 'A3要求至少4个Val音乐组，且相对Heuristic、Frozen、HybridFrozen、Unconditional、Shuffled和错音乐的配对R@1差值区间下界均大于0。A4还要求同歌错时相对Heuristic的区间下界大于0；不足则不追加Warp训练或规划接入。完整MRR/R@5、组均值、配对差值与覆盖人口见summary.json。']
- lines+=['','## 独立复验','',str(independent),'', '新进程重建来源与全部归一化输入；数据NPZ及完整正确/错音乐评分NPZ字节一致。每个训练臂0/120/239及Train拟合0/60/119步的真实损失/梯度精确复验，核实更新后权重变化；复验无优化器调用。未声称重新训练一遍全部更新。', '', '数组、模型、快照、训练日志和观看资产在服务器封存；公开代码、统计与回执。生产选路、G0/G1和Native不改。']
+ lines+=['','## 独立复验','',str(independent),'', '新进程从封存R41动作/特征数组和真实音频重建R54活动量、候选及归一化输入，不重跑SMPL转换或声学特征提取；数据NPZ及完整正确/错音乐评分NPZ字节一致。每个训练臂0/120/239及Train拟合0/60/119步的真实损失/梯度精确复验，核实更新后权重变化；复验无优化器调用。未声称重新训练一遍全部更新。', '', '数组、模型、快照、训练日志和观看资产在服务器封存；公开代码、统计与回执。生产选路、G0/G1和Native不改。']
  (out/'report.md').write_text('\n'.join(lines)+'\n',encoding='utf8');files=[]
- for mode in ('data','checks','Conditional','Unconditional','Shuffled','evaluation','independent','preview','main_view'):
+ for mode in ('data','checks','Conditional','Unconditional','Shuffled','evaluation','independent','preview','preview_v2','main_view'):
   if not (ROOT/mode).exists():continue
   for p in sorted((ROOT/mode).rglob('*')):
    if p.is_file():files.append(dict(path=p.as_posix(),bytes=p.stat().st_size,sha256=sha(p)))
