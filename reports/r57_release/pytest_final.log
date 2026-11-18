@@ -1,0 +1,28 @@
+........................................................................ [ 10%]
+........................................................................ [ 20%]
+........................................................................ [ 30%]
+........................................................................ [ 40%]
+........................................................................ [ 51%]
+........................................................................ [ 61%]
+........................................................................ [ 71%]
+........................................................................ [ 81%]
+.............................................s.......................... [ 92%]
+........................................................                 [100%]
+=============================== warnings summary ===============================
+tests/test_alignment.py::test_missing_values_cannot_affect_encoder
+tests/test_reranking.py::test_sync_encoding_identity_is_required
+tests/test_source_tasks.py::test_rate_models_have_identical_capacity_and_real_seconds
+  /home/disk/lsm/conda_envs/edge/lib/python3.9/site-packages/torch/nn/modules/transformer.py:392: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+    warnings.warn(
+
+tests/test_bridge_r38.py::test_ordered_music_embedding_responds_to_reversal_and_masks_padding
+  /home/disk/lsm/conda_envs/edge/lib/python3.9/site-packages/torch/nn/modules/transformer.py:515: UserWarning: The PyTorch API of nested tensors is in prototype stage and will change in the near future. We recommend specifying layout=torch.jagged when constructing a nested tensor, as this layout receives active development, has better operator coverage, and works with torch.compile. (Triggered internally at /pytorch/aten/src/ATen/NestedTensorImpl.cpp:178.)
+    output = torch._nested_tensor_from_mask(
+
+tests/test_coverage_r34.py::test_region_mask_keeps_unknowns_out_of_truth_and_counts_boundary_templates
+  /home/disk/lsm/storage/DunhuangDanceGen/tests/test_coverage_r34.py:56: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+  Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:835.)
+    assert torch.isfinite(loss+dyn) and float(loss)==pytest.approx(0,abs=1e-7)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+703 passed, 1 skipped, 5 warnings in 31.16s

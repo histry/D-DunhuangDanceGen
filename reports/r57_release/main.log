@@ -1,0 +1,35 @@
++ /home/disk/lsm/conda_envs/edge/bin/python -m pytest -q tests/test_tempo_attribution_r57.py tests/test_music_structure_r56.py
+...................                                                      [100%]
+19 passed in 4.93s
++ /home/disk/lsm/conda_envs/edge/bin/python -c 'from dunhuang.research.tempo_attribution_r57.common import verify_parent; print('\''R56_PARENT_SEALED'\'',verify_parent())'
+R56_PARENT_SEALED 43
++ /home/disk/lsm/conda_envs/edge/bin/python -m dunhuang.research.tempo_attribution_r57 main --out outputs/tempo_attribution_r57_01/main
+R57_MAIN r47:021a0275b050c878b2156883
+R57_MAIN r47:058b4536f51d3c37255b5cf7
+R57_MAIN r47:1b228a3e5bd8f536ebd033b8
+R57_MAIN r47:28088078d89f6394a8b1fa44
+R57_MAIN r47:70e341228da95cae7b269f2e
+R57_MAIN r47:a74b575f952414f4396bad53
+R57_MAIN r47:afdc7bb3f1539b3ddd8517b9
+R57_MAIN r47:c1f1efc803495ee700d67db1
++ /home/disk/lsm/conda_envs/edge/bin/python -m dunhuang.research.tempo_attribution_r57 render --source outputs/tempo_attribution_r57_01/main --out outputs/tempo_attribution_r57_01/main_video
+R57_VIDEO case0.mp4 233
+R57_VIDEO case1.mp4 262
+R57_VIDEO case2.mp4 245
+R57_VIDEO case3.mp4 270
+R57_VIDEO case4.mp4 247
+R57_VIDEO case5.mp4 236
+R57_VIDEO case6.mp4 248
+R57_VIDEO case7.mp4 236
++ /home/disk/lsm/conda_envs/edge/bin/python -m dunhuang.research.tempo_attribution_r57 verify --source outputs/tempo_attribution_r57_01/main --out outputs/tempo_attribution_r57_01/independent_main
+R57_MAIN r47:021a0275b050c878b2156883
+R57_MAIN r47:058b4536f51d3c37255b5cf7
+R57_MAIN r47:1b228a3e5bd8f536ebd033b8
+R57_MAIN r47:28088078d89f6394a8b1fa44
+R57_MAIN r47:70e341228da95cae7b269f2e
+R57_MAIN r47:a74b575f952414f4396bad53
+R57_MAIN r47:afdc7bb3f1539b3ddd8517b9
+R57_MAIN r47:c1f1efc803495ee700d67db1
++ status=0
+++ date -Is
++ printf 'exit_status=%s\nfinished_at=%s\n' 0 2026-11-19T06:07:23+08:00

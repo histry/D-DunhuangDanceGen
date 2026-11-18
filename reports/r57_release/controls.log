@@ -1,0 +1,73 @@
++ /home/disk/lsm/conda_envs/edge/bin/python -c 'import json; assert json.load(open('\''outputs/tempo_attribution_r57_01/receipts/main_browser.json'\''))['\''passed'\'']; assert json.load(open('\''outputs/tempo_attribution_r57_01/independent_main/result.json'\''))['\''arrays_bytes_exact'\'']'
++ CUDA_VISIBLE_DEVICES=
++ /home/disk/lsm/conda_envs/edge/bin/python -m dunhuang.research.tempo_attribution_r57 controls --out outputs/tempo_attribution_r57_01/controls
+R57_CONTROLS 0 101
+R57_CONTROLS 1 201
+R57_CONTROLS 2 298
++ CUDA_VISIBLE_DEVICES=
++ /home/disk/lsm/conda_envs/edge/bin/python -m dunhuang.research.tempo_attribution_r57 verify --source outputs/tempo_attribution_r57_01/controls --out outputs/tempo_attribution_r57_01/independent_controls
+R57_CONTROLS 0 101
+R57_CONTROLS 1 201
+R57_CONTROLS 2 298
++ CUDA_VISIBLE_DEVICES=
++ /home/disk/lsm/conda_envs/edge/bin/python -c 'import runpy; print('\''R55_SEAL'\'',runpy.run_path('\''scripts/release_r55_and_song.py'\'')['\''validate_seal'\''](__import__('\''pathlib'\'').Path('\''outputs/clock_residual_r55_02'\'')))'
+R55_SEAL 128
++ CUDA_VISIBLE_DEVICES=0
++ /home/disk/lsm/conda_envs/edge/bin/python -m dunhuang.research.tempo_attribution_r57 sdmr --out outputs/tempo_attribution_r57_01/sdmr
+R57_SDMR_GRAD Frozen 0 40
+R57_SDMR_GRAD Conditional 0 40
+R57_SDMR_GRAD Conditional 120 40
+R57_SDMR_GRAD Conditional 239 40
+R57_SDMR_GRAD NoClock 0 40
+R57_SDMR_GRAD NoClock 120 40
+R57_SDMR_GRAD NoClock 239 40
+R57_OPEN_POOL aist_publisher_track:mJB2 90 242
+R57_OPEN_POOL aist_publisher_track:mJB2 150 151
+R57_OPEN_POOL aist_publisher_track:mJB2 240 70
+R57_OPEN_POOL aist_publisher_track:mJS2 90 240
+R57_OPEN_POOL aist_publisher_track:mJS2 150 151
+R57_OPEN_POOL aist_publisher_track:mJS2 240 70
+R57_OPEN_POOL aist_publisher_track:mKR1 90 243
+R57_OPEN_POOL aist_publisher_track:mKR1 150 149
+R57_OPEN_POOL aist_publisher_track:mKR1 240 70
+R57_OPEN_POOL aist_publisher_track:mLO4 90 242
+R57_OPEN_POOL aist_publisher_track:mLO4 150 150
+R57_OPEN_POOL aist_publisher_track:mLO4 240 70
+R57_OPEN_POOL aist_publisher_track:mMH4 90 243
+R57_OPEN_POOL aist_publisher_track:mMH4 150 151
+R57_OPEN_POOL aist_publisher_track:mMH4 240 70
+R57_OPEN_POOL aist_publisher_track:mPO0 90 241
+R57_OPEN_POOL aist_publisher_track:mPO0 150 150
+R57_OPEN_POOL aist_publisher_track:mPO0 240 70
++ CUDA_VISIBLE_DEVICES=0
++ /home/disk/lsm/conda_envs/edge/bin/python -m dunhuang.research.tempo_attribution_r57 verify_sdmr --source outputs/tempo_attribution_r57_01/sdmr --out outputs/tempo_attribution_r57_01/independent_sdmr
+R57_SDMR_GRAD Frozen 0 40
+R57_SDMR_GRAD Conditional 0 40
+R57_SDMR_GRAD Conditional 120 40
+R57_SDMR_GRAD Conditional 239 40
+R57_SDMR_GRAD NoClock 0 40
+R57_SDMR_GRAD NoClock 120 40
+R57_SDMR_GRAD NoClock 239 40
+R57_OPEN_POOL aist_publisher_track:mJB2 90 242
+R57_OPEN_POOL aist_publisher_track:mJB2 150 151
+R57_OPEN_POOL aist_publisher_track:mJB2 240 70
+R57_OPEN_POOL aist_publisher_track:mJS2 90 240
+R57_OPEN_POOL aist_publisher_track:mJS2 150 151
+R57_OPEN_POOL aist_publisher_track:mJS2 240 70
+R57_OPEN_POOL aist_publisher_track:mKR1 90 243
+R57_OPEN_POOL aist_publisher_track:mKR1 150 149
+R57_OPEN_POOL aist_publisher_track:mKR1 240 70
+R57_OPEN_POOL aist_publisher_track:mLO4 90 242
+R57_OPEN_POOL aist_publisher_track:mLO4 150 150
+R57_OPEN_POOL aist_publisher_track:mLO4 240 70
+R57_OPEN_POOL aist_publisher_track:mMH4 90 243
+R57_OPEN_POOL aist_publisher_track:mMH4 150 151
+R57_OPEN_POOL aist_publisher_track:mMH4 240 70
+R57_OPEN_POOL aist_publisher_track:mPO0 90 241
+R57_OPEN_POOL aist_publisher_track:mPO0 150 150
+R57_OPEN_POOL aist_publisher_track:mPO0 240 70
++ CUDA_VISIBLE_DEVICES=
++ /home/disk/lsm/conda_envs/edge/bin/python -m pytest -q
++ status=0
+++ date -Is
++ printf 'exit_status=%s\nfinished_at=%s\n' 0 2026-11-19T06:16:20+08:00

@@ -1,0 +1,6 @@
++ /home/disk/lsm/conda_envs/edge/bin/python -m dunhuang.research.geometry_recovery_r57.study run --out outputs/tempo_attribution_r57_01/repair
++ /home/disk/lsm/conda_envs/edge/bin/python -m dunhuang.research.geometry_recovery_r57.study verify --source outputs/tempo_attribution_r57_01/repair --out outputs/tempo_attribution_r57_01/independent_repair
++ /home/disk/lsm/conda_envs/edge/bin/python -m pytest -q
++ status=0
+++ date -Is
++ printf 'exit_status=%s\nfinished_at=%s\n' 0 2026-11-19T06:19:23+08:00
