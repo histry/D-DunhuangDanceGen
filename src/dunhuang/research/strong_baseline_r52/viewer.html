@@ -13,6 +13,7 @@ audio.onloadedmetadata=()=>{audio.playbackRate=+$('rate').value;audio.currentTim
 
 if(new URLSearchParams(location.search).has('embedded')){
  document.querySelector('h1').hidden=true;document.querySelector('h1+p').hidden=true;$('case').hidden=true;audio.hidden=true;document.querySelectorAll('body>p').forEach(x=>{if(x.contains($('play')))x.hidden=true});$('seek').hidden=true;
+ $('curve').onclick=e=>window.parent.postMessage({type:'R52_SEEK',frame:Math.round((e.clientX-e.currentTarget.getBoundingClientRect().left)/e.currentTarget.getBoundingClientRect().width*(row.frames-1))},'*');
  const parentClock=e=>{if(e.source!==window.parent||e.data?.type!=='R52_CLOCK')return;const d=e.data;if(!Number.isInteger(d.index)||!R51.cases[d.index]||!Number.isFinite(d.frame))return;if(+$('case').value!==d.index){$('case').value=d.index;load();audio.hidden=true;}audio.pause();show(Math.round(d.frame));window.parent.postMessage({type:'R52_FRAME_ACK',frame},'*')};window.addEventListener('message',parentClock);window.parent.postMessage({type:'R52_READY'},'*');
 }
 </script></html>
