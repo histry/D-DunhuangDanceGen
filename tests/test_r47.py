@@ -28,3 +28,11 @@ def test_clock_tie_reference_and_unobserved_audio_are_not_hard_negatives():
     assert union([[0,100],[50,150],[160,200]])==[[0,150],[160,200]]
     signal=dict(onset=[0]*30,beat_strength=[0]*30,energy=[0]*30)
     assert stage_score(signal,[3],['speed_peak'],-8) is None
+
+def test_bounded_source_dp_matches_reference_without_protection():
+    from dunhuang.research.event_coverage_r47.index import segment_source
+    from dunhuang.research.paired_event_r41.events import segment
+    cfg=dict(minimum_core_frames=90,maximum_core_frames=450,preferred_core_frames=240,boundary_grid_frames=6,boundary_smoothing_sigma_frames=1.5)
+    rng=np.random.default_rng(0);p={k:rng.random(1100) for k in ('upper','lower','trunk','global')}
+    assert segment_source(p,[],cfg,[0,1100])==segment(p,[],cfg,[0,1100])[0]
+    held=segment_source(p,[[50,1050]],cfg,[0,1100]);assert held==[[0,1100]]
