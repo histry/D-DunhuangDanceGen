@@ -10,7 +10,9 @@ def decision(row):
     return dict(method=None,status='REJECT_CURRENT_ENDPOINT_PAIR')
 
 def run(main,out):
-    main=Path(main);out=Path(out);meta=read(main/'result.json');rows=[dict(key=r['key'],**decision(r)) for r in meta['records']];write(out/'decision.json',dict(records=rows,input_arrays_sha256=sha(main/'arrays.npz'),policy='PRESERVE_DOMAIN_VALID_G0; FOR_OUT_OF_DOMAIN_TRY_REGISTERED_G1_AND_REGISTERED_NUMERICAL_FILTER_ELSE_REJECT',posthoc_engineering_policy=True,hidden_truth_read_by_decision=False,parameters_tuned_on_val=False,physical_qualified=False,can_route=False));view(main,out/'viewer')
+    main=Path(main);out=Path(out)
+    if out.exists():raise ValueError('Fresh engineering readout')
+    meta=read(main/'result.json');rows=[dict(key=r['key'],**decision(r)) for r in meta['records']];write(out/'decision.json',dict(records=rows,input_arrays_sha256=sha(main/'arrays.npz'),policy='PRESERVE_DOMAIN_VALID_G0; FOR_OUT_OF_DOMAIN_TRY_REGISTERED_G1_AND_REGISTERED_NUMERICAL_FILTER_ELSE_REJECT',posthoc_engineering_policy=True,hidden_truth_read_by_decision=False,parameters_tuned_on_val=False,physical_qualified=False,can_route=False));view(main,out/'viewer')
     target=out/'viewer';text=(target/'data.js').read_text(encoding='utf8');encoded=text.split('"')[1];data=json.loads(gzip.decompress(base64.b64decode(encoded)));lookup={r['key']:r for r in rows}
     for case in data['cases']:
         selected=lookup[case['id']];case['engineering_decision']=selected;case['scope']=('本接法已拒绝，没有采用输出。' if selected['method'] is None else '研究性采用'+selected['method']+'，仍未取得物理资格。')+selected['status']+' · 事后工程选择，不是新模型或物理通过。'+case['scope']

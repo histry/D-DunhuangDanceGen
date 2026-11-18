@@ -14,6 +14,7 @@ def run(out):
     def same(a,b):
         aa=read(a);bb=read(b);aa.pop('code_commit',None);bb.pop('code_commit',None);assert aa==bb
     same(C/'index/result.json',C/'index_replay/result.json');same(P/'main/result.json',P/'main_replay/result.json');assert read(G/'connections.json')==read(G/'connections_replay.json')
+    assert read(G/'evaluation.json')==read(G/'evaluation_replay.json');assert read(G/'guard/decision.json')==read(G/'guard_replay/decision.json');assert digest(G/'guard/viewer/data.js')==digest(G/'guard_replay/viewer/data.js')
     a=Arrays(G/'main/arrays.npz');b=Arrays(G/'controls/arrays.npz')
     for key in a.files:assert np.array_equal(a[key],b[key],equal_nan=True),key
     a.close();b.close();parents=[]
