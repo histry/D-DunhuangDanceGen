@@ -1,0 +1,18 @@
+<!doctype html><html lang="zh"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>R50 带过渡预算的短编舞</title>
+<style>body{max-width:1100px;margin:30px auto;padding:15px;background:#f3f2e9;color:#22443b;font:17px system-ui}audio,input{width:100%}button,select{padding:8px;font:inherit}section{display:flex;gap:16px}article{flex:1;background:white;border-radius:10px;padding:15px}canvas{width:100%}pre{white-space:pre-wrap;font-size:14px}#state{padding:12px;background:#e0e8dd}</style>
+<h1>Core 与 Transition 共同占用音乐时间</h1>
+<p>播放实际保存的 ChangE 重定时 Core 与几何过渡。每段 Core 保留完整来源区间，过渡在目标音乐轴上占用明确帧数。画面采用骨盆相对的 22 关节姿态。</p>
+<label>短编舞 <select id="song"></select></label><audio id="audio" controls preload="metadata"></audio>
+<button id="prev">前一帧</button> <button id="next">后一帧</button><span id="clock"></span><input id="seek" aria-label="目标帧" type="range" min="0" value="0">
+<p id="state"></p><section><article><h2>固定局部视角</h2><canvas id="c0" width="500" height="400"></canvas></article><article><h2>侧面局部视角</h2><canvas id="c1" width="500" height="400"></canvas></article></section>
+<details><summary>来源、帧数预算和数值资格</summary><pre id="info"></pre></details>
+<p>身体数值筛查与世界 Root、接触和 Native24 的评价各有观测要求。当前短片的世界 Root 与接触状态为 UNKNOWN。</p>
+<script src="data.js"></script><script>
+const $=id=>document.getElementById(id), audio=$('audio'); let row,points,frame=0;
+R50.cases.forEach((r,i)=>$('song').add(new Option('音乐'+(r.song+2)+' · '+r.events+'事件 · '+r.transition_frames+'帧过渡',i)));
+function load(){row=R50.cases[+$('song').value];if(!row){$('state').textContent='没有通过数值筛查的短编舞';return}points=new Float32Array(Uint8Array.from(atob(row.data),c=>c.charCodeAt(0)).buffer);audio.src=row.audio;$('seek').max=row.total_frames-1;const {data,...info}=row;$('info').textContent=JSON.stringify(info,null,2);show(0)}
+function show(t){frame=Math.max(0,Math.min(row.total_frames-1,t));$('seek').value=frame;let global=row.music_interval[0]+frame,region=row.regions.find(r=>r.interval[0]<=global&&global<r.interval[1]);$('clock').textContent='目标第 '+global+' 帧 · '+(global/30).toFixed(3)+' 秒';$('state').textContent=(region.kind==='core'?'来源 Core':'几何 Transition')+' ['+region.interval+') · '+row.core_frames+' Core帧 + '+row.bridge_frames+' Transition帧 = '+row.total_frames+' 总帧';[0,1].forEach(i=>{let ctx=$('c'+i).getContext('2d');ctx.clearRect(0,0,500,400);const pos=j=>{let k=(frame*22+j)*3;return[250+135*(i?points[k+2]:.85*points[k]-.5*points[k+2]),200-135*points[k+1]]};for(let j=1;j<22;j++){ctx.strokeStyle=j%2?'#1b8073':'#b9843b';ctx.lineWidth=4;ctx.beginPath();ctx.moveTo(...pos(R50.parents[j]));ctx.lineTo(...pos(j));ctx.stroke()}})}
+function seek(t){audio.pause();show(t);audio.currentTime=frame/30}
+$('prev').onclick=()=>seek(frame-1);$('next').onclick=()=>seek(frame+1);$('seek').oninput=()=>seek(+$('seek').value);$('song').onchange=load;audio.onseeked=()=>row&&show(Math.round(audio.currentTime*30));function tick(){if(row&&!audio.paused)show(Math.floor(audio.currentTime*30));requestAnimationFrame(tick)}load();requestAnimationFrame(tick);
+</script>
