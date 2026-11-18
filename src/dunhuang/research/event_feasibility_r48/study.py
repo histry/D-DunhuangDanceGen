@@ -14,7 +14,8 @@ def windows(length, size=256, stride=128):
     return [[a,min(a+size,length)] for a in sorted(set(starts))]
 
 def compile_clock(unit, interval, beats, cfg):
-    mapped=multi_warp(unit['source_interval'],interval,unit['phases'],beats)
+    phases=[dict(p,type=p['body_region']+'_'+p['type']) for p in unit['phases']]
+    mapped=multi_warp(unit['source_interval'],interval,phases,beats)
     if mapped is None:return None
     warp=np.asarray(mapped['time_warp']);ticks=np.arange(*interval)
     source=np.interp(ticks,warp[:,1],warp[:,0]);a,b=unit['source_interval']

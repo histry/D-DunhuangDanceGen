@@ -29,12 +29,16 @@ def path(R,parameters,gap=(104,152),certify=False):
 
 def optimize(R,J,parents,reference,cfg):
     a,b=cfg['gap'];x0=np.r_[np.ones(3),np.zeros(3)];base,_=path(R,x0,(a,b));P0=relative_fk(base,J,parents);w=cfg['objective_weights']
+    calls=0
     # Residuals depend only on endpoint-derived paths, never source hidden ground truth.
     def residual(x):
+        nonlocal calls
+        calls+=1
         Q,_=path(R,x,(a,b));P=relative_fk(Q[a-3:b+3],J,parents);B=P0[a-3:b+3]
         d2=np.diff(P,n=2,axis=0)*900;d3=np.diff(P,n=3,axis=0)*27000
         return np.r_[np.sqrt(w['D2'])*d2.ravel()/max(reference['D2'],1e-6)/np.sqrt(d2.size),np.sqrt(w['D3'])*d3.ravel()/max(reference['D3'],1e-6)/np.sqrt(d3.size),np.sqrt(w['shape'])*(P[:,[16,17,20,21]]-B[:,[16,17,20,21]]).ravel()/np.sqrt(len(P)*12),np.sqrt(w['deviation'])*(x-x0)]
     lower=np.r_[np.full(3,cfg['velocity_scale_bounds'][0]),np.full(3,cfg['acceleration_scale_bounds'][0])];upper=np.r_[np.full(3,cfg['velocity_scale_bounds'][1]),np.full(3,cfg['acceleration_scale_bounds'][1])]
     fit=least_squares(residual,x0,bounds=(lower,upper),max_nfev=cfg['maximum_solver_evaluations'],ftol=1e-6,xtol=1e-6,gtol=1e-6)
-    out,c=path(R,fit.x,(a,b),True);c.update(eligible=c['maximum_chart_rad']<cfg['chart_radius_rad'] and c['physical_boundary_jet_residual']<1e-7,parameters=fit.x.tolist(),evaluations=int(fit.nfev),termination=int(fit.status),initial_objective=float(residual(x0)@residual(x0)),final_objective=float(fit.fun@fit.fun),optimized_variables=6,endpoint_edit=False)
+    initial_objective=float(residual(x0)@residual(x0))
+    out,c=path(R,fit.x,(a,b),True);c.update(residual_function_calls=calls,eligible=c['maximum_chart_rad']<cfg['chart_radius_rad'] and c['physical_boundary_jet_residual']<1e-7,parameters=fit.x.tolist(),evaluations=int(fit.nfev),termination=int(fit.status),initial_objective=initial_objective,final_objective=float(fit.fun@fit.fun),optimized_variables=6,endpoint_edit=False)
     return (out if c['eligible'] else None),c
