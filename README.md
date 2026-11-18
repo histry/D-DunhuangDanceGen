@@ -363,3 +363,13 @@ R37规划及默认EDGE路径保持冻结。R38用真实连续录制训练Context
 - 2,268固定事件对中38组存在局部恢复、20组存在反向丢失。原18个全局任务本就通过，失败任务恢复为0/18。
 - 联合规划开发门G3未通过；保留R52强基线，不能宣称整体质量或泛化提升。Root／Contact未知，未获得Native24资格。
 - [完整报告与成本表](reports/r53_release/report.md)、[独立复验](reports/r53_release/independent.json)、[封存核验](reports/r53_release/final_recheck.json)、[执行协议](docs/warp_coupling_r53.md)。完整回归661 passed、1 skipped；3阶段JSON全失败图与确定性NPZ字节均精确复现，R52原18轨迹不变。
+
+
+## R54：条件困难检索与残差SDMR（资格实验）
+
+修正“同绝对Heuristic分数但动作活动量不同”的对称混杂，增加动作活动量分箱、活动量匹配的错音乐及EnergyCurve基线。当前人口覆盖48个Train组、6个历史曝光Val组；R41总容量522632不变，局部路径可训练参数261312。
+
+- 本机观看：`outputs/residual_sdmr_r54_02/index.html`，包含6个严格候选来源预览和8个明确标注的Train拟合诊断；均为来源回放，非新动作生成。
+- 两版本各80次合成更新＋120次Train拟合；合成23/32（71.875%）低于预登记75%，Train拟合100%。**主模型、消融与Val神经评分均未启动**，不能声称新增内容匹配收益。
+- [完整报告](reports/r54_release/report.md)、[设计审计](reports/r54_release/design_audit.json)、[独立复验](reports/r54_release/02_independent.json)。最终回归668 passed、1 skipped；两轮90文件封存及原R53的248文件核验通过。
+- 实现位于`src/dunhuang/research/residual_sdmr_r54/`，协议见[执行说明](docs/residual_sdmr_r54.md)。正式规划与R52/R53保持冻结。

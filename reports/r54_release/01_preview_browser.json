@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "scope": "PLAYBACK_IDENTITY_ONLY_NOT_HUMAN_QUALITY",
+  "checks": [
+    "true query/Heuristic/Frozen panels",
+    "audio master seek60 then61",
+    "0.5x playback advances",
+    "pause and switch source group",
+    "visible common22 skeletons"
+  ],
+  "source_directory": "preview_v2",
+  "screenshot": "C:/Users/li/Documents/\u6566\u714c\u821e\u89c6\u9891\u751f\u6210/outputs/r54_preview_acceptance.jpg",
+  "at": "2026-11-18T18:19:26.378232+00:00"
+}

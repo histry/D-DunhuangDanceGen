@@ -1,0 +1,70 @@
+{
+  "code_commit": "9b7b3b8b784968cd46105607f0f1dcc4a2a6a4cf",
+  "source": {
+    "protocol_sha256": "4fa1c4f2773ef4898073a13f25f3eb387718dedad1b5d7b456a882a805a2f26b",
+    "r41_manifest_sha256": "4b6b884550b120b685b2867996ac5bb7e2efceab127a2b7901d4001af482405e",
+    "r43_manifest_sha256": "1799451b7639f93b8f3ee1736eb9d70251364779cd792de4cf3b577009036d0f",
+    "checkpoint_sha256": "212148e7cd86b482cc7734035725b1165edcd7a1c35e03fa513f6982f440e772",
+    "normalizer": {
+      "path": "outputs/transition_r37_02/content_data/normalization.json",
+      "sha256": "80a83d6f7a5f1bca62d3298cba206a871188f5c6b1519ab4a897672c7c986e35"
+    },
+    "skeleton_sha256": "61ee616bd31c2981065cef68e75887ca5db787dede41a8f29a6d7b1b5f36d55d",
+    "code": {
+      "__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "common.py": "2b772246ce9bf34333492d1db20c7bd809710f66472a7ee40cf5542f12c907cc",
+      "data.py": "f7db9c07ebf766775013741f7cfe9cb2d3a9f3f5172389f3253a9b73be3daafb",
+      "evaluate.py": "e60dff66798b78c9c13e2f507a79be37bd452a5fdd4bd1e5c3661a8a665d549a",
+      "learn.py": "cbe923992f506008a57902c91934e6f3ba598ec77eb067c77746c85d6cf1c69a"
+    },
+    "arrays_sha256": "ef32ce0897519dbbc3d2d93c6c9e87ec45aa3ee053359e50ded65a4a19f6fc92"
+  },
+  "population": {
+    "train_cross_music": 498,
+    "train_same_music": 168,
+    "val_cross_music": 56,
+    "val_same_music": 21
+  },
+  "groups": {
+    "train": 48,
+    "val": 6
+  },
+  "queries": 566,
+  "unavailable": 389,
+  "checks": {
+    "synthetic_held_realizations_accuracy": 0.71875,
+    "real_train_fit_R1": 1.0,
+    "fit_task_indices": [
+      0,
+      19,
+      39,
+      55,
+      69,
+      78,
+      93,
+      104
+    ],
+    "admitted": false,
+    "train_only": true,
+    "synthetic_semantic_truth": false
+  },
+  "evaluation": null,
+  "independent": {
+    "source_data_and_deterministic_npz_bytes_exact": true,
+    "synthetic_scores_exact": true,
+    "train_fit_loss_gradients_exact": true,
+    "trained_arms": [],
+    "full_actual_and_counterfactual_scores_exact": false,
+    "optimizer_calls": 0,
+    "test_tensor_reads": 0,
+    "can_route": false
+  },
+  "qualification_updates": 200,
+  "population_model_updates": 0,
+  "network_updates": 200,
+  "human_reviewed": false,
+  "finedance_admitted": false,
+  "unseen_music_generalization": false,
+  "can_route": false,
+  "production_planning_unchanged": true
+}

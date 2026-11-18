@@ -1,0 +1,157 @@
+{
+  "attempts": {
+    "01": {
+      "source_commit": "e1eeefa88753e573d635d2e40a5ac77c9287bbf4",
+      "population": {
+        "train_cross_music": 500,
+        "train_same_music": 214,
+        "val_cross_music": 66,
+        "val_same_music": 29
+      },
+      "music_groups": {
+        "train": 48,
+        "val": 6
+      },
+      "queries": 566,
+      "unavailable": 323,
+      "gate": {
+        "synthetic_held_realizations_accuracy": 0.71875,
+        "real_train_fit_R1": 1.0,
+        "fit_task_indices": [
+          0,
+          19,
+          39,
+          55,
+          69,
+          81,
+          97,
+          111
+        ],
+        "admitted": false,
+        "train_only": true,
+        "synthetic_semantic_truth": false
+      },
+      "fit_parameters": {
+        "total_parameters": 522632,
+        "trainable_parameters": 261312,
+        "updates": 120,
+        "model_sha256": "6f81db3029e31c53117620cfc0c46de4f0c7863ab439fa56f4e20b61206f2cb0"
+      },
+      "independent": {
+        "source_data_and_deterministic_npz_bytes_exact": true,
+        "synthetic_scores_exact": true,
+        "train_fit_loss_gradients_exact": true,
+        "trained_arms": [],
+        "full_actual_and_counterfactual_scores_exact": false,
+        "optimizer_calls": 0,
+        "test_tensor_reads": 0,
+        "can_route": false
+      },
+      "source_manifest_sha256": "32e429b14646f415033e7d311ebfaa57b9f0074500299e43729ef7a7ca82fa81",
+      "qualification_updates": 200,
+      "population_model_updates": 0,
+      "Val_neural_evaluation_executed": false
+    },
+    "02": {
+      "source_commit": "af7a1d57b2714272ddd794a2c74bdfc2bbd505e1",
+      "population": {
+        "train_cross_music": 498,
+        "train_same_music": 168,
+        "val_cross_music": 56,
+        "val_same_music": 21
+      },
+      "music_groups": {
+        "train": 48,
+        "val": 6
+      },
+      "queries": 566,
+      "unavailable": 389,
+      "gate": {
+        "synthetic_held_realizations_accuracy": 0.71875,
+        "real_train_fit_R1": 1.0,
+        "fit_task_indices": [
+          0,
+          19,
+          39,
+          55,
+          69,
+          78,
+          93,
+          104
+        ],
+        "admitted": false,
+        "train_only": true,
+        "synthetic_semantic_truth": false
+      },
+      "fit_parameters": {
+        "total_parameters": 522632,
+        "trainable_parameters": 261312,
+        "updates": 120,
+        "model_sha256": "0dae95e88c05894be3e530eacdd9131b91ab72691a692dd046e954bcde67f079"
+      },
+      "independent": {
+        "source_data_and_deterministic_npz_bytes_exact": true,
+        "synthetic_scores_exact": true,
+        "train_fit_loss_gradients_exact": true,
+        "trained_arms": [],
+        "full_actual_and_counterfactual_scores_exact": false,
+        "optimizer_calls": 0,
+        "test_tensor_reads": 0,
+        "can_route": false
+      },
+      "source_manifest_sha256": "630e2b3cb67e96645db64109ee597d4e094704ee3e9d2fce10d575f88c278c3a",
+      "qualification_updates": 200,
+      "population_model_updates": 0,
+      "Val_neural_evaluation_executed": false
+    }
+  },
+  "fit_final_replay": {
+    "fixed_train_tasks": 8,
+    "recomputed_R1": 1.0,
+    "original_R1": 1.0,
+    "model_sha256": "0dae95e88c05894be3e530eacdd9131b91ab72691a692dd046e954bcde67f079",
+    "optimizer_calls": 0,
+    "scope": "TRAIN_FIT_ONLY_NOT_POPULATION_MODEL"
+  },
+  "total_qualification_updates": 400,
+  "total_population_model_updates": 0,
+  "Val_neural_evaluation_executed": false,
+  "A3_population_comparison": "NOT_RUN_CHECKS_GATE_FAILED",
+  "A4": "NOT_RUN",
+  "A5": "NOT_RUN",
+  "whole_song_generations": 0,
+  "human_reviewed": false,
+  "production_planning_unchanged": true,
+  "source_inputs": [
+    {
+      "path": "outputs/residual_sdmr_r54_01/data/manifest.json",
+      "bytes": 11671935,
+      "sha256": "32e429b14646f415033e7d311ebfaa57b9f0074500299e43729ef7a7ca82fa81"
+    },
+    {
+      "path": "outputs/residual_sdmr_r54_01/checks/gate.json",
+      "bytes": 254,
+      "sha256": "281f1e98351942fd495a55c80f38823ec53fef6e462eab1fa9deb57eafbd6a3b"
+    },
+    {
+      "path": "outputs/residual_sdmr_r54_01/independent/result.json",
+      "bytes": 286,
+      "sha256": "ae8bc40e57eab55bc17bd0707fd55119e807b7be0c74eda6db5bc4102fe6de51"
+    },
+    {
+      "path": "outputs/residual_sdmr_r54_02/data/manifest.json",
+      "bytes": 11625573,
+      "sha256": "630e2b3cb67e96645db64109ee597d4e094704ee3e9d2fce10d575f88c278c3a"
+    },
+    {
+      "path": "outputs/residual_sdmr_r54_02/checks/gate.json",
+      "bytes": 254,
+      "sha256": "682d9580deadf68b572d74313b9639623275931182d2f55c15bc98a7f4202874"
+    },
+    {
+      "path": "outputs/residual_sdmr_r54_02/independent/result.json",
+      "bytes": 286,
+      "sha256": "ae8bc40e57eab55bc17bd0707fd55119e807b7be0c74eda6db5bc4102fe6de51"
+    }
+  ]
+}

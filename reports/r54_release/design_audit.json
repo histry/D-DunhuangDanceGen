@@ -1,0 +1,16 @@
+{
+  "01": {
+    "scope": "TRAIN_METADATA_ONLY_NO_VAL_SCORES",
+    "tasks": 714,
+    "motion_spread_over_005": 239,
+    "maximum_motion_spread": 0.9809778385627103,
+    "maximum_wrong_music_activity_delta": 0.3156095302246661
+  },
+  "02": {
+    "scope": "TRAIN_METADATA_ONLY_NO_VAL_SCORES",
+    "tasks": 666,
+    "motion_spread_over_005": 0,
+    "maximum_motion_spread": 0.04845240057687206,
+    "maximum_wrong_music_activity_delta": 0.04827898696939997
+  }
+}

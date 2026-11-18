@@ -1,0 +1,10 @@
+{
+  "source_data_and_deterministic_npz_bytes_exact": true,
+  "synthetic_scores_exact": true,
+  "train_fit_loss_gradients_exact": true,
+  "trained_arms": [],
+  "full_actual_and_counterfactual_scores_exact": false,
+  "optimizer_calls": 0,
+  "test_tensor_reads": 0,
+  "can_route": false
+}
