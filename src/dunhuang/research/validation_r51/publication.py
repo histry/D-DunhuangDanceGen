@@ -36,18 +36,33 @@ def release(out):
     for r in p['records']:
         for arm,s in r['selected'].items():
             events=s.get('events',[]);planning.append(dict(key=r['key'],arm=arm,status=s['status'],events=[e['event_uid'] for e in events],sources=[e['source_uid'] for e in events],repeated_event=len(events)!=len({e['event_uid'] for e in events}),kinematics=s.get('kinematics'),score=s.get('score')))
+    stages=[]
+    for r in p['records']:
+        for slot,pool in enumerate(r['pools']):
+            catalog=r['catalog_pools'][slot]
+            ranking=sorted(pool,key=lambda c:(-c['scores'][0],c['unit']['unit_uid']))
+            top=[];seen=set()
+            for c in ranking:
+                uid=c['unit']['source_uid']
+                if uid not in seen:top.append(c['unit']['unit_uid']);seen.add(uid)
+                if len(top)==4:break
+            stages.append(dict(key=r['key'],slot=slot,catalog_legal=len(catalog),registered_legal=len(pool),catalog_sources=dict(Counter(c['unit']['source_uid'] for c in catalog)),registered_sources=dict(Counter(c['unit']['source_uid'] for c in pool)),top4=top,raw_top_source=ranking[0]['unit']['source_uid'] if ranking else None))
+    planning_aggregate={}
+    for arm in sorted({r['arm'] for r in planning}):
+        rows=[r for r in planning if r['arm']==arm]
+        planning_aggregate[arm]=dict(cases=len(rows),admitted=sum(r['status']=='NUMERICAL_SHORT_PLAN' for r in rows),unique_sources=len({s for r in rows for s in r['sources']}),unique_events=len({s for r in rows for s in r['events']}),repeated_event_cases=sum(r['repeated_event'] for r in rows),sequences=[r['events'] for r in rows])
     neural=[]
     for r in n['records']:
         base=r['methods']['C2Phase']
         for arm,v in r['methods'].items():
             neural.append(dict(key=r['key'],domain=r['domain'],arm=arm,gap_angle_mean=float(np.mean([x['gap_angle_rad'] for x in v['final']])),proposal_gap_angle_mean=float(np.mean([x['gap_angle_rad'] for x in v['raw_proposal']])),protected_raw_exact=all(x['protected_raw_exact'] for x in v['final']),gap_activity=float(np.mean([x['gap_activity'] for x in v['final']]))))
-    summary=dict(planning=planning,neural=neural,paired={k:{t:v for t,v in row.items() if t in ('summary','source_balanced_summary')} for k,row in paired['tasks'].items()},independent=ind,pytest=(ROOT/'receipts/pytest.log').read_text().strip().splitlines()[-1],phase='FIXED_WEIGHTS_NEWLY_ENABLED_KINEMATIC_PROXY_NOT_TRAINED',new_training_steps=0,can_route=False,native24='NOT_EVALUABLE_22_OF24',code_commit=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip())
+    summary=dict(planning=planning,planning_aggregate=planning_aggregate,funnel_stages=stages,neural=neural,weights=n["weights"],context_checkpoint_sha256=digest("outputs/bridge_r38_01/training/context.pt"),paired={k:{t:v for t,v in row.items() if t in ('summary','source_balanced_summary')} for k,row in paired['tasks'].items()},independent=ind,pytest=(ROOT/'receipts/pytest.log').read_text().strip().splitlines()[-1],phase='FIXED_WEIGHTS_NEWLY_ENABLED_KINEMATIC_PROXY_NOT_TRAINED',new_training_steps=0,can_route=False,native24='NOT_EVALUABLE_22_OF24',code_commit=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip())
     write(out/'summary.json',summary)
-    lines=['# R51 来源集中归因与真实冻结条件验证','','先交付规划与四个真实冻结Lodge案例，再开展注册对照。全部原始动作、投影前proposal和层残差均保留；保护区由显式投影保留。','','## 规划选择','','|计划|评分/约束|选中来源|重复事件|','|---|---|---|---|']
+    lines=['# R51 来源集中归因与真实冻结条件验证','','先交付规划与四个真实冻结Lodge案例，再开展注册对照。全部原始动作、投影前proposal和层残差均保留；保护区由显式投影保留。','','## 规划选择','','完整预算池与原Top4的选择、错误音乐及禁止重复均按固定人口报告。来源增加不等于音乐内容更准确。','','|计划|评分/约束|选中来源|重复事件|','|---|---|---|---|']
     for r in planning:lines.append('|%s|%s|%s|%s|'%(r['key'],r['arm'],' → '.join(r['sources']),r['repeated_event']))
-    lines += ['','规划保存原139事件合法性与分项，连接图仅使用R50两条/来源的16条元数据预算。FullPool取消Top4截断，NoExactRepeat为工程约束，不能作为音乐选择成功证明。','','## 真实冻结采样','','|来源|条件|Gap角误差rad|投影前Gap角误差|活动度|外侧精确保留|','|---|---|---:|---:|---:|---|']
+    lines += ['', '各臂汇总：'+str({k:{t:v for t,v in r.items() if t!="sequences"} for k,r in planning_aggregate.items()}), '', '规划保存原139事件合法性与分项，连接图仅使用R50两条/来源的16条元数据预算。FullPool取消Top4截断，NoExactRepeat为工程约束，不能作为音乐选择成功证明。','','## 真实冻结采样','','|来源|条件|Gap角误差rad|投影前Gap角误差|活动度|外侧精确保留|','|---|---|---:|---:|---:|---|']
     for r in neural:lines.append('|%s|%s|%.6f|%.6f|%.6f|%s|'%(r['key'],r['arm'],r['gap_angle_mean'],r['proposal_gap_angle_mean'],r['gap_activity'],r['protected_raw_exact']))
-    lines += ['','阶段来自可见时钟及运动学代理；隐藏缺口不参与条件。Source的双侧观测可能与Context冗余，去单侧Context不能解释为删除了全部单侧信息。ChangE零音乐不提供跨音乐真值，Root只有模型曲线，没有完整世界Root与接触资格。','','## 同人口配对排序','']
+    lines += ['','Source仍沿用R38的1-C2_ENVELOPE注入门控，中心处直接Source残差为零；必须通过完整自注意力与Context间接传播，本轮未擅自修改旧门控。阶段来自可见时钟及运动学代理；隐藏缺口不参与条件。Source的双侧观测可能与Context冗余，去单侧Context不能解释为删除了全部单侧信息。ChangE零音乐不提供跨音乐真值，Root只有模型曲线，没有完整世界Root与接触资格。','','## 同人口配对排序','']
     for task,row in summary['paired'].items():
         lines.append('### '+task)
         for budget in ('summary','source_balanced_summary'):

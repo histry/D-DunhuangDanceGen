@@ -46,3 +46,12 @@ def generation(root):
 
 def refresh(out,count):
     write(out/'protocol.json',dict(cases=count,files=[dict(name=p.name,bytes=p.stat().st_size,sha256=sha(p)) for p in sorted(out.iterdir()) if p.name!='protocol.json']))
+
+
+def restyle(root):
+    for sub in ('main','plans'):
+        out=root/sub/'viewer'
+        count=read(out/'protocol.json')['cases']
+        shutil.copyfile(Path(__file__).with_name('viewer.html'),out/'index.html')
+        refresh(out,count)
+    (root/'index.html').write_text('<!doctype html><meta charset="utf-8"><title>R51 观看入口</title><h1>R51 规划与真实生成</h1><p><a href="plans/viewer/index.html">规划：Top-4 与完整预算候选池</a></p><p><a href="main/viewer/index.html">生成：来源、几何基线与实际冻结 Lodge</a></p><p>两页使用不同的固定研究人口；不是同一个事件的规划—生成联动。完整 Native 未通过。</p>',encoding='utf8')
