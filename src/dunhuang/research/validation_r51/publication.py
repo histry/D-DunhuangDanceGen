@@ -30,7 +30,9 @@ def verify(out):
 
 def release(out):
     out=fresh(out);ind=read(ROOT/'receipts/independent.json');assert ind['exact_scientific_replays']==5
-    assert read(ROOT/'browser_receipt.json')['passed']
+    acceptance=read(ROOT/'browser_receipt.json');assert acceptance['passed']
+    for sub,h in acceptance['protocol_sha256'].items():assert digest(ROOT/sub/'viewer/protocol.json')==h
+    assert acceptance['verified_unix'] < (ROOT/'controls/sample/result.json').stat().st_mtime
     p=read(ROOT/'controls/plans/result.json');n=read(ROOT/'controls/sample/result.json');paired=read(ROOT/'controls/paired/result.json')
     planning=[]
     for r in p['records']:
@@ -46,7 +48,7 @@ def release(out):
                 uid=c['unit']['source_uid']
                 if uid not in seen:top.append(c['unit']['unit_uid']);seen.add(uid)
                 if len(top)==4:break
-            stages.append(dict(key=r['key'],slot=slot,catalog_legal=len(catalog),registered_legal=len(pool),catalog_sources=dict(Counter(c['unit']['source_uid'] for c in catalog)),registered_sources=dict(Counter(c['unit']['source_uid'] for c in pool)),top4=top,raw_top_source=ranking[0]['unit']['source_uid'] if ranking else None))
+            stages.append(dict(key=r['key'],slot=slot,catalog_legal=len(catalog),registered_legal=len(pool),catalog_sources=dict(Counter(c['unit']['source_uid'] for c in catalog)),registered_sources=dict(Counter(c['unit']['source_uid'] for c in pool)),top4=top,raw_top_source=ranking[0]['unit']['source_uid'] if ranking else None,catalog_top_source=max(catalog,key=lambda c:c['scores'][0])['unit']['source_uid'] if catalog else None))
     planning_aggregate={}
     for arm in sorted({r['arm'] for r in planning}):
         rows=[r for r in planning if r['arm']==arm]
@@ -73,6 +75,6 @@ def release(out):
     for directory in [ROOT/'main',ROOT/'plans',ROOT/'controls',ROOT/'replay']:
         for f in sorted(directory.rglob('*')):
             if f.is_file():files.append(dict(path=str(f),bytes=f.stat().st_size,sha256=digest(f)))
-    for f in (out/'summary.json',out/'report.md',ROOT/'browser_receipt.json',ROOT/'receipts/independent.json'):
+    for f in (out/'summary.json',out/'report.md',ROOT/'index.html',ROOT/'main_preview.png',ROOT/'browser_receipt.json',ROOT/'receipts/independent.json'):
         files.append(dict(path=str(f),bytes=f.stat().st_size,sha256=digest(f)))
     write(out/'seal.json',dict(files=files))

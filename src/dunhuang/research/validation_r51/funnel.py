@@ -102,14 +102,16 @@ def control_run(out):
     original=read('outputs/validation_r51_01/plans/result.json');records=[];arrays={'J':net.joints,'parents':net.parents}
     arms={'Top4':dict(top4=True),'FullPool':dict(),'FullPoolWrongMusic':dict(wrong_music=True),'Top4WrongMusic':dict(top4=True,wrong_music=True),'FullPoolNoExactRepeat':dict(no_repeat=True),'LocalFullPool':dict(scoring='local'),'HeuristicFullPool':dict(scoring='heuristic')}
     for r in original['records']:
-        cores=[s['interval'] for s in r['regions'] if s['kind']=='core'];pools=[]
+        cores=[s['interval'] for s in r['regions'] if s['kind']=='core'];pools=[];catalog_pools=[]
         for slot,(a,b) in enumerate(cores):
             track=tracks[(r['song']+1)%3];music=net.music_tokens(track['values'][a:b],track['mask'][a:b]);energy=np.asarray(track['signal']['energy'][a:b]);activity=float(np.mean(track['structure']['energy_percentile'][a:b]));pool=[]
-            for c in r['pools'][slot]:
+            for c in r['catalog_pools'][slot]:
                 w=np.asarray(c['warp']['time_warp']);q=np.interp(np.arange(a,b),w[:,1],w[:,0]);part=main_scores(net,lib.rotations[c['unit']['source_uid']],q,music,energy,activity)
                 assert part is not None and part['valid_frames']==c['parts'][0]['valid_frames'],'Keep fixed valid token support'
                 pool.append(dict(c,R=rotation_sample(lib.rotations[c['unit']['source_uid']],q),parts=[c['parts'][0],part],scores=[c['scores'][0],part['local']+.1*part['multi']-.05*c['warp_cost']]))
-            pools.append(pool)
+            catalog_pools.append([{k:v for k,v in c.items() if k!='R'} for c in pool])
+            registered={c['unit']['unit_uid'] for c in r['pools'][slot]}
+            pools.append([c for c in pool if c['unit']['unit_uid'] in registered])
         edges={(e['slot'],e['left'],e['right']):(True if e['selected'] else None,{k:v for k,v in e.items() if k not in ('slot','left','right')}) for e in r['edges']}
         selected={}
         for arm,flags in arms.items():
@@ -125,7 +127,7 @@ def control_run(out):
             R=np.concatenate(chunks);name=r['key']+'_'+arm;arrays[name]=relative_fk(R,net.joints,net.parents).astype('<f4');arrays[name+'_R']=R
             selected[arm]=dict(status='NUMERICAL_SHORT_PLAN',**result,events=events,connections=connections,kinematics=regions(R,net.joints,net.parents,r['regions']))
             if arm in ('Top4','FullPool'):assert selected[arm]==r['selected'][arm],'Main search outcome changed'
-        records.append(dict(r,pools=[[{k:v for k,v in c.items() if k!='R'} for c in p] for p in pools],selected=selected))
+        records.append(dict(r,pools=[[{k:v for k,v in c.items() if k!='R'} for c in p] for p in pools],catalog_pools=catalog_pools,selected=selected))
         print('R51_PLAN_CONTROLS',r['key'],flush=True)
     np.savez_compressed(out/'arrays.npz',**arrays);write(out/'result.json',dict(original,records=records,main_graph_reused=True))
     from .view import plans
