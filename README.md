@@ -3,6 +3,10 @@
 当前默认路径：**Event Catalog → Music Timeline → Event Plan → 冻结 EDGE（Temporal V0.5）→ 原 Native 验收**。学习检索保留shadow。研究路径已完成真实151D配对补全，以及原生SO(3)跨录制条件的Cross/Additive同参数量训练（各1,200步）；事件跟随与完整生成质量仍未合格。
 
 
+新增 [R46几何桥责任与阶段上限报告](reports/r46_release/report.md)、[机器摘要](reports/r46_release/summary.json)、[独立复验](reports/r46_release/independent.json)和[封存复核](reports/r46_release/seal_recheck.json)。先验收22案例与3条实际轨迹视频，再运行8个Train音乐组对照。发现13/22条桥超出既有SO(3)局部图范围；新增连续曲线准入sidecar，原Geometry未覆盖。来源可行集合的事后Oracle能降低时间代理误差，但固定评分仍未通过，不启动新生成训练或整曲。完整回归626通过/10跳过，两组科学输出与308条官方FK精确复验，11个父代6346文件保持。
+
+本机优先观看 `outputs/source_coverage_r46_01/main/index.html`：飞天/女冥想/琵琶2的“当前窗口—完整来源高活动窗”三条无音乐原始动作对照；它解释首256帧覆盖偏差，不能当作生成结果。桥/阶段观看入口为 `outputs/bridge_audit_r46_01/videos/index.html`、`viewer/index.html`、`viewer_oracle/index.html`。全部媒体已回传并验收，媒体不随Git上传；未知Root/接触、人工语义和完整Native24限制保留。
+
 新增 [R45来源可行阶段时钟与冻结检索报告](reports/r45_release/report.md)、[机器摘要](reports/r45_release/summary.json)和[独立复验](reports/r45_release/independent.json)。先交付22案例与3条实际视频，再做同锚点PWL/C²和错音乐/无音乐对照。琵琶2 Phase Core D3为Geometry的0.9772，但四项Train音乐代理收益均未通过，未启动新训练或整曲。冻结SDMR对552原候选及184来源均衡候选完成评分审计；23查询×8来源的匿名页已回传，真实人工记录0，不报告艺术准确率。完整回归621通过/10跳过，4组独立精确重放、396条官方FK一致性核对、9个父代5900文件保持封存。
 
 本机观看：`outputs/phase_r45_01/videos/index.html`（飞天/女冥想/琵琶2五栏视频）、`outputs/phase_r45_01/viewer/index.html`（22案例主效果）、`outputs/phase_r45_01/viewer_controls/index.html`（插值与音乐控制）、`outputs/review_r45_01/viewer/index.html`（匿名来源/适配准备）。媒体不上传Git。来源几何可行与FK数值一致不等于物理合格；未知Root/接触和完整Native24限制保持。

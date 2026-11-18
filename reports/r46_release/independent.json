@@ -1,0 +1,96 @@
+{
+  "packs": [
+    {
+      "name": "main",
+      "receipt_sha256": "12358ba4d9bdf9ac9e8cd3abb5837ba3e4839c769555cec9a997587ec3083147"
+    },
+    {
+      "name": "oracle",
+      "receipt_sha256": "9a5ccc7cc89f4a4b71a02e608ae896de15a9bd166b1a16c8d3e0b4ba36e879b3"
+    }
+  ],
+  "all_scientific_values_exact": true,
+  "display_clock_correction_only": true,
+  "official_fk": [
+    {
+      "name": "main",
+      "count": 132,
+      "maximum_error_m": 5.103647708892822e-07
+    },
+    {
+      "name": "oracle",
+      "count": 176,
+      "maximum_error_m": 5.103647708892822e-07
+    }
+  ],
+  "parents": [
+    {
+      "root": "outputs/bridge_r38_01",
+      "files": 60,
+      "manifest_sha256": "73ab623c89537ce8f64245406dafaa0eeb16ae37c983b8201aa531baf36c3786"
+    },
+    {
+      "root": "outputs/stabilize_r39_01",
+      "files": 73,
+      "manifest_sha256": "89b877a960a55591b915d4c2a0e1fa9b6fcfce9ea905373fa000c997cd5bdf1b"
+    },
+    {
+      "root": "outputs/contract_r40_01",
+      "files": 100,
+      "manifest_sha256": "1976d2b6bc470f53feb4b49f4af0c3d8b0c994657d7322f636b50982d115af16"
+    },
+    {
+      "root": "outputs/paired_event_r41_01",
+      "files": 4434,
+      "manifest_sha256": "7310316b0d6269e4005dc694da8c9d4c783cdda236ee1301d1db290322a39b87"
+    },
+    {
+      "root": "outputs/source_context_r42_01",
+      "files": 357,
+      "manifest_sha256": "725a672581e26837d7c90b747c3af9ab5a6450ad7c1b205cc8553565e54d32a1"
+    },
+    {
+      "root": "outputs/music_reperformance_r43_01",
+      "files": 218,
+      "manifest_sha256": "a2038213fbb8df84609f3f87656d6595d27e9b61743f808b8c24d84c4c43aa23"
+    },
+    {
+      "root": "outputs/sdmr_event_rank_01",
+      "files": 381,
+      "manifest_sha256": "b868ad682d427ae16ff414f46f3c69f3739a45e2a2ad3800a61ac6b144428438"
+    },
+    {
+      "root": "outputs/reperformance_r44_01",
+      "files": 243,
+      "manifest_sha256": "4b3fccf9198f85ebdccca64f5df8c73851362fbd36fe4fa43b5a8b69c2895bfc"
+    },
+    {
+      "root": "outputs/retrieval_audit_r44_01",
+      "files": 34,
+      "manifest_sha256": "dcaed6d5797ac23ecf0fc57246eba9f4450e6c62239630b9edb4b183a7f09070"
+    },
+    {
+      "root": "outputs/phase_r45_01",
+      "files": 327,
+      "manifest_sha256": "85be3b1222cc418ca41d9a830788a3d093e316901ef5ed9f0b88f4a9b04c39b1"
+    },
+    {
+      "root": "outputs/review_r45_01",
+      "files": 119,
+      "manifest_sha256": "84ca774be02e144d3917f932b787457641eb343f32ee2122ca466eaa154212f6"
+    }
+  ],
+  "first_effect_before_oracle": true,
+  "raw_human_reviews": 0,
+  "human_metrics_status": "NOT_EVALUABLE_NO_VERIFIED_COMPLETE_MUSIC_JUDGMENTS",
+  "cross_performance_audit": {
+    "physical_clock_pairs": 9062,
+    "same_choreography_supported_pairs": 476,
+    "exact_stage_correspondence_verified": false,
+    "training_admitted": false
+  },
+  "optimizer_calls": 0,
+  "whole_song_generations": 0,
+  "can_route": false,
+  "operational_qualified": false
+}

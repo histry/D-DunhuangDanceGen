@@ -1,0 +1,107 @@
+{
+  "protocol": {
+    "files": [
+      {
+        "name": "female_FeiTian.mp4",
+        "bytes": 289250,
+        "sha256": "bd22cd7373c5cca87d0e8e574cf5b51b5017f5e6770d938ea5814702876cf644",
+        "frames": 256
+      },
+      {
+        "name": "female_meditation.mp4",
+        "bytes": 188093,
+        "sha256": "c32bc5907c045375b045f912a23b0d85490500206bd06d6e9469dad215ee653b",
+        "frames": 256
+      },
+      {
+        "name": "male_pipa_2.mp4",
+        "bytes": 436429,
+        "sha256": "c986c97e110b4793494fd26640d3a8975937c337461cd60d174bc2465b3cac06",
+        "frames": 256
+      },
+      {
+        "name": "index.html",
+        "bytes": 1097,
+        "sha256": "5f387ad8eee88be3bc3e4f178a9e4b75f4b680ad5b897fecb7a8eabe70550684"
+      }
+    ],
+    "records": [
+      {
+        "source_uid": "female_FeiTian",
+        "intervals": [
+          [
+            0,
+            256
+          ],
+          [
+            8920,
+            9176
+          ]
+        ],
+        "source_sha256": "120e0157ccdd60d128d2973ac0682883ee178ba43ce8479100e80f56c64f37a4",
+        "current_mean_upper_speed_radps": 0.04399128511418815,
+        "maximum_mean_upper_speed_radps": 1.8352729918055262,
+        "scope": "ORIGINAL_NATIVE_RECORDING_WINDOWS; MAX_ACTIVITY_DIAGNOSTIC_NOT_FULL_SEMANTIC_EVENT; NO_MUSIC_NO_GENERATOR"
+      },
+      {
+        "source_uid": "female_meditation",
+        "intervals": [
+          [
+            0,
+            256
+          ],
+          [
+            5684,
+            5940
+          ]
+        ],
+        "source_sha256": "225ab3ffb8cd176ee138130152ec56b826cf2cc3965f13249aaf0a1103b422e7",
+        "current_mean_upper_speed_radps": 0.010912142732508052,
+        "maximum_mean_upper_speed_radps": 0.6803734456453987,
+        "scope": "ORIGINAL_NATIVE_RECORDING_WINDOWS; MAX_ACTIVITY_DIAGNOSTIC_NOT_FULL_SEMANTIC_EVENT; NO_MUSIC_NO_GENERATOR"
+      },
+      {
+        "source_uid": "male_pipa_2",
+        "intervals": [
+          [
+            0,
+            256
+          ],
+          [
+            191,
+            447
+          ]
+        ],
+        "source_sha256": "e300cef72d5248c2eacb6b430f17152a00af92bb4f3c04ff96c35f63d5aeaebc",
+        "current_mean_upper_speed_radps": 1.3820984882769882,
+        "maximum_mean_upper_speed_radps": 1.7947919081679624,
+        "scope": "ORIGINAL_NATIVE_RECORDING_WINDOWS; MAX_ACTIVITY_DIAGNOSTIC_NOT_FULL_SEMANTIC_EVENT; NO_MUSIC_NO_GENERATOR"
+      }
+    ],
+    "scope": "SUPPLEMENTAL_SOURCE_COVERAGE_NOT_NEW_GENERATION",
+    "source_arrays_sha256": "4b08c5623c09b647e9acd50ece48e191d7af97e3e9bdb17f4e52489488da220f",
+    "coverage_sha256": "72a5b47c9b2c81e55f18b94a645bec85c15929b8a8ebcd27096d74d5b284af10"
+  },
+  "browser": {
+    "passed": true,
+    "observed_at_utc": "2026-11-18T07:00:21.317377+00:00",
+    "protocol_sha256": "3cbf21fcccd35f83c895e65f8a548daae842deab156788c8e740bc951ec0e238",
+    "checks": [
+      "3 real original-source clips; each ready4 duration8.533333",
+      "FeiTian playback reached8.533333 seconds",
+      "left current and right maximum-activity windows explicitly labeled; no music no generation",
+      "actual original frame intervals and common camera scale shown"
+    ],
+    "human_reviewed": false,
+    "screenshot_sha256": "3f4816d56bf0891c48e3ce927f8eaad836cf5f64178d6f63a67500ef2bea0894"
+  },
+  "seal_recheck": {
+    "files": 15,
+    "bytes": 5091432,
+    "manifest_sha256": "05158a2dc5ddb296624e351706ecfb276bd0cc771fdfc3b3618b28f258e0bc48",
+    "all_hashes_verified": true,
+    "source_arrays_independently_replayed": true,
+    "optimizer_calls": 0
+  },
+  "scope": "SUPPLEMENTAL_ORIGINAL_SOURCE_ONLY_NOT_GENERATED_DANCE"
+}
