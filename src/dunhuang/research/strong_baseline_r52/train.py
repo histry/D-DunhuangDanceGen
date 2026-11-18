@@ -73,7 +73,13 @@ def run(out,phase=True,replay=None):
   old=read(str(replay)+'/result.json');assert old['calibration']==read(out/'calibration.json')
   for row in [ledger[i] for i in check_steps]:
    before=torch.load(str(replay)+'/step%d_pre.pt'%row['step'],map_location='cpu',weights_only=True);rt.c.change.load_state_dict(before['source']);rt.c.context_branch.load_state_dict(before['context']);rt.c.zero_grad(set_to_none=True);values,total=loss(row);total.backward();grads=torch.cat([p.grad.flatten() if p.grad is not None else torch.zeros_like(p).flatten() for p in params]).cpu().numpy();saved=np.load(str(replay)+'/gradient%d.npz'%row['step']);assert np.array_equal(grads,saved['gradient']);assert float(total)==old['history'][row['step']]['loss'];history.append(dict(step=row['step'],exact_gradient=True));rt.c.clear_all()
-  write(out/'result.json',dict(snapshot_checks=history,optimizer_calls=0,frozen=fixed(rt)));assert fixed(rt)==frozen;rt.frozen=rt.fingerprint();rt.c.zero_grad(set_to_none=True);rt.close();return
+  fit=[]
+  with torch.no_grad():
+   for label,path in (('initial','initial.pt'),('final','model.pt')):
+    checkpoint=torch.load(str(replay)+'/'+path,map_location='cpu',weights_only=True);rt.c.change.load_state_dict(checkpoint['source']);rt.c.context_branch.load_state_dict(checkpoint['context'])
+    for row in ledger[:8]:
+     values,total=loss(row);fit.append(dict(checkpoint=label,task=row['task'],t=row['t'],keys=row['keys'],terms=[float(v) for v in values],total=float(total)));rt.c.clear_all()
+  write(out/'result.json',dict(snapshot_checks=history,fixed_train_fit=fit,optimizer_calls=0,frozen=fixed(rt)));assert fixed(rt)==frozen;rt.frozen=rt.fingerprint();rt.c.zero_grad(set_to_none=True);rt.close();return
  for row in ledger:
   step=row['step']
   if step in check_steps:torch.save(state(rt),out/f'step{step}_pre.pt')
