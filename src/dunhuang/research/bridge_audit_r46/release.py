@@ -5,6 +5,15 @@ import numpy as np
 from dunhuang.research.complete_r36.core import read,write
 from dunhuang.research.reperformance_r44.replay import digest
 
+def public_summary(result):
+    result=dict(result);records=[]
+    for row in result['bridge']:
+        row=dict(row);a=dict(row['audit']);shapes={}
+        for label in ('source_shape','geometry_shape'):
+            shapes[label]={k:dict(minimum=float(np.min(v)),maximum=float(np.max(v)),mean=float(np.mean(v))) for k,v in a.pop(label).items()}
+        a.pop('frames');a['shape_statistics']=shapes;a['full_frame_diagnostics']='SERVER_SEALED_MAIN_RESULT_JSON';row['audit']=a;records.append(row)
+    result['bridge']=records;result['public_summary_scope']='AGGREGATE_GEOMETRY_CLOCK_IDENTITY_AND_RECEIPTS; FULL_FRAME_PAYLOAD_RETAINED_IN_SEALED_SERVER_ARTIFACTS';return result
+
 def run(out):
     root=Path('outputs/bridge_audit_r46_01');out=Path(out)
     if out.exists():raise ValueError('Fresh release')
@@ -19,7 +28,7 @@ def run(out):
     regression=re.search(r'\d+ passed[^\n]*',(root/'full_pytest_final.log').read_text()).group(0)
     source_records=[dict(key=r['key'],source={k:v for k,v in r['source'].items() if k!='audit'},audit=r['source']['audit']) for r in audit['records']]
     result=dict(source_commit=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),baseline=audit['config']['baseline'],regression=regression,bridge=source_records,chart_guard=guard,full_source_coverage=coverage,phase_oracle_summary=oracle['summary'],oracle_capacity_screen=oracle['oracle_capacity_screen'],fixed_score_screen=oracle['fixed_score_screen'],oracle_conditions=[dict(key=r['key'],donors=r['donors'],available=r['available'],metrics=r['metrics']['methods']) for r in oracle['records']],independent=ind,receipts=receipts,browser=browser,optimizer_steps=0,new_neural_samples=0,whole_song_generations=0,human_reviewed=False,can_route=False,operational_qualified=False)
-    out.mkdir(parents=True);write(out/'summary.json',result)
+    out.mkdir(parents=True);write(out/'summary.json',public_summary(result))
     lines=['# R46：几何桥责任、完整来源覆盖与Train音乐阶段上限','','本轮按附件R46方案，先回传并验收22案例实际轨迹与3条视频，再运行固定时钟集合的Oracle和条件对照。没有新增Lodge/SDMR训练，没有新神经采样或整曲生成。正式EDGE/Planner/Native及11个父代冻结；研究代码独立在bridge_audit_r46。未删除仍被基线复验依赖的历史代码。','','## 观看','','- `outputs/bridge_audit_r46_01/videos/index.html`：飞天、女冥想、琵琶2四栏实际256帧视频。','- `outputs/bridge_audit_r46_01/viewer/index.html`：22案例，来源／冻结Geometry／仅观察端点重建／冻结Phase，支持117帧跳转、共同音频时钟、逐帧和两种坐标视角。','- `outputs/bridge_audit_r46_01/viewer_oracle/index.html`：8个AIST++ Train音乐组，正确／错音乐／同能量异起音／已知错位／无音乐与事后Oracle。该页是诊断上限，不是新生成模型。','','## P0：构形差异的实际责任','','仅用101/102/103/152/153/154帧的观测旋转重建原R38五次桥，隐藏48帧NaN与干扰值产生同一结果。所有22例最大旋转重建差如下；原Root/contact先验保持。Geometry与Phase的Bridge一致；不是修改Core时钟可以修复的部位。','', '|案例|重建最大角差rad|117帧平均角差rad|连续图最大范数rad|局部图域检查|','|---|---:|---:|---:|---|']
     guards={r['key']:r['certificate'] for r in guard['records']}
     for r in source_records:
