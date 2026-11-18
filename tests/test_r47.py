@@ -36,3 +36,12 @@ def test_bounded_source_dp_matches_reference_without_protection():
     rng=np.random.default_rng(0);p={k:rng.random(1100) for k in ('upper','lower','trunk','global')}
     assert segment_source(p,[],cfg,[0,1100])==segment(p,[],cfg,[0,1100])[0]
     held=segment_source(p,[[50,1050]],cfg,[0,1100]);assert held==[[0,1100]]
+
+def test_engineering_guard_never_uses_hidden_reconstruction_or_adopts_failed_pair():
+    from dunhuang.research.manifold_bridge_r47.guard import decision
+    row=dict(certificates=dict(G0=dict(chart_eligible=True),G1=dict(status='GEOMETRICALLY_ADMITTED_NOT_PHYSICS')),screens=dict(G1=dict(numerical_screen=False)),hidden_error=-1e9)
+    assert decision(row)['method']=='G0'
+    row['certificates']['G0']['chart_eligible']=False
+    assert decision(row)['method'] is None
+    row['screens']['G1']['numerical_screen']=True
+    assert decision(row)['method']=='G1'
