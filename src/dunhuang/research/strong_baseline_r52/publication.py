@@ -15,17 +15,23 @@ def condition_effects():
  return dict(key=key,geometry_arm_extent_ptp_rms_m=extent,scope='MATCHED_NOISE_ANCHOR_RETAINED_ISOLATED_INPUT_INTERVENTION_NOT_SEMANTIC_TRUTH',effects=effects)
 
 
-def compare(first,second):
- a=read(first/'result.json');b=read(second/'result.json');assert a==b,str(first)
+def compare(first,second,allow_execution_device=False):
+ a=read(first/'result.json');b=read(second/'result.json');metadata=[];count=0
+ if allow_execution_device and a['weights']['device']!=b['weights']['device']:
+  assert (a['weights']['device'],b['weights']['device'])==('cuda','cpu')
+  metadata.append(dict(path='weights.device',main=a['weights'].pop('device'),replay=b['weights'].pop('device'),scope='EXECUTION_METADATA_ONLY_SCORES_FROZEN_NO_NETWORK_RERANK'))
+ assert a==b,str(first)
  if (first/'arrays.npz').exists():
   with np.load(first/'arrays.npz') as x,np.load(second/'arrays.npz') as y:
    assert set(x.files)==set(y.files)
    for k in x.files:assert np.array_equal(x[k],y[k]),k
+   count=len(x.files)
+ return dict(main=str(first),replay=str(second),exact_arrays=count,non_scientific_metadata_differences=metadata)
 
 
 def verify(out):
  pairs=[('plans','replay/plans'),('plan_controls','replay/plan_controls'),('music_controls','replay/music_controls'),('frozen_full','replay/frozen_full'),('main','replay/main'),('controls','replay/controls'),('no_phase','replay/no_phase')]
- for a,b in pairs:compare(ROOT/a,ROOT/b)
+ replay_details=[compare(ROOT/a,ROOT/b,allow_execution_device=a=='plans') for a,b in pairs]
  with np.load(ROOT/'plans/arrays.npz') as new,np.load('outputs/validation_r51_01/controls/plans/arrays.npz') as old:
   for row in read(ROOT/'plans/result.json')['records']:
    for suffix in ('','_R'):assert np.array_equal(new[row['key']+'_Heuristic_repeat0_same0_balanced0'+suffix],old[row['key']+'_HeuristicFullPool'+suffix]),'Frozen heuristic trajectory changed'
@@ -46,7 +52,7 @@ def verify(out):
    for e,span in zip(linear['source_events'],cores):
     s,t=e['source_interval'];a,b=span['interval'];u,v=span['music_interval'];expected=relative_fk(rotation_sample(lib.rotations[e['source_uid']],np.linspace(s,t-1,b-a)),plans['J'],plans['parents']);assert np.array_equal(expected,music[r['key']+'_LinearNoBeat'][a:b]);rate=(v-u-1)/(t-s-1);assert .75<=rate<=1.33;applied.append([[s,u],[t-1,v-1]])
    maps.append(dict(key=r['key'],actual_no_beat_frame_center_maps=applied,compiled_source_Core_exact=True,registered_source_events_retain_original_E1W_metadata=True))
- write(out,dict(exact_scientific_replays=len(pairs),gradient_snapshot_replays=6,r51_sealed_files_verified=88,unchanged_heuristic_trajectories=18,applied_no_beat_clock_audit=maps,optimizer_calls=0,train_fit_scope='FIXED_TRAIN_ROWS_BEFORE_AFTER_NO_SELECTION',can_route=False))
+ write(out,dict(exact_scientific_replays=len(pairs),replay_details=replay_details,gradient_snapshot_replays=6,r51_sealed_files_verified=88,unchanged_heuristic_trajectories=18,applied_no_beat_clock_audit=maps,optimizer_calls=0,train_fit_scope='FIXED_TRAIN_ROWS_BEFORE_AFTER_NO_SELECTION',can_route=False))
 
 
 def release(out):
