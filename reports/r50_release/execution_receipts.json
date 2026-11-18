@@ -1,0 +1,8 @@
+{
+  "main_receipt.txt": "exit_status=0\ncommit=a56a78e3e916cfced47ce8f57e24963600db0b3d\nfinished=2026-11-18T11:39:48Z\n",
+  "controls_receipt.txt": "exit_status=0\ncommit=1515c2edeabd6829277fcfb74cd0e7418f7566eb\nfinished=2026-11-18T11:51:50Z\n",
+  "release_receipt.txt": "exit_status=0\ncommit=047a1b57d57f48b6ff639a1d5ada7e6054f26f5b\nfinished=2026-11-18T11:53:18Z\n",
+  "fetch_receipt.txt": "exit_status=128\n",
+  "fetch.log": "fatal: 无法访问 'https://github.com/histry/D-DunhuangDanceGen.git/'：gnutls_handshake() failed: The TLS connection was non-properly terminated.\n",
+  "git_sync": "Direct server fetch failed with recorded TLS EOF; verified bundles of commits already pushed to GitHub were fast-forwarded on the server. No scientific outputs were reconstructed from Git."
+}

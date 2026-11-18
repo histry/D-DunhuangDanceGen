@@ -1,0 +1,56 @@
+{
+  "files": [
+    {
+      "path": "outputs\\transition_planning_r50_01\\viewer\\data.js",
+      "bytes": 1469345,
+      "sha256": "b8ae8e5b9f2006b826c9186ed5e113c24a5337282f93dc09b94855676751f0ce"
+    },
+    {
+      "path": "outputs\\transition_planning_r50_01\\viewer\\index.html",
+      "bytes": 3428,
+      "sha256": "afca6a4069602d17f40b08f885a5910a8875be02b4ff74cd97dfdca3d2a5adc2"
+    },
+    {
+      "path": "outputs\\transition_planning_r50_01\\viewer\\protocol.json",
+      "bytes": 1290,
+      "sha256": "38a98bffd1f3df6fd6aa3c1d52849f96444a96f691c1dcdfad8885f9b0ac5d75"
+    },
+    {
+      "path": "outputs\\transition_planning_r50_01\\viewer\\song0_events2_gap48.wav",
+      "bytes": 1126444,
+      "sha256": "33ab79b003e2b04e8c713bdb0640836a61a3fd125f958e276e88b6688911a5e6"
+    },
+    {
+      "path": "outputs\\transition_planning_r50_01\\viewer\\song0_events3_gap48.wav",
+      "bytes": 1740844,
+      "sha256": "670e2d88db4f19938b4e88c56a330d61d947a10f1b31f34200606b331b1fe57a"
+    },
+    {
+      "path": "outputs\\transition_planning_r50_01\\viewer\\song1_events2_gap48.wav",
+      "bytes": 1126444,
+      "sha256": "6b2b33e83b259dcf4d39ef772d44d1608e519c4516f5889e9a5543513635694d"
+    },
+    {
+      "path": "outputs\\transition_planning_r50_01\\viewer\\song1_events3_gap48.wav",
+      "bytes": 1740844,
+      "sha256": "91aa02b4352d344f0ae76e3d5d19adc7c8cafc764ce540608342a6e072cceea5"
+    },
+    {
+      "path": "outputs\\transition_planning_r50_01\\viewer\\song2_events2_gap48.wav",
+      "bytes": 1126444,
+      "sha256": "e2038473845c860a2218336581d439bcc27803b10fac6daeaa91068251dec408"
+    },
+    {
+      "path": "outputs\\transition_planning_r50_01\\viewer\\song2_events3_gap48.wav",
+      "bytes": 1740844,
+      "sha256": "45351efb37833bfea20e040ad07d0f09796bc99cd217b3e903deaf3cf2cc893a"
+    }
+  ],
+  "files_verified": 9,
+  "server_sealed_files": 29,
+  "locally_available_sealed_files_verified": 14,
+  "transfer": "SFTP + SHA256 equality",
+  "browser_interaction_passed": true,
+  "neural_generation": false,
+  "root_contact": "UNKNOWN"
+}

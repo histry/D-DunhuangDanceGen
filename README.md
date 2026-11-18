@@ -3,6 +3,8 @@
 当前默认路径：**Event Catalog → Music Timeline → Event Plan → 冻结 EDGE（Temporal V0.5）→ 原 Native 验收**。学习检索保留shadow。研究路径已完成真实151D配对补全，以及原生SO(3)跨录制条件的Cross/Additive同参数量训练（各1,200步）；事件跟随与完整生成质量仍未合格。
 
 
+新增 [R50 显式过渡预算与完整音乐归因报告](reports/r50_release/report.md)、[汇总](reports/r50_release/summary.json)与[独立复验](reports/r50_release/independent.json)。先观看本机 `outputs/transition_planning_r50_01/viewer/index.html`：三首历史音乐各两事件/三事件共六段，逐帧显示实际 Core/Transition。每个 Core 为240帧，连接真实占用24/48/72帧；18组可装配，选中连接通过既定身体相对数值筛查，全片动态另报。完整主评分换音乐改变13/95个首选，Local为2/95，排名Spearman中位0.868871；不是正确率或独立泛化证明。独立研究子类修复可变长阶段置零，实际遮住64帧和禁止编辑16帧的结构检查通过；旧掩码探针维度错误已修正并在报告说明。641回归通过、10跳过，主轨迹/评分精确复算，17个R49封存文件保持，29个产物逐SHA复核。9个观看文件已回传并实际验收，临时本机服务关闭。Core是ChangE合法重定时、连接是冻结G0/G1几何提案；本轮新神经训练/生成为0，世界Root/接触未知、完整Native24未通过，正式路径与Shadow资格保持。
+
 新增 [R49 事件级音乐对齐报告](reports/r49_release/report.md)、[机器摘要](reports/r49_release/summary.json)与[独立复验](reports/r49_release/independent.json)。本机观看入口为 `outputs/event_alignment_r49_01/viewer/index.html`，可在同一真实音乐片段下逐帧比较 R41 与活动度选中的 ChangE 来源。观看验收后才启动对照。95 个时段共 3861/4177 个变体获得评分，316 个因音乐特征支持不足排除。历史 Val 五偏移 R@1 为 25.46%，换音乐 21.20%，配对区间跨零。敦煌主评分改变 70/95 个活动度首选，局部评分换音乐仅改 2/95。独立盲测尚缺核验资产，检索保持 Shadow。639 回归通过、10 跳过，评分和资格输出精确复算，17 个本轮科学与观看文件封存。
 
 新增 [R48事件合同、动态桥与冻结内容报告](reports/r48_release/report.md)、[机器摘要](reports/r48_release/summary.json)、[独立复验](reports/r48_release/independent.json)与[封存复核](reports/r48_release/seal_recheck.json)。先回传32个新身份主候选与4条真实轨迹视频并实际验收，再执行G2与冻结R41内容对照。139个候选中136个能在三首历史音乐的117个真实单槽/相邻槽目标上形成合法E1-W，共4177个时钟变体；590帧长来源完整保留，旧499与2137个质量未知帧边界不变。G3固定锚点、仅六个内部jet标量的受限优化相对G1 Gap D3中位比0.999565，整体收益很小；研究数值候选保留G0 18例、G1 1例、G3 8例、拒绝5例，未升级正式Planner或物理资格。

@@ -1,0 +1,3692 @@
+{
+  "plan_cases": [
+    {
+      "key": "song0_events2_gap24",
+      "song": 0,
+      "events": 2,
+      "transition_frames": 24,
+      "music_interval": [
+        1548,
+        2052
+      ],
+      "regions": [
+        {
+          "kind": "core",
+          "interval": [
+            1548,
+            1788
+          ]
+        },
+        {
+          "kind": "transition",
+          "interval": [
+            1788,
+            1812
+          ]
+        },
+        {
+          "kind": "core",
+          "interval": [
+            1812,
+            2052
+          ]
+        }
+      ],
+      "core_frames": 480,
+      "bridge_frames": 24,
+      "total_frames": 504,
+      "candidate_counts": [
+        4,
+        4
+      ],
+      "edge_trials": 12,
+      "eligible_edges": 12,
+      "failures": {},
+      "can_route": false,
+      "root_contact": "UNKNOWN",
+      "semantic_truth": "UNKNOWN",
+      "status": "NUMERICAL_SHORT_PLAN",
+      "selected": [
+        {
+          "event_uid": "r47:058b4536f51d3c37255b5cf7",
+          "source_uid": "male_meditation",
+          "source_interval": [
+            1893,
+            2155
+          ],
+          "warp": {
+            "time_warp": [
+              [
+                1893,
+                1548.0
+              ],
+              [
+                1953,
+                1602.942528735632
+              ],
+              [
+                1991,
+                1637.7394636015326
+              ],
+              [
+                2014,
+                1658.8007662835248
+              ],
+              [
+                2048,
+                1692.0
+              ],
+              [
+                2154,
+                1787.0
+              ]
+            ],
+            "anchor_source_frames": [
+              1953,
+              1991,
+              2014,
+              2048
+            ],
+            "cost": 0.753398864275825,
+            "rate_limits": [
+              0.75,
+              1.33
+            ],
+            "semantic_truth": "UNKNOWN",
+            "clock_contract": "ACTUAL_FRAME_CENTERS_WITH_HALF_OPEN_SUPPORT"
+          },
+          "score": 0.26701134726231907,
+          "phase_evidence_truncated": 0
+        },
+        {
+          "event_uid": "r47:28088078d89f6394a8b1fa44",
+          "source_uid": "female_FeiTian",
+          "source_interval": [
+            7528,
+            7798
+          ],
+          "warp": {
+            "time_warp": [
+              [
+                7528,
+                1812.0
+              ],
+              [
+                7541,
+                1823.5501858736059
+              ],
+              [
+                7631,
+                1896.0
+              ],
+              [
+                7738,
+                1988.0
+              ],
+              [
+                7770,
+                2029.0
+              ],
+              [
+                7797,
+                2051.0
+              ]
+            ],
+            "anchor_source_frames": [
+              7541,
+              7631,
+              7738,
+              7770
+            ],
+            "cost": 0.3240840517221497,
+            "rate_limits": [
+              0.75,
+              1.33
+            ],
+            "semantic_truth": "UNKNOWN",
+            "clock_contract": "ACTUAL_FRAME_CENTERS_WITH_HALF_OPEN_SUPPORT"
+          },
+          "score": 0.20440973267636486,
+          "phase_evidence_truncated": 0
+        }
+      ],
+      "score": 0.47037535443112904,
+      "whole_clip_D3": 87.7718505859375
+    },
+    {
+      "key": "song0_events2_gap48",
+      "song": 0,
+      "events": 2,
+      "transition_frames": 48,
+      "music_interval": [
+        1536,
+        2064
+      ],
+      "regions": [
+        {
+          "kind": "core",
+          "interval": [
+            1536,
+            1776
+          ]
+        },
+        {
+          "kind": "transition",
+          "interval": [
+            1776,
+            1824
+          ]
+        },
+        {
+          "kind": "core",
+          "interval": [
+            1824,
+            2064
+          ]
+        }
+      ],
+      "core_frames": 480,
+      "bridge_frames": 48,
+      "total_frames": 528,
+      "candidate_counts": [
+        4,
+        4
+      ],
+      "edge_trials": 12,
+      "eligible_edges": 12,
+      "failures": {},
+      "can_route": false,
+      "root_contact": "UNKNOWN",
+      "semantic_truth": "UNKNOWN",
+      "status": "NUMERICAL_SHORT_PLAN",
+      "selected": [
+        {
+          "event_uid": "r47:058b4536f51d3c37255b5cf7",
+          "source_uid": "male_meditation",
+          "source_interval": [
+            1893,
+            2155
+          ],
+          "warp": {
+            "time_warp": [
+              [
+                1893,
+                1536.0
+              ],
+              [
+                1953,
+                1590.0
+              ],
+              [
+                1991,
+                1630.0
+              ],
+              [
+                2014,
+                1651.0
+              ],
+              [
+                2048,
+                1692.0
+              ],
+              [
+                2154,
+                1775.0
+              ]
+            ],
+            "anchor_source_frames": [
+              1953,
+              1991,
+              2014,
+              2048
+            ],
+            "cost": 0.007816736395531522,
+            "rate_limits": [
+              0.75,
+              1.33
+            ],
+            "semantic_truth": "UNKNOWN",
+            "clock_contract": "ACTUAL_FRAME_CENTERS_WITH_HALF_OPEN_SUPPORT"
+          },
+          "score": 0.2621230147027673,
+          "phase_evidence_truncated": 0
+        },
+        {
+          "event_uid": "r47:28088078d89f6394a8b1fa44",
+          "source_uid": "female_FeiTian",
+          "source_interval": [
+            7528,
+            7798
+          ],
+          "warp": {
+            "time_warp": [
+              [
+                7528,
+                1824.0
+              ],
+              [
+                7541,
+                1835.0
+              ],
+              [
+                7631,
+                1916.0
+              ],
+              [
+                7738,
+                2008.0
+              ],
+              [
+                7770,
+                2039.011152416357
+              ],
+              [
+                7797,
+                2063.0
+              ]
+            ],
+            "anchor_source_frames": [
+              7541,
+              7631,
+              7738,
+              7770
+            ],
+            "cost": 0.33394494317841755,
+            "rate_limits": [
+              0.75,
+              1.33
+            ],
+            "semantic_truth": "UNKNOWN",
+            "clock_contract": "ACTUAL_FRAME_CENTERS_WITH_HALF_OPEN_SUPPORT"
+          },
+          "score": 0.20801425008295685,
+          "phase_evidence_truncated": 0
+        }
+      ],
+      "score": 0.4699497399560259,
+      "whole_clip_D3": 87.229621887207
+    },
+    {
+      "key": "song0_events2_gap72",
+      "song": 0,
+      "events": 2,
+      "transition_frames": 72,
+      "music_interval": [
+        1524,
+        2076
+      ],
+      "regions": [
+        {
+          "kind": "core",
+          "interval": [
+            1524,
+            1764
+          ]
+        },
+        {
+          "kind": "transition",
+          "interval": [
+            1764,
+            1836
+          ]
+        },
+        {
+          "kind": "core",
+          "interval": [
+            1836,
+            2076
+          ]
+        }
+      ],
+      "core_frames": 480,
+      "bridge_frames": 72,
+      "total_frames": 552,
+      "candidate_counts": [
+        4,
+        4
+      ],
+      "edge_trials": 12,
+      "eligible_edges": 12,
+      "failures": {},
+      "can_route": false,
+      "root_contact": "UNKNOWN",
+      "semantic_truth": "UNKNOWN",
+      "status": "NUMERICAL_SHORT_PLAN",
+      "selected": [
+        {
+          "event_uid": "r47:058b4536f51d3c37255b5cf7",
+          "source_uid": "male_meditation",
+          "source_interval": [
+            1893,
+            2155
+          ],
+          "warp": {
+            "time_warp": [
+              [
+                1893,
+                1524.0
+              ],
+              [
+                1953,
+                1569.0
+              ],
+              [
+                1991,
+                1610.0
+              ],
+              [
+                2014,
+                1630.0
+              ],
+              [
+                2048,
+                1671.0
+              ],
+              [
+                2154,
+                1763.0
+              ]
+            ],
+            "anchor_source_frames": [
+              1953,
+              1991,
+              2014,
+              2048
+            ],
+            "cost": 0.005384680201406261,
+            "rate_limits": [
+              0.75,
+              1.33
+            ],
+            "semantic_truth": "UNKNOWN",
+            "clock_contract": "ACTUAL_FRAME_CENTERS_WITH_HALF_OPEN_SUPPORT"
+          },
+          "score": 0.2823195046421768,
+          "phase_evidence_truncated": 0
+        },
+        {
+          "event_uid": "r47:28088078d89f6394a8b1fa44",
+          "source_uid": "female_FeiTian",
+          "source_interval": [
+            7528,
+            7798
+          ],
+          "warp": {
+            "time_warp": [
+              [
+                7528,
+                1836.0
+              ],
+              [
+                7541,
+                1847.5501858736059
+              ],
+              [
+                7631,
+                1916.0
+              ],
+              [
+                7738,
+                2008.0
+              ],
+              [
+                7770,
+                2050.0
+              ],
+              [
+                7797,
+                2075.0
+              ]
+            ],
+            "anchor_source_frames": [
+              7541,
+              7631,
+              7738,
+              7770
+            ],
+            "cost": 0.29319867377915615,
+            "rate_limits": [
+              0.75,
+              1.33
+            ],
+            "semantic_truth": "UNKNOWN",
+            "clock_contract": "ACTUAL_FRAME_CENTERS_WITH_HALF_OPEN_SUPPORT"
+          },
+          "score": 0.1963441015693948,
+          "phase_evidence_truncated": 0
+        }
+      ],
+      "score": 0.4785083485027601,
+      "whole_clip_D3": 76.22904052734376
+    },
+    {
+      "key": "song0_events3_gap24",
+      "song": 0,
+      "events": 3,
+      "transition_frames": 24,
+      "music_interval": [
+        1416,
+        2184
+      ],
+      "regions": [
+        {
+          "kind": "core",
+          "interval": [
+            1416,
+            1656
+          ]
+        },
+        {
+          "kind": "transition",
+          "interval": [
+            1656,
+            1680
+          ]
+        },
+        {
+          "kind": "core",
+          "interval": [
+            1680,
+            1920
+          ]
+        },
+        {
+          "kind": "transition",
+          "interval": [
+            1920,
+            1944
+          ]
+        },
+        {
+          "kind": "core",
+          "interval": [
+            1944,
+            2184
+          ]
+        }
+      ],
+      "core_frames": 720,
+      "bridge_frames": 48,
+      "total_frames": 768,
+      "candidate_counts": [
+        4,
+        4,
+        4
+      ],
+      "edge_trials": 26,
+      "eligible_edges": 22,
+      "failures": {
+        "GEOMETRY_OR_DYNAMIC_REJECT": 4
+      },
+      "can_route": false,
+      "root_contact": "UNKNOWN",
+      "semantic_truth": "UNKNOWN",
+      "status": "NUMERICAL_SHORT_PLAN",
+      "selected": [
+        {
+          "event_uid": "r47:058b4536f51d3c37255b5cf7",
+          "source_uid": "male_meditation",
+          "source_interval": [
+            1893,
+            2155
+          ],
+          "warp": {
+            "time_warp": [
+              [
+                1893,
+                1416.0
+              ],
+              [
+                1953,
+                1467.0
+              ],
+              [
+                1991,
+                1507.0
+              ],
+              [
+                2014,
+                1528.0
+              ],
+              [
+                2048,
+                1569.0
+              ],
+              [
+                2154,
+                1655.0
+              ]
+            ],
+            "anchor_source_frames": [
+              1953,
+              1991,
+              2014,
+              2048
+            ],
+            "cost": 0.004700261299746048,
+            "rate_limits": [
+              0.75,
+              1.33
+            ],
+            "semantic_truth": "UNKNOWN",
+            "clock_contract": "ACTUAL_FRAME_CENTERS_WITH_HALF_OPEN_SUPPORT"
+          },
+          "score": 0.22965150085721517,
+          "phase_evidence_truncated": 0
+        },
+        {
+          "event_uid": "r47:28088078d89f6394a8b1fa44",
+          "source_uid": "female_FeiTian",
+          "source_interval": [
+            7528,
+            7798
+          ],
+          "warp": {
+            "time_warp": [
+              [
+                7528,
+                1680.0
+              ],
+              [
+                7541,
+                1692.0
+              ],
+              [
+                7631,
+                1773.0
+              ],
+              [
+                7738,
+                1856.0
+              ],
+              [
+                7770,
+                1896.0
+              ],
+              [
+                7797,
+                1919.0
+              ]
+            ],
+            "anchor_source_frames": [
+              7541,
+              7631,
+              7738,
+              7770
+            ],
+            "cost": 0.0038442038298715808,
+            "rate_limits": [
+              0.75,
+              1.33
+            ],
+            "semantic_truth": "UNKNOWN",
+            "clock_contract": "ACTUAL_FRAME_CENTERS_WITH_HALF_OPEN_SUPPORT"
+          },
+          "score": 0.13201082915491041,
+          "phase_evidence_truncated": 0
+        },
+        {
+          "event_uid": "r47:058b4536f51d3c37255b5cf7",
+          "source_uid": "male_meditation",
+          "source_interval": [
+            1893,
+            2155
+          ],
+          "warp": {
+            "time_warp": [
+              [
+                1893,
+                1944.0
+              ],
+              [
+                1953,
+                1998.942528735632
+              ],
+              [
+                1991,
+                2029.0
+              ],
+              [
+                2014,
+                2050.0
+              ],
+              [
+                2048,
+                2091.0
+              ],
+              [
+                2154,
+                2183.0
+              ]
+            ],
+            "anchor_source_frames": [
+              1953,
+              1991,
+              2014,
+              2048
+            ],
+            "cost": 0.3042878906651429,
+            "rate_limits": [
+              0.75,
+              1.33
+            ],
+            "semantic_truth": "UNKNOWN",
+            "clock_contract": "ACTUAL_FRAME_CENTERS_WITH_HALF_OPEN_SUPPORT"
+          },
+          "score": 0.31000356855188665,
+          "phase_evidence_truncated": 0
+        }
+      ],
+      "score": 0.6692633248471338,
+      "whole_clip_D3": 62.570272064208936
+    },
+    {
+      "key": "song0_events3_gap48",
+      "song": 0,
+      "events": 3,
+      "transition_frames": 48,
+      "music_interval": [
+        1392,
+        2208
+      ],
+      "regions": [
+        {
+          "kind": "core",
+          "interval": [
+            1392,
+            1632
+          ]
+        },
+        {
+          "kind": "transition",
+          "interval": [
+            1632,
+            1680
+          ]
+        },
+        {
+          "kind": "core",
+          "interval": [
+            1680,
+            1920
+          ]
+        },
+        {
+          "kind": "transition",
+          "interval": [
+            1920,
+            1968
+          ]
+        },
+        {
+          "kind": "core",
+          "interval": [
+            1968,
+            2208
+          ]
+        }
+      ],
+      "core_frames": 720,
+      "bridge_frames": 96,
+      "total_frames": 816,
+      "candidate_counts": [
+        4,
+        4,
+        4
+      ],
+      "edge_trials": 26,
+      "eligible_edges": 26,
+      "failures": {},
+      "can_route": false,
+      "root_contact": "UNKNOWN",
+      "semantic_truth": "UNKNOWN",
+      "status": "NUMERICAL_SHORT_PLAN",
+      "selected": [
+        {
+          "event_uid": "r47:058b4536f51d3c37255b5cf7",
+          "source_uid": "male_meditation",
+          "source_interval": [
+            1893,
+            2155
+          ],
+          "warp": {
+            "time_warp": [
+              [
+                1893,
+                1392.0
+              ],
+              [
+                1953,
+                1447.0
+              ],
+              [
+                1991,
+                1487.0
+              ],
+              [
+                2014,
+                1507.0
+              ],
+              [
+                2048,
+                1548.0
+              ],
+              [
+                2154,
+                1631.0
+              ]
+            ],
+            "anchor_source_frames": [
+              1953,
+              1991,
+              2014,
+              2048
+            ],
+            "cost": 0.008104603573053874,
+            "rate_limits": [
+              0.75,
+              1.33
+            ],
+            "semantic_truth": "UNKNOWN",
+            "clock_contract": "ACTUAL_FRAME_CENTERS_WITH_HALF_OPEN_SUPPORT"
+          },
+          "score": 0.23704269841089481,
+          "phase_evidence_truncated": 0
+        },
+        {
+          "event_uid": "r47:28088078d89f6394a8b1fa44",
+          "source_uid": "female_FeiTian",
+          "source_interval": [
+            7528,
+            7798
+          ],
+          "warp": {
+            "time_warp": [
+              [
+                7528,
+                1680.0
+              ],
+              [
+                7541,
+                1692.0
+              ],
+              [
+                7631,
+                1773.0
+              ],
+              [
+                7738,
+                1856.0
+              ],
+              [
+                7770,
+                1896.0
+              ],
+              [
+                7797,
+                1919.0
+              ]
+            ],
+            "anchor_source_frames": [
+              7541,
+              7631,
+              7738,
+              7770
+            ],
+            "cost": 0.0038442038298715808,
+            "rate_limits": [
+              0.75,
+              1.33
+            ],
+            "semantic_truth": "UNKNOWN",
+            "clock_contract": "ACTUAL_FRAME_CENTERS_WITH_HALF_OPEN_SUPPORT"
+          },
+          "score": 0.13201082915491041,
+          "phase_evidence_truncated": 0
+        },
+        {
+          "event_uid": "r47:058b4536f51d3c37255b5cf7",
+          "source_uid": "male_meditation",
+          "source_interval": [
+            1893,
+            2155
+          ],
+          "warp": {
+            "time_warp": [
+              [
+                1893,
+                1968.0
+              ],
+              [
+                1953,
+                2029.0
+              ],
+              [
+                1991,
+                2057.7394636015324
+              ],
+              [
+                2014,
+                2078.800766283525
+              ],
+              [
+                2048,
+                2111.0
+              ],
+              [
+                2154,
+                2207.0
+              ]
+            ],
+            "anchor_source_frames": [
+              1953,
+              1991,
+              2014,
+              2048
+            ],
+            "cost": 0.5526019117942008,
+            "rate_limits": [
+              0.75,
+              1.33
+            ],
+            "semantic_truth": "UNKNOWN",
+            "clock_contract": "ACTUAL_FRAME_CENTERS_WITH_HALF_OPEN_SUPPORT"
+          },
+          "score": 0.2908139747168871,
+          "phase_evidence_truncated": 0
+        }
+      ],
+      "score": 0.6595083118969316,
+      "whole_clip_D3": 61.69316024780273
+    },
+    {
+      "key": "song0_events3_gap72",
+      "song": 0,
+      "events": 3,
+      "transition_frames": 72,
+      "music_interval": [
+        1368,
+        2232
+      ],
+      "regions": [
+        {
+          "kind": "core",
+          "interval": [
+            1368,
+            1608
+          ]
+        },
+        {
+          "kind": "transition",
+          "interval": [
+            1608,
+            1680
+          ]
+        },
+        {
+          "kind": "core",
+          "interval": [
+            1680,
+            1920
+          ]
+        },
+        {
+          "kind": "transition",
+          "interval": [
+            1920,
+            1992
+          ]
+        },
+        {
+          "kind": "core",
+          "interval": [
+            1992,
+            2232
+          ]
+        }
+      ],
+      "core_frames": 720,
+      "bridge_frames": 144,
+      "total_frames": 864,
+      "candidate_counts": [
+        4,
+        4,
+        4
+      ],
+      "edge_trials": 26,
+      "eligible_edges": 26,
+      "failures": {},
+      "can_route": false,
+      "root_contact": "UNKNOWN",
+      "semantic_truth": "UNKNOWN",
+      "status": "NUMERICAL_SHORT_PLAN",
+      "selected": [
+        {
+          "event_uid": "r47:058b4536f51d3c37255b5cf7",
+          "source_uid": "male_meditation",
+          "source_interval": [
+            1893,
+            2155
+          ],
+          "warp": {
+            "time_warp": [
+              [
+                1893,
+                1368.0
+              ],
+              [
+                1953,
+                1426.0
+              ],
+              [
+                1991,
+                1457.7394636015326
+              ],
+              [
+                2014,
+                1478.8007662835248
+              ],
+              [
+                2048,
+                1507.0
+              ],
+              [
+                2154,
+                1607.0
+              ]
+            ],
+            "anchor_source_frames": [
+              1953,
+              1991,
+              2014,
+              2048
+            ],
+            "cost": 0.5825910561109408,
+            "rate_limits": [
+              0.75,
+              1.33
+            ],
+            "semantic_truth": "UNKNOWN",
+            "clock_contract": "ACTUAL_FRAME_CENTERS_WITH_HALF_OPEN_SUPPORT"
+          },
+          "score": 0.2548091902452622,
+          "phase_evidence_truncated": 0
+        },
+        {
+          "event_uid": "r47:28088078d89f6394a8b1fa44",
+          "source_uid": "female_FeiTian",
+          "source_interval": [
+            7528,
+            7798
+          ],
+          "warp": {
+            "time_warp": [
+              [
+                7528,
+                1680.0
+              ],
+              [
+                7541,
+                1692.0
+              ],
+              [
+                7631,
+                1773.0
+              ],
+              [
+                7738,
+                1856.0
+              ],
+              [
+                7770,
+                1896.0
+              ],
+              [
+                7797,
+                1919.0
+              ]
+            ],
+            "anchor_source_frames": [
+              7541,
+              7631,
+              7738,
+              7770
+            ],
+            "cost": 0.0038442038298715808,
+            "rate_limits": [
+              0.75,
+              1.33
+            ],
+            "semantic_truth": "UNKNOWN",
+            "clock_contract": "ACTUAL_FRAME_CENTERS_WITH_HALF_OPEN_SUPPORT"
+          },
+          "score": 0.13201082915491041,
+          "phase_evidence_truncated": 0
+        },
+        {
+          "event_uid": "r47:058b4536f51d3c37255b5cf7",
+          "source_uid": "male_meditation",
+          "source_interval": [
+            1893,
+            2155
+          ],
+          "warp": {
+            "time_warp": [
+              [
+                1893,
+                1992.0
+              ],
+              [
+                1953,
+                2050.0
+              ],
+              [
+                1991,
+                2081.7394636015324
+              ],
+              [
+                2014,
+                2102.800766283525
+              ],
+              [
+                2048,
+                2131.0
+              ],
+              [
+                2154,
+                2231.0
+              ]
+            ],
+            "anchor_source_frames": [
+              1953,
+              1991,
+              2014,
+              2048
+            ],
+            "cost": 0.5825910561109483,
+            "rate_limits": [
+              0.75,
+              1.33
+            ],
+            "semantic_truth": "UNKNOWN",
+            "clock_contract": "ACTUAL_FRAME_CENTERS_WITH_HALF_OPEN_SUPPORT"
+          },
+          "score": 0.2778564639302683,
+          "phase_evidence_truncated": 0
+        }
+      ],
+      "score": 0.6644762731773166,
+      "whole_clip_D3": 59.08759307861328
+    },
+    {
+      "key": "song1_events2_gap24",
+      "song": 1,
+      "events": 2,
+      "transition_frames": 24,
+      "music_interval": [
+        1546,
+        2050
+      ],
+      "regions": [
+        {
+          "kind": "core",
+          "interval": [
+            1546,
+            1786
+          ]
+        },
+        {
+          "kind": "transition",
+          "interval": [
+            1786,
+            1810
+          ]
+        },
+        {
+          "kind": "core",
+          "interval": [
+            1810,
+            2050
+          ]
+        }
+      ],
+      "core_frames": 480,
+      "bridge_frames": 24,
+      "total_frames": 504,
+      "candidate_counts": [
+        4,
+        4
+      ],
+      "edge_trials": 12,
+      "eligible_edges": 12,
+      "failures": {},
+      "can_route": false,
+      "root_contact": "UNKNOWN",
+      "semantic_truth": "UNKNOWN",
+      "status": "NUMERICAL_SHORT_PLAN",
+      "selected": [
+        {
+          "event_uid": "r47:28088078d89f6394a8b1fa44",
+          "source_uid": "female_FeiTian",
+          "source_interval": [
+            7528,
+            7798
+          ],
+          "warp": {
+            "time_warp": [
+              [
+                7528,
+                1546.0
+              ],
+              [
+                7541,
+                1557.5501858736059
+              ],
+              [
+                7631,
+                1644.0
+              ],
+              [
+                7738,
+                1725.0
+              ],
+              [
+                7770,
+                1757.0
+              ],
+              [
+                7797,
+                1785.0
+              ]
+            ],
+            "anchor_source_frames": [
+              7541,
+              7631,
+              7738,
+              7770
+            ],
+            "cost": 0.2521813255759345,
+            "rate_limits": [
+              0.75,
+              1.33
+            ],
+            "semantic_truth": "UNKNOWN",
+            "clock_contract": "ACTUAL_FRAME_CENTERS_WITH_HALF_OPEN_SUPPORT"
+          },
+          "score": 0.1275427094181223,
+          "phase_evidence_truncated": 0
+        },
+        {
+          "event_uid": "r47:058b4536f51d3c37255b5cf7",
+          "source_uid": "male_meditation",
+          "source_interval": [
+            1893,
+            2155
+          ],
+          "warp": {
+            "time_warp": [
+              [
+                1893,
+                1810.0
+              ],
+              [
+                1953,
+                1870.0
+              ],
+              [
+                1991,
+                1899.7394636015326
+              ],
+              [
+                2014,
+                1918.0
+              ],
+              [
+                2048,
+                1951.0
+              ],
+              [
+                2154,
+                2049.0
+              ]
+            ],
+            "anchor_source_frames": [
+              1953,
+              1991,
+              2014,
+              2048
+            ],
+            "cost": 0.07649442266946338,
+            "rate_limits": [
+              0.75,
+              1.33
+            ],
+            "semantic_truth": "UNKNOWN",
+            "clock_contract": "ACTUAL_FRAME_CENTERS_WITH_HALF_OPEN_SUPPORT"
+          },
+          "score": 0.29573321495308463,
+          "phase_evidence_truncated": 0
+        }
+      ],
+      "score": 0.42192068382201053,
+      "whole_clip_D3": 98.46678161621094
+    },
+    {
+      "key": "song1_events2_gap48",
+      "song": 1,
+      "events": 2,
+      "transition_frames": 48,
+      "music_interval": [
+        1534,
+        2062
+      ],
+      "regions": [
+        {
+          "kind": "core",
+          "interval": [
+            1534,
+            1774
+          ]
+        },
+        {
+          "kind": "transition",
+          "interval": [
+            1774,
+            1822
+          ]
+        },
+        {
+          "kind": "core",
+          "interval": [
+            1822,
+            2062
+          ]
+        }
+      ],
+      "core_frames": 480,
+      "bridge_frames": 48,
+      "total_frames": 528,
+      "candidate_counts": [
+        4,
+        4
+      ],
+      "edge_trials": 13,
+      "eligible_edges": 10,
+      "failures": {
+        "GEOMETRY_OR_DYNAMIC_REJECT": 3
+      },
+      "can_route": false,
+      "root_contact": "UNKNOWN",
+      "semantic_truth": "UNKNOWN",
+      "status": "NUMERICAL_SHORT_PLAN",
+      "selected": [
+        {
+          "event_uid": "r47:058b4536f51d3c37255b5cf7",
+          "source_uid": "male_meditation",
+          "source_interval": [
+            1893,
+            2155
+          ],
+          "warp": {
+            "time_warp": [
+              [
+                1893,
+                1534.0
+              ],
+              [
+                1953,
+                1580.0
+              ],
+              [
+                1991,
+                1623.7394636015326
+              ],
+              [
+                2014,
+                1644.0
+              ],
+              [
+                2048,
+                1677.0
+              ],
+              [
+                2154,
+                1773.0
+              ]
+            ],
+            "anchor_source_frames": [
+              1953,
+              1991,
+              2014,
+              2048
+            ],
+            "cost": 0.17807603186486562,
+            "rate_limits": [
+              0.75,
+              1.33
+            ],
+            "semantic_truth": "UNKNOWN",
+            "clock_contract": "ACTUAL_FRAME_CENTERS_WITH_HALF_OPEN_SUPPORT"
+          },
+          "score": 0.23158336359137385,
+          "phase_evidence_truncated": 0
+        },
+        {
+          "event_uid": "r47:28088078d89f6394a8b1fa44",
+          "source_uid": "female_FeiTian",
+          "source_interval": [
+            7528,
+            7798
+          ],
+          "warp": {
+            "time_warp": [
+              [
+                7528,
+                1822.0
+              ],
+              [
+                7541,
+                1837.0
+              ],
+              [
+                7631,
+                1918.0
+              ],
+              [
+                7738,
+                1999.0
+              ],
+              [
+                7770,
+                2030.0
+              ],
+              [
+                7797,
+                2061.0
+              ]
+            ],
+            "anchor_source_frames": [
+              7541,
+              7631,
+              7738,
+              7770
+            ],
+            "cost": 0.005765517336686997,
+            "rate_limits": [
+              0.75,
+              1.33
+            ],
+            "semantic_truth": "UNKNOWN",
+            "clock_contract": "ACTUAL_FRAME_CENTERS_WITH_HALF_OPEN_SUPPORT"
+          },
+          "score": 0.2007445331406268,
+          "phase_evidence_truncated": 0
+        }
+      ],
+      "score": 0.4321850743026969,
+      "whole_clip_D3": 87.0614837646484
+    },
+    {
+      "key": "song1_events2_gap72",
+      "song": 1,
+      "events": 2,
+      "transition_frames": 72,
+      "music_interval": [
+        1522,
+        2074
+      ],
+      "regions": [
+        {
+          "kind": "core",
+          "interval": [
+            1522,
+            1762
+          ]
+        },
+        {
+          "kind": "transition",
+          "interval": [
+            1762,
+            1834
+          ]
+        },
+        {
+          "kind": "core",
+          "interval": [
+            1834,
+            2074
+          ]
+        }
+      ],
+      "core_frames": 480,
+      "bridge_frames": 72,
+      "total_frames": 552,
+      "candidate_counts": [
+        4,
+        4
+      ],
+      "edge_trials": 12,
+      "eligible_edges": 12,
+      "failures": {},
+      "can_route": false,
+      "root_contact": "UNKNOWN",
+      "semantic_truth": "UNKNOWN",
+      "status": "NUMERICAL_SHORT_PLAN",
+      "selected": [
+        {
+          "event_uid": "r47:058b4536f51d3c37255b5cf7",
+          "source_uid": "male_meditation",
+          "source_interval": [
+            1893,
+            2155
+          ],
+          "warp": {
+            "time_warp": [
+              [
+                1893,
+                1522.0
+              ],
+              [
+                1953,
+                1580.0
+              ],
+              [
+                1991,
+                1611.7394636015326
+              ],
+              [
+                2014,
+                1629.0
+              ],
+              [
+                2048,
+                1661.0
+              ],
+              [
+                2154,
+                1761.0
+              ]
+            ],
+            "anchor_source_frames": [
+              1953,
+              1991,
+              2014,
+              2048
+            ],
+            "cost": 0.04309812637316706,
+            "rate_limits": [
+              0.75,
+              1.33
+            ],
+            "semantic_truth": "UNKNOWN",
+            "clock_contract": "ACTUAL_FRAME_CENTERS_WITH_HALF_OPEN_SUPPORT"
+          },
+          "score": 0.24027515451725356,
+          "phase_evidence_truncated": 0
+        },
+        {
+          "event_uid": "r47:28088078d89f6394a8b1fa44",
+          "source_uid": "female_FeiTian",
+          "source_interval": [
+            7528,
+            7798
+          ],
+          "warp": {
+            "time_warp": [
+              [
+                7528,
+                1834.0
+              ],
+              [
+                7541,
+                1845.5501858736059
+              ],
+              [
+                7631,
+                1918.0
+              ],
+              [
+                7738,
+                2015.0
+              ],
+              [
+                7770,
+                2047.0
+              ],
+              [
+                7797,
+                2073.0
+              ]
+            ],
+            "anchor_source_frames": [
+              7541,
+              7631,
+              7738,
+              7770
+            ],
+            "cost": 0.28471465890926767,
+            "rate_limits": [
+              0.75,
+              1.33
+            ],
+            "semantic_truth": "UNKNOWN",
+            "clock_contract": "ACTUAL_FRAME_CENTERS_WITH_HALF_OPEN_SUPPORT"
+          },
+          "score": 0.20164746360074082,
+          "phase_evidence_truncated": 0
+        }
+      ],
+      "score": 0.44176687039169565,
+      "whole_clip_D3": 82.86252593994142
+    },
+    {
+      "key": "song1_events3_gap24",
+      "song": 1,
+      "events": 3,
+      "transition_frames": 24,
+      "music_interval": [
+        1414,
+        2182
+      ],
+      "regions": [
+        {
+          "kind": "core",
+          "interval": [
+            1414,
+            1654
+          ]
+        },
+        {
+          "kind": "transition",
+          "interval": [
+            1654,
+            1678
+          ]
+        },
+        {
+          "kind": "core",
+          "interval": [
+            1678,
+            1918
+          ]
+        },
+        {
+          "kind": "transition",
+          "interval": [
+            1918,
+            1942
+          ]
+        },
+        {
+          "kind": "core",
+          "interval": [
+            1942,
+            2182
+          ]
+        }
+      ],
+      "core_frames": 720,
+      "bridge_frames": 48,
+      "total_frames": 768,
+      "candidate_counts": [
+        4,
+        4,
+        4
+      ],
+      "edge_trials": 24,
+      "eligible_edges": 24,
+      "failures": {},
+      "can_route": false,
+      "root_contact": "UNKNOWN",
+      "semantic_truth": "UNKNOWN",
+      "status": "NUMERICAL_SHORT_PLAN",
+      "selected": [
+        {
+          "event_uid": "r47:058b4536f51d3c37255b5cf7",
+          "source_uid": "male_meditation",
+          "source_interval": [
+            1893,
+            2155
+          ],
+          "warp": {
+            "time_warp": [
+              [
+                1893,
+                1414.0
+              ],
+              [
+                1953,
+                1468.0
+              ],
+              [
+                1991,
+                1503.7394636015326
+              ],
+              [
+                2014,
+                1533.0
+              ],
+              [
+                2048,
+                1565.0
+              ],
+              [
+                2154,
+                1653.0
+              ]
+            ],
+            "anchor_source_frames": [
+              1953,
+              1991,
+              2014,
+              2048
+            ],
+            "cost": 0.12965853505771824,
+            "rate_limits": [
+              0.75,
+              1.33
+            ],
+            "semantic_truth": "UNKNOWN",
+            "clock_contract": "ACTUAL_FRAME_CENTERS_WITH_HALF_OPEN_SUPPORT"
+          },
+          "score": 0.23004036540705153,
+          "phase_evidence_truncated": 0
+        },
+        {
+          "event_uid": "r47:28088078d89f6394a8b1fa44",
+          "source_uid": "female_FeiTian",
+          "source_interval": [
+            7528,
+            7798
+          ],
+          "warp": {
+            "time_warp": [
+              [
+                7528,
+                1678.0
+              ],
+              [
+                7541,
+                1693.0
+              ],
+              [
+                7631,
+                1773.0
+              ],
+              [
+                7738,
+                1854.0
+              ],
+              [
+                7770,
+                1886.0
+              ],
+              [
+                7797,
+                1917.0
+              ]
+            ],
+            "anchor_source_frames": [
+              7541,
+              7631,
+              7738,
+              7770
+            ],
+            "cost": 0.006171713123551931,
+            "rate_limits": [
+              0.75,
+              1.33
+            ],
+            "semantic_truth": "UNKNOWN",
+            "clock_contract": "ACTUAL_FRAME_CENTERS_WITH_HALF_OPEN_SUPPORT"
+          },
+          "score": 0.18339019997133668,
+          "phase_evidence_truncated": 0
+        },
+        {
+          "event_uid": "r47:058b4536f51d3c37255b5cf7",
+          "source_uid": "male_meditation",
+          "source_interval": [
+            1893,
+            2155
+          ],
+          "warp": {
+            "time_warp": [
+              [
+                1893,
+                1942.0
+              ],
+              [
+                1953,
+                1999.0
+              ],
+              [
+                1991,
+                2030.0
+              ],
+              [
+                2014,
+                2052.800766283525
+              ],
+              [
+                2048,
+                2095.0
+              ],
+              [
+                2154,
+                2181.0
+              ]
+            ],
+            "anchor_source_frames": [
+              1953,
+              1991,
+              2014,
+              2048
+            ],
+            "cost": 0.19768207992640233,
+            "rate_limits": [
+              0.75,
+              1.33
+            ],
+            "semantic_truth": "UNKNOWN",
+            "clock_contract": "ACTUAL_FRAME_CENTERS_WITH_HALF_OPEN_SUPPORT"
+          },
+          "score": 0.2855624667263638,
+          "phase_evidence_truncated": 0
+        }
+      ],
+      "score": 0.6965783177978644,
+      "whole_clip_D3": 75.12185821533201
+    },
+    {
+      "key": "song1_events3_gap48",
+      "song": 1,
+      "events": 3,
+      "transition_frames": 48,
+      "music_interval": [
+        1390,
+        2206
+      ],
+      "regions": [
+        {
+          "kind": "core",
+          "interval": [
+            1390,
+            1630
+          ]
+        },
+        {
+          "kind": "transition",
+          "interval": [
+            1630,
+            1678
+          ]
+        },
+        {
+          "kind": "core",
+          "interval": [
+            1678,
+            1918
+          ]
+        },
+        {
+          "kind": "transition",
+          "interval": [
+            1918,
+            1966
+          ]
+        },
+        {
+          "kind": "core",
+          "interval": [
+            1966,
+            2206
+          ]
+        }
+      ],
+      "core_frames": 720,
+      "bridge_frames": 96,
+      "total_frames": 816,
+      "candidate_counts": [
+        4,
+        4,
+        4
+      ],
+      "edge_trials": 24,
+      "eligible_edges": 24,
+      "failures": {},
+      "can_route": false,
+      "root_contact": "UNKNOWN",
+      "semantic_truth": "UNKNOWN",
+      "status": "NUMERICAL_SHORT_PLAN",
+      "selected": [
+        {
+          "event_uid": "r47:058b4536f51d3c37255b5cf7",
+          "source_uid": "male_meditation",
+          "source_interval": [
+            1893,
+            2155
+          ],
+          "warp": {
+            "time_warp": [
+              [
+                1893,
+                1390.0
+              ],
+              [
+                1953,
+                1436.0
+              ],
+              [
+                1991,
+                1479.7394636015326
+              ],
+              [
+                2014,
+                1500.0
+              ],
+              [
+                2048,
+                1533.0
+              ],
+              [
+                2154,
+                1629.0
+              ]
+            ],
+            "anchor_source_frames": [
+              1953,
+              1991,
+              2014,
+              2048
+            ],
+            "cost": 0.14474269853153227,
+            "rate_limits": [
+              0.75,
+              1.33
+            ],
+            "semantic_truth": "UNKNOWN",
+            "clock_contract": "ACTUAL_FRAME_CENTERS_WITH_HALF_OPEN_SUPPORT"
+          },
+          "score": 0.2504000549211498,
+          "phase_evidence_truncated": 0
+        },
+        {
+          "event_uid": "r47:28088078d89f6394a8b1fa44",
+          "source_uid": "female_FeiTian",
+          "source_interval": [
+            7528,
+            7798
+          ],
+          "warp": {
+            "time_warp": [
+              [
+                7528,
+                1678.0
+              ],
+              [
+                7541,
+                1693.0
+              ],
+              [
+                7631,
+                1773.0
+              ],
+              [
+                7738,
+                1854.0
+              ],
+              [
+                7770,
+                1886.0
+              ],
+              [
+                7797,
+                1917.0
+              ]
+            ],
+            "anchor_source_frames": [
+              7541,
+              7631,
+              7738,
+              7770
+            ],
+            "cost": 0.006171713123551931,
+            "rate_limits": [
+              0.75,
+              1.33
+            ],
+            "semantic_truth": "UNKNOWN",
+            "clock_contract": "ACTUAL_FRAME_CENTERS_WITH_HALF_OPEN_SUPPORT"
+          },
+          "score": 0.18339019997133668,
+          "phase_evidence_truncated": 0
+        },
+        {
+          "event_uid": "r47:058b4536f51d3c37255b5cf7",
+          "source_uid": "male_meditation",
+          "source_interval": [
+            1893,
+            2155
+          ],
+          "warp": {
+            "time_warp": [
+              [
+                1893,
+                1966.0
+              ],
+              [
+                1953,
+                2015.0
+              ],
+              [
+                1991,
+                2047.0
+              ],
+              [
+                2014,
+                2076.800766283525
+              ],
+              [
+                2048,
+                2111.0
+              ],
+              [
+                2154,
+                2205.0
+              ]
+            ],
+            "anchor_source_frames": [
+              1953,
+              1991,
+              2014,
+              2048
+            ],
+            "cost": 0.044010687844671624,
+            "rate_limits": [
+              0.75,
+              1.33
+            ],
+            "semantic_truth": "UNKNOWN",
+            "clock_contract": "ACTUAL_FRAME_CENTERS_WITH_HALF_OPEN_SUPPORT"
+          },
+          "score": 0.30023575002994346,
+          "phase_evidence_truncated": 0
+        }
+      ],
+      "score": 0.7336975019917784,
+      "whole_clip_D3": 71.68145141601562
+    },
+    {
+      "key": "song1_events3_gap72",
+      "song": 1,
+      "events": 3,
+      "transition_frames": 72,
+      "music_interval": [
+        1366,
+        2230
+      ],
+      "regions": [
+        {
+          "kind": "core",
+          "interval": [
+            1366,
+            1606
+          ]
+        },
+        {
+          "kind": "transition",
+          "interval": [
+            1606,
+            1678
+          ]
+        },
+        {
+          "kind": "core",
+          "interval": [
+            1678,
+            1918
+          ]
+        },
+        {
+          "kind": "transition",
+          "interval": [
+            1918,
+            1990
+          ]
+        },
+        {
+          "kind": "core",
+          "interval": [
+            1990,
+            2230
+          ]
+        }
+      ],
+      "core_frames": 720,
+      "bridge_frames": 144,
+      "total_frames": 864,
+      "candidate_counts": [
+        4,
+        4,
+        4
+      ],
+      "edge_trials": 24,
+      "eligible_edges": 24,
+      "failures": {},
+      "can_route": false,
+      "root_contact": "UNKNOWN",
+      "semantic_truth": "UNKNOWN",
+      "status": "NUMERICAL_SHORT_PLAN",
+      "selected": [
+        {
+          "event_uid": "r47:058b4536f51d3c37255b5cf7",
+          "source_uid": "male_meditation",
+          "source_interval": [
+            1893,
+            2155
+          ],
+          "warp": {
+            "time_warp": [
+              [
+                1893,
+                1366.0
+              ],
+              [
+                1953,
+                1420.0
+              ],
+              [
+                1991,
+                1455.7394636015326
+              ],
+              [
+                2014,
+                1484.0
+              ],
+              [
+                2048,
+                1517.0
+              ],
+              [
+                2154,
+                1605.0
+              ]
+            ],
+            "anchor_source_frames": [
+              1953,
+              1991,
+              2014,
+              2048
+            ],
+            "cost": 0.12914525280995323,
+            "rate_limits": [
+              0.75,
+              1.33
+            ],
+            "semantic_truth": "UNKNOWN",
+            "clock_contract": "ACTUAL_FRAME_CENTERS_WITH_HALF_OPEN_SUPPORT"
+          },
+          "score": 0.24254802710615694,
+          "phase_evidence_truncated": 0
+        },
+        {
+          "event_uid": "r47:28088078d89f6394a8b1fa44",
+          "source_uid": "female_FeiTian",
+          "source_interval": [
+            7528,
+            7798
+          ],
+          "warp": {
+            "time_warp": [
+              [
+                7528,
+                1678.0
+              ],
+              [
+                7541,
+                1693.0
+              ],
+              [
+                7631,
+                1773.0
+              ],
+              [
+                7738,
+                1854.0
+              ],
+              [
+                7770,
+                1886.0
+              ],
+              [
+                7797,
+                1917.0
+              ]
+            ],
+            "anchor_source_frames": [
+              7541,
+              7631,
+              7738,
+              7770
+            ],
+            "cost": 0.006171713123551931,
+            "rate_limits": [
+              0.75,
+              1.33
+            ],
+            "semantic_truth": "UNKNOWN",
+            "clock_contract": "ACTUAL_FRAME_CENTERS_WITH_HALF_OPEN_SUPPORT"
+          },
+          "score": 0.18339019997133668,
+          "phase_evidence_truncated": 0
+        },
+        {
+          "event_uid": "r47:058b4536f51d3c37255b5cf7",
+          "source_uid": "male_meditation",
+          "source_interval": [
+            1893,
+            2155
+          ],
+          "warp": {
+            "time_warp": [
+              [
+                1893,
+                1990.0
+              ],
+              [
+                1953,
+                2047.0
+              ],
+              [
+                1991,
+                2078.0
+              ],
+              [
+                2014,
+                2100.800766283525
+              ],
+              [
+                2048,
+                2127.0
+              ],
+              [
+                2154,
+                2229.0
+              ]
+            ],
+            "anchor_source_frames": [
+              1953,
+              1991,
+              2014,
+              2048
+            ],
+            "cost": 0.1944126035534776,
+            "rate_limits": [
+              0.75,
+              1.33
+            ],
+            "semantic_truth": "UNKNOWN",
+            "clock_contract": "ACTUAL_FRAME_CENTERS_WITH_HALF_OPEN_SUPPORT"
+          },
+          "score": 0.2997959672275429,
+          "phase_evidence_truncated": 0
+        }
+      ],
+      "score": 0.7256010147658525,
+      "whole_clip_D3": 68.56784057617188
+    },
+    {
+      "key": "song2_events2_gap24",
+      "song": 2,
+      "events": 2,
+      "transition_frames": 24,
+      "music_interval": [
+        1548,
+        2052
+      ],
+      "regions": [
+        {
+          "kind": "core",
+          "interval": [
+            1548,
+            1788
+          ]
+        },
+        {
+          "kind": "transition",
+          "interval": [
+            1788,
+            1812
+          ]
+        },
+        {
+          "kind": "core",
+          "interval": [
+            1812,
+            2052
+          ]
+        }
+      ],
+      "core_frames": 480,
+      "bridge_frames": 24,
+      "total_frames": 504,
+      "candidate_counts": [
+        4,
+        4
+      ],
+      "edge_trials": 12,
+      "eligible_edges": 12,
+      "failures": {},
+      "can_route": false,
+      "root_contact": "UNKNOWN",
+      "semantic_truth": "UNKNOWN",
+      "status": "NUMERICAL_SHORT_PLAN",
+      "selected": [
+        {
+          "event_uid": "r47:058b4536f51d3c37255b5cf7",
+          "source_uid": "male_meditation",
+          "source_interval": [
+            1893,
+            2155
+          ],
+          "warp": {
+            "time_warp": [
+              [
+                1893,
+                1548.0
+              ],
+              [
+                1953,
+                1607.0
+              ],
+              [
+                1991,
+                1638.0
+              ],
+              [
+                2014,
+                1668.0
+              ],
+              [
+                2048,
+                1697.0
+              ],
+              [
+                2154,
+                1787.0
+              ]
+            ],
+            "anchor_source_frames": [
+              1953,
+              1991,
+              2014,
+              2048
+            ],
+            "cost": 0.005035765769733368,
+            "rate_limits": [
+              0.75,
+              1.33
+            ],
+            "semantic_truth": "UNKNOWN",
+            "clock_contract": "ACTUAL_FRAME_CENTERS_WITH_HALF_OPEN_SUPPORT"
+          },
+          "score": 0.25360839027610266,
+          "phase_evidence_truncated": 0
+        },
+        {
+          "event_uid": "r47:28088078d89f6394a8b1fa44",
+          "source_uid": "female_FeiTian",
+          "source_interval": [
+            7528,
+            7798
+          ],
+          "warp": {
+            "time_warp": [
+              [
+                7528,
+                1812.0
+              ],
+              [
+                7541,
+                1823.5501858736059
+              ],
+              [
+                7631,
+                1908.0
+              ],
+              [
+                7738,
+                1998.0
+              ],
+              [
+                7770,
+                2028.0
+              ],
+              [
+                7797,
+                2051.0
+              ]
+            ],
+            "anchor_source_frames": [
+              7541,
+              7631,
+              7738,
+              7770
+            ],
+            "cost": 0.21905443586093537,
+            "rate_limits": [
+              0.75,
+              1.33
+            ],
+            "semantic_truth": "UNKNOWN",
+            "clock_contract": "ACTUAL_FRAME_CENTERS_WITH_HALF_OPEN_SUPPORT"
+          },
+          "score": 0.22044193258577774,
+          "phase_evidence_truncated": 0
+        }
+      ],
+      "score": 0.4730032292950649,
+      "whole_clip_D3": 79.7643814086914
+    },
+    {
+      "key": "song2_events2_gap48",
+      "song": 2,
+      "events": 2,
+      "transition_frames": 48,
+      "music_interval": [
+        1536,
+        2064
+      ],
+      "regions": [
+        {
+          "kind": "core",
+          "interval": [
+            1536,
+            1776
+          ]
+        },
+        {
+          "kind": "transition",
+          "interval": [
+            1776,
+            1824
+          ]
+        },
+        {
+          "kind": "core",
+          "interval": [
+            1824,
+            2064
+          ]
+        }
+      ],
+      "core_frames": 480,
+      "bridge_frames": 48,
+      "total_frames": 528,
+      "candidate_counts": [
+        4,
+        4
+      ],
+      "edge_trials": 12,
+      "eligible_edges": 12,
+      "failures": {},
+      "can_route": false,
+      "root_contact": "UNKNOWN",
+      "semantic_truth": "UNKNOWN",
+      "status": "NUMERICAL_SHORT_PLAN",
+      "selected": [
+        {
+          "event_uid": "r47:058b4536f51d3c37255b5cf7",
+          "source_uid": "male_meditation",
+          "source_interval": [
+            1893,
+            2155
+          ],
+          "warp": {
+            "time_warp": [
+              [
+                1893,
+                1536.0
+              ],
+              [
+                1953,
+                1593.0
+              ],
+              [
+                1991,
+                1622.0
+              ],
+              [
+                2014,
+                1652.0
+              ],
+              [
+                2048,
+                1682.0
+              ],
+              [
+                2154,
+                1775.0
+              ]
+            ],
+            "anchor_source_frames": [
+              1953,
+              1991,
+              2014,
+              2048
+            ],
+            "cost": 0.0020591374172429203,
+            "rate_limits": [
+              0.75,
+              1.33
+            ],
+            "semantic_truth": "UNKNOWN",
+            "clock_contract": "ACTUAL_FRAME_CENTERS_WITH_HALF_OPEN_SUPPORT"
+          },
+          "score": 0.2615706611069046,
+          "phase_evidence_truncated": 0
+        },
+        {
+          "event_uid": "r47:28088078d89f6394a8b1fa44",
+          "source_uid": "female_FeiTian",
+          "source_interval": [
+            7528,
+            7798
+          ],
+          "warp": {
+            "time_warp": [
+              [
+                7528,
+                1824.0
+              ],
+              [
+                7541,
+                1835.5501858736059
+              ],
+              [
+                7631,
+                1908.0
+              ],
+              [
+                7738,
+                1998.0
+              ],
+              [
+                7770,
+                2028.0
+              ],
+              [
+                7797,
+                2063.0
+              ]
+            ],
+            "anchor_source_frames": [
+              7541,
+              7631,
+              7738,
+              7770
+            ],
+            "cost": 0.09620437390306681,
+            "rate_limits": [
+              0.75,
+              1.33
+            ],
+            "semantic_truth": "UNKNOWN",
+            "clock_contract": "ACTUAL_FRAME_CENTERS_WITH_HALF_OPEN_SUPPORT"
+          },
+          "score": 0.2038946439396354,
+          "phase_evidence_truncated": 0
+        }
+      ],
+      "score": 0.46528945022978463,
+      "whole_clip_D3": 78.63432922363276
+    },
+    {
+      "key": "song2_events2_gap72",
+      "song": 2,
+      "events": 2,
+      "transition_frames": 72,
+      "music_interval": [
+        1524,
+        2076
+      ],
+      "regions": [
+        {
+          "kind": "core",
+          "interval": [
+            1524,
+            1764
+          ]
+        },
+        {
+          "kind": "transition",
+          "interval": [
+            1764,
+            1836
+          ]
+        },
+        {
+          "kind": "core",
+          "interval": [
+            1836,
+            2076
+          ]
+        }
+      ],
+      "core_frames": 480,
+      "bridge_frames": 72,
+      "total_frames": 552,
+      "candidate_counts": [
+        4,
+        4
+      ],
+      "edge_trials": 12,
+      "eligible_edges": 12,
+      "failures": {},
+      "can_route": false,
+      "root_contact": "UNKNOWN",
+      "semantic_truth": "UNKNOWN",
+      "status": "NUMERICAL_SHORT_PLAN",
+      "selected": [
+        {
+          "event_uid": "r47:28088078d89f6394a8b1fa44",
+          "source_uid": "female_FeiTian",
+          "source_interval": [
+            7528,
+            7798
+          ],
+          "warp": {
+            "time_warp": [
+              [
+                7528,
+                1524.0
+              ],
+              [
+                7541,
+                1535.5501858736059
+              ],
+              [
+                7631,
+                1622.0
+              ],
+              [
+                7738,
+                1713.0
+              ],
+              [
+                7770,
+                1742.0
+              ],
+              [
+                7797,
+                1763.0
+              ]
+            ],
+            "anchor_source_frames": [
+              7541,
+              7631,
+              7738,
+              7770
+            ],
+            "cost": 0.12023522892165407,
+            "rate_limits": [
+              0.75,
+              1.33
+            ],
+            "semantic_truth": "UNKNOWN",
+            "clock_contract": "ACTUAL_FRAME_CENTERS_WITH_HALF_OPEN_SUPPORT"
+          },
+          "score": 0.17307793441008992,
+          "phase_evidence_truncated": 0
+        },
+        {
+          "event_uid": "r47:058b4536f51d3c37255b5cf7",
+          "source_uid": "male_meditation",
+          "source_interval": [
+            1893,
+            2155
+          ],
+          "warp": {
+            "time_warp": [
+              [
+                1893,
+                1836.0
+              ],
+              [
+                1953,
+                1892.0
+              ],
+              [
+                1991,
+                1925.7394636015326
+              ],
+              [
+                2014,
+                1953.0
+              ],
+              [
+                2048,
+                1982.0
+              ],
+              [
+                2154,
+                2075.0
+              ]
+            ],
+            "anchor_source_frames": [
+              1953,
+              1991,
+              2014,
+              2048
+            ],
+            "cost": 0.1265179220308983,
+            "rate_limits": [
+              0.75,
+              1.33
+            ],
+            "semantic_truth": "UNKNOWN",
+            "clock_contract": "ACTUAL_FRAME_CENTERS_WITH_HALF_OPEN_SUPPORT"
+          },
+          "score": 0.2933767527464836,
+          "phase_evidence_truncated": 0
+        }
+      ],
+      "score": 0.46638230966754857,
+      "whole_clip_D3": 87.21648254394532
+    },
+    {
+      "key": "song2_events3_gap24",
+      "song": 2,
+      "events": 3,
+      "transition_frames": 24,
+      "music_interval": [
+        1416,
+        2184
+      ],
+      "regions": [
+        {
+          "kind": "core",
+          "interval": [
+            1416,
+            1656
+          ]
+        },
+        {
+          "kind": "transition",
+          "interval": [
+            1656,
+            1680
+          ]
+        },
+        {
+          "kind": "core",
+          "interval": [
+            1680,
+            1920
+          ]
+        },
+        {
+          "kind": "transition",
+          "interval": [
+            1920,
+            1944
+          ]
+        },
+        {
+          "kind": "core",
+          "interval": [
+            1944,
+            2184
+          ]
+        }
+      ],
+      "core_frames": 720,
+      "bridge_frames": 48,
+      "total_frames": 768,
+      "candidate_counts": [
+        4,
+        4,
+        4
+      ],
+      "edge_trials": 25,
+      "eligible_edges": 25,
+      "failures": {},
+      "can_route": false,
+      "root_contact": "UNKNOWN",
+      "semantic_truth": "UNKNOWN",
+      "status": "NUMERICAL_SHORT_PLAN",
+      "selected": [
+        {
+          "event_uid": "r47:058b4536f51d3c37255b5cf7",
+          "source_uid": "male_meditation",
+          "source_interval": [
+            1893,
+            2155
+          ],
+          "warp": {
+            "time_warp": [
+              [
+                1893,
+                1416.0
+              ],
+              [
+                1953,
+                1473.0
+              ],
+              [
+                1991,
+                1502.0
+              ],
+              [
+                2014,
+                1532.0
+              ],
+              [
+                2048,
+                1562.0
+              ],
+              [
+                2154,
+                1655.0
+              ]
+            ],
+            "anchor_source_frames": [
+              1953,
+              1991,
+              2014,
+              2048
+            ],
+            "cost": 0.0020591374172429203,
+            "rate_limits": [
+              0.75,
+              1.33
+            ],
+            "semantic_truth": "UNKNOWN",
+            "clock_contract": "ACTUAL_FRAME_CENTERS_WITH_HALF_OPEN_SUPPORT"
+          },
+          "score": 0.2301001209432476,
+          "phase_evidence_truncated": 0
+        },
+        {
+          "event_uid": "r47:28088078d89f6394a8b1fa44",
+          "source_uid": "female_FeiTian",
+          "source_interval": [
+            7528,
+            7798
+          ],
+          "warp": {
+            "time_warp": [
+              [
+                7528,
+                1680.0
+              ],
+              [
+                7541,
+                1697.0
+              ],
+              [
+                7631,
+                1772.0
+              ],
+              [
+                7738,
+                1862.0
+              ],
+              [
+                7770,
+                1892.0
+              ],
+              [
+                7797,
+                1919.0
+              ]
+            ],
+            "anchor_source_frames": [
+              7541,
+              7631,
+              7738,
+              7770
+            ],
+            "cost": 0.0019993463329694827,
+            "rate_limits": [
+              0.75,
+              1.33
+            ],
+            "semantic_truth": "UNKNOWN",
+            "clock_contract": "ACTUAL_FRAME_CENTERS_WITH_HALF_OPEN_SUPPORT"
+          },
+          "score": 0.15262374611548035,
+          "phase_evidence_truncated": 0
+        },
+        {
+          "event_uid": "r47:058b4536f51d3c37255b5cf7",
+          "source_uid": "male_meditation",
+          "source_interval": [
+            1893,
+            2155
+          ],
+          "warp": {
+            "time_warp": [
+              [
+                1893,
+                1944.0
+              ],
+              [
+                1953,
+                1998.0
+              ],
+              [
+                1991,
+                2028.0
+              ],
+              [
+                2014,
+                2058.0
+              ],
+              [
+                2048,
+                2088.0
+              ],
+              [
+                2154,
+                2183.0
+              ]
+            ],
+            "anchor_source_frames": [
+              1953,
+              1991,
+              2014,
+              2048
+            ],
+            "cost": 0.001610989269094745,
+            "rate_limits": [
+              0.75,
+              1.33
+            ],
+            "semantic_truth": "UNKNOWN",
+            "clock_contract": "ACTUAL_FRAME_CENTERS_WITH_HALF_OPEN_SUPPORT"
+          },
+          "score": 0.2706601357093547,
+          "phase_evidence_truncated": 0
+        }
+      ],
+      "score": 0.6509534757371707,
+      "whole_clip_D3": 63.486528015136656
+    },
+    {
+      "key": "song2_events3_gap48",
+      "song": 2,
+      "events": 3,
+      "transition_frames": 48,
+      "music_interval": [
+        1392,
+        2208
+      ],
+      "regions": [
+        {
+          "kind": "core",
+          "interval": [
+            1392,
+            1632
+          ]
+        },
+        {
+          "kind": "transition",
+          "interval": [
+            1632,
+            1680
+          ]
+        },
+        {
+          "kind": "core",
+          "interval": [
+            1680,
+            1920
+          ]
+        },
+        {
+          "kind": "transition",
+          "interval": [
+            1920,
+            1968
+          ]
+        },
+        {
+          "kind": "core",
+          "interval": [
+            1968,
+            2208
+          ]
+        }
+      ],
+      "core_frames": 720,
+      "bridge_frames": 96,
+      "total_frames": 816,
+      "candidate_counts": [
+        4,
+        4,
+        4
+      ],
+      "edge_trials": 25,
+      "eligible_edges": 25,
+      "failures": {},
+      "can_route": false,
+      "root_contact": "UNKNOWN",
+      "semantic_truth": "UNKNOWN",
+      "status": "NUMERICAL_SHORT_PLAN",
+      "selected": [
+        {
+          "event_uid": "r47:058b4536f51d3c37255b5cf7",
+          "source_uid": "male_meditation",
+          "source_interval": [
+            1893,
+            2155
+          ],
+          "warp": {
+            "time_warp": [
+              [
+                1893,
+                1392.0
+              ],
+              [
+                1953,
+                1443.0
+              ],
+              [
+                1991,
+                1473.0
+              ],
+              [
+                2014,
+                1502.0
+              ],
+              [
+                2048,
+                1532.0
+              ],
+              [
+                2154,
+                1631.0
+              ]
+            ],
+            "anchor_source_frames": [
+              1953,
+              1991,
+              2014,
+              2048
+            ],
+            "cost": 0.0032102229855698007,
+            "rate_limits": [
+              0.75,
+              1.33
+            ],
+            "semantic_truth": "UNKNOWN",
+            "clock_contract": "ACTUAL_FRAME_CENTERS_WITH_HALF_OPEN_SUPPORT"
+          },
+          "score": 0.23327948104057472,
+          "phase_evidence_truncated": 0
+        },
+        {
+          "event_uid": "r47:28088078d89f6394a8b1fa44",
+          "source_uid": "female_FeiTian",
+          "source_interval": [
+            7528,
+            7798
+          ],
+          "warp": {
+            "time_warp": [
+              [
+                7528,
+                1680.0
+              ],
+              [
+                7541,
+                1697.0
+              ],
+              [
+                7631,
+                1772.0
+              ],
+              [
+                7738,
+                1862.0
+              ],
+              [
+                7770,
+                1892.0
+              ],
+              [
+                7797,
+                1919.0
+              ]
+            ],
+            "anchor_source_frames": [
+              7541,
+              7631,
+              7738,
+              7770
+            ],
+            "cost": 0.0019993463329694827,
+            "rate_limits": [
+              0.75,
+              1.33
+            ],
+            "semantic_truth": "UNKNOWN",
+            "clock_contract": "ACTUAL_FRAME_CENTERS_WITH_HALF_OPEN_SUPPORT"
+          },
+          "score": 0.15262374611548035,
+          "phase_evidence_truncated": 0
+        },
+        {
+          "event_uid": "r47:058b4536f51d3c37255b5cf7",
+          "source_uid": "male_meditation",
+          "source_interval": [
+            1893,
+            2155
+          ],
+          "warp": {
+            "time_warp": [
+              [
+                1893,
+                1968.0
+              ],
+              [
+                1953,
+                2028.0
+              ],
+              [
+                1991,
+                2058.0
+              ],
+              [
+                2014,
+                2088.0
+              ],
+              [
+                2048,
+                2118.0
+              ],
+              [
+                2154,
+                2207.0
+              ]
+            ],
+            "anchor_source_frames": [
+              1953,
+              1991,
+              2014,
+              2048
+            ],
+            "cost": 0.0058439394606656925,
+            "rate_limits": [
+              0.75,
+              1.33
+            ],
+            "semantic_truth": "UNKNOWN",
+            "clock_contract": "ACTUAL_FRAME_CENTERS_WITH_HALF_OPEN_SUPPORT"
+          },
+          "score": 0.27995993305129524,
+          "phase_evidence_truncated": 0
+        }
+      ],
+      "score": 0.6655290255499657,
+      "whole_clip_D3": 62.1754653930664
+    },
+    {
+      "key": "song2_events3_gap72",
+      "song": 2,
+      "events": 3,
+      "transition_frames": 72,
+      "music_interval": [
+        1368,
+        2232
+      ],
+      "regions": [
+        {
+          "kind": "core",
+          "interval": [
+            1368,
+            1608
+          ]
+        },
+        {
+          "kind": "transition",
+          "interval": [
+            1608,
+            1680
+          ]
+        },
+        {
+          "kind": "core",
+          "interval": [
+            1680,
+            1920
+          ]
+        },
+        {
+          "kind": "transition",
+          "interval": [
+            1920,
+            1992
+          ]
+        },
+        {
+          "kind": "core",
+          "interval": [
+            1992,
+            2232
+          ]
+        }
+      ],
+      "core_frames": 720,
+      "bridge_frames": 144,
+      "total_frames": 864,
+      "candidate_counts": [
+        4,
+        4,
+        4
+      ],
+      "edge_trials": 25,
+      "eligible_edges": 25,
+      "failures": {},
+      "can_route": false,
+      "root_contact": "UNKNOWN",
+      "semantic_truth": "UNKNOWN",
+      "status": "NUMERICAL_SHORT_PLAN",
+      "selected": [
+        {
+          "event_uid": "r47:058b4536f51d3c37255b5cf7",
+          "source_uid": "male_meditation",
+          "source_interval": [
+            1893,
+            2155
+          ],
+          "warp": {
+            "time_warp": [
+              [
+                1893,
+                1368.0
+              ],
+              [
+                1953,
+                1428.0
+              ],
+              [
+                1991,
+                1458.0
+              ],
+              [
+                2014,
+                1488.0
+              ],
+              [
+                2048,
+                1518.0
+              ],
+              [
+                2154,
+                1607.0
+              ]
+            ],
+            "anchor_source_frames": [
+              1953,
+              1991,
+              2014,
+              2048
+            ],
+            "cost": 0.005843939460665689,
+            "rate_limits": [
+              0.75,
+              1.33
+            ],
+            "semantic_truth": "UNKNOWN",
+            "clock_contract": "ACTUAL_FRAME_CENTERS_WITH_HALF_OPEN_SUPPORT"
+          },
+          "score": 0.23450774303824667,
+          "phase_evidence_truncated": 0
+        },
+        {
+          "event_uid": "r47:28088078d89f6394a8b1fa44",
+          "source_uid": "female_FeiTian",
+          "source_interval": [
+            7528,
+            7798
+          ],
+          "warp": {
+            "time_warp": [
+              [
+                7528,
+                1680.0
+              ],
+              [
+                7541,
+                1697.0
+              ],
+              [
+                7631,
+                1772.0
+              ],
+              [
+                7738,
+                1862.0
+              ],
+              [
+                7770,
+                1892.0
+              ],
+              [
+                7797,
+                1919.0
+              ]
+            ],
+            "anchor_source_frames": [
+              7541,
+              7631,
+              7738,
+              7770
+            ],
+            "cost": 0.0019993463329694827,
+            "rate_limits": [
+              0.75,
+              1.33
+            ],
+            "semantic_truth": "UNKNOWN",
+            "clock_contract": "ACTUAL_FRAME_CENTERS_WITH_HALF_OPEN_SUPPORT"
+          },
+          "score": 0.15262374611548035,
+          "phase_evidence_truncated": 0
+        },
+        {
+          "event_uid": "r47:058b4536f51d3c37255b5cf7",
+          "source_uid": "male_meditation",
+          "source_interval": [
+            1893,
+            2155
+          ],
+          "warp": {
+            "time_warp": [
+              [
+                1893,
+                1992.0
+              ],
+              [
+                1953,
+                2043.0
+              ],
+              [
+                1991,
+                2073.0
+              ],
+              [
+                2014,
+                2102.0
+              ],
+              [
+                2048,
+                2133.0
+              ],
+              [
+                2154,
+                2231.0
+              ]
+            ],
+            "anchor_source_frames": [
+              1953,
+              1991,
+              2014,
+              2048
+            ],
+            "cost": 0.0031145652588774613,
+            "rate_limits": [
+              0.75,
+              1.33
+            ],
+            "semantic_truth": "UNKNOWN",
+            "clock_contract": "ACTUAL_FRAME_CENTERS_WITH_HALF_OPEN_SUPPORT"
+          },
+          "score": 0.2859367703729077,
+          "phase_evidence_truncated": 0
+        }
+      ],
+      "score": 0.6729507273049226,
+      "whole_clip_D3": 61.8275146484375
+    }
+  ],
+  "attribution": {
+    "slots": 95,
+    "full_music_top_changes": 13,
+    "local_music_top_changes": 2,
+    "median_spearman": 0.8688714153561518,
+    "source_delta": {
+      "female_meditation": {
+        "candidates": 613,
+        "mean": 0.00014359842895859712,
+        "std": 0.0329936088680321
+      },
+      "male_pipa_1": {
+        "candidates": 323,
+        "mean": 0.002400893367171648,
+        "std": 0.029296341511406185
+      },
+      "male_meditation": {
+        "candidates": 539,
+        "mean": -0.00031361417452170566,
+        "std": 0.030290207518519446
+      },
+      "male_pipa_2": {
+        "candidates": 304,
+        "mean": 6.323429978936485e-05,
+        "std": 0.028764815111310273
+      },
+      "male_ribbon_FenHe": {
+        "candidates": 270,
+        "mean": -0.00028697265406435387,
+        "std": 0.02569634311760657
+      },
+      "female_FeiTian": {
+        "candidates": 1012,
+        "mean": -0.0003019722154623767,
+        "std": 0.02810569153509494
+      },
+      "female_lotus": {
+        "candidates": 602,
+        "mean": -5.903416962903201e-05,
+        "std": 0.028901072060248067
+      },
+      "male_ribbon": {
+        "candidates": 198,
+        "mean": 0.004515265397826442,
+        "std": 0.022701895937728457
+      }
+    },
+    "historical_val": {
+      "phase_offsets": {
+        "tasks": 118,
+        "methods": {
+          "Content": {
+            "R1": 0.2546296296296296,
+            "ci95": [
+              0.18796296296296297,
+              0.32129629629629625
+            ],
+            "songs": 6
+          },
+          "Duration": {
+            "R1": 0.20000000000000004,
+            "ci95": [
+              0.20000000000000004,
+              0.20000000000000004
+            ],
+            "songs": 6
+          },
+          "Energy": {
+            "R1": 0.1898148148148148,
+            "ci95": [
+              0.09166666666666667,
+              0.29444444444444445
+            ],
+            "songs": 6
+          },
+          "Rule": {
+            "R1": 0.19351851851851853,
+            "ci95": [
+              0.1036574074074074,
+              0.2916666666666667
+            ],
+            "songs": 6
+          },
+          "MusicSwap": {
+            "R1": 0.21203703703703702,
+            "ci95": [
+              0.17037037037037037,
+              0.2537037037037037
+            ],
+            "songs": 6
+          },
+          "BothZero": {
+            "R1": 0.20000000000000004,
+            "ci95": [
+              0.20000000000000004,
+              0.20000000000000004
+            ],
+            "songs": 6
+          }
+        },
+        "paired_differences": {
+          "Duration": {
+            "delta": 0.054629629629629584,
+            "ci95": [
+              -0.012037037037037077,
+              0.12129629629629624
+            ],
+            "songs": 6
+          },
+          "Energy": {
+            "delta": 0.06481481481481481,
+            "ci95": [
+              -0.030555555555555555,
+              0.15833333333333333
+            ],
+            "songs": 6
+          },
+          "Rule": {
+            "delta": 0.06111111111111111,
+            "ci95": [
+              -0.0638888888888889,
+              0.1611111111111111
+            ],
+            "songs": 6
+          },
+          "MusicSwap": {
+            "delta": 0.04259259259259259,
+            "ci95": [
+              -0.04074074074074074,
+              0.1259259259259259
+            ],
+            "songs": 6
+          },
+          "BothZero": {
+            "delta": 0.054629629629629584,
+            "ci95": [
+              -0.012037037037037077,
+              0.12129629629629624
+            ],
+            "songs": 6
+          }
+        }
+      },
+      "equal_duration_near_motion_energy": {
+        "tasks": 128,
+        "methods": {
+          "Content": {
+            "R1": 0.3,
+            "ci95": [
+              0.10000000000000002,
+              0.5
+            ],
+            "songs": 6
+          },
+          "MusicSwap": {
+            "R1": 0.24444444444444446,
+            "ci95": [
+              0.061111111111111116,
+              0.4666666666666666
+            ],
+            "songs": 6
+          },
+          "Energy": {
+            "R1": 0.08287037037037037,
+            "ci95": [
+              0.024999999999999998,
+              0.1486111111111111
+            ],
+            "songs": 6
+          },
+          "Duration": {
+            "R1": 0.20000000000000004,
+            "ci95": [
+              0.20000000000000004,
+              0.20000000000000004
+            ],
+            "songs": 6
+          },
+          "BothZero": {
+            "R1": 0.20000000000000004,
+            "ci95": [
+              0.20000000000000004,
+              0.20000000000000004
+            ],
+            "songs": 6
+          }
+        },
+        "paired_differences": {
+          "MusicSwap": {
+            "delta": 0.05555555555555558,
+            "ci95": [
+              -0.1972222222222222,
+              0.34722222222222227
+            ],
+            "songs": 6
+          },
+          "Energy": {
+            "delta": 0.21712962962962967,
+            "ci95": [
+              -0.036111111111111094,
+              0.46678240740740584
+            ],
+            "songs": 6
+          },
+          "Duration": {
+            "delta": 0.09999999999999996,
+            "ci95": [
+              -0.10000000000000003,
+              0.3
+            ],
+            "songs": 6
+          },
+          "BothZero": {
+            "delta": 0.09999999999999996,
+            "ci95": [
+              -0.10000000000000003,
+              0.3
+            ],
+            "songs": 6
+          }
+        }
+      },
+      "same_song_wrong_time": {
+        "tasks": 20,
+        "methods": {
+          "Content": {
+            "R1": 0.2,
+            "ci95": [
+              null,
+              null
+            ],
+            "songs": 1
+          },
+          "MusicSwap": {
+            "R1": 0.25,
+            "ci95": [
+              null,
+              null
+            ],
+            "songs": 1
+          },
+          "Energy": {
+            "R1": 0.05,
+            "ci95": [
+              null,
+              null
+            ],
+            "songs": 1
+          },
+          "Duration": {
+            "R1": 0.2,
+            "ci95": [
+              null,
+              null
+            ],
+            "songs": 1
+          },
+          "BothZero": {
+            "R1": 0.2,
+            "ci95": [
+              null,
+              null
+            ],
+            "songs": 1
+          }
+        },
+        "paired_differences": {
+          "MusicSwap": {
+            "delta": -0.04999999999999999,
+            "ci95": [
+              null,
+              null
+            ],
+            "songs": 1
+          },
+          "Energy": {
+            "delta": 0.15000000000000002,
+            "ci95": [
+              null,
+              null
+            ],
+            "songs": 1
+          },
+          "Duration": {
+            "delta": 0.0,
+            "ci95": [
+              null,
+              null
+            ],
+            "songs": 1
+          },
+          "BothZero": {
+            "delta": 0.0,
+            "ci95": [
+              null,
+              null
+            ],
+            "songs": 1
+          }
+        }
+      }
+    },
+    "independent_blind_evaluated": 0,
+    "can_route": false
+  },
+  "condition_probe": {
+    "reference_and_query_phase_gradient_norm": [
+      8.301622438011691e-05,
+      2.1791285689687356e-05
+    ],
+    "phase_zero_output_rms": 0.02018740586936474,
+    "hidden_poison_invariant": true,
+    "invalid_frame_count": 64,
+    "protected_frame_count": 16,
+    "probe": "FIXED_RANDOM_WEIGHTS_NONZERO_READOUT",
+    "scope": "STRUCTURAL_PROPAGATION",
+    "music_context_routing": "EXISTING_BACKBONE_CONTROLLER",
+    "actual_frozen_model_quality_evaluated": false
+  },
+  "independent": {
+    "exact_arrays_and_scores": true,
+    "accepted_short_plans": 18,
+    "r49_sealed_files_verified": 17,
+    "neural_training_steps": 0,
+    "can_route": false
+  },
+  "pytest": "641 passed, 10 skipped, 5 warnings in 30.94s",
+  "model": {
+    "checkpoint_sha256": "212148e7cd86b482cc7734035725b1165edcd7a1c35e03fa513f6982f440e772",
+    "manifest_sha256": "4b6b884550b120b685b2867996ac5bb7e2efceab127a2b7901d4001af482405e",
+    "normalizer_sha256": "80a83d6f7a5f1bca62d3298cba206a871188f5c6b1519ab4a897672c7c986e35",
+    "device": "cuda"
+  },
+  "can_route": false,
+  "neural_optimizer_steps": 0,
+  "code_commit": "047a1b57d57f48b6ff639a1d5ada7e6054f26f5b"
+}
