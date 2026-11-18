@@ -11,7 +11,7 @@ def fresh(out):
     out.mkdir(parents=True)
     return out
 
-def regions(R,J,parents,spans):
+def regions(R,J,parents,spans,origin=0):
     P=relative_fk(R,J,parents)
     def stat(a,b):
         result={'frames':b-a}
@@ -24,7 +24,11 @@ def regions(R,J,parents,spans):
         return result
     rows=[]
     for r in spans:
-        a,b=r['interval'];rows.append(dict(r,metrics=stat(a,b)))
+        a,b=(int(t)-int(origin) for t in r['interval'])
+        if not 0<=a<b<=len(P):raise ValueError('Region clock escapes clip; supply explicit music origin')
+        row=dict(r,interval=[a,b],metrics=stat(a,b))
+        if origin:row['music_interval']=r['interval']
+        rows.append(row)
         if a:
             lo=max(0,a-4);hi=min(len(P),a+4)
             rows.append(dict(kind='left_boundary',interval=[lo,hi],metrics=stat(lo,hi)))

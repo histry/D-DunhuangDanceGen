@@ -85,7 +85,7 @@ def run(out,controls=False):
                 if k<count-1:
                     q,e=edges[k,i,ids[k+1]];chunks.append(q);connections.append(e)
             R=np.concatenate(chunks);name=key+'_'+arm;arrays[name]=relative_fk(R,net.joints,net.parents).astype('<f4');arrays[name+'_R']=R
-            selected[arm]=dict(status='NUMERICAL_SHORT_PLAN',**result,events=events,connections=connections,kinematics=regions(R,net.joints,net.parents,spans))
+            selected[arm]=dict(status='NUMERICAL_SHORT_PLAN',**result,events=events,connections=connections,kinematics=regions(R,net.joints,net.parents,spans,origin=spans[0]["interval"][0]))
             if arm=='Top4':assert [v['event_uid'] for v in events]==[v['event_uid'] for v in base['selected']],'Frozen R50 choice mismatch'
         raw_pools=[[{k:v for k,v in c.items() if k!='R'} for c in p] for p in pools]
         edge_rows=[dict(slot=k,left=i,right=j,**e) for (k,i,j),(q,e) in sorted(edges.items())]
@@ -125,8 +125,8 @@ def control_run(out):
                     assert e==edges[k,i,ids[k+1]][1] and q is not None,'Frozen graph curve differs'
                     chunks.append(q);connections.append(e)
             R=np.concatenate(chunks);name=r['key']+'_'+arm;arrays[name]=relative_fk(R,net.joints,net.parents).astype('<f4');arrays[name+'_R']=R
-            selected[arm]=dict(status='NUMERICAL_SHORT_PLAN',**result,events=events,connections=connections,kinematics=regions(R,net.joints,net.parents,r['regions']))
-            if arm in ('Top4','FullPool'):assert selected[arm]==r['selected'][arm],'Main search outcome changed'
+            selected[arm]=dict(status='NUMERICAL_SHORT_PLAN',**result,events=events,connections=connections,kinematics=regions(R,net.joints,net.parents,r['regions'],origin=r['music_interval'][0]))
+            if arm in ('Top4','FullPool'):assert {k:v for k,v in selected[arm].items() if k!='kinematics'}=={k:v for k,v in r['selected'][arm].items() if k!='kinematics'},'Main choice changed; regional evaluation is versioned separately'
         records.append(dict(r,pools=[[{k:v for k,v in c.items() if k!='R'} for c in p] for p in pools],catalog_pools=catalog_pools,selected=selected))
         print('R51_PLAN_CONTROLS',r['key'],flush=True)
     np.savez_compressed(out/'arrays.npz',**arrays);write(out/'result.json',dict(original,records=records,main_graph_reused=True))
