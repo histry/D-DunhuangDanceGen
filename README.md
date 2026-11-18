@@ -346,3 +346,10 @@ R37规划及默认EDGE路径保持冻结。R38用真实连续录制训练Context
 - 本机视频：`outputs/reperformance_r44_01/videos/index.html`；逐帧条件对照：`outputs/reperformance_r44_01/viewer_controls/index.html`。
 - [实验报告](reports/r44_release/report.md)、[公开统计](reports/r44_release/summary.json)、[独立封存核验](reports/r44_release/independent_seal_check.json)。
 - 隔离实现：`src/dunhuang/research/reperformance_r44`、`src/dunhuang/research/retrieval_audit_r44`；606 passed、10 skipped。默认Planner/EDGE/Native继续使用原路径。
+
+
+## R52：启发式强基线与完整来源研究
+
+保留 Heuristic＋E1-W＋Geometry，修复分区时钟，将完整参考重建与真实连续缺口补间分开。两阶段共用 `EVENT_PLAN_R52_V1` 和音乐时钟；两组Source／Context适配各固定240步，Lodge／IO／General冻结。新候选尚未建立生成净收益，未进入整曲或正式物理准入。
+
+详见 [R52最终报告](reports/R52完整来源与启发式强基线实验报告.md)、[独立复验](reports/r52_release/independent.json) 和 [657项通过的完整回归](reports/r52_release/pytest_final_full.log)。本地效果入口为 `outputs/strong_baseline_r52_01/index.html`；真实媒体与权重不写入Git。

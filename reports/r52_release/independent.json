@@ -1,0 +1,143 @@
+{
+  "exact_scientific_replays": 7,
+  "replay_details": [
+    {
+      "main": "outputs/strong_baseline_r52_01/plans",
+      "replay": "outputs/strong_baseline_r52_01/replay/plans",
+      "exact_arrays": 38,
+      "non_scientific_metadata_differences": [
+        {
+          "path": "weights.device",
+          "main": "cuda",
+          "replay": "cpu",
+          "scope": "EXECUTION_METADATA_ONLY_SCORES_FROZEN_NO_NETWORK_RERANK"
+        }
+      ]
+    },
+    {
+      "main": "outputs/strong_baseline_r52_01/plan_controls",
+      "replay": "outputs/strong_baseline_r52_01/replay/plan_controls",
+      "exact_arrays": 194,
+      "non_scientific_metadata_differences": []
+    },
+    {
+      "main": "outputs/strong_baseline_r52_01/music_controls",
+      "replay": "outputs/strong_baseline_r52_01/replay/music_controls",
+      "exact_arrays": 12,
+      "non_scientific_metadata_differences": []
+    },
+    {
+      "main": "outputs/strong_baseline_r52_01/frozen_full",
+      "replay": "outputs/strong_baseline_r52_01/replay/frozen_full",
+      "exact_arrays": 10,
+      "non_scientific_metadata_differences": []
+    },
+    {
+      "main": "outputs/strong_baseline_r52_01/main",
+      "replay": "outputs/strong_baseline_r52_01/replay/main",
+      "exact_arrays": 10,
+      "non_scientific_metadata_differences": []
+    },
+    {
+      "main": "outputs/strong_baseline_r52_01/controls",
+      "replay": "outputs/strong_baseline_r52_01/replay/controls",
+      "exact_arrays": 24,
+      "non_scientific_metadata_differences": []
+    },
+    {
+      "main": "outputs/strong_baseline_r52_01/no_phase",
+      "replay": "outputs/strong_baseline_r52_01/replay/no_phase",
+      "exact_arrays": 10,
+      "non_scientific_metadata_differences": []
+    }
+  ],
+  "gradient_snapshot_replays": 6,
+  "r51_sealed_files_verified": 88,
+  "unchanged_heuristic_trajectories": 18,
+  "applied_no_beat_clock_audit": [
+    {
+      "key": "song0_events2_gap48",
+      "actual_no_beat_frame_center_maps": [
+        [
+          [
+            2020,
+            1536
+          ],
+          [
+            2267,
+            1775
+          ]
+        ],
+        [
+          [
+            2473,
+            1824
+          ],
+          [
+            2708,
+            2063
+          ]
+        ]
+      ],
+      "compiled_source_Core_exact": true,
+      "registered_source_events_retain_original_E1W_metadata": true
+    },
+    {
+      "key": "song1_events2_gap48",
+      "actual_no_beat_frame_center_maps": [
+        [
+          [
+            2020,
+            1534
+          ],
+          [
+            2267,
+            1773
+          ]
+        ],
+        [
+          [
+            2473,
+            1822
+          ],
+          [
+            2708,
+            2061
+          ]
+        ]
+      ],
+      "compiled_source_Core_exact": true,
+      "registered_source_events_retain_original_E1W_metadata": true
+    },
+    {
+      "key": "song2_events2_gap48",
+      "actual_no_beat_frame_center_maps": [
+        [
+          [
+            2660,
+            1536
+          ],
+          [
+            2895,
+            1775
+          ]
+        ],
+        [
+          [
+            2473,
+            1824
+          ],
+          [
+            2708,
+            2063
+          ]
+        ]
+      ],
+      "compiled_source_Core_exact": true,
+      "registered_source_events_retain_original_E1W_metadata": true
+    }
+  ],
+  "optimizer_calls": 0,
+  "train_fit_scope": "FIXED_TRAIN_ROWS_BEFORE_AFTER_NO_SELECTION",
+  "can_route": false
+}
