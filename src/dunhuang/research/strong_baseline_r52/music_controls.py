@@ -26,7 +26,7 @@ def run(out):
   if r['events']!=2 or r['gap']!=48:continue
   selection=next(iter(r['selected'].values()));a,b=r['music_interval'];R=z[r['key']+'_'+next(iter(r['selected']))+'_R'];chunks=[]
   for e in selection['events']:
-   s,t=e['source_interval'];chunks.append(rotation_sample(lib.rotations[e['source_uid']],np.linspace(s,t,241)[:-1]))
+   s,t=e['source_interval'];chunks.append(rotation_sample(lib.rotations[e['source_uid']],np.linspace(s,t-1,240)))
   q,evidence=bridge(chunks[0],chunks[1],48,net,ref);linear=None if q is None else np.concatenate([chunks[0],q,chunks[1]])
   definitions=[('CorrectE1W',r['song'],a,R),('WrongSong',(r['song']+1)%3,a,R),('SameSongWrongTime',r['song'],a+240,R)]
   if linear is not None:definitions.append(('LinearNoBeat',r['song'],a,linear))

@@ -7,7 +7,7 @@ from dunhuang.research.strong_baseline_r52.conditions import body_loss
 
 
 def plan():
- event=dict(event_uid='e',source_uid='s',source_interval=[0,240],target_interval=[1500,1740],time_warp=[[0,1500],[240,1740]],phase_scope='KINEMATIC_PROXY_NOT_SEMANTIC_TRUTH',sdmr_prior=dict(qualified=False,consumed_by_denoiser=False),left_context=dict(kind='UNKNOWN'),right_context=dict(kind='UNKNOWN'),transition_budget=0)
+ event=dict(event_uid='e',source_uid='s',source_interval=[0,240],target_interval=[1500,1740],time_warp=[[0,1500],[239,1739]],clock_contract='ACTUAL_FRAME_CENTERS_WITH_HALF_OPEN_SUPPORT',phase_scope='KINEMATIC_PROXY_NOT_SEMANTIC_TRUTH',sdmr_prior=dict(qualified=False,consumed_by_denoiser=False),left_context=dict(kind='UNKNOWN'),right_context=dict(kind='UNKNOWN'),transition_budget=0)
  return dict(schema=VERSION,fps=30,target_interval=[1500,1740],root_truth='UNKNOWN',contact_truth='UNKNOWN',events=[event])
 
 
@@ -15,7 +15,7 @@ def test_complete_contract_rejects_truncated_clock_and_invented_truth():
  p=plan();assert validate(p) is p
  for change in ('warp','root','sdmr','budget'):
   q=copy.deepcopy(p)
-  if change=='warp':q['events'][0]['time_warp'][-1][0]=239
+  if change=='warp':q['events'][0]['time_warp'][-1][0]=240
   elif change=='root':q['root_truth']='INFERRED'
   elif change=='sdmr':q['events'][0]['sdmr_prior']['qualified']=True
   else:q['events'][0]['transition_budget']=1
