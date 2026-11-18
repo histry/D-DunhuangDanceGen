@@ -14,7 +14,7 @@ from dunhuang.research.warp_coupling_r53.population import Population
 from dunhuang.research.transition_planning_r50.planning import bridge
 from dunhuang.research.transition_planning_r50.common import layout
 from dunhuang.research.validation_r51.common import regions
-ROOT=Path('outputs/whole_song_geometry_01')
+ROOT=Path('outputs/whole_song_geometry_02')
 CFG=read(Path(__file__).with_name('protocol.json'))
 
 def fresh(p):
