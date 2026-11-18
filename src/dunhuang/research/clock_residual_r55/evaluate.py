@@ -79,7 +79,7 @@ def evaluate(out):
     for i,t in enumerate(tasks):
      if t['group'] in groups and t['family']==family:raw[t['group']][t['recording']].append(retrieval_metrics(scores[name][i],t['positive'])['recall_at1'])
     per[name]={g:float(np.mean([np.mean(v) for v in rec.values()])) for g,rec in raw.items()};by[name]=mean_ci(list(per[name].values()))
-   comparisons={name:mean_ci([per['Conditional'][g]-per[name][g] for g in per['Conditional'].keys()&per[name].keys()]) for name in per if name!='Conditional'}
+   comparisons={name:mean_ci([per['Conditional'][g]-per[name][g] for g in sorted(per['Conditional'].keys()&per[name].keys())]) for name in per if name!='Conditional'}
    summary[role+'_'+family]=dict(methods=by,paired_differences=comparisons,group_R1=per)
  # Train-only calibration is computed and sealed before ANY Val clock readout.
  cal_ids=selected_clock_rows(s,s.split['calibration']);cal,aa=clock_readout(s,models['Conditional'],cal_ids);calibration=confidence([r for r in cal if r['control']=='actual']);write(out/'calibration.json',calibration);cal_hash=sha(out/'calibration.json');save_arrays(out/'calibration_scores.npz',aa)

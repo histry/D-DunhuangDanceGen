@@ -7,3 +7,5 @@
 P0音乐帧恰好覆盖一次；P1全部连接通过原筛查；P2保存全片、Core、过渡与边界D1/D2/D3及来源SO3、重复和拍点代理；P3 Root/Contact/Native24依然未知或不可评。输出rotations、root-relative 3D、逐帧来源/时间图，world_root_translation用NaN+false观测掩码，不伪造Root=0真值。只称几何整曲研究预览。
 
 先GitHub发布，再服务器tmux run；verify用新进程从原来源重建所有候选、连接、路径与NPZ，禁止优化器。观看页播放完整音乐，支持逐帧、公共时钟、来源事件跳转、3D方位和D3曲线。
+
+首轮01已完整运行与逐字节复验。02仅修正导出字段：原`source_complete_evidence`实际保存阶段证据截断计数，现改为`phase_evidence_truncated_count`；所有布局、评分、阈值、候选和搜索预算不变。02须重新从来源运行并独立复验，并核对轨迹NPZ与01完全相同；不把字段修正声称为质量收益。

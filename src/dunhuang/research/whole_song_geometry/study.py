@@ -93,7 +93,7 @@ def run(out,render=True):
  chunks=[];selected=[];connections=[];source_map=np.full(frames,np.nan);source_event=np.full(frames,-1,dtype=np.int32)
  for slot,i in enumerate(choice['ids']):
   node=pools[slot][i];chunks.append(node['R']);a,b=cores[slot];source_map[a:b]=node['source_positions'];source_event[a:b]=slot
-  selected.append(dict(event_uid=node['unit']['unit_uid'],source_uid=node['unit']['source_uid'],source_interval=node['unit']['source_interval'],target_interval=[a,b],time_warp=node['warp'],heuristic=node['heuristic'],source_complete_evidence=node['unit']['stage_evidence_truncated'],native_sha256=pop.lib.rows[node['unit']['source_uid']][0]['reference']['sha256']))
+  selected.append(dict(event_uid=node['unit']['unit_uid'],source_uid=node['unit']['source_uid'],source_interval=node['unit']['source_interval'],target_interval=[a,b],time_warp=node['warp'],heuristic=node['heuristic'],phase_evidence_truncated_count=node['unit']['stage_evidence_truncated'],native_sha256=pop.lib.rows[node['unit']['source_uid']][0]['reference']['sha256']))
   if slot<len(pools)-1:
    curve,evidence=edges[slot,i,choice['ids'][slot+1]];assert curve is not None;chunks.append(curve);connections.append(evidence)
  R=np.concatenate(chunks);assert len(R)==frames and np.isfinite(R).all();P=relative_fk(R,pop.net.joints,pop.net.parents).astype('<f4');core_errors=[]
