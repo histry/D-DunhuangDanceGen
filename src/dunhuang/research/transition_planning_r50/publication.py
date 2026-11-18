@@ -14,7 +14,7 @@ ROOTS = [ROOT,Path("outputs/transition_planning_r50_replay"),Path("outputs/attri
 def run():
     from .conditions import diagnose
     # Re-execute current condition contract, including exact protected-frame permissions.
-    diagnose()
+    phase_probe = diagnose()
     p = read(ROOT/"result.json")
     a = read("outputs/attribution_r50_01/result.json")
     ind = read(PUB/"independent.json")
@@ -23,7 +23,7 @@ def run():
     assert acceptance["protocol_sha256"]==digest(ROOT/"viewer/protocol.json")
     assert acceptance["verified_unix"]<Path("outputs/attribution_r50_01/result.json").stat().st_mtime
     summary = dict(plan_cases=[{k:v for k,v in r.items() if k!="connections"} for r in p["cases"]],
-                   attribution=a["summary"],condition_probe=a["condition_probe"],independent=ind,
+                   attribution=a["summary"],condition_probe=phase_probe,independent=ind,
                    pytest=(PUB/"pytest.log").read_text().strip().splitlines()[-1],
                    model=a["model"],can_route=False,neural_optimizer_steps=0,
                    code_commit=subprocess.check_output(["git","rev-parse","HEAD"],text=True).strip())
@@ -62,10 +62,10 @@ def run():
               "## 条件传播","","独立PhaseReference子类修复可变长来源路径的阶段置零，保留旧模块供冻结调用。"
               "MusicReperformanceCondition显式校验音乐、来源特征、源时钟、阶段、双侧上下文、掩码和编辑许可。"
               "固定随机权重与非零读出用于检查结构传播，尚未加载真实生成权重验证训练收益。"
-              f"参考/查询阶段梯度范数 {a['condition_probe']['reference_and_query_phase_gradient_norm']}，"
-              f"阶段置零输出RMS变化 {a['condition_probe']['phase_zero_output_rms']}。"
-              "无效来源改成NaN后输出逐位一致，禁编辑首尾区域精确保留输入隐藏状态。"
-              "主归因复验完成后补充的编辑许可保护在发布进程重新执行断言。音乐和上下文继续由现有主干与Controller路由，"
+              f"参考/查询阶段梯度范数 {phase_probe['reference_and_query_phase_gradient_norm']}，"
+              f"阶段置零输出RMS变化 {phase_probe['phase_zero_output_rms']}。"
+              "来源后64帧实际屏蔽并改成NaN后输出逐位一致，禁编辑首尾16帧精确保留输入隐藏状态。"
+              "旧探针误切了关节维度而未真正遮帧；发布版已修正为来源帧维度并重新验证，不把旧断言当成有效屏蔽证据。编辑许可保护也在发布进程重新执行断言。音乐和上下文继续由现有主干与Controller路由，"
               "本轮结构探针不作其质量改进结论。","",
               "## 验证与发布","",f"完整回归 {summary['pytest']}。"
               "主轨迹与完整归因均由新进程重算，数组及科学JSON精确一致，R49的17个封存文件逐哈希保持。"

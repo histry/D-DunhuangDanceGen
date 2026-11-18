@@ -103,10 +103,12 @@ def diagnose():
         model.set_condition(packet)
         zero = model.inject(0,hidden)
         delta = float((output-zero).square().mean().sqrt())
-        valid[:,:,64:] = False
+        valid[:,64:,:] = False
+        assert int((~valid.any(-1)).sum())==64
         model.set_condition(packet)
         masked = model.inject(0,hidden)
-        features[:,:,64:] = float("nan")
+        features[:,64:,:,:] = float("nan")
+        assert torch.isnan(features[~valid]).all()
         model.set_condition(packet)
         poisoned = model.inject(0,hidden)
         assert torch.equal(masked,poisoned)
@@ -118,6 +120,6 @@ def diagnose():
         assert torch.equal(protected[:,-8:],hidden[:,-8:])
     assert min(norms)>0 and delta>0
     return dict(reference_and_query_phase_gradient_norm=norms,phase_zero_output_rms=delta,
-                hidden_poison_invariant=True,probe="FIXED_RANDOM_WEIGHTS_NONZERO_READOUT",
+                hidden_poison_invariant=True,invalid_frame_count=64,protected_frame_count=16,probe="FIXED_RANDOM_WEIGHTS_NONZERO_READOUT",
                 scope="STRUCTURAL_PROPAGATION",music_context_routing="EXISTING_BACKBONE_CONTROLLER",
                 actual_frozen_model_quality_evaluated=False)
