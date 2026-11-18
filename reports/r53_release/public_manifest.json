@@ -1,9 +1,10 @@
 {
+  "scope": "CANONICAL_GIT_BLOB_PUBLIC_TEXT; CHECKOUT_CRLF_MAY_DIFFER; RAW_SCIENCE_SEAL_UNCHANGED",
   "files": [
     {
       "name": "cleanup.json",
-      "bytes": 418,
-      "sha256": "fc9c699ad32e302eb3caa624602b2ea1aa5d4a8d0573907e1acaf78c8c25cd81"
+      "bytes": 409,
+      "sha256": "cf28fb6280c51731a9b29788dd7f7a9dfd085da1f60d15ce3ed08eab4c191137"
     },
     {
       "name": "controls.log",
@@ -12,8 +13,8 @@
     },
     {
       "name": "controls_browser.json",
-      "bytes": 497,
-      "sha256": "c94deab50be42c3ea74a5643c885cb5c9fcd5a2d9cd1cb81ceab172c558a9d62"
+      "bytes": 484,
+      "sha256": "4e799929d99af2094e0361dab4d6c36efac1e994a2c1dca2f4387778a2999190"
     },
     {
       "name": "controls_receipt.txt",
@@ -27,8 +28,8 @@
     },
     {
       "name": "examples_browser.json",
-      "bytes": 613,
-      "sha256": "37b67f0a38b9f12ff5ef25071d5a2c36994d93d6e3411075e965ab1805c9b7b9"
+      "bytes": 599,
+      "sha256": "6c0c7c7699d5f20dc02b215d81a4834fb6aa53701e7ebcccc612bb3636fa412c"
     },
     {
       "name": "examples_receipt.txt",
@@ -47,8 +48,8 @@
     },
     {
       "name": "local_collection.json",
-      "bytes": 409,
-      "sha256": "3a07138d0e88a3d48599fedb88a34c5e6760ac3138a0343652c337d985a3d67f"
+      "bytes": 399,
+      "sha256": "64d0c76436a1a88c565eab103e248e9c3074f579647be540f1cdf94d77d9d174"
     },
     {
       "name": "main.log",
@@ -57,8 +58,8 @@
     },
     {
       "name": "main_browser.json",
-      "bytes": 414,
-      "sha256": "71ca997e354559fc5080b038987ac7a43aab97321bbd67c8ffe7a055681204c6"
+      "bytes": 413,
+      "sha256": "4c2b11f970920621d641f8bfc929256abc414f9edf6d7b9967c84cf85bf1355d"
     },
     {
       "name": "main_receipt.txt",
@@ -72,8 +73,8 @@
     },
     {
       "name": "preview_browser.json",
-      "bytes": 436,
-      "sha256": "61fe3a08425eeb5416186bdc4232b8aaaeab36e38f0088116f89831786766985"
+      "bytes": 435,
+      "sha256": "18b1ea6719c803af828e47fc253e1ba55a445ef915a4079fde6ee0947408788a"
     },
     {
       "name": "preview_receipt.txt",
@@ -82,13 +83,13 @@
     },
     {
       "name": "public_export_first_attempt.json",
-      "bytes": 269,
-      "sha256": "e5dfd384f3da7a2d84fe4b80a874685ee0550ca15304b4e9a7bde59fe01bb4b8"
+      "bytes": 259,
+      "sha256": "829e34a26962f8eebbed6ea7c5e6f01ac47456f71ccbb4872420681ea278e475"
     },
     {
       "name": "public_export_recheck.json",
-      "bytes": 294,
-      "sha256": "efa577c2988333f757763baa625ce8ad9f17a6b149f197b42258ae832bc8b46e"
+      "bytes": 285,
+      "sha256": "bf600f65f896cfa79fbbfed0d30a6f85e2ab8003cba0e0e2071a1fe490fb8695"
     },
     {
       "name": "publication.log",
