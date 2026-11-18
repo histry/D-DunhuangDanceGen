@@ -18,10 +18,11 @@ def official(main,out):
             for method in r['methods']:
                 R=z[r['key']+'_'+method+'_R'];x=np.zeros((256,139),np.float32);x[:,7:]=sixd(R,row=True).reshape(256,132)
                 with torch.no_grad():P=rt.f(torch.tensor(x[None],device='cuda'),rt.s)[0,:,:22].cpu().numpy()
+                P=P-P[:,:1] # Official FK includes rest pelvis J[0]; saved contract is pelvis-relative.
                 error=float(abs(P-z[r['key']+'_'+method+'_P']).max());assert error<2e-6;maximum=max(maximum,error);count+=1
         rt.check()
     finally:rt.close()
-    write(out,dict(official_fk_executed=True,trajectories=count,maximum_error_m=maximum,root_scope='ZERO_ROOT_FOR_BODY_RELATIVE_IMPLEMENTATION_CHECK_ONLY',physical_qualified=False))
+    write(out,dict(official_fk_executed=True,trajectories=count,maximum_error_m=maximum,root_scope='ZERO_ROOT_AND_EXPLICIT_OFFICIAL_PELVIS_ORIGIN_REMOVAL_FOR_BODY_RELATIVE_CHECK',physical_qualified=False))
 
 def verify(out):
     G=Path('outputs/bridge_dynamics_r48_01');parents=[]

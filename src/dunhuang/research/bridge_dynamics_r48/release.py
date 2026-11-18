@@ -34,6 +34,7 @@ def run(out):
     lines+=['','代码先推GitHub，再服务器tmux。成功/失败、launcher和SHA回执保留，观看包逐哈希回传并实际浏览器验收；最终发布/临时SSH清理见publication_receipt与cleanup_receipt。仍被研究依赖及封存引用的旧代码保留，没有为清理外观破坏基线。','本轮神经训练0、新神经采样0、整曲0。不得将几何优化叫学习式音乐演绎；下一步应以真实时钟内容检验、合法来源支持和实际动态证据决定。','','## 实现依据','','采用[SciPy bounded least_squares](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.least_squares.html)的受限局部最小二乘机制，未声称二阶SQP或全局解；音频时间按[librosa0.11 onset中心定义](https://librosa.org/doc/0.11.0/generated/librosa.onset.onset_strength.html)审计，未通过经验偏移调参重贴时钟标签。']
     ratio=np.median([r['metrics']['G3']['gap_D3']/max(r['metrics']['G1']['gap_D3'],1e-12) for r in g['records'] if 'G3' in r['metrics'] and 'G1' in r['metrics']])
     lead=['## 实际结论','',f"冻结R41内容在同合同Train时钟任务R@1={p['summary']['B2Content']['accuracy']:.4%}，优于能量、固定规则、置零和换音乐，必要内容检验通过。48组既有训练音乐重用，不能提升为独立泛化或语义阶段真值。G3/G1的Gap D3中位比={ratio:.8f}，仅极小整体变化，不支持统一升级。研究候选{dict(counts)}，所有正式路由、物理资格仍关闭。",'没有经过验证的阶段监督，B3Verified不可评；此处缺失的是可核验阶段关系，不要求必须由人工提供。已有物理时钟足以开展本轮客观测试，但不能冒充语义阶段监督。没有新增神经训练或整曲。','']
+    lines+=['','首次官方FK核验误把含静止骨盆原点J[0]的结果直接与骨盆为零的保存数组比较，出现约0.351407米常量偏移；扣除骨盆原点后按原2e-6米容差重新实算。动作数组、实验阈值、来源及评分未改，首次失败日志与回执原样保留。']
     lines[4:4]=lead
     (out/'report.md').write_text('\n'.join(lines)+'\n',encoding='utf8')
     for name in ROOTS:
