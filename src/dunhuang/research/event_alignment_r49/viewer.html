@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>R49 音乐与动作候选预演</title>
+<style>
+body{max-width:1100px;margin:32px auto;padding:0 20px;background:#f4f3eb;color:#183b34;font:16px system-ui} h1{font-size:2rem} audio,input[type=range]{width:100%} button,select{padding:8px 12px;font:inherit} .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px} article{background:#fff;border:1px solid #baccc2;border-radius:12px;padding:14px} canvas{width:100%;max-height:380px} code{overflow-wrap:anywhere} pre{white-space:pre-wrap} @media(max-width:650px){.grid{grid-template-columns:1fr}}
+</style>
+<h1>敦煌音乐与 ChangE 事件预演</h1>
+<p>两栏播放同一段音乐上的重定时来源动作。选片比较用于观察排序效果，骨架保留原动作并使用同一局部视角。</p>
+<label>音乐 <select id="song"></select></label>
+<audio id="audio" controls preload="metadata"></audio>
+<button id="prev">前一帧</button> <button id="next">后一帧</button> <span id="clock"></span>
+<input aria-label="目标帧" id="seek" type="range" min="0" value="0">
+<section class="grid"><article><h2>R41 内容与时间图</h2><p id="t0"></p><canvas id="c0" width="500" height="380"></canvas></article><article><h2>活动度排序</h2><p id="t1"></p><canvas id="c1" width="500" height="380"></canvas></article></section>
+<details><summary>候选分数与源时间图</summary><pre id="info"></pre></details>
+<script src="data.js"></script>
+<script>
+const $=id=>document.getElementById(id), audio=$('audio'), bank=R49.cases;
+let item, points, frame=0;
+bank.forEach((r,i)=>$('song').add(new Option(r.audio.split('_')[0],i)));
+function load(){
+  item=bank[+$('song').value];
+  if(!item){$('clock').textContent='无共同有效候选';return;}
+  audio.src=item.audio;
+  points=item.panels.map(p=>new Float32Array(Uint8Array.from(atob(p.data),c=>c.charCodeAt(0)).buffer));
+  $('seek').max=item.b-item.a-1;
+  item.panels.forEach((p,i)=>$('t'+i).textContent=p.source+' · '+p.event);
+  $('info').textContent=JSON.stringify({panels:item.panels.map(({data,...r})=>r),rank:item.candidates},null,2);
+  show(0);
+}
+function show(t){
+  frame=Math.max(0,Math.min(item.b-item.a-1,t));
+  $('seek').value=frame;
+  $('clock').textContent='目标第 '+(item.a+frame)+' 帧 · '+((item.a+frame)/30).toFixed(3)+' 秒';
+  points.forEach((p,i)=>{
+    const ctx=$('c'+i).getContext('2d');
+    ctx.clearRect(0,0,500,380);
+    const pos=j=>{const k=(frame*22+j)*3;return [250+125*(.85*p[k]-.5*p[k+2]),195-125*p[k+1]]};
+    for(let j=1;j<22;j++){
+      ctx.strokeStyle=j%2?'#228174':'#b97935';ctx.lineWidth=4;ctx.beginPath();
+      ctx.moveTo(...pos(R49.parents[j]));ctx.lineTo(...pos(j));ctx.stroke();
+    }
+  });
+}
+function jump(t){if(!item)return;audio.pause();show(t);audio.currentTime=frame/30}
+function tick(){if(item&&!audio.paused)show(Math.floor(audio.currentTime*30));requestAnimationFrame(tick)}
+audio.onseeked=()=>{if(item)show(Math.round(audio.currentTime*30))};
+$('song').onchange=load;$('seek').oninput=()=>jump(+$('seek').value);
+$('prev').onclick=()=>jump(frame-1);$('next').onclick=()=>jump(frame+1);
+load();requestAnimationFrame(tick);
+</script>
