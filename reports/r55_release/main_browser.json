@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "checked_at": "2026-11-18T20:02:38.197620+00:00",
+  "checks": [
+    "play_pause",
+    "frame_60_to_61",
+    "fixed_case_switch",
+    "rate_half",
+    "source_clock_table",
+    "all_panels_shared_clock"
+  ],
+  "display_role": "OPTIMIZATION_TRAIN_NOT_VAL",
+  "frame": 70,
+  "music_global_frame": 280,
+  "audio_duration_seconds": 5,
+  "screenshot_sha256": "307dbad1fb84b58e45db46d996c91dc8d681b0e8d597e03551de9a05a1c8b6d1",
+  "scope": "UI_ACCEPTANCE_NOT_MODEL_QUALIFICATION"
+}

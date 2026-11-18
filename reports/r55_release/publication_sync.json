@@ -1,0 +1,11 @@
+{
+  "current_server_commit": "2fc749be8a62e4f77a9cd31a96f53c3783c716fc",
+  "strict_main": "e2c065c17c08a473ac30d69b28611be6017fe5ea",
+  "strict_comparison": "8ce0c3522db7ca9e0948e86e06a7e07803b8ae63",
+  "geometry_v1": "f90b738d8073359b4aabd30b5b5c121dd4db4441",
+  "geometry_v2": "b053d0776bc18164c0fbddfafd683dce0f031342",
+  "video": "149752c663d3275e20f6db72db1b374e7b92f89c",
+  "direct_github_fetch": "FAILED_GNUTLS_TLS_EOF",
+  "fallback": "GIT_BUNDLES_CONTAINING_ALREADY_PUBLISHED_COMMITS; git bundle verify + fetch + ff-only merge + exact SHA",
+  "TLS_validation_disabled": false
+}

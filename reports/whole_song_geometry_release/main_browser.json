@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "checked_at": "2026-11-18T20:00:31.107762+00:00",
+  "audio_duration": 120.032688,
+  "embedded_audio": true,
+  "ready_state": 4,
+  "playback_frame_delta": 0,
+  "checks": [
+    "play_pause",
+    "full_audio_duration",
+    "event_seek",
+    "frame_step",
+    "3D_yaw",
+    "speed",
+    "unknown_Root_contact_label"
+  ],
+  "screenshot_sha256": "5d391bc3fc21e855b3f91f4a9ff572e9bb0659bc7a65bd9ef906cbcb6b10d10f",
+  "scope": "UI_ACCEPTANCE_NOT_PHYSICAL_QUALIFICATION"
+}

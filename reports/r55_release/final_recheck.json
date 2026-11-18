@@ -1,0 +1,18 @@
+{
+  "checked_at": "2026-11-18T20:16:56.825269+00:00",
+  "baseline_files": {
+    "outputs/strong_baseline_r52_01": 198,
+    "outputs/warp_coupling_r53_01": 248,
+    "outputs/residual_sdmr_r54_01": 43,
+    "outputs/residual_sdmr_r54_02": 47
+  },
+  "owned_files": {
+    "outputs/clock_residual_r55_01": 113,
+    "outputs/whole_song_geometry_01": 12,
+    "outputs/clock_residual_r55_02": 128,
+    "outputs/whole_song_geometry_02": 25
+  },
+  "all_hashes_verified": true,
+  "optimizer_calls": 0,
+  "Test_tensor_reads": 0
+}

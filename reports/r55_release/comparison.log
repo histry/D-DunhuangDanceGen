@@ -1,0 +1,48 @@
++ for ARM in NoClock Unconditional Shuffled
++ /home/disk/lsm/conda_envs/edge/bin/python -m dunhuang.research.clock_residual_r55 train --arm NoClock --out outputs/clock_residual_r55_02/NoClock
+R55_TRAIN NoClock 40 0.5378175377845764
+R55_TRAIN NoClock 80 0.38027191162109375
+R55_TRAIN NoClock 120 0.5731981992721558
+R55_TRAIN NoClock 160 0.486621618270874
+R55_TRAIN NoClock 200 0.468262255191803
+R55_TRAIN NoClock 240 0.4959585666656494
++ for ARM in NoClock Unconditional Shuffled
++ /home/disk/lsm/conda_envs/edge/bin/python -m dunhuang.research.clock_residual_r55 train --arm Unconditional --out outputs/clock_residual_r55_02/Unconditional
+R55_TRAIN Unconditional 40 1.126812219619751
+R55_TRAIN Unconditional 80 0.8057719469070435
+R55_TRAIN Unconditional 120 1.3123769760131836
+R55_TRAIN Unconditional 160 0.8364282250404358
+R55_TRAIN Unconditional 200 0.8093792796134949
+R55_TRAIN Unconditional 240 1.0639522075653076
++ for ARM in NoClock Unconditional Shuffled
++ /home/disk/lsm/conda_envs/edge/bin/python -m dunhuang.research.clock_residual_r55 train --arm Shuffled --out outputs/clock_residual_r55_02/Shuffled
+R55_TRAIN Shuffled 40 1.0106557607650757
+R55_TRAIN Shuffled 80 0.9937611818313599
+R55_TRAIN Shuffled 120 0.9679172039031982
+R55_TRAIN Shuffled 160 1.2096076011657715
+R55_TRAIN Shuffled 200 1.0015714168548584
+R55_TRAIN Shuffled 240 0.9936646223068237
++ /home/disk/lsm/conda_envs/edge/bin/python -m dunhuang.research.clock_residual_r55 evaluate --out outputs/clock_residual_r55_02/evaluation
+R55_EVAL 100 743
+R55_EVAL 200 743
+R55_EVAL 300 743
+R55_EVAL 400 743
+R55_EVAL 500 743
+R55_EVAL 600 743
+R55_EVAL 700 743
+R55_EVALUATED False
++ /home/disk/lsm/conda_envs/edge/bin/python -m dunhuang.research.clock_residual_r55 verify --out outputs/clock_residual_r55_02/independent_final
+R55_EVAL 100 743
+R55_EVAL 200 743
+R55_EVAL 300 743
+R55_EVAL 400 743
+R55_EVAL 500 743
+R55_EVAL 600 743
+R55_EVAL 700 743
+R55_EVALUATED False
+R55_REPLAY_EXACT {'S1': 'ALL_SYNTHETIC_SCORES_EXACT', 'S2': 'ALL_SYNTHETIC_SCORES_EXACT', 'S3': 'ALL_SYNTHETIC_SCORES_EXACT', 'S4': 'ALL_SYNTHETIC_SCORES_EXACT', 'qualification/real_fit': [0, 60, 119], 'Conditional': [0, 120, 239], 'NoClock': [0, 120, 239], 'Unconditional': [0, 120, 239], 'Shuffled': [0, 120, 239], 'evaluation': 'ALL_ARRAYS_AND_SUMMARY_EXACT'}
++ CUDA_VISIBLE_DEVICES=
++ /home/disk/lsm/conda_envs/edge/bin/python -m pytest -q
++ status=0
+++ date -Is
++ printf 'exit_status=%s\nfinished_at=%s\n' 0 2026-11-19T04:12:31+08:00

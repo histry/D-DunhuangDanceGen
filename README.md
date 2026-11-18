@@ -1,5 +1,15 @@
 # DunhuangDanceGen
 
+最新研究交付（2026-11-19）：
+
+- [dunhuangwu2 完整音乐纯几何整曲](reports/whole_song_geometry_release/report.md)：120.0326875秒、30FPS/3601帧，13个Core和12个冻结G0/G1过渡，6个来源录制、8个事件；音乐帧恰好覆盖一次，选中连接全部通过原数值筛查。从原来源完整重建候选图和轨迹精确一致。已回传交互页与完整音乐双视角MP4；这是Root-relative身体22关节研究预览，世界Root/接触未知、Native24不可评，不是Diffusion重新演绎。
+- [R55 任务一致的局部残差与时钟恢复](reports/r55_release/report.md)：合成资格与8任务Train拟合通过，修正校准动作作为负候选曝光后，40个优化音乐组/8个本次适配留组、543个有效任务，四组同初始化/同日程各240步。历史Val跨音乐R@1 Conditional35.14%，Heuristic47.92%，Frozen52.22%；新增内容门未通过，置信阈值保持拒答，不接管Planner。旧曝光尝试与中断评价完整保留，不用Val性能调参。
+
+683项回归通过、1跳过；全部最终评分与登记快照梯度在新进程精确复验、复验优化器调用0。R52的198文件、R53的248文件及R54的90文件复核未变。两条新研究包与生产和冻结基线分开。
+
+本机整曲观看：`D:/DunhuangDanceGen/outputs/whole_song_geometry_02/main/viewer/index.html`；完整视频：`D:/DunhuangDanceGen/outputs/whole_song_geometry_02/video/dunhuangwu2_geometry_full.mp4`。R55主候选：`D:/DunhuangDanceGen/outputs/clock_residual_r55_02/main_view/viewer/index.html`。Git仅含代码、公开统计与回执；原始数组、权重和媒体不入库。
+
+
 当前默认路径：**Event Catalog → Music Timeline → Event Plan → 冻结 EDGE（Temporal V0.5）→ 原 Native 验收**。学习检索保留shadow。研究路径已完成真实151D配对补全，以及原生SO(3)跨录制条件的Cross/Additive同参数量训练（各1,200步）；事件跟随与完整生成质量仍未合格。
 
 

@@ -1,0 +1,28 @@
++ /home/disk/lsm/conda_envs/edge/bin/python -m pytest -q tests/test_clock_residual_r55.py tests/test_r54.py
+...............                                                          [100%]
+15 passed in 4.46s
++ /home/disk/lsm/conda_envs/edge/bin/python -m dunhuang.research.clock_residual_r55 prepare --out outputs/clock_residual_r55_02/input
++ /home/disk/lsm/conda_envs/edge/bin/python -m dunhuang.research.clock_residual_r55 preview --out outputs/clock_residual_r55_02/preview
++ /home/disk/lsm/conda_envs/edge/bin/python -m dunhuang.research.clock_residual_r55 qualify --out outputs/clock_residual_r55_02/qualification
+R55_SYNTHETIC S1 {'8_actual': 0.8125, '8_music_zero': 0.125, '8_time_reverse': 0.78125}
+R55_SYNTHETIC S2 {'32_actual': 0.984375, '32_music_zero': 0.03125, '32_time_reverse': 0.9765625}
+R55_SYNTHETIC S3 {'8_actual': 1.0, '8_music_zero': 0.125, '8_time_reverse': 0.21875, '32_actual': 1.0, '32_music_zero': 0.03125, '32_time_reverse': 0.0546875}
+R55_SYNTHETIC S4 {'8_actual': 1.0, '8_music_zero': 0.1875, '8_time_reverse': 0.1875, '32_actual': 1.0, '32_music_zero': 0.1796875, '32_time_reverse': 0.1875}
+R55_TRAIN Conditional 40 0.13935814797878265
+R55_TRAIN Conditional 80 0.08987589180469513
+R55_TRAIN Conditional 120 0.07487476617097855
+R55_QUALIFICATION True
++ /home/disk/lsm/conda_envs/edge/bin/python -c 'import json; assert json.load(open('\''outputs/clock_residual_r55_02/qualification/gate.json'\''))['\''admitted'\'']'
++ /home/disk/lsm/conda_envs/edge/bin/python -m dunhuang.research.clock_residual_r55 train --arm Conditional --out outputs/clock_residual_r55_02/Conditional
+R55_TRAIN Conditional 40 0.7792710661888123
+R55_TRAIN Conditional 80 0.5641078948974609
+R55_TRAIN Conditional 120 0.8033339977264404
+R55_TRAIN Conditional 160 0.6558927297592163
+R55_TRAIN Conditional 200 0.5562779903411865
+R55_TRAIN Conditional 240 0.7239007353782654
++ /home/disk/lsm/conda_envs/edge/bin/python -m dunhuang.research.clock_residual_r55 main_view --out outputs/clock_residual_r55_02/main_view
++ /home/disk/lsm/conda_envs/edge/bin/python -m dunhuang.research.clock_residual_r55 verify --out outputs/clock_residual_r55_02/independent_main
+R55_REPLAY_EXACT {'S1': 'ALL_SYNTHETIC_SCORES_EXACT', 'S2': 'ALL_SYNTHETIC_SCORES_EXACT', 'S3': 'ALL_SYNTHETIC_SCORES_EXACT', 'S4': 'ALL_SYNTHETIC_SCORES_EXACT', 'qualification/real_fit': [0, 60, 119], 'Conditional': [0, 120, 239]}
++ status=0
+++ date -Is
++ printf 'exit_status=%s\nfinished_at=%s\n' 0 2026-11-19T03:59:19+08:00

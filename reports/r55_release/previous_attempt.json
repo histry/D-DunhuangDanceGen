@@ -1,0 +1,16 @@
+{
+  "population_updates": 960,
+  "qualification_updates": 440,
+  "evaluation_started": true,
+  "evaluation_completed": false,
+  "final_independent_completed": false,
+  "calibration_independent": false,
+  "disposition": "TRAIN_METADATA_CALIBRATION_CANDIDATE_EXPOSURE; INTERRUPTED_EVALUATION; NOT_USED_FOR_MODEL_OR_THRESHOLD_SELECTION",
+  "launcher_exit_status_alone_not_completion": true,
+  "models": {
+    "Conditional": "2c68218047f7b1372c99daf201311bbbb81c486a983bc7225e2456f6c05f4131",
+    "NoClock": "804b9674443180033c2db1bd57a55a61bf8d32fb55a2ccd615610d26096cb67f",
+    "Unconditional": "b1d87b2b1bc570a415ba7ba2995037450f5d6b97be12a79f92028ac0bc48b128",
+    "Shuffled": "64acb64571e305b62fa093405bcb9fac1ef2b7fcb79ff6311f5d82d69d704094"
+  }
+}

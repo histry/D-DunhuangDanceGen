@@ -1,0 +1,49 @@
+{
+  "checks": {
+    "S1": "ALL_SYNTHETIC_SCORES_EXACT",
+    "S2": "ALL_SYNTHETIC_SCORES_EXACT",
+    "S3": "ALL_SYNTHETIC_SCORES_EXACT",
+    "S4": "ALL_SYNTHETIC_SCORES_EXACT",
+    "qualification/real_fit": [
+      0,
+      60,
+      119
+    ],
+    "Conditional": [
+      0,
+      120,
+      239
+    ],
+    "NoClock": [
+      0,
+      120,
+      239
+    ],
+    "Unconditional": [
+      0,
+      120,
+      239
+    ],
+    "Shuffled": [
+      0,
+      120,
+      239
+    ],
+    "evaluation": "ALL_ARRAYS_AND_SUMMARY_EXACT"
+  },
+  "optimizer_calls": 0,
+  "parent_manifest_sha256": "630e2b3cb67e96645db64109ee597d4e094704ee3e9d2fce10d575f88c278c3a",
+  "parent_arrays_sha256": "ef32ce0897519dbbc3d2d93c6c9e87ec45aa3ee053359e50ded65a4a19f6fc92",
+  "commit": "149752c663d3275e20f6db72db1b374e7b92f89c",
+  "code": {
+    "__init__.py": "8cddd6e0e0a49f0fc4c216ec78d2b6e63e4e2f1df2f9069450db0e15029ec1e0",
+    "common.py": "d6b875505b927c90d921c53d49d337fba365207e2c855ee8b2588946be5332be",
+    "evaluate.py": "28fc91a5fb437634e1a922eed73bd255b4caa80dac10bd0d43ebac9f444fad52",
+    "population.py": "14fc33093e285c5a30b2956f4ddaccb4335d1a3003c6311974da02c81c3304d2",
+    "protocol.json": "6cdaf444a47ce6cef7d7c5dd5404e564314e363585812076fc54103ab9049c42",
+    "qualify.py": "fedf40eabde024b05ac456681dad4d79f32b206f19d21ce9d500e0c85c9ef415",
+    "replay.py": "cba49c52fad8101e5445fb6b9dfa503328326a87ab74aa4bd850ed0c4fffc4b3",
+    "study.py": "784d2b650b99042c86b8ea5fc1cab4301421f3b24cad0cb69d8a74129ac34332"
+  },
+  "can_route": false
+}

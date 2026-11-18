@@ -1,0 +1,48 @@
++ /home/disk/lsm/conda_envs/edge/bin/python -m pytest -q tests/test_whole_song_geometry.py
+.......                                                                  [100%]
+7 passed in 3.98s
++ /home/disk/lsm/conda_envs/edge/bin/python -m dunhuang.research.whole_song_geometry run --out outputs/whole_song_geometry_02/main
+SONG_POOL 0 8
+SONG_POOL 1 8
+SONG_POOL 2 8
+SONG_POOL 3 8
+SONG_POOL 4 8
+SONG_POOL 5 8
+SONG_POOL 6 8
+SONG_POOL 7 8
+SONG_POOL 8 8
+SONG_POOL 9 8
+SONG_POOL 10 8
+SONG_POOL 11 8
+SONG_POOL 12 8
+SONG_EDGES 100 624
+SONG_EDGES 200 624
+SONG_EDGES 300 624
+SONG_EDGES 400 624
+SONG_EDGES 500 624
+SONG_EDGES 600 624
+WHOLE_SONG GEOMETRY_WHOLE_SONG_RESEARCH_PREVIEW 3601 13 12
++ /home/disk/lsm/conda_envs/edge/bin/python -m dunhuang.research.whole_song_geometry verify --out outputs/whole_song_geometry_02/independent --source outputs/whole_song_geometry_02/main
+SONG_POOL 0 8
+SONG_POOL 1 8
+SONG_POOL 2 8
+SONG_POOL 3 8
+SONG_POOL 4 8
+SONG_POOL 5 8
+SONG_POOL 6 8
+SONG_POOL 7 8
+SONG_POOL 8 8
+SONG_POOL 9 8
+SONG_POOL 10 8
+SONG_POOL 11 8
+SONG_POOL 12 8
+SONG_EDGES 100 624
+SONG_EDGES 200 624
+SONG_EDGES 300 624
+SONG_EDGES 400 624
+SONG_EDGES 500 624
+SONG_EDGES 600 624
+WHOLE_SONG GEOMETRY_WHOLE_SONG_RESEARCH_PREVIEW 3601 13 12
++ status=0
+++ date -Is
++ printf 'exit_status=%s\nfinished_at=%s\n' 0 2026-11-19T03:50:14+08:00

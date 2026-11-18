@@ -1,0 +1,54 @@
+{
+  "threshold": null,
+  "curve": [
+    {
+      "threshold": 0,
+      "accepted": 80,
+      "total": 80,
+      "coverage": 1.0,
+      "group_error": 0.8375,
+      "music_groups": 8
+    },
+    {
+      "threshold": 0.005,
+      "accepted": 66,
+      "total": 80,
+      "coverage": 0.825,
+      "group_error": 0.8402777777777777,
+      "music_groups": 8
+    },
+    {
+      "threshold": 0.01,
+      "accepted": 57,
+      "total": 80,
+      "coverage": 0.7125,
+      "group_error": 0.821875,
+      "music_groups": 8
+    },
+    {
+      "threshold": 0.02,
+      "accepted": 36,
+      "total": 80,
+      "coverage": 0.45,
+      "group_error": 0.7916666666666666,
+      "music_groups": 8
+    },
+    {
+      "threshold": 0.04,
+      "accepted": 22,
+      "total": 80,
+      "coverage": 0.275,
+      "group_error": 0.75,
+      "music_groups": 8
+    },
+    {
+      "threshold": 0.08,
+      "accepted": 7,
+      "total": 80,
+      "coverage": 0.0875,
+      "group_error": 1.0,
+      "music_groups": 4
+    }
+  ],
+  "scope": "TRAIN_HELD_MUSIC_GROUPS_INJECTED_CLOCK_NOT_SEMANTIC_CONFIDENCE"
+}
