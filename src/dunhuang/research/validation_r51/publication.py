@@ -78,3 +78,12 @@ def release(out):
     for f in (out/'summary.json',out/'report.md',ROOT/'index.html',ROOT/'main_preview.png',ROOT/'browser_receipt.json',ROOT/'receipts/independent.json'):
         files.append(dict(path=str(f),bytes=f.stat().st_size,sha256=digest(f)))
     write(out/'seal.json',dict(files=files))
+
+
+def recheck(out):
+    manifest=read(ROOT/'publication/seal.json')
+    for item in manifest['files']:
+        path=Path(item['path'])
+        assert path.resolve().is_relative_to(ROOT.resolve())
+        assert path.stat().st_size==item['bytes'] and digest(path)==item['sha256'],str(path)
+    write(out,dict(files=len(manifest['files']),all_hashes_verified=True,commit=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),optimizer_calls=0))

@@ -1,6 +1,6 @@
 import argparse
 from .common import ROOT
-p=argparse.ArgumentParser();p.add_argument('mode',choices=['plans','sample','paired','verify','release','refresh']);p.add_argument('--out',required=True);p.add_argument('--controls',action='store_true');a=p.parse_args()
+p=argparse.ArgumentParser();p.add_argument('mode',choices=['plans','sample','paired','verify','release','refresh','recheck']);p.add_argument('--out',required=True);p.add_argument('--controls',action='store_true');a=p.parse_args()
 if a.controls:
     from dunhuang.research.complete_r36.core import read
     if not read(ROOT/'browser_receipt.json')['passed']:raise ValueError('Watch actual primary output before controls')
