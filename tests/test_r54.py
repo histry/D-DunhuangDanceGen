@@ -41,3 +41,10 @@ def test_residual_objective_gradients_use_both_modalities():
 def test_inference_cache_never_used_in_train_gradients():
  s=Study.__new__(Study);s.base=object();s.frozen_inference=True;s.token_cache={}
  with pytest.raises(ValueError,match='cannot enter training'):s.tokens(object(),[0])
+
+def test_heuristic_symmetry_cannot_pass_activity_match():
+ from dunhuang.research.residual_sdmr_r54.common import matched_bin
+ # Equal absolute Heuristic scores can hide almost opposite motion activity.
+ assert not matched_bin(-.49,.99,-.49,.01)
+ assert matched_bin(-.125,.213,-.13,.222)
+ assert not matched_bin(-.125,.251,-.13,.222)

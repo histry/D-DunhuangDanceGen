@@ -11,3 +11,6 @@
 7. 新进程重建数据并精确比对NPZ；复验合成评分与训练检查点的实际损失/梯度及更新变化，复验优化器调用0；重算全部正确/错音乐评分与指标。缓存仅冻结推理，固定batch1；不得进入训练梯度路径。
 
 服务器使用tmux、PYTHONPATH=src、OMP/OPENBLAS/MKL线程1及固定GPU。执行入口：`python -m dunhuang.research.residual_sdmr_r54 MODE --out 新目录`，MODE依序为prepare、preview、checks、train --arm Conditional、main_view、train --arm Unconditional/Shuffled、evaluate、verify、release。来源与权重各自SHA绑定，所有成功/失败与无法构造保留。观看通过只表示身份和播放正确，human_reviewed仍false。原始模型/音频/数组不入Git，完成后清理本轮SSH辅助文件。
+
+
+V2修正依据仅为Train元数据：V1的714任务中239项动作活动量跨度超过0.05，最大0.98098；错音乐活动量差最高0.31561。V2增加独立动作活动量0.05分箱及真实错音乐0.05活动量上限，并增加EnergyCurve基线。保留V1资格结果：合成71.875%<75%，Train拟合100%，主训练0；V2维持同种子、80/120/240预算和原门槛，不根据Val重选。输出改为residual_sdmr_r54_02，旧01完整保留。

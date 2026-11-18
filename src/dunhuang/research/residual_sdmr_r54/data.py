@@ -33,7 +33,7 @@ def build(out):
  for q in queries:
   r=rows[q];pool=bylength[r['role'],r['frames']];h={i:float(heuristic(r['music_activity'],rows[i]['body_activity'])) for i in pool};pos=sorted([i for i in pool if relation(r,rows[i])=='CLOCK_POSITIVE'],key=lambda i:rows[i]['uid'])
   if not pos:missing.append(dict(query=q,reason='NO_CROSS_RECORDING_CLOCK_POSITIVE'));continue
-  bin_id=int(np.floor(h[pos[0]]/CFG['heuristic_bin_width']));pos=[i for i in pos if int(np.floor(h[i]/CFG['heuristic_bin_width']))==bin_id][:CFG['maximum_positives']]
+  reference=pos[0];bin_id=int(np.floor(h[reference]/CFG['heuristic_bin_width']));motion_bin=int(np.floor(rows[reference]['body_activity']/CFG['motion_activity_bin_width']));pos=[i for i in pos if matched_bin(h[i],rows[i]['body_activity'],h[reference],rows[reference]['body_activity'])][:CFG['maximum_positives']]
   negative=[]
   for i in pool:
    rel=relation(r,rows[i])
@@ -42,16 +42,22 @@ def build(out):
    negative.append(i)
   for family in ('cross_music','same_music'):
    broad=[i for i in negative if (rows[i]['audio_sha256']!=r['audio_sha256'])==(family=='cross_music')]
-   hard=[i for i in broad if int(np.floor(h[i]/CFG['heuristic_bin_width']))==bin_id];hard=sorted(hard,key=lambda i:rows[i]['uid'])[:CFG['maximum_negatives']]
+   hard=[i for i in broad if matched_bin(h[i],rows[i]['body_activity'],h[reference],rows[reference]['body_activity'])];hard=sorted(hard,key=lambda i:rows[i]['uid'])[:CFG['maximum_negatives']]
    if len(hard)<CFG['minimum_negatives']:missing.append(dict(query=q,family=family,reason='INSUFFICIENT_SAME_HEURISTIC_BIN',count=len(hard)));continue
    seed=int(identity([CFG['seed'],r['uid'],family])[:12],16);rng=np.random.default_rng(seed);broad=sorted(broad,key=lambda i:rows[i]['uid']);unconditional=[broad[k] for k in rng.choice(len(broad),len(hard),replace=False)];ids=sorted(pos+hard,key=lambda i:rows[i]['uid']);other=sorted(pos+unconditional,key=lambda i:rows[i]['uid']);p=[i in pos for i in ids]
-   donor=next(i for i in pool if rows[i]['audio_sha256']!=r['audio_sha256']);tasks.append(dict(uid=identity([r['uid'],family,bin_id]),query=q,candidates=ids,unconditional_candidates=other,positive=p,unconditional_positive=[i in pos for i in other],shuffled_positive=permuted_labels(p,seed),role=r['role'],group=r['source_group'],recording=r['raw_motion_sha256'],family=family,frames=r['frames'],heuristic=[h[i] for i in ids],unconditional_heuristic=[h[i] for i in other],heuristic_bin=bin_id,donor=donor,labels='PHYSICAL_CLOCK_OR_AUDIO_ASSOCIATION_NOT_ARTISTIC_INCOMPATIBILITY'))
+   donors=[i for i in pool if rows[i]['audio_sha256']!=r['audio_sha256'] and abs(rows[i]['music_activity']-r['music_activity'])<=CFG['donor_music_activity_tolerance']]
+   if not donors:missing.append(dict(query=q,family=family,reason='NO_ACTIVITY_MATCHED_REAL_MUSIC_DONOR'));continue
+   donor=min(donors,key=lambda i:(abs(rows[i]['music_activity']-r['music_activity']),rows[i]['uid']));tasks.append(dict(uid=identity([r['uid'],family,bin_id]),query=q,candidates=ids,unconditional_candidates=other,positive=p,unconditional_positive=[i in pos for i in other],shuffled_positive=permuted_labels(p,seed),role=r['role'],group=r['source_group'],recording=r['raw_motion_sha256'],family=family,frames=r['frames'],heuristic=[h[i] for i in ids],unconditional_heuristic=[h[i] for i in other],heuristic_bin=bin_id,motion_bin=motion_bin,donor=donor,donor_activity_delta=abs(rows[donor]['music_activity']-r['music_activity']),labels='PHYSICAL_CLOCK_OR_AUDIO_ASSOCIATION_NOT_ARTISTIC_INCOMPATIBILITY'))
  assert tasks
+ for t in tasks:
+  assert np.ptp([rows[i]['body_activity'] for i in t['candidates']])<CFG['motion_activity_bin_width']+1e-9
+  assert np.ptp(t['heuristic'])<CFG['heuristic_bin_width']+1e-9
  used=sorted({i for t in tasks for i in [t['query'],t['donor']]+t['candidates']+t['unconditional_candidates']});arrays=dict(J=J,parents=parents)
  for i in used:
   r=rows[i];unit=pop.unit(r['parent_index']);a,b=r['slice']
   for dest,key in [('M','music'),('D','motion'),('DM','motion_mask')]:arrays[dest+str(i)]=unit[key][a:b]
   arrays['MV'+str(i)]=unit['music_mask'][a:b].any(-1)
+  lo,hi=r['source_interval'];u=r['audio_frame_interval'][0];ticks=np.arange(r['frames'])+u;arrays['E'+str(i)]=np.interp(ticks,np.arange(len(audio[r['audio_sha256']])),audio[r['audio_sha256']]);arrays['A'+str(i)]=speed[r['source_uid']][lo:hi]/2
  save_arrays(out/'arrays.npz',arrays);groups={role:sorted({t['group'] for t in tasks if t['role']==role}) for role in ('train','val')};assert len(groups['train'])>=CFG['minimum_train_groups'];checkpoint=sealed('outputs/paired_event_r41_01','main/model.pt');binding=dict(protocol_sha256=sha(Path(__file__).with_name('protocol.json')),r41_manifest_sha256=sha(source),r43_manifest_sha256=sha(old),checkpoint_sha256=sha(checkpoint),normalizer=pop.manifest['normalizer'],skeleton_sha256=sha(skeleton),code=code_binding(),arrays_sha256=sha(out/'arrays.npz'))
  result=dict(binding=binding,rows=rows,tasks=tasks,queries=queries,missing=missing,groups=groups,role_isolation=validate_roles(rows),shared_choreography_across_roles=pop.manifest['shared_choreography_across_roles'],statistics=dict(Counter((t['role']+'_'+t['family']) for t in tasks)),activity='R36_AUDIO_RMS_PERCENTILE_AND_R53_CLIPPED_COMMON22_FK_SPEED; WHOLE_RECORD_FIRST',candidate_scope='OFFLINE_PAIRED_DIAGNOSTIC_CONDITIONING_ON_POSITIVE_HEURISTIC_BIN; NOT_DEPLOYABLE_SHORTLIST',human_reviewed=False,test_tensor_reads=0,finedance_admitted=False,can_route=False)
  write(out/'manifest.json',result);print('R54_P0_COMPLETE',result['statistics'],{k:len(v) for k,v in groups.items()},flush=True)

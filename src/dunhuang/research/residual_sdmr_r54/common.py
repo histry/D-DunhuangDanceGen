@@ -4,7 +4,7 @@ import json,hashlib
 import numpy as np
 from dunhuang.research.complete_r36.core import read,write,sha,relative_fk
 from dunhuang.research.warp_coupling_r53.common import save_arrays,array_hash
-ROOT=Path('outputs/residual_sdmr_r54_01')
+ROOT=Path('outputs/residual_sdmr_r54_02')
 CFG=read(Path(__file__).with_name('protocol.json'))
 def fresh(p):
  p=Path(p)
@@ -29,3 +29,6 @@ def permuted_labels(p,seed):
  if np.array_equal(p,q):q=np.roll(p,1)
  assert q.sum()==p.sum() and not np.array_equal(q,p)
  return q.tolist()
+
+def matched_bin(h,body,reference_h,reference_body):
+ return int(np.floor(h/CFG['heuristic_bin_width']))==int(np.floor(reference_h/CFG['heuristic_bin_width'])) and int(np.floor(body/CFG['motion_activity_bin_width']))==int(np.floor(reference_body/CFG['motion_activity_bin_width']))
