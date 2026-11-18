@@ -48,3 +48,13 @@ def test_heuristic_symmetry_cannot_pass_activity_match():
  assert not matched_bin(-.49,.99,-.49,.01)
  assert matched_bin(-.125,.213,-.13,.222)
  assert not matched_bin(-.125,.251,-.13,.222)
+
+def test_evaluation_balances_music_groups_instead_of_windows():
+ from dunhuang.research.residual_sdmr_r54.evaluate import summarize
+ # Three easy windows in one recording cannot outweigh a second music group.
+ tasks=[dict(role='val',family='cross_music',group=g,recording=g,positive=[True,False]) for g in ('a','a','a','b')]
+ scores={'Conditional':{i:np.array([1.,0.]) if i<3 else np.array([0.,1.]) for i in range(4)},'Heuristic':{i:np.array([0.,0.]) for i in range(4)}}
+ r=summarize(tasks,scores)['val_cross_music'];assert r['methods']['Conditional']['recall_at1']['mean']==.5
+ assert r['methods']['Heuristic']['recall_at1']['mean']==.5
+ assert r['paired_differences']['Heuristic']['delta']==0
+ assert r['methods']['Conditional']['recall_at1']['music_groups']==2
