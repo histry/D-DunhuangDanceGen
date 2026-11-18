@@ -64,13 +64,19 @@ def release(out):
  lines=['# R52 Heuristic强基线与独立完整来源训练','','修复了绝对音乐帧与局部短片帧混用；原1008条空分区读数重算为882条有效区域，原计划、轨迹和whole统计不变。高D3不直接解释为不自然或Native失败。','','## 两阶段接口','','EVENT_PLAN_R52_V1绑定真实来源、完整区间、合法Warp、阶段代理/未知状态、软参考上下文、实际过渡预算和真实音乐35D。SDMR分数保留Shadow元数据，不成为ModuleII训练门槛。','','## 完整来源与补间分开','','训练FULL_REFERENCE_RECONSTRUCTION可读取完整合法来源，这是身份重建任务；HIDDEN_GAP_INBETWEENING隐藏中心48帧并使用真实连续目标。AIST++真实配对音乐与ChangE零音乐源保持任务各占半批，不伪造敦煌配对重演真值。只训练已有Source/Context，固定Lodge、CanonicalIO、General；Root/C4不入损失。两个240步训练组在主效果观看后才进行零Phase同预算对照，动态项按Train初始梯度校准，NoPhase沿用主组权重。','','## 两个完整事件','','固定R51 Heuristic的两个真实完整事件、E1-W和48帧几何桥，Core240+240，整段528帧。每个256帧计算窗都能读取同一完整528帧来源记忆；四窗对同一全局噪声轨迹共同去噪。只有整段外端16帧硬保护，Root/C4保留未知模型规范，未生成合格世界Root。来源Core可读480帧，桥区参考未知，不把几何桥当真实重演目标。采样从t119执行50步，仍属温启动局部研究。','','|案例|方法|来源Core角误差rad|来源CoreFK误差m|','|---|---|---:|---:|']
  for r in n['records']:
   for method,v in r['methods'].items():lines.append('|%s|%s|%.6f|%.6f|'%(r['key'],method,np.mean([x['source_core_angle_rad'] for x in v]),np.mean([x['source_core_fk_rmse_m'] for x in v])))
+ lines+=['','|案例|检查点|角误差rad|FK误差m|全片D3 Q95代理|','|---|---|---:|---:|---:|']
+ for label,group in (('Frozen',summary['frozen_generation']),('Main240',n),('NoPhase240',summary['no_phase'])):
+  for r in group['records']:
+   v=r['methods']['FullReference'];lines.append('|%s|%s|%.6f|%.6f|%.3f|'%(r['key'],label,np.mean([x['source_core_angle_rad'] for x in v]),np.mean([x['source_core_fk_rmse_m'] for x in v]),np.mean([x['whole']['D3_Q95'] for x in v])))
+ lines+=['','|固定fixture0条件|角误差rad|FK误差m|','|---|---:|---:|']
+ for name,v in ctrl['records'][0]['methods'].items():lines.append('|%s|%.6f|%.6f|'%(name,np.mean([x['source_core_angle_rad'] for x in v]),np.mean([x['source_core_fk_rmse_m'] for x in v])))
  lines += ['','几何基线Core直接等于来源，来源误差为0，因此要求神经生成保持来源、改善连接/音乐响应，而不声称超过零误差。所有Core/Bridge/边界/whole动态及相对来源D1/D2/D3残差保留机器摘要；源动作本身的快速变化不等同异常抖动。两首敦煌音乐是非配对历史开发输入，换音乐只能检验响应，不能证明新音乐重演正确。','','## 规划对照','','Heuristic、SDMR、Hybrid=Heuristic+0.1Full、RhythmCurve=Heuristic+0.1Multi在同一候选/图/预算上比较；重复、来源均衡和同来源前向不重叠事件连接开关完全匹配。方法筛查失败不等价于所有神经重演皆不可能。冻结Heuristic保持原18组选择，不直接晋升SDMR。','','## 复验','',str(ind),summary['pytest'],'原R51的88文件保持；本轮轨迹、检查点、真实梯度及采样重放保留服务器。完整Native不可评、无整曲、研究不晋升。','','## 结果解释','','NoSource保留相同几何Anchor与Context，只移除专用Source入口；并非所有来源信息被移除。Context可读取几何桥先验，不能称为真实桥观测。NoPhase零化整个8D位置/运动学代理字段，仍保留独立2D时钟，不是人工语义阶段消融。音乐替换为同长真实片段，不把非目标偏移定义为艺术错误。NoBeat实际线性帧中心图及其Core数组校验保存在独立复验回执；source_events中原E1W是冻结选择登记，不是NoBeat实际图。','','本轮固定R51的16事件预算库，每Core实际合法候选10条，并不把它称为完整139候选库的搜索结果。匹配结构对照只使用预先固定的三首音乐、两事件、48帧桥，32种配置共享同一候选及几何预算。匿名页仅是准备，human_reviewed=false。','','训练后的角度误差降低不等同整体质量提高，必须同时检查FK、幅度及相对来源动态残差。新增固定Train输入的初末检查点前向评价用于拟合诊断，不用于挑选权重。独立训练复核验证6份实际梯度快照，未宣称从零重训复现全部480次Adam更新。']
  (out/'report.md').write_text('\n'.join(lines)+'\n',encoding='utf8')
  files=[]
  for directory in (ROOT/'repair',ROOT/'plans',ROOT/'interface',ROOT/'frozen_full',ROOT/'train_main',ROOT/'train_main_replay',ROOT/'main',ROOT/'plan_controls',ROOT/'music_controls',ROOT/'controls',ROOT/'train_no_phase',ROOT/'train_no_phase_replay',ROOT/'no_phase',ROOT/'replay'):
   for f in sorted(directory.rglob('*')):
    if f.is_file():files.append(dict(path=str(f),bytes=f.stat().st_size,sha256=digest(f)))
- for f in (out/'summary.json',out/'report.md',ROOT/'index.html',ROOT/'hubdata.js',ROOT/'receipts/independent.json',ROOT/'receipts/main_browser.json',ROOT/'receipts/trained_browser.json'):
+ for f in (out/'summary.json',out/'report.md',ROOT/'index.html',ROOT/'hubdata.js',ROOT/'receipts/independent.json',ROOT/'receipts/main_browser.json',ROOT/'receipts/trained_browser.json',ROOT/'receipts/hub_browser.json'):
   files.append(dict(path=str(f),bytes=f.stat().st_size,sha256=digest(f)))
  write(out/'seal.json',dict(files=files))
 
