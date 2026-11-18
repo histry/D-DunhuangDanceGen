@@ -7,7 +7,7 @@ import soundfile as sf
 from dunhuang.research.complete_r36.core import Library, read, relative_fk, rotation_sample, sha, write
 from .common import BASELINE, Frozen, MULTI_WEIGHT, R48, WARP_WEIGHT, audio_signals, cosine, multiscale, sealed
 
-SONGS = Path("outputs/transition_r37_02")
+SONGS = Path("outputs/complete_r36_01")
 CATALOG = Path("src/dunhuang/research/complete_r36/config.json")
 PREVIEW_ROOT = Path("outputs/event_alignment_r49_01")
 
@@ -82,8 +82,8 @@ def run(out, controls=False):
     tracks, audio_paths, inputs = {}, {}, {}
     for song in range(3):
         name = f"dunhuangwu{song+2}.wav"
-        audio = sealed(SONGS, "viewer_final/audio/"+name)
-        music = sealed(Path("outputs/complete_r36_01"), f"planning/song{song}_music.json")
+        audio = sealed(SONGS, "viewer/audio/"+name)
+        music = sealed(SONGS, f"planning/song{song}_music.json")
         audio_paths[song] = audio
         signal = audio_signals(audio)
         values, mask, _ = full_audio_observations(audio)

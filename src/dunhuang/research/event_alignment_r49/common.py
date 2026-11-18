@@ -25,8 +25,13 @@ WARP_WEIGHT = 0.05
 
 def sealed(root, relative):
     manifest = read(root / "artifacts_manifest.json")
-    entry = next(f for f in manifest["files"] if f["path"] == str(relative))
-    return checked(dict(path=str(root / relative), sha256=entry["sha256"]))
+    files = manifest["files"]
+    entry = files[str(relative)] if isinstance(files,dict) else next(
+        (f for f in files if f["path"] == str(relative)), None)
+    if entry is None:
+        raise ValueError(f"Asset is absent from its frozen manifest: {root / relative}")
+    digest = entry if isinstance(entry,str) else entry["sha256"]
+    return checked(dict(path=str(root / relative), sha256=digest))
 
 
 class Frozen:

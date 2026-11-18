@@ -37,7 +37,7 @@ def summaries(tasks, actual="Content"):
     return dict(tasks=len(tasks), methods=aggregate, paired_differences=comparisons)
 
 
-def phase_scores(net, sources, audio, tokens):
+def phase_scores(sources, audio, tokens, zeros):
     result = []
     for source in sources:
         uid = source["source_uid"]
@@ -71,7 +71,7 @@ def phase_scores(net, sources, audio, tokens):
             q = t+offset+delta
             scores["Content"].append(cosine(interpolate(music,mv,q,RADIUS),d))
             scores["MusicSwap"].append(cosine(interpolate(swap,sv,q,RADIUS),d))
-            scores["BothZero"].append(0.)
+            scores["BothZero"].append(cosine(interpolate(zero_music,mv,q,RADIUS),zeros[uid][t-RADIUS]))
             scores["Energy"].append(stage_score(signal,t+offset,kinds,delta,"energy"))
             scores["Rule"].append(stage_score(signal,t+offset,kinds,delta))
             scores["Duration"].append(0.)
@@ -80,7 +80,7 @@ def phase_scores(net, sources, audio, tokens):
     return result
 
 
-def event_banks(rows, sources, audio, tokens):
+def event_banks(rows, sources, audio, tokens, zeros):
     """A common crop length; use known physical-time positives and disjoint negatives."""
     sources = {s["source_uid"]:s for s in sources}
     prepared = []
@@ -126,17 +126,19 @@ def event_banks(rows, sources, audio, tokens):
         swapped = interpolate(swap,sv,p["q"],RADIUS)
         if swapped is None:
             continue
-        levels = [float(np.mean(v[2]["energy"])) for v in audio.values()]
         music_activity = float(np.mean(np.interp(p["q"],np.arange(len(sig["energy"])),sig["energy"])))
         for name,pool in (("same_song_wrong_time",same),("equal_duration_near_motion_energy",hard)):
             if len(pool)<4:
                 continue
             bank = [p]+[n for _,_,n in sorted(pool,key=lambda z:z[:2])[:4]]
             ids = [n["row"]["event_uid"] for n in bank]
+            z = interpolate(audio[key][3],mv,p["q"],RADIUS)
             scores = dict(Content=[cosine(p["m"],n["d"]) for n in bank],
                           MusicSwap=[cosine(swapped,n["d"]) for n in bank],
                           Energy=[-float(abs(music_activity-n["row"]["motion_activity"]/(1+n["row"]["motion_activity"]))) for n in bank],
-                          Duration=[0.]*5,BothZero=[0.]*5)
+                          Duration=[0.]*5,BothZero=[cosine(z,zeros[n["row"]["source_uid"]][
+                              (sum(n["row"]["source_interval"])-90)//2-RADIUS:
+                              (sum(n["row"]["source_interval"])-90)//2-RADIUS+90]) for n in bank])
             result[name].append(dict(audio=key,recording=row["raw_motion_sha256"],query=row["event_uid"],
                                      candidate_events=ids,positive=0,scores=scores))
     return result
@@ -154,19 +156,22 @@ def run(out):
     for field in ("source_group","audio_sha256","raw_motion_sha256","recording_uid"):
         if {s[field] for s in sources}&{s[field] for s in train}:
             raise ValueError(f"Roles overlap through {field}")
-    audio, motion = {}, {}
+    audio, motion, zeros = {}, {}, {}
     for s in sources:
         key = s["audio_sha256"]
         if key not in audio:
             path = checked(dict(path=str(AF/(key+".npz")),sha256=s["features_sha256"]))
             with np.load(path,allow_pickle=False) as features:
                 m,mv = net.music_tokens(features["values"],features["mask"])
-            audio[key] = (m,mv,audio_signals(checked(s["audio"])),None)
+                center = np.broadcast_to(net.normalizer["music"]["mean"],features["values"].shape)
+                zm,_ = net.music_tokens(center,features["mask"])
+            audio[key] = (m,mv,audio_signals(checked(s["audio"])),zm)
         with np.load(checked(s["source_arrays"]),allow_pickle=False) as data:
             values,mask = net.motion(data["R"])
         motion[s["source_uid"]] = net.motion_tokens(values,mask)
-    phases = phase_scores(net,sources,audio,motion)
-    events = event_banks([r for r in net.manifest["rows"] if r["role"]=="val"],sources,audio,motion)
+        zeros[s["source_uid"]] = net.motion_tokens(np.zeros_like(values),mask)[0]
+    phases = phase_scores(sources,audio,motion,zeros)
+    events = event_banks([r for r in net.manifest["rows"] if r["role"]=="val"],sources,audio,motion,zeros)
     summary = {"phase_offsets":summaries(phases), **{k:summaries(v) for k,v in events.items()}}
     write(out/"result.json",dict(model=net.binding(), split="HISTORICALLY_EXPOSED_VAL",
           sources=len(sources), songs=len(audio), phase=phases, events=dict(events), summary=summary,

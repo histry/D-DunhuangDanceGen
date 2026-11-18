@@ -1,6 +1,5 @@
 """Offline synchronized music and saved ChangE reference positions."""
 import base64
-import html
 import json
 from pathlib import Path
 import numpy as np
