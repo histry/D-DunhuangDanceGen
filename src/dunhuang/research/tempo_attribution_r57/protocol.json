@@ -1,0 +1,47 @@
+{
+  "version": "R57_SOURCE_TEMPO_ATTRIBUTION_V1",
+  "parent_commit": "78eafb84f1e6e25a524af244ea457d145364f938",
+  "seed": 57057,
+  "songs": [
+    0,
+    1,
+    2
+  ],
+  "arms": [
+    "B0",
+    "B1"
+  ],
+  "main_song": 0,
+  "main_slot": 0,
+  "main_population": "ALL_METADATA_COMMON_LEGAL_EVENTS_AT_FIRST_SLOT_NOT_QUALITY_SELECTED",
+  "epsilon": 1e-08,
+  "transport_rate_limits": [
+    0.75,
+    1.33
+  ],
+  "knot_stencil_order": 3,
+  "gap": 48,
+  "G1_counts": [
+    4,
+    8,
+    16
+  ],
+  "chart_radius_margin": 0.05,
+  "gradient_models": [
+    "Frozen",
+    "Conditional",
+    "NoClock"
+  ],
+  "gradient_steps": [
+    0,
+    120,
+    239
+  ],
+  "gradient_groups": "FIRST_ADMITTED_TASK_PER_OPTIMIZATION_MUSIC_GROUP_UID_ORDER",
+  "sdmr_scope": "R55_FROZEN_DIAGNOSTIC_NO_NEW_OPTIMIZER",
+  "phrase_truth": "NOT_EVALUABLE",
+  "human_reviewed": false,
+  "native24": "NOT_EVALUABLE",
+  "can_route": false,
+  "train_steps": 0
+}
