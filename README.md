@@ -3,6 +3,10 @@
 当前默认路径：**Event Catalog → Music Timeline → Event Plan → 冻结 EDGE（Temporal V0.5）→ 原 Native 验收**。学习检索保留shadow。研究路径已完成真实151D配对补全，以及原生SO(3)跨录制条件的Cross/Additive同参数量训练（各1,200步）；事件跟随与完整生成质量仍未合格。
 
 
+新增 [R45来源可行阶段时钟与冻结检索报告](reports/r45_release/report.md)、[机器摘要](reports/r45_release/summary.json)和[独立复验](reports/r45_release/independent.json)。先交付22案例与3条实际视频，再做同锚点PWL/C²和错音乐/无音乐对照。琵琶2 Phase Core D3为Geometry的0.9772，但四项Train音乐代理收益均未通过，未启动新训练或整曲。冻结SDMR对552原候选及184来源均衡候选完成评分审计；23查询×8来源的匿名页已回传，真实人工记录0，不报告艺术准确率。完整回归621通过/10跳过，4组独立精确重放、396条官方FK一致性核对、9个父代5900文件保持封存。
+
+本机观看：`outputs/phase_r45_01/videos/index.html`（飞天/女冥想/琵琶2五栏视频）、`outputs/phase_r45_01/viewer/index.html`（22案例主效果）、`outputs/phase_r45_01/viewer_controls/index.html`（插值与音乐控制）、`outputs/review_r45_01/viewer/index.html`（匿名来源/适配准备）。媒体不上传Git。来源几何可行与FK数值一致不等于物理合格；未知Root/接触和完整Native24限制保持。
+
 新增 [R43音乐条件Core与SDMR-E2报告](reports/r43_release/report.md)、[机器摘要](reports/r43_release/summary.json)及[独立封存回执](reports/r43_release/seal_recheck.json)。先回传并验收真实生成/来源候选，再执行固定对照。Module II：22案例×两种子，220轨迹及220条完整采样重放；音乐门2/8、ChangE动态保持0/4，Core风险门0/44，全部Geometry回退，新生成训练/整曲均0。SDMR-E2：10,107子窗口、178查询、433有效任务；三组各240步，曝光Val困难检索Rank41.37%，未优于Frozen42.11%和Shuffled43.15%，继续Shadow。12数组包与5,024父代文件独立复验，CPU595通过/10跳过、GPU合同12通过；失败与中断回执保留。
 
 本机观看文件位于 `outputs/music_reperformance_r43_01/viewer_guarded/index.html`（实际生成）、`outputs/sdmr_event_rank_01/viewer_change_v2/index.html`（23个完整ChangE候选查询）、`outputs/sdmr_event_rank_01/viewer_NoRank/index.html`、`viewer_Rank/index.html`、`viewer_ShuffledRank/index.html`（三组真实训练排序）。观看页和音频片段已回传本机，不随Git上传。完整Native24仍不可评，阶段为运动学权限代理，未宣称音乐重演或敦煌语义已经成功。

@@ -1,0 +1,80 @@
+{
+  "packs": [
+    {
+      "root": "outputs/phase_r45_01",
+      "name": "main",
+      "receipt_sha256": "a919e5cb1bec171da7ab6b5e2733a2016c3488111ca2f4c4e6586a62c2629969"
+    },
+    {
+      "root": "outputs/phase_r45_01",
+      "name": "controls",
+      "receipt_sha256": "74a6896e2b3a46abdaa0dbc33942200095017be74a9584c9e922d77f30d9b55d"
+    },
+    {
+      "root": "outputs/phase_r45_01",
+      "name": "attribution",
+      "receipt_sha256": "bb74b318e3d781e418eacf85e5bec99c42598a9535602b505c78119eade25c01"
+    },
+    {
+      "root": "outputs/review_r45_01",
+      "name": "scores",
+      "receipt_sha256": "1de8933273c62672c089ae38f53ccb89448590ee71ec4faef3f2574521e39615"
+    }
+  ],
+  "all_scientific_values_exact": true,
+  "official_fk_replayed": true,
+  "review_package_replayed": true,
+  "raw_human_reviews": 0,
+  "parents": [
+    {
+      "root": "outputs/bridge_r38_01",
+      "files": 60,
+      "manifest_sha256": "73ab623c89537ce8f64245406dafaa0eeb16ae37c983b8201aa531baf36c3786"
+    },
+    {
+      "root": "outputs/stabilize_r39_01",
+      "files": 73,
+      "manifest_sha256": "89b877a960a55591b915d4c2a0e1fa9b6fcfce9ea905373fa000c997cd5bdf1b"
+    },
+    {
+      "root": "outputs/contract_r40_01",
+      "files": 100,
+      "manifest_sha256": "1976d2b6bc470f53feb4b49f4af0c3d8b0c994657d7322f636b50982d115af16"
+    },
+    {
+      "root": "outputs/paired_event_r41_01",
+      "files": 4434,
+      "manifest_sha256": "7310316b0d6269e4005dc694da8c9d4c783cdda236ee1301d1db290322a39b87"
+    },
+    {
+      "root": "outputs/source_context_r42_01",
+      "files": 357,
+      "manifest_sha256": "725a672581e26837d7c90b747c3af9ab5a6450ad7c1b205cc8553565e54d32a1"
+    },
+    {
+      "root": "outputs/music_reperformance_r43_01",
+      "files": 218,
+      "manifest_sha256": "a2038213fbb8df84609f3f87656d6595d27e9b61743f808b8c24d84c4c43aa23"
+    },
+    {
+      "root": "outputs/sdmr_event_rank_01",
+      "files": 381,
+      "manifest_sha256": "b868ad682d427ae16ff414f46f3c69f3739a45e2a2ad3800a61ac6b144428438"
+    },
+    {
+      "root": "outputs/reperformance_r44_01",
+      "files": 243,
+      "manifest_sha256": "4b3fccf9198f85ebdccca64f5df8c73851362fbd36fe4fa43b5a8b69c2895bfc"
+    },
+    {
+      "root": "outputs/retrieval_audit_r44_01",
+      "files": 34,
+      "manifest_sha256": "dcaed6d5797ac23ecf0fc57246eba9f4450e6c62239630b9edb4b183a7f09070"
+    }
+  ],
+  "primary_delivery_preceded_controls": true,
+  "optimizer_calls": 0,
+  "whole_song_generations": 0,
+  "can_route": false,
+  "operational_qualified": false
+}

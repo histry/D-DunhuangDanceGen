@@ -1,0 +1,2782 @@
+{
+  "source_commit": "c4b92888746e5930975a221b12eebcfe77b13d6b",
+  "baseline": "8524471220e6c50e9a63f9688da3289d8f87ba30",
+  "regression": "621 passed, 10 skipped, 5 warnings in 27.64s",
+  "train_gate": {
+    "music": false,
+    "comparisons": {
+      "rms_timing_seconds/WrongMusic": {
+        "group_mean_improvement_seconds": {
+          "6bde923c8a0b374a08cab44055c60ccd9c10da75613434636b66bd51d8434767": 0.024999999999999994,
+          "7d9a3f700836bf3ec1ccd1ee6e2543ed1514e141bf83b43ce120d1ea252f7889": -0.016666666666666663,
+          "0d2e173c96d4c96bc2757ff89579f3029465e8ce729c51ce691d5db06b7c33d2": 0.020000000000000004,
+          "9b78122c3c8cb169bdff8b0e5af341f86617150f967d05462ddbe7c62b3008be": 0.041666666666666664,
+          "7a23ff77f70aaf9b73d17be50a8f6c95f2649f52ee5f6a3fbf0ec9c5d3caf14f": 0.023333333333333324,
+          "94889534012d2b7025bafe9d665968c4bbcc731d2c77f0b608002d6fd6206187": 0.044444444444444446,
+          "9d3442376028838df6538bfe843d32c5efd170397d666ebafadf8ae05ec4b271": 0.01999999999999999,
+          "4615db8b31d7194a9f3a0534251489f10257971c0b5e0b20ec3d53658ba8a8f7": -0.030555555555555558
+        },
+        "evaluable_music_groups": 8,
+        "registered_music_groups": 8,
+        "ci95": [
+          -0.0022934027777777814,
+          0.03208506944444441
+        ],
+        "passed": false
+      },
+      "rms_timing_seconds/NoMusic": {
+        "group_mean_improvement_seconds": {
+          "6bde923c8a0b374a08cab44055c60ccd9c10da75613434636b66bd51d8434767": -0.003333333333333341,
+          "7d9a3f700836bf3ec1ccd1ee6e2543ed1514e141bf83b43ce120d1ea252f7889": 0.009999999999999995,
+          "0d2e173c96d4c96bc2757ff89579f3029465e8ce729c51ce691d5db06b7c33d2": 0.003333333333333341,
+          "9b78122c3c8cb169bdff8b0e5af341f86617150f967d05462ddbe7c62b3008be": 0.049999999999999996,
+          "7a23ff77f70aaf9b73d17be50a8f6c95f2649f52ee5f6a3fbf0ec9c5d3caf14f": 0.013333333333333329,
+          "94889534012d2b7025bafe9d665968c4bbcc731d2c77f0b608002d6fd6206187": 0.019444444444444438,
+          "9d3442376028838df6538bfe843d32c5efd170397d666ebafadf8ae05ec4b271": 0.006666666666666654,
+          "4615db8b31d7194a9f3a0534251489f10257971c0b5e0b20ec3d53658ba8a8f7": -0.030555555555555558
+        },
+        "evaluable_music_groups": 8,
+        "registered_music_groups": 8,
+        "ci95": [
+          -0.005694444444444446,
+          0.023333333333333327
+        ],
+        "passed": false
+      },
+      "wrist_acceleration_timing_seconds/WrongMusic": {
+        "group_mean_improvement_seconds": {
+          "6bde923c8a0b374a08cab44055c60ccd9c10da75613434636b66bd51d8434767": -0.010648148148148157,
+          "7d9a3f700836bf3ec1ccd1ee6e2543ed1514e141bf83b43ce120d1ea252f7889": -0.02638888888888888,
+          "0d2e173c96d4c96bc2757ff89579f3029465e8ce729c51ce691d5db06b7c33d2": -0.022222222222222227,
+          "9b78122c3c8cb169bdff8b0e5af341f86617150f967d05462ddbe7c62b3008be": 0.002777777777777775,
+          "7a23ff77f70aaf9b73d17be50a8f6c95f2649f52ee5f6a3fbf0ec9c5d3caf14f": 0.018518518518518517,
+          "94889534012d2b7025bafe9d665968c4bbcc731d2c77f0b608002d6fd6206187": -0.022222222222222227,
+          "9d3442376028838df6538bfe843d32c5efd170397d666ebafadf8ae05ec4b271": 0.0,
+          "4615db8b31d7194a9f3a0534251489f10257971c0b5e0b20ec3d53658ba8a8f7": -0.03333333333333332
+        },
+        "evaluable_music_groups": 8,
+        "registered_music_groups": 8,
+        "ci95": [
+          -0.0225708912037037,
+          -2.6020852139652106e-18
+        ],
+        "passed": false
+      },
+      "wrist_acceleration_timing_seconds/NoMusic": {
+        "group_mean_improvement_seconds": {
+          "6bde923c8a0b374a08cab44055c60ccd9c10da75613434636b66bd51d8434767": 0.03703703703703702,
+          "7d9a3f700836bf3ec1ccd1ee6e2543ed1514e141bf83b43ce120d1ea252f7889": 0.011111111111111113,
+          "0d2e173c96d4c96bc2757ff89579f3029465e8ce729c51ce691d5db06b7c33d2": -0.01111111111111112,
+          "9b78122c3c8cb169bdff8b0e5af341f86617150f967d05462ddbe7c62b3008be": 0.015277777777777772,
+          "7a23ff77f70aaf9b73d17be50a8f6c95f2649f52ee5f6a3fbf0ec9c5d3caf14f": 0.03851851851851852,
+          "94889534012d2b7025bafe9d665968c4bbcc731d2c77f0b608002d6fd6206187": -0.005555555555555564,
+          "9d3442376028838df6538bfe843d32c5efd170397d666ebafadf8ae05ec4b271": -0.013095238095238104,
+          "4615db8b31d7194a9f3a0534251489f10257971c0b5e0b20ec3d53658ba8a8f7": -0.029629629629629624
+        },
+        "evaluable_music_groups": 8,
+        "registered_music_groups": 8,
+        "ci95": [
+          -0.00976860119047619,
+          0.02143551587301586
+        ],
+        "passed": false
+      }
+    },
+    "change_sources_passed": 4,
+    "change_sources": 4,
+    "source_pass_is_by_construction": true,
+    "necessary_screen_passed": false
+  },
+  "conditional_training": {
+    "admitted": false,
+    "reason": "NO_CREDIBLE_MUSIC_PROXY_BENEFIT"
+  },
+  "source_results": [
+    {
+      "key": "female_FeiTian_0__music",
+      "domain": "ChangE",
+      "role": "train",
+      "activity_ratio": 1.0,
+      "D3_ratio": 1.0,
+      "source_feasibility_filter_passed": true,
+      "seed_contract": {
+        "body_identical": true,
+        "root_identical": true,
+        "contact_channels_identical": true,
+        "root_maximum_difference_m": 0.0,
+        "scope": "BODY_CLOCK_REPETITIONS_NOT_INDEPENDENT_SOURCES; MODEL_ROOT_CONTACT_PRIORS_MAY_DIFFER"
+      },
+      "identity_cores": 2,
+      "factor": {
+        "MatchedLinear": {
+          "knot_stencil_D3": 119.27253953868492,
+          "interior_D3": 19.07911491696729,
+          "all_core_D3": 31.586400152012633
+        },
+        "MatchedC2": {
+          "knot_stencil_D3": 114.68127145052364,
+          "interior_D3": 19.86292880856478,
+          "all_core_D3": 31.26859257600246
+        }
+      },
+      "metrics": {
+        "Geometry": {
+          "core_D1": 0.016495446610640768,
+          "gap_D1": 0.17136682859415525,
+          "boundary_D1": 0.10964354213433983,
+          "core_D2": 0.6023960883049815,
+          "gap_D2": 0.8560539711223376,
+          "boundary_D2": 1.2992641912723562,
+          "core_D3": 31.729030451545952,
+          "gap_D3": 5.032805812488783,
+          "boundary_D3": 40.17778786080035,
+          "core_activity": 0.016495446610640768,
+          "upper_range_m": 0.020058641117066144,
+          "rms_timing_seconds": 0.05,
+          "wrist_acceleration_timing_seconds": 0.1,
+          "speed_peak_count": 2,
+          "wrist_acceleration_peak_count": 7,
+          "proxy_truth": "NOT_HUMAN_OR_SEMANTIC_EVENT_CORRESPONDENCE",
+          "protected_exact": true
+        },
+        "R44C2": {
+          "core_D1": 0.016265458420947062,
+          "gap_D1": 0.17136682859415525,
+          "boundary_D1": 0.10964354213433983,
+          "core_D2": 0.594136356234379,
+          "gap_D2": 0.8560539711223376,
+          "boundary_D2": 1.2992641912723562,
+          "core_D3": 31.26859257600246,
+          "gap_D3": 5.032805812488783,
+          "boundary_D3": 40.17778786080035,
+          "core_activity": 0.016265458420947062,
+          "upper_range_m": 0.020071720518171788,
+          "rms_timing_seconds": 0.05555555555555556,
+          "wrist_acceleration_timing_seconds": 0.08095238095238094,
+          "speed_peak_count": 3,
+          "wrist_acceleration_peak_count": 7,
+          "proxy_truth": "NOT_HUMAN_OR_SEMANTIC_EVENT_CORRESPONDENCE",
+          "protected_exact": true
+        },
+        "Phase": {
+          "core_D1": 0.016495446610640768,
+          "gap_D1": 0.17136682859415525,
+          "boundary_D1": 0.10964354213433983,
+          "core_D2": 0.6023960883049815,
+          "gap_D2": 0.8560539711223376,
+          "boundary_D2": 1.2992641912723562,
+          "core_D3": 31.729030451545952,
+          "gap_D3": 5.032805812488783,
+          "boundary_D3": 40.17778786080035,
+          "core_activity": 0.016495446610640768,
+          "upper_range_m": 0.020058641117066144,
+          "rms_timing_seconds": 0.05,
+          "wrist_acceleration_timing_seconds": 0.1,
+          "speed_peak_count": 2,
+          "wrist_acceleration_peak_count": 7,
+          "proxy_truth": "NOT_HUMAN_OR_SEMANTIC_EVENT_CORRESPONDENCE",
+          "protected_exact": true
+        },
+        "R43Core": {
+          "core_D1": 0.08220369553929874,
+          "gap_D1": 0.15368071597811633,
+          "boundary_D1": 0.109554440022922,
+          "core_D2": 1.7255670973601036,
+          "gap_D2": 0.8891377273854976,
+          "boundary_D2": 1.2986685390484367,
+          "core_D3": 64.65975491935795,
+          "gap_D3": 10.966857425737738,
+          "boundary_D3": 40.20885741337467,
+          "core_activity": 0.08220369553929874,
+          "upper_range_m": 0.045213851414155216,
+          "rms_timing_seconds": 0.06666666666666667,
+          "wrist_acceleration_timing_seconds": 0.1,
+          "speed_peak_count": 3,
+          "wrist_acceleration_peak_count": 6,
+          "proxy_truth": "NOT_HUMAN_OR_SEMANTIC_EVENT_CORRESPONDENCE",
+          "protected_exact": false
+        },
+        "MatchedLinear": {
+          "core_D1": 0.01627303869668833,
+          "gap_D1": 0.17136682859415525,
+          "boundary_D1": 0.10964354213433983,
+          "core_D2": 0.5980065871154953,
+          "gap_D2": 0.8560539711223376,
+          "boundary_D2": 1.2992641912723562,
+          "core_D3": 31.586400152012633,
+          "gap_D3": 5.032805812488783,
+          "boundary_D3": 40.17778786080035,
+          "core_activity": 0.01627303869668833,
+          "upper_range_m": 0.020056652339796224,
+          "rms_timing_seconds": 0.04444444444444444,
+          "wrist_acceleration_timing_seconds": 0.08333333333333333,
+          "speed_peak_count": 3,
+          "wrist_acceleration_peak_count": 8,
+          "proxy_truth": "NOT_HUMAN_OR_SEMANTIC_EVENT_CORRESPONDENCE",
+          "protected_exact": true
+        },
+        "MatchedC2": {
+          "core_D1": 0.016265458420947062,
+          "gap_D1": 0.17136682859415525,
+          "boundary_D1": 0.10964354213433983,
+          "core_D2": 0.594136356234379,
+          "gap_D2": 0.8560539711223376,
+          "boundary_D2": 1.2992641912723562,
+          "core_D3": 31.26859257600246,
+          "gap_D3": 5.032805812488783,
+          "boundary_D3": 40.17778786080035,
+          "core_activity": 0.016265458420947062,
+          "upper_range_m": 0.020071720518171788,
+          "rms_timing_seconds": 0.05555555555555556,
+          "wrist_acceleration_timing_seconds": 0.08095238095238094,
+          "speed_peak_count": 3,
+          "wrist_acceleration_peak_count": 7,
+          "proxy_truth": "NOT_HUMAN_OR_SEMANTIC_EVENT_CORRESPONDENCE",
+          "protected_exact": true
+        },
+        "WrongMusic": {
+          "core_D1": 0.016495446610640768,
+          "gap_D1": 0.17136682859415525,
+          "boundary_D1": 0.10964354213433983,
+          "core_D2": 0.6023960883049815,
+          "gap_D2": 0.8560539711223376,
+          "boundary_D2": 1.2992641912723562,
+          "core_D3": 31.729030451545952,
+          "gap_D3": 5.032805812488783,
+          "boundary_D3": 40.17778786080035,
+          "core_activity": 0.016495446610640768,
+          "upper_range_m": 0.020058641117066144,
+          "rms_timing_seconds": 0.05,
+          "wrist_acceleration_timing_seconds": 0.1,
+          "speed_peak_count": 2,
+          "wrist_acceleration_peak_count": 7,
+          "proxy_truth": "NOT_HUMAN_OR_SEMANTIC_EVENT_CORRESPONDENCE",
+          "protected_exact": true
+        },
+        "NoMusic": {
+          "core_D1": 0.016495446610640768,
+          "gap_D1": 0.17136682859415525,
+          "boundary_D1": 0.10964354213433983,
+          "core_D2": 0.6023960883049815,
+          "gap_D2": 0.8560539711223376,
+          "boundary_D2": 1.2992641912723562,
+          "core_D3": 31.729030451545952,
+          "gap_D3": 5.032805812488783,
+          "boundary_D3": 40.17778786080035,
+          "core_activity": 0.016495446610640768,
+          "upper_range_m": 0.020058641117066144,
+          "rms_timing_seconds": 0.05,
+          "wrist_acceleration_timing_seconds": 0.1,
+          "speed_peak_count": 2,
+          "wrist_acceleration_peak_count": 7,
+          "proxy_truth": "NOT_HUMAN_OR_SEMANTIC_EVENT_CORRESPONDENCE",
+          "protected_exact": true
+        },
+        "FixedMapMusicB": {
+          "core_D1": 0.016495446610640768,
+          "gap_D1": 0.17136682859415525,
+          "boundary_D1": 0.10964354213433983,
+          "core_D2": 0.6023960883049815,
+          "gap_D2": 0.8560539711223376,
+          "boundary_D2": 1.2992641912723562,
+          "core_D3": 31.729030451545952,
+          "gap_D3": 5.032805812488783,
+          "boundary_D3": 40.17778786080035,
+          "core_activity": 0.016495446610640768,
+          "upper_range_m": 0.020058641117066144,
+          "rms_timing_seconds": 0.05,
+          "wrist_acceleration_timing_seconds": 0.1,
+          "speed_peak_count": 2,
+          "wrist_acceleration_peak_count": 7,
+          "proxy_truth": "NOT_HUMAN_OR_SEMANTIC_EVENT_CORRESPONDENCE",
+          "protected_exact": true
+        }
+      }
+    },
+    {
+      "key": "female_lotus_0__music",
+      "domain": "ChangE",
+      "role": "train",
+      "activity_ratio": 0.993697903844285,
+      "D3_ratio": 0.9928074108889233,
+      "source_feasibility_filter_passed": true,
+      "seed_contract": {
+        "body_identical": true,
+        "root_identical": true,
+        "contact_channels_identical": true,
+        "root_maximum_difference_m": 0.0,
+        "scope": "BODY_CLOCK_REPETITIONS_NOT_INDEPENDENT_SOURCES; MODEL_ROOT_CONTACT_PRIORS_MAY_DIFFER"
+      },
+      "identity_cores": 1,
+      "factor": {
+        "MatchedLinear": {
+          "knot_stencil_D3": 56.012919855305086,
+          "interior_D3": 33.76710801061002,
+          "all_core_D3": 35.737521888892324
+        },
+        "MatchedC2": {
+          "knot_stencil_D3": 55.49058250819312,
+          "interior_D3": 34.422817258751856,
+          "all_core_D3": 36.2604943386033
+        }
+      },
+      "metrics": {
+        "Geometry": {
+          "core_D1": 0.11478756454605969,
+          "gap_D1": 0.10675659756150939,
+          "boundary_D1": 0.08167394910580954,
+          "core_D2": 1.003535417158893,
+          "gap_D2": 0.4143717880647671,
+          "boundary_D2": 0.6098680060182561,
+          "core_D3": 36.56112839343829,
+          "gap_D3": 2.2495046736143167,
+          "boundary_D3": 14.077484863214279,
+          "core_activity": 0.11478756454605969,
+          "upper_range_m": 0.034568431371978174,
+          "rms_timing_seconds": 0.04444444444444444,
+          "wrist_acceleration_timing_seconds": 0.058333333333333334,
+          "speed_peak_count": 3,
+          "wrist_acceleration_peak_count": 8,
+          "proxy_truth": "NOT_HUMAN_OR_SEMANTIC_EVENT_CORRESPONDENCE",
+          "protected_exact": true
+        },
+        "R44C2": {
+          "core_D1": 0.11564811952659164,
+          "gap_D1": 0.10675659756150939,
+          "boundary_D1": 0.08167394910580954,
+          "core_D2": 1.0125110376393054,
+          "gap_D2": 0.4143717880647671,
+          "boundary_D2": 0.6098680060182561,
+          "core_D3": 36.2604943386033,
+          "gap_D3": 2.2495046736143167,
+          "boundary_D3": 14.077484863214279,
+          "core_activity": 0.11564811952659164,
+          "upper_range_m": 0.03455284762312658,
+          "rms_timing_seconds": 0.03333333333333333,
+          "wrist_acceleration_timing_seconds": 0.058333333333333334,
+          "speed_peak_count": 3,
+          "wrist_acceleration_peak_count": 8,
+          "proxy_truth": "NOT_HUMAN_OR_SEMANTIC_EVENT_CORRESPONDENCE",
+          "protected_exact": true
+        },
+        "Phase": {
+          "core_D1": 0.11406416227681009,
+          "gap_D1": 0.10675659756150939,
+          "boundary_D1": 0.08167394910580954,
+          "core_D2": 0.9949602758891842,
+          "gap_D2": 0.4143717880647671,
+          "boundary_D2": 0.6098680060182561,
+          "core_D3": 36.29815921946697,
+          "gap_D3": 2.2495046736143167,
+          "boundary_D3": 14.077484863214279,
+          "core_activity": 0.11406416227681009,
+          "upper_range_m": 0.03456977969035506,
+          "rms_timing_seconds": 0.04444444444444444,
+          "wrist_acceleration_timing_seconds": 0.058333333333333334,
+          "speed_peak_count": 3,
+          "wrist_acceleration_peak_count": 8,
+          "proxy_truth": "NOT_HUMAN_OR_SEMANTIC_EVENT_CORRESPONDENCE",
+          "protected_exact": true
+        },
+        "R43Core": {
+          "core_D1": 0.12554670410873797,
+          "gap_D1": 0.09944524489628559,
+          "boundary_D1": 0.08163674248968596,
+          "core_D2": 1.4122169543938565,
+          "gap_D2": 0.5105504309689358,
+          "boundary_D2": 0.6088560085289638,
+          "core_D3": 50.218249627083786,
+          "gap_D3": 7.285885914720106,
+          "boundary_D3": 14.043123972819332,
+          "core_activity": 0.12554670410873797,
+          "upper_range_m": 0.052614486943154286,
+          "rms_timing_seconds": 0.04444444444444444,
+          "wrist_acceleration_timing_seconds": 0.06190476190476191,
+          "speed_peak_count": 3,
+          "wrist_acceleration_peak_count": 7,
+          "proxy_truth": "NOT_HUMAN_OR_SEMANTIC_EVENT_CORRESPONDENCE",
+          "protected_exact": false
+        },
+        "MatchedLinear": {
+          "core_D1": 0.1154976124433519,
+          "gap_D1": 0.10675659756150939,
+          "boundary_D1": 0.08167394910580954,
+          "core_D2": 1.0043529000654117,
+          "gap_D2": 0.4143717880647671,
+          "boundary_D2": 0.6098680060182561,
+          "core_D3": 35.737521888892324,
+          "gap_D3": 2.2495046736143167,
+          "boundary_D3": 14.077484863214279,
+          "core_activity": 0.1154976124433519,
+          "upper_range_m": 0.03454541394409413,
+          "rms_timing_seconds": 0.03333333333333333,
+          "wrist_acceleration_timing_seconds": 0.058333333333333334,
+          "speed_peak_count": 3,
+          "wrist_acceleration_peak_count": 8,
+          "proxy_truth": "NOT_HUMAN_OR_SEMANTIC_EVENT_CORRESPONDENCE",
+          "protected_exact": true
+        },
+        "MatchedC2": {
+          "core_D1": 0.11564811952659164,
+          "gap_D1": 0.10675659756150939,
+          "boundary_D1": 0.08167394910580954,
+          "core_D2": 1.0125110376393054,
+          "gap_D2": 0.4143717880647671,
+          "boundary_D2": 0.6098680060182561,
+          "core_D3": 36.2604943386033,
+          "gap_D3": 2.2495046736143167,
+          "boundary_D3": 14.077484863214279,
+          "core_activity": 0.11564811952659164,
+          "upper_range_m": 0.03455284762312658,
+          "rms_timing_seconds": 0.03333333333333333,
+          "wrist_acceleration_timing_seconds": 0.058333333333333334,
+          "speed_peak_count": 3,
+          "wrist_acceleration_peak_count": 8,
+          "proxy_truth": "NOT_HUMAN_OR_SEMANTIC_EVENT_CORRESPONDENCE",
+          "protected_exact": true
+        },
+        "WrongMusic": {
+          "core_D1": 0.1152700196185346,
+          "gap_D1": 0.10675659756150939,
+          "boundary_D1": 0.08167394910580954,
+          "core_D2": 1.010334301405717,
+          "gap_D2": 0.4143717880647671,
+          "boundary_D2": 0.6098680060182561,
+          "core_D3": 36.112062800384955,
+          "gap_D3": 2.2495046736143167,
+          "boundary_D3": 14.077484863214279,
+          "core_activity": 0.1152700196185346,
+          "upper_range_m": 0.034533059090608734,
+          "rms_timing_seconds": 0.04444444444444444,
+          "wrist_acceleration_timing_seconds": 0.08518518518518518,
+          "speed_peak_count": 3,
+          "wrist_acceleration_peak_count": 9,
+          "proxy_truth": "NOT_HUMAN_OR_SEMANTIC_EVENT_CORRESPONDENCE",
+          "protected_exact": true
+        },
+        "NoMusic": {
+          "core_D1": 0.11478756454605969,
+          "gap_D1": 0.10675659756150939,
+          "boundary_D1": 0.08167394910580954,
+          "core_D2": 1.003535417158893,
+          "gap_D2": 0.4143717880647671,
+          "boundary_D2": 0.6098680060182561,
+          "core_D3": 36.56112839343829,
+          "gap_D3": 2.2495046736143167,
+          "boundary_D3": 14.077484863214279,
+          "core_activity": 0.11478756454605969,
+          "upper_range_m": 0.034568431371978174,
+          "rms_timing_seconds": 0.04444444444444444,
+          "wrist_acceleration_timing_seconds": 0.058333333333333334,
+          "speed_peak_count": 3,
+          "wrist_acceleration_peak_count": 8,
+          "proxy_truth": "NOT_HUMAN_OR_SEMANTIC_EVENT_CORRESPONDENCE",
+          "protected_exact": true
+        },
+        "FixedMapMusicB": {
+          "core_D1": 0.11406416227681009,
+          "gap_D1": 0.10675659756150939,
+          "boundary_D1": 0.08167394910580954,
+          "core_D2": 0.9949602758891842,
+          "gap_D2": 0.4143717880647671,
+          "boundary_D2": 0.6098680060182561,
+          "core_D3": 36.29815921946697,
+          "gap_D3": 2.2495046736143167,
+          "boundary_D3": 14.077484863214279,
+          "core_activity": 0.11406416227681009,
+          "upper_range_m": 0.03456977969035506,
+          "rms_timing_seconds": 0.04444444444444444,
+          "wrist_acceleration_timing_seconds": 0.058333333333333334,
+          "speed_peak_count": 3,
+          "wrist_acceleration_peak_count": 8,
+          "proxy_truth": "NOT_HUMAN_OR_SEMANTIC_EVENT_CORRESPONDENCE",
+          "protected_exact": true
+        }
+      }
+    },
+    {
+      "key": "female_meditation_0__music",
+      "domain": "ChangE",
+      "role": "held",
+      "activity_ratio": 1.0,
+      "D3_ratio": 1.0,
+      "source_feasibility_filter_passed": true,
+      "seed_contract": {
+        "body_identical": true,
+        "root_identical": true,
+        "contact_channels_identical": true,
+        "root_maximum_difference_m": 0.0,
+        "scope": "BODY_CLOCK_REPETITIONS_NOT_INDEPENDENT_SOURCES; MODEL_ROOT_CONTACT_PRIORS_MAY_DIFFER"
+      },
+      "identity_cores": 2,
+      "factor": {
+        "MatchedLinear": {
+          "knot_stencil_D3": null,
+          "interior_D3": 12.267763243315146,
+          "all_core_D3": 12.267763243315146
+        },
+        "MatchedC2": {
+          "knot_stencil_D3": null,
+          "interior_D3": 12.267763243315146,
+          "all_core_D3": 12.267763243315146
+        }
+      },
+      "metrics": {
+        "Geometry": {
+          "core_D1": 0.006744559324686063,
+          "gap_D1": 0.00744646460967432,
+          "boundary_D1": 0.0057599908206642575,
+          "core_D2": 0.23934773359926864,
+          "gap_D2": 0.03510213360821108,
+          "boundary_D2": 0.0862625162429791,
+          "core_D3": 12.267763243315146,
+          "gap_D3": 0.18507858182097917,
+          "boundary_D3": 2.896838772156956,
+          "core_activity": 0.006744559324686063,
+          "upper_range_m": 0.004821500771989425,
+          "rms_timing_seconds": null,
+          "wrist_acceleration_timing_seconds": 0.10416666666666667,
+          "speed_peak_count": 0,
+          "wrist_acceleration_peak_count": 8,
+          "proxy_truth": "NOT_HUMAN_OR_SEMANTIC_EVENT_CORRESPONDENCE",
+          "protected_exact": true
+        },
+        "R44C2": {
+          "core_D1": 0.006744559324686063,
+          "gap_D1": 0.00744646460967432,
+          "boundary_D1": 0.0057599908206642575,
+          "core_D2": 0.23934773359926864,
+          "gap_D2": 0.03510213360821108,
+          "boundary_D2": 0.0862625162429791,
+          "core_D3": 12.267763243315146,
+          "gap_D3": 0.18507858182097917,
+          "boundary_D3": 2.896838772156956,
+          "core_activity": 0.006744559324686063,
+          "upper_range_m": 0.004821500771989425,
+          "rms_timing_seconds": null,
+          "wrist_acceleration_timing_seconds": 0.10416666666666667,
+          "speed_peak_count": 0,
+          "wrist_acceleration_peak_count": 8,
+          "proxy_truth": "NOT_HUMAN_OR_SEMANTIC_EVENT_CORRESPONDENCE",
+          "protected_exact": true
+        },
+        "Phase": {
+          "core_D1": 0.006744559324686063,
+          "gap_D1": 0.00744646460967432,
+          "boundary_D1": 0.0057599908206642575,
+          "core_D2": 0.23934773359926864,
+          "gap_D2": 0.03510213360821108,
+          "boundary_D2": 0.0862625162429791,
+          "core_D3": 12.267763243315146,
+          "gap_D3": 0.18507858182097917,
+          "boundary_D3": 2.896838772156956,
+          "core_activity": 0.006744559324686063,
+          "upper_range_m": 0.004821500771989425,
+          "rms_timing_seconds": null,
+          "wrist_acceleration_timing_seconds": 0.10416666666666667,
+          "speed_peak_count": 0,
+          "wrist_acceleration_peak_count": 8,
+          "proxy_truth": "NOT_HUMAN_OR_SEMANTIC_EVENT_CORRESPONDENCE",
+          "protected_exact": true
+        },
+        "R43Core": {
+          "core_D1": 0.049553708822927485,
+          "gap_D1": 0.028467375594705996,
+          "boundary_D1": 0.005898214326701533,
+          "core_D2": 1.1475282516707583,
+          "gap_D2": 0.3116964600766168,
+          "boundary_D2": 0.09870832769343288,
+          "core_D3": 42.32700643465584,
+          "gap_D3": 7.15596888036017,
+          "boundary_D3": 3.261745734176959,
+          "core_activity": 0.049553708822927485,
+          "upper_range_m": 0.025708782599152376,
+          "rms_timing_seconds": 0.06666666666666667,
+          "wrist_acceleration_timing_seconds": 0.13333333333333333,
+          "speed_peak_count": 2,
+          "wrist_acceleration_peak_count": 3,
+          "proxy_truth": "NOT_HUMAN_OR_SEMANTIC_EVENT_CORRESPONDENCE",
+          "protected_exact": false
+        },
+        "MatchedLinear": {
+          "core_D1": 0.006744559324686063,
+          "gap_D1": 0.00744646460967432,
+          "boundary_D1": 0.0057599908206642575,
+          "core_D2": 0.23934773359926864,
+          "gap_D2": 0.03510213360821108,
+          "boundary_D2": 0.0862625162429791,
+          "core_D3": 12.267763243315146,
+          "gap_D3": 0.18507858182097917,
+          "boundary_D3": 2.896838772156956,
+          "core_activity": 0.006744559324686063,
+          "upper_range_m": 0.004821500771989425,
+          "rms_timing_seconds": null,
+          "wrist_acceleration_timing_seconds": 0.10416666666666667,
+          "speed_peak_count": 0,
+          "wrist_acceleration_peak_count": 8,
+          "proxy_truth": "NOT_HUMAN_OR_SEMANTIC_EVENT_CORRESPONDENCE",
+          "protected_exact": true
+        },
+        "MatchedC2": {
+          "core_D1": 0.006744559324686063,
+          "gap_D1": 0.00744646460967432,
+          "boundary_D1": 0.0057599908206642575,
+          "core_D2": 0.23934773359926864,
+          "gap_D2": 0.03510213360821108,
+          "boundary_D2": 0.0862625162429791,
+          "core_D3": 12.267763243315146,
+          "gap_D3": 0.18507858182097917,
+          "boundary_D3": 2.896838772156956,
+          "core_activity": 0.006744559324686063,
+          "upper_range_m": 0.004821500771989425,
+          "rms_timing_seconds": null,
+          "wrist_acceleration_timing_seconds": 0.10416666666666667,
+          "speed_peak_count": 0,
+          "wrist_acceleration_peak_count": 8,
+          "proxy_truth": "NOT_HUMAN_OR_SEMANTIC_EVENT_CORRESPONDENCE",
+          "protected_exact": true
+        },
+        "WrongMusic": {
+          "core_D1": 0.006744559324686063,
+          "gap_D1": 0.00744646460967432,
+          "boundary_D1": 0.0057599908206642575,
+          "core_D2": 0.23934773359926864,
+          "gap_D2": 0.03510213360821108,
+          "boundary_D2": 0.0862625162429791,
+          "core_D3": 12.267763243315146,
+          "gap_D3": 0.18507858182097917,
+          "boundary_D3": 2.896838772156956,
+          "core_activity": 0.006744559324686063,
+          "upper_range_m": 0.004821500771989425,
+          "rms_timing_seconds": null,
+          "wrist_acceleration_timing_seconds": 0.10416666666666667,
+          "speed_peak_count": 0,
+          "wrist_acceleration_peak_count": 8,
+          "proxy_truth": "NOT_HUMAN_OR_SEMANTIC_EVENT_CORRESPONDENCE",
+          "protected_exact": true
+        },
+        "NoMusic": {
+          "core_D1": 0.006744559324686063,
+          "gap_D1": 0.00744646460967432,
+          "boundary_D1": 0.0057599908206642575,
+          "core_D2": 0.23934773359926864,
+          "gap_D2": 0.03510213360821108,
+          "boundary_D2": 0.0862625162429791,
+          "core_D3": 12.267763243315146,
+          "gap_D3": 0.18507858182097917,
+          "boundary_D3": 2.896838772156956,
+          "core_activity": 0.006744559324686063,
+          "upper_range_m": 0.004821500771989425,
+          "rms_timing_seconds": null,
+          "wrist_acceleration_timing_seconds": 0.10416666666666667,
+          "speed_peak_count": 0,
+          "wrist_acceleration_peak_count": 8,
+          "proxy_truth": "NOT_HUMAN_OR_SEMANTIC_EVENT_CORRESPONDENCE",
+          "protected_exact": true
+        },
+        "FixedMapMusicB": {
+          "core_D1": 0.006744559324686063,
+          "gap_D1": 0.00744646460967432,
+          "boundary_D1": 0.0057599908206642575,
+          "core_D2": 0.23934773359926864,
+          "gap_D2": 0.03510213360821108,
+          "boundary_D2": 0.0862625162429791,
+          "core_D3": 12.267763243315146,
+          "gap_D3": 0.18507858182097917,
+          "boundary_D3": 2.896838772156956,
+          "core_activity": 0.006744559324686063,
+          "upper_range_m": 0.004821500771989425,
+          "rms_timing_seconds": null,
+          "wrist_acceleration_timing_seconds": 0.10416666666666667,
+          "speed_peak_count": 0,
+          "wrist_acceleration_peak_count": 8,
+          "proxy_truth": "NOT_HUMAN_OR_SEMANTIC_EVENT_CORRESPONDENCE",
+          "protected_exact": true
+        }
+      }
+    },
+    {
+      "key": "male_meditation_0__music",
+      "domain": "ChangE",
+      "role": "held",
+      "activity_ratio": 1.0,
+      "D3_ratio": 1.0,
+      "source_feasibility_filter_passed": true,
+      "seed_contract": {
+        "body_identical": true,
+        "root_identical": true,
+        "contact_channels_identical": true,
+        "root_maximum_difference_m": 0.0,
+        "scope": "BODY_CLOCK_REPETITIONS_NOT_INDEPENDENT_SOURCES; MODEL_ROOT_CONTACT_PRIORS_MAY_DIFFER"
+      },
+      "identity_cores": 2,
+      "factor": {
+        "MatchedLinear": {
+          "knot_stencil_D3": null,
+          "interior_D3": 8.821710893516771,
+          "all_core_D3": 8.821710893516771
+        },
+        "MatchedC2": {
+          "knot_stencil_D3": null,
+          "interior_D3": 8.821710893516771,
+          "all_core_D3": 8.821710893516771
+        }
+      },
+      "metrics": {
+        "Geometry": {
+          "core_D1": 0.006886089145125567,
+          "gap_D1": 0.015333078208855443,
+          "boundary_D1": 0.010472517814115529,
+          "core_D2": 0.19090359696867806,
+          "gap_D2": 0.06847853267151731,
+          "boundary_D2": 0.11283808513190216,
+          "core_D3": 8.821710893516771,
+          "gap_D3": 0.3688305762769202,
+          "boundary_D3": 2.0154145904272127,
+          "core_activity": 0.006886089145125567,
+          "upper_range_m": 0.005575948796467856,
+          "rms_timing_seconds": null,
+          "wrist_acceleration_timing_seconds": 0.1037037037037037,
+          "speed_peak_count": 0,
+          "wrist_acceleration_peak_count": 9,
+          "proxy_truth": "NOT_HUMAN_OR_SEMANTIC_EVENT_CORRESPONDENCE",
+          "protected_exact": true
+        },
+        "R44C2": {
+          "core_D1": 0.006886089145125567,
+          "gap_D1": 0.015333078208855443,
+          "boundary_D1": 0.010472517814115529,
+          "core_D2": 0.19090359696867806,
+          "gap_D2": 0.06847853267151731,
+          "boundary_D2": 0.11283808513190216,
+          "core_D3": 8.821710893516771,
+          "gap_D3": 0.3688305762769202,
+          "boundary_D3": 2.0154145904272127,
+          "core_activity": 0.006886089145125567,
+          "upper_range_m": 0.005575948796467856,
+          "rms_timing_seconds": null,
+          "wrist_acceleration_timing_seconds": 0.1037037037037037,
+          "speed_peak_count": 0,
+          "wrist_acceleration_peak_count": 9,
+          "proxy_truth": "NOT_HUMAN_OR_SEMANTIC_EVENT_CORRESPONDENCE",
+          "protected_exact": true
+        },
+        "Phase": {
+          "core_D1": 0.006886089145125567,
+          "gap_D1": 0.015333078208855443,
+          "boundary_D1": 0.010472517814115529,
+          "core_D2": 0.19090359696867806,
+          "gap_D2": 0.06847853267151731,
+          "boundary_D2": 0.11283808513190216,
+          "core_D3": 8.821710893516771,
+          "gap_D3": 0.3688305762769202,
+          "boundary_D3": 2.0154145904272127,
+          "core_activity": 0.006886089145125567,
+          "upper_range_m": 0.005575948796467856,
+          "rms_timing_seconds": null,
+          "wrist_acceleration_timing_seconds": 0.1037037037037037,
+          "speed_peak_count": 0,
+          "wrist_acceleration_peak_count": 9,
+          "proxy_truth": "NOT_HUMAN_OR_SEMANTIC_EVENT_CORRESPONDENCE",
+          "protected_exact": true
+        },
+        "R43Core": {
+          "core_D1": 0.03788487416216433,
+          "gap_D1": 0.026429860161578465,
+          "boundary_D1": 0.010495009792353245,
+          "core_D2": 0.8755311204755327,
+          "gap_D2": 0.2381797843490659,
+          "boundary_D2": 0.11550530722080876,
+          "core_D3": 34.90905092431815,
+          "gap_D3": 4.3249426511826545,
+          "boundary_D3": 2.1707516470273176,
+          "core_activity": 0.03788487416216433,
+          "upper_range_m": 0.02050000965852329,
+          "rms_timing_seconds": 0.06666666666666667,
+          "wrist_acceleration_timing_seconds": 0.1380952380952381,
+          "speed_peak_count": 2,
+          "wrist_acceleration_peak_count": 7,
+          "proxy_truth": "NOT_HUMAN_OR_SEMANTIC_EVENT_CORRESPONDENCE",
+          "protected_exact": false
+        },
+        "MatchedLinear": {
+          "core_D1": 0.006886089145125567,
+          "gap_D1": 0.015333078208855443,
+          "boundary_D1": 0.010472517814115529,
+          "core_D2": 0.19090359696867806,
+          "gap_D2": 0.06847853267151731,
+          "boundary_D2": 0.11283808513190216,
+          "core_D3": 8.821710893516771,
+          "gap_D3": 0.3688305762769202,
+          "boundary_D3": 2.0154145904272127,
+          "core_activity": 0.006886089145125567,
+          "upper_range_m": 0.005575948796467856,
+          "rms_timing_seconds": null,
+          "wrist_acceleration_timing_seconds": 0.1037037037037037,
+          "speed_peak_count": 0,
+          "wrist_acceleration_peak_count": 9,
+          "proxy_truth": "NOT_HUMAN_OR_SEMANTIC_EVENT_CORRESPONDENCE",
+          "protected_exact": true
+        },
+        "MatchedC2": {
+          "core_D1": 0.006886089145125567,
+          "gap_D1": 0.015333078208855443,
+          "boundary_D1": 0.010472517814115529,
+          "core_D2": 0.19090359696867806,
+          "gap_D2": 0.06847853267151731,
+          "boundary_D2": 0.11283808513190216,
+          "core_D3": 8.821710893516771,
+          "gap_D3": 0.3688305762769202,
+          "boundary_D3": 2.0154145904272127,
+          "core_activity": 0.006886089145125567,
+          "upper_range_m": 0.005575948796467856,
+          "rms_timing_seconds": null,
+          "wrist_acceleration_timing_seconds": 0.1037037037037037,
+          "speed_peak_count": 0,
+          "wrist_acceleration_peak_count": 9,
+          "proxy_truth": "NOT_HUMAN_OR_SEMANTIC_EVENT_CORRESPONDENCE",
+          "protected_exact": true
+        },
+        "WrongMusic": {
+          "core_D1": 0.006886089145125567,
+          "gap_D1": 0.015333078208855443,
+          "boundary_D1": 0.010472517814115529,
+          "core_D2": 0.19090359696867806,
+          "gap_D2": 0.06847853267151731,
+          "boundary_D2": 0.11283808513190216,
+          "core_D3": 8.821710893516771,
+          "gap_D3": 0.3688305762769202,
+          "boundary_D3": 2.0154145904272127,
+          "core_activity": 0.006886089145125567,
+          "upper_range_m": 0.005575948796467856,
+          "rms_timing_seconds": null,
+          "wrist_acceleration_timing_seconds": 0.1037037037037037,
+          "speed_peak_count": 0,
+          "wrist_acceleration_peak_count": 9,
+          "proxy_truth": "NOT_HUMAN_OR_SEMANTIC_EVENT_CORRESPONDENCE",
+          "protected_exact": true
+        },
+        "NoMusic": {
+          "core_D1": 0.006886089145125567,
+          "gap_D1": 0.015333078208855443,
+          "boundary_D1": 0.010472517814115529,
+          "core_D2": 0.19090359696867806,
+          "gap_D2": 0.06847853267151731,
+          "boundary_D2": 0.11283808513190216,
+          "core_D3": 8.821710893516771,
+          "gap_D3": 0.3688305762769202,
+          "boundary_D3": 2.0154145904272127,
+          "core_activity": 0.006886089145125567,
+          "upper_range_m": 0.005575948796467856,
+          "rms_timing_seconds": null,
+          "wrist_acceleration_timing_seconds": 0.1037037037037037,
+          "speed_peak_count": 0,
+          "wrist_acceleration_peak_count": 9,
+          "proxy_truth": "NOT_HUMAN_OR_SEMANTIC_EVENT_CORRESPONDENCE",
+          "protected_exact": true
+        },
+        "FixedMapMusicB": {
+          "core_D1": 0.006886089145125567,
+          "gap_D1": 0.015333078208855443,
+          "boundary_D1": 0.010472517814115529,
+          "core_D2": 0.19090359696867806,
+          "gap_D2": 0.06847853267151731,
+          "boundary_D2": 0.11283808513190216,
+          "core_D3": 8.821710893516771,
+          "gap_D3": 0.3688305762769202,
+          "boundary_D3": 2.0154145904272127,
+          "core_activity": 0.006886089145125567,
+          "upper_range_m": 0.005575948796467856,
+          "rms_timing_seconds": null,
+          "wrist_acceleration_timing_seconds": 0.1037037037037037,
+          "speed_peak_count": 0,
+          "wrist_acceleration_peak_count": 9,
+          "proxy_truth": "NOT_HUMAN_OR_SEMANTIC_EVENT_CORRESPONDENCE",
+          "protected_exact": true
+        }
+      }
+    },
+    {
+      "key": "male_pipa_1_0__music",
+      "domain": "ChangE",
+      "role": "train",
+      "activity_ratio": 1.000073926531929,
+      "D3_ratio": 0.9993020783294916,
+      "source_feasibility_filter_passed": true,
+      "seed_contract": {
+        "body_identical": true,
+        "root_identical": true,
+        "contact_channels_identical": true,
+        "root_maximum_difference_m": 0.0,
+        "scope": "BODY_CLOCK_REPETITIONS_NOT_INDEPENDENT_SOURCES; MODEL_ROOT_CONTACT_PRIORS_MAY_DIFFER"
+      },
+      "identity_cores": 1,
+      "factor": {
+        "MatchedLinear": {
+          "knot_stencil_D3": 19.780733419538407,
+          "interior_D3": 12.552335584020742,
+          "all_core_D3": 13.376452248729239
+        },
+        "MatchedC2": {
+          "knot_stencil_D3": 20.06932828686423,
+          "interior_D3": 13.203494600955894,
+          "all_core_D3": 13.972069666689189
+        }
+      },
+      "metrics": {
+        "Geometry": {
+          "core_D1": 0.01538004872745032,
+          "gap_D1": 0.041773511725864625,
+          "boundary_D1": 0.0316635001483497,
+          "core_D2": 0.35895387325049544,
+          "gap_D2": 0.20630482758594262,
+          "boundary_D2": 0.41343747440260803,
+          "core_D3": 14.478877369464659,
+          "gap_D3": 1.200377731932633,
+          "boundary_D3": 11.208227436453846,
+          "core_activity": 0.01538004872745032,
+          "upper_range_m": 0.023407107622673114,
+          "rms_timing_seconds": 0.08333333333333333,
+          "wrist_acceleration_timing_seconds": 0.11111111111111112,
+          "speed_peak_count": 4,
+          "wrist_acceleration_peak_count": 9,
+          "proxy_truth": "NOT_HUMAN_OR_SEMANTIC_EVENT_CORRESPONDENCE",
+          "protected_exact": true
+        },
+        "R44C2": {
+          "core_D1": 0.015356367688042289,
+          "gap_D1": 0.041773511725864625,
+          "boundary_D1": 0.0316635001483497,
+          "core_D2": 0.3533534648900216,
+          "gap_D2": 0.20630482758594262,
+          "boundary_D2": 0.41343747440260803,
+          "core_D3": 13.972069666689189,
+          "gap_D3": 1.200377731932633,
+          "boundary_D3": 11.208227436453846,
+          "core_activity": 0.015356367688042289,
+          "upper_range_m": 0.023411079278836646,
+          "rms_timing_seconds": 0.04444444444444444,
+          "wrist_acceleration_timing_seconds": 0.09666666666666666,
+          "speed_peak_count": 3,
+          "wrist_acceleration_peak_count": 10,
+          "proxy_truth": "NOT_HUMAN_OR_SEMANTIC_EVENT_CORRESPONDENCE",
+          "protected_exact": true
+        },
+        "Phase": {
+          "core_D1": 0.01538118572111364,
+          "gap_D1": 0.041773511725864625,
+          "boundary_D1": 0.0316635001483497,
+          "core_D2": 0.35889547889701906,
+          "gap_D2": 0.20630482758594262,
+          "boundary_D2": 0.41343747440260803,
+          "core_D3": 14.468772247183875,
+          "gap_D3": 1.200377731932633,
+          "boundary_D3": 11.208227436453846,
+          "core_activity": 0.01538118572111364,
+          "upper_range_m": 0.02340239311257998,
+          "rms_timing_seconds": 0.08333333333333333,
+          "wrist_acceleration_timing_seconds": 0.13333333333333333,
+          "speed_peak_count": 4,
+          "wrist_acceleration_peak_count": 10,
+          "proxy_truth": "NOT_HUMAN_OR_SEMANTIC_EVENT_CORRESPONDENCE",
+          "protected_exact": true
+        },
+        "R43Core": {
+          "core_D1": 0.07361937103502632,
+          "gap_D1": 0.05972141532044423,
+          "boundary_D1": 0.031689624710552394,
+          "core_D2": 1.5435407976110158,
+          "gap_D2": 0.4440847089059098,
+          "boundary_D2": 0.41410348923514173,
+          "core_D3": 54.728454714566936,
+          "gap_D3": 7.783598917822686,
+          "boundary_D3": 11.170806437460563,
+          "core_activity": 0.07361937103502632,
+          "upper_range_m": 0.04279192502144724,
+          "rms_timing_seconds": 0.025,
+          "wrist_acceleration_timing_seconds": 0.1,
+          "speed_peak_count": 4,
+          "wrist_acceleration_peak_count": 4,
+          "proxy_truth": "NOT_HUMAN_OR_SEMANTIC_EVENT_CORRESPONDENCE",
+          "protected_exact": false
+        },
+        "MatchedLinear": {
+          "core_D1": 0.015251074264444383,
+          "gap_D1": 0.041773511725864625,
+          "boundary_D1": 0.0316635001483497,
+          "core_D2": 0.34452065550138217,
+          "gap_D2": 0.20630482758594262,
+          "boundary_D2": 0.41343747440260803,
+          "core_D3": 13.376452248729239,
+          "gap_D3": 1.200377731932633,
+          "boundary_D3": 11.208227436453846,
+          "core_activity": 0.015251074264444383,
+          "upper_range_m": 0.02341284491121769,
+          "rms_timing_seconds": 0.04444444444444444,
+          "wrist_acceleration_timing_seconds": 0.09333333333333332,
+          "speed_peak_count": 3,
+          "wrist_acceleration_peak_count": 10,
+          "proxy_truth": "NOT_HUMAN_OR_SEMANTIC_EVENT_CORRESPONDENCE",
+          "protected_exact": true
+        },
+        "MatchedC2": {
+          "core_D1": 0.015356367688042289,
+          "gap_D1": 0.041773511725864625,
+          "boundary_D1": 0.0316635001483497,
+          "core_D2": 0.3533534648900216,
+          "gap_D2": 0.20630482758594262,
+          "boundary_D2": 0.41343747440260803,
+          "core_D3": 13.972069666689189,
+          "gap_D3": 1.200377731932633,
+          "boundary_D3": 11.208227436453846,
+          "core_activity": 0.015356367688042289,
+          "upper_range_m": 0.023411079278836646,
+          "rms_timing_seconds": 0.04444444444444444,
+          "wrist_acceleration_timing_seconds": 0.09666666666666666,
+          "speed_peak_count": 3,
+          "wrist_acceleration_peak_count": 10,
+          "proxy_truth": "NOT_HUMAN_OR_SEMANTIC_EVENT_CORRESPONDENCE",
+          "protected_exact": true
+        },
+        "WrongMusic": {
+          "core_D1": 0.015403321877321338,
+          "gap_D1": 0.041773511725864625,
+          "boundary_D1": 0.0316635001483497,
+          "core_D2": 0.35897505691053033,
+          "gap_D2": 0.20630482758594262,
+          "boundary_D2": 0.41343747440260803,
+          "core_D3": 14.454293691379949,
+          "gap_D3": 1.200377731932633,
+          "boundary_D3": 11.208227436453846,
+          "core_activity": 0.015403321877321338,
+          "upper_range_m": 0.023409130796790124,
+          "rms_timing_seconds": 0.075,
+          "wrist_acceleration_timing_seconds": 0.12000000000000001,
+          "speed_peak_count": 4,
+          "wrist_acceleration_peak_count": 10,
+          "proxy_truth": "NOT_HUMAN_OR_SEMANTIC_EVENT_CORRESPONDENCE",
+          "protected_exact": true
+        },
+        "NoMusic": {
+          "core_D1": 0.01538004872745032,
+          "gap_D1": 0.041773511725864625,
+          "boundary_D1": 0.0316635001483497,
+          "core_D2": 0.35895387325049544,
+          "gap_D2": 0.20630482758594262,
+          "boundary_D2": 0.41343747440260803,
+          "core_D3": 14.478877369464659,
+          "gap_D3": 1.200377731932633,
+          "boundary_D3": 11.208227436453846,
+          "core_activity": 0.01538004872745032,
+          "upper_range_m": 0.023407107622673114,
+          "rms_timing_seconds": 0.08333333333333333,
+          "wrist_acceleration_timing_seconds": 0.11111111111111112,
+          "speed_peak_count": 4,
+          "wrist_acceleration_peak_count": 9,
+          "proxy_truth": "NOT_HUMAN_OR_SEMANTIC_EVENT_CORRESPONDENCE",
+          "protected_exact": true
+        },
+        "FixedMapMusicB": {
+          "core_D1": 0.01538118572111364,
+          "gap_D1": 0.041773511725864625,
+          "boundary_D1": 0.0316635001483497,
+          "core_D2": 0.35889547889701906,
+          "gap_D2": 0.20630482758594262,
+          "boundary_D2": 0.41343747440260803,
+          "core_D3": 14.468772247183875,
+          "gap_D3": 1.200377731932633,
+          "boundary_D3": 11.208227436453846,
+          "core_activity": 0.01538118572111364,
+          "upper_range_m": 0.02340239311257998,
+          "rms_timing_seconds": 0.08333333333333333,
+          "wrist_acceleration_timing_seconds": 0.13333333333333333,
+          "speed_peak_count": 4,
+          "wrist_acceleration_peak_count": 10,
+          "proxy_truth": "NOT_HUMAN_OR_SEMANTIC_EVENT_CORRESPONDENCE",
+          "protected_exact": true
+        }
+      }
+    },
+    {
+      "key": "male_pipa_2_0__music",
+      "domain": "ChangE",
+      "role": "held",
+      "activity_ratio": 0.9999493452579014,
+      "D3_ratio": 0.9772034929863266,
+      "source_feasibility_filter_passed": true,
+      "seed_contract": {
+        "body_identical": true,
+        "root_identical": true,
+        "contact_channels_identical": true,
+        "root_maximum_difference_m": 0.0,
+        "scope": "BODY_CLOCK_REPETITIONS_NOT_INDEPENDENT_SOURCES; MODEL_ROOT_CONTACT_PRIORS_MAY_DIFFER"
+      },
+      "identity_cores": 0,
+      "factor": {
+        "MatchedLinear": {
+          "knot_stencil_D3": 244.87706758660295,
+          "interior_D3": 171.23469893511475,
+          "all_core_D3": 179.22893051962538
+        },
+        "MatchedC2": {
+          "knot_stencil_D3": 216.46757913826946,
+          "interior_D3": 180.62066257890137,
+          "all_core_D3": 184.18809301375902
+        }
+      },
+      "metrics": {
+        "Geometry": {
+          "core_D1": 0.587481166249998,
+          "gap_D1": 0.38695223210298424,
+          "boundary_D1": 0.245903795005898,
+          "core_D2": 6.826514483729314,
+          "gap_D2": 1.7093236371022174,
+          "boundary_D2": 2.112875862009624,
+          "core_D3": 172.67102441072817,
+          "gap_D3": 10.487087668839724,
+          "boundary_D3": 34.32002547646987,
+          "core_activity": 0.587481166249998,
+          "upper_range_m": 0.5244177104187353,
+          "rms_timing_seconds": 0.03333333333333333,
+          "wrist_acceleration_timing_seconds": 0.09166666666666666,
+          "speed_peak_count": 4,
+          "wrist_acceleration_peak_count": 8,
+          "proxy_truth": "NOT_HUMAN_OR_SEMANTIC_EVENT_CORRESPONDENCE",
+          "protected_exact": true
+        },
+        "R44C2": {
+          "core_D1": 0.5999824224532989,
+          "gap_D1": 0.38695223210298424,
+          "boundary_D1": 0.245903795005898,
+          "core_D2": 7.334038091052126,
+          "gap_D2": 1.7093236371022174,
+          "boundary_D2": 2.112875862009624,
+          "core_D3": 184.18809301375902,
+          "gap_D3": 10.487087668839724,
+          "boundary_D3": 34.32002547646987,
+          "core_activity": 0.5999824224532989,
+          "upper_range_m": 0.5242700103573346,
+          "rms_timing_seconds": 0.02222222222222222,
+          "wrist_acceleration_timing_seconds": 0.09047619047619047,
+          "speed_peak_count": 3,
+          "wrist_acceleration_peak_count": 7,
+          "proxy_truth": "NOT_HUMAN_OR_SEMANTIC_EVENT_CORRESPONDENCE",
+          "protected_exact": true
+        },
+        "Phase": {
+          "core_D1": 0.5874514075430338,
+          "gap_D1": 0.38695223210298424,
+          "boundary_D1": 0.245903795005898,
+          "core_D2": 6.809274663809315,
+          "gap_D2": 1.7093236371022174,
+          "boundary_D2": 2.112875862009624,
+          "core_D3": 168.73472819169083,
+          "gap_D3": 10.487087668839724,
+          "boundary_D3": 34.32002547646987,
+          "core_activity": 0.5874514075430338,
+          "upper_range_m": 0.5244413002607567,
+          "rms_timing_seconds": 0.03333333333333333,
+          "wrist_acceleration_timing_seconds": 0.0875,
+          "speed_peak_count": 3,
+          "wrist_acceleration_peak_count": 8,
+          "proxy_truth": "NOT_HUMAN_OR_SEMANTIC_EVENT_CORRESPONDENCE",
+          "protected_exact": true
+        },
+        "R43Core": {
+          "core_D1": 0.5697634891369717,
+          "gap_D1": 0.3803923308345969,
+          "boundary_D1": 0.24586527575195616,
+          "core_D2": 6.886906149792676,
+          "gap_D2": 1.6971293412776802,
+          "boundary_D2": 2.1153259309994743,
+          "core_D3": 196.2891034381916,
+          "gap_D3": 12.549193276236018,
+          "boundary_D3": 34.21944614099577,
+          "core_activity": 0.5697634891369717,
+          "upper_range_m": 0.5247010300922436,
+          "rms_timing_seconds": 0.04444444444444444,
+          "wrist_acceleration_timing_seconds": 0.07777777777777778,
+          "speed_peak_count": 3,
+          "wrist_acceleration_peak_count": 9,
+          "proxy_truth": "NOT_HUMAN_OR_SEMANTIC_EVENT_CORRESPONDENCE",
+          "protected_exact": false
+        },
+        "MatchedLinear": {
+          "core_D1": 0.597200394264843,
+          "gap_D1": 0.38695223210298424,
+          "boundary_D1": 0.245903795005898,
+          "core_D2": 7.176622223179992,
+          "gap_D2": 1.7093236371022174,
+          "boundary_D2": 2.112875862009624,
+          "core_D3": 179.22893051962538,
+          "gap_D3": 10.487087668839724,
+          "boundary_D3": 34.32002547646987,
+          "core_activity": 0.597200394264843,
+          "upper_range_m": 0.5243052361047982,
+          "rms_timing_seconds": 0.02222222222222222,
+          "wrist_acceleration_timing_seconds": 0.08571428571428572,
+          "speed_peak_count": 3,
+          "wrist_acceleration_peak_count": 7,
+          "proxy_truth": "NOT_HUMAN_OR_SEMANTIC_EVENT_CORRESPONDENCE",
+          "protected_exact": true
+        },
+        "MatchedC2": {
+          "core_D1": 0.5999824224532989,
+          "gap_D1": 0.38695223210298424,
+          "boundary_D1": 0.245903795005898,
+          "core_D2": 7.334038091052126,
+          "gap_D2": 1.7093236371022174,
+          "boundary_D2": 2.112875862009624,
+          "core_D3": 184.18809301375902,
+          "gap_D3": 10.487087668839724,
+          "boundary_D3": 34.32002547646987,
+          "core_activity": 0.5999824224532989,
+          "upper_range_m": 0.5242700103573346,
+          "rms_timing_seconds": 0.02222222222222222,
+          "wrist_acceleration_timing_seconds": 0.09047619047619047,
+          "speed_peak_count": 3,
+          "wrist_acceleration_peak_count": 7,
+          "proxy_truth": "NOT_HUMAN_OR_SEMANTIC_EVENT_CORRESPONDENCE",
+          "protected_exact": true
+        },
+        "WrongMusic": {
+          "core_D1": 0.5861772656202222,
+          "gap_D1": 0.38695223210298424,
+          "boundary_D1": 0.245903795005898,
+          "core_D2": 6.7907006951114335,
+          "gap_D2": 1.7093236371022174,
+          "boundary_D2": 2.112875862009624,
+          "core_D3": 169.62171478451643,
+          "gap_D3": 10.487087668839724,
+          "boundary_D3": 34.32002547646987,
+          "core_activity": 0.5861772656202222,
+          "upper_range_m": 0.5244232151114071,
+          "rms_timing_seconds": 0.02222222222222222,
+          "wrist_acceleration_timing_seconds": 0.10952380952380952,
+          "speed_peak_count": 3,
+          "wrist_acceleration_peak_count": 7,
+          "proxy_truth": "NOT_HUMAN_OR_SEMANTIC_EVENT_CORRESPONDENCE",
+          "protected_exact": true
+        },
+        "NoMusic": {
+          "core_D1": 0.587481166249998,
+          "gap_D1": 0.38695223210298424,
+          "boundary_D1": 0.245903795005898,
+          "core_D2": 6.826514483729314,
+          "gap_D2": 1.7093236371022174,
+          "boundary_D2": 2.112875862009624,
+          "core_D3": 172.67102441072817,
+          "gap_D3": 10.487087668839724,
+          "boundary_D3": 34.32002547646987,
+          "core_activity": 0.587481166249998,
+          "upper_range_m": 0.5244177104187353,
+          "rms_timing_seconds": 0.03333333333333333,
+          "wrist_acceleration_timing_seconds": 0.09166666666666666,
+          "speed_peak_count": 4,
+          "wrist_acceleration_peak_count": 8,
+          "proxy_truth": "NOT_HUMAN_OR_SEMANTIC_EVENT_CORRESPONDENCE",
+          "protected_exact": true
+        },
+        "FixedMapMusicB": {
+          "core_D1": 0.5874514075430338,
+          "gap_D1": 0.38695223210298424,
+          "boundary_D1": 0.245903795005898,
+          "core_D2": 6.809274663809315,
+          "gap_D2": 1.7093236371022174,
+          "boundary_D2": 2.112875862009624,
+          "core_D3": 168.73472819169083,
+          "gap_D3": 10.487087668839724,
+          "boundary_D3": 34.32002547646987,
+          "core_activity": 0.5874514075430338,
+          "upper_range_m": 0.5244413002607567,
+          "rms_timing_seconds": 0.03333333333333333,
+          "wrist_acceleration_timing_seconds": 0.0875,
+          "speed_peak_count": 3,
+          "wrist_acceleration_peak_count": 8,
+          "proxy_truth": "NOT_HUMAN_OR_SEMANTIC_EVENT_CORRESPONDENCE",
+          "protected_exact": true
+        }
+      }
+    },
+    {
+      "key": "male_ribbon_0__music",
+      "domain": "ChangE",
+      "role": "train",
+      "activity_ratio": 0.9883455379099422,
+      "D3_ratio": 0.965528791827688,
+      "source_feasibility_filter_passed": true,
+      "seed_contract": {
+        "body_identical": true,
+        "root_identical": true,
+        "contact_channels_identical": true,
+        "root_maximum_difference_m": 0.0,
+        "scope": "BODY_CLOCK_REPETITIONS_NOT_INDEPENDENT_SOURCES; MODEL_ROOT_CONTACT_PRIORS_MAY_DIFFER"
+      },
+      "identity_cores": 0,
+      "factor": {
+        "MatchedLinear": {
+          "knot_stencil_D3": 312.6892610783179,
+          "interior_D3": 91.4024696301176,
+          "all_core_D3": 101.97205932976176
+        },
+        "MatchedC2": {
+          "knot_stencil_D3": 317.01146651102425,
+          "interior_D3": 94.31143114540387,
+          "all_core_D3": 104.82555722288879
+        }
+      },
+      "metrics": {
+        "Geometry": {
+          "core_D1": 0.3091115138441862,
+          "gap_D1": 0.6643280117059573,
+          "boundary_D1": 0.6087504383226344,
+          "core_D2": 3.6609819843588713,
+          "gap_D2": 5.9072042968368255,
+          "boundary_D2": 6.031189668943975,
+          "core_D3": 105.1463090694835,
+          "gap_D3": 77.38319256129212,
+          "boundary_D3": 90.64823814453594,
+          "core_activity": 0.3091115138441862,
+          "upper_range_m": 0.42238030837615953,
+          "rms_timing_seconds": 0.16666666666666666,
+          "wrist_acceleration_timing_seconds": 0.11333333333333333,
+          "speed_peak_count": 1,
+          "wrist_acceleration_peak_count": 5,
+          "proxy_truth": "NOT_HUMAN_OR_SEMANTIC_EVENT_CORRESPONDENCE",
+          "protected_exact": true
+        },
+        "R44C2": {
+          "core_D1": 0.3091414033333904,
+          "gap_D1": 0.6643280117059573,
+          "boundary_D1": 0.6087504383226344,
+          "core_D2": 3.6548374651710125,
+          "gap_D2": 5.9072042968368255,
+          "boundary_D2": 6.031189668943975,
+          "core_D3": 104.82555722288879,
+          "gap_D3": 77.38319256129212,
+          "boundary_D3": 90.64823814453594,
+          "core_activity": 0.3091414033333904,
+          "upper_range_m": 0.4223723567750615,
+          "rms_timing_seconds": 0.16666666666666666,
+          "wrist_acceleration_timing_seconds": 0.11333333333333333,
+          "speed_peak_count": 1,
+          "wrist_acceleration_peak_count": 5,
+          "proxy_truth": "NOT_HUMAN_OR_SEMANTIC_EVENT_CORRESPONDENCE",
+          "protected_exact": true
+        },
+        "Phase": {
+          "core_D1": 0.3055089854244888,
+          "gap_D1": 0.6643280117059573,
+          "boundary_D1": 0.6087504383226344,
+          "core_D2": 3.51079576986714,
+          "gap_D2": 5.9072042968368255,
+          "boundary_D2": 6.031189668943975,
+          "core_D3": 101.52178876099907,
+          "gap_D3": 77.38319256129212,
+          "boundary_D3": 90.64823814453594,
+          "core_activity": 0.3055089854244888,
+          "upper_range_m": 0.4223427255637944,
+          "rms_timing_seconds": 0.2,
+          "wrist_acceleration_timing_seconds": 0.07333333333333333,
+          "speed_peak_count": 1,
+          "wrist_acceleration_peak_count": 5,
+          "proxy_truth": "NOT_HUMAN_OR_SEMANTIC_EVENT_CORRESPONDENCE",
+          "protected_exact": true
+        },
+        "R43Core": {
+          "core_D1": 0.31335984225560715,
+          "gap_D1": 0.6537686408130541,
+          "boundary_D1": 0.60885110264533,
+          "core_D2": 4.261650191046215,
+          "gap_D2": 6.077602631121206,
+          "boundary_D2": 6.034396683255254,
+          "core_D3": 135.44785982564517,
+          "gap_D3": 123.28908312594356,
+          "boundary_D3": 90.75463158704277,
+          "core_activity": 0.31335984225560715,
+          "upper_range_m": 0.410463338442302,
+          "rms_timing_seconds": 0.16666666666666666,
+          "wrist_acceleration_timing_seconds": 0.10833333333333334,
+          "speed_peak_count": 1,
+          "wrist_acceleration_peak_count": 4,
+          "proxy_truth": "NOT_HUMAN_OR_SEMANTIC_EVENT_CORRESPONDENCE",
+          "protected_exact": false
+        },
+        "MatchedLinear": {
+          "core_D1": 0.3082753614335362,
+          "gap_D1": 0.6643280117059573,
+          "boundary_D1": 0.6087504383226344,
+          "core_D2": 3.600953473248752,
+          "gap_D2": 5.9072042968368255,
+          "boundary_D2": 6.031189668943975,
+          "core_D3": 101.97205932976176,
+          "gap_D3": 77.38319256129212,
+          "boundary_D3": 90.64823814453594,
+          "core_activity": 0.3082753614335362,
+          "upper_range_m": 0.4223600631424536,
+          "rms_timing_seconds": 0.16666666666666666,
+          "wrist_acceleration_timing_seconds": 0.10666666666666667,
+          "speed_peak_count": 1,
+          "wrist_acceleration_peak_count": 5,
+          "proxy_truth": "NOT_HUMAN_OR_SEMANTIC_EVENT_CORRESPONDENCE",
+          "protected_exact": true
+        },
+        "MatchedC2": {
+          "core_D1": 0.3091414033333904,
+          "gap_D1": 0.6643280117059573,
+          "boundary_D1": 0.6087504383226344,
+          "core_D2": 3.6548374651710125,
+          "gap_D2": 5.9072042968368255,
+          "boundary_D2": 6.031189668943975,
+          "core_D3": 104.82555722288879,
+          "gap_D3": 77.38319256129212,
+          "boundary_D3": 90.64823814453594,
+          "core_activity": 0.3091414033333904,
+          "upper_range_m": 0.4223723567750615,
+          "rms_timing_seconds": 0.16666666666666666,
+          "wrist_acceleration_timing_seconds": 0.11333333333333333,
+          "speed_peak_count": 1,
+          "wrist_acceleration_peak_count": 5,
+          "proxy_truth": "NOT_HUMAN_OR_SEMANTIC_EVENT_CORRESPONDENCE",
+          "protected_exact": true
+        },
+        "WrongMusic": {
+          "core_D1": 0.3074308375775434,
+          "gap_D1": 0.6643280117059573,
+          "boundary_D1": 0.6087504383226344,
+          "core_D2": 3.579268340880418,
+          "gap_D2": 5.9072042968368255,
+          "boundary_D2": 6.031189668943975,
+          "core_D3": 102.98568319789723,
+          "gap_D3": 77.38319256129212,
+          "boundary_D3": 90.64823814453594,
+          "core_activity": 0.3074308375775434,
+          "upper_range_m": 0.42234936545137314,
+          "rms_timing_seconds": 0.2,
+          "wrist_acceleration_timing_seconds": 0.08,
+          "speed_peak_count": 1,
+          "wrist_acceleration_peak_count": 5,
+          "proxy_truth": "NOT_HUMAN_OR_SEMANTIC_EVENT_CORRESPONDENCE",
+          "protected_exact": true
+        },
+        "NoMusic": {
+          "core_D1": 0.3091115138441862,
+          "gap_D1": 0.6643280117059573,
+          "boundary_D1": 0.6087504383226344,
+          "core_D2": 3.6609819843588713,
+          "gap_D2": 5.9072042968368255,
+          "boundary_D2": 6.031189668943975,
+          "core_D3": 105.1463090694835,
+          "gap_D3": 77.38319256129212,
+          "boundary_D3": 90.64823814453594,
+          "core_activity": 0.3091115138441862,
+          "upper_range_m": 0.42238030837615953,
+          "rms_timing_seconds": 0.16666666666666666,
+          "wrist_acceleration_timing_seconds": 0.11333333333333333,
+          "speed_peak_count": 1,
+          "wrist_acceleration_peak_count": 5,
+          "proxy_truth": "NOT_HUMAN_OR_SEMANTIC_EVENT_CORRESPONDENCE",
+          "protected_exact": true
+        },
+        "FixedMapMusicB": {
+          "core_D1": 0.3055089854244888,
+          "gap_D1": 0.6643280117059573,
+          "boundary_D1": 0.6087504383226344,
+          "core_D2": 3.51079576986714,
+          "gap_D2": 5.9072042968368255,
+          "boundary_D2": 6.031189668943975,
+          "core_D3": 101.52178876099907,
+          "gap_D3": 77.38319256129212,
+          "boundary_D3": 90.64823814453594,
+          "core_activity": 0.3055089854244888,
+          "upper_range_m": 0.4223427255637944,
+          "rms_timing_seconds": 0.2,
+          "wrist_acceleration_timing_seconds": 0.07333333333333333,
+          "speed_peak_count": 1,
+          "wrist_acceleration_peak_count": 5,
+          "proxy_truth": "NOT_HUMAN_OR_SEMANTIC_EVENT_CORRESPONDENCE",
+          "protected_exact": true
+        }
+      }
+    },
+    {
+      "key": "male_ribbon_FenHe_0__music",
+      "domain": "ChangE",
+      "role": "held",
+      "activity_ratio": 1.0226283818118385,
+      "D3_ratio": 0.9764614935181126,
+      "source_feasibility_filter_passed": true,
+      "seed_contract": {
+        "body_identical": true,
+        "root_identical": true,
+        "contact_channels_identical": true,
+        "root_maximum_difference_m": 0.0,
+        "scope": "BODY_CLOCK_REPETITIONS_NOT_INDEPENDENT_SOURCES; MODEL_ROOT_CONTACT_PRIORS_MAY_DIFFER"
+      },
+      "identity_cores": 1,
+      "factor": {
+        "MatchedLinear": {
+          "knot_stencil_D3": 100.50332763987183,
+          "interior_D3": 64.5932562727693,
+          "all_core_D3": 67.66700371737014
+        },
+        "MatchedC2": {
+          "knot_stencil_D3": 102.20243065116607,
+          "interior_D3": 65.85411290969509,
+          "all_core_D3": 68.9611320951615
+        }
+      },
+      "metrics": {
+        "Geometry": {
+          "core_D1": 0.08463169291238383,
+          "gap_D1": 0.05300638687309399,
+          "boundary_D1": 0.034592160569483985,
+          "core_D2": 1.5332537724980426,
+          "gap_D2": 0.23813595513708527,
+          "boundary_D2": 0.37426220378438996,
+          "core_D3": 73.56206572460225,
+          "gap_D3": 1.2424666998765725,
+          "boundary_D3": 10.954500861088974,
+          "core_activity": 0.08463169291238383,
+          "upper_range_m": 0.12136320478069441,
+          "rms_timing_seconds": 0.08888888888888888,
+          "wrist_acceleration_timing_seconds": 0.07333333333333333,
+          "speed_peak_count": 3,
+          "wrist_acceleration_peak_count": 10,
+          "proxy_truth": "NOT_HUMAN_OR_SEMANTIC_EVENT_CORRESPONDENCE",
+          "protected_exact": true
+        },
+        "R44C2": {
+          "core_D1": 0.08405947508613879,
+          "gap_D1": 0.05300638687309399,
+          "boundary_D1": 0.034592160569483985,
+          "core_D2": 1.47411072862688,
+          "gap_D2": 0.23813595513708527,
+          "boundary_D2": 0.37426220378438996,
+          "core_D3": 68.9611320951615,
+          "gap_D3": 1.2424666998765725,
+          "boundary_D3": 10.954500861088974,
+          "core_activity": 0.08405947508613879,
+          "upper_range_m": 0.1213306744005725,
+          "rms_timing_seconds": 0.07777777777777778,
+          "wrist_acceleration_timing_seconds": 0.07407407407407408,
+          "speed_peak_count": 3,
+          "wrist_acceleration_peak_count": 9,
+          "proxy_truth": "NOT_HUMAN_OR_SEMANTIC_EVENT_CORRESPONDENCE",
+          "protected_exact": true
+        },
+        "Phase": {
+          "core_D1": 0.08654677117298752,
+          "gap_D1": 0.05300638687309399,
+          "boundary_D1": 0.034592160569483985,
+          "core_D2": 1.5340382603282179,
+          "gap_D2": 0.23813595513708527,
+          "boundary_D2": 0.37426220378438996,
+          "core_D3": 71.83052456372268,
+          "gap_D3": 1.2424666998765725,
+          "boundary_D3": 10.954500861088974,
+          "core_activity": 0.08654677117298752,
+          "upper_range_m": 0.12134417287403873,
+          "rms_timing_seconds": 0.08888888888888888,
+          "wrist_acceleration_timing_seconds": 0.07,
+          "speed_peak_count": 3,
+          "wrist_acceleration_peak_count": 10,
+          "proxy_truth": "NOT_HUMAN_OR_SEMANTIC_EVENT_CORRESPONDENCE",
+          "protected_exact": true
+        },
+        "R43Core": {
+          "core_D1": 0.10826735757630075,
+          "gap_D1": 0.05395211941054792,
+          "boundary_D1": 0.034532853774883326,
+          "core_D2": 2.1630207914645077,
+          "gap_D2": 0.375223625421124,
+          "boundary_D2": 0.37483969811969475,
+          "core_D3": 90.73625434780917,
+          "gap_D3": 5.896167835542606,
+          "boundary_D3": 10.942666454755262,
+          "core_activity": 0.10826735757630075,
+          "upper_range_m": 0.12064563227371158,
+          "rms_timing_seconds": 0.05555555555555556,
+          "wrist_acceleration_timing_seconds": 0.07777777777777778,
+          "speed_peak_count": 3,
+          "wrist_acceleration_peak_count": 6,
+          "proxy_truth": "NOT_HUMAN_OR_SEMANTIC_EVENT_CORRESPONDENCE",
+          "protected_exact": false
+        },
+        "MatchedLinear": {
+          "core_D1": 0.08415524334268666,
+          "gap_D1": 0.05300638687309399,
+          "boundary_D1": 0.034592160569483985,
+          "core_D2": 1.4589697078458645,
+          "gap_D2": 0.23813595513708527,
+          "boundary_D2": 0.37426220378438996,
+          "core_D3": 67.66700371737014,
+          "gap_D3": 1.2424666998765725,
+          "boundary_D3": 10.954500861088974,
+          "core_activity": 0.08415524334268666,
+          "upper_range_m": 0.12133803177566733,
+          "rms_timing_seconds": 0.07777777777777778,
+          "wrist_acceleration_timing_seconds": 0.07037037037037037,
+          "speed_peak_count": 3,
+          "wrist_acceleration_peak_count": 9,
+          "proxy_truth": "NOT_HUMAN_OR_SEMANTIC_EVENT_CORRESPONDENCE",
+          "protected_exact": true
+        },
+        "MatchedC2": {
+          "core_D1": 0.08405947508613879,
+          "gap_D1": 0.05300638687309399,
+          "boundary_D1": 0.034592160569483985,
+          "core_D2": 1.47411072862688,
+          "gap_D2": 0.23813595513708527,
+          "boundary_D2": 0.37426220378438996,
+          "core_D3": 68.9611320951615,
+          "gap_D3": 1.2424666998765725,
+          "boundary_D3": 10.954500861088974,
+          "core_activity": 0.08405947508613879,
+          "upper_range_m": 0.1213306744005725,
+          "rms_timing_seconds": 0.07777777777777778,
+          "wrist_acceleration_timing_seconds": 0.07407407407407408,
+          "speed_peak_count": 3,
+          "wrist_acceleration_peak_count": 9,
+          "proxy_truth": "NOT_HUMAN_OR_SEMANTIC_EVENT_CORRESPONDENCE",
+          "protected_exact": true
+        },
+        "WrongMusic": {
+          "core_D1": 0.0845003152160643,
+          "gap_D1": 0.05300638687309399,
+          "boundary_D1": 0.034592160569483985,
+          "core_D2": 1.5161401793263534,
+          "gap_D2": 0.23813595513708527,
+          "boundary_D2": 0.37426220378438996,
+          "core_D3": 72.37137196239861,
+          "gap_D3": 1.2424666998765725,
+          "boundary_D3": 10.954500861088974,
+          "core_activity": 0.0845003152160643,
+          "upper_range_m": 0.12136842169275042,
+          "rms_timing_seconds": 0.07777777777777778,
+          "wrist_acceleration_timing_seconds": 0.07037037037037037,
+          "speed_peak_count": 3,
+          "wrist_acceleration_peak_count": 9,
+          "proxy_truth": "NOT_HUMAN_OR_SEMANTIC_EVENT_CORRESPONDENCE",
+          "protected_exact": true
+        },
+        "NoMusic": {
+          "core_D1": 0.08463169291238383,
+          "gap_D1": 0.05300638687309399,
+          "boundary_D1": 0.034592160569483985,
+          "core_D2": 1.5332537724980426,
+          "gap_D2": 0.23813595513708527,
+          "boundary_D2": 0.37426220378438996,
+          "core_D3": 73.56206572460225,
+          "gap_D3": 1.2424666998765725,
+          "boundary_D3": 10.954500861088974,
+          "core_activity": 0.08463169291238383,
+          "upper_range_m": 0.12136320478069441,
+          "rms_timing_seconds": 0.08888888888888888,
+          "wrist_acceleration_timing_seconds": 0.07333333333333333,
+          "speed_peak_count": 3,
+          "wrist_acceleration_peak_count": 10,
+          "proxy_truth": "NOT_HUMAN_OR_SEMANTIC_EVENT_CORRESPONDENCE",
+          "protected_exact": true
+        },
+        "FixedMapMusicB": {
+          "core_D1": 0.08654677117298752,
+          "gap_D1": 0.05300638687309399,
+          "boundary_D1": 0.034592160569483985,
+          "core_D2": 1.5340382603282179,
+          "gap_D2": 0.23813595513708527,
+          "boundary_D2": 0.37426220378438996,
+          "core_D3": 71.83052456372268,
+          "gap_D3": 1.2424666998765725,
+          "boundary_D3": 10.954500861088974,
+          "core_activity": 0.08654677117298752,
+          "upper_range_m": 0.12134417287403873,
+          "rms_timing_seconds": 0.08888888888888888,
+          "wrist_acceleration_timing_seconds": 0.07,
+          "speed_peak_count": 3,
+          "wrist_acceleration_peak_count": 10,
+          "proxy_truth": "NOT_HUMAN_OR_SEMANTIC_EVENT_CORRESPONDENCE",
+          "protected_exact": true
+        }
+      }
+    }
+  ],
+  "seed_contracts": {
+    "female_FeiTian_0__music": {
+      "body_identical": true,
+      "root_identical": true,
+      "contact_channels_identical": true,
+      "root_maximum_difference_m": 0.0,
+      "scope": "BODY_CLOCK_REPETITIONS_NOT_INDEPENDENT_SOURCES; MODEL_ROOT_CONTACT_PRIORS_MAY_DIFFER"
+    },
+    "female_lotus_0__music": {
+      "body_identical": true,
+      "root_identical": true,
+      "contact_channels_identical": true,
+      "root_maximum_difference_m": 0.0,
+      "scope": "BODY_CLOCK_REPETITIONS_NOT_INDEPENDENT_SOURCES; MODEL_ROOT_CONTACT_PRIORS_MAY_DIFFER"
+    },
+    "female_meditation_0__music": {
+      "body_identical": true,
+      "root_identical": true,
+      "contact_channels_identical": true,
+      "root_maximum_difference_m": 0.0,
+      "scope": "BODY_CLOCK_REPETITIONS_NOT_INDEPENDENT_SOURCES; MODEL_ROOT_CONTACT_PRIORS_MAY_DIFFER"
+    },
+    "male_meditation_0__music": {
+      "body_identical": true,
+      "root_identical": true,
+      "contact_channels_identical": true,
+      "root_maximum_difference_m": 0.0,
+      "scope": "BODY_CLOCK_REPETITIONS_NOT_INDEPENDENT_SOURCES; MODEL_ROOT_CONTACT_PRIORS_MAY_DIFFER"
+    },
+    "male_pipa_1_0__music": {
+      "body_identical": true,
+      "root_identical": true,
+      "contact_channels_identical": true,
+      "root_maximum_difference_m": 0.0,
+      "scope": "BODY_CLOCK_REPETITIONS_NOT_INDEPENDENT_SOURCES; MODEL_ROOT_CONTACT_PRIORS_MAY_DIFFER"
+    },
+    "male_pipa_2_0__music": {
+      "body_identical": true,
+      "root_identical": true,
+      "contact_channels_identical": true,
+      "root_maximum_difference_m": 0.0,
+      "scope": "BODY_CLOCK_REPETITIONS_NOT_INDEPENDENT_SOURCES; MODEL_ROOT_CONTACT_PRIORS_MAY_DIFFER"
+    },
+    "male_ribbon_0__music": {
+      "body_identical": true,
+      "root_identical": true,
+      "contact_channels_identical": true,
+      "root_maximum_difference_m": 0.0,
+      "scope": "BODY_CLOCK_REPETITIONS_NOT_INDEPENDENT_SOURCES; MODEL_ROOT_CONTACT_PRIORS_MAY_DIFFER"
+    },
+    "male_ribbon_FenHe_0__music": {
+      "body_identical": true,
+      "root_identical": true,
+      "contact_channels_identical": true,
+      "root_maximum_difference_m": 0.0,
+      "scope": "BODY_CLOCK_REPETITIONS_NOT_INDEPENDENT_SOURCES; MODEL_ROOT_CONTACT_PRIORS_MAY_DIFFER"
+    },
+    "paired_92": {
+      "body_identical": true,
+      "root_identical": true,
+      "contact_channels_identical": true,
+      "root_maximum_difference_m": 0.0,
+      "scope": "BODY_CLOCK_REPETITIONS_NOT_INDEPENDENT_SOURCES; MODEL_ROOT_CONTACT_PRIORS_MAY_DIFFER"
+    },
+    "paired_48": {
+      "body_identical": true,
+      "root_identical": true,
+      "contact_channels_identical": true,
+      "root_maximum_difference_m": 0.0,
+      "scope": "BODY_CLOCK_REPETITIONS_NOT_INDEPENDENT_SOURCES; MODEL_ROOT_CONTACT_PRIORS_MAY_DIFFER"
+    },
+    "paired_32": {
+      "body_identical": true,
+      "root_identical": true,
+      "contact_channels_identical": true,
+      "root_maximum_difference_m": 0.0,
+      "scope": "BODY_CLOCK_REPETITIONS_NOT_INDEPENDENT_SOURCES; MODEL_ROOT_CONTACT_PRIORS_MAY_DIFFER"
+    },
+    "paired_0": {
+      "body_identical": true,
+      "root_identical": true,
+      "contact_channels_identical": true,
+      "root_maximum_difference_m": 0.0,
+      "scope": "BODY_CLOCK_REPETITIONS_NOT_INDEPENDENT_SOURCES; MODEL_ROOT_CONTACT_PRIORS_MAY_DIFFER"
+    },
+    "paired_37": {
+      "body_identical": true,
+      "root_identical": true,
+      "contact_channels_identical": true,
+      "root_maximum_difference_m": 0.0,
+      "scope": "BODY_CLOCK_REPETITIONS_NOT_INDEPENDENT_SOURCES; MODEL_ROOT_CONTACT_PRIORS_MAY_DIFFER"
+    },
+    "paired_26": {
+      "body_identical": true,
+      "root_identical": true,
+      "contact_channels_identical": true,
+      "root_maximum_difference_m": 0.0,
+      "scope": "BODY_CLOCK_REPETITIONS_NOT_INDEPENDENT_SOURCES; MODEL_ROOT_CONTACT_PRIORS_MAY_DIFFER"
+    },
+    "paired_21": {
+      "body_identical": true,
+      "root_identical": true,
+      "contact_channels_identical": true,
+      "root_maximum_difference_m": 0.0,
+      "scope": "BODY_CLOCK_REPETITIONS_NOT_INDEPENDENT_SOURCES; MODEL_ROOT_CONTACT_PRIORS_MAY_DIFFER"
+    },
+    "paired_76": {
+      "body_identical": true,
+      "root_identical": true,
+      "contact_channels_identical": true,
+      "root_maximum_difference_m": 0.0,
+      "scope": "BODY_CLOCK_REPETITIONS_NOT_INDEPENDENT_SOURCES; MODEL_ROOT_CONTACT_PRIORS_MAY_DIFFER"
+    },
+    "paired_4": {
+      "body_identical": true,
+      "root_identical": true,
+      "contact_channels_identical": true,
+      "root_maximum_difference_m": 0.0,
+      "scope": "BODY_CLOCK_REPETITIONS_NOT_INDEPENDENT_SOURCES; MODEL_ROOT_CONTACT_PRIORS_MAY_DIFFER"
+    },
+    "paired_8": {
+      "body_identical": true,
+      "root_identical": true,
+      "contact_channels_identical": true,
+      "root_maximum_difference_m": 0.0,
+      "scope": "BODY_CLOCK_REPETITIONS_NOT_INDEPENDENT_SOURCES; MODEL_ROOT_CONTACT_PRIORS_MAY_DIFFER"
+    },
+    "paired_12": {
+      "body_identical": true,
+      "root_identical": true,
+      "contact_channels_identical": true,
+      "root_maximum_difference_m": 0.0,
+      "scope": "BODY_CLOCK_REPETITIONS_NOT_INDEPENDENT_SOURCES; MODEL_ROOT_CONTACT_PRIORS_MAY_DIFFER"
+    },
+    "paired_16": {
+      "body_identical": true,
+      "root_identical": true,
+      "contact_channels_identical": true,
+      "root_maximum_difference_m": 0.0,
+      "scope": "BODY_CLOCK_REPETITIONS_NOT_INDEPENDENT_SOURCES; MODEL_ROOT_CONTACT_PRIORS_MAY_DIFFER"
+    },
+    "old_failed": {
+      "body_identical": true,
+      "root_identical": false,
+      "contact_channels_identical": false,
+      "root_maximum_difference_m": 0.08141247183084488,
+      "scope": "BODY_CLOCK_REPETITIONS_NOT_INDEPENDENT_SOURCES; MODEL_ROOT_CONTACT_PRIORS_MAY_DIFFER"
+    },
+    "new_plan": {
+      "body_identical": true,
+      "root_identical": false,
+      "contact_channels_identical": false,
+      "root_maximum_difference_m": 0.06572830677032471,
+      "scope": "BODY_CLOCK_REPETITIONS_NOT_INDEPENDENT_SOURCES; MODEL_ROOT_CONTACT_PRIORS_MAY_DIFFER"
+    }
+  },
+  "attribution": [
+    {
+      "key": "female_FeiTian_0__music",
+      "methods": {
+        "R44C2": {
+          "3": {
+            "actual_D3_rms": 31.26859257600246,
+            "baseline_D3_rms": 31.729030451545952,
+            "continuous_path_sampled_D3_rms": 31.268617664640853,
+            "baseline_continuous_path_sampled_D3_rms": 31.728983274773935,
+            "energy_delta": -29.0064917110941,
+            "signed_energy_contributions": {
+              "source_speed": 579.8368122958501,
+              "clock_acceleration": 6.057857639977161,
+              "clock_jerk": -1.3322737198132548,
+              "quadrature_source_derivative_residual": -613.5647221217586,
+              "representation_roundtrip_increment": -0.0041658053499291445
+            },
+            "contribution_sum_error": 2.7000623958883807e-13,
+            "relative_closure_rms": 0.43467094527116157,
+            "warning": "SIGNED_DIAGNOSTIC_NOT_CAUSAL_EFFECT; ROUNDTRIP_INCLUDES_6D_QUANTIZATION_AND_ROTATION_REPROJECTION; NO_NEW_PRECISION_CANDIDATE_SELECTED"
+          },
+          "5": {
+            "actual_D3_rms": 31.26859257600246,
+            "baseline_D3_rms": 31.729030451545952,
+            "continuous_path_sampled_D3_rms": 31.268617664640853,
+            "baseline_continuous_path_sampled_D3_rms": 31.728983274773935,
+            "energy_delta": -29.0064917110941,
+            "signed_energy_contributions": {
+              "source_speed": -5.222697262748115,
+              "clock_acceleration": 6.560440034308426,
+              "clock_jerk": -1.246218426995572,
+              "quadrature_source_derivative_residual": -29.09385025030913,
+              "representation_roundtrip_increment": -0.0041658053499291445
+            },
+            "contribution_sum_error": 2.2026824808563106e-13,
+            "relative_closure_rms": 0.09600503355971937,
+            "warning": "SIGNED_DIAGNOSTIC_NOT_CAUSAL_EFFECT; ROUNDTRIP_INCLUDES_6D_QUANTIZATION_AND_ROTATION_REPROJECTION; NO_NEW_PRECISION_CANDIDATE_SELECTED"
+          },
+          "quadrature_relative_difference": 0.4394002874045815
+        },
+        "Phase": {
+          "3": {
+            "actual_D3_rms": 31.729030451545952,
+            "baseline_D3_rms": 31.729030451545952,
+            "continuous_path_sampled_D3_rms": 31.728983274773935,
+            "baseline_continuous_path_sampled_D3_rms": 31.728983274773935,
+            "energy_delta": 0.0,
+            "signed_energy_contributions": {
+              "source_speed": 743.642584292084,
+              "clock_acceleration": 4.237099959424519e-18,
+              "clock_jerk": -3.799239325056515e-17,
+              "quadrature_source_derivative_residual": -743.642584292084,
+              "representation_roundtrip_increment": 0.0
+            },
+            "contribution_sum_error": 0.0,
+            "relative_closure_rms": 0.3937206330105241,
+            "warning": "SIGNED_DIAGNOSTIC_NOT_CAUSAL_EFFECT; ROUNDTRIP_INCLUDES_6D_QUANTIZATION_AND_ROTATION_REPROJECTION; NO_NEW_PRECISION_CANDIDATE_SELECTED"
+          },
+          "5": {
+            "actual_D3_rms": 31.729030451545952,
+            "baseline_D3_rms": 31.729030451545952,
+            "continuous_path_sampled_D3_rms": 31.728983274773935,
+            "baseline_continuous_path_sampled_D3_rms": 31.728983274773935,
+            "energy_delta": 0.0,
+            "signed_energy_contributions": {
+              "source_speed": 23.91327667982781,
+              "clock_acceleration": 4.24250303974855e-18,
+              "clock_jerk": -3.795756324586762e-17,
+              "quadrature_source_derivative_residual": -23.91327667982781,
+              "representation_roundtrip_increment": 0.0
+            },
+            "contribution_sum_error": 0.0,
+            "relative_closure_rms": 0.012663032879504281,
+            "warning": "SIGNED_DIAGNOSTIC_NOT_CAUSAL_EFFECT; ROUNDTRIP_INCLUDES_6D_QUANTIZATION_AND_ROTATION_REPROJECTION; NO_NEW_PRECISION_CANDIDATE_SELECTED"
+          },
+          "quadrature_relative_difference": 0.38105767479149455
+        }
+      },
+      "scope": "ROOT_RELATIVE_COMMON22_CORE; NOT_WORLD_ROOT_OR_CONTACT_CAUSALITY"
+    },
+    {
+      "key": "female_meditation_0__music",
+      "methods": {
+        "R44C2": {
+          "3": {
+            "actual_D3_rms": 12.267763243315146,
+            "baseline_D3_rms": 12.267763243315146,
+            "continuous_path_sampled_D3_rms": 12.267836834490524,
+            "baseline_continuous_path_sampled_D3_rms": 12.267836834490524,
+            "energy_delta": 0.0,
+            "signed_energy_contributions": {
+              "source_speed": 103.51517837422416,
+              "clock_acceleration": -1.2613329462137572e-18,
+              "clock_jerk": -9.908391464453343e-17,
+              "quadrature_source_derivative_residual": -103.51517837422416,
+              "representation_roundtrip_increment": 0.0
+            },
+            "contribution_sum_error": 0.0,
+            "relative_closure_rms": 0.3699393836908779,
+            "warning": "SIGNED_DIAGNOSTIC_NOT_CAUSAL_EFFECT; ROUNDTRIP_INCLUDES_6D_QUANTIZATION_AND_ROTATION_REPROJECTION; NO_NEW_PRECISION_CANDIDATE_SELECTED"
+          },
+          "5": {
+            "actual_D3_rms": 12.267763243315146,
+            "baseline_D3_rms": 12.267763243315146,
+            "continuous_path_sampled_D3_rms": 12.267836834490524,
+            "baseline_continuous_path_sampled_D3_rms": 12.267836834490524,
+            "energy_delta": 0.0,
+            "signed_energy_contributions": {
+              "source_speed": 3.3299714771240803,
+              "clock_acceleration": -1.3906703159498834e-18,
+              "clock_jerk": -9.82060377699674e-17,
+              "quadrature_source_derivative_residual": -3.3299714771240803,
+              "representation_roundtrip_increment": 0.0
+            },
+            "contribution_sum_error": 0.0,
+            "relative_closure_rms": 0.0119003500393831,
+            "warning": "SIGNED_DIAGNOSTIC_NOT_CAUSAL_EFFECT; ROUNDTRIP_INCLUDES_6D_QUANTIZATION_AND_ROTATION_REPROJECTION; NO_NEW_PRECISION_CANDIDATE_SELECTED"
+          },
+          "quadrature_relative_difference": 0.3580413818579963
+        },
+        "Phase": {
+          "3": {
+            "actual_D3_rms": 12.267763243315146,
+            "baseline_D3_rms": 12.267763243315146,
+            "continuous_path_sampled_D3_rms": 12.267836834490524,
+            "baseline_continuous_path_sampled_D3_rms": 12.267836834490524,
+            "energy_delta": 0.0,
+            "signed_energy_contributions": {
+              "source_speed": 103.51517837422416,
+              "clock_acceleration": -1.2613329462137572e-18,
+              "clock_jerk": -9.908391464453343e-17,
+              "quadrature_source_derivative_residual": -103.51517837422416,
+              "representation_roundtrip_increment": 0.0
+            },
+            "contribution_sum_error": 0.0,
+            "relative_closure_rms": 0.3699393836908779,
+            "warning": "SIGNED_DIAGNOSTIC_NOT_CAUSAL_EFFECT; ROUNDTRIP_INCLUDES_6D_QUANTIZATION_AND_ROTATION_REPROJECTION; NO_NEW_PRECISION_CANDIDATE_SELECTED"
+          },
+          "5": {
+            "actual_D3_rms": 12.267763243315146,
+            "baseline_D3_rms": 12.267763243315146,
+            "continuous_path_sampled_D3_rms": 12.267836834490524,
+            "baseline_continuous_path_sampled_D3_rms": 12.267836834490524,
+            "energy_delta": 0.0,
+            "signed_energy_contributions": {
+              "source_speed": 3.3299714771240803,
+              "clock_acceleration": -1.3906703159498834e-18,
+              "clock_jerk": -9.82060377699674e-17,
+              "quadrature_source_derivative_residual": -3.3299714771240803,
+              "representation_roundtrip_increment": 0.0
+            },
+            "contribution_sum_error": 0.0,
+            "relative_closure_rms": 0.0119003500393831,
+            "warning": "SIGNED_DIAGNOSTIC_NOT_CAUSAL_EFFECT; ROUNDTRIP_INCLUDES_6D_QUANTIZATION_AND_ROTATION_REPROJECTION; NO_NEW_PRECISION_CANDIDATE_SELECTED"
+          },
+          "quadrature_relative_difference": 0.3580413818579963
+        }
+      },
+      "scope": "ROOT_RELATIVE_COMMON22_CORE; NOT_WORLD_ROOT_OR_CONTACT_CAUSALITY"
+    },
+    {
+      "key": "male_pipa_1_0__music",
+      "methods": {
+        "R44C2": {
+          "3": {
+            "actual_D3_rms": 13.972069666689189,
+            "baseline_D3_rms": 14.478877369464659,
+            "continuous_path_sampled_D3_rms": 13.97204311316847,
+            "baseline_continuous_path_sampled_D3_rms": 14.478781129507084,
+            "energy_delta": -14.419159109179674,
+            "signed_energy_contributions": {
+              "source_speed": -0.37752691099812774,
+              "clock_acceleration": -0.36747754361694956,
+              "clock_jerk": -0.009003391490052852,
+              "quadrature_source_derivative_residual": -13.664164673276014,
+              "representation_roundtrip_increment": -0.0009865897985464243
+            },
+            "contribution_sum_error": 1.7763568394002505e-14,
+            "relative_closure_rms": 0.31886057244399796,
+            "warning": "SIGNED_DIAGNOSTIC_NOT_CAUSAL_EFFECT; ROUNDTRIP_INCLUDES_6D_QUANTIZATION_AND_ROTATION_REPROJECTION; NO_NEW_PRECISION_CANDIDATE_SELECTED"
+          },
+          "5": {
+            "actual_D3_rms": 13.972069666689189,
+            "baseline_D3_rms": 14.478877369464659,
+            "continuous_path_sampled_D3_rms": 13.97204311316847,
+            "baseline_continuous_path_sampled_D3_rms": 14.478781129507084,
+            "energy_delta": -14.419159109179674,
+            "signed_energy_contributions": {
+              "source_speed": -14.521032606875071,
+              "clock_acceleration": -0.3851036579219975,
+              "clock_jerk": -0.009605031217296856,
+              "quadrature_source_derivative_residual": 0.4975687766332265,
+              "representation_roundtrip_increment": -0.0009865897985464243
+            },
+            "contribution_sum_error": 1.2434497875801753e-14,
+            "relative_closure_rms": 0.07273934404988278,
+            "warning": "SIGNED_DIAGNOSTIC_NOT_CAUSAL_EFFECT; ROUNDTRIP_INCLUDES_6D_QUANTIZATION_AND_ROTATION_REPROJECTION; NO_NEW_PRECISION_CANDIDATE_SELECTED"
+          },
+          "quadrature_relative_difference": 0.32290583605820494
+        },
+        "Phase": {
+          "3": {
+            "actual_D3_rms": 14.468772247183875,
+            "baseline_D3_rms": 14.478877369464659,
+            "continuous_path_sampled_D3_rms": 14.468688373515715,
+            "baseline_continuous_path_sampled_D3_rms": 14.478781129507084,
+            "energy_delta": -0.2925195391175066,
+            "signed_energy_contributions": {
+              "source_speed": 99.34342644348735,
+              "clock_acceleration": 0.024622957092715187,
+              "clock_jerk": 0.008807246828997835,
+              "quadrature_source_derivative_residual": -99.668826304943,
+              "representation_roundtrip_increment": -0.0005498815835800633
+            },
+            "contribution_sum_error": 1.354472090042691e-14,
+            "relative_closure_rms": 0.3007662890888721,
+            "warning": "SIGNED_DIAGNOSTIC_NOT_CAUSAL_EFFECT; ROUNDTRIP_INCLUDES_6D_QUANTIZATION_AND_ROTATION_REPROJECTION; NO_NEW_PRECISION_CANDIDATE_SELECTED"
+          },
+          "5": {
+            "actual_D3_rms": 14.468772247183875,
+            "baseline_D3_rms": 14.478877369464659,
+            "continuous_path_sampled_D3_rms": 14.468688373515715,
+            "baseline_continuous_path_sampled_D3_rms": 14.478781129507084,
+            "energy_delta": -0.2925195391175066,
+            "signed_energy_contributions": {
+              "source_speed": 2.6131953460039905,
+              "clock_acceleration": 0.024762703548462897,
+              "clock_jerk": 0.00855992814592639,
+              "quadrature_source_derivative_residual": -2.938487635232316,
+              "representation_roundtrip_increment": -0.0005498815835800633
+            },
+            "contribution_sum_error": 9.547918011776346e-15,
+            "relative_closure_rms": 0.025222890528877835,
+            "warning": "SIGNED_DIAGNOSTIC_NOT_CAUSAL_EFFECT; ROUNDTRIP_INCLUDES_6D_QUANTIZATION_AND_ROTATION_REPROJECTION; NO_NEW_PRECISION_CANDIDATE_SELECTED"
+          },
+          "quadrature_relative_difference": 0.29292298900651853
+        }
+      },
+      "scope": "ROOT_RELATIVE_COMMON22_CORE; NOT_WORLD_ROOT_OR_CONTACT_CAUSALITY"
+    },
+    {
+      "key": "male_pipa_2_0__music",
+      "methods": {
+        "R44C2": {
+          "3": {
+            "actual_D3_rms": 184.18809301375902,
+            "baseline_D3_rms": 172.67102441072817,
+            "continuous_path_sampled_D3_rms": 184.18808267550793,
+            "baseline_continuous_path_sampled_D3_rms": 172.67100395202456,
+            "energy_delta": 4109.970936994869,
+            "signed_energy_contributions": {
+              "source_speed": 9772.50730205595,
+              "clock_acceleration": 69.6811288271207,
+              "clock_jerk": 55.35575283505765,
+              "quadrature_source_derivative_residual": -5787.569907193186,
+              "representation_roundtrip_increment": -0.0033395300686975145
+            },
+            "contribution_sum_error": 4.547473508864641e-12,
+            "relative_closure_rms": 0.2522411028640769,
+            "warning": "SIGNED_DIAGNOSTIC_NOT_CAUSAL_EFFECT; ROUNDTRIP_INCLUDES_6D_QUANTIZATION_AND_ROTATION_REPROJECTION; NO_NEW_PRECISION_CANDIDATE_SELECTED"
+          },
+          "5": {
+            "actual_D3_rms": 184.18809301375902,
+            "baseline_D3_rms": 172.67102441072817,
+            "continuous_path_sampled_D3_rms": 184.18808267550793,
+            "baseline_continuous_path_sampled_D3_rms": 172.67100395202456,
+            "energy_delta": 4109.970936994869,
+            "signed_energy_contributions": {
+              "source_speed": 3615.7884579024326,
+              "clock_acceleration": 68.57766977699961,
+              "clock_jerk": 56.03137340807406,
+              "quadrature_source_derivative_residual": 369.57677543743455,
+              "representation_roundtrip_increment": -0.0033395300686975145
+            },
+            "contribution_sum_error": 3.637978807091713e-12,
+            "relative_closure_rms": 0.06673217059726225,
+            "warning": "SIGNED_DIAGNOSTIC_NOT_CAUSAL_EFFECT; ROUNDTRIP_INCLUDES_6D_QUANTIZATION_AND_ROTATION_REPROJECTION; NO_NEW_PRECISION_CANDIDATE_SELECTED"
+          },
+          "quadrature_relative_difference": 0.27413388403922617
+        },
+        "Phase": {
+          "3": {
+            "actual_D3_rms": 168.73472819169083,
+            "baseline_D3_rms": 172.67102441072817,
+            "continuous_path_sampled_D3_rms": 168.73472404236261,
+            "baseline_continuous_path_sampled_D3_rms": 172.67100395202456,
+            "energy_delta": -1343.874173126489,
+            "signed_energy_contributions": {
+              "source_speed": 5203.022504576872,
+              "clock_acceleration": -196.15750822766978,
+              "clock_jerk": -49.293628756910046,
+              "quadrature_source_derivative_residual": -6301.448841329345,
+              "representation_roundtrip_increment": 0.003300610563749055
+            },
+            "contribution_sum_error": 4.547473508864641e-13,
+            "relative_closure_rms": 0.2530333975845779,
+            "warning": "SIGNED_DIAGNOSTIC_NOT_CAUSAL_EFFECT; ROUNDTRIP_INCLUDES_6D_QUANTIZATION_AND_ROTATION_REPROJECTION; NO_NEW_PRECISION_CANDIDATE_SELECTED"
+          },
+          "5": {
+            "actual_D3_rms": 168.73472819169083,
+            "baseline_D3_rms": 172.67102441072817,
+            "continuous_path_sampled_D3_rms": 168.73472404236261,
+            "baseline_continuous_path_sampled_D3_rms": 172.67100395202456,
+            "energy_delta": -1343.874173126489,
+            "signed_energy_contributions": {
+              "source_speed": -959.6574729607406,
+              "clock_acceleration": -200.24545577027638,
+              "clock_jerk": -47.76452322171462,
+              "quadrature_source_derivative_residual": -136.21002178432056,
+              "representation_roundtrip_increment": 0.003300610563749055
+            },
+            "contribution_sum_error": 4.547473508864641e-13,
+            "relative_closure_rms": 0.0545575113198808,
+            "warning": "SIGNED_DIAGNOSTIC_NOT_CAUSAL_EFFECT; ROUNDTRIP_INCLUDES_6D_QUANTIZATION_AND_ROTATION_REPROJECTION; NO_NEW_PRECISION_CANDIDATE_SELECTED"
+          },
+          "quadrature_relative_difference": 0.26130309522910716
+        }
+      },
+      "scope": "ROOT_RELATIVE_COMMON22_CORE; NOT_WORLD_ROOT_OR_CONTACT_CAUSALITY"
+    }
+  ],
+  "official_fk": {
+    "official_fk_trajectories": 396,
+    "maximum_fk_error_m": 6.26780092716217e-07,
+    "full_native24": "NOT_EVALUABLE_22_OF24",
+    "foot_slide": "NOT_EVALUABLE_NO_CONTACT_TRUTH"
+  },
+  "target_review": {
+    "original_pool": 552,
+    "selected": 184,
+    "queries": 23,
+    "status": "NOT_EVALUABLE_NO_VERIFIED_COMPLETE_MUSIC_JUDGMENTS",
+    "human_reviewed": false,
+    "raw_review_count": 0,
+    "new_independent_music_count": 0,
+    "hubness": {
+      "full": {
+        "availability": {
+          "female_FeiTian": 391,
+          "female_lotus": 23,
+          "female_meditation": 23,
+          "male_meditation": 23,
+          "male_pipa_1": 23,
+          "male_pipa_2": 23,
+          "male_ribbon": 23,
+          "male_ribbon_FenHe": 23
+        },
+        "methods": {
+          "Global": {
+            "fractional_top1": {
+              "female_FeiTian": 23.0
+            },
+            "top1_per_available_candidate": {
+              "female_FeiTian": 0.058823529411764705,
+              "female_lotus": 0.0,
+              "female_meditation": 0.0,
+              "male_meditation": 0.0,
+              "male_pipa_1": 0.0,
+              "male_pipa_2": 0.0,
+              "male_ribbon": 0.0,
+              "male_ribbon_FenHe": 0.0
+            },
+            "tied_queries": 0
+          },
+          "Diagonal": {
+            "fractional_top1": {
+              "male_meditation": 9.0,
+              "male_ribbon_FenHe": 9.0,
+              "female_meditation": 1.0,
+              "male_pipa_2": 4.0
+            },
+            "top1_per_available_candidate": {
+              "female_FeiTian": 0.0,
+              "female_lotus": 0.0,
+              "female_meditation": 0.043478260869565216,
+              "male_meditation": 0.391304347826087,
+              "male_pipa_1": 0.0,
+              "male_pipa_2": 0.17391304347826086,
+              "male_ribbon": 0.0,
+              "male_ribbon_FenHe": 0.391304347826087
+            },
+            "tied_queries": 0
+          },
+          "Partial": {
+            "fractional_top1": {
+              "female_FeiTian": 7.958333333333342,
+              "female_lotus": 0.29166666666666663,
+              "female_meditation": 0.29166666666666663,
+              "male_meditation": 0.29166666666666663,
+              "male_pipa_1": 0.29166666666666663,
+              "male_pipa_2": 13.291666666666664,
+              "male_ribbon": 0.29166666666666663,
+              "male_ribbon_FenHe": 0.29166666666666663
+            },
+            "top1_per_available_candidate": {
+              "female_FeiTian": 0.02035379369138962,
+              "female_lotus": 0.012681159420289854,
+              "female_meditation": 0.012681159420289854,
+              "male_meditation": 0.012681159420289854,
+              "male_pipa_1": 0.012681159420289854,
+              "male_pipa_2": 0.5778985507246376,
+              "male_ribbon": 0.012681159420289854,
+              "male_ribbon_FenHe": 0.012681159420289854
+            },
+            "tied_queries": 7
+          },
+          "Debias": {
+            "fractional_top1": {
+              "female_FeiTian": 23.0
+            },
+            "top1_per_available_candidate": {
+              "female_FeiTian": 0.058823529411764705,
+              "female_lotus": 0.0,
+              "female_meditation": 0.0,
+              "male_meditation": 0.0,
+              "male_pipa_1": 0.0,
+              "male_pipa_2": 0.0,
+              "male_ribbon": 0.0,
+              "male_ribbon_FenHe": 0.0
+            },
+            "tied_queries": 0
+          },
+          "EnergyHeuristic": {
+            "fractional_top1": {
+              "female_FeiTian": 13.0,
+              "male_ribbon": 2.0,
+              "male_pipa_1": 6.0,
+              "male_ribbon_FenHe": 2.0
+            },
+            "top1_per_available_candidate": {
+              "female_FeiTian": 0.03324808184143223,
+              "female_lotus": 0.0,
+              "female_meditation": 0.0,
+              "male_meditation": 0.0,
+              "male_pipa_1": 0.2608695652173913,
+              "male_pipa_2": 0.0,
+              "male_ribbon": 0.08695652173913043,
+              "male_ribbon_FenHe": 0.08695652173913043
+            },
+            "tied_queries": 0
+          }
+        }
+      },
+      "balanced": {
+        "availability": {
+          "female_FeiTian": 23,
+          "female_lotus": 23,
+          "female_meditation": 23,
+          "male_meditation": 23,
+          "male_pipa_1": 23,
+          "male_pipa_2": 23,
+          "male_ribbon": 23,
+          "male_ribbon_FenHe": 23
+        },
+        "methods": {
+          "Global": {
+            "fractional_top1": {
+              "female_lotus": 5.0,
+              "female_FeiTian": 12.0,
+              "male_pipa_2": 4.0,
+              "male_ribbon_FenHe": 2.0
+            },
+            "top1_per_available_candidate": {
+              "female_FeiTian": 0.5217391304347826,
+              "female_lotus": 0.21739130434782608,
+              "female_meditation": 0.0,
+              "male_meditation": 0.0,
+              "male_pipa_1": 0.0,
+              "male_pipa_2": 0.17391304347826086,
+              "male_ribbon": 0.0,
+              "male_ribbon_FenHe": 0.08695652173913043
+            },
+            "tied_queries": 0
+          },
+          "Diagonal": {
+            "fractional_top1": {
+              "male_meditation": 9.0,
+              "male_ribbon_FenHe": 9.0,
+              "female_meditation": 1.0,
+              "male_pipa_2": 4.0
+            },
+            "top1_per_available_candidate": {
+              "female_FeiTian": 0.0,
+              "female_lotus": 0.0,
+              "female_meditation": 0.043478260869565216,
+              "male_meditation": 0.391304347826087,
+              "male_pipa_1": 0.0,
+              "male_pipa_2": 0.17391304347826086,
+              "male_ribbon": 0.0,
+              "male_ribbon_FenHe": 0.391304347826087
+            },
+            "tied_queries": 0
+          },
+          "Partial": {
+            "fractional_top1": {
+              "female_FeiTian": 2.0,
+              "female_lotus": 1.0,
+              "female_meditation": 1.0,
+              "male_meditation": 1.0,
+              "male_pipa_1": 1.0,
+              "male_pipa_2": 15.0,
+              "male_ribbon": 1.0,
+              "male_ribbon_FenHe": 1.0
+            },
+            "top1_per_available_candidate": {
+              "female_FeiTian": 0.08695652173913043,
+              "female_lotus": 0.043478260869565216,
+              "female_meditation": 0.043478260869565216,
+              "male_meditation": 0.043478260869565216,
+              "male_pipa_1": 0.043478260869565216,
+              "male_pipa_2": 0.6521739130434783,
+              "male_ribbon": 0.043478260869565216,
+              "male_ribbon_FenHe": 0.043478260869565216
+            },
+            "tied_queries": 8
+          },
+          "Debias": {
+            "fractional_top1": {
+              "female_lotus": 5.0,
+              "female_FeiTian": 8.0,
+              "male_pipa_2": 7.0,
+              "male_pipa_1": 1.0,
+              "male_ribbon": 1.0,
+              "male_ribbon_FenHe": 1.0
+            },
+            "top1_per_available_candidate": {
+              "female_FeiTian": 0.34782608695652173,
+              "female_lotus": 0.21739130434782608,
+              "female_meditation": 0.0,
+              "male_meditation": 0.0,
+              "male_pipa_1": 0.043478260869565216,
+              "male_pipa_2": 0.30434782608695654,
+              "male_ribbon": 0.043478260869565216,
+              "male_ribbon_FenHe": 0.043478260869565216
+            },
+            "tied_queries": 0
+          },
+          "EnergyHeuristic": {
+            "fractional_top1": {
+              "male_ribbon_FenHe": 5.0,
+              "male_pipa_1": 8.0,
+              "male_ribbon": 5.0,
+              "male_pipa_2": 1.0,
+              "female_FeiTian": 2.0,
+              "female_lotus": 2.0
+            },
+            "top1_per_available_candidate": {
+              "female_FeiTian": 0.08695652173913043,
+              "female_lotus": 0.08695652173913043,
+              "female_meditation": 0.0,
+              "male_meditation": 0.0,
+              "male_pipa_1": 0.34782608695652173,
+              "male_pipa_2": 0.043478260869565216,
+              "male_ribbon": 0.21739130434782608,
+              "male_ribbon_FenHe": 0.21739130434782608
+            },
+            "tied_queries": 0
+          }
+        }
+      }
+    },
+    "coverage": {
+      "EVENT": {
+        "registered": 184,
+        "states": {
+          "UNREVIEWED": 184
+        }
+      },
+      "POSE": {
+        "registered": 184,
+        "states": {
+          "UNREVIEWED": 184
+        }
+      },
+      "MUSIC_MATCH": {
+        "registered": 184,
+        "states": {
+          "UNREVIEWED": 184
+        }
+      },
+      "QUERY_MATCH": {
+        "registered": 23,
+        "states": {
+          "UNREVIEWED": 23
+        }
+      }
+    },
+    "summary": {
+      "Global/ndcg_at1": {
+        "song_means": {},
+        "mean": null,
+        "ci95": [
+          null,
+          null
+        ]
+      },
+      "Global/ndcg_at3": {
+        "song_means": {},
+        "mean": null,
+        "ci95": [
+          null,
+          null
+        ]
+      },
+      "Global/ndcg_at5": {
+        "song_means": {},
+        "mean": null,
+        "ci95": [
+          null,
+          null
+        ]
+      },
+      "Global/preference_agreement": {
+        "song_means": {},
+        "mean": null,
+        "ci95": [
+          null,
+          null
+        ]
+      },
+      "Diagonal/ndcg_at1": {
+        "song_means": {},
+        "mean": null,
+        "ci95": [
+          null,
+          null
+        ]
+      },
+      "Diagonal/ndcg_at3": {
+        "song_means": {},
+        "mean": null,
+        "ci95": [
+          null,
+          null
+        ]
+      },
+      "Diagonal/ndcg_at5": {
+        "song_means": {},
+        "mean": null,
+        "ci95": [
+          null,
+          null
+        ]
+      },
+      "Diagonal/preference_agreement": {
+        "song_means": {},
+        "mean": null,
+        "ci95": [
+          null,
+          null
+        ]
+      },
+      "Partial/ndcg_at1": {
+        "song_means": {},
+        "mean": null,
+        "ci95": [
+          null,
+          null
+        ]
+      },
+      "Partial/ndcg_at3": {
+        "song_means": {},
+        "mean": null,
+        "ci95": [
+          null,
+          null
+        ]
+      },
+      "Partial/ndcg_at5": {
+        "song_means": {},
+        "mean": null,
+        "ci95": [
+          null,
+          null
+        ]
+      },
+      "Partial/preference_agreement": {
+        "song_means": {},
+        "mean": null,
+        "ci95": [
+          null,
+          null
+        ]
+      },
+      "Debias/ndcg_at1": {
+        "song_means": {},
+        "mean": null,
+        "ci95": [
+          null,
+          null
+        ]
+      },
+      "Debias/ndcg_at3": {
+        "song_means": {},
+        "mean": null,
+        "ci95": [
+          null,
+          null
+        ]
+      },
+      "Debias/ndcg_at5": {
+        "song_means": {},
+        "mean": null,
+        "ci95": [
+          null,
+          null
+        ]
+      },
+      "Debias/preference_agreement": {
+        "song_means": {},
+        "mean": null,
+        "ci95": [
+          null,
+          null
+        ]
+      },
+      "EnergyHeuristic/ndcg_at1": {
+        "song_means": {},
+        "mean": null,
+        "ci95": [
+          null,
+          null
+        ]
+      },
+      "EnergyHeuristic/ndcg_at3": {
+        "song_means": {},
+        "mean": null,
+        "ci95": [
+          null,
+          null
+        ]
+      },
+      "EnergyHeuristic/ndcg_at5": {
+        "song_means": {},
+        "mean": null,
+        "ci95": [
+          null,
+          null
+        ]
+      },
+      "EnergyHeuristic/preference_agreement": {
+        "song_means": {},
+        "mean": null,
+        "ci95": [
+          null,
+          null
+        ]
+      }
+    },
+    "refusal": {
+      "evaluable_queries": 0,
+      "rule": "REGISTERED_ALL_NULL_PARTIAL_COVERAGE_ONLY; NOT_FITTED_TO_LABELS",
+      "precision": null,
+      "recall": null
+    }
+  },
+  "frozen_scores": {
+    "checkpoint_sha256": "212148e7cd86b482cc7734035725b1165edcd7a1c35e03fa513f6982f440e772",
+    "encoder_parameters": 522632,
+    "encoder_forward_calls": 23,
+    "maximum_conformance_error": 0.0,
+    "train_bank_groups": 24
+  },
+  "independent": {
+    "packs": [
+      {
+        "root": "outputs/phase_r45_01",
+        "name": "main",
+        "receipt_sha256": "a919e5cb1bec171da7ab6b5e2733a2016c3488111ca2f4c4e6586a62c2629969"
+      },
+      {
+        "root": "outputs/phase_r45_01",
+        "name": "controls",
+        "receipt_sha256": "74a6896e2b3a46abdaa0dbc33942200095017be74a9584c9e922d77f30d9b55d"
+      },
+      {
+        "root": "outputs/phase_r45_01",
+        "name": "attribution",
+        "receipt_sha256": "bb74b318e3d781e418eacf85e5bec99c42598a9535602b505c78119eade25c01"
+      },
+      {
+        "root": "outputs/review_r45_01",
+        "name": "scores",
+        "receipt_sha256": "1de8933273c62672c089ae38f53ccb89448590ee71ec4faef3f2574521e39615"
+      }
+    ],
+    "all_scientific_values_exact": true,
+    "official_fk_replayed": true,
+    "review_package_replayed": true,
+    "raw_human_reviews": 0,
+    "parents": [
+      {
+        "root": "outputs/bridge_r38_01",
+        "files": 60,
+        "manifest_sha256": "73ab623c89537ce8f64245406dafaa0eeb16ae37c983b8201aa531baf36c3786"
+      },
+      {
+        "root": "outputs/stabilize_r39_01",
+        "files": 73,
+        "manifest_sha256": "89b877a960a55591b915d4c2a0e1fa9b6fcfce9ea905373fa000c997cd5bdf1b"
+      },
+      {
+        "root": "outputs/contract_r40_01",
+        "files": 100,
+        "manifest_sha256": "1976d2b6bc470f53feb4b49f4af0c3d8b0c994657d7322f636b50982d115af16"
+      },
+      {
+        "root": "outputs/paired_event_r41_01",
+        "files": 4434,
+        "manifest_sha256": "7310316b0d6269e4005dc694da8c9d4c783cdda236ee1301d1db290322a39b87"
+      },
+      {
+        "root": "outputs/source_context_r42_01",
+        "files": 357,
+        "manifest_sha256": "725a672581e26837d7c90b747c3af9ab5a6450ad7c1b205cc8553565e54d32a1"
+      },
+      {
+        "root": "outputs/music_reperformance_r43_01",
+        "files": 218,
+        "manifest_sha256": "a2038213fbb8df84609f3f87656d6595d27e9b61743f808b8c24d84c4c43aa23"
+      },
+      {
+        "root": "outputs/sdmr_event_rank_01",
+        "files": 381,
+        "manifest_sha256": "b868ad682d427ae16ff414f46f3c69f3739a45e2a2ad3800a61ac6b144428438"
+      },
+      {
+        "root": "outputs/reperformance_r44_01",
+        "files": 243,
+        "manifest_sha256": "4b3fccf9198f85ebdccca64f5df8c73851362fbd36fe4fa43b5a8b69c2895bfc"
+      },
+      {
+        "root": "outputs/retrieval_audit_r44_01",
+        "files": 34,
+        "manifest_sha256": "dcaed6d5797ac23ecf0fc57246eba9f4450e6c62239630b9edb4b183a7f09070"
+      }
+    ],
+    "primary_delivery_preceded_controls": true,
+    "optimizer_calls": 0,
+    "whole_song_generations": 0,
+    "can_route": false,
+    "operational_qualified": false
+  },
+  "receipts": {
+    "outputs/phase_r45_01/primary_receipt.txt": "exit_status=0\ncommit=c779ec21fe968a6f0ca26a3d3603afabf5ecf5a2\nfinished_utc=2026-11-18T03:42:11Z\n",
+    "outputs/phase_r45_01/controls_receipt.txt": "exit_status=0\ncommit=15cd3243d17413aa9e8254947fb6551cb1201a74\nfinished_utc=2026-11-18T04:29:14Z\n",
+    "outputs/review_r45_01/receipt.txt": "exit_status=0\ncommit=15cd3243d17413aa9e8254947fb6551cb1201a74\nfinished_utc=2026-11-18T04:20:17Z\n",
+    "outputs/r45_publication/verify_receipt.txt": "exit_status=0\ncommit=a96d81d33307703cdcc14dc97d3894d978866f9a\nfinished_utc=2026-11-18T05:21:18Z\n"
+  },
+  "browser": {
+    "outputs/phase_r45_01": {
+      "passed": true,
+      "observed_at_utc": "2026-11-18T05:26:00.775671+00:00",
+      "deliveries": [
+        {
+          "folder": "viewer",
+          "files": 27,
+          "bytes": 68119095,
+          "protocol_sha256": "3a401739ce86c80a33c01a1979d38f3e6dcbc6e4a9794ea0e971e011e0ba8ad7"
+        },
+        {
+          "folder": "videos",
+          "files": 5,
+          "bytes": 1551151,
+          "protocol_sha256": "75dc727231faa71721a079ace7addaadcc5c195e8e7efbcd12aeb767441dc6b0"
+        },
+        {
+          "folder": "viewer_controls",
+          "files": 49,
+          "bytes": 111712442,
+          "protocol_sha256": "1caaf508253427f3b46886b02ec5dc920cebbc63db9879295a6956664960a49d"
+        }
+      ],
+      "checks": [
+        "22 actual trajectory cases; first main delivery preceded controls",
+        "pipa2 MatchedLinear/MatchedC2/Phase visible at common frame27 audio0.9s",
+        "music B audition ready4; changing playback music does not rerun clock",
+        "frame1=1/30s; local/world Root scope; matched anchors visible"
+      ],
+      "screenshot": {
+        "path": "receipts/controls_final.jpg",
+        "sha256": "dd465fac068ec63e237231adbd5f7bb41fdacd3cebbb76a710e15e08518143c5"
+      },
+      "browser": "Chrome",
+      "temporary_read_only_http": "127.0.0.1:8745",
+      "media_scope": "EXPOSED_RESEARCH_PREPARATION_ONLY",
+      "human_reviewed": false
+    },
+    "outputs/review_r45_01": {
+      "passed": true,
+      "observed_at_utc": "2026-11-18T05:26:00.786719+00:00",
+      "deliveries": [
+        {
+          "folder": "viewer",
+          "files": 28,
+          "bytes": 50131373,
+          "protocol_sha256": "d8d35836afe064113dbd0bb7b1499c76b4df05e70c952427ea891d8e718738e1"
+        }
+      ],
+      "checks": [
+        "23 queries x8 candidates; no source names model scores or role shown",
+        "POSE and EVENT audio hidden computed display none and src null",
+        "MUSIC_MATCH audio visible ready4; frame1=1/30s; original source398 vs retimed330 last index",
+        "0 real raw reviews; demo export archived and excluded; no human truth created"
+      ],
+      "screenshot": {
+        "path": "receipts/reviewer_final.jpg",
+        "sha256": "ecb59d2bb43cff8aacbc48ec877133192c7a53368c7eb3f023948ce1c55cf442"
+      },
+      "browser": "Chrome",
+      "temporary_read_only_http": "127.0.0.1:8745",
+      "media_scope": "EXPOSED_RESEARCH_PREPARATION_ONLY",
+      "human_reviewed": false
+    }
+  },
+  "optimizer_steps": 0,
+  "new_neural_samples": 0,
+  "whole_song_generations": 0,
+  "human_reviewed": false,
+  "can_route": false,
+  "operational_qualified": false
+}
