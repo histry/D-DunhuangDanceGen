@@ -1,0 +1,58 @@
+{
+  "version": "R55_TASK_ALIGNED_LOCAL_RESIDUAL_V1",
+  "parent_commit": "1de80d1c1dd93663abe82d1341009561f30d182d",
+  "seed": 55055,
+  "steps": 240,
+  "fit_steps": 120,
+  "synthetic_steps": 80,
+  "synthetic_eval_seeds": [
+    66055,
+    77055,
+    88055,
+    99055
+  ],
+  "synthetic_train_seed": 550000,
+  "temperature": 0.1,
+  "residual_weight": 0.25,
+  "residual_penalty": 0.01,
+  "clock_weight": 0.5,
+  "lr": 0.0003,
+  "batch_groups": 4,
+  "offsets": [
+    -15,
+    -8,
+    0,
+    8,
+    15
+  ],
+  "synthetic_content_gate": 0.75,
+  "synthetic_clock_gate": 0.6,
+  "fit_gate": 0.6,
+  "calibration_groups": 8,
+  "confidence_thresholds": [
+    0,
+    0.005,
+    0.01,
+    0.02,
+    0.04,
+    0.08
+  ],
+  "calibration_max_error": 0.2,
+  "bootstrap_draws": 5000,
+  "arms": [
+    "Conditional",
+    "NoClock",
+    "Unconditional",
+    "Shuffled"
+  ],
+  "data": "outputs/residual_sdmr_r54_02/data",
+  "can_route": false,
+  "human_reviewed": false,
+  "semantic_event_truth": "UNKNOWN",
+  "Val_selection": false,
+  "S1_S2_diagnostic_only": true,
+  "S0": "FROZEN_R54_23_OF_32_NO_RETRAIN",
+  "source_scope": "AISTPP_48_TRAIN_6_EXPOSED_VAL_NO_TEST",
+  "candidate_scope": "OFFLINE_POSITIVE_CONDITIONED_DIAGNOSTIC_NOT_DEPLOYABLE_RECALL",
+  "qualification_policy": "S3_BOTH_HELD_SIZES_AND_S4_ABOVE_GATES_PLUS_REAL_TRAIN_FIT_NO_RETUNING"
+}

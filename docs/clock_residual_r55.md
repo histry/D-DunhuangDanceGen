@@ -1,0 +1,13 @@
+# R55 Task-Aligned Residual SDMR
+
+独立研究包，不改变 R52/R53/R54 或生产选路。R54 的 23/32 与原门保留。
+
+S0 只引用封存历史；S1=8→8 池化、S2=32→32 池化为候选规模诊断。S3 使用 6 候选、逐时刻局部残差、相同 pairwise softplus 与 residual penalty，评价 8/32 候选各4独立种子。S4 使用真实连续随机信号的非循环裁剪、五个偏移和同一局部残差损失；所有候选共享有效支持，不以padding、长度或标签索引入模。每项80更新，参数容量与初始R41权重不变。
+
+新协议只以 S3 两种规模≥.75、S4≥.6且超过零音乐/反序对照，以及120步8任务真实Train拟合≥.6作为主实验准入。S1/S2不设主实验门。不重选种子、预算、阈值或权重。合成资格不能证明真实艺术关联。
+
+真实严格R54人口保留48 Train/6历史曝光Val。按seed55055与组名SHA排序，8个Train音乐组仅用于校准，40个用于优化；不改变父数据角色。四组Conditional、NoClock、Unconditional、Shuffled共用240步日程、R41初始化、参数范围、学习率。NoClock仅移除时钟辅助，Unconditional移除困难候选条件，Shuffled保持候选并打乱关联与辅助时钟标签。模型一律从原R41初始化，不继承8任务拟合。条件池仍依赖已知正例，因此为离线诊断，不是在线原语召回。
+
+Conditional先训练及显示真实来源选择与五偏移恢复，浏览器验收回执后才执行另外三组。四组冻结后，历史Val按音乐组、录制均衡评价；置信阈值只由8个Train留组的合成注入时钟正确率制定；无足够证据则拒答。ChangE语义/文化、世界Root接触、生成质量保持未知；不接管Planner、不跑新整曲。
+
+执行：`PYTHONPATH=src python -m dunhuang.research.clock_residual_r55 <prepare|preview|qualify|train|main_view|evaluate|verify> --out <fresh-path> [--arm Conditional]`。所有训练在已发布提交的tmux任务中执行，保留命令/提交/退出状态；verify新进程禁止构造优化器，重算资格分数、真实快照梯度和最终全部评价。
