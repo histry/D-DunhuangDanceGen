@@ -3,10 +3,9 @@ import os
 os.environ.setdefault('CUBLAS_WORKSPACE_CONFIG',':4096:8')
 import numpy as np
 import torch
-from scipy.spatial.transform import Rotation
 from .common import read,write,fresh,digest
 from .contracts import require_task
-from .conditions import condition,body_loss
+from .conditions import body_loss
 from dunhuang.research.bridge_r38.study import runtime
 from dunhuang.research.coverage_r34.context_train import restore_context
 from dunhuang.research.validation_r51.condition import install
@@ -72,7 +71,7 @@ def run(out,phase=True,replay=None):
  if replay:
   old=read(str(replay)+'/result.json');assert old['calibration']==read(out/'calibration.json')
   for row in [ledger[i] for i in check_steps]:
-   before=torch.load(str(replay)+'/step%d_pre.pt'%row['step'],map_location='cpu',weights_only=True);rt.c.change.load_state_dict(before['source']);rt.c.context_branch.load_state_dict(before['context']);rt.c.zero_grad(set_to_none=True);values,total=loss(row);total.backward();grads=torch.cat([p.grad.flatten() if p.grad is not None else torch.zeros_like(p).flatten() for p in params]).cpu().numpy();saved=np.load(str(replay)+'/gradient%d.npz'%row['step']);assert np.array_equal(grads,saved['gradient']);assert float(total)==old['history'][row['step']]['loss'];history.append(dict(step=row['step'],exact_gradient=True));rt.c.clear_all()
+   before=torch.load(str(replay)+'/step%d_pre.pt'%row['step'],map_location='cpu',weights_only=True);rt.c.change.load_state_dict(before['source']);rt.c.context_branch.load_state_dict(before['context']);rt.c.zero_grad(set_to_none=True);values,total=loss(row);total.backward();grads=torch.cat([p.grad.flatten() if p.grad is not None else torch.zeros_like(p).flatten() for p in params]).cpu().numpy();saved=np.load(str(replay)+'/gradient%d.npz'%row['step']);assert np.array_equal(grads,saved['gradient']);assert float(total.detach())==old['history'][row['step']]['loss'];history.append(dict(step=row['step'],exact_gradient=True));rt.c.clear_all()
   fit=[]
   with torch.no_grad():
    for label,path in (('initial','initial.pt'),('final','model.pt')):

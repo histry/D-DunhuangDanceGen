@@ -10,4 +10,9 @@ function show(t){frame=Math.max(0,Math.min(row.frames-1,t));$('seek').value=fram
 function pause(){running=false;audio.pause()}function seek(t){pause();show(t);if(row.audio)audio.currentTime=frame/30}
 $('play').onclick=()=>{if(row.audio)audio.play();else{base=frame;wall=performance.now();running=true}};$('pause').onclick=pause;$('curve').onclick=e=>seek(Math.round((e.clientX-e.currentTarget.getBoundingClientRect().left)/e.currentTarget.getBoundingClientRect().width*(row.frames-1)));$('prev').onclick=()=>seek(frame-1);$('next').onclick=()=>seek(frame+1);$('seek').oninput=()=>seek(+$('seek').value);$('case').onchange=load;audio.onseeked=()=>row&&show(Math.round(audio.currentTime*30));function tick(){if(row.audio&&!audio.paused)show(Math.floor(audio.currentTime*30));if(!row.audio&&running){show(Math.floor(base+(performance.now()-wall)*.03));if(frame===row.frames-1)running=false}requestAnimationFrame(tick)}load();requestAnimationFrame(tick);
 audio.onloadedmetadata=()=>{audio.playbackRate=+$('rate').value;audio.currentTime=frame/30};$('rate').onchange=()=>{audio.defaultPlaybackRate=+$('rate').value;audio.playbackRate=+$('rate').value};
+
+if(new URLSearchParams(location.search).has('embedded')){
+ document.querySelector('h1').hidden=true;document.querySelector('h1+p').hidden=true;$('case').hidden=true;audio.hidden=true;document.querySelectorAll('body>p').forEach(x=>{if(x.contains($('play')))x.hidden=true});$('seek').hidden=true;
+ const parentClock=e=>{if(e.source!==window.parent||e.data?.type!=='R52_CLOCK')return;const d=e.data;if(!Number.isInteger(d.index)||!R51.cases[d.index]||!Number.isFinite(d.frame))return;if(+$('case').value!==d.index){$('case').value=d.index;load();audio.hidden=true;}audio.pause();show(Math.round(d.frame));window.parent.postMessage({type:'R52_FRAME_ACK',frame},'*')};window.addEventListener('message',parentClock);window.parent.postMessage({type:'R52_READY'},'*');
+}
 </script></html>
