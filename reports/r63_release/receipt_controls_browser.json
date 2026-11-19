@@ -1,0 +1,46 @@
+{
+  "passed": true,
+  "main_result_sha256": "b47f50455cea2e5815221ee5b8d547a1ab83aa2b2e632cf017a2f927cf3d359e",
+  "controls_result_sha256": "1d2af2675a35c18ca10d00f7adf4ec92a90b3cdb00a534f57956be6e39fdf693",
+  "viewer_index_sha256": "4cc49ac764f41bc8b871379556abcf694b9491dbe49b3664326a0dd6335c5e34",
+  "registered_cases": 29,
+  "panels": [
+    "Fixed48",
+    "ShortestScreened",
+    "Fixed24",
+    "BoundaryConditioned",
+    "Fixed48_G0"
+  ],
+  "clock": "ACTUAL_AUDIO_MASTER_30FPS",
+  "DEV02_checks": {
+    "frame266": {
+      "accepted_panels_frames": [
+        266,
+        266,
+        266
+      ],
+      "audio_time_seconds": 8.866666
+    },
+    "rejected_panels": [
+      "Fixed24",
+      "Fixed48_G0"
+    ],
+    "rejected_panels_blank": true,
+    "playback_observed": true,
+    "end_frame": 527,
+    "final_seek": {
+      "accepted_panels_frames": [
+        264,
+        264,
+        264
+      ],
+      "audio_time_seconds": 8.8,
+      "paused": true
+    },
+    "page_error_text": "",
+    "actual_skeletons_visible": true
+  },
+  "human_quality_evaluated": false,
+  "Native24": "NOT_EVALUABLE",
+  "can_route": false
+}

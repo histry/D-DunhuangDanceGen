@@ -1,0 +1,14 @@
+{
+  "mode": "verify",
+  "command": [
+    "/home/disk/lsm/conda_envs/edge/bin/python",
+    "scripts/budget_r63.py",
+    "verify"
+  ],
+  "pid": 2896143,
+  "started": 1795096258.5694788,
+  "commit": "34ea82f03f87212a2b632ff1f68468488178505f",
+  "exit_status": 0,
+  "ended": 1795096497.593381,
+  "log_sha256": "8d57f538686f88ccfb228c1b49c71e765fdbb8ad354fbd10710ca3f7116ba8ab"
+}

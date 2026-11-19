@@ -1,0 +1,248 @@
+{
+  "kind": "DEV_ONLY_STANDARDIZED_1NN_V1",
+  "status": "FIT",
+  "rule": "ONE_NEAREST_DEV_CASE_EUCLIDEAN; EXACT_DISTANCE_TIE_BY_LEXICOGRAPHIC_CASE_KEY",
+  "feature_names": [
+    "endpoint_pose_mean_angle_rad",
+    "left_omega_rms_radps",
+    "right_omega_rms_radps",
+    "left_alpha_rms_radps2",
+    "right_alpha_rms_radps2"
+  ],
+  "feature_source": "RECOMPILED_FIXED48_VISIBLE_EDGE_POSES_ONLY",
+  "label_source": "R63_RECOMPILED_FIXED_TOTAL_BUDGET_FIRST_PASSING_G1; NOT_R62_ORACLE_LABELS",
+  "fit_role": "DEV",
+  "source_disjoint_evaluation_required": true,
+  "input_development_cases": 9,
+  "fitted_cases": 9,
+  "excluded_cases": [],
+  "development_case_keys": [
+    "dev00_c7119093e2ba1657deed89d2",
+    "dev01_2cca6484effad93edb674ecf",
+    "dev02_92608d7506a9eaa2ca72b538",
+    "dev03_d5b76e9b8fa1f327945991eb",
+    "dev04_e30e53c50dca06db19dd5e34",
+    "dev05_d4f43bd07a93e64182e89470",
+    "dev06_3e7a15bd0ee5b6c38cac3d8c",
+    "dev07_8bf597d5ede30ff3ec4cd27a",
+    "dev08_c9c9289339e7197a4580b4d0"
+  ],
+  "fitted_rows": [
+    {
+      "key": "dev00_c7119093e2ba1657deed89d2",
+      "features": [
+        0.4807503095490859,
+        0.13426280491501708,
+        0.0847334648731052,
+        2.3059655482399792,
+        2.388821413500996
+      ],
+      "shortest_gap": 24,
+      "left_source_uid": "male_ribbon_FenHe",
+      "right_source_uid": "male_pipa_2"
+    },
+    {
+      "key": "dev01_2cca6484effad93edb674ecf",
+      "features": [
+        0.5689269644108225,
+        1.5038758580964398,
+        0.0747662074211594,
+        13.919656977037297,
+        3.509810410137218
+      ],
+      "shortest_gap": 36,
+      "left_source_uid": "male_pipa_2",
+      "right_source_uid": "male_ribbon_FenHe"
+    },
+    {
+      "key": "dev02_92608d7506a9eaa2ca72b538",
+      "features": [
+        0.4807503095490859,
+        0.1318231399373103,
+        0.0671832515439818,
+        2.2560203440874633,
+        1.6604011883684726
+      ],
+      "shortest_gap": 24,
+      "left_source_uid": "male_ribbon_FenHe",
+      "right_source_uid": "male_pipa_2"
+    },
+    {
+      "key": "dev03_d5b76e9b8fa1f327945991eb",
+      "features": [
+        0.4807503095490859,
+        0.10506092107909944,
+        0.0847334648731052,
+        2.099911339618384,
+        2.388821413500996
+      ],
+      "shortest_gap": 24,
+      "left_source_uid": "male_ribbon_FenHe",
+      "right_source_uid": "male_pipa_2"
+    },
+    {
+      "key": "dev04_e30e53c50dca06db19dd5e34",
+      "features": [
+        0.6144661669986881,
+        0.3269253876354646,
+        0.09187143353230633,
+        6.117270468319923,
+        4.5996901539186545
+      ],
+      "shortest_gap": 24,
+      "left_source_uid": "female_FeiTian",
+      "right_source_uid": "male_ribbon_FenHe"
+    },
+    {
+      "key": "dev05_d4f43bd07a93e64182e89470",
+      "features": [
+        0.4807503095490859,
+        0.10506092107909944,
+        0.08185680644530133,
+        2.099911339618384,
+        2.3792570466267007
+      ],
+      "shortest_gap": 24,
+      "left_source_uid": "male_ribbon_FenHe",
+      "right_source_uid": "male_pipa_2"
+    },
+    {
+      "key": "dev06_3e7a15bd0ee5b6c38cac3d8c",
+      "features": [
+        0.49980815007712825,
+        0.3386874624793783,
+        0.07073778834919213,
+        6.154264104077384,
+        1.872633003543484
+      ],
+      "shortest_gap": 24,
+      "left_source_uid": "female_FeiTian",
+      "right_source_uid": "male_pipa_2"
+    },
+    {
+      "key": "dev07_8bf597d5ede30ff3ec4cd27a",
+      "features": [
+        0.6120395405183612,
+        1.5038758580964398,
+        0.05107362612380127,
+        13.919656977037297,
+        1.8850006834863053
+      ],
+      "shortest_gap": 36,
+      "left_source_uid": "male_pipa_2",
+      "right_source_uid": "female_FeiTian"
+    },
+    {
+      "key": "dev08_c9c9289339e7197a4580b4d0",
+      "features": [
+        0.49980815007712825,
+        0.3067354249152164,
+        0.09158647948437329,
+        5.396942291560941,
+        2.4164765446825056
+      ],
+      "shortest_gap": 24,
+      "left_source_uid": "female_FeiTian",
+      "right_source_uid": "male_pipa_2"
+    }
+  ],
+  "normalization_mean": [
+    0.5242278011420525,
+    0.4951453086926073,
+    0.07761583584959177,
+    6.029955487733006,
+    2.566767984196148
+  ],
+  "normalization_std": [
+    0.05437083292725181,
+    0.5466992637791239,
+    0.012411749354307005,
+    4.520567110136971,
+    0.8763123612350066
+  ],
+  "standardized_fitted_features": [
+    [
+      -0.7996473339141134,
+      -0.66011155984178,
+      0.5734589718445722,
+      -0.8237882214252078,
+      -0.2030629471486262
+    ],
+    [
+      0.8221165809355447,
+      1.8451287869510966,
+      -0.22959120000626787,
+      1.7452902029951805,
+      1.0761487200888264
+    ],
+    [
+      -0.7996473339141134,
+      -0.664574095534333,
+      -0.8405410073794108,
+      -0.8348366591401392,
+      -1.0342964859588568
+    ],
+    [
+      -0.7996473339141134,
+      -0.7135264549599043,
+      0.5734589718445722,
+      -0.8693697167556358,
+      -0.2030629471486262
+    ],
+    [
+      1.6596833448804167,
+      -0.3077010199251092,
+      1.148556684136368,
+      0.01931505018277918,
+      2.3198602001430904
+    ],
+    [
+      -0.7996473339141134,
+      -0.7135264549599043,
+      0.3416899966834974,
+      -0.8693697167556358,
+      -0.21397728237586897
+    ],
+    [
+      -0.4491314506363682,
+      -0.2861863122545574,
+      -0.5541561712260071,
+      0.027498456126362186,
+      -0.792109082741232
+    ],
+    [
+      1.6150523111132182,
+      1.8451287869510966,
+      -2.1384745186285987,
+      1.7452902029951805,
+      -0.7779957591252199
+    ],
+    [
+      -0.4491314506363682,
+      -0.3446316764266063,
+      1.1255982727312783,
+      -0.1400295982228843,
+      -0.1715044157334874
+    ]
+  ],
+  "duration_grid": [
+    24,
+    36,
+    48,
+    60,
+    72
+  ],
+  "fitted_source_uids": [
+    "female_FeiTian",
+    "male_pipa_2",
+    "male_ribbon_FenHe"
+  ],
+  "normalization_population": "FINITE_LABELLED_DEV_FIT_ROWS_ONLY",
+  "fitting_calls": 1,
+  "neural_training_steps": 0,
+  "optimizer_calls": 0,
+  "evaluation_labels_read": false,
+  "fallback_allowed": false,
+  "can_route": false,
+  "policy_sha256": "a416a3d8389e60044b6a3a12b2058dd8303aa8c449f1d7e331a421f9bffcae42"
+}

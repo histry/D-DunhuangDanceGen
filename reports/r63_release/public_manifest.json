@@ -1,0 +1,45 @@
+{
+  "binding": {
+    "commit": "34ea82f03f87212a2b632ff1f68468488178505f",
+    "code": {
+      "__init__.py": "e38b1e18c4d7535dba677e506d08ab41734587916f2b2ba7593d69044d35cebb",
+      "common.py": "7949f613f259b5071c7980e1dba52333dcf65e19bcd73248a8d9945fb6cfc8e7",
+      "engine.py": "eaf61a98b7aef810fc9ca9a8307c1d327235998256f3daa4309c8dabcdee490a",
+      "policies.py": "fe1b9f52805ba5284cde8f8bd0ff68b2d0bfff5bab38322bf5356d5b8bee6b47",
+      "population.py": "f54e94551fe31bbdd4c8e56352e0ce513660a0f4af94db96dfff9d201e99737e",
+      "protocol.json": "4398d5fe70e6483475ab64663fbed18da8669cd5c04d5d4995f26da11d745e4a",
+      "study.py": "82cb73067240a2eba199934884036bc4d152ba3996ff46cdd8724a0a0b69d149",
+      "viewer.html": "be52aa9bbcd33e750f778f681ebb48939592f65a01720beaf17863c2d2210897",
+      "viewer.py": "e7a4892b356654bc4d4378856c978c9d18ee61c64c8e270ea20c31224b89e279"
+    }
+  },
+  "results": {
+    "main": {
+      "sha256": "b47f50455cea2e5815221ee5b8d547a1ab83aa2b2e632cf017a2f927cf3d359e",
+      "commit": "34ea82f03f87212a2b632ff1f68468488178505f"
+    },
+    "controls": {
+      "sha256": "1d2af2675a35c18ca10d00f7adf4ec92a90b3cdb00a534f57956be6e39fdf693",
+      "commit": "34ea82f03f87212a2b632ff1f68468488178505f"
+    }
+  },
+  "policy_sha256": "6cc251e268b251249b18eecb5a2125956e1a09ba96d7a329ad68c96275004609",
+  "scientific_files_sha256": "1e093f2422d739de659b5c4fb00984dffc0b7984b28221e3d7e07fa978c7a68b",
+  "verification_sha256": "8e88537fb00662a5e4d979f5cd435c0d3c8aa89f10ed50dc6f644e616c3e9d9b",
+  "receipts": [
+    "attribution.json",
+    "controls_browser.json",
+    "controls_delivery.json",
+    "execution_controls.json",
+    "execution_main.json",
+    "execution_tests.json",
+    "execution_verify.json",
+    "main_browser.json",
+    "main_delivery.json"
+  ],
+  "coordinates_in_public_release": false,
+  "audio_in_public_release": false,
+  "weights_in_public_release": false,
+  "can_route": false,
+  "Native24": "NOT_EVALUABLE"
+}

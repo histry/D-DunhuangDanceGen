@@ -1,0 +1,73 @@
+{
+  "files": [
+    {
+      "path": "index.html",
+      "bytes": 27896190,
+      "sha256": "4cc49ac764f41bc8b871379556abcf694b9491dbe49b3664326a0dd6335c5e34"
+    },
+    {
+      "path": "protocol.json",
+      "bytes": 6906,
+      "sha256": "7803f65224b4209140cb5d0e8343202774739d0a0692418dc5a6feec78ea9d2e"
+    }
+  ],
+  "total_files": 2,
+  "total_bytes": 27903096,
+  "reused_files": [
+    {
+      "path": "audio/04e91d37ccaf1c98fd7e.m4a",
+      "bytes": 284858,
+      "sha256": "9a438de7900d965c805ecd10cec2ed988f72f14096c8d69498f2bf0f15cf9dff"
+    },
+    {
+      "path": "audio/1e6aea1539b0e7dc5974.m4a",
+      "bytes": 284524,
+      "sha256": "db4d3dab3d0c3da3444d9f9fa334307833b1a60163d7f70cb513b29b36c79bd4"
+    },
+    {
+      "path": "audio/5f068755367981678ef5.m4a",
+      "bytes": 284348,
+      "sha256": "76059b2f5a28f9b2474a162445d2c253ca6e063e408e13f2fd9b43a991105b1c"
+    },
+    {
+      "path": "audio/7c71a063aeef3879d416.m4a",
+      "bytes": 285164,
+      "sha256": "c7c8d0d2ed98ad8272444604f9c881161a21130c9c7679ebbd385c2e24c81844"
+    },
+    {
+      "path": "audio/816b1d3ad4b8486540e1.m4a",
+      "bytes": 285095,
+      "sha256": "aea573dbf9e23c0ba6ef371524f0ef9ba2dc5d3f2122728d37255733524ca0b8"
+    },
+    {
+      "path": "audio/958bc632a5c4c3f84a42.m4a",
+      "bytes": 284517,
+      "sha256": "2351549ee690174c59a3e0051a32fc6f01569ec9e4c377e8e03a93fb5b9c1c24"
+    },
+    {
+      "path": "audio/9a726ff7be3bb8d9385a.m4a",
+      "bytes": 284256,
+      "sha256": "a13bbc2da14a3b0beea6daf279c2348593e68c017e3b3b23e35e3b4bb2292f1e"
+    },
+    {
+      "path": "audio/c6a9343e4f1447249a85.m4a",
+      "bytes": 285213,
+      "sha256": "41d332c98565f8ba954d5beefeaae7d95a1c3ace80d73329c7fc08ce5b462fc0"
+    },
+    {
+      "path": "audio/cbefda6d631d2910f30e.m4a",
+      "bytes": 284447,
+      "sha256": "f3f0e0038139ecea196f2bdb0c3fe1e4a55698c05c04aa4357b54d8d0757f015"
+    },
+    {
+      "path": "audio/f160efad8489dd4aebc3.m4a",
+      "bytes": 285420,
+      "sha256": "09ff81a5edfb25d347da72736b4835a766e2bbeb331f1c37bc37bb517fdf7361"
+    }
+  ],
+  "reused_audio_files": 10,
+  "all_hashes_exact": true,
+  "authorization": "R63_EXPLICIT_BATCH_USER_REPLY",
+  "remote_root": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/budget_r63_01/controls_viewer",
+  "local_root": "D:\\DunhuangDanceGen\\outputs\\budget_r63_01\\controls_viewer"
+}

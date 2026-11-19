@@ -1,0 +1,43 @@
+{
+  "passed": true,
+  "main_result_sha256": "b47f50455cea2e5815221ee5b8d547a1ab83aa2b2e632cf017a2f927cf3d359e",
+  "main_code_commit": "34ea82f03f87212a2b632ff1f68468488178505f",
+  "viewer_index_sha256": "440420462cb1820af3309c7aae60548f556aab014560bedb0ecdbfa9de86c910",
+  "browser": "CHROME_ACTUAL_UI_VIA_CUA",
+  "clock": "ACTUAL_AUDIO_MASTER_30FPS",
+  "registered_cases": 29,
+  "checks": {
+    "DEV36_frame265": {
+      "both_rendered_frame": 265,
+      "audio_time_seconds": 8.833333
+    },
+    "previous_frame": 264,
+    "playback_rate": 0.5,
+    "pause": {
+      "both_rendered_frame": 408,
+      "audio_time_seconds": 13.613444,
+      "paused": true
+    },
+    "EVAL_source_switch_reset": 0,
+    "last_frame_clamp": {
+      "both_rendered_frame": 527,
+      "audio_time_seconds": 17.566666
+    },
+    "EVAL_seek": {
+      "both_rendered_frame": 264,
+      "audio_time_seconds": 8.8
+    },
+    "music_duration_seconds": 17.6,
+    "HTTP_audio_seekable_range_seconds": [
+      0,
+      17.6
+    ],
+    "page_error_text": "",
+    "actual_body22_skeleton_visible": true
+  },
+  "local_service_fix": "THREADING_READ_ONLY_WHITELIST_WITH_HTTP_RANGE; NO_EXPERIMENT_OR_PAGE_CHANGE",
+  "quality_preference_evaluated": false,
+  "human_reviewed": false,
+  "Native24": "NOT_EVALUABLE",
+  "can_route": false
+}

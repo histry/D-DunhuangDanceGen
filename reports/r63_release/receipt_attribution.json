@@ -1,0 +1,156 @@
+{
+  "all_candidate_allocations_exact528": true,
+  "all_constructed_cores_exact": true,
+  "development_fixed48_R62_core_parity": true,
+  "main_candidate_count": 85,
+  "controls_candidate_count": 89,
+  "eval_guard_failures": [
+    {
+      "case_key": "eval02_3582931accb6c3ebc79beb78",
+      "policy": "ShortestScreened",
+      "gap_frames": 24,
+      "left_source": "female_lotus",
+      "right_source": "male_pipa_1",
+      "reasons": [
+        {
+          "metric": "whole_D3_Q95_ratio",
+          "value": 1.1444470540353033
+        }
+      ]
+    },
+    {
+      "case_key": "eval02_3582931accb6c3ebc79beb78",
+      "policy": "Fixed24",
+      "gap_frames": 24,
+      "left_source": "female_lotus",
+      "right_source": "male_pipa_1",
+      "reasons": [
+        {
+          "metric": "whole_D3_Q95_ratio",
+          "value": 1.1444470540353033
+        }
+      ]
+    },
+    {
+      "case_key": "eval04_ee00609bd954d39ec66e4e90",
+      "policy": "ShortestScreened",
+      "gap_frames": 24,
+      "left_source": "female_meditation",
+      "right_source": "female_lotus",
+      "reasons": [
+        {
+          "metric": "whole_D3_Q95_ratio",
+          "value": 1.13626723234507
+        }
+      ]
+    },
+    {
+      "case_key": "eval04_ee00609bd954d39ec66e4e90",
+      "policy": "Fixed24",
+      "gap_frames": 24,
+      "left_source": "female_meditation",
+      "right_source": "female_lotus",
+      "reasons": [
+        {
+          "metric": "whole_D3_Q95_ratio",
+          "value": 1.13626723234507
+        }
+      ]
+    },
+    {
+      "case_key": "eval04_ee00609bd954d39ec66e4e90",
+      "policy": "BoundaryConditioned",
+      "gap_frames": 24,
+      "left_source": "female_meditation",
+      "right_source": "female_lotus",
+      "reasons": [
+        {
+          "metric": "whole_D3_Q95_ratio",
+          "value": 1.13626723234507
+        }
+      ]
+    },
+    {
+      "case_key": "eval06_87c8726999c794d11fb4be80",
+      "policy": "ShortestScreened",
+      "gap_frames": 24,
+      "left_source": "female_meditation",
+      "right_source": "male_pipa_1",
+      "reasons": [
+        {
+          "metric": "whole_D3_Q95_ratio",
+          "value": 1.1071346529779011
+        }
+      ]
+    },
+    {
+      "case_key": "eval06_87c8726999c794d11fb4be80",
+      "policy": "Fixed24",
+      "gap_frames": 24,
+      "left_source": "female_meditation",
+      "right_source": "male_pipa_1",
+      "reasons": [
+        {
+          "metric": "whole_D3_Q95_ratio",
+          "value": 1.1071346529779011
+        }
+      ]
+    },
+    {
+      "case_key": "eval06_87c8726999c794d11fb4be80",
+      "policy": "BoundaryConditioned",
+      "gap_frames": 24,
+      "left_source": "female_meditation",
+      "right_source": "male_pipa_1",
+      "reasons": [
+        {
+          "metric": "whole_D3_Q95_ratio",
+          "value": 1.1071346529779011
+        }
+      ]
+    },
+    {
+      "case_key": "eval14_137b66136a4084d9360e92d1",
+      "policy": "ShortestScreened",
+      "gap_frames": 24,
+      "left_source": "male_pipa_1",
+      "right_source": "male_meditation",
+      "reasons": [
+        {
+          "metric": "whole_D3_Q95_ratio",
+          "value": 1.1645156444274918
+        }
+      ]
+    },
+    {
+      "case_key": "eval14_137b66136a4084d9360e92d1",
+      "policy": "Fixed24",
+      "gap_frames": 24,
+      "left_source": "male_pipa_1",
+      "right_source": "male_meditation",
+      "reasons": [
+        {
+          "metric": "whole_D3_Q95_ratio",
+          "value": 1.1645156444274918
+        }
+      ]
+    },
+    {
+      "case_key": "eval14_137b66136a4084d9360e92d1",
+      "policy": "BoundaryConditioned",
+      "gap_frames": 36,
+      "left_source": "male_pipa_1",
+      "right_source": "male_meditation",
+      "reasons": [
+        {
+          "metric": "whole_D3_Q95_ratio",
+          "value": 1.1511076530599538
+        }
+      ]
+    }
+  ],
+  "independent_frozen_parent_files": 4067,
+  "evaluation_shortest_equals_fixed24": true,
+  "Native24": "NOT_EVALUABLE",
+  "full_song_admitted": false
+}

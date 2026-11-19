@@ -1,0 +1,39 @@
+{
+  "binding": {
+    "commit": "34ea82f03f87212a2b632ff1f68468488178505f",
+    "code": {
+      "__init__.py": "e38b1e18c4d7535dba677e506d08ab41734587916f2b2ba7593d69044d35cebb",
+      "common.py": "7949f613f259b5071c7980e1dba52333dcf65e19bcd73248a8d9945fb6cfc8e7",
+      "engine.py": "eaf61a98b7aef810fc9ca9a8307c1d327235998256f3daa4309c8dabcdee490a",
+      "policies.py": "fe1b9f52805ba5284cde8f8bd0ff68b2d0bfff5bab38322bf5356d5b8bee6b47",
+      "population.py": "f54e94551fe31bbdd4c8e56352e0ce513660a0f4af94db96dfff9d201e99737e",
+      "protocol.json": "4398d5fe70e6483475ab64663fbed18da8669cd5c04d5d4995f26da11d745e4a",
+      "study.py": "82cb73067240a2eba199934884036bc4d152ba3996ff46cdd8724a0a0b69d149",
+      "viewer.html": "be52aa9bbcd33e750f778f681ebb48939592f65a01720beaf17863c2d2210897",
+      "viewer.py": "e7a4892b356654bc4d4378856c978c9d18ee61c64c8e270ea20c31224b89e279"
+    }
+  },
+  "records": [
+    {
+      "mode": "main",
+      "scientific_values_exact": true,
+      "arrays_bytes_exact": true,
+      "source_result_sha256": "b47f50455cea2e5815221ee5b8d547a1ab83aa2b2e632cf017a2f927cf3d359e",
+      "source_commit": "34ea82f03f87212a2b632ff1f68468488178505f"
+    },
+    {
+      "mode": "controls",
+      "scientific_values_exact": true,
+      "arrays_bytes_exact": true,
+      "source_result_sha256": "1d2af2675a35c18ca10d00f7adf4ec92a90b3cdb00a534f57956be6e39fdf693",
+      "source_commit": "34ea82f03f87212a2b632ff1f68468488178505f"
+    }
+  ],
+  "frozen_parent_files_unchanged": 4067,
+  "optimizer_calls": 0,
+  "neural_training_steps": 0,
+  "production_lookup_refits": 0,
+  "arithmetic_dev_fit_reconstructions": 2,
+  "fresh_source_recompile_and_geometry": true,
+  "can_route": false
+}
