@@ -1,0 +1,51 @@
+{
+  "version": "R58_EXECUTION_PROFILES_BOUNDED_JOINT_V1",
+  "parent_commit": "a350627e9edb237047bd496c944c0fb1cfc530d0",
+  "seed": 58058,
+  "songs": [
+    0,
+    1,
+    2
+  ],
+  "main_song": 0,
+  "events": 13,
+  "gap": 48,
+  "min_core": 180,
+  "max_core": 300,
+  "boundary_offsets": [
+    -18,
+    0,
+    18
+  ],
+  "variable_boundary_indices": [
+    0,
+    2,
+    4,
+    6,
+    8,
+    10
+  ],
+  "beam": 128,
+  "workers": 4,
+  "maximum_geometry_trials_per_song": 16384,
+  "execution_weight": 0.1,
+  "structure_weight": 1.0,
+  "length_weight": 0.1,
+  "edge_weight": 0.01,
+  "unit_reuse": 0.1,
+  "source_reuse": 0.02,
+  "source_epsilon": 1e-08,
+  "baseline_incumbent": true,
+  "C3": "CIRCULAR_SHIFT_BOUNDARY_REWARD_ONLY; SAME_GRAPH_ACTUAL_ENERGY_AND_BEATS_RETAINED",
+  "lattice_scope": "SIX_ALTERNATING_BOUNDARIES_AROUND_FROZEN_B1; NOT_UNRESTRICTED_JOINT_OPTIMUM",
+  "proxy_boundary_noninferiority": 0.05,
+  "activity_ratio_scope": [
+    0.8,
+    1.25
+  ],
+  "human_reviewed": false,
+  "new_independent_music": 0,
+  "native24": "NOT_EVALUABLE",
+  "can_route": false,
+  "neural_training_steps": 0
+}
