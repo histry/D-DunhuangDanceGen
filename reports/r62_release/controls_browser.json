@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "controls_result_sha256": "f472fba7344f612da988d9a6aae503a9a3c1ee12a5d4d95ef184b37bab96cb54",
+  "controls_view_manifest_sha256": "9d5e91a45203a5897be8a1cc72decbcedabdaec277874856172dd4d26b541dfd",
+  "checked_at": "2026-11-19T11:16:03.955543+00:00",
+  "scope": "REPRESENTATIVE_BROWSER_INTERACTION_ACCEPTANCE_NOT_HUMAN_QUALITY_REVIEW",
+  "checks": {
+    "P0_truth_G1_SLERP_Hermite_four_panels": true,
+    "P0_all_panels_source_frame68_to69": true,
+    "Hermite_rejection_case_male_pipa2_gap24_shows_empty_without_fallback": true,
+    "P1_G0_G1_only_no_fictitious_hidden_truth": true,
+    "P1_all_ten_panels_half_speed_frame30_to33": true,
+    "P1_seek100_short84_and96_ended_blank": true,
+    "pause_seek_and_shared_clock": true
+  },
+  "human_reviewed": false,
+  "verified_phase": "UNKNOWN"
+}

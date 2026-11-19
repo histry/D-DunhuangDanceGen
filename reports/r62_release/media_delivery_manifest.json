@@ -1,0 +1,16 @@
+{
+  "base_scientific_manifest_sha256": "aa8c7440c1a274fdff541d0615d29cd4f70ca1fb89114efcf9aba12bf9073d74",
+  "files": [
+    {
+      "path": "media_delivery.json",
+      "bytes": 3046,
+      "sha256": "9b7d841afc5c78e5bbf0f0e1224b07af118f1bcbf9314902727e9c4afc757a1e"
+    },
+    {
+      "path": "controls_browser.json",
+      "bytes": 813,
+      "sha256": "235aeff1142ae4fd6228805d36ac86a8bb541da86f5fa13b99bcd3e210e4b480"
+    }
+  ],
+  "scope": "DELIVERY_SUPPLEMENT_ONLY; FROZEN_SCIENTIFIC_RELEASE_UNCHANGED"
+}

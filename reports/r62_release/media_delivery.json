@@ -1,0 +1,75 @@
+{
+  "schema": "R62_AUTHORIZED_CONTROLS_MEDIA_DELIVERY_V1",
+  "explicit_user_authorized": true,
+  "files": [
+    {
+      "path": "outputs/duration_r62_01/index.html",
+      "bytes": 839,
+      "sha256": "b56633383183a70f7b4dd35211e63e610774814d28187a8644b37dd29621a539"
+    },
+    {
+      "path": "outputs/duration_r62_01/controls/continuous/viewer/index.html",
+      "bytes": 4751,
+      "sha256": "ef417a6f9448e1f341307258628849ede4bc529efb16af9e8fd564c3cb30835e"
+    },
+    {
+      "path": "outputs/duration_r62_01/controls/continuous/viewer/data.js",
+      "bytes": 4556601,
+      "sha256": "0910ae48b208b55f8fce0a79a2a219e214c1f09940eba14bf84665ca291b68c2"
+    },
+    {
+      "path": "outputs/duration_r62_01/controls/continuous/viewer/protocol.json",
+      "bytes": 487,
+      "sha256": "6a490ea8e70e8bf8b11ddfcd3c3183c58ce5390fb0674632049ab3bebd4a962f"
+    },
+    {
+      "path": "outputs/duration_r62_01/controls/cross_source/viewer/index.html",
+      "bytes": 4751,
+      "sha256": "ef417a6f9448e1f341307258628849ede4bc529efb16af9e8fd564c3cb30835e"
+    },
+    {
+      "path": "outputs/duration_r62_01/controls/cross_source/viewer/data.js",
+      "bytes": 3314571,
+      "sha256": "2f9cd2bf24cff17093261432f7c00bfcc467a43c3f2ae61dbc6d11c8a7d1b01e"
+    },
+    {
+      "path": "outputs/duration_r62_01/controls/cross_source/viewer/protocol.json",
+      "bytes": 486,
+      "sha256": "adfa12a398296d13042044148dcba6eee48ddecb4032842c08e8ae11005c2a7f"
+    }
+  ],
+  "file_count": 7,
+  "bytes": 7882486,
+  "all_file_sizes_and_sha256_exact": true,
+  "prior_main_batch_files": 12,
+  "prior_main_batch_bytes": 5110687,
+  "cumulative_file_transfers": 19,
+  "unique_current_viewing_files": 18,
+  "cumulative_transferred_bytes": 12993173,
+  "all_viewing_batches_delivered": true,
+  "browser_acceptance": {
+    "passed": true,
+    "controls_result_sha256": "f472fba7344f612da988d9a6aae503a9a3c1ee12a5d4d95ef184b37bab96cb54",
+    "controls_view_manifest_sha256": "9d5e91a45203a5897be8a1cc72decbcedabdaec277874856172dd4d26b541dfd",
+    "checked_at": "2026-11-19T11:16:03.955543+00:00",
+    "scope": "REPRESENTATIVE_BROWSER_INTERACTION_ACCEPTANCE_NOT_HUMAN_QUALITY_REVIEW",
+    "checks": {
+      "P0_truth_G1_SLERP_Hermite_four_panels": true,
+      "P0_all_panels_source_frame68_to69": true,
+      "Hermite_rejection_case_male_pipa2_gap24_shows_empty_without_fallback": true,
+      "P1_G0_G1_only_no_fictitious_hidden_truth": true,
+      "P1_all_ten_panels_half_speed_frame30_to33": true,
+      "P1_seek100_short84_and96_ended_blank": true,
+      "pause_seek_and_shared_clock": true
+    },
+    "human_reviewed": false,
+    "verified_phase": "UNKNOWN"
+  },
+  "scientific_controls_result_sha256": "f472fba7344f612da988d9a6aae503a9a3c1ee12a5d4d95ef184b37bab96cb54",
+  "scientific_base_public_manifest_sha256": "aa8c7440c1a274fdff541d0615d29cd4f70ca1fb89114efcf9aba12bf9073d74",
+  "media_or_body_coordinates_published_to_git": false,
+  "raw_rotations_transferred": false,
+  "new_training_steps": 0,
+  "new_experiment_runs": 0,
+  "Native24": "NOT_EVALUABLE"
+}
