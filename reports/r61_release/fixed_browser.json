@@ -1,0 +1,18 @@
+{
+  "human_reviewed": false,
+  "fixed_result_sha256": "1de8d0cdf70811f2d966a0a12c0e7dfea019033c12bbfcc03d313f33c53f44f7",
+  "checks": {
+    "three_panels": true,
+    "twelve_cases": true,
+    "shared_source_clock": true,
+    "seek_source_frame_108": true,
+    "jump_source_frame_84": true,
+    "single_frame_108_to_109": true,
+    "edit_mask_visible": true,
+    "play_pause": true
+  },
+  "verified_phase": "UNKNOWN",
+  "passed": true,
+  "checked_at": "2026-11-19T17:05:43.7129344+08:00",
+  "scope": "FIXED_GAP_UI_ACCEPTANCE_NOT_PERCEPTUAL_QUALITY"
+}

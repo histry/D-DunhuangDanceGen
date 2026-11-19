@@ -1,0 +1,159 @@
+{
+  "schema": "R61_INTERVENTION_EDIT_SUPPORT_FIXED_GAP_PUBLIC_V1",
+  "registered_cases": 12,
+  "matched_source_crops": 12,
+  "source_recordings": 12,
+  "source_counts": {
+    "ChangE": 8,
+    "FineDance": 4
+  },
+  "phase_proxy_counts": {
+    "pose_hold": 3,
+    "root_turn_span": 3,
+    "speed_peak": 6
+  },
+  "nested_crops_with_zero_added_frames": 12,
+  "total_existing_raw_evidence_frames_removed": 169,
+  "centers_removed": 8,
+  "fixed_gap": {
+    "ALL": {
+      "tasks": 12,
+      "paired_constructible": 12,
+      "primary": {
+        "sources": 12,
+        "tasks": 12,
+        "mean": -0.005303947999994531,
+        "ci95": [
+          -0.009370354478173741,
+          -0.0017544302518073898
+        ],
+        "scope": "RECORDING_BALANCED_PAIRED_RECONSTRUCTION; NO_INDEPENDENT_MUSIC_OR_SEMANTIC_GENERALIZATION"
+      },
+      "fk": {
+        "sources": 12,
+        "tasks": 12,
+        "mean": -0.0043258241025622346,
+        "ci95": [
+          -0.007310490155841517,
+          -0.0017443911964812886
+        ],
+        "scope": "RECORDING_BALANCED_PAIRED_RECONSTRUCTION; NO_INDEPENDENT_MUSIC_OR_SEMANTIC_GENERALIZATION"
+      },
+      "methods": {
+        "SLERP": {
+          "constructed": 12,
+          "passed_original_screen": 8
+        },
+        "G1": {
+          "constructed": 12,
+          "passed_original_screen": 8
+        }
+      }
+    },
+    "ChangE": {
+      "tasks": 8,
+      "paired_constructible": 8,
+      "primary": {
+        "sources": 8,
+        "tasks": 8,
+        "mean": -0.004987287749266434,
+        "ci95": [
+          -0.010474933061197724,
+          -0.0006098670750821877
+        ],
+        "scope": "RECORDING_BALANCED_PAIRED_RECONSTRUCTION; NO_INDEPENDENT_MUSIC_OR_SEMANTIC_GENERALIZATION"
+      },
+      "fk": {
+        "sources": 8,
+        "tasks": 8,
+        "mean": -0.005021413293566833,
+        "ci95": [
+          -0.00920531851981861,
+          -0.0012594926256716944
+        ],
+        "scope": "RECORDING_BALANCED_PAIRED_RECONSTRUCTION; NO_INDEPENDENT_MUSIC_OR_SEMANTIC_GENERALIZATION"
+      },
+      "methods": {
+        "SLERP": {
+          "constructed": 8,
+          "passed_original_screen": 5
+        },
+        "G1": {
+          "constructed": 8,
+          "passed_original_screen": 5
+        }
+      }
+    },
+    "FineDance": {
+      "tasks": 4,
+      "paired_constructible": 4,
+      "primary": {
+        "sources": 4,
+        "tasks": 4,
+        "mean": -0.005937268501450724,
+        "ci95": [
+          -0.009427399491547597,
+          -0.0001996097457967541
+        ],
+        "scope": "RECORDING_BALANCED_PAIRED_RECONSTRUCTION; NO_INDEPENDENT_MUSIC_OR_SEMANTIC_GENERALIZATION"
+      },
+      "fk": {
+        "sources": 4,
+        "tasks": 4,
+        "mean": -0.0029346457205530387,
+        "ci95": [
+          -0.004141162387877682,
+          -0.0017281290532283958
+        ],
+        "scope": "RECORDING_BALANCED_PAIRED_RECONSTRUCTION; NO_INDEPENDENT_MUSIC_OR_SEMANTIC_GENERALIZATION"
+      },
+      "methods": {
+        "SLERP": {
+          "constructed": 4,
+          "passed_original_screen": 3
+        },
+        "G1": {
+          "constructed": 4,
+          "passed_original_screen": 3
+        }
+      }
+    },
+    "AIST++": {
+      "tasks": 0,
+      "paired_constructible": 0,
+      "primary": {
+        "sources": 0,
+        "tasks": 0,
+        "mean": null,
+        "ci95": null
+      },
+      "fk": {
+        "sources": 0,
+        "tasks": 0,
+        "mean": null,
+        "ci95": null
+      },
+      "methods": {
+        "SLERP": {
+          "constructed": 0,
+          "passed_original_screen": 0
+        },
+        "G1": {
+          "constructed": 0,
+          "passed_original_screen": 0
+        }
+      }
+    }
+  },
+  "tests": {
+    "passed": 780,
+    "skipped": 1,
+    "log_sha256": "6e88675e582cb0ccc3cc36e76506638f9d563f2010b46bd6ddf3e13e609caf5c"
+  },
+  "parent_files_unchanged": 4067,
+  "main_commit": "c7554534dc976949a050957f0c267e472b19fa8f",
+  "fixed_commit": "a8a19c8666390b41a3cec8feaee1b8f378c04d88",
+  "human_records": 0,
+  "AIST_registered_cases": 0,
+  "can_route": false
+}

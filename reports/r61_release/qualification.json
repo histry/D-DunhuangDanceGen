@@ -1,0 +1,21 @@
+{
+  "INTERVENTION_VALIDITY": "OBSERVED_KINEMATIC_EVIDENCE_REMOVAL_VERIFIED; SEMANTIC_PHASE_VALIDITY_UNKNOWN",
+  "EDIT_SUPPORT_AUDIT": "COMPLETE_EDIT_OVERLAP_REPORTED; INTRUSION_IS_NOT_AVOIDED_BY_THIS_AUDIT",
+  "INBETWEENING_QUALITY": "PAIRED_SAME_48_FRAME_TARGET_SLERP_VS_G1",
+  "phase_semantic_effect_established": false,
+  "independent_perceptual_quality_established": false,
+  "verified_phase": "UNKNOWN",
+  "human_reviewed": false,
+  "semantic_completeness": "UNKNOWN",
+  "source_independence": "RECORDING_GROUPED_DEVELOPMENT_DIAGNOSTIC; NOT_NEW_UNSEEN_OR_PRETRAINING_INDEPENDENT_TEST",
+  "world_root_contact": "UNKNOWN",
+  "Native24": "NOT_EVALUABLE",
+  "training_steps": 0,
+  "optimizer_calls": 0,
+  "planner_runs": 0,
+  "duration_grid_runs": 0,
+  "can_route": false,
+  "negative_delta_meaning": "G1_HAS_LOWER_MEAN_HIDDEN_RECONSTRUCTION_ERROR_THAN_SLERP_ON_THE_SAME_TARGET",
+  "missing_construction_policy": "FAILURES_RETAINED; PAIRED_MEAN_CONDITIONAL_ON_BOTH_METHODS_CONSTRUCTIBLE",
+  "protected_source_claim_authorized": false
+}

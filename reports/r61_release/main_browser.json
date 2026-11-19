@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "verified_phase": "UNKNOWN",
+  "human_reviewed": false,
+  "url": "http://127.0.0.1:18762/main/viewer/index.html",
+  "browser": "Chrome",
+  "scope": "SOURCE_CROP_UI_ACCEPTANCE_NOT_HUMAN_PHASE_QUALITY",
+  "checked_at": "2026-11-19T17:01:15.1371609+08:00",
+  "checks": {
+    "twelve_source_choices": true,
+    "shared_source_clock": true,
+    "A5_only_stopped_at_last_valid_frame_673": true,
+    "play_pause_rate_seek": true,
+    "A5_removed_context_gray": true,
+    "single_frame_355_to_356": true
+  },
+  "screenshot": "receipts/crop_browser.png",
+  "main_result_sha256": "cc2d35d44e05a02c578cd2f57add84c7f66bd12aade56c9f75394fd719da820f"
+}
