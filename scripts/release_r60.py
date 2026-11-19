@@ -12,10 +12,10 @@ def csvfile(path,rows):
 def release():
     out=fresh('reports/r60_release');p=read(ROOT/'population/result.json');r=read(ROOT/'controls/result.json');v=read(ROOT/'independent/result.json')
     assert v['result_exact'] and v['arrays_bytes_exact'];assert read(ROOT/'receipts/main_browser.json')['passed']
-    for name in ('main','controls','verify','tests'):
+    for name in ('main','controls','verify','tests','sources'):
         receipt=read('outputs/r60_execution_02/'+name+'_receipt.json');assert receipt['exit_status']==0
         write(out/(name+'_receipt.json'),receipt)
-    write(out/'independent.json',v);write(out/'main_browser.json',read(ROOT/'receipts/main_browser.json'))
+    write(out/'independent.json',v);write(out/'independent_sources.json',read(ROOT/'independent_sources/result.json'));write(out/'main_browser.json',read(ROOT/'receipts/main_browser.json'))
     write(out/'summary.json',dict(schema='R60_PHASE_INTEGRITY_ATTRIBUTION',scientific_commit=r['binding']['commit'],
                                 sources=len(p['sources']),source_counts=dict(Counter(s['dataset'] for s in p['sources'])),
                                 units=len(p['units']),summary=r['summary'],accepted_change_frames=p['legacy_accepted_frames'],
@@ -72,7 +72,8 @@ def release():
     for d,s in r['summary'].items():
         t=s['primary'];value='不可计算' if t['mean'] is None else '%.6f [%.6f, %.6f]'%(t['mean'],*t['ci95'])
         lines.append('|%s|%d|%d|%d|%s|'%(d,s['units'],s['matched'],t['sources'],value))
-    lines += ['','负值只表示在本轮同录制、同长度、真实上下文条件下，A4对隐藏48帧的固定G1重建误差更低；不能等价为舞蹈自然性、文化语义或阶段检测准确率。所有方法的构造失败、原数值门失败与缺失人口均保留。主误差使用构造成功的共同接缝；原数值门资格另外报告，不能只挑合格连接来计算误差。','',
+    lines += ['','本轮结果没有支持保护阶段具有稳定的连接重建优势：ChangE差异区间跨零，FineDance的A4误差反而更高。AIST++选中录制的R47单位缺少可干预的完整上下文，12个全部NOT_MATCHABLE；不将不可配对理解为算法失败，也不据此宣称AIST阶段收益。','',
+              '负值只表示在本轮同录制、同长度、真实上下文条件下，A4对隐藏48帧的固定G1重建误差更低；不能等价为舞蹈自然性、文化语义或阶段检测准确率。所有方法的构造失败、原数值门失败与缺失人口均保留。主误差使用构造成功的共同接缝；原数值门资格另外报告，不能只挑合格连接来计算误差。','',
               'Virtual Split逐数组精确回拼，误差为0；Actual Split+Bridge替换相同48帧，不增加总时长，隐藏真值从不进入求解器。原ChangE Train参照阈值用于外域时仅为冻结迁移诊断，不是已验证的通用物理门。','',
               '同长度A4/A5合法时长覆盖相同：原E1-W的线性回退保证端点速率域，阶段拍点为可选吸引项。因此当前接口本身不能证明阶段完整性改变合法时长集合。D1/D2/D3、结点放大和边界状态另存完整私有档案；高D3不直接等于动作不自然，近静态来源归一化保持未定义。','',
               '96/180/240/300帧控制仅描述相同中心附近的保护风险、来源支持与长度关系；不是随机化时长试验，也不把每种长度都标为完整动作。','',
