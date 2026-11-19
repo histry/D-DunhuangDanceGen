@@ -1,0 +1,74 @@
+{
+  "version": "R59_RAW_GRID_FROZEN_QUALIFICATION_V1",
+  "parent_commit": "d2558c60655f86b6581d5837c8dcc283e9694669",
+  "seed": 59059,
+  "frames": 150,
+  "stride": 75,
+  "query_sources_per_group": 2,
+  "queries_per_source": 3,
+  "hard_pool_size": 64,
+  "offsets": [
+    -15,
+    -8,
+    0,
+    8,
+    15
+  ],
+  "positive_iou": 0.6,
+  "negative_gap": 15,
+  "bootstrap_draws": 3000,
+  "controls": [
+    "actual",
+    "music_zero",
+    "wrong_music",
+    "motion_tokens_reverse"
+  ],
+  "models": [
+    "Frozen",
+    "Conditional",
+    "NoClock"
+  ],
+  "methods": [
+    "Heuristic",
+    "Frozen",
+    "Conditional",
+    "NoClock",
+    "Conditional_TeacherRescore",
+    "NoClock_TeacherRescore"
+  ],
+  "fine_ids": [
+    "001",
+    "002",
+    "003",
+    "004",
+    "005",
+    "006",
+    "007",
+    "008",
+    "009",
+    "010",
+    "011",
+    "013"
+  ],
+  "fine_main_ids": [
+    "001",
+    "002"
+  ],
+  "fine_raw_root": "/home/disk/lsm/storage/danceRAG/assets/datasets/finedance",
+  "fine_copy": "inputs/paired_benchmark_r59/finedance",
+  "aist": "outputs/paired_event_r41_01/data",
+  "a2": "outputs/transfer_audit_01/a2",
+  "normalizer": "outputs/transition_r37_02/content_data/normalization.json",
+  "checkpoint": "outputs/paired_event_r41_01/main/model.pt",
+  "r55": "outputs/clock_residual_r55_02",
+  "residual_weight": 0.25,
+  "training_updates": 0,
+  "can_route": false,
+  "new_unseen_music_certified": false,
+  "human_reviewed": false,
+  "test_tensor_reads": 0,
+  "minimum_independent_eval_music": 8,
+  "qualification": "DATA_INDEPENDENCE_AND_PAIRED_MUSIC_GROUP_CI_ABOVE_FROZEN_AND_HEURISTIC_AND_CORRECT_MUSIC_CONTROLS; NO_NEW_TRAINING_IF_NOT_ESTABLISHED",
+  "pool_rule": "RAW_COMPLETE_SHARED_RECORD_150_STRIDE75_PLUS_END; NO_LABEL_OR_SCORE_DEPENDENT_POPULATION",
+  "fine_split": "OFFICIAL_CROSS_GENRE_TRAIN_DIAGNOSTIC; CROSS_DANCER_TEST_IDS_SEPARATELY_DISCLOSED; NO_TEST_TENSOR_ACCESS_UNDER_SELECTED_PRIMARY_SPLIT"
+}
