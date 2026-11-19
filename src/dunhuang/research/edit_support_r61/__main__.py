@@ -10,7 +10,8 @@ def main():
         verify_main(ROOT/'independent_main')
     elif a.action=='fixed':
         from .fixed_gap import run
-        run(ROOT/'fixed')
+        from .view import fixed_view
+        run(ROOT/'fixed_gap');fixed_view(ROOT/'fixed_gap')
     else:
         from .fixed_gap import verify
         verify(ROOT/'independent_fixed')

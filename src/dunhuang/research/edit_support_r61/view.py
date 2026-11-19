@@ -17,6 +17,20 @@ def crop_view(out,assets,cases):
             details=c,scope='嵌套裁剪：A5没有新增来源帧，灰色只是被删去的真实上下文；不变速、不冻结末帧。阶段为自动运动学代理，人工确认UNKNOWN。'))
     page(out,rows,assets.parents,'INTERVENTION_VALIDITY');render(out,rows,assets.parents)
 
+def fixed_view(out):
+    result=read(out/'result.json');z=np.load(out/'arrays.npz');rows=[];J,parents=z['J'],z['parents']
+    for r in result['records']:
+        if r['status']!='FIXED_GAP_EVALUATED':continue
+        a,b=r['source_interval'];phase=r['target_phase'];x,y=phase['evidence_span'];band=[max(0,phase['frame']-12),phase['frame']+13] if phase['type']=='speed_peak' else [x,y];methods=[]
+        for name,label in [('truth','真实隐藏动作／真值'),('SLERP','端点 SLERP'),('G1','冻结 G1')]:
+            key=r['key']+'_'+name
+            if key not in z:continue
+            methods.append(dict(name=label,data=encode(relative_fk(z[key],J,parents)),interval=[a,b],generated=name!='truth'))
+        rows.append(dict(case=r['case'],label=r['source_uid']+' · 同一48帧缺口',frames=b-a,origin=a,raw=[x,y],band=band,edit=r['edit_source_interval'],methods=methods,details=r,
+            scope='两方法使用完全相同缺口、4+4真实观察和隐藏目标。棕色区为重建；其内已侵入的来源证据不宣称原样保留。没有阶段标签输入、音乐条件或新训练。'))
+    page(out,rows,parents,'INBETWEENING_QUALITY_AND_EDIT_SUPPORT')
+    (ROOT/'index.html').write_text('<meta charset="utf-8"><style>body{font:20px system-ui;max-width:1100px;margin:50px auto;background:#f4f1e8;color:#173e36}a{display:block;margin:25px}</style><h1>R61 来源裁剪与同目标补间</h1><a href="main/viewer/index.html">① 十二段真实来源裁剪：删除已有证据，原速观看</a><a href="main/video/index.html">② 十二段原速裁剪MP4</a><a href="fixed_gap/viewer/index.html">③ 同一48帧：真实动作／SLERP／G1与实际编辑支持</a><p>自动运动学阶段，独立语义确认UNKNOWN；无新训练、无Planner扩展。灰色是删除上下文，棕色是实际重建，不混为完整性保持。</p>',encoding='utf8')
+
 def render(out,rows,parents):
     from PIL import Image,ImageDraw,ImageFont
     folder=fresh(out/'video');font=ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf',18);small=ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf',14);records=[]
