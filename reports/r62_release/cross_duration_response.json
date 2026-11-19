@@ -1,0 +1,241 @@
+{
+  "by_duration": {
+    "24": {
+      "tasks": 9,
+      "methods": {
+        "G0": {
+          "constructed": 9,
+          "passed_original_screen": 7
+        },
+        "G1": {
+          "constructed": 9,
+          "passed_original_screen": 7
+        }
+      }
+    },
+    "36": {
+      "tasks": 9,
+      "methods": {
+        "G0": {
+          "constructed": 9,
+          "passed_original_screen": 7
+        },
+        "G1": {
+          "constructed": 9,
+          "passed_original_screen": 7
+        }
+      }
+    },
+    "48": {
+      "tasks": 9,
+      "methods": {
+        "G0": {
+          "constructed": 8,
+          "passed_original_screen": 7
+        },
+        "G1": {
+          "constructed": 9,
+          "passed_original_screen": 9
+        }
+      }
+    },
+    "60": {
+      "tasks": 9,
+      "methods": {
+        "G0": {
+          "constructed": 7,
+          "passed_original_screen": 7
+        },
+        "G1": {
+          "constructed": 9,
+          "passed_original_screen": 9
+        }
+      }
+    },
+    "72": {
+      "tasks": 9,
+      "methods": {
+        "G0": {
+          "constructed": 6,
+          "passed_original_screen": 5
+        },
+        "G1": {
+          "constructed": 9,
+          "passed_original_screen": 9
+        }
+      }
+    }
+  },
+  "pair_responses": [
+    {
+      "pair_case": 0,
+      "passing_G1_durations": [
+        24,
+        36,
+        48,
+        60,
+        72
+      ],
+      "minimum_passing_duration": 24,
+      "duration_pass_pattern": {
+        "24": true,
+        "36": true,
+        "48": true,
+        "60": true,
+        "72": true
+      },
+      "posthoc_scope": "OBSERVED_ORACLE_RESPONSE_NOT_TRAINED_ADAPTIVE_DECISION_OR_FIXED_MUSIC_BUDGET"
+    },
+    {
+      "pair_case": 1,
+      "passing_G1_durations": [
+        48,
+        60,
+        72
+      ],
+      "minimum_passing_duration": 48,
+      "duration_pass_pattern": {
+        "24": false,
+        "36": false,
+        "48": true,
+        "60": true,
+        "72": true
+      },
+      "posthoc_scope": "OBSERVED_ORACLE_RESPONSE_NOT_TRAINED_ADAPTIVE_DECISION_OR_FIXED_MUSIC_BUDGET"
+    },
+    {
+      "pair_case": 2,
+      "passing_G1_durations": [
+        24,
+        36,
+        48,
+        60,
+        72
+      ],
+      "minimum_passing_duration": 24,
+      "duration_pass_pattern": {
+        "24": true,
+        "36": true,
+        "48": true,
+        "60": true,
+        "72": true
+      },
+      "posthoc_scope": "OBSERVED_ORACLE_RESPONSE_NOT_TRAINED_ADAPTIVE_DECISION_OR_FIXED_MUSIC_BUDGET"
+    },
+    {
+      "pair_case": 3,
+      "passing_G1_durations": [
+        24,
+        36,
+        48,
+        60,
+        72
+      ],
+      "minimum_passing_duration": 24,
+      "duration_pass_pattern": {
+        "24": true,
+        "36": true,
+        "48": true,
+        "60": true,
+        "72": true
+      },
+      "posthoc_scope": "OBSERVED_ORACLE_RESPONSE_NOT_TRAINED_ADAPTIVE_DECISION_OR_FIXED_MUSIC_BUDGET"
+    },
+    {
+      "pair_case": 4,
+      "passing_G1_durations": [
+        24,
+        36,
+        48,
+        60,
+        72
+      ],
+      "minimum_passing_duration": 24,
+      "duration_pass_pattern": {
+        "24": true,
+        "36": true,
+        "48": true,
+        "60": true,
+        "72": true
+      },
+      "posthoc_scope": "OBSERVED_ORACLE_RESPONSE_NOT_TRAINED_ADAPTIVE_DECISION_OR_FIXED_MUSIC_BUDGET"
+    },
+    {
+      "pair_case": 5,
+      "passing_G1_durations": [
+        24,
+        36,
+        48,
+        60,
+        72
+      ],
+      "minimum_passing_duration": 24,
+      "duration_pass_pattern": {
+        "24": true,
+        "36": true,
+        "48": true,
+        "60": true,
+        "72": true
+      },
+      "posthoc_scope": "OBSERVED_ORACLE_RESPONSE_NOT_TRAINED_ADAPTIVE_DECISION_OR_FIXED_MUSIC_BUDGET"
+    },
+    {
+      "pair_case": 6,
+      "passing_G1_durations": [
+        24,
+        36,
+        48,
+        60,
+        72
+      ],
+      "minimum_passing_duration": 24,
+      "duration_pass_pattern": {
+        "24": true,
+        "36": true,
+        "48": true,
+        "60": true,
+        "72": true
+      },
+      "posthoc_scope": "OBSERVED_ORACLE_RESPONSE_NOT_TRAINED_ADAPTIVE_DECISION_OR_FIXED_MUSIC_BUDGET"
+    },
+    {
+      "pair_case": 7,
+      "passing_G1_durations": [
+        48,
+        60,
+        72
+      ],
+      "minimum_passing_duration": 48,
+      "duration_pass_pattern": {
+        "24": false,
+        "36": false,
+        "48": true,
+        "60": true,
+        "72": true
+      },
+      "posthoc_scope": "OBSERVED_ORACLE_RESPONSE_NOT_TRAINED_ADAPTIVE_DECISION_OR_FIXED_MUSIC_BUDGET"
+    },
+    {
+      "pair_case": 8,
+      "passing_G1_durations": [
+        24,
+        36,
+        48,
+        60,
+        72
+      ],
+      "minimum_passing_duration": 24,
+      "duration_pass_pattern": {
+        "24": true,
+        "36": true,
+        "48": true,
+        "60": true,
+        "72": true
+      },
+      "posthoc_scope": "OBSERVED_ORACLE_RESPONSE_NOT_TRAINED_ADAPTIVE_DECISION_OR_FIXED_MUSIC_BUDGET"
+    }
+  ],
+  "pass_patterns_differ_across_pairs": true,
+  "adaptive_policy_qualified": false,
+  "P2": "NOT_ADMITTED_NO_OUT_OF_SAMPLE_DURATION_DECISION_NET_GAIN"
+}

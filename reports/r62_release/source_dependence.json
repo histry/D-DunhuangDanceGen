@@ -1,0 +1,16 @@
+{
+  "cross_unique_sources": [
+    "female_FeiTian",
+    "male_pipa_2",
+    "male_ribbon_FenHe"
+  ],
+  "cross_pair_source_incidence": {
+    "male_ribbon_FenHe": 6,
+    "male_pipa_2": 8,
+    "female_FeiTian": 4
+  },
+  "cross_pair_count": 9,
+  "cross_pairs_share_sources": true,
+  "independent_edge_bootstrap_performed": false,
+  "independence": "DEVELOPMENT_FROZEN_HEURISTIC_PAIRS; NO_UNSEEN_SOURCE_OR_PRETRAINING_INDEPENDENCE_CLAIM"
+}

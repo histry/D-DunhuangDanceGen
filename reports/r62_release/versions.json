@@ -1,0 +1,55 @@
+{
+  "main_commit": "6c08fd1a3fd3655995d366cba82075132fecd240",
+  "controls_commit": "eab245854a9764b4b550de13ef541a16748517ac",
+  "main_package_hashes": {
+    "__init__.py": "5ab9c270eef31e25aa17d38d12a8b180ca9ff658509fa36234086672e14a2da7",
+    "__main__.py": "fd87e246466cb458f8658bab7e00dc8cd533576d790ff2b2e5f4c9b43525d12d",
+    "common.py": "cb144b746c73827cfb8b5123985334a954b8c0bcd68d9301f94e77008a6a2419",
+    "continuous.py": "589336cfc5efb1384e31e565157d29749a667f2a916409f88c99b793989ae109",
+    "cross_source.py": "d2a5dc233621d3f653ddd2a3f2721d7edb3340f580fe08704a06ffef549e8dce",
+    "methods.py": "f90726a880c5a26f83724fa222c08b790aa44a107d9a2feb137164a8efffba4a",
+    "protocol.json": "15056609e9604988c0b43c8417abd254b80fb7e094002c3e597a2b3bac30ad8a",
+    "study.py": "72ac6ac0cdee4e9c5182c6019dab5cdac2bf479d8a34c4d6c30a37fa359cb402",
+    "view.py": "4338b59048755d86d90a1435b8ae53cc80ed02092c43b71ced2f1c8ec4977244",
+    "viewer.html": "ef417a6f9448e1f341307258628849ede4bc529efb16af9e8fd564c3cb30835e"
+  },
+  "controls_package_hashes": {
+    "__init__.py": "5ab9c270eef31e25aa17d38d12a8b180ca9ff658509fa36234086672e14a2da7",
+    "__main__.py": "fd87e246466cb458f8658bab7e00dc8cd533576d790ff2b2e5f4c9b43525d12d",
+    "common.py": "cb144b746c73827cfb8b5123985334a954b8c0bcd68d9301f94e77008a6a2419",
+    "continuous.py": "589336cfc5efb1384e31e565157d29749a667f2a916409f88c99b793989ae109",
+    "cross_source.py": "d2a5dc233621d3f653ddd2a3f2721d7edb3340f580fe08704a06ffef549e8dce",
+    "methods.py": "f90726a880c5a26f83724fa222c08b790aa44a107d9a2feb137164a8efffba4a",
+    "protocol.json": "15056609e9604988c0b43c8417abd254b80fb7e094002c3e597a2b3bac30ad8a",
+    "study.py": "72ac6ac0cdee4e9c5182c6019dab5cdac2bf479d8a34c4d6c30a37fa359cb402",
+    "view.py": "4338b59048755d86d90a1435b8ae53cc80ed02092c43b71ced2f1c8ec4977244",
+    "viewer.html": "ef417a6f9448e1f341307258628849ede4bc529efb16af9e8fd564c3cb30835e"
+  },
+  "frozen_P0_geometry_sha256": "4646ff82c2775b32e893335abe0aac43cdd4dfbabc643d230e8985a347adea7f",
+  "frozen_P1_algorithms": {
+    "src/dunhuang/research/bridge_r38/geometry.py": "b1b54f1e5b2cbe12a59bf7e8007c6ba12c7d0dea07f1fe709c6289ad38396577",
+    "src/dunhuang/research/bridge_audit_r46/admission.py": "4745854ce2925e4401fef1769bff30c379559518acd74cf35ca83fe2411068bc",
+    "src/dunhuang/research/manifold_bridge_r47/geometry.py": "4646ff82c2775b32e893335abe0aac43cdd4dfbabc643d230e8985a347adea7f"
+  },
+  "R61_main_result_sha256": "cc2d35d44e05a02c578cd2f57add84c7f66bd12aade56c9f75394fd719da820f",
+  "R61_fixed_result_sha256": "1de8d0cdf70811f2d966a0a12c0e7dfea019033c12bbfcc03d313f33c53f44f7",
+  "R61_fixed_arrays_sha256": "7e4878f15a8ad97ffa74cb6ed468a5614ce8b29e4700682b8f1b8cdeebfb5b4c",
+  "source_selection": {
+    "requested_maximum_pairs": 12,
+    "selected_pairs": 9,
+    "restricted_to_frozen_gap_frames": 48,
+    "shortfall_retained": true,
+    "selection": "FIRST_UNIQUE_FULL_EVENT_WARP_AND_EDGE_READSET_BY_SORTED_FROZEN_R51_KEY_EDGE; NO_R62_OUTCOMES",
+    "frozen_R51_sha256": "a2cf76cf0d54249c3469ae42b8170170155389d0db4b2e144400d0a85be7ee0b",
+    "frozen_R52_result_sha256": "4fcec30e4869d07458f118601024fa59ecefb4541d480efe2f20c307696118e1",
+    "frozen_R52_arrays_sha256": "5ee8b57a828bd4cb7c5a176a3b3abb973c5c92d158414e0e1f910e68fd378910",
+    "R47_units_sha256": "483d13759a3efbdf9129cf7d4ab8d81ae248529acbd6a45bcb03d427d552807e",
+    "catalog_sha256": "d33cd546ae746227cfc6e5cad1dee2923c88742631a3c69433b63f4dfa85421a"
+  },
+  "frozen_numerical_reference": {
+    "D2": 11.601721832266323,
+    "D3": 284.73454603204124,
+    "shoulder_wrist_lower_m": 0.1974362962380649,
+    "scope": "TRAIN_SOURCE_Q95_BODY_RELATIVE_NUMERICAL_REFERENCE_NOT_NATIVE"
+  }
+}

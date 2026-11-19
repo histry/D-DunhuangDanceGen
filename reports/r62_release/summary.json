@@ -1,0 +1,4022 @@
+{
+  "schema": "R62_DURATION_LOCAL_DIAGNOSTIC_PUBLIC_V1",
+  "main_commit": "6c08fd1a3fd3655995d366cba82075132fecd240",
+  "controls_commit": "eab245854a9764b4b550de13ef541a16748517ac",
+  "durations": [
+    24,
+    36,
+    48,
+    60,
+    72
+  ],
+  "continuous_registered": 60,
+  "continuous_source_centers": 12,
+  "continuous_eligible": 60,
+  "continuous_summary": {
+    "24": {
+      "ALL": {
+        "registered": 12,
+        "eligible": 12,
+        "not_eligible": 0,
+        "sources": 12,
+        "methods": {
+          "G1": {
+            "constructed": 12,
+            "passed_original_screen": 8,
+            "rejection_count": 0
+          },
+          "SLERP": {
+            "constructed": 12,
+            "passed_original_screen": 6,
+            "rejection_count": 0
+          },
+          "SingleChartHermite": {
+            "constructed": 9,
+            "passed_original_screen": 7,
+            "rejection_count": 3
+          }
+        },
+        "paired": {
+          "G1_minus_SLERP_error_rad": {
+            "sources": 12,
+            "tasks": 12,
+            "mean": -0.005957200397613977,
+            "ci95": [
+              -0.009392272790834103,
+              -0.0027039491053407866
+            ],
+            "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+          },
+          "G1_minus_SLERP_fk_error_m": {
+            "sources": 12,
+            "tasks": 12,
+            "mean": -0.0036409414177951665,
+            "ci95": [
+              -0.005989361571659369,
+              -0.0016907265063300409
+            ],
+            "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+          },
+          "G1_minus_SingleChartHermite_error_rad": {
+            "sources": 9,
+            "tasks": 9,
+            "mean": -0.04867601974551309,
+            "ci95": [
+              -0.09257928170772978,
+              -0.008814270962383897
+            ],
+            "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+          },
+          "G1_minus_SingleChartHermite_fk_error_m": {
+            "sources": 9,
+            "tasks": 9,
+            "mean": 0.007050484241807826,
+            "ci95": [
+              -0.00213268194517247,
+              0.017230650752847916
+            ],
+            "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+          }
+        },
+        "interpretation": "WITHIN_GAP_METHOD_COMPARISON; HIDDEN_TARGET_CHANGES_ACROSS_GAPS"
+      },
+      "ChangE": {
+        "registered": 8,
+        "eligible": 8,
+        "not_eligible": 0,
+        "sources": 8,
+        "methods": {
+          "G1": {
+            "constructed": 8,
+            "passed_original_screen": 5,
+            "rejection_count": 0
+          },
+          "SLERP": {
+            "constructed": 8,
+            "passed_original_screen": 3,
+            "rejection_count": 0
+          },
+          "SingleChartHermite": {
+            "constructed": 7,
+            "passed_original_screen": 5,
+            "rejection_count": 1
+          }
+        },
+        "paired": {
+          "G1_minus_SLERP_error_rad": {
+            "sources": 8,
+            "tasks": 8,
+            "mean": -0.003416289412566649,
+            "ci95": [
+              -0.006627581354018683,
+              -0.0008440333241207629
+            ],
+            "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+          },
+          "G1_minus_SLERP_fk_error_m": {
+            "sources": 8,
+            "tasks": 8,
+            "mean": -0.004058368492974605,
+            "ci95": [
+              -0.007508642780790237,
+              -0.001217481837854262
+            ],
+            "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+          },
+          "G1_minus_SingleChartHermite_error_rad": {
+            "sources": 7,
+            "tasks": 7,
+            "mean": -0.047583365886629606,
+            "ci95": [
+              -0.09177805426009707,
+              -0.013613045475068737
+            ],
+            "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+          },
+          "G1_minus_SingleChartHermite_fk_error_m": {
+            "sources": 7,
+            "tasks": 7,
+            "mean": 0.00905516754126094,
+            "ci95": [
+              -0.0015987583288092058,
+              0.020783399137120188
+            ],
+            "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+          }
+        },
+        "interpretation": "WITHIN_GAP_METHOD_COMPARISON; HIDDEN_TARGET_CHANGES_ACROSS_GAPS"
+      },
+      "FineDance": {
+        "registered": 4,
+        "eligible": 4,
+        "not_eligible": 0,
+        "sources": 4,
+        "methods": {
+          "G1": {
+            "constructed": 4,
+            "passed_original_screen": 3,
+            "rejection_count": 0
+          },
+          "SLERP": {
+            "constructed": 4,
+            "passed_original_screen": 3,
+            "rejection_count": 0
+          },
+          "SingleChartHermite": {
+            "constructed": 2,
+            "passed_original_screen": 2,
+            "rejection_count": 2
+          }
+        },
+        "paired": {
+          "G1_minus_SLERP_error_rad": {
+            "sources": 4,
+            "tasks": 4,
+            "mean": -0.011039022367708633,
+            "ci95": [
+              -0.01577773231292972,
+              -0.006220446537586962
+            ],
+            "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+          },
+          "G1_minus_SLERP_fk_error_m": {
+            "sources": 4,
+            "tasks": 4,
+            "mean": -0.002806087267436288,
+            "ci95": [
+              -0.0036650627401980072,
+              -0.0019471117946745688
+            ],
+            "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+          },
+          "G1_minus_SingleChartHermite_error_rad": {
+            "sources": 2,
+            "tasks": 2,
+            "mean": -0.0525003082516053,
+            "ci95": [
+              -0.139108371888607,
+              0.0341077553853964
+            ],
+            "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+          },
+          "G1_minus_SingleChartHermite_fk_error_m": {
+            "sources": 2,
+            "tasks": 2,
+            "mean": 3.4092693721928316e-05,
+            "ci95": [
+              -0.011424002660473269,
+              0.011492188047917126
+            ],
+            "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+          }
+        },
+        "interpretation": "WITHIN_GAP_METHOD_COMPARISON; HIDDEN_TARGET_CHANGES_ACROSS_GAPS"
+      },
+      "AIST++": {
+        "registered": 0,
+        "eligible": 0,
+        "not_eligible": 0,
+        "sources": 0,
+        "methods": {
+          "G1": {
+            "constructed": 0,
+            "passed_original_screen": 0,
+            "rejection_count": 0
+          },
+          "SLERP": {
+            "constructed": 0,
+            "passed_original_screen": 0,
+            "rejection_count": 0
+          },
+          "SingleChartHermite": {
+            "constructed": 0,
+            "passed_original_screen": 0,
+            "rejection_count": 0
+          }
+        },
+        "paired": {
+          "G1_minus_SLERP_error_rad": {
+            "sources": 0,
+            "tasks": 0,
+            "mean": null,
+            "ci95": null
+          },
+          "G1_minus_SLERP_fk_error_m": {
+            "sources": 0,
+            "tasks": 0,
+            "mean": null,
+            "ci95": null
+          },
+          "G1_minus_SingleChartHermite_error_rad": {
+            "sources": 0,
+            "tasks": 0,
+            "mean": null,
+            "ci95": null
+          },
+          "G1_minus_SingleChartHermite_fk_error_m": {
+            "sources": 0,
+            "tasks": 0,
+            "mean": null,
+            "ci95": null
+          }
+        },
+        "interpretation": "WITHIN_GAP_METHOD_COMPARISON; HIDDEN_TARGET_CHANGES_ACROSS_GAPS"
+      }
+    },
+    "36": {
+      "ALL": {
+        "registered": 12,
+        "eligible": 12,
+        "not_eligible": 0,
+        "sources": 12,
+        "methods": {
+          "G1": {
+            "constructed": 12,
+            "passed_original_screen": 10,
+            "rejection_count": 0
+          },
+          "SLERP": {
+            "constructed": 12,
+            "passed_original_screen": 9,
+            "rejection_count": 0
+          },
+          "SingleChartHermite": {
+            "constructed": 10,
+            "passed_original_screen": 8,
+            "rejection_count": 2
+          }
+        },
+        "paired": {
+          "G1_minus_SLERP_error_rad": {
+            "sources": 12,
+            "tasks": 12,
+            "mean": -0.0023251078921855913,
+            "ci95": [
+              -0.005917342857484756,
+              0.0017059407197465082
+            ],
+            "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+          },
+          "G1_minus_SLERP_fk_error_m": {
+            "sources": 12,
+            "tasks": 12,
+            "mean": -0.0023264475466873466,
+            "ci95": [
+              -0.0037921513436840492,
+              -0.0010814954905333392
+            ],
+            "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+          },
+          "G1_minus_SingleChartHermite_error_rad": {
+            "sources": 10,
+            "tasks": 10,
+            "mean": -0.060618152641071885,
+            "ci95": [
+              -0.11631321234964768,
+              -0.021338844274385267
+            ],
+            "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+          },
+          "G1_minus_SingleChartHermite_fk_error_m": {
+            "sources": 10,
+            "tasks": 10,
+            "mean": -0.008487907662228069,
+            "ci95": [
+              -0.021833822057189606,
+              0.003415230157496625
+            ],
+            "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+          }
+        },
+        "interpretation": "WITHIN_GAP_METHOD_COMPARISON; HIDDEN_TARGET_CHANGES_ACROSS_GAPS"
+      },
+      "ChangE": {
+        "registered": 8,
+        "eligible": 8,
+        "not_eligible": 0,
+        "sources": 8,
+        "methods": {
+          "G1": {
+            "constructed": 8,
+            "passed_original_screen": 6,
+            "rejection_count": 0
+          },
+          "SLERP": {
+            "constructed": 8,
+            "passed_original_screen": 5,
+            "rejection_count": 0
+          },
+          "SingleChartHermite": {
+            "constructed": 6,
+            "passed_original_screen": 5,
+            "rejection_count": 2
+          }
+        },
+        "paired": {
+          "G1_minus_SLERP_error_rad": {
+            "sources": 8,
+            "tasks": 8,
+            "mean": 0.0011269407406734114,
+            "ci95": [
+              -0.002599952830654427,
+              0.005472336446201129
+            ],
+            "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+          },
+          "G1_minus_SLERP_fk_error_m": {
+            "sources": 8,
+            "tasks": 8,
+            "mean": -0.002071044711370044,
+            "ci95": [
+              -0.0042772332874188405,
+              -0.00035996505264041163
+            ],
+            "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+          },
+          "G1_minus_SingleChartHermite_error_rad": {
+            "sources": 6,
+            "tasks": 6,
+            "mean": -0.028163623478123786,
+            "ci95": [
+              -0.06662118443493274,
+              -0.005273769791894177
+            ],
+            "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+          },
+          "G1_minus_SingleChartHermite_fk_error_m": {
+            "sources": 6,
+            "tasks": 6,
+            "mean": -0.01135375152893104,
+            "ci95": [
+              -0.0293615462588068,
+              0.00010921063163245486
+            ],
+            "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+          }
+        },
+        "interpretation": "WITHIN_GAP_METHOD_COMPARISON; HIDDEN_TARGET_CHANGES_ACROSS_GAPS"
+      },
+      "FineDance": {
+        "registered": 4,
+        "eligible": 4,
+        "not_eligible": 0,
+        "sources": 4,
+        "methods": {
+          "G1": {
+            "constructed": 4,
+            "passed_original_screen": 4,
+            "rejection_count": 0
+          },
+          "SLERP": {
+            "constructed": 4,
+            "passed_original_screen": 4,
+            "rejection_count": 0
+          },
+          "SingleChartHermite": {
+            "constructed": 4,
+            "passed_original_screen": 3,
+            "rejection_count": 0
+          }
+        },
+        "paired": {
+          "G1_minus_SLERP_error_rad": {
+            "sources": 4,
+            "tasks": 4,
+            "mean": -0.009229205157903597,
+            "ci95": [
+              -0.010280938981897705,
+              -0.008177471333909489
+            ],
+            "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+          },
+          "G1_minus_SLERP_fk_error_m": {
+            "sources": 4,
+            "tasks": 4,
+            "mean": -0.0028372532173219518,
+            "ci95": [
+              -0.0033765199216884857,
+              -0.0023410154841961503
+            ],
+            "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+          },
+          "G1_minus_SingleChartHermite_error_rad": {
+            "sources": 4,
+            "tasks": 4,
+            "mean": -0.10929994638549406,
+            "ci95": [
+              -0.21307745236697181,
+              -0.04825724456429893
+            ],
+            "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+          },
+          "G1_minus_SingleChartHermite_fk_error_m": {
+            "sources": 4,
+            "tasks": 4,
+            "mean": -0.004189141862173611,
+            "ci95": [
+              -0.024168822294315054,
+              0.0157932755390836
+            ],
+            "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+          }
+        },
+        "interpretation": "WITHIN_GAP_METHOD_COMPARISON; HIDDEN_TARGET_CHANGES_ACROSS_GAPS"
+      },
+      "AIST++": {
+        "registered": 0,
+        "eligible": 0,
+        "not_eligible": 0,
+        "sources": 0,
+        "methods": {
+          "G1": {
+            "constructed": 0,
+            "passed_original_screen": 0,
+            "rejection_count": 0
+          },
+          "SLERP": {
+            "constructed": 0,
+            "passed_original_screen": 0,
+            "rejection_count": 0
+          },
+          "SingleChartHermite": {
+            "constructed": 0,
+            "passed_original_screen": 0,
+            "rejection_count": 0
+          }
+        },
+        "paired": {
+          "G1_minus_SLERP_error_rad": {
+            "sources": 0,
+            "tasks": 0,
+            "mean": null,
+            "ci95": null
+          },
+          "G1_minus_SLERP_fk_error_m": {
+            "sources": 0,
+            "tasks": 0,
+            "mean": null,
+            "ci95": null
+          },
+          "G1_minus_SingleChartHermite_error_rad": {
+            "sources": 0,
+            "tasks": 0,
+            "mean": null,
+            "ci95": null
+          },
+          "G1_minus_SingleChartHermite_fk_error_m": {
+            "sources": 0,
+            "tasks": 0,
+            "mean": null,
+            "ci95": null
+          }
+        },
+        "interpretation": "WITHIN_GAP_METHOD_COMPARISON; HIDDEN_TARGET_CHANGES_ACROSS_GAPS"
+      }
+    },
+    "48": {
+      "ALL": {
+        "registered": 12,
+        "eligible": 12,
+        "not_eligible": 0,
+        "sources": 12,
+        "methods": {
+          "G1": {
+            "constructed": 12,
+            "passed_original_screen": 8,
+            "rejection_count": 0
+          },
+          "SLERP": {
+            "constructed": 12,
+            "passed_original_screen": 8,
+            "rejection_count": 0
+          },
+          "SingleChartHermite": {
+            "constructed": 8,
+            "passed_original_screen": 6,
+            "rejection_count": 4
+          }
+        },
+        "paired": {
+          "G1_minus_SLERP_error_rad": {
+            "sources": 12,
+            "tasks": 12,
+            "mean": -0.005303947999994531,
+            "ci95": [
+              -0.009256355907151095,
+              -0.0016822223139457847
+            ],
+            "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+          },
+          "G1_minus_SLERP_fk_error_m": {
+            "sources": 12,
+            "tasks": 12,
+            "mean": -0.0043258241025622346,
+            "ci95": [
+              -0.007259304840999104,
+              -0.0017632116336696324
+            ],
+            "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+          },
+          "G1_minus_SingleChartHermite_error_rad": {
+            "sources": 8,
+            "tasks": 8,
+            "mean": -0.06551266161850675,
+            "ci95": [
+              -0.09815252867428124,
+              -0.03448900341155053
+            ],
+            "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+          },
+          "G1_minus_SingleChartHermite_fk_error_m": {
+            "sources": 8,
+            "tasks": 8,
+            "mean": -0.010795537343857905,
+            "ci95": [
+              -0.022581299085703294,
+              0.0013184546712747569
+            ],
+            "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+          }
+        },
+        "interpretation": "WITHIN_GAP_METHOD_COMPARISON; HIDDEN_TARGET_CHANGES_ACROSS_GAPS"
+      },
+      "ChangE": {
+        "registered": 8,
+        "eligible": 8,
+        "not_eligible": 0,
+        "sources": 8,
+        "methods": {
+          "G1": {
+            "constructed": 8,
+            "passed_original_screen": 5,
+            "rejection_count": 0
+          },
+          "SLERP": {
+            "constructed": 8,
+            "passed_original_screen": 5,
+            "rejection_count": 0
+          },
+          "SingleChartHermite": {
+            "constructed": 6,
+            "passed_original_screen": 5,
+            "rejection_count": 2
+          }
+        },
+        "paired": {
+          "G1_minus_SLERP_error_rad": {
+            "sources": 8,
+            "tasks": 8,
+            "mean": -0.004987287749266434,
+            "ci95": [
+              -0.010641353114470746,
+              -0.0005847151683631537
+            ],
+            "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+          },
+          "G1_minus_SLERP_fk_error_m": {
+            "sources": 8,
+            "tasks": 8,
+            "mean": -0.005021413293566833,
+            "ci95": [
+              -0.009395688614782446,
+              -0.0012700380063776382
+            ],
+            "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+          },
+          "G1_minus_SingleChartHermite_error_rad": {
+            "sources": 6,
+            "tasks": 6,
+            "mean": -0.07390154614826107,
+            "ci95": [
+              -0.10783323800134627,
+              -0.036640277482236465
+            ],
+            "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+          },
+          "G1_minus_SingleChartHermite_fk_error_m": {
+            "sources": 6,
+            "tasks": 6,
+            "mean": -0.018177226071532465,
+            "ci95": [
+              -0.02922597455651453,
+              -0.008359074994041388
+            ],
+            "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+          }
+        },
+        "interpretation": "WITHIN_GAP_METHOD_COMPARISON; HIDDEN_TARGET_CHANGES_ACROSS_GAPS"
+      },
+      "FineDance": {
+        "registered": 4,
+        "eligible": 4,
+        "not_eligible": 0,
+        "sources": 4,
+        "methods": {
+          "G1": {
+            "constructed": 4,
+            "passed_original_screen": 3,
+            "rejection_count": 0
+          },
+          "SLERP": {
+            "constructed": 4,
+            "passed_original_screen": 3,
+            "rejection_count": 0
+          },
+          "SingleChartHermite": {
+            "constructed": 2,
+            "passed_original_screen": 1,
+            "rejection_count": 2
+          }
+        },
+        "paired": {
+          "G1_minus_SLERP_error_rad": {
+            "sources": 4,
+            "tasks": 4,
+            "mean": -0.005937268501450724,
+            "ci95": [
+              -0.009427399491547597,
+              -0.0001996097457967541
+            ],
+            "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+          },
+          "G1_minus_SLERP_fk_error_m": {
+            "sources": 4,
+            "tasks": 4,
+            "mean": -0.0029346457205530387,
+            "ci95": [
+              -0.004141162387877682,
+              -0.0017281290532283958
+            ],
+            "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+          },
+          "G1_minus_SingleChartHermite_error_rad": {
+            "sources": 2,
+            "tasks": 2,
+            "mean": -0.04034600802924379,
+            "ci95": [
+              -0.07194348780556317,
+              -0.008748528252924409
+            ],
+            "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+          },
+          "G1_minus_SingleChartHermite_fk_error_m": {
+            "sources": 2,
+            "tasks": 2,
+            "mean": 0.01134952883916577,
+            "ci95": [
+              0.003466284212423676,
+              0.019232773465907863
+            ],
+            "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+          }
+        },
+        "interpretation": "WITHIN_GAP_METHOD_COMPARISON; HIDDEN_TARGET_CHANGES_ACROSS_GAPS"
+      },
+      "AIST++": {
+        "registered": 0,
+        "eligible": 0,
+        "not_eligible": 0,
+        "sources": 0,
+        "methods": {
+          "G1": {
+            "constructed": 0,
+            "passed_original_screen": 0,
+            "rejection_count": 0
+          },
+          "SLERP": {
+            "constructed": 0,
+            "passed_original_screen": 0,
+            "rejection_count": 0
+          },
+          "SingleChartHermite": {
+            "constructed": 0,
+            "passed_original_screen": 0,
+            "rejection_count": 0
+          }
+        },
+        "paired": {
+          "G1_minus_SLERP_error_rad": {
+            "sources": 0,
+            "tasks": 0,
+            "mean": null,
+            "ci95": null
+          },
+          "G1_minus_SLERP_fk_error_m": {
+            "sources": 0,
+            "tasks": 0,
+            "mean": null,
+            "ci95": null
+          },
+          "G1_minus_SingleChartHermite_error_rad": {
+            "sources": 0,
+            "tasks": 0,
+            "mean": null,
+            "ci95": null
+          },
+          "G1_minus_SingleChartHermite_fk_error_m": {
+            "sources": 0,
+            "tasks": 0,
+            "mean": null,
+            "ci95": null
+          }
+        },
+        "interpretation": "WITHIN_GAP_METHOD_COMPARISON; HIDDEN_TARGET_CHANGES_ACROSS_GAPS"
+      }
+    },
+    "60": {
+      "ALL": {
+        "registered": 12,
+        "eligible": 12,
+        "not_eligible": 0,
+        "sources": 12,
+        "methods": {
+          "G1": {
+            "constructed": 12,
+            "passed_original_screen": 10,
+            "rejection_count": 0
+          },
+          "SLERP": {
+            "constructed": 12,
+            "passed_original_screen": 10,
+            "rejection_count": 0
+          },
+          "SingleChartHermite": {
+            "constructed": 7,
+            "passed_original_screen": 5,
+            "rejection_count": 5
+          }
+        },
+        "paired": {
+          "G1_minus_SLERP_error_rad": {
+            "sources": 12,
+            "tasks": 12,
+            "mean": -0.0008226741030476404,
+            "ci95": [
+              -0.005154091931530516,
+              0.003943313463655526
+            ],
+            "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+          },
+          "G1_minus_SLERP_fk_error_m": {
+            "sources": 12,
+            "tasks": 12,
+            "mean": -0.002256706927178306,
+            "ci95": [
+              -0.005074958794518854,
+              0.0004670358585490167
+            ],
+            "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+          },
+          "G1_minus_SingleChartHermite_error_rad": {
+            "sources": 7,
+            "tasks": 7,
+            "mean": -0.0910048910312234,
+            "ci95": [
+              -0.1873374902758433,
+              -0.03324838006662418
+            ],
+            "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+          },
+          "G1_minus_SingleChartHermite_fk_error_m": {
+            "sources": 7,
+            "tasks": 7,
+            "mean": -0.01810973958259075,
+            "ci95": [
+              -0.03920034137928752,
+              0.0014060185310726763
+            ],
+            "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+          }
+        },
+        "interpretation": "WITHIN_GAP_METHOD_COMPARISON; HIDDEN_TARGET_CHANGES_ACROSS_GAPS"
+      },
+      "ChangE": {
+        "registered": 8,
+        "eligible": 8,
+        "not_eligible": 0,
+        "sources": 8,
+        "methods": {
+          "G1": {
+            "constructed": 8,
+            "passed_original_screen": 7,
+            "rejection_count": 0
+          },
+          "SLERP": {
+            "constructed": 8,
+            "passed_original_screen": 6,
+            "rejection_count": 0
+          },
+          "SingleChartHermite": {
+            "constructed": 5,
+            "passed_original_screen": 4,
+            "rejection_count": 3
+          }
+        },
+        "paired": {
+          "G1_minus_SLERP_error_rad": {
+            "sources": 8,
+            "tasks": 8,
+            "mean": -0.0005819959368511302,
+            "ci95": [
+              -0.005246044514868717,
+              0.004121086131249403
+            ],
+            "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+          },
+          "G1_minus_SLERP_fk_error_m": {
+            "sources": 8,
+            "tasks": 8,
+            "mean": -0.003530933100338175,
+            "ci95": [
+              -0.0067427780211819655,
+              -0.0007991516231417854
+            ],
+            "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+          },
+          "G1_minus_SingleChartHermite_error_rad": {
+            "sources": 5,
+            "tasks": 5,
+            "mean": -0.11217910675270515,
+            "ci95": [
+              -0.2420583155899613,
+              -0.0319212287092769
+            ],
+            "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+          },
+          "G1_minus_SingleChartHermite_fk_error_m": {
+            "sources": 5,
+            "tasks": 5,
+            "mean": -0.028550275214472794,
+            "ci95": [
+              -0.05035722702289253,
+              -0.010939399054506967
+            ],
+            "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+          }
+        },
+        "interpretation": "WITHIN_GAP_METHOD_COMPARISON; HIDDEN_TARGET_CHANGES_ACROSS_GAPS"
+      },
+      "FineDance": {
+        "registered": 4,
+        "eligible": 4,
+        "not_eligible": 0,
+        "sources": 4,
+        "methods": {
+          "G1": {
+            "constructed": 4,
+            "passed_original_screen": 3,
+            "rejection_count": 0
+          },
+          "SLERP": {
+            "constructed": 4,
+            "passed_original_screen": 4,
+            "rejection_count": 0
+          },
+          "SingleChartHermite": {
+            "constructed": 2,
+            "passed_original_screen": 1,
+            "rejection_count": 2
+          }
+        },
+        "paired": {
+          "G1_minus_SLERP_error_rad": {
+            "sources": 4,
+            "tasks": 4,
+            "mean": -0.0013040304354406604,
+            "ci95": [
+              -0.009222061125613176,
+              0.009541793022616783
+            ],
+            "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+          },
+          "G1_minus_SLERP_fk_error_m": {
+            "sources": 4,
+            "tasks": 4,
+            "mean": 0.00029174541914143114,
+            "ci95": [
+              -0.003526573674600509,
+              0.005145252594816803
+            ],
+            "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+          },
+          "G1_minus_SingleChartHermite_error_rad": {
+            "sources": 2,
+            "tasks": 2,
+            "mean": -0.03806935172751906,
+            "ci95": [
+              -0.04611238756676439,
+              -0.03002631588827373
+            ],
+            "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+          },
+          "G1_minus_SingleChartHermite_fk_error_m": {
+            "sources": 2,
+            "tasks": 2,
+            "mean": 0.007991599497114366,
+            "ci95": [
+              -0.009621654857997583,
+              0.025604853852226314
+            ],
+            "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+          }
+        },
+        "interpretation": "WITHIN_GAP_METHOD_COMPARISON; HIDDEN_TARGET_CHANGES_ACROSS_GAPS"
+      },
+      "AIST++": {
+        "registered": 0,
+        "eligible": 0,
+        "not_eligible": 0,
+        "sources": 0,
+        "methods": {
+          "G1": {
+            "constructed": 0,
+            "passed_original_screen": 0,
+            "rejection_count": 0
+          },
+          "SLERP": {
+            "constructed": 0,
+            "passed_original_screen": 0,
+            "rejection_count": 0
+          },
+          "SingleChartHermite": {
+            "constructed": 0,
+            "passed_original_screen": 0,
+            "rejection_count": 0
+          }
+        },
+        "paired": {
+          "G1_minus_SLERP_error_rad": {
+            "sources": 0,
+            "tasks": 0,
+            "mean": null,
+            "ci95": null
+          },
+          "G1_minus_SLERP_fk_error_m": {
+            "sources": 0,
+            "tasks": 0,
+            "mean": null,
+            "ci95": null
+          },
+          "G1_minus_SingleChartHermite_error_rad": {
+            "sources": 0,
+            "tasks": 0,
+            "mean": null,
+            "ci95": null
+          },
+          "G1_minus_SingleChartHermite_fk_error_m": {
+            "sources": 0,
+            "tasks": 0,
+            "mean": null,
+            "ci95": null
+          }
+        },
+        "interpretation": "WITHIN_GAP_METHOD_COMPARISON; HIDDEN_TARGET_CHANGES_ACROSS_GAPS"
+      }
+    },
+    "72": {
+      "ALL": {
+        "registered": 12,
+        "eligible": 12,
+        "not_eligible": 0,
+        "sources": 12,
+        "methods": {
+          "G1": {
+            "constructed": 12,
+            "passed_original_screen": 11,
+            "rejection_count": 0
+          },
+          "SLERP": {
+            "constructed": 12,
+            "passed_original_screen": 11,
+            "rejection_count": 0
+          },
+          "SingleChartHermite": {
+            "constructed": 6,
+            "passed_original_screen": 4,
+            "rejection_count": 6
+          }
+        },
+        "paired": {
+          "G1_minus_SLERP_error_rad": {
+            "sources": 12,
+            "tasks": 12,
+            "mean": -0.0004821423140659368,
+            "ci95": [
+              -0.004806603902416678,
+              0.004619073822775733
+            ],
+            "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+          },
+          "G1_minus_SLERP_fk_error_m": {
+            "sources": 12,
+            "tasks": 12,
+            "mean": -0.002331792102372781,
+            "ci95": [
+              -0.004497398038892744,
+              -0.0007091641552060199
+            ],
+            "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+          },
+          "G1_minus_SingleChartHermite_error_rad": {
+            "sources": 6,
+            "tasks": 6,
+            "mean": -0.09075898708752717,
+            "ci95": [
+              -0.12968520185628463,
+              -0.04928603313156945
+            ],
+            "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+          },
+          "G1_minus_SingleChartHermite_fk_error_m": {
+            "sources": 6,
+            "tasks": 6,
+            "mean": -0.021184971995867604,
+            "ci95": [
+              -0.030443305977306417,
+              -0.01169921884091008
+            ],
+            "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+          }
+        },
+        "interpretation": "WITHIN_GAP_METHOD_COMPARISON; HIDDEN_TARGET_CHANGES_ACROSS_GAPS"
+      },
+      "ChangE": {
+        "registered": 8,
+        "eligible": 8,
+        "not_eligible": 0,
+        "sources": 8,
+        "methods": {
+          "G1": {
+            "constructed": 8,
+            "passed_original_screen": 7,
+            "rejection_count": 0
+          },
+          "SLERP": {
+            "constructed": 8,
+            "passed_original_screen": 7,
+            "rejection_count": 0
+          },
+          "SingleChartHermite": {
+            "constructed": 4,
+            "passed_original_screen": 3,
+            "rejection_count": 4
+          }
+        },
+        "paired": {
+          "G1_minus_SLERP_error_rad": {
+            "sources": 8,
+            "tasks": 8,
+            "mean": 2.2399586625252593e-05,
+            "ci95": [
+              -0.001566351731122398,
+              0.0016341157232477776
+            ],
+            "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+          },
+          "G1_minus_SLERP_fk_error_m": {
+            "sources": 8,
+            "tasks": 8,
+            "mean": -0.002254126012015231,
+            "ci95": [
+              -0.00537705758302585,
+              -9.613925528613753e-05
+            ],
+            "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+          },
+          "G1_minus_SingleChartHermite_error_rad": {
+            "sources": 4,
+            "tasks": 4,
+            "mean": -0.08601909094101876,
+            "ci95": [
+              -0.13913906766259704,
+              -0.029596277814546032
+            ],
+            "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+          },
+          "G1_minus_SingleChartHermite_fk_error_m": {
+            "sources": 4,
+            "tasks": 4,
+            "mean": -0.022577708604080413,
+            "ci95": [
+              -0.035117688018385274,
+              -0.009909397838051318
+            ],
+            "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+          }
+        },
+        "interpretation": "WITHIN_GAP_METHOD_COMPARISON; HIDDEN_TARGET_CHANGES_ACROSS_GAPS"
+      },
+      "FineDance": {
+        "registered": 4,
+        "eligible": 4,
+        "not_eligible": 0,
+        "sources": 4,
+        "methods": {
+          "G1": {
+            "constructed": 4,
+            "passed_original_screen": 4,
+            "rejection_count": 0
+          },
+          "SLERP": {
+            "constructed": 4,
+            "passed_original_screen": 4,
+            "rejection_count": 0
+          },
+          "SingleChartHermite": {
+            "constructed": 2,
+            "passed_original_screen": 1,
+            "rejection_count": 2
+          }
+        },
+        "paired": {
+          "G1_minus_SLERP_error_rad": {
+            "sources": 4,
+            "tasks": 4,
+            "mean": -0.0014912261154483158,
+            "ci95": [
+              -0.01131315384071531,
+              0.014510109477028119
+            ],
+            "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+          },
+          "G1_minus_SLERP_fk_error_m": {
+            "sources": 4,
+            "tasks": 4,
+            "mean": -0.0024871242830878815,
+            "ci95": [
+              -0.0038793670213049976,
+              -0.0003987899946326038
+            ],
+            "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+          },
+          "G1_minus_SingleChartHermite_error_rad": {
+            "sources": 2,
+            "tasks": 2,
+            "mean": -0.10023877938054397,
+            "ci95": [
+              -0.12462465928166755,
+              -0.0758528994794204
+            ],
+            "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+          },
+          "G1_minus_SingleChartHermite_fk_error_m": {
+            "sources": 2,
+            "tasks": 2,
+            "mean": -0.018399498779441983,
+            "ci95": [
+              -0.02466136980742069,
+              -0.012137627751463279
+            ],
+            "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+          }
+        },
+        "interpretation": "WITHIN_GAP_METHOD_COMPARISON; HIDDEN_TARGET_CHANGES_ACROSS_GAPS"
+      },
+      "AIST++": {
+        "registered": 0,
+        "eligible": 0,
+        "not_eligible": 0,
+        "sources": 0,
+        "methods": {
+          "G1": {
+            "constructed": 0,
+            "passed_original_screen": 0,
+            "rejection_count": 0
+          },
+          "SLERP": {
+            "constructed": 0,
+            "passed_original_screen": 0,
+            "rejection_count": 0
+          },
+          "SingleChartHermite": {
+            "constructed": 0,
+            "passed_original_screen": 0,
+            "rejection_count": 0
+          }
+        },
+        "paired": {
+          "G1_minus_SLERP_error_rad": {
+            "sources": 0,
+            "tasks": 0,
+            "mean": null,
+            "ci95": null
+          },
+          "G1_minus_SLERP_fk_error_m": {
+            "sources": 0,
+            "tasks": 0,
+            "mean": null,
+            "ci95": null
+          },
+          "G1_minus_SingleChartHermite_error_rad": {
+            "sources": 0,
+            "tasks": 0,
+            "mean": null,
+            "ci95": null
+          },
+          "G1_minus_SingleChartHermite_fk_error_m": {
+            "sources": 0,
+            "tasks": 0,
+            "mean": null,
+            "ci95": null
+          }
+        },
+        "interpretation": "WITHIN_GAP_METHOD_COMPARISON; HIDDEN_TARGET_CHANGES_ACROSS_GAPS"
+      }
+    }
+  },
+  "continuous_difficulty_summary": {
+    "lower_or_equal_median": {
+      "24": {
+        "ALL": {
+          "registered": 6,
+          "eligible": 6,
+          "not_eligible": 0,
+          "sources": 6,
+          "methods": {
+            "G1": {
+              "constructed": 6,
+              "passed_original_screen": 5,
+              "rejection_count": 0
+            },
+            "SLERP": {
+              "constructed": 6,
+              "passed_original_screen": 5,
+              "rejection_count": 0
+            },
+            "SingleChartHermite": {
+              "constructed": 5,
+              "passed_original_screen": 4,
+              "rejection_count": 1
+            }
+          },
+          "paired": {
+            "G1_minus_SLERP_error_rad": {
+              "sources": 6,
+              "tasks": 6,
+              "mean": -0.002817284275097148,
+              "ci95": [
+                -0.006983864562685883,
+                -2.259293480709858e-05
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SLERP_fk_error_m": {
+              "sources": 6,
+              "tasks": 6,
+              "mean": -0.0006991114797429003,
+              "ci95": [
+                -0.001422997373893533,
+                -6.76663178292231e-05
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SingleChartHermite_error_rad": {
+              "sources": 5,
+              "tasks": 5,
+              "mean": -0.02757796111285869,
+              "ci95": [
+                -0.09532890872918272,
+                0.017914733532730688
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SingleChartHermite_fk_error_m": {
+              "sources": 5,
+              "tasks": 5,
+              "mean": -8.510557614588924e-05,
+              "ci95": [
+                -0.0050833522951775605,
+                0.006155067662434092
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            }
+          },
+          "interpretation": "WITHIN_GAP_METHOD_COMPARISON; HIDDEN_TARGET_CHANGES_ACROSS_GAPS"
+        },
+        "ChangE": {
+          "registered": 4,
+          "eligible": 4,
+          "not_eligible": 0,
+          "sources": 4,
+          "methods": {
+            "G1": {
+              "constructed": 4,
+              "passed_original_screen": 3,
+              "rejection_count": 0
+            },
+            "SLERP": {
+              "constructed": 4,
+              "passed_original_screen": 3,
+              "rejection_count": 0
+            },
+            "SingleChartHermite": {
+              "constructed": 4,
+              "passed_original_screen": 3,
+              "rejection_count": 0
+            }
+          },
+          "paired": {
+            "G1_minus_SLERP_error_rad": {
+              "sources": 4,
+              "tasks": 4,
+              "mean": -6.386856561281989e-05,
+              "ci95": [
+                -0.0002439062203981785,
+                0.0001216141878020772
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SLERP_fk_error_m": {
+              "sources": 4,
+              "tasks": 4,
+              "mean": -7.511132227706606e-05,
+              "ci95": [
+                -0.00010845238844509297,
+                -4.749934888922288e-05
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SingleChartHermite_error_rad": {
+              "sources": 4,
+              "tasks": 4,
+              "mean": -0.04299939023742246,
+              "ci95": [
+                -0.1188106852310223,
+                -0.0015530322199621763
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SingleChartHermite_fk_error_m": {
+              "sources": 4,
+              "tasks": 4,
+              "mean": -0.002979428982161643,
+              "ci95": [
+                -0.006335728524784621,
+                -0.0004944166574694065
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            }
+          },
+          "interpretation": "WITHIN_GAP_METHOD_COMPARISON; HIDDEN_TARGET_CHANGES_ACROSS_GAPS"
+        },
+        "FineDance": {
+          "registered": 2,
+          "eligible": 2,
+          "not_eligible": 0,
+          "sources": 2,
+          "methods": {
+            "G1": {
+              "constructed": 2,
+              "passed_original_screen": 2,
+              "rejection_count": 0
+            },
+            "SLERP": {
+              "constructed": 2,
+              "passed_original_screen": 2,
+              "rejection_count": 0
+            },
+            "SingleChartHermite": {
+              "constructed": 1,
+              "passed_original_screen": 1,
+              "rejection_count": 1
+            }
+          },
+          "paired": {
+            "G1_minus_SLERP_error_rad": {
+              "sources": 2,
+              "tasks": 2,
+              "mean": -0.008324115694065805,
+              "ci95": [
+                -0.01253145400702349,
+                -0.004116777381108119
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SLERP_fk_error_m": {
+              "sources": 2,
+              "tasks": 2,
+              "mean": -0.0019471117946745688,
+              "ci95": [
+                -0.0021059191331191454,
+                -0.0017883044562299923
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SingleChartHermite_error_rad": {
+              "sources": 1,
+              "tasks": 1,
+              "mean": 0.0341077553853964,
+              "ci95": [
+                0.0341077553853964,
+                0.0341077553853964
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SingleChartHermite_fk_error_m": {
+              "sources": 1,
+              "tasks": 1,
+              "mean": 0.011492188047917126,
+              "ci95": [
+                0.011492188047917126,
+                0.011492188047917126
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            }
+          },
+          "interpretation": "WITHIN_GAP_METHOD_COMPARISON; HIDDEN_TARGET_CHANGES_ACROSS_GAPS"
+        },
+        "AIST++": {
+          "registered": 0,
+          "eligible": 0,
+          "not_eligible": 0,
+          "sources": 0,
+          "methods": {
+            "G1": {
+              "constructed": 0,
+              "passed_original_screen": 0,
+              "rejection_count": 0
+            },
+            "SLERP": {
+              "constructed": 0,
+              "passed_original_screen": 0,
+              "rejection_count": 0
+            },
+            "SingleChartHermite": {
+              "constructed": 0,
+              "passed_original_screen": 0,
+              "rejection_count": 0
+            }
+          },
+          "paired": {
+            "G1_minus_SLERP_error_rad": {
+              "sources": 0,
+              "tasks": 0,
+              "mean": null,
+              "ci95": null
+            },
+            "G1_minus_SLERP_fk_error_m": {
+              "sources": 0,
+              "tasks": 0,
+              "mean": null,
+              "ci95": null
+            },
+            "G1_minus_SingleChartHermite_error_rad": {
+              "sources": 0,
+              "tasks": 0,
+              "mean": null,
+              "ci95": null
+            },
+            "G1_minus_SingleChartHermite_fk_error_m": {
+              "sources": 0,
+              "tasks": 0,
+              "mean": null,
+              "ci95": null
+            }
+          },
+          "interpretation": "WITHIN_GAP_METHOD_COMPARISON; HIDDEN_TARGET_CHANGES_ACROSS_GAPS"
+        }
+      },
+      "36": {
+        "ALL": {
+          "registered": 6,
+          "eligible": 6,
+          "not_eligible": 0,
+          "sources": 6,
+          "methods": {
+            "G1": {
+              "constructed": 6,
+              "passed_original_screen": 5,
+              "rejection_count": 0
+            },
+            "SLERP": {
+              "constructed": 6,
+              "passed_original_screen": 5,
+              "rejection_count": 0
+            },
+            "SingleChartHermite": {
+              "constructed": 6,
+              "passed_original_screen": 5,
+              "rejection_count": 0
+            }
+          },
+          "paired": {
+            "G1_minus_SLERP_error_rad": {
+              "sources": 6,
+              "tasks": 6,
+              "mean": -0.0031875799034179844,
+              "ci95": [
+                -0.007058023203090808,
+                1.9411142682752472e-05
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SLERP_fk_error_m": {
+              "sources": 6,
+              "tasks": 6,
+              "mean": -0.0009344551496214262,
+              "ci95": [
+                -0.001899973572905646,
+                2.579317915068316e-06
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SingleChartHermite_error_rad": {
+              "sources": 6,
+              "tasks": 6,
+              "mean": -0.028472929732636192,
+              "ci95": [
+                -0.05020541217039005,
+                -0.009836763271140974
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SingleChartHermite_fk_error_m": {
+              "sources": 6,
+              "tasks": 6,
+              "mean": -0.004202039581662354,
+              "ci95": [
+                -0.006486860264924229,
+                -0.0020313715831441438
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            }
+          },
+          "interpretation": "WITHIN_GAP_METHOD_COMPARISON; HIDDEN_TARGET_CHANGES_ACROSS_GAPS"
+        },
+        "ChangE": {
+          "registered": 4,
+          "eligible": 4,
+          "not_eligible": 0,
+          "sources": 4,
+          "methods": {
+            "G1": {
+              "constructed": 4,
+              "passed_original_screen": 3,
+              "rejection_count": 0
+            },
+            "SLERP": {
+              "constructed": 4,
+              "passed_original_screen": 3,
+              "rejection_count": 0
+            },
+            "SingleChartHermite": {
+              "constructed": 4,
+              "passed_original_screen": 3,
+              "rejection_count": 0
+            }
+          },
+          "paired": {
+            "G1_minus_SLERP_error_rad": {
+              "sources": 4,
+              "tasks": 4,
+              "mean": 2.5702528351907424e-06,
+              "ci95": [
+                -7.433700417329523e-05,
+                5.569890072987455e-05
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SLERP_fk_error_m": {
+              "sources": 4,
+              "tasks": 4,
+              "mean": -4.570601391529693e-06,
+              "ci95": [
+                -2.9072703254070316e-05,
+                1.993150047101093e-05
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SingleChartHermite_error_rad": {
+              "sources": 4,
+              "tasks": 4,
+              "mean": -0.011977694417081096,
+              "ci95": [
+                -0.02014722141404967,
+                -0.003808167420112521
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SingleChartHermite_fk_error_m": {
+              "sources": 4,
+              "tasks": 4,
+              "mean": -0.004207119956848842,
+              "ci95": [
+                -0.007196839423273605,
+                -0.0012174004904240794
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            }
+          },
+          "interpretation": "WITHIN_GAP_METHOD_COMPARISON; HIDDEN_TARGET_CHANGES_ACROSS_GAPS"
+        },
+        "FineDance": {
+          "registered": 2,
+          "eligible": 2,
+          "not_eligible": 0,
+          "sources": 2,
+          "methods": {
+            "G1": {
+              "constructed": 2,
+              "passed_original_screen": 2,
+              "rejection_count": 0
+            },
+            "SLERP": {
+              "constructed": 2,
+              "passed_original_screen": 2,
+              "rejection_count": 0
+            },
+            "SingleChartHermite": {
+              "constructed": 2,
+              "passed_original_screen": 2,
+              "rejection_count": 0
+            }
+          },
+          "paired": {
+            "G1_minus_SLERP_error_rad": {
+              "sources": 2,
+              "tasks": 2,
+              "mean": -0.009567880215924335,
+              "ci95": [
+                -0.010607863939138568,
+                -0.008527896492710102
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SLERP_fk_error_m": {
+              "sources": 2,
+              "tasks": 2,
+              "mean": -0.0027942242460812193,
+              "ci95": [
+                -0.002848477729539889,
+                -0.0027399707626225497
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SingleChartHermite_error_rad": {
+              "sources": 2,
+              "tasks": 2,
+              "mean": -0.06146340036374638,
+              "ci95": [
+                -0.07316822012493518,
+                -0.049758580602557584
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SingleChartHermite_fk_error_m": {
+              "sources": 2,
+              "tasks": 2,
+              "mean": -0.004191878831289377,
+              "ci95": [
+                -0.007305524070863621,
+                -0.0010782335917151331
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            }
+          },
+          "interpretation": "WITHIN_GAP_METHOD_COMPARISON; HIDDEN_TARGET_CHANGES_ACROSS_GAPS"
+        },
+        "AIST++": {
+          "registered": 0,
+          "eligible": 0,
+          "not_eligible": 0,
+          "sources": 0,
+          "methods": {
+            "G1": {
+              "constructed": 0,
+              "passed_original_screen": 0,
+              "rejection_count": 0
+            },
+            "SLERP": {
+              "constructed": 0,
+              "passed_original_screen": 0,
+              "rejection_count": 0
+            },
+            "SingleChartHermite": {
+              "constructed": 0,
+              "passed_original_screen": 0,
+              "rejection_count": 0
+            }
+          },
+          "paired": {
+            "G1_minus_SLERP_error_rad": {
+              "sources": 0,
+              "tasks": 0,
+              "mean": null,
+              "ci95": null
+            },
+            "G1_minus_SLERP_fk_error_m": {
+              "sources": 0,
+              "tasks": 0,
+              "mean": null,
+              "ci95": null
+            },
+            "G1_minus_SingleChartHermite_error_rad": {
+              "sources": 0,
+              "tasks": 0,
+              "mean": null,
+              "ci95": null
+            },
+            "G1_minus_SingleChartHermite_fk_error_m": {
+              "sources": 0,
+              "tasks": 0,
+              "mean": null,
+              "ci95": null
+            }
+          },
+          "interpretation": "WITHIN_GAP_METHOD_COMPARISON; HIDDEN_TARGET_CHANGES_ACROSS_GAPS"
+        }
+      },
+      "48": {
+        "ALL": {
+          "registered": 6,
+          "eligible": 6,
+          "not_eligible": 0,
+          "sources": 6,
+          "methods": {
+            "G1": {
+              "constructed": 6,
+              "passed_original_screen": 4,
+              "rejection_count": 0
+            },
+            "SLERP": {
+              "constructed": 6,
+              "passed_original_screen": 4,
+              "rejection_count": 0
+            },
+            "SingleChartHermite": {
+              "constructed": 5,
+              "passed_original_screen": 3,
+              "rejection_count": 1
+            }
+          },
+          "paired": {
+            "G1_minus_SLERP_error_rad": {
+              "sources": 6,
+              "tasks": 6,
+              "mean": -0.0004366633407722673,
+              "ci95": [
+                -0.003529329720989599,
+                0.001639855719843593
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SLERP_fk_error_m": {
+              "sources": 6,
+              "tasks": 6,
+              "mean": -0.0005039679841352602,
+              "ci95": [
+                -0.0012853517505854637,
+                0.00013546606831762778
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SingleChartHermite_error_rad": {
+              "sources": 5,
+              "tasks": 5,
+              "mean": -0.041371776488089325,
+              "ci95": [
+                -0.07709413381693964,
+                -0.01315836773855083
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SingleChartHermite_fk_error_m": {
+              "sources": 5,
+              "tasks": 5,
+              "mean": -0.01076272820668675,
+              "ci95": [
+                -0.020947756356429946,
+                -0.0013648998526147617
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            }
+          },
+          "interpretation": "WITHIN_GAP_METHOD_COMPARISON; HIDDEN_TARGET_CHANGES_ACROSS_GAPS"
+        },
+        "ChangE": {
+          "registered": 4,
+          "eligible": 4,
+          "not_eligible": 0,
+          "sources": 4,
+          "methods": {
+            "G1": {
+              "constructed": 4,
+              "passed_original_screen": 3,
+              "rejection_count": 0
+            },
+            "SLERP": {
+              "constructed": 4,
+              "passed_original_screen": 3,
+              "rejection_count": 0
+            },
+            "SingleChartHermite": {
+              "constructed": 4,
+              "passed_original_screen": 3,
+              "rejection_count": 0
+            }
+          },
+          "paired": {
+            "G1_minus_SLERP_error_rad": {
+              "sources": 4,
+              "tasks": 4,
+              "mean": 0.0005685737445185243,
+              "ci95": [
+                0.00015903846305722268,
+                0.0008802068058080349
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SLERP_fk_error_m": {
+              "sources": 4,
+              "tasks": 4,
+              "mean": 0.0001081125504113076,
+              "ci95": [
+                -3.9723354127596685e-06,
+                0.00027569577477742224
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SingleChartHermite_error_rad": {
+              "sources": 4,
+              "tasks": 4,
+              "mean": -0.04952758854688055,
+              "ci95": [
+                -0.09219157009607692,
+                -0.016236276986514243
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SingleChartHermite_fk_error_m": {
+              "sources": 4,
+              "tasks": 4,
+              "mean": -0.014319981311464357,
+              "ci95": [
+                -0.02515666131123032,
+                -0.005428000258538355
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            }
+          },
+          "interpretation": "WITHIN_GAP_METHOD_COMPARISON; HIDDEN_TARGET_CHANGES_ACROSS_GAPS"
+        },
+        "FineDance": {
+          "registered": 2,
+          "eligible": 2,
+          "not_eligible": 0,
+          "sources": 2,
+          "methods": {
+            "G1": {
+              "constructed": 2,
+              "passed_original_screen": 1,
+              "rejection_count": 0
+            },
+            "SLERP": {
+              "constructed": 2,
+              "passed_original_screen": 1,
+              "rejection_count": 0
+            },
+            "SingleChartHermite": {
+              "constructed": 1,
+              "passed_original_screen": 0,
+              "rejection_count": 1
+            }
+          },
+          "paired": {
+            "G1_minus_SLERP_error_rad": {
+              "sources": 2,
+              "tasks": 2,
+              "mean": -0.00244713751135385,
+              "ci95": [
+                -0.007737310097580413,
+                0.002843035074872713
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SLERP_fk_error_m": {
+              "sources": 2,
+              "tasks": 2,
+              "mean": -0.0017281290532283958,
+              "ci95": [
+                -0.002129120922360332,
+                -0.0013271371840964594
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SingleChartHermite_error_rad": {
+              "sources": 1,
+              "tasks": 1,
+              "mean": -0.008748528252924409,
+              "ci95": [
+                -0.008748528252924409,
+                -0.008748528252924409
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SingleChartHermite_fk_error_m": {
+              "sources": 1,
+              "tasks": 1,
+              "mean": 0.003466284212423676,
+              "ci95": [
+                0.003466284212423676,
+                0.003466284212423676
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            }
+          },
+          "interpretation": "WITHIN_GAP_METHOD_COMPARISON; HIDDEN_TARGET_CHANGES_ACROSS_GAPS"
+        },
+        "AIST++": {
+          "registered": 0,
+          "eligible": 0,
+          "not_eligible": 0,
+          "sources": 0,
+          "methods": {
+            "G1": {
+              "constructed": 0,
+              "passed_original_screen": 0,
+              "rejection_count": 0
+            },
+            "SLERP": {
+              "constructed": 0,
+              "passed_original_screen": 0,
+              "rejection_count": 0
+            },
+            "SingleChartHermite": {
+              "constructed": 0,
+              "passed_original_screen": 0,
+              "rejection_count": 0
+            }
+          },
+          "paired": {
+            "G1_minus_SLERP_error_rad": {
+              "sources": 0,
+              "tasks": 0,
+              "mean": null,
+              "ci95": null
+            },
+            "G1_minus_SLERP_fk_error_m": {
+              "sources": 0,
+              "tasks": 0,
+              "mean": null,
+              "ci95": null
+            },
+            "G1_minus_SingleChartHermite_error_rad": {
+              "sources": 0,
+              "tasks": 0,
+              "mean": null,
+              "ci95": null
+            },
+            "G1_minus_SingleChartHermite_fk_error_m": {
+              "sources": 0,
+              "tasks": 0,
+              "mean": null,
+              "ci95": null
+            }
+          },
+          "interpretation": "WITHIN_GAP_METHOD_COMPARISON; HIDDEN_TARGET_CHANGES_ACROSS_GAPS"
+        }
+      },
+      "60": {
+        "ALL": {
+          "registered": 6,
+          "eligible": 6,
+          "not_eligible": 0,
+          "sources": 6,
+          "methods": {
+            "G1": {
+              "constructed": 6,
+              "passed_original_screen": 4,
+              "rejection_count": 0
+            },
+            "SLERP": {
+              "constructed": 6,
+              "passed_original_screen": 5,
+              "rejection_count": 0
+            },
+            "SingleChartHermite": {
+              "constructed": 5,
+              "passed_original_screen": 3,
+              "rejection_count": 1
+            }
+          },
+          "paired": {
+            "G1_minus_SLERP_error_rad": {
+              "sources": 6,
+              "tasks": 6,
+              "mean": 0.001588920580182728,
+              "ci95": [
+                -0.00411626388375442,
+                0.00821708361733797
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SLERP_fk_error_m": {
+              "sources": 6,
+              "tasks": 6,
+              "mean": 0.0009306014996710651,
+              "ci95": [
+                -0.001417838281920111,
+                0.00399859823872545
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SingleChartHermite_error_rad": {
+              "sources": 5,
+              "tasks": 5,
+              "mean": -0.047664115408258226,
+              "ci95": [
+                -0.06853588825661242,
+                -0.030121270303299225
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SingleChartHermite_fk_error_m": {
+              "sources": 5,
+              "tasks": 5,
+              "mean": -0.01632250615817705,
+              "ci95": [
+                -0.0257405811049084,
+                -0.00827351559738878
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            }
+          },
+          "interpretation": "WITHIN_GAP_METHOD_COMPARISON; HIDDEN_TARGET_CHANGES_ACROSS_GAPS"
+        },
+        "ChangE": {
+          "registered": 4,
+          "eligible": 4,
+          "not_eligible": 0,
+          "sources": 4,
+          "methods": {
+            "G1": {
+              "constructed": 4,
+              "passed_original_screen": 3,
+              "rejection_count": 0
+            },
+            "SLERP": {
+              "constructed": 4,
+              "passed_original_screen": 3,
+              "rejection_count": 0
+            },
+            "SingleChartHermite": {
+              "constructed": 4,
+              "passed_original_screen": 3,
+              "rejection_count": 0
+            }
+          },
+          "paired": {
+            "G1_minus_SLERP_error_rad": {
+              "sources": 4,
+              "tasks": 4,
+              "mean": 0.0007167651673670788,
+              "ci95": [
+                0.0002880283560335816,
+                0.0011316453246949074
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SLERP_fk_error_m": {
+              "sources": 4,
+              "tasks": 4,
+              "mean": 0.00019815937025548333,
+              "ci95": [
+                2.9738359385046806e-05,
+                0.00044952579475849615
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SingleChartHermite_error_rad": {
+              "sources": 4,
+              "tasks": 4,
+              "mean": -0.04805204736863168,
+              "ci95": [
+                -0.07189181542160233,
+                -0.026123490987432933
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SingleChartHermite_fk_error_m": {
+              "sources": 4,
+              "tasks": 4,
+              "mean": -0.01799771898322191,
+              "ci95": [
+                -0.02804411011124642,
+                -0.007951327855197407
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            }
+          },
+          "interpretation": "WITHIN_GAP_METHOD_COMPARISON; HIDDEN_TARGET_CHANGES_ACROSS_GAPS"
+        },
+        "FineDance": {
+          "registered": 2,
+          "eligible": 2,
+          "not_eligible": 0,
+          "sources": 2,
+          "methods": {
+            "G1": {
+              "constructed": 2,
+              "passed_original_screen": 1,
+              "rejection_count": 0
+            },
+            "SLERP": {
+              "constructed": 2,
+              "passed_original_screen": 2,
+              "rejection_count": 0
+            },
+            "SingleChartHermite": {
+              "constructed": 1,
+              "passed_original_screen": 0,
+              "rejection_count": 1
+            }
+          },
+          "paired": {
+            "G1_minus_SLERP_error_rad": {
+              "sources": 2,
+              "tasks": 2,
+              "mean": 0.003333231405814027,
+              "ci95": [
+                -0.009083891827791485,
+                0.01575035463941954
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SLERP_fk_error_m": {
+              "sources": 2,
+              "tasks": 2,
+              "mean": 0.002395485758502229,
+              "ci95": [
+                -0.0031040479141269187,
+                0.007895019431131377
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SingleChartHermite_error_rad": {
+              "sources": 1,
+              "tasks": 1,
+              "mean": -0.04611238756676439,
+              "ci95": [
+                -0.04611238756676439,
+                -0.04611238756676439
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SingleChartHermite_fk_error_m": {
+              "sources": 1,
+              "tasks": 1,
+              "mean": -0.009621654857997583,
+              "ci95": [
+                -0.009621654857997583,
+                -0.009621654857997583
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            }
+          },
+          "interpretation": "WITHIN_GAP_METHOD_COMPARISON; HIDDEN_TARGET_CHANGES_ACROSS_GAPS"
+        },
+        "AIST++": {
+          "registered": 0,
+          "eligible": 0,
+          "not_eligible": 0,
+          "sources": 0,
+          "methods": {
+            "G1": {
+              "constructed": 0,
+              "passed_original_screen": 0,
+              "rejection_count": 0
+            },
+            "SLERP": {
+              "constructed": 0,
+              "passed_original_screen": 0,
+              "rejection_count": 0
+            },
+            "SingleChartHermite": {
+              "constructed": 0,
+              "passed_original_screen": 0,
+              "rejection_count": 0
+            }
+          },
+          "paired": {
+            "G1_minus_SLERP_error_rad": {
+              "sources": 0,
+              "tasks": 0,
+              "mean": null,
+              "ci95": null
+            },
+            "G1_minus_SLERP_fk_error_m": {
+              "sources": 0,
+              "tasks": 0,
+              "mean": null,
+              "ci95": null
+            },
+            "G1_minus_SingleChartHermite_error_rad": {
+              "sources": 0,
+              "tasks": 0,
+              "mean": null,
+              "ci95": null
+            },
+            "G1_minus_SingleChartHermite_fk_error_m": {
+              "sources": 0,
+              "tasks": 0,
+              "mean": null,
+              "ci95": null
+            }
+          },
+          "interpretation": "WITHIN_GAP_METHOD_COMPARISON; HIDDEN_TARGET_CHANGES_ACROSS_GAPS"
+        }
+      },
+      "72": {
+        "ALL": {
+          "registered": 6,
+          "eligible": 6,
+          "not_eligible": 0,
+          "sources": 6,
+          "methods": {
+            "G1": {
+              "constructed": 6,
+              "passed_original_screen": 5,
+              "rejection_count": 0
+            },
+            "SLERP": {
+              "constructed": 6,
+              "passed_original_screen": 5,
+              "rejection_count": 0
+            },
+            "SingleChartHermite": {
+              "constructed": 5,
+              "passed_original_screen": 3,
+              "rejection_count": 1
+            }
+          },
+          "paired": {
+            "G1_minus_SLERP_error_rad": {
+              "sources": 6,
+              "tasks": 6,
+              "mean": -0.0024237495161438414,
+              "ci95": [
+                -0.00781528159945864,
+                0.002282975865501139
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SLERP_fk_error_m": {
+              "sources": 6,
+              "tasks": 6,
+              "mean": -0.0007939010936220007,
+              "ci95": [
+                -0.0022191995557949667,
+                0.0005056220417948631
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SingleChartHermite_error_rad": {
+              "sources": 5,
+              "tasks": 5,
+              "mean": -0.08398585264869908,
+              "ci95": [
+                -0.12782609432258957,
+                -0.038813995640105084
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SingleChartHermite_fk_error_m": {
+              "sources": 5,
+              "tasks": 5,
+              "mean": -0.02299444084474847,
+              "ci95": [
+                -0.033026424376192354,
+                -0.011711635513144336
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            }
+          },
+          "interpretation": "WITHIN_GAP_METHOD_COMPARISON; HIDDEN_TARGET_CHANGES_ACROSS_GAPS"
+        },
+        "ChangE": {
+          "registered": 4,
+          "eligible": 4,
+          "not_eligible": 0,
+          "sources": 4,
+          "methods": {
+            "G1": {
+              "constructed": 4,
+              "passed_original_screen": 3,
+              "rejection_count": 0
+            },
+            "SLERP": {
+              "constructed": 4,
+              "passed_original_screen": 3,
+              "rejection_count": 0
+            },
+            "SingleChartHermite": {
+              "constructed": 4,
+              "passed_original_screen": 3,
+              "rejection_count": 0
+            }
+          },
+          "paired": {
+            "G1_minus_SLERP_error_rad": {
+              "sources": 4,
+              "tasks": 4,
+              "mean": 0.001859250277200529,
+              "ci95": [
+                0.0005321357443822112,
+                0.003187969561136108
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SLERP_fk_error_m": {
+              "sources": 4,
+              "tasks": 4,
+              "mean": 0.0004007562762300206,
+              "ci95": [
+                1.737794441914798e-05,
+                0.0007841346080408934
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SingleChartHermite_error_rad": {
+              "sources": 4,
+              "tasks": 4,
+              "mean": -0.08601909094101876,
+              "ci95": [
+                -0.13913906766259704,
+                -0.029596277814546032
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SingleChartHermite_fk_error_m": {
+              "sources": 4,
+              "tasks": 4,
+              "mean": -0.022577708604080413,
+              "ci95": [
+                -0.035117688018385274,
+                -0.009909397838051318
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            }
+          },
+          "interpretation": "WITHIN_GAP_METHOD_COMPARISON; HIDDEN_TARGET_CHANGES_ACROSS_GAPS"
+        },
+        "FineDance": {
+          "registered": 2,
+          "eligible": 2,
+          "not_eligible": 0,
+          "sources": 2,
+          "methods": {
+            "G1": {
+              "constructed": 2,
+              "passed_original_screen": 2,
+              "rejection_count": 0
+            },
+            "SLERP": {
+              "constructed": 2,
+              "passed_original_screen": 2,
+              "rejection_count": 0
+            },
+            "SingleChartHermite": {
+              "constructed": 1,
+              "passed_original_screen": 0,
+              "rejection_count": 1
+            }
+          },
+          "paired": {
+            "G1_minus_SLERP_error_rad": {
+              "sources": 2,
+              "tasks": 2,
+              "mean": -0.010989749102832583,
+              "ci95": [
+                -0.012972711400802722,
+                -0.009006786804862443
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SLERP_fk_error_m": {
+              "sources": 2,
+              "tasks": 2,
+              "mean": -0.0031832158333260432,
+              "ci95": [
+                -0.0034107445382565854,
+                -0.002955687128395501
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SingleChartHermite_error_rad": {
+              "sources": 1,
+              "tasks": 1,
+              "mean": -0.0758528994794204,
+              "ci95": [
+                -0.0758528994794204,
+                -0.0758528994794204
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SingleChartHermite_fk_error_m": {
+              "sources": 1,
+              "tasks": 1,
+              "mean": -0.02466136980742069,
+              "ci95": [
+                -0.02466136980742069,
+                -0.02466136980742069
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            }
+          },
+          "interpretation": "WITHIN_GAP_METHOD_COMPARISON; HIDDEN_TARGET_CHANGES_ACROSS_GAPS"
+        },
+        "AIST++": {
+          "registered": 0,
+          "eligible": 0,
+          "not_eligible": 0,
+          "sources": 0,
+          "methods": {
+            "G1": {
+              "constructed": 0,
+              "passed_original_screen": 0,
+              "rejection_count": 0
+            },
+            "SLERP": {
+              "constructed": 0,
+              "passed_original_screen": 0,
+              "rejection_count": 0
+            },
+            "SingleChartHermite": {
+              "constructed": 0,
+              "passed_original_screen": 0,
+              "rejection_count": 0
+            }
+          },
+          "paired": {
+            "G1_minus_SLERP_error_rad": {
+              "sources": 0,
+              "tasks": 0,
+              "mean": null,
+              "ci95": null
+            },
+            "G1_minus_SLERP_fk_error_m": {
+              "sources": 0,
+              "tasks": 0,
+              "mean": null,
+              "ci95": null
+            },
+            "G1_minus_SingleChartHermite_error_rad": {
+              "sources": 0,
+              "tasks": 0,
+              "mean": null,
+              "ci95": null
+            },
+            "G1_minus_SingleChartHermite_fk_error_m": {
+              "sources": 0,
+              "tasks": 0,
+              "mean": null,
+              "ci95": null
+            }
+          },
+          "interpretation": "WITHIN_GAP_METHOD_COMPARISON; HIDDEN_TARGET_CHANGES_ACROSS_GAPS"
+        }
+      }
+    },
+    "above_median": {
+      "24": {
+        "ALL": {
+          "registered": 6,
+          "eligible": 6,
+          "not_eligible": 0,
+          "sources": 6,
+          "methods": {
+            "G1": {
+              "constructed": 6,
+              "passed_original_screen": 3,
+              "rejection_count": 0
+            },
+            "SLERP": {
+              "constructed": 6,
+              "passed_original_screen": 1,
+              "rejection_count": 0
+            },
+            "SingleChartHermite": {
+              "constructed": 4,
+              "passed_original_screen": 3,
+              "rejection_count": 2
+            }
+          },
+          "paired": {
+            "G1_minus_SLERP_error_rad": {
+              "sources": 6,
+              "tasks": 6,
+              "mean": -0.009097116520130807,
+              "ci95": [
+                -0.013139171764356453,
+                -0.00505518682712644
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SLERP_fk_error_m": {
+              "sources": 6,
+              "tasks": 6,
+              "mean": -0.0065827713558474325,
+              "ci95": [
+                -0.009769804768798537,
+                -0.004090870703284463
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SingleChartHermite_error_rad": {
+              "sources": 4,
+              "tasks": 4,
+              "mean": -0.0750485930363311,
+              "ci95": [
+                -0.12017489131240383,
+                -0.03175758921193196
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SingleChartHermite_fk_error_m": {
+              "sources": 4,
+              "tasks": 4,
+              "mean": 0.01596997151424997,
+              "ci95": [
+                -0.001701933268751005,
+                0.03088867226079066
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            }
+          },
+          "interpretation": "WITHIN_GAP_METHOD_COMPARISON; HIDDEN_TARGET_CHANGES_ACROSS_GAPS"
+        },
+        "ChangE": {
+          "registered": 4,
+          "eligible": 4,
+          "not_eligible": 0,
+          "sources": 4,
+          "methods": {
+            "G1": {
+              "constructed": 4,
+              "passed_original_screen": 2,
+              "rejection_count": 0
+            },
+            "SLERP": {
+              "constructed": 4,
+              "passed_original_screen": 0,
+              "rejection_count": 0
+            },
+            "SingleChartHermite": {
+              "constructed": 3,
+              "passed_original_screen": 2,
+              "rejection_count": 1
+            }
+          },
+          "paired": {
+            "G1_minus_SLERP_error_rad": {
+              "sources": 4,
+              "tasks": 4,
+              "mean": -0.006768710259520479,
+              "ci95": [
+                -0.01044374987302811,
+                -0.002955698348732362
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SLERP_fk_error_m": {
+              "sources": 4,
+              "tasks": 4,
+              "mean": -0.008041625663672145,
+              "ci95": [
+                -0.011327671035191444,
+                -0.004755580292152846
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SingleChartHermite_error_rad": {
+              "sources": 3,
+              "tasks": 3,
+              "mean": -0.05369533341890579,
+              "ci95": [
+                -0.08305214758552071,
+                -0.014659403087402378
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SingleChartHermite_fk_error_m": {
+              "sources": 3,
+              "tasks": 3,
+              "mean": 0.025101296239157717,
+              "ci95": [
+                0.013526544195891832,
+                0.034313069615165524
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            }
+          },
+          "interpretation": "WITHIN_GAP_METHOD_COMPARISON; HIDDEN_TARGET_CHANGES_ACROSS_GAPS"
+        },
+        "FineDance": {
+          "registered": 2,
+          "eligible": 2,
+          "not_eligible": 0,
+          "sources": 2,
+          "methods": {
+            "G1": {
+              "constructed": 2,
+              "passed_original_screen": 1,
+              "rejection_count": 0
+            },
+            "SLERP": {
+              "constructed": 2,
+              "passed_original_screen": 1,
+              "rejection_count": 0
+            },
+            "SingleChartHermite": {
+              "constructed": 1,
+              "passed_original_screen": 1,
+              "rejection_count": 1
+            }
+          },
+          "paired": {
+            "G1_minus_SLERP_error_rad": {
+              "sources": 2,
+              "tasks": 2,
+              "mean": -0.013753929041351462,
+              "ci95": [
+                -0.017801535584507977,
+                -0.009706322498194947
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SLERP_fk_error_m": {
+              "sources": 2,
+              "tasks": 2,
+              "mean": -0.0036650627401980072,
+              "ci95": [
+                -0.004019879555593048,
+                -0.0033102459248029667
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SingleChartHermite_error_rad": {
+              "sources": 1,
+              "tasks": 1,
+              "mean": -0.139108371888607,
+              "ci95": [
+                -0.139108371888607,
+                -0.139108371888607
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SingleChartHermite_fk_error_m": {
+              "sources": 1,
+              "tasks": 1,
+              "mean": -0.011424002660473269,
+              "ci95": [
+                -0.011424002660473269,
+                -0.011424002660473269
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            }
+          },
+          "interpretation": "WITHIN_GAP_METHOD_COMPARISON; HIDDEN_TARGET_CHANGES_ACROSS_GAPS"
+        },
+        "AIST++": {
+          "registered": 0,
+          "eligible": 0,
+          "not_eligible": 0,
+          "sources": 0,
+          "methods": {
+            "G1": {
+              "constructed": 0,
+              "passed_original_screen": 0,
+              "rejection_count": 0
+            },
+            "SLERP": {
+              "constructed": 0,
+              "passed_original_screen": 0,
+              "rejection_count": 0
+            },
+            "SingleChartHermite": {
+              "constructed": 0,
+              "passed_original_screen": 0,
+              "rejection_count": 0
+            }
+          },
+          "paired": {
+            "G1_minus_SLERP_error_rad": {
+              "sources": 0,
+              "tasks": 0,
+              "mean": null,
+              "ci95": null
+            },
+            "G1_minus_SLERP_fk_error_m": {
+              "sources": 0,
+              "tasks": 0,
+              "mean": null,
+              "ci95": null
+            },
+            "G1_minus_SingleChartHermite_error_rad": {
+              "sources": 0,
+              "tasks": 0,
+              "mean": null,
+              "ci95": null
+            },
+            "G1_minus_SingleChartHermite_fk_error_m": {
+              "sources": 0,
+              "tasks": 0,
+              "mean": null,
+              "ci95": null
+            }
+          },
+          "interpretation": "WITHIN_GAP_METHOD_COMPARISON; HIDDEN_TARGET_CHANGES_ACROSS_GAPS"
+        }
+      },
+      "36": {
+        "ALL": {
+          "registered": 6,
+          "eligible": 6,
+          "not_eligible": 0,
+          "sources": 6,
+          "methods": {
+            "G1": {
+              "constructed": 6,
+              "passed_original_screen": 5,
+              "rejection_count": 0
+            },
+            "SLERP": {
+              "constructed": 6,
+              "passed_original_screen": 4,
+              "rejection_count": 0
+            },
+            "SingleChartHermite": {
+              "constructed": 4,
+              "passed_original_screen": 3,
+              "rejection_count": 2
+            }
+          },
+          "paired": {
+            "G1_minus_SLERP_error_rad": {
+              "sources": 6,
+              "tasks": 6,
+              "mean": -0.0014626358809531985,
+              "ci95": [
+                -0.007600051013681196,
+                0.005744818381855199
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SLERP_fk_error_m": {
+              "sources": 6,
+              "tasks": 6,
+              "mean": -0.003718439943753267,
+              "ci95": [
+                -0.00569814678006704,
+                -0.001847042755929842
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SingleChartHermite_error_rad": {
+              "sources": 4,
+              "tasks": 4,
+              "mean": -0.10883598700372546,
+              "ci95": [
+                -0.2123267843478425,
+                -0.0243230107179596
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SingleChartHermite_fk_error_m": {
+              "sources": 4,
+              "tasks": 4,
+              "mean": -0.014916709783076638,
+              "ci95": [
+                -0.04349121151752409,
+                0.013657791951370808
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            }
+          },
+          "interpretation": "WITHIN_GAP_METHOD_COMPARISON; HIDDEN_TARGET_CHANGES_ACROSS_GAPS"
+        },
+        "ChangE": {
+          "registered": 4,
+          "eligible": 4,
+          "not_eligible": 0,
+          "sources": 4,
+          "methods": {
+            "G1": {
+              "constructed": 4,
+              "passed_original_screen": 3,
+              "rejection_count": 0
+            },
+            "SLERP": {
+              "constructed": 4,
+              "passed_original_screen": 2,
+              "rejection_count": 0
+            },
+            "SingleChartHermite": {
+              "constructed": 2,
+              "passed_original_screen": 2,
+              "rejection_count": 2
+            }
+          },
+          "paired": {
+            "G1_minus_SLERP_error_rad": {
+              "sources": 4,
+              "tasks": 4,
+              "mean": 0.002251311228511632,
+              "ci95": [
+                -0.005157336270532581,
+                0.009659958727555845
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SLERP_fk_error_m": {
+              "sources": 4,
+              "tasks": 4,
+              "mean": -0.004137518821348558,
+              "ci95": [
+                -0.006762442421208839,
+                -0.0015125952214882776
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SingleChartHermite_error_rad": {
+              "sources": 2,
+              "tasks": 2,
+              "mean": -0.06053548160020916,
+              "ci95": [
+                -0.1191808502905394,
+                -0.0018901129098789216
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SingleChartHermite_fk_error_m": {
+              "sources": 2,
+              "tasks": 2,
+              "mean": -0.025647014673095436,
+              "ci95": [
+                -0.05511673783986648,
+                0.0038227084936756084
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            }
+          },
+          "interpretation": "WITHIN_GAP_METHOD_COMPARISON; HIDDEN_TARGET_CHANGES_ACROSS_GAPS"
+        },
+        "FineDance": {
+          "registered": 2,
+          "eligible": 2,
+          "not_eligible": 0,
+          "sources": 2,
+          "methods": {
+            "G1": {
+              "constructed": 2,
+              "passed_original_screen": 2,
+              "rejection_count": 0
+            },
+            "SLERP": {
+              "constructed": 2,
+              "passed_original_screen": 2,
+              "rejection_count": 0
+            },
+            "SingleChartHermite": {
+              "constructed": 2,
+              "passed_original_screen": 1,
+              "rejection_count": 0
+            }
+          },
+          "paired": {
+            "G1_minus_SLERP_error_rad": {
+              "sources": 2,
+              "tasks": 2,
+              "mean": -0.00889053009988286,
+              "ci95": [
+                -0.009954014024656843,
+                -0.007827046175108876
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SLERP_fk_error_m": {
+              "sources": 2,
+              "tasks": 2,
+              "mean": -0.002880282188562684,
+              "ci95": [
+                -0.0035887029747104643,
+                -0.002171861402414904
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SingleChartHermite_error_rad": {
+              "sources": 2,
+              "tasks": 2,
+              "mean": -0.15713649240724176,
+              "ci95": [
+                -0.26751707628844323,
+                -0.04675590852604028
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SingleChartHermite_fk_error_m": {
+              "sources": 2,
+              "tasks": 2,
+              "mean": -0.004186404893057844,
+              "ci95": [
+                -0.031865685195181695,
+                0.023492875409066007
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            }
+          },
+          "interpretation": "WITHIN_GAP_METHOD_COMPARISON; HIDDEN_TARGET_CHANGES_ACROSS_GAPS"
+        },
+        "AIST++": {
+          "registered": 0,
+          "eligible": 0,
+          "not_eligible": 0,
+          "sources": 0,
+          "methods": {
+            "G1": {
+              "constructed": 0,
+              "passed_original_screen": 0,
+              "rejection_count": 0
+            },
+            "SLERP": {
+              "constructed": 0,
+              "passed_original_screen": 0,
+              "rejection_count": 0
+            },
+            "SingleChartHermite": {
+              "constructed": 0,
+              "passed_original_screen": 0,
+              "rejection_count": 0
+            }
+          },
+          "paired": {
+            "G1_minus_SLERP_error_rad": {
+              "sources": 0,
+              "tasks": 0,
+              "mean": null,
+              "ci95": null
+            },
+            "G1_minus_SLERP_fk_error_m": {
+              "sources": 0,
+              "tasks": 0,
+              "mean": null,
+              "ci95": null
+            },
+            "G1_minus_SingleChartHermite_error_rad": {
+              "sources": 0,
+              "tasks": 0,
+              "mean": null,
+              "ci95": null
+            },
+            "G1_minus_SingleChartHermite_fk_error_m": {
+              "sources": 0,
+              "tasks": 0,
+              "mean": null,
+              "ci95": null
+            }
+          },
+          "interpretation": "WITHIN_GAP_METHOD_COMPARISON; HIDDEN_TARGET_CHANGES_ACROSS_GAPS"
+        }
+      },
+      "48": {
+        "ALL": {
+          "registered": 6,
+          "eligible": 6,
+          "not_eligible": 0,
+          "sources": 6,
+          "methods": {
+            "G1": {
+              "constructed": 6,
+              "passed_original_screen": 4,
+              "rejection_count": 0
+            },
+            "SLERP": {
+              "constructed": 6,
+              "passed_original_screen": 4,
+              "rejection_count": 0
+            },
+            "SingleChartHermite": {
+              "constructed": 3,
+              "passed_original_screen": 3,
+              "rejection_count": 3
+            }
+          },
+          "paired": {
+            "G1_minus_SLERP_error_rad": {
+              "sources": 6,
+              "tasks": 6,
+              "mean": -0.010171232659216795,
+              "ci95": [
+                -0.015472773947069396,
+                -0.005685332713519092
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SLERP_fk_error_m": {
+              "sources": 6,
+              "tasks": 6,
+              "mean": -0.008147680220989209,
+              "ci95": [
+                -0.011655676555033287,
+                -0.005003060334483674
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SingleChartHermite_error_rad": {
+              "sources": 3,
+              "tasks": 3,
+              "mean": -0.10574747016920245,
+              "ci95": [
+                -0.12552512673484317,
+                -0.07194348780556317
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SingleChartHermite_fk_error_m": {
+              "sources": 3,
+              "tasks": 3,
+              "mean": -0.010850219239143163,
+              "ci95": [
+                -0.0400891398059838,
+                0.019232773465907863
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            }
+          },
+          "interpretation": "WITHIN_GAP_METHOD_COMPARISON; HIDDEN_TARGET_CHANGES_ACROSS_GAPS"
+        },
+        "ChangE": {
+          "registered": 4,
+          "eligible": 4,
+          "not_eligible": 0,
+          "sources": 4,
+          "methods": {
+            "G1": {
+              "constructed": 4,
+              "passed_original_screen": 2,
+              "rejection_count": 0
+            },
+            "SLERP": {
+              "constructed": 4,
+              "passed_original_screen": 2,
+              "rejection_count": 0
+            },
+            "SingleChartHermite": {
+              "constructed": 2,
+              "passed_original_screen": 2,
+              "rejection_count": 2
+            }
+          },
+          "paired": {
+            "G1_minus_SLERP_error_rad": {
+              "sources": 4,
+              "tasks": 4,
+              "mean": -0.010543149243051393,
+              "ci95": [
+                -0.0184809072563325,
+                -0.0038645908143385074
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SLERP_fk_error_m": {
+              "sources": 4,
+              "tasks": 4,
+              "mean": -0.010150939137544973,
+              "ci95": [
+                -0.013369941846633822,
+                -0.005730487107721428
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SingleChartHermite_error_rad": {
+              "sources": 2,
+              "tasks": 2,
+              "mean": -0.1226494613510221,
+              "ci95": [
+                -0.12552512673484317,
+                -0.11977379596720103
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SingleChartHermite_fk_error_m": {
+              "sources": 2,
+              "tasks": 2,
+              "mean": -0.025891715591668675,
+              "ci95": [
+                -0.0400891398059838,
+                -0.011694291377353547
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            }
+          },
+          "interpretation": "WITHIN_GAP_METHOD_COMPARISON; HIDDEN_TARGET_CHANGES_ACROSS_GAPS"
+        },
+        "FineDance": {
+          "registered": 2,
+          "eligible": 2,
+          "not_eligible": 0,
+          "sources": 2,
+          "methods": {
+            "G1": {
+              "constructed": 2,
+              "passed_original_screen": 2,
+              "rejection_count": 0
+            },
+            "SLERP": {
+              "constructed": 2,
+              "passed_original_screen": 2,
+              "rejection_count": 0
+            },
+            "SingleChartHermite": {
+              "constructed": 1,
+              "passed_original_screen": 1,
+              "rejection_count": 1
+            }
+          },
+          "paired": {
+            "G1_minus_SLERP_error_rad": {
+              "sources": 2,
+              "tasks": 2,
+              "mean": -0.009427399491547597,
+              "ci95": [
+                -0.00952725477529004,
+                -0.009327544207805155
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SLERP_fk_error_m": {
+              "sources": 2,
+              "tasks": 2,
+              "mean": -0.004141162387877682,
+              "ci95": [
+                -0.004337184736523329,
+                -0.003945140039232034
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SingleChartHermite_error_rad": {
+              "sources": 1,
+              "tasks": 1,
+              "mean": -0.07194348780556317,
+              "ci95": [
+                -0.07194348780556317,
+                -0.07194348780556317
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SingleChartHermite_fk_error_m": {
+              "sources": 1,
+              "tasks": 1,
+              "mean": 0.019232773465907863,
+              "ci95": [
+                0.019232773465907863,
+                0.019232773465907863
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            }
+          },
+          "interpretation": "WITHIN_GAP_METHOD_COMPARISON; HIDDEN_TARGET_CHANGES_ACROSS_GAPS"
+        },
+        "AIST++": {
+          "registered": 0,
+          "eligible": 0,
+          "not_eligible": 0,
+          "sources": 0,
+          "methods": {
+            "G1": {
+              "constructed": 0,
+              "passed_original_screen": 0,
+              "rejection_count": 0
+            },
+            "SLERP": {
+              "constructed": 0,
+              "passed_original_screen": 0,
+              "rejection_count": 0
+            },
+            "SingleChartHermite": {
+              "constructed": 0,
+              "passed_original_screen": 0,
+              "rejection_count": 0
+            }
+          },
+          "paired": {
+            "G1_minus_SLERP_error_rad": {
+              "sources": 0,
+              "tasks": 0,
+              "mean": null,
+              "ci95": null
+            },
+            "G1_minus_SLERP_fk_error_m": {
+              "sources": 0,
+              "tasks": 0,
+              "mean": null,
+              "ci95": null
+            },
+            "G1_minus_SingleChartHermite_error_rad": {
+              "sources": 0,
+              "tasks": 0,
+              "mean": null,
+              "ci95": null
+            },
+            "G1_minus_SingleChartHermite_fk_error_m": {
+              "sources": 0,
+              "tasks": 0,
+              "mean": null,
+              "ci95": null
+            }
+          },
+          "interpretation": "WITHIN_GAP_METHOD_COMPARISON; HIDDEN_TARGET_CHANGES_ACROSS_GAPS"
+        }
+      },
+      "60": {
+        "ALL": {
+          "registered": 6,
+          "eligible": 6,
+          "not_eligible": 0,
+          "sources": 6,
+          "methods": {
+            "G1": {
+              "constructed": 6,
+              "passed_original_screen": 6,
+              "rejection_count": 0
+            },
+            "SLERP": {
+              "constructed": 6,
+              "passed_original_screen": 5,
+              "rejection_count": 0
+            },
+            "SingleChartHermite": {
+              "constructed": 2,
+              "passed_original_screen": 2,
+              "rejection_count": 4
+            }
+          },
+          "paired": {
+            "G1_minus_SLERP_error_rad": {
+              "sources": 6,
+              "tasks": 6,
+              "mean": -0.0032342687862780086,
+              "ci95": [
+                -0.008896613754063106,
+                0.004139298974757649
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SLERP_fk_error_m": {
+              "sources": 6,
+              "tasks": 6,
+              "mean": -0.005444015354027678,
+              "ci95": [
+                -0.008462885282848909,
+                -0.0024554366807763087
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SingleChartHermite_error_rad": {
+              "sources": 2,
+              "tasks": 2,
+              "mean": -0.19935683008863636,
+              "ci95": [
+                -0.36868734428899896,
+                -0.03002631588827373
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SingleChartHermite_fk_error_m": {
+              "sources": 2,
+              "tasks": 2,
+              "mean": -0.022577823143625005,
+              "ci95": [
+                -0.07076050013947632,
+                0.025604853852226314
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            }
+          },
+          "interpretation": "WITHIN_GAP_METHOD_COMPARISON; HIDDEN_TARGET_CHANGES_ACROSS_GAPS"
+        },
+        "ChangE": {
+          "registered": 4,
+          "eligible": 4,
+          "not_eligible": 0,
+          "sources": 4,
+          "methods": {
+            "G1": {
+              "constructed": 4,
+              "passed_original_screen": 4,
+              "rejection_count": 0
+            },
+            "SLERP": {
+              "constructed": 4,
+              "passed_original_screen": 3,
+              "rejection_count": 0
+            },
+            "SingleChartHermite": {
+              "constructed": 1,
+              "passed_original_screen": 1,
+              "rejection_count": 3
+            }
+          },
+          "paired": {
+            "G1_minus_SLERP_error_rad": {
+              "sources": 4,
+              "tasks": 4,
+              "mean": -0.0018807570410693392,
+              "ci95": [
+                -0.009550101340346034,
+                0.008091025981930983
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SLERP_fk_error_m": {
+              "sources": 4,
+              "tasks": 4,
+              "mean": -0.007260025570931833,
+              "ci95": [
+                -0.010268009912724876,
+                -0.004252041229138789
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SingleChartHermite_error_rad": {
+              "sources": 1,
+              "tasks": 1,
+              "mean": -0.36868734428899896,
+              "ci95": [
+                -0.36868734428899896,
+                -0.36868734428899896
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SingleChartHermite_fk_error_m": {
+              "sources": 1,
+              "tasks": 1,
+              "mean": -0.07076050013947632,
+              "ci95": [
+                -0.07076050013947632,
+                -0.07076050013947632
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            }
+          },
+          "interpretation": "WITHIN_GAP_METHOD_COMPARISON; HIDDEN_TARGET_CHANGES_ACROSS_GAPS"
+        },
+        "FineDance": {
+          "registered": 2,
+          "eligible": 2,
+          "not_eligible": 0,
+          "sources": 2,
+          "methods": {
+            "G1": {
+              "constructed": 2,
+              "passed_original_screen": 2,
+              "rejection_count": 0
+            },
+            "SLERP": {
+              "constructed": 2,
+              "passed_original_screen": 2,
+              "rejection_count": 0
+            },
+            "SingleChartHermite": {
+              "constructed": 1,
+              "passed_original_screen": 1,
+              "rejection_count": 1
+            }
+          },
+          "paired": {
+            "G1_minus_SLERP_error_rad": {
+              "sources": 2,
+              "tasks": 2,
+              "mean": -0.005941292276695348,
+              "ci95": [
+                -0.009360230423434868,
+                -0.0025223541299558283
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SLERP_fk_error_m": {
+              "sources": 2,
+              "tasks": 2,
+              "mean": -0.0018119949202193668,
+              "ci95": [
+                -0.003949099435074099,
+                0.00032510959463536576
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SingleChartHermite_error_rad": {
+              "sources": 1,
+              "tasks": 1,
+              "mean": -0.03002631588827373,
+              "ci95": [
+                -0.03002631588827373,
+                -0.03002631588827373
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SingleChartHermite_fk_error_m": {
+              "sources": 1,
+              "tasks": 1,
+              "mean": 0.025604853852226314,
+              "ci95": [
+                0.025604853852226314,
+                0.025604853852226314
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            }
+          },
+          "interpretation": "WITHIN_GAP_METHOD_COMPARISON; HIDDEN_TARGET_CHANGES_ACROSS_GAPS"
+        },
+        "AIST++": {
+          "registered": 0,
+          "eligible": 0,
+          "not_eligible": 0,
+          "sources": 0,
+          "methods": {
+            "G1": {
+              "constructed": 0,
+              "passed_original_screen": 0,
+              "rejection_count": 0
+            },
+            "SLERP": {
+              "constructed": 0,
+              "passed_original_screen": 0,
+              "rejection_count": 0
+            },
+            "SingleChartHermite": {
+              "constructed": 0,
+              "passed_original_screen": 0,
+              "rejection_count": 0
+            }
+          },
+          "paired": {
+            "G1_minus_SLERP_error_rad": {
+              "sources": 0,
+              "tasks": 0,
+              "mean": null,
+              "ci95": null
+            },
+            "G1_minus_SLERP_fk_error_m": {
+              "sources": 0,
+              "tasks": 0,
+              "mean": null,
+              "ci95": null
+            },
+            "G1_minus_SingleChartHermite_error_rad": {
+              "sources": 0,
+              "tasks": 0,
+              "mean": null,
+              "ci95": null
+            },
+            "G1_minus_SingleChartHermite_fk_error_m": {
+              "sources": 0,
+              "tasks": 0,
+              "mean": null,
+              "ci95": null
+            }
+          },
+          "interpretation": "WITHIN_GAP_METHOD_COMPARISON; HIDDEN_TARGET_CHANGES_ACROSS_GAPS"
+        }
+      },
+      "72": {
+        "ALL": {
+          "registered": 6,
+          "eligible": 6,
+          "not_eligible": 0,
+          "sources": 6,
+          "methods": {
+            "G1": {
+              "constructed": 6,
+              "passed_original_screen": 6,
+              "rejection_count": 0
+            },
+            "SLERP": {
+              "constructed": 6,
+              "passed_original_screen": 6,
+              "rejection_count": 0
+            },
+            "SingleChartHermite": {
+              "constructed": 1,
+              "passed_original_screen": 1,
+              "rejection_count": 5
+            }
+          },
+          "paired": {
+            "G1_minus_SLERP_error_rad": {
+              "sources": 6,
+              "tasks": 6,
+              "mean": 0.0014594648880119677,
+              "ci95": [
+                -0.004270342342031788,
+                0.010022401835643934
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SLERP_fk_error_m": {
+              "sources": 6,
+              "tasks": 6,
+              "mean": -0.003869683111123562,
+              "ci95": [
+                -0.007398755763131701,
+                -0.0013017001833487006
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SingleChartHermite_error_rad": {
+              "sources": 1,
+              "tasks": 1,
+              "mean": -0.12462465928166755,
+              "ci95": [
+                -0.12462465928166755,
+                -0.12462465928166755
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SingleChartHermite_fk_error_m": {
+              "sources": 1,
+              "tasks": 1,
+              "mean": -0.012137627751463279,
+              "ci95": [
+                -0.012137627751463279,
+                -0.012137627751463279
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            }
+          },
+          "interpretation": "WITHIN_GAP_METHOD_COMPARISON; HIDDEN_TARGET_CHANGES_ACROSS_GAPS"
+        },
+        "ChangE": {
+          "registered": 4,
+          "eligible": 4,
+          "not_eligible": 0,
+          "sources": 4,
+          "methods": {
+            "G1": {
+              "constructed": 4,
+              "passed_original_screen": 4,
+              "rejection_count": 0
+            },
+            "SLERP": {
+              "constructed": 4,
+              "passed_original_screen": 4,
+              "rejection_count": 0
+            },
+            "SingleChartHermite": {
+              "constructed": 0,
+              "passed_original_screen": 0,
+              "rejection_count": 4
+            }
+          },
+          "paired": {
+            "G1_minus_SLERP_error_rad": {
+              "sources": 4,
+              "tasks": 4,
+              "mean": -0.0018144511039500238,
+              "ci95": [
+                -0.0033397359385709258,
+                -0.00028916626932912193
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SLERP_fk_error_m": {
+              "sources": 4,
+              "tasks": 4,
+              "mean": -0.004909008300260483,
+              "ci95": [
+                -0.009565648449699343,
+                -0.0020449151251402398
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SingleChartHermite_error_rad": {
+              "sources": 0,
+              "tasks": 0,
+              "mean": null,
+              "ci95": null
+            },
+            "G1_minus_SingleChartHermite_fk_error_m": {
+              "sources": 0,
+              "tasks": 0,
+              "mean": null,
+              "ci95": null
+            }
+          },
+          "interpretation": "WITHIN_GAP_METHOD_COMPARISON; HIDDEN_TARGET_CHANGES_ACROSS_GAPS"
+        },
+        "FineDance": {
+          "registered": 2,
+          "eligible": 2,
+          "not_eligible": 0,
+          "sources": 2,
+          "methods": {
+            "G1": {
+              "constructed": 2,
+              "passed_original_screen": 2,
+              "rejection_count": 0
+            },
+            "SLERP": {
+              "constructed": 2,
+              "passed_original_screen": 2,
+              "rejection_count": 0
+            },
+            "SingleChartHermite": {
+              "constructed": 1,
+              "passed_original_screen": 1,
+              "rejection_count": 1
+            }
+          },
+          "paired": {
+            "G1_minus_SLERP_error_rad": {
+              "sources": 2,
+              "tasks": 2,
+              "mean": 0.008007296871935951,
+              "ci95": [
+                -0.00633448116045307,
+                0.022349074904324973
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SLERP_fk_error_m": {
+              "sources": 2,
+              "tasks": 2,
+              "mean": -0.0017910327328497198,
+              "ci95": [
+                -0.004187260318941496,
+                0.0006051948532420567
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SingleChartHermite_error_rad": {
+              "sources": 1,
+              "tasks": 1,
+              "mean": -0.12462465928166755,
+              "ci95": [
+                -0.12462465928166755,
+                -0.12462465928166755
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            },
+            "G1_minus_SingleChartHermite_fk_error_m": {
+              "sources": 1,
+              "tasks": 1,
+              "mean": -0.012137627751463279,
+              "ci95": [
+                -0.012137627751463279,
+                -0.012137627751463279
+              ],
+              "scope": "RECORDING_BALANCED_SAME_DURATION_PAIRED_METHOD_EFFECT; NOT_LENGTH_CAUSAL_EFFECT"
+            }
+          },
+          "interpretation": "WITHIN_GAP_METHOD_COMPARISON; HIDDEN_TARGET_CHANGES_ACROSS_GAPS"
+        },
+        "AIST++": {
+          "registered": 0,
+          "eligible": 0,
+          "not_eligible": 0,
+          "sources": 0,
+          "methods": {
+            "G1": {
+              "constructed": 0,
+              "passed_original_screen": 0,
+              "rejection_count": 0
+            },
+            "SLERP": {
+              "constructed": 0,
+              "passed_original_screen": 0,
+              "rejection_count": 0
+            },
+            "SingleChartHermite": {
+              "constructed": 0,
+              "passed_original_screen": 0,
+              "rejection_count": 0
+            }
+          },
+          "paired": {
+            "G1_minus_SLERP_error_rad": {
+              "sources": 0,
+              "tasks": 0,
+              "mean": null,
+              "ci95": null
+            },
+            "G1_minus_SLERP_fk_error_m": {
+              "sources": 0,
+              "tasks": 0,
+              "mean": null,
+              "ci95": null
+            },
+            "G1_minus_SingleChartHermite_error_rad": {
+              "sources": 0,
+              "tasks": 0,
+              "mean": null,
+              "ci95": null
+            },
+            "G1_minus_SingleChartHermite_fk_error_m": {
+              "sources": 0,
+              "tasks": 0,
+              "mean": null,
+              "ci95": null
+            }
+          },
+          "interpretation": "WITHIN_GAP_METHOD_COMPARISON; HIDDEN_TARGET_CHANGES_ACROSS_GAPS"
+        }
+      }
+    }
+  },
+  "cross_pairs": 9,
+  "cross_source_count": 3,
+  "cross_records": 45,
+  "cross_summary": {
+    "by_duration": {
+      "24": {
+        "tasks": 9,
+        "methods": {
+          "G0": {
+            "constructed": 9,
+            "passed_original_screen": 7
+          },
+          "G1": {
+            "constructed": 9,
+            "passed_original_screen": 7
+          }
+        }
+      },
+      "36": {
+        "tasks": 9,
+        "methods": {
+          "G0": {
+            "constructed": 9,
+            "passed_original_screen": 7
+          },
+          "G1": {
+            "constructed": 9,
+            "passed_original_screen": 7
+          }
+        }
+      },
+      "48": {
+        "tasks": 9,
+        "methods": {
+          "G0": {
+            "constructed": 8,
+            "passed_original_screen": 7
+          },
+          "G1": {
+            "constructed": 9,
+            "passed_original_screen": 9
+          }
+        }
+      },
+      "60": {
+        "tasks": 9,
+        "methods": {
+          "G0": {
+            "constructed": 7,
+            "passed_original_screen": 7
+          },
+          "G1": {
+            "constructed": 9,
+            "passed_original_screen": 9
+          }
+        }
+      },
+      "72": {
+        "tasks": 9,
+        "methods": {
+          "G0": {
+            "constructed": 6,
+            "passed_original_screen": 5
+          },
+          "G1": {
+            "constructed": 9,
+            "passed_original_screen": 9
+          }
+        }
+      }
+    },
+    "pair_responses": [
+      {
+        "pair_case": 0,
+        "passing_G1_durations": [
+          24,
+          36,
+          48,
+          60,
+          72
+        ],
+        "minimum_passing_duration": 24,
+        "duration_pass_pattern": {
+          "24": true,
+          "36": true,
+          "48": true,
+          "60": true,
+          "72": true
+        },
+        "posthoc_scope": "OBSERVED_ORACLE_RESPONSE_NOT_TRAINED_ADAPTIVE_DECISION_OR_FIXED_MUSIC_BUDGET"
+      },
+      {
+        "pair_case": 1,
+        "passing_G1_durations": [
+          48,
+          60,
+          72
+        ],
+        "minimum_passing_duration": 48,
+        "duration_pass_pattern": {
+          "24": false,
+          "36": false,
+          "48": true,
+          "60": true,
+          "72": true
+        },
+        "posthoc_scope": "OBSERVED_ORACLE_RESPONSE_NOT_TRAINED_ADAPTIVE_DECISION_OR_FIXED_MUSIC_BUDGET"
+      },
+      {
+        "pair_case": 2,
+        "passing_G1_durations": [
+          24,
+          36,
+          48,
+          60,
+          72
+        ],
+        "minimum_passing_duration": 24,
+        "duration_pass_pattern": {
+          "24": true,
+          "36": true,
+          "48": true,
+          "60": true,
+          "72": true
+        },
+        "posthoc_scope": "OBSERVED_ORACLE_RESPONSE_NOT_TRAINED_ADAPTIVE_DECISION_OR_FIXED_MUSIC_BUDGET"
+      },
+      {
+        "pair_case": 3,
+        "passing_G1_durations": [
+          24,
+          36,
+          48,
+          60,
+          72
+        ],
+        "minimum_passing_duration": 24,
+        "duration_pass_pattern": {
+          "24": true,
+          "36": true,
+          "48": true,
+          "60": true,
+          "72": true
+        },
+        "posthoc_scope": "OBSERVED_ORACLE_RESPONSE_NOT_TRAINED_ADAPTIVE_DECISION_OR_FIXED_MUSIC_BUDGET"
+      },
+      {
+        "pair_case": 4,
+        "passing_G1_durations": [
+          24,
+          36,
+          48,
+          60,
+          72
+        ],
+        "minimum_passing_duration": 24,
+        "duration_pass_pattern": {
+          "24": true,
+          "36": true,
+          "48": true,
+          "60": true,
+          "72": true
+        },
+        "posthoc_scope": "OBSERVED_ORACLE_RESPONSE_NOT_TRAINED_ADAPTIVE_DECISION_OR_FIXED_MUSIC_BUDGET"
+      },
+      {
+        "pair_case": 5,
+        "passing_G1_durations": [
+          24,
+          36,
+          48,
+          60,
+          72
+        ],
+        "minimum_passing_duration": 24,
+        "duration_pass_pattern": {
+          "24": true,
+          "36": true,
+          "48": true,
+          "60": true,
+          "72": true
+        },
+        "posthoc_scope": "OBSERVED_ORACLE_RESPONSE_NOT_TRAINED_ADAPTIVE_DECISION_OR_FIXED_MUSIC_BUDGET"
+      },
+      {
+        "pair_case": 6,
+        "passing_G1_durations": [
+          24,
+          36,
+          48,
+          60,
+          72
+        ],
+        "minimum_passing_duration": 24,
+        "duration_pass_pattern": {
+          "24": true,
+          "36": true,
+          "48": true,
+          "60": true,
+          "72": true
+        },
+        "posthoc_scope": "OBSERVED_ORACLE_RESPONSE_NOT_TRAINED_ADAPTIVE_DECISION_OR_FIXED_MUSIC_BUDGET"
+      },
+      {
+        "pair_case": 7,
+        "passing_G1_durations": [
+          48,
+          60,
+          72
+        ],
+        "minimum_passing_duration": 48,
+        "duration_pass_pattern": {
+          "24": false,
+          "36": false,
+          "48": true,
+          "60": true,
+          "72": true
+        },
+        "posthoc_scope": "OBSERVED_ORACLE_RESPONSE_NOT_TRAINED_ADAPTIVE_DECISION_OR_FIXED_MUSIC_BUDGET"
+      },
+      {
+        "pair_case": 8,
+        "passing_G1_durations": [
+          24,
+          36,
+          48,
+          60,
+          72
+        ],
+        "minimum_passing_duration": 24,
+        "duration_pass_pattern": {
+          "24": true,
+          "36": true,
+          "48": true,
+          "60": true,
+          "72": true
+        },
+        "posthoc_scope": "OBSERVED_ORACLE_RESPONSE_NOT_TRAINED_ADAPTIVE_DECISION_OR_FIXED_MUSIC_BUDGET"
+      }
+    ],
+    "pass_patterns_differ_across_pairs": true,
+    "adaptive_policy_qualified": false,
+    "P2": "NOT_ADMITTED_NO_OUT_OF_SAMPLE_DURATION_DECISION_NET_GAIN"
+  },
+  "R61_parity_cases": 12,
+  "direct_parent_files_unchanged": 61,
+  "inherited_frozen_parent_files_unchanged": 4067,
+  "tests": {
+    "passed": 813,
+    "skipped": 1,
+    "log_sha256": "a2d377efc6c41a2880852e7a156221ab3270533bf85968e57ce7e03c674d055a"
+  },
+  "training_steps": 0,
+  "optimizer_calls": 0,
+  "planner_runs": 0,
+  "joint_budget_planning_runs": 0,
+  "can_route": false
+}

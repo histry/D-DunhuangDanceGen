@@ -1,0 +1,33 @@
+{
+  "scope": "DESCRIPTIVE_ONLY; BASELINE48_VISIBLE_ENDPOINT_DISTANCE_MEDIAN; NO_ERROR_READS",
+  "median_endpoint_mean_angle_rad": 0.41243824613571295,
+  "case_values": {
+    "0": 0.03170943074184222,
+    "1": 0.4868758467892895,
+    "2": 0.005722457135595527,
+    "3": 0.00521650191476124,
+    "4": 0.027816009295472743,
+    "5": 0.5566234847408597,
+    "6": 0.5361279753923739,
+    "7": 0.47243963713913123,
+    "8": 0.5147272666912782,
+    "9": 0.35243685513229467,
+    "10": 0.4782794100429219,
+    "11": 0.3494790379506618
+  },
+  "case_labels": {
+    "0": "lower_or_equal_median",
+    "1": "above_median",
+    "2": "lower_or_equal_median",
+    "3": "lower_or_equal_median",
+    "4": "lower_or_equal_median",
+    "5": "above_median",
+    "6": "above_median",
+    "7": "above_median",
+    "8": "above_median",
+    "9": "lower_or_equal_median",
+    "10": "above_median",
+    "11": "lower_or_equal_median"
+  },
+  "all_durations_share_same_source_stratum": true
+}

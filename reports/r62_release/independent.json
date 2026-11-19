@@ -1,0 +1,25 @@
+{
+  "records": [
+    {
+      "mode": "main",
+      "scientific_values_exact": true,
+      "arrays_bytes_exact": true,
+      "source_result_sha256": "6dbea88ff5bfe7ab918036d566e6b4baa9abdc078473b4910a943901d31084fe",
+      "source_commit": "6c08fd1a3fd3655995d366cba82075132fecd240"
+    },
+    {
+      "mode": "controls",
+      "scientific_values_exact": true,
+      "arrays_bytes_exact": true,
+      "source_result_sha256": "f472fba7344f612da988d9a6aae503a9a3c1ee12a5d4d95ef184b37bab96cb54",
+      "source_commit": "eab245854a9764b4b550de13ef541a16748517ac"
+    }
+  ],
+  "replay_commit": "eab245854a9764b4b550de13ef541a16748517ac",
+  "frozen_parent_files_unchanged": 4067,
+  "fresh_source_decoding_and_curve_solves": true,
+  "optimizer_calls": 0,
+  "training_steps": 0,
+  "planner_runs": 0,
+  "can_route": false
+}

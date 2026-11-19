@@ -1,0 +1,18 @@
+{
+  "main_result_sha256": "6dbea88ff5bfe7ab918036d566e6b4baa9abdc078473b4910a943901d31084fe",
+  "human_reviewed": false,
+  "checks": {
+    "five_gaps_24_36_48_60_72": true,
+    "seek_frame100_shorter84_and96_ended_blank": true,
+    "continuous_60_choices": true,
+    "common_playback_half_speed_frame30_to32": true,
+    "cross_9_choices": true,
+    "continuous_jump_absolute84": true,
+    "continuous_next_absolute85": true,
+    "no_stretch_or_last_frame_freeze": true
+  },
+  "verified_phase": "UNKNOWN",
+  "checked_at": "2026-11-19T17:49:09.3577524+08:00",
+  "scope": "SAVED_ACTUAL_CURVE_UI_ACCEPTANCE_NOT_HUMAN_QUALITY",
+  "passed": true
+}
