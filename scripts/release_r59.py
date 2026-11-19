@@ -32,6 +32,9 @@ def main():
   for r in m:assert sha(r['path'])==r['sha256']
   parent_counts[name]=len(m)
  for name in ('clock_residual_r55_01','clock_residual_r55_02','whole_song_geometry_01','whole_song_geometry_02','music_structure_r56_02','tempo_attribution_r57_01','execution_planning_r58_01'):parent_counts[name]=validate(Path('outputs')/name)
+ fine_receipts=[]
+ for receipt in data['FineDance_audio_receipts']:
+  r=dict(receipt);e=r['extractor'];r['extractor']={k:v for k,v in e.items() if k!='control_metadata'};r['full_extractor_receipt_sha256']=__import__('hashlib').sha256(json.dumps(e,sort_keys=True,separators=(',',':'),allow_nan=False).encode()).hexdigest();r['private_frame_curves_published']=False;fine_receipts.append(r)
  out.mkdir();clock_ci={}
  for ds,role in [('AIST++','val'),('FineDance','genre_train_diagnostic')]:
   for method in CFG['methods']:
@@ -40,7 +43,7 @@ def main():
     b=ev['summary']['clock']['|'.join((ds,role,ctrl,ref))]['groups'];common=sorted(a.keys()&b.keys())
     for metric in ('accuracy','mae_frames'):
      values=paired_ci([a[g][metric]-b[g][metric] for g in common],CFG['seed'],CFG['bootstrap_draws']);values.update(metric=metric,improvement_direction='POSITIVE' if metric=='accuracy' else 'NEGATIVE',unit='AIST_MUSIC_GROUP' if ds=='AIST++' else 'FINE_ARCHIVE_AUDIO_ID_WORK_ALIASES_NOT_VERIFIED');clock_ci['|'.join((ds,role,method,'minus_'+ctrl+'_'+ref,metric))]=values
- put(out/'paired_clock_differences.json',clock_ci);put(out/'qualification.json',gate);put(out/'paired_metrics.json',ev['summary']);put(out/'r58_objective_decomposition.json',diag);put(out/'source_audit.json',dict(source_counts=data['source_counts'],groups=data['groups'],role_isolation=data['role_isolation'],shared_choreography_across_AIST_roles=data['shared_choreography_across_AIST_roles'],AIST_raw_audits=data['AIST_raw_audits'],FineDance_asset_proof=data['FineDance_asset_proof'],FineDance_audio_receipts=data['FineDance_audio_receipts'],normalizer=data['normalizer'],parent_manifest_sha256=data['parent_manifest_sha256'],data_manifest_sha256=sha(ROOT/'data/manifest.json'),scope='ALL_REGISTERED_SHARED_AIST_RAW_GRID_NOT_ALL_PUBLISHED_AIST; TWELVE_OFFICIAL_GENRE_TRAIN_FINE_DIAGNOSTICS; NO_NEW_UNSEEN_MUSIC'))
+ put(out/'paired_clock_differences.json',clock_ci);put(out/'qualification.json',gate);put(out/'paired_metrics.json',ev['summary']);put(out/'r58_objective_decomposition.json',diag);put(out/'source_audit.json',dict(source_counts=data['source_counts'],groups=data['groups'],role_isolation=data['role_isolation'],shared_choreography_across_AIST_roles=data['shared_choreography_across_AIST_roles'],AIST_raw_audits=data['AIST_raw_audits'],FineDance_asset_proof=data['FineDance_asset_proof'],FineDance_audio_receipts=fine_receipts,FineDance_actual_uploaded_asset_receipt_sha256=sha(Path(CFG['fine_copy'])/'upload_receipt.json'),source_root_in_asset_proof_is_configured_fallback=True,normalizer=data['normalizer'],parent_manifest_sha256=data['parent_manifest_sha256'],data_manifest_sha256=sha(ROOT/'data/manifest.json'),scope='ALL_REGISTERED_SHARED_AIST_RAW_GRID_NOT_ALL_PUBLISHED_AIST; TWELVE_OFFICIAL_GENRE_TRAIN_FINE_DIAGNOSTICS; NO_NEW_UNSEEN_MUSIC'))
  rows=[]
  for r in ev['records']:
   row={k:r[k] for k in ('query','group','recording','dataset','role','task','control','method','target_count','pool_size','unknown_count','top1','top1_relation','pool_sha256')};row.update({k:r['metrics'][k] if r['metrics'] else None for k in ('recall_at1','recall_at5','mrr','chance_at1')});rows.append(row)
@@ -53,7 +56,7 @@ def main():
  for ds,role in [('AIST++','val'),('FineDance','genre_train_diagnostic')]:
   for name in CFG['methods']:
    r=ev['summary']['retrieval']['|'.join((ds,role,'open','actual',name))];m=r['mean'];lines.append('|'+ds+'/'+role+'|'+name+'|'+ '|'.join(format(m[k],'.5f') if m else 'NOT_EVALUABLE' for k in ('recall_at1','recall_at5','mrr'))+'|'+format(r['mean_target_coverage'],'.5f')+'|')
- lines+=['','R@K是源音频时钟目标检索，不是艺术正确率。1e-7固定分箱，同分按随机排列的解析期望统计，不以UID先后判对；额外同歌曲/活动困难池、零音乐/错音乐/反转动作Token、所有查询缺失统计见CSV和paired_metrics.json。录制内均衡后按音乐组重采样，区间只描述本次历史人口，不能代替独立泛化。TeacherRescore是Frozen+.25(raw_R55−Frozen)，没有训练新Teacher-Preserved模型。', '', '## 已知非循环偏移恢复','', '|数据/角色|方法|准确率|MAE帧|', '|---|---|---:|---:|']
+ lines+=['','公开来源审计只保留提取器合同、采样/时长信息及SHA；逐帧音频派生曲线保留私有原始回执，不入Git。本轮H的录制时钟检索读数不否定R51/R52 Heuristic整曲观感；任务和候选池不同，不据此更换编舞基线。R@K是源音频时钟目标检索，不是艺术正确率。1e-7固定分箱，同分按随机排列的解析期望统计，不以UID先后判对；额外同歌曲/活动困难池、零音乐/错音乐/反转动作Token、所有查询缺失统计见CSV和paired_metrics.json。录制内均衡后按音乐组重采样，区间只描述本次历史人口，不能代替独立泛化。TeacherRescore是Frozen+.25(raw_R55−Frozen)，没有训练新Teacher-Preserved模型。', '', '## 已知非循环偏移恢复','', '|数据/角色|方法|准确率|MAE帧|', '|---|---|---:|---:|']
  for ds,role in [('AIST++','val'),('FineDance','genre_train_diagnostic')]:
   for name in CFG['methods']:
    m=ev['summary']['clock']['|'.join((ds,role,'actual',name))]['mean'];lines.append('|'+ds+'/'+role+'|'+name+'|'+format(m['accuracy'],'.5f')+'|'+format(m['mae_frames'],'.5f')+'|')
