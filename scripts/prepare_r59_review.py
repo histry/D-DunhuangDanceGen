@@ -39,4 +39,3 @@ def patch_viewer():
 if __name__=='__main__':
  import sys
  patch_viewer() if '--patch-viewer' in sys.argv else main()
-
