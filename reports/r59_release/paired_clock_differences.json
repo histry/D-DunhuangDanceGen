@@ -1,0 +1,866 @@
+{
+  "AIST++|val|Heuristic|minus_actual_Frozen|accuracy": {
+    "groups": 6,
+    "mean": -0.22777777777777783,
+    "ci95": [
+      -0.3444444444444445,
+      -0.10000000000000002
+    ],
+    "unit": "AIST_MUSIC_GROUP",
+    "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+    "metric": "accuracy",
+    "improvement_direction": "POSITIVE"
+  },
+  "AIST++|val|Heuristic|minus_actual_Frozen|mae_frames": {
+    "groups": 6,
+    "mean": 1.9999999999999998,
+    "ci95": [
+      0.011111111111110628,
+      3.8555555555555556
+    ],
+    "unit": "AIST_MUSIC_GROUP",
+    "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+    "metric": "mae_frames",
+    "improvement_direction": "NEGATIVE"
+  },
+  "AIST++|val|Heuristic|minus_actual_Heuristic|accuracy": {
+    "groups": 6,
+    "mean": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ],
+    "unit": "AIST_MUSIC_GROUP",
+    "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+    "metric": "accuracy",
+    "improvement_direction": "POSITIVE"
+  },
+  "AIST++|val|Heuristic|minus_actual_Heuristic|mae_frames": {
+    "groups": 6,
+    "mean": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ],
+    "unit": "AIST_MUSIC_GROUP",
+    "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+    "metric": "mae_frames",
+    "improvement_direction": "NEGATIVE"
+  },
+  "AIST++|val|Heuristic|minus_music_zero_Heuristic|accuracy": {
+    "groups": 6,
+    "mean": -0.12777777777777785,
+    "ci95": [
+      -0.2000000000000001,
+      -0.03888888888888896
+    ],
+    "unit": "AIST_MUSIC_GROUP",
+    "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+    "metric": "accuracy",
+    "improvement_direction": "POSITIVE"
+  },
+  "AIST++|val|Heuristic|minus_music_zero_Heuristic|mae_frames": {
+    "groups": 6,
+    "mean": 1.5788888888888886,
+    "ci95": [
+      -1.2544444444444451,
+      4.345555555555555
+    ],
+    "unit": "AIST_MUSIC_GROUP",
+    "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+    "metric": "mae_frames",
+    "improvement_direction": "NEGATIVE"
+  },
+  "AIST++|val|Frozen|minus_actual_Frozen|accuracy": {
+    "groups": 6,
+    "mean": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ],
+    "unit": "AIST_MUSIC_GROUP",
+    "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+    "metric": "accuracy",
+    "improvement_direction": "POSITIVE"
+  },
+  "AIST++|val|Frozen|minus_actual_Frozen|mae_frames": {
+    "groups": 6,
+    "mean": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ],
+    "unit": "AIST_MUSIC_GROUP",
+    "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+    "metric": "mae_frames",
+    "improvement_direction": "NEGATIVE"
+  },
+  "AIST++|val|Frozen|minus_actual_Heuristic|accuracy": {
+    "groups": 6,
+    "mean": 0.22777777777777783,
+    "ci95": [
+      0.10000000000000002,
+      0.3444444444444445
+    ],
+    "unit": "AIST_MUSIC_GROUP",
+    "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+    "metric": "accuracy",
+    "improvement_direction": "POSITIVE"
+  },
+  "AIST++|val|Frozen|minus_actual_Heuristic|mae_frames": {
+    "groups": 6,
+    "mean": -1.9999999999999998,
+    "ci95": [
+      -3.8555555555555556,
+      -0.011111111111110628
+    ],
+    "unit": "AIST_MUSIC_GROUP",
+    "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+    "metric": "mae_frames",
+    "improvement_direction": "NEGATIVE"
+  },
+  "AIST++|val|Frozen|minus_music_zero_Frozen|accuracy": {
+    "groups": 6,
+    "mean": 0.03333333333333333,
+    "ci95": [
+      -0.08333333333333333,
+      0.13333333333333333
+    ],
+    "unit": "AIST_MUSIC_GROUP",
+    "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+    "metric": "accuracy",
+    "improvement_direction": "POSITIVE"
+  },
+  "AIST++|val|Frozen|minus_music_zero_Frozen|mae_frames": {
+    "groups": 6,
+    "mean": -0.7277777777777777,
+    "ci95": [
+      -2.2059722222222224,
+      0.844444444444445
+    ],
+    "unit": "AIST_MUSIC_GROUP",
+    "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+    "metric": "mae_frames",
+    "improvement_direction": "NEGATIVE"
+  },
+  "AIST++|val|Conditional|minus_actual_Frozen|accuracy": {
+    "groups": 6,
+    "mean": -0.1777777777777778,
+    "ci95": [
+      -0.2888888888888889,
+      -0.05000000000000001
+    ],
+    "unit": "AIST_MUSIC_GROUP",
+    "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+    "metric": "accuracy",
+    "improvement_direction": "POSITIVE"
+  },
+  "AIST++|val|Conditional|minus_actual_Frozen|mae_frames": {
+    "groups": 6,
+    "mean": 2.461111111111111,
+    "ci95": [
+      -0.10083333333333327,
+      4.772222222222222
+    ],
+    "unit": "AIST_MUSIC_GROUP",
+    "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+    "metric": "mae_frames",
+    "improvement_direction": "NEGATIVE"
+  },
+  "AIST++|val|Conditional|minus_actual_Heuristic|accuracy": {
+    "groups": 6,
+    "mean": 0.049999999999999996,
+    "ci95": [
+      0.0,
+      0.15
+    ],
+    "unit": "AIST_MUSIC_GROUP",
+    "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+    "metric": "accuracy",
+    "improvement_direction": "POSITIVE"
+  },
+  "AIST++|val|Conditional|minus_actual_Heuristic|mae_frames": {
+    "groups": 6,
+    "mean": 0.46111111111111097,
+    "ci95": [
+      -0.19444444444444434,
+      1.2111111111111106
+    ],
+    "unit": "AIST_MUSIC_GROUP",
+    "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+    "metric": "mae_frames",
+    "improvement_direction": "NEGATIVE"
+  },
+  "AIST++|val|Conditional|minus_music_zero_Conditional|accuracy": {
+    "groups": 6,
+    "mean": -0.07222222222222223,
+    "ci95": [
+      -0.2333333333333333,
+      0.07222222222222223
+    ],
+    "unit": "AIST_MUSIC_GROUP",
+    "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+    "metric": "accuracy",
+    "improvement_direction": "POSITIVE"
+  },
+  "AIST++|val|Conditional|minus_music_zero_Conditional|mae_frames": {
+    "groups": 6,
+    "mean": 1.1888888888888889,
+    "ci95": [
+      -2.544861111111111,
+      4.8999999999999995
+    ],
+    "unit": "AIST_MUSIC_GROUP",
+    "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+    "metric": "mae_frames",
+    "improvement_direction": "NEGATIVE"
+  },
+  "AIST++|val|NoClock|minus_actual_Frozen|accuracy": {
+    "groups": 6,
+    "mean": -0.17222222222222228,
+    "ci95": [
+      -0.2833333333333334,
+      -0.05000000000000001
+    ],
+    "unit": "AIST_MUSIC_GROUP",
+    "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+    "metric": "accuracy",
+    "improvement_direction": "POSITIVE"
+  },
+  "AIST++|val|NoClock|minus_actual_Frozen|mae_frames": {
+    "groups": 6,
+    "mean": 2.1111111111111103,
+    "ci95": [
+      -0.7337499999999999,
+      4.538888888888888
+    ],
+    "unit": "AIST_MUSIC_GROUP",
+    "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+    "metric": "mae_frames",
+    "improvement_direction": "NEGATIVE"
+  },
+  "AIST++|val|NoClock|minus_actual_Heuristic|accuracy": {
+    "groups": 6,
+    "mean": 0.05555555555555555,
+    "ci95": [
+      0.0,
+      0.16666666666666666
+    ],
+    "unit": "AIST_MUSIC_GROUP",
+    "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+    "metric": "accuracy",
+    "improvement_direction": "POSITIVE"
+  },
+  "AIST++|val|NoClock|minus_actual_Heuristic|mae_frames": {
+    "groups": 6,
+    "mean": 0.11111111111111072,
+    "ci95": [
+      -0.7611111111111107,
+      0.8611111111111104
+    ],
+    "unit": "AIST_MUSIC_GROUP",
+    "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+    "metric": "mae_frames",
+    "improvement_direction": "NEGATIVE"
+  },
+  "AIST++|val|NoClock|minus_music_zero_NoClock|accuracy": {
+    "groups": 6,
+    "mean": -0.06666666666666667,
+    "ci95": [
+      -0.12222222222222222,
+      -0.005555555555555564
+    ],
+    "unit": "AIST_MUSIC_GROUP",
+    "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+    "metric": "accuracy",
+    "improvement_direction": "POSITIVE"
+  },
+  "AIST++|val|NoClock|minus_music_zero_NoClock|mae_frames": {
+    "groups": 6,
+    "mean": 0.794444444444444,
+    "ci95": [
+      -2.7166666666666663,
+      3.6666666666666647
+    ],
+    "unit": "AIST_MUSIC_GROUP",
+    "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+    "metric": "mae_frames",
+    "improvement_direction": "NEGATIVE"
+  },
+  "AIST++|val|Conditional_TeacherRescore|minus_actual_Frozen|accuracy": {
+    "groups": 6,
+    "mean": 0.08333333333333331,
+    "ci95": [
+      -0.01666666666666668,
+      0.19444444444444442
+    ],
+    "unit": "AIST_MUSIC_GROUP",
+    "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+    "metric": "accuracy",
+    "improvement_direction": "POSITIVE"
+  },
+  "AIST++|val|Conditional_TeacherRescore|minus_actual_Frozen|mae_frames": {
+    "groups": 6,
+    "mean": -1.2611111111111106,
+    "ci95": [
+      -2.8388888888888886,
+      0.4000000000000001
+    ],
+    "unit": "AIST_MUSIC_GROUP",
+    "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+    "metric": "mae_frames",
+    "improvement_direction": "NEGATIVE"
+  },
+  "AIST++|val|Conditional_TeacherRescore|minus_actual_Heuristic|accuracy": {
+    "groups": 6,
+    "mean": 0.3111111111111111,
+    "ci95": [
+      0.2388888888888889,
+      0.3833333333333333
+    ],
+    "unit": "AIST_MUSIC_GROUP",
+    "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+    "metric": "accuracy",
+    "improvement_direction": "POSITIVE"
+  },
+  "AIST++|val|Conditional_TeacherRescore|minus_actual_Heuristic|mae_frames": {
+    "groups": 6,
+    "mean": -3.2611111111111106,
+    "ci95": [
+      -6.26111111111111,
+      0.1511111111111158
+    ],
+    "unit": "AIST_MUSIC_GROUP",
+    "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+    "metric": "mae_frames",
+    "improvement_direction": "NEGATIVE"
+  },
+  "AIST++|val|Conditional_TeacherRescore|minus_music_zero_Conditional_TeacherRescore|accuracy": {
+    "groups": 6,
+    "mean": 0.1722222222222222,
+    "ci95": [
+      0.06111111111111108,
+      0.2888888888888889
+    ],
+    "unit": "AIST_MUSIC_GROUP",
+    "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+    "metric": "accuracy",
+    "improvement_direction": "POSITIVE"
+  },
+  "AIST++|val|Conditional_TeacherRescore|minus_music_zero_Conditional_TeacherRescore|mae_frames": {
+    "groups": 6,
+    "mean": -2.405555555555555,
+    "ci95": [
+      -3.4500000000000006,
+      -0.9833333333333331
+    ],
+    "unit": "AIST_MUSIC_GROUP",
+    "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+    "metric": "mae_frames",
+    "improvement_direction": "NEGATIVE"
+  },
+  "AIST++|val|NoClock_TeacherRescore|minus_actual_Frozen|accuracy": {
+    "groups": 6,
+    "mean": 0.061111111111111095,
+    "ci95": [
+      -0.03888888888888889,
+      0.16666666666666663
+    ],
+    "unit": "AIST_MUSIC_GROUP",
+    "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+    "metric": "accuracy",
+    "improvement_direction": "POSITIVE"
+  },
+  "AIST++|val|NoClock_TeacherRescore|minus_actual_Frozen|mae_frames": {
+    "groups": 6,
+    "mean": -1.138888888888889,
+    "ci95": [
+      -2.928194444444445,
+      0.5722222222222219
+    ],
+    "unit": "AIST_MUSIC_GROUP",
+    "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+    "metric": "mae_frames",
+    "improvement_direction": "NEGATIVE"
+  },
+  "AIST++|val|NoClock_TeacherRescore|minus_actual_Heuristic|accuracy": {
+    "groups": 6,
+    "mean": 0.2888888888888889,
+    "ci95": [
+      0.12222222222222222,
+      0.45555555555555555
+    ],
+    "unit": "AIST_MUSIC_GROUP",
+    "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+    "metric": "accuracy",
+    "improvement_direction": "POSITIVE"
+  },
+  "AIST++|val|NoClock_TeacherRescore|minus_actual_Heuristic|mae_frames": {
+    "groups": 6,
+    "mean": -3.1388888888888893,
+    "ci95": [
+      -6.73888888888889,
+      0.5277777777777782
+    ],
+    "unit": "AIST_MUSIC_GROUP",
+    "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+    "metric": "mae_frames",
+    "improvement_direction": "NEGATIVE"
+  },
+  "AIST++|val|NoClock_TeacherRescore|minus_music_zero_NoClock_TeacherRescore|accuracy": {
+    "groups": 6,
+    "mean": 0.14444444444444443,
+    "ci95": [
+      0.0055555555555555315,
+      0.3055555555555555
+    ],
+    "unit": "AIST_MUSIC_GROUP",
+    "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+    "metric": "accuracy",
+    "improvement_direction": "POSITIVE"
+  },
+  "AIST++|val|NoClock_TeacherRescore|minus_music_zero_NoClock_TeacherRescore|mae_frames": {
+    "groups": 6,
+    "mean": -1.9777777777777776,
+    "ci95": [
+      -4.756805555555554,
+      0.47222222222222204
+    ],
+    "unit": "AIST_MUSIC_GROUP",
+    "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+    "metric": "mae_frames",
+    "improvement_direction": "NEGATIVE"
+  },
+  "FineDance|genre_train_diagnostic|Heuristic|minus_actual_Frozen|accuracy": {
+    "groups": 12,
+    "mean": -0.08333333333333331,
+    "ci95": [
+      -0.21111111111111114,
+      0.05000000000000002
+    ],
+    "unit": "FINE_ARCHIVE_AUDIO_ID_WORK_ALIASES_NOT_VERIFIED",
+    "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+    "metric": "accuracy",
+    "improvement_direction": "POSITIVE"
+  },
+  "FineDance|genre_train_diagnostic|Heuristic|minus_actual_Frozen|mae_frames": {
+    "groups": 12,
+    "mean": -0.2055555555555554,
+    "ci95": [
+      -3.439027777777777,
+      2.9945833333333334
+    ],
+    "unit": "FINE_ARCHIVE_AUDIO_ID_WORK_ALIASES_NOT_VERIFIED",
+    "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+    "metric": "mae_frames",
+    "improvement_direction": "NEGATIVE"
+  },
+  "FineDance|genre_train_diagnostic|Heuristic|minus_actual_Heuristic|accuracy": {
+    "groups": 12,
+    "mean": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ],
+    "unit": "FINE_ARCHIVE_AUDIO_ID_WORK_ALIASES_NOT_VERIFIED",
+    "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+    "metric": "accuracy",
+    "improvement_direction": "POSITIVE"
+  },
+  "FineDance|genre_train_diagnostic|Heuristic|minus_actual_Heuristic|mae_frames": {
+    "groups": 12,
+    "mean": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ],
+    "unit": "FINE_ARCHIVE_AUDIO_ID_WORK_ALIASES_NOT_VERIFIED",
+    "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+    "metric": "mae_frames",
+    "improvement_direction": "NEGATIVE"
+  },
+  "FineDance|genre_train_diagnostic|Heuristic|minus_music_zero_Heuristic|accuracy": {
+    "groups": 12,
+    "mean": -0.08333333333333338,
+    "ci95": [
+      -0.15555555555555564,
+      -5.782411586589357e-17
+    ],
+    "unit": "FINE_ARCHIVE_AUDIO_ID_WORK_ALIASES_NOT_VERIFIED",
+    "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+    "metric": "accuracy",
+    "improvement_direction": "POSITIVE"
+  },
+  "FineDance|genre_train_diagnostic|Heuristic|minus_music_zero_Heuristic|mae_frames": {
+    "groups": 12,
+    "mean": 0.3899999999999995,
+    "ci95": [
+      -1.7937500000000002,
+      2.7402777777777785
+    ],
+    "unit": "FINE_ARCHIVE_AUDIO_ID_WORK_ALIASES_NOT_VERIFIED",
+    "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+    "metric": "mae_frames",
+    "improvement_direction": "NEGATIVE"
+  },
+  "FineDance|genre_train_diagnostic|Frozen|minus_actual_Frozen|accuracy": {
+    "groups": 12,
+    "mean": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ],
+    "unit": "FINE_ARCHIVE_AUDIO_ID_WORK_ALIASES_NOT_VERIFIED",
+    "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+    "metric": "accuracy",
+    "improvement_direction": "POSITIVE"
+  },
+  "FineDance|genre_train_diagnostic|Frozen|minus_actual_Frozen|mae_frames": {
+    "groups": 12,
+    "mean": 0.0,
+    "ci95": [
+      0.0,
+      0.0
+    ],
+    "unit": "FINE_ARCHIVE_AUDIO_ID_WORK_ALIASES_NOT_VERIFIED",
+    "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+    "metric": "mae_frames",
+    "improvement_direction": "NEGATIVE"
+  },
+  "FineDance|genre_train_diagnostic|Frozen|minus_actual_Heuristic|accuracy": {
+    "groups": 12,
+    "mean": 0.08333333333333331,
+    "ci95": [
+      -0.05000000000000002,
+      0.21111111111111114
+    ],
+    "unit": "FINE_ARCHIVE_AUDIO_ID_WORK_ALIASES_NOT_VERIFIED",
+    "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+    "metric": "accuracy",
+    "improvement_direction": "POSITIVE"
+  },
+  "FineDance|genre_train_diagnostic|Frozen|minus_actual_Heuristic|mae_frames": {
+    "groups": 12,
+    "mean": 0.2055555555555554,
+    "ci95": [
+      -2.994583333333333,
+      3.4390277777777776
+    ],
+    "unit": "FINE_ARCHIVE_AUDIO_ID_WORK_ALIASES_NOT_VERIFIED",
+    "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+    "metric": "mae_frames",
+    "improvement_direction": "NEGATIVE"
+  },
+  "FineDance|genre_train_diagnostic|Frozen|minus_music_zero_Frozen|accuracy": {
+    "groups": 12,
+    "mean": 0.04444444444444443,
+    "ci95": [
+      -0.05555555555555556,
+      0.13333333333333333
+    ],
+    "unit": "FINE_ARCHIVE_AUDIO_ID_WORK_ALIASES_NOT_VERIFIED",
+    "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+    "metric": "accuracy",
+    "improvement_direction": "POSITIVE"
+  },
+  "FineDance|genre_train_diagnostic|Frozen|minus_music_zero_Frozen|mae_frames": {
+    "groups": 12,
+    "mean": -2.3944444444444444,
+    "ci95": [
+      -4.139166666666667,
+      -0.6274999999999991
+    ],
+    "unit": "FINE_ARCHIVE_AUDIO_ID_WORK_ALIASES_NOT_VERIFIED",
+    "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+    "metric": "mae_frames",
+    "improvement_direction": "NEGATIVE"
+  },
+  "FineDance|genre_train_diagnostic|Conditional|minus_actual_Frozen|accuracy": {
+    "groups": 12,
+    "mean": -0.055555555555555546,
+    "ci95": [
+      -0.18333333333333332,
+      0.07222222222222224
+    ],
+    "unit": "FINE_ARCHIVE_AUDIO_ID_WORK_ALIASES_NOT_VERIFIED",
+    "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+    "metric": "accuracy",
+    "improvement_direction": "POSITIVE"
+  },
+  "FineDance|genre_train_diagnostic|Conditional|minus_actual_Frozen|mae_frames": {
+    "groups": 12,
+    "mean": -0.3166666666666666,
+    "ci95": [
+      -3.5723611111111104,
+      2.7612500000000004
+    ],
+    "unit": "FINE_ARCHIVE_AUDIO_ID_WORK_ALIASES_NOT_VERIFIED",
+    "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+    "metric": "mae_frames",
+    "improvement_direction": "NEGATIVE"
+  },
+  "FineDance|genre_train_diagnostic|Conditional|minus_actual_Heuristic|accuracy": {
+    "groups": 12,
+    "mean": 0.02777777777777778,
+    "ci95": [
+      0.0,
+      0.061111111111111116
+    ],
+    "unit": "FINE_ARCHIVE_AUDIO_ID_WORK_ALIASES_NOT_VERIFIED",
+    "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+    "metric": "accuracy",
+    "improvement_direction": "POSITIVE"
+  },
+  "FineDance|genre_train_diagnostic|Conditional|minus_actual_Heuristic|mae_frames": {
+    "groups": 12,
+    "mean": -0.11111111111111116,
+    "ci95": [
+      -0.5722222222222221,
+      0.4166666666666665
+    ],
+    "unit": "FINE_ARCHIVE_AUDIO_ID_WORK_ALIASES_NOT_VERIFIED",
+    "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+    "metric": "mae_frames",
+    "improvement_direction": "NEGATIVE"
+  },
+  "FineDance|genre_train_diagnostic|Conditional|minus_music_zero_Conditional|accuracy": {
+    "groups": 12,
+    "mean": -0.09444444444444443,
+    "ci95": [
+      -0.18333333333333332,
+      -0.005555555555555545
+    ],
+    "unit": "FINE_ARCHIVE_AUDIO_ID_WORK_ALIASES_NOT_VERIFIED",
+    "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+    "metric": "accuracy",
+    "improvement_direction": "POSITIVE"
+  },
+  "FineDance|genre_train_diagnostic|Conditional|minus_music_zero_Conditional|mae_frames": {
+    "groups": 12,
+    "mean": 0.38333333333333314,
+    "ci95": [
+      -2.216666666666667,
+      2.8558333333333343
+    ],
+    "unit": "FINE_ARCHIVE_AUDIO_ID_WORK_ALIASES_NOT_VERIFIED",
+    "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+    "metric": "mae_frames",
+    "improvement_direction": "NEGATIVE"
+  },
+  "FineDance|genre_train_diagnostic|NoClock|minus_actual_Frozen|accuracy": {
+    "groups": 12,
+    "mean": -0.061111111111111095,
+    "ci95": [
+      -0.18888888888888888,
+      0.0666666666666667
+    ],
+    "unit": "FINE_ARCHIVE_AUDIO_ID_WORK_ALIASES_NOT_VERIFIED",
+    "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+    "metric": "accuracy",
+    "improvement_direction": "POSITIVE"
+  },
+  "FineDance|genre_train_diagnostic|NoClock|minus_actual_Frozen|mae_frames": {
+    "groups": 12,
+    "mean": -0.36666666666666653,
+    "ci95": [
+      -3.7166666666666663,
+      2.800277777777778
+    ],
+    "unit": "FINE_ARCHIVE_AUDIO_ID_WORK_ALIASES_NOT_VERIFIED",
+    "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+    "metric": "mae_frames",
+    "improvement_direction": "NEGATIVE"
+  },
+  "FineDance|genre_train_diagnostic|NoClock|minus_actual_Heuristic|accuracy": {
+    "groups": 12,
+    "mean": 0.022222222222222223,
+    "ci95": [
+      0.0,
+      0.061111111111111116
+    ],
+    "unit": "FINE_ARCHIVE_AUDIO_ID_WORK_ALIASES_NOT_VERIFIED",
+    "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+    "metric": "accuracy",
+    "improvement_direction": "POSITIVE"
+  },
+  "FineDance|genre_train_diagnostic|NoClock|minus_actual_Heuristic|mae_frames": {
+    "groups": 12,
+    "mean": -0.16111111111111112,
+    "ci95": [
+      -0.5279166666666665,
+      0.23333333333333325
+    ],
+    "unit": "FINE_ARCHIVE_AUDIO_ID_WORK_ALIASES_NOT_VERIFIED",
+    "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+    "metric": "mae_frames",
+    "improvement_direction": "NEGATIVE"
+  },
+  "FineDance|genre_train_diagnostic|NoClock|minus_music_zero_NoClock|accuracy": {
+    "groups": 12,
+    "mean": -0.06666666666666667,
+    "ci95": [
+      -0.16666666666666666,
+      0.038888888888888896
+    ],
+    "unit": "FINE_ARCHIVE_AUDIO_ID_WORK_ALIASES_NOT_VERIFIED",
+    "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+    "metric": "accuracy",
+    "improvement_direction": "POSITIVE"
+  },
+  "FineDance|genre_train_diagnostic|NoClock|minus_music_zero_NoClock|mae_frames": {
+    "groups": 12,
+    "mean": -0.4722222222222223,
+    "ci95": [
+      -3.4722222222222228,
+      2.405694444444445
+    ],
+    "unit": "FINE_ARCHIVE_AUDIO_ID_WORK_ALIASES_NOT_VERIFIED",
+    "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+    "metric": "mae_frames",
+    "improvement_direction": "NEGATIVE"
+  },
+  "FineDance|genre_train_diagnostic|Conditional_TeacherRescore|minus_actual_Frozen|accuracy": {
+    "groups": 12,
+    "mean": -0.04444444444444443,
+    "ci95": [
+      -0.12222222222222222,
+      0.038888888888888896
+    ],
+    "unit": "FINE_ARCHIVE_AUDIO_ID_WORK_ALIASES_NOT_VERIFIED",
+    "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+    "metric": "accuracy",
+    "improvement_direction": "POSITIVE"
+  },
+  "FineDance|genre_train_diagnostic|Conditional_TeacherRescore|minus_actual_Frozen|mae_frames": {
+    "groups": 12,
+    "mean": 0.5888888888888889,
+    "ci95": [
+      -0.6834722222222223,
+      1.816805555555556
+    ],
+    "unit": "FINE_ARCHIVE_AUDIO_ID_WORK_ALIASES_NOT_VERIFIED",
+    "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+    "metric": "mae_frames",
+    "improvement_direction": "NEGATIVE"
+  },
+  "FineDance|genre_train_diagnostic|Conditional_TeacherRescore|minus_actual_Heuristic|accuracy": {
+    "groups": 12,
+    "mean": 0.03888888888888889,
+    "ci95": [
+      -0.08333333333333333,
+      0.16111111111111112
+    ],
+    "unit": "FINE_ARCHIVE_AUDIO_ID_WORK_ALIASES_NOT_VERIFIED",
+    "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+    "metric": "accuracy",
+    "improvement_direction": "POSITIVE"
+  },
+  "FineDance|genre_train_diagnostic|Conditional_TeacherRescore|minus_actual_Heuristic|mae_frames": {
+    "groups": 12,
+    "mean": 0.7944444444444443,
+    "ci95": [
+      -1.6056944444444443,
+      3.4001388888888884
+    ],
+    "unit": "FINE_ARCHIVE_AUDIO_ID_WORK_ALIASES_NOT_VERIFIED",
+    "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+    "metric": "mae_frames",
+    "improvement_direction": "NEGATIVE"
+  },
+  "FineDance|genre_train_diagnostic|Conditional_TeacherRescore|minus_music_zero_Conditional_TeacherRescore|accuracy": {
+    "groups": 12,
+    "mean": -0.01666666666666666,
+    "ci95": [
+      -0.16666666666666666,
+      0.10555555555555556
+    ],
+    "unit": "FINE_ARCHIVE_AUDIO_ID_WORK_ALIASES_NOT_VERIFIED",
+    "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+    "metric": "accuracy",
+    "improvement_direction": "POSITIVE"
+  },
+  "FineDance|genre_train_diagnostic|Conditional_TeacherRescore|minus_music_zero_Conditional_TeacherRescore|mae_frames": {
+    "groups": 12,
+    "mean": -0.8944444444444447,
+    "ci95": [
+      -2.5611111111111113,
+      1.033333333333333
+    ],
+    "unit": "FINE_ARCHIVE_AUDIO_ID_WORK_ALIASES_NOT_VERIFIED",
+    "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+    "metric": "mae_frames",
+    "improvement_direction": "NEGATIVE"
+  },
+  "FineDance|genre_train_diagnostic|NoClock_TeacherRescore|minus_actual_Frozen|accuracy": {
+    "groups": 12,
+    "mean": -0.08333333333333333,
+    "ci95": [
+      -0.15,
+      -0.022222222222222227
+    ],
+    "unit": "FINE_ARCHIVE_AUDIO_ID_WORK_ALIASES_NOT_VERIFIED",
+    "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+    "metric": "accuracy",
+    "improvement_direction": "POSITIVE"
+  },
+  "FineDance|genre_train_diagnostic|NoClock_TeacherRescore|minus_actual_Frozen|mae_frames": {
+    "groups": 12,
+    "mean": 0.3500000000000001,
+    "ci95": [
+      -0.6999999999999994,
+      1.3555555555555554
+    ],
+    "unit": "FINE_ARCHIVE_AUDIO_ID_WORK_ALIASES_NOT_VERIFIED",
+    "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+    "metric": "mae_frames",
+    "improvement_direction": "NEGATIVE"
+  },
+  "FineDance|genre_train_diagnostic|NoClock_TeacherRescore|minus_actual_Heuristic|accuracy": {
+    "groups": 12,
+    "mean": -1.3877787807814457e-17,
+    "ci95": [
+      -0.10555555555555558,
+      0.10013888888888939
+    ],
+    "unit": "FINE_ARCHIVE_AUDIO_ID_WORK_ALIASES_NOT_VERIFIED",
+    "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+    "metric": "accuracy",
+    "improvement_direction": "POSITIVE"
+  },
+  "FineDance|genre_train_diagnostic|NoClock_TeacherRescore|minus_actual_Heuristic|mae_frames": {
+    "groups": 12,
+    "mean": 0.5555555555555555,
+    "ci95": [
+      -1.8777777777777775,
+      3.133333333333333
+    ],
+    "unit": "FINE_ARCHIVE_AUDIO_ID_WORK_ALIASES_NOT_VERIFIED",
+    "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+    "metric": "mae_frames",
+    "improvement_direction": "NEGATIVE"
+  },
+  "FineDance|genre_train_diagnostic|NoClock_TeacherRescore|minus_music_zero_NoClock_TeacherRescore|accuracy": {
+    "groups": 12,
+    "mean": -0.044444444444444446,
+    "ci95": [
+      -0.1722222222222222,
+      0.05000000000000001
+    ],
+    "unit": "FINE_ARCHIVE_AUDIO_ID_WORK_ALIASES_NOT_VERIFIED",
+    "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+    "metric": "accuracy",
+    "improvement_direction": "POSITIVE"
+  },
+  "FineDance|genre_train_diagnostic|NoClock_TeacherRescore|minus_music_zero_NoClock_TeacherRescore|mae_frames": {
+    "groups": 12,
+    "mean": -1.7833333333333339,
+    "ci95": [
+      -3.439027777777779,
+      0.10597222222222365
+    ],
+    "unit": "FINE_ARCHIVE_AUDIO_ID_WORK_ALIASES_NOT_VERIFIED",
+    "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+    "metric": "mae_frames",
+    "improvement_direction": "NEGATIVE"
+  }
+}

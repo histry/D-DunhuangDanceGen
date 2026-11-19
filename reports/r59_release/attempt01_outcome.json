@@ -1,0 +1,10 @@
+{
+  "status": "ABORTED_BEFORE_COMPLETE_DATA_MANIFEST_AND_BEFORE_ANY_MODEL_SCORE",
+  "reason": "RAW_HEADER_PREFLIGHT_FOUND_UNEQUAL_FINE_009_011_END_SUPPORT; REPLACE_OVERSTRICT_TWO_FRAME_DIFFERENCE_WITH_OBSERVED_COMMON_PREFIX",
+  "recorded_shell_exit_status_alone_is_not_completion": true,
+  "model_score_outputs": 0,
+  "neural_training_steps": 0,
+  "preserved_partial_files": 1043,
+  "partial_archive": "publication/attempt01/data",
+  "interrupted_at": "2026-11-19T06:08:17.589440+00:00"
+}

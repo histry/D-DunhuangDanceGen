@@ -1,0 +1,65 @@
++ /home/disk/lsm/conda_envs/edge/bin/python -c 'import json;assert json.load(open('\''outputs/paired_benchmark_r59_01/receipts/main_browser.json'\''))['\''passed'\''];assert json.load(open('\''outputs/paired_benchmark_r59_01/independent_main/result.json'\''))['\''score_bytes_exact'\'']'
++ /home/disk/lsm/conda_envs/edge/bin/python -m dunhuang.research.paired_benchmark_r59 verify_data --source outputs/paired_benchmark_r59_01/data --out outputs/paired_benchmark_r59_01/independent_data
+R59_AIST_SOURCES 200 605
+R59_AIST_SOURCES 400 1216
+R59_AIST_SOURCES 600 1829
+R59_AIST_SOURCES 800 2430
+R59_AIST_SOURCES 1000 3051
+R59_FINE fine_001 3209
+R59_FINE fine_002 3250
+R59_FINE fine_003 3321
+R59_FINE fine_004 3359
+R59_FINE fine_005 3397
+R59_FINE fine_006 3408
+R59_FINE fine_007 3457
+R59_FINE fine_008 3509
+R59_FINE fine_009 3528
+R59_FINE fine_010 3601
+R59_FINE fine_011 3630
+R59_FINE fine_013 3659
+R59_DATA 3659 338 {'AIST++_train': 919, 'AIST++_val': 118, 'FineDance_genre_train_diagnostic': 12}
++ /home/disk/lsm/conda_envs/edge/bin/python -m dunhuang.research.paired_benchmark_r59 controls --out outputs/paired_benchmark_r59_01/controls
+R59_ENCODE Frozen 1500 3659
+R59_ENCODE Frozen 3000 3659
+R59_ENCODE Conditional 1500 3659
+R59_ENCODE Conditional 3000 3659
+R59_ENCODE NoClock 1500 3659
+R59_ENCODE NoClock 3000 3659
+R59_QUERIES 30 338
+R59_QUERIES 60 338
+R59_QUERIES 90 338
+R59_QUERIES 120 338
+R59_QUERIES 150 338
+R59_QUERIES 180 338
+R59_QUERIES 210 338
+R59_QUERIES 240 338
+R59_QUERIES 270 338
+R59_QUERIES 300 338
+R59_QUERIES 330 338
++ /home/disk/lsm/conda_envs/edge/bin/python -m dunhuang.research.paired_benchmark_r59 verify --source outputs/paired_benchmark_r59_01/controls --out outputs/paired_benchmark_r59_01/independent_controls
+R59_ENCODE Frozen 1500 3659
+R59_ENCODE Frozen 3000 3659
+R59_ENCODE Conditional 1500 3659
+R59_ENCODE Conditional 3000 3659
+R59_ENCODE NoClock 1500 3659
+R59_ENCODE NoClock 3000 3659
+R59_QUERIES 30 338
+R59_QUERIES 60 338
+R59_QUERIES 90 338
+R59_QUERIES 120 338
+R59_QUERIES 150 338
+R59_QUERIES 180 338
+R59_QUERIES 210 338
+R59_QUERIES 240 338
+R59_QUERIES 270 338
+R59_QUERIES 300 338
+R59_QUERIES 330 338
++ /home/disk/lsm/conda_envs/edge/bin/python -m dunhuang.research.paired_benchmark_r59 diagnostics --out outputs/paired_benchmark_r59_01/r58_diagnostics
+R59_R58_DECOMPOSED 12 0 0
++ /home/disk/lsm/conda_envs/edge/bin/python -m dunhuang.research.paired_benchmark_r59 diagnostics --out outputs/paired_benchmark_r59_01/independent_diagnostics/rebuild
+R59_R58_DECOMPOSED 12 0 0
++ /home/disk/lsm/conda_envs/edge/bin/python -c 'import json;from pathlib import Path;a=json.load(open('\''outputs/paired_benchmark_r59_01/r58_diagnostics/result.json'\''));b=json.load(open('\''outputs/paired_benchmark_r59_01/independent_diagnostics/rebuild/result.json'\''));assert a==b;Path('\''outputs/paired_benchmark_r59_01/independent_diagnostics/result.json'\'').write_text(json.dumps(dict(result_exact=True,optimizer_calls=0))+'\''\n'\'')'
++ /home/disk/lsm/conda_envs/edge/bin/python -m pytest -q
++ status=0
+++ date -Is
++ printf 'exit_status=%s\nfinished_at=%s\n' 0 2026-11-19T14:56:37+08:00

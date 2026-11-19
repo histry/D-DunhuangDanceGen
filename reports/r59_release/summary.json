@@ -1,0 +1,122 @@
+{
+  "data_binding": {
+    "commit": "15fdbea3cf77f3d9fab78f766741f9e57eddbe0d",
+    "science": {
+      "common.py": "2cf56c9865675ac3db0e403557be2c0c451594c727d56cfeae40830034fee48b",
+      "data.py": "9d99419d7ca201364fed6b21ccfdacd79781ac1ca9200a274f1cd8f7ab412181",
+      "scoring.py": "b2031570101f30e8269664c8603ce77f280a383668b755fc6e28bdf0e2ff9715",
+      "metrics.py": "8187765b42cedf545caadea4654cbaa3f6fc7cb1cc2472240dc90646d69224b9",
+      "diagnostics.py": "bec6e15fa0a0b640b0a9b2d542e1a1732d3dbebdbc16189223c3cbb3e5dc4488",
+      "protocol.json": "077c706870cfd4ef476959371f82ae18b98416c2ee024b5b55542248280dc38a"
+    },
+    "dependencies": {
+      "src/dunhuang/research/paired_event_r41/model.py": "3188778c5f2a6186ebb23cce6a7bae7eeebaf22d09a652eecdd171997b23f95d",
+      "src/dunhuang/research/transition_r37/content.py": "c9ee4734ba0a644086c4da2b3af90ce0fe4720cde11ac85e989099bef6e82070",
+      "src/dunhuang/research/bridge_r38/content.py": "17a6f12e7f9653cedf66fb61c46eb4708d91f7604f256c6ac3fb8fff2c8b0fd2",
+      "src/dunhuang/research/clock_residual_r55/common.py": "d6b875505b927c90d921c53d49d337fba365207e2c855ee8b2588946be5332be",
+      "src/dunhuang/research/strong_baseline_r52/viewer.html": "9566d7c989f77791f88258e2e05e0c6773922a02cb2f9a44f09c9ede9d10d17d"
+    }
+  },
+  "evaluation_binding": {
+    "commit": "9235f88db5d63c1d4a5cd22b0c1ee7ebd307dcd8",
+    "science": {
+      "common.py": "2cf56c9865675ac3db0e403557be2c0c451594c727d56cfeae40830034fee48b",
+      "data.py": "9d99419d7ca201364fed6b21ccfdacd79781ac1ca9200a274f1cd8f7ab412181",
+      "scoring.py": "b2031570101f30e8269664c8603ce77f280a383668b755fc6e28bdf0e2ff9715",
+      "metrics.py": "8187765b42cedf545caadea4654cbaa3f6fc7cb1cc2472240dc90646d69224b9",
+      "diagnostics.py": "bec6e15fa0a0b640b0a9b2d542e1a1732d3dbebdbc16189223c3cbb3e5dc4488",
+      "protocol.json": "077c706870cfd4ef476959371f82ae18b98416c2ee024b5b55542248280dc38a"
+    },
+    "dependencies": {
+      "src/dunhuang/research/paired_event_r41/model.py": "3188778c5f2a6186ebb23cce6a7bae7eeebaf22d09a652eecdd171997b23f95d",
+      "src/dunhuang/research/transition_r37/content.py": "c9ee4734ba0a644086c4da2b3af90ce0fe4720cde11ac85e989099bef6e82070",
+      "src/dunhuang/research/bridge_r38/content.py": "17a6f12e7f9653cedf66fb61c46eb4708d91f7604f256c6ac3fb8fff2c8b0fd2",
+      "src/dunhuang/research/clock_residual_r55/common.py": "d6b875505b927c90d921c53d49d337fba365207e2c855ee8b2588946be5332be",
+      "src/dunhuang/research/strong_baseline_r52/viewer.html": "9566d7c989f77791f88258e2e05e0c6773922a02cb2f9a44f09c9ede9d10d17d"
+    }
+  },
+  "main_binding": {
+    "commit": "15fdbea3cf77f3d9fab78f766741f9e57eddbe0d",
+    "science": {
+      "common.py": "2cf56c9865675ac3db0e403557be2c0c451594c727d56cfeae40830034fee48b",
+      "data.py": "9d99419d7ca201364fed6b21ccfdacd79781ac1ca9200a274f1cd8f7ab412181",
+      "scoring.py": "b2031570101f30e8269664c8603ce77f280a383668b755fc6e28bdf0e2ff9715",
+      "metrics.py": "8187765b42cedf545caadea4654cbaa3f6fc7cb1cc2472240dc90646d69224b9",
+      "diagnostics.py": "bec6e15fa0a0b640b0a9b2d542e1a1732d3dbebdbc16189223c3cbb3e5dc4488",
+      "protocol.json": "077c706870cfd4ef476959371f82ae18b98416c2ee024b5b55542248280dc38a"
+    },
+    "dependencies": {
+      "src/dunhuang/research/paired_event_r41/model.py": "3188778c5f2a6186ebb23cce6a7bae7eeebaf22d09a652eecdd171997b23f95d",
+      "src/dunhuang/research/transition_r37/content.py": "c9ee4734ba0a644086c4da2b3af90ce0fe4720cde11ac85e989099bef6e82070",
+      "src/dunhuang/research/bridge_r38/content.py": "17a6f12e7f9653cedf66fb61c46eb4708d91f7604f256c6ac3fb8fff2c8b0fd2",
+      "src/dunhuang/research/clock_residual_r55/common.py": "d6b875505b927c90d921c53d49d337fba365207e2c855ee8b2588946be5332be",
+      "src/dunhuang/research/strong_baseline_r52/viewer.html": "9566d7c989f77791f88258e2e05e0c6773922a02cb2f9a44f09c9ede9d10d17d"
+    }
+  },
+  "source_counts": {
+    "AIST++_train": 919,
+    "AIST++_val": 118,
+    "FineDance_genre_train_diagnostic": 12
+  },
+  "source_groups": {
+    "AIST++": 54,
+    "FineDance": 12
+  },
+  "raw_grid_rows": 3659,
+  "queries": 338,
+  "retrieval_records": 24336,
+  "clock_records": 20280,
+  "models": {
+    "Frozen": {
+      "path": "outputs/paired_event_r41_01/main/model.pt",
+      "sha256": "212148e7cd86b482cc7734035725b1165edcd7a1c35e03fa513f6982f440e772",
+      "state_digest": "b6a628cd77bc887469c43edccaf8fef00f8def843c78450876ce2111ba8da444",
+      "training_updates_this_round": 0
+    },
+    "Conditional": {
+      "path": "outputs/clock_residual_r55_02/Conditional/model.pt",
+      "sha256": "2c15de36746c617d8ac37a73f081996aedc6abeda70bcbd61ee97424da6718c1",
+      "state_digest": "cc735c927409641f98ce65d6869e4426e5aa7bf509ab62d656888ff6748c1022",
+      "training_updates_this_round": 0
+    },
+    "NoClock": {
+      "path": "outputs/clock_residual_r55_02/NoClock/model.pt",
+      "sha256": "a06b8e8984c54878823fbe9855c3f02f87e751b8a86dc655243f41efa1bd9cd5",
+      "state_digest": "b4b5e264867af3251bbe4ac2127e8b6b63a33d1c9e7a2e18e395fddff270f887",
+      "training_updates_this_round": 0
+    }
+  },
+  "review": {
+    "status": "PREPARATION_ONLY",
+    "independent_records": 0,
+    "music_items": 3,
+    "quality_pairs": 18,
+    "human_reviewed": false,
+    "require_independent_reviewers": 2,
+    "conflicts_retained": true,
+    "UNKNOWN_allowed": true,
+    "metrics_preference_agreement": "NOT_EVALUABLE",
+    "scores_used_for_weight_tuning": false,
+    "admin_mapping_public": false,
+    "review_tasks": [
+      "MUSIC_ONLY_BOUNDARIES_ACCENTS_REPETITIONS_UNSURE",
+      "MUSIC_COORDINATION",
+      "NATURALNESS",
+      "WHOLE_SONG_VARIATION"
+    ],
+    "source_manifest_sha256": "38552c0ffdac00a8fe29296f0b498b8888d28eb3e45e95bcdaf3dea2e186cb9a",
+    "preference_export": true,
+    "preference_defaults": "UNRATED",
+    "admin_mapping_sha256": "c71936383fff4e1aa64fcc17a21a0ddca71d1a2cf201c9ae967c8c296fa5dbfc",
+    "viewer_generator_commit": "c202457757d1fe8c66b66d2d172b6addff8c4ee1"
+  },
+  "parent_files_unchanged": 988,
+  "test_tensor_reads": 0,
+  "training_updates": 0,
+  "teacher_rescore_not_retrained": true,
+  "human_reviewed": false,
+  "new_unseen_music_certified": false,
+  "native24": "NOT_EVALUABLE",
+  "operational_qualified": false,
+  "production_changed": false
+}

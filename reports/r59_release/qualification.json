@@ -1,0 +1,211 @@
+{
+  "training_admitted": false,
+  "independent_music_certified": false,
+  "available_AIST_val_groups": 6,
+  "registered_minimum_independent_music": 8,
+  "performance": {
+    "Conditional": {
+      "comparisons": {
+        "AIST++|val|open|Conditional|minus_actual_Frozen": {
+          "groups": 6,
+          "mean": 0.0,
+          "ci95": [
+            -0.1111111111111111,
+            0.13888888888888887
+          ],
+          "unit": "MUSIC_GROUP_MEAN_AFTER_RECORDING_BALANCE",
+          "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+          "lower_CI_above_zero": false
+        },
+        "AIST++|val|open|Conditional|minus_actual_Heuristic": {
+          "groups": 6,
+          "mean": 0.1111111111111111,
+          "ci95": [
+            0.027777777777777776,
+            0.2222222222222222
+          ],
+          "unit": "MUSIC_GROUP_MEAN_AFTER_RECORDING_BALANCE",
+          "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+          "lower_CI_above_zero": true
+        },
+        "AIST++|val|open|Conditional|minus_music_zero_Conditional": {
+          "groups": 6,
+          "mean": 0.16666666666666666,
+          "ci95": [
+            0.05555555555555555,
+            0.27777777777777773
+          ],
+          "unit": "MUSIC_GROUP_MEAN_AFTER_RECORDING_BALANCE",
+          "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+          "lower_CI_above_zero": true
+        },
+        "AIST++|val|open|Conditional|minus_wrong_music_Conditional": {
+          "groups": 6,
+          "mean": 0.05555555555555555,
+          "ci95": [
+            -0.05555555555555555,
+            0.19444444444444442
+          ],
+          "unit": "MUSIC_GROUP_MEAN_AFTER_RECORDING_BALANCE",
+          "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+          "lower_CI_above_zero": false
+        }
+      },
+      "all_current_checks_pass": false
+    },
+    "NoClock": {
+      "comparisons": {
+        "AIST++|val|open|NoClock|minus_actual_Frozen": {
+          "groups": 6,
+          "mean": 0.0,
+          "ci95": [
+            -0.08333333333333333,
+            0.08333333333333333
+          ],
+          "unit": "MUSIC_GROUP_MEAN_AFTER_RECORDING_BALANCE",
+          "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+          "lower_CI_above_zero": false
+        },
+        "AIST++|val|open|NoClock|minus_actual_Heuristic": {
+          "groups": 6,
+          "mean": 0.1111111111111111,
+          "ci95": [
+            -0.027777777777777776,
+            0.25
+          ],
+          "unit": "MUSIC_GROUP_MEAN_AFTER_RECORDING_BALANCE",
+          "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+          "lower_CI_above_zero": false
+        },
+        "AIST++|val|open|NoClock|minus_music_zero_NoClock": {
+          "groups": 6,
+          "mean": 0.16666666666666666,
+          "ci95": [
+            0.05555555555555555,
+            0.27777777777777773
+          ],
+          "unit": "MUSIC_GROUP_MEAN_AFTER_RECORDING_BALANCE",
+          "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+          "lower_CI_above_zero": true
+        },
+        "AIST++|val|open|NoClock|minus_wrong_music_NoClock": {
+          "groups": 6,
+          "mean": 0.05555555555555555,
+          "ci95": [
+            -0.1111111111111111,
+            0.2222222222222222
+          ],
+          "unit": "MUSIC_GROUP_MEAN_AFTER_RECORDING_BALANCE",
+          "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+          "lower_CI_above_zero": false
+        }
+      },
+      "all_current_checks_pass": false
+    },
+    "Conditional_TeacherRescore": {
+      "comparisons": {
+        "AIST++|val|open|Conditional_TeacherRescore|minus_actual_Frozen": {
+          "groups": 6,
+          "mean": 0.1111111111111111,
+          "ci95": [
+            0.0,
+            0.2222222222222222
+          ],
+          "unit": "MUSIC_GROUP_MEAN_AFTER_RECORDING_BALANCE",
+          "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+          "lower_CI_above_zero": false
+        },
+        "AIST++|val|open|Conditional_TeacherRescore|minus_actual_Heuristic": {
+          "groups": 6,
+          "mean": 0.2222222222222222,
+          "ci95": [
+            -0.05555555555555555,
+            0.5
+          ],
+          "unit": "MUSIC_GROUP_MEAN_AFTER_RECORDING_BALANCE",
+          "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+          "lower_CI_above_zero": false
+        },
+        "AIST++|val|open|Conditional_TeacherRescore|minus_music_zero_Conditional_TeacherRescore": {
+          "groups": 6,
+          "mean": 0.2222222222222222,
+          "ci95": [
+            0.05555555555555555,
+            0.4444444444444444
+          ],
+          "unit": "MUSIC_GROUP_MEAN_AFTER_RECORDING_BALANCE",
+          "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+          "lower_CI_above_zero": true
+        },
+        "AIST++|val|open|Conditional_TeacherRescore|minus_wrong_music_Conditional_TeacherRescore": {
+          "groups": 6,
+          "mean": 0.27777777777777773,
+          "ci95": [
+            0.05555555555555555,
+            0.5555555555555555
+          ],
+          "unit": "MUSIC_GROUP_MEAN_AFTER_RECORDING_BALANCE",
+          "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+          "lower_CI_above_zero": true
+        }
+      },
+      "all_current_checks_pass": false
+    },
+    "NoClock_TeacherRescore": {
+      "comparisons": {
+        "AIST++|val|open|NoClock_TeacherRescore|minus_actual_Frozen": {
+          "groups": 6,
+          "mean": 0.13888888888888892,
+          "ci95": [
+            -0.05555555555555555,
+            0.3888888888888889
+          ],
+          "unit": "MUSIC_GROUP_MEAN_AFTER_RECORDING_BALANCE",
+          "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+          "lower_CI_above_zero": false
+        },
+        "AIST++|val|open|NoClock_TeacherRescore|minus_actual_Heuristic": {
+          "groups": 6,
+          "mean": 0.25,
+          "ci95": [
+            -0.08333333333333333,
+            0.638888888888889
+          ],
+          "unit": "MUSIC_GROUP_MEAN_AFTER_RECORDING_BALANCE",
+          "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+          "lower_CI_above_zero": false
+        },
+        "AIST++|val|open|NoClock_TeacherRescore|minus_music_zero_NoClock_TeacherRescore": {
+          "groups": 6,
+          "mean": 0.25,
+          "ci95": [
+            0.027777777777777776,
+            0.5
+          ],
+          "unit": "MUSIC_GROUP_MEAN_AFTER_RECORDING_BALANCE",
+          "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+          "lower_CI_above_zero": true
+        },
+        "AIST++|val|open|NoClock_TeacherRescore|minus_wrong_music_NoClock_TeacherRescore": {
+          "groups": 6,
+          "mean": 0.3055555555555556,
+          "ci95": [
+            0.027777777777777776,
+            0.6666666666666666
+          ],
+          "unit": "MUSIC_GROUP_MEAN_AFTER_RECORDING_BALANCE",
+          "scope": "HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION",
+          "lower_CI_above_zero": true
+        }
+      },
+      "all_current_checks_pass": false
+    }
+  },
+  "reasons": [
+    "AIST_VAL_HISTORICALLY_EXPOSED",
+    "COMPLETE_PRETRAINING_ROLE_LINEAGE_NOT_CERTIFIED",
+    "FINEDANCE_PRIMARY_GENRE_TRAIN_DIAGNOSTIC_NOT_OFFICIAL_TEST"
+  ],
+  "new_training_updates": 0,
+  "can_route": false
+}

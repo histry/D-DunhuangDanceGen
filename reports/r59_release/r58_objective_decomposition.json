@@ -1,0 +1,3755 @@
+{
+  "binding": {
+    "commit": "9235f88db5d63c1d4a5cd22b0c1ee7ebd307dcd8",
+    "science": {
+      "common.py": "2cf56c9865675ac3db0e403557be2c0c451594c727d56cfeae40830034fee48b",
+      "data.py": "9d99419d7ca201364fed6b21ccfdacd79781ac1ca9200a274f1cd8f7ab412181",
+      "scoring.py": "b2031570101f30e8269664c8603ce77f280a383668b755fc6e28bdf0e2ff9715",
+      "metrics.py": "8187765b42cedf545caadea4654cbaa3f6fc7cb1cc2472240dc90646d69224b9",
+      "diagnostics.py": "bec6e15fa0a0b640b0a9b2d542e1a1732d3dbebdbc16189223c3cbb3e5dc4488",
+      "protocol.json": "077c706870cfd4ef476959371f82ae18b98416c2ee024b5b55542248280dc38a"
+    },
+    "dependencies": {
+      "src/dunhuang/research/paired_event_r41/model.py": "3188778c5f2a6186ebb23cce6a7bae7eeebaf22d09a652eecdd171997b23f95d",
+      "src/dunhuang/research/transition_r37/content.py": "c9ee4734ba0a644086c4da2b3af90ce0fe4720cde11ac85e989099bef6e82070",
+      "src/dunhuang/research/bridge_r38/content.py": "17a6f12e7f9653cedf66fb61c46eb4708d91f7604f256c6ac3fb8fff2c8b0fd2",
+      "src/dunhuang/research/clock_residual_r55/common.py": "d6b875505b927c90d921c53d49d337fba365207e2c855ee8b2588946be5332be",
+      "src/dunhuang/research/strong_baseline_r52/viewer.html": "9566d7c989f77791f88258e2e05e0c6773922a02cb2f9a44f09c9ede9d10d17d"
+    }
+  },
+  "parent_manifest_sha256": "38552c0ffdac00a8fe29296f0b498b8888d28eb3e45e95bcdaf3dea2e186cb9a",
+  "records": [
+    {
+      "song": 0,
+      "arm": "B1",
+      "saved_score": -2.9257243397803308,
+      "common_objective": {
+        "terms": {
+          "heuristic": -2.344945895998762,
+          "execution": -0.15156998713331507,
+          "length": -0.06511645299145301,
+          "boundary": 3.8863677038722217,
+          "geometry": -0.020778443781568613,
+          "unit_reuse": -0.4,
+          "source_reuse": -0.16
+        },
+        "total": 0.7439569239671233,
+        "slots": [
+          {
+            "slot": 0,
+            "event_uid": "r47:1b228a3e5bd8f536ebd033b8",
+            "target": [
+              0,
+              222
+            ],
+            "terms": {
+              "heuristic": -0.3920059681315118,
+              "execution": -0.008514783341278349,
+              "length": -0.0007939266929651526,
+              "boundary": 0.09921534749100763,
+              "geometry": 0.0,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.0851478334127835,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 1,
+            "event_uid": "r47:c1f1efc803495ee700d67db1",
+            "target": [
+              270,
+              471
+            ],
+            "terms": {
+              "heuristic": -0.364235222200987,
+              "execution": -0.012130978434596847,
+              "length": -0.0069750164365548935,
+              "boundary": 0.35266556195695387,
+              "geometry": -0.00038668460674350986,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.12130978434596847,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 2,
+            "event_uid": "r47:713b0851cf08a6e2c97f0465",
+            "target": [
+              519,
+              758
+            ],
+            "terms": {
+              "heuristic": -0.39898971263852845,
+              "execution": -0.0222014799979527,
+              "length": -0.0002762984878369506,
+              "boundary": 0.1301037062784395,
+              "geometry": -0.00042949763710833043,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.22201479997952697,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 3,
+            "event_uid": "r47:ec6fb0184ef6f45871d64668",
+            "target": [
+              806,
+              1081
+            ],
+            "terms": {
+              "heuristic": -0.0743635719388655,
+              "execution": -0.017559031333627653,
+              "length": -0.012430144641683114,
+              "boundary": 0.14147640555693092,
+              "geometry": -0.00035911774596483233,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.1755903133362765,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 4,
+            "event_uid": "r47:a74b575f952414f4396bad53",
+            "target": [
+              1129,
+              1354
+            ],
+            "terms": {
+              "heuristic": -0.014053021615283434,
+              "execution": -0.0015884603534352755,
+              "length": -0.0004109138724523327,
+              "boundary": 0.6530330701907623,
+              "geometry": -0.00016777634876243935,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.015884603534352754,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 5,
+            "event_uid": "r47:afdc7bb3f1539b3ddd8517b9",
+            "target": [
+              1402,
+              1616
+            ],
+            "terms": {
+              "heuristic": -0.05556306437824948,
+              "execution": -0.007293424602625574,
+              "length": -0.002426405325443784,
+              "boundary": 0.6598750309364353,
+              "geometry": -0.007281227017409361,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.07293424602625574,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 6,
+            "event_uid": "r47:c1f1efc803495ee700d67db1",
+            "target": [
+              1664,
+              1862
+            ],
+            "terms": {
+              "heuristic": -0.03802643816062018,
+              "execution": -0.012290901421018893,
+              "length": -0.008358029257067714,
+              "boundary": 0.8924713567542705,
+              "geometry": -0.000296391914013359,
+              "unit_reuse": -0.1,
+              "source_reuse": -0.02
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.12290901421018892,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 7,
+            "event_uid": "r47:afdc7bb3f1539b3ddd8517b9",
+            "target": [
+              1910,
+              2109
+            ],
+            "terms": {
+              "heuristic": -0.1957513546037592,
+              "execution": -0.010138631732043149,
+              "length": -0.00788313609467455,
+              "boundary": 0.09590490349346659,
+              "geometry": -0.0004349189061197181,
+              "unit_reuse": -0.1,
+              "source_reuse": -0.02
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.10138631732043148,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 8,
+            "event_uid": "r47:6e0b3c3e9f7ad420012cb8be",
+            "target": [
+              2157,
+              2429
+            ],
+            "terms": {
+              "heuristic": -0.09019408743942203,
+              "execution": -0.01745987460729591,
+              "length": -0.010729824128862598,
+              "boundary": 0.05983569831856407,
+              "geometry": -0.00022879548751063945,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.02
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.1745987460729591,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 9,
+            "event_uid": "r47:6932683ac9dd7b541f599811",
+            "target": [
+              2477,
+              2721
+            ],
+            "terms": {
+              "heuristic": -0.5209091547634791,
+              "execution": -0.01014769588205275,
+              "length": -0.0008879437869822506,
+              "boundary": 0.13127526216922733,
+              "geometry": -0.002157741930002199,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.1014769588205275,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 10,
+            "event_uid": "r47:6e0b3c3e9f7ad420012cb8be",
+            "target": [
+              2769,
+              3046
+            ],
+            "terms": {
+              "heuristic": -0.004994158343312072,
+              "execution": -0.01592722349040075,
+              "length": -0.013633136094674567,
+              "boundary": 0.10364873578852948,
+              "geometry": -0.00020892839779971357,
+              "unit_reuse": -0.1,
+              "source_reuse": -0.04
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.15927223490400746,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 11,
+            "event_uid": "r47:a74b575f952414f4396bad53",
+            "target": [
+              3094,
+              3320
+            ],
+            "terms": {
+              "heuristic": -0.08185509910725547,
+              "execution": -0.0024464411755801083,
+              "length": -0.00031102071005917044,
+              "boundary": 0.5668626249376343,
+              "geometry": -0.00193092712671811,
+              "unit_reuse": -0.1,
+              "source_reuse": -0.02
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.02446441175580108,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 12,
+            "event_uid": "r47:021a0275b050c878b2156883",
+            "target": [
+              3368,
+              3601
+            ],
+            "terms": {
+              "heuristic": -0.1140050426774884,
+              "execution": -0.013871060761407115,
+              "length": -6.574621959237905e-07,
+              "boundary": 0.0,
+              "geometry": -0.006896436663416396,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.04
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.13871060761407114,
+              "observed_orders": 3
+            }
+          }
+        ]
+      },
+      "original_score_reconstructed": false,
+      "scope": "B1_COMMON_RESCORE_NOT_REWRITING_OLD_OBJECTIVE"
+    },
+    {
+      "song": 0,
+      "arm": "C1",
+      "saved_score": 0.7554493098949406,
+      "common_objective": {
+        "terms": {
+          "heuristic": -2.1471930256374567,
+          "execution": -0.13812617353672016,
+          "length": -0.06511645299145301,
+          "boundary": 3.8863677038722217,
+          "geometry": -0.0204827418116513,
+          "unit_reuse": -0.6,
+          "source_reuse": -0.16
+        },
+        "total": 0.7554493098949404,
+        "slots": [
+          {
+            "slot": 0,
+            "event_uid": "r47:c1f1efc803495ee700d67db1",
+            "target": [
+              0,
+              222
+            ],
+            "terms": {
+              "heuristic": -0.27477841970556577,
+              "execution": -0.005602602963394923,
+              "length": -0.0007939266929651526,
+              "boundary": 0.09921534749100763,
+              "geometry": 0.0,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.056026029633949224,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 1,
+            "event_uid": "r47:afdc7bb3f1539b3ddd8517b9",
+            "target": [
+              270,
+              471
+            ],
+            "terms": {
+              "heuristic": -0.2910076659980397,
+              "execution": -0.008609891996212904,
+              "length": -0.0069750164365548935,
+              "boundary": 0.35266556195695387,
+              "geometry": -0.0003993783058959033,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.08609891996212903,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 2,
+            "event_uid": "r47:713b0851cf08a6e2c97f0465",
+            "target": [
+              519,
+              758
+            ],
+            "terms": {
+              "heuristic": -0.39898971263852845,
+              "execution": -0.0222014799979527,
+              "length": -0.0002762984878369506,
+              "boundary": 0.1301037062784395,
+              "geometry": -0.000128782177630415,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.22201479997952697,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 3,
+            "event_uid": "r47:ec6fb0184ef6f45871d64668",
+            "target": [
+              806,
+              1081
+            ],
+            "terms": {
+              "heuristic": -0.0743635719388655,
+              "execution": -0.017559031333627653,
+              "length": -0.012430144641683114,
+              "boundary": 0.14147640555693092,
+              "geometry": -0.00035911774596483233,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.1755903133362765,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 4,
+            "event_uid": "r47:a74b575f952414f4396bad53",
+            "target": [
+              1129,
+              1354
+            ],
+            "terms": {
+              "heuristic": -0.014053021615283434,
+              "execution": -0.0015884603534352755,
+              "length": -0.0004109138724523327,
+              "boundary": 0.6530330701907623,
+              "geometry": -0.00016777634876243935,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.015884603534352754,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 5,
+            "event_uid": "r47:afdc7bb3f1539b3ddd8517b9",
+            "target": [
+              1402,
+              1616
+            ],
+            "terms": {
+              "heuristic": -0.05556306437824948,
+              "execution": -0.007293424602625574,
+              "length": -0.002426405325443784,
+              "boundary": 0.6598750309364353,
+              "geometry": -0.007281227017409361,
+              "unit_reuse": -0.1,
+              "source_reuse": -0.02
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.07293424602625574,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 6,
+            "event_uid": "r47:c1f1efc803495ee700d67db1",
+            "target": [
+              1664,
+              1862
+            ],
+            "terms": {
+              "heuristic": -0.03802643816062018,
+              "execution": -0.012290901421018893,
+              "length": -0.008358029257067714,
+              "boundary": 0.8924713567542705,
+              "geometry": -0.000296391914013359,
+              "unit_reuse": -0.1,
+              "source_reuse": -0.02
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.12290901421018892,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 7,
+            "event_uid": "r47:afdc7bb3f1539b3ddd8517b9",
+            "target": [
+              1910,
+              2109
+            ],
+            "terms": {
+              "heuristic": -0.1957513546037592,
+              "execution": -0.010138631732043149,
+              "length": -0.00788313609467455,
+              "boundary": 0.09590490349346659,
+              "geometry": -0.0004349189061197181,
+              "unit_reuse": -0.2,
+              "source_reuse": -0.04
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.10138631732043148,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 8,
+            "event_uid": "r47:6e0b3c3e9f7ad420012cb8be",
+            "target": [
+              2157,
+              2429
+            ],
+            "terms": {
+              "heuristic": -0.09019408743942203,
+              "execution": -0.01745987460729591,
+              "length": -0.010729824128862598,
+              "boundary": 0.05983569831856407,
+              "geometry": -0.00022879548751063945,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.02
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.1745987460729591,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 9,
+            "event_uid": "r47:6932683ac9dd7b541f599811",
+            "target": [
+              2477,
+              2721
+            ],
+            "terms": {
+              "heuristic": -0.5209091547634791,
+              "execution": -0.01014769588205275,
+              "length": -0.0008879437869822506,
+              "boundary": 0.13127526216922733,
+              "geometry": -0.002157741930002199,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.1014769588205275,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 10,
+            "event_uid": "r47:6e0b3c3e9f7ad420012cb8be",
+            "target": [
+              2769,
+              3046
+            ],
+            "terms": {
+              "heuristic": -0.004994158343312072,
+              "execution": -0.01592722349040075,
+              "length": -0.013633136094674567,
+              "boundary": 0.10364873578852948,
+              "geometry": -0.00020892839779971357,
+              "unit_reuse": -0.1,
+              "source_reuse": -0.04
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.15927223490400746,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 11,
+            "event_uid": "r47:a74b575f952414f4396bad53",
+            "target": [
+              3094,
+              3320
+            ],
+            "terms": {
+              "heuristic": -0.08185509910725547,
+              "execution": -0.0024464411755801083,
+              "length": -0.00031102071005917044,
+              "boundary": 0.5668626249376343,
+              "geometry": -0.00193092712671811,
+              "unit_reuse": -0.1,
+              "source_reuse": -0.02
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.02446441175580108,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 12,
+            "event_uid": "r47:1b228a3e5bd8f536ebd033b8",
+            "target": [
+              3368,
+              3601
+            ],
+            "terms": {
+              "heuristic": -0.10670727694507642,
+              "execution": -0.006860513981079602,
+              "length": -6.574621959237905e-07,
+              "boundary": 0.0,
+              "geometry": -0.006888756453824611,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.06860513981079601,
+              "observed_orders": 3
+            }
+          }
+        ]
+      },
+      "original_score_reconstructed": true,
+      "scope": "B1_COMMON_RESCORE_NOT_REWRITING_OLD_OBJECTIVE"
+    },
+    {
+      "song": 0,
+      "arm": "C2",
+      "saved_score": 0.7554493098949406,
+      "common_objective": {
+        "terms": {
+          "heuristic": -2.1471930256374567,
+          "execution": -0.13812617353672016,
+          "length": -0.06511645299145301,
+          "boundary": 3.8863677038722217,
+          "geometry": -0.0204827418116513,
+          "unit_reuse": -0.6,
+          "source_reuse": -0.16
+        },
+        "total": 0.7554493098949404,
+        "slots": [
+          {
+            "slot": 0,
+            "event_uid": "r47:c1f1efc803495ee700d67db1",
+            "target": [
+              0,
+              222
+            ],
+            "terms": {
+              "heuristic": -0.27477841970556577,
+              "execution": -0.005602602963394923,
+              "length": -0.0007939266929651526,
+              "boundary": 0.09921534749100763,
+              "geometry": 0.0,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.056026029633949224,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 1,
+            "event_uid": "r47:afdc7bb3f1539b3ddd8517b9",
+            "target": [
+              270,
+              471
+            ],
+            "terms": {
+              "heuristic": -0.2910076659980397,
+              "execution": -0.008609891996212904,
+              "length": -0.0069750164365548935,
+              "boundary": 0.35266556195695387,
+              "geometry": -0.0003993783058959033,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.08609891996212903,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 2,
+            "event_uid": "r47:713b0851cf08a6e2c97f0465",
+            "target": [
+              519,
+              758
+            ],
+            "terms": {
+              "heuristic": -0.39898971263852845,
+              "execution": -0.0222014799979527,
+              "length": -0.0002762984878369506,
+              "boundary": 0.1301037062784395,
+              "geometry": -0.000128782177630415,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.22201479997952697,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 3,
+            "event_uid": "r47:ec6fb0184ef6f45871d64668",
+            "target": [
+              806,
+              1081
+            ],
+            "terms": {
+              "heuristic": -0.0743635719388655,
+              "execution": -0.017559031333627653,
+              "length": -0.012430144641683114,
+              "boundary": 0.14147640555693092,
+              "geometry": -0.00035911774596483233,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.1755903133362765,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 4,
+            "event_uid": "r47:a74b575f952414f4396bad53",
+            "target": [
+              1129,
+              1354
+            ],
+            "terms": {
+              "heuristic": -0.014053021615283434,
+              "execution": -0.0015884603534352755,
+              "length": -0.0004109138724523327,
+              "boundary": 0.6530330701907623,
+              "geometry": -0.00016777634876243935,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.015884603534352754,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 5,
+            "event_uid": "r47:afdc7bb3f1539b3ddd8517b9",
+            "target": [
+              1402,
+              1616
+            ],
+            "terms": {
+              "heuristic": -0.05556306437824948,
+              "execution": -0.007293424602625574,
+              "length": -0.002426405325443784,
+              "boundary": 0.6598750309364353,
+              "geometry": -0.007281227017409361,
+              "unit_reuse": -0.1,
+              "source_reuse": -0.02
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.07293424602625574,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 6,
+            "event_uid": "r47:c1f1efc803495ee700d67db1",
+            "target": [
+              1664,
+              1862
+            ],
+            "terms": {
+              "heuristic": -0.03802643816062018,
+              "execution": -0.012290901421018893,
+              "length": -0.008358029257067714,
+              "boundary": 0.8924713567542705,
+              "geometry": -0.000296391914013359,
+              "unit_reuse": -0.1,
+              "source_reuse": -0.02
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.12290901421018892,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 7,
+            "event_uid": "r47:afdc7bb3f1539b3ddd8517b9",
+            "target": [
+              1910,
+              2109
+            ],
+            "terms": {
+              "heuristic": -0.1957513546037592,
+              "execution": -0.010138631732043149,
+              "length": -0.00788313609467455,
+              "boundary": 0.09590490349346659,
+              "geometry": -0.0004349189061197181,
+              "unit_reuse": -0.2,
+              "source_reuse": -0.04
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.10138631732043148,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 8,
+            "event_uid": "r47:6e0b3c3e9f7ad420012cb8be",
+            "target": [
+              2157,
+              2429
+            ],
+            "terms": {
+              "heuristic": -0.09019408743942203,
+              "execution": -0.01745987460729591,
+              "length": -0.010729824128862598,
+              "boundary": 0.05983569831856407,
+              "geometry": -0.00022879548751063945,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.02
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.1745987460729591,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 9,
+            "event_uid": "r47:6932683ac9dd7b541f599811",
+            "target": [
+              2477,
+              2721
+            ],
+            "terms": {
+              "heuristic": -0.5209091547634791,
+              "execution": -0.01014769588205275,
+              "length": -0.0008879437869822506,
+              "boundary": 0.13127526216922733,
+              "geometry": -0.002157741930002199,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.1014769588205275,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 10,
+            "event_uid": "r47:6e0b3c3e9f7ad420012cb8be",
+            "target": [
+              2769,
+              3046
+            ],
+            "terms": {
+              "heuristic": -0.004994158343312072,
+              "execution": -0.01592722349040075,
+              "length": -0.013633136094674567,
+              "boundary": 0.10364873578852948,
+              "geometry": -0.00020892839779971357,
+              "unit_reuse": -0.1,
+              "source_reuse": -0.04
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.15927223490400746,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 11,
+            "event_uid": "r47:a74b575f952414f4396bad53",
+            "target": [
+              3094,
+              3320
+            ],
+            "terms": {
+              "heuristic": -0.08185509910725547,
+              "execution": -0.0024464411755801083,
+              "length": -0.00031102071005917044,
+              "boundary": 0.5668626249376343,
+              "geometry": -0.00193092712671811,
+              "unit_reuse": -0.1,
+              "source_reuse": -0.02
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.02446441175580108,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 12,
+            "event_uid": "r47:1b228a3e5bd8f536ebd033b8",
+            "target": [
+              3368,
+              3601
+            ],
+            "terms": {
+              "heuristic": -0.10670727694507642,
+              "execution": -0.006860513981079602,
+              "length": -6.574621959237905e-07,
+              "boundary": 0.0,
+              "geometry": -0.006888756453824611,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.06860513981079601,
+              "observed_orders": 3
+            }
+          }
+        ]
+      },
+      "original_score_reconstructed": true,
+      "scope": "B1_COMMON_RESCORE_NOT_REWRITING_OLD_OBJECTIVE"
+    },
+    {
+      "song": 0,
+      "arm": "C3",
+      "saved_score": -0.6045748297973872,
+      "common_objective": {
+        "terms": {
+          "heuristic": -2.148126378665308,
+          "execution": -0.1465802979879326,
+          "length": -0.084366452991453,
+          "boundary": 2.572028490599947,
+          "geometry": -0.01753019075264115,
+          "unit_reuse": -0.6000000000000001,
+          "source_reuse": -0.18
+        },
+        "total": -0.6045748297973881,
+        "slots": [
+          {
+            "slot": 0,
+            "event_uid": "r47:c1f1efc803495ee700d67db1",
+            "target": [
+              0,
+              222
+            ],
+            "terms": {
+              "heuristic": -0.27477841970556577,
+              "execution": -0.005602602963394923,
+              "length": -0.0007939266929651526,
+              "boundary": 0.5687080173998068,
+              "geometry": 0.0,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.056026029633949224,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 1,
+            "event_uid": "r47:afdc7bb3f1539b3ddd8517b9",
+            "target": [
+              270,
+              471
+            ],
+            "terms": {
+              "heuristic": -0.2910076659980397,
+              "execution": -0.008609891996212904,
+              "length": -0.0069750164365548935,
+              "boundary": 0.4939651342670702,
+              "geometry": -0.0003993783058959033,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.08609891996212903,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 2,
+            "event_uid": "r47:6e0b3c3e9f7ad420012cb8be",
+            "target": [
+              519,
+              776
+            ],
+            "terms": {
+              "heuristic": -0.02538094050892059,
+              "execution": -0.02115336460416422,
+              "length": -0.004103221564760031,
+              "boundary": 0.07538481173906822,
+              "geometry": -0.00022911886144543484,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.21153364604164218,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 3,
+            "event_uid": "r47:a74b575f952414f4396bad53",
+            "target": [
+              824,
+              1081
+            ],
+            "terms": {
+              "heuristic": -0.10717083279211737,
+              "execution": -0.013362680917348489,
+              "length": -0.004103221564760031,
+              "boundary": 0.03730142116997806,
+              "geometry": -0.002053422743513631,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.13362680917348488,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 4,
+            "event_uid": "r47:afdc7bb3f1539b3ddd8517b9",
+            "target": [
+              1129,
+              1336
+            ],
+            "terms": {
+              "heuristic": -0.06698244313694851,
+              "execution": -0.010921074400917266,
+              "length": -0.004583990795529252,
+              "boundary": 0.13773272961339292,
+              "geometry": -0.005003418251890345,
+              "unit_reuse": -0.1,
+              "source_reuse": -0.02
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.10921074400917265,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 5,
+            "event_uid": "r47:a74b575f952414f4396bad53",
+            "target": [
+              1384,
+              1616
+            ],
+            "terms": {
+              "heuristic": -0.030873418625090798,
+              "execution": -0.00817453977204275,
+              "length": -3.32840236686378e-06,
+              "boundary": 0.09024721553314248,
+              "geometry": -0.0001418625115712272,
+              "unit_reuse": -0.1,
+              "source_reuse": -0.02
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.0817453977204275,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 6,
+            "event_uid": "r47:c1f1efc803495ee700d67db1",
+            "target": [
+              1664,
+              1844
+            ],
+            "terms": {
+              "heuristic": -0.012827877751262928,
+              "execution": -0.021340127759413824,
+              "length": -0.01928110618014463,
+              "boundary": 0.5448390508958327,
+              "geometry": -0.006130842121825261,
+              "unit_reuse": -0.1,
+              "source_reuse": -0.02
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.2134012775941382,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 7,
+            "event_uid": "r47:021a0275b050c878b2156883",
+            "target": [
+              1892,
+              2109
+            ],
+            "terms": {
+              "heuristic": -0.41160512387899795,
+              "execution": -0.002902244819750302,
+              "length": -0.0017100591715976305,
+              "boundary": 0.09071687215261427,
+              "geometry": -0.0005075881406804856,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.04
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.029022448197503017,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 8,
+            "event_uid": "r47:6e0b3c3e9f7ad420012cb8be",
+            "target": [
+              2157,
+              2429
+            ],
+            "terms": {
+              "heuristic": -0.09019408743942203,
+              "execution": -0.01745987460729591,
+              "length": -0.010729824128862598,
+              "boundary": 0.17787326630865483,
+              "geometry": -0.0002191659378023207,
+              "unit_reuse": -0.1,
+              "source_reuse": -0.02
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.1745987460729591,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 9,
+            "event_uid": "r47:1b228a3e5bd8f536ebd033b8",
+            "target": [
+              2477,
+              2721
+            ],
+            "terms": {
+              "heuristic": -0.46396435306342,
+              "execution": -0.006850921478572758,
+              "length": -0.0008879437869822506,
+              "boundary": 0.12585401578991848,
+              "geometry": -0.002279750322624581,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.06850921478572758,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 10,
+            "event_uid": "r47:d45ceeb25e7c7ff478c7efa9",
+            "target": [
+              2769,
+              3064
+            ],
+            "terms": {
+              "heuristic": -0.09286281182743289,
+              "execution": -0.018060280419816343,
+              "length": -0.02696005917159765,
+              "boundary": 0.12906750271720496,
+              "geometry": -0.00018311053299502987,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.1806028041981634,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 11,
+            "event_uid": "r47:afdc7bb3f1539b3ddd8517b9",
+            "target": [
+              3112,
+              3320
+            ],
+            "terms": {
+              "heuristic": -0.10033986937696338,
+              "execution": -0.008279743658640811,
+              "length": -0.0042340976331360905,
+              "boundary": 0.10033845301326305,
+              "geometry": -0.00024567708804958176,
+              "unit_reuse": -0.2,
+              "source_reuse": -0.06
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.0827974365864081,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 12,
+            "event_uid": "r47:70e341228da95cae7b269f2e",
+            "target": [
+              3368,
+              3601
+            ],
+            "terms": {
+              "heuristic": -0.18013853456112575,
+              "execution": -0.0038629505903620986,
+              "length": -6.574621959237905e-07,
+              "boundary": 0.0,
+              "geometry": -0.00013685593434734704,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.038629505903620985,
+              "observed_orders": 3
+            }
+          }
+        ]
+      },
+      "original_score_reconstructed": true,
+      "scope": "B1_COMMON_RESCORE_NOT_REWRITING_OLD_OBJECTIVE"
+    },
+    {
+      "song": 1,
+      "arm": "B1",
+      "saved_score": -3.6200495952414093,
+      "common_objective": {
+        "terms": {
+          "heuristic": -2.9098156972394387,
+          "execution": -0.15754028095375788,
+          "length": -0.12603632478632482,
+          "boundary": 3.4625072158752737,
+          "geometry": -0.010233898001970748,
+          "unit_reuse": -0.5,
+          "source_reuse": -0.2
+        },
+        "total": -0.4411189851062188,
+        "slots": [
+          {
+            "slot": 0,
+            "event_uid": "r47:c1f1efc803495ee700d67db1",
+            "target": [
+              0,
+              197
+            ],
+            "terms": {
+              "heuristic": -0.013042127516386726,
+              "execution": -0.01801364613316667,
+              "length": -0.008732782708744244,
+              "boundary": 0.2942235165616106,
+              "geometry": 0.0,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.1801364613316667,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 1,
+            "event_uid": "r47:afdc7bb3f1539b3ddd8517b9",
+            "target": [
+              245,
+              445
+            ],
+            "terms": {
+              "heuristic": -0.1614229902070347,
+              "execution": -0.010895092720132156,
+              "length": -0.007317718606180141,
+              "boundary": 0.32002890373721365,
+              "geometry": -0.00048770063736595606,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.10895092720132155,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 2,
+            "event_uid": "r47:6e0b3c3e9f7ad420012cb8be",
+            "target": [
+              493,
+              750
+            ],
+            "terms": {
+              "heuristic": -0.045674939258665836,
+              "execution": -0.02101749820794674,
+              "length": -0.0041815006574622,
+              "boundary": 0.2467096234804903,
+              "geometry": -0.00022963259466301497,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.21017498207946736,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 3,
+            "event_uid": "r47:d45ceeb25e7c7ff478c7efa9",
+            "target": [
+              798,
+              1091
+            ],
+            "terms": {
+              "heuristic": -0.13667462336584058,
+              "execution": -0.01592250736911199,
+              "length": -0.025450731426692977,
+              "boundary": 0.18328954226317215,
+              "geometry": -0.0022436037874714893,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.15922507369111988,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 4,
+            "event_uid": "r47:6e0b3c3e9f7ad420012cb8be",
+            "target": [
+              1139,
+              1439
+            ],
+            "terms": {
+              "heuristic": -0.0409929347619612,
+              "execution": -0.009884379120647973,
+              "length": -0.03167669296515452,
+              "boundary": 0.2828090927253379,
+              "geometry": -0.0002237576464178875,
+              "unit_reuse": -0.1,
+              "source_reuse": -0.02
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.09884379120647972,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 5,
+            "event_uid": "r47:a74b575f952414f4396bad53",
+            "target": [
+              1487,
+              1779
+            ],
+            "terms": {
+              "heuristic": -0.013210359300191155,
+              "execution": -0.02180361602972573,
+              "length": -0.024616863905325453,
+              "boundary": 0.40167689199947937,
+              "geometry": -0.0017939135373821542,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.21803616029725728,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 6,
+            "event_uid": "r47:afdc7bb3f1539b3ddd8517b9",
+            "target": [
+              1827,
+              2035
+            ],
+            "terms": {
+              "heuristic": -0.2117697373426673,
+              "execution": -0.008243634602809507,
+              "length": -0.004155325443786979,
+              "boundary": 0.27003846804652115,
+              "geometry": -0.0039545668010064925,
+              "unit_reuse": -0.1,
+              "source_reuse": -0.02
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.08243634602809506,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 7,
+            "event_uid": "r47:1b228a3e5bd8f536ebd033b8",
+            "target": [
+              2083,
+              2291
+            ],
+            "terms": {
+              "heuristic": -0.4733890543527983,
+              "execution": -0.0036416479595583425,
+              "length": -0.004155325443786979,
+              "boundary": 0.24004590001042428,
+              "geometry": -0.00012182559924399951,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.036416479595583424,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 8,
+            "event_uid": "r47:021a0275b050c878b2156883",
+            "target": [
+              2339,
+              2551
+            ],
+            "terms": {
+              "heuristic": -0.4753627196721361,
+              "execution": -0.0027300425400438606,
+              "length": -0.0029074621959237316,
+              "boundary": 0.2357696440223143,
+              "geometry": -0.0002242754470329633,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.04
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.027300425400438602,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 9,
+            "event_uid": "r47:c1f1efc803495ee700d67db1",
+            "target": [
+              2599,
+              2807
+            ],
+            "terms": {
+              "heuristic": -0.3455765415592255,
+              "execution": -0.010283340132547517,
+              "length": -0.004155325443786979,
+              "boundary": 0.3533028425335135,
+              "geometry": -0.0001856923429921755,
+              "unit_reuse": -0.1,
+              "source_reuse": -0.02
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.10283340132547515,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 10,
+            "event_uid": "r47:afdc7bb3f1539b3ddd8517b9",
+            "target": [
+              2855,
+              3064
+            ],
+            "terms": {
+              "heuristic": -0.3192906017029542,
+              "execution": -0.008688280720104484,
+              "length": -0.0038225262984878335,
+              "boundary": 0.2756152791321565,
+              "geometry": -0.0004237106235110881,
+              "unit_reuse": -0.2,
+              "source_reuse": -0.06
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.08688280720104484,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 11,
+            "event_uid": "r47:70e341228da95cae7b269f2e",
+            "target": [
+              3112,
+              3344
+            ],
+            "terms": {
+              "heuristic": -0.5779678100075807,
+              "execution": -0.006814364546874706,
+              "length": -1.4792899408283462e-06,
+              "boundary": 0.35899751136304,
+              "geometry": -0.0001377130006362018,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.06814364546874706,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 12,
+            "event_uid": "r47:28088078d89f6394a8b1fa44",
+            "target": [
+              3392,
+              3598
+            ],
+            "terms": {
+              "heuristic": -0.09544125819199635,
+              "execution": -0.019602230871088214,
+              "length": -0.004862590401051937,
+              "boundary": 0.0,
+              "geometry": -0.000207505984247326,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.04
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.19602230871088214,
+              "observed_orders": 3
+            }
+          }
+        ]
+      },
+      "original_score_reconstructed": false,
+      "scope": "B1_COMMON_RESCORE_NOT_REWRITING_OLD_OBJECTIVE"
+    },
+    {
+      "song": 1,
+      "arm": "C1",
+      "saved_score": -0.43326511192827644,
+      "common_objective": {
+        "terms": {
+          "heuristic": -2.9117557299505528,
+          "execution": -0.14771965400247256,
+          "length": -0.12603632478632482,
+          "boundary": 3.4625072158752737,
+          "geometry": -0.010260619064199807,
+          "unit_reuse": -0.5,
+          "source_reuse": -0.2
+        },
+        "total": -0.43326511192827644,
+        "slots": [
+          {
+            "slot": 0,
+            "event_uid": "r47:c1f1efc803495ee700d67db1",
+            "target": [
+              0,
+              197
+            ],
+            "terms": {
+              "heuristic": -0.013042127516386726,
+              "execution": -0.01801364613316667,
+              "length": -0.008732782708744244,
+              "boundary": 0.2942235165616106,
+              "geometry": 0.0,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.1801364613316667,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 1,
+            "event_uid": "r47:afdc7bb3f1539b3ddd8517b9",
+            "target": [
+              245,
+              445
+            ],
+            "terms": {
+              "heuristic": -0.1614229902070347,
+              "execution": -0.010895092720132156,
+              "length": -0.007317718606180141,
+              "boundary": 0.32002890373721365,
+              "geometry": -0.00048770063736595606,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.10895092720132155,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 2,
+            "event_uid": "r47:6e0b3c3e9f7ad420012cb8be",
+            "target": [
+              493,
+              750
+            ],
+            "terms": {
+              "heuristic": -0.045674939258665836,
+              "execution": -0.02101749820794674,
+              "length": -0.0041815006574622,
+              "boundary": 0.2467096234804903,
+              "geometry": -0.00022963259466301497,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.21017498207946736,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 3,
+            "event_uid": "r47:d45ceeb25e7c7ff478c7efa9",
+            "target": [
+              798,
+              1091
+            ],
+            "terms": {
+              "heuristic": -0.13667462336584058,
+              "execution": -0.01592250736911199,
+              "length": -0.025450731426692977,
+              "boundary": 0.18328954226317215,
+              "geometry": -0.0022436037874714893,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.15922507369111988,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 4,
+            "event_uid": "r47:6e0b3c3e9f7ad420012cb8be",
+            "target": [
+              1139,
+              1439
+            ],
+            "terms": {
+              "heuristic": -0.0409929347619612,
+              "execution": -0.009884379120647973,
+              "length": -0.03167669296515452,
+              "boundary": 0.2828090927253379,
+              "geometry": -0.0002237576464178875,
+              "unit_reuse": -0.1,
+              "source_reuse": -0.02
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.09884379120647972,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 5,
+            "event_uid": "r47:a74b575f952414f4396bad53",
+            "target": [
+              1487,
+              1779
+            ],
+            "terms": {
+              "heuristic": -0.013210359300191155,
+              "execution": -0.02180361602972573,
+              "length": -0.024616863905325453,
+              "boundary": 0.40167689199947937,
+              "geometry": -0.0017939135373821542,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.21803616029725728,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 6,
+            "event_uid": "r47:afdc7bb3f1539b3ddd8517b9",
+            "target": [
+              1827,
+              2035
+            ],
+            "terms": {
+              "heuristic": -0.2117697373426673,
+              "execution": -0.008243634602809507,
+              "length": -0.004155325443786979,
+              "boundary": 0.27003846804652115,
+              "geometry": -0.0039545668010064925,
+              "unit_reuse": -0.1,
+              "source_reuse": -0.02
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.08243634602809506,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 7,
+            "event_uid": "r47:1b228a3e5bd8f536ebd033b8",
+            "target": [
+              2083,
+              2291
+            ],
+            "terms": {
+              "heuristic": -0.4733890543527983,
+              "execution": -0.0036416479595583425,
+              "length": -0.004155325443786979,
+              "boundary": 0.24004590001042428,
+              "geometry": -0.00012182559924399951,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.036416479595583424,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 8,
+            "event_uid": "r47:021a0275b050c878b2156883",
+            "target": [
+              2339,
+              2551
+            ],
+            "terms": {
+              "heuristic": -0.4753627196721361,
+              "execution": -0.0027300425400438606,
+              "length": -0.0029074621959237316,
+              "boundary": 0.2357696440223143,
+              "geometry": -0.0002242754470329633,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.04
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.027300425400438602,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 9,
+            "event_uid": "r47:c1f1efc803495ee700d67db1",
+            "target": [
+              2599,
+              2807
+            ],
+            "terms": {
+              "heuristic": -0.3455765415592255,
+              "execution": -0.010283340132547517,
+              "length": -0.004155325443786979,
+              "boundary": 0.3533028425335135,
+              "geometry": -0.0001856923429921755,
+              "unit_reuse": -0.1,
+              "source_reuse": -0.02
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.10283340132547515,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 10,
+            "event_uid": "r47:afdc7bb3f1539b3ddd8517b9",
+            "target": [
+              2855,
+              3064
+            ],
+            "terms": {
+              "heuristic": -0.3192906017029542,
+              "execution": -0.008688280720104484,
+              "length": -0.0038225262984878335,
+              "boundary": 0.2756152791321565,
+              "geometry": -0.0004237106235110881,
+              "unit_reuse": -0.2,
+              "source_reuse": -0.06
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.08688280720104484,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 11,
+            "event_uid": "r47:28088078d89f6394a8b1fa44",
+            "target": [
+              3112,
+              3344
+            ],
+            "terms": {
+              "heuristic": -0.5622264872660031,
+              "execution": -0.005626863075037135,
+              "length": -1.4792899408283462e-06,
+              "boundary": 0.35899751136304,
+              "geometry": -0.00018244629956167365,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.04
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.05626863075037134,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 12,
+            "event_uid": "r47:70e341228da95cae7b269f2e",
+            "target": [
+              3392,
+              3598
+            ],
+            "terms": {
+              "heuristic": -0.11312261364468804,
+              "execution": -0.010969105391640439,
+              "length": -0.004862590401051937,
+              "boundary": 0.0,
+              "geometry": -0.00018949374755091353,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.10969105391640438,
+              "observed_orders": 3
+            }
+          }
+        ]
+      },
+      "original_score_reconstructed": true,
+      "scope": "B1_COMMON_RESCORE_NOT_REWRITING_OLD_OBJECTIVE"
+    },
+    {
+      "song": 1,
+      "arm": "C2",
+      "saved_score": -0.10585612688601333,
+      "common_objective": {
+        "terms": {
+          "heuristic": -2.306102945812007,
+          "execution": -0.147337405002998,
+          "length": -0.1360363247863248,
+          "boundary": 3.3035807800073647,
+          "geometry": -0.019960231292048346,
+          "unit_reuse": -0.6,
+          "source_reuse": -0.19999999999999998
+        },
+        "total": -0.10585612688601356,
+        "slots": [
+          {
+            "slot": 0,
+            "event_uid": "r47:c1f1efc803495ee700d67db1",
+            "target": [
+              0,
+              197
+            ],
+            "terms": {
+              "heuristic": -0.013042127516386726,
+              "execution": -0.01801364613316667,
+              "length": -0.008732782708744244,
+              "boundary": 0.2942235165616106,
+              "geometry": 0.0,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.1801364613316667,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 1,
+            "event_uid": "r47:afdc7bb3f1539b3ddd8517b9",
+            "target": [
+              245,
+              445
+            ],
+            "terms": {
+              "heuristic": -0.1614229902070347,
+              "execution": -0.010895092720132156,
+              "length": -0.007317718606180141,
+              "boundary": 0.32002890373721365,
+              "geometry": -0.00048770063736595606,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.10895092720132155,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 2,
+            "event_uid": "r47:6e0b3c3e9f7ad420012cb8be",
+            "target": [
+              493,
+              750
+            ],
+            "terms": {
+              "heuristic": -0.045674939258665836,
+              "execution": -0.02101749820794674,
+              "length": -0.0041815006574622,
+              "boundary": 0.2467096234804903,
+              "geometry": -0.00022963259466301497,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.21017498207946736,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 3,
+            "event_uid": "r47:d45ceeb25e7c7ff478c7efa9",
+            "target": [
+              798,
+              1091
+            ],
+            "terms": {
+              "heuristic": -0.13667462336584058,
+              "execution": -0.01592250736911199,
+              "length": -0.025450731426692977,
+              "boundary": 0.18328954226317215,
+              "geometry": -0.0022436037874714893,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.15922507369111988,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 4,
+            "event_uid": "r47:6e0b3c3e9f7ad420012cb8be",
+            "target": [
+              1139,
+              1439
+            ],
+            "terms": {
+              "heuristic": -0.0409929347619612,
+              "execution": -0.009884379120647973,
+              "length": -0.03167669296515452,
+              "boundary": 0.2828090927253379,
+              "geometry": -0.0002237576464178875,
+              "unit_reuse": -0.1,
+              "source_reuse": -0.02
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.09884379120647972,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 5,
+            "event_uid": "r47:ec6fb0184ef6f45871d64668",
+            "target": [
+              1487,
+              1779
+            ],
+            "terms": {
+              "heuristic": -0.07309553868043556,
+              "execution": -0.013733490025160909,
+              "length": -0.024616863905325453,
+              "boundary": 0.40167689199947937,
+              "geometry": -0.0023814772520195523,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.02
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.13733490025160908,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 6,
+            "event_uid": "r47:a74b575f952414f4396bad53",
+            "target": [
+              1827,
+              2053
+            ],
+            "terms": {
+              "heuristic": -0.17074018287241693,
+              "execution": -0.005387021209623352,
+              "length": -0.0002899408284023661,
+              "boundary": 0.19722279857224645,
+              "geometry": -0.00017518292278747349,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.053870212096233515,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 7,
+            "event_uid": "r47:afdc7bb3f1539b3ddd8517b9",
+            "target": [
+              2101,
+              2291
+            ],
+            "terms": {
+              "heuristic": -0.24829838692427697,
+              "execution": -0.012565848875999073,
+              "length": -0.012520710059171592,
+              "boundary": 0.24004590001042428,
+              "geometry": -0.006286421757854215,
+              "unit_reuse": -0.1,
+              "source_reuse": -0.02
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.12565848875999072,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 8,
+            "event_uid": "r47:a74b575f952414f4396bad53",
+            "target": [
+              2339,
+              2569
+            ],
+            "terms": {
+              "heuristic": -0.2379429317868021,
+              "execution": -0.007050707939631216,
+              "length": -4.207758053911871e-05,
+              "boundary": 0.14965887762868,
+              "geometry": -0.0001941631163395092,
+              "unit_reuse": -0.1,
+              "source_reuse": -0.02
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.07050707939631216,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 9,
+            "event_uid": "r47:afdc7bb3f1539b3ddd8517b9",
+            "target": [
+              2617,
+              2807
+            ],
+            "terms": {
+              "heuristic": -0.24560169523675968,
+              "execution": -0.012565848875999073,
+              "length": -0.012520710059171592,
+              "boundary": 0.3533028425335135,
+              "geometry": -0.006104478373348329,
+              "unit_reuse": -0.2,
+              "source_reuse": -0.04
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.12565848875999072,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 10,
+            "event_uid": "r47:c1f1efc803495ee700d67db1",
+            "target": [
+              2855,
+              3064
+            ],
+            "terms": {
+              "heuristic": -0.3897224212355769,
+              "execution": -0.009985544694756104,
+              "length": -0.0038225262984878335,
+              "boundary": 0.2756152791321565,
+              "geometry": -0.0009878873591540821,
+              "unit_reuse": -0.1,
+              "source_reuse": -0.02
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.09985544694756103,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 11,
+            "event_uid": "r47:1b228a3e5bd8f536ebd033b8",
+            "target": [
+              3112,
+              3344
+            ],
+            "terms": {
+              "heuristic": -0.5041745512270783,
+              "execution": -0.004475614000993867,
+              "length": -1.4792899408283462e-06,
+              "boundary": 0.35899751136304,
+              "geometry": -0.00043240317968058664,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.04475614000993866,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 12,
+            "event_uid": "r47:021a0275b050c878b2156883",
+            "target": [
+              3392,
+              3598
+            ],
+            "terms": {
+              "heuristic": -0.038719622738771525,
+              "execution": -0.0058402058298288925,
+              "length": -0.004862590401051937,
+              "boundary": 0.0,
+              "geometry": -0.00021352266494624702,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.06
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.05840205829828892,
+              "observed_orders": 3
+            }
+          }
+        ]
+      },
+      "original_score_reconstructed": true,
+      "scope": "B1_COMMON_RESCORE_NOT_REWRITING_OLD_OBJECTIVE"
+    },
+    {
+      "song": 1,
+      "arm": "C3",
+      "saved_score": -0.9608572806316674,
+      "common_objective": {
+        "terms": {
+          "heuristic": -2.2805691640808714,
+          "execution": -0.16803214050680387,
+          "length": -0.1480363247863248,
+          "boundary": 2.436335721435533,
+          "geometry": -0.020555372693200315,
+          "unit_reuse": -0.6000000000000001,
+          "source_reuse": -0.18000000000000002
+        },
+        "total": -0.9608572806316675,
+        "slots": [
+          {
+            "slot": 0,
+            "event_uid": "r47:afdc7bb3f1539b3ddd8517b9",
+            "target": [
+              0,
+              215
+            ],
+            "terms": {
+              "heuristic": -0.020979931948914343,
+              "execution": -0.008050526139101923,
+              "length": -0.00211739809335963,
+              "boundary": 0.18949400109017742,
+              "geometry": 0.0,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.08050526139101923,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 1,
+            "event_uid": "r47:c1f1efc803495ee700d67db1",
+            "target": [
+              263,
+              445
+            ],
+            "terms": {
+              "heuristic": -0.23287661140219967,
+              "execution": -0.021501494677627853,
+              "length": -0.017683103221564755,
+              "boundary": 0.10023590369240272,
+              "geometry": -0.00030336393398077316,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.2150149467762785,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 2,
+            "event_uid": "r47:6e0b3c3e9f7ad420012cb8be",
+            "target": [
+              493,
+              750
+            ],
+            "terms": {
+              "heuristic": -0.045674939258665836,
+              "execution": -0.02101749820794674,
+              "length": -0.0041815006574622,
+              "boundary": 0.20567855017410716,
+              "geometry": -0.0005271580895379596,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.21017498207946736,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 3,
+            "event_uid": "r47:d45ceeb25e7c7ff478c7efa9",
+            "target": [
+              798,
+              1091
+            ],
+            "terms": {
+              "heuristic": -0.13667462336584058,
+              "execution": -0.01592250736911199,
+              "length": -0.025450731426692977,
+              "boundary": 0.2461762136698485,
+              "geometry": -0.0022436037874714893,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.15922507369111988,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 4,
+            "event_uid": "r47:6e0b3c3e9f7ad420012cb8be",
+            "target": [
+              1139,
+              1439
+            ],
+            "terms": {
+              "heuristic": -0.0409929347619612,
+              "execution": -0.009884379120647973,
+              "length": -0.03167669296515452,
+              "boundary": 0.10820261328749088,
+              "geometry": -0.0002237576464178875,
+              "unit_reuse": -0.1,
+              "source_reuse": -0.02
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.09884379120647972,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 5,
+            "event_uid": "r47:ec6fb0184ef6f45871d64668",
+            "target": [
+              1487,
+              1779
+            ],
+            "terms": {
+              "heuristic": -0.07309553868043556,
+              "execution": -0.013733490025160909,
+              "length": -0.024616863905325453,
+              "boundary": 0.1580337673902824,
+              "geometry": -0.0023814772520195523,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.02
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.13733490025160908,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 6,
+            "event_uid": "r47:afdc7bb3f1539b3ddd8517b9",
+            "target": [
+              1827,
+              2017
+            ],
+            "terms": {
+              "heuristic": -0.181979963676834,
+              "execution": -0.0125658488759999,
+              "length": -0.012520710059171592,
+              "boundary": 0.22841356362541626,
+              "geometry": -0.00018291661899780045,
+              "unit_reuse": -0.1,
+              "source_reuse": -0.02
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.125658488759999,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 7,
+            "event_uid": "r47:a74b575f952414f4396bad53",
+            "target": [
+              2065,
+              2291
+            ],
+            "terms": {
+              "heuristic": -0.23601646369015605,
+              "execution": -0.000595291215364005,
+              "length": -0.0002899408284023661,
+              "boundary": 0.18257299533403762,
+              "geometry": -0.00019163697096095868,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.00595291215364005,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 8,
+            "event_uid": "r47:c1f1efc803495ee700d67db1",
+            "target": [
+              2339,
+              2533
+            ],
+            "terms": {
+              "heuristic": -0.31113471717087354,
+              "execution": -0.014535872711943947,
+              "length": -0.010272846811308346,
+              "boundary": 0.2681840766518977,
+              "geometry": -0.0071147219022802246,
+              "unit_reuse": -0.1,
+              "source_reuse": -0.02
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.14535872711943945,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 9,
+            "event_uid": "r47:a74b575f952414f4396bad53",
+            "target": [
+              2581,
+              2807
+            ],
+            "terms": {
+              "heuristic": -0.2349416081605159,
+              "execution": -0.004028975121977341,
+              "length": -0.0002899408284023661,
+              "boundary": 0.25286187142482675,
+              "geometry": -0.00045601084140337397,
+              "unit_reuse": -0.1,
+              "source_reuse": -0.02
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.04028975121977341,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 10,
+            "event_uid": "r47:afdc7bb3f1539b3ddd8517b9",
+            "target": [
+              2855,
+              3046
+            ],
+            "terms": {
+              "heuristic": -0.2849627061499562,
+              "execution": -0.013908953304089505,
+              "length": -0.01193791091387245,
+              "boundary": 0.35940865116628806,
+              "geometry": -0.006671924891936638,
+              "unit_reuse": -0.2,
+              "source_reuse": -0.04
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.13908953304089505,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 11,
+            "event_uid": "r47:713b0851cf08a6e2c97f0465",
+            "target": [
+              3094,
+              3344
+            ],
+            "terms": {
+              "heuristic": -0.4511787696212106,
+              "execution": -0.023003129741770798,
+              "length": -0.002136094674556215,
+              "boundary": 0.13707351392875744,
+              "geometry": -0.00013606876324849808,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.04
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.23003129741770798,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 12,
+            "event_uid": "r47:1b228a3e5bd8f536ebd033b8",
+            "target": [
+              3392,
+              3598
+            ],
+            "terms": {
+              "heuristic": -0.03006035619330774,
+              "execution": -0.00928417399606098,
+              "length": -0.004862590401051937,
+              "boundary": 0.0,
+              "geometry": -0.0001227319949451572,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.09284173996060979,
+              "observed_orders": 3
+            }
+          }
+        ]
+      },
+      "original_score_reconstructed": true,
+      "scope": "B1_COMMON_RESCORE_NOT_REWRITING_OLD_OBJECTIVE"
+    },
+    {
+      "song": 2,
+      "arm": "B1",
+      "saved_score": -3.184021741301187,
+      "common_objective": {
+        "terms": {
+          "heuristic": -2.3604551550543738,
+          "execution": -0.17118849959191137,
+          "length": -0.08050534188034189,
+          "boundary": 3.8840103480718597,
+          "geometry": -0.02356658624681296,
+          "unit_reuse": -0.6000000000000001,
+          "source_reuse": -0.2
+        },
+        "total": 0.44829476529841966,
+        "slots": [
+          {
+            "slot": 0,
+            "event_uid": "r47:afdc7bb3f1539b3ddd8517b9",
+            "target": [
+              0,
+              224
+            ],
+            "terms": {
+              "heuristic": -0.17516559702100348,
+              "execution": -0.006801179041451954,
+              "length": -0.0005246959237343838,
+              "boundary": 0.11816040664675993,
+              "geometry": 0.0,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.06801179041451953,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 1,
+            "event_uid": "r47:c1f1efc803495ee700d67db1",
+            "target": [
+              272,
+              499
+            ],
+            "terms": {
+              "heuristic": -0.31839046941115234,
+              "execution": -0.002779660989240232,
+              "length": -0.00022501643655489708,
+              "boundary": 0.16357488944609902,
+              "geometry": -0.00029507194296146715,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.02779660989240232,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 2,
+            "event_uid": "r47:713b0851cf08a6e2c97f0465",
+            "target": [
+              547,
+              789
+            ],
+            "terms": {
+              "heuristic": -0.44297024063230744,
+              "execution": -0.021063263705486956,
+              "length": -0.000601619000657464,
+              "boundary": 0.15080775338416794,
+              "geometry": -0.00038268556796657087,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.21063263705486954,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 3,
+            "event_uid": "r47:a74b575f952414f4396bad53",
+            "target": [
+              837,
+              1104
+            ],
+            "terms": {
+              "heuristic": -0.29337249165236035,
+              "execution": -0.012883490775655211,
+              "length": -0.008173734385272852,
+              "boundary": 0.12521865401499585,
+              "geometry": -0.0001592815592000998,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.1288349077565521,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 4,
+            "event_uid": "r47:6e0b3c3e9f7ad420012cb8be",
+            "target": [
+              1152,
+              1422
+            ],
+            "terms": {
+              "heuristic": -0.08872292367893775,
+              "execution": -0.02061082378342105,
+              "length": -0.009665721564760034,
+              "boundary": 0.36221292769855007,
+              "geometry": -0.005163190414660787,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.02
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.20610823783421048,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 5,
+            "event_uid": "r47:1b228a3e5bd8f536ebd033b8",
+            "target": [
+              1470,
+              1656
+            ],
+            "terms": {
+              "heuristic": -0.10564795141419409,
+              "execution": -0.020174829943181136,
+              "length": -0.015140080539118993,
+              "boundary": 0.7004195239660032,
+              "geometry": -0.0023805630054106832,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.20174829943181136,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 6,
+            "event_uid": "r47:c1f1efc803495ee700d67db1",
+            "target": [
+              1704,
+              1895
+            ],
+            "terms": {
+              "heuristic": -0.022314373270262033,
+              "execution": -0.01855174154599636,
+              "length": -0.012071170282708737,
+              "boundary": 0.22566323986174947,
+              "geometry": -0.00039598618272166096,
+              "unit_reuse": -0.1,
+              "source_reuse": -0.02
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.18551741545996359,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 7,
+            "event_uid": "r47:6e0b3c3e9f7ad420012cb8be",
+            "target": [
+              1943,
+              2200
+            ],
+            "terms": {
+              "heuristic": -0.10024691989258683,
+              "execution": -0.02101749820794674,
+              "length": -0.004103221564760031,
+              "boundary": 0.10861662541670253,
+              "geometry": -0.0005342151574854266,
+              "unit_reuse": -0.1,
+              "source_reuse": -0.04
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.21017498207946736,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 8,
+            "event_uid": "r47:a74b575f952414f4396bad53",
+            "target": [
+              2248,
+              2498
+            ],
+            "terms": {
+              "heuristic": -0.1806607798998428,
+              "execution": -0.01224634492375767,
+              "length": -0.002080251479289944,
+              "boundary": 1.090940131810096,
+              "geometry": -0.002053422743513631,
+              "unit_reuse": -0.1,
+              "source_reuse": -0.02
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.1224634492375767,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 9,
+            "event_uid": "r47:ec6fb0184ef6f45871d64668",
+            "target": [
+              2546,
+              2825
+            ],
+            "terms": {
+              "heuristic": -0.1125442886913916,
+              "execution": -0.01626332346516437,
+              "length": -0.014891683103221576,
+              "boundary": 0.33806256166757925,
+              "geometry": -0.004943744720463912,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.16263323465164367,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 10,
+            "event_uid": "r47:afdc7bb3f1539b3ddd8517b9",
+            "target": [
+              2873,
+              3069
+            ],
+            "terms": {
+              "heuristic": -0.26265918673259486,
+              "execution": -0.011685573031572466,
+              "length": -0.009349482248520705,
+              "boundary": 0.10941865214514314,
+              "geometry": -0.00019028880140671458,
+              "unit_reuse": -0.1,
+              "source_reuse": -0.02
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.11685573031572466,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 11,
+            "event_uid": "r47:a74b575f952414f4396bad53",
+            "target": [
+              3117,
+              3342
+            ],
+            "terms": {
+              "heuristic": -0.23707161719826075,
+              "execution": -0.002265678305969062,
+              "length": -0.0004109138724523327,
+              "boundary": 0.3909149820140132,
+              "geometry": -0.00017169948760560556,
+              "unit_reuse": -0.2,
+              "source_reuse": -0.04
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.022656783059690617,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 12,
+            "event_uid": "r47:021a0275b050c878b2156883",
+            "target": [
+              3390,
+              3601
+            ],
+            "terms": {
+              "heuristic": -0.020688315559479198,
+              "execution": -0.00484509187306818,
+              "length": -0.003267751479289937,
+              "boundary": 0.0,
+              "geometry": -0.006896436663416396,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.04
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.0484509187306818,
+              "observed_orders": 3
+            }
+          }
+        ]
+      },
+      "original_score_reconstructed": false,
+      "scope": "B1_COMMON_RESCORE_NOT_REWRITING_OLD_OBJECTIVE"
+    },
+    {
+      "song": 2,
+      "arm": "C1",
+      "saved_score": 0.4516920730912378,
+      "common_objective": {
+        "terms": {
+          "heuristic": -2.3619549005487785,
+          "execution": -0.16684153901847737,
+          "length": -0.08050534188034189,
+          "boundary": 3.8840103480718597,
+          "geometry": -0.0230164935330245,
+          "unit_reuse": -0.6000000000000001,
+          "source_reuse": -0.2
+        },
+        "total": 0.45169207309123743,
+        "slots": [
+          {
+            "slot": 0,
+            "event_uid": "r47:afdc7bb3f1539b3ddd8517b9",
+            "target": [
+              0,
+              224
+            ],
+            "terms": {
+              "heuristic": -0.17516559702100348,
+              "execution": -0.006801179041451954,
+              "length": -0.0005246959237343838,
+              "boundary": 0.11816040664675993,
+              "geometry": 0.0,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.06801179041451953,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 1,
+            "event_uid": "r47:c1f1efc803495ee700d67db1",
+            "target": [
+              272,
+              499
+            ],
+            "terms": {
+              "heuristic": -0.31839046941115234,
+              "execution": -0.002779660989240232,
+              "length": -0.00022501643655489708,
+              "boundary": 0.16357488944609902,
+              "geometry": -0.00029507194296146715,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.02779660989240232,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 2,
+            "event_uid": "r47:713b0851cf08a6e2c97f0465",
+            "target": [
+              547,
+              789
+            ],
+            "terms": {
+              "heuristic": -0.44297024063230744,
+              "execution": -0.021063263705486956,
+              "length": -0.000601619000657464,
+              "boundary": 0.15080775338416794,
+              "geometry": -0.00038268556796657087,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.21063263705486954,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 3,
+            "event_uid": "r47:a74b575f952414f4396bad53",
+            "target": [
+              837,
+              1104
+            ],
+            "terms": {
+              "heuristic": -0.29337249165236035,
+              "execution": -0.012883490775655211,
+              "length": -0.008173734385272852,
+              "boundary": 0.12521865401499585,
+              "geometry": -0.0001592815592000998,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.1288349077565521,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 4,
+            "event_uid": "r47:6e0b3c3e9f7ad420012cb8be",
+            "target": [
+              1152,
+              1422
+            ],
+            "terms": {
+              "heuristic": -0.08872292367893775,
+              "execution": -0.02061082378342105,
+              "length": -0.009665721564760034,
+              "boundary": 0.36221292769855007,
+              "geometry": -0.005163190414660787,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.02
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.20610823783421048,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 5,
+            "event_uid": "r47:021a0275b050c878b2156883",
+            "target": [
+              1470,
+              1656
+            ],
+            "terms": {
+              "heuristic": -0.1151957321036271,
+              "execution": -0.00927460613654764,
+              "length": -0.015140080539118993,
+              "boundary": 0.7004195239660032,
+              "geometry": -0.0020407028808948654,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.02
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.0927460613654764,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 6,
+            "event_uid": "r47:c1f1efc803495ee700d67db1",
+            "target": [
+              1704,
+              1895
+            ],
+            "terms": {
+              "heuristic": -0.022314373270262033,
+              "execution": -0.01855174154599636,
+              "length": -0.012071170282708737,
+              "boundary": 0.22566323986174947,
+              "geometry": -0.00019343380304080252,
+              "unit_reuse": -0.1,
+              "source_reuse": -0.02
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.18551741545996359,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 7,
+            "event_uid": "r47:6e0b3c3e9f7ad420012cb8be",
+            "target": [
+              1943,
+              2200
+            ],
+            "terms": {
+              "heuristic": -0.10024691989258683,
+              "execution": -0.02101749820794674,
+              "length": -0.004103221564760031,
+              "boundary": 0.10861662541670253,
+              "geometry": -0.0005342151574854266,
+              "unit_reuse": -0.1,
+              "source_reuse": -0.04
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.21017498207946736,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 8,
+            "event_uid": "r47:a74b575f952414f4396bad53",
+            "target": [
+              2248,
+              2498
+            ],
+            "terms": {
+              "heuristic": -0.1806607798998428,
+              "execution": -0.01224634492375767,
+              "length": -0.002080251479289944,
+              "boundary": 1.090940131810096,
+              "geometry": -0.002053422743513631,
+              "unit_reuse": -0.1,
+              "source_reuse": -0.02
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.1224634492375767,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 9,
+            "event_uid": "r47:ec6fb0184ef6f45871d64668",
+            "target": [
+              2546,
+              2825
+            ],
+            "terms": {
+              "heuristic": -0.1125442886913916,
+              "execution": -0.01626332346516437,
+              "length": -0.014891683103221576,
+              "boundary": 0.33806256166757925,
+              "geometry": -0.004943744720463912,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.16263323465164367,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 10,
+            "event_uid": "r47:afdc7bb3f1539b3ddd8517b9",
+            "target": [
+              2873,
+              3069
+            ],
+            "terms": {
+              "heuristic": -0.26265918673259486,
+              "execution": -0.011685573031572466,
+              "length": -0.009349482248520705,
+              "boundary": 0.10941865214514314,
+              "geometry": -0.00019028880140671458,
+              "unit_reuse": -0.1,
+              "source_reuse": -0.04
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.11685573031572466,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 11,
+            "event_uid": "r47:a74b575f952414f4396bad53",
+            "target": [
+              3117,
+              3342
+            ],
+            "terms": {
+              "heuristic": -0.23707161719826075,
+              "execution": -0.002265678305969062,
+              "length": -0.0004109138724523327,
+              "boundary": 0.3909149820140132,
+              "geometry": -0.00017169948760560556,
+              "unit_reuse": -0.2,
+              "source_reuse": -0.04
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.022656783059690617,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 12,
+            "event_uid": "r47:1b228a3e5bd8f536ebd033b8",
+            "target": [
+              3390,
+              3601
+            ],
+            "terms": {
+              "heuristic": -0.012640280364450751,
+              "execution": -0.011398355106267657,
+              "length": -0.003267751479289937,
+              "boundary": 0.0,
+              "geometry": -0.006888756453824611,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.11398355106267656,
+              "observed_orders": 3
+            }
+          }
+        ]
+      },
+      "original_score_reconstructed": true,
+      "scope": "B1_COMMON_RESCORE_NOT_REWRITING_OLD_OBJECTIVE"
+    },
+    {
+      "song": 2,
+      "arm": "C2",
+      "saved_score": 0.7313794361430004,
+      "common_objective": {
+        "terms": {
+          "heuristic": -2.083282843258953,
+          "execution": -0.1703405567453629,
+          "length": -0.09650534188034189,
+          "boundary": 3.806267909883384,
+          "geometry": -0.024759731855725456,
+          "unit_reuse": -0.5,
+          "source_reuse": -0.2
+        },
+        "total": 0.7313794361430004,
+        "slots": [
+          {
+            "slot": 0,
+            "event_uid": "r47:a74b575f952414f4396bad53",
+            "target": [
+              0,
+              206
+            ],
+            "terms": {
+              "heuristic": -0.08394308820915858,
+              "execution": -0.0008617032102714988,
+              "length": -0.004947772846811305,
+              "boundary": 0.10107351131004494,
+              "geometry": 0.0,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.008617032102714988,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 1,
+            "event_uid": "r47:713b0851cf08a6e2c97f0465",
+            "target": [
+              254,
+              499
+            ],
+            "terms": {
+              "heuristic": -0.3836129030460441,
+              "execution": -0.02062801876055256,
+              "length": -0.0010519395134779772,
+              "boundary": 0.16357488944609902,
+              "geometry": -0.007088556073329439,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.20628018760552558,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 2,
+            "event_uid": "r47:afdc7bb3f1539b3ddd8517b9",
+            "target": [
+              547,
+              771
+            ],
+            "terms": {
+              "heuristic": -0.3197278841840712,
+              "execution": -0.006295631330722831,
+              "length": -0.0005246959237343838,
+              "boundary": 0.09015221053240693,
+              "geometry": -0.0002083807649044519,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.06295631330722831,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 3,
+            "event_uid": "r47:d45ceeb25e7c7ff478c7efa9",
+            "target": [
+              819,
+              1104
+            ],
+            "terms": {
+              "heuristic": -0.16394286598772456,
+              "execution": -0.019241258937172982,
+              "length": -0.019000657462195935,
+              "boundary": 0.12521865401499585,
+              "geometry": -0.0002203019490466847,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.1924125893717298,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 4,
+            "event_uid": "r47:6e0b3c3e9f7ad420012cb8be",
+            "target": [
+              1152,
+              1422
+            ],
+            "terms": {
+              "heuristic": -0.08872292367893775,
+              "execution": -0.02061082378342105,
+              "length": -0.009665721564760034,
+              "boundary": 0.36221292769855007,
+              "geometry": -0.00022622902020930829,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.02
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.20610823783421048,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 5,
+            "event_uid": "r47:021a0275b050c878b2156883",
+            "target": [
+              1470,
+              1656
+            ],
+            "terms": {
+              "heuristic": -0.1151957321036271,
+              "execution": -0.00927460613654764,
+              "length": -0.015140080539118993,
+              "boundary": 0.7004195239660032,
+              "geometry": -0.0020407028808948654,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.02
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.0927460613654764,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 6,
+            "event_uid": "r47:c1f1efc803495ee700d67db1",
+            "target": [
+              1704,
+              1895
+            ],
+            "terms": {
+              "heuristic": -0.022314373270262033,
+              "execution": -0.01855174154599636,
+              "length": -0.012071170282708737,
+              "boundary": 0.22566323986174947,
+              "geometry": -0.00019343380304080252,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.18551741545996359,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 7,
+            "event_uid": "r47:6e0b3c3e9f7ad420012cb8be",
+            "target": [
+              1943,
+              2200
+            ],
+            "terms": {
+              "heuristic": -0.10024691989258683,
+              "execution": -0.02101749820794674,
+              "length": -0.004103221564760031,
+              "boundary": 0.10861662541670253,
+              "geometry": -0.0005342151574854266,
+              "unit_reuse": -0.1,
+              "source_reuse": -0.04
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.21017498207946736,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 8,
+            "event_uid": "r47:a74b575f952414f4396bad53",
+            "target": [
+              2248,
+              2498
+            ],
+            "terms": {
+              "heuristic": -0.1806607798998428,
+              "execution": -0.01224634492375767,
+              "length": -0.002080251479289944,
+              "boundary": 1.090940131810096,
+              "geometry": -0.002053422743513631,
+              "unit_reuse": -0.1,
+              "source_reuse": -0.02
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.1224634492375767,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 9,
+            "event_uid": "r47:ec6fb0184ef6f45871d64668",
+            "target": [
+              2546,
+              2825
+            ],
+            "terms": {
+              "heuristic": -0.1125442886913916,
+              "execution": -0.01626332346516437,
+              "length": -0.014891683103221576,
+              "boundary": 0.33806256166757925,
+              "geometry": -0.004943744720463912,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.02
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.16263323465164367,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 10,
+            "event_uid": "r47:afdc7bb3f1539b3ddd8517b9",
+            "target": [
+              2873,
+              3069
+            ],
+            "terms": {
+              "heuristic": -0.26265918673259486,
+              "execution": -0.011685573031572466,
+              "length": -0.009349482248520705,
+              "boundary": 0.10941865214514314,
+              "geometry": -0.00019028880140671458,
+              "unit_reuse": -0.1,
+              "source_reuse": -0.04
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.11685573031572466,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 11,
+            "event_uid": "r47:a74b575f952414f4396bad53",
+            "target": [
+              3117,
+              3342
+            ],
+            "terms": {
+              "heuristic": -0.23707161719826075,
+              "execution": -0.002265678305969062,
+              "length": -0.0004109138724523327,
+              "boundary": 0.3909149820140132,
+              "geometry": -0.00017169948760560556,
+              "unit_reuse": -0.2,
+              "source_reuse": -0.04
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.022656783059690617,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 12,
+            "event_uid": "r47:1b228a3e5bd8f536ebd033b8",
+            "target": [
+              3390,
+              3601
+            ],
+            "terms": {
+              "heuristic": -0.012640280364450751,
+              "execution": -0.011398355106267657,
+              "length": -0.003267751479289937,
+              "boundary": 0.0,
+              "geometry": -0.006888756453824611,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.11398355106267656,
+              "observed_orders": 3
+            }
+          }
+        ]
+      },
+      "original_score_reconstructed": true,
+      "scope": "B1_COMMON_RESCORE_NOT_REWRITING_OLD_OBJECTIVE"
+    },
+    {
+      "song": 2,
+      "arm": "C3",
+      "saved_score": -0.5980723600703344,
+      "common_objective": {
+        "terms": {
+          "heuristic": -2.1934692351269844,
+          "execution": -0.1655481976742295,
+          "length": -0.10550534188034189,
+          "boundary": 2.468318550727745,
+          "geometry": -0.02186813611652376,
+          "unit_reuse": -0.4,
+          "source_reuse": -0.18000000000000002
+        },
+        "total": -0.5980723600703345,
+        "slots": [
+          {
+            "slot": 0,
+            "event_uid": "r47:a74b575f952414f4396bad53",
+            "target": [
+              0,
+              206
+            ],
+            "terms": {
+              "heuristic": -0.08394308820915858,
+              "execution": -0.0008617032102714988,
+              "length": -0.004947772846811305,
+              "boundary": 0.09674503462288939,
+              "geometry": 0.0,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.008617032102714988,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 1,
+            "event_uid": "r47:713b0851cf08a6e2c97f0465",
+            "target": [
+              254,
+              499
+            ],
+            "terms": {
+              "heuristic": -0.3836129030460441,
+              "execution": -0.02062801876055256,
+              "length": -0.0010519395134779772,
+              "boundary": 0.48229778329708506,
+              "geometry": -0.007088556073329439,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.20628018760552558,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 2,
+            "event_uid": "r47:afdc7bb3f1539b3ddd8517b9",
+            "target": [
+              547,
+              771
+            ],
+            "terms": {
+              "heuristic": -0.3197278841840712,
+              "execution": -0.006295631330722831,
+              "length": -0.0005246959237343838,
+              "boundary": 0.22147874428778735,
+              "geometry": -0.0002083807649044519,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.06295631330722831,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 3,
+            "event_uid": "r47:d45ceeb25e7c7ff478c7efa9",
+            "target": [
+              819,
+              1104
+            ],
+            "terms": {
+              "heuristic": -0.16394286598772456,
+              "execution": -0.019241258937172982,
+              "length": -0.019000657462195935,
+              "boundary": 0.09028409112476732,
+              "geometry": -0.0002203019490466847,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.1924125893717298,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 4,
+            "event_uid": "r47:6e0b3c3e9f7ad420012cb8be",
+            "target": [
+              1152,
+              1422
+            ],
+            "terms": {
+              "heuristic": -0.08872292367893775,
+              "execution": -0.02061082378342105,
+              "length": -0.009665721564760034,
+              "boundary": 0.2709185590534393,
+              "geometry": -0.00022622902020930829,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.02
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.20610823783421048,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 5,
+            "event_uid": "r47:1b228a3e5bd8f536ebd033b8",
+            "target": [
+              1470,
+              1656
+            ],
+            "terms": {
+              "heuristic": -0.10564795141419409,
+              "execution": -0.020174829943181136,
+              "length": -0.015140080539118993,
+              "boundary": 0.1135113339786372,
+              "geometry": -0.0023805630054106832,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.20174829943181136,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 6,
+            "event_uid": "r47:c1f1efc803495ee700d67db1",
+            "target": [
+              1704,
+              1895
+            ],
+            "terms": {
+              "heuristic": -0.022314373270262033,
+              "execution": -0.01855174154599636,
+              "length": -0.012071170282708737,
+              "boundary": 0.09241285993616871,
+              "geometry": -0.00039598618272166096,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.0
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.18551741545996359,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 7,
+            "event_uid": "r47:6e0b3c3e9f7ad420012cb8be",
+            "target": [
+              1943,
+              2200
+            ],
+            "terms": {
+              "heuristic": -0.10024691989258683,
+              "execution": -0.02101749820794674,
+              "length": -0.004103221564760031,
+              "boundary": 0.16312336616287043,
+              "geometry": -0.0005342151574854266,
+              "unit_reuse": -0.1,
+              "source_reuse": -0.04
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.21017498207946736,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 8,
+            "event_uid": "r47:afdc7bb3f1539b3ddd8517b9",
+            "target": [
+              2248,
+              2480
+            ],
+            "terms": {
+              "heuristic": -0.23140560844110558,
+              "execution": -0.004268794124132013,
+              "length": -3.32840236686378e-06,
+              "boundary": 0.12206642439195545,
+              "geometry": -0.0022005501937970326,
+              "unit_reuse": -0.1,
+              "source_reuse": -0.02
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.04268794124132013,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 9,
+            "event_uid": "r47:ec6fb0184ef6f45871d64668",
+            "target": [
+              2528,
+              2825
+            ],
+            "terms": {
+              "heuristic": -0.0927409349098407,
+              "execution": -0.01440040055825724,
+              "length": -0.028718606180144653,
+              "boundary": 0.07993157796882851,
+              "geometry": -0.0011010228863936205,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.02
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.1440040055825724,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 10,
+            "event_uid": "r47:a74b575f952414f4396bad53",
+            "target": [
+              2873,
+              3087
+            ],
+            "terms": {
+              "heuristic": -0.24194174438492144,
+              "execution": -0.0014996791366202237,
+              "length": -0.002426405325443784,
+              "boundary": 0.1515977243984619,
+              "geometry": -0.00016910834811427269,
+              "unit_reuse": -0.1,
+              "source_reuse": -0.02
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.014996791366202236,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 11,
+            "event_uid": "r47:c1f1efc803495ee700d67db1",
+            "target": [
+              3135,
+              3342
+            ],
+            "terms": {
+              "heuristic": -0.3385337221486585,
+              "execution": -0.013152726262886725,
+              "length": -0.004583990795529252,
+              "boundary": 0.5839510515048547,
+              "geometry": -0.00690228881402657,
+              "unit_reuse": -0.1,
+              "source_reuse": -0.02
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.13152726262886724,
+              "observed_orders": 3
+            }
+          },
+          {
+            "slot": 12,
+            "event_uid": "r47:021a0275b050c878b2156883",
+            "target": [
+              3390,
+              3601
+            ],
+            "terms": {
+              "heuristic": -0.020688315559479198,
+              "execution": -0.00484509187306818,
+              "length": -0.003267751479289937,
+              "boundary": 0.0,
+              "geometry": -0.00044093372108460594,
+              "unit_reuse": -0.0,
+              "source_reuse": -0.04
+            },
+            "evidence": {
+              "status": "OBSERVED",
+              "value": 0.0484509187306818,
+              "observed_orders": 3
+            }
+          }
+        ]
+      },
+      "original_score_reconstructed": true,
+      "scope": "B1_COMMON_RESCORE_NOT_REWRITING_OLD_OBJECTIVE"
+    }
+  ],
+  "C2_minus_C1": [
+    {
+      "song": 0,
+      "terms": {
+        "heuristic": 0.0,
+        "execution": 0.0,
+        "length": 0.0,
+        "boundary": 0.0,
+        "geometry": 0.0,
+        "unit_reuse": 0.0,
+        "source_reuse": 0.0
+      },
+      "total": 0.0
+    },
+    {
+      "song": 1,
+      "terms": {
+        "heuristic": 0.6056527841385457,
+        "execution": 0.00038224899947456037,
+        "length": -0.009999999999999981,
+        "boundary": -0.158926435867909,
+        "geometry": -0.009699612227848538,
+        "unit_reuse": -0.09999999999999998,
+        "source_reuse": 2.7755575615628914e-17
+      },
+      "total": 0.3274089850422629
+    },
+    {
+      "song": 2,
+      "terms": {
+        "heuristic": 0.2786720572898256,
+        "execution": -0.003499017726885517,
+        "length": -0.016,
+        "boundary": -0.07774243818847593,
+        "geometry": -0.0017432383227009574,
+        "unit_reuse": 0.10000000000000009,
+        "source_reuse": 0.0
+      },
+      "total": 0.27968736305176295
+    }
+  ],
+  "all_unknown_graph_nodes": [],
+  "all_unknown_selected_nodes": [],
+  "all_unknown_uniform_entries": [],
+  "missing_is_not_low_cost": true,
+  "frozen_R58_fallback_zero_retained": true,
+  "production_changed": false,
+  "optimizer_calls": 0
+}
