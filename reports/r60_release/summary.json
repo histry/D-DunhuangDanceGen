@@ -1,0 +1,102 @@
+{
+  "schema": "R60_PHASE_INTEGRITY_ATTRIBUTION",
+  "scientific_commit": "32c6e1b42e7acdc11e2c0dca5710216358c62e56",
+  "sources": 32,
+  "source_counts": {
+    "ChangE": 8,
+    "AIST++": 12,
+    "FineDance": 12
+  },
+  "units": 187,
+  "summary": {
+    "ChangE": {
+      "units": 139,
+      "matched": 97,
+      "not_matchable": 42,
+      "with_common_hidden_support": 97,
+      "primary": {
+        "sources": 8,
+        "pairs": 97,
+        "mean": 0.0012783052281473335,
+        "ci95": [
+          -0.007429638021305922,
+          0.009090236158335688
+        ],
+        "sampling_unit": "SOURCE_RECORDING_NOT_WINDOW; NO_UNSEEN_SEMANTIC_GENERALIZATION"
+      },
+      "legal_counts": {
+        "A4": 341,
+        "A5": 341
+      },
+      "legal_duration_identical_for_equal_length": true
+    },
+    "AIST++": {
+      "units": 12,
+      "matched": 0,
+      "not_matchable": 12,
+      "with_common_hidden_support": 0,
+      "primary": {
+        "sources": 0,
+        "mean": null,
+        "ci95": null
+      },
+      "legal_counts": {
+        "A4": 0,
+        "A5": 0
+      },
+      "legal_duration_identical_for_equal_length": true
+    },
+    "FineDance": {
+      "units": 36,
+      "matched": 12,
+      "not_matchable": 24,
+      "with_common_hidden_support": 12,
+      "primary": {
+        "sources": 12,
+        "pairs": 12,
+        "mean": 0.021581766711011086,
+        "ci95": [
+          0.0027098544483957665,
+          0.04439323041131628
+        ],
+        "sampling_unit": "SOURCE_RECORDING_NOT_WINDOW; NO_UNSEEN_SEMANTIC_GENERALIZATION"
+      },
+      "legal_counts": {
+        "A4": 35,
+        "A5": 35
+      },
+      "legal_duration_identical_for_equal_length": true
+    }
+  },
+  "accepted_change_frames": 41400,
+  "legacy_events": 499,
+  "r47_units": 139,
+  "r58_bank": 16,
+  "parent_files_unchanged": 4067,
+  "main": {
+    "binding": {
+      "commit": "32c6e1b42e7acdc11e2c0dca5710216358c62e56",
+      "code": {
+        "__init__.py": "68e0ba519355bc46d3f6461cbbce38f68d57dc73582f09bb76e778924880fbd1",
+        "__main__.py": "aa9974537220c5cf820f11301f396cee79333cad239a53210f8074de0ca86512",
+        "common.py": "ca56749f752c8af8f6fcc0479620feb3aa6cb138835c3c87957e1dc7ef8a2fd6",
+        "population.py": "995b7bf9b8e4a78b9c29a92d66a159cd3b5adb08a59f8399b93efc1e37fee0c8",
+        "protocol.json": "0bd38f7c15fd50d076fa8ebe0e0d0251d46ae79d8cbee6afd8f9e5d5b50f2966",
+        "study.py": "644e435cdb28557177ac59bbea69362b40d7d6da148dd51a73ffc1d0e644ff85",
+        "view.py": "5a689f123992cf946d5916bac4b02d5c62117ea4485dee034f6c811911782f4a",
+        "viewer.html": "4407c9379c53977ba624d3e59d16275d47b83949c8846f83940e9e922181b469"
+      }
+    },
+    "cases": 9,
+    "population_sha256": "7f3ed399dfa81483576131b4033c01d00153abea946798e46de13c51ac4d9f12",
+    "arrays_sha256": "e794ad01f4b05cd8a190253603f8f015a889e344de36fd9d970849799500579f",
+    "selection_before_outcome_scoring": true,
+    "fps": 30,
+    "original_speed": true,
+    "music": "SILENT_SOURCE_SEGMENTATION_REVIEW_NOT_MUSIC_MATCHING",
+    "source_native_world_root": "UNKNOWN_BODY22_ROOT_RELATIVE",
+    "generated": false,
+    "can_route": false
+  },
+  "legal_domain_note": "EQUAL_SOURCE_LENGTH_HAS_SAME_ENDPOINT_RATE_DOMAIN; EXISTING_OPTIONAL_BEAT_ATTRACTION_CANNOT_PROVE_PHASE_DEPENDENT_FEASIBILITY"
+}

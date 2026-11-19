@@ -1,0 +1,72 @@
+{
+  "G1_phase_truth": "NOT_ESTABLISHED",
+  "G2_numerical_results": {
+    "ChangE": {
+      "units": 139,
+      "matched": 97,
+      "not_matchable": 42,
+      "with_common_hidden_support": 97,
+      "primary": {
+        "sources": 8,
+        "pairs": 97,
+        "mean": 0.0012783052281473335,
+        "ci95": [
+          -0.007429638021305922,
+          0.009090236158335688
+        ],
+        "sampling_unit": "SOURCE_RECORDING_NOT_WINDOW; NO_UNSEEN_SEMANTIC_GENERALIZATION"
+      },
+      "legal_counts": {
+        "A4": 341,
+        "A5": 341
+      },
+      "legal_duration_identical_for_equal_length": true
+    },
+    "AIST++": {
+      "units": 12,
+      "matched": 0,
+      "not_matchable": 12,
+      "with_common_hidden_support": 0,
+      "primary": {
+        "sources": 0,
+        "mean": null,
+        "ci95": null
+      },
+      "legal_counts": {
+        "A4": 0,
+        "A5": 0
+      },
+      "legal_duration_identical_for_equal_length": true
+    },
+    "FineDance": {
+      "units": 36,
+      "matched": 12,
+      "not_matchable": 24,
+      "with_common_hidden_support": 12,
+      "primary": {
+        "sources": 12,
+        "pairs": 12,
+        "mean": 0.021581766711011086,
+        "ci95": [
+          0.0027098544483957665,
+          0.04439323041131628
+        ],
+        "sampling_unit": "SOURCE_RECORDING_NOT_WINDOW; NO_UNSEEN_SEMANTIC_GENERALIZATION"
+      },
+      "legal_counts": {
+        "A4": 35,
+        "A5": 35
+      },
+      "legal_duration_identical_for_equal_length": true
+    }
+  },
+  "G3_joint_planning": "NOT_ADMITTED",
+  "human_reviewed": false,
+  "semantic_completeness": "UNKNOWN",
+  "can_route": false,
+  "training_updates": 0,
+  "Native24": "NOT_EVALUABLE",
+  "pre_score_correction": "V1_RETAINED; V2_REQUIRES_EQUAL_REAL_CONTEXT_AND_INTERVENED_SEAM",
+  "no_V1_controls": true,
+  "no_production_or_frozen_algorithm_changes": true
+}

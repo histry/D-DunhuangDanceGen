@@ -1,0 +1,32 @@
+{
+  "passed": true,
+  "verified_at": "2026-11-19T07:52:09.985060+00:00",
+  "main_result_sha256": "7b69e687c8363bf1cf7a2fad77f923bd4040a7c61bfbc17e337ebdf282550080",
+  "cases": 9,
+  "source_views": 3,
+  "frame_step_forward_backward": true,
+  "seek": true,
+  "play_pause": true,
+  "speed_half": true,
+  "observed_change": {
+    "source": "female_FeiTian",
+    "origin": 89,
+    "local_frame": 180,
+    "actual_source_frame": 269,
+    "source_seconds": 8.966666666666667
+  },
+  "observed_finedance": {
+    "source": "fine_001",
+    "origin": 718,
+    "local_frame": 150,
+    "actual_source_frame": 868,
+    "source_seconds": 28.933333333333334
+  },
+  "original_clock_not_stretched": true,
+  "old499_cuts_visible": true,
+  "protected_spans_visible": true,
+  "context_outside_interval_gray": true,
+  "human_quality_review": false,
+  "scientific_outcome_scores_computed": false,
+  "scope": "BROWSER_INTERACTION_AND_SOURCE_CLOCK_ACCEPTANCE_NOT_ARTISTIC_OR_PHYSICAL_QUALITY"
+}

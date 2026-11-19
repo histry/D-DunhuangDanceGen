@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "cases": 9,
+  "panels_expected": 4,
+  "observed_source": "female_FeiTian",
+  "observed_side": "right",
+  "local_gap_frame": 28,
+  "actual_hidden_region": [
+    4,
+    52
+  ],
+  "source_absolute_clocks_distinct_and_disclosed": true,
+  "real_G1_and_truth_visible": true,
+  "play_pause": true,
+  "seek_and_frame_step": true,
+  "silent_half_speed": true,
+  "can_route": false,
+  "human_quality_review": false,
+  "neural_generation": false,
+  "controls_result_sha256": "3f01bb275757c0d71d1ae83e347303cab4c954e68d1e6dbf9ede9a753baad695"
+}
