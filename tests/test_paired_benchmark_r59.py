@@ -59,3 +59,14 @@ def test_finedance_unequal_ends_use_only_observed_prefix():
  s=shared_support(1500,1497,1497);assert s['frames']==1497 and s['unmatched_motion_tail']==3
  s=shared_support(2191,2216,2216);assert s['frames']==2191 and s['unmatched_audio_feature_tail']==25 and not s['resampling'] and s['padding_frames']==0
  with pytest.raises(ValueError):shared_support(0,100,100)
+
+def test_replay_candidate_views_preserve_every_score_bit():
+ from dunhuang.research.paired_benchmark_r59.replay import Bank,cached_diagonal
+ from dunhuang.research.paired_benchmark_r59.scoring import diagonal
+ rng=np.random.default_rng(59)
+ for zero_outside in (False,True):
+  mt=rng.normal(size=(150,96)).astype('float32');dt=rng.normal(size=(21,150,96)).astype('float32');dv=np.ones((21,150),bool)
+  if zero_outside:dv[20]=False
+  ids=[9,2,7,9];q=[mt,mt,np.ones(150,bool),np.ones(150,bool)];bank=dt.view(Bank);valid=dv.view(Bank)
+  for reverse in (False,True):
+   actual=cached_diagonal(q,[None,bank[ids],None,valid[ids]],reverse);expected=diagonal(q,[None,dt[ids],None,dv[ids]],reverse);assert np.array_equal(actual,expected)

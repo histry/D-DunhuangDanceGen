@@ -14,7 +14,7 @@ elif a.stage=='diagnostics':
  from .diagnostics import run
  run(a.out)
 elif a.stage=='verify':
- from .scoring import verify
+ from .replay import verify
  verify(a.out,a.source)
 else:
  from .scoring import run
