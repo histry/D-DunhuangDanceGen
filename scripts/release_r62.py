@@ -264,7 +264,7 @@ def release():
         '## P0：真实连续动作的变长隐藏缺口', '',
         f"沿用R61的{summary['continuous_source_centers']}个来源中心，五时长共登记{summary['continuous_registered']}个任务，实际具备真实上下文{summary['continuous_eligible']}个；缺少支持时不平移中心或另选来源。每个时长内部，三方法使用相同隐藏目标与同一组4+4可用边缘观测。", '',
         'SLERP仅读两个邻接端点；SingleChartHermite与冻结G1实际使用相同的最近3+3姿态，估计相同身体角速度／角加速度及SO(3)导数约束。二者可用的第4帧保持不动但不进入冻结导数估计器。Hermite为单个Lie代数五次图，G1使用4/8/16重锚定分段及内部测地线状态；因此该比较同时涉及内部锚点／分段组织，不能称为只改变一项抽象几何性质。两者沿用同半径、同导数容差，拒绝不回退。', '',
-        '|隐藏长度|数据|合格来源任务|G1−SLERP角误差rad，95%来源重采样区间|G1−单图Hermite角误差rad，95%来源重采样区间|',
+        '|隐藏长度|数据|具备上下文任务|G1−SLERP有效配对n；角误差rad与95%区间|G1−单图Hermite有效配对n；角误差rad与95%区间|',
         '|---:|---|---:|---|---|']
     for gap,datasets in continuous['summary'].items():
         for dataset,s in datasets.items():
@@ -273,11 +273,12 @@ def release():
             for name in ('SLERP','SingleChartHermite'):
                 q=s['paired']['G1_minus_'+name+'_error_rad'];value=fmt(q['mean'])
                 if q['ci95'] is not None:value+=' ['+fmt(q['ci95'][0])+', '+fmt(q['ci95'][1])+']'
-                values.append(value)
+                values.append('n=%d；'%q['sources']+value)
             lines.append('|%s|%s|%d/%d|%s|%s|'%(gap,dataset,s['eligible'],s['registered'],*values))
     lines += ['',
         '负值只表示同一个长度、同一个隐藏目标上G1平均重建误差更低。长度变化会改变真实隐藏内容和边界状态，不能把不同长度平均误差直接排序成“更长更好”。配对均值以双方均可构造为条件；全部拒绝、原数值筛查失败和人口缺失在failures.csv另列，不能把失败填零。', '',
-        '纯观测难度分层先用固定48帧任务的可见端点平均SO(3)距离取全来源中位数，再把相同来源标签用于全部长度。分层不读取重建成绩、不用于选最佳长度；逐来源、数据域和固定难度分层的同长度差值完整公开。自动阶段侵入仍是代理重叠，不是语义完整性真值；目标阶段分母与整条来源证据分母明确区分。', '',
+        '端点距离描述性分层先用固定48帧任务的可见端点平均SO(3)距离取全来源中位数，再把相同来源标签用于全部长度。端点接近不代表整段动作简单，绕回相近姿态的复杂动作也可能被归在低端点距离组。分层不读取重建成绩、不用于选最佳长度；逐来源、数据域和端点距离分层的同长度差值完整公开。自动阶段侵入仍是代理重叠，不是语义完整性真值；目标阶段分母与整条来源证据分母明确区分。', '',
+        '表中的上下文任务数不是每项配对的分母；每个差值旁单列双方可构造的有效来源数n。五种长度、多个方法和数据域的区间均为探索性逐项区间，未作多重比较调整，也不是独立样本上的稳定收益证明。', '',
         f"48帧基线的{summary['R61_parity_cases']}个可评案例与R61原真值、G1轨迹、共享标量读数及目标／全来源掩码逐项精确一致。", '',
         '## P1：固定两个真实Core，仅改变连接帧数', '',
         f"按冻结R51案例编号和边顺序，最多请求{cross['population']['requested_maximum_pairs']}组，实际得到{summary['cross_pairs']}组不重复事件／Warp／边缘读集组合，涉及{summary['cross_source_count']}条来源。该短人口不足12组时保留实际短缺，不能补选更容易的案例。全部完整Core与合法Warp、端点姿态、最近4+4读集和估计边界jet在五时长间保持精确一致。", '',
@@ -291,7 +292,7 @@ def release():
         lines.append('|%s|%d|%s|%s|'%(gap,s['tasks'],*cells))
     patterns=Counter('|'.join(map(str,r['passing_G1_durations'])) or 'NONE' for r in cross['summary']['pair_responses'])
     lines += ['', '固定连接组的G1通过长度集合：'+ '；'.join(k+'：'+str(v)+'组' for k,v in sorted(patterns.items()))+'。', '',
-        '通过集合和最短通过长度均是观察到的事后Oracle描述，不是已经训练或验证的自适应决策器。D2/D3下降可能仅来自给过渡分配更多时间，需同时查看路径长度、关节活动、姿态范围和边界变化，不能自动解释为自然性提高。', '',
+        '通过集合和最短通过长度均是观察到的事后Oracle描述，不是已经训练或验证的自适应决策器。D2/D3下降可能仅来自给过渡分配更多时间，需同时查看路径长度、关节活动、姿态范围和边界变化，不能自动解释为自然性提高。R52原桥在G0/G1合格选项中选取低D3者；本轮主效果仅G1，单个48帧G1失败不能直接认定历史Heuristic桥退化。', '',
         '**本轮长过渡直接增加总时长，没有从固定Core合法时长中偿还帧数。** 因此不是固定音乐总帧数下的时间预算收益，也没有完成Core×Transition联合规划；新P2与整曲对照保持未运行。只有冻结选择规则在独立评价上超过固定48帧和简单规则、且没有静止化退化，才有依据启动联合时间预算研究。', '',
         '## 复验、封存与资格', '',
         f"完整回归{tests['passed']} passed、{tests['skipped']} skipped。独立新进程重新解码来源并重构main/controls两阶段的P0/P1全部曲线；科学值和确定性NPZ逐字节精确一致。直接R61父代封存{summary['direct_parent_files_unchanged']}个文件、继承历史父代{summary['inherited_frozen_parent_files_unchanged']}个文件保持不变。", '',
