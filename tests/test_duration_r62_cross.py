@@ -1,8 +1,14 @@
 import numpy as np
 import pytest
+import json
 from scipy.spatial.transform import Rotation
 
 from dunhuang.research.duration_r62 import cross_source as cross
+
+def test_boundary_evidence_identity_is_json_serializable():
+    source=dict(phase_evidence=[dict(evidence_span=[2,5])],protected_spans=[[1,6]])
+    data=cross.boundary_evidence(np.array([2.25,3.5]),source)
+    assert json.loads(json.dumps(data))==data
 
 
 def motion(start=0.,end=.3,n=70):

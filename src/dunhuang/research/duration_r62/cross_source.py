@@ -92,7 +92,7 @@ def edge_jets(R,gap):
 def boundary_evidence(positions,source):
     """Record observed source evidence near edges without extending it into gap."""
     positions=np.asarray(positions,float)
-    support=sorted(set(np.floor(positions).astype(int))|set(np.ceil(positions).astype(int)))
+    support=sorted({int(t) for t in np.r_[np.floor(positions),np.ceil(positions)]})
     result=dict(source_positions=positions.tolist(),interpolation_read_support=support,
                 verified_phase='UNKNOWN',transition_source_evidence='UNOBSERVED_DIFFERENT_SOURCE_GAP')
     for name,spans in [('raw',[p['evidence_span'] for p in source['phase_evidence']]),
