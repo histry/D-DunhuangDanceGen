@@ -1,0 +1,31 @@
+{
+  "schema": "R65_INDEPENDENT_FROZEN_REVIEW_V1",
+  "parent_commit": "cd5797e13bea3591f1dc9349f00d2704b1224d7f",
+  "parent_main_sha256": "48122dea0886791e5fa7ba946d9715cfc2a788314d6d5bc004baa0912bce30ee",
+  "parent_controls_sha256": "7a32a9aa890a22e316d5397b4fcada4ec4270750b6901caedee1706c151d203e",
+  "methods": ["Fixed48", "BeatOnly", "LocalBeat", "ShuffledBeat"],
+  "dimensions": ["music_coordination", "transition_timing", "continuity", "richness"],
+  "population": "ALL_29_FROZEN_R64_CASES; 9_DEV_20_EXPOSED_EVAL; ALL_FOUR_ARMS_RETAINED_INCLUDING_IDENTICAL_TRAJECTORIES",
+  "fps": 30,
+  "frames": 528,
+  "review_forms": 2,
+  "blinding": "HMAC_OPAQUE_IDS; BALANCED_RANDOM_POSITION_PER_FORM; PRIVATE_ADMIN_SEED_AND_MAPPING; REVIEWER_ALLOWLIST_ONLY",
+  "music_annotation_clock": "COMPLETE_ORIGINAL_WAV; SAMPLE0_EQUALS_MEDIA0; SOURCE_SAMPLE_RATE_AND_LENGTH_HASHED; NO_AUTOMATIC_MARKS_DISPLAYED",
+  "music_event_types": ["beat", "downbeat", "accent", "phrase"],
+  "match_tolerance_seconds": {"beat": 0.07, "downbeat": 0.10, "accent": 0.10, "phrase": 0.50},
+  "tolerance_scope": "BEAT_70MS_FOLLOWS_MIR_EVAL_DEFAULT; OTHER_TOLERANCES_ARE_PREREGISTERED_PILOT_VALUES_NOT_VALIDATED_ARTISTIC_BOUNDARIES",
+  "event_matching": "ONE_TO_ONE_MAXIMUM_CARDINALITY_THEN_MINIMUM_ABSOLUTE_ERROR; NO_POSTHOC_CLOCK_SHIFT; UNSURE_INTERVALS_MASKED",
+  "quality_ratings": "ORDINAL_1_TO_5_PER_DIMENSION; EXPLICIT_UNSURE; DEFAULT_UNRATED; NO_AUTOFILL; ORIGINAL_REVIEW_RECORDS_PRESERVED",
+  "independence": "AT_LEAST_TWO_DISTINCT_ADMIN_VERIFIED_PERSONS; AUDIO_ONLY_BEFORE_MOTION; METHOD_EXPOSURE_OR_PREVIOUS_R64_VIEWING_EXCLUDED_FROM_INDEPENDENT_ANALYSIS",
+  "human_status": "NO_RECORDS_IS_NOT_EVALUABLE; STRUCTURAL_IMPORT_IS_UNVERIFIED; ROSTER_ATTESTATION_DOES_NOT_PROVE_CULTURAL_OR_PHYSICAL_TRUTH",
+  "sampling": "CASE_CONTRASTS_DESCRIPTIVE; SHARED_3_MUSIC_AND_8_SOURCES; NO_IID_EDGE_OR_METHOD_OR_REVIEWER_P_VALUES; NO_GENERALIZATION_CLAIMS",
+  "proxy_controls": ["Identity", "QuarterBeat", "HalfBeat", "ThreeQuarterBeat", "HalfWindow"],
+  "proxy_control_scope": "LOCAL_CIRCULAR_EVENT_COUNT_PRESERVING_SCORE_ONLY; EXISTING_TRAJECTORIES_AND_METHOD_SELECTIONS_NEVER_CHANGED; PERIODICITY_MAY_SURVIVE",
+  "quality_gate": "NO_REWARD_TUNING_NO_NEW_PLANNER_NO_MODEL_TRAINING_NO_FULL_SONG_EXPANSION",
+  "Native24": "NOT_EVALUABLE",
+  "can_route": false,
+  "references": [
+    "https://github.com/mir-evaluation/mir_eval/blob/main/mir_eval/beat.py",
+    "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.spearmanr.html"
+  ]
+}
