@@ -27,7 +27,7 @@ def balanced_cost(record,reference):
         scope='PLANNING_SURROGATES_NOT_INDEPENDENT_QUALITY')
 
 def guard(record,baseline):
-    if not original_pass(record):return False
+    if not record.get('methods',{}).get('G1',{}).get('constructible'):return False
     cfg=CFG['retention_guard']
     for side in ('left','right'):
         r=record[side].get('retention_vs_fixed48') or {}

@@ -11,7 +11,7 @@ from dunhuang.research.warp_coupling_r53.common import array_hash
 
 
 def prepared(frames=600, beats=None):
-    beats = list(range(0, frames, 30)) if beats is None else beats
+    beats = list(range(0, frames, 30))+[frames] if beats is None else beats
     curve = np.zeros(frames)
     curve[[30, 300]] = 1.
     proposal = np.zeros(frames)
@@ -44,6 +44,9 @@ def test_clock_uses_actual_samples_seconds_and_audio_only_evidence():
     assert c['sample_rate'] == 44100 and c['duration_seconds'] == 20
     assert c['frame_times_seconds'][1] == 1/FPS
     assert np.array_equal(np.asarray(c['beat_frames'])/FPS, c['beat_seconds'])
+    assert c['beat_frames'][0] == 30 and c['beat_frames'][-1] == 570
+    assert c['raw_legacy_beat_frames'][0] == 0 and c['raw_legacy_beat_frames'][-1] == 600
+    assert c['excluded_legacy_boundary_sentinels'] == [0, 600]
     assert set(c['tempo_curve_bpm']) == {60.}
     assert c['downbeat_frames'] is None and c['independent_phrase_labels'] is None
     assert c['motion_used_to_extract_music'] is False and c['human_reviewed'] is False
@@ -179,8 +182,37 @@ def test_build_reads_real_sample_rate_and_source_hash(tmp_path):
     t = np.arange(sample_rate*3+1)/sample_rate
     sf.write(path, .05*np.sin(2*np.pi*440*t), sample_rate)
     track = dict(path=str(path), audio_sha256=sha(path), structure_sha256='b'*64,
-                 structure=dict(frames=91, beats=[0, 30, 60, 90]))
+                 structure=dict(frames=91, beats=[0, 30, 60, 90, 91]))
     clocks = build([track])
     assert clocks[0]['audio_samples'] == sample_rate*3+1
     assert clocks[0]['sample_rate'] == sample_rate and clocks[0]['frames'] == 91
     assert clocks[0]['feature_version'] == 'SCIPY_STFT_LOG_FREQUENCY48_CHROMA12_V1'
+
+
+@pytest.mark.parametrize('frames', [3601, 3598])
+def test_real_legacy_end_fencepost_is_preserved_but_not_a_beat(frames):
+    # The failure had sorted real R36 clocks ending exactly at frames. Only the
+    # start/end injected fences may be dropped; detector candidates are kept.
+    track, arrays, metadata = prepared()
+    track['structure']['frames'] = frames
+    track['structure']['beats'] = [0, 30, 75, frames-2, frames]
+    arrays = {k: np.resize(v, frames) if k not in ('proxy_accents', 'proxy_boundaries') else v
+              for k, v in arrays.items()}
+    metadata.update(frames=frames, audio_samples=frames*1470,
+                    arrays={k: array_hash(v) for k, v in arrays.items()})
+    original = copy.deepcopy(track)
+    c = clock_from_features(0, track, arrays, metadata)
+    assert track == original
+    assert c['beat_frames'] == [30., 75., frames-2.]
+    assert c['raw_legacy_beat_frames'] == original['structure']['beats']
+    assert c['legacy_boundary_sentinels'] == [0, frames]
+    assert c['legacy_raw_beat_count'] == 5 and c['interior_legacy_beat_count'] == 3
+    assert c['tempo_observation_bpm'][0] == pytest.approx(60*30/45)
+
+
+@pytest.mark.parametrize('bad', [-1, 600.5, 601])
+def test_arbitrary_out_of_range_legacy_beat_is_not_silently_removed(bad):
+    track, arrays, metadata = prepared()
+    track['structure']['beats'] = sorted([0, 30, 300, 600, bad])
+    with pytest.raises(ValueError, match='actual audio frame centers'):
+        clock_from_features(0, track, arrays, metadata)

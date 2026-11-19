@@ -60,6 +60,7 @@ def add_summary(result):
             p['offset_counts']=dict(Counter(str(s['timing_offset_frames']) for s in selected))
             p['music_primary_conditional_mean']=mean([index[s['record_key']]['music_reward']['primary_music_score'] for s in selected if s['record_key']])
             p['same_shared_graph']=True
+            p['original_and_retention_passes']=sum(s['accepted'] and s['retention_guard_passed'] for s in selected)
     return out
 
 def mean(values):

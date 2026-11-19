@@ -14,6 +14,7 @@ import numpy as np
 from scipy.signal import find_peaks
 
 from dunhuang.research.complete_r36.core import read, sha
+from dunhuang.research.complete_r36 import music as legacy_music
 from dunhuang.research.music_structure_r56.music import analyze
 from dunhuang.research.music_structure_r56.common import CFG as R56_CFG
 from dunhuang.research.warp_coupling_r53.common import array_hash
@@ -51,6 +52,18 @@ def _events(value, frames, name):
     return data
 
 
+def _legacy_interior_beats(raw, legacy_frames, actual_frames):
+    """Remove only R36's two explicit planning fenceposts, not bad timestamps."""
+    raw = _finite(raw, name='raw legacy beats')
+    if len(raw) and np.any(np.diff(raw) <= 0):
+        raise ValueError('Raw legacy beats must be sorted and unique')
+    fences = [0, int(legacy_frames)]
+    interior = raw[(raw != fences[0]) & (raw != fences[1])]
+    _events(interior, actual_frames, 'interior legacy beats')
+    excluded = [int(v) for v in fences if np.any(raw == v)]
+    return raw, interior, excluded
+
+
 def validate_clock(clock):
     """Validate sample/second/frame agreement without granting label quality."""
     if clock.get('schema') != 'MusicClockR64V1' or clock.get('fps') != FPS:
@@ -71,6 +84,14 @@ def validate_clock(clock):
     if not np.array_equal(times, np.arange(frames)/FPS) or times[-1] >= samples/sr:
         raise ValueError('Frame timestamps must be actual 30FPS audio frame centers')
     beats = _events(clock['beat_frames'], frames, 'beats')
+    raw, interior, excluded = _legacy_interior_beats(
+        clock['raw_legacy_beat_frames'], clock['legacy_structure_frames'], frames)
+    if (not np.array_equal(interior, beats)
+            or clock['legacy_boundary_sentinels'] != [0, clock['legacy_structure_frames']]
+            or clock['excluded_legacy_boundary_sentinels'] != excluded
+            or clock['legacy_raw_beat_count'] != len(raw)
+            or clock['interior_legacy_beat_count'] != len(interior)):
+        raise ValueError('Legacy beat fencepost exclusion evidence is inconsistent')
     if not np.array_equal(_finite(clock['beat_seconds'], len(beats), 'beat seconds'), beats/FPS):
         raise ValueError('Beat frame and second clocks disagree')
     for name in ('onset_strength', 'accent_strength', 'phrase_proxy_strength', 'section_proxy_strength'):
@@ -99,9 +120,11 @@ def clock_from_features(songidx, track, arrays, metadata):
     hashes = {k: array_hash(v) for k, v in arrays.items()}
     if metadata.get('arrays') != hashes:
         raise ValueError('R56 feature arrays differ from their extraction receipt')
-    if abs(frames-int(track['structure']['frames'])) > 1:
+    legacy_frames = int(track['structure']['frames'])
+    if abs(frames-legacy_frames) > 1:
         raise ValueError('Legacy audio beat clock does not span this actual waveform')
-    beats = _events(track['structure']['beats'], frames, 'beats')
+    raw_beats, beats, excluded = _legacy_interior_beats(
+        track['structure']['beats'], legacy_frames, frames)
     accent = _finite(arrays['accent_curve'], frames, 'R56 spectral-flux accent')
     phrase = _finite(arrays['held_boundary'], frames, 'R56 chroma novelty')
     section = _finite(arrays['proposal'], frames, 'R56 spectral novelty')
@@ -124,7 +147,16 @@ def clock_from_features(songidx, track, arrays, metadata):
         audio_samples=samples, sample_rate=sr, frames=frames, fps=FPS,
         duration_seconds=samples/sr, frame_times_seconds=(np.arange(frames)/FPS).tolist(),
         beat_frames=beats.tolist(), beat_seconds=(beats/FPS).tolist(),
-        beats=beats.tolist(), beat_scope='RECORDED_AUDIO_DETECTOR_OUTPUT_NOT_HUMAN_BEAT_TRUTH',
+        beats=beats.tolist(), beat_scope='INTERIOR_LEGACY_AUDIO_DETECTOR_CANDIDATES_NOT_BEAT_TRUTH',
+        raw_legacy_beat_frames=raw_beats.tolist(), legacy_structure_frames=legacy_frames,
+        legacy_boundary_sentinels=[0, legacy_frames],
+        excluded_legacy_boundary_sentinels=excluded, legacy_raw_beat_count=len(raw_beats),
+        interior_legacy_beat_count=len(beats),
+        legacy_beat_sanitization_version='R64_R36_EXPLICIT_BOUNDARY_FENCEPOSTS_ONLY_V1',
+        legacy_beat_exclusion_reason='R36_ADDS_0_AND_FRAMES_FOR_PLANNING_COVERAGE; NOT_DETECTED_BEAT_OBSERVATIONS',
+        legacy_beat_clock_algorithm='src/dunhuang/research/complete_r36/music.py:analyze',
+        legacy_beat_clock_algorithm_sha256=sha(Path(legacy_music.__file__)),
+        legacy_interior_detector_or_grid_fallback_status='R36_LEGACY_DOES_NOT_SAVE_BRANCH; NOT_INDEPENDENT_TRUTH',
         beat_clock_source='SEALED_R36_AUDIO_STRUCTURE; MOTION_NOT_USED',
         tempo_curve_bpm=tempo, tempo_observation_seconds=(tempo_midpoints/FPS).tolist(),
         tempo_observation_bpm=interval_bpm.tolist(),

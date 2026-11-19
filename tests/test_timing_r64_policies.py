@@ -1,5 +1,5 @@
 import copy
-from dunhuang.research.timing_r64.policies import choose,selection,objective
+from dunhuang.research.timing_r64.policies import choose,selection,objective,guard
 
 def row(g=48,o=0,cost=.5,music=.2,guard=True):
     return dict(key=f'x_{g}_{o}',gap_frames=g,timing_offset_frames=o,execution_cache_key=f'{g}_{o}',
@@ -35,3 +35,9 @@ def test_balanced_equal_is_nested_in_full_lattice():
     a,b=row(cost=.7),row(36,12,cost=.3)
     assert choose([a,b],'BalancedEqual') is a
     assert choose([a,b],'LocalBalanced') is b
+
+def test_relative_guard_is_not_the_original_bridge_gate():
+    r=row();r['methods']['G1'].update(passes_original_screen=False,full_dynamics=dict(D3_Q95=1.))
+    ratios=dict(FK_path_length_mean_m_ratio=1.,FK_motion_range_rms_m_ratio=1.)
+    r.update(left=dict(retention_vs_fixed48=ratios),right=dict(retention_vs_fixed48=ratios))
+    assert guard(r,r) and not r['methods']['G1']['passes_original_screen']
