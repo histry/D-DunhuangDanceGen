@@ -1,0 +1,41 @@
+{
+  "schema": "R61_INTERVENTION_EDIT_SUPPORT_FIXED_GAP_V1",
+  "parent_commit": "6f72406a11efaaf0013694ef2e587c4e2348782e",
+  "fps": 30,
+  "context": 45,
+  "gap": 48,
+  "observed_each_side": 4,
+  "speed_peak_region": "upper",
+  "minimum_raw_support_frames": {"speed_peak": 3, "pose_hold": 30, "root_turn_span": 12},
+  "seed": 61061,
+  "bootstrap_draws": 3000,
+  "roster": [
+    ["female_FeiTian", "pose_hold"],
+    ["female_lotus", "root_turn_span"],
+    ["female_meditation", "pose_hold"],
+    ["male_meditation", "pose_hold"],
+    ["male_pipa_1", "speed_peak"],
+    ["male_pipa_2", "speed_peak"],
+    ["male_ribbon", "root_turn_span"],
+    ["male_ribbon_FenHe", "root_turn_span"],
+    ["fine_001", "speed_peak"],
+    ["fine_002", "speed_peak"],
+    ["fine_003", "speed_peak"],
+    ["fine_004", "speed_peak"]
+  ],
+  "excluded_diagnostic_intervals": {
+    "fine_001": [[718,1128]], "fine_002": [[1522,1741]],
+    "fine_006": [[271,575]], "fine_008": [[1704,2195]],
+    "fine_003": [[2164,2877]], "female_FeiTian": [[89,504]]
+  },
+  "selection": "FIRST_CHRONOLOGICAL_TYPE_MATCHED_FULL_RAW_EVIDENCE_IN_ACCEPTED_COMPONENT_WITH_CONTEXT_AND_NO_DIAGNOSTIC_INTERVAL_OVERLAP; NO_SCORE_READS",
+  "intervention": "NESTED_RIGHT_CROP_A5_SUBSET_A4; SAME_LEFT_BOUNDARY; NO_ADDED_FRAMES; LENGTH_NOT_CONTROLLED",
+  "peak_removal": "CUT_BEFORE_ORIGINAL_RAW_EVIDENCE_START_REMOVES_EXISTING_CENTER",
+  "hold_turn_removal": "CUT_AT_ORIGINAL_EVIDENCE_MIDPOINT_REMOVES_EXISTING_SECOND_HALF",
+  "verified_phase": "UNKNOWN",
+  "human_reviewed": false,
+  "training_steps": 0,
+  "planner_runs": 0,
+  "duration_grid_runs": 0,
+  "can_route": false
+}
