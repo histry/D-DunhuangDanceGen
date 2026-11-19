@@ -1,0 +1,144 @@
+{
+  "files": [
+    {
+      "path": "comparison_differences.json",
+      "bytes": 1386,
+      "sha256": "035fb81fe898b3fe0a54862308e01bb4818b853f5790d6bd9ae0a242847a4b4d"
+    },
+    {
+      "path": "controls.log",
+      "bytes": 4501,
+      "sha256": "7cfa134c89df78ad30f780c0afca342c6d1feb4a8dce81a3e34f9b7064aaa775"
+    },
+    {
+      "path": "controls.sh",
+      "bytes": 1801,
+      "sha256": "5fc1df890da42363a74b117048dfebaf32bb8e9168f884eaa5f7b2d8abe87a1a"
+    },
+    {
+      "path": "controls_browser.json",
+      "bytes": 301,
+      "sha256": "37f0478f8891fd87efbc5f9ac486f4a703209cf6cb5ee419521d42a77e2f94ac"
+    },
+    {
+      "path": "controls_receipt.txt",
+      "bytes": 175,
+      "sha256": "709d9e5e2875941b1700aa423f90c699b4a343ec120b5f271f845fbf12a3d8e3"
+    },
+    {
+      "path": "geometry_graph_comparison.json",
+      "bytes": 17002,
+      "sha256": "762625323dd748451b4bc752b148968bea66646ee392750908cc91de5966592c"
+    },
+    {
+      "path": "independent_controls.json",
+      "bytes": 301,
+      "sha256": "c13f4c4e4c34618943b711afc92664972e0bfb1760b05de63e7a9b84439a4f82"
+    },
+    {
+      "path": "independent_main.json",
+      "bytes": 301,
+      "sha256": "fb558c9c4014be9b35c3e3565a000267aa1de47494928eba7d2336310bfe454c"
+    },
+    {
+      "path": "independent_recovery.json",
+      "bytes": 81,
+      "sha256": "c006c8b65c567d2327e2dc6f6f5bde8c31b7e1f1cc094ec3853a8dd1ce9dc943"
+    },
+    {
+      "path": "independent_support.json",
+      "bytes": 138,
+      "sha256": "eb98788dbde6ad98c25d55a613d25bd893ee022d01c4f5d58d226443578e5903"
+    },
+    {
+      "path": "main.log",
+      "bytes": 1786,
+      "sha256": "c5ce715bf27a9474b293f3be88d7368cca7535ee81d5c2240021ab90fad30f12"
+    },
+    {
+      "path": "main.sh",
+      "bytes": 1217,
+      "sha256": "6bd5b5c5623e5c856d8add3907eaa0bfc8ccfcaf5f8e30aa0a6cecb6af9757ae"
+    },
+    {
+      "path": "main_browser.json",
+      "bytes": 406,
+      "sha256": "ce8c4b1cb4c9e9f5f320c5f8bdf9bdcb11081cdfb3f766e60704377d70ff32a8"
+    },
+    {
+      "path": "main_receipt.txt",
+      "bytes": 175,
+      "sha256": "e5ef895dfcd24397b0d0eda33327beca68fbc5add92c41e9662fe2ec58b65212"
+    },
+    {
+      "path": "missing_counterfactual_support.json",
+      "bytes": 110144,
+      "sha256": "59d923f9083190f3f42455403f5aafeabfa9ad02ecee9b04c8b00d5c72b1f4a4"
+    },
+    {
+      "path": "parent_seals.json",
+      "bytes": 379,
+      "sha256": "c93d3481dc890a073241a1e335dae67fd6893c08c4fdf5ba2cb27d7f433f875a"
+    },
+    {
+      "path": "profiles.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "profiles.sh",
+      "bytes": 606,
+      "sha256": "e5abd61a85a20039dfd2adf1e40ef9c5bed8a56c999e4efc83c1f39703809404"
+    },
+    {
+      "path": "profiles_browser.json",
+      "bytes": 388,
+      "sha256": "818e32c875f32cbfc52f271f9a3de9f9940d2c03aa8b31196e88bbb96297f357"
+    },
+    {
+      "path": "profiles_receipt.txt",
+      "bytes": 175,
+      "sha256": "04f6a37155719c479c8c0f406a4666ada808536ae8071f7ae435f807e8f45cf0"
+    },
+    {
+      "path": "pytest_final.log",
+      "bytes": 2551,
+      "sha256": "153442561871691ff04f6eaeea673cd16dd70f8a50cdecd771e11031b63a41f8"
+    },
+    {
+      "path": "report.md",
+      "bytes": 5665,
+      "sha256": "2148c110739da733fe4950302df1075666e0fe744f3e8a659f139c05d31a453f"
+    },
+    {
+      "path": "review_browser.json",
+      "bytes": 353,
+      "sha256": "67a7ae189b3f446d1e24959f54a941c0e6a3032c5e40a66edbed9a789f140910"
+    },
+    {
+      "path": "seal.json",
+      "bytes": 107,
+      "sha256": "1b2ff83be376b31f04ab2bbd5d8f1e3312a7d6fbe62d58f61a125781e37adf9e"
+    },
+    {
+      "path": "selected_execution_profiles.csv",
+      "bytes": 57427,
+      "sha256": "39dc5303d53210b85a0f0eb9bb0123ecb4aa6e7d49cf7cb80a9330d2c9c14ff3"
+    },
+    {
+      "path": "summary.json",
+      "bytes": 64045,
+      "sha256": "6fdcd3e7300e995f433ff95e7bb656c602b14f6209462ebbbcba15b14e958f78"
+    },
+    {
+      "path": "sync_receipt.txt",
+      "bytes": 139,
+      "sha256": "6ada7907a2a1351c363cc7a538d694575fbaa3c29d9b51a66fc14bdb74b1eb33"
+    },
+    {
+      "path": "uniform_duration_profiles.csv",
+      "bytes": 306677,
+      "sha256": "f9e6b4bd80477a3c4f6afddadc5159398a2883074551323ff1336dd7b60697e0"
+    }
+  ]
+}

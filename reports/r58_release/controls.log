@@ -1,0 +1,96 @@
++ /home/disk/lsm/conda_envs/edge/bin/python -c 'import json; assert json.load(open('\''outputs/execution_planning_r58_01/receipts/main_browser.json'\''))['\''passed'\'']; assert json.load(open('\''outputs/execution_planning_r58_01/independent_main/result.json'\''))['\''arrays_bytes_exact'\'']'
++ /home/disk/lsm/conda_envs/edge/bin/python -m dunhuang.research.execution_planning_r58 controls --out outputs/execution_planning_r58_01/controls
+R58_PLAN 0 C1 NUMERICAL_WHOLE_SONG_RESEARCH_PREVIEW
+R58_PLAN 0 C2 NUMERICAL_WHOLE_SONG_RESEARCH_PREVIEW
+R58_PLAN 0 C3 NUMERICAL_WHOLE_SONG_RESEARCH_PREVIEW
+R58_EDGES 1 500 3718
+R58_EDGES 1 1000 3718
+R58_EDGES 1 1500 3718
+R58_EDGES 1 2000 3718
+R58_EDGES 1 2500 3718
+R58_EDGES 1 3000 3718
+R58_EDGES 1 3500 3718
+R58_PLAN 1 C1 NUMERICAL_WHOLE_SONG_RESEARCH_PREVIEW
+R58_PLAN 1 C2 NUMERICAL_WHOLE_SONG_RESEARCH_PREVIEW
+R58_PLAN 1 C3 NUMERICAL_WHOLE_SONG_RESEARCH_PREVIEW
+R58_EDGES 2 500 4658
+R58_EDGES 2 1000 4658
+R58_EDGES 2 1500 4658
+R58_EDGES 2 2000 4658
+R58_EDGES 2 2500 4658
+R58_EDGES 2 3000 4658
+R58_EDGES 2 3500 4658
+R58_EDGES 2 4000 4658
+R58_EDGES 2 4500 4658
+R58_PLAN 2 C1 NUMERICAL_WHOLE_SONG_RESEARCH_PREVIEW
+R58_PLAN 2 C2 NUMERICAL_WHOLE_SONG_RESEARCH_PREVIEW
+R58_PLAN 2 C3 NUMERICAL_WHOLE_SONG_RESEARCH_PREVIEW
++ /home/disk/lsm/conda_envs/edge/bin/python -m dunhuang.research.execution_planning_r58 verify --source outputs/execution_planning_r58_01/controls --out outputs/execution_planning_r58_01/independent_controls
+R58_EDGES 0 500 4687
+R58_EDGES 0 1000 4687
+R58_EDGES 0 1500 4687
+R58_EDGES 0 2000 4687
+R58_EDGES 0 2500 4687
+R58_EDGES 0 3000 4687
+R58_EDGES 0 3500 4687
+R58_EDGES 0 4000 4687
+R58_EDGES 0 4500 4687
+R58_PLAN 0 C1 NUMERICAL_WHOLE_SONG_RESEARCH_PREVIEW
+R58_PLAN 0 C2 NUMERICAL_WHOLE_SONG_RESEARCH_PREVIEW
+R58_PLAN 0 C3 NUMERICAL_WHOLE_SONG_RESEARCH_PREVIEW
+R58_EDGES 1 500 3718
+R58_EDGES 1 1000 3718
+R58_EDGES 1 1500 3718
+R58_EDGES 1 2000 3718
+R58_EDGES 1 2500 3718
+R58_EDGES 1 3000 3718
+R58_EDGES 1 3500 3718
+R58_PLAN 1 C1 NUMERICAL_WHOLE_SONG_RESEARCH_PREVIEW
+R58_PLAN 1 C2 NUMERICAL_WHOLE_SONG_RESEARCH_PREVIEW
+R58_PLAN 1 C3 NUMERICAL_WHOLE_SONG_RESEARCH_PREVIEW
+R58_EDGES 2 500 4658
+R58_EDGES 2 1000 4658
+R58_EDGES 2 1500 4658
+R58_EDGES 2 2000 4658
+R58_EDGES 2 2500 4658
+R58_EDGES 2 3000 4658
+R58_EDGES 2 3500 4658
+R58_EDGES 2 4000 4658
+R58_EDGES 2 4500 4658
+R58_PLAN 2 C1 NUMERICAL_WHOLE_SONG_RESEARCH_PREVIEW
+R58_PLAN 2 C2 NUMERICAL_WHOLE_SONG_RESEARCH_PREVIEW
+R58_PLAN 2 C3 NUMERICAL_WHOLE_SONG_RESEARCH_PREVIEW
++ /home/disk/lsm/conda_envs/edge/bin/python -m dunhuang.research.execution_planning_r58 support --out outputs/execution_planning_r58_01/support
++ /home/disk/lsm/conda_envs/edge/bin/python -m dunhuang.research.execution_planning_r58 support --out outputs/execution_planning_r58_01/independent_support/rebuild
++ /home/disk/lsm/conda_envs/edge/bin/python -c 'import json,hashlib;from pathlib import Path;a=Path('\''outputs/execution_planning_r58_01/support/result.json'\'');b=Path('\''outputs/execution_planning_r58_01/independent_support/rebuild/result.json'\'');assert a.read_bytes()==b.read_bytes();Path('\''outputs/execution_planning_r58_01/independent_support/result.json'\'').write_text(json.dumps(dict(result_exact=True,optimizer_calls=0,source_sha256=hashlib.sha256(a.read_bytes()).hexdigest()))+'\''\n'\'')'
++ /home/disk/lsm/conda_envs/edge/bin/python -m dunhuang.research.execution_planning_r58 recovery --out outputs/execution_planning_r58_01/recovery
+R58_G1_GRAPH 0 B0 0 False
+R58_G1_GRAPH 0 B1 2 False
+R58_G1_GRAPH 0 B2 2 False
+R58_G1_GRAPH 0 B3 2 False
+R58_G1_GRAPH 1 B0 0 False
+R58_G1_GRAPH 1 B1 3 False
+R58_G1_GRAPH 1 B2 2 False
+R58_G1_GRAPH 1 B3 3 False
+R58_G1_GRAPH 2 B0 0 False
+R58_G1_GRAPH 2 B1 1 False
+R58_G1_GRAPH 2 B2 1 False
+R58_G1_GRAPH 2 B3 1 False
++ /home/disk/lsm/conda_envs/edge/bin/python -m dunhuang.research.execution_planning_r58 verify_recovery --source outputs/execution_planning_r58_01/recovery --out outputs/execution_planning_r58_01/independent_recovery
+R58_G1_GRAPH 0 B0 0 False
+R58_G1_GRAPH 0 B1 2 False
+R58_G1_GRAPH 0 B2 2 False
+R58_G1_GRAPH 0 B3 2 False
+R58_G1_GRAPH 1 B0 0 False
+R58_G1_GRAPH 1 B1 3 False
+R58_G1_GRAPH 1 B2 2 False
+R58_G1_GRAPH 1 B3 3 False
+R58_G1_GRAPH 2 B0 0 False
+R58_G1_GRAPH 2 B1 1 False
+R58_G1_GRAPH 2 B2 1 False
+R58_G1_GRAPH 2 B3 1 False
++ /home/disk/lsm/conda_envs/edge/bin/python scripts/review_r58.py
++ /home/disk/lsm/conda_envs/edge/bin/python -m pytest -q
++ status=0
+++ date -Is
++ printf 'exit_status=%s\nfinished_at=%s\n' 0 2026-11-19T11:07:41+08:00

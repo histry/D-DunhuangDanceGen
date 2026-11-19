@@ -1,0 +1,35 @@
++ /home/disk/lsm/conda_envs/edge/bin/python -m pytest -q tests/test_execution_planning_r58.py tests/test_tempo_attribution_r57.py tests/test_geometry_recovery_r57.py
+..................                                                       [100%]
+18 passed in 4.32s
++ /home/disk/lsm/conda_envs/edge/bin/python -c 'import runpy;from pathlib import Path;f=runpy.run_path('\''scripts/release_r55_and_song.py'\'')['\''validate_seal'\''];print('\''PARENT_SEALS'\'',f(Path('\''outputs/music_structure_r56_02'\'')),f(Path('\''outputs/tempo_attribution_r57_01'\'')))'
+PARENT_SEALS 43 56
++ /home/disk/lsm/conda_envs/edge/bin/python -m dunhuang.research.execution_planning_r58 main --out outputs/execution_planning_r58_01/main
+R58_EDGES 0 500 4687
+R58_EDGES 0 1000 4687
+R58_EDGES 0 1500 4687
+R58_EDGES 0 2000 4687
+R58_EDGES 0 2500 4687
+R58_EDGES 0 3000 4687
+R58_EDGES 0 3500 4687
+R58_EDGES 0 4000 4687
+R58_EDGES 0 4500 4687
+R58_PLAN 0 C2 NUMERICAL_WHOLE_SONG_RESEARCH_PREVIEW
++ /home/disk/lsm/conda_envs/edge/bin/python -m dunhuang.research.execution_planning_r58 render --source outputs/execution_planning_r58_01/main --out outputs/execution_planning_r58_01/main_video
+R58_RENDER 900 3601
+R58_RENDER 1800 3601
+R58_RENDER 2700 3601
+R58_RENDER 3600 3601
++ /home/disk/lsm/conda_envs/edge/bin/python -m dunhuang.research.execution_planning_r58 verify --source outputs/execution_planning_r58_01/main --out outputs/execution_planning_r58_01/independent_main
+R58_EDGES 0 500 4687
+R58_EDGES 0 1000 4687
+R58_EDGES 0 1500 4687
+R58_EDGES 0 2000 4687
+R58_EDGES 0 2500 4687
+R58_EDGES 0 3000 4687
+R58_EDGES 0 3500 4687
+R58_EDGES 0 4000 4687
+R58_EDGES 0 4500 4687
+R58_PLAN 0 C2 NUMERICAL_WHOLE_SONG_RESEARCH_PREVIEW
++ status=0
+++ date -Is
++ printf 'exit_status=%s\nfinished_at=%s\n' 0 2026-11-19T10:43:40+08:00
