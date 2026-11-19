@@ -5,12 +5,12 @@ import numpy as np
 from dunhuang.research.complete_r36.core import read, write, sha, identity, relative_fk, rotation_sample, Library
 from dunhuang.research.warp_coupling_r53.common import save_arrays, array_hash
 
-ROOT = Path('outputs/phase_integrity_r60_01')
+ROOT = Path('outputs/phase_integrity_r60_02')
 HERE = Path(__file__).parent
 CFG = read(HERE/'protocol.json')
 PARENTS = ['event_coverage_r47_01', 'event_feasibility_r48_01',
            'strong_baseline_r52_01', 'warp_coupling_r53_01', 'execution_planning_r58_01',
-           'paired_benchmark_r59_01']
+           'paired_benchmark_r59_01', 'phase_integrity_r60_01']
 
 def fresh(path):
     p = Path(path)

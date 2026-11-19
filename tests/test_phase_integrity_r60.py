@@ -35,7 +35,13 @@ def test_activity_constraint_prevents_unmatched_dynamic_confound():
 def test_missing_seam_support_is_explicit():
     cfg=copy.deepcopy(CFG);cfg['hidden_gap']=300
     q=match_pair(dict(source_interval=[40,140],support_component=[0,200]),np.ones(200),[[15,30],[145,160]],cfg)
-    assert q['status']=='MATCHED' and q['common_hidden_seams']==[]
+    assert q['status']=='NOT_MATCHABLE'
+
+def test_only_intervened_seam_with_equal_real_context_is_evaluated():
+    q=match_pair(dict(source_interval=[40,140],support_component=[0,200]),np.ones(200),[[145,160]])
+    assert q['status']=='MATCHED' and q['common_hidden_seams']==['right']
+    assert all(q[k][0]>=30 and 200-q[k][1]>=30 for k in ('A4','A5'))
+    assert match_pair(dict(source_interval=[0,100],support_component=[0,200]),np.ones(200),[[0,10],[101,120]])['reason']=='A4_LACKS_FULL_COMMON_REAL_CONTEXT'
 
 def test_source_balancing_does_not_count_correlated_windows_as_sources():
     rows=[dict(source_uid='a',delta=1.)]*100+[dict(source_uid='b',delta=3.)]

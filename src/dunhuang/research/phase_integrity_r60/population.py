@@ -11,27 +11,33 @@ def protected_spans(evidence, n, config):
 def match_pair(unit, speed, protected, config=CFG):
     a,b = proof_interval(unit['source_interval'],unit['support_component']); lo,hi = unit['support_component']
     if crossings([a,b],protected): return dict(status='NOT_MATCHABLE', reason='A4_ALREADY_CUTS_PROTECTED_SUPPORT')
+    context=config['context_frames'];gap=config['hidden_gap'];half=gap//2
+    if a-lo<context or hi-b<context:
+        return dict(status='NOT_MATCHABLE',reason='A4_LACKS_FULL_COMMON_REAL_CONTEXT')
     native = float(np.mean(speed[a:b])); options=[]
     for shift in range(-config['pair_max_shift'],config['pair_max_shift']+1):
         A,B=a+shift,b+shift
-        if not shift or A<lo or B>hi: continue
+        if not shift or A-lo<context or hi-B<context: continue
         overlap=max(0,min(b,B)-max(a,A))/(b-a)
         cross=crossings([A,B],protected)
         if overlap<config['pair_min_overlap'] or not cross: continue
+        common=[name for name,x,y in [('left',a,A),('right',b,B)]
+                if any(start<y<end for start,end in protected)
+                and all(lo<=cut-half-4 and cut+gap-half+4<=hi for cut in (x,y))]
+        if not common:continue
         value=float(np.mean(speed[A:B])); difference=abs(native-value)/max(native,value,config['pair_activity_floor_radps'])
         if difference<=config['pair_activity_relative_tolerance']:
-            options.append((difference,abs(shift),shift,value,cross))
-    if not options: return dict(status='NOT_MATCHABLE',reason='NO_EQUAL_LENGTH_ACTIVITY_MATCHED_PROTECTED_CUT_WITHIN_SAME_COMPONENT')
-    difference,_,shift,value,cross=min(options,key=lambda x:x[:3])
-    A,B=a+shift,b+shift; gap=config['hidden_gap']; half=gap//2
-    common=[name for name,x,y in [('left',a,A),('right',b,B)]
-            if all(lo<=cut-half-4 and cut+gap-half+4<=hi for cut in (x,y))]
+            options.append((difference,abs(shift),shift,value,cross,common))
+    if not options: return dict(status='NOT_MATCHABLE',reason='NO_ACTIVITY_MATCHED_PROTECTED_CUT_WITH_COMMON_CONTEXT_AND_INTERVENED_HIDDEN_SEAM')
+    difference,_,shift,value,cross,common=min(options,key=lambda x:x[:3])
+    A,B=a+shift,b+shift
     return dict(status='MATCHED',A4=[a,b],A5=[A,B],length=b-a,shift=shift,
                 overlap_fraction=max(0,min(b,B)-max(a,A))/(b-a),
                 activity_A4=native,activity_A5=value,relative_activity_difference=difference,
                 A4_crossings=[],A5_crossings=cross,common_hidden_seams=common,
                 selection='MIN_ACTIVITY_DIFFERENCE_THEN_ABS_SHIFT_THEN_SIGN; NO_OUTCOME_READS',
                 context_frames_each_side=config['context_frames'],seam_count_per_arm=len(common),
+                evaluated_seams_are_intervened=True,
                 intervention_scope='SOURCE_LOCAL_BOUNDARY_SHIFT_NOT_RANDOMIZED_SEMANTIC_CAUSALITY')
 
 class Assets:
