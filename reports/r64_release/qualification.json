@@ -1,0 +1,14 @@
+{
+  "P0": "AUDIO_CLOCK_VALIDATED; BEAT_ACCURACY_DOWNBEAT_PHRASE_NOT_EVALUABLE_WITHOUT_INDEPENDENT_LABELS",
+  "P2": "NOT_ADMITTED_LOCAL_PROXY_DIAGNOSTIC_ONLY",
+  "unavailable_hierarchy_policies": {
+    "BeatDownbeat": "NOT_EVALUABLE_NO_INDEPENDENT_DOWNBEAT_TIMES",
+    "BeatDownbeatPhrase": "NOT_EVALUABLE_NO_INDEPENDENT_DOWNBEAT_AND_PHRASE_TIMES"
+  },
+  "optimized_scores_are_independent_quality": false,
+  "all_cases_historically_exposed": true,
+  "independent_edge_sampling": false,
+  "human_reviewed": false,
+  "Native24": "NOT_EVALUABLE",
+  "can_route": false
+}

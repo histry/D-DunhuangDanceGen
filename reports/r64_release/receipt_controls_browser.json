@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "controls_result_sha256": "7a32a9aa890a22e316d5397b4fcada4ec4270750b6901caedee1706c151d203e",
+  "viewer_index_sha256": "eef534bf4ce87b7c7123459f18cf2340c412db8be158c4403c37294790453edc",
+  "browser": "CHROME_ACTUAL_CUA",
+  "registered_cases": 29,
+  "visible_policies": [
+    "Fixed48",
+    "LocalShortest",
+    "LocalBalanced",
+    "LocalBeat",
+    "ShuffledBeat",
+    "Fixed24"
+  ],
+  "checks": {
+    "frame240_audio_seconds": 8.0,
+    "frame241_half_speed_playing": true,
+    "dev_case2_fixed24": "REJECTED_BLANK_NO_FALLBACK",
+    "evaluation_case10_frame320_audio_seconds": 10.666666,
+    "evaluation_source_frames": [
+      2582.911,
+      2589.527,
+      2578.515,
+      2578.515,
+      2578.515,
+      2589.527
+    ],
+    "actual_skeletons_visible": true,
+    "music_proxy_timeline_visible": true,
+    "downbeat": "UNKNOWN",
+    "independent_phrase": "UNKNOWN"
+  },
+  "human_quality_evaluated": false,
+  "Native24": "NOT_EVALUABLE",
+  "can_route": false
+}

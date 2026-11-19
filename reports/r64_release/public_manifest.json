@@ -1,0 +1,38 @@
+{
+  "binding": {
+    "commit": "853ee812fad76119b777fbed69c6abc2fa336e74",
+    "code": {
+      "__init__.py": "0f250b0804e8316fb5670e8be1776af074a0197fe074eab7febf90b56be03381",
+      "common.py": "94ce74a443007e5a78e4dde4cf275f48b0f856cf8a78557b2e35e384337a18eb",
+      "engine.py": "851ef085eb60eb95019ce570db35ca9dc7245564121d3ac2ee9a4667c9aa844e",
+      "music.py": "0c0e8b5bfa805fe53c1d48a6a5ae23df4fc9120a46620818b1719f7f6c6e0206",
+      "policies.py": "404b9afb1e5beb877b07593588d659c00ead3a33f871e577dd28f1f0a9f4494e",
+      "protocol.json": "bb44097c5e8469464b0c9368465c1ec30c1331dc16a91d3d4747c35cb8f45f19",
+      "study.py": "d81d0f8d0ef633d518aea0aeae118ed9c40c7cfa5b5502fd0e7dfa470cb340e6",
+      "viewer.py": "76040af8ce6d86f08c77192e3e13fbba777235cf660f2d4cd48f79aa79f3adb0"
+    }
+  },
+  "main_result_sha256": "48122dea0886791e5fa7ba946d9715cfc2a788314d6d5bc004baa0912bce30ee",
+  "controls_result_sha256": "7a32a9aa890a22e316d5397b4fcada4ec4270750b6901caedee1706c151d203e",
+  "main_execution_commit": "313d83cd39f1ee3fe191d74d56a6bf56f65ab3ea",
+  "controls_execution_commit": "853ee812fad76119b777fbed69c6abc2fa336e74",
+  "scientific_files_sha256": "b3300fed3dfea05ec840bd0304696126791336cffa92c2b549739ed967fc945f",
+  "independent_sha256": "fce83b9395ddb72d99fd700beb7419205f121dec05dd438771307ac13b7fb8e7",
+  "receipts": [
+    "controls_browser.json",
+    "controls_delivery.json",
+    "execution_controls.json",
+    "execution_main.json",
+    "execution_main_failed_clock_fence.json",
+    "execution_tests.json",
+    "execution_tests_pre_clock_correction.json",
+    "execution_verify.json",
+    "main_browser.json",
+    "main_delivery.json"
+  ],
+  "public_coordinates": false,
+  "public_audio": false,
+  "public_raw_arrays": false,
+  "can_route": false,
+  "Native24": "NOT_EVALUABLE"
+}

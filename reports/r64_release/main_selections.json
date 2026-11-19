@@ -1,0 +1,4236 @@
+[
+  {
+    "case_key": "dev00_c7119093e2ba1657deed89d2",
+    "role": "DEV",
+    "policy": "Fixed48",
+    "record_key": "dev00_c7119093e2ba1657deed89d2_o0_g48",
+    "method": "G1",
+    "gap_frames": 48,
+    "timing_offset_frames": 0,
+    "accepted": true,
+    "constructible": true,
+    "retention_guard_passed": true,
+    "objective": 0.1942800607996758,
+    "candidate_population": 25,
+    "original_pass_candidates": 25,
+    "rejection_reason": null,
+    "guard_used_for_selection": false,
+    "fallback_used": false,
+    "trials": [
+      {
+        "gap_frames": 48,
+        "offset": 0
+      }
+    ],
+    "comparison_scope": "EXPOSED_LOCAL_DIAGNOSTIC_NOT_ARTISTIC_OR_NATIVE_QUALIFICATION"
+  },
+  {
+    "case_key": "dev00_c7119093e2ba1657deed89d2",
+    "role": "DEV",
+    "policy": "LocalBeat",
+    "record_key": "dev00_c7119093e2ba1657deed89d2_o12_g60",
+    "method": "G1",
+    "gap_frames": 60,
+    "timing_offset_frames": 12,
+    "accepted": true,
+    "constructible": true,
+    "retention_guard_passed": true,
+    "objective": -0.1203841684534779,
+    "candidate_population": 25,
+    "original_pass_candidates": 25,
+    "rejection_reason": null,
+    "guard_used_for_selection": false,
+    "fallback_used": false,
+    "trials": [
+      {
+        "gap_frames": 24,
+        "offset": -24
+      },
+      {
+        "gap_frames": 24,
+        "offset": -12
+      },
+      {
+        "gap_frames": 24,
+        "offset": 0
+      },
+      {
+        "gap_frames": 24,
+        "offset": 12
+      },
+      {
+        "gap_frames": 24,
+        "offset": 24
+      },
+      {
+        "gap_frames": 36,
+        "offset": -24
+      },
+      {
+        "gap_frames": 36,
+        "offset": -12
+      },
+      {
+        "gap_frames": 36,
+        "offset": 0
+      },
+      {
+        "gap_frames": 36,
+        "offset": 12
+      },
+      {
+        "gap_frames": 36,
+        "offset": 24
+      },
+      {
+        "gap_frames": 48,
+        "offset": -24
+      },
+      {
+        "gap_frames": 48,
+        "offset": -12
+      },
+      {
+        "gap_frames": 48,
+        "offset": 0
+      },
+      {
+        "gap_frames": 48,
+        "offset": 12
+      },
+      {
+        "gap_frames": 48,
+        "offset": 24
+      },
+      {
+        "gap_frames": 60,
+        "offset": -24
+      },
+      {
+        "gap_frames": 60,
+        "offset": -12
+      },
+      {
+        "gap_frames": 60,
+        "offset": 0
+      },
+      {
+        "gap_frames": 60,
+        "offset": 12
+      },
+      {
+        "gap_frames": 60,
+        "offset": 24
+      },
+      {
+        "gap_frames": 72,
+        "offset": -24
+      },
+      {
+        "gap_frames": 72,
+        "offset": -12
+      },
+      {
+        "gap_frames": 72,
+        "offset": 0
+      },
+      {
+        "gap_frames": 72,
+        "offset": 12
+      },
+      {
+        "gap_frames": 72,
+        "offset": 24
+      }
+    ],
+    "comparison_scope": "EXPOSED_LOCAL_DIAGNOSTIC_NOT_ARTISTIC_OR_NATIVE_QUALIFICATION"
+  },
+  {
+    "case_key": "dev01_2cca6484effad93edb674ecf",
+    "role": "DEV",
+    "policy": "Fixed48",
+    "record_key": "dev01_2cca6484effad93edb674ecf_o0_g48",
+    "method": "G1",
+    "gap_frames": 48,
+    "timing_offset_frames": 0,
+    "accepted": true,
+    "constructible": true,
+    "retention_guard_passed": true,
+    "objective": 0.5057359776122305,
+    "candidate_population": 25,
+    "original_pass_candidates": 14,
+    "rejection_reason": null,
+    "guard_used_for_selection": false,
+    "fallback_used": false,
+    "trials": [
+      {
+        "gap_frames": 48,
+        "offset": 0
+      }
+    ],
+    "comparison_scope": "EXPOSED_LOCAL_DIAGNOSTIC_NOT_ARTISTIC_OR_NATIVE_QUALIFICATION"
+  },
+  {
+    "case_key": "dev01_2cca6484effad93edb674ecf",
+    "role": "DEV",
+    "policy": "LocalBeat",
+    "record_key": "dev01_2cca6484effad93edb674ecf_o-12_g60",
+    "method": "G1",
+    "gap_frames": 60,
+    "timing_offset_frames": -12,
+    "accepted": true,
+    "constructible": true,
+    "retention_guard_passed": true,
+    "objective": 0.1951003524468568,
+    "candidate_population": 25,
+    "original_pass_candidates": 14,
+    "rejection_reason": null,
+    "guard_used_for_selection": false,
+    "fallback_used": false,
+    "trials": [
+      {
+        "gap_frames": 24,
+        "offset": -24
+      },
+      {
+        "gap_frames": 24,
+        "offset": -12
+      },
+      {
+        "gap_frames": 24,
+        "offset": 0
+      },
+      {
+        "gap_frames": 24,
+        "offset": 12
+      },
+      {
+        "gap_frames": 24,
+        "offset": 24
+      },
+      {
+        "gap_frames": 36,
+        "offset": -24
+      },
+      {
+        "gap_frames": 36,
+        "offset": -12
+      },
+      {
+        "gap_frames": 36,
+        "offset": 0
+      },
+      {
+        "gap_frames": 36,
+        "offset": 12
+      },
+      {
+        "gap_frames": 36,
+        "offset": 24
+      },
+      {
+        "gap_frames": 48,
+        "offset": -24
+      },
+      {
+        "gap_frames": 48,
+        "offset": -12
+      },
+      {
+        "gap_frames": 48,
+        "offset": 0
+      },
+      {
+        "gap_frames": 48,
+        "offset": 12
+      },
+      {
+        "gap_frames": 48,
+        "offset": 24
+      },
+      {
+        "gap_frames": 60,
+        "offset": -24
+      },
+      {
+        "gap_frames": 60,
+        "offset": -12
+      },
+      {
+        "gap_frames": 60,
+        "offset": 0
+      },
+      {
+        "gap_frames": 60,
+        "offset": 12
+      },
+      {
+        "gap_frames": 60,
+        "offset": 24
+      },
+      {
+        "gap_frames": 72,
+        "offset": -24
+      },
+      {
+        "gap_frames": 72,
+        "offset": -12
+      },
+      {
+        "gap_frames": 72,
+        "offset": 0
+      },
+      {
+        "gap_frames": 72,
+        "offset": 12
+      },
+      {
+        "gap_frames": 72,
+        "offset": 24
+      }
+    ],
+    "comparison_scope": "EXPOSED_LOCAL_DIAGNOSTIC_NOT_ARTISTIC_OR_NATIVE_QUALIFICATION"
+  },
+  {
+    "case_key": "dev02_92608d7506a9eaa2ca72b538",
+    "role": "DEV",
+    "policy": "Fixed48",
+    "record_key": "dev02_92608d7506a9eaa2ca72b538_o0_g48",
+    "method": "G1",
+    "gap_frames": 48,
+    "timing_offset_frames": 0,
+    "accepted": true,
+    "constructible": true,
+    "retention_guard_passed": true,
+    "objective": 0.14918180016683824,
+    "candidate_population": 25,
+    "original_pass_candidates": 25,
+    "rejection_reason": null,
+    "guard_used_for_selection": false,
+    "fallback_used": false,
+    "trials": [
+      {
+        "gap_frames": 48,
+        "offset": 0
+      }
+    ],
+    "comparison_scope": "EXPOSED_LOCAL_DIAGNOSTIC_NOT_ARTISTIC_OR_NATIVE_QUALIFICATION"
+  },
+  {
+    "case_key": "dev02_92608d7506a9eaa2ca72b538",
+    "role": "DEV",
+    "policy": "LocalBeat",
+    "record_key": "dev02_92608d7506a9eaa2ca72b538_o12_g48",
+    "method": "G1",
+    "gap_frames": 48,
+    "timing_offset_frames": 12,
+    "accepted": true,
+    "constructible": true,
+    "retention_guard_passed": true,
+    "objective": -0.13383779272503749,
+    "candidate_population": 25,
+    "original_pass_candidates": 25,
+    "rejection_reason": null,
+    "guard_used_for_selection": false,
+    "fallback_used": false,
+    "trials": [
+      {
+        "gap_frames": 24,
+        "offset": -24
+      },
+      {
+        "gap_frames": 24,
+        "offset": -12
+      },
+      {
+        "gap_frames": 24,
+        "offset": 0
+      },
+      {
+        "gap_frames": 24,
+        "offset": 12
+      },
+      {
+        "gap_frames": 24,
+        "offset": 24
+      },
+      {
+        "gap_frames": 36,
+        "offset": -24
+      },
+      {
+        "gap_frames": 36,
+        "offset": -12
+      },
+      {
+        "gap_frames": 36,
+        "offset": 0
+      },
+      {
+        "gap_frames": 36,
+        "offset": 12
+      },
+      {
+        "gap_frames": 36,
+        "offset": 24
+      },
+      {
+        "gap_frames": 48,
+        "offset": -24
+      },
+      {
+        "gap_frames": 48,
+        "offset": -12
+      },
+      {
+        "gap_frames": 48,
+        "offset": 0
+      },
+      {
+        "gap_frames": 48,
+        "offset": 12
+      },
+      {
+        "gap_frames": 48,
+        "offset": 24
+      },
+      {
+        "gap_frames": 60,
+        "offset": -24
+      },
+      {
+        "gap_frames": 60,
+        "offset": -12
+      },
+      {
+        "gap_frames": 60,
+        "offset": 0
+      },
+      {
+        "gap_frames": 60,
+        "offset": 12
+      },
+      {
+        "gap_frames": 60,
+        "offset": 24
+      },
+      {
+        "gap_frames": 72,
+        "offset": -24
+      },
+      {
+        "gap_frames": 72,
+        "offset": -12
+      },
+      {
+        "gap_frames": 72,
+        "offset": 0
+      },
+      {
+        "gap_frames": 72,
+        "offset": 12
+      },
+      {
+        "gap_frames": 72,
+        "offset": 24
+      }
+    ],
+    "comparison_scope": "EXPOSED_LOCAL_DIAGNOSTIC_NOT_ARTISTIC_OR_NATIVE_QUALIFICATION"
+  },
+  {
+    "case_key": "dev03_d5b76e9b8fa1f327945991eb",
+    "role": "DEV",
+    "policy": "Fixed48",
+    "record_key": "dev03_d5b76e9b8fa1f327945991eb_o0_g48",
+    "method": "G1",
+    "gap_frames": 48,
+    "timing_offset_frames": 0,
+    "accepted": true,
+    "constructible": true,
+    "retention_guard_passed": true,
+    "objective": 0.09618843671799843,
+    "candidate_population": 25,
+    "original_pass_candidates": 25,
+    "rejection_reason": null,
+    "guard_used_for_selection": false,
+    "fallback_used": false,
+    "trials": [
+      {
+        "gap_frames": 48,
+        "offset": 0
+      }
+    ],
+    "comparison_scope": "EXPOSED_LOCAL_DIAGNOSTIC_NOT_ARTISTIC_OR_NATIVE_QUALIFICATION"
+  },
+  {
+    "case_key": "dev03_d5b76e9b8fa1f327945991eb",
+    "role": "DEV",
+    "policy": "LocalBeat",
+    "record_key": "dev03_d5b76e9b8fa1f327945991eb_o12_g72",
+    "method": "G1",
+    "gap_frames": 72,
+    "timing_offset_frames": 12,
+    "accepted": true,
+    "constructible": true,
+    "retention_guard_passed": true,
+    "objective": -0.3356319541611817,
+    "candidate_population": 25,
+    "original_pass_candidates": 25,
+    "rejection_reason": null,
+    "guard_used_for_selection": false,
+    "fallback_used": false,
+    "trials": [
+      {
+        "gap_frames": 24,
+        "offset": -24
+      },
+      {
+        "gap_frames": 24,
+        "offset": -12
+      },
+      {
+        "gap_frames": 24,
+        "offset": 0
+      },
+      {
+        "gap_frames": 24,
+        "offset": 12
+      },
+      {
+        "gap_frames": 24,
+        "offset": 24
+      },
+      {
+        "gap_frames": 36,
+        "offset": -24
+      },
+      {
+        "gap_frames": 36,
+        "offset": -12
+      },
+      {
+        "gap_frames": 36,
+        "offset": 0
+      },
+      {
+        "gap_frames": 36,
+        "offset": 12
+      },
+      {
+        "gap_frames": 36,
+        "offset": 24
+      },
+      {
+        "gap_frames": 48,
+        "offset": -24
+      },
+      {
+        "gap_frames": 48,
+        "offset": -12
+      },
+      {
+        "gap_frames": 48,
+        "offset": 0
+      },
+      {
+        "gap_frames": 48,
+        "offset": 12
+      },
+      {
+        "gap_frames": 48,
+        "offset": 24
+      },
+      {
+        "gap_frames": 60,
+        "offset": -24
+      },
+      {
+        "gap_frames": 60,
+        "offset": -12
+      },
+      {
+        "gap_frames": 60,
+        "offset": 0
+      },
+      {
+        "gap_frames": 60,
+        "offset": 12
+      },
+      {
+        "gap_frames": 60,
+        "offset": 24
+      },
+      {
+        "gap_frames": 72,
+        "offset": -24
+      },
+      {
+        "gap_frames": 72,
+        "offset": -12
+      },
+      {
+        "gap_frames": 72,
+        "offset": 0
+      },
+      {
+        "gap_frames": 72,
+        "offset": 12
+      },
+      {
+        "gap_frames": 72,
+        "offset": 24
+      }
+    ],
+    "comparison_scope": "EXPOSED_LOCAL_DIAGNOSTIC_NOT_ARTISTIC_OR_NATIVE_QUALIFICATION"
+  },
+  {
+    "case_key": "dev04_e30e53c50dca06db19dd5e34",
+    "role": "DEV",
+    "policy": "Fixed48",
+    "record_key": "dev04_e30e53c50dca06db19dd5e34_o0_g48",
+    "method": "G1",
+    "gap_frames": 48,
+    "timing_offset_frames": 0,
+    "accepted": true,
+    "constructible": true,
+    "retention_guard_passed": true,
+    "objective": 0.10619682341888395,
+    "candidate_population": 25,
+    "original_pass_candidates": 25,
+    "rejection_reason": null,
+    "guard_used_for_selection": false,
+    "fallback_used": false,
+    "trials": [
+      {
+        "gap_frames": 48,
+        "offset": 0
+      }
+    ],
+    "comparison_scope": "EXPOSED_LOCAL_DIAGNOSTIC_NOT_ARTISTIC_OR_NATIVE_QUALIFICATION"
+  },
+  {
+    "case_key": "dev04_e30e53c50dca06db19dd5e34",
+    "role": "DEV",
+    "policy": "LocalBeat",
+    "record_key": "dev04_e30e53c50dca06db19dd5e34_o-12_g48",
+    "method": "G1",
+    "gap_frames": 48,
+    "timing_offset_frames": -12,
+    "accepted": true,
+    "constructible": true,
+    "retention_guard_passed": true,
+    "objective": -0.25861240425625903,
+    "candidate_population": 25,
+    "original_pass_candidates": 25,
+    "rejection_reason": null,
+    "guard_used_for_selection": false,
+    "fallback_used": false,
+    "trials": [
+      {
+        "gap_frames": 24,
+        "offset": -24
+      },
+      {
+        "gap_frames": 24,
+        "offset": -12
+      },
+      {
+        "gap_frames": 24,
+        "offset": 0
+      },
+      {
+        "gap_frames": 24,
+        "offset": 12
+      },
+      {
+        "gap_frames": 24,
+        "offset": 24
+      },
+      {
+        "gap_frames": 36,
+        "offset": -24
+      },
+      {
+        "gap_frames": 36,
+        "offset": -12
+      },
+      {
+        "gap_frames": 36,
+        "offset": 0
+      },
+      {
+        "gap_frames": 36,
+        "offset": 12
+      },
+      {
+        "gap_frames": 36,
+        "offset": 24
+      },
+      {
+        "gap_frames": 48,
+        "offset": -24
+      },
+      {
+        "gap_frames": 48,
+        "offset": -12
+      },
+      {
+        "gap_frames": 48,
+        "offset": 0
+      },
+      {
+        "gap_frames": 48,
+        "offset": 12
+      },
+      {
+        "gap_frames": 48,
+        "offset": 24
+      },
+      {
+        "gap_frames": 60,
+        "offset": -24
+      },
+      {
+        "gap_frames": 60,
+        "offset": -12
+      },
+      {
+        "gap_frames": 60,
+        "offset": 0
+      },
+      {
+        "gap_frames": 60,
+        "offset": 12
+      },
+      {
+        "gap_frames": 60,
+        "offset": 24
+      },
+      {
+        "gap_frames": 72,
+        "offset": -24
+      },
+      {
+        "gap_frames": 72,
+        "offset": -12
+      },
+      {
+        "gap_frames": 72,
+        "offset": 0
+      },
+      {
+        "gap_frames": 72,
+        "offset": 12
+      },
+      {
+        "gap_frames": 72,
+        "offset": 24
+      }
+    ],
+    "comparison_scope": "EXPOSED_LOCAL_DIAGNOSTIC_NOT_ARTISTIC_OR_NATIVE_QUALIFICATION"
+  },
+  {
+    "case_key": "dev05_d4f43bd07a93e64182e89470",
+    "role": "DEV",
+    "policy": "Fixed48",
+    "record_key": "dev05_d4f43bd07a93e64182e89470_o0_g48",
+    "method": "G1",
+    "gap_frames": 48,
+    "timing_offset_frames": 0,
+    "accepted": true,
+    "constructible": true,
+    "retention_guard_passed": true,
+    "objective": 0.09905954040911316,
+    "candidate_population": 25,
+    "original_pass_candidates": 25,
+    "rejection_reason": null,
+    "guard_used_for_selection": false,
+    "fallback_used": false,
+    "trials": [
+      {
+        "gap_frames": 48,
+        "offset": 0
+      }
+    ],
+    "comparison_scope": "EXPOSED_LOCAL_DIAGNOSTIC_NOT_ARTISTIC_OR_NATIVE_QUALIFICATION"
+  },
+  {
+    "case_key": "dev05_d4f43bd07a93e64182e89470",
+    "role": "DEV",
+    "policy": "LocalBeat",
+    "record_key": "dev05_d4f43bd07a93e64182e89470_o12_g72",
+    "method": "G1",
+    "gap_frames": 72,
+    "timing_offset_frames": 12,
+    "accepted": true,
+    "constructible": true,
+    "retention_guard_passed": true,
+    "objective": -0.22615047475043049,
+    "candidate_population": 25,
+    "original_pass_candidates": 25,
+    "rejection_reason": null,
+    "guard_used_for_selection": false,
+    "fallback_used": false,
+    "trials": [
+      {
+        "gap_frames": 24,
+        "offset": -24
+      },
+      {
+        "gap_frames": 24,
+        "offset": -12
+      },
+      {
+        "gap_frames": 24,
+        "offset": 0
+      },
+      {
+        "gap_frames": 24,
+        "offset": 12
+      },
+      {
+        "gap_frames": 24,
+        "offset": 24
+      },
+      {
+        "gap_frames": 36,
+        "offset": -24
+      },
+      {
+        "gap_frames": 36,
+        "offset": -12
+      },
+      {
+        "gap_frames": 36,
+        "offset": 0
+      },
+      {
+        "gap_frames": 36,
+        "offset": 12
+      },
+      {
+        "gap_frames": 36,
+        "offset": 24
+      },
+      {
+        "gap_frames": 48,
+        "offset": -24
+      },
+      {
+        "gap_frames": 48,
+        "offset": -12
+      },
+      {
+        "gap_frames": 48,
+        "offset": 0
+      },
+      {
+        "gap_frames": 48,
+        "offset": 12
+      },
+      {
+        "gap_frames": 48,
+        "offset": 24
+      },
+      {
+        "gap_frames": 60,
+        "offset": -24
+      },
+      {
+        "gap_frames": 60,
+        "offset": -12
+      },
+      {
+        "gap_frames": 60,
+        "offset": 0
+      },
+      {
+        "gap_frames": 60,
+        "offset": 12
+      },
+      {
+        "gap_frames": 60,
+        "offset": 24
+      },
+      {
+        "gap_frames": 72,
+        "offset": -24
+      },
+      {
+        "gap_frames": 72,
+        "offset": -12
+      },
+      {
+        "gap_frames": 72,
+        "offset": 0
+      },
+      {
+        "gap_frames": 72,
+        "offset": 12
+      },
+      {
+        "gap_frames": 72,
+        "offset": 24
+      }
+    ],
+    "comparison_scope": "EXPOSED_LOCAL_DIAGNOSTIC_NOT_ARTISTIC_OR_NATIVE_QUALIFICATION"
+  },
+  {
+    "case_key": "dev06_3e7a15bd0ee5b6c38cac3d8c",
+    "role": "DEV",
+    "policy": "Fixed48",
+    "record_key": "dev06_3e7a15bd0ee5b6c38cac3d8c_o0_g48",
+    "method": "G1",
+    "gap_frames": 48,
+    "timing_offset_frames": 0,
+    "accepted": true,
+    "constructible": true,
+    "retention_guard_passed": true,
+    "objective": 0.2073718306874905,
+    "candidate_population": 25,
+    "original_pass_candidates": 25,
+    "rejection_reason": null,
+    "guard_used_for_selection": false,
+    "fallback_used": false,
+    "trials": [
+      {
+        "gap_frames": 48,
+        "offset": 0
+      }
+    ],
+    "comparison_scope": "EXPOSED_LOCAL_DIAGNOSTIC_NOT_ARTISTIC_OR_NATIVE_QUALIFICATION"
+  },
+  {
+    "case_key": "dev06_3e7a15bd0ee5b6c38cac3d8c",
+    "role": "DEV",
+    "policy": "LocalBeat",
+    "record_key": "dev06_3e7a15bd0ee5b6c38cac3d8c_o0_g72",
+    "method": "G1",
+    "gap_frames": 72,
+    "timing_offset_frames": 0,
+    "accepted": true,
+    "constructible": true,
+    "retention_guard_passed": false,
+    "objective": -0.19059550476869977,
+    "candidate_population": 25,
+    "original_pass_candidates": 25,
+    "rejection_reason": null,
+    "guard_used_for_selection": false,
+    "fallback_used": false,
+    "trials": [
+      {
+        "gap_frames": 24,
+        "offset": -24
+      },
+      {
+        "gap_frames": 24,
+        "offset": -12
+      },
+      {
+        "gap_frames": 24,
+        "offset": 0
+      },
+      {
+        "gap_frames": 24,
+        "offset": 12
+      },
+      {
+        "gap_frames": 24,
+        "offset": 24
+      },
+      {
+        "gap_frames": 36,
+        "offset": -24
+      },
+      {
+        "gap_frames": 36,
+        "offset": -12
+      },
+      {
+        "gap_frames": 36,
+        "offset": 0
+      },
+      {
+        "gap_frames": 36,
+        "offset": 12
+      },
+      {
+        "gap_frames": 36,
+        "offset": 24
+      },
+      {
+        "gap_frames": 48,
+        "offset": -24
+      },
+      {
+        "gap_frames": 48,
+        "offset": -12
+      },
+      {
+        "gap_frames": 48,
+        "offset": 0
+      },
+      {
+        "gap_frames": 48,
+        "offset": 12
+      },
+      {
+        "gap_frames": 48,
+        "offset": 24
+      },
+      {
+        "gap_frames": 60,
+        "offset": -24
+      },
+      {
+        "gap_frames": 60,
+        "offset": -12
+      },
+      {
+        "gap_frames": 60,
+        "offset": 0
+      },
+      {
+        "gap_frames": 60,
+        "offset": 12
+      },
+      {
+        "gap_frames": 60,
+        "offset": 24
+      },
+      {
+        "gap_frames": 72,
+        "offset": -24
+      },
+      {
+        "gap_frames": 72,
+        "offset": -12
+      },
+      {
+        "gap_frames": 72,
+        "offset": 0
+      },
+      {
+        "gap_frames": 72,
+        "offset": 12
+      },
+      {
+        "gap_frames": 72,
+        "offset": 24
+      }
+    ],
+    "comparison_scope": "EXPOSED_LOCAL_DIAGNOSTIC_NOT_ARTISTIC_OR_NATIVE_QUALIFICATION"
+  },
+  {
+    "case_key": "dev07_8bf597d5ede30ff3ec4cd27a",
+    "role": "DEV",
+    "policy": "Fixed48",
+    "record_key": "dev07_8bf597d5ede30ff3ec4cd27a_o0_g48",
+    "method": "G1",
+    "gap_frames": 48,
+    "timing_offset_frames": 0,
+    "accepted": true,
+    "constructible": true,
+    "retention_guard_passed": true,
+    "objective": 0.4510560655314448,
+    "candidate_population": 25,
+    "original_pass_candidates": 15,
+    "rejection_reason": null,
+    "guard_used_for_selection": false,
+    "fallback_used": false,
+    "trials": [
+      {
+        "gap_frames": 48,
+        "offset": 0
+      }
+    ],
+    "comparison_scope": "EXPOSED_LOCAL_DIAGNOSTIC_NOT_ARTISTIC_OR_NATIVE_QUALIFICATION"
+  },
+  {
+    "case_key": "dev07_8bf597d5ede30ff3ec4cd27a",
+    "role": "DEV",
+    "policy": "LocalBeat",
+    "record_key": "dev07_8bf597d5ede30ff3ec4cd27a_o24_g72",
+    "method": "G1",
+    "gap_frames": 72,
+    "timing_offset_frames": 24,
+    "accepted": true,
+    "constructible": true,
+    "retention_guard_passed": true,
+    "objective": -0.0040658628404224295,
+    "candidate_population": 25,
+    "original_pass_candidates": 15,
+    "rejection_reason": null,
+    "guard_used_for_selection": false,
+    "fallback_used": false,
+    "trials": [
+      {
+        "gap_frames": 24,
+        "offset": -24
+      },
+      {
+        "gap_frames": 24,
+        "offset": -12
+      },
+      {
+        "gap_frames": 24,
+        "offset": 0
+      },
+      {
+        "gap_frames": 24,
+        "offset": 12
+      },
+      {
+        "gap_frames": 24,
+        "offset": 24
+      },
+      {
+        "gap_frames": 36,
+        "offset": -24
+      },
+      {
+        "gap_frames": 36,
+        "offset": -12
+      },
+      {
+        "gap_frames": 36,
+        "offset": 0
+      },
+      {
+        "gap_frames": 36,
+        "offset": 12
+      },
+      {
+        "gap_frames": 36,
+        "offset": 24
+      },
+      {
+        "gap_frames": 48,
+        "offset": -24
+      },
+      {
+        "gap_frames": 48,
+        "offset": -12
+      },
+      {
+        "gap_frames": 48,
+        "offset": 0
+      },
+      {
+        "gap_frames": 48,
+        "offset": 12
+      },
+      {
+        "gap_frames": 48,
+        "offset": 24
+      },
+      {
+        "gap_frames": 60,
+        "offset": -24
+      },
+      {
+        "gap_frames": 60,
+        "offset": -12
+      },
+      {
+        "gap_frames": 60,
+        "offset": 0
+      },
+      {
+        "gap_frames": 60,
+        "offset": 12
+      },
+      {
+        "gap_frames": 60,
+        "offset": 24
+      },
+      {
+        "gap_frames": 72,
+        "offset": -24
+      },
+      {
+        "gap_frames": 72,
+        "offset": -12
+      },
+      {
+        "gap_frames": 72,
+        "offset": 0
+      },
+      {
+        "gap_frames": 72,
+        "offset": 12
+      },
+      {
+        "gap_frames": 72,
+        "offset": 24
+      }
+    ],
+    "comparison_scope": "EXPOSED_LOCAL_DIAGNOSTIC_NOT_ARTISTIC_OR_NATIVE_QUALIFICATION"
+  },
+  {
+    "case_key": "dev08_c9c9289339e7197a4580b4d0",
+    "role": "DEV",
+    "policy": "Fixed48",
+    "record_key": "dev08_c9c9289339e7197a4580b4d0_o0_g48",
+    "method": "G1",
+    "gap_frames": 48,
+    "timing_offset_frames": 0,
+    "accepted": true,
+    "constructible": true,
+    "retention_guard_passed": true,
+    "objective": 0.11929706078363232,
+    "candidate_population": 25,
+    "original_pass_candidates": 25,
+    "rejection_reason": null,
+    "guard_used_for_selection": false,
+    "fallback_used": false,
+    "trials": [
+      {
+        "gap_frames": 48,
+        "offset": 0
+      }
+    ],
+    "comparison_scope": "EXPOSED_LOCAL_DIAGNOSTIC_NOT_ARTISTIC_OR_NATIVE_QUALIFICATION"
+  },
+  {
+    "case_key": "dev08_c9c9289339e7197a4580b4d0",
+    "role": "DEV",
+    "policy": "LocalBeat",
+    "record_key": "dev08_c9c9289339e7197a4580b4d0_o0_g48",
+    "method": "G1",
+    "gap_frames": 48,
+    "timing_offset_frames": 0,
+    "accepted": true,
+    "constructible": true,
+    "retention_guard_passed": true,
+    "objective": -0.17524426045358707,
+    "candidate_population": 25,
+    "original_pass_candidates": 25,
+    "rejection_reason": null,
+    "guard_used_for_selection": false,
+    "fallback_used": false,
+    "trials": [
+      {
+        "gap_frames": 24,
+        "offset": -24
+      },
+      {
+        "gap_frames": 24,
+        "offset": -12
+      },
+      {
+        "gap_frames": 24,
+        "offset": 0
+      },
+      {
+        "gap_frames": 24,
+        "offset": 12
+      },
+      {
+        "gap_frames": 24,
+        "offset": 24
+      },
+      {
+        "gap_frames": 36,
+        "offset": -24
+      },
+      {
+        "gap_frames": 36,
+        "offset": -12
+      },
+      {
+        "gap_frames": 36,
+        "offset": 0
+      },
+      {
+        "gap_frames": 36,
+        "offset": 12
+      },
+      {
+        "gap_frames": 36,
+        "offset": 24
+      },
+      {
+        "gap_frames": 48,
+        "offset": -24
+      },
+      {
+        "gap_frames": 48,
+        "offset": -12
+      },
+      {
+        "gap_frames": 48,
+        "offset": 0
+      },
+      {
+        "gap_frames": 48,
+        "offset": 12
+      },
+      {
+        "gap_frames": 48,
+        "offset": 24
+      },
+      {
+        "gap_frames": 60,
+        "offset": -24
+      },
+      {
+        "gap_frames": 60,
+        "offset": -12
+      },
+      {
+        "gap_frames": 60,
+        "offset": 0
+      },
+      {
+        "gap_frames": 60,
+        "offset": 12
+      },
+      {
+        "gap_frames": 60,
+        "offset": 24
+      },
+      {
+        "gap_frames": 72,
+        "offset": -24
+      },
+      {
+        "gap_frames": 72,
+        "offset": -12
+      },
+      {
+        "gap_frames": 72,
+        "offset": 0
+      },
+      {
+        "gap_frames": 72,
+        "offset": 12
+      },
+      {
+        "gap_frames": 72,
+        "offset": 24
+      }
+    ],
+    "comparison_scope": "EXPOSED_LOCAL_DIAGNOSTIC_NOT_ARTISTIC_OR_NATIVE_QUALIFICATION"
+  },
+  {
+    "case_key": "eval00_e34847b5d9a9a3d0897f86e5",
+    "role": "EVAL",
+    "policy": "Fixed48",
+    "record_key": "eval00_e34847b5d9a9a3d0897f86e5_o0_g48",
+    "method": "G1",
+    "gap_frames": 48,
+    "timing_offset_frames": 0,
+    "accepted": true,
+    "constructible": true,
+    "retention_guard_passed": true,
+    "objective": 0.09823701148219452,
+    "candidate_population": 25,
+    "original_pass_candidates": 25,
+    "rejection_reason": null,
+    "guard_used_for_selection": false,
+    "fallback_used": false,
+    "trials": [
+      {
+        "gap_frames": 48,
+        "offset": 0
+      }
+    ],
+    "comparison_scope": "EXPOSED_LOCAL_DIAGNOSTIC_NOT_ARTISTIC_OR_NATIVE_QUALIFICATION"
+  },
+  {
+    "case_key": "eval00_e34847b5d9a9a3d0897f86e5",
+    "role": "EVAL",
+    "policy": "LocalBeat",
+    "record_key": "eval00_e34847b5d9a9a3d0897f86e5_o0_g60",
+    "method": "G1",
+    "gap_frames": 60,
+    "timing_offset_frames": 0,
+    "accepted": true,
+    "constructible": true,
+    "retention_guard_passed": true,
+    "objective": -0.15381959848050802,
+    "candidate_population": 25,
+    "original_pass_candidates": 25,
+    "rejection_reason": null,
+    "guard_used_for_selection": false,
+    "fallback_used": false,
+    "trials": [
+      {
+        "gap_frames": 24,
+        "offset": -24
+      },
+      {
+        "gap_frames": 24,
+        "offset": -12
+      },
+      {
+        "gap_frames": 24,
+        "offset": 0
+      },
+      {
+        "gap_frames": 24,
+        "offset": 12
+      },
+      {
+        "gap_frames": 24,
+        "offset": 24
+      },
+      {
+        "gap_frames": 36,
+        "offset": -24
+      },
+      {
+        "gap_frames": 36,
+        "offset": -12
+      },
+      {
+        "gap_frames": 36,
+        "offset": 0
+      },
+      {
+        "gap_frames": 36,
+        "offset": 12
+      },
+      {
+        "gap_frames": 36,
+        "offset": 24
+      },
+      {
+        "gap_frames": 48,
+        "offset": -24
+      },
+      {
+        "gap_frames": 48,
+        "offset": -12
+      },
+      {
+        "gap_frames": 48,
+        "offset": 0
+      },
+      {
+        "gap_frames": 48,
+        "offset": 12
+      },
+      {
+        "gap_frames": 48,
+        "offset": 24
+      },
+      {
+        "gap_frames": 60,
+        "offset": -24
+      },
+      {
+        "gap_frames": 60,
+        "offset": -12
+      },
+      {
+        "gap_frames": 60,
+        "offset": 0
+      },
+      {
+        "gap_frames": 60,
+        "offset": 12
+      },
+      {
+        "gap_frames": 60,
+        "offset": 24
+      },
+      {
+        "gap_frames": 72,
+        "offset": -24
+      },
+      {
+        "gap_frames": 72,
+        "offset": -12
+      },
+      {
+        "gap_frames": 72,
+        "offset": 0
+      },
+      {
+        "gap_frames": 72,
+        "offset": 12
+      },
+      {
+        "gap_frames": 72,
+        "offset": 24
+      }
+    ],
+    "comparison_scope": "EXPOSED_LOCAL_DIAGNOSTIC_NOT_ARTISTIC_OR_NATIVE_QUALIFICATION"
+  },
+  {
+    "case_key": "eval01_921806a175ae48fe4c3a1ea8",
+    "role": "EVAL",
+    "policy": "Fixed48",
+    "record_key": "eval01_921806a175ae48fe4c3a1ea8_o0_g48",
+    "method": "G1",
+    "gap_frames": 48,
+    "timing_offset_frames": 0,
+    "accepted": true,
+    "constructible": true,
+    "retention_guard_passed": true,
+    "objective": 0.11997605751272483,
+    "candidate_population": 25,
+    "original_pass_candidates": 25,
+    "rejection_reason": null,
+    "guard_used_for_selection": false,
+    "fallback_used": false,
+    "trials": [
+      {
+        "gap_frames": 48,
+        "offset": 0
+      }
+    ],
+    "comparison_scope": "EXPOSED_LOCAL_DIAGNOSTIC_NOT_ARTISTIC_OR_NATIVE_QUALIFICATION"
+  },
+  {
+    "case_key": "eval01_921806a175ae48fe4c3a1ea8",
+    "role": "EVAL",
+    "policy": "LocalBeat",
+    "record_key": "eval01_921806a175ae48fe4c3a1ea8_o0_g48",
+    "method": "G1",
+    "gap_frames": 48,
+    "timing_offset_frames": 0,
+    "accepted": true,
+    "constructible": true,
+    "retention_guard_passed": true,
+    "objective": -0.24398478821204075,
+    "candidate_population": 25,
+    "original_pass_candidates": 25,
+    "rejection_reason": null,
+    "guard_used_for_selection": false,
+    "fallback_used": false,
+    "trials": [
+      {
+        "gap_frames": 24,
+        "offset": -24
+      },
+      {
+        "gap_frames": 24,
+        "offset": -12
+      },
+      {
+        "gap_frames": 24,
+        "offset": 0
+      },
+      {
+        "gap_frames": 24,
+        "offset": 12
+      },
+      {
+        "gap_frames": 24,
+        "offset": 24
+      },
+      {
+        "gap_frames": 36,
+        "offset": -24
+      },
+      {
+        "gap_frames": 36,
+        "offset": -12
+      },
+      {
+        "gap_frames": 36,
+        "offset": 0
+      },
+      {
+        "gap_frames": 36,
+        "offset": 12
+      },
+      {
+        "gap_frames": 36,
+        "offset": 24
+      },
+      {
+        "gap_frames": 48,
+        "offset": -24
+      },
+      {
+        "gap_frames": 48,
+        "offset": -12
+      },
+      {
+        "gap_frames": 48,
+        "offset": 0
+      },
+      {
+        "gap_frames": 48,
+        "offset": 12
+      },
+      {
+        "gap_frames": 48,
+        "offset": 24
+      },
+      {
+        "gap_frames": 60,
+        "offset": -24
+      },
+      {
+        "gap_frames": 60,
+        "offset": -12
+      },
+      {
+        "gap_frames": 60,
+        "offset": 0
+      },
+      {
+        "gap_frames": 60,
+        "offset": 12
+      },
+      {
+        "gap_frames": 60,
+        "offset": 24
+      },
+      {
+        "gap_frames": 72,
+        "offset": -24
+      },
+      {
+        "gap_frames": 72,
+        "offset": -12
+      },
+      {
+        "gap_frames": 72,
+        "offset": 0
+      },
+      {
+        "gap_frames": 72,
+        "offset": 12
+      },
+      {
+        "gap_frames": 72,
+        "offset": 24
+      }
+    ],
+    "comparison_scope": "EXPOSED_LOCAL_DIAGNOSTIC_NOT_ARTISTIC_OR_NATIVE_QUALIFICATION"
+  },
+  {
+    "case_key": "eval02_3582931accb6c3ebc79beb78",
+    "role": "EVAL",
+    "policy": "Fixed48",
+    "record_key": "eval02_3582931accb6c3ebc79beb78_o0_g48",
+    "method": "G1",
+    "gap_frames": 48,
+    "timing_offset_frames": 0,
+    "accepted": true,
+    "constructible": true,
+    "retention_guard_passed": true,
+    "objective": 0.18028965845385733,
+    "candidate_population": 25,
+    "original_pass_candidates": 25,
+    "rejection_reason": null,
+    "guard_used_for_selection": false,
+    "fallback_used": false,
+    "trials": [
+      {
+        "gap_frames": 48,
+        "offset": 0
+      }
+    ],
+    "comparison_scope": "EXPOSED_LOCAL_DIAGNOSTIC_NOT_ARTISTIC_OR_NATIVE_QUALIFICATION"
+  },
+  {
+    "case_key": "eval02_3582931accb6c3ebc79beb78",
+    "role": "EVAL",
+    "policy": "LocalBeat",
+    "record_key": "eval02_3582931accb6c3ebc79beb78_o24_g48",
+    "method": "G1",
+    "gap_frames": 48,
+    "timing_offset_frames": 24,
+    "accepted": true,
+    "constructible": true,
+    "retention_guard_passed": true,
+    "objective": -0.06270573681356882,
+    "candidate_population": 25,
+    "original_pass_candidates": 25,
+    "rejection_reason": null,
+    "guard_used_for_selection": false,
+    "fallback_used": false,
+    "trials": [
+      {
+        "gap_frames": 24,
+        "offset": -24
+      },
+      {
+        "gap_frames": 24,
+        "offset": -12
+      },
+      {
+        "gap_frames": 24,
+        "offset": 0
+      },
+      {
+        "gap_frames": 24,
+        "offset": 12
+      },
+      {
+        "gap_frames": 24,
+        "offset": 24
+      },
+      {
+        "gap_frames": 36,
+        "offset": -24
+      },
+      {
+        "gap_frames": 36,
+        "offset": -12
+      },
+      {
+        "gap_frames": 36,
+        "offset": 0
+      },
+      {
+        "gap_frames": 36,
+        "offset": 12
+      },
+      {
+        "gap_frames": 36,
+        "offset": 24
+      },
+      {
+        "gap_frames": 48,
+        "offset": -24
+      },
+      {
+        "gap_frames": 48,
+        "offset": -12
+      },
+      {
+        "gap_frames": 48,
+        "offset": 0
+      },
+      {
+        "gap_frames": 48,
+        "offset": 12
+      },
+      {
+        "gap_frames": 48,
+        "offset": 24
+      },
+      {
+        "gap_frames": 60,
+        "offset": -24
+      },
+      {
+        "gap_frames": 60,
+        "offset": -12
+      },
+      {
+        "gap_frames": 60,
+        "offset": 0
+      },
+      {
+        "gap_frames": 60,
+        "offset": 12
+      },
+      {
+        "gap_frames": 60,
+        "offset": 24
+      },
+      {
+        "gap_frames": 72,
+        "offset": -24
+      },
+      {
+        "gap_frames": 72,
+        "offset": -12
+      },
+      {
+        "gap_frames": 72,
+        "offset": 0
+      },
+      {
+        "gap_frames": 72,
+        "offset": 12
+      },
+      {
+        "gap_frames": 72,
+        "offset": 24
+      }
+    ],
+    "comparison_scope": "EXPOSED_LOCAL_DIAGNOSTIC_NOT_ARTISTIC_OR_NATIVE_QUALIFICATION"
+  },
+  {
+    "case_key": "eval03_049cdb40e4fb107331353a57",
+    "role": "EVAL",
+    "policy": "Fixed48",
+    "record_key": "eval03_049cdb40e4fb107331353a57_o0_g48",
+    "method": "G1",
+    "gap_frames": 48,
+    "timing_offset_frames": 0,
+    "accepted": true,
+    "constructible": true,
+    "retention_guard_passed": true,
+    "objective": 0.11321230433764487,
+    "candidate_population": 25,
+    "original_pass_candidates": 25,
+    "rejection_reason": null,
+    "guard_used_for_selection": false,
+    "fallback_used": false,
+    "trials": [
+      {
+        "gap_frames": 48,
+        "offset": 0
+      }
+    ],
+    "comparison_scope": "EXPOSED_LOCAL_DIAGNOSTIC_NOT_ARTISTIC_OR_NATIVE_QUALIFICATION"
+  },
+  {
+    "case_key": "eval03_049cdb40e4fb107331353a57",
+    "role": "EVAL",
+    "policy": "LocalBeat",
+    "record_key": "eval03_049cdb40e4fb107331353a57_o0_g48",
+    "method": "G1",
+    "gap_frames": 48,
+    "timing_offset_frames": 0,
+    "accepted": true,
+    "constructible": true,
+    "retention_guard_passed": true,
+    "objective": -0.1409344311036204,
+    "candidate_population": 25,
+    "original_pass_candidates": 25,
+    "rejection_reason": null,
+    "guard_used_for_selection": false,
+    "fallback_used": false,
+    "trials": [
+      {
+        "gap_frames": 24,
+        "offset": -24
+      },
+      {
+        "gap_frames": 24,
+        "offset": -12
+      },
+      {
+        "gap_frames": 24,
+        "offset": 0
+      },
+      {
+        "gap_frames": 24,
+        "offset": 12
+      },
+      {
+        "gap_frames": 24,
+        "offset": 24
+      },
+      {
+        "gap_frames": 36,
+        "offset": -24
+      },
+      {
+        "gap_frames": 36,
+        "offset": -12
+      },
+      {
+        "gap_frames": 36,
+        "offset": 0
+      },
+      {
+        "gap_frames": 36,
+        "offset": 12
+      },
+      {
+        "gap_frames": 36,
+        "offset": 24
+      },
+      {
+        "gap_frames": 48,
+        "offset": -24
+      },
+      {
+        "gap_frames": 48,
+        "offset": -12
+      },
+      {
+        "gap_frames": 48,
+        "offset": 0
+      },
+      {
+        "gap_frames": 48,
+        "offset": 12
+      },
+      {
+        "gap_frames": 48,
+        "offset": 24
+      },
+      {
+        "gap_frames": 60,
+        "offset": -24
+      },
+      {
+        "gap_frames": 60,
+        "offset": -12
+      },
+      {
+        "gap_frames": 60,
+        "offset": 0
+      },
+      {
+        "gap_frames": 60,
+        "offset": 12
+      },
+      {
+        "gap_frames": 60,
+        "offset": 24
+      },
+      {
+        "gap_frames": 72,
+        "offset": -24
+      },
+      {
+        "gap_frames": 72,
+        "offset": -12
+      },
+      {
+        "gap_frames": 72,
+        "offset": 0
+      },
+      {
+        "gap_frames": 72,
+        "offset": 12
+      },
+      {
+        "gap_frames": 72,
+        "offset": 24
+      }
+    ],
+    "comparison_scope": "EXPOSED_LOCAL_DIAGNOSTIC_NOT_ARTISTIC_OR_NATIVE_QUALIFICATION"
+  },
+  {
+    "case_key": "eval04_ee00609bd954d39ec66e4e90",
+    "role": "EVAL",
+    "policy": "Fixed48",
+    "record_key": "eval04_ee00609bd954d39ec66e4e90_o0_g48",
+    "method": "G1",
+    "gap_frames": 48,
+    "timing_offset_frames": 0,
+    "accepted": true,
+    "constructible": true,
+    "retention_guard_passed": true,
+    "objective": 0.13499433764491553,
+    "candidate_population": 25,
+    "original_pass_candidates": 25,
+    "rejection_reason": null,
+    "guard_used_for_selection": false,
+    "fallback_used": false,
+    "trials": [
+      {
+        "gap_frames": 48,
+        "offset": 0
+      }
+    ],
+    "comparison_scope": "EXPOSED_LOCAL_DIAGNOSTIC_NOT_ARTISTIC_OR_NATIVE_QUALIFICATION"
+  },
+  {
+    "case_key": "eval04_ee00609bd954d39ec66e4e90",
+    "role": "EVAL",
+    "policy": "LocalBeat",
+    "record_key": "eval04_ee00609bd954d39ec66e4e90_o0_g60",
+    "method": "G1",
+    "gap_frames": 60,
+    "timing_offset_frames": 0,
+    "accepted": true,
+    "constructible": true,
+    "retention_guard_passed": false,
+    "objective": -0.288711815764311,
+    "candidate_population": 25,
+    "original_pass_candidates": 25,
+    "rejection_reason": null,
+    "guard_used_for_selection": false,
+    "fallback_used": false,
+    "trials": [
+      {
+        "gap_frames": 24,
+        "offset": -24
+      },
+      {
+        "gap_frames": 24,
+        "offset": -12
+      },
+      {
+        "gap_frames": 24,
+        "offset": 0
+      },
+      {
+        "gap_frames": 24,
+        "offset": 12
+      },
+      {
+        "gap_frames": 24,
+        "offset": 24
+      },
+      {
+        "gap_frames": 36,
+        "offset": -24
+      },
+      {
+        "gap_frames": 36,
+        "offset": -12
+      },
+      {
+        "gap_frames": 36,
+        "offset": 0
+      },
+      {
+        "gap_frames": 36,
+        "offset": 12
+      },
+      {
+        "gap_frames": 36,
+        "offset": 24
+      },
+      {
+        "gap_frames": 48,
+        "offset": -24
+      },
+      {
+        "gap_frames": 48,
+        "offset": -12
+      },
+      {
+        "gap_frames": 48,
+        "offset": 0
+      },
+      {
+        "gap_frames": 48,
+        "offset": 12
+      },
+      {
+        "gap_frames": 48,
+        "offset": 24
+      },
+      {
+        "gap_frames": 60,
+        "offset": -24
+      },
+      {
+        "gap_frames": 60,
+        "offset": -12
+      },
+      {
+        "gap_frames": 60,
+        "offset": 0
+      },
+      {
+        "gap_frames": 60,
+        "offset": 12
+      },
+      {
+        "gap_frames": 60,
+        "offset": 24
+      },
+      {
+        "gap_frames": 72,
+        "offset": -24
+      },
+      {
+        "gap_frames": 72,
+        "offset": -12
+      },
+      {
+        "gap_frames": 72,
+        "offset": 0
+      },
+      {
+        "gap_frames": 72,
+        "offset": 12
+      },
+      {
+        "gap_frames": 72,
+        "offset": 24
+      }
+    ],
+    "comparison_scope": "EXPOSED_LOCAL_DIAGNOSTIC_NOT_ARTISTIC_OR_NATIVE_QUALIFICATION"
+  },
+  {
+    "case_key": "eval05_01058fc334f90b9f0ec20267",
+    "role": "EVAL",
+    "policy": "Fixed48",
+    "record_key": "eval05_01058fc334f90b9f0ec20267_o0_g48",
+    "method": "G1",
+    "gap_frames": 48,
+    "timing_offset_frames": 0,
+    "accepted": true,
+    "constructible": true,
+    "retention_guard_passed": true,
+    "objective": 0.08605587068456347,
+    "candidate_population": 25,
+    "original_pass_candidates": 25,
+    "rejection_reason": null,
+    "guard_used_for_selection": false,
+    "fallback_used": false,
+    "trials": [
+      {
+        "gap_frames": 48,
+        "offset": 0
+      }
+    ],
+    "comparison_scope": "EXPOSED_LOCAL_DIAGNOSTIC_NOT_ARTISTIC_OR_NATIVE_QUALIFICATION"
+  },
+  {
+    "case_key": "eval05_01058fc334f90b9f0ec20267",
+    "role": "EVAL",
+    "policy": "LocalBeat",
+    "record_key": "eval05_01058fc334f90b9f0ec20267_o0_g60",
+    "method": "G1",
+    "gap_frames": 60,
+    "timing_offset_frames": 0,
+    "accepted": true,
+    "constructible": true,
+    "retention_guard_passed": true,
+    "objective": -0.19302352393308228,
+    "candidate_population": 25,
+    "original_pass_candidates": 25,
+    "rejection_reason": null,
+    "guard_used_for_selection": false,
+    "fallback_used": false,
+    "trials": [
+      {
+        "gap_frames": 24,
+        "offset": -24
+      },
+      {
+        "gap_frames": 24,
+        "offset": -12
+      },
+      {
+        "gap_frames": 24,
+        "offset": 0
+      },
+      {
+        "gap_frames": 24,
+        "offset": 12
+      },
+      {
+        "gap_frames": 24,
+        "offset": 24
+      },
+      {
+        "gap_frames": 36,
+        "offset": -24
+      },
+      {
+        "gap_frames": 36,
+        "offset": -12
+      },
+      {
+        "gap_frames": 36,
+        "offset": 0
+      },
+      {
+        "gap_frames": 36,
+        "offset": 12
+      },
+      {
+        "gap_frames": 36,
+        "offset": 24
+      },
+      {
+        "gap_frames": 48,
+        "offset": -24
+      },
+      {
+        "gap_frames": 48,
+        "offset": -12
+      },
+      {
+        "gap_frames": 48,
+        "offset": 0
+      },
+      {
+        "gap_frames": 48,
+        "offset": 12
+      },
+      {
+        "gap_frames": 48,
+        "offset": 24
+      },
+      {
+        "gap_frames": 60,
+        "offset": -24
+      },
+      {
+        "gap_frames": 60,
+        "offset": -12
+      },
+      {
+        "gap_frames": 60,
+        "offset": 0
+      },
+      {
+        "gap_frames": 60,
+        "offset": 12
+      },
+      {
+        "gap_frames": 60,
+        "offset": 24
+      },
+      {
+        "gap_frames": 72,
+        "offset": -24
+      },
+      {
+        "gap_frames": 72,
+        "offset": -12
+      },
+      {
+        "gap_frames": 72,
+        "offset": 0
+      },
+      {
+        "gap_frames": 72,
+        "offset": 12
+      },
+      {
+        "gap_frames": 72,
+        "offset": 24
+      }
+    ],
+    "comparison_scope": "EXPOSED_LOCAL_DIAGNOSTIC_NOT_ARTISTIC_OR_NATIVE_QUALIFICATION"
+  },
+  {
+    "case_key": "eval06_87c8726999c794d11fb4be80",
+    "role": "EVAL",
+    "policy": "Fixed48",
+    "record_key": "eval06_87c8726999c794d11fb4be80_o0_g48",
+    "method": "G1",
+    "gap_frames": 48,
+    "timing_offset_frames": 0,
+    "accepted": true,
+    "constructible": true,
+    "retention_guard_passed": true,
+    "objective": 0.12466945542934821,
+    "candidate_population": 25,
+    "original_pass_candidates": 25,
+    "rejection_reason": null,
+    "guard_used_for_selection": false,
+    "fallback_used": false,
+    "trials": [
+      {
+        "gap_frames": 48,
+        "offset": 0
+      }
+    ],
+    "comparison_scope": "EXPOSED_LOCAL_DIAGNOSTIC_NOT_ARTISTIC_OR_NATIVE_QUALIFICATION"
+  },
+  {
+    "case_key": "eval06_87c8726999c794d11fb4be80",
+    "role": "EVAL",
+    "policy": "LocalBeat",
+    "record_key": "eval06_87c8726999c794d11fb4be80_o0_g60",
+    "method": "G1",
+    "gap_frames": 60,
+    "timing_offset_frames": 0,
+    "accepted": true,
+    "constructible": true,
+    "retention_guard_passed": false,
+    "objective": -0.0957954143340304,
+    "candidate_population": 25,
+    "original_pass_candidates": 25,
+    "rejection_reason": null,
+    "guard_used_for_selection": false,
+    "fallback_used": false,
+    "trials": [
+      {
+        "gap_frames": 24,
+        "offset": -24
+      },
+      {
+        "gap_frames": 24,
+        "offset": -12
+      },
+      {
+        "gap_frames": 24,
+        "offset": 0
+      },
+      {
+        "gap_frames": 24,
+        "offset": 12
+      },
+      {
+        "gap_frames": 24,
+        "offset": 24
+      },
+      {
+        "gap_frames": 36,
+        "offset": -24
+      },
+      {
+        "gap_frames": 36,
+        "offset": -12
+      },
+      {
+        "gap_frames": 36,
+        "offset": 0
+      },
+      {
+        "gap_frames": 36,
+        "offset": 12
+      },
+      {
+        "gap_frames": 36,
+        "offset": 24
+      },
+      {
+        "gap_frames": 48,
+        "offset": -24
+      },
+      {
+        "gap_frames": 48,
+        "offset": -12
+      },
+      {
+        "gap_frames": 48,
+        "offset": 0
+      },
+      {
+        "gap_frames": 48,
+        "offset": 12
+      },
+      {
+        "gap_frames": 48,
+        "offset": 24
+      },
+      {
+        "gap_frames": 60,
+        "offset": -24
+      },
+      {
+        "gap_frames": 60,
+        "offset": -12
+      },
+      {
+        "gap_frames": 60,
+        "offset": 0
+      },
+      {
+        "gap_frames": 60,
+        "offset": 12
+      },
+      {
+        "gap_frames": 60,
+        "offset": 24
+      },
+      {
+        "gap_frames": 72,
+        "offset": -24
+      },
+      {
+        "gap_frames": 72,
+        "offset": -12
+      },
+      {
+        "gap_frames": 72,
+        "offset": 0
+      },
+      {
+        "gap_frames": 72,
+        "offset": 12
+      },
+      {
+        "gap_frames": 72,
+        "offset": 24
+      }
+    ],
+    "comparison_scope": "EXPOSED_LOCAL_DIAGNOSTIC_NOT_ARTISTIC_OR_NATIVE_QUALIFICATION"
+  },
+  {
+    "case_key": "eval07_3cc151a0b99553c51eb6b8d6",
+    "role": "EVAL",
+    "policy": "Fixed48",
+    "record_key": "eval07_3cc151a0b99553c51eb6b8d6_o0_g48",
+    "method": "G1",
+    "gap_frames": 48,
+    "timing_offset_frames": 0,
+    "accepted": true,
+    "constructible": true,
+    "retention_guard_passed": true,
+    "objective": 0.17362578696279776,
+    "candidate_population": 25,
+    "original_pass_candidates": 25,
+    "rejection_reason": null,
+    "guard_used_for_selection": false,
+    "fallback_used": false,
+    "trials": [
+      {
+        "gap_frames": 48,
+        "offset": 0
+      }
+    ],
+    "comparison_scope": "EXPOSED_LOCAL_DIAGNOSTIC_NOT_ARTISTIC_OR_NATIVE_QUALIFICATION"
+  },
+  {
+    "case_key": "eval07_3cc151a0b99553c51eb6b8d6",
+    "role": "EVAL",
+    "policy": "LocalBeat",
+    "record_key": "eval07_3cc151a0b99553c51eb6b8d6_o0_g60",
+    "method": "G1",
+    "gap_frames": 60,
+    "timing_offset_frames": 0,
+    "accepted": true,
+    "constructible": true,
+    "retention_guard_passed": false,
+    "objective": -0.25568848533004185,
+    "candidate_population": 25,
+    "original_pass_candidates": 25,
+    "rejection_reason": null,
+    "guard_used_for_selection": false,
+    "fallback_used": false,
+    "trials": [
+      {
+        "gap_frames": 24,
+        "offset": -24
+      },
+      {
+        "gap_frames": 24,
+        "offset": -12
+      },
+      {
+        "gap_frames": 24,
+        "offset": 0
+      },
+      {
+        "gap_frames": 24,
+        "offset": 12
+      },
+      {
+        "gap_frames": 24,
+        "offset": 24
+      },
+      {
+        "gap_frames": 36,
+        "offset": -24
+      },
+      {
+        "gap_frames": 36,
+        "offset": -12
+      },
+      {
+        "gap_frames": 36,
+        "offset": 0
+      },
+      {
+        "gap_frames": 36,
+        "offset": 12
+      },
+      {
+        "gap_frames": 36,
+        "offset": 24
+      },
+      {
+        "gap_frames": 48,
+        "offset": -24
+      },
+      {
+        "gap_frames": 48,
+        "offset": -12
+      },
+      {
+        "gap_frames": 48,
+        "offset": 0
+      },
+      {
+        "gap_frames": 48,
+        "offset": 12
+      },
+      {
+        "gap_frames": 48,
+        "offset": 24
+      },
+      {
+        "gap_frames": 60,
+        "offset": -24
+      },
+      {
+        "gap_frames": 60,
+        "offset": -12
+      },
+      {
+        "gap_frames": 60,
+        "offset": 0
+      },
+      {
+        "gap_frames": 60,
+        "offset": 12
+      },
+      {
+        "gap_frames": 60,
+        "offset": 24
+      },
+      {
+        "gap_frames": 72,
+        "offset": -24
+      },
+      {
+        "gap_frames": 72,
+        "offset": -12
+      },
+      {
+        "gap_frames": 72,
+        "offset": 0
+      },
+      {
+        "gap_frames": 72,
+        "offset": 12
+      },
+      {
+        "gap_frames": 72,
+        "offset": 24
+      }
+    ],
+    "comparison_scope": "EXPOSED_LOCAL_DIAGNOSTIC_NOT_ARTISTIC_OR_NATIVE_QUALIFICATION"
+  },
+  {
+    "case_key": "eval08_8294c34c2824afb40734545a",
+    "role": "EVAL",
+    "policy": "Fixed48",
+    "record_key": "eval08_8294c34c2824afb40734545a_o0_g48",
+    "method": "G1",
+    "gap_frames": 48,
+    "timing_offset_frames": 0,
+    "accepted": true,
+    "constructible": true,
+    "retention_guard_passed": true,
+    "objective": 0.06884113090244356,
+    "candidate_population": 25,
+    "original_pass_candidates": 25,
+    "rejection_reason": null,
+    "guard_used_for_selection": false,
+    "fallback_used": false,
+    "trials": [
+      {
+        "gap_frames": 48,
+        "offset": 0
+      }
+    ],
+    "comparison_scope": "EXPOSED_LOCAL_DIAGNOSTIC_NOT_ARTISTIC_OR_NATIVE_QUALIFICATION"
+  },
+  {
+    "case_key": "eval08_8294c34c2824afb40734545a",
+    "role": "EVAL",
+    "policy": "LocalBeat",
+    "record_key": "eval08_8294c34c2824afb40734545a_o-24_g48",
+    "method": "G1",
+    "gap_frames": 48,
+    "timing_offset_frames": -24,
+    "accepted": true,
+    "constructible": true,
+    "retention_guard_passed": true,
+    "objective": -0.2062889943703913,
+    "candidate_population": 25,
+    "original_pass_candidates": 25,
+    "rejection_reason": null,
+    "guard_used_for_selection": false,
+    "fallback_used": false,
+    "trials": [
+      {
+        "gap_frames": 24,
+        "offset": -24
+      },
+      {
+        "gap_frames": 24,
+        "offset": -12
+      },
+      {
+        "gap_frames": 24,
+        "offset": 0
+      },
+      {
+        "gap_frames": 24,
+        "offset": 12
+      },
+      {
+        "gap_frames": 24,
+        "offset": 24
+      },
+      {
+        "gap_frames": 36,
+        "offset": -24
+      },
+      {
+        "gap_frames": 36,
+        "offset": -12
+      },
+      {
+        "gap_frames": 36,
+        "offset": 0
+      },
+      {
+        "gap_frames": 36,
+        "offset": 12
+      },
+      {
+        "gap_frames": 36,
+        "offset": 24
+      },
+      {
+        "gap_frames": 48,
+        "offset": -24
+      },
+      {
+        "gap_frames": 48,
+        "offset": -12
+      },
+      {
+        "gap_frames": 48,
+        "offset": 0
+      },
+      {
+        "gap_frames": 48,
+        "offset": 12
+      },
+      {
+        "gap_frames": 48,
+        "offset": 24
+      },
+      {
+        "gap_frames": 60,
+        "offset": -24
+      },
+      {
+        "gap_frames": 60,
+        "offset": -12
+      },
+      {
+        "gap_frames": 60,
+        "offset": 0
+      },
+      {
+        "gap_frames": 60,
+        "offset": 12
+      },
+      {
+        "gap_frames": 60,
+        "offset": 24
+      },
+      {
+        "gap_frames": 72,
+        "offset": -24
+      },
+      {
+        "gap_frames": 72,
+        "offset": -12
+      },
+      {
+        "gap_frames": 72,
+        "offset": 0
+      },
+      {
+        "gap_frames": 72,
+        "offset": 12
+      },
+      {
+        "gap_frames": 72,
+        "offset": 24
+      }
+    ],
+    "comparison_scope": "EXPOSED_LOCAL_DIAGNOSTIC_NOT_ARTISTIC_OR_NATIVE_QUALIFICATION"
+  },
+  {
+    "case_key": "eval09_3166381a1b643a6189b9adbb",
+    "role": "EVAL",
+    "policy": "Fixed48",
+    "record_key": "eval09_3166381a1b643a6189b9adbb_o0_g48",
+    "method": "G1",
+    "gap_frames": 48,
+    "timing_offset_frames": 0,
+    "accepted": true,
+    "constructible": true,
+    "retention_guard_passed": true,
+    "objective": 0.09048985762418271,
+    "candidate_population": 25,
+    "original_pass_candidates": 25,
+    "rejection_reason": null,
+    "guard_used_for_selection": false,
+    "fallback_used": false,
+    "trials": [
+      {
+        "gap_frames": 48,
+        "offset": 0
+      }
+    ],
+    "comparison_scope": "EXPOSED_LOCAL_DIAGNOSTIC_NOT_ARTISTIC_OR_NATIVE_QUALIFICATION"
+  },
+  {
+    "case_key": "eval09_3166381a1b643a6189b9adbb",
+    "role": "EVAL",
+    "policy": "LocalBeat",
+    "record_key": "eval09_3166381a1b643a6189b9adbb_o0_g48",
+    "method": "G1",
+    "gap_frames": 48,
+    "timing_offset_frames": 0,
+    "accepted": true,
+    "constructible": true,
+    "retention_guard_passed": true,
+    "objective": -0.1848645451321122,
+    "candidate_population": 25,
+    "original_pass_candidates": 25,
+    "rejection_reason": null,
+    "guard_used_for_selection": false,
+    "fallback_used": false,
+    "trials": [
+      {
+        "gap_frames": 24,
+        "offset": -24
+      },
+      {
+        "gap_frames": 24,
+        "offset": -12
+      },
+      {
+        "gap_frames": 24,
+        "offset": 0
+      },
+      {
+        "gap_frames": 24,
+        "offset": 12
+      },
+      {
+        "gap_frames": 24,
+        "offset": 24
+      },
+      {
+        "gap_frames": 36,
+        "offset": -24
+      },
+      {
+        "gap_frames": 36,
+        "offset": -12
+      },
+      {
+        "gap_frames": 36,
+        "offset": 0
+      },
+      {
+        "gap_frames": 36,
+        "offset": 12
+      },
+      {
+        "gap_frames": 36,
+        "offset": 24
+      },
+      {
+        "gap_frames": 48,
+        "offset": -24
+      },
+      {
+        "gap_frames": 48,
+        "offset": -12
+      },
+      {
+        "gap_frames": 48,
+        "offset": 0
+      },
+      {
+        "gap_frames": 48,
+        "offset": 12
+      },
+      {
+        "gap_frames": 48,
+        "offset": 24
+      },
+      {
+        "gap_frames": 60,
+        "offset": -24
+      },
+      {
+        "gap_frames": 60,
+        "offset": -12
+      },
+      {
+        "gap_frames": 60,
+        "offset": 0
+      },
+      {
+        "gap_frames": 60,
+        "offset": 12
+      },
+      {
+        "gap_frames": 60,
+        "offset": 24
+      },
+      {
+        "gap_frames": 72,
+        "offset": -24
+      },
+      {
+        "gap_frames": 72,
+        "offset": -12
+      },
+      {
+        "gap_frames": 72,
+        "offset": 0
+      },
+      {
+        "gap_frames": 72,
+        "offset": 12
+      },
+      {
+        "gap_frames": 72,
+        "offset": 24
+      }
+    ],
+    "comparison_scope": "EXPOSED_LOCAL_DIAGNOSTIC_NOT_ARTISTIC_OR_NATIVE_QUALIFICATION"
+  },
+  {
+    "case_key": "eval10_75b0c3f81a176145b012e723",
+    "role": "EVAL",
+    "policy": "Fixed48",
+    "record_key": "eval10_75b0c3f81a176145b012e723_o0_g48",
+    "method": "G1",
+    "gap_frames": 48,
+    "timing_offset_frames": 0,
+    "accepted": true,
+    "constructible": true,
+    "retention_guard_passed": true,
+    "objective": 0.10322369097987139,
+    "candidate_population": 25,
+    "original_pass_candidates": 25,
+    "rejection_reason": null,
+    "guard_used_for_selection": false,
+    "fallback_used": false,
+    "trials": [
+      {
+        "gap_frames": 48,
+        "offset": 0
+      }
+    ],
+    "comparison_scope": "EXPOSED_LOCAL_DIAGNOSTIC_NOT_ARTISTIC_OR_NATIVE_QUALIFICATION"
+  },
+  {
+    "case_key": "eval10_75b0c3f81a176145b012e723",
+    "role": "EVAL",
+    "policy": "LocalBeat",
+    "record_key": "eval10_75b0c3f81a176145b012e723_o0_g60",
+    "method": "G1",
+    "gap_frames": 60,
+    "timing_offset_frames": 0,
+    "accepted": true,
+    "constructible": true,
+    "retention_guard_passed": false,
+    "objective": -0.2931114349516306,
+    "candidate_population": 25,
+    "original_pass_candidates": 25,
+    "rejection_reason": null,
+    "guard_used_for_selection": false,
+    "fallback_used": false,
+    "trials": [
+      {
+        "gap_frames": 24,
+        "offset": -24
+      },
+      {
+        "gap_frames": 24,
+        "offset": -12
+      },
+      {
+        "gap_frames": 24,
+        "offset": 0
+      },
+      {
+        "gap_frames": 24,
+        "offset": 12
+      },
+      {
+        "gap_frames": 24,
+        "offset": 24
+      },
+      {
+        "gap_frames": 36,
+        "offset": -24
+      },
+      {
+        "gap_frames": 36,
+        "offset": -12
+      },
+      {
+        "gap_frames": 36,
+        "offset": 0
+      },
+      {
+        "gap_frames": 36,
+        "offset": 12
+      },
+      {
+        "gap_frames": 36,
+        "offset": 24
+      },
+      {
+        "gap_frames": 48,
+        "offset": -24
+      },
+      {
+        "gap_frames": 48,
+        "offset": -12
+      },
+      {
+        "gap_frames": 48,
+        "offset": 0
+      },
+      {
+        "gap_frames": 48,
+        "offset": 12
+      },
+      {
+        "gap_frames": 48,
+        "offset": 24
+      },
+      {
+        "gap_frames": 60,
+        "offset": -24
+      },
+      {
+        "gap_frames": 60,
+        "offset": -12
+      },
+      {
+        "gap_frames": 60,
+        "offset": 0
+      },
+      {
+        "gap_frames": 60,
+        "offset": 12
+      },
+      {
+        "gap_frames": 60,
+        "offset": 24
+      },
+      {
+        "gap_frames": 72,
+        "offset": -24
+      },
+      {
+        "gap_frames": 72,
+        "offset": -12
+      },
+      {
+        "gap_frames": 72,
+        "offset": 0
+      },
+      {
+        "gap_frames": 72,
+        "offset": 12
+      },
+      {
+        "gap_frames": 72,
+        "offset": 24
+      }
+    ],
+    "comparison_scope": "EXPOSED_LOCAL_DIAGNOSTIC_NOT_ARTISTIC_OR_NATIVE_QUALIFICATION"
+  },
+  {
+    "case_key": "eval11_286d30b53b5fbb3d218cc63c",
+    "role": "EVAL",
+    "policy": "Fixed48",
+    "record_key": "eval11_286d30b53b5fbb3d218cc63c_o0_g48",
+    "method": "G1",
+    "gap_frames": 48,
+    "timing_offset_frames": 0,
+    "accepted": true,
+    "constructible": true,
+    "retention_guard_passed": true,
+    "objective": 0.0794755823041271,
+    "candidate_population": 25,
+    "original_pass_candidates": 25,
+    "rejection_reason": null,
+    "guard_used_for_selection": false,
+    "fallback_used": false,
+    "trials": [
+      {
+        "gap_frames": 48,
+        "offset": 0
+      }
+    ],
+    "comparison_scope": "EXPOSED_LOCAL_DIAGNOSTIC_NOT_ARTISTIC_OR_NATIVE_QUALIFICATION"
+  },
+  {
+    "case_key": "eval11_286d30b53b5fbb3d218cc63c",
+    "role": "EVAL",
+    "policy": "LocalBeat",
+    "record_key": "eval11_286d30b53b5fbb3d218cc63c_o12_g60",
+    "method": "G1",
+    "gap_frames": 60,
+    "timing_offset_frames": 12,
+    "accepted": true,
+    "constructible": true,
+    "retention_guard_passed": false,
+    "objective": -0.17329584146533167,
+    "candidate_population": 25,
+    "original_pass_candidates": 25,
+    "rejection_reason": null,
+    "guard_used_for_selection": false,
+    "fallback_used": false,
+    "trials": [
+      {
+        "gap_frames": 24,
+        "offset": -24
+      },
+      {
+        "gap_frames": 24,
+        "offset": -12
+      },
+      {
+        "gap_frames": 24,
+        "offset": 0
+      },
+      {
+        "gap_frames": 24,
+        "offset": 12
+      },
+      {
+        "gap_frames": 24,
+        "offset": 24
+      },
+      {
+        "gap_frames": 36,
+        "offset": -24
+      },
+      {
+        "gap_frames": 36,
+        "offset": -12
+      },
+      {
+        "gap_frames": 36,
+        "offset": 0
+      },
+      {
+        "gap_frames": 36,
+        "offset": 12
+      },
+      {
+        "gap_frames": 36,
+        "offset": 24
+      },
+      {
+        "gap_frames": 48,
+        "offset": -24
+      },
+      {
+        "gap_frames": 48,
+        "offset": -12
+      },
+      {
+        "gap_frames": 48,
+        "offset": 0
+      },
+      {
+        "gap_frames": 48,
+        "offset": 12
+      },
+      {
+        "gap_frames": 48,
+        "offset": 24
+      },
+      {
+        "gap_frames": 60,
+        "offset": -24
+      },
+      {
+        "gap_frames": 60,
+        "offset": -12
+      },
+      {
+        "gap_frames": 60,
+        "offset": 0
+      },
+      {
+        "gap_frames": 60,
+        "offset": 12
+      },
+      {
+        "gap_frames": 60,
+        "offset": 24
+      },
+      {
+        "gap_frames": 72,
+        "offset": -24
+      },
+      {
+        "gap_frames": 72,
+        "offset": -12
+      },
+      {
+        "gap_frames": 72,
+        "offset": 0
+      },
+      {
+        "gap_frames": 72,
+        "offset": 12
+      },
+      {
+        "gap_frames": 72,
+        "offset": 24
+      }
+    ],
+    "comparison_scope": "EXPOSED_LOCAL_DIAGNOSTIC_NOT_ARTISTIC_OR_NATIVE_QUALIFICATION"
+  },
+  {
+    "case_key": "eval12_73cf7135b5d44f280b4cd5aa",
+    "role": "EVAL",
+    "policy": "Fixed48",
+    "record_key": "eval12_73cf7135b5d44f280b4cd5aa_o0_g48",
+    "method": "G1",
+    "gap_frames": 48,
+    "timing_offset_frames": 0,
+    "accepted": true,
+    "constructible": true,
+    "retention_guard_passed": true,
+    "objective": 0.13260372466844544,
+    "candidate_population": 25,
+    "original_pass_candidates": 25,
+    "rejection_reason": null,
+    "guard_used_for_selection": false,
+    "fallback_used": false,
+    "trials": [
+      {
+        "gap_frames": 48,
+        "offset": 0
+      }
+    ],
+    "comparison_scope": "EXPOSED_LOCAL_DIAGNOSTIC_NOT_ARTISTIC_OR_NATIVE_QUALIFICATION"
+  },
+  {
+    "case_key": "eval12_73cf7135b5d44f280b4cd5aa",
+    "role": "EVAL",
+    "policy": "LocalBeat",
+    "record_key": "eval12_73cf7135b5d44f280b4cd5aa_o12_g60",
+    "method": "G1",
+    "gap_frames": 60,
+    "timing_offset_frames": 12,
+    "accepted": true,
+    "constructible": true,
+    "retention_guard_passed": false,
+    "objective": -0.12159195254496266,
+    "candidate_population": 25,
+    "original_pass_candidates": 25,
+    "rejection_reason": null,
+    "guard_used_for_selection": false,
+    "fallback_used": false,
+    "trials": [
+      {
+        "gap_frames": 24,
+        "offset": -24
+      },
+      {
+        "gap_frames": 24,
+        "offset": -12
+      },
+      {
+        "gap_frames": 24,
+        "offset": 0
+      },
+      {
+        "gap_frames": 24,
+        "offset": 12
+      },
+      {
+        "gap_frames": 24,
+        "offset": 24
+      },
+      {
+        "gap_frames": 36,
+        "offset": -24
+      },
+      {
+        "gap_frames": 36,
+        "offset": -12
+      },
+      {
+        "gap_frames": 36,
+        "offset": 0
+      },
+      {
+        "gap_frames": 36,
+        "offset": 12
+      },
+      {
+        "gap_frames": 36,
+        "offset": 24
+      },
+      {
+        "gap_frames": 48,
+        "offset": -24
+      },
+      {
+        "gap_frames": 48,
+        "offset": -12
+      },
+      {
+        "gap_frames": 48,
+        "offset": 0
+      },
+      {
+        "gap_frames": 48,
+        "offset": 12
+      },
+      {
+        "gap_frames": 48,
+        "offset": 24
+      },
+      {
+        "gap_frames": 60,
+        "offset": -24
+      },
+      {
+        "gap_frames": 60,
+        "offset": -12
+      },
+      {
+        "gap_frames": 60,
+        "offset": 0
+      },
+      {
+        "gap_frames": 60,
+        "offset": 12
+      },
+      {
+        "gap_frames": 60,
+        "offset": 24
+      },
+      {
+        "gap_frames": 72,
+        "offset": -24
+      },
+      {
+        "gap_frames": 72,
+        "offset": -12
+      },
+      {
+        "gap_frames": 72,
+        "offset": 0
+      },
+      {
+        "gap_frames": 72,
+        "offset": 12
+      },
+      {
+        "gap_frames": 72,
+        "offset": 24
+      }
+    ],
+    "comparison_scope": "EXPOSED_LOCAL_DIAGNOSTIC_NOT_ARTISTIC_OR_NATIVE_QUALIFICATION"
+  },
+  {
+    "case_key": "eval13_aa20a2ad3283d14ae8686707",
+    "role": "EVAL",
+    "policy": "Fixed48",
+    "record_key": "eval13_aa20a2ad3283d14ae8686707_o0_g48",
+    "method": "G1",
+    "gap_frames": 48,
+    "timing_offset_frames": 0,
+    "accepted": true,
+    "constructible": true,
+    "retention_guard_passed": true,
+    "objective": 0.09443217938196068,
+    "candidate_population": 25,
+    "original_pass_candidates": 25,
+    "rejection_reason": null,
+    "guard_used_for_selection": false,
+    "fallback_used": false,
+    "trials": [
+      {
+        "gap_frames": 48,
+        "offset": 0
+      }
+    ],
+    "comparison_scope": "EXPOSED_LOCAL_DIAGNOSTIC_NOT_ARTISTIC_OR_NATIVE_QUALIFICATION"
+  },
+  {
+    "case_key": "eval13_aa20a2ad3283d14ae8686707",
+    "role": "EVAL",
+    "policy": "LocalBeat",
+    "record_key": "eval13_aa20a2ad3283d14ae8686707_o0_g48",
+    "method": "G1",
+    "gap_frames": 48,
+    "timing_offset_frames": 0,
+    "accepted": true,
+    "constructible": true,
+    "retention_guard_passed": true,
+    "objective": -0.33641158915764524,
+    "candidate_population": 25,
+    "original_pass_candidates": 25,
+    "rejection_reason": null,
+    "guard_used_for_selection": false,
+    "fallback_used": false,
+    "trials": [
+      {
+        "gap_frames": 24,
+        "offset": -24
+      },
+      {
+        "gap_frames": 24,
+        "offset": -12
+      },
+      {
+        "gap_frames": 24,
+        "offset": 0
+      },
+      {
+        "gap_frames": 24,
+        "offset": 12
+      },
+      {
+        "gap_frames": 24,
+        "offset": 24
+      },
+      {
+        "gap_frames": 36,
+        "offset": -24
+      },
+      {
+        "gap_frames": 36,
+        "offset": -12
+      },
+      {
+        "gap_frames": 36,
+        "offset": 0
+      },
+      {
+        "gap_frames": 36,
+        "offset": 12
+      },
+      {
+        "gap_frames": 36,
+        "offset": 24
+      },
+      {
+        "gap_frames": 48,
+        "offset": -24
+      },
+      {
+        "gap_frames": 48,
+        "offset": -12
+      },
+      {
+        "gap_frames": 48,
+        "offset": 0
+      },
+      {
+        "gap_frames": 48,
+        "offset": 12
+      },
+      {
+        "gap_frames": 48,
+        "offset": 24
+      },
+      {
+        "gap_frames": 60,
+        "offset": -24
+      },
+      {
+        "gap_frames": 60,
+        "offset": -12
+      },
+      {
+        "gap_frames": 60,
+        "offset": 0
+      },
+      {
+        "gap_frames": 60,
+        "offset": 12
+      },
+      {
+        "gap_frames": 60,
+        "offset": 24
+      },
+      {
+        "gap_frames": 72,
+        "offset": -24
+      },
+      {
+        "gap_frames": 72,
+        "offset": -12
+      },
+      {
+        "gap_frames": 72,
+        "offset": 0
+      },
+      {
+        "gap_frames": 72,
+        "offset": 12
+      },
+      {
+        "gap_frames": 72,
+        "offset": 24
+      }
+    ],
+    "comparison_scope": "EXPOSED_LOCAL_DIAGNOSTIC_NOT_ARTISTIC_OR_NATIVE_QUALIFICATION"
+  },
+  {
+    "case_key": "eval14_137b66136a4084d9360e92d1",
+    "role": "EVAL",
+    "policy": "Fixed48",
+    "record_key": "eval14_137b66136a4084d9360e92d1_o0_g48",
+    "method": "G1",
+    "gap_frames": 48,
+    "timing_offset_frames": 0,
+    "accepted": true,
+    "constructible": true,
+    "retention_guard_passed": true,
+    "objective": 0.08416006164490453,
+    "candidate_population": 25,
+    "original_pass_candidates": 25,
+    "rejection_reason": null,
+    "guard_used_for_selection": false,
+    "fallback_used": false,
+    "trials": [
+      {
+        "gap_frames": 48,
+        "offset": 0
+      }
+    ],
+    "comparison_scope": "EXPOSED_LOCAL_DIAGNOSTIC_NOT_ARTISTIC_OR_NATIVE_QUALIFICATION"
+  },
+  {
+    "case_key": "eval14_137b66136a4084d9360e92d1",
+    "role": "EVAL",
+    "policy": "LocalBeat",
+    "record_key": "eval14_137b66136a4084d9360e92d1_o-12_g72",
+    "method": "G1",
+    "gap_frames": 72,
+    "timing_offset_frames": -12,
+    "accepted": true,
+    "constructible": true,
+    "retention_guard_passed": false,
+    "objective": 0.03397700715659272,
+    "candidate_population": 25,
+    "original_pass_candidates": 25,
+    "rejection_reason": null,
+    "guard_used_for_selection": false,
+    "fallback_used": false,
+    "trials": [
+      {
+        "gap_frames": 24,
+        "offset": -24
+      },
+      {
+        "gap_frames": 24,
+        "offset": -12
+      },
+      {
+        "gap_frames": 24,
+        "offset": 0
+      },
+      {
+        "gap_frames": 24,
+        "offset": 12
+      },
+      {
+        "gap_frames": 24,
+        "offset": 24
+      },
+      {
+        "gap_frames": 36,
+        "offset": -24
+      },
+      {
+        "gap_frames": 36,
+        "offset": -12
+      },
+      {
+        "gap_frames": 36,
+        "offset": 0
+      },
+      {
+        "gap_frames": 36,
+        "offset": 12
+      },
+      {
+        "gap_frames": 36,
+        "offset": 24
+      },
+      {
+        "gap_frames": 48,
+        "offset": -24
+      },
+      {
+        "gap_frames": 48,
+        "offset": -12
+      },
+      {
+        "gap_frames": 48,
+        "offset": 0
+      },
+      {
+        "gap_frames": 48,
+        "offset": 12
+      },
+      {
+        "gap_frames": 48,
+        "offset": 24
+      },
+      {
+        "gap_frames": 60,
+        "offset": -24
+      },
+      {
+        "gap_frames": 60,
+        "offset": -12
+      },
+      {
+        "gap_frames": 60,
+        "offset": 0
+      },
+      {
+        "gap_frames": 60,
+        "offset": 12
+      },
+      {
+        "gap_frames": 60,
+        "offset": 24
+      },
+      {
+        "gap_frames": 72,
+        "offset": -24
+      },
+      {
+        "gap_frames": 72,
+        "offset": -12
+      },
+      {
+        "gap_frames": 72,
+        "offset": 0
+      },
+      {
+        "gap_frames": 72,
+        "offset": 12
+      },
+      {
+        "gap_frames": 72,
+        "offset": 24
+      }
+    ],
+    "comparison_scope": "EXPOSED_LOCAL_DIAGNOSTIC_NOT_ARTISTIC_OR_NATIVE_QUALIFICATION"
+  },
+  {
+    "case_key": "eval15_99f29086a2b52982433e9d57",
+    "role": "EVAL",
+    "policy": "Fixed48",
+    "record_key": "eval15_99f29086a2b52982433e9d57_o0_g48",
+    "method": "G1",
+    "gap_frames": 48,
+    "timing_offset_frames": 0,
+    "accepted": true,
+    "constructible": true,
+    "retention_guard_passed": true,
+    "objective": 0.11364612042073151,
+    "candidate_population": 25,
+    "original_pass_candidates": 25,
+    "rejection_reason": null,
+    "guard_used_for_selection": false,
+    "fallback_used": false,
+    "trials": [
+      {
+        "gap_frames": 48,
+        "offset": 0
+      }
+    ],
+    "comparison_scope": "EXPOSED_LOCAL_DIAGNOSTIC_NOT_ARTISTIC_OR_NATIVE_QUALIFICATION"
+  },
+  {
+    "case_key": "eval15_99f29086a2b52982433e9d57",
+    "role": "EVAL",
+    "policy": "LocalBeat",
+    "record_key": "eval15_99f29086a2b52982433e9d57_o-12_g72",
+    "method": "G1",
+    "gap_frames": 72,
+    "timing_offset_frames": -12,
+    "accepted": true,
+    "constructible": true,
+    "retention_guard_passed": true,
+    "objective": -0.2034865309615407,
+    "candidate_population": 25,
+    "original_pass_candidates": 25,
+    "rejection_reason": null,
+    "guard_used_for_selection": false,
+    "fallback_used": false,
+    "trials": [
+      {
+        "gap_frames": 24,
+        "offset": -24
+      },
+      {
+        "gap_frames": 24,
+        "offset": -12
+      },
+      {
+        "gap_frames": 24,
+        "offset": 0
+      },
+      {
+        "gap_frames": 24,
+        "offset": 12
+      },
+      {
+        "gap_frames": 24,
+        "offset": 24
+      },
+      {
+        "gap_frames": 36,
+        "offset": -24
+      },
+      {
+        "gap_frames": 36,
+        "offset": -12
+      },
+      {
+        "gap_frames": 36,
+        "offset": 0
+      },
+      {
+        "gap_frames": 36,
+        "offset": 12
+      },
+      {
+        "gap_frames": 36,
+        "offset": 24
+      },
+      {
+        "gap_frames": 48,
+        "offset": -24
+      },
+      {
+        "gap_frames": 48,
+        "offset": -12
+      },
+      {
+        "gap_frames": 48,
+        "offset": 0
+      },
+      {
+        "gap_frames": 48,
+        "offset": 12
+      },
+      {
+        "gap_frames": 48,
+        "offset": 24
+      },
+      {
+        "gap_frames": 60,
+        "offset": -24
+      },
+      {
+        "gap_frames": 60,
+        "offset": -12
+      },
+      {
+        "gap_frames": 60,
+        "offset": 0
+      },
+      {
+        "gap_frames": 60,
+        "offset": 12
+      },
+      {
+        "gap_frames": 60,
+        "offset": 24
+      },
+      {
+        "gap_frames": 72,
+        "offset": -24
+      },
+      {
+        "gap_frames": 72,
+        "offset": -12
+      },
+      {
+        "gap_frames": 72,
+        "offset": 0
+      },
+      {
+        "gap_frames": 72,
+        "offset": 12
+      },
+      {
+        "gap_frames": 72,
+        "offset": 24
+      }
+    ],
+    "comparison_scope": "EXPOSED_LOCAL_DIAGNOSTIC_NOT_ARTISTIC_OR_NATIVE_QUALIFICATION"
+  },
+  {
+    "case_key": "eval16_86aafc0af6b2f221e39c34cd",
+    "role": "EVAL",
+    "policy": "Fixed48",
+    "record_key": "eval16_86aafc0af6b2f221e39c34cd_o0_g48",
+    "method": "G1",
+    "gap_frames": 48,
+    "timing_offset_frames": 0,
+    "accepted": true,
+    "constructible": true,
+    "retention_guard_passed": true,
+    "objective": 0.16674457649161115,
+    "candidate_population": 25,
+    "original_pass_candidates": 25,
+    "rejection_reason": null,
+    "guard_used_for_selection": false,
+    "fallback_used": false,
+    "trials": [
+      {
+        "gap_frames": 48,
+        "offset": 0
+      }
+    ],
+    "comparison_scope": "EXPOSED_LOCAL_DIAGNOSTIC_NOT_ARTISTIC_OR_NATIVE_QUALIFICATION"
+  },
+  {
+    "case_key": "eval16_86aafc0af6b2f221e39c34cd",
+    "role": "EVAL",
+    "policy": "LocalBeat",
+    "record_key": "eval16_86aafc0af6b2f221e39c34cd_o0_g60",
+    "method": "G1",
+    "gap_frames": 60,
+    "timing_offset_frames": 0,
+    "accepted": true,
+    "constructible": true,
+    "retention_guard_passed": true,
+    "objective": -0.296272297178642,
+    "candidate_population": 25,
+    "original_pass_candidates": 25,
+    "rejection_reason": null,
+    "guard_used_for_selection": false,
+    "fallback_used": false,
+    "trials": [
+      {
+        "gap_frames": 24,
+        "offset": -24
+      },
+      {
+        "gap_frames": 24,
+        "offset": -12
+      },
+      {
+        "gap_frames": 24,
+        "offset": 0
+      },
+      {
+        "gap_frames": 24,
+        "offset": 12
+      },
+      {
+        "gap_frames": 24,
+        "offset": 24
+      },
+      {
+        "gap_frames": 36,
+        "offset": -24
+      },
+      {
+        "gap_frames": 36,
+        "offset": -12
+      },
+      {
+        "gap_frames": 36,
+        "offset": 0
+      },
+      {
+        "gap_frames": 36,
+        "offset": 12
+      },
+      {
+        "gap_frames": 36,
+        "offset": 24
+      },
+      {
+        "gap_frames": 48,
+        "offset": -24
+      },
+      {
+        "gap_frames": 48,
+        "offset": -12
+      },
+      {
+        "gap_frames": 48,
+        "offset": 0
+      },
+      {
+        "gap_frames": 48,
+        "offset": 12
+      },
+      {
+        "gap_frames": 48,
+        "offset": 24
+      },
+      {
+        "gap_frames": 60,
+        "offset": -24
+      },
+      {
+        "gap_frames": 60,
+        "offset": -12
+      },
+      {
+        "gap_frames": 60,
+        "offset": 0
+      },
+      {
+        "gap_frames": 60,
+        "offset": 12
+      },
+      {
+        "gap_frames": 60,
+        "offset": 24
+      },
+      {
+        "gap_frames": 72,
+        "offset": -24
+      },
+      {
+        "gap_frames": 72,
+        "offset": -12
+      },
+      {
+        "gap_frames": 72,
+        "offset": 0
+      },
+      {
+        "gap_frames": 72,
+        "offset": 12
+      },
+      {
+        "gap_frames": 72,
+        "offset": 24
+      }
+    ],
+    "comparison_scope": "EXPOSED_LOCAL_DIAGNOSTIC_NOT_ARTISTIC_OR_NATIVE_QUALIFICATION"
+  },
+  {
+    "case_key": "eval17_89d47862849411b39aff2035",
+    "role": "EVAL",
+    "policy": "Fixed48",
+    "record_key": "eval17_89d47862849411b39aff2035_o0_g48",
+    "method": "G1",
+    "gap_frames": 48,
+    "timing_offset_frames": 0,
+    "accepted": true,
+    "constructible": true,
+    "retention_guard_passed": true,
+    "objective": 0.12640846953581308,
+    "candidate_population": 25,
+    "original_pass_candidates": 25,
+    "rejection_reason": null,
+    "guard_used_for_selection": false,
+    "fallback_used": false,
+    "trials": [
+      {
+        "gap_frames": 48,
+        "offset": 0
+      }
+    ],
+    "comparison_scope": "EXPOSED_LOCAL_DIAGNOSTIC_NOT_ARTISTIC_OR_NATIVE_QUALIFICATION"
+  },
+  {
+    "case_key": "eval17_89d47862849411b39aff2035",
+    "role": "EVAL",
+    "policy": "LocalBeat",
+    "record_key": "eval17_89d47862849411b39aff2035_o0_g60",
+    "method": "G1",
+    "gap_frames": 60,
+    "timing_offset_frames": 0,
+    "accepted": true,
+    "constructible": true,
+    "retention_guard_passed": true,
+    "objective": -0.13424025045572238,
+    "candidate_population": 25,
+    "original_pass_candidates": 25,
+    "rejection_reason": null,
+    "guard_used_for_selection": false,
+    "fallback_used": false,
+    "trials": [
+      {
+        "gap_frames": 24,
+        "offset": -24
+      },
+      {
+        "gap_frames": 24,
+        "offset": -12
+      },
+      {
+        "gap_frames": 24,
+        "offset": 0
+      },
+      {
+        "gap_frames": 24,
+        "offset": 12
+      },
+      {
+        "gap_frames": 24,
+        "offset": 24
+      },
+      {
+        "gap_frames": 36,
+        "offset": -24
+      },
+      {
+        "gap_frames": 36,
+        "offset": -12
+      },
+      {
+        "gap_frames": 36,
+        "offset": 0
+      },
+      {
+        "gap_frames": 36,
+        "offset": 12
+      },
+      {
+        "gap_frames": 36,
+        "offset": 24
+      },
+      {
+        "gap_frames": 48,
+        "offset": -24
+      },
+      {
+        "gap_frames": 48,
+        "offset": -12
+      },
+      {
+        "gap_frames": 48,
+        "offset": 0
+      },
+      {
+        "gap_frames": 48,
+        "offset": 12
+      },
+      {
+        "gap_frames": 48,
+        "offset": 24
+      },
+      {
+        "gap_frames": 60,
+        "offset": -24
+      },
+      {
+        "gap_frames": 60,
+        "offset": -12
+      },
+      {
+        "gap_frames": 60,
+        "offset": 0
+      },
+      {
+        "gap_frames": 60,
+        "offset": 12
+      },
+      {
+        "gap_frames": 60,
+        "offset": 24
+      },
+      {
+        "gap_frames": 72,
+        "offset": -24
+      },
+      {
+        "gap_frames": 72,
+        "offset": -12
+      },
+      {
+        "gap_frames": 72,
+        "offset": 0
+      },
+      {
+        "gap_frames": 72,
+        "offset": 12
+      },
+      {
+        "gap_frames": 72,
+        "offset": 24
+      }
+    ],
+    "comparison_scope": "EXPOSED_LOCAL_DIAGNOSTIC_NOT_ARTISTIC_OR_NATIVE_QUALIFICATION"
+  },
+  {
+    "case_key": "eval18_8eb4693f7b6fa54bfd95cce6",
+    "role": "EVAL",
+    "policy": "Fixed48",
+    "record_key": "eval18_8eb4693f7b6fa54bfd95cce6_o0_g48",
+    "method": "G1",
+    "gap_frames": 48,
+    "timing_offset_frames": 0,
+    "accepted": true,
+    "constructible": true,
+    "retention_guard_passed": true,
+    "objective": 0.1601877627453225,
+    "candidate_population": 25,
+    "original_pass_candidates": 25,
+    "rejection_reason": null,
+    "guard_used_for_selection": false,
+    "fallback_used": false,
+    "trials": [
+      {
+        "gap_frames": 48,
+        "offset": 0
+      }
+    ],
+    "comparison_scope": "EXPOSED_LOCAL_DIAGNOSTIC_NOT_ARTISTIC_OR_NATIVE_QUALIFICATION"
+  },
+  {
+    "case_key": "eval18_8eb4693f7b6fa54bfd95cce6",
+    "role": "EVAL",
+    "policy": "LocalBeat",
+    "record_key": "eval18_8eb4693f7b6fa54bfd95cce6_o0_g72",
+    "method": "G1",
+    "gap_frames": 72,
+    "timing_offset_frames": 0,
+    "accepted": true,
+    "constructible": true,
+    "retention_guard_passed": false,
+    "objective": -0.05339792603146226,
+    "candidate_population": 25,
+    "original_pass_candidates": 25,
+    "rejection_reason": null,
+    "guard_used_for_selection": false,
+    "fallback_used": false,
+    "trials": [
+      {
+        "gap_frames": 24,
+        "offset": -24
+      },
+      {
+        "gap_frames": 24,
+        "offset": -12
+      },
+      {
+        "gap_frames": 24,
+        "offset": 0
+      },
+      {
+        "gap_frames": 24,
+        "offset": 12
+      },
+      {
+        "gap_frames": 24,
+        "offset": 24
+      },
+      {
+        "gap_frames": 36,
+        "offset": -24
+      },
+      {
+        "gap_frames": 36,
+        "offset": -12
+      },
+      {
+        "gap_frames": 36,
+        "offset": 0
+      },
+      {
+        "gap_frames": 36,
+        "offset": 12
+      },
+      {
+        "gap_frames": 36,
+        "offset": 24
+      },
+      {
+        "gap_frames": 48,
+        "offset": -24
+      },
+      {
+        "gap_frames": 48,
+        "offset": -12
+      },
+      {
+        "gap_frames": 48,
+        "offset": 0
+      },
+      {
+        "gap_frames": 48,
+        "offset": 12
+      },
+      {
+        "gap_frames": 48,
+        "offset": 24
+      },
+      {
+        "gap_frames": 60,
+        "offset": -24
+      },
+      {
+        "gap_frames": 60,
+        "offset": -12
+      },
+      {
+        "gap_frames": 60,
+        "offset": 0
+      },
+      {
+        "gap_frames": 60,
+        "offset": 12
+      },
+      {
+        "gap_frames": 60,
+        "offset": 24
+      },
+      {
+        "gap_frames": 72,
+        "offset": -24
+      },
+      {
+        "gap_frames": 72,
+        "offset": -12
+      },
+      {
+        "gap_frames": 72,
+        "offset": 0
+      },
+      {
+        "gap_frames": 72,
+        "offset": 12
+      },
+      {
+        "gap_frames": 72,
+        "offset": 24
+      }
+    ],
+    "comparison_scope": "EXPOSED_LOCAL_DIAGNOSTIC_NOT_ARTISTIC_OR_NATIVE_QUALIFICATION"
+  },
+  {
+    "case_key": "eval19_4c54a326ffec98714252cf50",
+    "role": "EVAL",
+    "policy": "Fixed48",
+    "record_key": "eval19_4c54a326ffec98714252cf50_o0_g48",
+    "method": "G1",
+    "gap_frames": 48,
+    "timing_offset_frames": 0,
+    "accepted": true,
+    "constructible": true,
+    "retention_guard_passed": true,
+    "objective": 0.20176009808157513,
+    "candidate_population": 25,
+    "original_pass_candidates": 25,
+    "rejection_reason": null,
+    "guard_used_for_selection": false,
+    "fallback_used": false,
+    "trials": [
+      {
+        "gap_frames": 48,
+        "offset": 0
+      }
+    ],
+    "comparison_scope": "EXPOSED_LOCAL_DIAGNOSTIC_NOT_ARTISTIC_OR_NATIVE_QUALIFICATION"
+  },
+  {
+    "case_key": "eval19_4c54a326ffec98714252cf50",
+    "role": "EVAL",
+    "policy": "LocalBeat",
+    "record_key": "eval19_4c54a326ffec98714252cf50_o0_g60",
+    "method": "G1",
+    "gap_frames": 60,
+    "timing_offset_frames": 0,
+    "accepted": true,
+    "constructible": true,
+    "retention_guard_passed": true,
+    "objective": -0.26270855736310855,
+    "candidate_population": 25,
+    "original_pass_candidates": 25,
+    "rejection_reason": null,
+    "guard_used_for_selection": false,
+    "fallback_used": false,
+    "trials": [
+      {
+        "gap_frames": 24,
+        "offset": -24
+      },
+      {
+        "gap_frames": 24,
+        "offset": -12
+      },
+      {
+        "gap_frames": 24,
+        "offset": 0
+      },
+      {
+        "gap_frames": 24,
+        "offset": 12
+      },
+      {
+        "gap_frames": 24,
+        "offset": 24
+      },
+      {
+        "gap_frames": 36,
+        "offset": -24
+      },
+      {
+        "gap_frames": 36,
+        "offset": -12
+      },
+      {
+        "gap_frames": 36,
+        "offset": 0
+      },
+      {
+        "gap_frames": 36,
+        "offset": 12
+      },
+      {
+        "gap_frames": 36,
+        "offset": 24
+      },
+      {
+        "gap_frames": 48,
+        "offset": -24
+      },
+      {
+        "gap_frames": 48,
+        "offset": -12
+      },
+      {
+        "gap_frames": 48,
+        "offset": 0
+      },
+      {
+        "gap_frames": 48,
+        "offset": 12
+      },
+      {
+        "gap_frames": 48,
+        "offset": 24
+      },
+      {
+        "gap_frames": 60,
+        "offset": -24
+      },
+      {
+        "gap_frames": 60,
+        "offset": -12
+      },
+      {
+        "gap_frames": 60,
+        "offset": 0
+      },
+      {
+        "gap_frames": 60,
+        "offset": 12
+      },
+      {
+        "gap_frames": 60,
+        "offset": 24
+      },
+      {
+        "gap_frames": 72,
+        "offset": -24
+      },
+      {
+        "gap_frames": 72,
+        "offset": -12
+      },
+      {
+        "gap_frames": 72,
+        "offset": 0
+      },
+      {
+        "gap_frames": 72,
+        "offset": 12
+      },
+      {
+        "gap_frames": 72,
+        "offset": 24
+      }
+    ],
+    "comparison_scope": "EXPOSED_LOCAL_DIAGNOSTIC_NOT_ARTISTIC_OR_NATIVE_QUALIFICATION"
+  }
+]

@@ -1,0 +1,65 @@
+[
+  {
+    "song": "0",
+    "audio_sha256": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c",
+    "frames": 3601,
+    "audio_samples": 1920523,
+    "sample_rate": 16000,
+    "clock_sha256": "be8ef73d307c3df713cfd6f3ffc21a343b811b07d6f0e62657876452f1c2674b",
+    "raw_legacy_events": 175,
+    "interior_beat_candidates": 173,
+    "excluded_sentinels": [
+      0,
+      3601
+    ],
+    "accents": 271,
+    "section_proxies": 8,
+    "chroma_phrase_proxies": 9,
+    "downbeat_status": "UNKNOWN_NO_INDEPENDENT_EVIDENCE",
+    "phrase_truth": "UNKNOWN_NO_INDEPENDENT_ANNOTATIONS",
+    "beat_scope": "INTERIOR_LEGACY_AUDIO_DETECTOR_CANDIDATES_NOT_BEAT_TRUTH",
+    "human_reviewed": false
+  },
+  {
+    "song": "1",
+    "audio_sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f",
+    "frames": 3598,
+    "audio_samples": 1918433,
+    "sample_rate": 16000,
+    "clock_sha256": "fb776baa283ee08aa314bcf17846c4b16a83543241f7ea080c5a4492bc39f7c6",
+    "raw_legacy_events": 221,
+    "interior_beat_candidates": 219,
+    "excluded_sentinels": [
+      0,
+      3598
+    ],
+    "accents": 389,
+    "section_proxies": 15,
+    "chroma_phrase_proxies": 14,
+    "downbeat_status": "UNKNOWN_NO_INDEPENDENT_EVIDENCE",
+    "phrase_truth": "UNKNOWN_NO_INDEPENDENT_ANNOTATIONS",
+    "beat_scope": "INTERIOR_LEGACY_AUDIO_DETECTOR_CANDIDATES_NOT_BEAT_TRUTH",
+    "human_reviewed": false
+  },
+  {
+    "song": "2",
+    "audio_sha256": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33",
+    "frames": 3601,
+    "audio_samples": 1920523,
+    "sample_rate": 16000,
+    "clock_sha256": "d413774c1052a2a4e39ea4fa896f8f61a78b2b9c8169cd8b065f7d049bc0a60d",
+    "raw_legacy_events": 241,
+    "interior_beat_candidates": 239,
+    "excluded_sentinels": [
+      0,
+      3601
+    ],
+    "accents": 274,
+    "section_proxies": 7,
+    "chroma_phrase_proxies": 8,
+    "downbeat_status": "UNKNOWN_NO_INDEPENDENT_EVIDENCE",
+    "phrase_truth": "UNKNOWN_NO_INDEPENDENT_ANNOTATIONS",
+    "beat_scope": "INTERIOR_LEGACY_AUDIO_DETECTOR_CANDIDATES_NOT_BEAT_TRUTH",
+    "human_reviewed": false
+  }
+]

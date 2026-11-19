@@ -1,0 +1,14 @@
+{
+  "mode": "verify",
+  "command": [
+    "/home/disk/lsm/conda_envs/edge/bin/python",
+    "scripts/timing_r64.py",
+    "verify"
+  ],
+  "pid": 2924558,
+  "started": 1795099688.2400465,
+  "commit": "853ee812fad76119b777fbed69c6abc2fa336e74",
+  "exit_status": 0,
+  "ended": 1795100310.0096414,
+  "log_sha256": "b331eef21c32256e1ccb306e5bc90332bc102f52690f6b3b858d96174de65cc8"
+}

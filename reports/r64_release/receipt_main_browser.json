@@ -1,0 +1,57 @@
+{
+  "passed": true,
+  "main_result_sha256": "48122dea0886791e5fa7ba946d9715cfc2a788314d6d5bc004baa0912bce30ee",
+  "main_execution_commit": "313d83cd39f1ee3fe191d74d56a6bf56f65ab3ea",
+  "viewer_index_sha256": "792bb5a779589a4dcbb99ad119f2b28d22d5697ebe0cfde719ca374496ff58f5",
+  "browser": "CHROME_ACTUAL_CUA",
+  "registered_cases": 29,
+  "checks": {
+    "source_clock_frame100": {
+      "audio_seconds": 3.333333,
+      "source_frame": 2117.033
+    },
+    "next_frame101": {
+      "audio_seconds": 3.366666,
+      "source_frame": 2118.164
+    },
+    "music_timeline_click": {
+      "target_frame": 240,
+      "audio_seconds": 8.0,
+      "regions": [
+        "TRANSITION",
+        "LEFT_CORE"
+      ]
+    },
+    "half_speed_play_observed": true,
+    "pause_seek264": {
+      "audio_seconds": 8.8,
+      "panels": [
+        264,
+        264
+      ]
+    },
+    "evaluation_source_switch_reset": 0,
+    "last_frame_clamp527": {
+      "audio_seconds": 17.566666,
+      "panels": [
+        527,
+        527
+      ]
+    },
+    "evaluation_source_clock_frame320": {
+      "audio_seconds": 10.666666,
+      "source_frames": [
+        2582.911,
+        2578.515
+      ]
+    },
+    "downbeat": "UNKNOWN",
+    "independent_phrase": "UNKNOWN",
+    "music_timeline_visible": true,
+    "actual_skeletons_visible": true,
+    "page_error_text": ""
+  },
+  "human_quality_evaluated": false,
+  "Native24": "NOT_EVALUABLE",
+  "can_route": false
+}

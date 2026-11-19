@@ -1,0 +1,15 @@
+{
+  "mode": "tests",
+  "command": [
+    "/home/disk/lsm/conda_envs/edge/bin/python",
+    "-m",
+    "pytest",
+    "-q"
+  ],
+  "pid": 2915130,
+  "started": 1795098618.3289347,
+  "commit": "313d83cd39f1ee3fe191d74d56a6bf56f65ab3ea",
+  "exit_status": 0,
+  "ended": 1795098669.6801062,
+  "log_sha256": "166a96fd398cd0e1c8fa84c84085067f2b6d65ac5769271dd3e0389490027c3c"
+}
