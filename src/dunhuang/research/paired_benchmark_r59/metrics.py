@@ -43,3 +43,9 @@ def paired_ci(differences,seed=59059,draws=3000):
  if not len(x):return dict(groups=0,mean=None,ci95=None)
  rng=np.random.default_rng(seed);means=np.mean(x[rng.integers(len(x),size=(draws,len(x)))],axis=1)
  return dict(groups=len(x),mean=float(x.mean()),ci95=np.quantile(means,[.025,.975]).tolist(),unit='MUSIC_GROUP_MEAN_AFTER_RECORDING_BALANCE',scope='HISTORICALLY_EXPOSED_GROUP_POPULATION_NOT_NEW_MUSIC_GENERALIZATION')
+
+def shared_support(motion_frames,audio_feature_frames,energy_frames):
+ counts=[int(motion_frames),int(audio_feature_frames),int(energy_frames)]
+ if min(counts)<1:raise ValueError('No genuine physical common prefix')
+ n=min(counts)
+ return dict(frames=n,unmatched_motion_tail=counts[0]-n,unmatched_audio_feature_tail=counts[1]-n,unmatched_audio_energy_tail=counts[2]-n,padding_frames=0,resampling=False)

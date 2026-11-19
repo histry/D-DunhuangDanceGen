@@ -53,3 +53,9 @@ def test_finedance_row6d_is_not_silently_transposed():
  R=Rotation.from_euler('z',.6).as_matrix();x=R[:2].reshape(6)
  np.testing.assert_allclose(matrices(x,row=True),R,atol=1e-7)
  assert not np.allclose(matrices(x),R)
+
+def test_finedance_unequal_ends_use_only_observed_prefix():
+ from dunhuang.research.paired_benchmark_r59.metrics import shared_support
+ s=shared_support(1500,1497,1497);assert s['frames']==1497 and s['unmatched_motion_tail']==3
+ s=shared_support(2191,2216,2216);assert s['frames']==2191 and s['unmatched_audio_feature_tail']==25 and not s['resampling'] and s['padding_frames']==0
+ with pytest.raises(ValueError):shared_support(0,100,100)

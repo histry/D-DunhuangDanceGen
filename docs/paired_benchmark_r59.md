@@ -6,7 +6,7 @@
 
 AIST++沿用Data V3的919 Train、118历史曝光Val来源（实际数量再由原始清单核验）；每个来源复核原动作、派生Native、R41旋转、真实音频和官方时钟证据SHA，再在完整共享支持上生成150帧、75步长和末端窗口。没有受正例/H分箱/历史特征落盘范围限制。动作求导在完整录制上完成，R37 Train统计冻结，50D音乐＋274D姿态/几何/动态通道接口保持。
 
-FineDance从用户既有danceRAG原资产按官方@Genre Train编号固定取001–011与013，逐文件核对已存下载清单SHA并复制到本项目私有inputs；从完整真实音频用同一librosa0.11.0/50D提取器重提，使用原始315D前22身体旋转。保留原始共同零点，Lodge中004等的双侧等量裁剪不当作音频偏移。@Dancer角色另外报告，不把两种官方划分混合；不称12条@Genre Train诊断为完整FineDance官方测试。该源库没有多录制配对证明，时间检索候选含对应录制的真实目标窗；只能报告同录制Recorded Correspondence，不能冒充跨来源泛化。原始平移保存，显示局部身体；世界坐标/物理单位和接触不因本轮获得Native资格。
+FineDance从用户既有danceRAG原资产按官方@Genre Train编号固定取001–011与013，逐文件核对已存下载清单SHA并复制到本项目私有inputs；从完整真实音频用同一librosa0.11.0/50D提取器重提，使用原始315D前22身体旋转。009等动作/音频尾部不等长时只保留共同前缀并记录未配对尾部，不使用旧四样本的2帧长度差作为普遍条件。保留原始共同零点，Lodge中004等的双侧等量裁剪不当作音频偏移。@Dancer角色另外报告，不把两种官方划分混合；不称12条@Genre Train诊断为完整FineDance官方测试。该源库没有多录制配对证明，时间检索候选含对应录制的真实目标窗；只能报告同录制Recorded Correspondence，不能冒充跨来源泛化。原始平移保存，显示局部身体；世界坐标/物理单位和接触不因本轮获得Native资格。
 
 官方依据：https://google.github.io/aistplusplus_dataset/factsfigures.html 明确音乐/编舞重复及Val/Test音乐共享；https://github.com/li-ronghui/FineDance 的固定官方加载器0476cd42619e57fb6ec4840e81acaf7743b1507d区分cross_genre/cross_dancer。当前Data V3还可能跨角色共享编舞，必须如实报告，不宣称未见编舞。旧Val、旧开发观看和完整预训练谱系未知都不更名为新盲测。
 
