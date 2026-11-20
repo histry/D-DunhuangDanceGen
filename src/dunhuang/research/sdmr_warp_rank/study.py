@@ -19,10 +19,21 @@ def deformation(warp):
     return float(np.average(np.log(delta[:,1]/delta[:,0]/rho)**2,weights=delta[:,0]))
 
 def rank_indices(values):
+    values=list(values)
+    if any(v is not None and (isinstance(v,(bool,str)) or not isinstance(v,(int,float,np.number)) or not np.isfinite(v)) for v in values):
+        raise ValueError('Scores must be finite numeric evidence or None')
     good=[(i,v) for i,v in enumerate(values) if v is not None]
     if not good:return []
     best=max(v for i,v in good)
     return [i for i,v in good if abs(v-best)<=1e-12]
+
+
+def screened_rank_indices(values,connections):
+    """Filter the shared score vector by actual G1 status, retaining bank indices."""
+    values=list(values);connections=list(connections)
+    if len(values)!=len(connections):raise ValueError('Scores and G1 results must use the same candidate bank')
+    rank_indices(values)  # Invalid scores cannot be concealed by a rejected connection.
+    return rank_indices([v if row.get('passes_original_screen') is True else None for v,row in zip(values,connections)])
 
 def encode_bank(net,rotations,music):
     motions=[net.encode_rotations(R) for R in rotations]
@@ -78,7 +89,7 @@ def run_main(out=None):
                 dynamics=body_metrics.measure(body,source,ctx['J'],ctx['parents'],candidate['q'],case['source_interval'],include_curves=False)))
         q=np.asarray([c['q'] for c in bank['candidates']]);diverse=int(np.argmax(np.mean(abs(q-q[:1]),axis=1)))
         selections=[('E1W',0),('Diverse',diverse)]
-        qualified={name:rank_indices([v if connections[j].get('passes_original_screen') is True else None for j,v in values]) for name,values in scores['actual'].items()}
+        qualified={name:screened_rank_indices(values,connections) for name,values in scores['actual'].items()}
         write(target/'selections'/(case['key']+'.json'),dict(raw_score_ties={n:rank_indices(v) for n,v in scores['actual'].items()},G1_screened_score_ties=qualified,abstain_when_empty=True,selection_display='RAW_SCORE_FIRST_REGISTERED_TIE; ACTUAL_G1_STATUS_SHOWN_SEPARATELY; NOT_QUALIFIED_ROUTING'))
         for name in ('Single64','Multi64'):
             tied=rank_indices(scores['actual'][name]);selections.append((name,tied[0] if tied else None))
