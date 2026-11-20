@@ -1,0 +1,809 @@
+{
+  "schema": "R66B_FIXED48_CORE_METADATA_ROSTER_V1",
+  "cases": [
+    {
+      "parent_case_key": "dev04_e30e53c50dca06db19dd5e34",
+      "parent_record_key": "dev04_e30e53c50dca06db19dd5e34_o0_g48",
+      "parent_side": "left",
+      "parent_role": "DEV",
+      "parent_pair_music_interval": [
+        1390,
+        1918
+      ],
+      "source_uid": "female_FeiTian",
+      "event_uid": "r47:c1f1efc803495ee700d67db1",
+      "source_interval": [
+        2660,
+        2896
+      ],
+      "support_component": [
+        1798,
+        8158
+      ],
+      "target_interval": [
+        1390,
+        1630
+      ],
+      "music_interval": [
+        1390,
+        1630
+      ],
+      "time_warp": [
+        [
+          2660.0,
+          1390.0
+        ],
+        [
+          2691.0,
+          1420.0
+        ],
+        [
+          2740.0,
+          1468.0
+        ],
+        [
+          2786.0,
+          1517.0
+        ],
+        [
+          2815.0,
+          1548.0
+        ],
+        [
+          2895.0,
+          1629.0
+        ]
+      ],
+      "baseline_core_R_sha256": "f87f92d70ec29a8276a058b918db2cfd3b4b540739a0e50188f4653fc31d6e82",
+      "songidx": 1,
+      "music_id": "dunhuangwu3",
+      "audio_sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f",
+      "raw_source_sha256": "120e0157ccdd60d128d2973ac0682883ee178ba43ce8479100e80f56c64f37a4",
+      "native_reference": {
+        "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/event_plan_01/prepare/catalog/female_FeiTian.npy",
+        "sha256": "50436001fab4f0aa45610b0723cebd7ee93592f3039adc133c270902b3c9fab4"
+      },
+      "key": "r66b00_6280fdcb23109a34"
+    },
+    {
+      "parent_case_key": "eval00_e34847b5d9a9a3d0897f86e5",
+      "parent_record_key": "eval00_e34847b5d9a9a3d0897f86e5_o0_g48",
+      "parent_side": "left",
+      "parent_role": "EVAL",
+      "parent_pair_music_interval": [
+        1536,
+        2064
+      ],
+      "source_uid": "female_lotus",
+      "event_uid": "r47:1b228a3e5bd8f536ebd033b8",
+      "source_interval": [
+        1864,
+        2109
+      ],
+      "support_component": [
+        0,
+        4629
+      ],
+      "target_interval": [
+        1536,
+        1776
+      ],
+      "music_interval": [
+        1536,
+        1776
+      ],
+      "time_warp": [
+        [
+          1864.0,
+          1536.0
+        ],
+        [
+          1879.0,
+          1548.0
+        ],
+        [
+          1900.0,
+          1569.0
+        ],
+        [
+          1925.0,
+          1590.0
+        ],
+        [
+          1947.0,
+          1610.0
+        ],
+        [
+          2108.0,
+          1775.0
+        ]
+      ],
+      "baseline_core_R_sha256": "3d8ed734134236bd51419cb32bbfdbc2c1a2db735d004dab78725a40188bccad",
+      "songidx": 0,
+      "music_id": "dunhuangwu2",
+      "audio_sha256": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c",
+      "raw_source_sha256": "22b915af2e0fbb645acb78d7f61e58afe3f7aa40c0fc719da95f7403ed8dd47d",
+      "native_reference": {
+        "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/event_plan_01/prepare/catalog/female_lotus.npy",
+        "sha256": "5cebda88bce0ff6ecbff76890f6ea9c2af237aab62a7dc95f23bb40972af8675"
+      },
+      "key": "r66b01_ca3f06a9b37a47ff"
+    },
+    {
+      "parent_case_key": "eval05_01058fc334f90b9f0ec20267",
+      "parent_record_key": "eval05_01058fc334f90b9f0ec20267_o0_g48",
+      "parent_side": "left",
+      "parent_role": "EVAL",
+      "parent_pair_music_interval": [
+        1536,
+        2064
+      ],
+      "source_uid": "female_meditation",
+      "event_uid": "r47:7a9d007ab852687d2d6830e3",
+      "source_interval": [
+        2551,
+        2789
+      ],
+      "support_component": [
+        0,
+        6114
+      ],
+      "target_interval": [
+        1536,
+        1776
+      ],
+      "music_interval": [
+        1536,
+        1776
+      ],
+      "time_warp": [
+        [
+          2551.0,
+          1536.0
+        ],
+        [
+          2566.0,
+          1548.0
+        ],
+        [
+          2623.0,
+          1607.0
+        ],
+        [
+          2662.0,
+          1652.0
+        ],
+        [
+          2681.0,
+          1668.0
+        ],
+        [
+          2788.0,
+          1775.0
+        ]
+      ],
+      "baseline_core_R_sha256": "e53089154a320286864d60a0d1fdd60291a13ad2a51a2545fe7b0795169bf3a1",
+      "songidx": 2,
+      "music_id": "dunhuangwu4",
+      "audio_sha256": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33",
+      "raw_source_sha256": "225ab3ffb8cd176ee138130152ec56b826cf2cc3965f13249aaf0a1103b422e7",
+      "native_reference": {
+        "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/event_plan_01/prepare/catalog/female_meditation.npy",
+        "sha256": "d38f5fb33507483d4b01e69d9e3bc5e738a1ecc2d3b88856d2ba8030a82ab3df"
+      },
+      "key": "r66b02_70c9ebdda89155ec"
+    },
+    {
+      "parent_case_key": "eval09_3166381a1b643a6189b9adbb",
+      "parent_record_key": "eval09_3166381a1b643a6189b9adbb_o0_g48",
+      "parent_side": "left",
+      "parent_role": "EVAL",
+      "parent_pair_music_interval": [
+        1536,
+        2064
+      ],
+      "source_uid": "male_meditation",
+      "event_uid": "r47:2b2df7fad8e937cc7ce5507b",
+      "source_interval": [
+        1071,
+        1317
+      ],
+      "support_component": [
+        0,
+        6133
+      ],
+      "target_interval": [
+        1536,
+        1776
+      ],
+      "music_interval": [
+        1536,
+        1776
+      ],
+      "time_warp": [
+        [
+          1071.0,
+          1536.0
+        ],
+        [
+          1138.0,
+          1610.0
+        ],
+        [
+          1187.0,
+          1651.0
+        ],
+        [
+          1254.0,
+          1713.0
+        ],
+        [
+          1297.0,
+          1753.0
+        ],
+        [
+          1316.0,
+          1775.0
+        ]
+      ],
+      "baseline_core_R_sha256": "b6fb6771c67b1656a0ea9822e7d0f5ea4dece556c265c086dc0f4815ec530660",
+      "songidx": 0,
+      "music_id": "dunhuangwu2",
+      "audio_sha256": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c",
+      "raw_source_sha256": "1cd10b49771226ae7f9ea962bf21e2c86324af2249d80bf08a069a881d20d165",
+      "native_reference": {
+        "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/event_plan_01/prepare/catalog/male_meditation.npy",
+        "sha256": "8d6c096a31d5b90f9f1021f1e2e980aab808a4aeadef174ec23f92f1423a6737"
+      },
+      "key": "r66b03_a9c01b65dc66d062"
+    },
+    {
+      "parent_case_key": "eval13_aa20a2ad3283d14ae8686707",
+      "parent_record_key": "eval13_aa20a2ad3283d14ae8686707_o0_g48",
+      "parent_side": "left",
+      "parent_role": "EVAL",
+      "parent_pair_music_interval": [
+        1535,
+        2063
+      ],
+      "source_uid": "male_pipa_1",
+      "event_uid": "r47:bacef9a1c3f2e8cb8e6eab24",
+      "source_interval": [
+        559,
+        793
+      ],
+      "support_component": [
+        0,
+        1868
+      ],
+      "target_interval": [
+        1535,
+        1775
+      ],
+      "music_interval": [
+        1535,
+        1775
+      ],
+      "time_warp": [
+        [
+          559.0,
+          1535.0
+        ],
+        [
+          578.0,
+          1554.489270386266
+        ],
+        [
+          615.0,
+          1596.0
+        ],
+        [
+          638.0,
+          1616.0343347639484
+        ],
+        [
+          664.0,
+          1644.0
+        ],
+        [
+          792.0,
+          1774.0
+        ]
+      ],
+      "baseline_core_R_sha256": "88a70f01fc0563d2341638e80908f5c20f7671d67453185c803390be2d0de1a4",
+      "songidx": 1,
+      "music_id": "dunhuangwu3",
+      "audio_sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f",
+      "raw_source_sha256": "7b58c904c3b4c7f29c3fdf82ac0e0a948e4f436cf57c5e7589e424168cfb3dfd",
+      "native_reference": {
+        "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/event_plan_01/prepare/catalog/male_pipa_1.npy",
+        "sha256": "59f14fedc9b7c89e269a7cd5f2cf23807080d9f6f980127c4b19d9487a413788"
+      },
+      "key": "r66b04_c4ded6ddc2d6940d"
+    },
+    {
+      "parent_case_key": "dev07_8bf597d5ede30ff3ec4cd27a",
+      "parent_record_key": "dev07_8bf597d5ede30ff3ec4cd27a_o0_g48",
+      "parent_side": "left",
+      "parent_role": "DEV",
+      "parent_pair_music_interval": [
+        1392,
+        1920
+      ],
+      "source_uid": "male_pipa_2",
+      "event_uid": "r47:a74b575f952414f4396bad53",
+      "source_interval": [
+        2473,
+        2709
+      ],
+      "support_component": [
+        1876,
+        2709
+      ],
+      "target_interval": [
+        1392,
+        1632
+      ],
+      "music_interval": [
+        1392,
+        1632
+      ],
+      "time_warp": [
+        [
+          2473.0,
+          1392.0
+        ],
+        [
+          2507.0,
+          1428.0
+        ],
+        [
+          2532.0,
+          1458.0
+        ],
+        [
+          2606.0,
+          1532.0
+        ],
+        [
+          2626.0,
+          1548.0
+        ],
+        [
+          2708.0,
+          1631.0
+        ]
+      ],
+      "baseline_core_R_sha256": "f2387cf40eeea11b533fed7b1d9614e7292ce4fe1353f83b6fd68f91eb581a0d",
+      "songidx": 2,
+      "music_id": "dunhuangwu4",
+      "audio_sha256": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33",
+      "raw_source_sha256": "e300cef72d5248c2eacb6b430f17152a00af92bb4f3c04ff96c35f63d5aeaebc",
+      "native_reference": {
+        "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/event_plan_01/prepare/catalog/male_pipa_2.npy",
+        "sha256": "c3aa1daac4922b6db1423a11e7c1ad98f02178232aa623116f1b6956d546f7cc"
+      },
+      "key": "r66b05_56fb0e6ccb0310ef"
+    },
+    {
+      "parent_case_key": "eval18_8eb4693f7b6fa54bfd95cce6",
+      "parent_record_key": "eval18_8eb4693f7b6fa54bfd95cce6_o0_g48",
+      "parent_side": "left",
+      "parent_role": "EVAL",
+      "parent_pair_music_interval": [
+        1536,
+        2064
+      ],
+      "source_uid": "male_ribbon",
+      "event_uid": "r47:c410f0e637b8f1aef9847183",
+      "source_interval": [
+        948,
+        1197
+      ],
+      "support_component": [
+        360,
+        1926
+      ],
+      "target_interval": [
+        1536,
+        1776
+      ],
+      "music_interval": [
+        1536,
+        1776
+      ],
+      "time_warp": [
+        [
+          948.0,
+          1536.0
+        ],
+        [
+          982.0,
+          1569.0
+        ],
+        [
+          1006.0,
+          1590.0
+        ],
+        [
+          1033.0,
+          1617.9153225806451
+        ],
+        [
+          1081.0,
+          1671.0
+        ],
+        [
+          1196.0,
+          1775.0
+        ]
+      ],
+      "baseline_core_R_sha256": "1fdd5a3572f646e400bd254a647173b3ceeb17ca58eaf7182f6a34e4a2a9ad6b",
+      "songidx": 0,
+      "music_id": "dunhuangwu2",
+      "audio_sha256": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c",
+      "raw_source_sha256": "7faf97974cb347b5e08107dd102c508ad3309901094f7c1822c21db83dd6addd",
+      "native_reference": {
+        "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/event_plan_01/prepare/catalog/male_ribbon.npy",
+        "sha256": "c8900b68ae468ce8c7b745bf59af61b15ee9ab83d99a4d5f279f25e11c940b2e"
+      },
+      "key": "r66b06_0a8028422bbfb1c4"
+    },
+    {
+      "parent_case_key": "dev03_d5b76e9b8fa1f327945991eb",
+      "parent_record_key": "dev03_d5b76e9b8fa1f327945991eb_o0_g48",
+      "parent_side": "left",
+      "parent_role": "DEV",
+      "parent_pair_music_interval": [
+        1534,
+        2062
+      ],
+      "source_uid": "male_ribbon_FenHe",
+      "event_uid": "r47:afdc7bb3f1539b3ddd8517b9",
+      "source_interval": [
+        2020,
+        2268
+      ],
+      "support_component": [
+        0,
+        2885
+      ],
+      "target_interval": [
+        1534,
+        1774
+      ],
+      "music_interval": [
+        1534,
+        1774
+      ],
+      "time_warp": [
+        [
+          2020.0,
+          1534.0
+        ],
+        [
+          2065.0,
+          1580.0
+        ],
+        [
+          2134.0,
+          1644.0
+        ],
+        [
+          2153.0,
+          1661.0
+        ],
+        [
+          2190.0,
+          1693.0
+        ],
+        [
+          2267.0,
+          1773.0
+        ]
+      ],
+      "baseline_core_R_sha256": "1ca7a292e921c516c3d4b3f7af13a798e4eac76839d35393c6580231af7df134",
+      "songidx": 1,
+      "music_id": "dunhuangwu3",
+      "audio_sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f",
+      "raw_source_sha256": "38fa662ac4aa912d70d0c405f75a9e502e3c6d471445f8896016619b7b10357c",
+      "native_reference": {
+        "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/event_plan_01/prepare/catalog/male_ribbon_FenHe.npy",
+        "sha256": "16ef0128692035c3cdc54f13530f94374aac3f06888ef37aeb1ea98b207c1d3f"
+      },
+      "key": "r66b07_4717682e3be3dd02"
+    },
+    {
+      "parent_case_key": "dev06_3e7a15bd0ee5b6c38cac3d8c",
+      "parent_record_key": "dev06_3e7a15bd0ee5b6c38cac3d8c_o0_g48",
+      "parent_side": "left",
+      "parent_role": "DEV",
+      "parent_pair_music_interval": [
+        1536,
+        2064
+      ],
+      "source_uid": "female_FeiTian",
+      "event_uid": "r47:c1f1efc803495ee700d67db1",
+      "source_interval": [
+        2660,
+        2896
+      ],
+      "support_component": [
+        1798,
+        8158
+      ],
+      "target_interval": [
+        1536,
+        1776
+      ],
+      "music_interval": [
+        1536,
+        1776
+      ],
+      "time_warp": [
+        [
+          2660.0,
+          1536.0
+        ],
+        [
+          2691.0,
+          1562.0
+        ],
+        [
+          2740.0,
+          1622.0
+        ],
+        [
+          2786.0,
+          1668.0
+        ],
+        [
+          2815.0,
+          1697.0
+        ],
+        [
+          2895.0,
+          1775.0
+        ]
+      ],
+      "baseline_core_R_sha256": "e198296f1db3a0b0c05b37de673d450841820b6d243621ec6d10f0fef2b8e452",
+      "songidx": 2,
+      "music_id": "dunhuangwu4",
+      "audio_sha256": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33",
+      "raw_source_sha256": "120e0157ccdd60d128d2973ac0682883ee178ba43ce8479100e80f56c64f37a4",
+      "native_reference": {
+        "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/event_plan_01/prepare/catalog/female_FeiTian.npy",
+        "sha256": "50436001fab4f0aa45610b0723cebd7ee93592f3039adc133c270902b3c9fab4"
+      },
+      "key": "r66b08_a7e0cdf241d7a758"
+    },
+    {
+      "parent_case_key": "eval01_921806a175ae48fe4c3a1ea8",
+      "parent_record_key": "eval01_921806a175ae48fe4c3a1ea8_o0_g48",
+      "parent_side": "left",
+      "parent_role": "EVAL",
+      "parent_pair_music_interval": [
+        1535,
+        2063
+      ],
+      "source_uid": "female_lotus",
+      "event_uid": "r47:1b228a3e5bd8f536ebd033b8",
+      "source_interval": [
+        1864,
+        2109
+      ],
+      "support_component": [
+        0,
+        4629
+      ],
+      "target_interval": [
+        1535,
+        1775
+      ],
+      "music_interval": [
+        1535,
+        1775
+      ],
+      "time_warp": [
+        [
+          1864.0,
+          1535.0
+        ],
+        [
+          1879.0,
+          1548.0
+        ],
+        [
+          1900.0,
+          1565.0
+        ],
+        [
+          1925.0,
+          1596.0
+        ],
+        [
+          1947.0,
+          1613.0
+        ],
+        [
+          2108.0,
+          1774.0
+        ]
+      ],
+      "baseline_core_R_sha256": "e7ec815811792d7e28e47a0d168b8fdf81b462e62f71d7c95be1d78f4a10a727",
+      "songidx": 1,
+      "music_id": "dunhuangwu3",
+      "audio_sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f",
+      "raw_source_sha256": "22b915af2e0fbb645acb78d7f61e58afe3f7aa40c0fc719da95f7403ed8dd47d",
+      "native_reference": {
+        "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/event_plan_01/prepare/catalog/female_lotus.npy",
+        "sha256": "5cebda88bce0ff6ecbff76890f6ea9c2af237aab62a7dc95f23bb40972af8675"
+      },
+      "key": "r66b09_43aba2362b9199f7"
+    },
+    {
+      "parent_case_key": "eval06_87c8726999c794d11fb4be80",
+      "parent_record_key": "eval06_87c8726999c794d11fb4be80_o0_g48",
+      "parent_side": "left",
+      "parent_role": "EVAL",
+      "parent_pair_music_interval": [
+        1536,
+        2064
+      ],
+      "source_uid": "female_meditation",
+      "event_uid": "r47:7a9d007ab852687d2d6830e3",
+      "source_interval": [
+        2551,
+        2789
+      ],
+      "support_component": [
+        0,
+        6114
+      ],
+      "target_interval": [
+        1536,
+        1776
+      ],
+      "music_interval": [
+        1536,
+        1776
+      ],
+      "time_warp": [
+        [
+          2551.0,
+          1536.0
+        ],
+        [
+          2566.0,
+          1548.0
+        ],
+        [
+          2623.0,
+          1610.0
+        ],
+        [
+          2662.0,
+          1651.0
+        ],
+        [
+          2681.0,
+          1671.0
+        ],
+        [
+          2788.0,
+          1775.0
+        ]
+      ],
+      "baseline_core_R_sha256": "5c9b9affa86b54298b4b510cc43c637e74e0912f261c1fe76dff5976ee2243f5",
+      "songidx": 0,
+      "music_id": "dunhuangwu2",
+      "audio_sha256": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c",
+      "raw_source_sha256": "225ab3ffb8cd176ee138130152ec56b826cf2cc3965f13249aaf0a1103b422e7",
+      "native_reference": {
+        "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/event_plan_01/prepare/catalog/female_meditation.npy",
+        "sha256": "d38f5fb33507483d4b01e69d9e3bc5e738a1ecc2d3b88856d2ba8030a82ab3df"
+      },
+      "key": "r66b10_f449ca842cdeb74f"
+    },
+    {
+      "parent_case_key": "eval08_8294c34c2824afb40734545a",
+      "parent_record_key": "eval08_8294c34c2824afb40734545a_o0_g48",
+      "parent_side": "left",
+      "parent_role": "EVAL",
+      "parent_pair_music_interval": [
+        1536,
+        2064
+      ],
+      "source_uid": "male_meditation",
+      "event_uid": "r47:2b2df7fad8e937cc7ce5507b",
+      "source_interval": [
+        1071,
+        1317
+      ],
+      "support_component": [
+        0,
+        6133
+      ],
+      "target_interval": [
+        1536,
+        1776
+      ],
+      "music_interval": [
+        1536,
+        1776
+      ],
+      "time_warp": [
+        [
+          1071.0,
+          1536.0
+        ],
+        [
+          1138.0,
+          1607.0
+        ],
+        [
+          1187.0,
+          1652.0
+        ],
+        [
+          1254.0,
+          1713.0
+        ],
+        [
+          1297.0,
+          1758.0
+        ],
+        [
+          1316.0,
+          1775.0
+        ]
+      ],
+      "baseline_core_R_sha256": "f9dc8627abd50648e81d3e1cdc731a69f43220e2a612dfd91f87bdd6bd30a2c1",
+      "songidx": 2,
+      "music_id": "dunhuangwu4",
+      "audio_sha256": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33",
+      "raw_source_sha256": "1cd10b49771226ae7f9ea962bf21e2c86324af2249d80bf08a069a881d20d165",
+      "native_reference": {
+        "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/event_plan_01/prepare/catalog/male_meditation.npy",
+        "sha256": "8d6c096a31d5b90f9f1021f1e2e980aab808a4aeadef174ec23f92f1423a6737"
+      },
+      "key": "r66b11_73f9e95e0fef2d60"
+    }
+  ],
+  "requested_cases": 12,
+  "source_interval_count": 8,
+  "cross_music_repeats": 4,
+  "source_count": 8,
+  "music_count": 3,
+  "source_occurrences": {
+    "female_FeiTian": 2,
+    "female_lotus": 2,
+    "female_meditation": 2,
+    "male_meditation": 2,
+    "male_pipa_1": 1,
+    "male_pipa_2": 1,
+    "male_ribbon": 1,
+    "male_ribbon_FenHe": 1
+  },
+  "music_occurrences": {
+    "1": 4,
+    "0": 4,
+    "2": 4
+  },
+  "parent_fixed48_core_occurrences": 58,
+  "unique_source_music_candidates": 22,
+  "parent_main_sha256": "48122dea0886791e5fa7ba946d9715cfc2a788314d6d5bc004baa0912bce30ee",
+  "parent_controls_sha256": "7a32a9aa890a22e316d5397b4fcada4ec4270750b6901caedee1706c151d203e",
+  "parent_viewer_sha256": "eef534bf4ce87b7c7123459f18cf2340c412db8be158c4403c37294790453edc",
+  "parent_delivery_receipt_sha256": "ef5986d1b846bb5cb66f98b7104ed252b2f133d12b968416de4c025b210d8bd2",
+  "R47_viewer_metadata_sha256": "c854c08a70ece6f8d7af915a1b1eab17dad906c9802a4e5214912990dfa293de",
+  "source_catalog_sha256": "d33cd546ae746227cfc6e5cad1dee2923c88742631a3c69433b63f4dfa85421a",
+  "selection_rule": "FIXED48_ONLY; DEDUP_SOURCE_INTERVAL_PLUS_MUSIC_BY_EARLIEST_TARGET_THEN_CASE_SIDE; FIRST_COVER_ALL_EIGHT_SOURCE_UIDS_WITH_LEAST_USED_MUSIC; FILL_TO12_BY_LEAST_USED_SOURCE_THEN_MUSIC_THEN_IDENTITY",
+  "score_fields_consulted": false,
+  "new_planner_searches": 0,
+  "coordinates_serialized": false,
+  "rotation_arrays_serialized": false,
+  "semantic_completeness": "UNKNOWN",
+  "recording_independence_verified": false,
+  "previous_bridge_qualification_inherited": false
+}
