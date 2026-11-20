@@ -144,3 +144,12 @@ def test_reviewer_projection_rejects_added_metadata_and_remains_blank_until_user
     assert "UNSURE" in text and "UNRATED" in text
     assert "method_identity_seen:''" in text and "own_judgment:false" in text
     assert list(v.DIMENSIONS)==["music_coordination","transition_timing","continuity","richness","naturalness"]
+
+def test_no_event_with_explicit_null_connection_keeps_placeholder(tmp_path,monkeypatch):
+    row,J,parents,clocks,_=fixture(tmp_path,monkeypatch)
+    panel=next(p for p in row[1] if p['method']=='BeatDP')
+    panel.update(R=None,q=None,full_R=None,row=dict(status='NO_EVENT',reason='NO_SOURCE_EVENT',connection=None))
+    out=tmp_path/'null_connection';out.mkdir()
+    v.build(out,[row],J,parents,clocks,blind_seed=SEED)
+    public,_=payload(out/'reviewer/index.html','r69-review-data')
+    assert sum(not x['available'] for x in public['cases'][0]['variants'])==1

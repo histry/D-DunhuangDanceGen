@@ -102,7 +102,7 @@ def _audio(watch,case,clock,interval,known,raw_hashes):
 
 def _pair_interval(case,panels):
     pair=case.get("pair_music_interval")
-    candidates=[p.get("row",{}).get("connection",{}).get("pair_music_interval") for p in panels]
+    candidates=[(p.get("row",{}).get("connection") or {}).get("pair_music_interval") for p in panels]
     candidates=[p for p in candidates if p is not None]
     if pair is None and candidates:pair=candidates[0]
     if (not isinstance(pair,(list,tuple)) or len(pair)!=2
