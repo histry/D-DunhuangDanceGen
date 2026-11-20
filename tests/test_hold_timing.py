@@ -16,3 +16,10 @@ def test_same_motion_cost_is_independent_of_music_and_empty_cap_abstains():
 def test_low_motion_requires_both_rotation_and_fk_not_one_signal():
  s={'angular':np.array([0,.1,0]),'linear':np.array([0,0,.1])}
  assert low_mask(s,{'angular':.05,'linear':.05}).tolist()==[True,False,False]
+
+def test_entire_core_inside_source_hold_has_fixed_occupancy_under_every_clock():
+ h=[{'cells_half_open':[100,500]}]
+ q1=np.linspace(200,439,240);q2=200+239*(np.linspace(0,1,240)**1.02)
+ a=occupancy(q1,h,[200,440])[0];b=occupancy(q2,h,[200,440])[0]
+ assert a['target_seconds']==b['target_seconds']==239/30
+ assert excess([a],2.4)==excess([b],2.4)
