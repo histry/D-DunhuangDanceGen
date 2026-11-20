@@ -2,7 +2,7 @@
 import json
 import pytest
 from dunhuang.research.omni_judge_r71.prepare import METHODS, register
-from dunhuang.research.omni_judge_r71.judge import DIMS, parse, save
+from dunhuang.research.omni_judge_r71.judge import DIMS, parse, save, video_clocks
 from dunhuang.research.omni_judge_r71.summarize import normalize
 from dunhuang.research.omni_judge_r71.controls import wrong_music
 
@@ -67,3 +67,19 @@ def test_unicode_response_persistence_is_atomic_utf8(tmp_path):
     save(p,obj)
     assert json.loads(p.read_bytes().decode('utf-8'))==obj
     assert not p.with_name('result.json.tmp').exists()
+
+
+def test_real_sample_rate_covers_full_video_not_requested_rate():
+    video=[None]*16
+    meta=dict(frames_indices=[round(i*527/15) for i in range(16)],total_num_frames=528,fps=30)
+    videos,metadata,rates=video_clocks([(video,meta)])
+    assert rates==[16/17.6]
+    assert abs(8*(2/rates[0])-17.6)<1e-9
+    assert metadata[0]['frame_times_seconds'][-1]==527/30
+
+
+def test_model_reported_intervals_are_validated_without_inventing_point_times():
+    obj=valid_response();obj[DIMS[0]]['timestamps_seconds']=['0.00-1.00','17.0-17.6']
+    assert parse(json.dumps(obj))==obj
+    obj[DIMS[0]]['timestamps_seconds']=['17.0-18.0']
+    assert parse(json.dumps(obj)) is None
