@@ -1,5 +1,5 @@
 """Publish scalar/automatic R71 evidence. Never publish model weights or AV data."""
-import hashlib,json,re,shutil
+import hashlib,json,re
 from collections import Counter
 from pathlib import Path
 
@@ -59,7 +59,7 @@ def main():
     for name in names:
         source=ROOT/name
         assert source.is_file(),name
-        target=OUT/name;target.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(source,target)
+        target=OUT/name;target.parent.mkdir(parents=True,exist_ok=True);target.write_bytes(source.read_bytes().replace(b'\r\n',b'\n'))
     rows=pilot+controls
     peak=max(r['peak_allocated_bytes'] for r in rows)/2**30
     load=max(r['load_peak_bytes']['allocated'] for r in rows)/2**30
