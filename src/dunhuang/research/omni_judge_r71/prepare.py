@@ -10,7 +10,7 @@ def sha(p):
  with Path(p).open('rb') as f:
   for b in iter(lambda:f.read(1048576),b''):h.update(b)
  return h.hexdigest()
-def read(p):return json.loads(Path(p).read_text())
+def read(p):return json.loads(Path(p).read_text(encoding='utf-8'))
 def write(p,v):Path(p).parent.mkdir(parents=True,exist_ok=True);Path(p).write_bytes((json.dumps(v,ensure_ascii=False,sort_keys=True,indent=2)+'\n').encode())
 def eligible(row):return row['status']=='LEGAL' and (row.get('connection') or {}).get('passes_original_screen') is True
 def register(cases,rows):

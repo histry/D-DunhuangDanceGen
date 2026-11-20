@@ -2,7 +2,7 @@
 import json
 import pytest
 from dunhuang.research.omni_judge_r71.prepare import METHODS, register
-from dunhuang.research.omni_judge_r71.judge import DIMS, parse
+from dunhuang.research.omni_judge_r71.judge import DIMS, parse, save
 from dunhuang.research.omni_judge_r71.summarize import normalize
 from dunhuang.research.omni_judge_r71.controls import wrong_music
 
@@ -60,3 +60,10 @@ def test_incomplete_response_never_filled_with_fabricated_scores():
     del obj[DIMS[0]]
     assert parse(json.dumps(obj)) is None
     assert parse('no JSON') is None
+
+
+def test_unicode_response_persistence_is_atomic_utf8(tmp_path):
+    p=tmp_path/'result.json';obj=dict(raw_response='相当，无法判断。',human_reviewed=False)
+    save(p,obj)
+    assert json.loads(p.read_bytes().decode('utf-8'))==obj
+    assert not p.with_name('result.json.tmp').exists()
