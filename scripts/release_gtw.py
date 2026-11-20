@@ -18,6 +18,7 @@ def main():
     inventory=read(ROOT/'source_audit/inventory.json');write(out/'source_inventory.json',inventory)
     human=summarize([],read(ROOT/'preview/admin/map.json'));write(out/'human_state.json',human)
     selected=read(ROOT/'controls/selections.json');rows=read(ROOT/'controls/records.json');agreements=[]
+    executions={(r['unit'],r['method']):r for r in rows if r['status']=='EXECUTED'}
     for protocol in ['A','B']:
         units=sorted({r['unit'] for r in selected if r['protocol']==protocol});eligible=[]
         for unit in units:
@@ -27,6 +28,8 @@ def main():
         for a,b in itertools.combinations(['GTWLocal','GTWExtended','GTWContext'],2):
             pairs=[(next(r for r in g if r['method']==a),next(r for r in g if r['method']==b)) for g in eligible]
             agreements.append(dict(protocol=protocol,methods=[a,b],common_executions=len(pairs),different_selected_ids=sum(x['selected_id']!=y['selected_id'] for x,y in pairs),
+                different_actual_core_hashes=sum(executions[x['unit'],protocol+'_'+a]['core_sha256']!=executions[y['unit'],protocol+'_'+b]['core_sha256'] for x,y in pairs),
+                different_actual_clock_hashes=sum(executions[x['unit'],protocol+'_'+a]['q_sha256']!=executions[y['unit'],protocol+'_'+b]['q_sha256'] for x,y in pairs),
                 groups_with_choice=sum(x['eligible_count']>1 for x,y in pairs),interpretation='CHOICE_DIFFERENCE_NOT_QUALITY_GAIN'))
     actual=[r for r in rows if r['status']=='EXECUTED'];fixed=[r for r in actual if r['method'] not in ['Uniform','E1W']]
     q=dict(protocol_summary=read(ROOT/'controls/summary.json'),agreements=agreements,displayed_executions=len(actual),
