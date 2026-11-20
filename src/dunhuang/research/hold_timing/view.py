@@ -36,14 +36,15 @@ def build(controls=False):
   items.append(dict(label=f"{ci+1}. {uid} [{a},{b})",case_key=c['key'],source_uid=uid,source_interval=[a,b],sourceP=positions(R),sourceMetrics=compact(references[c['key']]['natural']),variants=variants,audio=clip['path'],core_offset=0 if c['parent_side']=='left' else 288,source_holds=references[c['key']]['source_holds']))
  for p in packs.values():p[3].close()
  template=Path(__file__).with_name('viewer.html').read_text(encoding='utf8')
+ if controls:template=template.replace('href="source.html"','href="../../audit/viewer/source.html"')
  payload=dict(title='停顿控制机制先导' if controls else '来源／E1-W／GTW · 低活动审计',parents=ctx['parents'].tolist(),items=items,manifest_sha256=sha(root/'manifest.json'),human_records=0)
  (out/'index.html').write_bytes(template.replace('__DATA__',json.dumps(payload,ensure_ascii=False,separators=(',',':'))).encode())
  # Separate original full recordings: no music and no time normalization.
  full=[]
- for uid in sorted({c['source_uid'] for c in cases}):
+ for uid in ([] if controls else sorted({c['source_uid'] for c in cases})):
   R=ctx['lib'].rotations[uid];full.append(dict(label=uid,source_uid=uid,source_interval=[0,len(R)],sourceP=positions(R),sourceMetrics=compact(dict(regions=natural[uid]['regions'])),variants=[],audio=None,core_offset=0,source_holds=[]))
- (out/'source.html').write_bytes(template.replace('__DATA__',json.dumps(dict(payload,title='完整来源 · 原速独立播放',items=full),ensure_ascii=False,separators=(',',':'))).encode())
- write(out/'protocol.json',dict(source_manifest_sha256=payload['manifest_sha256'],cases=len(items),full_original_recordings=len(full),original_fps=30,source_clock='INDEPENDENT_REAL_TIME_NEVER_TARGET_NORMALIZED',target_clock='ORIGINAL_AUDIO',body='ROOT_RELATIVE_22_NO_FINGERS_WORLD_ROOT_OR_CONTACT',semantic_hold='UNKNOWN',human_records=0,can_route=False))
+ if not controls:(out/'source.html').write_bytes(template.replace('__DATA__',json.dumps(dict(payload,title='完整来源 · 原速独立播放',items=full),ensure_ascii=False,separators=(',',':'))).encode())
+ write(out/'protocol.json',dict(source_manifest_sha256=payload['manifest_sha256'],cases=len(items),full_original_recordings=len({c['source_uid'] for c in cases}),original_source_page_reused_from_audit=controls,original_fps=30,source_clock='INDEPENDENT_REAL_TIME_NEVER_TARGET_NORMALIZED',target_clock='ORIGINAL_AUDIO',body='ROOT_RELATIVE_22_NO_FINGERS_WORLD_ROOT_OR_CONTACT',semantic_hold='UNKNOWN',human_records=0,can_route=False))
  write(root/'viewer_delivery.json',dict(files=[dict(path=p.relative_to(root).as_posix(),bytes=p.stat().st_size,sha256=sha(p)) for p in sorted(out.rglob('*')) if p.is_file()]));print('HOLD_VIEW_READY',len(items),len(full),flush=True)
 
 if __name__=='__main__':build('--controls' in sys.argv)
