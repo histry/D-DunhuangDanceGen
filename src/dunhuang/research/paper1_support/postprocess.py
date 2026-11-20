@@ -61,4 +61,8 @@ def release():
     write(out/'attribution.json',read(ROOT/'attribution/result.json'))
     for name in ['independent','roundoff_correction','preview_browser_acceptance','human_status','asset_copy']:write(out/(name+'.json'),read(ROOT/'receipts'/(name+'.json')))
     write(out/'protocol.json',read(HERE/'protocol.json'));write(out/'manifest.json',dict(files={p.name:sha(p) for p in sorted(out.iterdir()) if p.is_file()}))
-if __name__=='__main__':{'attribution':attribution,'reviews':review_pack,'release':release}[sys.argv[1]]()
+
+def index():
+    (ROOT/'index.html').write_bytes('''<!doctype html><meta charset="utf-8"><title>Paper 1 来源与时间对照</title><style>body{background:#102132;color:#deedf3;font:18px system-ui;max-width:850px;margin:40px auto;padding:20px}a{color:#87d8e5}li{margin:20px 0}</style><h1>Paper 1 · 来源容量与执行时钟</h1><p>先观看真实主候选，再区分固定来源的时间变化与替换来源的内容变化。所有结果均来自历史开发人口。</p><ol><li><a href="main/viewer/index.html">主候选：同来源匀速／GTWLocal与原速来源</a></li><li><a href="main/viewer/sources.html">14条原始轨道：首12秒原速检查</a>（6条多人轨道未准入Solo）</li><li><a href="controls/viewer/index.html">完整对照：时间调整／来源替换／最短低活动诊断</a></li><li><a href="controls/viewer/naturalness.html">匿名评价：静音自然性</a></li><li><a href="controls/viewer/music_coordination.html">匿名评价：有音乐协调性</a></li></ol><p>普通观看无需身份。正式科研评价需要独立名册核验；实际记录仍为0。机器代价、低活动缩短和G1数值门不能证明艺术质量提升。世界Root、接触与Native24不可评，正式路由关闭。</p>'''.encode())
+
+if __name__=='__main__':{'attribution':attribution,'reviews':review_pack,'release':release,'index':index}[sys.argv[1]]()
