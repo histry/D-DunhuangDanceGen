@@ -1,0 +1,35 @@
+{
+  "clock_validated": true,
+  "fixture": "TEST_FIXTURE_R66_EXACT_CLOCK_NOT_REAL_AUDIO",
+  "offset_sign": "POSITIVE_DELTA_READS_LATER_RAW_AUDIO; AUDIO_FRAME=MOTION_FRAME+SOURCE_OFFSET+DELTA",
+  "real_audio_reads": 0,
+  "scope": "SYNTHETIC_CODE_SIGN_POSITIVE_CONTROL_NOT_REAL_EVENT_TRUTH",
+  "scores": {},
+  "scores_by_audio_offset_frames": {
+    "Accent": {
+      "-15": 3.7266531720786714e-06,
+      "-8": 0.02856550078455038,
+      "0": 1.0,
+      "15": 3.7266531720786714e-06,
+      "8": 0.02856550078455038
+    },
+    "Beat": {
+      "-15": 3.7266531720786714e-06,
+      "-8": 0.02856550078455038,
+      "0": 1.0,
+      "15": 3.7266531720786714e-06,
+      "8": 0.02856550078455038
+    },
+    "Primary": {
+      "-15": 3.7266531720786714e-06,
+      "-8": 0.02856550078455038,
+      "0": 1.0,
+      "15": 3.7266531720786714e-06,
+      "8": 0.02856550078455038
+    }
+  },
+  "sigma_frames": 3,
+  "status": "PASS",
+  "synthetic_event_coordinates_published": false,
+  "training_steps": 0
+}

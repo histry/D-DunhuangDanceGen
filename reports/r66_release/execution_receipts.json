@@ -1,0 +1,113 @@
+{
+  "missing_receipts_do_not_imply_success": true,
+  "records": [
+    {
+      "projection": {
+        "commit": "a5c325f3a71485b85d6a332ddd89e66621f5fcdb",
+        "completed_at": "2026-11-20T05:33:38.857891+00:00",
+        "exit_status": 0,
+        "log_sha256": "896ecd1fb34a1a73a5b18182ed0fcad33923a8f3dc4ee553cc2e2606c1bc171a",
+        "neural_training_steps": 0,
+        "new_planner_searches": 0,
+        "stage": "Bcontrols",
+        "tmux_session": "ddg_r66_Bcontrols_01"
+      },
+      "receipt": "rhythm_r66_execution_01/execution_Bcontrols.json",
+      "scope": "WHITELISTED_EXECUTION_RECEIPT_NOT_SCIENTIFIC_RESULT",
+      "source_sha256": "b8cfc2c028256bc721044825701e9b70a20b9f4233b910af58eb2df6f91c5595"
+    },
+    {
+      "projection": {
+        "commit": "a5c325f3a71485b85d6a332ddd89e66621f5fcdb",
+        "completed_at": "2026-11-20T05:23:13.686913+00:00",
+        "exit_status": 0,
+        "log_sha256": "94a27f1bdcc8e4dbaa5c656d59cbc7e09228e054ee76266a1810d09c2ad1353b",
+        "neural_training_steps": 0,
+        "new_planner_searches": 0,
+        "stage": "Bverify",
+        "tmux_session": "ddg_r66_Bverify_01"
+      },
+      "receipt": "rhythm_r66_execution_01/execution_Bverify.json",
+      "scope": "WHITELISTED_EXECUTION_RECEIPT_NOT_SCIENTIFIC_RESULT",
+      "source_sha256": "6eef0af883061628bf21bbaeea5b2d86c65963fb3ea36e63319d286b52b96d65"
+    },
+    {
+      "projection": {
+        "commit": "a5c325f3a71485b85d6a332ddd89e66621f5fcdb",
+        "completed_at": "2026-11-20T05:36:11.377945+00:00",
+        "exit_status": 0,
+        "log_sha256": "896ecd1fb34a1a73a5b18182ed0fcad33923a8f3dc4ee553cc2e2606c1bc171a",
+        "neural_training_steps": 0,
+        "new_planner_searches": 0,
+        "stage": "Bverify_controls",
+        "tmux_session": "ddg_r66_Bverify_controls_01"
+      },
+      "receipt": "rhythm_r66_execution_01/execution_Bverify_controls.json",
+      "scope": "WHITELISTED_EXECUTION_RECEIPT_NOT_SCIENTIFIC_RESULT",
+      "source_sha256": "d289e6083d46c10b301475d9b1580cd51bc5f63abdccf88f2af6a66bb58ecf6d"
+    },
+    {
+      "projection": {
+        "commit": "a5c325f3a71485b85d6a332ddd89e66621f5fcdb",
+        "completed_at": "2026-11-20T05:21:11.077173+00:00",
+        "exit_status": 0,
+        "geometry_bridge_solves": 0,
+        "log_sha256": "94a27f1bdcc8e4dbaa5c656d59cbc7e09228e054ee76266a1810d09c2ad1353b",
+        "neural_training_steps": 0,
+        "new_planner_searches": 0,
+        "stage": "R66_B_MAIN",
+        "tmux_session": "ddg_r66_Bmain_01"
+      },
+      "receipt": "rhythm_r66_execution_01/execution_main.json",
+      "scope": "WHITELISTED_EXECUTION_RECEIPT_NOT_SCIENTIFIC_RESULT",
+      "source_sha256": "6a43c55913ca4e67ac2733ba8baa382d39c18c1819a98263ff24c0d1e02b9741"
+    },
+    {
+      "projection": {
+        "status": "FAILED_BEFORE_SCIENTIFIC_RUN"
+      },
+      "receipt": "rhythm_r66_execution_01/launch_failure_windows_newlines.json",
+      "scope": "WHITELISTED_EXECUTION_RECEIPT_NOT_SCIENTIFIC_RESULT",
+      "source_sha256": "8b1e7ef60c6d61111d37ed90624ef2ce9f98795cf3102f387a5c4e365d5c5333"
+    },
+    {
+      "projection": {
+        "commit": "a5c325f3a71485b85d6a332ddd89e66621f5fcdb",
+        "completed_at": "2026-11-20T05:26:50.651514+00:00",
+        "exit_status": 0,
+        "log_sha256": "a34012f5a98d36585a8c31ad789d3743f32b6761dca4fbd2ac713956471bbcb2",
+        "neural_training_steps": 0,
+        "new_planner_searches": 0,
+        "stage": "Amain",
+        "tmux_session": "ddg_r66_Amain_01"
+      },
+      "receipt": "timing_validity_r66_execution_01/execution_Amain.json",
+      "scope": "WHITELISTED_EXECUTION_RECEIPT_NOT_SCIENTIFIC_RESULT",
+      "source_sha256": "74ae0221e765709f85bffbe1afdca570c94f87f69b3f2ffaeb9e819c5bbe3f1c"
+    },
+    {
+      "projection": {
+        "commit": "a5c325f3a71485b85d6a332ddd89e66621f5fcdb",
+        "completed_at": "2026-11-20T05:37:49.634662+00:00",
+        "exit_status": 0,
+        "log_sha256": "a34012f5a98d36585a8c31ad789d3743f32b6761dca4fbd2ac713956471bbcb2",
+        "neural_training_steps": 0,
+        "new_planner_searches": 0,
+        "stage": "Averify",
+        "tmux_session": "ddg_r66_Averify_01"
+      },
+      "receipt": "timing_validity_r66_execution_01/execution_Averify.json",
+      "scope": "WHITELISTED_EXECUTION_RECEIPT_NOT_SCIENTIFIC_RESULT",
+      "source_sha256": "57acdc4594832325c944512f5880f5fe9f94f86a667d200d65a169ad2d1cbdf2"
+    },
+    {
+      "projection": {
+        "github_commit": "a5c325f3a71485b85d6a332ddd89e66621f5fcdb",
+        "server_commit": "a5c325f3a71485b85d6a332ddd89e66621f5fcdb"
+      },
+      "receipt": "timing_validity_r66_execution_01/synchronization.json",
+      "scope": "WHITELISTED_EXECUTION_RECEIPT_NOT_SCIENTIFIC_RESULT",
+      "source_sha256": "15266f04ee6ee476f9a2afb987436abecd20033a20a3034207efe15861311c39"
+    }
+  ]
+}

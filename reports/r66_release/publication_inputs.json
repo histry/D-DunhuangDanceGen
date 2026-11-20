@@ -1,0 +1,120 @@
+{
+  "files": [
+    {
+      "bytes": 4012,
+      "path": "outputs/rhythm_r66_01/controls/artifacts_manifest.json",
+      "sha256": "8437db754f516a852a5486dfa849a6530ae6b9c4f9339d0171535dacd66b0777"
+    },
+    {
+      "bytes": 3658374,
+      "path": "outputs/rhythm_r66_01/controls/result.json",
+      "sha256": "463b099676e4f389492fe96bec289cc4778b082e914dea3a50d2556cd9265bad"
+    },
+    {
+      "bytes": 1453,
+      "path": "outputs/rhythm_r66_01/controls/viewer_manifest.json",
+      "sha256": "0cd061fbe0d8938c60be3a67bef3a0218eb40e11decd53af5e871be84be39ffa"
+    },
+    {
+      "bytes": 4012,
+      "path": "outputs/rhythm_r66_01/main/artifacts_manifest.json",
+      "sha256": "e7c918d8c5274a2d68937c81b872f806dc22306c14254f7658595355525ed5c3"
+    },
+    {
+      "bytes": 11234186,
+      "path": "outputs/rhythm_r66_01/main/result.json",
+      "sha256": "6f9fd9c7cb68cea457af8c663794aa46695406b189e3e255d8a1538ff3788244"
+    },
+    {
+      "bytes": 1453,
+      "path": "outputs/rhythm_r66_01/main/viewer_manifest.json",
+      "sha256": "11174659f447d6387de3451130b2ef13861efac3a93c20690f8913405d5be637"
+    },
+    {
+      "bytes": 3062,
+      "path": "outputs/rhythm_r66_01/replay_controls/independent.json",
+      "sha256": "95ada12209bbc178458fdfe12a9c1dee21ec296f7fceda8c55aa0996b34363e0"
+    },
+    {
+      "bytes": 3062,
+      "path": "outputs/rhythm_r66_01/replay_main/independent.json",
+      "sha256": "1144055a623b0290ab2e17ff18b62d269d97a092470b7e30cc022199cdc77c2b"
+    },
+    {
+      "bytes": 342,
+      "path": "outputs/rhythm_r66_execution_01/execution_Bcontrols.json",
+      "sha256": "b8cfc2c028256bc721044825701e9b70a20b9f4233b910af58eb2df6f91c5595"
+    },
+    {
+      "bytes": 338,
+      "path": "outputs/rhythm_r66_execution_01/execution_Bverify.json",
+      "sha256": "6eef0af883061628bf21bbaeea5b2d86c65963fb3ea36e63319d286b52b96d65"
+    },
+    {
+      "bytes": 356,
+      "path": "outputs/rhythm_r66_execution_01/execution_Bverify_controls.json",
+      "sha256": "d289e6083d46c10b301475d9b1580cd51bc5f63abdccf88f2af6a66bb58ecf6d"
+    },
+    {
+      "bytes": 396,
+      "path": "outputs/rhythm_r66_execution_01/execution_main.json",
+      "sha256": "6a43c55913ca4e67ac2733ba8baa382d39c18c1819a98263ff24c0d1e02b9741"
+    },
+    {
+      "bytes": 192,
+      "path": "outputs/rhythm_r66_execution_01/launch_failure_windows_newlines.json",
+      "sha256": "8b1e7ef60c6d61111d37ed90624ef2ce9f98795cf3102f387a5c4e365d5c5333"
+    },
+    {
+      "bytes": 14983,
+      "path": "outputs/timing_validity_r66_01/artifacts_manifest.json",
+      "sha256": "ea41009fafb55761a21ad3a115da3c7b4e73b300b79e82727eea47d4a4776f21"
+    },
+    {
+      "bytes": 398,
+      "path": "outputs/timing_validity_r66_01/qualification.json",
+      "sha256": "5740f97505c623531dd4d372401325968106d74dff3227aedc78177cc343ecc5"
+    },
+    {
+      "bytes": 9416983,
+      "path": "outputs/timing_validity_r66_01/summary.json",
+      "sha256": "447831e1d77da91fdce2007cc668bc85b81066943c9d501ec8f2222ff8369c33"
+    },
+    {
+      "bytes": 860,
+      "path": "outputs/timing_validity_r66_01/synthetic_control.json",
+      "sha256": "9170f112a60883ab6822817ce0f79f39921f6ab0aa6f6ff4e87292946875c630"
+    },
+    {
+      "bytes": 334,
+      "path": "outputs/timing_validity_r66_execution_01/execution_Amain.json",
+      "sha256": "74ae0221e765709f85bffbe1afdca570c94f87f69b3f2ffaeb9e819c5bbe3f1c"
+    },
+    {
+      "bytes": 338,
+      "path": "outputs/timing_validity_r66_execution_01/execution_Averify.json",
+      "sha256": "57acdc4594832325c944512f5880f5fe9f94f86a667d200d65a169ad2d1cbdf2"
+    },
+    {
+      "bytes": 435,
+      "path": "outputs/timing_validity_r66_execution_01/synchronization.json",
+      "sha256": "15266f04ee6ee476f9a2afb987436abecd20033a20a3034207efe15861311c39"
+    },
+    {
+      "bytes": 2682,
+      "path": "outputs/timing_validity_r66_replay_01/result.json",
+      "sha256": "af5e53a44c3736953b2ee28e14aaba2dc69df9e3fb7192890b7cbe48c83a1391"
+    },
+    {
+      "bytes": 1668,
+      "path": "src/dunhuang/research/rhythm_r66/protocol.json",
+      "sha256": "3570cd145e59a47ba0270347efb023866250d9cfb84f1c8601d6dd24c8db9141"
+    },
+    {
+      "bytes": 2064,
+      "path": "src/dunhuang/research/timing_validity_r66/protocol.json",
+      "sha256": "d3c90bf8b0ea78556f1120d47665bfbddf02fb4e3fe53ebef7ee83887c96c53a"
+    }
+  ],
+  "raw_inputs_or_media_copied": false
+}

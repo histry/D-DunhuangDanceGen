@@ -1,0 +1,44 @@
+{
+  "binding": {
+    "code": {
+      "__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "common.py": "4e59ce3ae4b9c352872da5d82048b9f425e30c5c222acf2e19977a1f7d734c8f",
+      "engine.py": "d35fd2828f32732ddb96ff3944239eab74250cd59caf30c93737c2d6c871caff",
+      "metrics.py": "e46e3f92f1b0e9d0e39a23512604eb93b8ea0e8f585bfe94c35871ebe18ef6cc",
+      "population.py": "c6335b8420d8c63e8e0d447f79776e050d833d1a2ed70c2ef84d08d3d786db8e",
+      "protocol.json": "d3c90bf8b0ea78556f1120d47665bfbddf02fb4e3fe53ebef7ee83887c96c53a",
+      "study.py": "d994999a1018acf62dbdc21e9424248833f2c37a72bf42fba696cb87567294e4",
+      "viewer.html": "fe31e53564b1eb5915a41f593bae5238b635e3d8b1d0821ec778df2db13c8c00",
+      "viewer.py": "d1913cf7a11cd802c4322e7bae1f9b6e669e110f6d19e5f718e0268ca367f02a"
+    },
+    "commit": "a5c325f3a71485b85d6a332ddd89e66621f5fcdb",
+    "dependencies": {
+      "src/dunhuang/contracts.py": "7aaedf151cde42b9eb70b4000309f39fb2f2eec3e2f4a3f0fdbb4bf7ff1c141e",
+      "src/dunhuang/io.py": "b5577ed27991c175db342b3b2bd9626df801158e90da2b103ea4d6fe71a1d926",
+      "src/dunhuang/planning/planner.py": "86b98f7cd9a2d757165235a7299dff97e61096e409b160bcdc7aaf56ce5e02ac",
+      "src/dunhuang/research/complete_r36/core.py": "03f296665e48ca2fa2ef8a866baaf2b4b786afeb22f468b6faeedac7225e9901",
+      "src/dunhuang/research/complete_r36/music.py": "6b607d336a3593fe86c172eb964104ee8b696488e3469e4b386647ce6acc5f9b",
+      "src/dunhuang/research/manifold_bridge_r47/config.json": "b6f85af0569bf34577561df17e2fe9b4a03076fad4c148aeff5edf660f3c9f4b",
+      "src/dunhuang/research/music_structure_r56/music.py": "7fab45ec0aabb38f9737c98e3334d2437a5f51db8ff9fd684b688ed63b3dba79",
+      "src/dunhuang/research/music_structure_r56/protocol.json": "d33cd42903bdff19a4ac4e6729bf6b299d40aace24c067d69c8b1c3de9f49737",
+      "src/dunhuang/research/paired_event_r41/events.py": "e6bbb769f9ed37b9743113a5c0a84139300bfc2e957a1b4315c041d2e1fb3759",
+      "src/dunhuang/research/timing_r64/music.py": "0c0e8b5bfa805fe53c1d48a6a5ae23df4fc9120a46620818b1719f7f6c6e0206",
+      "src/dunhuang/research/warp_coupling_r53/common.py": "dc94b1346ef986b0c4fab09eb090dceb08b46f3af0e807a940dcf4476cd88d1c"
+    }
+  },
+  "differences": [],
+  "fresh_process_required": true,
+  "full_record_motion_recomputed": 120,
+  "new_planner_runs": 0,
+  "optimizer_calls": 0,
+  "original_frozen_files_rehashed": 91,
+  "raw_audio_clocks_reextracted": 66,
+  "receipt_sha256": "af5e53a44c3736953b2ee28e14aaba2dc69df9e3fb7192890b7cbe48c83a1391",
+  "scientific_outputs_exact": true,
+  "source_manifest_binding_exact": true,
+  "source_manifest_sha256": "ea41009fafb55761a21ad3a115da3c7b4e73b300b79e82727eea47d4a4776f21",
+  "status": "EXACT",
+  "training_steps": 0,
+  "viewer_files_rebuilt": 17,
+  "viewer_files_rebuilt_exact": true
+}

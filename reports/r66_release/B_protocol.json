@@ -1,0 +1,45 @@
+{
+  "schema": "R66B_FIXED_240FRAME_INTRA_PRIMITIVE_RHYTHM_V1",
+  "parent_commit": "c6d4049f008d9f435dc2fc240716e3a2690e2eee",
+  "target_frames": 240,
+  "transition_budget_frames": 48,
+  "transition_regenerated": false,
+  "source_selection": "12_IDENTITY_SELECTED_FIXED48_CORES; EIGHT_UNIQUE_SOURCE_INTERVALS; CROSS_MUSIC_REPEATS_DISCLOSED",
+  "main_methods": [
+    "Uniform",
+    "E1W",
+    "Rhythm"
+  ],
+  "control_methods": [
+    "ShuffledRhythm"
+  ],
+  "source_order_and_support_unchanged": true,
+  "source_kinematic_semantics": "UNKNOWN",
+  "speed_domain": "D_TARGET_FRAME_D_SOURCE_FRAME_IN_[0.75,1.33]; INVERSE_POSITION_SPEED_RECIPROCAL",
+  "tau_rate_limits": [
+    0.75,
+    1.33
+  ],
+  "warp": "FINITE_BEAM_PCHIP_WITH_ANALYTIC_DERIVATIVE_EXTREMA_AND_DENSE_CHECK; UNIFORM_EXPLICIT_BASELINE",
+  "max_internal_anchors": 8,
+  "objective": {
+    "beat": 0.5,
+    "accent": 0.5,
+    "rate_penalty": 0.05,
+    "curvature_penalty": 0.05
+  },
+  "weights_chosen_on_results": false,
+  "shift_control": "LOCAL_EVENT_CLOCK_PLUS120_MODULO240; SAME_ALGORITHM; NOT_ARTISTICALLY_WRONG_TRUTH",
+  "eval_music_clock": "FROZEN_R64_AUDIO_ONLY_PROXIES",
+  "dynamic_metrics": "FULL_CORE_AND_BOUNDARY_SO3_AND_BODY22_FK_D1_D2_D3; RANGE_AND_ACTIVITY_REPORTED",
+  "quality": "NOT_EVALUABLE_NO_INDEPENDENT_RATINGS",
+  "human_reviewed": false,
+  "Native24": "NOT_EVALUABLE",
+  "new_independent_music": false,
+  "neural_training_steps": 0,
+  "new_planner_searches": 0,
+  "geometry_bridge_solves": 0,
+  "can_route": false,
+  "effect_before_controls": true,
+  "conclusion": "OPTIMIZED_PROXY_IS_TECHNICAL_REACHABILITY_NOT_QUALITY_EVIDENCE; CHANGED_ENDPOINT_JETS_REQUIRE_NEW_BRIDGE_VALIDATION"
+}

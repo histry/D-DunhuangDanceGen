@@ -1,0 +1,45 @@
+{
+  "all_frozen_files_rebuilt": 13,
+  "binding": {
+    "code": {
+      "__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "common.py": "72264252e382487c4bfb32facc93cbac47c66af511271c1d4882d2c11a587a71",
+      "metrics.py": "c2e5fae5d5c1823b7b7f335002bdd9d29ea9a821e08efa436d3bde0dd3033267",
+      "population_b.py": "6665e2f8b884fcaa2db1d7de34cb2968c8513e8a4e314205170a51118d00da00",
+      "protocol.json": "3570cd145e59a47ba0270347efb023866250d9cfb84f1c8601d6dd24c8db9141",
+      "roster.json": "4f250df98c6da1ff110f8d0c6c3bf2465665d08b3791cf9433a226d76032fa6b",
+      "study.py": "bffb9ced1b50463efb3194eefee54bef02d8da6e2a69a289e80ee4a51d28987b",
+      "viewer.html": "3e55ae47f377f6eab6510fb943ba7285755254510a95287583f7e5b3c410f920",
+      "viewer.py": "5e91eb21f43fcd2d586972c1042043f12d9114971468ac56c7eb02664f90dce8",
+      "warp.py": "b79201f605bc7a907d9124842eb5f27d256197120cc21fea2b2fd2082e0ac5e1"
+    },
+    "commit": "a5c325f3a71485b85d6a332ddd89e66621f5fcdb",
+    "dependencies": {
+      "src/dunhuang/contracts.py": "7aaedf151cde42b9eb70b4000309f39fb2f2eec3e2f4a3f0fdbb4bf7ff1c141e",
+      "src/dunhuang/io.py": "b5577ed27991c175db342b3b2bd9626df801158e90da2b103ea4d6fe71a1d926",
+      "src/dunhuang/planning/planner.py": "86b98f7cd9a2d757165235a7299dff97e61096e409b160bcdc7aaf56ce5e02ac",
+      "src/dunhuang/research/budget_r63/engine.py": "eaf61a98b7aef810fc9ca9a8307c1d327235998256f3daa4309c8dabcdee490a",
+      "src/dunhuang/research/budget_r63/population.py": "f54e94551fe31bbdd4c8e56352e0ce513660a0f4af94db96dfff9d201e99737e",
+      "src/dunhuang/research/complete_r36/core.py": "03f296665e48ca2fa2ef8a866baaf2b4b786afeb22f468b6faeedac7225e9901",
+      "src/dunhuang/research/complete_r36/music.py": "6b607d336a3593fe86c172eb964104ee8b696488e3469e4b386647ce6acc5f9b",
+      "src/dunhuang/research/manifold_bridge_r47/config.json": "b6f85af0569bf34577561df17e2fe9b4a03076fad4c148aeff5edf660f3c9f4b",
+      "src/dunhuang/research/music_structure_r56/music.py": "7fab45ec0aabb38f9737c98e3334d2437a5f51db8ff9fd684b688ed63b3dba79",
+      "src/dunhuang/research/music_structure_r56/protocol.json": "d33cd42903bdff19a4ac4e6729bf6b299d40aace24c067d69c8b1c3de9f49737",
+      "src/dunhuang/research/paired_event_r41/events.py": "e6bbb769f9ed37b9743113a5c0a84139300bfc2e957a1b4315c041d2e1fb3759",
+      "src/dunhuang/research/timing_r64/music.py": "0c0e8b5bfa805fe53c1d48a6a5ae23df4fc9120a46620818b1719f7f6c6e0206",
+      "src/dunhuang/research/timing_validity_r66/engine.py": "d35fd2828f32732ddb96ff3944239eab74250cd59caf30c93737c2d6c871caff",
+      "src/dunhuang/research/warp_coupling_r53/common.py": "dc94b1346ef986b0c4fab09eb090dceb08b46f3af0e807a940dcf4476cd88d1c"
+    }
+  },
+  "differences": [],
+  "geometry_bridge_solves": 0,
+  "neural_training_steps": 0,
+  "new_planner_searches": 0,
+  "receipt_sha256": "95ada12209bbc178458fdfe12a9c1dee21ec296f7fceda8c55aa0996b34363e0",
+  "scientific_outputs_exact": true,
+  "source_manifest_binding_exact": true,
+  "source_manifest_sha256": "8437db754f516a852a5486dfa849a6530ae6b9c4f9339d0171535dacd66b0777",
+  "source_rotation_interpolation_recomputed": true,
+  "status": "EXACT",
+  "warp_search_reexecuted": true
+}
