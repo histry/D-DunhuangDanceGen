@@ -3,6 +3,14 @@ import json
 import pytest
 from dunhuang.research.omni_judge_r71.prepare import METHODS, register
 from dunhuang.research.omni_judge_r71.judge import DIMS, parse
+from dunhuang.research.omni_judge_r71.summarize import normalize
+
+
+def test_order_swap_is_decoded_before_automatic_consistency_counts():
+    assert normalize('A', 'AB') == normalize('B', 'BA') == 'baseline'
+    assert normalize('B', 'AB') == normalize('A', 'BA') == 'candidate'
+    assert normalize('TIE', 'AB') == normalize('TIE', 'BA') == 'TIE'
+    assert normalize('UNSURE', 'AB') == 'UNSURE'
 
 
 def test_registered_population_keeps_missing_and_failed_G1():
