@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "files": [
+    {
+      "path": "viewer/audio/dunhuangwu2.wav",
+      "bytes": 7682170,
+      "sha256": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c",
+      "method": "REUSED_EXISTING_IDENTICAL_LOCAL_AUDIO"
+    },
+    {
+      "path": "viewer/audio/dunhuangwu3.wav",
+      "bytes": 7673810,
+      "sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f",
+      "method": "REUSED_EXISTING_IDENTICAL_LOCAL_AUDIO"
+    },
+    {
+      "path": "viewer/audio/dunhuangwu4.wav",
+      "bytes": 7682170,
+      "sha256": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33",
+      "method": "REUSED_EXISTING_IDENTICAL_LOCAL_AUDIO"
+    },
+    {
+      "path": "viewer/index.html",
+      "bytes": 3251998,
+      "sha256": "097df3ca1a552adfbd443144fec3276e7672acf6b0d1227613932a1363c6143a",
+      "method": "SFTP_WHITELIST"
+    },
+    {
+      "path": "viewer/protocol.json",
+      "bytes": 243,
+      "sha256": "e0bc9a4d78a22c9d888b9a43af754752b4a1b836fb5b857e3d9baf6e1e5a31f1",
+      "method": "SFTP_WHITELIST"
+    },
+    {
+      "path": "viewer/review_samples.json",
+      "bytes": 2626,
+      "sha256": "ae9c7b7859e3de6935de709311b44bd3d79713d3bafee0c12d8fcf51692fec30",
+      "method": "SFTP_WHITELIST"
+    }
+  ],
+  "total_bytes": 26293017
+}

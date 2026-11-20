@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "removed": [
+    {
+      "path": "C:\\Users\\li\\Documents\\敦煌舞视频生成\\outputs\\music_events_ssh_temp",
+      "absent": true
+    },
+    {
+      "path": "C:\\Users\\li\\Documents\\敦煌舞视频生成\\outputs\\music_events_stage",
+      "absent": true
+    }
+  ],
+  "temporary_http_port": 56769,
+  "temporary_http_listener_absent": true,
+  "password_environment_absent": true,
+  "original_datasets_and_scientific_outputs_preserved": true
+}

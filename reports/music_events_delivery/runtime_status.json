@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "exit_status": {
+    "main": 0,
+    "replay": 0,
+    "paired_prepare": 0,
+    "paired": 0,
+    "saved_eval": 0,
+    "verify": 0,
+    "verify_saved": 0,
+    "release": 0,
+    "release_extended": 0,
+    "controls": 0
+  },
+  "main_full_model_replayed": true,
+  "paired_models_replayed": false,
+  "independent_scalar_score_checks": 2745,
+  "independent_human_records": 0,
+  "can_route": false
+}
