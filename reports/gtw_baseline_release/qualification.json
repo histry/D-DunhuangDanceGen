@@ -1,0 +1,119 @@
+{
+  "protocol_summary": {
+    "groups": 48,
+    "proposals": 972,
+    "legal": 658,
+    "selection_status": {
+      "SELECTED": 192,
+      "NO_ELIGIBLE_CANDIDATE": 96
+    },
+    "coarse_knn_queries": 1974,
+    "full_knn_queries": 2346,
+    "actual_geometry": {
+      "check_requests": 288,
+      "actual_geometry_calls": 288,
+      "cached_geometry_reuses": 0,
+      "actual_constructed": 288,
+      "actual_screen_passed": 288
+    },
+    "distinct_source_intervals": 8,
+    "human_records": 0,
+    "phase_labels": 0,
+    "preference_prediction": "NOT_EVALUABLE",
+    "R74": "NOT_STARTED",
+    "new_training_steps": 0
+  },
+  "agreements": [
+    {
+      "protocol": "A",
+      "methods": [
+        "GTWLocal",
+        "GTWExtended"
+      ],
+      "common_executions": 32,
+      "different_selected_ids": 12,
+      "different_actual_core_hashes": 12,
+      "different_actual_clock_hashes": 12,
+      "groups_with_choice": 31,
+      "interpretation": "CHOICE_DIFFERENCE_NOT_QUALITY_GAIN"
+    },
+    {
+      "protocol": "A",
+      "methods": [
+        "GTWLocal",
+        "GTWContext"
+      ],
+      "common_executions": 32,
+      "different_selected_ids": 20,
+      "different_actual_core_hashes": 20,
+      "different_actual_clock_hashes": 20,
+      "groups_with_choice": 31,
+      "interpretation": "CHOICE_DIFFERENCE_NOT_QUALITY_GAIN"
+    },
+    {
+      "protocol": "A",
+      "methods": [
+        "GTWExtended",
+        "GTWContext"
+      ],
+      "common_executions": 32,
+      "different_selected_ids": 20,
+      "different_actual_core_hashes": 20,
+      "different_actual_clock_hashes": 20,
+      "groups_with_choice": 31,
+      "interpretation": "CHOICE_DIFFERENCE_NOT_QUALITY_GAIN"
+    },
+    {
+      "protocol": "B",
+      "methods": [
+        "GTWLocal",
+        "GTWExtended"
+      ],
+      "common_executions": 32,
+      "different_selected_ids": 17,
+      "different_actual_core_hashes": 17,
+      "different_actual_clock_hashes": 17,
+      "groups_with_choice": 31,
+      "interpretation": "CHOICE_DIFFERENCE_NOT_QUALITY_GAIN"
+    },
+    {
+      "protocol": "B",
+      "methods": [
+        "GTWLocal",
+        "GTWContext"
+      ],
+      "common_executions": 32,
+      "different_selected_ids": 23,
+      "different_actual_core_hashes": 23,
+      "different_actual_clock_hashes": 23,
+      "groups_with_choice": 31,
+      "interpretation": "CHOICE_DIFFERENCE_NOT_QUALITY_GAIN"
+    },
+    {
+      "protocol": "B",
+      "methods": [
+        "GTWExtended",
+        "GTWContext"
+      ],
+      "common_executions": 32,
+      "different_selected_ids": 23,
+      "different_actual_core_hashes": 23,
+      "different_actual_clock_hashes": 23,
+      "groups_with_choice": 31,
+      "interpretation": "CHOICE_DIFFERENCE_NOT_QUALITY_GAIN"
+    }
+  ],
+  "displayed_executions": 288,
+  "actual_screen_passed": 288,
+  "selected_strict_internal_guards_exact": true,
+  "physical_retiming_2006": "NOT_REPRODUCED_MISSING_REQUIRED_OBSERVATIONS",
+  "original_GTW_DP": "NOT_REPRODUCED_FINITE_CANDIDATE_ADAPTATION",
+  "new_source_generalization": "NOT_TESTED_ALL_SOURCE_AND_MUSIC_HISTORICALLY_EXPOSED",
+  "human_records": 0,
+  "phase_labels": 0,
+  "context_predictive_gain": "NOT_EVALUABLE",
+  "naturalness": "NOT_EVALUABLE",
+  "Native24": "NOT_EVALUABLE",
+  "new_training_steps": 0,
+  "R74": "NOT_STARTED_G1_G2_G3_NOT_ESTABLISHED"
+}

@@ -1,0 +1,308 @@
+{
+  "verified_recordings": [
+    {
+      "source_uid": "female_FeiTian",
+      "frames": 11819,
+      "fps": 30,
+      "native_sha256": "50436001fab4f0aa45610b0723cebd7ee93592f3039adc133c270902b3c9fab4",
+      "source_rotation_support": true,
+      "semantic_completeness": "UNKNOWN",
+      "independent_phase_annotations": 0
+    },
+    {
+      "source_uid": "female_lotus",
+      "frames": 6948,
+      "fps": 30,
+      "native_sha256": "5cebda88bce0ff6ecbff76890f6ea9c2af237aab62a7dc95f23bb40972af8675",
+      "source_rotation_support": true,
+      "semantic_completeness": "UNKNOWN",
+      "independent_phase_annotations": 0
+    },
+    {
+      "source_uid": "female_meditation",
+      "frames": 6114,
+      "fps": 30,
+      "native_sha256": "d38f5fb33507483d4b01e69d9e3bc5e738a1ecc2d3b88856d2ba8030a82ab3df",
+      "source_rotation_support": true,
+      "semantic_completeness": "UNKNOWN",
+      "independent_phase_annotations": 0
+    },
+    {
+      "source_uid": "male_meditation",
+      "frames": 6133,
+      "fps": 30,
+      "native_sha256": "8d6c096a31d5b90f9f1021f1e2e980aab808a4aeadef174ec23f92f1423a6737",
+      "source_rotation_support": true,
+      "semantic_completeness": "UNKNOWN",
+      "independent_phase_annotations": 0
+    },
+    {
+      "source_uid": "male_pipa_1",
+      "frames": 3833,
+      "fps": 30,
+      "native_sha256": "59f14fedc9b7c89e269a7cd5f2cf23807080d9f6f980127c4b19d9487a413788",
+      "source_rotation_support": true,
+      "semantic_completeness": "UNKNOWN",
+      "independent_phase_annotations": 0
+    },
+    {
+      "source_uid": "male_pipa_2",
+      "frames": 3439,
+      "fps": 30,
+      "native_sha256": "c3aa1daac4922b6db1423a11e7c1ad98f02178232aa623116f1b6956d546f7cc",
+      "source_rotation_support": true,
+      "semantic_completeness": "UNKNOWN",
+      "independent_phase_annotations": 0
+    },
+    {
+      "source_uid": "male_ribbon",
+      "frames": 2366,
+      "fps": 30,
+      "native_sha256": "c8900b68ae468ce8c7b745bf59af61b15ee9ab83d99a4d5f279f25e11c940b2e",
+      "source_rotation_support": true,
+      "semantic_completeness": "UNKNOWN",
+      "independent_phase_annotations": 0
+    },
+    {
+      "source_uid": "male_ribbon_FenHe",
+      "frames": 2885,
+      "fps": 30,
+      "native_sha256": "16ef0128692035c3cdc54f13530f94374aac3f06888ef37aeb1ea98b207c1d3f",
+      "source_rotation_support": true,
+      "semantic_completeness": "UNKNOWN",
+      "independent_phase_annotations": 0
+    }
+  ],
+  "total_supported_240frame_intervals": 175,
+  "proposed_25": [
+    {
+      "source_uid": "female_FeiTian",
+      "source_interval": [
+        30,
+        270
+      ],
+      "phase": "UNKNOWN",
+      "status": "SUPPORTED_CANDIDATE_NOT_NEW_INDEPENDENT_RECORDING"
+    },
+    {
+      "source_uid": "female_lotus",
+      "source_interval": [
+        30,
+        270
+      ],
+      "phase": "UNKNOWN",
+      "status": "SUPPORTED_CANDIDATE_NOT_NEW_INDEPENDENT_RECORDING"
+    },
+    {
+      "source_uid": "female_meditation",
+      "source_interval": [
+        30,
+        270
+      ],
+      "phase": "UNKNOWN",
+      "status": "SUPPORTED_CANDIDATE_NOT_NEW_INDEPENDENT_RECORDING"
+    },
+    {
+      "source_uid": "male_meditation",
+      "source_interval": [
+        30,
+        270
+      ],
+      "phase": "UNKNOWN",
+      "status": "SUPPORTED_CANDIDATE_NOT_NEW_INDEPENDENT_RECORDING"
+    },
+    {
+      "source_uid": "male_pipa_1",
+      "source_interval": [
+        30,
+        270
+      ],
+      "phase": "UNKNOWN",
+      "status": "SUPPORTED_CANDIDATE_NOT_NEW_INDEPENDENT_RECORDING"
+    },
+    {
+      "source_uid": "male_pipa_2",
+      "source_interval": [
+        30,
+        270
+      ],
+      "phase": "UNKNOWN",
+      "status": "SUPPORTED_CANDIDATE_NOT_NEW_INDEPENDENT_RECORDING"
+    },
+    {
+      "source_uid": "male_ribbon",
+      "source_interval": [
+        30,
+        270
+      ],
+      "phase": "UNKNOWN",
+      "status": "SUPPORTED_CANDIDATE_NOT_NEW_INDEPENDENT_RECORDING"
+    },
+    {
+      "source_uid": "male_ribbon_FenHe",
+      "source_interval": [
+        30,
+        270
+      ],
+      "phase": "UNKNOWN",
+      "status": "SUPPORTED_CANDIDATE_NOT_NEW_INDEPENDENT_RECORDING"
+    },
+    {
+      "source_uid": "female_FeiTian",
+      "source_interval": [
+        270,
+        510
+      ],
+      "phase": "UNKNOWN",
+      "status": "SUPPORTED_CANDIDATE_NOT_NEW_INDEPENDENT_RECORDING"
+    },
+    {
+      "source_uid": "female_lotus",
+      "source_interval": [
+        270,
+        510
+      ],
+      "phase": "UNKNOWN",
+      "status": "SUPPORTED_CANDIDATE_NOT_NEW_INDEPENDENT_RECORDING"
+    },
+    {
+      "source_uid": "female_meditation",
+      "source_interval": [
+        270,
+        510
+      ],
+      "phase": "UNKNOWN",
+      "status": "SUPPORTED_CANDIDATE_NOT_NEW_INDEPENDENT_RECORDING"
+    },
+    {
+      "source_uid": "male_meditation",
+      "source_interval": [
+        270,
+        510
+      ],
+      "phase": "UNKNOWN",
+      "status": "SUPPORTED_CANDIDATE_NOT_NEW_INDEPENDENT_RECORDING"
+    },
+    {
+      "source_uid": "male_pipa_1",
+      "source_interval": [
+        270,
+        510
+      ],
+      "phase": "UNKNOWN",
+      "status": "SUPPORTED_CANDIDATE_NOT_NEW_INDEPENDENT_RECORDING"
+    },
+    {
+      "source_uid": "male_pipa_2",
+      "source_interval": [
+        270,
+        510
+      ],
+      "phase": "UNKNOWN",
+      "status": "SUPPORTED_CANDIDATE_NOT_NEW_INDEPENDENT_RECORDING"
+    },
+    {
+      "source_uid": "male_ribbon",
+      "source_interval": [
+        270,
+        510
+      ],
+      "phase": "UNKNOWN",
+      "status": "SUPPORTED_CANDIDATE_NOT_NEW_INDEPENDENT_RECORDING"
+    },
+    {
+      "source_uid": "male_ribbon_FenHe",
+      "source_interval": [
+        270,
+        510
+      ],
+      "phase": "UNKNOWN",
+      "status": "SUPPORTED_CANDIDATE_NOT_NEW_INDEPENDENT_RECORDING"
+    },
+    {
+      "source_uid": "female_FeiTian",
+      "source_interval": [
+        510,
+        750
+      ],
+      "phase": "UNKNOWN",
+      "status": "SUPPORTED_CANDIDATE_NOT_NEW_INDEPENDENT_RECORDING"
+    },
+    {
+      "source_uid": "female_lotus",
+      "source_interval": [
+        510,
+        750
+      ],
+      "phase": "UNKNOWN",
+      "status": "SUPPORTED_CANDIDATE_NOT_NEW_INDEPENDENT_RECORDING"
+    },
+    {
+      "source_uid": "female_meditation",
+      "source_interval": [
+        510,
+        750
+      ],
+      "phase": "UNKNOWN",
+      "status": "SUPPORTED_CANDIDATE_NOT_NEW_INDEPENDENT_RECORDING"
+    },
+    {
+      "source_uid": "male_meditation",
+      "source_interval": [
+        510,
+        750
+      ],
+      "phase": "UNKNOWN",
+      "status": "SUPPORTED_CANDIDATE_NOT_NEW_INDEPENDENT_RECORDING"
+    },
+    {
+      "source_uid": "male_pipa_1",
+      "source_interval": [
+        510,
+        750
+      ],
+      "phase": "UNKNOWN",
+      "status": "SUPPORTED_CANDIDATE_NOT_NEW_INDEPENDENT_RECORDING"
+    },
+    {
+      "source_uid": "male_pipa_2",
+      "source_interval": [
+        510,
+        750
+      ],
+      "phase": "UNKNOWN",
+      "status": "SUPPORTED_CANDIDATE_NOT_NEW_INDEPENDENT_RECORDING"
+    },
+    {
+      "source_uid": "male_ribbon",
+      "source_interval": [
+        510,
+        750
+      ],
+      "phase": "UNKNOWN",
+      "status": "SUPPORTED_CANDIDATE_NOT_NEW_INDEPENDENT_RECORDING"
+    },
+    {
+      "source_uid": "male_ribbon_FenHe",
+      "source_interval": [
+        510,
+        750
+      ],
+      "phase": "UNKNOWN",
+      "status": "SUPPORTED_CANDIDATE_NOT_NEW_INDEPENDENT_RECORDING"
+    },
+    {
+      "source_uid": "female_FeiTian",
+      "source_interval": [
+        750,
+        990
+      ],
+      "phase": "UNKNOWN",
+      "status": "SUPPORTED_CANDIDATE_NOT_NEW_INDEPENDENT_RECORDING"
+    }
+  ],
+  "requested_original72_status": "NOT_ASSUMED_AVAILABLE_OR_INDEPENDENT; ONLY_HASH_VERIFIED_LIBRARY_COUNTED",
+  "phase_agreement": "NOT_EVALUABLE",
+  "human_records": 0,
+  "R74": "NOT_STARTED"
+}

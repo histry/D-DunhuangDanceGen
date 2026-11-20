@@ -1,0 +1,24 @@
+{
+  "groups": 48,
+  "proposals": 972,
+  "legal": 658,
+  "selection_status": {
+    "SELECTED": 192,
+    "NO_ELIGIBLE_CANDIDATE": 96
+  },
+  "coarse_knn_queries": 1974,
+  "full_knn_queries": 2346,
+  "actual_geometry": {
+    "check_requests": 288,
+    "actual_geometry_calls": 288,
+    "cached_geometry_reuses": 0,
+    "actual_constructed": 288,
+    "actual_screen_passed": 288
+  },
+  "distinct_source_intervals": 8,
+  "human_records": 0,
+  "phase_labels": 0,
+  "preference_prediction": "NOT_EVALUABLE",
+  "R74": "NOT_STARTED",
+  "new_training_steps": 0
+}
