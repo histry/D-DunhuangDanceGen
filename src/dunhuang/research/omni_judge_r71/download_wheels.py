@@ -22,7 +22,7 @@ def main():
         response = requests.get(index, timeout=(15,30))
         response.raise_for_status()
         links = [urljoin(index, html.unescape(u)) for u in re.findall('href="([^"]+)"', response.text)]
-        urls = [u for u in links if f'-{version}-' in u and 'x86_64.whl' in u and ('cp310-cp310' in u if package=='triton' else 'py3-none' in u)]
+        urls = [u for u in links if f'-{version}-' in u and 'x86_64.whl' in u and ('cp310-cp310' in u and 'manylinux2014' in u if package=='triton' else 'py3-none' in u)]
         assert len(urls) == 1, (package, urls)
         url = urls[0]
         expected = urlsplit(url).fragment.removeprefix('sha256=')
@@ -63,3 +63,4 @@ def main():
 
 
 if __name__=='__main__': main()
+
