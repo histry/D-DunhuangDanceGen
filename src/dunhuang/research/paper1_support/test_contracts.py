@@ -1,8 +1,13 @@
 import unittest
 from .contracts import MusicEvidence,SourcePrimitive,ExecutionCandidate
-from .study import clocks
+from .study import clocks,duplicate_clock
 from dunhuang.research.warp_coupling_r53.warp_lattice import validate
 class Contracts(unittest.TestCase):
+    def test_roundoff_is_not_a_new_execution(self):
+        import numpy as np
+        q=np.linspace(100,382,240)
+        self.assertTrue(duplicate_clock(q+1e-12,{'base':(q,None)}))
+        self.assertFalse(duplicate_clock(q+1e-5,{'base':(q,None)}))
     def test_reject_clock_and_music_mismatch(self):
         p=SourcePrimitive('e','s',(0,240),'x')
         with self.assertRaises(ValueError):ExecutionCandidate(p,MusicEvidence('x',(0,239)),240,((0,0),(239,239))).validate()

@@ -82,6 +82,10 @@ def clocks(u,hold,T):
     # Exactly retain the unmodified clock even if floating knot evaluation differs.
     uniform=np.array([[a,0],[end,T-1]],float);return [uniform]+paths
 
+def duplicate_clock(q,arrays):
+    # Sub-nanoframe interpolation roundoff is not an independent execution.
+    return any(np.allclose(q,old[0],atol=1e-9,rtol=0) for old in arrays.values())
+
 def evaluate_pool(ctx,u,h,T,music):
     s=u['source_uid'];a,b=u['source_interval'];R=ctx['lib'].rotations[s];baseq=np.linspace(a,b-1,T);baseR=rotation_sample(R,baseq);scorer=ReferenceCost(R[max(0,a-30):min(len(R),b+30)],ctx['J'],ctx['parents']);rows=[];arrays={}
     for w in clocks(u,h,T):
@@ -89,7 +93,7 @@ def evaluate_pool(ctx,u,h,T,music):
         # Guard restoration is roundoff only; sampled slopes still satisfy inverse rate bounds.
         if not ((np.diff(q)>=1/1.33-1e-8)&(np.diff(q)<=1/.75+1e-8)).all():raise ValueError('Sampled inverse clock rate failed')
         k=array_hash(q)
-        if k in arrays:continue
+        if duplicate_clock(q,arrays):continue
         V=rotation_sample(R,q);assert boundary_unchanged(q,baseq,V,baseR)
         primitive=SourcePrimitive(u['unit_uid'],s,tuple([a,b]),u['source_sha256']);candidate=ExecutionCandidate(primitive,music,T,tuple(map(tuple,w.tolist()))).validate()
         cost=scorer.score(V,only='GTWLocal')[0]['GTWLocal'];holds=metrics.occupancy(q,ctx['natural'][s]['regions']['body']['low_runs'],[a,b]);hold_seconds=sum(x['target_seconds'] for x in holds)
@@ -119,7 +123,7 @@ def run(phase='main',dest=None):
             # Alternative receives the same finite timing mechanism, using its first fully internal low run if present.
             if origin=='alternative':
                 a,b=u['source_interval'];h=next((v for v in ctx['natural'][u['source_uid']]['regions']['body']['low_runs'] if a+5<v['cells_half_open'][0]<v['cells_half_open'][1]<b-5),None)
-            rows,arrays,base=evaluate_pool(ctx,u,h,T,music);pools.append(dict(case_key=c['key'],source=origin,rows=rows));best=min(rows,key=lambda v:(v['GTWLocal'],v['max_clock_shift_frames'],v['key']));chosen=[('Uniform',next(v for v in rows if v['key']==base)),('GTWLocal',best)]
+            rows,arrays,base=evaluate_pool(ctx,u,h,T,music);pools.append(dict(case_key=c['key'],source=origin,rows=rows));minimum=min(v['GTWLocal'] for v in rows);best=min([v for v in rows if v['GTWLocal']<=minimum+1e-10],key=lambda v:(v['max_clock_shift_frames'],v['key']));chosen=[('Uniform',next(v for v in rows if v['key']==base)),('GTWLocal',best)]
             if phase=='controls':chosen.append(('MinHoldDiagnostic',min(rows,key=lambda v:(v['mapped_low_seconds'],v['GTWLocal'],v['key']))))
             for label,v in chosen:
                 q,R=arrays[v['key']];name=c['key']+'__'+origin+'_'+label;full,connection=connect(ctx,R,c['neighbor'],T);saved[name+'__q']=q;saved[name+'__R']=R
