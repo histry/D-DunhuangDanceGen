@@ -83,7 +83,7 @@ def run(destination=None):
    for name,value in dict(R=v['R'],q=v['q'],**geo).items():arrays[c['key']+'__'+method+'__'+name]=value
   print('HOLD_COMMON_POOL',ci+1,len(cases),len(bank),flush=True)
  music.close();net.check();save_arrays(out/'arrays.npz',arrays);write(out/'records.json',rows);write(out/'candidates.json',candidates);write(out/'readout.json',proofs)
- write(out/'registration.json',dict(audit_manifest_sha256=sha(ROOT/'audit/manifest.json'),protocol=CFG,binding=binding(),controls_code_sha256=sha(Path(__file__)),encoder=net.binding,weights_before=net.before,weights_after=net.check(),reference_scope='SAME_FULL_SOURCE_INTERVAL_PLUS_AVAILABLE30_FRAMES',music_quality='NOT_EVALUABLE',can_route=False))
+ write(out/'registration.json',dict(audit_manifest_sha256=sha(ROOT/'audit/manifest.json'),protocol=CFG,binding=binding(),controls_code_sha256=sha(Path(__file__)),encoder=net.binding,weights_before=net.before,weights_after=net.check(),reference_scope='SAME_FULL_SOURCE_INTERVAL_PLUS_AVAILABLE30_FRAMES',alignment_task='HOLD_SELECTION_NO_FIXED_ACTUAL_PEAK_STRATUM_NOT_ORIGINAL_GTW_PROTOCOL_A',music_quality='NOT_EVALUABLE',can_route=False))
  write(out/'summary.json',dict(cases=len(cases),positions=len(rows),actual=sum(r['status']=='EXECUTED' for r in rows),geometry=ctx['counters'],candidates=len(candidates),unique_motion_profiles=len(scorecache),distinct_encoded_motions=len(tokencache),training_steps=0,optimizer_calls=0,human_records=0,preference='NOT_EVALUABLE',R74='NOT_STARTED',can_route=False))
  write(out/'manifest.json',dict(files={p.name:sha(p) for p in sorted(out.iterdir()) if p.is_file()}))
 
