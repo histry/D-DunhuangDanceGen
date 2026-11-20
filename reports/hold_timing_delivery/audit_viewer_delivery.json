@@ -1,0 +1,60 @@
+{
+  "status": "PASS",
+  "files": [
+    {
+      "path": "viewer/audio/36ce6f03d7a8_1536_2064.wav",
+      "bytes": 776238,
+      "sha256": "f3b181e0b6bc695f92abbeb6b46f5c424993d29b12464212310f2c6c13ed22c5",
+      "method": "EXISTING_IDENTICAL_LOCAL_AUDIO"
+    },
+    {
+      "path": "viewer/audio/cd8f37bb78c3_1390_1918.wav",
+      "bytes": 776238,
+      "sha256": "ddb54b8c5b9dd90616c9654cc949d1895542e341ccc2d438dd7f11820419ac94",
+      "method": "EXISTING_IDENTICAL_LOCAL_AUDIO"
+    },
+    {
+      "path": "viewer/audio/cd8f37bb78c3_1534_2062.wav",
+      "bytes": 776238,
+      "sha256": "3e0f1793b8e608b99e7604e6ec831d7e2a54230dd90951acf4958c06ff76f854",
+      "method": "EXISTING_IDENTICAL_LOCAL_AUDIO"
+    },
+    {
+      "path": "viewer/audio/cd8f37bb78c3_1535_2063.wav",
+      "bytes": 776238,
+      "sha256": "3fa25f701034e694b2a090466df24c96cd18cb788ad6cca1e1b24b9dc95d0bee",
+      "method": "EXISTING_IDENTICAL_LOCAL_AUDIO"
+    },
+    {
+      "path": "viewer/audio/d1dc8fbd2897_1392_1920.wav",
+      "bytes": 776238,
+      "sha256": "6c59779c74ac274aca2969590f80212e0cbbf6502653dc1f042b65e8afdae16d",
+      "method": "EXISTING_IDENTICAL_LOCAL_AUDIO"
+    },
+    {
+      "path": "viewer/audio/d1dc8fbd2897_1536_2064.wav",
+      "bytes": 776238,
+      "sha256": "c0244553089c07f78ad266ad1c680dd8be3d5ed407bb043f05496b3308511014",
+      "method": "EXISTING_IDENTICAL_LOCAL_AUDIO"
+    },
+    {
+      "path": "viewer/index.html",
+      "bytes": 33095397,
+      "sha256": "deda2fa6ae950cdadf45a8edff553fdfe01699a137f3c1b63f173e593fcaafc4",
+      "method": "SFTP_WHITELIST"
+    },
+    {
+      "path": "viewer/protocol.json",
+      "bytes": 460,
+      "sha256": "954de025b300b95d7d1f95c5af675583bf5293027e301c2df6a9284c150b33c7",
+      "method": "SFTP_WHITELIST"
+    },
+    {
+      "path": "viewer/source.html",
+      "bytes": 24553331,
+      "sha256": "ffac0d70836fcbfb735b30009f423c0120495cf532765e51ede87c18c99c6baf",
+      "method": "SFTP_WHITELIST"
+    }
+  ],
+  "total_bytes": 62306616
+}

@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "removed": [
+    {
+      "path": "C:\\Users\\li\\Documents\\敦煌舞视频生成\\outputs\\hold_timing_ssh_temp",
+      "absent": true
+    },
+    {
+      "path": "C:\\Users\\li\\Documents\\敦煌舞视频生成\\outputs\\hold_timing_stage",
+      "absent": true
+    }
+  ],
+  "temporary_http_port": 56770,
+  "temporary_http_listener_absent": true,
+  "password_environment_absent": true,
+  "server_temporary_ssh_files_created": false,
+  "scientific_archives_and_original_datasets_preserved": true
+}

@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "publication_commit": "11c9162db11e234ae43ac070e6dddca7ab36128b",
+  "public_files_verified": 20,
+  "public_manifest_sha256": "a1ee11c53a214530ab128f3da3012cd010c29b9fe3392cc2e755a7ef61d5a16c",
+  "report_sha256": "aed59adee105ff80c14c2f1631fbc3efefbc6b0925972f6f610f1b1b8f8e5e89",
+  "differences": [],
+  "full_scientific_replay": {
+    "audit": {
+      "exact": true,
+      "differences": [],
+      "manifest_sha256": "7bb08a0c606b83764eec2aed91063376bcb2c448beab204989e0a07be9381b80"
+    },
+    "controls": {
+      "exact": true,
+      "differences": [],
+      "manifest_sha256": "3af8de66bc4e170705b5d73169d75521b6c0dd86883fcb86a0b54ffcd8a21a65"
+    }
+  },
+  "auxiliary_inputs_post_run_verified": true
+}

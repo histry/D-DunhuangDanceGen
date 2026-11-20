@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "fresh_process": true,
+  "verification_timing": "POST_RUN",
+  "checks": [
+    {
+      "input": "R69",
+      "manifest_sha256": "57ea35f5d7bd1d5d63da065e46e59951698d78b05c844de9aae711f890b08abe",
+      "files": 25,
+      "differences": []
+    },
+    {
+      "input": "R73",
+      "manifest_sha256": "05f3cf963c8d92f49e2da3020ac68c484a28da6777781527399ff448fd8f0192",
+      "files": 6,
+      "differences": []
+    },
+    {
+      "input": "GTW",
+      "manifest_sha256": "9f9419779c1a9335b9c55f6536db691e1873a95be17d4d0f2a3861300785454c",
+      "files": 6,
+      "differences": []
+    },
+    {
+      "input": "MusicEvents",
+      "manifest_sha256": "ccc3ace99ac5313135c95f84c9a732f8f50312c00036900115118ddab26dbf52",
+      "files": 26,
+      "differences": []
+    }
+  ],
+  "source_or_model_mutated": false
+}
