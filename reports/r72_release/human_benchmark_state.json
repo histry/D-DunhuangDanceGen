@@ -1,0 +1,17 @@
+{
+  "MISSING": "NO_RECORD_NOT_ZERO",
+  "TIE": "EQUAL_RATINGS_OR_PAIRWISE_TIE",
+  "UNSURE": "EXPLICIT_ABSTENTION",
+  "existing_importer": "dunhuang.research.retiming_baselines_r69.reviews",
+  "expected_reviewers": [
+    4,
+    6
+  ],
+  "human_reviewed": false,
+  "independent_quality": "NOT_EVALUABLE",
+  "minimum_independent_people_per_comparison": 2,
+  "music_tracks": 3,
+  "real_records": 0,
+  "source_intervals": 8,
+  "state": "MISSING"
+}

@@ -1,0 +1,23 @@
+{
+  "Native24": "NOT_EVALUABLE",
+  "R74": "NOT_STARTED",
+  "actual_G1_requests": {
+    "actual_constructed": 87,
+    "actual_geometry_calls": 87,
+    "actual_screen_passed": 87,
+    "cached_geometry_reuses": 0,
+    "check_requests": 87
+  },
+  "groups": 48,
+  "human_preference": "NOT_EVALUABLE",
+  "human_records": 0,
+  "legal_proposals": 658,
+  "new_training_steps": 0,
+  "proposed": 972,
+  "semantic_phase_truth": "UNKNOWN",
+  "status_counts": {
+    "MATCHED_HIGH_LOW": 10,
+    "NO_EVENT": 12,
+    "NO_MATCH": 26
+  }
+}

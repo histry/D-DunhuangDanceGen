@@ -1,0 +1,10 @@
+{
+  "test_command": "python -m pytest tests/test_compensation_r73.py tests/test_judge_repair_r72.py -q",
+  "credentials_saved": false,
+  "scientific_binding": "reports/r73_release/controls/manifest.json",
+  "R73_independent_replay_head": "4fbdc51",
+  "R73_serialization_fix_commit": "3b2d0f8ff7872ace697299d2f1c82801387b53a4",
+  "tests_passed": 6,
+  "R72_code_commit": "e24659c3fcf281039dc1d518164a79302a7a8a19",
+  "R74": "NOT_STARTED"
+}

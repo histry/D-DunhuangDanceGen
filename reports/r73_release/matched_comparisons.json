@@ -1,0 +1,3322 @@
+[
+  {
+    "High": {
+      "activity": 1.0090642551461164,
+      "actual_peak": 110,
+      "core": {
+        "FK": {
+          "D1": {
+            "count": 239,
+            "maximum": 0.4680878783110538,
+            "mean": 0.14078593298401398,
+            "minimum": 0.006378591777713287,
+            "p50": 0.10962999492095932,
+            "p95": 0.32472154421936344
+          },
+          "D2": {
+            "count": 238,
+            "maximum": 10.746637366409502,
+            "mean": 1.301261193042645,
+            "minimum": 0.04836257256673682,
+            "p50": 0.9985418737628383,
+            "p95": 2.7765398681900186
+          },
+          "D3": {
+            "count": 237,
+            "maximum": 526.6569376438757,
+            "mean": 41.97888702981225,
+            "minimum": 0.6169699396748219,
+            "p50": 32.44332431272592,
+            "p95": 105.95152183440035
+          }
+        },
+        "SO3": {
+          "D1": {
+            "count": 239,
+            "maximum": 2.010810065106259,
+            "mean": 0.3721803479526306,
+            "minimum": 0.016248960917042525,
+            "p50": 0.26678651339873166,
+            "p95": 1.016603018803419
+          },
+          "D2": {
+            "count": 238,
+            "maximum": 47.98822497276559,
+            "mean": 5.959636792060336,
+            "minimum": 0.11596596383933887,
+            "p50": 3.0949135704904833,
+            "p95": 23.212999889308964
+          },
+          "D3": {
+            "count": 237,
+            "maximum": 2412.240882557708,
+            "mean": 243.5552342908719,
+            "minimum": 3.1224144004641334,
+            "p50": 127.51885239732324,
+            "p95": 957.8817325719725
+          }
+        },
+        "derivative_scope": "SO3_BODY_RATE_COVARIANT_SUCCESSIVE_DIFFERENCES; FK_ACTUAL_FINITE_DIFFERENCES",
+        "endpoint_mean_joint_speed_radps": {
+          "left": 0.04858312551415513,
+          "right": 0.026613799812972287
+        },
+        "frames": 240,
+        "region_scope": "WHOLE_SINGLE_CORE; NO_REAL_OUTSIDE_CONTEXT_OR_BRIDGE_CERTIFICATE",
+        "units": {
+          "FK_D1": "m/s",
+          "FK_D2": "m/s^2",
+          "FK_D3": "m/s^3",
+          "SO3_D1": "rad/s",
+          "SO3_D2": "rad/s^2",
+          "SO3_D3": "rad/s^3"
+        }
+      },
+      "dose": {
+        "postmap_derivative_energy": {
+          "1": 1.7800381436774677,
+          "2": 0.006374792250070017,
+          "3": 6.439184090983832e-05
+        },
+        "source_shift_max": 7.125,
+        "source_shift_rms": 3.932467347978149,
+        "target_offset_rms": 3.9768561220171046,
+        "unchanged_edge_frames": 4
+      },
+      "pair": {
+        "FK": {
+          "D1": {
+            "count": 527,
+            "maximum": 0.4680878783110538,
+            "mean": 0.08335636326496709,
+            "minimum": 0.0036117822324835272,
+            "p50": 0.022769392287234666,
+            "p95": 0.29861297388896607
+          },
+          "D2": {
+            "count": 526,
+            "maximum": 10.746637366409502,
+            "mean": 0.7250418448966376,
+            "minimum": 0.04836257256673682,
+            "p50": 0.2740201355139885,
+            "p95": 2.5102974012702766
+          },
+          "D3": {
+            "count": 525,
+            "maximum": 526.6569376438757,
+            "mean": 22.60409815497374,
+            "minimum": 0.16945904600865044,
+            "p50": 9.15238592542063,
+            "p95": 78.66954561852876
+          }
+        },
+        "SO3": {
+          "D1": {
+            "count": 527,
+            "maximum": 2.010810065106259,
+            "mean": 0.20570604210172852,
+            "minimum": 0.009900937139671882,
+            "p50": 0.04531026311121712,
+            "p95": 0.7678079432861484
+          },
+          "D2": {
+            "count": 526,
+            "maximum": 47.98822497276559,
+            "mean": 2.9856240358708686,
+            "minimum": 5.182296493474688e-07,
+            "p50": 0.6669743571338438,
+            "p95": 13.474168675907034
+          },
+          "D3": {
+            "count": 525,
+            "maximum": 2412.240882557708,
+            "mean": 118.81284418188449,
+            "minimum": 3.3778620969985724e-07,
+            "p50": 24.597178206284273,
+            "p95": 532.3135030031855
+          }
+        },
+        "can_route": false,
+        "derivative_scope": "SO3_BODY_RATE_COVARIANT_SUCCESSIVE_DIFFERENCES; FK_ACTUAL_FINITE_DIFFERENCES",
+        "endpoint_mean_joint_speed_radps": {
+          "left": 0.04858312551415513,
+          "right": 0.03264944329509308
+        },
+        "frames": 528,
+        "region_scope": "WHOLE_SINGLE_CORE; NO_REAL_OUTSIDE_CONTEXT_OR_BRIDGE_CERTIFICATE",
+        "scope": "ACTUAL_FULL528_BODY22_PAIR_ALL_STENCILS_NOT_NATIVE24",
+        "units": {
+          "FK_D1": "m/s",
+          "FK_D2": "m/s^2",
+          "FK_D3": "m/s^3",
+          "SO3_D1": "rad/s",
+          "SO3_D2": "rad/s^2",
+          "SO3_D3": "rad/s^3"
+        }
+      }
+    },
+    "Low": {
+      "activity": 0.47641443757230406,
+      "actual_peak": 110,
+      "core": {
+        "FK": {
+          "D1": {
+            "count": 239,
+            "maximum": 0.4680878783110538,
+            "mean": 0.14103526283107568,
+            "minimum": 0.0072370738858407975,
+            "p50": 0.09606870400814237,
+            "p95": 0.37881751740897696
+          },
+          "D2": {
+            "count": 238,
+            "maximum": 10.746637366409502,
+            "mean": 1.3587826453330836,
+            "minimum": 0.04173005068384961,
+            "p50": 0.865795920484596,
+            "p95": 3.635195397284692
+          },
+          "D3": {
+            "count": 237,
+            "maximum": 526.6580050890151,
+            "mean": 44.847661362892126,
+            "minimum": 0.6169699396748219,
+            "p50": 31.512114886709625,
+            "p95": 123.9947754843372
+          }
+        },
+        "SO3": {
+          "D1": {
+            "count": 239,
+            "maximum": 2.5266785400540757,
+            "mean": 0.3767960118319487,
+            "minimum": 0.016819462431522998,
+            "p50": 0.24282435346994496,
+            "p95": 0.991689336740406
+          },
+          "D2": {
+            "count": 238,
+            "maximum": 66.64894033916555,
+            "mean": 6.51810918931713,
+            "minimum": 0.11596596383933887,
+            "p50": 2.7805241394700593,
+            "p95": 24.017127496812474
+          },
+          "D3": {
+            "count": 237,
+            "maximum": 3672.066731844665,
+            "mean": 283.09199479867914,
+            "minimum": 3.1224144004641334,
+            "p50": 111.83426176190915,
+            "p95": 1140.3060381158696
+          }
+        },
+        "derivative_scope": "SO3_BODY_RATE_COVARIANT_SUCCESSIVE_DIFFERENCES; FK_ACTUAL_FINITE_DIFFERENCES",
+        "endpoint_mean_joint_speed_radps": {
+          "left": 0.04858312551415513,
+          "right": 0.026613799812972287
+        },
+        "frames": 240,
+        "region_scope": "WHOLE_SINGLE_CORE; NO_REAL_OUTSIDE_CONTEXT_OR_BRIDGE_CERTIFICATE",
+        "units": {
+          "FK_D1": "m/s",
+          "FK_D2": "m/s^2",
+          "FK_D3": "m/s^3",
+          "SO3_D1": "rad/s",
+          "SO3_D2": "rad/s^2",
+          "SO3_D3": "rad/s^3"
+        }
+      },
+      "dose": {
+        "postmap_derivative_energy": {
+          "1": 1.7800381436774677,
+          "2": 0.006374792250070017,
+          "3": 6.439184090983832e-05
+        },
+        "source_shift_max": 7.125,
+        "source_shift_rms": 3.904809607617878,
+        "target_offset_rms": 4.033036649377851,
+        "unchanged_edge_frames": 4
+      },
+      "pair": {
+        "FK": {
+          "D1": {
+            "count": 527,
+            "maximum": 0.4680878783110538,
+            "mean": 0.08346943695272374,
+            "minimum": 0.0036117822324835272,
+            "p50": 0.023139291868151887,
+            "p95": 0.3125517004241367
+          },
+          "D2": {
+            "count": 526,
+            "maximum": 10.746637366409502,
+            "mean": 0.7510686617124633,
+            "minimum": 0.04173005068384961,
+            "p50": 0.26171706610436946,
+            "p95": 3.1039018285881648
+          },
+          "D3": {
+            "count": 525,
+            "maximum": 526.6580050890151,
+            "mean": 23.899144853906943,
+            "minimum": 0.16945904600865044,
+            "p50": 8.484872943437658,
+            "p95": 90.08485167337092
+          }
+        },
+        "SO3": {
+          "D1": {
+            "count": 527,
+            "maximum": 2.5266785400540757,
+            "mean": 0.20779929384206444,
+            "minimum": 0.009900937139671882,
+            "p50": 0.047739361679027176,
+            "p95": 0.8065526124549635
+          },
+          "D2": {
+            "count": 526,
+            "maximum": 66.64894033916555,
+            "mean": 3.2383168696106353,
+            "minimum": 5.182296493474688e-07,
+            "p50": 0.6716631189116881,
+            "p95": 15.389754209023495
+          },
+          "D3": {
+            "count": 525,
+            "maximum": 3672.066731844665,
+            "mean": 136.66086749683745,
+            "minimum": 3.3778620969985724e-07,
+            "p50": 23.322496060136395,
+            "p95": 630.1147973257781
+          }
+        },
+        "can_route": false,
+        "derivative_scope": "SO3_BODY_RATE_COVARIANT_SUCCESSIVE_DIFFERENCES; FK_ACTUAL_FINITE_DIFFERENCES",
+        "endpoint_mean_joint_speed_radps": {
+          "left": 0.04858312551415513,
+          "right": 0.03264944329509308
+        },
+        "frames": 528,
+        "region_scope": "WHOLE_SINGLE_CORE; NO_REAL_OUTSIDE_CONTEXT_OR_BRIDGE_CERTIFICATE",
+        "scope": "ACTUAL_FULL528_BODY22_PAIR_ALL_STENCILS_NOT_NATIVE24",
+        "units": {
+          "FK_D1": "m/s",
+          "FK_D2": "m/s^2",
+          "FK_D3": "m/s^3",
+          "SO3_D1": "rad/s",
+          "SO3_D2": "rad/s^2",
+          "SO3_D3": "rad/s^3"
+        }
+      }
+    },
+    "case_key": "r66b02_70c9ebdda89155ec",
+    "delta": -6,
+    "match": {
+      "budget_scope": "RMS_AND_MAX_CLOCK_SHIFT_AND_FIRST_RATE_ENERGY; CURVATURE_REPORTED_SEPARATELY",
+      "curvature_energy_gap": 0.0,
+      "eligible": true,
+      "gaps": {
+        "rate_energy": 0.0,
+        "source_shift_max": 0.0,
+        "source_shift_rms": 0.0070331773700526585,
+        "target_offset_rms": 0.013930081039410616
+      },
+      "peak_gap_frames": 0,
+      "phase_semantics": "UNKNOWN"
+    },
+    "source_interval": [
+      2551,
+      2789
+    ],
+    "source_uid": "female_meditation"
+  },
+  {
+    "High": {
+      "activity": 1.0090642551461164,
+      "actual_peak": 119,
+      "core": {
+        "FK": {
+          "D1": {
+            "count": 239,
+            "maximum": 0.471408252921172,
+            "mean": 0.14072404142401207,
+            "minimum": 0.006378591777713287,
+            "p50": 0.09858903673892218,
+            "p95": 0.40610478184747995
+          },
+          "D2": {
+            "count": 238,
+            "maximum": 10.746637366409502,
+            "mean": 1.3865952522556595,
+            "minimum": 0.042681880257202015,
+            "p50": 0.8945672885950889,
+            "p95": 4.071073382491661
+          },
+          "D3": {
+            "count": 237,
+            "maximum": 526.6585387785752,
+            "mean": 43.568654135541955,
+            "minimum": 0.6056394762103032,
+            "p50": 30.71096903690627,
+            "p95": 107.24328596723576
+          }
+        },
+        "SO3": {
+          "D1": {
+            "count": 239,
+            "maximum": 2.087059849500242,
+            "mean": 0.3710674624050487,
+            "minimum": 0.016248960917042525,
+            "p50": 0.21772914014598962,
+            "p95": 1.0653704427921888
+          },
+          "D2": {
+            "count": 238,
+            "maximum": 40.97462684260248,
+            "mean": 6.1285779902152395,
+            "minimum": 0.11596596383933887,
+            "p50": 2.8226283162756136,
+            "p95": 23.555421654309537
+          },
+          "D3": {
+            "count": 237,
+            "maximum": 2065.9632376004683,
+            "mean": 254.14918712029643,
+            "minimum": 2.075548072184423,
+            "p50": 102.55164365816975,
+            "p95": 1048.2796553037817
+          }
+        },
+        "derivative_scope": "SO3_BODY_RATE_COVARIANT_SUCCESSIVE_DIFFERENCES; FK_ACTUAL_FINITE_DIFFERENCES",
+        "endpoint_mean_joint_speed_radps": {
+          "left": 0.04858312551415513,
+          "right": 0.026613799812972287
+        },
+        "frames": 240,
+        "region_scope": "WHOLE_SINGLE_CORE; NO_REAL_OUTSIDE_CONTEXT_OR_BRIDGE_CERTIFICATE",
+        "units": {
+          "FK_D1": "m/s",
+          "FK_D2": "m/s^2",
+          "FK_D3": "m/s^3",
+          "SO3_D1": "rad/s",
+          "SO3_D2": "rad/s^2",
+          "SO3_D3": "rad/s^3"
+        }
+      },
+      "dose": {
+        "postmap_derivative_energy": {
+          "1": 0.4450095359193669,
+          "2": 0.0015936980625175044,
+          "3": 1.609796022745958e-05
+        },
+        "source_shift_max": 3.5625,
+        "source_shift_rms": 1.970360917441373,
+        "target_offset_rms": 1.9884280610085523,
+        "unchanged_edge_frames": 4
+      },
+      "pair": {
+        "FK": {
+          "D1": {
+            "count": 527,
+            "maximum": 0.471408252921172,
+            "mean": 0.08332829479657916,
+            "minimum": 0.0036117822324835272,
+            "p50": 0.022417083114902453,
+            "p95": 0.33785162559841264
+          },
+          "D2": {
+            "count": 526,
+            "maximum": 10.746637366409502,
+            "mean": 0.7636530732097506,
+            "minimum": 0.042681880257202015,
+            "p50": 0.2587794488809875,
+            "p95": 3.1363742810982997
+          },
+          "D3": {
+            "count": 525,
+            "maximum": 526.6585387785752,
+            "mean": 23.321764448417444,
+            "minimum": 0.16945904600865044,
+            "p50": 8.578756764178397,
+            "p95": 83.70081954937702
+          }
+        },
+        "SO3": {
+          "D1": {
+            "count": 527,
+            "maximum": 2.087059849500242,
+            "mean": 0.20520133689134507,
+            "minimum": 0.009900937139671882,
+            "p50": 0.04513344084601953,
+            "p95": 0.8224387773306708
+          },
+          "D2": {
+            "count": 526,
+            "maximum": 40.97462684260248,
+            "mean": 3.0620651103211878,
+            "minimum": 5.182296493474688e-07,
+            "p50": 0.646357761305762,
+            "p95": 15.230413563679338
+          },
+          "D3": {
+            "count": 525,
+            "maximum": 2065.9632376004683,
+            "mean": 123.59525717345328,
+            "minimum": 3.3778620969985724e-07,
+            "p50": 23.002079700041428,
+            "p95": 681.8179730926722
+          }
+        },
+        "can_route": false,
+        "derivative_scope": "SO3_BODY_RATE_COVARIANT_SUCCESSIVE_DIFFERENCES; FK_ACTUAL_FINITE_DIFFERENCES",
+        "endpoint_mean_joint_speed_radps": {
+          "left": 0.04858312551415513,
+          "right": 0.03264944329509308
+        },
+        "frames": 528,
+        "region_scope": "WHOLE_SINGLE_CORE; NO_REAL_OUTSIDE_CONTEXT_OR_BRIDGE_CERTIFICATE",
+        "scope": "ACTUAL_FULL528_BODY22_PAIR_ALL_STENCILS_NOT_NATIVE24",
+        "units": {
+          "FK_D1": "m/s",
+          "FK_D2": "m/s^2",
+          "FK_D3": "m/s^3",
+          "SO3_D1": "rad/s",
+          "SO3_D2": "rad/s^2",
+          "SO3_D3": "rad/s^3"
+        }
+      }
+    },
+    "Low": {
+      "activity": 0.47641443757230406,
+      "actual_peak": 119,
+      "core": {
+        "FK": {
+          "D1": {
+            "count": 239,
+            "maximum": 0.4680878783110538,
+            "mean": 0.1410347393358903,
+            "minimum": 0.005533380175459502,
+            "p50": 0.09821367884305755,
+            "p95": 0.37882292848240523
+          },
+          "D2": {
+            "count": 238,
+            "maximum": 10.746637366409502,
+            "mean": 1.3679696859834318,
+            "minimum": 0.04836257256673682,
+            "p50": 0.9094345775835475,
+            "p95": 3.6031391390441008
+          },
+          "D3": {
+            "count": 237,
+            "maximum": 526.6580050890151,
+            "mean": 44.7174783930832,
+            "minimum": 0.6169699396748219,
+            "p50": 29.325653352656797,
+            "p95": 122.1741755155289
+          }
+        },
+        "SO3": {
+          "D1": {
+            "count": 239,
+            "maximum": 2.5266785400540757,
+            "mean": 0.3765726614752155,
+            "minimum": 0.01409021309566231,
+            "p50": 0.2309301501660158,
+            "p95": 0.9810638880205579
+          },
+          "D2": {
+            "count": 238,
+            "maximum": 66.64894033916555,
+            "mean": 6.60636557749875,
+            "minimum": 0.11596596383933887,
+            "p50": 2.9258728950156514,
+            "p95": 23.061965186588928
+          },
+          "D3": {
+            "count": 237,
+            "maximum": 3672.066731844665,
+            "mean": 287.20423699798437,
+            "minimum": 3.1224144004641334,
+            "p50": 99.03083568999719,
+            "p95": 1163.59993443233
+          }
+        },
+        "derivative_scope": "SO3_BODY_RATE_COVARIANT_SUCCESSIVE_DIFFERENCES; FK_ACTUAL_FINITE_DIFFERENCES",
+        "endpoint_mean_joint_speed_radps": {
+          "left": 0.04858312551415513,
+          "right": 0.026613799812972287
+        },
+        "frames": 240,
+        "region_scope": "WHOLE_SINGLE_CORE; NO_REAL_OUTSIDE_CONTEXT_OR_BRIDGE_CERTIFICATE",
+        "units": {
+          "FK_D1": "m/s",
+          "FK_D2": "m/s^2",
+          "FK_D3": "m/s^3",
+          "SO3_D1": "rad/s",
+          "SO3_D2": "rad/s^2",
+          "SO3_D3": "rad/s^3"
+        }
+      },
+      "dose": {
+        "postmap_derivative_energy": {
+          "1": 0.4450095359193669,
+          "2": 0.0015936980625175044,
+          "3": 1.609796022745958e-05
+        },
+        "source_shift_max": 3.5625,
+        "source_shift_rms": 1.9543003187082053,
+        "target_offset_rms": 2.0165183246889256,
+        "unchanged_edge_frames": 4
+      },
+      "pair": {
+        "FK": {
+          "D1": {
+            "count": 527,
+            "maximum": 0.4680878783110538,
+            "mean": 0.08346919954219373,
+            "minimum": 0.0036117822324835272,
+            "p50": 0.021998503201291847,
+            "p95": 0.3331320111614512
+          },
+          "D2": {
+            "count": 526,
+            "maximum": 10.746637366409502,
+            "mean": 0.7552255356188948,
+            "minimum": 0.04836257256673682,
+            "p50": 0.2590689950099252,
+            "p95": 3.138595050024339
+          },
+          "D3": {
+            "count": 525,
+            "maximum": 526.6580050890151,
+            "mean": 23.840376541821765,
+            "minimum": 0.16945904600865044,
+            "p50": 8.713099250120562,
+            "p95": 95.44762381036226
+          }
+        },
+        "SO3": {
+          "D1": {
+            "count": 527,
+            "maximum": 2.5266785400540757,
+            "mean": 0.20769800212430498,
+            "minimum": 0.009900937139671882,
+            "p50": 0.044749192283813154,
+            "p95": 0.8109598552531021
+          },
+          "D2": {
+            "count": 526,
+            "maximum": 66.64894033916555,
+            "mean": 3.278250368445666,
+            "minimum": 5.182296493474688e-07,
+            "p50": 0.646357761305762,
+            "p95": 14.683440379328319
+          },
+          "D3": {
+            "count": 525,
+            "maximum": 3672.066731844665,
+            "mean": 138.5172511182381,
+            "minimum": 3.3778620969985724e-07,
+            "p50": 23.322496060136395,
+            "p95": 646.7530444232475
+          }
+        },
+        "can_route": false,
+        "derivative_scope": "SO3_BODY_RATE_COVARIANT_SUCCESSIVE_DIFFERENCES; FK_ACTUAL_FINITE_DIFFERENCES",
+        "endpoint_mean_joint_speed_radps": {
+          "left": 0.04858312551415513,
+          "right": 0.03264944329509308
+        },
+        "frames": 528,
+        "region_scope": "WHOLE_SINGLE_CORE; NO_REAL_OUTSIDE_CONTEXT_OR_BRIDGE_CERTIFICATE",
+        "scope": "ACTUAL_FULL528_BODY22_PAIR_ALL_STENCILS_NOT_NATIVE24",
+        "units": {
+          "FK_D1": "m/s",
+          "FK_D2": "m/s^2",
+          "FK_D3": "m/s^3",
+          "SO3_D1": "rad/s",
+          "SO3_D2": "rad/s^2",
+          "SO3_D3": "rad/s^3"
+        }
+      }
+    },
+    "case_key": "r66b02_70c9ebdda89155ec",
+    "delta": 3,
+    "match": {
+      "budget_scope": "RMS_AND_MAX_CLOCK_SHIFT_AND_FIRST_RATE_ENERGY; CURVATURE_REPORTED_SEPARATELY",
+      "curvature_energy_gap": 0.0,
+      "eligible": true,
+      "gaps": {
+        "rate_energy": 0.0,
+        "source_shift_max": 0.0,
+        "source_shift_rms": 0.008151094853232923,
+        "target_offset_rms": 0.013930081039410616
+      },
+      "peak_gap_frames": 0,
+      "phase_semantics": "UNKNOWN"
+    },
+    "source_interval": [
+      2551,
+      2789
+    ],
+    "source_uid": "female_meditation"
+  },
+  {
+    "High": {
+      "activity": 1.0090642551461164,
+      "actual_peak": 113,
+      "core": {
+        "FK": {
+          "D1": {
+            "count": 239,
+            "maximum": 0.4680878783110538,
+            "mean": 0.14070013093660527,
+            "minimum": 0.006378591777713287,
+            "p50": 0.10785039486114459,
+            "p95": 0.35117289728540757
+          },
+          "D2": {
+            "count": 238,
+            "maximum": 10.746637366409502,
+            "mean": 1.3230891727450873,
+            "minimum": 0.04836257256673682,
+            "p50": 0.9890729089270467,
+            "p95": 3.030432857240669
+          },
+          "D3": {
+            "count": 237,
+            "maximum": 526.6574713774834,
+            "mean": 42.62182633477681,
+            "minimum": 0.6169699396748219,
+            "p50": 33.81869582285847,
+            "p95": 104.18673748759166
+          }
+        },
+        "SO3": {
+          "D1": {
+            "count": 239,
+            "maximum": 1.9141488668465498,
+            "mean": 0.3724405441855396,
+            "minimum": 0.016248960917042525,
+            "p50": 0.24686499315136434,
+            "p95": 1.0323897676529663
+          },
+          "D2": {
+            "count": 238,
+            "maximum": 44.796696572510506,
+            "mean": 6.036534750197188,
+            "minimum": 0.11596596383933887,
+            "p50": 2.990589315018211,
+            "p95": 21.515837606369143
+          },
+          "D3": {
+            "count": 237,
+            "maximum": 1889.11183851237,
+            "mean": 248.74412667982088,
+            "minimum": 3.1224144004641334,
+            "p50": 125.00986343668437,
+            "p95": 1018.9725991446925
+          }
+        },
+        "derivative_scope": "SO3_BODY_RATE_COVARIANT_SUCCESSIVE_DIFFERENCES; FK_ACTUAL_FINITE_DIFFERENCES",
+        "endpoint_mean_joint_speed_radps": {
+          "left": 0.04858312551415513,
+          "right": 0.026613799812972287
+        },
+        "frames": 240,
+        "region_scope": "WHOLE_SINGLE_CORE; NO_REAL_OUTSIDE_CONTEXT_OR_BRIDGE_CERTIFICATE",
+        "units": {
+          "FK_D1": "m/s",
+          "FK_D2": "m/s^2",
+          "FK_D3": "m/s^3",
+          "SO3_D1": "rad/s",
+          "SO3_D2": "rad/s^2",
+          "SO3_D3": "rad/s^3"
+        }
+      },
+      "dose": {
+        "postmap_derivative_energy": {
+          "1": 0.4450095359193669,
+          "2": 0.0015936980625175044,
+          "3": 1.609796022745958e-05
+        },
+        "source_shift_max": 3.5625,
+        "source_shift_rms": 1.9680584437806825,
+        "target_offset_rms": 1.9884280610085523,
+        "unchanged_edge_frames": 4
+      },
+      "pair": {
+        "FK": {
+          "D1": {
+            "count": 527,
+            "maximum": 0.4680878783110538,
+            "mean": 0.08331745114099996,
+            "minimum": 0.0036117822324835272,
+            "p50": 0.02279024375062628,
+            "p95": 0.31230464477902103
+          },
+          "D2": {
+            "count": 526,
+            "maximum": 10.746637366409502,
+            "mean": 0.7349183832410886,
+            "minimum": 0.04836257256673682,
+            "p50": 0.26551047390380106,
+            "p95": 2.761882045035523
+          },
+          "D3": {
+            "count": 525,
+            "maximum": 526.6574713774834,
+            "mean": 22.894339326929178,
+            "minimum": 0.16945904600865044,
+            "p50": 8.985267682716076,
+            "p95": 82.21702969921935
+          }
+        },
+        "SO3": {
+          "D1": {
+            "count": 527,
+            "maximum": 1.9141488668465498,
+            "mean": 0.2058240438088732,
+            "minimum": 0.009900937139671882,
+            "p50": 0.04513344084601953,
+            "p95": 0.7722760288378131
+          },
+          "D2": {
+            "count": 526,
+            "maximum": 44.796696572510506,
+            "mean": 3.0204181690202434,
+            "minimum": 5.182296493474688e-07,
+            "p50": 0.6615509968775135,
+            "p95": 14.761338219383155
+          },
+          "D3": {
+            "count": 525,
+            "maximum": 1889.11183851237,
+            "mean": 121.15525846032435,
+            "minimum": 3.3778620969985724e-07,
+            "p50": 24.037023488642888,
+            "p95": 589.6042422378185
+          }
+        },
+        "can_route": false,
+        "derivative_scope": "SO3_BODY_RATE_COVARIANT_SUCCESSIVE_DIFFERENCES; FK_ACTUAL_FINITE_DIFFERENCES",
+        "endpoint_mean_joint_speed_radps": {
+          "left": 0.04858312551415513,
+          "right": 0.03264944329509308
+        },
+        "frames": 528,
+        "region_scope": "WHOLE_SINGLE_CORE; NO_REAL_OUTSIDE_CONTEXT_OR_BRIDGE_CERTIFICATE",
+        "scope": "ACTUAL_FULL528_BODY22_PAIR_ALL_STENCILS_NOT_NATIVE24",
+        "units": {
+          "FK_D1": "m/s",
+          "FK_D2": "m/s^2",
+          "FK_D3": "m/s^3",
+          "SO3_D1": "rad/s",
+          "SO3_D2": "rad/s^2",
+          "SO3_D3": "rad/s^3"
+        }
+      }
+    },
+    "Low": {
+      "activity": 0.47641443757230406,
+      "actual_peak": 113,
+      "core": {
+        "FK": {
+          "D1": {
+            "count": 239,
+            "maximum": 0.4680878783110538,
+            "mean": 0.141079816045204,
+            "minimum": 0.006506826647163345,
+            "p50": 0.1013945688916067,
+            "p95": 0.378819327643197
+          },
+          "D2": {
+            "count": 238,
+            "maximum": 10.746637366409502,
+            "mean": 1.3761954235204392,
+            "minimum": 0.04836257256673682,
+            "p50": 0.9029753495061765,
+            "p95": 3.6031391390441008
+          },
+          "D3": {
+            "count": 237,
+            "maximum": 526.6580050890151,
+            "mean": 46.03062084621439,
+            "minimum": 0.6169699396748219,
+            "p50": 30.41355592227524,
+            "p95": 134.19678448569383
+          }
+        },
+        "SO3": {
+          "D1": {
+            "count": 239,
+            "maximum": 2.5266785400540757,
+            "mean": 0.37683665501062275,
+            "minimum": 0.016819462431522998,
+            "p50": 0.24097529387009387,
+            "p95": 0.9794906950704074
+          },
+          "D2": {
+            "count": 238,
+            "maximum": 66.64894033916555,
+            "mean": 6.604637259958289,
+            "minimum": 0.11596596383933887,
+            "p50": 2.8434412650220713,
+            "p95": 23.32837601181194
+          },
+          "D3": {
+            "count": 237,
+            "maximum": 3672.066731844665,
+            "mean": 287.3351425145174,
+            "minimum": 3.1224144004641334,
+            "p50": 111.8322612304592,
+            "p95": 1163.0470412919065
+          }
+        },
+        "derivative_scope": "SO3_BODY_RATE_COVARIANT_SUCCESSIVE_DIFFERENCES; FK_ACTUAL_FINITE_DIFFERENCES",
+        "endpoint_mean_joint_speed_radps": {
+          "left": 0.04858312551415513,
+          "right": 0.026613799812972287
+        },
+        "frames": 240,
+        "region_scope": "WHOLE_SINGLE_CORE; NO_REAL_OUTSIDE_CONTEXT_OR_BRIDGE_CERTIFICATE",
+        "units": {
+          "FK_D1": "m/s",
+          "FK_D2": "m/s^2",
+          "FK_D3": "m/s^3",
+          "SO3_D1": "rad/s",
+          "SO3_D2": "rad/s^2",
+          "SO3_D3": "rad/s^3"
+        }
+      },
+      "dose": {
+        "postmap_derivative_energy": {
+          "1": 0.4450095359193669,
+          "2": 0.0015936980625175044,
+          "3": 1.609796022745958e-05
+        },
+        "source_shift_max": 3.5625,
+        "source_shift_rms": 1.9535697038779418,
+        "target_offset_rms": 2.0165183246889256,
+        "unchanged_edge_frames": 4
+      },
+      "pair": {
+        "FK": {
+          "D1": {
+            "count": 527,
+            "maximum": 0.4680878783110538,
+            "mean": 0.08348964230030755,
+            "minimum": 0.0036117822324835272,
+            "p50": 0.022927322413324902,
+            "p95": 0.31970480406681645
+          },
+          "D2": {
+            "count": 526,
+            "maximum": 10.746637366409502,
+            "mean": 0.7589474472801263,
+            "minimum": 0.04836257256673682,
+            "p50": 0.2591188998801745,
+            "p95": 3.1391414757023166
+          },
+          "D3": {
+            "count": 525,
+            "maximum": 526.6580050890151,
+            "mean": 24.433166563521,
+            "minimum": 0.16945904600865044,
+            "p50": 8.55942208294398,
+            "p95": 101.91158516757174
+          }
+        },
+        "SO3": {
+          "D1": {
+            "count": 527,
+            "maximum": 2.5266785400540757,
+            "mean": 0.20781772594776293,
+            "minimum": 0.009900937139671882,
+            "p50": 0.04604517019398234,
+            "p95": 0.7981209241196419
+          },
+          "D2": {
+            "count": 526,
+            "maximum": 66.64894033916555,
+            "mean": 3.2774683540452285,
+            "minimum": 5.182296493474688e-07,
+            "p50": 0.6600711216471371,
+            "p95": 15.022153945568428
+          },
+          "D3": {
+            "count": 525,
+            "maximum": 3672.066731844665,
+            "mean": 138.57634560855874,
+            "minimum": 3.3778620969985724e-07,
+            "p50": 23.06837478979351,
+            "p95": 642.0569756738562
+          }
+        },
+        "can_route": false,
+        "derivative_scope": "SO3_BODY_RATE_COVARIANT_SUCCESSIVE_DIFFERENCES; FK_ACTUAL_FINITE_DIFFERENCES",
+        "endpoint_mean_joint_speed_radps": {
+          "left": 0.04858312551415513,
+          "right": 0.03264944329509308
+        },
+        "frames": 528,
+        "region_scope": "WHOLE_SINGLE_CORE; NO_REAL_OUTSIDE_CONTEXT_OR_BRIDGE_CERTIFICATE",
+        "scope": "ACTUAL_FULL528_BODY22_PAIR_ALL_STENCILS_NOT_NATIVE24",
+        "units": {
+          "FK_D1": "m/s",
+          "FK_D2": "m/s^2",
+          "FK_D3": "m/s^3",
+          "SO3_D1": "rad/s",
+          "SO3_D2": "rad/s^2",
+          "SO3_D3": "rad/s^3"
+        }
+      }
+    },
+    "case_key": "r66b02_70c9ebdda89155ec",
+    "delta": -3,
+    "match": {
+      "budget_scope": "RMS_AND_MAX_CLOCK_SHIFT_AND_FIRST_RATE_ENERGY; CURVATURE_REPORTED_SEPARATELY",
+      "curvature_energy_gap": 0.0,
+      "eligible": true,
+      "gaps": {
+        "rate_energy": 0.0,
+        "source_shift_max": 0.0,
+        "source_shift_rms": 0.007361945956700101,
+        "target_offset_rms": 0.013930081039410616
+      },
+      "peak_gap_frames": 0,
+      "phase_semantics": "UNKNOWN"
+    },
+    "source_interval": [
+      2551,
+      2789
+    ],
+    "source_uid": "female_meditation"
+  },
+  {
+    "High": {
+      "activity": 1.6661046617841326,
+      "actual_peak": 133,
+      "core": {
+        "FK": {
+          "D1": {
+            "count": 239,
+            "maximum": 1.5983864693316225,
+            "mean": 0.5197342700446668,
+            "minimum": 0.022039985649679676,
+            "p50": 0.48363225811657673,
+            "p95": 1.3158786529405089
+          },
+          "D2": {
+            "count": 238,
+            "maximum": 25.783875467263325,
+            "mean": 5.788555704689231,
+            "minimum": 0.35895154223649656,
+            "p50": 4.1350050260352855,
+            "p95": 15.786535586713164
+          },
+          "D3": {
+            "count": 237,
+            "maximum": 1102.4370086332813,
+            "mean": 173.72915027080316,
+            "minimum": 18.531659035306696,
+            "p50": 106.65508895333416,
+            "p95": 482.1403244547866
+          }
+        },
+        "SO3": {
+          "D1": {
+            "count": 239,
+            "maximum": 2.38940135180664,
+            "mean": 0.7999158448963567,
+            "minimum": 0.04189566885063495,
+            "p50": 0.6777824822198283,
+            "p95": 1.9666085506442692
+          },
+          "D2": {
+            "count": 238,
+            "maximum": 70.89698784055173,
+            "mean": 14.041474008094683,
+            "minimum": 0.869398035826512,
+            "p50": 8.321771338870654,
+            "p95": 38.59020459894176
+          },
+          "D3": {
+            "count": 237,
+            "maximum": 3957.231735336862,
+            "mean": 549.4424261939664,
+            "minimum": 38.34852437953683,
+            "p50": 336.09202855793427,
+            "p95": 1754.675287149057
+          }
+        },
+        "derivative_scope": "SO3_BODY_RATE_COVARIANT_SUCCESSIVE_DIFFERENCES; FK_ACTUAL_FINITE_DIFFERENCES",
+        "endpoint_mean_joint_speed_radps": {
+          "left": 0.13392538698059958,
+          "right": 0.10964654057515999
+        },
+        "frames": 240,
+        "region_scope": "WHOLE_SINGLE_CORE; NO_REAL_OUTSIDE_CONTEXT_OR_BRIDGE_CERTIFICATE",
+        "units": {
+          "FK_D1": "m/s",
+          "FK_D2": "m/s^2",
+          "FK_D3": "m/s^3",
+          "SO3_D1": "rad/s",
+          "SO3_D2": "rad/s^2",
+          "SO3_D3": "rad/s^3"
+        }
+      },
+      "dose": {
+        "postmap_derivative_energy": {
+          "1": 1.7800381436774677,
+          "2": 0.006374792250070017,
+          "3": 6.439184090983832e-05
+        },
+        "source_shift_max": 6.9375,
+        "source_shift_rms": 4.62869766770772,
+        "target_offset_rms": 4.232656921512175,
+        "unchanged_edge_frames": 4
+      },
+      "pair": {
+        "FK": {
+          "D1": {
+            "count": 527,
+            "maximum": 1.896277810061574,
+            "mean": 0.5160556461656818,
+            "minimum": 0.022039985649679676,
+            "p50": 0.4188464757931771,
+            "p95": 1.3649892457941466
+          },
+          "D2": {
+            "count": 526,
+            "maximum": 30.605052985873666,
+            "mean": 5.274071285793949,
+            "minimum": 0.1089223538665494,
+            "p50": 3.016445022210024,
+            "p95": 17.951764632206178
+          },
+          "D3": {
+            "count": 525,
+            "maximum": 1102.4370086332813,
+            "mean": 139.88116551733458,
+            "minimum": 0.10258129949644594,
+            "p50": 78.0119692706555,
+            "p95": 450.21611446201797
+          }
+        },
+        "SO3": {
+          "D1": {
+            "count": 527,
+            "maximum": 4.387980673291856,
+            "mean": 0.7973117029555803,
+            "minimum": 0.04189566885063495,
+            "p50": 0.6709976695845159,
+            "p95": 1.9138461258749544
+          },
+          "D2": {
+            "count": 526,
+            "maximum": 80.24666731573333,
+            "mean": 12.620930289753256,
+            "minimum": 3.8137965622601186e-07,
+            "p50": 8.217744276373658,
+            "p95": 36.427274587623884
+          },
+          "D3": {
+            "count": 525,
+            "maximum": 3957.231735336862,
+            "mean": 459.9935370445021,
+            "minimum": 1.7474694482790226e-07,
+            "p50": 307.0745386961707,
+            "p95": 1418.5713576885782
+          }
+        },
+        "can_route": false,
+        "derivative_scope": "SO3_BODY_RATE_COVARIANT_SUCCESSIVE_DIFFERENCES; FK_ACTUAL_FINITE_DIFFERENCES",
+        "endpoint_mean_joint_speed_radps": {
+          "left": 0.13392538698059958,
+          "right": 1.7747546110211125
+        },
+        "frames": 528,
+        "region_scope": "WHOLE_SINGLE_CORE; NO_REAL_OUTSIDE_CONTEXT_OR_BRIDGE_CERTIFICATE",
+        "scope": "ACTUAL_FULL528_BODY22_PAIR_ALL_STENCILS_NOT_NATIVE24",
+        "units": {
+          "FK_D1": "m/s",
+          "FK_D2": "m/s^2",
+          "FK_D3": "m/s^3",
+          "SO3_D1": "rad/s",
+          "SO3_D2": "rad/s^2",
+          "SO3_D3": "rad/s^3"
+        }
+      }
+    },
+    "Low": {
+      "activity": 0.8796238894419139,
+      "actual_peak": 133,
+      "core": {
+        "FK": {
+          "D1": {
+            "count": 239,
+            "maximum": 1.4822069637719055,
+            "mean": 0.520281857946748,
+            "minimum": 0.022039985649679676,
+            "p50": 0.46989584286177377,
+            "p95": 1.2105245143405179
+          },
+          "D2": {
+            "count": 238,
+            "maximum": 25.78363139496815,
+            "mean": 5.857412888528488,
+            "minimum": 0.456413644816959,
+            "p50": 4.1350050260352855,
+            "p95": 17.60293292315457
+          },
+          "D3": {
+            "count": 237,
+            "maximum": 1152.6600768578478,
+            "mean": 179.31002212372164,
+            "minimum": 13.981861608208686,
+            "p50": 104.00260364218391,
+            "p95": 540.4809169976702
+          }
+        },
+        "SO3": {
+          "D1": {
+            "count": 239,
+            "maximum": 2.5598348823572477,
+            "mean": 0.8031630746308397,
+            "minimum": 0.041930537443584624,
+            "p50": 0.6921577446847577,
+            "p95": 1.9829981196160065
+          },
+          "D2": {
+            "count": 238,
+            "maximum": 70.89698784055173,
+            "mean": 14.478514578871408,
+            "minimum": 1.0229626559840748,
+            "p50": 8.321771338870654,
+            "p95": 41.30130158719844
+          },
+          "D3": {
+            "count": 237,
+            "maximum": 3957.231735336862,
+            "mean": 578.1219666467119,
+            "minimum": 25.879430518941415,
+            "p50": 315.94874579888165,
+            "p95": 1821.7113202608966
+          }
+        },
+        "derivative_scope": "SO3_BODY_RATE_COVARIANT_SUCCESSIVE_DIFFERENCES; FK_ACTUAL_FINITE_DIFFERENCES",
+        "endpoint_mean_joint_speed_radps": {
+          "left": 0.13392538698059958,
+          "right": 0.10964654057515999
+        },
+        "frames": 240,
+        "region_scope": "WHOLE_SINGLE_CORE; NO_REAL_OUTSIDE_CONTEXT_OR_BRIDGE_CERTIFICATE",
+        "units": {
+          "FK_D1": "m/s",
+          "FK_D2": "m/s^2",
+          "FK_D3": "m/s^3",
+          "SO3_D1": "rad/s",
+          "SO3_D2": "rad/s^2",
+          "SO3_D3": "rad/s^3"
+        }
+      },
+      "dose": {
+        "postmap_derivative_energy": {
+          "1": 1.7800381436774677,
+          "2": 0.006374792250070017,
+          "3": 6.439184090983832e-05
+        },
+        "source_shift_max": 6.9375,
+        "source_shift_rms": 4.5091696989310455,
+        "target_offset_rms": 4.2149003090494235,
+        "unchanged_edge_frames": 4
+      },
+      "pair": {
+        "FK": {
+          "D1": {
+            "count": 527,
+            "maximum": 1.896277810061574,
+            "mean": 0.5163039829941398,
+            "minimum": 0.022039985649679676,
+            "p50": 0.415099906710924,
+            "p95": 1.2731882146968412
+          },
+          "D2": {
+            "count": 526,
+            "maximum": 30.605052985873666,
+            "mean": 5.305227197873308,
+            "minimum": 0.1089223538665494,
+            "p50": 3.066137828914358,
+            "p95": 18.162109566040783
+          },
+          "D3": {
+            "count": 525,
+            "maximum": 1152.6600768578478,
+            "mean": 142.40053052522347,
+            "minimum": 0.10258129949644594,
+            "p50": 77.08526044420748,
+            "p95": 464.33296017532274
+          }
+        },
+        "SO3": {
+          "D1": {
+            "count": 527,
+            "maximum": 4.387980673291856,
+            "mean": 0.7987843555296628,
+            "minimum": 0.041930537443584624,
+            "p50": 0.6772490056837522,
+            "p95": 1.921466081113939
+          },
+          "D2": {
+            "count": 526,
+            "maximum": 80.24666731573333,
+            "mean": 12.818678684895575,
+            "minimum": 3.8137965622601186e-07,
+            "p50": 8.235459401764002,
+            "p95": 37.85179372926592
+          },
+          "D3": {
+            "count": 525,
+            "maximum": 3957.231735336862,
+            "mean": 472.94030102031286,
+            "minimum": 1.7474694482790226e-07,
+            "p50": 299.74486767141207,
+            "p95": 1641.3742335188372
+          }
+        },
+        "can_route": false,
+        "derivative_scope": "SO3_BODY_RATE_COVARIANT_SUCCESSIVE_DIFFERENCES; FK_ACTUAL_FINITE_DIFFERENCES",
+        "endpoint_mean_joint_speed_radps": {
+          "left": 0.13392538698059958,
+          "right": 1.7747546110211125
+        },
+        "frames": 528,
+        "region_scope": "WHOLE_SINGLE_CORE; NO_REAL_OUTSIDE_CONTEXT_OR_BRIDGE_CERTIFICATE",
+        "scope": "ACTUAL_FULL528_BODY22_PAIR_ALL_STENCILS_NOT_NATIVE24",
+        "units": {
+          "FK_D1": "m/s",
+          "FK_D2": "m/s^2",
+          "FK_D3": "m/s^3",
+          "SO3_D1": "rad/s",
+          "SO3_D2": "rad/s^2",
+          "SO3_D3": "rad/s^3"
+        }
+      }
+    },
+    "case_key": "r66b07_4717682e3be3dd02",
+    "delta": 6,
+    "match": {
+      "budget_scope": "RMS_AND_MAX_CLOCK_SHIFT_AND_FIRST_RATE_ENERGY; CURVATURE_REPORTED_SEPARATELY",
+      "curvature_energy_gap": 0.0,
+      "eligible": true,
+      "gaps": {
+        "rate_energy": 0.0,
+        "source_shift_max": 0.0,
+        "source_shift_rms": 0.02582323957137358,
+        "target_offset_rms": 0.00419514569501375
+      },
+      "peak_gap_frames": 0,
+      "phase_semantics": "UNKNOWN"
+    },
+    "source_interval": [
+      2020,
+      2268
+    ],
+    "source_uid": "male_ribbon_FenHe"
+  },
+  {
+    "High": {
+      "activity": 2.154202928798925,
+      "actual_peak": 130,
+      "core": {
+        "FK": {
+          "D1": {
+            "count": 239,
+            "maximum": 1.6376543297872879,
+            "mean": 0.5198518039988129,
+            "minimum": 0.022039985649679676,
+            "p50": 0.4922763428931512,
+            "p95": 1.2977859375021816
+          },
+          "D2": {
+            "count": 238,
+            "maximum": 25.860153138819776,
+            "mean": 5.782310128934846,
+            "minimum": 0.38612867682165253,
+            "p50": 4.116441971656975,
+            "p95": 16.205543464067546
+          },
+          "D3": {
+            "count": 237,
+            "maximum": 1098.01487460125,
+            "mean": 174.78552493537666,
+            "minimum": 18.531659035306696,
+            "p50": 104.81718405873634,
+            "p95": 533.83768943171
+          }
+        },
+        "SO3": {
+          "D1": {
+            "count": 239,
+            "maximum": 2.38940135180664,
+            "mean": 0.8008832474847416,
+            "minimum": 0.04189566885063495,
+            "p50": 0.7045034457367434,
+            "p95": 2.0199096158645764
+          },
+          "D2": {
+            "count": 238,
+            "maximum": 71.04861566011073,
+            "mean": 14.168746357967496,
+            "minimum": 0.869398035826512,
+            "p50": 8.725589521497394,
+            "p95": 42.475235130223844
+          },
+          "D3": {
+            "count": 237,
+            "maximum": 3966.32025185026,
+            "mean": 559.386587469213,
+            "minimum": 38.34852437953683,
+            "p50": 342.9013488296006,
+            "p95": 1784.6429242534161
+          }
+        },
+        "derivative_scope": "SO3_BODY_RATE_COVARIANT_SUCCESSIVE_DIFFERENCES; FK_ACTUAL_FINITE_DIFFERENCES",
+        "endpoint_mean_joint_speed_radps": {
+          "left": 0.13392538698059958,
+          "right": 0.10964654057515999
+        },
+        "frames": 240,
+        "region_scope": "WHOLE_SINGLE_CORE; NO_REAL_OUTSIDE_CONTEXT_OR_BRIDGE_CERTIFICATE",
+        "units": {
+          "FK_D1": "m/s",
+          "FK_D2": "m/s^2",
+          "FK_D3": "m/s^3",
+          "SO3_D1": "rad/s",
+          "SO3_D2": "rad/s^2",
+          "SO3_D3": "rad/s^3"
+        }
+      },
+      "dose": {
+        "postmap_derivative_energy": {
+          "1": 0.5439005439014485,
+          "2": 0.0029097559961739346,
+          "3": 4.3905783207041486e-05
+        },
+        "source_shift_max": 3.46875,
+        "source_shift_rms": 2.1762222432565683,
+        "target_offset_rms": 1.9721841925645804,
+        "unchanged_edge_frames": 4
+      },
+      "pair": {
+        "FK": {
+          "D1": {
+            "count": 527,
+            "maximum": 1.896277810061574,
+            "mean": 0.5161089490405222,
+            "minimum": 0.022039985649679676,
+            "p50": 0.4188464757931771,
+            "p95": 1.3561756669687821
+          },
+          "D2": {
+            "count": 526,
+            "maximum": 30.605052985873666,
+            "mean": 5.271245340870862,
+            "minimum": 0.1089223538665494,
+            "p50": 3.0524602689909393,
+            "p95": 18.162109566040783
+          },
+          "D3": {
+            "count": 525,
+            "maximum": 1098.01487460125,
+            "mean": 140.35804322305634,
+            "minimum": 0.10258129949644594,
+            "p50": 79.46617179243049,
+            "p95": 471.63596501708514
+          }
+        },
+        "SO3": {
+          "D1": {
+            "count": 527,
+            "maximum": 4.387980673291856,
+            "mean": 0.7977504301256448,
+            "minimum": 0.04189566885063495,
+            "p50": 0.6948843370771054,
+            "p95": 1.9245500815923697
+          },
+          "D2": {
+            "count": 526,
+            "maximum": 80.24666731573333,
+            "mean": 12.678517398631067,
+            "minimum": 3.8137965622601186e-07,
+            "p50": 8.264520186116778,
+            "p95": 37.836894124182336
+          },
+          "D3": {
+            "count": 525,
+            "maximum": 3966.32025185026,
+            "mean": 464.482615563042,
+            "minimum": 1.7474694482790226e-07,
+            "p50": 310.745103752449,
+            "p95": 1512.8094930379207
+          }
+        },
+        "can_route": false,
+        "derivative_scope": "SO3_BODY_RATE_COVARIANT_SUCCESSIVE_DIFFERENCES; FK_ACTUAL_FINITE_DIFFERENCES",
+        "endpoint_mean_joint_speed_radps": {
+          "left": 0.13392538698059958,
+          "right": 1.7747546110211125
+        },
+        "frames": 528,
+        "region_scope": "WHOLE_SINGLE_CORE; NO_REAL_OUTSIDE_CONTEXT_OR_BRIDGE_CERTIFICATE",
+        "scope": "ACTUAL_FULL528_BODY22_PAIR_ALL_STENCILS_NOT_NATIVE24",
+        "units": {
+          "FK_D1": "m/s",
+          "FK_D2": "m/s^2",
+          "FK_D3": "m/s^3",
+          "SO3_D1": "rad/s",
+          "SO3_D2": "rad/s^2",
+          "SO3_D3": "rad/s^3"
+        }
+      }
+    },
+    "Low": {
+      "activity": 0.7667967007847418,
+      "actual_peak": 130,
+      "core": {
+        "FK": {
+          "D1": {
+            "count": 239,
+            "maximum": 1.4870813967120244,
+            "mean": 0.5202565765420504,
+            "minimum": 0.022039985649679676,
+            "p50": 0.49219323849557345,
+            "p95": 1.2251439652961045
+          },
+          "D2": {
+            "count": 238,
+            "maximum": 25.78363139496815,
+            "mean": 5.817353492003777,
+            "minimum": 0.4000434154867005,
+            "p50": 4.253877258888764,
+            "p95": 14.759292938177326
+          },
+          "D3": {
+            "count": 237,
+            "maximum": 1102.4370086332813,
+            "mean": 177.5342028621527,
+            "minimum": 18.531659035306696,
+            "p50": 107.01370357470067,
+            "p95": 479.4247581632828
+          }
+        },
+        "SO3": {
+          "D1": {
+            "count": 239,
+            "maximum": 2.559026539361016,
+            "mean": 0.8037187561553848,
+            "minimum": 0.04189566885063495,
+            "p50": 0.7100402045124902,
+            "p95": 1.9829909158230186
+          },
+          "D2": {
+            "count": 238,
+            "maximum": 70.89698784055173,
+            "mean": 14.472431573548361,
+            "minimum": 0.869398035826512,
+            "p50": 8.933530281735232,
+            "p95": 40.82657981349435
+          },
+          "D3": {
+            "count": 237,
+            "maximum": 3957.231735336862,
+            "mean": 578.5010721416373,
+            "minimum": 38.34852437953683,
+            "p50": 347.50448254779496,
+            "p95": 1821.336179176095
+          }
+        },
+        "derivative_scope": "SO3_BODY_RATE_COVARIANT_SUCCESSIVE_DIFFERENCES; FK_ACTUAL_FINITE_DIFFERENCES",
+        "endpoint_mean_joint_speed_radps": {
+          "left": 0.13392538698059958,
+          "right": 0.10964654057515999
+        },
+        "frames": 240,
+        "region_scope": "WHOLE_SINGLE_CORE; NO_REAL_OUTSIDE_CONTEXT_OR_BRIDGE_CERTIFICATE",
+        "units": {
+          "FK_D1": "m/s",
+          "FK_D2": "m/s^2",
+          "FK_D3": "m/s^3",
+          "SO3_D1": "rad/s",
+          "SO3_D2": "rad/s^2",
+          "SO3_D3": "rad/s^3"
+        }
+      },
+      "dose": {
+        "postmap_derivative_energy": {
+          "1": 0.5439005439014485,
+          "2": 0.0029097559961739346,
+          "3": 4.3905783207041486e-05
+        },
+        "source_shift_max": 3.46875,
+        "source_shift_rms": 2.1541301754313347,
+        "target_offset_rms": 1.9721841925645807,
+        "unchanged_edge_frames": 4
+      },
+      "pair": {
+        "FK": {
+          "D1": {
+            "count": 527,
+            "maximum": 1.896277810061574,
+            "mean": 0.5162925176132618,
+            "minimum": 0.022039985649679676,
+            "p50": 0.41854485956501647,
+            "p95": 1.2913206941129503
+          },
+          "D2": {
+            "count": 526,
+            "maximum": 30.605052985873666,
+            "mean": 5.287101463324104,
+            "minimum": 0.1089223538665494,
+            "p50": 3.0602212075144384,
+            "p95": 17.64487496632546
+          },
+          "D3": {
+            "count": 525,
+            "maximum": 1102.4370086332813,
+            "mean": 141.59887497285808,
+            "minimum": 0.10258129949644594,
+            "p50": 82.23368886924,
+            "p95": 450.21611446201797
+          }
+        },
+        "SO3": {
+          "D1": {
+            "count": 527,
+            "maximum": 4.387980673291856,
+            "mean": 0.7990363629003767,
+            "minimum": 0.04189566885063495,
+            "p50": 0.6914106216905284,
+            "p95": 1.921466081113939
+          },
+          "D2": {
+            "count": 526,
+            "maximum": 80.24666731573333,
+            "mean": 12.81592629845663,
+            "minimum": 3.8137965622601186e-07,
+            "p50": 8.308806439288904,
+            "p95": 37.85179372926592
+          },
+          "D3": {
+            "count": 525,
+            "maximum": 3957.231735336862,
+            "mean": 473.11144007230774,
+            "minimum": 1.7474694482790226e-07,
+            "p50": 307.9599719560329,
+            "p95": 1611.5141762995488
+          }
+        },
+        "can_route": false,
+        "derivative_scope": "SO3_BODY_RATE_COVARIANT_SUCCESSIVE_DIFFERENCES; FK_ACTUAL_FINITE_DIFFERENCES",
+        "endpoint_mean_joint_speed_radps": {
+          "left": 0.13392538698059958,
+          "right": 1.7747546110211125
+        },
+        "frames": 528,
+        "region_scope": "WHOLE_SINGLE_CORE; NO_REAL_OUTSIDE_CONTEXT_OR_BRIDGE_CERTIFICATE",
+        "scope": "ACTUAL_FULL528_BODY22_PAIR_ALL_STENCILS_NOT_NATIVE24",
+        "units": {
+          "FK_D1": "m/s",
+          "FK_D2": "m/s^2",
+          "FK_D3": "m/s^3",
+          "SO3_D1": "rad/s",
+          "SO3_D2": "rad/s^2",
+          "SO3_D3": "rad/s^3"
+        }
+      }
+    },
+    "case_key": "r66b07_4717682e3be3dd02",
+    "delta": 3,
+    "match": {
+      "budget_scope": "RMS_AND_MAX_CLOCK_SHIFT_AND_FIRST_RATE_ENERGY; CURVATURE_REPORTED_SEPARATELY",
+      "curvature_energy_gap": 0.0,
+      "eligible": true,
+      "gaps": {
+        "rate_energy": 0.0,
+        "source_shift_max": 0.0,
+        "source_shift_rms": 0.01015156788039,
+        "target_offset_rms": 1.1258816786087808e-16
+      },
+      "peak_gap_frames": 0,
+      "phase_semantics": "UNKNOWN"
+    },
+    "source_interval": [
+      2020,
+      2268
+    ],
+    "source_uid": "male_ribbon_FenHe"
+  },
+  {
+    "High": {
+      "activity": 2.154202928798925,
+      "actual_peak": 124,
+      "core": {
+        "FK": {
+          "D1": {
+            "count": 239,
+            "maximum": 1.360813246871769,
+            "mean": 0.520068500065151,
+            "minimum": 0.022039985649679676,
+            "p50": 0.513899664425325,
+            "p95": 1.1976087002988465
+          },
+          "D2": {
+            "count": 238,
+            "maximum": 25.71796140553004,
+            "mean": 5.657636734910641,
+            "minimum": 0.4000434154867005,
+            "p50": 4.316262317566954,
+            "p95": 15.796091672235297
+          },
+          "D3": {
+            "count": 237,
+            "maximum": 1106.8788721259386,
+            "mean": 170.75438116685524,
+            "minimum": 18.531659035306696,
+            "p50": 109.27120211132221,
+            "p95": 500.97198251757413
+          }
+        },
+        "SO3": {
+          "D1": {
+            "count": 239,
+            "maximum": 2.8061367070643923,
+            "mean": 0.8014415077362913,
+            "minimum": 0.04189566885063495,
+            "p50": 0.7277195282946152,
+            "p95": 1.9500570603916638
+          },
+          "D2": {
+            "count": 238,
+            "maximum": 70.74629692354202,
+            "mean": 14.01170565742559,
+            "minimum": 0.869398035826512,
+            "p50": 9.13955059780029,
+            "p95": 43.8606717121121
+          },
+          "D3": {
+            "count": 237,
+            "maximum": 3948.1805913017643,
+            "mean": 554.0156134003687,
+            "minimum": 38.34852437953683,
+            "p50": 335.345298364893,
+            "p95": 1821.091482774715
+          }
+        },
+        "derivative_scope": "SO3_BODY_RATE_COVARIANT_SUCCESSIVE_DIFFERENCES; FK_ACTUAL_FINITE_DIFFERENCES",
+        "endpoint_mean_joint_speed_radps": {
+          "left": 0.13392538698059958,
+          "right": 0.10964654057515999
+        },
+        "frames": 240,
+        "region_scope": "WHOLE_SINGLE_CORE; NO_REAL_OUTSIDE_CONTEXT_OR_BRIDGE_CERTIFICATE",
+        "units": {
+          "FK_D1": "m/s",
+          "FK_D2": "m/s^2",
+          "FK_D3": "m/s^3",
+          "SO3_D1": "rad/s",
+          "SO3_D2": "rad/s^2",
+          "SO3_D3": "rad/s^3"
+        }
+      },
+      "dose": {
+        "postmap_derivative_energy": {
+          "1": 0.5439005439014485,
+          "2": 0.0029097559961739346,
+          "3": 4.3905783207041486e-05
+        },
+        "source_shift_max": 3.46875,
+        "source_shift_rms": 2.175404644438478,
+        "target_offset_rms": 1.9721841925645804,
+        "unchanged_edge_frames": 4
+      },
+      "pair": {
+        "FK": {
+          "D1": {
+            "count": 527,
+            "maximum": 1.896277810061574,
+            "mean": 0.5162072229681404,
+            "minimum": 0.022039985649679676,
+            "p50": 0.42268911720922026,
+            "p95": 1.2661722617022002
+          },
+          "D2": {
+            "count": 526,
+            "maximum": 30.605052985873666,
+            "mean": 5.214834185399834,
+            "minimum": 0.1089223538665494,
+            "p50": 3.1916043548497193,
+            "p95": 16.950965044100627
+          },
+          "D3": {
+            "count": 525,
+            "maximum": 1106.8788721259386,
+            "mean": 138.53826975040954,
+            "minimum": 0.10258129949644594,
+            "p50": 79.53609732202493,
+            "p95": 464.47855623849676
+          }
+        },
+        "SO3": {
+          "D1": {
+            "count": 527,
+            "maximum": 4.387980673291856,
+            "mean": 0.7980036069759682,
+            "minimum": 0.04189566885063495,
+            "p50": 0.6948843370771054,
+            "p95": 1.916560244867887
+          },
+          "D2": {
+            "count": 526,
+            "maximum": 80.24666731573333,
+            "mean": 12.60746095998283,
+            "minimum": 3.8137965622601186e-07,
+            "p50": 8.389841001066682,
+            "p95": 37.172025498834195
+          },
+          "D3": {
+            "count": 525,
+            "maximum": 3948.1805913017643,
+            "mean": 462.0580044119637,
+            "minimum": 1.7474694482790226e-07,
+            "p50": 306.1769321591006,
+            "p95": 1582.8708084044579
+          }
+        },
+        "can_route": false,
+        "derivative_scope": "SO3_BODY_RATE_COVARIANT_SUCCESSIVE_DIFFERENCES; FK_ACTUAL_FINITE_DIFFERENCES",
+        "endpoint_mean_joint_speed_radps": {
+          "left": 0.13392538698059958,
+          "right": 1.7747546110211125
+        },
+        "frames": 528,
+        "region_scope": "WHOLE_SINGLE_CORE; NO_REAL_OUTSIDE_CONTEXT_OR_BRIDGE_CERTIFICATE",
+        "scope": "ACTUAL_FULL528_BODY22_PAIR_ALL_STENCILS_NOT_NATIVE24",
+        "units": {
+          "FK_D1": "m/s",
+          "FK_D2": "m/s^2",
+          "FK_D3": "m/s^3",
+          "SO3_D1": "rad/s",
+          "SO3_D2": "rad/s^2",
+          "SO3_D3": "rad/s^3"
+        }
+      }
+    },
+    "Low": {
+      "activity": 0.7667967007847418,
+      "actual_peak": 124,
+      "core": {
+        "FK": {
+          "D1": {
+            "count": 239,
+            "maximum": 1.4727130424952786,
+            "mean": 0.5201539814646224,
+            "minimum": 0.022039985649679676,
+            "p50": 0.505720442405094,
+            "p95": 1.2061572127744802
+          },
+          "D2": {
+            "count": 238,
+            "maximum": 25.78363139496815,
+            "mean": 5.702959269159051,
+            "minimum": 0.4000434154867005,
+            "p50": 4.017691181044931,
+            "p95": 15.902347616643038
+          },
+          "D3": {
+            "count": 237,
+            "maximum": 1102.4370086332813,
+            "mean": 174.90808130693597,
+            "minimum": 18.531659035306696,
+            "p50": 105.39029343217713,
+            "p95": 531.4795985267223
+          }
+        },
+        "SO3": {
+          "D1": {
+            "count": 239,
+            "maximum": 2.5963292518788297,
+            "mean": 0.8024252961134418,
+            "minimum": 0.04189566885063495,
+            "p50": 0.6994209508870846,
+            "p95": 1.9964439807400838
+          },
+          "D2": {
+            "count": 238,
+            "maximum": 70.89698784055173,
+            "mean": 14.184398081336846,
+            "minimum": 0.869398035826512,
+            "p50": 8.701421391541508,
+            "p95": 40.758411725605804
+          },
+          "D3": {
+            "count": 237,
+            "maximum": 3957.231735336862,
+            "mean": 563.6415305295831,
+            "minimum": 38.34852437953683,
+            "p50": 323.56275146772356,
+            "p95": 1800.5896194090978
+          }
+        },
+        "derivative_scope": "SO3_BODY_RATE_COVARIANT_SUCCESSIVE_DIFFERENCES; FK_ACTUAL_FINITE_DIFFERENCES",
+        "endpoint_mean_joint_speed_radps": {
+          "left": 0.13392538698059958,
+          "right": 0.10964654057515999
+        },
+        "frames": 240,
+        "region_scope": "WHOLE_SINGLE_CORE; NO_REAL_OUTSIDE_CONTEXT_OR_BRIDGE_CERTIFICATE",
+        "units": {
+          "FK_D1": "m/s",
+          "FK_D2": "m/s^2",
+          "FK_D3": "m/s^3",
+          "SO3_D1": "rad/s",
+          "SO3_D2": "rad/s^2",
+          "SO3_D3": "rad/s^3"
+        }
+      },
+      "dose": {
+        "postmap_derivative_energy": {
+          "1": 0.5439005439014485,
+          "2": 0.0029097559961739346,
+          "3": 4.3905783207041486e-05
+        },
+        "source_shift_max": 3.46875,
+        "source_shift_rms": 2.1561205803407,
+        "target_offset_rms": 1.9721841925645807,
+        "unchanged_edge_frames": 4
+      },
+      "pair": {
+        "FK": {
+          "D1": {
+            "count": 527,
+            "maximum": 1.896277810061574,
+            "mean": 0.5162459896749216,
+            "minimum": 0.022039985649679676,
+            "p50": 0.42268911720922026,
+            "p95": 1.2731882146968412
+          },
+          "D2": {
+            "count": 526,
+            "maximum": 30.605052985873666,
+            "mean": 5.235341339679532,
+            "minimum": 0.1089223538665494,
+            "p50": 3.1055066092309245,
+            "p95": 17.569209824742735
+          },
+          "D3": {
+            "count": 525,
+            "maximum": 1102.4370086332813,
+            "mean": 140.4133686707888,
+            "minimum": 0.10258129949644594,
+            "p50": 81.31825973193898,
+            "p95": 460.11838710096185
+          }
+        },
+        "SO3": {
+          "D1": {
+            "count": 527,
+            "maximum": 4.387980673291856,
+            "mean": 0.798449765272247,
+            "minimum": 0.04189566885063495,
+            "p50": 0.6789954674286777,
+            "p95": 1.921466081113939
+          },
+          "D2": {
+            "count": 526,
+            "maximum": 80.24666731573333,
+            "mean": 12.685599357113778,
+            "minimum": 3.8137965622601186e-07,
+            "p50": 8.308806439288904,
+            "p95": 37.85179372926592
+          },
+          "D3": {
+            "count": 525,
+            "maximum": 3957.231735336862,
+            "mean": 466.40341843029466,
+            "minimum": 1.7474694482790226e-07,
+            "p50": 303.6264081773301,
+            "p95": 1596.4962840334754
+          }
+        },
+        "can_route": false,
+        "derivative_scope": "SO3_BODY_RATE_COVARIANT_SUCCESSIVE_DIFFERENCES; FK_ACTUAL_FINITE_DIFFERENCES",
+        "endpoint_mean_joint_speed_radps": {
+          "left": 0.13392538698059958,
+          "right": 1.7747546110211125
+        },
+        "frames": 528,
+        "region_scope": "WHOLE_SINGLE_CORE; NO_REAL_OUTSIDE_CONTEXT_OR_BRIDGE_CERTIFICATE",
+        "scope": "ACTUAL_FULL528_BODY22_PAIR_ALL_STENCILS_NOT_NATIVE24",
+        "units": {
+          "FK_D1": "m/s",
+          "FK_D2": "m/s^2",
+          "FK_D3": "m/s^3",
+          "SO3_D1": "rad/s",
+          "SO3_D2": "rad/s^2",
+          "SO3_D3": "rad/s^3"
+        }
+      }
+    },
+    "case_key": "r66b07_4717682e3be3dd02",
+    "delta": -3,
+    "match": {
+      "budget_scope": "RMS_AND_MAX_CLOCK_SHIFT_AND_FIRST_RATE_ENERGY; CURVATURE_REPORTED_SEPARATELY",
+      "curvature_energy_gap": 0.0,
+      "eligible": true,
+      "gaps": {
+        "rate_energy": 0.0,
+        "source_shift_max": 0.0,
+        "source_shift_rms": 0.008864587168680847,
+        "target_offset_rms": 1.1258816786087808e-16
+      },
+      "peak_gap_frames": 0,
+      "phase_semantics": "UNKNOWN"
+    },
+    "source_interval": [
+      2020,
+      2268
+    ],
+    "source_uid": "male_ribbon_FenHe"
+  },
+  {
+    "High": {
+      "activity": 0.9931714628766066,
+      "actual_peak": 121,
+      "core": {
+        "FK": {
+          "D1": {
+            "count": 239,
+            "maximum": 0.5270689390720759,
+            "mean": 0.14065119011608282,
+            "minimum": 0.005552016142278634,
+            "p50": 0.09998507943206614,
+            "p95": 0.4379380381863698
+          },
+          "D2": {
+            "count": 238,
+            "maximum": 9.26174334275003,
+            "mean": 1.4030924147352257,
+            "minimum": 0.04247054818340291,
+            "p50": 0.8286055816436129,
+            "p95": 4.852455578405127
+          },
+          "D3": {
+            "count": 237,
+            "maximum": 386.3147249525585,
+            "mean": 41.745700250269905,
+            "minimum": 0.6277662121470468,
+            "p50": 25.9965417742566,
+            "p95": 113.2252312189227
+          }
+        },
+        "SO3": {
+          "D1": {
+            "count": 239,
+            "maximum": 2.1576004406282543,
+            "mean": 0.37022553489033116,
+            "minimum": 0.015308706774937234,
+            "p50": 0.21922702287353432,
+            "p95": 1.1173956760488912
+          },
+          "D2": {
+            "count": 238,
+            "maximum": 47.93602720988915,
+            "mean": 6.062461315537477,
+            "minimum": 0.1210771497638241,
+            "p50": 2.4343495064342466,
+            "p95": 23.231040894250448
+          },
+          "D3": {
+            "count": 237,
+            "maximum": 2093.3500693900687,
+            "mean": 244.41800299519986,
+            "minimum": 2.6809066996281334,
+            "p50": 88.31672672734446,
+            "p95": 999.2963426714672
+          }
+        },
+        "derivative_scope": "SO3_BODY_RATE_COVARIANT_SUCCESSIVE_DIFFERENCES; FK_ACTUAL_FINITE_DIFFERENCES",
+        "endpoint_mean_joint_speed_radps": {
+          "left": 0.04858312551415513,
+          "right": 0.027529907647941033
+        },
+        "frames": 240,
+        "region_scope": "WHOLE_SINGLE_CORE; NO_REAL_OUTSIDE_CONTEXT_OR_BRIDGE_CERTIFICATE",
+        "units": {
+          "FK_D1": "m/s",
+          "FK_D2": "m/s^2",
+          "FK_D3": "m/s^3",
+          "SO3_D1": "rad/s",
+          "SO3_D2": "rad/s^2",
+          "SO3_D3": "rad/s^3"
+        }
+      },
+      "dose": {
+        "postmap_derivative_energy": {
+          "1": 1.7800381436774677,
+          "2": 0.006374792250070017,
+          "3": 6.439184090983832e-05
+        },
+        "source_shift_max": 6.173076923077133,
+        "source_shift_rms": 3.9348769930855756,
+        "target_offset_rms": 3.9768561220171046,
+        "unchanged_edge_frames": 4
+      },
+      "pair": {
+        "FK": {
+          "D1": {
+            "count": 527,
+            "maximum": 0.5270689390720759,
+            "mean": 0.13190664312595077,
+            "minimum": 0.005552016142278634,
+            "p50": 0.10455506382728462,
+            "p95": 0.3778963754246055
+          },
+          "D2": {
+            "count": 526,
+            "maximum": 9.26174334275003,
+            "mean": 1.020467542963702,
+            "minimum": 0.04247054818340291,
+            "p50": 0.5725225025696572,
+            "p95": 3.6131752419198357
+          },
+          "D3": {
+            "count": 525,
+            "maximum": 386.3147249525585,
+            "mean": 30.64080908769903,
+            "minimum": 0.6277662121470468,
+            "p50": 19.38131378055325,
+            "p95": 99.19314821397849
+          }
+        },
+        "SO3": {
+          "D1": {
+            "count": 527,
+            "maximum": 2.1576004406282543,
+            "mean": 0.2598070060428868,
+            "minimum": 0.015308706774937234,
+            "p50": 0.17389499310482506,
+            "p95": 0.8442879541516466
+          },
+          "D2": {
+            "count": 526,
+            "maximum": 47.93602720988915,
+            "mean": 3.8499184148742542,
+            "minimum": 5.276348279215621e-07,
+            "p50": 1.7356270072072069,
+            "p95": 16.054900663575964
+          },
+          "D3": {
+            "count": 525,
+            "maximum": 2093.3500693900687,
+            "mean": 153.4405380891499,
+            "minimum": 1.4534011146298899e-07,
+            "p50": 61.203003686547014,
+            "p95": 679.5426650686878
+          }
+        },
+        "can_route": false,
+        "derivative_scope": "SO3_BODY_RATE_COVARIANT_SUCCESSIVE_DIFFERENCES; FK_ACTUAL_FINITE_DIFFERENCES",
+        "endpoint_mean_joint_speed_radps": {
+          "left": 0.04858312551415513,
+          "right": 0.06049447196820225
+        },
+        "frames": 528,
+        "region_scope": "WHOLE_SINGLE_CORE; NO_REAL_OUTSIDE_CONTEXT_OR_BRIDGE_CERTIFICATE",
+        "scope": "ACTUAL_FULL528_BODY22_PAIR_ALL_STENCILS_NOT_NATIVE24",
+        "units": {
+          "FK_D1": "m/s",
+          "FK_D2": "m/s^2",
+          "FK_D3": "m/s^3",
+          "SO3_D1": "rad/s",
+          "SO3_D2": "rad/s^2",
+          "SO3_D3": "rad/s^3"
+        }
+      }
+    },
+    "Low": {
+      "activity": 0.47433124743316146,
+      "actual_peak": 121,
+      "core": {
+        "FK": {
+          "D1": {
+            "count": 239,
+            "maximum": 0.4651864990535695,
+            "mean": 0.14074171277765235,
+            "minimum": 0.004714628191624612,
+            "p50": 0.0937703458878261,
+            "p95": 0.3786596693972384
+          },
+          "D2": {
+            "count": 238,
+            "maximum": 9.26174334275003,
+            "mean": 1.340616752774536,
+            "minimum": 0.05149657632710264,
+            "p50": 0.852329752230378,
+            "p95": 3.6458838169417556
+          },
+          "D3": {
+            "count": 237,
+            "maximum": 386.3147249525585,
+            "mean": 40.88824911326071,
+            "minimum": 0.6277662121470468,
+            "p50": 27.315601349914026,
+            "p95": 124.34005750217692
+          }
+        },
+        "SO3": {
+          "D1": {
+            "count": 239,
+            "maximum": 2.3455737084101935,
+            "mean": 0.37123082750861647,
+            "minimum": 0.012774960940968836,
+            "p50": 0.23468932781945082,
+            "p95": 1.0145386362742868
+          },
+          "D2": {
+            "count": 238,
+            "maximum": 58.98388195786102,
+            "mean": 5.947838726887359,
+            "minimum": 0.1043142479918318,
+            "p50": 2.802931608537511,
+            "p95": 18.689163292431754
+          },
+          "D3": {
+            "count": 237,
+            "maximum": 3054.192300967748,
+            "mean": 243.77871815226985,
+            "minimum": 2.6809066996281334,
+            "p50": 100.74068030434564,
+            "p95": 935.07022470466
+          }
+        },
+        "derivative_scope": "SO3_BODY_RATE_COVARIANT_SUCCESSIVE_DIFFERENCES; FK_ACTUAL_FINITE_DIFFERENCES",
+        "endpoint_mean_joint_speed_radps": {
+          "left": 0.04858312551415513,
+          "right": 0.027529907647941033
+        },
+        "frames": 240,
+        "region_scope": "WHOLE_SINGLE_CORE; NO_REAL_OUTSIDE_CONTEXT_OR_BRIDGE_CERTIFICATE",
+        "units": {
+          "FK_D1": "m/s",
+          "FK_D2": "m/s^2",
+          "FK_D3": "m/s^3",
+          "SO3_D1": "rad/s",
+          "SO3_D2": "rad/s^2",
+          "SO3_D3": "rad/s^3"
+        }
+      },
+      "dose": {
+        "postmap_derivative_energy": {
+          "1": 1.7800381436774677,
+          "2": 0.006374792250070017,
+          "3": 6.439184090983832e-05
+        },
+        "source_shift_max": 6.01862962371797,
+        "source_shift_rms": 3.8292299393154225,
+        "target_offset_rms": 4.01439716710055,
+        "unchanged_edge_frames": 4
+      },
+      "pair": {
+        "FK": {
+          "D1": {
+            "count": 527,
+            "maximum": 0.4651864990535695,
+            "mean": 0.13194769609770624,
+            "minimum": 0.004714628191624612,
+            "p50": 0.10388220630030005,
+            "p95": 0.35315220119417096
+          },
+          "D2": {
+            "count": 526,
+            "maximum": 9.26174334275003,
+            "mean": 0.9921990875518308,
+            "minimum": 0.05149657632710264,
+            "p50": 0.5841146662282668,
+            "p95": 3.2087482338771944
+          },
+          "D3": {
+            "count": 525,
+            "maximum": 386.3147249525585,
+            "mean": 30.253731145849166,
+            "minimum": 0.6277662121470468,
+            "p50": 19.89730664870093,
+            "p95": 91.03133081601884
+          }
+        },
+        "SO3": {
+          "D1": {
+            "count": 527,
+            "maximum": 2.3455737084101935,
+            "mean": 0.2602629167369479,
+            "minimum": 0.012774960940968836,
+            "p50": 0.1729458960909419,
+            "p95": 0.8281454276384611
+          },
+          "D2": {
+            "count": 526,
+            "maximum": 58.98388195786102,
+            "mean": 3.7980549622150748,
+            "minimum": 5.276348279215621e-07,
+            "p50": 1.7637783057438208,
+            "p95": 13.683680904421907
+          },
+          "D3": {
+            "count": 525,
+            "maximum": 3054.192300967748,
+            "mean": 153.15194664577007,
+            "minimum": 1.4534011146298899e-07,
+            "p50": 64.70005289502816,
+            "p95": 560.3282457049845
+          }
+        },
+        "can_route": false,
+        "derivative_scope": "SO3_BODY_RATE_COVARIANT_SUCCESSIVE_DIFFERENCES; FK_ACTUAL_FINITE_DIFFERENCES",
+        "endpoint_mean_joint_speed_radps": {
+          "left": 0.04858312551415513,
+          "right": 0.06049447196820225
+        },
+        "frames": 528,
+        "region_scope": "WHOLE_SINGLE_CORE; NO_REAL_OUTSIDE_CONTEXT_OR_BRIDGE_CERTIFICATE",
+        "scope": "ACTUAL_FULL528_BODY22_PAIR_ALL_STENCILS_NOT_NATIVE24",
+        "units": {
+          "FK_D1": "m/s",
+          "FK_D2": "m/s^2",
+          "FK_D3": "m/s^3",
+          "SO3_D1": "rad/s",
+          "SO3_D2": "rad/s^2",
+          "SO3_D3": "rad/s^3"
+        }
+      }
+    },
+    "case_key": "r66b10_f449ca842cdeb74f",
+    "delta": 6,
+    "match": {
+      "budget_scope": "RMS_AND_MAX_CLOCK_SHIFT_AND_FIRST_RATE_ENERGY; CURVATURE_REPORTED_SEPARATELY",
+      "curvature_energy_gap": 0.0,
+      "eligible": true,
+      "gaps": {
+        "rate_energy": 0.0,
+        "source_shift_max": 0.025019500207713957,
+        "source_shift_rms": 0.02684888344814784,
+        "target_offset_rms": 0.00935160212624402
+      },
+      "peak_gap_frames": 0,
+      "phase_semantics": "UNKNOWN"
+    },
+    "source_interval": [
+      2551,
+      2789
+    ],
+    "source_uid": "female_meditation"
+  },
+  {
+    "High": {
+      "activity": 1.0446540659387025,
+      "actual_peak": 109,
+      "core": {
+        "FK": {
+          "D1": {
+            "count": 239,
+            "maximum": 0.4573250513939555,
+            "mean": 0.14072757547821174,
+            "minimum": 0.005552016142278634,
+            "p50": 0.11165356648396332,
+            "p95": 0.33210112611761944
+          },
+          "D2": {
+            "count": 238,
+            "maximum": 9.26174334275003,
+            "mean": 1.2793138404302624,
+            "minimum": 0.04192895882026153,
+            "p50": 0.9907409586037947,
+            "p95": 3.0234887739515037
+          },
+          "D3": {
+            "count": 237,
+            "maximum": 386.3147249525585,
+            "mean": 40.239909736858934,
+            "minimum": 0.6277662121470468,
+            "p50": 28.350046626911332,
+            "p95": 116.38449803361785
+          }
+        },
+        "SO3": {
+          "D1": {
+            "count": 239,
+            "maximum": 2.250779192675792,
+            "mean": 0.3721704856754804,
+            "minimum": 0.015308706774937234,
+            "p50": 0.26447614320238905,
+            "p95": 1.0315448860984613
+          },
+          "D2": {
+            "count": 238,
+            "maximum": 53.11296766677418,
+            "mean": 6.006185590975992,
+            "minimum": 0.12180413082287884,
+            "p50": 2.9461817235509176,
+            "p95": 18.252130569482215
+          },
+          "D3": {
+            "count": 237,
+            "maximum": 3054.7140262501207,
+            "mean": 246.4475571688752,
+            "minimum": 2.6809066996281334,
+            "p50": 105.49760215347177,
+            "p95": 845.7910152203225
+          }
+        },
+        "derivative_scope": "SO3_BODY_RATE_COVARIANT_SUCCESSIVE_DIFFERENCES; FK_ACTUAL_FINITE_DIFFERENCES",
+        "endpoint_mean_joint_speed_radps": {
+          "left": 0.04858312551415513,
+          "right": 0.027529907647941033
+        },
+        "frames": 240,
+        "region_scope": "WHOLE_SINGLE_CORE; NO_REAL_OUTSIDE_CONTEXT_OR_BRIDGE_CERTIFICATE",
+        "units": {
+          "FK_D1": "m/s",
+          "FK_D2": "m/s^2",
+          "FK_D3": "m/s^3",
+          "SO3_D1": "rad/s",
+          "SO3_D2": "rad/s^2",
+          "SO3_D3": "rad/s^3"
+        }
+      },
+      "dose": {
+        "postmap_derivative_energy": {
+          "1": 2.175602175605794,
+          "2": 0.011639023984695738,
+          "3": 0.00017562313282816594
+        },
+        "source_shift_max": 6.173076923077133,
+        "source_shift_rms": 3.9901191380717926,
+        "target_offset_rms": 4.019706700445497,
+        "unchanged_edge_frames": 4
+      },
+      "pair": {
+        "FK": {
+          "D1": {
+            "count": 527,
+            "maximum": 0.4573250513939555,
+            "mean": 0.131941284684867,
+            "minimum": 0.005552016142278634,
+            "p50": 0.10849853412418992,
+            "p95": 0.3261453880397675
+          },
+          "D2": {
+            "count": 526,
+            "maximum": 9.26174334275003,
+            "mean": 0.9644612678979582,
+            "minimum": 0.04192895882026153,
+            "p50": 0.6127637092830884,
+            "p95": 2.748716806705204
+          },
+          "D3": {
+            "count": 525,
+            "maximum": 386.3147249525585,
+            "mean": 29.96105222735922,
+            "minimum": 0.6277662121470468,
+            "p50": 20.56614549635193,
+            "p95": 90.40806444776447
+          }
+        },
+        "SO3": {
+          "D1": {
+            "count": 527,
+            "maximum": 2.250779192675792,
+            "mean": 0.26068906152229987,
+            "minimum": 0.015308706774937234,
+            "p50": 0.18005834506904955,
+            "p95": 0.7798750148172919
+          },
+          "D2": {
+            "count": 526,
+            "maximum": 53.11296766677418,
+            "mean": 3.8244552543312254,
+            "minimum": 5.276348279215621e-07,
+            "p50": 1.8452068322526776,
+            "p95": 12.772886484566834
+          },
+          "D3": {
+            "count": 525,
+            "maximum": 3054.7140262501207,
+            "mean": 154.35673683040903,
+            "minimum": 1.4534011146298899e-07,
+            "p50": 67.87357049010978,
+            "p95": 540.8479132023436
+          }
+        },
+        "can_route": false,
+        "derivative_scope": "SO3_BODY_RATE_COVARIANT_SUCCESSIVE_DIFFERENCES; FK_ACTUAL_FINITE_DIFFERENCES",
+        "endpoint_mean_joint_speed_radps": {
+          "left": 0.04858312551415513,
+          "right": 0.06049447196820225
+        },
+        "frames": 528,
+        "region_scope": "WHOLE_SINGLE_CORE; NO_REAL_OUTSIDE_CONTEXT_OR_BRIDGE_CERTIFICATE",
+        "scope": "ACTUAL_FULL528_BODY22_PAIR_ALL_STENCILS_NOT_NATIVE24",
+        "units": {
+          "FK_D1": "m/s",
+          "FK_D2": "m/s^2",
+          "FK_D3": "m/s^3",
+          "SO3_D1": "rad/s",
+          "SO3_D2": "rad/s^2",
+          "SO3_D3": "rad/s^3"
+        }
+      }
+    },
+    "Low": {
+      "activity": 0.4084208017328353,
+      "actual_peak": 109,
+      "core": {
+        "FK": {
+          "D1": {
+            "count": 239,
+            "maximum": 0.4651864990535695,
+            "mean": 0.14060542396989228,
+            "minimum": 0.00673688844335744,
+            "p50": 0.09817587159858242,
+            "p95": 0.37865604484206883
+          },
+          "D2": {
+            "count": 238,
+            "maximum": 9.26174334275003,
+            "mean": 1.3263280486248088,
+            "minimum": 0.05149657632710264,
+            "p50": 0.852329752230378,
+            "p95": 3.634947850472819
+          },
+          "D3": {
+            "count": 237,
+            "maximum": 386.3147249525585,
+            "mean": 41.03492685511686,
+            "minimum": 0.6277662121470468,
+            "p50": 27.473432275089444,
+            "p95": 133.94872852062653
+          }
+        },
+        "SO3": {
+          "D1": {
+            "count": 239,
+            "maximum": 2.3455737084101935,
+            "mean": 0.3722217506573565,
+            "minimum": 0.018023033628007466,
+            "p50": 0.24999091047894573,
+            "p95": 1.0293689279924862
+          },
+          "D2": {
+            "count": 238,
+            "maximum": 58.98388195786102,
+            "mean": 6.014799832411775,
+            "minimum": 0.12902971328550517,
+            "p50": 2.72680835413561,
+            "p95": 19.791735346683073
+          },
+          "D3": {
+            "count": 237,
+            "maximum": 3054.192300967748,
+            "mean": 247.47783791464926,
+            "minimum": 2.6809066996281334,
+            "p50": 104.98388987018299,
+            "p95": 1017.8725977982803
+          }
+        },
+        "derivative_scope": "SO3_BODY_RATE_COVARIANT_SUCCESSIVE_DIFFERENCES; FK_ACTUAL_FINITE_DIFFERENCES",
+        "endpoint_mean_joint_speed_radps": {
+          "left": 0.04858312551415513,
+          "right": 0.027529907647941033
+        },
+        "frames": 240,
+        "region_scope": "WHOLE_SINGLE_CORE; NO_REAL_OUTSIDE_CONTEXT_OR_BRIDGE_CERTIFICATE",
+        "units": {
+          "FK_D1": "m/s",
+          "FK_D2": "m/s^2",
+          "FK_D3": "m/s^3",
+          "SO3_D1": "rad/s",
+          "SO3_D2": "rad/s^2",
+          "SO3_D3": "rad/s^3"
+        }
+      },
+      "dose": {
+        "postmap_derivative_energy": {
+          "1": 2.175602175605794,
+          "2": 0.011639023984695738,
+          "3": 0.00017562313282816594
+        },
+        "source_shift_max": 5.899885175957479,
+        "source_shift_rms": 3.863238067236038,
+        "target_offset_rms": 4.05685123680995,
+        "unchanged_edge_frames": 4
+      },
+      "pair": {
+        "FK": {
+          "D1": {
+            "count": 527,
+            "maximum": 0.4651864990535695,
+            "mean": 0.1318858877010181,
+            "minimum": 0.00673688844335744,
+            "p50": 0.10429110783491188,
+            "p95": 0.34929211436130697
+          },
+          "D2": {
+            "count": 526,
+            "maximum": 9.26174334275003,
+            "mean": 0.9857338563966312,
+            "minimum": 0.05149657632710264,
+            "p50": 0.581709585445777,
+            "p95": 3.2087482338771944
+          },
+          "D3": {
+            "count": 525,
+            "maximum": 386.3147249525585,
+            "mean": 30.319945669315654,
+            "minimum": 0.6277662121470468,
+            "p50": 19.586617553217266,
+            "p95": 87.16263459619108
+          }
+        },
+        "SO3": {
+          "D1": {
+            "count": 527,
+            "maximum": 2.3455737084101935,
+            "mean": 0.26071231072660417,
+            "minimum": 0.018023033628007466,
+            "p50": 0.17631843656814097,
+            "p95": 0.8171936101274209
+          },
+          "D2": {
+            "count": 526,
+            "maximum": 58.98388195786102,
+            "mean": 3.828352952927644,
+            "minimum": 5.276348279215621e-07,
+            "p50": 1.8354133232328407,
+            "p95": 13.69402420636593
+          },
+          "D3": {
+            "count": 525,
+            "maximum": 3054.192300967748,
+            "mean": 154.82183499564417,
+            "minimum": 1.4534011146298899e-07,
+            "p50": 67.00300932325236,
+            "p95": 560.3282457049845
+          }
+        },
+        "can_route": false,
+        "derivative_scope": "SO3_BODY_RATE_COVARIANT_SUCCESSIVE_DIFFERENCES; FK_ACTUAL_FINITE_DIFFERENCES",
+        "endpoint_mean_joint_speed_radps": {
+          "left": 0.04858312551415513,
+          "right": 0.06049447196820225
+        },
+        "frames": 528,
+        "region_scope": "WHOLE_SINGLE_CORE; NO_REAL_OUTSIDE_CONTEXT_OR_BRIDGE_CERTIFICATE",
+        "scope": "ACTUAL_FULL528_BODY22_PAIR_ALL_STENCILS_NOT_NATIVE24",
+        "units": {
+          "FK_D1": "m/s",
+          "FK_D2": "m/s^2",
+          "FK_D3": "m/s^3",
+          "SO3_D1": "rad/s",
+          "SO3_D2": "rad/s^2",
+          "SO3_D3": "rad/s^3"
+        }
+      }
+    },
+    "case_key": "r66b10_f449ca842cdeb74f",
+    "delta": -6,
+    "match": {
+      "budget_scope": "RMS_AND_MAX_CLOCK_SHIFT_AND_FIRST_RATE_ENERGY; CURVATURE_REPORTED_SEPARATELY",
+      "curvature_energy_gap": 0.0,
+      "eligible": true,
+      "gaps": {
+        "rate_energy": 0.0,
+        "source_shift_max": 0.04425536090411688,
+        "source_shift_rms": 0.03179881764058537,
+        "target_offset_rms": 0.009156001587492526
+      },
+      "peak_gap_frames": 0,
+      "phase_semantics": "UNKNOWN"
+    },
+    "source_interval": [
+      2551,
+      2789
+    ],
+    "source_uid": "female_meditation"
+  },
+  {
+    "High": {
+      "activity": 0.9931714628766066,
+      "actual_peak": 118,
+      "core": {
+        "FK": {
+          "D1": {
+            "count": 239,
+            "maximum": 0.4777961280698884,
+            "mean": 0.1405168468063688,
+            "minimum": 0.005552016142278634,
+            "p50": 0.10371770345186332,
+            "p95": 0.41680339497185387
+          },
+          "D2": {
+            "count": 238,
+            "maximum": 9.26174334275003,
+            "mean": 1.3618972937798262,
+            "minimum": 0.042191648308854676,
+            "p50": 0.9212815474201747,
+            "p95": 4.168576820448984
+          },
+          "D3": {
+            "count": 237,
+            "maximum": 386.3147249525585,
+            "mean": 40.75392641567159,
+            "minimum": 0.6277662121470468,
+            "p50": 27.515462124903994,
+            "p95": 120.70227037304832
+          }
+        },
+        "SO3": {
+          "D1": {
+            "count": 239,
+            "maximum": 2.506025691270124,
+            "mean": 0.3718419414981447,
+            "minimum": 0.015308706774937234,
+            "p50": 0.22886856453862336,
+            "p95": 1.0485590623718766
+          },
+          "D2": {
+            "count": 238,
+            "maximum": 61.76469761752599,
+            "mean": 6.243658126215404,
+            "minimum": 0.12143679498762973,
+            "p50": 2.7367842733026726,
+            "p95": 22.001358100508103
+          },
+          "D3": {
+            "count": 237,
+            "maximum": 3565.14042375015,
+            "mean": 258.8556097440529,
+            "minimum": 2.6809066996281334,
+            "p50": 97.80871753795226,
+            "p95": 1100.4070048107596
+          }
+        },
+        "derivative_scope": "SO3_BODY_RATE_COVARIANT_SUCCESSIVE_DIFFERENCES; FK_ACTUAL_FINITE_DIFFERENCES",
+        "endpoint_mean_joint_speed_radps": {
+          "left": 0.04858312551415513,
+          "right": 0.027529907647941033
+        },
+        "frames": 240,
+        "region_scope": "WHOLE_SINGLE_CORE; NO_REAL_OUTSIDE_CONTEXT_OR_BRIDGE_CERTIFICATE",
+        "units": {
+          "FK_D1": "m/s",
+          "FK_D2": "m/s^2",
+          "FK_D3": "m/s^3",
+          "SO3_D1": "rad/s",
+          "SO3_D2": "rad/s^2",
+          "SO3_D3": "rad/s^3"
+        }
+      },
+      "dose": {
+        "postmap_derivative_energy": {
+          "1": 0.4450095359193669,
+          "2": 0.0015936980625175044,
+          "3": 1.609796022745958e-05
+        },
+        "source_shift_max": 3.0865384615385665,
+        "source_shift_rms": 1.9666999089107984,
+        "target_offset_rms": 1.9884280610085523,
+        "unchanged_edge_frames": 4
+      },
+      "pair": {
+        "FK": {
+          "D1": {
+            "count": 527,
+            "maximum": 0.4777961280698884,
+            "mean": 0.13184571703293058,
+            "minimum": 0.005552016142278634,
+            "p50": 0.10515450946129234,
+            "p95": 0.3648751623626021
+          },
+          "D2": {
+            "count": 526,
+            "maximum": 9.26174334275003,
+            "mean": 1.0018279254971905,
+            "minimum": 0.042191648308854676,
+            "p50": 0.5873403569635367,
+            "p95": 3.4363403136117725
+          },
+          "D3": {
+            "count": 525,
+            "maximum": 386.3147249525585,
+            "mean": 30.193094042366074,
+            "minimum": 0.6277662121470468,
+            "p50": 19.775915312470495,
+            "p95": 88.72553433747882
+          }
+        },
+        "SO3": {
+          "D1": {
+            "count": 527,
+            "maximum": 2.506025691270124,
+            "mean": 0.26054006330904894,
+            "minimum": 0.015308706774937234,
+            "p50": 0.1755973711781862,
+            "p95": 0.8442879541516466
+          },
+          "D2": {
+            "count": 526,
+            "maximum": 61.76469761752599,
+            "mean": 3.931904804496586,
+            "minimum": 5.276348279215621e-07,
+            "p50": 1.7585705384869441,
+            "p95": 14.516162315159079
+          },
+          "D3": {
+            "count": 525,
+            "maximum": 3565.14042375015,
+            "mean": 159.95808627863215,
+            "minimum": 1.4534011146298899e-07,
+            "p50": 63.539792940874506,
+            "p95": 618.6217957385842
+          }
+        },
+        "can_route": false,
+        "derivative_scope": "SO3_BODY_RATE_COVARIANT_SUCCESSIVE_DIFFERENCES; FK_ACTUAL_FINITE_DIFFERENCES",
+        "endpoint_mean_joint_speed_radps": {
+          "left": 0.04858312551415513,
+          "right": 0.06049447196820225
+        },
+        "frames": 528,
+        "region_scope": "WHOLE_SINGLE_CORE; NO_REAL_OUTSIDE_CONTEXT_OR_BRIDGE_CERTIFICATE",
+        "scope": "ACTUAL_FULL528_BODY22_PAIR_ALL_STENCILS_NOT_NATIVE24",
+        "units": {
+          "FK_D1": "m/s",
+          "FK_D2": "m/s^2",
+          "FK_D3": "m/s^3",
+          "SO3_D1": "rad/s",
+          "SO3_D2": "rad/s^2",
+          "SO3_D3": "rad/s^3"
+        }
+      }
+    },
+    "Low": {
+      "activity": 0.47433124743316146,
+      "actual_peak": 118,
+      "core": {
+        "FK": {
+          "D1": {
+            "count": 239,
+            "maximum": 0.4651864990535695,
+            "mean": 0.14072912175063712,
+            "minimum": 0.0050882654454055525,
+            "p50": 0.1019050385329365,
+            "p95": 0.37865785708129557
+          },
+          "D2": {
+            "count": 238,
+            "maximum": 9.26174334275003,
+            "mean": 1.340221105283098,
+            "minimum": 0.03631610475112117,
+            "p50": 0.8596005527026782,
+            "p95": 3.643542704528894
+          },
+          "D3": {
+            "count": 237,
+            "maximum": 386.3147249525585,
+            "mean": 41.22634334371668,
+            "minimum": 0.6277662121470468,
+            "p50": 26.176867854683596,
+            "p95": 124.87920255196855
+          }
+        },
+        "SO3": {
+          "D1": {
+            "count": 239,
+            "maximum": 2.3455737084101935,
+            "mean": 0.3720559767509716,
+            "minimum": 0.014607724885533096,
+            "p50": 0.23072198045923684,
+            "p95": 1.0254114650376744
+          },
+          "D2": {
+            "count": 238,
+            "maximum": 58.98388195786102,
+            "mean": 6.032389779414901,
+            "minimum": 0.12902971328550517,
+            "p50": 2.743653558329619,
+            "p95": 19.826159378637506
+          },
+          "D3": {
+            "count": 237,
+            "maximum": 3054.192300967748,
+            "mean": 248.66778341012224,
+            "minimum": 2.6809066996281334,
+            "p50": 100.73782634528956,
+            "p95": 1098.550503677363
+          }
+        },
+        "derivative_scope": "SO3_BODY_RATE_COVARIANT_SUCCESSIVE_DIFFERENCES; FK_ACTUAL_FINITE_DIFFERENCES",
+        "endpoint_mean_joint_speed_radps": {
+          "left": 0.04858312551415513,
+          "right": 0.027529907647941033
+        },
+        "frames": 240,
+        "region_scope": "WHOLE_SINGLE_CORE; NO_REAL_OUTSIDE_CONTEXT_OR_BRIDGE_CERTIFICATE",
+        "units": {
+          "FK_D1": "m/s",
+          "FK_D2": "m/s^2",
+          "FK_D3": "m/s^3",
+          "SO3_D1": "rad/s",
+          "SO3_D2": "rad/s^2",
+          "SO3_D3": "rad/s^3"
+        }
+      },
+      "dose": {
+        "postmap_derivative_energy": {
+          "1": 0.4450095359193669,
+          "2": 0.0015936980625175044,
+          "3": 1.609796022745958e-05
+        },
+        "source_shift_max": 3.0110040689742164,
+        "source_shift_rms": 1.9136268257621696,
+        "target_offset_rms": 2.007198583550275,
+        "unchanged_edge_frames": 4
+      },
+      "pair": {
+        "FK": {
+          "D1": {
+            "count": 527,
+            "maximum": 0.4651864990535695,
+            "mean": 0.13194198593554943,
+            "minimum": 0.0050882654454055525,
+            "p50": 0.10474860137462622,
+            "p95": 0.35020933576309127
+          },
+          "D2": {
+            "count": 526,
+            "maximum": 9.26174334275003,
+            "mean": 0.9920200683446783,
+            "minimum": 0.03631610475112117,
+            "p50": 0.5930222699501275,
+            "p95": 3.2087482338771944
+          },
+          "D3": {
+            "count": 525,
+            "maximum": 386.3147249525585,
+            "mean": 30.406356541312146,
+            "minimum": 0.6277662121470468,
+            "p50": 19.89730664870093,
+            "p95": 90.42597826788769
+          }
+        },
+        "SO3": {
+          "D1": {
+            "count": 527,
+            "maximum": 2.3455737084101935,
+            "mean": 0.26063713052997045,
+            "minimum": 0.014607724885533096,
+            "p50": 0.17495023256817885,
+            "p95": 0.8256398943754285
+          },
+          "D2": {
+            "count": 526,
+            "maximum": 58.98388195786102,
+            "mean": 3.8363119023321,
+            "minimum": 5.276348279215621e-07,
+            "p50": 1.7952824150531312,
+            "p95": 13.877614879327243
+          },
+          "D3": {
+            "count": 525,
+            "maximum": 3054.192300967748,
+            "mean": 155.3590103907434,
+            "minimum": 1.4534011146298899e-07,
+            "p50": 67.00300932325236,
+            "p95": 586.1677523940501
+          }
+        },
+        "can_route": false,
+        "derivative_scope": "SO3_BODY_RATE_COVARIANT_SUCCESSIVE_DIFFERENCES; FK_ACTUAL_FINITE_DIFFERENCES",
+        "endpoint_mean_joint_speed_radps": {
+          "left": 0.04858312551415513,
+          "right": 0.06049447196820225
+        },
+        "frames": 528,
+        "region_scope": "WHOLE_SINGLE_CORE; NO_REAL_OUTSIDE_CONTEXT_OR_BRIDGE_CERTIFICATE",
+        "scope": "ACTUAL_FULL528_BODY22_PAIR_ALL_STENCILS_NOT_NATIVE24",
+        "units": {
+          "FK_D1": "m/s",
+          "FK_D2": "m/s^2",
+          "FK_D3": "m/s^3",
+          "SO3_D1": "rad/s",
+          "SO3_D2": "rad/s^2",
+          "SO3_D3": "rad/s^3"
+        }
+      }
+    },
+    "case_key": "r66b10_f449ca842cdeb74f",
+    "delta": 3,
+    "match": {
+      "budget_scope": "RMS_AND_MAX_CLOCK_SHIFT_AND_FIRST_RATE_ENERGY; CURVATURE_REPORTED_SEPARATELY",
+      "curvature_energy_gap": 0.0,
+      "eligible": true,
+      "gaps": {
+        "rate_energy": 0.0,
+        "source_shift_max": 0.02447220195231198,
+        "source_shift_rms": 0.026985857327883764,
+        "target_offset_rms": 0.00935160212624402
+      },
+      "peak_gap_frames": 0,
+      "phase_semantics": "UNKNOWN"
+    },
+    "source_interval": [
+      2551,
+      2789
+    ],
+    "source_uid": "female_meditation"
+  },
+  {
+    "High": {
+      "activity": 1.0446540659387025,
+      "actual_peak": 112,
+      "core": {
+        "FK": {
+          "D1": {
+            "count": 239,
+            "maximum": 0.4573250513939555,
+            "mean": 0.14075857557674173,
+            "minimum": 0.005552016142278634,
+            "p50": 0.11081742463871938,
+            "p95": 0.35429113924413913
+          },
+          "D2": {
+            "count": 238,
+            "maximum": 9.26174334275003,
+            "mean": 1.3067363644169976,
+            "minimum": 0.04192895882026153,
+            "p50": 0.9583806101410012,
+            "p95": 3.176211581941883
+          },
+          "D3": {
+            "count": 237,
+            "maximum": 386.3147249525585,
+            "mean": 40.846087942582884,
+            "minimum": 0.6277662121470468,
+            "p50": 29.802088565214405,
+            "p95": 122.54369787836183
+          }
+        },
+        "SO3": {
+          "D1": {
+            "count": 239,
+            "maximum": 1.9949699526270817,
+            "mean": 0.3712935778900535,
+            "minimum": 0.015308706774937234,
+            "p50": 0.2516062374664,
+            "p95": 1.0298856356172723
+          },
+          "D2": {
+            "count": 238,
+            "maximum": 47.13539185256255,
+            "mean": 5.892078812666827,
+            "minimum": 0.12180413082287884,
+            "p50": 2.831753067511677,
+            "p95": 19.775720865983004
+          },
+          "D3": {
+            "count": 237,
+            "maximum": 2204.572594791927,
+            "mean": 236.34535625039172,
+            "minimum": 2.6809066996281334,
+            "p50": 105.77108061027317,
+            "p95": 934.7169874241716
+          }
+        },
+        "derivative_scope": "SO3_BODY_RATE_COVARIANT_SUCCESSIVE_DIFFERENCES; FK_ACTUAL_FINITE_DIFFERENCES",
+        "endpoint_mean_joint_speed_radps": {
+          "left": 0.04858312551415513,
+          "right": 0.027529907647941033
+        },
+        "frames": 240,
+        "region_scope": "WHOLE_SINGLE_CORE; NO_REAL_OUTSIDE_CONTEXT_OR_BRIDGE_CERTIFICATE",
+        "units": {
+          "FK_D1": "m/s",
+          "FK_D2": "m/s^2",
+          "FK_D3": "m/s^3",
+          "SO3_D1": "rad/s",
+          "SO3_D2": "rad/s^2",
+          "SO3_D3": "rad/s^3"
+        }
+      },
+      "dose": {
+        "postmap_derivative_energy": {
+          "1": 0.5439005439014485,
+          "2": 0.0029097559961739346,
+          "3": 4.3905783207041486e-05
+        },
+        "source_shift_max": 3.0865384615385665,
+        "source_shift_rms": 1.9958211771703078,
+        "target_offset_rms": 2.0098533502227487,
+        "unchanged_edge_frames": 4
+      },
+      "pair": {
+        "FK": {
+          "D1": {
+            "count": 527,
+            "maximum": 0.4573250513939555,
+            "mean": 0.13195534355308075,
+            "minimum": 0.005552016142278634,
+            "p50": 0.10783788442806147,
+            "p95": 0.34083530805160656
+          },
+          "D2": {
+            "count": 526,
+            "maximum": 9.26174334275003,
+            "mean": 0.9768691779908154,
+            "minimum": 0.04192895882026153,
+            "p50": 0.5990605225265693,
+            "p95": 2.8723612893747914
+          },
+          "D3": {
+            "count": 525,
+            "maximum": 386.3147249525585,
+            "mean": 30.234698388800314,
+            "minimum": 0.6277662121470468,
+            "p50": 20.56614549635193,
+            "p95": 87.2700779291609
+          }
+        },
+        "SO3": {
+          "D1": {
+            "count": 527,
+            "maximum": 1.9949699526270817,
+            "mean": 0.2602913746898197,
+            "minimum": 0.015308706774937234,
+            "p50": 0.17926889279953798,
+            "p95": 0.7858155440585575
+          },
+          "D2": {
+            "count": 526,
+            "maximum": 47.13539185256255,
+            "mean": 3.7728251911419073,
+            "minimum": 5.276348279215621e-07,
+            "p50": 1.8412106429412336,
+            "p95": 14.040590000906755
+          },
+          "D3": {
+            "count": 525,
+            "maximum": 2204.572594791927,
+            "mean": 149.79631470149363,
+            "minimum": 1.4534011146298899e-07,
+            "p50": 67.00300932325236,
+            "p95": 620.2346904955295
+          }
+        },
+        "can_route": false,
+        "derivative_scope": "SO3_BODY_RATE_COVARIANT_SUCCESSIVE_DIFFERENCES; FK_ACTUAL_FINITE_DIFFERENCES",
+        "endpoint_mean_joint_speed_radps": {
+          "left": 0.04858312551415513,
+          "right": 0.06049447196820225
+        },
+        "frames": 528,
+        "region_scope": "WHOLE_SINGLE_CORE; NO_REAL_OUTSIDE_CONTEXT_OR_BRIDGE_CERTIFICATE",
+        "scope": "ACTUAL_FULL528_BODY22_PAIR_ALL_STENCILS_NOT_NATIVE24",
+        "units": {
+          "FK_D1": "m/s",
+          "FK_D2": "m/s^2",
+          "FK_D3": "m/s^3",
+          "SO3_D1": "rad/s",
+          "SO3_D2": "rad/s^2",
+          "SO3_D3": "rad/s^3"
+        }
+      }
+    },
+    "Low": {
+      "activity": 0.4084208017328353,
+      "actual_peak": 112,
+      "core": {
+        "FK": {
+          "D1": {
+            "count": 239,
+            "maximum": 0.4651864990535695,
+            "mean": 0.1405420090743217,
+            "minimum": 0.00624925467578781,
+            "p50": 0.10306067705302126,
+            "p95": 0.37865604484206883
+          },
+          "D2": {
+            "count": 238,
+            "maximum": 9.26174334275003,
+            "mean": 1.325274892804309,
+            "minimum": 0.05149657632710264,
+            "p50": 0.8680577150671701,
+            "p95": 3.6088232839356684
+          },
+          "D3": {
+            "count": 237,
+            "maximum": 386.3147249525585,
+            "mean": 40.543712460164215,
+            "minimum": 0.6277662121470468,
+            "p50": 25.63086431654824,
+            "p95": 129.92992589043573
+          }
+        },
+        "SO3": {
+          "D1": {
+            "count": 239,
+            "maximum": 2.3455737084101935,
+            "mean": 0.3724569501607749,
+            "minimum": 0.016915212611397636,
+            "p50": 0.24508655839699756,
+            "p95": 1.0397936000754455
+          },
+          "D2": {
+            "count": 238,
+            "maximum": 58.98388195786102,
+            "mean": 6.075700539952401,
+            "minimum": 0.12902971328550517,
+            "p50": 2.552794549550868,
+            "p95": 19.79181131296556
+          },
+          "D3": {
+            "count": 237,
+            "maximum": 3054.192300967748,
+            "mean": 251.40584986276411,
+            "minimum": 2.6809066996281334,
+            "p50": 96.26044558721149,
+            "p95": 1068.34949870657
+          }
+        },
+        "derivative_scope": "SO3_BODY_RATE_COVARIANT_SUCCESSIVE_DIFFERENCES; FK_ACTUAL_FINITE_DIFFERENCES",
+        "endpoint_mean_joint_speed_radps": {
+          "left": 0.04858312551415513,
+          "right": 0.027529907647941033
+        },
+        "frames": 240,
+        "region_scope": "WHOLE_SINGLE_CORE; NO_REAL_OUTSIDE_CONTEXT_OR_BRIDGE_CERTIFICATE",
+        "units": {
+          "FK_D1": "m/s",
+          "FK_D2": "m/s^2",
+          "FK_D3": "m/s^3",
+          "SO3_D1": "rad/s",
+          "SO3_D2": "rad/s^2",
+          "SO3_D3": "rad/s^3"
+        }
+      },
+      "dose": {
+        "postmap_derivative_energy": {
+          "1": 0.5439005439014485,
+          "2": 0.0029097559961739346,
+          "3": 4.3905783207041486e-05
+        },
+        "source_shift_max": 3.0332181895973918,
+        "source_shift_rms": 1.9326488532166919,
+        "target_offset_rms": 2.028425618404975,
+        "unchanged_edge_frames": 4
+      },
+      "pair": {
+        "FK": {
+          "D1": {
+            "count": 527,
+            "maximum": 0.4651864990535695,
+            "mean": 0.13185712838405153,
+            "minimum": 0.00624925467578781,
+            "p50": 0.10455506382728462,
+            "p95": 0.34929211436130697
+          },
+          "D2": {
+            "count": 526,
+            "maximum": 9.26174334275003,
+            "mean": 0.9852573334208158,
+            "minimum": 0.05149657632710264,
+            "p50": 0.5850707991075306,
+            "p95": 3.1617234479265264
+          },
+          "D3": {
+            "count": 525,
+            "maximum": 386.3147249525585,
+            "mean": 30.09819745673703,
+            "minimum": 0.6277662121470468,
+            "p50": 19.38131378055325,
+            "p95": 89.78966503253173
+          }
+        },
+        "SO3": {
+          "D1": {
+            "count": 527,
+            "maximum": 2.3455737084101935,
+            "mean": 0.26081897615604815,
+            "minimum": 0.016915212611397636,
+            "p50": 0.17495023256817885,
+            "p95": 0.8171936101274209
+          },
+          "D2": {
+            "count": 526,
+            "maximum": 58.98388195786102,
+            "mean": 3.855908786377585,
+            "minimum": 5.276348279215621e-07,
+            "p50": 1.7952824150531312,
+            "p95": 14.70551414800595
+          },
+          "D3": {
+            "count": 525,
+            "maximum": 3054.192300967748,
+            "mean": 156.59505181793602,
+            "minimum": 1.4534011146298899e-07,
+            "p50": 63.76158731730752,
+            "p95": 626.208675919896
+          }
+        },
+        "can_route": false,
+        "derivative_scope": "SO3_BODY_RATE_COVARIANT_SUCCESSIVE_DIFFERENCES; FK_ACTUAL_FINITE_DIFFERENCES",
+        "endpoint_mean_joint_speed_radps": {
+          "left": 0.04858312551415513,
+          "right": 0.06049447196820225
+        },
+        "frames": 528,
+        "region_scope": "WHOLE_SINGLE_CORE; NO_REAL_OUTSIDE_CONTEXT_OR_BRIDGE_CERTIFICATE",
+        "scope": "ACTUAL_FULL528_BODY22_PAIR_ALL_STENCILS_NOT_NATIVE24",
+        "units": {
+          "FK_D1": "m/s",
+          "FK_D2": "m/s^2",
+          "FK_D3": "m/s^3",
+          "SO3_D1": "rad/s",
+          "SO3_D2": "rad/s^2",
+          "SO3_D3": "rad/s^3"
+        }
+      }
+    },
+    "case_key": "r66b10_f449ca842cdeb74f",
+    "delta": -3,
+    "match": {
+      "budget_scope": "RMS_AND_MAX_CLOCK_SHIFT_AND_FIRST_RATE_ENERGY; CURVATURE_REPORTED_SEPARATELY",
+      "curvature_energy_gap": 0.0,
+      "eligible": true,
+      "gaps": {
+        "rate_energy": 0.0,
+        "source_shift_max": 0.017275103681875334,
+        "source_shift_rms": 0.03165229664672774,
+        "target_offset_rms": 0.009156001587492526
+      },
+      "peak_gap_frames": 0,
+      "phase_semantics": "UNKNOWN"
+    },
+    "source_interval": [
+      2551,
+      2789
+    ],
+    "source_uid": "female_meditation"
+  }
+]

@@ -1,0 +1,1577 @@
+[
+  {
+    "audio": "outputs/judge_repair_r72_01/media/source_0.wav",
+    "audio_sha256": "514a4e71b558f89ac41dbfee360703aa844a6fe6f84abf1b36094e237b8780bc",
+    "expected": "TIE",
+    "fps": 1,
+    "job_id": "s0_Identical_1",
+    "observation_interval_seconds": [
+      0,
+      8
+    ],
+    "role": "dev",
+    "source_index": 0,
+    "source_interval": [
+      2660,
+      2896
+    ],
+    "source_uid": "female_FeiTian",
+    "support": {
+      "circular_shift": false,
+      "delayed_source_valid_frames": [
+        15,
+        240
+      ],
+      "padding_frames": [
+        0,
+        15
+      ]
+    },
+    "synthetic_truth": true,
+    "task": "naturalness",
+    "test": "Identical",
+    "use_audio": true,
+    "video": "outputs/judge_repair_r72_01/media/8097d5ee79d905e5103f9f30.mp4",
+    "video_sha256": "36b9a52fae2a428857f1523686733c1f39863072419437756c921fe6eeecc0de"
+  },
+  {
+    "audio": "outputs/judge_repair_r72_01/media/source_0.wav",
+    "audio_sha256": "514a4e71b558f89ac41dbfee360703aa844a6fe6f84abf1b36094e237b8780bc",
+    "expected": "TIE",
+    "fps": 2,
+    "job_id": "s0_Identical_2",
+    "observation_interval_seconds": [
+      0,
+      8
+    ],
+    "role": "dev",
+    "source_index": 0,
+    "source_interval": [
+      2660,
+      2896
+    ],
+    "source_uid": "female_FeiTian",
+    "support": {
+      "circular_shift": false,
+      "delayed_source_valid_frames": [
+        15,
+        240
+      ],
+      "padding_frames": [
+        0,
+        15
+      ]
+    },
+    "synthetic_truth": true,
+    "task": "naturalness",
+    "test": "Identical",
+    "use_audio": true,
+    "video": "outputs/judge_repair_r72_01/media/8097d5ee79d905e5103f9f30.mp4",
+    "video_sha256": "36b9a52fae2a428857f1523686733c1f39863072419437756c921fe6eeecc0de"
+  },
+  {
+    "audio": "outputs/judge_repair_r72_01/media/source_0.wav",
+    "audio_sha256": "514a4e71b558f89ac41dbfee360703aa844a6fe6f84abf1b36094e237b8780bc",
+    "expected": "DIFFERENT_ONLY_NO_NATURALNESS_TRUTH",
+    "fps": 1,
+    "job_id": "s0_Different_1",
+    "observation_interval_seconds": [
+      0,
+      8
+    ],
+    "role": "dev",
+    "source_index": 0,
+    "source_interval": [
+      2660,
+      2896
+    ],
+    "source_uid": "female_FeiTian",
+    "support": {
+      "circular_shift": false,
+      "delayed_source_valid_frames": [
+        15,
+        240
+      ],
+      "padding_frames": [
+        0,
+        15
+      ]
+    },
+    "synthetic_truth": true,
+    "task": "naturalness",
+    "test": "Different",
+    "use_audio": true,
+    "video": "outputs/judge_repair_r72_01/media/5aea702f94689f0b4a671414.mp4",
+    "video_sha256": "b8ee2d454140440b939666c46f037313dd66ce6b16ef09fe385b34a29d6bf457"
+  },
+  {
+    "audio": "outputs/judge_repair_r72_01/media/source_0.wav",
+    "audio_sha256": "514a4e71b558f89ac41dbfee360703aa844a6fe6f84abf1b36094e237b8780bc",
+    "expected": "DIFFERENT_ONLY_NO_NATURALNESS_TRUTH",
+    "fps": 2,
+    "job_id": "s0_Different_2",
+    "observation_interval_seconds": [
+      0,
+      8
+    ],
+    "role": "dev",
+    "source_index": 0,
+    "source_interval": [
+      2660,
+      2896
+    ],
+    "source_uid": "female_FeiTian",
+    "support": {
+      "circular_shift": false,
+      "delayed_source_valid_frames": [
+        15,
+        240
+      ],
+      "padding_frames": [
+        0,
+        15
+      ]
+    },
+    "synthetic_truth": true,
+    "task": "naturalness",
+    "test": "Different",
+    "use_audio": true,
+    "video": "outputs/judge_repair_r72_01/media/5aea702f94689f0b4a671414.mp4",
+    "video_sha256": "b8ee2d454140440b939666c46f037313dd66ce6b16ef09fe385b34a29d6bf457"
+  },
+  {
+    "audio": "outputs/judge_repair_r72_01/media/source_0.wav",
+    "audio_sha256": "514a4e71b558f89ac41dbfee360703aa844a6fe6f84abf1b36094e237b8780bc",
+    "expected": "A",
+    "fps": 1,
+    "job_id": "s0_SyncAB_1",
+    "observation_interval_seconds": [
+      0.5,
+      8
+    ],
+    "role": "dev",
+    "source_index": 0,
+    "source_interval": [
+      2660,
+      2896
+    ],
+    "source_uid": "female_FeiTian",
+    "support": {
+      "circular_shift": false,
+      "delayed_source_valid_frames": [
+        15,
+        240
+      ],
+      "padding_frames": [
+        0,
+        15
+      ]
+    },
+    "synthetic_truth": true,
+    "task": "music",
+    "test": "SyncAB",
+    "use_audio": true,
+    "video": "outputs/judge_repair_r72_01/media/b87ac5278b80aa76c58c5727.mp4",
+    "video_sha256": "feacae2dd6c0fe40694b10707f71ea854b5a58ba59cc8115a927749d6a65e4fd"
+  },
+  {
+    "audio": "outputs/judge_repair_r72_01/media/source_0.wav",
+    "audio_sha256": "514a4e71b558f89ac41dbfee360703aa844a6fe6f84abf1b36094e237b8780bc",
+    "expected": "A",
+    "fps": 2,
+    "job_id": "s0_SyncAB_2",
+    "observation_interval_seconds": [
+      0.5,
+      8
+    ],
+    "role": "dev",
+    "source_index": 0,
+    "source_interval": [
+      2660,
+      2896
+    ],
+    "source_uid": "female_FeiTian",
+    "support": {
+      "circular_shift": false,
+      "delayed_source_valid_frames": [
+        15,
+        240
+      ],
+      "padding_frames": [
+        0,
+        15
+      ]
+    },
+    "synthetic_truth": true,
+    "task": "music",
+    "test": "SyncAB",
+    "use_audio": true,
+    "video": "outputs/judge_repair_r72_01/media/b87ac5278b80aa76c58c5727.mp4",
+    "video_sha256": "feacae2dd6c0fe40694b10707f71ea854b5a58ba59cc8115a927749d6a65e4fd"
+  },
+  {
+    "audio": "outputs/judge_repair_r72_01/media/source_0.wav",
+    "audio_sha256": "514a4e71b558f89ac41dbfee360703aa844a6fe6f84abf1b36094e237b8780bc",
+    "expected": "B",
+    "fps": 1,
+    "job_id": "s0_SyncBA_1",
+    "observation_interval_seconds": [
+      0.5,
+      8
+    ],
+    "role": "dev",
+    "source_index": 0,
+    "source_interval": [
+      2660,
+      2896
+    ],
+    "source_uid": "female_FeiTian",
+    "support": {
+      "circular_shift": false,
+      "delayed_source_valid_frames": [
+        15,
+        240
+      ],
+      "padding_frames": [
+        0,
+        15
+      ]
+    },
+    "synthetic_truth": true,
+    "task": "music",
+    "test": "SyncBA",
+    "use_audio": true,
+    "video": "outputs/judge_repair_r72_01/media/ef1037218e36364f8b101a51.mp4",
+    "video_sha256": "d333efbcbd91390a7d3b71938068168687c1186bc5c9ef700408cb8077be5e7b"
+  },
+  {
+    "audio": "outputs/judge_repair_r72_01/media/source_0.wav",
+    "audio_sha256": "514a4e71b558f89ac41dbfee360703aa844a6fe6f84abf1b36094e237b8780bc",
+    "expected": "B",
+    "fps": 2,
+    "job_id": "s0_SyncBA_2",
+    "observation_interval_seconds": [
+      0.5,
+      8
+    ],
+    "role": "dev",
+    "source_index": 0,
+    "source_interval": [
+      2660,
+      2896
+    ],
+    "source_uid": "female_FeiTian",
+    "support": {
+      "circular_shift": false,
+      "delayed_source_valid_frames": [
+        15,
+        240
+      ],
+      "padding_frames": [
+        0,
+        15
+      ]
+    },
+    "synthetic_truth": true,
+    "task": "music",
+    "test": "SyncBA",
+    "use_audio": true,
+    "video": "outputs/judge_repair_r72_01/media/ef1037218e36364f8b101a51.mp4",
+    "video_sha256": "d333efbcbd91390a7d3b71938068168687c1186bc5c9ef700408cb8077be5e7b"
+  },
+  {
+    "audio": "outputs/judge_repair_r72_01/media/source_0.wav",
+    "audio_sha256": "514a4e71b558f89ac41dbfee360703aa844a6fe6f84abf1b36094e237b8780bc",
+    "expected": "UNSURE",
+    "fps": 1,
+    "job_id": "s0_Muted_1",
+    "observation_interval_seconds": [
+      0.5,
+      8
+    ],
+    "role": "dev",
+    "source_index": 0,
+    "source_interval": [
+      2660,
+      2896
+    ],
+    "source_uid": "female_FeiTian",
+    "support": {
+      "circular_shift": false,
+      "delayed_source_valid_frames": [
+        15,
+        240
+      ],
+      "padding_frames": [
+        0,
+        15
+      ]
+    },
+    "synthetic_truth": true,
+    "task": "music",
+    "test": "Muted",
+    "use_audio": false,
+    "video": "outputs/judge_repair_r72_01/media/7d12155a7e2ce16901018639.mp4",
+    "video_sha256": "feacae2dd6c0fe40694b10707f71ea854b5a58ba59cc8115a927749d6a65e4fd"
+  },
+  {
+    "audio": "outputs/judge_repair_r72_01/media/source_0.wav",
+    "audio_sha256": "514a4e71b558f89ac41dbfee360703aa844a6fe6f84abf1b36094e237b8780bc",
+    "expected": "UNSURE",
+    "fps": 2,
+    "job_id": "s0_Muted_2",
+    "observation_interval_seconds": [
+      0.5,
+      8
+    ],
+    "role": "dev",
+    "source_index": 0,
+    "source_interval": [
+      2660,
+      2896
+    ],
+    "source_uid": "female_FeiTian",
+    "support": {
+      "circular_shift": false,
+      "delayed_source_valid_frames": [
+        15,
+        240
+      ],
+      "padding_frames": [
+        0,
+        15
+      ]
+    },
+    "synthetic_truth": true,
+    "task": "music",
+    "test": "Muted",
+    "use_audio": false,
+    "video": "outputs/judge_repair_r72_01/media/7d12155a7e2ce16901018639.mp4",
+    "video_sha256": "feacae2dd6c0fe40694b10707f71ea854b5a58ba59cc8115a927749d6a65e4fd"
+  },
+  {
+    "audio": "outputs/judge_repair_r72_01/media/source_1.wav",
+    "audio_sha256": "2fd8ce737296dd511469df4032a5e3fe1efebb65ea46124035c5f425f1931cbb",
+    "expected": "TIE",
+    "fps": 2,
+    "job_id": "s1_Identical_2",
+    "observation_interval_seconds": [
+      0,
+      8
+    ],
+    "role": "validation",
+    "source_index": 1,
+    "source_interval": [
+      1864,
+      2109
+    ],
+    "source_uid": "female_lotus",
+    "support": {
+      "circular_shift": false,
+      "delayed_source_valid_frames": [
+        15,
+        240
+      ],
+      "padding_frames": [
+        0,
+        15
+      ]
+    },
+    "synthetic_truth": true,
+    "task": "naturalness",
+    "test": "Identical",
+    "use_audio": true,
+    "video": "outputs/judge_repair_r72_01/media/35f4734047dbd5a64b1f7494.mp4",
+    "video_sha256": "e8c7e6c27e7865f2d0b82a2bc5f81a09b771f650cef61f6195e3d9336d4db107"
+  },
+  {
+    "audio": "outputs/judge_repair_r72_01/media/source_1.wav",
+    "audio_sha256": "2fd8ce737296dd511469df4032a5e3fe1efebb65ea46124035c5f425f1931cbb",
+    "expected": "DIFFERENT_ONLY_NO_NATURALNESS_TRUTH",
+    "fps": 2,
+    "job_id": "s1_Different_2",
+    "observation_interval_seconds": [
+      0,
+      8
+    ],
+    "role": "validation",
+    "source_index": 1,
+    "source_interval": [
+      1864,
+      2109
+    ],
+    "source_uid": "female_lotus",
+    "support": {
+      "circular_shift": false,
+      "delayed_source_valid_frames": [
+        15,
+        240
+      ],
+      "padding_frames": [
+        0,
+        15
+      ]
+    },
+    "synthetic_truth": true,
+    "task": "naturalness",
+    "test": "Different",
+    "use_audio": true,
+    "video": "outputs/judge_repair_r72_01/media/464afd3d30f53d258570e7f3.mp4",
+    "video_sha256": "2073318aab9edba2ea71b1e982485c1a8244b99bfdd04f402c7fd7902483b5f3"
+  },
+  {
+    "audio": "outputs/judge_repair_r72_01/media/source_1.wav",
+    "audio_sha256": "2fd8ce737296dd511469df4032a5e3fe1efebb65ea46124035c5f425f1931cbb",
+    "expected": "A",
+    "fps": 1,
+    "job_id": "s1_SyncAB_1",
+    "observation_interval_seconds": [
+      0.5,
+      8
+    ],
+    "role": "validation",
+    "source_index": 1,
+    "source_interval": [
+      1864,
+      2109
+    ],
+    "source_uid": "female_lotus",
+    "support": {
+      "circular_shift": false,
+      "delayed_source_valid_frames": [
+        15,
+        240
+      ],
+      "padding_frames": [
+        0,
+        15
+      ]
+    },
+    "synthetic_truth": true,
+    "task": "music",
+    "test": "SyncAB",
+    "use_audio": true,
+    "video": "outputs/judge_repair_r72_01/media/166511f394b7de3abc3ae11e.mp4",
+    "video_sha256": "1038ec985a0eb90fac5f4d8f2da21fd47dea556ce7fa7960629a1f55b5c1810d"
+  },
+  {
+    "audio": "outputs/judge_repair_r72_01/media/source_1.wav",
+    "audio_sha256": "2fd8ce737296dd511469df4032a5e3fe1efebb65ea46124035c5f425f1931cbb",
+    "expected": "A",
+    "fps": 2,
+    "job_id": "s1_SyncAB_2",
+    "observation_interval_seconds": [
+      0.5,
+      8
+    ],
+    "role": "validation",
+    "source_index": 1,
+    "source_interval": [
+      1864,
+      2109
+    ],
+    "source_uid": "female_lotus",
+    "support": {
+      "circular_shift": false,
+      "delayed_source_valid_frames": [
+        15,
+        240
+      ],
+      "padding_frames": [
+        0,
+        15
+      ]
+    },
+    "synthetic_truth": true,
+    "task": "music",
+    "test": "SyncAB",
+    "use_audio": true,
+    "video": "outputs/judge_repair_r72_01/media/166511f394b7de3abc3ae11e.mp4",
+    "video_sha256": "1038ec985a0eb90fac5f4d8f2da21fd47dea556ce7fa7960629a1f55b5c1810d"
+  },
+  {
+    "audio": "outputs/judge_repair_r72_01/media/source_1.wav",
+    "audio_sha256": "2fd8ce737296dd511469df4032a5e3fe1efebb65ea46124035c5f425f1931cbb",
+    "expected": "B",
+    "fps": 2,
+    "job_id": "s1_SyncBA_2",
+    "observation_interval_seconds": [
+      0.5,
+      8
+    ],
+    "role": "validation",
+    "source_index": 1,
+    "source_interval": [
+      1864,
+      2109
+    ],
+    "source_uid": "female_lotus",
+    "support": {
+      "circular_shift": false,
+      "delayed_source_valid_frames": [
+        15,
+        240
+      ],
+      "padding_frames": [
+        0,
+        15
+      ]
+    },
+    "synthetic_truth": true,
+    "task": "music",
+    "test": "SyncBA",
+    "use_audio": true,
+    "video": "outputs/judge_repair_r72_01/media/685462005c29c30afb45729e.mp4",
+    "video_sha256": "1e335abb28fdae7a620dd70278e60481c0d01acc7fd60a3d3d810ad900e2c590"
+  },
+  {
+    "audio": "outputs/judge_repair_r72_01/media/source_1.wav",
+    "audio_sha256": "2fd8ce737296dd511469df4032a5e3fe1efebb65ea46124035c5f425f1931cbb",
+    "expected": "UNSURE",
+    "fps": 2,
+    "job_id": "s1_Muted_2",
+    "observation_interval_seconds": [
+      0.5,
+      8
+    ],
+    "role": "validation",
+    "source_index": 1,
+    "source_interval": [
+      1864,
+      2109
+    ],
+    "source_uid": "female_lotus",
+    "support": {
+      "circular_shift": false,
+      "delayed_source_valid_frames": [
+        15,
+        240
+      ],
+      "padding_frames": [
+        0,
+        15
+      ]
+    },
+    "synthetic_truth": true,
+    "task": "music",
+    "test": "Muted",
+    "use_audio": false,
+    "video": "outputs/judge_repair_r72_01/media/182e7e1c3a8d09d054ff1420.mp4",
+    "video_sha256": "1038ec985a0eb90fac5f4d8f2da21fd47dea556ce7fa7960629a1f55b5c1810d"
+  },
+  {
+    "audio": "outputs/judge_repair_r72_01/media/source_1.wav",
+    "audio_sha256": "2fd8ce737296dd511469df4032a5e3fe1efebb65ea46124035c5f425f1931cbb",
+    "expected": 4.0,
+    "fps": 2,
+    "job_id": "s1_Localization_2",
+    "observation_interval_seconds": [
+      0,
+      8
+    ],
+    "role": "validation",
+    "source_index": 1,
+    "source_interval": [
+      1864,
+      2109
+    ],
+    "source_uid": "female_lotus",
+    "support": {
+      "circular_shift": false,
+      "delayed_source_valid_frames": [
+        15,
+        240
+      ],
+      "padding_frames": [
+        0,
+        15
+      ]
+    },
+    "synthetic_truth": true,
+    "task": "time",
+    "test": "Localization",
+    "use_audio": false,
+    "video": "outputs/judge_repair_r72_01/media/ad741f574660b0366c0e94f9.mp4",
+    "video_sha256": "44594950658e4f4f2814ded116d801970d5c6932cdf388486fc377eca7efcc58"
+  },
+  {
+    "audio": "outputs/judge_repair_r72_01/media/source_2.wav",
+    "audio_sha256": "ea6e5939607a3d87e54a91dc5fe8054d751e582bd4075d35bc6a452ec6da2ab9",
+    "expected": "TIE",
+    "fps": 2,
+    "job_id": "s2_Identical_2",
+    "observation_interval_seconds": [
+      0,
+      8
+    ],
+    "role": "validation",
+    "source_index": 2,
+    "source_interval": [
+      2551,
+      2789
+    ],
+    "source_uid": "female_meditation",
+    "support": {
+      "circular_shift": false,
+      "delayed_source_valid_frames": [
+        15,
+        240
+      ],
+      "padding_frames": [
+        0,
+        15
+      ]
+    },
+    "synthetic_truth": true,
+    "task": "naturalness",
+    "test": "Identical",
+    "use_audio": true,
+    "video": "outputs/judge_repair_r72_01/media/c049dcfeb74f513c32a5c16d.mp4",
+    "video_sha256": "be80d20cc48eeff43e0e558e8c90bf167e8a9b1ce00a84fbb5bdf3b4d7a2a31a"
+  },
+  {
+    "audio": "outputs/judge_repair_r72_01/media/source_2.wav",
+    "audio_sha256": "ea6e5939607a3d87e54a91dc5fe8054d751e582bd4075d35bc6a452ec6da2ab9",
+    "expected": "DIFFERENT_ONLY_NO_NATURALNESS_TRUTH",
+    "fps": 2,
+    "job_id": "s2_Different_2",
+    "observation_interval_seconds": [
+      0,
+      8
+    ],
+    "role": "validation",
+    "source_index": 2,
+    "source_interval": [
+      2551,
+      2789
+    ],
+    "source_uid": "female_meditation",
+    "support": {
+      "circular_shift": false,
+      "delayed_source_valid_frames": [
+        15,
+        240
+      ],
+      "padding_frames": [
+        0,
+        15
+      ]
+    },
+    "synthetic_truth": true,
+    "task": "naturalness",
+    "test": "Different",
+    "use_audio": true,
+    "video": "outputs/judge_repair_r72_01/media/d885d5fa7d9dd77ee763a99b.mp4",
+    "video_sha256": "1563b79ff1b4bd73379f5fef1b79cbfb79e1ddf29e55f32aa9cd8268f07d0530"
+  },
+  {
+    "audio": "outputs/judge_repair_r72_01/media/source_2.wav",
+    "audio_sha256": "ea6e5939607a3d87e54a91dc5fe8054d751e582bd4075d35bc6a452ec6da2ab9",
+    "expected": "A",
+    "fps": 1,
+    "job_id": "s2_SyncAB_1",
+    "observation_interval_seconds": [
+      0.5,
+      8
+    ],
+    "role": "validation",
+    "source_index": 2,
+    "source_interval": [
+      2551,
+      2789
+    ],
+    "source_uid": "female_meditation",
+    "support": {
+      "circular_shift": false,
+      "delayed_source_valid_frames": [
+        15,
+        240
+      ],
+      "padding_frames": [
+        0,
+        15
+      ]
+    },
+    "synthetic_truth": true,
+    "task": "music",
+    "test": "SyncAB",
+    "use_audio": true,
+    "video": "outputs/judge_repair_r72_01/media/436fb6196fb1215b9c8b5704.mp4",
+    "video_sha256": "5a99bcdf19d736fe0a2833d9ddabd6dc6d8c1f9d074ed60fc46e875e47f7da0b"
+  },
+  {
+    "audio": "outputs/judge_repair_r72_01/media/source_2.wav",
+    "audio_sha256": "ea6e5939607a3d87e54a91dc5fe8054d751e582bd4075d35bc6a452ec6da2ab9",
+    "expected": "A",
+    "fps": 2,
+    "job_id": "s2_SyncAB_2",
+    "observation_interval_seconds": [
+      0.5,
+      8
+    ],
+    "role": "validation",
+    "source_index": 2,
+    "source_interval": [
+      2551,
+      2789
+    ],
+    "source_uid": "female_meditation",
+    "support": {
+      "circular_shift": false,
+      "delayed_source_valid_frames": [
+        15,
+        240
+      ],
+      "padding_frames": [
+        0,
+        15
+      ]
+    },
+    "synthetic_truth": true,
+    "task": "music",
+    "test": "SyncAB",
+    "use_audio": true,
+    "video": "outputs/judge_repair_r72_01/media/436fb6196fb1215b9c8b5704.mp4",
+    "video_sha256": "5a99bcdf19d736fe0a2833d9ddabd6dc6d8c1f9d074ed60fc46e875e47f7da0b"
+  },
+  {
+    "audio": "outputs/judge_repair_r72_01/media/source_2.wav",
+    "audio_sha256": "ea6e5939607a3d87e54a91dc5fe8054d751e582bd4075d35bc6a452ec6da2ab9",
+    "expected": "B",
+    "fps": 2,
+    "job_id": "s2_SyncBA_2",
+    "observation_interval_seconds": [
+      0.5,
+      8
+    ],
+    "role": "validation",
+    "source_index": 2,
+    "source_interval": [
+      2551,
+      2789
+    ],
+    "source_uid": "female_meditation",
+    "support": {
+      "circular_shift": false,
+      "delayed_source_valid_frames": [
+        15,
+        240
+      ],
+      "padding_frames": [
+        0,
+        15
+      ]
+    },
+    "synthetic_truth": true,
+    "task": "music",
+    "test": "SyncBA",
+    "use_audio": true,
+    "video": "outputs/judge_repair_r72_01/media/78943a9a8000a792ec935ef9.mp4",
+    "video_sha256": "34f1139e87346171156261d7031e0dd4f68039aaf16d09488f386675bfb113bd"
+  },
+  {
+    "audio": "outputs/judge_repair_r72_01/media/source_2.wav",
+    "audio_sha256": "ea6e5939607a3d87e54a91dc5fe8054d751e582bd4075d35bc6a452ec6da2ab9",
+    "expected": "UNSURE",
+    "fps": 2,
+    "job_id": "s2_Muted_2",
+    "observation_interval_seconds": [
+      0.5,
+      8
+    ],
+    "role": "validation",
+    "source_index": 2,
+    "source_interval": [
+      2551,
+      2789
+    ],
+    "source_uid": "female_meditation",
+    "support": {
+      "circular_shift": false,
+      "delayed_source_valid_frames": [
+        15,
+        240
+      ],
+      "padding_frames": [
+        0,
+        15
+      ]
+    },
+    "synthetic_truth": true,
+    "task": "music",
+    "test": "Muted",
+    "use_audio": false,
+    "video": "outputs/judge_repair_r72_01/media/dc475f2b03d7e5743eae2138.mp4",
+    "video_sha256": "5a99bcdf19d736fe0a2833d9ddabd6dc6d8c1f9d074ed60fc46e875e47f7da0b"
+  },
+  {
+    "audio": "outputs/judge_repair_r72_01/media/source_2.wav",
+    "audio_sha256": "ea6e5939607a3d87e54a91dc5fe8054d751e582bd4075d35bc6a452ec6da2ab9",
+    "expected": 4.0,
+    "fps": 2,
+    "job_id": "s2_Localization_2",
+    "observation_interval_seconds": [
+      0,
+      8
+    ],
+    "role": "validation",
+    "source_index": 2,
+    "source_interval": [
+      2551,
+      2789
+    ],
+    "source_uid": "female_meditation",
+    "support": {
+      "circular_shift": false,
+      "delayed_source_valid_frames": [
+        15,
+        240
+      ],
+      "padding_frames": [
+        0,
+        15
+      ]
+    },
+    "synthetic_truth": true,
+    "task": "time",
+    "test": "Localization",
+    "use_audio": false,
+    "video": "outputs/judge_repair_r72_01/media/56c4eb39c142ae10a3c48ad6.mp4",
+    "video_sha256": "ce649759cf7b9e7d0dcaaef411669f32825d83249046bd4a4140f37843d13e4d"
+  },
+  {
+    "audio": "outputs/judge_repair_r72_01/media/source_3.wav",
+    "audio_sha256": "ea6e5939607a3d87e54a91dc5fe8054d751e582bd4075d35bc6a452ec6da2ab9",
+    "expected": "TIE",
+    "fps": 2,
+    "job_id": "s3_Identical_2",
+    "observation_interval_seconds": [
+      0,
+      8
+    ],
+    "role": "validation",
+    "source_index": 3,
+    "source_interval": [
+      1071,
+      1317
+    ],
+    "source_uid": "male_meditation",
+    "support": {
+      "circular_shift": false,
+      "delayed_source_valid_frames": [
+        15,
+        240
+      ],
+      "padding_frames": [
+        0,
+        15
+      ]
+    },
+    "synthetic_truth": true,
+    "task": "naturalness",
+    "test": "Identical",
+    "use_audio": true,
+    "video": "outputs/judge_repair_r72_01/media/2e6899085111f3d3e930e1a6.mp4",
+    "video_sha256": "f23bd97aca2685d68fb70df611b77f248b72ee66e67f1b3735de1201c8a860ba"
+  },
+  {
+    "audio": "outputs/judge_repair_r72_01/media/source_3.wav",
+    "audio_sha256": "ea6e5939607a3d87e54a91dc5fe8054d751e582bd4075d35bc6a452ec6da2ab9",
+    "expected": "DIFFERENT_ONLY_NO_NATURALNESS_TRUTH",
+    "fps": 2,
+    "job_id": "s3_Different_2",
+    "observation_interval_seconds": [
+      0,
+      8
+    ],
+    "role": "validation",
+    "source_index": 3,
+    "source_interval": [
+      1071,
+      1317
+    ],
+    "source_uid": "male_meditation",
+    "support": {
+      "circular_shift": false,
+      "delayed_source_valid_frames": [
+        15,
+        240
+      ],
+      "padding_frames": [
+        0,
+        15
+      ]
+    },
+    "synthetic_truth": true,
+    "task": "naturalness",
+    "test": "Different",
+    "use_audio": true,
+    "video": "outputs/judge_repair_r72_01/media/13d1c1a9b510a93a5c52e20b.mp4",
+    "video_sha256": "d7b8dbd743c3a92b683def19513d21b0f06cee2d827f4f35d94cf6db1f452f15"
+  },
+  {
+    "audio": "outputs/judge_repair_r72_01/media/source_3.wav",
+    "audio_sha256": "ea6e5939607a3d87e54a91dc5fe8054d751e582bd4075d35bc6a452ec6da2ab9",
+    "expected": "A",
+    "fps": 1,
+    "job_id": "s3_SyncAB_1",
+    "observation_interval_seconds": [
+      0.5,
+      8
+    ],
+    "role": "validation",
+    "source_index": 3,
+    "source_interval": [
+      1071,
+      1317
+    ],
+    "source_uid": "male_meditation",
+    "support": {
+      "circular_shift": false,
+      "delayed_source_valid_frames": [
+        15,
+        240
+      ],
+      "padding_frames": [
+        0,
+        15
+      ]
+    },
+    "synthetic_truth": true,
+    "task": "music",
+    "test": "SyncAB",
+    "use_audio": true,
+    "video": "outputs/judge_repair_r72_01/media/52255388db1b50c53071a489.mp4",
+    "video_sha256": "f071ecf15ce25573838db58fee1315c54929fbe5d7cae93c5c4af1bf6dc043c1"
+  },
+  {
+    "audio": "outputs/judge_repair_r72_01/media/source_3.wav",
+    "audio_sha256": "ea6e5939607a3d87e54a91dc5fe8054d751e582bd4075d35bc6a452ec6da2ab9",
+    "expected": "A",
+    "fps": 2,
+    "job_id": "s3_SyncAB_2",
+    "observation_interval_seconds": [
+      0.5,
+      8
+    ],
+    "role": "validation",
+    "source_index": 3,
+    "source_interval": [
+      1071,
+      1317
+    ],
+    "source_uid": "male_meditation",
+    "support": {
+      "circular_shift": false,
+      "delayed_source_valid_frames": [
+        15,
+        240
+      ],
+      "padding_frames": [
+        0,
+        15
+      ]
+    },
+    "synthetic_truth": true,
+    "task": "music",
+    "test": "SyncAB",
+    "use_audio": true,
+    "video": "outputs/judge_repair_r72_01/media/52255388db1b50c53071a489.mp4",
+    "video_sha256": "f071ecf15ce25573838db58fee1315c54929fbe5d7cae93c5c4af1bf6dc043c1"
+  },
+  {
+    "audio": "outputs/judge_repair_r72_01/media/source_3.wav",
+    "audio_sha256": "ea6e5939607a3d87e54a91dc5fe8054d751e582bd4075d35bc6a452ec6da2ab9",
+    "expected": "B",
+    "fps": 2,
+    "job_id": "s3_SyncBA_2",
+    "observation_interval_seconds": [
+      0.5,
+      8
+    ],
+    "role": "validation",
+    "source_index": 3,
+    "source_interval": [
+      1071,
+      1317
+    ],
+    "source_uid": "male_meditation",
+    "support": {
+      "circular_shift": false,
+      "delayed_source_valid_frames": [
+        15,
+        240
+      ],
+      "padding_frames": [
+        0,
+        15
+      ]
+    },
+    "synthetic_truth": true,
+    "task": "music",
+    "test": "SyncBA",
+    "use_audio": true,
+    "video": "outputs/judge_repair_r72_01/media/2546d3f631d5d4bf1b698ef1.mp4",
+    "video_sha256": "d77f84d59d7acf98b05865a8c7bc1866375a9fb280d9d88bec8c1a687694bed9"
+  },
+  {
+    "audio": "outputs/judge_repair_r72_01/media/source_3.wav",
+    "audio_sha256": "ea6e5939607a3d87e54a91dc5fe8054d751e582bd4075d35bc6a452ec6da2ab9",
+    "expected": "UNSURE",
+    "fps": 2,
+    "job_id": "s3_Muted_2",
+    "observation_interval_seconds": [
+      0.5,
+      8
+    ],
+    "role": "validation",
+    "source_index": 3,
+    "source_interval": [
+      1071,
+      1317
+    ],
+    "source_uid": "male_meditation",
+    "support": {
+      "circular_shift": false,
+      "delayed_source_valid_frames": [
+        15,
+        240
+      ],
+      "padding_frames": [
+        0,
+        15
+      ]
+    },
+    "synthetic_truth": true,
+    "task": "music",
+    "test": "Muted",
+    "use_audio": false,
+    "video": "outputs/judge_repair_r72_01/media/c08a6270ef9e09ef4690ee1e.mp4",
+    "video_sha256": "f071ecf15ce25573838db58fee1315c54929fbe5d7cae93c5c4af1bf6dc043c1"
+  },
+  {
+    "audio": "outputs/judge_repair_r72_01/media/source_3.wav",
+    "audio_sha256": "ea6e5939607a3d87e54a91dc5fe8054d751e582bd4075d35bc6a452ec6da2ab9",
+    "expected": 4.0,
+    "fps": 2,
+    "job_id": "s3_Localization_2",
+    "observation_interval_seconds": [
+      0,
+      8
+    ],
+    "role": "validation",
+    "source_index": 3,
+    "source_interval": [
+      1071,
+      1317
+    ],
+    "source_uid": "male_meditation",
+    "support": {
+      "circular_shift": false,
+      "delayed_source_valid_frames": [
+        15,
+        240
+      ],
+      "padding_frames": [
+        0,
+        15
+      ]
+    },
+    "synthetic_truth": true,
+    "task": "time",
+    "test": "Localization",
+    "use_audio": false,
+    "video": "outputs/judge_repair_r72_01/media/5adaf3557efb17c00ff8e4ad.mp4",
+    "video_sha256": "fa4d02d78268690d03755aa6240c0bcb5ffde97abaef57fad93decba6bd29f44"
+  },
+  {
+    "audio": "outputs/judge_repair_r72_01/media/source_4.wav",
+    "audio_sha256": "5d76ae71206d7f0400f9423ed4f921016a3e67aaffbfc1164ef6f33421b3c4c1",
+    "expected": "TIE",
+    "fps": 2,
+    "job_id": "s4_Identical_2",
+    "observation_interval_seconds": [
+      0,
+      8
+    ],
+    "role": "validation",
+    "source_index": 4,
+    "source_interval": [
+      559,
+      793
+    ],
+    "source_uid": "male_pipa_1",
+    "support": {
+      "circular_shift": false,
+      "delayed_source_valid_frames": [
+        15,
+        240
+      ],
+      "padding_frames": [
+        0,
+        15
+      ]
+    },
+    "synthetic_truth": true,
+    "task": "naturalness",
+    "test": "Identical",
+    "use_audio": true,
+    "video": "outputs/judge_repair_r72_01/media/978816895f89ea203710f0fa.mp4",
+    "video_sha256": "923e4213ec58dcec02a90e7dff97fa655d8c7dfdcb5ca70cca1b48381fcec07c"
+  },
+  {
+    "audio": "outputs/judge_repair_r72_01/media/source_4.wav",
+    "audio_sha256": "5d76ae71206d7f0400f9423ed4f921016a3e67aaffbfc1164ef6f33421b3c4c1",
+    "expected": "DIFFERENT_ONLY_NO_NATURALNESS_TRUTH",
+    "fps": 2,
+    "job_id": "s4_Different_2",
+    "observation_interval_seconds": [
+      0,
+      8
+    ],
+    "role": "validation",
+    "source_index": 4,
+    "source_interval": [
+      559,
+      793
+    ],
+    "source_uid": "male_pipa_1",
+    "support": {
+      "circular_shift": false,
+      "delayed_source_valid_frames": [
+        15,
+        240
+      ],
+      "padding_frames": [
+        0,
+        15
+      ]
+    },
+    "synthetic_truth": true,
+    "task": "naturalness",
+    "test": "Different",
+    "use_audio": true,
+    "video": "outputs/judge_repair_r72_01/media/3d3e3352879125ddec794b57.mp4",
+    "video_sha256": "090d45b27310f17ad28fcad09785c7f2395c06f49aabac70c1c3b360bac7b881"
+  },
+  {
+    "audio": "outputs/judge_repair_r72_01/media/source_4.wav",
+    "audio_sha256": "5d76ae71206d7f0400f9423ed4f921016a3e67aaffbfc1164ef6f33421b3c4c1",
+    "expected": "A",
+    "fps": 1,
+    "job_id": "s4_SyncAB_1",
+    "observation_interval_seconds": [
+      0.5,
+      8
+    ],
+    "role": "validation",
+    "source_index": 4,
+    "source_interval": [
+      559,
+      793
+    ],
+    "source_uid": "male_pipa_1",
+    "support": {
+      "circular_shift": false,
+      "delayed_source_valid_frames": [
+        15,
+        240
+      ],
+      "padding_frames": [
+        0,
+        15
+      ]
+    },
+    "synthetic_truth": true,
+    "task": "music",
+    "test": "SyncAB",
+    "use_audio": true,
+    "video": "outputs/judge_repair_r72_01/media/f19543f2390b180363dbfbf2.mp4",
+    "video_sha256": "bf0565330428abddb356cbd9b82ee28dafc00193060d6d78b035f842870768b3"
+  },
+  {
+    "audio": "outputs/judge_repair_r72_01/media/source_4.wav",
+    "audio_sha256": "5d76ae71206d7f0400f9423ed4f921016a3e67aaffbfc1164ef6f33421b3c4c1",
+    "expected": "A",
+    "fps": 2,
+    "job_id": "s4_SyncAB_2",
+    "observation_interval_seconds": [
+      0.5,
+      8
+    ],
+    "role": "validation",
+    "source_index": 4,
+    "source_interval": [
+      559,
+      793
+    ],
+    "source_uid": "male_pipa_1",
+    "support": {
+      "circular_shift": false,
+      "delayed_source_valid_frames": [
+        15,
+        240
+      ],
+      "padding_frames": [
+        0,
+        15
+      ]
+    },
+    "synthetic_truth": true,
+    "task": "music",
+    "test": "SyncAB",
+    "use_audio": true,
+    "video": "outputs/judge_repair_r72_01/media/f19543f2390b180363dbfbf2.mp4",
+    "video_sha256": "bf0565330428abddb356cbd9b82ee28dafc00193060d6d78b035f842870768b3"
+  },
+  {
+    "audio": "outputs/judge_repair_r72_01/media/source_4.wav",
+    "audio_sha256": "5d76ae71206d7f0400f9423ed4f921016a3e67aaffbfc1164ef6f33421b3c4c1",
+    "expected": "B",
+    "fps": 2,
+    "job_id": "s4_SyncBA_2",
+    "observation_interval_seconds": [
+      0.5,
+      8
+    ],
+    "role": "validation",
+    "source_index": 4,
+    "source_interval": [
+      559,
+      793
+    ],
+    "source_uid": "male_pipa_1",
+    "support": {
+      "circular_shift": false,
+      "delayed_source_valid_frames": [
+        15,
+        240
+      ],
+      "padding_frames": [
+        0,
+        15
+      ]
+    },
+    "synthetic_truth": true,
+    "task": "music",
+    "test": "SyncBA",
+    "use_audio": true,
+    "video": "outputs/judge_repair_r72_01/media/400ce2a1b097333c49fe812c.mp4",
+    "video_sha256": "e40459dc0726519db56c61159d375e1b2277adf497bb39926440f072e31ff35b"
+  },
+  {
+    "audio": "outputs/judge_repair_r72_01/media/source_4.wav",
+    "audio_sha256": "5d76ae71206d7f0400f9423ed4f921016a3e67aaffbfc1164ef6f33421b3c4c1",
+    "expected": "UNSURE",
+    "fps": 2,
+    "job_id": "s4_Muted_2",
+    "observation_interval_seconds": [
+      0.5,
+      8
+    ],
+    "role": "validation",
+    "source_index": 4,
+    "source_interval": [
+      559,
+      793
+    ],
+    "source_uid": "male_pipa_1",
+    "support": {
+      "circular_shift": false,
+      "delayed_source_valid_frames": [
+        15,
+        240
+      ],
+      "padding_frames": [
+        0,
+        15
+      ]
+    },
+    "synthetic_truth": true,
+    "task": "music",
+    "test": "Muted",
+    "use_audio": false,
+    "video": "outputs/judge_repair_r72_01/media/354025a22ded403cb1139589.mp4",
+    "video_sha256": "bf0565330428abddb356cbd9b82ee28dafc00193060d6d78b035f842870768b3"
+  },
+  {
+    "audio": "outputs/judge_repair_r72_01/media/source_4.wav",
+    "audio_sha256": "5d76ae71206d7f0400f9423ed4f921016a3e67aaffbfc1164ef6f33421b3c4c1",
+    "expected": 4.0,
+    "fps": 2,
+    "job_id": "s4_Localization_2",
+    "observation_interval_seconds": [
+      0,
+      8
+    ],
+    "role": "validation",
+    "source_index": 4,
+    "source_interval": [
+      559,
+      793
+    ],
+    "source_uid": "male_pipa_1",
+    "support": {
+      "circular_shift": false,
+      "delayed_source_valid_frames": [
+        15,
+        240
+      ],
+      "padding_frames": [
+        0,
+        15
+      ]
+    },
+    "synthetic_truth": true,
+    "task": "time",
+    "test": "Localization",
+    "use_audio": false,
+    "video": "outputs/judge_repair_r72_01/media/15313ea5dbdebabce6d32a06.mp4",
+    "video_sha256": "357f66697ae1164a95edcbe8df0354caf693291825725f37dad0c71448b49f3d"
+  },
+  {
+    "audio": "outputs/judge_repair_r72_01/media/source_5.wav",
+    "audio_sha256": "2fd8ce737296dd511469df4032a5e3fe1efebb65ea46124035c5f425f1931cbb",
+    "expected": "TIE",
+    "fps": 2,
+    "job_id": "s5_Identical_2",
+    "observation_interval_seconds": [
+      0,
+      8
+    ],
+    "role": "validation",
+    "source_index": 5,
+    "source_interval": [
+      2473,
+      2709
+    ],
+    "source_uid": "male_pipa_2",
+    "support": {
+      "circular_shift": false,
+      "delayed_source_valid_frames": [
+        15,
+        240
+      ],
+      "padding_frames": [
+        0,
+        15
+      ]
+    },
+    "synthetic_truth": true,
+    "task": "naturalness",
+    "test": "Identical",
+    "use_audio": true,
+    "video": "outputs/judge_repair_r72_01/media/b9d5cad4d84b0181f294ecc9.mp4",
+    "video_sha256": "bbb833ae30bc26e6d5f74a26ece47ce146c7ea663ae2df737461875ac8b066da"
+  },
+  {
+    "audio": "outputs/judge_repair_r72_01/media/source_5.wav",
+    "audio_sha256": "2fd8ce737296dd511469df4032a5e3fe1efebb65ea46124035c5f425f1931cbb",
+    "expected": "DIFFERENT_ONLY_NO_NATURALNESS_TRUTH",
+    "fps": 2,
+    "job_id": "s5_Different_2",
+    "observation_interval_seconds": [
+      0,
+      8
+    ],
+    "role": "validation",
+    "source_index": 5,
+    "source_interval": [
+      2473,
+      2709
+    ],
+    "source_uid": "male_pipa_2",
+    "support": {
+      "circular_shift": false,
+      "delayed_source_valid_frames": [
+        15,
+        240
+      ],
+      "padding_frames": [
+        0,
+        15
+      ]
+    },
+    "synthetic_truth": true,
+    "task": "naturalness",
+    "test": "Different",
+    "use_audio": true,
+    "video": "outputs/judge_repair_r72_01/media/f964cf3fa146302122cefa6a.mp4",
+    "video_sha256": "a9fda398565bcc2c6edd9e57349fefd35d1b9f9adde9a9fafb6c2dbce97ed29a"
+  },
+  {
+    "audio": "outputs/judge_repair_r72_01/media/source_5.wav",
+    "audio_sha256": "2fd8ce737296dd511469df4032a5e3fe1efebb65ea46124035c5f425f1931cbb",
+    "expected": "A",
+    "fps": 1,
+    "job_id": "s5_SyncAB_1",
+    "observation_interval_seconds": [
+      0.5,
+      8
+    ],
+    "role": "validation",
+    "source_index": 5,
+    "source_interval": [
+      2473,
+      2709
+    ],
+    "source_uid": "male_pipa_2",
+    "support": {
+      "circular_shift": false,
+      "delayed_source_valid_frames": [
+        15,
+        240
+      ],
+      "padding_frames": [
+        0,
+        15
+      ]
+    },
+    "synthetic_truth": true,
+    "task": "music",
+    "test": "SyncAB",
+    "use_audio": true,
+    "video": "outputs/judge_repair_r72_01/media/713e96496434bc37705bb9cf.mp4",
+    "video_sha256": "fdabf59e59b61edc8d2fdc2e9351153cf9eb83e9bc4ea7311f3050fa54be6ad1"
+  },
+  {
+    "audio": "outputs/judge_repair_r72_01/media/source_5.wav",
+    "audio_sha256": "2fd8ce737296dd511469df4032a5e3fe1efebb65ea46124035c5f425f1931cbb",
+    "expected": "A",
+    "fps": 2,
+    "job_id": "s5_SyncAB_2",
+    "observation_interval_seconds": [
+      0.5,
+      8
+    ],
+    "role": "validation",
+    "source_index": 5,
+    "source_interval": [
+      2473,
+      2709
+    ],
+    "source_uid": "male_pipa_2",
+    "support": {
+      "circular_shift": false,
+      "delayed_source_valid_frames": [
+        15,
+        240
+      ],
+      "padding_frames": [
+        0,
+        15
+      ]
+    },
+    "synthetic_truth": true,
+    "task": "music",
+    "test": "SyncAB",
+    "use_audio": true,
+    "video": "outputs/judge_repair_r72_01/media/713e96496434bc37705bb9cf.mp4",
+    "video_sha256": "fdabf59e59b61edc8d2fdc2e9351153cf9eb83e9bc4ea7311f3050fa54be6ad1"
+  },
+  {
+    "audio": "outputs/judge_repair_r72_01/media/source_5.wav",
+    "audio_sha256": "2fd8ce737296dd511469df4032a5e3fe1efebb65ea46124035c5f425f1931cbb",
+    "expected": "B",
+    "fps": 2,
+    "job_id": "s5_SyncBA_2",
+    "observation_interval_seconds": [
+      0.5,
+      8
+    ],
+    "role": "validation",
+    "source_index": 5,
+    "source_interval": [
+      2473,
+      2709
+    ],
+    "source_uid": "male_pipa_2",
+    "support": {
+      "circular_shift": false,
+      "delayed_source_valid_frames": [
+        15,
+        240
+      ],
+      "padding_frames": [
+        0,
+        15
+      ]
+    },
+    "synthetic_truth": true,
+    "task": "music",
+    "test": "SyncBA",
+    "use_audio": true,
+    "video": "outputs/judge_repair_r72_01/media/32fa20bc5c1d68cfd684bc41.mp4",
+    "video_sha256": "9c90ba2a4e83eb43f3e99d3b5e48e61eb0af95cf70ef28756a8c701acf246154"
+  },
+  {
+    "audio": "outputs/judge_repair_r72_01/media/source_5.wav",
+    "audio_sha256": "2fd8ce737296dd511469df4032a5e3fe1efebb65ea46124035c5f425f1931cbb",
+    "expected": "UNSURE",
+    "fps": 2,
+    "job_id": "s5_Muted_2",
+    "observation_interval_seconds": [
+      0.5,
+      8
+    ],
+    "role": "validation",
+    "source_index": 5,
+    "source_interval": [
+      2473,
+      2709
+    ],
+    "source_uid": "male_pipa_2",
+    "support": {
+      "circular_shift": false,
+      "delayed_source_valid_frames": [
+        15,
+        240
+      ],
+      "padding_frames": [
+        0,
+        15
+      ]
+    },
+    "synthetic_truth": true,
+    "task": "music",
+    "test": "Muted",
+    "use_audio": false,
+    "video": "outputs/judge_repair_r72_01/media/37f725db46a577243275b64a.mp4",
+    "video_sha256": "fdabf59e59b61edc8d2fdc2e9351153cf9eb83e9bc4ea7311f3050fa54be6ad1"
+  },
+  {
+    "audio": "outputs/judge_repair_r72_01/media/source_5.wav",
+    "audio_sha256": "2fd8ce737296dd511469df4032a5e3fe1efebb65ea46124035c5f425f1931cbb",
+    "expected": 4.0,
+    "fps": 2,
+    "job_id": "s5_Localization_2",
+    "observation_interval_seconds": [
+      0,
+      8
+    ],
+    "role": "validation",
+    "source_index": 5,
+    "source_interval": [
+      2473,
+      2709
+    ],
+    "source_uid": "male_pipa_2",
+    "support": {
+      "circular_shift": false,
+      "delayed_source_valid_frames": [
+        15,
+        240
+      ],
+      "padding_frames": [
+        0,
+        15
+      ]
+    },
+    "synthetic_truth": true,
+    "task": "time",
+    "test": "Localization",
+    "use_audio": false,
+    "video": "outputs/judge_repair_r72_01/media/fd320a55069f3019099f33bc.mp4",
+    "video_sha256": "54a1a0df0580009d5fcbf53afb1c6f9be1e18dd797cc311ede4b0c9ba158abc1"
+  }
+]

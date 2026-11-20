@@ -1,0 +1,1691 @@
+[
+  {
+    "case_index": 0,
+    "case_key": "r66b00_6280fdcb23109a34",
+    "delta": 6,
+    "event": {
+      "body_region": "upper",
+      "evidence_span": [
+        2785,
+        2788
+      ],
+      "frame": 2786,
+      "score": 0.7315475187998332,
+      "score_scope": "UNCALIBRATED_KINEMATIC_PROXY",
+      "semantic_truth": "UNKNOWN",
+      "type": "upper_speed_peak"
+    },
+    "event_selection": {
+      "guardable": 3,
+      "kind": "upper_speed_peak",
+      "matching": 7,
+      "replacement_after_failed_intervention": false,
+      "rule": "WHOLE_ORIGINAL_EVIDENCE_INSIDE_CORE_AND_BASELINE_MAPPED_CENTRE_IN_64_TO_175; NEAREST119.5_THEN_SOURCE_FRAME; NO_LEGALITY_SCORE_OR_QUALITY_RESELECTION",
+      "semantic_truth": "UNKNOWN",
+      "whole_evidence": 7
+    },
+    "methods": [
+      "High_+6",
+      "Low_+6",
+      "Distributed_+6"
+    ],
+    "primary_match": {
+      "budget_scope": "RMS_AND_MAX_CLOCK_SHIFT_AND_FIRST_RATE_ENERGY; CURVATURE_REPORTED_SEPARATELY",
+      "curvature_energy_gap": 0.0,
+      "eligible": false,
+      "gaps": {
+        "rate_energy": 0.0,
+        "source_shift_max": 0.0020629562135098334,
+        "source_shift_rms": 0.14113129877598923,
+        "target_offset_rms": 0.13193706196744592
+      },
+      "peak_gap_frames": 0,
+      "phase_semantics": "UNKNOWN"
+    },
+    "status": "NO_MATCH"
+  },
+  {
+    "case_index": 0,
+    "case_key": "r66b00_6280fdcb23109a34",
+    "delta": -6,
+    "event": {
+      "body_region": "upper",
+      "evidence_span": [
+        2785,
+        2788
+      ],
+      "frame": 2786,
+      "score": 0.7315475187998332,
+      "score_scope": "UNCALIBRATED_KINEMATIC_PROXY",
+      "semantic_truth": "UNKNOWN",
+      "type": "upper_speed_peak"
+    },
+    "event_selection": {
+      "guardable": 3,
+      "kind": "upper_speed_peak",
+      "matching": 7,
+      "replacement_after_failed_intervention": false,
+      "rule": "WHOLE_ORIGINAL_EVIDENCE_INSIDE_CORE_AND_BASELINE_MAPPED_CENTRE_IN_64_TO_175; NEAREST119.5_THEN_SOURCE_FRAME; NO_LEGALITY_SCORE_OR_QUALITY_RESELECTION",
+      "semantic_truth": "UNKNOWN",
+      "whole_evidence": 7
+    },
+    "methods": [
+      "High_-6",
+      "Low_-6",
+      "Distributed_-6"
+    ],
+    "primary_match": {
+      "budget_scope": "RMS_AND_MAX_CLOCK_SHIFT_AND_FIRST_RATE_ENERGY; CURVATURE_REPORTED_SEPARATELY",
+      "curvature_energy_gap": 0.0,
+      "eligible": false,
+      "gaps": {
+        "rate_energy": 0.0,
+        "source_shift_max": 0.06877196208421406,
+        "source_shift_rms": 0.16628016408023027,
+        "target_offset_rms": 0.15407412500961554
+      },
+      "peak_gap_frames": 0,
+      "phase_semantics": "UNKNOWN"
+    },
+    "status": "NO_MATCH"
+  },
+  {
+    "case_index": 0,
+    "case_key": "r66b00_6280fdcb23109a34",
+    "delta": 3,
+    "event": {
+      "body_region": "upper",
+      "evidence_span": [
+        2785,
+        2788
+      ],
+      "frame": 2786,
+      "score": 0.7315475187998332,
+      "score_scope": "UNCALIBRATED_KINEMATIC_PROXY",
+      "semantic_truth": "UNKNOWN",
+      "type": "upper_speed_peak"
+    },
+    "event_selection": {
+      "guardable": 3,
+      "kind": "upper_speed_peak",
+      "matching": 7,
+      "replacement_after_failed_intervention": false,
+      "rule": "WHOLE_ORIGINAL_EVIDENCE_INSIDE_CORE_AND_BASELINE_MAPPED_CENTRE_IN_64_TO_175; NEAREST119.5_THEN_SOURCE_FRAME; NO_LEGALITY_SCORE_OR_QUALITY_RESELECTION",
+      "semantic_truth": "UNKNOWN",
+      "whole_evidence": 7
+    },
+    "methods": [
+      "High_+3",
+      "Low_+3",
+      "Distributed_+3"
+    ],
+    "primary_match": {
+      "budget_scope": "RMS_AND_MAX_CLOCK_SHIFT_AND_FIRST_RATE_ENERGY; CURVATURE_REPORTED_SEPARATELY",
+      "curvature_energy_gap": 0.0,
+      "eligible": false,
+      "gaps": {
+        "rate_energy": 0.0,
+        "source_shift_max": 0.0020533474825469382,
+        "source_shift_rms": 0.14141871107822082,
+        "target_offset_rms": 0.13193706196744592
+      },
+      "peak_gap_frames": 0,
+      "phase_semantics": "UNKNOWN"
+    },
+    "status": "NO_MATCH"
+  },
+  {
+    "case_index": 0,
+    "case_key": "r66b00_6280fdcb23109a34",
+    "delta": -3,
+    "event": {
+      "body_region": "upper",
+      "evidence_span": [
+        2785,
+        2788
+      ],
+      "frame": 2786,
+      "score": 0.7315475187998332,
+      "score_scope": "UNCALIBRATED_KINEMATIC_PROXY",
+      "semantic_truth": "UNKNOWN",
+      "type": "upper_speed_peak"
+    },
+    "event_selection": {
+      "guardable": 3,
+      "kind": "upper_speed_peak",
+      "matching": 7,
+      "replacement_after_failed_intervention": false,
+      "rule": "WHOLE_ORIGINAL_EVIDENCE_INSIDE_CORE_AND_BASELINE_MAPPED_CENTRE_IN_64_TO_175; NEAREST119.5_THEN_SOURCE_FRAME; NO_LEGALITY_SCORE_OR_QUALITY_RESELECTION",
+      "semantic_truth": "UNKNOWN",
+      "whole_evidence": 7
+    },
+    "methods": [
+      "High_-3",
+      "Low_-3",
+      "Distributed_-3"
+    ],
+    "primary_match": {
+      "budget_scope": "RMS_AND_MAX_CLOCK_SHIFT_AND_FIRST_RATE_ENERGY; CURVATURE_REPORTED_SEPARATELY",
+      "curvature_energy_gap": 0.0,
+      "eligible": false,
+      "gaps": {
+        "rate_energy": 0.0,
+        "source_shift_max": 0.025985617753180652,
+        "source_shift_rms": 0.14204469320323168,
+        "target_offset_rms": 0.13193706196744592
+      },
+      "peak_gap_frames": 0,
+      "phase_semantics": "UNKNOWN"
+    },
+    "status": "NO_MATCH"
+  },
+  {
+    "case_index": 1,
+    "case_key": "r66b01_ca3f06a9b37a47ff",
+    "delta": 6,
+    "event": {
+      "body_region": "upper",
+      "evidence_span": [
+        2029,
+        2032
+      ],
+      "frame": 2030,
+      "score": 0.7176479193901234,
+      "score_scope": "UNCALIBRATED_KINEMATIC_PROXY",
+      "semantic_truth": "UNKNOWN",
+      "type": "upper_speed_peak"
+    },
+    "event_selection": {
+      "guardable": 2,
+      "kind": "upper_speed_peak",
+      "matching": 6,
+      "replacement_after_failed_intervention": false,
+      "rule": "WHOLE_ORIGINAL_EVIDENCE_INSIDE_CORE_AND_BASELINE_MAPPED_CENTRE_IN_64_TO_175; NEAREST119.5_THEN_SOURCE_FRAME; NO_LEGALITY_SCORE_OR_QUALITY_RESELECTION",
+      "semantic_truth": "UNKNOWN",
+      "whole_evidence": 6
+    },
+    "methods": [
+      "High_+6",
+      "Low_+6",
+      "Distributed_+6"
+    ],
+    "primary_match": {
+      "budget_scope": "RMS_AND_MAX_CLOCK_SHIFT_AND_FIRST_RATE_ENERGY; CURVATURE_REPORTED_SEPARATELY",
+      "curvature_energy_gap": 0.0,
+      "eligible": false,
+      "gaps": {
+        "rate_energy": 0.0,
+        "source_shift_max": 0.0,
+        "source_shift_rms": 0.1008099026704119,
+        "target_offset_rms": 0.09912301531481055
+      },
+      "peak_gap_frames": 0,
+      "phase_semantics": "UNKNOWN"
+    },
+    "status": "NO_MATCH"
+  },
+  {
+    "case_index": 1,
+    "case_key": "r66b01_ca3f06a9b37a47ff",
+    "delta": -6,
+    "event": {
+      "body_region": "upper",
+      "evidence_span": [
+        2029,
+        2032
+      ],
+      "frame": 2030,
+      "score": 0.7176479193901234,
+      "score_scope": "UNCALIBRATED_KINEMATIC_PROXY",
+      "semantic_truth": "UNKNOWN",
+      "type": "upper_speed_peak"
+    },
+    "event_selection": {
+      "guardable": 2,
+      "kind": "upper_speed_peak",
+      "matching": 6,
+      "replacement_after_failed_intervention": false,
+      "rule": "WHOLE_ORIGINAL_EVIDENCE_INSIDE_CORE_AND_BASELINE_MAPPED_CENTRE_IN_64_TO_175; NEAREST119.5_THEN_SOURCE_FRAME; NO_LEGALITY_SCORE_OR_QUALITY_RESELECTION",
+      "semantic_truth": "UNKNOWN",
+      "whole_evidence": 6
+    },
+    "methods": [
+      "Low_-6"
+    ],
+    "primary_match": {
+      "eligible": false,
+      "reason": "NO_COMMON_WIDTH_ACTIVITY_CONTRAST_AND_REDETECTED_PEAK"
+    },
+    "status": "NO_MATCH"
+  },
+  {
+    "case_index": 1,
+    "case_key": "r66b01_ca3f06a9b37a47ff",
+    "delta": 3,
+    "event": {
+      "body_region": "upper",
+      "evidence_span": [
+        2029,
+        2032
+      ],
+      "frame": 2030,
+      "score": 0.7176479193901234,
+      "score_scope": "UNCALIBRATED_KINEMATIC_PROXY",
+      "semantic_truth": "UNKNOWN",
+      "type": "upper_speed_peak"
+    },
+    "event_selection": {
+      "guardable": 2,
+      "kind": "upper_speed_peak",
+      "matching": 6,
+      "replacement_after_failed_intervention": false,
+      "rule": "WHOLE_ORIGINAL_EVIDENCE_INSIDE_CORE_AND_BASELINE_MAPPED_CENTRE_IN_64_TO_175; NEAREST119.5_THEN_SOURCE_FRAME; NO_LEGALITY_SCORE_OR_QUALITY_RESELECTION",
+      "semantic_truth": "UNKNOWN",
+      "whole_evidence": 6
+    },
+    "methods": [
+      "High_+3",
+      "Low_+3",
+      "Distributed_+3"
+    ],
+    "primary_match": {
+      "budget_scope": "RMS_AND_MAX_CLOCK_SHIFT_AND_FIRST_RATE_ENERGY; CURVATURE_REPORTED_SEPARATELY",
+      "curvature_energy_gap": 0.0,
+      "eligible": false,
+      "gaps": {
+        "rate_energy": 0.0,
+        "source_shift_max": 0.0,
+        "source_shift_rms": 0.10089869773761137,
+        "target_offset_rms": 0.09912301531481055
+      },
+      "peak_gap_frames": 0,
+      "phase_semantics": "UNKNOWN"
+    },
+    "status": "NO_MATCH"
+  },
+  {
+    "case_index": 1,
+    "case_key": "r66b01_ca3f06a9b37a47ff",
+    "delta": -3,
+    "event": {
+      "body_region": "upper",
+      "evidence_span": [
+        2029,
+        2032
+      ],
+      "frame": 2030,
+      "score": 0.7176479193901234,
+      "score_scope": "UNCALIBRATED_KINEMATIC_PROXY",
+      "semantic_truth": "UNKNOWN",
+      "type": "upper_speed_peak"
+    },
+    "event_selection": {
+      "guardable": 2,
+      "kind": "upper_speed_peak",
+      "matching": 6,
+      "replacement_after_failed_intervention": false,
+      "rule": "WHOLE_ORIGINAL_EVIDENCE_INSIDE_CORE_AND_BASELINE_MAPPED_CENTRE_IN_64_TO_175; NEAREST119.5_THEN_SOURCE_FRAME; NO_LEGALITY_SCORE_OR_QUALITY_RESELECTION",
+      "semantic_truth": "UNKNOWN",
+      "whole_evidence": 6
+    },
+    "methods": [
+      "High_-3",
+      "Low_-3",
+      "Distributed_-3"
+    ],
+    "primary_match": {
+      "budget_scope": "RMS_AND_MAX_CLOCK_SHIFT_AND_FIRST_RATE_ENERGY; CURVATURE_REPORTED_SEPARATELY",
+      "curvature_energy_gap": 0.0,
+      "eligible": false,
+      "gaps": {
+        "rate_energy": 0.0,
+        "source_shift_max": 0.0,
+        "source_shift_rms": 0.10107146452538926,
+        "target_offset_rms": 0.09912301531481055
+      },
+      "peak_gap_frames": 0,
+      "phase_semantics": "UNKNOWN"
+    },
+    "status": "NO_MATCH"
+  },
+  {
+    "case_index": 2,
+    "case_key": "r66b02_70c9ebdda89155ec",
+    "delta": 6,
+    "event": {
+      "body_region": "upper",
+      "evidence_span": [
+        2661,
+        2664
+      ],
+      "frame": 2662,
+      "score": 0.7469752086927884,
+      "score_scope": "UNCALIBRATED_KINEMATIC_PROXY",
+      "semantic_truth": "UNKNOWN",
+      "type": "upper_speed_peak"
+    },
+    "event_selection": {
+      "guardable": 4,
+      "kind": "upper_speed_peak",
+      "matching": 8,
+      "replacement_after_failed_intervention": false,
+      "rule": "WHOLE_ORIGINAL_EVIDENCE_INSIDE_CORE_AND_BASELINE_MAPPED_CENTRE_IN_64_TO_175; NEAREST119.5_THEN_SOURCE_FRAME; NO_LEGALITY_SCORE_OR_QUALITY_RESELECTION",
+      "semantic_truth": "UNKNOWN",
+      "whole_evidence": 8
+    },
+    "methods": [
+      "Low_+6"
+    ],
+    "primary_match": {
+      "eligible": false,
+      "reason": "NO_COMMON_WIDTH_ACTIVITY_CONTRAST_AND_REDETECTED_PEAK"
+    },
+    "status": "NO_MATCH"
+  },
+  {
+    "case_index": 2,
+    "case_key": "r66b02_70c9ebdda89155ec",
+    "delta": -6,
+    "event": {
+      "body_region": "upper",
+      "evidence_span": [
+        2661,
+        2664
+      ],
+      "frame": 2662,
+      "score": 0.7469752086927884,
+      "score_scope": "UNCALIBRATED_KINEMATIC_PROXY",
+      "semantic_truth": "UNKNOWN",
+      "type": "upper_speed_peak"
+    },
+    "event_selection": {
+      "guardable": 4,
+      "kind": "upper_speed_peak",
+      "matching": 8,
+      "replacement_after_failed_intervention": false,
+      "rule": "WHOLE_ORIGINAL_EVIDENCE_INSIDE_CORE_AND_BASELINE_MAPPED_CENTRE_IN_64_TO_175; NEAREST119.5_THEN_SOURCE_FRAME; NO_LEGALITY_SCORE_OR_QUALITY_RESELECTION",
+      "semantic_truth": "UNKNOWN",
+      "whole_evidence": 8
+    },
+    "methods": [
+      "High_-6",
+      "Low_-6"
+    ],
+    "primary_match": {
+      "budget_scope": "RMS_AND_MAX_CLOCK_SHIFT_AND_FIRST_RATE_ENERGY; CURVATURE_REPORTED_SEPARATELY",
+      "curvature_energy_gap": 0.0,
+      "eligible": true,
+      "gaps": {
+        "rate_energy": 0.0,
+        "source_shift_max": 0.0,
+        "source_shift_rms": 0.0070331773700526585,
+        "target_offset_rms": 0.013930081039410616
+      },
+      "peak_gap_frames": 0,
+      "phase_semantics": "UNKNOWN"
+    },
+    "status": "MATCHED_HIGH_LOW"
+  },
+  {
+    "case_index": 2,
+    "case_key": "r66b02_70c9ebdda89155ec",
+    "delta": 3,
+    "event": {
+      "body_region": "upper",
+      "evidence_span": [
+        2661,
+        2664
+      ],
+      "frame": 2662,
+      "score": 0.7469752086927884,
+      "score_scope": "UNCALIBRATED_KINEMATIC_PROXY",
+      "semantic_truth": "UNKNOWN",
+      "type": "upper_speed_peak"
+    },
+    "event_selection": {
+      "guardable": 4,
+      "kind": "upper_speed_peak",
+      "matching": 8,
+      "replacement_after_failed_intervention": false,
+      "rule": "WHOLE_ORIGINAL_EVIDENCE_INSIDE_CORE_AND_BASELINE_MAPPED_CENTRE_IN_64_TO_175; NEAREST119.5_THEN_SOURCE_FRAME; NO_LEGALITY_SCORE_OR_QUALITY_RESELECTION",
+      "semantic_truth": "UNKNOWN",
+      "whole_evidence": 8
+    },
+    "methods": [
+      "High_+3",
+      "Low_+3",
+      "Distributed_+3"
+    ],
+    "primary_match": {
+      "budget_scope": "RMS_AND_MAX_CLOCK_SHIFT_AND_FIRST_RATE_ENERGY; CURVATURE_REPORTED_SEPARATELY",
+      "curvature_energy_gap": 0.0,
+      "eligible": true,
+      "gaps": {
+        "rate_energy": 0.0,
+        "source_shift_max": 0.0,
+        "source_shift_rms": 0.008151094853232923,
+        "target_offset_rms": 0.013930081039410616
+      },
+      "peak_gap_frames": 0,
+      "phase_semantics": "UNKNOWN"
+    },
+    "status": "MATCHED_HIGH_LOW"
+  },
+  {
+    "case_index": 2,
+    "case_key": "r66b02_70c9ebdda89155ec",
+    "delta": -3,
+    "event": {
+      "body_region": "upper",
+      "evidence_span": [
+        2661,
+        2664
+      ],
+      "frame": 2662,
+      "score": 0.7469752086927884,
+      "score_scope": "UNCALIBRATED_KINEMATIC_PROXY",
+      "semantic_truth": "UNKNOWN",
+      "type": "upper_speed_peak"
+    },
+    "event_selection": {
+      "guardable": 4,
+      "kind": "upper_speed_peak",
+      "matching": 8,
+      "replacement_after_failed_intervention": false,
+      "rule": "WHOLE_ORIGINAL_EVIDENCE_INSIDE_CORE_AND_BASELINE_MAPPED_CENTRE_IN_64_TO_175; NEAREST119.5_THEN_SOURCE_FRAME; NO_LEGALITY_SCORE_OR_QUALITY_RESELECTION",
+      "semantic_truth": "UNKNOWN",
+      "whole_evidence": 8
+    },
+    "methods": [
+      "High_-3",
+      "Low_-3",
+      "Distributed_-3"
+    ],
+    "primary_match": {
+      "budget_scope": "RMS_AND_MAX_CLOCK_SHIFT_AND_FIRST_RATE_ENERGY; CURVATURE_REPORTED_SEPARATELY",
+      "curvature_energy_gap": 0.0,
+      "eligible": true,
+      "gaps": {
+        "rate_energy": 0.0,
+        "source_shift_max": 0.0,
+        "source_shift_rms": 0.007361945956700101,
+        "target_offset_rms": 0.013930081039410616
+      },
+      "peak_gap_frames": 0,
+      "phase_semantics": "UNKNOWN"
+    },
+    "status": "MATCHED_HIGH_LOW"
+  },
+  {
+    "case_index": 3,
+    "case_key": "r66b03_a9c01b65dc66d062",
+    "delta": 6,
+    "event": null,
+    "event_selection": {
+      "guardable": 0,
+      "kind": "upper_speed_peak",
+      "matching": 0,
+      "replacement_after_failed_intervention": false,
+      "rule": "WHOLE_ORIGINAL_EVIDENCE_INSIDE_CORE_AND_BASELINE_MAPPED_CENTRE_IN_64_TO_175; NEAREST119.5_THEN_SOURCE_FRAME; NO_LEGALITY_SCORE_OR_QUALITY_RESELECTION",
+      "semantic_truth": "UNKNOWN",
+      "whole_evidence": 0
+    },
+    "methods": [],
+    "primary_match": null,
+    "status": "NO_EVENT"
+  },
+  {
+    "case_index": 3,
+    "case_key": "r66b03_a9c01b65dc66d062",
+    "delta": -6,
+    "event": null,
+    "event_selection": {
+      "guardable": 0,
+      "kind": "upper_speed_peak",
+      "matching": 0,
+      "replacement_after_failed_intervention": false,
+      "rule": "WHOLE_ORIGINAL_EVIDENCE_INSIDE_CORE_AND_BASELINE_MAPPED_CENTRE_IN_64_TO_175; NEAREST119.5_THEN_SOURCE_FRAME; NO_LEGALITY_SCORE_OR_QUALITY_RESELECTION",
+      "semantic_truth": "UNKNOWN",
+      "whole_evidence": 0
+    },
+    "methods": [],
+    "primary_match": null,
+    "status": "NO_EVENT"
+  },
+  {
+    "case_index": 3,
+    "case_key": "r66b03_a9c01b65dc66d062",
+    "delta": 3,
+    "event": null,
+    "event_selection": {
+      "guardable": 0,
+      "kind": "upper_speed_peak",
+      "matching": 0,
+      "replacement_after_failed_intervention": false,
+      "rule": "WHOLE_ORIGINAL_EVIDENCE_INSIDE_CORE_AND_BASELINE_MAPPED_CENTRE_IN_64_TO_175; NEAREST119.5_THEN_SOURCE_FRAME; NO_LEGALITY_SCORE_OR_QUALITY_RESELECTION",
+      "semantic_truth": "UNKNOWN",
+      "whole_evidence": 0
+    },
+    "methods": [],
+    "primary_match": null,
+    "status": "NO_EVENT"
+  },
+  {
+    "case_index": 3,
+    "case_key": "r66b03_a9c01b65dc66d062",
+    "delta": -3,
+    "event": null,
+    "event_selection": {
+      "guardable": 0,
+      "kind": "upper_speed_peak",
+      "matching": 0,
+      "replacement_after_failed_intervention": false,
+      "rule": "WHOLE_ORIGINAL_EVIDENCE_INSIDE_CORE_AND_BASELINE_MAPPED_CENTRE_IN_64_TO_175; NEAREST119.5_THEN_SOURCE_FRAME; NO_LEGALITY_SCORE_OR_QUALITY_RESELECTION",
+      "semantic_truth": "UNKNOWN",
+      "whole_evidence": 0
+    },
+    "methods": [],
+    "primary_match": null,
+    "status": "NO_EVENT"
+  },
+  {
+    "case_index": 4,
+    "case_key": "r66b04_c4ded6ddc2d6940d",
+    "delta": 6,
+    "event": null,
+    "event_selection": {
+      "guardable": 0,
+      "kind": "upper_speed_peak",
+      "matching": 0,
+      "replacement_after_failed_intervention": false,
+      "rule": "WHOLE_ORIGINAL_EVIDENCE_INSIDE_CORE_AND_BASELINE_MAPPED_CENTRE_IN_64_TO_175; NEAREST119.5_THEN_SOURCE_FRAME; NO_LEGALITY_SCORE_OR_QUALITY_RESELECTION",
+      "semantic_truth": "UNKNOWN",
+      "whole_evidence": 0
+    },
+    "methods": [],
+    "primary_match": null,
+    "status": "NO_EVENT"
+  },
+  {
+    "case_index": 4,
+    "case_key": "r66b04_c4ded6ddc2d6940d",
+    "delta": -6,
+    "event": null,
+    "event_selection": {
+      "guardable": 0,
+      "kind": "upper_speed_peak",
+      "matching": 0,
+      "replacement_after_failed_intervention": false,
+      "rule": "WHOLE_ORIGINAL_EVIDENCE_INSIDE_CORE_AND_BASELINE_MAPPED_CENTRE_IN_64_TO_175; NEAREST119.5_THEN_SOURCE_FRAME; NO_LEGALITY_SCORE_OR_QUALITY_RESELECTION",
+      "semantic_truth": "UNKNOWN",
+      "whole_evidence": 0
+    },
+    "methods": [],
+    "primary_match": null,
+    "status": "NO_EVENT"
+  },
+  {
+    "case_index": 4,
+    "case_key": "r66b04_c4ded6ddc2d6940d",
+    "delta": 3,
+    "event": null,
+    "event_selection": {
+      "guardable": 0,
+      "kind": "upper_speed_peak",
+      "matching": 0,
+      "replacement_after_failed_intervention": false,
+      "rule": "WHOLE_ORIGINAL_EVIDENCE_INSIDE_CORE_AND_BASELINE_MAPPED_CENTRE_IN_64_TO_175; NEAREST119.5_THEN_SOURCE_FRAME; NO_LEGALITY_SCORE_OR_QUALITY_RESELECTION",
+      "semantic_truth": "UNKNOWN",
+      "whole_evidence": 0
+    },
+    "methods": [],
+    "primary_match": null,
+    "status": "NO_EVENT"
+  },
+  {
+    "case_index": 4,
+    "case_key": "r66b04_c4ded6ddc2d6940d",
+    "delta": -3,
+    "event": null,
+    "event_selection": {
+      "guardable": 0,
+      "kind": "upper_speed_peak",
+      "matching": 0,
+      "replacement_after_failed_intervention": false,
+      "rule": "WHOLE_ORIGINAL_EVIDENCE_INSIDE_CORE_AND_BASELINE_MAPPED_CENTRE_IN_64_TO_175; NEAREST119.5_THEN_SOURCE_FRAME; NO_LEGALITY_SCORE_OR_QUALITY_RESELECTION",
+      "semantic_truth": "UNKNOWN",
+      "whole_evidence": 0
+    },
+    "methods": [],
+    "primary_match": null,
+    "status": "NO_EVENT"
+  },
+  {
+    "case_index": 5,
+    "case_key": "r66b05_56fb0e6ccb0310ef",
+    "delta": 6,
+    "event": {
+      "body_region": "upper",
+      "evidence_span": [
+        2605,
+        2608
+      ],
+      "frame": 2606,
+      "score": 0.5717929530580017,
+      "score_scope": "UNCALIBRATED_KINEMATIC_PROXY",
+      "semantic_truth": "UNKNOWN",
+      "type": "upper_speed_peak"
+    },
+    "event_selection": {
+      "guardable": 3,
+      "kind": "upper_speed_peak",
+      "matching": 6,
+      "replacement_after_failed_intervention": false,
+      "rule": "WHOLE_ORIGINAL_EVIDENCE_INSIDE_CORE_AND_BASELINE_MAPPED_CENTRE_IN_64_TO_175; NEAREST119.5_THEN_SOURCE_FRAME; NO_LEGALITY_SCORE_OR_QUALITY_RESELECTION",
+      "semantic_truth": "UNKNOWN",
+      "whole_evidence": 6
+    },
+    "methods": [
+      "Low_+6"
+    ],
+    "primary_match": {
+      "eligible": false,
+      "reason": "NO_COMMON_WIDTH_ACTIVITY_CONTRAST_AND_REDETECTED_PEAK"
+    },
+    "status": "NO_MATCH"
+  },
+  {
+    "case_index": 5,
+    "case_key": "r66b05_56fb0e6ccb0310ef",
+    "delta": -6,
+    "event": {
+      "body_region": "upper",
+      "evidence_span": [
+        2605,
+        2608
+      ],
+      "frame": 2606,
+      "score": 0.5717929530580017,
+      "score_scope": "UNCALIBRATED_KINEMATIC_PROXY",
+      "semantic_truth": "UNKNOWN",
+      "type": "upper_speed_peak"
+    },
+    "event_selection": {
+      "guardable": 3,
+      "kind": "upper_speed_peak",
+      "matching": 6,
+      "replacement_after_failed_intervention": false,
+      "rule": "WHOLE_ORIGINAL_EVIDENCE_INSIDE_CORE_AND_BASELINE_MAPPED_CENTRE_IN_64_TO_175; NEAREST119.5_THEN_SOURCE_FRAME; NO_LEGALITY_SCORE_OR_QUALITY_RESELECTION",
+      "semantic_truth": "UNKNOWN",
+      "whole_evidence": 6
+    },
+    "methods": [
+      "High_-6",
+      "Low_-6",
+      "Distributed_-6"
+    ],
+    "primary_match": {
+      "budget_scope": "RMS_AND_MAX_CLOCK_SHIFT_AND_FIRST_RATE_ENERGY; CURVATURE_REPORTED_SEPARATELY",
+      "curvature_energy_gap": 0.0,
+      "eligible": false,
+      "gaps": {
+        "rate_energy": 0.0,
+        "source_shift_max": 0.0,
+        "source_shift_rms": 0.17105403913031217,
+        "target_offset_rms": 0.1862036130422969
+      },
+      "peak_gap_frames": 0,
+      "phase_semantics": "UNKNOWN"
+    },
+    "status": "NO_MATCH"
+  },
+  {
+    "case_index": 5,
+    "case_key": "r66b05_56fb0e6ccb0310ef",
+    "delta": 3,
+    "event": {
+      "body_region": "upper",
+      "evidence_span": [
+        2605,
+        2608
+      ],
+      "frame": 2606,
+      "score": 0.5717929530580017,
+      "score_scope": "UNCALIBRATED_KINEMATIC_PROXY",
+      "semantic_truth": "UNKNOWN",
+      "type": "upper_speed_peak"
+    },
+    "event_selection": {
+      "guardable": 3,
+      "kind": "upper_speed_peak",
+      "matching": 6,
+      "replacement_after_failed_intervention": false,
+      "rule": "WHOLE_ORIGINAL_EVIDENCE_INSIDE_CORE_AND_BASELINE_MAPPED_CENTRE_IN_64_TO_175; NEAREST119.5_THEN_SOURCE_FRAME; NO_LEGALITY_SCORE_OR_QUALITY_RESELECTION",
+      "semantic_truth": "UNKNOWN",
+      "whole_evidence": 6
+    },
+    "methods": [
+      "High_+3",
+      "Low_+3",
+      "Distributed_+3"
+    ],
+    "primary_match": {
+      "budget_scope": "RMS_AND_MAX_CLOCK_SHIFT_AND_FIRST_RATE_ENERGY; CURVATURE_REPORTED_SEPARATELY",
+      "curvature_energy_gap": 0.0,
+      "eligible": false,
+      "gaps": {
+        "rate_energy": 0.0,
+        "source_shift_max": 0.0,
+        "source_shift_rms": 0.17104324843700952,
+        "target_offset_rms": 0.1862036130422969
+      },
+      "peak_gap_frames": 0,
+      "phase_semantics": "UNKNOWN"
+    },
+    "status": "NO_MATCH"
+  },
+  {
+    "case_index": 5,
+    "case_key": "r66b05_56fb0e6ccb0310ef",
+    "delta": -3,
+    "event": {
+      "body_region": "upper",
+      "evidence_span": [
+        2605,
+        2608
+      ],
+      "frame": 2606,
+      "score": 0.5717929530580017,
+      "score_scope": "UNCALIBRATED_KINEMATIC_PROXY",
+      "semantic_truth": "UNKNOWN",
+      "type": "upper_speed_peak"
+    },
+    "event_selection": {
+      "guardable": 3,
+      "kind": "upper_speed_peak",
+      "matching": 6,
+      "replacement_after_failed_intervention": false,
+      "rule": "WHOLE_ORIGINAL_EVIDENCE_INSIDE_CORE_AND_BASELINE_MAPPED_CENTRE_IN_64_TO_175; NEAREST119.5_THEN_SOURCE_FRAME; NO_LEGALITY_SCORE_OR_QUALITY_RESELECTION",
+      "semantic_truth": "UNKNOWN",
+      "whole_evidence": 6
+    },
+    "methods": [
+      "High_-3",
+      "Low_-3",
+      "Distributed_-3"
+    ],
+    "primary_match": {
+      "budget_scope": "RMS_AND_MAX_CLOCK_SHIFT_AND_FIRST_RATE_ENERGY; CURVATURE_REPORTED_SEPARATELY",
+      "curvature_energy_gap": 0.0,
+      "eligible": false,
+      "gaps": {
+        "rate_energy": 0.0,
+        "source_shift_max": 0.0,
+        "source_shift_rms": 0.17098619350445646,
+        "target_offset_rms": 0.1862036130422969
+      },
+      "peak_gap_frames": 0,
+      "phase_semantics": "UNKNOWN"
+    },
+    "status": "NO_MATCH"
+  },
+  {
+    "case_index": 6,
+    "case_key": "r66b06_0a8028422bbfb1c4",
+    "delta": 6,
+    "event": {
+      "body_region": "upper",
+      "evidence_span": [
+        1080,
+        1083
+      ],
+      "frame": 1081,
+      "score": 0.7529601956508326,
+      "score_scope": "UNCALIBRATED_KINEMATIC_PROXY",
+      "semantic_truth": "UNKNOWN",
+      "type": "upper_speed_peak"
+    },
+    "event_selection": {
+      "guardable": 3,
+      "kind": "upper_speed_peak",
+      "matching": 7,
+      "replacement_after_failed_intervention": false,
+      "rule": "WHOLE_ORIGINAL_EVIDENCE_INSIDE_CORE_AND_BASELINE_MAPPED_CENTRE_IN_64_TO_175; NEAREST119.5_THEN_SOURCE_FRAME; NO_LEGALITY_SCORE_OR_QUALITY_RESELECTION",
+      "semantic_truth": "UNKNOWN",
+      "whole_evidence": 7
+    },
+    "methods": [],
+    "primary_match": {
+      "eligible": false,
+      "reason": "NO_COMMON_WIDTH_ACTIVITY_CONTRAST_AND_REDETECTED_PEAK"
+    },
+    "status": "NO_MATCH"
+  },
+  {
+    "case_index": 6,
+    "case_key": "r66b06_0a8028422bbfb1c4",
+    "delta": -6,
+    "event": {
+      "body_region": "upper",
+      "evidence_span": [
+        1080,
+        1083
+      ],
+      "frame": 1081,
+      "score": 0.7529601956508326,
+      "score_scope": "UNCALIBRATED_KINEMATIC_PROXY",
+      "semantic_truth": "UNKNOWN",
+      "type": "upper_speed_peak"
+    },
+    "event_selection": {
+      "guardable": 3,
+      "kind": "upper_speed_peak",
+      "matching": 7,
+      "replacement_after_failed_intervention": false,
+      "rule": "WHOLE_ORIGINAL_EVIDENCE_INSIDE_CORE_AND_BASELINE_MAPPED_CENTRE_IN_64_TO_175; NEAREST119.5_THEN_SOURCE_FRAME; NO_LEGALITY_SCORE_OR_QUALITY_RESELECTION",
+      "semantic_truth": "UNKNOWN",
+      "whole_evidence": 7
+    },
+    "methods": [
+      "Low_-6",
+      "Distributed_-6"
+    ],
+    "primary_match": {
+      "eligible": false,
+      "reason": "NO_COMMON_WIDTH_ACTIVITY_CONTRAST_AND_REDETECTED_PEAK"
+    },
+    "status": "NO_MATCH"
+  },
+  {
+    "case_index": 6,
+    "case_key": "r66b06_0a8028422bbfb1c4",
+    "delta": 3,
+    "event": {
+      "body_region": "upper",
+      "evidence_span": [
+        1080,
+        1083
+      ],
+      "frame": 1081,
+      "score": 0.7529601956508326,
+      "score_scope": "UNCALIBRATED_KINEMATIC_PROXY",
+      "semantic_truth": "UNKNOWN",
+      "type": "upper_speed_peak"
+    },
+    "event_selection": {
+      "guardable": 3,
+      "kind": "upper_speed_peak",
+      "matching": 7,
+      "replacement_after_failed_intervention": false,
+      "rule": "WHOLE_ORIGINAL_EVIDENCE_INSIDE_CORE_AND_BASELINE_MAPPED_CENTRE_IN_64_TO_175; NEAREST119.5_THEN_SOURCE_FRAME; NO_LEGALITY_SCORE_OR_QUALITY_RESELECTION",
+      "semantic_truth": "UNKNOWN",
+      "whole_evidence": 7
+    },
+    "methods": [
+      "High_+3",
+      "Low_+3",
+      "Distributed_+3"
+    ],
+    "primary_match": {
+      "budget_scope": "RMS_AND_MAX_CLOCK_SHIFT_AND_FIRST_RATE_ENERGY; CURVATURE_REPORTED_SEPARATELY",
+      "curvature_energy_gap": 0.0,
+      "eligible": false,
+      "gaps": {
+        "rate_energy": 0.0,
+        "source_shift_max": 0.0,
+        "source_shift_rms": 0.05404649810423436,
+        "target_offset_rms": 0.09056651878477619
+      },
+      "peak_gap_frames": 0,
+      "phase_semantics": "UNKNOWN"
+    },
+    "status": "NO_MATCH"
+  },
+  {
+    "case_index": 6,
+    "case_key": "r66b06_0a8028422bbfb1c4",
+    "delta": -3,
+    "event": {
+      "body_region": "upper",
+      "evidence_span": [
+        1080,
+        1083
+      ],
+      "frame": 1081,
+      "score": 0.7529601956508326,
+      "score_scope": "UNCALIBRATED_KINEMATIC_PROXY",
+      "semantic_truth": "UNKNOWN",
+      "type": "upper_speed_peak"
+    },
+    "event_selection": {
+      "guardable": 3,
+      "kind": "upper_speed_peak",
+      "matching": 7,
+      "replacement_after_failed_intervention": false,
+      "rule": "WHOLE_ORIGINAL_EVIDENCE_INSIDE_CORE_AND_BASELINE_MAPPED_CENTRE_IN_64_TO_175; NEAREST119.5_THEN_SOURCE_FRAME; NO_LEGALITY_SCORE_OR_QUALITY_RESELECTION",
+      "semantic_truth": "UNKNOWN",
+      "whole_evidence": 7
+    },
+    "methods": [
+      "High_-3",
+      "Low_-3",
+      "Distributed_-3"
+    ],
+    "primary_match": {
+      "budget_scope": "RMS_AND_MAX_CLOCK_SHIFT_AND_FIRST_RATE_ENERGY; CURVATURE_REPORTED_SEPARATELY",
+      "curvature_energy_gap": 0.0,
+      "eligible": false,
+      "gaps": {
+        "rate_energy": 0.0,
+        "source_shift_max": 0.0,
+        "source_shift_rms": 0.05549181765112159,
+        "target_offset_rms": 0.09056651878477619
+      },
+      "peak_gap_frames": 0,
+      "phase_semantics": "UNKNOWN"
+    },
+    "status": "NO_MATCH"
+  },
+  {
+    "case_index": 7,
+    "case_key": "r66b07_4717682e3be3dd02",
+    "delta": 6,
+    "event": {
+      "body_region": "upper",
+      "evidence_span": [
+        2152,
+        2155
+      ],
+      "frame": 2153,
+      "score": 0.5875162074989033,
+      "score_scope": "UNCALIBRATED_KINEMATIC_PROXY",
+      "semantic_truth": "UNKNOWN",
+      "type": "upper_speed_peak"
+    },
+    "event_selection": {
+      "guardable": 4,
+      "kind": "upper_speed_peak",
+      "matching": 6,
+      "replacement_after_failed_intervention": false,
+      "rule": "WHOLE_ORIGINAL_EVIDENCE_INSIDE_CORE_AND_BASELINE_MAPPED_CENTRE_IN_64_TO_175; NEAREST119.5_THEN_SOURCE_FRAME; NO_LEGALITY_SCORE_OR_QUALITY_RESELECTION",
+      "semantic_truth": "UNKNOWN",
+      "whole_evidence": 6
+    },
+    "methods": [
+      "High_+6",
+      "Low_+6"
+    ],
+    "primary_match": {
+      "budget_scope": "RMS_AND_MAX_CLOCK_SHIFT_AND_FIRST_RATE_ENERGY; CURVATURE_REPORTED_SEPARATELY",
+      "curvature_energy_gap": 0.0,
+      "eligible": true,
+      "gaps": {
+        "rate_energy": 0.0,
+        "source_shift_max": 0.0,
+        "source_shift_rms": 0.02582323957137358,
+        "target_offset_rms": 0.00419514569501375
+      },
+      "peak_gap_frames": 0,
+      "phase_semantics": "UNKNOWN"
+    },
+    "status": "MATCHED_HIGH_LOW"
+  },
+  {
+    "case_index": 7,
+    "case_key": "r66b07_4717682e3be3dd02",
+    "delta": -6,
+    "event": {
+      "body_region": "upper",
+      "evidence_span": [
+        2152,
+        2155
+      ],
+      "frame": 2153,
+      "score": 0.5875162074989033,
+      "score_scope": "UNCALIBRATED_KINEMATIC_PROXY",
+      "semantic_truth": "UNKNOWN",
+      "type": "upper_speed_peak"
+    },
+    "event_selection": {
+      "guardable": 4,
+      "kind": "upper_speed_peak",
+      "matching": 6,
+      "replacement_after_failed_intervention": false,
+      "rule": "WHOLE_ORIGINAL_EVIDENCE_INSIDE_CORE_AND_BASELINE_MAPPED_CENTRE_IN_64_TO_175; NEAREST119.5_THEN_SOURCE_FRAME; NO_LEGALITY_SCORE_OR_QUALITY_RESELECTION",
+      "semantic_truth": "UNKNOWN",
+      "whole_evidence": 6
+    },
+    "methods": [
+      "High_-6"
+    ],
+    "primary_match": {
+      "eligible": false,
+      "reason": "NO_COMMON_WIDTH_ACTIVITY_CONTRAST_AND_REDETECTED_PEAK"
+    },
+    "status": "NO_MATCH"
+  },
+  {
+    "case_index": 7,
+    "case_key": "r66b07_4717682e3be3dd02",
+    "delta": 3,
+    "event": {
+      "body_region": "upper",
+      "evidence_span": [
+        2152,
+        2155
+      ],
+      "frame": 2153,
+      "score": 0.5875162074989033,
+      "score_scope": "UNCALIBRATED_KINEMATIC_PROXY",
+      "semantic_truth": "UNKNOWN",
+      "type": "upper_speed_peak"
+    },
+    "event_selection": {
+      "guardable": 4,
+      "kind": "upper_speed_peak",
+      "matching": 6,
+      "replacement_after_failed_intervention": false,
+      "rule": "WHOLE_ORIGINAL_EVIDENCE_INSIDE_CORE_AND_BASELINE_MAPPED_CENTRE_IN_64_TO_175; NEAREST119.5_THEN_SOURCE_FRAME; NO_LEGALITY_SCORE_OR_QUALITY_RESELECTION",
+      "semantic_truth": "UNKNOWN",
+      "whole_evidence": 6
+    },
+    "methods": [
+      "High_+3",
+      "Low_+3",
+      "Distributed_+3"
+    ],
+    "primary_match": {
+      "budget_scope": "RMS_AND_MAX_CLOCK_SHIFT_AND_FIRST_RATE_ENERGY; CURVATURE_REPORTED_SEPARATELY",
+      "curvature_energy_gap": 0.0,
+      "eligible": true,
+      "gaps": {
+        "rate_energy": 0.0,
+        "source_shift_max": 0.0,
+        "source_shift_rms": 0.01015156788039,
+        "target_offset_rms": 1.1258816786087808e-16
+      },
+      "peak_gap_frames": 0,
+      "phase_semantics": "UNKNOWN"
+    },
+    "status": "MATCHED_HIGH_LOW"
+  },
+  {
+    "case_index": 7,
+    "case_key": "r66b07_4717682e3be3dd02",
+    "delta": -3,
+    "event": {
+      "body_region": "upper",
+      "evidence_span": [
+        2152,
+        2155
+      ],
+      "frame": 2153,
+      "score": 0.5875162074989033,
+      "score_scope": "UNCALIBRATED_KINEMATIC_PROXY",
+      "semantic_truth": "UNKNOWN",
+      "type": "upper_speed_peak"
+    },
+    "event_selection": {
+      "guardable": 4,
+      "kind": "upper_speed_peak",
+      "matching": 6,
+      "replacement_after_failed_intervention": false,
+      "rule": "WHOLE_ORIGINAL_EVIDENCE_INSIDE_CORE_AND_BASELINE_MAPPED_CENTRE_IN_64_TO_175; NEAREST119.5_THEN_SOURCE_FRAME; NO_LEGALITY_SCORE_OR_QUALITY_RESELECTION",
+      "semantic_truth": "UNKNOWN",
+      "whole_evidence": 6
+    },
+    "methods": [
+      "High_-3",
+      "Low_-3",
+      "Distributed_-3"
+    ],
+    "primary_match": {
+      "budget_scope": "RMS_AND_MAX_CLOCK_SHIFT_AND_FIRST_RATE_ENERGY; CURVATURE_REPORTED_SEPARATELY",
+      "curvature_energy_gap": 0.0,
+      "eligible": true,
+      "gaps": {
+        "rate_energy": 0.0,
+        "source_shift_max": 0.0,
+        "source_shift_rms": 0.008864587168680847,
+        "target_offset_rms": 1.1258816786087808e-16
+      },
+      "peak_gap_frames": 0,
+      "phase_semantics": "UNKNOWN"
+    },
+    "status": "MATCHED_HIGH_LOW"
+  },
+  {
+    "case_index": 8,
+    "case_key": "r66b08_a7e0cdf241d7a758",
+    "delta": 6,
+    "event": {
+      "body_region": "upper",
+      "evidence_span": [
+        2785,
+        2788
+      ],
+      "frame": 2786,
+      "score": 0.7315475187998332,
+      "score_scope": "UNCALIBRATED_KINEMATIC_PROXY",
+      "semantic_truth": "UNKNOWN",
+      "type": "upper_speed_peak"
+    },
+    "event_selection": {
+      "guardable": 3,
+      "kind": "upper_speed_peak",
+      "matching": 7,
+      "replacement_after_failed_intervention": false,
+      "rule": "WHOLE_ORIGINAL_EVIDENCE_INSIDE_CORE_AND_BASELINE_MAPPED_CENTRE_IN_64_TO_175; NEAREST119.5_THEN_SOURCE_FRAME; NO_LEGALITY_SCORE_OR_QUALITY_RESELECTION",
+      "semantic_truth": "UNKNOWN",
+      "whole_evidence": 7
+    },
+    "methods": [],
+    "primary_match": {
+      "eligible": false,
+      "reason": "NO_COMMON_WIDTH_ACTIVITY_CONTRAST_AND_REDETECTED_PEAK"
+    },
+    "status": "NO_MATCH"
+  },
+  {
+    "case_index": 8,
+    "case_key": "r66b08_a7e0cdf241d7a758",
+    "delta": -6,
+    "event": {
+      "body_region": "upper",
+      "evidence_span": [
+        2785,
+        2788
+      ],
+      "frame": 2786,
+      "score": 0.7315475187998332,
+      "score_scope": "UNCALIBRATED_KINEMATIC_PROXY",
+      "semantic_truth": "UNKNOWN",
+      "type": "upper_speed_peak"
+    },
+    "event_selection": {
+      "guardable": 3,
+      "kind": "upper_speed_peak",
+      "matching": 7,
+      "replacement_after_failed_intervention": false,
+      "rule": "WHOLE_ORIGINAL_EVIDENCE_INSIDE_CORE_AND_BASELINE_MAPPED_CENTRE_IN_64_TO_175; NEAREST119.5_THEN_SOURCE_FRAME; NO_LEGALITY_SCORE_OR_QUALITY_RESELECTION",
+      "semantic_truth": "UNKNOWN",
+      "whole_evidence": 7
+    },
+    "methods": [
+      "High_-6",
+      "Low_-6"
+    ],
+    "primary_match": {
+      "budget_scope": "RMS_AND_MAX_CLOCK_SHIFT_AND_FIRST_RATE_ENERGY; CURVATURE_REPORTED_SEPARATELY",
+      "curvature_energy_gap": 0.0,
+      "eligible": false,
+      "gaps": {
+        "rate_energy": 0.0,
+        "source_shift_max": 0.025000000000005542,
+        "source_shift_rms": 0.14904357213055683,
+        "target_offset_rms": 0.16227095347674556
+      },
+      "peak_gap_frames": 0,
+      "phase_semantics": "UNKNOWN"
+    },
+    "status": "NO_MATCH"
+  },
+  {
+    "case_index": 8,
+    "case_key": "r66b08_a7e0cdf241d7a758",
+    "delta": 3,
+    "event": {
+      "body_region": "upper",
+      "evidence_span": [
+        2785,
+        2788
+      ],
+      "frame": 2786,
+      "score": 0.7315475187998332,
+      "score_scope": "UNCALIBRATED_KINEMATIC_PROXY",
+      "semantic_truth": "UNKNOWN",
+      "type": "upper_speed_peak"
+    },
+    "event_selection": {
+      "guardable": 3,
+      "kind": "upper_speed_peak",
+      "matching": 7,
+      "replacement_after_failed_intervention": false,
+      "rule": "WHOLE_ORIGINAL_EVIDENCE_INSIDE_CORE_AND_BASELINE_MAPPED_CENTRE_IN_64_TO_175; NEAREST119.5_THEN_SOURCE_FRAME; NO_LEGALITY_SCORE_OR_QUALITY_RESELECTION",
+      "semantic_truth": "UNKNOWN",
+      "whole_evidence": 7
+    },
+    "methods": [],
+    "primary_match": {
+      "eligible": false,
+      "reason": "NO_COMMON_WIDTH_ACTIVITY_CONTRAST_AND_REDETECTED_PEAK"
+    },
+    "status": "NO_MATCH"
+  },
+  {
+    "case_index": 8,
+    "case_key": "r66b08_a7e0cdf241d7a758",
+    "delta": -3,
+    "event": {
+      "body_region": "upper",
+      "evidence_span": [
+        2785,
+        2788
+      ],
+      "frame": 2786,
+      "score": 0.7315475187998332,
+      "score_scope": "UNCALIBRATED_KINEMATIC_PROXY",
+      "semantic_truth": "UNKNOWN",
+      "type": "upper_speed_peak"
+    },
+    "event_selection": {
+      "guardable": 3,
+      "kind": "upper_speed_peak",
+      "matching": 7,
+      "replacement_after_failed_intervention": false,
+      "rule": "WHOLE_ORIGINAL_EVIDENCE_INSIDE_CORE_AND_BASELINE_MAPPED_CENTRE_IN_64_TO_175; NEAREST119.5_THEN_SOURCE_FRAME; NO_LEGALITY_SCORE_OR_QUALITY_RESELECTION",
+      "semantic_truth": "UNKNOWN",
+      "whole_evidence": 7
+    },
+    "methods": [
+      "High_-3",
+      "Low_-3",
+      "Distributed_-3"
+    ],
+    "primary_match": {
+      "budget_scope": "RMS_AND_MAX_CLOCK_SHIFT_AND_FIRST_RATE_ENERGY; CURVATURE_REPORTED_SEPARATELY",
+      "curvature_energy_gap": 0.0,
+      "eligible": false,
+      "gaps": {
+        "rate_energy": 0.0,
+        "source_shift_max": 0.025000000000077592,
+        "source_shift_rms": 0.1494150709153343,
+        "target_offset_rms": 0.16227095347674556
+      },
+      "peak_gap_frames": 0,
+      "phase_semantics": "UNKNOWN"
+    },
+    "status": "NO_MATCH"
+  },
+  {
+    "case_index": 9,
+    "case_key": "r66b09_43aba2362b9199f7",
+    "delta": 6,
+    "event": {
+      "body_region": "upper",
+      "evidence_span": [
+        1946,
+        1949
+      ],
+      "frame": 1947,
+      "score": 0.7850738637752197,
+      "score_scope": "UNCALIBRATED_KINEMATIC_PROXY",
+      "semantic_truth": "UNKNOWN",
+      "type": "upper_speed_peak"
+    },
+    "event_selection": {
+      "guardable": 2,
+      "kind": "upper_speed_peak",
+      "matching": 6,
+      "replacement_after_failed_intervention": false,
+      "rule": "WHOLE_ORIGINAL_EVIDENCE_INSIDE_CORE_AND_BASELINE_MAPPED_CENTRE_IN_64_TO_175; NEAREST119.5_THEN_SOURCE_FRAME; NO_LEGALITY_SCORE_OR_QUALITY_RESELECTION",
+      "semantic_truth": "UNKNOWN",
+      "whole_evidence": 6
+    },
+    "methods": [],
+    "primary_match": {
+      "eligible": false,
+      "reason": "NO_COMMON_WIDTH_ACTIVITY_CONTRAST_AND_REDETECTED_PEAK"
+    },
+    "status": "NO_MATCH"
+  },
+  {
+    "case_index": 9,
+    "case_key": "r66b09_43aba2362b9199f7",
+    "delta": -6,
+    "event": {
+      "body_region": "upper",
+      "evidence_span": [
+        1946,
+        1949
+      ],
+      "frame": 1947,
+      "score": 0.7850738637752197,
+      "score_scope": "UNCALIBRATED_KINEMATIC_PROXY",
+      "semantic_truth": "UNKNOWN",
+      "type": "upper_speed_peak"
+    },
+    "event_selection": {
+      "guardable": 2,
+      "kind": "upper_speed_peak",
+      "matching": 6,
+      "replacement_after_failed_intervention": false,
+      "rule": "WHOLE_ORIGINAL_EVIDENCE_INSIDE_CORE_AND_BASELINE_MAPPED_CENTRE_IN_64_TO_175; NEAREST119.5_THEN_SOURCE_FRAME; NO_LEGALITY_SCORE_OR_QUALITY_RESELECTION",
+      "semantic_truth": "UNKNOWN",
+      "whole_evidence": 6
+    },
+    "methods": [],
+    "primary_match": {
+      "eligible": false,
+      "reason": "NO_COMMON_WIDTH_ACTIVITY_CONTRAST_AND_REDETECTED_PEAK"
+    },
+    "status": "NO_MATCH"
+  },
+  {
+    "case_index": 9,
+    "case_key": "r66b09_43aba2362b9199f7",
+    "delta": 3,
+    "event": {
+      "body_region": "upper",
+      "evidence_span": [
+        1946,
+        1949
+      ],
+      "frame": 1947,
+      "score": 0.7850738637752197,
+      "score_scope": "UNCALIBRATED_KINEMATIC_PROXY",
+      "semantic_truth": "UNKNOWN",
+      "type": "upper_speed_peak"
+    },
+    "event_selection": {
+      "guardable": 2,
+      "kind": "upper_speed_peak",
+      "matching": 6,
+      "replacement_after_failed_intervention": false,
+      "rule": "WHOLE_ORIGINAL_EVIDENCE_INSIDE_CORE_AND_BASELINE_MAPPED_CENTRE_IN_64_TO_175; NEAREST119.5_THEN_SOURCE_FRAME; NO_LEGALITY_SCORE_OR_QUALITY_RESELECTION",
+      "semantic_truth": "UNKNOWN",
+      "whole_evidence": 6
+    },
+    "methods": [],
+    "primary_match": {
+      "eligible": false,
+      "reason": "NO_COMMON_WIDTH_ACTIVITY_CONTRAST_AND_REDETECTED_PEAK"
+    },
+    "status": "NO_MATCH"
+  },
+  {
+    "case_index": 9,
+    "case_key": "r66b09_43aba2362b9199f7",
+    "delta": -3,
+    "event": {
+      "body_region": "upper",
+      "evidence_span": [
+        1946,
+        1949
+      ],
+      "frame": 1947,
+      "score": 0.7850738637752197,
+      "score_scope": "UNCALIBRATED_KINEMATIC_PROXY",
+      "semantic_truth": "UNKNOWN",
+      "type": "upper_speed_peak"
+    },
+    "event_selection": {
+      "guardable": 2,
+      "kind": "upper_speed_peak",
+      "matching": 6,
+      "replacement_after_failed_intervention": false,
+      "rule": "WHOLE_ORIGINAL_EVIDENCE_INSIDE_CORE_AND_BASELINE_MAPPED_CENTRE_IN_64_TO_175; NEAREST119.5_THEN_SOURCE_FRAME; NO_LEGALITY_SCORE_OR_QUALITY_RESELECTION",
+      "semantic_truth": "UNKNOWN",
+      "whole_evidence": 6
+    },
+    "methods": [
+      "High_-3"
+    ],
+    "primary_match": {
+      "eligible": false,
+      "reason": "NO_COMMON_WIDTH_ACTIVITY_CONTRAST_AND_REDETECTED_PEAK"
+    },
+    "status": "NO_MATCH"
+  },
+  {
+    "case_index": 10,
+    "case_key": "r66b10_f449ca842cdeb74f",
+    "delta": 6,
+    "event": {
+      "body_region": "upper",
+      "evidence_span": [
+        2661,
+        2664
+      ],
+      "frame": 2662,
+      "score": 0.7469752086927884,
+      "score_scope": "UNCALIBRATED_KINEMATIC_PROXY",
+      "semantic_truth": "UNKNOWN",
+      "type": "upper_speed_peak"
+    },
+    "event_selection": {
+      "guardable": 4,
+      "kind": "upper_speed_peak",
+      "matching": 8,
+      "replacement_after_failed_intervention": false,
+      "rule": "WHOLE_ORIGINAL_EVIDENCE_INSIDE_CORE_AND_BASELINE_MAPPED_CENTRE_IN_64_TO_175; NEAREST119.5_THEN_SOURCE_FRAME; NO_LEGALITY_SCORE_OR_QUALITY_RESELECTION",
+      "semantic_truth": "UNKNOWN",
+      "whole_evidence": 8
+    },
+    "methods": [
+      "High_+6",
+      "Low_+6",
+      "Distributed_+6"
+    ],
+    "primary_match": {
+      "budget_scope": "RMS_AND_MAX_CLOCK_SHIFT_AND_FIRST_RATE_ENERGY; CURVATURE_REPORTED_SEPARATELY",
+      "curvature_energy_gap": 0.0,
+      "eligible": true,
+      "gaps": {
+        "rate_energy": 0.0,
+        "source_shift_max": 0.025019500207713957,
+        "source_shift_rms": 0.02684888344814784,
+        "target_offset_rms": 0.00935160212624402
+      },
+      "peak_gap_frames": 0,
+      "phase_semantics": "UNKNOWN"
+    },
+    "status": "MATCHED_HIGH_LOW"
+  },
+  {
+    "case_index": 10,
+    "case_key": "r66b10_f449ca842cdeb74f",
+    "delta": -6,
+    "event": {
+      "body_region": "upper",
+      "evidence_span": [
+        2661,
+        2664
+      ],
+      "frame": 2662,
+      "score": 0.7469752086927884,
+      "score_scope": "UNCALIBRATED_KINEMATIC_PROXY",
+      "semantic_truth": "UNKNOWN",
+      "type": "upper_speed_peak"
+    },
+    "event_selection": {
+      "guardable": 4,
+      "kind": "upper_speed_peak",
+      "matching": 8,
+      "replacement_after_failed_intervention": false,
+      "rule": "WHOLE_ORIGINAL_EVIDENCE_INSIDE_CORE_AND_BASELINE_MAPPED_CENTRE_IN_64_TO_175; NEAREST119.5_THEN_SOURCE_FRAME; NO_LEGALITY_SCORE_OR_QUALITY_RESELECTION",
+      "semantic_truth": "UNKNOWN",
+      "whole_evidence": 8
+    },
+    "methods": [
+      "High_-6",
+      "Low_-6"
+    ],
+    "primary_match": {
+      "budget_scope": "RMS_AND_MAX_CLOCK_SHIFT_AND_FIRST_RATE_ENERGY; CURVATURE_REPORTED_SEPARATELY",
+      "curvature_energy_gap": 0.0,
+      "eligible": true,
+      "gaps": {
+        "rate_energy": 0.0,
+        "source_shift_max": 0.04425536090411688,
+        "source_shift_rms": 0.03179881764058537,
+        "target_offset_rms": 0.009156001587492526
+      },
+      "peak_gap_frames": 0,
+      "phase_semantics": "UNKNOWN"
+    },
+    "status": "MATCHED_HIGH_LOW"
+  },
+  {
+    "case_index": 10,
+    "case_key": "r66b10_f449ca842cdeb74f",
+    "delta": 3,
+    "event": {
+      "body_region": "upper",
+      "evidence_span": [
+        2661,
+        2664
+      ],
+      "frame": 2662,
+      "score": 0.7469752086927884,
+      "score_scope": "UNCALIBRATED_KINEMATIC_PROXY",
+      "semantic_truth": "UNKNOWN",
+      "type": "upper_speed_peak"
+    },
+    "event_selection": {
+      "guardable": 4,
+      "kind": "upper_speed_peak",
+      "matching": 8,
+      "replacement_after_failed_intervention": false,
+      "rule": "WHOLE_ORIGINAL_EVIDENCE_INSIDE_CORE_AND_BASELINE_MAPPED_CENTRE_IN_64_TO_175; NEAREST119.5_THEN_SOURCE_FRAME; NO_LEGALITY_SCORE_OR_QUALITY_RESELECTION",
+      "semantic_truth": "UNKNOWN",
+      "whole_evidence": 8
+    },
+    "methods": [
+      "High_+3",
+      "Low_+3",
+      "Distributed_+3"
+    ],
+    "primary_match": {
+      "budget_scope": "RMS_AND_MAX_CLOCK_SHIFT_AND_FIRST_RATE_ENERGY; CURVATURE_REPORTED_SEPARATELY",
+      "curvature_energy_gap": 0.0,
+      "eligible": true,
+      "gaps": {
+        "rate_energy": 0.0,
+        "source_shift_max": 0.02447220195231198,
+        "source_shift_rms": 0.026985857327883764,
+        "target_offset_rms": 0.00935160212624402
+      },
+      "peak_gap_frames": 0,
+      "phase_semantics": "UNKNOWN"
+    },
+    "status": "MATCHED_HIGH_LOW"
+  },
+  {
+    "case_index": 10,
+    "case_key": "r66b10_f449ca842cdeb74f",
+    "delta": -3,
+    "event": {
+      "body_region": "upper",
+      "evidence_span": [
+        2661,
+        2664
+      ],
+      "frame": 2662,
+      "score": 0.7469752086927884,
+      "score_scope": "UNCALIBRATED_KINEMATIC_PROXY",
+      "semantic_truth": "UNKNOWN",
+      "type": "upper_speed_peak"
+    },
+    "event_selection": {
+      "guardable": 4,
+      "kind": "upper_speed_peak",
+      "matching": 8,
+      "replacement_after_failed_intervention": false,
+      "rule": "WHOLE_ORIGINAL_EVIDENCE_INSIDE_CORE_AND_BASELINE_MAPPED_CENTRE_IN_64_TO_175; NEAREST119.5_THEN_SOURCE_FRAME; NO_LEGALITY_SCORE_OR_QUALITY_RESELECTION",
+      "semantic_truth": "UNKNOWN",
+      "whole_evidence": 8
+    },
+    "methods": [
+      "High_-3",
+      "Low_-3",
+      "Distributed_-3"
+    ],
+    "primary_match": {
+      "budget_scope": "RMS_AND_MAX_CLOCK_SHIFT_AND_FIRST_RATE_ENERGY; CURVATURE_REPORTED_SEPARATELY",
+      "curvature_energy_gap": 0.0,
+      "eligible": true,
+      "gaps": {
+        "rate_energy": 0.0,
+        "source_shift_max": 0.017275103681875334,
+        "source_shift_rms": 0.03165229664672774,
+        "target_offset_rms": 0.009156001587492526
+      },
+      "peak_gap_frames": 0,
+      "phase_semantics": "UNKNOWN"
+    },
+    "status": "MATCHED_HIGH_LOW"
+  },
+  {
+    "case_index": 11,
+    "case_key": "r66b11_73f9e95e0fef2d60",
+    "delta": 6,
+    "event": null,
+    "event_selection": {
+      "guardable": 0,
+      "kind": "upper_speed_peak",
+      "matching": 0,
+      "replacement_after_failed_intervention": false,
+      "rule": "WHOLE_ORIGINAL_EVIDENCE_INSIDE_CORE_AND_BASELINE_MAPPED_CENTRE_IN_64_TO_175; NEAREST119.5_THEN_SOURCE_FRAME; NO_LEGALITY_SCORE_OR_QUALITY_RESELECTION",
+      "semantic_truth": "UNKNOWN",
+      "whole_evidence": 0
+    },
+    "methods": [],
+    "primary_match": null,
+    "status": "NO_EVENT"
+  },
+  {
+    "case_index": 11,
+    "case_key": "r66b11_73f9e95e0fef2d60",
+    "delta": -6,
+    "event": null,
+    "event_selection": {
+      "guardable": 0,
+      "kind": "upper_speed_peak",
+      "matching": 0,
+      "replacement_after_failed_intervention": false,
+      "rule": "WHOLE_ORIGINAL_EVIDENCE_INSIDE_CORE_AND_BASELINE_MAPPED_CENTRE_IN_64_TO_175; NEAREST119.5_THEN_SOURCE_FRAME; NO_LEGALITY_SCORE_OR_QUALITY_RESELECTION",
+      "semantic_truth": "UNKNOWN",
+      "whole_evidence": 0
+    },
+    "methods": [],
+    "primary_match": null,
+    "status": "NO_EVENT"
+  },
+  {
+    "case_index": 11,
+    "case_key": "r66b11_73f9e95e0fef2d60",
+    "delta": 3,
+    "event": null,
+    "event_selection": {
+      "guardable": 0,
+      "kind": "upper_speed_peak",
+      "matching": 0,
+      "replacement_after_failed_intervention": false,
+      "rule": "WHOLE_ORIGINAL_EVIDENCE_INSIDE_CORE_AND_BASELINE_MAPPED_CENTRE_IN_64_TO_175; NEAREST119.5_THEN_SOURCE_FRAME; NO_LEGALITY_SCORE_OR_QUALITY_RESELECTION",
+      "semantic_truth": "UNKNOWN",
+      "whole_evidence": 0
+    },
+    "methods": [],
+    "primary_match": null,
+    "status": "NO_EVENT"
+  },
+  {
+    "case_index": 11,
+    "case_key": "r66b11_73f9e95e0fef2d60",
+    "delta": -3,
+    "event": null,
+    "event_selection": {
+      "guardable": 0,
+      "kind": "upper_speed_peak",
+      "matching": 0,
+      "replacement_after_failed_intervention": false,
+      "rule": "WHOLE_ORIGINAL_EVIDENCE_INSIDE_CORE_AND_BASELINE_MAPPED_CENTRE_IN_64_TO_175; NEAREST119.5_THEN_SOURCE_FRAME; NO_LEGALITY_SCORE_OR_QUALITY_RESELECTION",
+      "semantic_truth": "UNKNOWN",
+      "whole_evidence": 0
+    },
+    "methods": [],
+    "primary_match": null,
+    "status": "NO_EVENT"
+  }
+]

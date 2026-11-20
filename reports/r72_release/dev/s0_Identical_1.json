@@ -1,0 +1,119 @@
+{
+  "automatic": true,
+  "generated_tokens": 12,
+  "human_reviewed": false,
+  "input": {
+    "audio_present": true,
+    "input_shapes": {
+      "attention_mask": [
+        1,
+        886
+      ],
+      "feature_attention_mask": [
+        1,
+        30000
+      ],
+      "input_features": [
+        1,
+        128,
+        30000
+      ],
+      "input_ids": [
+        1,
+        886
+      ],
+      "pixel_values_videos": [
+        2304,
+        1176
+      ],
+      "video_grid_thw": [
+        1,
+        3
+      ],
+      "video_second_per_grid": [
+        1
+      ]
+    },
+    "prompt": "两侧同镜头同步播放8秒骨架。比较动作自然性，允许TIE或UNSURE，不假定运动越快越好或静止一定不好。同时判断两边实际运动是否明显不同。只输出短JSON：{\"preference\":\"A或B或TIE或UNSURE\",\"different\":true或false或null}。不要解释，不要时间戳。",
+    "requested_and_actual_fps": 1,
+    "sampled_indices": [
+      0,
+      30,
+      60,
+      90,
+      120,
+      150,
+      180,
+      210
+    ],
+    "sampled_times_seconds": [
+      0.0,
+      1.0,
+      2.0,
+      3.0,
+      4.0,
+      5.0,
+      6.0,
+      7.0
+    ],
+    "tensor_sha256": {
+      "attention_mask": "a32cc846edd5aa0c95def42d975f0809bd03c6487bf1b475f41317fcf5cbcb6e",
+      "feature_attention_mask": "c5cfee1283631240a445a07b72e4cc16bf84d900ed38db0e0012764ebcd39619",
+      "input_features": "187dee6298ed8d9c1306714deb93ca9f6097645c40f0d3505b15d6769ac562e2",
+      "input_ids": "6f1dc48458c6f01a99f5e3d33804d86122ca8c20ea2c11efd2a1817f3580c69f",
+      "pixel_values_videos": "ecab763d0a934c1955eb9fd57c65cacf0aecfd3deb696913ce17d455fdcdded0",
+      "video_grid_thw": "930e897eb3bd72d8acb2f1674b8464be1b3f698dab0c2e83b0f4b04bb3480bf9",
+      "video_second_per_grid": "d88c86f15bbea365d658ad95a81d45367c465f7af6f7264fb077f01747ddc77d"
+    },
+    "time_grid": [
+      2.0
+    ],
+    "video_reader": "TORCHVISION_EXACT_REGULAR_FRAME_SAMPLING_NO_LINSPACE_DRIFT"
+  },
+  "job": {
+    "audio": "outputs/judge_repair_r72_01/media/source_0.wav",
+    "audio_sha256": "514a4e71b558f89ac41dbfee360703aa844a6fe6f84abf1b36094e237b8780bc",
+    "expected": "TIE",
+    "fps": 1,
+    "job_id": "s0_Identical_1",
+    "observation_interval_seconds": [
+      0,
+      8
+    ],
+    "role": "dev",
+    "source_index": 0,
+    "source_interval": [
+      2660,
+      2896
+    ],
+    "source_uid": "female_FeiTian",
+    "support": {
+      "circular_shift": false,
+      "delayed_source_valid_frames": [
+        15,
+        240
+      ],
+      "padding_frames": [
+        0,
+        15
+      ]
+    },
+    "synthetic_truth": true,
+    "task": "naturalness",
+    "test": "Identical",
+    "use_audio": true,
+    "video": "outputs/judge_repair_r72_01/media/8097d5ee79d905e5103f9f30.mp4",
+    "video_sha256": "36b9a52fae2a428857f1523686733c1f39863072419437756c921fe6eeecc0de"
+  },
+  "last_token": 151645,
+  "parsed": {
+    "different": false,
+    "preference": "TIE"
+  },
+  "peak_allocated_bytes": 8274967552,
+  "quality_truth": "NOT_EVALUABLE",
+  "raw_response": "{\"preference\":\"TIE\",\"different\":false}",
+  "seconds": 15.632669921033084,
+  "stop_reason": "EOS",
+  "token_limit": 128
+}

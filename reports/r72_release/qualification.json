@@ -1,0 +1,150 @@
+{
+  "R69_bulk_inferences": 0,
+  "R74": "NOT_STARTED",
+  "automatic_judge_can_rank_quality": false,
+  "development": {
+    "R69_bulk_ranking": "NOT_AUTHORIZED_BY_DIAGNOSTIC_PASS",
+    "calls": 10,
+    "development_2fps_gate_passed": false,
+    "human_agreement": "NOT_EVALUABLE",
+    "human_reviewed": false,
+    "primary_2fps_correct": 1,
+    "primary_2fps_total": 5,
+    "structured": 10
+  },
+  "diagnostic_scope": "SYNTHETIC_PERIODIC_POSE_ROTATIONS_NOT_ARTISTIC_QUALITY_TRUTH",
+  "fresh_process_replay": {
+    "budget_includes_replay": true,
+    "differences": [],
+    "exact": true,
+    "fresh_process": true,
+    "generation_calls": 1
+  },
+  "hard_budget": 48,
+  "human_agreement": "NOT_EVALUABLE",
+  "maximum_generated_tokens": 12,
+  "new_training_steps": 0,
+  "peak_allocated_bytes": 10359645184,
+  "per_test": [
+    {
+      "expected": "DIFFERENT_ONLY_NO_NATURALNESS_TRUTH",
+      "fps": 1,
+      "id": "s0_Different_1",
+      "parsed": {
+        "different": false,
+        "preference": "TIE"
+      },
+      "stop": "EOS",
+      "test": "Different",
+      "tokens": 12
+    },
+    {
+      "expected": "DIFFERENT_ONLY_NO_NATURALNESS_TRUTH",
+      "fps": 2,
+      "id": "s0_Different_2",
+      "parsed": {
+        "different": false,
+        "preference": "TIE"
+      },
+      "stop": "EOS",
+      "test": "Different",
+      "tokens": 12
+    },
+    {
+      "expected": "TIE",
+      "fps": 1,
+      "id": "s0_Identical_1",
+      "parsed": {
+        "different": false,
+        "preference": "TIE"
+      },
+      "stop": "EOS",
+      "test": "Identical",
+      "tokens": 12
+    },
+    {
+      "expected": "TIE",
+      "fps": 2,
+      "id": "s0_Identical_2",
+      "parsed": {
+        "different": false,
+        "preference": "TIE"
+      },
+      "stop": "EOS",
+      "test": "Identical",
+      "tokens": 12
+    },
+    {
+      "expected": "UNSURE",
+      "fps": 1,
+      "id": "s0_Muted_1",
+      "parsed": {
+        "preference": "UNSURE"
+      },
+      "stop": "EOS",
+      "test": "Muted",
+      "tokens": 8
+    },
+    {
+      "expected": "UNSURE",
+      "fps": 2,
+      "id": "s0_Muted_2",
+      "parsed": {
+        "preference": "TIE"
+      },
+      "stop": "EOS",
+      "test": "Muted",
+      "tokens": 8
+    },
+    {
+      "expected": "A",
+      "fps": 1,
+      "id": "s0_SyncAB_1",
+      "parsed": {
+        "preference": "UNSURE"
+      },
+      "stop": "EOS",
+      "test": "SyncAB",
+      "tokens": 8
+    },
+    {
+      "expected": "A",
+      "fps": 2,
+      "id": "s0_SyncAB_2",
+      "parsed": {
+        "preference": "TIE"
+      },
+      "stop": "EOS",
+      "test": "SyncAB",
+      "tokens": 8
+    },
+    {
+      "expected": "B",
+      "fps": 1,
+      "id": "s0_SyncBA_1",
+      "parsed": {
+        "preference": "TIE"
+      },
+      "stop": "EOS",
+      "test": "SyncBA",
+      "tokens": 8
+    },
+    {
+      "expected": "B",
+      "fps": 2,
+      "id": "s0_SyncBA_2",
+      "parsed": {
+        "preference": "TIE"
+      },
+      "stop": "EOS",
+      "test": "SyncBA",
+      "tokens": 8
+    }
+  ],
+  "raw_stop_reasons": {
+    "EOS": 10
+  },
+  "total_generation_attempts": 11,
+  "valid_human_records": 0,
+  "validation": "NOT_RUN_DEVELOPMENT_GATE_FAILED"
+}

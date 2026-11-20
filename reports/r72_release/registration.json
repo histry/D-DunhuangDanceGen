@@ -1,0 +1,35 @@
+{
+  "Native24": "NOT_EVALUABLE",
+  "development_fps": [
+    1,
+    2
+  ],
+  "development_sources": [
+    "female_FeiTian"
+  ],
+  "diagnostic_truth": "SYNTHETIC_CONSTRUCTION_NOT_DUNHUANG_ARTISTIC_QUALITY",
+  "human_reviewed": false,
+  "max_generation_attempts": 48,
+  "model": "FROZEN_R71_OFFICIAL_AWQ",
+  "planned_primary_calls": 45,
+  "planned_replay_calls": 1,
+  "primary_validation_fps": 2,
+  "prompt_revisions_allowed": 0,
+  "source_ids": [
+    "female_FeiTian",
+    "female_lotus",
+    "female_meditation",
+    "male_meditation",
+    "male_pipa_1",
+    "male_pipa_2"
+  ],
+  "source_split": "RECORDING_DISJOINT_WITHIN_R72; ALL_HISTORICALLY_EXPOSED_TO_PROJECT",
+  "validation_1fps_contrast": "SYNC_AB_ONLY",
+  "validation_sources": [
+    "female_lotus",
+    "female_meditation",
+    "male_meditation",
+    "male_pipa_1",
+    "male_pipa_2"
+  ]
+}

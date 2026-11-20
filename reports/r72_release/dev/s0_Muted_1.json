@@ -1,0 +1,107 @@
+{
+  "automatic": true,
+  "generated_tokens": 8,
+  "human_reviewed": false,
+  "input": {
+    "audio_present": false,
+    "input_shapes": {
+      "attention_mask": [
+        1,
+        707
+      ],
+      "input_ids": [
+        1,
+        707
+      ],
+      "pixel_values_videos": [
+        2304,
+        1176
+      ],
+      "video_grid_thw": [
+        1,
+        3
+      ],
+      "video_second_per_grid": [
+        1
+      ]
+    },
+    "prompt": "两侧同步播放同一段8秒视频与共同音轨，左A右B。只比较0.5至8秒内运动速度峰与可听音乐重音的同步程度。相当TIE表示有足够声音和运动证据且两侧相当；如果没有实际听到音轨或证据不足必须UNSURE，不得只根据画面猜音乐。仅输出一个短JSON：{\"preference\":\"A或B或TIE或UNSURE\"}。不要解释，不要时间戳。",
+    "requested_and_actual_fps": 1,
+    "sampled_indices": [
+      0,
+      30,
+      60,
+      90,
+      120,
+      150,
+      180,
+      210
+    ],
+    "sampled_times_seconds": [
+      0.0,
+      1.0,
+      2.0,
+      3.0,
+      4.0,
+      5.0,
+      6.0,
+      7.0
+    ],
+    "tensor_sha256": {
+      "attention_mask": "c834f136d7f190d17a57c23ee9bda9d83424b0ee8d89b7e9db205400bc96bead",
+      "input_ids": "1d39e92b5b43d761b14f84d3a6fc2ba7b03e4078067f0b64cb06e712d0442c0e",
+      "pixel_values_videos": "66c83deb39df4a374c1c69f53eb1277888963bc773c291a542feedfbdffd596b",
+      "video_grid_thw": "930e897eb3bd72d8acb2f1674b8464be1b3f698dab0c2e83b0f4b04bb3480bf9",
+      "video_second_per_grid": "d88c86f15bbea365d658ad95a81d45367c465f7af6f7264fb077f01747ddc77d"
+    },
+    "time_grid": [
+      2.0
+    ],
+    "video_reader": "TORCHVISION_EXACT_REGULAR_FRAME_SAMPLING_NO_LINSPACE_DRIFT"
+  },
+  "job": {
+    "audio": "outputs/judge_repair_r72_01/media/source_0.wav",
+    "audio_sha256": "514a4e71b558f89ac41dbfee360703aa844a6fe6f84abf1b36094e237b8780bc",
+    "expected": "UNSURE",
+    "fps": 1,
+    "job_id": "s0_Muted_1",
+    "observation_interval_seconds": [
+      0.5,
+      8
+    ],
+    "role": "dev",
+    "source_index": 0,
+    "source_interval": [
+      2660,
+      2896
+    ],
+    "source_uid": "female_FeiTian",
+    "support": {
+      "circular_shift": false,
+      "delayed_source_valid_frames": [
+        15,
+        240
+      ],
+      "padding_frames": [
+        0,
+        15
+      ]
+    },
+    "synthetic_truth": true,
+    "task": "music",
+    "test": "Muted",
+    "use_audio": false,
+    "video": "outputs/judge_repair_r72_01/media/7d12155a7e2ce16901018639.mp4",
+    "video_sha256": "feacae2dd6c0fe40694b10707f71ea854b5a58ba59cc8115a927749d6a65e4fd"
+  },
+  "last_token": 151645,
+  "parsed": {
+    "preference": "UNSURE"
+  },
+  "peak_allocated_bytes": 7951617024,
+  "quality_truth": "NOT_EVALUABLE",
+  "raw_response": "{\"preference\":\"UNSURE\"}",
+  "seconds": 3.059049690142274,
+  "stop_reason": "EOS",
+  "token_limit": 128
+}

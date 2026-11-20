@@ -1,0 +1,264 @@
+{
+  "descriptions": [
+    {
+      "expected": "TIE",
+      "role": "dev",
+      "source_uid": "female_FeiTian",
+      "test": "Identical",
+      "video": "media/8097d5ee79d905e5103f9f30.mp4"
+    },
+    {
+      "expected": "DIFFERENT_ONLY_NO_NATURALNESS_TRUTH",
+      "role": "dev",
+      "source_uid": "female_FeiTian",
+      "test": "Different",
+      "video": "media/5aea702f94689f0b4a671414.mp4"
+    },
+    {
+      "expected": "A",
+      "role": "dev",
+      "source_uid": "female_FeiTian",
+      "test": "SyncAB",
+      "video": "media/b87ac5278b80aa76c58c5727.mp4"
+    },
+    {
+      "expected": "B",
+      "role": "dev",
+      "source_uid": "female_FeiTian",
+      "test": "SyncBA",
+      "video": "media/ef1037218e36364f8b101a51.mp4"
+    },
+    {
+      "expected": "UNSURE",
+      "role": "dev",
+      "source_uid": "female_FeiTian",
+      "test": "Muted",
+      "video": "media/7d12155a7e2ce16901018639.mp4"
+    },
+    {
+      "expected": null,
+      "role": "dev",
+      "source_uid": "female_FeiTian",
+      "test": "Localization",
+      "video": "media/160f8de71cdd4aa7ba57d998.mp4"
+    },
+    {
+      "expected": "TIE",
+      "role": "validation",
+      "source_uid": "female_lotus",
+      "test": "Identical",
+      "video": "media/35f4734047dbd5a64b1f7494.mp4"
+    },
+    {
+      "expected": "DIFFERENT_ONLY_NO_NATURALNESS_TRUTH",
+      "role": "validation",
+      "source_uid": "female_lotus",
+      "test": "Different",
+      "video": "media/464afd3d30f53d258570e7f3.mp4"
+    },
+    {
+      "expected": "A",
+      "role": "validation",
+      "source_uid": "female_lotus",
+      "test": "SyncAB",
+      "video": "media/166511f394b7de3abc3ae11e.mp4"
+    },
+    {
+      "expected": "B",
+      "role": "validation",
+      "source_uid": "female_lotus",
+      "test": "SyncBA",
+      "video": "media/685462005c29c30afb45729e.mp4"
+    },
+    {
+      "expected": "UNSURE",
+      "role": "validation",
+      "source_uid": "female_lotus",
+      "test": "Muted",
+      "video": "media/182e7e1c3a8d09d054ff1420.mp4"
+    },
+    {
+      "expected": 4.0,
+      "role": "validation",
+      "source_uid": "female_lotus",
+      "test": "Localization",
+      "video": "media/ad741f574660b0366c0e94f9.mp4"
+    },
+    {
+      "expected": "TIE",
+      "role": "validation",
+      "source_uid": "female_meditation",
+      "test": "Identical",
+      "video": "media/c049dcfeb74f513c32a5c16d.mp4"
+    },
+    {
+      "expected": "DIFFERENT_ONLY_NO_NATURALNESS_TRUTH",
+      "role": "validation",
+      "source_uid": "female_meditation",
+      "test": "Different",
+      "video": "media/d885d5fa7d9dd77ee763a99b.mp4"
+    },
+    {
+      "expected": "A",
+      "role": "validation",
+      "source_uid": "female_meditation",
+      "test": "SyncAB",
+      "video": "media/436fb6196fb1215b9c8b5704.mp4"
+    },
+    {
+      "expected": "B",
+      "role": "validation",
+      "source_uid": "female_meditation",
+      "test": "SyncBA",
+      "video": "media/78943a9a8000a792ec935ef9.mp4"
+    },
+    {
+      "expected": "UNSURE",
+      "role": "validation",
+      "source_uid": "female_meditation",
+      "test": "Muted",
+      "video": "media/dc475f2b03d7e5743eae2138.mp4"
+    },
+    {
+      "expected": 4.0,
+      "role": "validation",
+      "source_uid": "female_meditation",
+      "test": "Localization",
+      "video": "media/56c4eb39c142ae10a3c48ad6.mp4"
+    },
+    {
+      "expected": "TIE",
+      "role": "validation",
+      "source_uid": "male_meditation",
+      "test": "Identical",
+      "video": "media/2e6899085111f3d3e930e1a6.mp4"
+    },
+    {
+      "expected": "DIFFERENT_ONLY_NO_NATURALNESS_TRUTH",
+      "role": "validation",
+      "source_uid": "male_meditation",
+      "test": "Different",
+      "video": "media/13d1c1a9b510a93a5c52e20b.mp4"
+    },
+    {
+      "expected": "A",
+      "role": "validation",
+      "source_uid": "male_meditation",
+      "test": "SyncAB",
+      "video": "media/52255388db1b50c53071a489.mp4"
+    },
+    {
+      "expected": "B",
+      "role": "validation",
+      "source_uid": "male_meditation",
+      "test": "SyncBA",
+      "video": "media/2546d3f631d5d4bf1b698ef1.mp4"
+    },
+    {
+      "expected": "UNSURE",
+      "role": "validation",
+      "source_uid": "male_meditation",
+      "test": "Muted",
+      "video": "media/c08a6270ef9e09ef4690ee1e.mp4"
+    },
+    {
+      "expected": 4.0,
+      "role": "validation",
+      "source_uid": "male_meditation",
+      "test": "Localization",
+      "video": "media/5adaf3557efb17c00ff8e4ad.mp4"
+    },
+    {
+      "expected": "TIE",
+      "role": "validation",
+      "source_uid": "male_pipa_1",
+      "test": "Identical",
+      "video": "media/978816895f89ea203710f0fa.mp4"
+    },
+    {
+      "expected": "DIFFERENT_ONLY_NO_NATURALNESS_TRUTH",
+      "role": "validation",
+      "source_uid": "male_pipa_1",
+      "test": "Different",
+      "video": "media/3d3e3352879125ddec794b57.mp4"
+    },
+    {
+      "expected": "A",
+      "role": "validation",
+      "source_uid": "male_pipa_1",
+      "test": "SyncAB",
+      "video": "media/f19543f2390b180363dbfbf2.mp4"
+    },
+    {
+      "expected": "B",
+      "role": "validation",
+      "source_uid": "male_pipa_1",
+      "test": "SyncBA",
+      "video": "media/400ce2a1b097333c49fe812c.mp4"
+    },
+    {
+      "expected": "UNSURE",
+      "role": "validation",
+      "source_uid": "male_pipa_1",
+      "test": "Muted",
+      "video": "media/354025a22ded403cb1139589.mp4"
+    },
+    {
+      "expected": 4.0,
+      "role": "validation",
+      "source_uid": "male_pipa_1",
+      "test": "Localization",
+      "video": "media/15313ea5dbdebabce6d32a06.mp4"
+    },
+    {
+      "expected": "TIE",
+      "role": "validation",
+      "source_uid": "male_pipa_2",
+      "test": "Identical",
+      "video": "media/b9d5cad4d84b0181f294ecc9.mp4"
+    },
+    {
+      "expected": "DIFFERENT_ONLY_NO_NATURALNESS_TRUTH",
+      "role": "validation",
+      "source_uid": "male_pipa_2",
+      "test": "Different",
+      "video": "media/f964cf3fa146302122cefa6a.mp4"
+    },
+    {
+      "expected": "A",
+      "role": "validation",
+      "source_uid": "male_pipa_2",
+      "test": "SyncAB",
+      "video": "media/713e96496434bc37705bb9cf.mp4"
+    },
+    {
+      "expected": "B",
+      "role": "validation",
+      "source_uid": "male_pipa_2",
+      "test": "SyncBA",
+      "video": "media/32fa20bc5c1d68cfd684bc41.mp4"
+    },
+    {
+      "expected": "UNSURE",
+      "role": "validation",
+      "source_uid": "male_pipa_2",
+      "test": "Muted",
+      "video": "media/37f725db46a577243275b64a.mp4"
+    },
+    {
+      "expected": 4.0,
+      "role": "validation",
+      "source_uid": "male_pipa_2",
+      "test": "Localization",
+      "video": "media/fd320a55069f3019099f33bc.mp4"
+    }
+  ],
+  "fps": 30,
+  "frames": 240,
+  "padding_not_scored": [
+    0,
+    0.5
+  ],
+  "style_truth": "UNKNOWN",
+  "synthetic": true
+}

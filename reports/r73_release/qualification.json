@@ -1,0 +1,83 @@
+{
+  "Native24": "NOT_EVALUABLE",
+  "R74": "NOT_STARTED_INDEPENDENT_MECHANISM_EVIDENCE_MISSING",
+  "all_selected_bridges_byte_identical": true,
+  "all_selected_protected_clock_and_rotation_edges_exact": true,
+  "controls": {
+    "Native24": "NOT_EVALUABLE",
+    "R74": "NOT_STARTED",
+    "actual_G1_requests": {
+      "actual_constructed": 87,
+      "actual_geometry_calls": 87,
+      "actual_screen_passed": 87,
+      "cached_geometry_reuses": 0,
+      "check_requests": 87
+    },
+    "groups": 48,
+    "human_preference": "NOT_EVALUABLE",
+    "human_records": 0,
+    "legal_proposals": 658,
+    "new_training_steps": 0,
+    "proposed": 972,
+    "semantic_phase_truth": "UNKNOWN",
+    "status_counts": {
+      "MATCHED_HIGH_LOW": 10,
+      "NO_EVENT": 12,
+      "NO_MATCH": 26
+    }
+  },
+  "correction": "OUTPUT_ONLY_NUMPY_BOOL_SERIALIZATION; INITIAL_FAILED_ARCHIVE_RETAINED; CANDIDATES_AND_RULES_UNCHANGED",
+  "matched_by_dose": {
+    "-3": {
+      "MATCHED_HIGH_LOW": 3,
+      "NO_EVENT": 3,
+      "NO_MATCH": 6
+    },
+    "-6": {
+      "MATCHED_HIGH_LOW": 2,
+      "NO_EVENT": 3,
+      "NO_MATCH": 7
+    },
+    "3": {
+      "MATCHED_HIGH_LOW": 3,
+      "NO_EVENT": 3,
+      "NO_MATCH": 6
+    },
+    "6": {
+      "MATCHED_HIGH_LOW": 2,
+      "NO_EVENT": 3,
+      "NO_MATCH": 7
+    }
+  },
+  "matched_source_intervals": 2,
+  "naturalness_gain": "NOT_EVALUABLE",
+  "new_training_steps": 0,
+  "preview": {
+    "Native24": "NOT_EVALUABLE",
+    "R74": "NOT_STARTED",
+    "actual_G1_requests": {
+      "actual_constructed": 25,
+      "actual_geometry_calls": 25,
+      "actual_screen_passed": 25,
+      "cached_geometry_reuses": 0,
+      "check_requests": 25
+    },
+    "groups": 12,
+    "human_preference": "NOT_EVALUABLE",
+    "human_records": 0,
+    "legal_proposals": 110,
+    "new_training_steps": 0,
+    "proposed": 243,
+    "semantic_phase_truth": "UNKNOWN",
+    "status_counts": {
+      "MATCHED_HIGH_LOW": 2,
+      "NO_EVENT": 3,
+      "NO_MATCH": 7
+    }
+  },
+  "quality_winner": null,
+  "selected_nonbaseline_executions": 75,
+  "semantic_phase_truth": "UNKNOWN",
+  "source_grouped_effect": "DESCRIPTIVE_ONLY_REPEATED_DOSES_AND_MUSIC_NOT_INDEPENDENT",
+  "valid_human_records": 0
+}
