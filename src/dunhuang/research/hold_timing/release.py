@@ -1,6 +1,8 @@
 """Canonical scalar release; media, weights and original rotations stay private."""
 from pathlib import Path
 from collections import Counter
+import numpy as np
+from scipy.spatial.transform import Rotation
 from .study import ROOT,CFG
 from dunhuang.research.local_timing_r68.common import read,write,sha
 
@@ -31,15 +33,19 @@ def run():
   whole=[v for v in own if any(h['source_supported_frame_centers']==[float(a),float(b-1)] for h in v['mapped_source_holds'])]
   if whole:capacity.append(dict(case_key=c['key'],source_uid=c['source_uid'],source_interval=[a,b],pool=len(own),whole_source_low_support=len(whole),target_durations_seconds=[min(h['target_seconds'] for v in whole for h in v['mapped_source_holds'] if h['source_supported_frame_centers']==[float(a),float(b-1)]),max(h['target_seconds'] for v in whole for h in v['mapped_source_holds'] if h['source_supported_frame_centers']==[float(a),float(b-1)])],scope='CURRENT_FROZEN_SOURCE_AND_240_FRAME_BUDGET_NOT_GLOBAL_INFEASIBILITY'))
  write(out/'capacity.json',capacity)
- by={(r['case_key'],r['method']):r for r in controls};comparisons=[]
+ by={(r['case_key'],r['method']):r for r in controls};comparisons=[];z=np.load(ROOT/'controls/arrays.npz')
  for method in sorted({r['method'] for r in controls}):
   own=[r for r in controls if r['method']==method and r['status']=='EXECUTED'];pairs=[(r,by[r['case_key'],'GTWLocal']) for r in own if by[r['case_key'],'GTWLocal']['status']=='EXECUTED'];differences=[a['core']['regions']['body']['longest_low_seconds']-b['core']['regions']['body']['longest_low_seconds'] for a,b in pairs]
-  comparisons.append(dict(method=method,actual=len(own),G1_pass=sum(r['connection']['passes_original_screen'] is True for r in own),different_clock_from_GTWLocal=sum(a['clock_sha256']!=b['clock_sha256'] for a,b in pairs),different_motion_from_GTWLocal=sum(a['rotation_sha256']!=b['rotation_sha256'] for a,b in pairs),longest_low_decreased=sum(v<-1e-9 for v in differences),longest_low_increased=sum(v>1e-9 for v in differences),longest_low_unchanged=sum(abs(v)<=1e-9 for v in differences),quality='NOT_EVALUABLE'))
+  clock_changes=[];pose_changes=[]
+  for a,b in pairs:
+   pre=a['case_key']+'__';qa=z[pre+a['method']+'__q'];qb=z[pre+'GTWLocal__q'];clock_changes.append(float(abs(qa-qb).max()));ra=z[pre+a['method']+'__R'];rb=z[pre+'GTWLocal__R'];pose_changes.append(float(np.linalg.norm(Rotation.from_matrix((rb.swapaxes(-1,-2)@ra).reshape(-1,3,3)).as_rotvec(),axis=-1).mean()))
+  comparisons.append(dict(method=method,actual=len(own),G1_pass=sum(r['connection']['passes_original_screen'] is True for r in own),different_clock_from_GTWLocal=sum(a['clock_sha256']!=b['clock_sha256'] for a,b in pairs),different_motion_from_GTWLocal=sum(a['rotation_sha256']!=b['rotation_sha256'] for a,b in pairs),longest_low_decreased=sum(v<-1e-9 for v in differences),longest_low_increased=sum(v>1e-9 for v in differences),longest_low_unchanged=sum(abs(v)<=1e-9 for v in differences),maximum_clock_change_frames=max(clock_changes,default=0),numerically_changed_clocks_above_1e_minus8=sum(v>1e-8 for v in clock_changes),mean_pose_difference_rad=float(np.mean(pose_changes)) if pose_changes else None,quality='NOT_EVALUABLE'))
+ z.close()
  write(out/'comparisons.json',comparisons)
  opportunity=[]
  for c in cases:
   own=[v for v in candidates if v['case_key']==c['key']]
-  opportunity.append(dict(case_key=c['key'],source_uid=c['source_uid'],candidate_count=len(own),hold_cost_distinct=len({v['hold_cost'] for v in own}),music_hold_cost_distinct=len({v['music_hold_cost'] for v in own}),wrong_music_hold_cost_distinct=len({v['wrong_music_hold_cost'] for v in own}),mapped_hold_count_range=[min(len(v['mapped_source_holds']) for v in own),max(len(v['mapped_source_holds']) for v in own)]))
+  opportunity.append(dict(case_key=c['key'],source_uid=c['source_uid'],candidate_count=len(own),RMS_clock_change_from_E1W_range=[min(v['clock_shift'] for v in own),max(v['clock_shift'] for v in own)],hold_cost_distinct=len({v['hold_cost'] for v in own}),music_hold_cost_distinct=len({v['music_hold_cost'] for v in own}),wrong_music_hold_cost_distinct=len({v['wrong_music_hold_cost'] for v in own}),mapped_hold_count_range=[min(len(v['mapped_source_holds']) for v in own),max(len(v['mapped_source_holds']) for v in own)]))
  write(out/'opportunity.json',opportunity)
  write(out/'qualification.json',dict(status='COMPLETED_RESEARCH_DIAGNOSTIC',independent_human_records=0,hold_semantics='UNKNOWN',hold_cap='TRAIN_SOURCE_STATISTIC_NOT_ACCEPTABILITY_TRUTH',music_tolerance_validity='NOT_EVALUABLE',preference_gain='NOT_EVALUABLE',can_route=False,R74='NOT_STARTED',training_steps=0,optimizer_calls=0))
  for p in out.iterdir():
