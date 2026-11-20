@@ -1,0 +1,45 @@
+"""Admission and schema controls, no fabricated model or human judgments."""
+import json
+import pytest
+from dunhuang.research.omni_judge_r71.prepare import METHODS, register
+from dunhuang.research.omni_judge_r71.judge import DIMS, parse
+
+
+def test_registered_population_keeps_missing_and_failed_G1():
+    cases = [dict(key=str(i)) for i in range(12)]
+    rows = [dict(case_key=c['key'], method=m, status='LEGAL', connection=dict(passes_original_screen=True))
+            for c in cases for m in ['E1W'] + METHODS]
+    for r in rows:
+        if r['method'] == 'BeatDP' and r['case_key'] in ['0', '1', '2']:
+            r.update(status='NO_EVENT', connection=None)
+        if r['method'] == 'RhythmDTW' and r['case_key'] == '3':
+            r['connection']['passes_original_screen'] = False
+    result = register(cases, rows)
+    assert len(result) == 60 and sum(r['eligible'] for r in result) == 56
+    assert len({r['pair_id'] for r in result}) == 60
+    assert sum(r['pilot'] for r in result) == 3
+    assert all(r['exclusion'] for r in result if not r['eligible'])
+
+
+def valid_response():
+    return {d: dict(preference='UNSURE', timestamps_seconds=[], reason='Missing evidence') for d in DIMS}
+
+
+def test_uncertainty_and_ties_survive_without_winner_imputation():
+    obj = valid_response()
+    obj[DIMS[1]]['preference'] = 'TIE'
+    assert parse(json.dumps(obj)) == obj
+
+
+@pytest.mark.parametrize('bad', [True, -0.1, 17.6, float('nan'), '1'])
+def test_invalid_timestamps_rejected(bad):
+    obj = valid_response()
+    obj[DIMS[0]]['timestamps_seconds'] = [bad]
+    assert parse(json.dumps(obj)) is None
+
+
+def test_incomplete_response_never_filled_with_fabricated_scores():
+    obj = valid_response()
+    del obj[DIMS[0]]
+    assert parse(json.dumps(obj)) is None
+    assert parse('no JSON') is None
