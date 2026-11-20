@@ -1,0 +1,148 @@
+{
+  "results": [
+    {
+      "dataset": "AIST++",
+      "metric": "R64_accent_candidate",
+      "groups": 3,
+      "mean_paired_win": 0.4166666666666667,
+      "group_bootstrap_95": [
+        0.25,
+        0.5
+      ]
+    },
+    {
+      "dataset": "AIST++",
+      "metric": "R64_beat",
+      "groups": 3,
+      "mean_paired_win": 0.4166666666666667,
+      "group_bootstrap_95": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "dataset": "AIST++",
+      "metric": "acoustic_accent_candidate",
+      "groups": 3,
+      "mean_paired_win": 0.4166666666666667,
+      "group_bootstrap_95": [
+        0.25,
+        0.75
+      ]
+    },
+    {
+      "dataset": "AIST++",
+      "metric": "allin1_beat",
+      "groups": 3,
+      "mean_paired_win": 0.5,
+      "group_bootstrap_95": [
+        0.25,
+        1.0
+      ]
+    },
+    {
+      "dataset": "AIST++",
+      "metric": "allin1_downbeat",
+      "groups": 3,
+      "mean_paired_win": 0.3333333333333333,
+      "group_bootstrap_95": [
+        0.0,
+        0.75
+      ]
+    },
+    {
+      "dataset": "AIST++",
+      "metric": "beat_this_beat",
+      "groups": 3,
+      "mean_paired_win": 0.375,
+      "group_bootstrap_95": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "dataset": "AIST++",
+      "metric": "beat_this_downbeat",
+      "groups": 3,
+      "mean_paired_win": 0.5,
+      "group_bootstrap_95": [
+        0.0,
+        0.75
+      ]
+    },
+    {
+      "dataset": "FineDance",
+      "metric": "R64_accent_candidate",
+      "groups": 3,
+      "mean_paired_win": 0.6666666666666666,
+      "group_bootstrap_95": [
+        0.5,
+        0.75
+      ]
+    },
+    {
+      "dataset": "FineDance",
+      "metric": "R64_beat",
+      "groups": 3,
+      "mean_paired_win": 0.5833333333333334,
+      "group_bootstrap_95": [
+        0.25,
+        0.75
+      ]
+    },
+    {
+      "dataset": "FineDance",
+      "metric": "acoustic_accent_candidate",
+      "groups": 3,
+      "mean_paired_win": 0.4166666666666667,
+      "group_bootstrap_95": [
+        0.25,
+        0.5
+      ]
+    },
+    {
+      "dataset": "FineDance",
+      "metric": "allin1_beat",
+      "groups": 3,
+      "mean_paired_win": 0.6666666666666666,
+      "group_bootstrap_95": [
+        0.25,
+        1.0
+      ]
+    },
+    {
+      "dataset": "FineDance",
+      "metric": "allin1_downbeat",
+      "groups": 3,
+      "mean_paired_win": 0.4166666666666667,
+      "group_bootstrap_95": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "dataset": "FineDance",
+      "metric": "beat_this_beat",
+      "groups": 3,
+      "mean_paired_win": 0.6666666666666666,
+      "group_bootstrap_95": [
+        0.25,
+        1.0
+      ]
+    },
+    {
+      "dataset": "FineDance",
+      "metric": "beat_this_downbeat",
+      "groups": 3,
+      "mean_paired_win": 0.5,
+      "group_bootstrap_95": [
+        0.0,
+        1.0
+      ]
+    }
+  ],
+  "scope": "VERY_SMALL_EXPOSED_TRAIN_CLOCK_DIAGNOSTIC_NOT_ARTISTIC_TRUTH",
+  "independent_accuracy": "NOT_EVALUABLE",
+  "training_steps": 0,
+  "can_route": false
+}

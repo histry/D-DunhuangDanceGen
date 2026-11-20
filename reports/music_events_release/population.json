@@ -1,0 +1,62 @@
+{
+  "selection": "LEX_FIRST3_TRAIN_DISTINCT_AUDIO_GROUPS_PER_DATASET_NO_REPLACEMENT",
+  "exposure": "HISTORICALLY_EXPOSED_NOT_NEW_GENERALIZATION",
+  "requested_groups": 6,
+  "registered_groups": 6,
+  "sources": [
+    {
+      "source_uid": "033c4d217edce5e9cbd07626",
+      "dataset": "AIST++",
+      "role": "train",
+      "audio_sha256": "9db11a207fcba36c22c7e502e302f48ac2a5d863c4f160fb532ce8020065ab37",
+      "clock_scope": "VERIFIED_OFFICIAL_SOURCE_CLOCK",
+      "status": "SUPPORTED",
+      "legacy_error": null
+    },
+    {
+      "source_uid": "05548ccce94e669f7c061092",
+      "dataset": "AIST++",
+      "role": "train",
+      "audio_sha256": "6bde923c8a0b374a08cab44055c60ccd9c10da75613434636b66bd51d8434767",
+      "clock_scope": "VERIFIED_OFFICIAL_SOURCE_CLOCK",
+      "status": "SUPPORTED",
+      "legacy_error": null
+    },
+    {
+      "source_uid": "062462537c48db40add1905e",
+      "dataset": "AIST++",
+      "role": "train",
+      "audio_sha256": "7d1d19a20701bb92d07a1711a5557d5c3f6d9d1558b9983b720013e5858b7d6f",
+      "clock_scope": "VERIFIED_OFFICIAL_SOURCE_CLOCK",
+      "status": "SUPPORTED",
+      "legacy_error": null
+    },
+    {
+      "source_uid": "fine_001",
+      "dataset": "FineDance",
+      "role": "genre_train_diagnostic",
+      "audio_sha256": "b5536d4ae0f07f28d3068c3b41dec3320be8d5a6c9c356d28eb15e914bf9d031",
+      "clock_scope": "OFFICIAL_ARCHIVE_ID_AND_RAW_COMMON_START_NOT_AIST_WAVEFORM_CALIBRATED",
+      "status": "SUPPORTED",
+      "legacy_error": null
+    },
+    {
+      "source_uid": "fine_002",
+      "dataset": "FineDance",
+      "role": "genre_train_diagnostic",
+      "audio_sha256": "1dbeaef56f43f07c462844df651f5e04cd0e7aca821e55b433433c747fed6d51",
+      "clock_scope": "OFFICIAL_ARCHIVE_ID_AND_RAW_COMMON_START_NOT_AIST_WAVEFORM_CALIBRATED",
+      "status": "SUPPORTED",
+      "legacy_error": null
+    },
+    {
+      "source_uid": "fine_003",
+      "dataset": "FineDance",
+      "role": "genre_train_diagnostic",
+      "audio_sha256": "6b7bb2fb634a39744380605b1821d9a123bce388c00932541c01121cab0fcba5",
+      "clock_scope": "OFFICIAL_ARCHIVE_ID_AND_RAW_COMMON_START_NOT_AIST_WAVEFORM_CALIBRATED",
+      "status": "SUPPORTED",
+      "legacy_error": null
+    }
+  ]
+}

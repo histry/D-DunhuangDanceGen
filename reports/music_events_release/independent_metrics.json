@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "fresh_process": true,
+  "main_full_model_replay": true,
+  "paired_model_replayed": false,
+  "paired_saved_event_score_recalculation": true,
+  "catalogs": 9,
+  "events": 8518,
+  "independent_score_checks": 2745,
+  "paired_score_checks": 246,
+  "saved_motion_score_checks": 2499,
+  "saved_motion_profiles_recomputed": 132,
+  "missing_executions_retained": 3,
+  "bindings": {
+    "main/manifest.json": "ccc3ace99ac5313135c95f84c9a732f8f50312c00036900115118ddab26dbf52",
+    "replay/independent.json": "c07169c4675620ccd0d798feaf9237add1055268da3e80c0df565f9cc9765dc5",
+    "paired/population.json": "cffbe02f0b65ba3addbc0ff2baaf7152af2a50f921e60755c52a580f8ead86d0",
+    "paired/scores.json": "8fbacf0f00f50b55330eb79a809972d1a3fe2fbaa5a69a44121f11e83972bc21",
+    "paired/summary.json": "0a32882c8587dbb8c96d6f2e79e97aa48a9407f9564d6b0d53d3c38567c5195d",
+    "saved_motion_diagnostics/scores.json": "905052f25b25d6be56843dbfb94fd2802344c1358fb76431b4000bde43e229c3",
+    "saved_motion_diagnostics/qualification.json": "d879270005b43a7cf953ec819d2d48d1b9c4b9c80a183eac28f57b1776f05a25"
+  },
+  "optimizer_calls": 0,
+  "training_steps": 0,
+  "quality": "NOT_EVALUABLE",
+  "can_route": false
+}

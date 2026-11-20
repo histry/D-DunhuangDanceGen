@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "manifest_sha256": "ccc3ace99ac5313135c95f84c9a732f8f50312c00036900115118ddab26dbf52",
+  "three_original_audio_playbacks": true,
+  "audio_error_codes": [
+    null,
+    null,
+    null
+  ],
+  "durations_seconds": [
+    120.032688,
+    119.902063,
+    120.032688
+  ],
+  "seek_verified": true,
+  "zoom_modes_verified": [
+    0,
+    8,
+    20
+  ],
+  "paused_step_before_seconds": 10.768174,
+  "paused_step_after_seconds": 10.801507,
+  "step_seconds": 0.03333333333333333,
+  "step_browser_rounding_microseconds": true,
+  "click_tracks_selectable": true,
+  "sample_accurate_click_timing_claim": false,
+  "console_errors": [],
+  "narrow_layout_corrected": true,
+  "human_annotation_records": 0,
+  "independent_music_accuracy": "NOT_EVALUABLE",
+  "screenshot_sha256": "9d0679433ccbcc4ad5b4c804522570eb80b64dba0077e1ee58da2263018409bf"
+}
