@@ -23,3 +23,11 @@ def test_distributed_not_falsely_claimed_same_curvature_budget():
 def test_illegal_dose_never_repaired_or_clipped():
     case=dict(time_warp=[[0,0],[239,239]],target_interval=[0,240]);p=proposals(120,np.ones(240))[0]
     r=solve(case,p,30);assert r['status']=='NOT_FEASIBLE' and r['q'] is None
+
+
+def test_numpy_match_decisions_serialize_without_changing_truth():
+    import json
+    from dunhuang.research.local_timing_r68.study import plain
+    record={'primary_match': {'eligible': np.bool_(False)}, 'dose': np.float64(3.)}
+    recovered=json.loads(json.dumps(plain(record),allow_nan=False))
+    assert recovered=={'primary_match': {'eligible': False}, 'dose': 3.}

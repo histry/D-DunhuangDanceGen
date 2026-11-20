@@ -96,7 +96,7 @@ def run(mode='preview',destination=None):
                 for n,a in dict(R=R,q=p['q'],offset=p['offset'],edited_mask=p['edited_mask'],compensation_mask=p['compensation_mask'],**geo).items():arrays[key+'__'+method+'__'+n]=a
             groups.append(group)
         print('R73_CASE',ci+1,12,flush=True)
-    save_arrays(out/'arrays.npz',arrays);write(out/'records.json',rows);write(out/'proposals.json',proposal_rows);write(out/'groups.json',groups)
+    save_arrays(out/'arrays.npz',arrays);write(out/'records.json',plain(rows));write(out/'proposals.json',plain(proposal_rows));write(out/'groups.json',plain(groups))
     if previous:
         for row in rows:
             if (row['case_key'],row['method']) in previous:
