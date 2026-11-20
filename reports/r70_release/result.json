@@ -1,0 +1,52 @@
+{
+  "schema": "R70_ONE_EXPOSED_SONG_SYSTEM_PREVIEW_V1",
+  "commit": "efd1177255c57f11c4bcc3dc8405bd9922f50173",
+  "frames": 3601,
+  "fps": 30,
+  "music": {
+    "path": "/home/disk/lsm/storage/danceRAG/assets/music/test/audio/dunhuangwu2.wav",
+    "sha256": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c"
+  },
+  "seed": 70070,
+  "checkpoint": {
+    "path": "/home/disk/lsm/storage/EDGE/checkpoints/checkpoint.pt",
+    "sha256": "28ca4ce167bb17c36869b4d021af8762a34c6df034002f61b3bc1c1d0b1b02c7"
+  },
+  "features": {
+    "path": "/home/disk/lsm/storage/danceRAG/outputs/edge_baseline_A65_01/features/features.npy",
+    "sha256": "9f4682d3884dd9e2626ce5a3ea9d32ddb9bbe8ac0bde5f0a1cfe7b802a8b83ab"
+  },
+  "official_edge_commit": "17c3428669ed6733edd9d8c66f7dc62060b8e46d",
+  "sampler": {
+    "method": "official_long_ddim",
+    "steps": 50
+  },
+  "systems": {
+    "current": {
+      "status": "FROZEN_FULL_SONG_SYSTEM_REUSE",
+      "source_result_sha256": "bb0907101a2fa8d308de2b7ed4ac8fdcc5b2e4f3c8c6a28020bb58773440106d",
+      "source_arrays_sha256": "3a1d39cc1fd7cec7ced8dd5d46730ef2f418bd639ad607e8bdbca724882e5582",
+      "source_condition": "ChangE16 source units; full120s heuristic E1W G0/G1 graph; not fixed R69 event selection"
+    },
+    "EDGE": {
+      "status": "FRESH_OFFICIAL_SAMPLER_REFERENCE",
+      "training_domain": "AIST++ pretrained; no ChangE reference condition",
+      "frames_generated": 3675
+    },
+    "ChoreoGraph": {
+      "status": "NOT_REPRODUCED_OFFICIAL_CODE_AND_WEIGHTS_NOT_LOCATED",
+      "paper": "https://arxiv.org/html/2207.07386",
+      "substitution": false
+    }
+  },
+  "position_hashes": {
+    "current": "287ba6cc3ba2c9037eed866f65794291b1ed03017f455bfbea0b9967c5b129e8",
+    "EDGE": "e11433c83fecc524cd3bc4d8e0f3106b51db84a3c459778dfe8b6e47ceac0e8f"
+  },
+  "render_contract": "SAME22_JOINTS_SKELETON_METRIC_SCALE_YUP_ROOT_RELATIVE_CAMERA_NO_PER_ARM_RESCALE",
+  "native24": "NOT_EVALUABLE",
+  "human_reviewed": false,
+  "quality_winner": null,
+  "scope": "ONE_HISTORICALLY_EXPOSED_MUSIC_SYSTEM_PRECOMPARISON_NOT_THREE_METHOD_BENCHMARK",
+  "training_steps": 0
+}
