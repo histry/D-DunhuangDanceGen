@@ -4,6 +4,15 @@ import pytest
 from dunhuang.research.omni_judge_r71.prepare import METHODS, register
 from dunhuang.research.omni_judge_r71.judge import DIMS, parse
 from dunhuang.research.omni_judge_r71.summarize import normalize
+from dunhuang.research.omni_judge_r71.controls import wrong_music
+
+
+def test_wrong_music_uses_recording_identity_not_nearby_same_song_clip():
+    files={'near':dict(path='near.wav',raw_audio_sha256='same'),
+           'other':dict(path='other.wav',raw_audio_sha256='different')}
+    assert wrong_music('same',files)['raw_audio_sha256']=='different'
+    with pytest.raises(ValueError):
+        wrong_music('same',{'near':files['near']})
 
 
 def test_order_swap_is_decoded_before_automatic_consistency_counts():
