@@ -35,6 +35,43 @@ def parse(raw):
    assert all(valid_timestamp(t) for t in item['timestamps_seconds'])
   return obj
  except (ValueError,KeyError,AssertionError,TypeError):return None
+
+def job_inputs(processor,process_mm_info,torch,job):
+ video=Path(job['video'])
+ if not video.is_absolute():video=ROOT.parent.parent/video
+ assert hashlib.sha256(video.read_bytes()).hexdigest()==job['sha256']
+ message=[dict(role='system',content=[dict(type='text',text='You are an audio-video comparison assistant. Report uncertainty; automated opinions are not ground truth.')]),dict(role='user',content=[dict(type='video',video=str(video),fps=1.0,max_pixels=160*28*28),dict(type='text',text=PROMPT)])]
+ text=processor.apply_chat_template(message,tokenize=False,add_generation_prompt=True)
+ use_audio=job['condition']!='muted'
+ audios,images,payloads,_=process_mm_info(message,use_audio_in_video=use_audio,return_video_kwargs=True,return_video_metadata=True)
+ videos,frame_metadata,actual_fps=video_clocks(payloads)
+ assert len(videos)==len(actual_fps)==1
+ # Omni4.52.3 wraps its scalar FPS internally; unlike Qwen-VL it cannot accept a list.
+ inputs=processor(text=text,audio=audios,images=images,videos=videos,return_tensors='pt',padding=True,use_audio_in_video=use_audio,fps=actual_fps[0])
+ shapes={k:list(v.shape) for k,v in inputs.items() if hasattr(v,'shape')}
+ input_hashes={k:hashlib.sha256(v.detach().cpu().contiguous().view(torch.uint8).numpy().tobytes()).hexdigest() for k,v in inputs.items() if torch.is_tensor(v)}
+ grid=inputs.get('video_second_per_grid',inputs.get('second_per_grid_ts'))
+ if hasattr(grid,'tolist'):grid=grid.tolist()
+ assert len(grid)==len(actual_fps) and all(abs(g-2/r)<1e-5 for g,r in zip(grid,actual_fps))
+ assert abs(grid[0]*int(inputs['video_grid_thw'][0,0])-17.6)<.001
+ if not videos or use_audio and not audios:raise ValueError('Required modalities did not enter the processor')
+ assert ('input_features' in inputs)==use_audio
+ record=dict(sampled_video_shapes=[list(v.shape) for v in videos],audio_sample_shapes=[list(v.shape) for v in (audios or [])],processor_shapes=shapes,processor_tensor_sha256=input_hashes,video_seconds_per_grid=grid,video_frame_metadata=frame_metadata,actual_sample_fps=actual_fps,use_audio_in_video=use_audio)
+ return inputs,record
+
+def check_inputs(replay=False,full=False,controls=False):
+ os.environ['FORCE_QWENVL_VIDEO_READER']='torchvision'
+ import torch
+ from transformers import Qwen2_5OmniProcessor
+ from qwen_omni_utils import process_mm_info
+ processor=Qwen2_5OmniProcessor.from_pretrained(ROOT/'assets/model')
+ path=ROOT/('jobs_full.json' if full else 'jobs_controls.json' if controls else 'jobs.json')
+ jobs=json.loads(path.read_text(encoding='utf-8'));rows=[]
+ for job in jobs[:1] if replay else jobs:
+  _,record=job_inputs(processor,process_mm_info,torch,job);rows.append(dict(job=job,**record))
+ stage='replay' if replay else 'full' if full else 'controls' if controls else 'pilot'
+ save(ROOT/('receipts/input_'+stage+'.json'),dict(passed=True,model_loaded=False,generation_calls=0,jobs_sha256=hashlib.sha256(path.read_bytes()).hexdigest(),rows=rows))
+ print('R71_INPUTS_ADMITTED',stage,len(rows),flush=True)
 def run(replay=False,full=False,controls=False):
  os.environ['FORCE_QWENVL_VIDEO_READER']='torchvision'
  import torch
@@ -58,28 +95,14 @@ def run(replay=False,full=False,controls=False):
  processor=Qwen2_5OmniProcessor.from_pretrained(modelpath)
  rows=[]
  for index,job in enumerate(jobs[:1] if replay else jobs):
-  video=Path(job['video'])
-  if not video.is_absolute():video=ROOT.parent.parent/video
-  assert hashlib.sha256(video.read_bytes()).hexdigest()==job['sha256']
-  message=[dict(role='system',content=[dict(type='text',text='You are an audio-video comparison assistant. Report uncertainty; automated opinions are not ground truth.')]),dict(role='user',content=[dict(type='video',video=str(video),fps=1.0,max_pixels=160*28*28),dict(type='text',text=PROMPT)])]
-  text=processor.apply_chat_template(message,tokenize=False,add_generation_prompt=True)
-  use_audio=job['condition']!='muted'
-  audios,images,payloads,_=process_mm_info(message,use_audio_in_video=use_audio,return_video_kwargs=True,return_video_metadata=True)
-  videos,frame_metadata,actual_fps=video_clocks(payloads)
-  inputs=processor(text=text,audio=audios,images=images,videos=videos,return_tensors='pt',padding=True,use_audio_in_video=use_audio,fps=actual_fps)
-  shapes={k:list(v.shape) for k,v in inputs.items() if hasattr(v,'shape')}
-  input_hashes={k:hashlib.sha256(v.detach().cpu().contiguous().view(torch.uint8).numpy().tobytes()).hexdigest() for k,v in inputs.items() if torch.is_tensor(v)}
-  grid=inputs.get('video_second_per_grid',inputs.get('second_per_grid_ts'))
-  if hasattr(grid,'tolist'):grid=grid.tolist()
-  assert len(grid)==len(actual_fps) and all(abs(g-2/r)<1e-5 for g,r in zip(grid,actual_fps))
-  if not videos or use_audio and not audios:raise ValueError('Required modalities did not enter the processor')
+  inputs,input_record=job_inputs(processor,process_mm_info,torch,job);use_audio=input_record['use_audio_in_video']
   torch.manual_seed(71071);torch.cuda.manual_seed_all(71071);torch.cuda.reset_peak_memory_stats();tick=time.perf_counter()
   inputs=inputs.to('cuda')
   with torch.inference_mode():ids=model.model.thinker.generate(**inputs,use_audio_in_video=use_audio,do_sample=False,max_new_tokens=512)
   if isinstance(ids,tuple):raise ValueError('Text-only inference unexpectedly returned audio tuple')
   raw=processor.batch_decode(ids[:,inputs['input_ids'].shape[1]:],skip_special_tokens=True,clean_up_tokenization_spaces=False)[0]
   row=dict(job=job,model_revision=json.loads((ROOT/'receipts/model_registration.json').read_text(encoding='utf-8'))['revision'],official_code_commit=commit,prompt=PROMPT,
-   sampled_video_shapes=[list(v.shape) for v in videos],audio_sample_shapes=[list(v.shape) for v in (audios or [])],processor_shapes=shapes,processor_tensor_sha256=input_hashes,video_seconds_per_grid=grid,video_frame_metadata=frame_metadata,actual_sample_fps=actual_fps,use_audio_in_video=use_audio,
+   **input_record,
    requested_fps=1,text_entrypoint='official_multimodal_thinker.generate',video_reader='torchvision',seed=71071,attention_implementation='sdpa',gpu=torch.cuda.get_device_name(),torch_version=torch.__version__,load_peak_bytes=load_peak,raw_response=raw,parsed=parse(raw),seconds=time.perf_counter()-tick,peak_allocated_bytes=torch.cuda.max_memory_allocated(),peak_reserved_bytes=torch.cuda.max_memory_reserved(),
    automatic_judgment=True,human_reviewed=False,human_agreement='NOT_EVALUABLE',Native24='NOT_EVALUABLE')
   save(output/(str(index)+'.json'),row);rows.append(row);print('R71_INFERENCE',index+1,len(jobs),row['peak_allocated_bytes'],row['parsed'] is not None,flush=True)
@@ -89,4 +112,5 @@ def run(replay=False,full=False,controls=False):
   fields=['job','model_revision','official_code_commit','prompt','sampled_video_shapes','audio_sample_shapes','processor_shapes','processor_tensor_sha256','video_seconds_per_grid','video_frame_metadata','actual_sample_fps','use_audio_in_video','raw_response','parsed']
   differences=[f for f in fields if previous[f]!=current[f]]
   save(output/'independent_replay.json',dict(fresh_process=True,compared_fields=fields,differences=differences,exact=not differences,optimizer_calls=0,human_reviewed=False))
-if __name__=='__main__':run('--replay' in sys.argv,'--full' in sys.argv,'--controls' in sys.argv)
+if __name__=='__main__':
+ (check_inputs if '--check-inputs' in sys.argv else run)('--replay' in sys.argv,'--full' in sys.argv,'--controls' in sys.argv)

@@ -19,8 +19,13 @@ export TOKENIZERS_PARALLELISM=false
 export R71_STAGE="$stage"
 export R71_START="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
 py=/home/disk/lsm/conda_envs/dancejudge_r71/bin/python
+export PYTHONUTF8=1
 set +e
+"$py" -m dunhuang.research.omni_judge_r71.judge --check-inputs "${options[@]}" > "$folder/${stage}_inputs.log" 2>&1
+input_status=$?
+if [ "$input_status" = 0 ]; then
 "$py" -m dunhuang.research.omni_judge_r71.judge "${options[@]}" > "$folder/$stage.log" 2>&1
+else cat "$folder/${stage}_inputs.log" > "$folder/$stage.log"; (exit "$input_status"); fi
 status=$?
 R71_STATUS="$status" "$py" - <<'PY'
 import os,json,subprocess,hashlib,platform
