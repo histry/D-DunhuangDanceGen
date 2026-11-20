@@ -1,0 +1,4814 @@
+[
+  {
+    "case_key": "f8d91db44c816c9c6b18cfb8",
+    "source": "original",
+    "rows": [
+      {
+        "key": "c897d7408d1a3b8078984920b4e39a847895ad34507db78b35259072c229086c",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:c114381dab695779ce81904c",
+            "source_uid": "female_FeiTian",
+            "source_interval": [
+              2377,
+              2660
+            ],
+            "source_sha256": "120e0157ccdd60d128d2973ac0682883ee178ba43ce8479100e80f56c64f37a4",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c",
+            "interval": [
+              900,
+              1140
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 240,
+          "time_warp": [
+            [
+              2377.0,
+              0.0
+            ],
+            [
+              2659.0,
+              239.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.26076829945812946,
+        "mapped_low_seconds": 2.3165484633569626,
+        "max_clock_shift_frames": 0.0,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "a087620ffb80f261085b8a97a86fc11ba0c0e89374975715e41e34ec95421d57",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:c114381dab695779ce81904c",
+            "source_uid": "female_FeiTian",
+            "source_interval": [
+              2377,
+              2660
+            ],
+            "source_sha256": "120e0157ccdd60d128d2973ac0682883ee178ba43ce8479100e80f56c64f37a4",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c",
+            "interval": [
+              900,
+              1140
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 240,
+          "time_warp": [
+            [
+              2377.0,
+              0.0
+            ],
+            [
+              2380.539748953975,
+              3.0
+            ],
+            [
+              2541.0,
+              126.99290780141843
+            ],
+            [
+              2608.0,
+              183.77659574468083
+            ],
+            [
+              2655.460251046025,
+              236.0
+            ],
+            [
+              2659.0,
+              239.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.2874542879641418,
+        "mapped_low_seconds": 2.2893600632809132,
+        "max_clock_shift_frames": 14.158995815899743,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "72e910ee781dc5ecae216ca6cbf0fa03bc122926dd0684313d75d233c44041bd",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:c114381dab695779ce81904c",
+            "source_uid": "female_FeiTian",
+            "source_interval": [
+              2377,
+              2660
+            ],
+            "source_sha256": "120e0157ccdd60d128d2973ac0682883ee178ba43ce8479100e80f56c64f37a4",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c",
+            "interval": [
+              900,
+              1140
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 240,
+          "time_warp": [
+            [
+              2377.0,
+              0.0
+            ],
+            [
+              2380.539748953975,
+              3.0
+            ],
+            [
+              2541.0,
+              126.99290780141843
+            ],
+            [
+              2608.0,
+              189.77659574468083
+            ],
+            [
+              2655.460251046025,
+              236.0
+            ],
+            [
+              2659.0,
+              239.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.2734939514553077,
+        "mapped_low_seconds": 2.488159592178225,
+        "max_clock_shift_frames": 14.158196098541794,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "9ddba4482bcb334dad6734d2c0011ea4c78b9e961517fd9fc9188449d0b8908d",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:c114381dab695779ce81904c",
+            "source_uid": "female_FeiTian",
+            "source_interval": [
+              2377,
+              2660
+            ],
+            "source_sha256": "120e0157ccdd60d128d2973ac0682883ee178ba43ce8479100e80f56c64f37a4",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c",
+            "interval": [
+              900,
+              1140
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 240,
+          "time_warp": [
+            [
+              2377.0,
+              0.0
+            ],
+            [
+              2380.539748953975,
+              3.0
+            ],
+            [
+              2541.0,
+              126.99290780141843
+            ],
+            [
+              2608.0,
+              195.77659574468083
+            ],
+            [
+              2655.460251046025,
+              236.0
+            ],
+            [
+              2659.0,
+              239.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.2912962013774279,
+        "mapped_low_seconds": 2.686754815742071,
+        "max_clock_shift_frames": 14.157535899848881,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "c4416cf5729b03522cef56f04c509aaabd28fd4e5623bb2b0a18c2ce98720ac3",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:c114381dab695779ce81904c",
+            "source_uid": "female_FeiTian",
+            "source_interval": [
+              2377,
+              2660
+            ],
+            "source_sha256": "120e0157ccdd60d128d2973ac0682883ee178ba43ce8479100e80f56c64f37a4",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c",
+            "interval": [
+              900,
+              1140
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 240,
+          "time_warp": [
+            [
+              2377.0,
+              0.0
+            ],
+            [
+              2380.539748953975,
+              3.0
+            ],
+            [
+              2541.0,
+              132.99290780141843
+            ],
+            [
+              2608.0,
+              183.77659574468083
+            ],
+            [
+              2655.460251046025,
+              236.0
+            ],
+            [
+              2659.0,
+              239.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.27433036391046905,
+        "mapped_low_seconds": 2.1042143511129288,
+        "max_clock_shift_frames": 14.098425656573,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "0ccdeaaa9ca669652c4b2a677c6cf3a898ba2fca91aa91b99ba336c0dee04445",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:c114381dab695779ce81904c",
+            "source_uid": "female_FeiTian",
+            "source_interval": [
+              2377,
+              2660
+            ],
+            "source_sha256": "120e0157ccdd60d128d2973ac0682883ee178ba43ce8479100e80f56c64f37a4",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c",
+            "interval": [
+              900,
+              1140
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 240,
+          "time_warp": [
+            [
+              2377.0,
+              0.0
+            ],
+            [
+              2380.539748953975,
+              3.0
+            ],
+            [
+              2541.0,
+              132.99290780141843
+            ],
+            [
+              2608.0,
+              189.77659574468083
+            ],
+            [
+              2655.460251046025,
+              236.0
+            ],
+            [
+              2659.0,
+              239.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.2585518570135543,
+        "mapped_low_seconds": 2.303026977985542,
+        "max_clock_shift_frames": 7.079497907950099,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "d0863a8ed17ae288aa95bf06f48387131b97deb29d1fa6f1b278356d5bd99d07",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:c114381dab695779ce81904c",
+            "source_uid": "female_FeiTian",
+            "source_interval": [
+              2377,
+              2660
+            ],
+            "source_sha256": "120e0157ccdd60d128d2973ac0682883ee178ba43ce8479100e80f56c64f37a4",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c",
+            "interval": [
+              900,
+              1140
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 240,
+          "time_warp": [
+            [
+              2377.0,
+              0.0
+            ],
+            [
+              2380.539748953975,
+              3.0
+            ],
+            [
+              2541.0,
+              132.99290780141843
+            ],
+            [
+              2608.0,
+              195.77659574468083
+            ],
+            [
+              2655.460251046025,
+              236.0
+            ],
+            [
+              2659.0,
+              239.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.2738150086696942,
+        "mapped_low_seconds": 2.5016354292642995,
+        "max_clock_shift_frames": 7.078698190592149,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "867362b23c31a2b89ba9ab9b675d176a86132dfc2a693ea7040025a4e0d966ba",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:c114381dab695779ce81904c",
+            "source_uid": "female_FeiTian",
+            "source_interval": [
+              2377,
+              2660
+            ],
+            "source_sha256": "120e0157ccdd60d128d2973ac0682883ee178ba43ce8479100e80f56c64f37a4",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c",
+            "interval": [
+              900,
+              1140
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 240,
+          "time_warp": [
+            [
+              2377.0,
+              0.0
+            ],
+            [
+              2380.539748953975,
+              3.0
+            ],
+            [
+              2541.0,
+              138.99290780141843
+            ],
+            [
+              2608.0,
+              189.77659574468083
+            ],
+            [
+              2655.460251046025,
+              236.0
+            ],
+            [
+              2659.0,
+              239.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.24741958399529906,
+        "mapped_low_seconds": 2.117925449088146,
+        "max_clock_shift_frames": 7.045281692513981,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "30a539e6dfaec1136c7e18681d757d5a07eb84773bafb3e8d7af23f87558cf89",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:c114381dab695779ce81904c",
+            "source_uid": "female_FeiTian",
+            "source_interval": [
+              2377,
+              2660
+            ],
+            "source_sha256": "120e0157ccdd60d128d2973ac0682883ee178ba43ce8479100e80f56c64f37a4",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c",
+            "interval": [
+              900,
+              1140
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 240,
+          "time_warp": [
+            [
+              2377.0,
+              0.0
+            ],
+            [
+              2380.539748953975,
+              3.0
+            ],
+            [
+              2541.0,
+              144.99290780141843
+            ],
+            [
+              2608.0,
+              195.77659574468083
+            ],
+            [
+              2655.460251046025,
+              236.0
+            ],
+            [
+              2659.0,
+              239.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.2531332670828509,
+        "mapped_low_seconds": 2.131497800000969,
+        "max_clock_shift_frames": 7.078509220301385,
+        "protected_four_frames_exact": true
+      }
+    ]
+  },
+  {
+    "case_key": "4a69181188a9e248a0a6330b",
+    "source": "original",
+    "rows": [
+      {
+        "key": "1fcf7f831ae758fbc0ade5b1ef2ee0890ca6fe36dbbfc165bd68ac47690248d8",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:7498d2a729087f738d4402df",
+            "source_uid": "female_lotus",
+            "source_interval": [
+              583,
+              870
+            ],
+            "source_sha256": "22b915af2e0fbb645acb78d7f61e58afe3f7aa40c0fc719da95f7403ed8dd47d",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f",
+            "interval": [
+              900,
+              1140
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 240,
+          "time_warp": [
+            [
+              583.0,
+              0.0
+            ],
+            [
+              869.0,
+              239.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.281041045023009,
+        "mapped_low_seconds": 2.144871794871797,
+        "max_clock_shift_frames": 0.0,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "c897a77f5c74b552291b37f46a83e436f83be885a75b079d3c0291a51894762f",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:7498d2a729087f738d4402df",
+            "source_uid": "female_lotus",
+            "source_interval": [
+              583,
+              870
+            ],
+            "source_sha256": "22b915af2e0fbb645acb78d7f61e58afe3f7aa40c0fc719da95f7403ed8dd47d",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f",
+            "interval": [
+              900,
+              1140
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 240,
+          "time_warp": [
+            [
+              583.0,
+              0.0
+            ],
+            [
+              586.5899581589958,
+              3.0
+            ],
+            [
+              725.0,
+              112.66433566433565
+            ],
+            [
+              768.0,
+              148.59790209790208
+            ],
+            [
+              865.4100418410042,
+              236.0
+            ],
+            [
+              869.0,
+              239.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.27610673519863105,
+        "mapped_low_seconds": 2.0959157433790785,
+        "max_clock_shift_frames": 7.179916317991683,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "13ed06b8f1728ee72371cc2508d634069bf26b4f4ad85e09f35f2352cb81edb6",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:7498d2a729087f738d4402df",
+            "source_uid": "female_lotus",
+            "source_interval": [
+              583,
+              870
+            ],
+            "source_sha256": "22b915af2e0fbb645acb78d7f61e58afe3f7aa40c0fc719da95f7403ed8dd47d",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f",
+            "interval": [
+              900,
+              1140
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 240,
+          "time_warp": [
+            [
+              583.0,
+              0.0
+            ],
+            [
+              586.5899581589958,
+              3.0
+            ],
+            [
+              725.0,
+              112.66433566433565
+            ],
+            [
+              768.0,
+              154.59790209790208
+            ],
+            [
+              865.4100418410042,
+              236.0
+            ],
+            [
+              869.0,
+              239.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.28917432820381644,
+        "mapped_low_seconds": 2.293000872856791,
+        "max_clock_shift_frames": 7.1364210973431454,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "cae460538cf2964dcb3d9399979bff5a247e7a19705db0caf48959c680a43f6f",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:7498d2a729087f738d4402df",
+            "source_uid": "female_lotus",
+            "source_interval": [
+              583,
+              870
+            ],
+            "source_sha256": "22b915af2e0fbb645acb78d7f61e58afe3f7aa40c0fc719da95f7403ed8dd47d",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f",
+            "interval": [
+              900,
+              1140
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 240,
+          "time_warp": [
+            [
+              583.0,
+              0.0
+            ],
+            [
+              586.5899581589958,
+              3.0
+            ],
+            [
+              725.0,
+              112.66433566433565
+            ],
+            [
+              768.0,
+              160.59790209790208
+            ],
+            [
+              865.4100418410042,
+              236.0
+            ],
+            [
+              869.0,
+              239.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.3098897466557635,
+        "mapped_low_seconds": 2.4903647465882717,
+        "max_clock_shift_frames": 7.141627870202683,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "9690f89660b4e9e80a8099caa28b45db8ba8a73f53dd84f43776776806184920",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:7498d2a729087f738d4402df",
+            "source_uid": "female_lotus",
+            "source_interval": [
+              583,
+              870
+            ],
+            "source_sha256": "22b915af2e0fbb645acb78d7f61e58afe3f7aa40c0fc719da95f7403ed8dd47d",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f",
+            "interval": [
+              900,
+              1140
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 240,
+          "time_warp": [
+            [
+              583.0,
+              0.0
+            ],
+            [
+              586.5899581589958,
+              3.0
+            ],
+            [
+              725.0,
+              118.66433566433565
+            ],
+            [
+              768.0,
+              160.59790209790208
+            ],
+            [
+              865.4100418410042,
+              236.0
+            ],
+            [
+              869.0,
+              239.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.29862152911902706,
+        "mapped_low_seconds": 2.3418692788985123,
+        "max_clock_shift_frames": 7.141627870202683,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "3038ec3e1d063232acba841f3896c4b7c4bf9002e905434e484a47c66bd95e92",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:7498d2a729087f738d4402df",
+            "source_uid": "female_lotus",
+            "source_interval": [
+              583,
+              870
+            ],
+            "source_sha256": "22b915af2e0fbb645acb78d7f61e58afe3f7aa40c0fc719da95f7403ed8dd47d",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f",
+            "interval": [
+              900,
+              1140
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 240,
+          "time_warp": [
+            [
+              583.0,
+              0.0
+            ],
+            [
+              586.5899581589958,
+              3.0
+            ],
+            [
+              725.0,
+              124.66433566433565
+            ],
+            [
+              768.0,
+              160.59790209790208
+            ],
+            [
+              865.4100418410042,
+              236.0
+            ],
+            [
+              869.0,
+              239.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.2937084197381066,
+        "mapped_low_seconds": 2.1937622496733145,
+        "max_clock_shift_frames": 7.179916317991683,
+        "protected_four_frames_exact": true
+      }
+    ]
+  },
+  {
+    "case_key": "73cb91d45a9d9530430d1650",
+    "source": "original",
+    "rows": [
+      {
+        "key": "9137d981f1f9a3c860b128e13893e4eed52834403022f488408951915af49426",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:df065e93a0e1f42193d7cbbc",
+            "source_uid": "male_meditation",
+            "source_interval": [
+              689,
+              1071
+            ],
+            "source_sha256": "1cd10b49771226ae7f9ea962bf21e2c86324af2249d80bf08a069a881d20d165",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33",
+            "interval": [
+              900,
+              1260
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 360,
+          "time_warp": [
+            [
+              689.0,
+              0.0
+            ],
+            [
+              1070.0,
+              359.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.23409755092785314,
+        "mapped_low_seconds": 4.114523184601924,
+        "max_clock_shift_frames": 0.0,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "5046063f9339c9153309a5c383fd800f3a9b5e509c57676cfacdd6090b9c2c31",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:df065e93a0e1f42193d7cbbc",
+            "source_uid": "male_meditation",
+            "source_interval": [
+              689,
+              1071
+            ],
+            "source_sha256": "1cd10b49771226ae7f9ea962bf21e2c86324af2249d80bf08a069a881d20d165",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33",
+            "interval": [
+              900,
+              1260
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 360,
+          "time_warp": [
+            [
+              689.0,
+              0.0
+            ],
+            [
+              692.183844011142,
+              3.0
+            ],
+            [
+              863.0,
+              139.95275590551182
+            ],
+            [
+              924.0,
+              197.43044619422574
+            ],
+            [
+              1066.8161559888579,
+              356.0
+            ],
+            [
+              1070.0,
+              359.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.2863838310095648,
+        "mapped_low_seconds": 4.124295303277535,
+        "max_clock_shift_frames": 25.470752089136568,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "fe75a534c9b66fbb873cb20696de88c55823ecdf343246138f794a0252e967e8",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:df065e93a0e1f42193d7cbbc",
+            "source_uid": "male_meditation",
+            "source_interval": [
+              689,
+              1071
+            ],
+            "source_sha256": "1cd10b49771226ae7f9ea962bf21e2c86324af2249d80bf08a069a881d20d165",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33",
+            "interval": [
+              900,
+              1260
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 360,
+          "time_warp": [
+            [
+              689.0,
+              0.0
+            ],
+            [
+              692.183844011142,
+              3.0
+            ],
+            [
+              863.0,
+              139.95275590551182
+            ],
+            [
+              924.0,
+              209.43044619422574
+            ],
+            [
+              1066.8161559888579,
+              356.0
+            ],
+            [
+              1070.0,
+              359.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.27655483424654365,
+        "mapped_low_seconds": 4.438362774346824,
+        "max_clock_shift_frames": 25.462092168135996,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "8b7a16da4bc570e19a776c9ad0730f982d9a8f8a3ab3818f1a12724f138c933c",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:df065e93a0e1f42193d7cbbc",
+            "source_uid": "male_meditation",
+            "source_interval": [
+              689,
+              1071
+            ],
+            "source_sha256": "1cd10b49771226ae7f9ea962bf21e2c86324af2249d80bf08a069a881d20d165",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33",
+            "interval": [
+              900,
+              1260
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 360,
+          "time_warp": [
+            [
+              689.0,
+              0.0
+            ],
+            [
+              692.183844011142,
+              3.0
+            ],
+            [
+              863.0,
+              139.95275590551182
+            ],
+            [
+              924.0,
+              215.43044619422574
+            ],
+            [
+              1066.8161559888579,
+              356.0
+            ],
+            [
+              1070.0,
+              359.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.2791941626193405,
+        "mapped_low_seconds": 4.595533382110283,
+        "max_clock_shift_frames": 25.45879482122939,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "9546193087a8f62c9a575ae82a3ff98dea9e3ad8c96d87109e7e5c9e2c915a7b",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:df065e93a0e1f42193d7cbbc",
+            "source_uid": "male_meditation",
+            "source_interval": [
+              689,
+              1071
+            ],
+            "source_sha256": "1cd10b49771226ae7f9ea962bf21e2c86324af2249d80bf08a069a881d20d165",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33",
+            "interval": [
+              900,
+              1260
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 360,
+          "time_warp": [
+            [
+              689.0,
+              0.0
+            ],
+            [
+              692.183844011142,
+              3.0
+            ],
+            [
+              863.0,
+              151.95275590551182
+            ],
+            [
+              924.0,
+              209.43044619422574
+            ],
+            [
+              1066.8161559888579,
+              356.0
+            ],
+            [
+              1070.0,
+              359.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.24801050804160688,
+        "mapped_low_seconds": 4.119434659415372,
+        "max_clock_shift_frames": 12.735376044568284,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "b8acd11f9dafc74e2b2609023f56b80cc5c9e4550775ffdec53bb32a6f4d8011",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:df065e93a0e1f42193d7cbbc",
+            "source_uid": "male_meditation",
+            "source_interval": [
+              689,
+              1071
+            ],
+            "source_sha256": "1cd10b49771226ae7f9ea962bf21e2c86324af2249d80bf08a069a881d20d165",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33",
+            "interval": [
+              900,
+              1260
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 360,
+          "time_warp": [
+            [
+              689.0,
+              0.0
+            ],
+            [
+              692.183844011142,
+              3.0
+            ],
+            [
+              863.0,
+              151.95275590551182
+            ],
+            [
+              924.0,
+              215.43044619422574
+            ],
+            [
+              1066.8161559888579,
+              356.0
+            ],
+            [
+              1070.0,
+              359.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.24663763425018653,
+        "mapped_low_seconds": 4.276392470735079,
+        "max_clock_shift_frames": 12.730636810150258,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "49a44f5fc6d7572b5748d2d3c0a1094015f9183ff6ce634a7666c47f6459b0e1",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:df065e93a0e1f42193d7cbbc",
+            "source_uid": "male_meditation",
+            "source_interval": [
+              689,
+              1071
+            ],
+            "source_sha256": "1cd10b49771226ae7f9ea962bf21e2c86324af2249d80bf08a069a881d20d165",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33",
+            "interval": [
+              900,
+              1260
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 360,
+          "time_warp": [
+            [
+              689.0,
+              0.0
+            ],
+            [
+              692.183844011142,
+              3.0
+            ],
+            [
+              863.0,
+              151.95275590551182
+            ],
+            [
+              924.0,
+              221.43044619422574
+            ],
+            [
+              1066.8161559888579,
+              356.0
+            ],
+            [
+              1070.0,
+              359.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.2524100715742216,
+        "mapped_low_seconds": 4.4334554805987345,
+        "max_clock_shift_frames": 12.726716123567826,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "cefcc04dce71c1b71b0d4b731c84d2feda1c67fed6970bafb9bad016f7860ab7",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:df065e93a0e1f42193d7cbbc",
+            "source_uid": "male_meditation",
+            "source_interval": [
+              689,
+              1071
+            ],
+            "source_sha256": "1cd10b49771226ae7f9ea962bf21e2c86324af2249d80bf08a069a881d20d165",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33",
+            "interval": [
+              900,
+              1260
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 360,
+          "time_warp": [
+            [
+              689.0,
+              0.0
+            ],
+            [
+              692.183844011142,
+              3.0
+            ],
+            [
+              863.0,
+              151.95275590551182
+            ],
+            [
+              924.0,
+              227.43044619422574
+            ],
+            [
+              1066.8161559888579,
+              356.0
+            ],
+            [
+              1070.0,
+              359.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.26409986580517736,
+        "mapped_low_seconds": 4.590609939315215,
+        "max_clock_shift_frames": 12.72341877666122,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "8c6a3dcdb1891f4749e7cde07eb28535e01bcb1aa4dfd8e2611b6e91d5a775f8",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:df065e93a0e1f42193d7cbbc",
+            "source_uid": "male_meditation",
+            "source_interval": [
+              689,
+              1071
+            ],
+            "source_sha256": "1cd10b49771226ae7f9ea962bf21e2c86324af2249d80bf08a069a881d20d165",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33",
+            "interval": [
+              900,
+              1260
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 360,
+          "time_warp": [
+            [
+              689.0,
+              0.0
+            ],
+            [
+              692.183844011142,
+              3.0
+            ],
+            [
+              863.0,
+              157.95275590551182
+            ],
+            [
+              924.0,
+              209.43044619422574
+            ],
+            [
+              1066.8161559888579,
+              356.0
+            ],
+            [
+              1070.0,
+              359.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.24463780509204217,
+        "mapped_low_seconds": 3.96016663206401,
+        "max_clock_shift_frames": 12.685887718338108,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "4f587d9c612a98d8b64f74300846f27559e77c9379f1fc9319bf3e1ca127d0d0",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:df065e93a0e1f42193d7cbbc",
+            "source_uid": "male_meditation",
+            "source_interval": [
+              689,
+              1071
+            ],
+            "source_sha256": "1cd10b49771226ae7f9ea962bf21e2c86324af2249d80bf08a069a881d20d165",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33",
+            "interval": [
+              900,
+              1260
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 360,
+          "time_warp": [
+            [
+              689.0,
+              0.0
+            ],
+            [
+              692.183844011142,
+              3.0
+            ],
+            [
+              863.0,
+              157.95275590551182
+            ],
+            [
+              924.0,
+              215.43044619422574
+            ],
+            [
+              1066.8161559888579,
+              356.0
+            ],
+            [
+              1070.0,
+              359.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.2391199281022871,
+        "mapped_low_seconds": 4.116985628670584,
+        "max_clock_shift_frames": 6.367688022284142,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "55af22fff4495ac3fbeddcb0fc28a01b8f55db7c97c17a593f117887853982e0",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:df065e93a0e1f42193d7cbbc",
+            "source_uid": "male_meditation",
+            "source_interval": [
+              689,
+              1071
+            ],
+            "source_sha256": "1cd10b49771226ae7f9ea962bf21e2c86324af2249d80bf08a069a881d20d165",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33",
+            "interval": [
+              900,
+              1260
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 360,
+          "time_warp": [
+            [
+              689.0,
+              0.0
+            ],
+            [
+              692.183844011142,
+              3.0
+            ],
+            [
+              863.0,
+              157.95275590551182
+            ],
+            [
+              924.0,
+              221.43044619422574
+            ],
+            [
+              1066.8161559888579,
+              356.0
+            ],
+            [
+              1070.0,
+              359.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.24169837026153584,
+        "mapped_low_seconds": 4.273930721907852,
+        "max_clock_shift_frames": 6.362948787866117,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "9a0c0770a9b8ae150f6d3083efeafe4a40339c3caf66b3609fe1f9510b031f90",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:df065e93a0e1f42193d7cbbc",
+            "source_uid": "male_meditation",
+            "source_interval": [
+              689,
+              1071
+            ],
+            "source_sha256": "1cd10b49771226ae7f9ea962bf21e2c86324af2249d80bf08a069a881d20d165",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33",
+            "interval": [
+              900,
+              1260
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 360,
+          "time_warp": [
+            [
+              689.0,
+              0.0
+            ],
+            [
+              692.183844011142,
+              3.0
+            ],
+            [
+              863.0,
+              157.95275590551182
+            ],
+            [
+              924.0,
+              227.43044619422574
+            ],
+            [
+              1066.8161559888579,
+              356.0
+            ],
+            [
+              1070.0,
+              359.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.25243233751956734,
+        "mapped_low_seconds": 4.430983816597533,
+        "max_clock_shift_frames": 6.359028101283684,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "26cc7d56b51cc4dc3273e35ffa5d57949e16ef73206b10bffb7adcbedb29aa38",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:df065e93a0e1f42193d7cbbc",
+            "source_uid": "male_meditation",
+            "source_interval": [
+              689,
+              1071
+            ],
+            "source_sha256": "1cd10b49771226ae7f9ea962bf21e2c86324af2249d80bf08a069a881d20d165",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33",
+            "interval": [
+              900,
+              1260
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 360,
+          "time_warp": [
+            [
+              689.0,
+              0.0
+            ],
+            [
+              692.183844011142,
+              3.0
+            ],
+            [
+              863.0,
+              157.95275590551182
+            ],
+            [
+              924.0,
+              233.43044619422574
+            ],
+            [
+              1066.8161559888579,
+              356.0
+            ],
+            [
+              1070.0,
+              359.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.26517367234396805,
+        "mapped_low_seconds": 4.588130630498381,
+        "max_clock_shift_frames": 12.676197548204868,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "292613ae1d141b8489cc3de814e9a6c32279f791d1dca20faea2e0318e2a949c",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:df065e93a0e1f42193d7cbbc",
+            "source_uid": "male_meditation",
+            "source_interval": [
+              689,
+              1071
+            ],
+            "source_sha256": "1cd10b49771226ae7f9ea962bf21e2c86324af2249d80bf08a069a881d20d165",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33",
+            "interval": [
+              900,
+              1260
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 360,
+          "time_warp": [
+            [
+              689.0,
+              0.0
+            ],
+            [
+              692.183844011142,
+              3.0
+            ],
+            [
+              863.0,
+              163.95275590551182
+            ],
+            [
+              924.0,
+              215.43044619422574
+            ],
+            [
+              1066.8161559888579,
+              356.0
+            ],
+            [
+              1070.0,
+              359.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.23607310622905037,
+        "mapped_low_seconds": 3.957720212911446,
+        "max_clock_shift_frames": 6.341887691779448,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "e1518f080573654aa3706945a4ce0bd8b1d3a0dbe25dc2dd001538648acf0b10",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:df065e93a0e1f42193d7cbbc",
+            "source_uid": "male_meditation",
+            "source_interval": [
+              689,
+              1071
+            ],
+            "source_sha256": "1cd10b49771226ae7f9ea962bf21e2c86324af2249d80bf08a069a881d20d165",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33",
+            "interval": [
+              900,
+              1260
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 360,
+          "time_warp": [
+            [
+              689.0,
+              0.0
+            ],
+            [
+              692.183844011142,
+              3.0
+            ],
+            [
+              863.0,
+              163.95275590551182
+            ],
+            [
+              924.0,
+              227.43044619422574
+            ],
+            [
+              1066.8161559888579,
+              356.0
+            ],
+            [
+              1070.0,
+              359.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.24155451402904216,
+        "mapped_low_seconds": 4.27145581564642,
+        "max_clock_shift_frames": 6.3394796258191946,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "3338efc0b25cc1bd6b83df6f102789592bf7886be6c8ec4843f0628eb2f24fb0",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:df065e93a0e1f42193d7cbbc",
+            "source_uid": "male_meditation",
+            "source_interval": [
+              689,
+              1071
+            ],
+            "source_sha256": "1cd10b49771226ae7f9ea962bf21e2c86324af2249d80bf08a069a881d20d165",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33",
+            "interval": [
+              900,
+              1260
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 360,
+          "time_warp": [
+            [
+              689.0,
+              0.0
+            ],
+            [
+              692.183844011142,
+              3.0
+            ],
+            [
+              863.0,
+              163.95275590551182
+            ],
+            [
+              924.0,
+              233.43044619422574
+            ],
+            [
+              1066.8161559888579,
+              356.0
+            ],
+            [
+              1070.0,
+              359.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.2532894610450584,
+        "mapped_low_seconds": 4.428499298537911,
+        "max_clock_shift_frames": 12.676197548204868,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "04d53f5322ffb674e09099aef23b845c950f679029cf3ee6ed3c17edd2ccd6d4",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:df065e93a0e1f42193d7cbbc",
+            "source_uid": "male_meditation",
+            "source_interval": [
+              689,
+              1071
+            ],
+            "source_sha256": "1cd10b49771226ae7f9ea962bf21e2c86324af2249d80bf08a069a881d20d165",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33",
+            "interval": [
+              900,
+              1260
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 360,
+          "time_warp": [
+            [
+              689.0,
+              0.0
+            ],
+            [
+              692.183844011142,
+              3.0
+            ],
+            [
+              863.0,
+              169.95275590551182
+            ],
+            [
+              924.0,
+              221.43044619422574
+            ],
+            [
+              1066.8161559888579,
+              356.0
+            ],
+            [
+              1070.0,
+              359.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.23358810477936912,
+        "mapped_low_seconds": 3.9552593770505684,
+        "max_clock_shift_frames": 6.361844021651905,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "b15d6387d43babeba296b479c87a679818a8bf7803bbeb2f497e6a2fe6f6c17f",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:df065e93a0e1f42193d7cbbc",
+            "source_uid": "male_meditation",
+            "source_interval": [
+              689,
+              1071
+            ],
+            "source_sha256": "1cd10b49771226ae7f9ea962bf21e2c86324af2249d80bf08a069a881d20d165",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33",
+            "interval": [
+              900,
+              1260
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 360,
+          "time_warp": [
+            [
+              689.0,
+              0.0
+            ],
+            [
+              692.183844011142,
+              3.0
+            ],
+            [
+              863.0,
+              169.95275590551182
+            ],
+            [
+              924.0,
+              227.43044619422574
+            ],
+            [
+              1066.8161559888579,
+              356.0
+            ],
+            [
+              1070.0,
+              359.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.23621792280492587,
+        "mapped_low_seconds": 4.1120465524775565,
+        "max_clock_shift_frames": 6.367688022284256,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "729a679cb0f916546de0a3ced7add9ff383b31951054ae6d630fed52648faae7",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:df065e93a0e1f42193d7cbbc",
+            "source_uid": "male_meditation",
+            "source_interval": [
+              689,
+              1071
+            ],
+            "source_sha256": "1cd10b49771226ae7f9ea962bf21e2c86324af2249d80bf08a069a881d20d165",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33",
+            "interval": [
+              900,
+              1260
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 360,
+          "time_warp": [
+            [
+              689.0,
+              0.0
+            ],
+            [
+              692.183844011142,
+              3.0
+            ],
+            [
+              863.0,
+              169.95275590551182
+            ],
+            [
+              924.0,
+              233.43044619422574
+            ],
+            [
+              1066.8161559888579,
+              356.0
+            ],
+            [
+              1070.0,
+              359.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.24448241595736342,
+        "mapped_low_seconds": 4.268967020090894,
+        "max_clock_shift_frames": 12.692196353203485,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "2e07848a6e96386309666ffcc3572810c519fdfb3db93d86bcd3cbcb88697b8b",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:df065e93a0e1f42193d7cbbc",
+            "source_uid": "male_meditation",
+            "source_interval": [
+              689,
+              1071
+            ],
+            "source_sha256": "1cd10b49771226ae7f9ea962bf21e2c86324af2249d80bf08a069a881d20d165",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33",
+            "interval": [
+              900,
+              1260
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 360,
+          "time_warp": [
+            [
+              689.0,
+              0.0
+            ],
+            [
+              692.183844011142,
+              3.0
+            ],
+            [
+              863.0,
+              169.95275590551182
+            ],
+            [
+              924.0,
+              245.43044619422574
+            ],
+            [
+              1066.8161559888579,
+              356.0
+            ],
+            [
+              1070.0,
+              359.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.2742567632069646,
+        "mapped_low_seconds": 4.583133807533702,
+        "max_clock_shift_frames": 25.36180809264988,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "ed38c55f617f4d4b35e415b13705d9000f2fdfc98909f2d3d90153d95767801d",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:df065e93a0e1f42193d7cbbc",
+            "source_uid": "male_meditation",
+            "source_interval": [
+              689,
+              1071
+            ],
+            "source_sha256": "1cd10b49771226ae7f9ea962bf21e2c86324af2249d80bf08a069a881d20d165",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33",
+            "interval": [
+              900,
+              1260
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 360,
+          "time_warp": [
+            [
+              689.0,
+              0.0
+            ],
+            [
+              692.183844011142,
+              3.0
+            ],
+            [
+              863.0,
+              175.95275590551182
+            ],
+            [
+              924.0,
+              227.43044619422574
+            ],
+            [
+              1066.8161559888579,
+              356.0
+            ],
+            [
+              1070.0,
+              359.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.24452026959526502,
+        "mapped_low_seconds": 3.9527832400746705,
+        "max_clock_shift_frames": 12.729532043936047,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "8ddae1ee37fedb6ed0812c46f2074dfdd91bd9386f67ebb3139568113a3d7e3a",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:df065e93a0e1f42193d7cbbc",
+            "source_uid": "male_meditation",
+            "source_interval": [
+              689,
+              1071
+            ],
+            "source_sha256": "1cd10b49771226ae7f9ea962bf21e2c86324af2249d80bf08a069a881d20d165",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33",
+            "interval": [
+              900,
+              1260
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 360,
+          "time_warp": [
+            [
+              689.0,
+              0.0
+            ],
+            [
+              692.183844011142,
+              3.0
+            ],
+            [
+              863.0,
+              175.95275590551182
+            ],
+            [
+              924.0,
+              233.43044619422574
+            ],
+            [
+              1066.8161559888579,
+              356.0
+            ],
+            [
+              1070.0,
+              359.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.2481111522879619,
+        "mapped_low_seconds": 4.109554895625843,
+        "max_clock_shift_frames": 12.735376044568284,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "a20736ca6e0de3f53b5003a35d015d3715b9ab9065fc740554737212d801761e",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:df065e93a0e1f42193d7cbbc",
+            "source_uid": "male_meditation",
+            "source_interval": [
+              689,
+              1071
+            ],
+            "source_sha256": "1cd10b49771226ae7f9ea962bf21e2c86324af2249d80bf08a069a881d20d165",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33",
+            "interval": [
+              900,
+              1260
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 360,
+          "time_warp": [
+            [
+              689.0,
+              0.0
+            ],
+            [
+              692.183844011142,
+              3.0
+            ],
+            [
+              863.0,
+              175.95275590551182
+            ],
+            [
+              924.0,
+              245.43044619422574
+            ],
+            [
+              1066.8161559888579,
+              356.0
+            ],
+            [
+              1070.0,
+              359.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.27287343873749936,
+        "mapped_low_seconds": 4.42348889270279,
+        "max_clock_shift_frames": 25.39185058668818,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "7050d1544a55615bb22e1fe9f4dba1742118f1f38af9fb09eeae7dc17a51425a",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:df065e93a0e1f42193d7cbbc",
+            "source_uid": "male_meditation",
+            "source_interval": [
+              689,
+              1071
+            ],
+            "source_sha256": "1cd10b49771226ae7f9ea962bf21e2c86324af2249d80bf08a069a881d20d165",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33",
+            "interval": [
+              900,
+              1260
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 360,
+          "time_warp": [
+            [
+              689.0,
+              0.0
+            ],
+            [
+              692.183844011142,
+              3.0
+            ],
+            [
+              863.0,
+              187.95275590551182
+            ],
+            [
+              924.0,
+              245.43044619422574
+            ],
+            [
+              1066.8161559888579,
+              356.0
+            ],
+            [
+              1070.0,
+              359.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.282393672894614,
+        "mapped_low_seconds": 4.104522812731748,
+        "max_clock_shift_frames": 25.470752089136568,
+        "protected_four_frames_exact": true
+      }
+    ]
+  },
+  {
+    "case_key": "e5722e89378a4fae9c0a660d",
+    "source": "original",
+    "rows": [
+      {
+        "key": "87b811293ce53e0f2d4eb8dc235ff39d661cc478946bd5650d8416dcf5aca9c4",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:bd8565c92cceadf1279b1909",
+            "source_uid": "male_pipa_1",
+            "source_interval": [
+              2916,
+              3454
+            ],
+            "source_sha256": "7b58c904c3b4c7f29c3fdf82ac0e0a948e4f436cf57c5e7589e424168cfb3dfd",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c",
+            "interval": [
+              900,
+              1350
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 450,
+          "time_warp": [
+            [
+              2916.0,
+              0.0
+            ],
+            [
+              3453.0,
+              449.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.31750508651498316,
+        "mapped_low_seconds": 0.8918684047175608,
+        "max_clock_shift_frames": 0.0,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "5a6954a2410260696aa41822ee9bd0825005ea3cb55051b7e860e66d7461634f",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:bd8565c92cceadf1279b1909",
+            "source_uid": "male_pipa_1",
+            "source_interval": [
+              2916,
+              3454
+            ],
+            "source_sha256": "7b58c904c3b4c7f29c3fdf82ac0e0a948e4f436cf57c5e7589e424168cfb3dfd",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c",
+            "interval": [
+              900,
+              1350
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 450,
+          "time_warp": [
+            [
+              2916.0,
+              0.0
+            ],
+            [
+              2919.587973273942,
+              3.0
+            ],
+            [
+              3378.0,
+              362.29050279329607
+            ],
+            [
+              3410.0,
+              401.04655493482306
+            ],
+            [
+              3449.412026726058,
+              446.0
+            ],
+            [
+              3453.0,
+              449.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.3486094593242742,
+        "mapped_low_seconds": 1.2885481571583455,
+        "max_clock_shift_frames": 28.680577868461114,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "6e11383de67c89cd30771da0293674377ddbd024e8bc68cc4db300ab0077c770",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:bd8565c92cceadf1279b1909",
+            "source_uid": "male_pipa_1",
+            "source_interval": [
+              2916,
+              3454
+            ],
+            "source_sha256": "7b58c904c3b4c7f29c3fdf82ac0e0a948e4f436cf57c5e7589e424168cfb3dfd",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c",
+            "interval": [
+              900,
+              1350
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 450,
+          "time_warp": [
+            [
+              2916.0,
+              0.0
+            ],
+            [
+              2919.587973273942,
+              3.0
+            ],
+            [
+              3378.0,
+              374.29050279329607
+            ],
+            [
+              3410.0,
+              401.04655493482306
+            ],
+            [
+              3449.412026726058,
+              446.0
+            ],
+            [
+              3453.0,
+              449.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.3329065816952648,
+        "mapped_low_seconds": 0.8921782314190504,
+        "max_clock_shift_frames": 14.351893095768446,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "7d99b0f76bb8a65381e09cf3e3b86c2692936a8e4078e44eb5a5524ce26f77c9",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:bd8565c92cceadf1279b1909",
+            "source_uid": "male_pipa_1",
+            "source_interval": [
+              2916,
+              3454
+            ],
+            "source_sha256": "7b58c904c3b4c7f29c3fdf82ac0e0a948e4f436cf57c5e7589e424168cfb3dfd",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c",
+            "interval": [
+              900,
+              1350
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 450,
+          "time_warp": [
+            [
+              2916.0,
+              0.0
+            ],
+            [
+              2919.587973273942,
+              3.0
+            ],
+            [
+              3378.0,
+              374.29050279329607
+            ],
+            [
+              3410.0,
+              407.04655493482306
+            ],
+            [
+              3449.412026726058,
+              446.0
+            ],
+            [
+              3453.0,
+              449.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.3320257586270534,
+        "mapped_low_seconds": 1.0901338650895223,
+        "max_clock_shift_frames": 14.340663977323402,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "7f23ac8853af8e174554be88725041ffd3a65a622fe8382fa38e4c615d725e55",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:bd8565c92cceadf1279b1909",
+            "source_uid": "male_pipa_1",
+            "source_interval": [
+              2916,
+              3454
+            ],
+            "source_sha256": "7b58c904c3b4c7f29c3fdf82ac0e0a948e4f436cf57c5e7589e424168cfb3dfd",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c",
+            "interval": [
+              900,
+              1350
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 450,
+          "time_warp": [
+            [
+              2916.0,
+              0.0
+            ],
+            [
+              2919.587973273942,
+              3.0
+            ],
+            [
+              3378.0,
+              374.29050279329607
+            ],
+            [
+              3410.0,
+              413.04655493482306
+            ],
+            [
+              3449.412026726058,
+              446.0
+            ],
+            [
+              3453.0,
+              449.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.33256943678573697,
+        "mapped_low_seconds": 1.2884286688210635,
+        "max_clock_shift_frames": 14.340663977323402,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "cfacc646aa5ba41ba72497a2cede7d6a449b2ebc7c192560d0b8b6569f515b63",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:bd8565c92cceadf1279b1909",
+            "source_uid": "male_pipa_1",
+            "source_interval": [
+              2916,
+              3454
+            ],
+            "source_sha256": "7b58c904c3b4c7f29c3fdf82ac0e0a948e4f436cf57c5e7589e424168cfb3dfd",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c",
+            "interval": [
+              900,
+              1350
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 450,
+          "time_warp": [
+            [
+              2916.0,
+              0.0
+            ],
+            [
+              2919.587973273942,
+              3.0
+            ],
+            [
+              3378.0,
+              380.29050279329607
+            ],
+            [
+              3410.0,
+              407.04655493482306
+            ],
+            [
+              3449.412026726058,
+              446.0
+            ],
+            [
+              3453.0,
+              449.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.3243872376744782,
+        "mapped_low_seconds": 0.8920267799871605,
+        "max_clock_shift_frames": 7.17594654788445,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "e5c4c0e691d3c7b987b3d4317357dea89379ecabdec83c4aa6bfe1aedf0717cf",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:bd8565c92cceadf1279b1909",
+            "source_uid": "male_pipa_1",
+            "source_interval": [
+              2916,
+              3454
+            ],
+            "source_sha256": "7b58c904c3b4c7f29c3fdf82ac0e0a948e4f436cf57c5e7589e424168cfb3dfd",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c",
+            "interval": [
+              900,
+              1350
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 450,
+          "time_warp": [
+            [
+              2916.0,
+              0.0
+            ],
+            [
+              2919.587973273942,
+              3.0
+            ],
+            [
+              3378.0,
+              380.29050279329607
+            ],
+            [
+              3410.0,
+              413.04655493482306
+            ],
+            [
+              3449.412026726058,
+              446.0
+            ],
+            [
+              3453.0,
+              449.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.32466914463260843,
+        "mapped_low_seconds": 1.0900313394311032,
+        "max_clock_shift_frames": 7.170421276239722,
+        "protected_four_frames_exact": true
+      }
+    ]
+  },
+  {
+    "case_key": "b7b2ddb39b2addc9619fc709",
+    "source": "original",
+    "rows": [
+      {
+        "key": "2ca0db6e4a17c4275c231bedfd06974ca132acfba84b5919379e18af634b2166",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:ef27e17da9c989bbd4ff32f5",
+            "source_uid": "male_pipa_2",
+            "source_interval": [
+              1420,
+              1769
+            ],
+            "source_sha256": "e300cef72d5248c2eacb6b430f17152a00af92bb4f3c04ff96c35f63d5aeaebc",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f",
+            "interval": [
+              900,
+              1260
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 360,
+          "time_warp": [
+            [
+              1420.0,
+              0.0
+            ],
+            [
+              1768.0,
+              359.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.11579713193098852,
+        "mapped_low_seconds": 2.5790229885057507,
+        "max_clock_shift_frames": 0.0,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "7df5a04bcbc8314a9897529f3a851a9cebf8db01770e415bc3787bf52069cd76",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:ef27e17da9c989bbd4ff32f5",
+            "source_uid": "male_pipa_2",
+            "source_interval": [
+              1420,
+              1769
+            ],
+            "source_sha256": "e300cef72d5248c2eacb6b430f17152a00af92bb4f3c04ff96c35f63d5aeaebc",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f",
+            "interval": [
+              900,
+              1260
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 360,
+          "time_warp": [
+            [
+              1420.0,
+              0.0
+            ],
+            [
+              1422.908077994429,
+              3.0
+            ],
+            [
+              1492.0,
+              62.27586206896551
+            ],
+            [
+              1567.0,
+              127.64655172413791
+            ],
+            [
+              1765.091922005571,
+              356.0
+            ],
+            [
+              1768.0,
+              359.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.1423360545382723,
+        "mapped_low_seconds": 2.1809503957805774,
+        "max_clock_shift_frames": 23.22861468433166,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "12faabb03e755b2fd8a742f22c0ea16055083ae3620e04bfc2a1601692cc6b6e",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:ef27e17da9c989bbd4ff32f5",
+            "source_uid": "male_pipa_2",
+            "source_interval": [
+              1420,
+              1769
+            ],
+            "source_sha256": "e300cef72d5248c2eacb6b430f17152a00af92bb4f3c04ff96c35f63d5aeaebc",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f",
+            "interval": [
+              900,
+              1260
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 360,
+          "time_warp": [
+            [
+              1420.0,
+              0.0
+            ],
+            [
+              1422.908077994429,
+              3.0
+            ],
+            [
+              1492.0,
+              62.27586206896551
+            ],
+            [
+              1567.0,
+              139.6465517241379
+            ],
+            [
+              1765.091922005571,
+              356.0
+            ],
+            [
+              1768.0,
+              359.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.12661080929666016,
+        "mapped_low_seconds": 2.5781772183842784,
+        "max_clock_shift_frames": 11.632311977715972,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "4c1f184337f116c5f81cb6dd115d745c4b122d03bd7d76eae6c259fdca2fad3e",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:ef27e17da9c989bbd4ff32f5",
+            "source_uid": "male_pipa_2",
+            "source_interval": [
+              1420,
+              1769
+            ],
+            "source_sha256": "e300cef72d5248c2eacb6b430f17152a00af92bb4f3c04ff96c35f63d5aeaebc",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f",
+            "interval": [
+              900,
+              1260
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 360,
+          "time_warp": [
+            [
+              1420.0,
+              0.0
+            ],
+            [
+              1422.908077994429,
+              3.0
+            ],
+            [
+              1492.0,
+              62.27586206896551
+            ],
+            [
+              1567.0,
+              145.6465517241379
+            ],
+            [
+              1765.091922005571,
+              356.0
+            ],
+            [
+              1768.0,
+              359.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.12025977540355791,
+        "mapped_low_seconds": 2.776851757758817,
+        "max_clock_shift_frames": 11.581794233628898,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "37e2467db78ef26a4dc18ec83547e4e95d63a82b44772bb5ce249faec8ea9a11",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:ef27e17da9c989bbd4ff32f5",
+            "source_uid": "male_pipa_2",
+            "source_interval": [
+              1420,
+              1769
+            ],
+            "source_sha256": "e300cef72d5248c2eacb6b430f17152a00af92bb4f3c04ff96c35f63d5aeaebc",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f",
+            "interval": [
+              900,
+              1260
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 360,
+          "time_warp": [
+            [
+              1420.0,
+              0.0
+            ],
+            [
+              1422.908077994429,
+              3.0
+            ],
+            [
+              1492.0,
+              62.27586206896551
+            ],
+            [
+              1567.0,
+              151.6465517241379
+            ],
+            [
+              1765.091922005571,
+              356.0
+            ],
+            [
+              1768.0,
+              359.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.1168913582438452,
+        "mapped_low_seconds": 2.9755640489636193,
+        "max_clock_shift_frames": 11.578176727092341,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "011e10b1f8388b21c42b4dc9c4d891bd236b258afe0bcc42c21fc8b183099b7e",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:ef27e17da9c989bbd4ff32f5",
+            "source_uid": "male_pipa_2",
+            "source_interval": [
+              1420,
+              1769
+            ],
+            "source_sha256": "e300cef72d5248c2eacb6b430f17152a00af92bb4f3c04ff96c35f63d5aeaebc",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f",
+            "interval": [
+              900,
+              1260
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 360,
+          "time_warp": [
+            [
+              1420.0,
+              0.0
+            ],
+            [
+              1422.908077994429,
+              3.0
+            ],
+            [
+              1492.0,
+              62.27586206896551
+            ],
+            [
+              1567.0,
+              157.6465517241379
+            ],
+            [
+              1765.091922005571,
+              356.0
+            ],
+            [
+              1768.0,
+              359.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.11392956647355988,
+        "mapped_low_seconds": 3.17431207442249,
+        "max_clock_shift_frames": 11.578176727092341,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "116d8660efa7d69052ba824b8918b16ad740564a26bd1863a1e56dd2cdb2b100",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:ef27e17da9c989bbd4ff32f5",
+            "source_uid": "male_pipa_2",
+            "source_interval": [
+              1420,
+              1769
+            ],
+            "source_sha256": "e300cef72d5248c2eacb6b430f17152a00af92bb4f3c04ff96c35f63d5aeaebc",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f",
+            "interval": [
+              900,
+              1260
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 360,
+          "time_warp": [
+            [
+              1420.0,
+              0.0
+            ],
+            [
+              1422.908077994429,
+              3.0
+            ],
+            [
+              1492.0,
+              68.27586206896551
+            ],
+            [
+              1567.0,
+              127.64655172413791
+            ],
+            [
+              1765.091922005571,
+              356.0
+            ],
+            [
+              1768.0,
+              359.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.14214660240286722,
+        "mapped_low_seconds": 1.9828366659045655,
+        "max_clock_shift_frames": 23.22861468433166,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "ac56e133c1d9901d85402e4e7a8583772b0c0f77a9637c03cabca3a94a8da4f9",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:ef27e17da9c989bbd4ff32f5",
+            "source_uid": "male_pipa_2",
+            "source_interval": [
+              1420,
+              1769
+            ],
+            "source_sha256": "e300cef72d5248c2eacb6b430f17152a00af92bb4f3c04ff96c35f63d5aeaebc",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f",
+            "interval": [
+              900,
+              1260
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 360,
+          "time_warp": [
+            [
+              1420.0,
+              0.0
+            ],
+            [
+              1422.908077994429,
+              3.0
+            ],
+            [
+              1492.0,
+              68.27586206896551
+            ],
+            [
+              1567.0,
+              139.6465517241379
+            ],
+            [
+              1765.091922005571,
+              356.0
+            ],
+            [
+              1768.0,
+              359.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.12591070027739532,
+        "mapped_low_seconds": 2.380002056003281,
+        "max_clock_shift_frames": 11.613308718717235,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "149fb4f083bf36abf795c5d5a8629f392c9c61f955528254de125353dfac5146",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:ef27e17da9c989bbd4ff32f5",
+            "source_uid": "male_pipa_2",
+            "source_interval": [
+              1420,
+              1769
+            ],
+            "source_sha256": "e300cef72d5248c2eacb6b430f17152a00af92bb4f3c04ff96c35f63d5aeaebc",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f",
+            "interval": [
+              900,
+              1260
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 360,
+          "time_warp": [
+            [
+              1420.0,
+              0.0
+            ],
+            [
+              1422.908077994429,
+              3.0
+            ],
+            [
+              1492.0,
+              68.27586206896551
+            ],
+            [
+              1567.0,
+              145.6465517241379
+            ],
+            [
+              1765.091922005571,
+              356.0
+            ],
+            [
+              1768.0,
+              359.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.1192912893861631,
+        "mapped_low_seconds": 2.5786455566845987,
+        "max_clock_shift_frames": 5.8161559888581,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "a8e25cea2165c33a0641b7027d273ddb854e9690b9b6fa145face99e0db9a521",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:ef27e17da9c989bbd4ff32f5",
+            "source_uid": "male_pipa_2",
+            "source_interval": [
+              1420,
+              1769
+            ],
+            "source_sha256": "e300cef72d5248c2eacb6b430f17152a00af92bb4f3c04ff96c35f63d5aeaebc",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f",
+            "interval": [
+              900,
+              1260
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 360,
+          "time_warp": [
+            [
+              1420.0,
+              0.0
+            ],
+            [
+              1422.908077994429,
+              3.0
+            ],
+            [
+              1492.0,
+              68.27586206896551
+            ],
+            [
+              1567.0,
+              151.6465517241379
+            ],
+            [
+              1765.091922005571,
+              356.0
+            ],
+            [
+              1768.0,
+              359.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.11579911797010545,
+        "mapped_low_seconds": 2.7773267538142923,
+        "max_clock_shift_frames": 5.79157635446245,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "ea73d04ff24585db1b0aaba81712745e442d5fb716314bd6d961c2531b189600",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:ef27e17da9c989bbd4ff32f5",
+            "source_uid": "male_pipa_2",
+            "source_interval": [
+              1420,
+              1769
+            ],
+            "source_sha256": "e300cef72d5248c2eacb6b430f17152a00af92bb4f3c04ff96c35f63d5aeaebc",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f",
+            "interval": [
+              900,
+              1260
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 360,
+          "time_warp": [
+            [
+              1420.0,
+              0.0
+            ],
+            [
+              1422.908077994429,
+              3.0
+            ],
+            [
+              1492.0,
+              68.27586206896551
+            ],
+            [
+              1567.0,
+              157.6465517241379
+            ],
+            [
+              1765.091922005571,
+              356.0
+            ],
+            [
+              1768.0,
+              359.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.1127838281023915,
+        "mapped_low_seconds": 2.976043726006182,
+        "max_clock_shift_frames": 5.8057921140461985,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "2c0ccfcc57bfaf49209552babfd4b0e0a6d50cdd4e5e5a5fde20e1414dad8475",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:ef27e17da9c989bbd4ff32f5",
+            "source_uid": "male_pipa_2",
+            "source_interval": [
+              1420,
+              1769
+            ],
+            "source_sha256": "e300cef72d5248c2eacb6b430f17152a00af92bb4f3c04ff96c35f63d5aeaebc",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f",
+            "interval": [
+              900,
+              1260
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 360,
+          "time_warp": [
+            [
+              1420.0,
+              0.0
+            ],
+            [
+              1422.908077994429,
+              3.0
+            ],
+            [
+              1492.0,
+              68.27586206896551
+            ],
+            [
+              1567.0,
+              163.6465517241379
+            ],
+            [
+              1765.091922005571,
+              356.0
+            ],
+            [
+              1768.0,
+              359.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.11179644779222782,
+        "mapped_low_seconds": 3.1747946986191287,
+        "max_clock_shift_frames": 11.610937676138974,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "b17f4db92b5e5a5515c78e652e844714b774e78161df9c94ad54a96c713736ba",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:ef27e17da9c989bbd4ff32f5",
+            "source_uid": "male_pipa_2",
+            "source_interval": [
+              1420,
+              1769
+            ],
+            "source_sha256": "e300cef72d5248c2eacb6b430f17152a00af92bb4f3c04ff96c35f63d5aeaebc",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f",
+            "interval": [
+              900,
+              1260
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 360,
+          "time_warp": [
+            [
+              1420.0,
+              0.0
+            ],
+            [
+              1422.908077994429,
+              3.0
+            ],
+            [
+              1492.0,
+              74.27586206896551
+            ],
+            [
+              1567.0,
+              139.6465517241379
+            ],
+            [
+              1765.091922005571,
+              356.0
+            ],
+            [
+              1768.0,
+              359.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.12643135781820705,
+        "mapped_low_seconds": 2.181758574152666,
+        "max_clock_shift_frames": 11.613308718717235,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "87ad3d0a5da6824f3834eb734af156db834885e2b4dfc14e1388bd6af5f13679",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:ef27e17da9c989bbd4ff32f5",
+            "source_uid": "male_pipa_2",
+            "source_interval": [
+              1420,
+              1769
+            ],
+            "source_sha256": "e300cef72d5248c2eacb6b430f17152a00af92bb4f3c04ff96c35f63d5aeaebc",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f",
+            "interval": [
+              900,
+              1260
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 360,
+          "time_warp": [
+            [
+              1420.0,
+              0.0
+            ],
+            [
+              1422.908077994429,
+              3.0
+            ],
+            [
+              1492.0,
+              74.27586206896551
+            ],
+            [
+              1567.0,
+              145.6465517241379
+            ],
+            [
+              1765.091922005571,
+              356.0
+            ],
+            [
+              1768.0,
+              359.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.11955393849709275,
+        "mapped_low_seconds": 2.380371949584958,
+        "max_clock_shift_frames": 5.806383340378716,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "0a69c62d87b1561b92e9f91eba2ca52f40ed346850e6e6bba77f248577e5a0c3",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:ef27e17da9c989bbd4ff32f5",
+            "source_uid": "male_pipa_2",
+            "source_interval": [
+              1420,
+              1769
+            ],
+            "source_sha256": "e300cef72d5248c2eacb6b430f17152a00af92bb4f3c04ff96c35f63d5aeaebc",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f",
+            "interval": [
+              900,
+              1260
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 360,
+          "time_warp": [
+            [
+              1420.0,
+              0.0
+            ],
+            [
+              1422.908077994429,
+              3.0
+            ],
+            [
+              1492.0,
+              74.27586206896551
+            ],
+            [
+              1567.0,
+              157.6465517241379
+            ],
+            [
+              1765.091922005571,
+              356.0
+            ],
+            [
+              1768.0,
+              359.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.1126640577127542,
+        "mapped_low_seconds": 2.777709856044711,
+        "max_clock_shift_frames": 5.8057921140461985,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "5fa01561e3be858e09a0a5b9231761376254305a870511145a6a6ede8e9800ce",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:ef27e17da9c989bbd4ff32f5",
+            "source_uid": "male_pipa_2",
+            "source_interval": [
+              1420,
+              1769
+            ],
+            "source_sha256": "e300cef72d5248c2eacb6b430f17152a00af92bb4f3c04ff96c35f63d5aeaebc",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f",
+            "interval": [
+              900,
+              1260
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 360,
+          "time_warp": [
+            [
+              1420.0,
+              0.0
+            ],
+            [
+              1422.908077994429,
+              3.0
+            ],
+            [
+              1492.0,
+              74.27586206896551
+            ],
+            [
+              1567.0,
+              163.6465517241379
+            ],
+            [
+              1765.091922005571,
+              356.0
+            ],
+            [
+              1768.0,
+              359.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.11162085008643322,
+        "mapped_low_seconds": 2.976430850639573,
+        "max_clock_shift_frames": 11.610937676138974,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "58e79f858c50c21617b00704462d985cfc283bfedd5e741663d7bc6d7f09d3dc",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:ef27e17da9c989bbd4ff32f5",
+            "source_uid": "male_pipa_2",
+            "source_interval": [
+              1420,
+              1769
+            ],
+            "source_sha256": "e300cef72d5248c2eacb6b430f17152a00af92bb4f3c04ff96c35f63d5aeaebc",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f",
+            "interval": [
+              900,
+              1260
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 360,
+          "time_warp": [
+            [
+              1420.0,
+              0.0
+            ],
+            [
+              1422.908077994429,
+              3.0
+            ],
+            [
+              1492.0,
+              80.27586206896551
+            ],
+            [
+              1567.0,
+              139.6465517241379
+            ],
+            [
+              1765.091922005571,
+              356.0
+            ],
+            [
+              1768.0,
+              359.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.12813548060011812,
+        "mapped_low_seconds": 1.983461727396045,
+        "max_clock_shift_frames": 11.613308718717235,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "45b7e146b61e7f4ed1b59e007931c8fd661546aa4a8a19d01b23ea61b52ecfbe",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:ef27e17da9c989bbd4ff32f5",
+            "source_uid": "male_pipa_2",
+            "source_interval": [
+              1420,
+              1769
+            ],
+            "source_sha256": "e300cef72d5248c2eacb6b430f17152a00af92bb4f3c04ff96c35f63d5aeaebc",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f",
+            "interval": [
+              900,
+              1260
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 360,
+          "time_warp": [
+            [
+              1420.0,
+              0.0
+            ],
+            [
+              1422.908077994429,
+              3.0
+            ],
+            [
+              1492.0,
+              80.27586206896551
+            ],
+            [
+              1567.0,
+              145.6465517241379
+            ],
+            [
+              1765.091922005571,
+              356.0
+            ],
+            [
+              1768.0,
+              359.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.12098558461247833,
+        "mapped_low_seconds": 2.182045158709003,
+        "max_clock_shift_frames": 5.806383340378716,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "93604c591a15ab40a5bea70fb299debc6df1f081cdbd001d75edf5ef18ef39a8",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:ef27e17da9c989bbd4ff32f5",
+            "source_uid": "male_pipa_2",
+            "source_interval": [
+              1420,
+              1769
+            ],
+            "source_sha256": "e300cef72d5248c2eacb6b430f17152a00af92bb4f3c04ff96c35f63d5aeaebc",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f",
+            "interval": [
+              900,
+              1260
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 360,
+          "time_warp": [
+            [
+              1420.0,
+              0.0
+            ],
+            [
+              1422.908077994429,
+              3.0
+            ],
+            [
+              1492.0,
+              80.27586206896551
+            ],
+            [
+              1567.0,
+              151.6465517241379
+            ],
+            [
+              1765.091922005571,
+              356.0
+            ],
+            [
+              1768.0,
+              359.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.11697456444353063,
+        "mapped_low_seconds": 2.3806662804864107,
+        "max_clock_shift_frames": 5.795393272253477,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "a3f3ab21ef4b00f8dd704d048e18f38ae3ed2d771becaf40b6273555869abf55",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:ef27e17da9c989bbd4ff32f5",
+            "source_uid": "male_pipa_2",
+            "source_interval": [
+              1420,
+              1769
+            ],
+            "source_sha256": "e300cef72d5248c2eacb6b430f17152a00af92bb4f3c04ff96c35f63d5aeaebc",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f",
+            "interval": [
+              900,
+              1260
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 360,
+          "time_warp": [
+            [
+              1420.0,
+              0.0
+            ],
+            [
+              1422.908077994429,
+              3.0
+            ],
+            [
+              1492.0,
+              80.27586206896551
+            ],
+            [
+              1567.0,
+              157.6465517241379
+            ],
+            [
+              1765.091922005571,
+              356.0
+            ],
+            [
+              1768.0,
+              359.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.11357348236152834,
+        "mapped_low_seconds": 2.5793233331963057,
+        "max_clock_shift_frames": 5.8161559888581,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "308c938b16f9711e1f6a28acc816786bfb96d0bded28d8e07cf25514e8ecbdf5",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:ef27e17da9c989bbd4ff32f5",
+            "source_uid": "male_pipa_2",
+            "source_interval": [
+              1420,
+              1769
+            ],
+            "source_sha256": "e300cef72d5248c2eacb6b430f17152a00af92bb4f3c04ff96c35f63d5aeaebc",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f",
+            "interval": [
+              900,
+              1260
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 360,
+          "time_warp": [
+            [
+              1420.0,
+              0.0
+            ],
+            [
+              1422.908077994429,
+              3.0
+            ],
+            [
+              1492.0,
+              80.27586206896551
+            ],
+            [
+              1567.0,
+              163.6465517241379
+            ],
+            [
+              1765.091922005571,
+              356.0
+            ],
+            [
+              1768.0,
+              359.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.1124103903240387,
+        "mapped_low_seconds": 2.778014679039427,
+        "max_clock_shift_frames": 11.610937676138974,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "9ecdd2ba22e64c80066f2bea26d868c980a80d17e7e6f2734c1a86de080db7a2",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:ef27e17da9c989bbd4ff32f5",
+            "source_uid": "male_pipa_2",
+            "source_interval": [
+              1420,
+              1769
+            ],
+            "source_sha256": "e300cef72d5248c2eacb6b430f17152a00af92bb4f3c04ff96c35f63d5aeaebc",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f",
+            "interval": [
+              900,
+              1260
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 360,
+          "time_warp": [
+            [
+              1420.0,
+              0.0
+            ],
+            [
+              1422.908077994429,
+              3.0
+            ],
+            [
+              1492.0,
+              80.27586206896551
+            ],
+            [
+              1567.0,
+              175.6465517241379
+            ],
+            [
+              1765.091922005571,
+              356.0
+            ],
+            [
+              1768.0,
+              359.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.12123807639451183,
+        "mapped_low_seconds": 3.175494242354008,
+        "max_clock_shift_frames": 23.21903103051568,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "0cade0ffdb359d54e59b216b9c8a042f53094a2ea15e2732eb62c503833a7c91",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:ef27e17da9c989bbd4ff32f5",
+            "source_uid": "male_pipa_2",
+            "source_interval": [
+              1420,
+              1769
+            ],
+            "source_sha256": "e300cef72d5248c2eacb6b430f17152a00af92bb4f3c04ff96c35f63d5aeaebc",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f",
+            "interval": [
+              900,
+              1260
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 360,
+          "time_warp": [
+            [
+              1420.0,
+              0.0
+            ],
+            [
+              1422.908077994429,
+              3.0
+            ],
+            [
+              1492.0,
+              86.27586206896551
+            ],
+            [
+              1567.0,
+              145.6465517241379
+            ],
+            [
+              1765.091922005571,
+              356.0
+            ],
+            [
+              1768.0,
+              359.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.12316785465489344,
+        "mapped_low_seconds": 1.983677995358255,
+        "max_clock_shift_frames": 11.593778439073276,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "5f75ad3c84d7a95fd6f42559cdb8bf8e72d2669530352ce42f10d77cbbef881e",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:ef27e17da9c989bbd4ff32f5",
+            "source_uid": "male_pipa_2",
+            "source_interval": [
+              1420,
+              1769
+            ],
+            "source_sha256": "e300cef72d5248c2eacb6b430f17152a00af92bb4f3c04ff96c35f63d5aeaebc",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f",
+            "interval": [
+              900,
+              1260
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 360,
+          "time_warp": [
+            [
+              1420.0,
+              0.0
+            ],
+            [
+              1422.908077994429,
+              3.0
+            ],
+            [
+              1492.0,
+              86.27586206896551
+            ],
+            [
+              1567.0,
+              151.6465517241379
+            ],
+            [
+              1765.091922005571,
+              356.0
+            ],
+            [
+              1768.0,
+              359.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.11887959894321698,
+        "mapped_low_seconds": 2.1822688368642167,
+        "max_clock_shift_frames": 11.593778439073276,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "efb24accc43f5669968c4e30630e8279be3a6c35e59580a89f04d6e2ae9dc017",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:ef27e17da9c989bbd4ff32f5",
+            "source_uid": "male_pipa_2",
+            "source_interval": [
+              1420,
+              1769
+            ],
+            "source_sha256": "e300cef72d5248c2eacb6b430f17152a00af92bb4f3c04ff96c35f63d5aeaebc",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f",
+            "interval": [
+              900,
+              1260
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 360,
+          "time_warp": [
+            [
+              1420.0,
+              0.0
+            ],
+            [
+              1422.908077994429,
+              3.0
+            ],
+            [
+              1492.0,
+              86.27586206896551
+            ],
+            [
+              1567.0,
+              157.6465517241379
+            ],
+            [
+              1765.091922005571,
+              356.0
+            ],
+            [
+              1768.0,
+              359.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.11521992672288955,
+        "mapped_low_seconds": 2.3808957894088167,
+        "max_clock_shift_frames": 11.593778439073276,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "0a39d98b82d83d3d9eb48543930e45cdb3c97cc6adf959c3f6a6a3866ded42d6",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:ef27e17da9c989bbd4ff32f5",
+            "source_uid": "male_pipa_2",
+            "source_interval": [
+              1420,
+              1769
+            ],
+            "source_sha256": "e300cef72d5248c2eacb6b430f17152a00af92bb4f3c04ff96c35f63d5aeaebc",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f",
+            "interval": [
+              900,
+              1260
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 360,
+          "time_warp": [
+            [
+              1420.0,
+              0.0
+            ],
+            [
+              1422.908077994429,
+              3.0
+            ],
+            [
+              1492.0,
+              86.27586206896551
+            ],
+            [
+              1567.0,
+              163.6465517241379
+            ],
+            [
+              1765.091922005571,
+              356.0
+            ],
+            [
+              1768.0,
+              359.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.11378446505125357,
+        "mapped_low_seconds": 2.5795572685970947,
+        "max_clock_shift_frames": 11.632311977715972,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "1ece309bbffb5d0afe3db8627118f9d9d655adfdf64c4ab50e1f1e176a90d87b",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:ef27e17da9c989bbd4ff32f5",
+            "source_uid": "male_pipa_2",
+            "source_interval": [
+              1420,
+              1769
+            ],
+            "source_sha256": "e300cef72d5248c2eacb6b430f17152a00af92bb4f3c04ff96c35f63d5aeaebc",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f",
+            "interval": [
+              900,
+              1260
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 360,
+          "time_warp": [
+            [
+              1420.0,
+              0.0
+            ],
+            [
+              1422.908077994429,
+              3.0
+            ],
+            [
+              1492.0,
+              86.27586206896551
+            ],
+            [
+              1567.0,
+              175.6465517241379
+            ],
+            [
+              1765.091922005571,
+              356.0
+            ],
+            [
+              1768.0,
+              359.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.12244280078700019,
+        "mapped_low_seconds": 2.9769779715383726,
+        "max_clock_shift_frames": 23.21903103051568,
+        "protected_four_frames_exact": true
+      }
+    ]
+  },
+  {
+    "case_key": "f98054618c10bac0a98674d3",
+    "source": "original",
+    "rows": [
+      {
+        "key": "24d1d1366a9f369f551070b50161494d84fd6c22655d76e0f89ac87374ec1b58",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:de4ba4c405a3decf45cd8531",
+            "source_uid": "male_ribbon",
+            "source_interval": [
+              0,
+              358
+            ],
+            "source_sha256": "7faf97974cb347b5e08107dd102c508ad3309901094f7c1822c21db83dd6addd",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33",
+            "interval": [
+              900,
+              1260
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 360,
+          "time_warp": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              357.0,
+              359.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.16090579201778368,
+        "mapped_low_seconds": 4.3576097105508875,
+        "max_clock_shift_frames": 0.0,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "a31109b3396aee471c7e648e4520b0011fdbdb35ec986c1e5d346df395e66d9d",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:de4ba4c405a3decf45cd8531",
+            "source_uid": "male_ribbon",
+            "source_interval": [
+              0,
+              358
+            ],
+            "source_sha256": "7faf97974cb347b5e08107dd102c508ad3309901094f7c1822c21db83dd6addd",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33",
+            "interval": [
+              900,
+              1260
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 360,
+          "time_warp": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              2.9832869080779947,
+              3.0
+            ],
+            [
+              95.0,
+              83.53221288515405
+            ],
+            [
+              131.0,
+              119.73389355742296
+            ],
+            [
+              354.016713091922,
+              356.0
+            ],
+            [
+              357.0,
+              359.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.16955054433307565,
+        "mapped_low_seconds": 4.261349550369293,
+        "max_clock_shift_frames": 11.933147632312,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "c6bcccf9993d55d88d477131711c65999bb1adcea105dc23b1b304c6f97c7768",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:de4ba4c405a3decf45cd8531",
+            "source_uid": "male_ribbon",
+            "source_interval": [
+              0,
+              358
+            ],
+            "source_sha256": "7faf97974cb347b5e08107dd102c508ad3309901094f7c1822c21db83dd6addd",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33",
+            "interval": [
+              900,
+              1260
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 360,
+          "time_warp": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              2.9832869080779947,
+              3.0
+            ],
+            [
+              95.0,
+              83.53221288515405
+            ],
+            [
+              131.0,
+              125.73389355742296
+            ],
+            [
+              354.016713091922,
+              356.0
+            ],
+            [
+              357.0,
+              359.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.16712975412298434,
+        "mapped_low_seconds": 4.413187160622545,
+        "max_clock_shift_frames": 11.867010779311983,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "4fd6245189b20c9e2e25fb1e89f936277b082e984d544d98cfc6cacf3d34b73a",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:de4ba4c405a3decf45cd8531",
+            "source_uid": "male_ribbon",
+            "source_interval": [
+              0,
+              358
+            ],
+            "source_sha256": "7faf97974cb347b5e08107dd102c508ad3309901094f7c1822c21db83dd6addd",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33",
+            "interval": [
+              900,
+              1260
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 360,
+          "time_warp": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              2.9832869080779947,
+              3.0
+            ],
+            [
+              95.0,
+              89.53221288515405
+            ],
+            [
+              131.0,
+              119.73389355742296
+            ],
+            [
+              354.016713091922,
+              356.0
+            ],
+            [
+              357.0,
+              359.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.16723271419171679,
+        "mapped_low_seconds": 4.158005485769717,
+        "max_clock_shift_frames": 11.91970733182626,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "c645038682ff55cdc0bf61c877fd186d3f5b5083dcbb3e963b74eae7d4ba720c",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:de4ba4c405a3decf45cd8531",
+            "source_uid": "male_ribbon",
+            "source_interval": [
+              0,
+              358
+            ],
+            "source_sha256": "7faf97974cb347b5e08107dd102c508ad3309901094f7c1822c21db83dd6addd",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33",
+            "interval": [
+              900,
+              1260
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 360,
+          "time_warp": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              2.9832869080779947,
+              3.0
+            ],
+            [
+              95.0,
+              89.53221288515405
+            ],
+            [
+              131.0,
+              125.73389355742296
+            ],
+            [
+              354.016713091922,
+              356.0
+            ],
+            [
+              357.0,
+              359.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.16413479227847727,
+        "mapped_low_seconds": 4.309500777313825,
+        "max_clock_shift_frames": 5.966573816156014,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "2d111d7e0cdac42bce1e945873704cb8dec776f889ba80174e02a50889a40898",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:de4ba4c405a3decf45cd8531",
+            "source_uid": "male_ribbon",
+            "source_interval": [
+              0,
+              358
+            ],
+            "source_sha256": "7faf97974cb347b5e08107dd102c508ad3309901094f7c1822c21db83dd6addd",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33",
+            "interval": [
+              900,
+              1260
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 360,
+          "time_warp": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              2.9832869080779947,
+              3.0
+            ],
+            [
+              95.0,
+              89.53221288515405
+            ],
+            [
+              131.0,
+              131.73389355742296
+            ],
+            [
+              354.016713091922,
+              356.0
+            ],
+            [
+              357.0,
+              359.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.15988528336163563,
+        "mapped_low_seconds": 4.4613062413040705,
+        "max_clock_shift_frames": 5.929876644555932,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "6ab3c130fce93bd441786d4f8d82f4792ce51d6ca27eab9844768225c8e293b8",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:de4ba4c405a3decf45cd8531",
+            "source_uid": "male_ribbon",
+            "source_interval": [
+              0,
+              358
+            ],
+            "source_sha256": "7faf97974cb347b5e08107dd102c508ad3309901094f7c1822c21db83dd6addd",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33",
+            "interval": [
+              900,
+              1260
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 360,
+          "time_warp": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              2.9832869080779947,
+              3.0
+            ],
+            [
+              95.0,
+              95.53221288515405
+            ],
+            [
+              131.0,
+              125.73389355742296
+            ],
+            [
+              354.016713091922,
+              356.0
+            ],
+            [
+              357.0,
+              359.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.1658304346610022,
+        "mapped_low_seconds": 4.206139186699617,
+        "max_clock_shift_frames": 5.959678560240505,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "0797051834bbfd930ad2704c04f7b67b29b595a9b3e19f748a4cfae0d944ab35",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:de4ba4c405a3decf45cd8531",
+            "source_uid": "male_ribbon",
+            "source_interval": [
+              0,
+              358
+            ],
+            "source_sha256": "7faf97974cb347b5e08107dd102c508ad3309901094f7c1822c21db83dd6addd",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33",
+            "interval": [
+              900,
+              1260
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 360,
+          "time_warp": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              2.9832869080779947,
+              3.0
+            ],
+            [
+              95.0,
+              95.53221288515405
+            ],
+            [
+              131.0,
+              137.73389355742296
+            ],
+            [
+              354.016713091922,
+              356.0
+            ],
+            [
+              357.0,
+              359.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.15840858902671978,
+        "mapped_low_seconds": 4.509386144254048,
+        "max_clock_shift_frames": 5.959299467616631,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "9b14b4a05223d3cb0f6a661de96ad67abb4c73735fadb28813444562c2623c12",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:de4ba4c405a3decf45cd8531",
+            "source_uid": "male_ribbon",
+            "source_interval": [
+              0,
+              358
+            ],
+            "source_sha256": "7faf97974cb347b5e08107dd102c508ad3309901094f7c1822c21db83dd6addd",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33",
+            "interval": [
+              900,
+              1260
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 360,
+          "time_warp": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              2.9832869080779947,
+              3.0
+            ],
+            [
+              95.0,
+              101.53221288515405
+            ],
+            [
+              131.0,
+              131.73389355742296
+            ],
+            [
+              354.016713091922,
+              356.0
+            ],
+            [
+              357.0,
+              359.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.16184542101446053,
+        "mapped_low_seconds": 4.254230772329889,
+        "max_clock_shift_frames": 5.934345904367561,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "37e1f6d84e68ef848c2abc45ac4057d1451610a3ad2d23a39d9f6d1546fb2389",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:de4ba4c405a3decf45cd8531",
+            "source_uid": "male_ribbon",
+            "source_interval": [
+              0,
+              358
+            ],
+            "source_sha256": "7faf97974cb347b5e08107dd102c508ad3309901094f7c1822c21db83dd6addd",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33",
+            "interval": [
+              900,
+              1260
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 360,
+          "time_warp": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              2.9832869080779947,
+              3.0
+            ],
+            [
+              95.0,
+              101.53221288515405
+            ],
+            [
+              131.0,
+              137.73389355742296
+            ],
+            [
+              354.016713091922,
+              356.0
+            ],
+            [
+              357.0,
+              359.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.15868148817637856,
+        "mapped_low_seconds": 4.405679127594205,
+        "max_clock_shift_frames": 5.966573816156,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "5f504aabd758e405575f4b7d06e6db895ad66e3f4cc1daf35e99e1f49a94c49a",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:de4ba4c405a3decf45cd8531",
+            "source_uid": "male_ribbon",
+            "source_interval": [
+              0,
+              358
+            ],
+            "source_sha256": "7faf97974cb347b5e08107dd102c508ad3309901094f7c1822c21db83dd6addd",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33",
+            "interval": [
+              900,
+              1260
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 360,
+          "time_warp": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              2.9832869080779947,
+              3.0
+            ],
+            [
+              95.0,
+              101.53221288515405
+            ],
+            [
+              131.0,
+              143.73389355742296
+            ],
+            [
+              354.016713091922,
+              356.0
+            ],
+            [
+              357.0,
+              359.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.16185457484514237,
+        "mapped_low_seconds": 4.557429075929238,
+        "max_clock_shift_frames": 11.91818769585106,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "0392b101d35167d02d112007aaa623cf013d8fe89cea5e3bd1b79f127c2330d6",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:de4ba4c405a3decf45cd8531",
+            "source_uid": "male_ribbon",
+            "source_interval": [
+              0,
+              358
+            ],
+            "source_sha256": "7faf97974cb347b5e08107dd102c508ad3309901094f7c1822c21db83dd6addd",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33",
+            "interval": [
+              900,
+              1260
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 360,
+          "time_warp": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              2.9832869080779947,
+              3.0
+            ],
+            [
+              95.0,
+              107.53221288515405
+            ],
+            [
+              131.0,
+              137.73389355742296
+            ],
+            [
+              354.016713091922,
+              356.0
+            ],
+            [
+              357.0,
+              359.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.1645636449053559,
+        "mapped_low_seconds": 4.302283221428842,
+        "max_clock_shift_frames": 11.872391481121142,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "2b7d221aa355045f964783283ae4f1ff1c30454dcfade589cf3f8b4ddf2a8fb1",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:de4ba4c405a3decf45cd8531",
+            "source_uid": "male_ribbon",
+            "source_interval": [
+              0,
+              358
+            ],
+            "source_sha256": "7faf97974cb347b5e08107dd102c508ad3309901094f7c1822c21db83dd6addd",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33",
+            "interval": [
+              900,
+              1260
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 360,
+          "time_warp": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              2.9832869080779947,
+              3.0
+            ],
+            [
+              95.0,
+              107.53221288515405
+            ],
+            [
+              131.0,
+              143.73389355742296
+            ],
+            [
+              354.016713091922,
+              356.0
+            ],
+            [
+              357.0,
+              359.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.1670824048739919,
+        "mapped_low_seconds": 4.453711412178644,
+        "max_clock_shift_frames": 11.933147632311972,
+        "protected_four_frames_exact": true
+      },
+      {
+        "key": "744d4ce24fee7a06cdbf85f5c72a7aa257b6e8a8a63e9f2021d20d3234786e33",
+        "candidate": {
+          "primitive": {
+            "event_uid": "r47:de4ba4c405a3decf45cd8531",
+            "source_uid": "male_ribbon",
+            "source_interval": [
+              0,
+              358
+            ],
+            "source_sha256": "7faf97974cb347b5e08107dd102c508ad3309901094f7c1822c21db83dd6addd",
+            "semantic_completeness": "UNKNOWN",
+            "world_root_contact": "UNKNOWN"
+          },
+          "music": {
+            "audio_sha256": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33",
+            "interval": [
+              900,
+              1260
+            ],
+            "fps": 30,
+            "annotation_status": "AUTOMATIC_NOT_GROUND_TRUTH"
+          },
+          "target_frames": 360,
+          "time_warp": [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              2.9832869080779947,
+              3.0
+            ],
+            [
+              95.0,
+              119.53221288515405
+            ],
+            [
+              131.0,
+              155.73389355742296
+            ],
+            [
+              354.016713091922,
+              356.0
+            ],
+            [
+              357.0,
+              359.0
+            ]
+          ]
+        },
+        "GTWLocal": 0.18319170559472378,
+        "mapped_low_seconds": 4.54967242358247,
+        "max_clock_shift_frames": 23.866295264623957,
+        "protected_four_frames_exact": true
+      }
+    ]
+  }
+]

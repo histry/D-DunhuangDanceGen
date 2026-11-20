@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "exit_status": {
+    "main": 0,
+    "controls": 0,
+    "replay": 0
+  },
+  "python": "3.9.25",
+  "numpy": "1.26.4",
+  "scipy": "1.13.1",
+  "tmux_sessions_remaining": [],
+  "server_head_before_result_release": "0836488e025a6b999432979970305c2117f7c81c",
+  "old_LFS_placeholders_preserved": 6,
+  "raw_source_tracks_verified": 14,
+  "scientific_execution_commits": {
+    "main": "2276562fead3798e021f3aa9a24d790a75796e01",
+    "controls": "2e0a49bfb6bc178002d81e90f39c1ef05cc30670",
+    "replay": "2e0a49bfb6bc178002d81e90f39c1ef05cc30670"
+  },
+  "temporary_SSH_helper_files_created_on_server": 0,
+  "training_steps": 0,
+  "R74": "NOT_STARTED"
+}

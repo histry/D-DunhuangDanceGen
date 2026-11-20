@@ -1,0 +1,60 @@
+{
+  "cases": 6,
+  "source_status": [
+    {
+      "source_uid": "female_FeiTian",
+      "status": "REGISTERED",
+      "eligible_opportunities": 2,
+      "alternative": "AVAILABLE"
+    },
+    {
+      "source_uid": "female_lotus",
+      "status": "REGISTERED",
+      "eligible_opportunities": 2,
+      "alternative": "AVAILABLE"
+    },
+    {
+      "source_uid": "female_meditation",
+      "status": "NO_COMPLETE_MIXED_SUPPORT_AT_FROZEN_BUDGETS"
+    },
+    {
+      "source_uid": "male_meditation",
+      "status": "REGISTERED",
+      "eligible_opportunities": 2,
+      "alternative": "AVAILABLE"
+    },
+    {
+      "source_uid": "male_pipa_1",
+      "status": "REGISTERED",
+      "eligible_opportunities": 1,
+      "alternative": "MISSING_MATCHED_LESS_LOW_SOURCE"
+    },
+    {
+      "source_uid": "male_pipa_2",
+      "status": "REGISTERED",
+      "eligible_opportunities": 1,
+      "alternative": "MISSING_MATCHED_LESS_LOW_SOURCE"
+    },
+    {
+      "source_uid": "male_ribbon",
+      "status": "REGISTERED",
+      "eligible_opportunities": 2,
+      "alternative": "AVAILABLE"
+    },
+    {
+      "source_uid": "male_ribbon_FenHe",
+      "status": "NO_COMPLETE_MIXED_SUPPORT_AT_FROZEN_BUDGETS"
+    }
+  ],
+  "selected_positions": 12,
+  "distinct_selected_rotations": 11,
+  "G1_screen_passes": 10,
+  "candidate_clocks": 87,
+  "varying_hold_pools": 6,
+  "human_records": 0,
+  "music_quality": "NOT_EVALUABLE",
+  "native24": "NOT_EVALUABLE",
+  "can_route": false,
+  "new_training_steps": 0,
+  "R74": "NOT_STARTED"
+}

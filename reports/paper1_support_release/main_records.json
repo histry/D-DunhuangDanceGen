@@ -1,0 +1,1631 @@
+[
+  {
+    "case_key": "f8d91db44c816c9c6b18cfb8",
+    "method": "original_Uniform",
+    "source_uid": "female_FeiTian",
+    "source_interval": [
+      2377,
+      2660
+    ],
+    "candidate_uid": "c897d7408d1a3b8078984920b4e39a847895ad34507db78b35259072c229086c",
+    "audit": {
+      "candidate_uid": "c897d7408d1a3b8078984920b4e39a847895ad34507db78b35259072c229086c",
+      "rotation_sha256": "f6f1923bf0d412f2988822ea3550a04da7f06a5c96bcc3580ef12643c3af9b6c",
+      "bridge_screen": true,
+      "quality": "NOT_EVALUABLE",
+      "native24": "NOT_EVALUABLE"
+    },
+    "GTWLocal": 0.26076829945812946,
+    "mapped_low_seconds": 2.3165484633569626,
+    "core": {
+      "frames": 240,
+      "time_between_centers_seconds": 7.966666666666667,
+      "low_cell_fraction": 0.36401673640167365,
+      "longest_low_seconds": 1.8333333333333333,
+      "low_runs": [
+        {
+          "cells_half_open": [
+            141,
+            196
+          ],
+          "duration_seconds": 1.8333333333333333,
+          "angular_excursion_max_rad": 0.34361091150730766,
+          "FK_excursion_rms_max_m": 0.11081614010221325,
+          "left_censored": false,
+          "right_censored": false,
+          "semantic_truth": "UNKNOWN"
+        }
+      ],
+      "FK_D3_q95": 115.61811711772164,
+      "FK_D3_max": 211.9835578453799,
+      "FK_activity_path_mean_m": 1.2666630249133184,
+      "FK_motion_range_rms_m": 0.13706141441876088,
+      "world_root_contact": "UNKNOWN",
+      "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+      "semantic_hold": "UNKNOWN"
+    },
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "metrics": {
+        "gap_D2": 2.8880106288412657,
+        "gap_D3": 38.50905294143687,
+        "boundary_D3": 49.22554351253679,
+        "sampled_boundary_rate_jump": 0.09939996724038794,
+        "sampled_boundary_acc_jump": 2.4258665626571054,
+        "shoulder_wrist_min_m": 0.39324999641367536,
+        "wrist_separation_max_m": 0.39387351069354276,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      },
+      "transported_boundary_velocity_increment_radps": 0.08481272077546906,
+      "transported_boundary_acceleration_increment_radps2": 0.5729362062832841,
+      "transported_rate_increment_indices": [
+        28,
+        77
+      ],
+      "transported_acceleration_increment_indices": [
+        27,
+        77
+      ],
+      "FK_path_length_mean_m": 0.6827349095286128,
+      "FK_endpoint_chord_mean_m": 0.4247109079691915,
+      "FK_path_to_endpoint_chord_ratio": 1.6075285487561304,
+      "FK_motion_range_rms_m": 0.13368389396897923,
+      "gap_mean_joint_speed_radps": 0.5046582678596718,
+      "adjacent_core_mean_joint_speed_radps": 0.12346037787904307,
+      "gap_to_adjacent_core_speed_ratio": 4.087613180271463,
+      "hidden_SO3_error_rad": null,
+      "hidden_FK_error_m": null,
+      "evaluation_scope": "NO_HIDDEN_TRUTH_CROSS_SOURCE_NUMERICAL_DIAGNOSTICS_NOT_NATIVE24",
+      "proof": {
+        "available_boundary_frame_indices": [
+          26,
+          27,
+          28,
+          29,
+          78,
+          79,
+          80,
+          81
+        ],
+        "G1_actual_boundary_read_indices": [
+          27,
+          28,
+          29,
+          78,
+          79,
+          80
+        ],
+        "G0_actual_boundary_read_indices": null,
+        "hidden_read": false,
+        "phase_labels_used": false,
+        "rejection_fallback": false,
+        "guards": {
+          "G1": {
+            "status": "GEOMETRICALLY_ADMITTED_NOT_PHYSICS",
+            "selected_segments": 4,
+            "local_chart_radius_rad": 3.0915926535897933,
+            "trials": [
+              {
+                "segments": 4,
+                "maximum_chart_rad": 0.6347734939829967,
+                "jet_residual": 1.3183898417423734e-16,
+                "eligible": true
+              }
+            ],
+            "hidden_read": false,
+            "endpoint_jets": "OBSERVED_THREE_FRAME_BODY_RATE_AND_ACCELERATION_WITH_RIGHT_JACOBIAN",
+            "internal_anchor": "SHORTEST_GEODESIC_NO_HIDDEN_POSE",
+            "physical_boundary_jet_residual": 1.3183898417423734e-16
+          }
+        }
+      },
+      "bridge_sha256": "977d5f820d9dd25b5ab8e8c45d2359d0024db98a32606daa4ec10afbdf42c33e",
+      "inherited": false
+    },
+    "full_rotation_sha256": "d63f76c9477e2ef1ed3f3936f73d353a16ad5c58bed24f154676da15aa06a79a",
+    "target_frames": 240,
+    "protected_four_frames_exact": true
+  },
+  {
+    "case_key": "f8d91db44c816c9c6b18cfb8",
+    "method": "original_GTWLocal",
+    "source_uid": "female_FeiTian",
+    "source_interval": [
+      2377,
+      2660
+    ],
+    "candidate_uid": "867362b23c31a2b89ba9ab9b675d176a86132dfc2a693ea7040025a4e0d966ba",
+    "audit": {
+      "candidate_uid": "867362b23c31a2b89ba9ab9b675d176a86132dfc2a693ea7040025a4e0d966ba",
+      "rotation_sha256": "9bf159e8cd7111a20888ca3928f5f39d68ee3fb1711efa2669e5049da09a2700",
+      "bridge_screen": true,
+      "quality": "NOT_EVALUABLE",
+      "native24": "NOT_EVALUABLE"
+    },
+    "GTWLocal": 0.24741958399529906,
+    "mapped_low_seconds": 2.117925449088146,
+    "core": {
+      "frames": 240,
+      "time_between_centers_seconds": 7.966666666666667,
+      "low_cell_fraction": 0.3138075313807531,
+      "longest_low_seconds": 0.7666666666666667,
+      "low_runs": [],
+      "FK_D3_q95": 97.40258676633543,
+      "FK_D3_max": 221.28343765729704,
+      "FK_activity_path_mean_m": 1.2670923484688252,
+      "FK_motion_range_rms_m": 0.13952411777123788,
+      "world_root_contact": "UNKNOWN",
+      "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+      "semantic_hold": "UNKNOWN"
+    },
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "metrics": {
+        "gap_D2": 2.8880106288412657,
+        "gap_D3": 38.50905294143687,
+        "boundary_D3": 49.22554351253679,
+        "sampled_boundary_rate_jump": 0.09939996724038794,
+        "sampled_boundary_acc_jump": 2.4258665626571054,
+        "shoulder_wrist_min_m": 0.39324999641367536,
+        "wrist_separation_max_m": 0.39387351069354276,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      },
+      "transported_boundary_velocity_increment_radps": 0.08481272077546906,
+      "transported_boundary_acceleration_increment_radps2": 0.5729362062832841,
+      "transported_rate_increment_indices": [
+        28,
+        77
+      ],
+      "transported_acceleration_increment_indices": [
+        27,
+        77
+      ],
+      "FK_path_length_mean_m": 0.6827349095286128,
+      "FK_endpoint_chord_mean_m": 0.4247109079691915,
+      "FK_path_to_endpoint_chord_ratio": 1.6075285487561304,
+      "FK_motion_range_rms_m": 0.13368389396897923,
+      "gap_mean_joint_speed_radps": 0.5046582678596718,
+      "adjacent_core_mean_joint_speed_radps": 0.12346037787904307,
+      "gap_to_adjacent_core_speed_ratio": 4.087613180271463,
+      "hidden_SO3_error_rad": null,
+      "hidden_FK_error_m": null,
+      "evaluation_scope": "NO_HIDDEN_TRUTH_CROSS_SOURCE_NUMERICAL_DIAGNOSTICS_NOT_NATIVE24",
+      "proof": {
+        "available_boundary_frame_indices": [
+          26,
+          27,
+          28,
+          29,
+          78,
+          79,
+          80,
+          81
+        ],
+        "G1_actual_boundary_read_indices": [
+          27,
+          28,
+          29,
+          78,
+          79,
+          80
+        ],
+        "G0_actual_boundary_read_indices": null,
+        "hidden_read": false,
+        "phase_labels_used": false,
+        "rejection_fallback": false,
+        "guards": {
+          "G1": {
+            "status": "GEOMETRICALLY_ADMITTED_NOT_PHYSICS",
+            "selected_segments": 4,
+            "local_chart_radius_rad": 3.0915926535897933,
+            "trials": [
+              {
+                "segments": 4,
+                "maximum_chart_rad": 0.6347734939829967,
+                "jet_residual": 1.3183898417423734e-16,
+                "eligible": true
+              }
+            ],
+            "hidden_read": false,
+            "endpoint_jets": "OBSERVED_THREE_FRAME_BODY_RATE_AND_ACCELERATION_WITH_RIGHT_JACOBIAN",
+            "internal_anchor": "SHORTEST_GEODESIC_NO_HIDDEN_POSE",
+            "physical_boundary_jet_residual": 1.3183898417423734e-16
+          }
+        }
+      },
+      "bridge_sha256": "977d5f820d9dd25b5ab8e8c45d2359d0024db98a32606daa4ec10afbdf42c33e",
+      "inherited": false
+    },
+    "full_rotation_sha256": "6d551e8b0201cf04cc6e94f5b6382c9dfe181373d174bfff645966b4a20e0030",
+    "target_frames": 240,
+    "protected_four_frames_exact": true
+  },
+  {
+    "case_key": "4a69181188a9e248a0a6330b",
+    "method": "original_Uniform",
+    "source_uid": "female_lotus",
+    "source_interval": [
+      583,
+      870
+    ],
+    "candidate_uid": "1fcf7f831ae758fbc0ade5b1ef2ee0890ca6fe36dbbfc165bd68ac47690248d8",
+    "audit": {
+      "candidate_uid": "1fcf7f831ae758fbc0ade5b1ef2ee0890ca6fe36dbbfc165bd68ac47690248d8",
+      "rotation_sha256": "88dd4e8b58643d1ca66c0e77ed0c16b503f1bf973de7677f41bbbf9f5a5006ec",
+      "bridge_screen": true,
+      "quality": "NOT_EVALUABLE",
+      "native24": "NOT_EVALUABLE"
+    },
+    "GTWLocal": 0.281041045023009,
+    "mapped_low_seconds": 2.144871794871797,
+    "core": {
+      "frames": 240,
+      "time_between_centers_seconds": 7.966666666666667,
+      "low_cell_fraction": 0.5146443514644351,
+      "longest_low_seconds": 1.7666666666666666,
+      "low_runs": [
+        {
+          "cells_half_open": [
+            5,
+            58
+          ],
+          "duration_seconds": 1.7666666666666666,
+          "angular_excursion_max_rad": 0.08900978126646178,
+          "FK_excursion_rms_max_m": 0.023462689291970564,
+          "left_censored": false,
+          "right_censored": false,
+          "semantic_truth": "UNKNOWN"
+        },
+        {
+          "cells_half_open": [
+            119,
+            154
+          ],
+          "duration_seconds": 1.1666666666666667,
+          "angular_excursion_max_rad": 0.2738768164140894,
+          "FK_excursion_rms_max_m": 0.04091689581101587,
+          "left_censored": false,
+          "right_censored": false,
+          "semantic_truth": "UNKNOWN"
+        }
+      ],
+      "FK_D3_q95": 148.9615965010416,
+      "FK_D3_max": 245.5272955189491,
+      "FK_activity_path_mean_m": 0.7380041996282635,
+      "FK_motion_range_rms_m": 0.0519333266524254,
+      "world_root_contact": "UNKNOWN",
+      "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+      "semantic_hold": "UNKNOWN"
+    },
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "metrics": {
+        "gap_D2": 1.1551604920512977,
+        "gap_D3": 13.56169013269324,
+        "boundary_D3": 19.503713611223507,
+        "sampled_boundary_rate_jump": 0.0483081019662291,
+        "sampled_boundary_acc_jump": 1.8258647703126731,
+        "shoulder_wrist_min_m": 0.2921086504836697,
+        "wrist_separation_max_m": 1.0283064780109838,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      },
+      "transported_boundary_velocity_increment_radps": 0.03364198270296677,
+      "transported_boundary_acceleration_increment_radps2": 0.4303132678029968,
+      "transported_rate_increment_indices": [
+        28,
+        77
+      ],
+      "transported_acceleration_increment_indices": [
+        27,
+        77
+      ],
+      "FK_path_length_mean_m": 0.24579039502058334,
+      "FK_endpoint_chord_mean_m": 0.21868126969179177,
+      "FK_path_to_endpoint_chord_ratio": 1.123966379777285,
+      "FK_motion_range_rms_m": 0.05223584829675184,
+      "gap_mean_joint_speed_radps": 0.35471588696550305,
+      "adjacent_core_mean_joint_speed_radps": 0.10551193771645188,
+      "gap_to_adjacent_core_speed_ratio": 3.3618554889850554,
+      "hidden_SO3_error_rad": null,
+      "hidden_FK_error_m": null,
+      "evaluation_scope": "NO_HIDDEN_TRUTH_CROSS_SOURCE_NUMERICAL_DIAGNOSTICS_NOT_NATIVE24",
+      "proof": {
+        "available_boundary_frame_indices": [
+          26,
+          27,
+          28,
+          29,
+          78,
+          79,
+          80,
+          81
+        ],
+        "G1_actual_boundary_read_indices": [
+          27,
+          28,
+          29,
+          78,
+          79,
+          80
+        ],
+        "G0_actual_boundary_read_indices": null,
+        "hidden_read": false,
+        "phase_labels_used": false,
+        "rejection_fallback": false,
+        "guards": {
+          "G1": {
+            "status": "GEOMETRICALLY_ADMITTED_NOT_PHYSICS",
+            "selected_segments": 4,
+            "local_chart_radius_rad": 3.0915926535897933,
+            "trials": [
+              {
+                "segments": 4,
+                "maximum_chart_rad": 0.41421039695381895,
+                "jet_residual": 1.3183898417423734e-16,
+                "eligible": true
+              }
+            ],
+            "hidden_read": false,
+            "endpoint_jets": "OBSERVED_THREE_FRAME_BODY_RATE_AND_ACCELERATION_WITH_RIGHT_JACOBIAN",
+            "internal_anchor": "SHORTEST_GEODESIC_NO_HIDDEN_POSE",
+            "physical_boundary_jet_residual": 1.3183898417423734e-16
+          }
+        }
+      },
+      "bridge_sha256": "2c47b0c9b4504f1fd660655d043b37c84d96ecdb328949f617a66309451d714f",
+      "inherited": false
+    },
+    "full_rotation_sha256": "8f4433d81ffc95ac9c6a8a1558e91c3014acd84c89f2ebe9b8fd6f1d449a885b",
+    "target_frames": 240,
+    "protected_four_frames_exact": true
+  },
+  {
+    "case_key": "4a69181188a9e248a0a6330b",
+    "method": "original_GTWLocal",
+    "source_uid": "female_lotus",
+    "source_interval": [
+      583,
+      870
+    ],
+    "candidate_uid": "c897a77f5c74b552291b37f46a83e436f83be885a75b079d3c0291a51894762f",
+    "audit": {
+      "candidate_uid": "c897a77f5c74b552291b37f46a83e436f83be885a75b079d3c0291a51894762f",
+      "rotation_sha256": "d5090cfb6c73d51ef1bf7293f88213bdce44d793ea48501d95add3bb5dacf20e",
+      "bridge_screen": true,
+      "quality": "NOT_EVALUABLE",
+      "native24": "NOT_EVALUABLE"
+    },
+    "GTWLocal": 0.27610673519863105,
+    "mapped_low_seconds": 2.0959157433790785,
+    "core": {
+      "frames": 240,
+      "time_between_centers_seconds": 7.966666666666667,
+      "low_cell_fraction": 0.48535564853556484,
+      "longest_low_seconds": 1.6666666666666667,
+      "low_runs": [
+        {
+          "cells_half_open": [
+            5,
+            55
+          ],
+          "duration_seconds": 1.6666666666666667,
+          "angular_excursion_max_rad": 0.0859757355177977,
+          "FK_excursion_rms_max_m": 0.022999470172963977,
+          "left_censored": false,
+          "right_censored": false,
+          "semantic_truth": "UNKNOWN"
+        },
+        {
+          "cells_half_open": [
+            113,
+            148
+          ],
+          "duration_seconds": 1.1666666666666667,
+          "angular_excursion_max_rad": 0.2738768164140893,
+          "FK_excursion_rms_max_m": 0.040916895811015964,
+          "left_censored": false,
+          "right_censored": false,
+          "semantic_truth": "UNKNOWN"
+        }
+      ],
+      "FK_D3_q95": 139.20503573772635,
+      "FK_D3_max": 251.80338199061978,
+      "FK_activity_path_mean_m": 0.7351957559164823,
+      "FK_motion_range_rms_m": 0.05246899432559502,
+      "world_root_contact": "UNKNOWN",
+      "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+      "semantic_hold": "UNKNOWN"
+    },
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "metrics": {
+        "gap_D2": 1.1551604920512977,
+        "gap_D3": 13.56169013269324,
+        "boundary_D3": 19.503713611223507,
+        "sampled_boundary_rate_jump": 0.0483081019662291,
+        "sampled_boundary_acc_jump": 1.8258647703126731,
+        "shoulder_wrist_min_m": 0.2921086504836697,
+        "wrist_separation_max_m": 1.0283064780109838,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      },
+      "transported_boundary_velocity_increment_radps": 0.03364198270296677,
+      "transported_boundary_acceleration_increment_radps2": 0.4303132678029968,
+      "transported_rate_increment_indices": [
+        28,
+        77
+      ],
+      "transported_acceleration_increment_indices": [
+        27,
+        77
+      ],
+      "FK_path_length_mean_m": 0.24579039502058334,
+      "FK_endpoint_chord_mean_m": 0.21868126969179177,
+      "FK_path_to_endpoint_chord_ratio": 1.123966379777285,
+      "FK_motion_range_rms_m": 0.05223584829675184,
+      "gap_mean_joint_speed_radps": 0.35471588696550305,
+      "adjacent_core_mean_joint_speed_radps": 0.10551193771645188,
+      "gap_to_adjacent_core_speed_ratio": 3.3618554889850554,
+      "hidden_SO3_error_rad": null,
+      "hidden_FK_error_m": null,
+      "evaluation_scope": "NO_HIDDEN_TRUTH_CROSS_SOURCE_NUMERICAL_DIAGNOSTICS_NOT_NATIVE24",
+      "proof": {
+        "available_boundary_frame_indices": [
+          26,
+          27,
+          28,
+          29,
+          78,
+          79,
+          80,
+          81
+        ],
+        "G1_actual_boundary_read_indices": [
+          27,
+          28,
+          29,
+          78,
+          79,
+          80
+        ],
+        "G0_actual_boundary_read_indices": null,
+        "hidden_read": false,
+        "phase_labels_used": false,
+        "rejection_fallback": false,
+        "guards": {
+          "G1": {
+            "status": "GEOMETRICALLY_ADMITTED_NOT_PHYSICS",
+            "selected_segments": 4,
+            "local_chart_radius_rad": 3.0915926535897933,
+            "trials": [
+              {
+                "segments": 4,
+                "maximum_chart_rad": 0.41421039695381895,
+                "jet_residual": 1.3183898417423734e-16,
+                "eligible": true
+              }
+            ],
+            "hidden_read": false,
+            "endpoint_jets": "OBSERVED_THREE_FRAME_BODY_RATE_AND_ACCELERATION_WITH_RIGHT_JACOBIAN",
+            "internal_anchor": "SHORTEST_GEODESIC_NO_HIDDEN_POSE",
+            "physical_boundary_jet_residual": 1.3183898417423734e-16
+          }
+        }
+      },
+      "bridge_sha256": "2c47b0c9b4504f1fd660655d043b37c84d96ecdb328949f617a66309451d714f",
+      "inherited": false
+    },
+    "full_rotation_sha256": "c34fa81c7b6ec329bfdd4c5c42f95a387e0161ba891569957baff6195bb9ac52",
+    "target_frames": 240,
+    "protected_four_frames_exact": true
+  },
+  {
+    "case_key": "73cb91d45a9d9530430d1650",
+    "method": "original_Uniform",
+    "source_uid": "male_meditation",
+    "source_interval": [
+      689,
+      1071
+    ],
+    "candidate_uid": "9137d981f1f9a3c860b128e13893e4eed52834403022f488408951915af49426",
+    "audit": {
+      "candidate_uid": "9137d981f1f9a3c860b128e13893e4eed52834403022f488408951915af49426",
+      "rotation_sha256": "42cbabb39ccc5f83515ee44012ac99f84baf0c4bfb6d90e54a306eb5cb991cb1",
+      "bridge_screen": true,
+      "quality": "NOT_EVALUABLE",
+      "native24": "NOT_EVALUABLE"
+    },
+    "GTWLocal": 0.23409755092785314,
+    "mapped_low_seconds": 4.114523184601924,
+    "core": {
+      "frames": 360,
+      "time_between_centers_seconds": 11.966666666666667,
+      "low_cell_fraction": 0.3732590529247911,
+      "longest_low_seconds": 1.9333333333333333,
+      "low_runs": [
+        {
+          "cells_half_open": [
+            0,
+            34
+          ],
+          "duration_seconds": 1.1333333333333333,
+          "angular_excursion_max_rad": 0.1263763418141385,
+          "FK_excursion_rms_max_m": 0.013301579584680059,
+          "left_censored": true,
+          "right_censored": false,
+          "semantic_truth": "UNKNOWN"
+        },
+        {
+          "cells_half_open": [
+            164,
+            222
+          ],
+          "duration_seconds": 1.9333333333333333,
+          "angular_excursion_max_rad": 0.30433081983100013,
+          "FK_excursion_rms_max_m": 0.11078293256484793,
+          "left_censored": false,
+          "right_censored": false,
+          "semantic_truth": "UNKNOWN"
+        },
+        {
+          "cells_half_open": [
+            328,
+            359
+          ],
+          "duration_seconds": 1.0333333333333334,
+          "angular_excursion_max_rad": 0.16240452120392865,
+          "FK_excursion_rms_max_m": 0.02534224286246147,
+          "left_censored": false,
+          "right_censored": true,
+          "semantic_truth": "UNKNOWN"
+        }
+      ],
+      "FK_D3_q95": 46.09453103482366,
+      "FK_D3_max": 405.9321441892502,
+      "FK_activity_path_mean_m": 1.0016402230268264,
+      "FK_motion_range_rms_m": 0.11470897148135767,
+      "world_root_contact": "UNKNOWN",
+      "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+      "semantic_hold": "UNKNOWN"
+    },
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "metrics": {
+        "gap_D2": 0.8538948540104987,
+        "gap_D3": 10.050773822628702,
+        "boundary_D3": 14.524792694727974,
+        "sampled_boundary_rate_jump": 0.020204604144458932,
+        "sampled_boundary_acc_jump": 1.2334063448920412,
+        "shoulder_wrist_min_m": 0.42050012079147236,
+        "wrist_separation_max_m": 1.0506378372423806,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      },
+      "transported_boundary_velocity_increment_radps": 0.018923745505817116,
+      "transported_boundary_acceleration_increment_radps2": 0.26169259814944135,
+      "transported_rate_increment_indices": [
+        28,
+        77
+      ],
+      "transported_acceleration_increment_indices": [
+        27,
+        77
+      ],
+      "FK_path_length_mean_m": 0.17501246716537947,
+      "FK_endpoint_chord_mean_m": 0.16171469394984603,
+      "FK_path_to_endpoint_chord_ratio": 1.0822298388027596,
+      "FK_motion_range_rms_m": 0.04447658926762859,
+      "gap_mean_joint_speed_radps": 0.21878885257676123,
+      "adjacent_core_mean_joint_speed_radps": 0.030376554092369668,
+      "gap_to_adjacent_core_speed_ratio": 7.202556679452957,
+      "hidden_SO3_error_rad": null,
+      "hidden_FK_error_m": null,
+      "evaluation_scope": "NO_HIDDEN_TRUTH_CROSS_SOURCE_NUMERICAL_DIAGNOSTICS_NOT_NATIVE24",
+      "proof": {
+        "available_boundary_frame_indices": [
+          26,
+          27,
+          28,
+          29,
+          78,
+          79,
+          80,
+          81
+        ],
+        "G1_actual_boundary_read_indices": [
+          27,
+          28,
+          29,
+          78,
+          79,
+          80
+        ],
+        "G0_actual_boundary_read_indices": null,
+        "hidden_read": false,
+        "phase_labels_used": false,
+        "rejection_fallback": false,
+        "guards": {
+          "G1": {
+            "status": "GEOMETRICALLY_ADMITTED_NOT_PHYSICS",
+            "selected_segments": 4,
+            "local_chart_radius_rad": 3.0915926535897933,
+            "trials": [
+              {
+                "segments": 4,
+                "maximum_chart_rad": 0.29509578668483294,
+                "jet_residual": 6.537739100087592e-17,
+                "eligible": true
+              }
+            ],
+            "hidden_read": false,
+            "endpoint_jets": "OBSERVED_THREE_FRAME_BODY_RATE_AND_ACCELERATION_WITH_RIGHT_JACOBIAN",
+            "internal_anchor": "SHORTEST_GEODESIC_NO_HIDDEN_POSE",
+            "physical_boundary_jet_residual": 6.537739100087592e-17
+          }
+        }
+      },
+      "bridge_sha256": "1aeb6ad1df2080adc7d81ecc66c8efc78fd78d2c05bf58be25976faa3174e13c",
+      "inherited": false
+    },
+    "full_rotation_sha256": "76ad5ab7c1d0531876e3f01d543fefc2e13b15cb838923020c69a602b7417d51",
+    "target_frames": 360,
+    "protected_four_frames_exact": true
+  },
+  {
+    "case_key": "73cb91d45a9d9530430d1650",
+    "method": "original_GTWLocal",
+    "source_uid": "male_meditation",
+    "source_interval": [
+      689,
+      1071
+    ],
+    "candidate_uid": "04d53f5322ffb674e09099aef23b845c950f679029cf3ee6ed3c17edd2ccd6d4",
+    "audit": {
+      "candidate_uid": "04d53f5322ffb674e09099aef23b845c950f679029cf3ee6ed3c17edd2ccd6d4",
+      "rotation_sha256": "cd8ee7cc1818fb7173d0eec6433ad97dd87594838061b4c8d71dcaaaa4efe110",
+      "bridge_screen": true,
+      "quality": "NOT_EVALUABLE",
+      "native24": "NOT_EVALUABLE"
+    },
+    "GTWLocal": 0.23358810477936912,
+    "mapped_low_seconds": 3.9552593770505684,
+    "core": {
+      "frames": 360,
+      "time_between_centers_seconds": 11.966666666666667,
+      "low_cell_fraction": 0.34818941504178275,
+      "longest_low_seconds": 1.2333333333333334,
+      "low_runs": [
+        {
+          "cells_half_open": [
+            0,
+            36
+          ],
+          "duration_seconds": 1.2,
+          "angular_excursion_max_rad": 0.13767810213456394,
+          "FK_excursion_rms_max_m": 0.014257452481864665,
+          "left_censored": true,
+          "right_censored": false,
+          "semantic_truth": "UNKNOWN"
+        },
+        {
+          "cells_half_open": [
+            184,
+            221
+          ],
+          "duration_seconds": 1.2333333333333334,
+          "angular_excursion_max_rad": 0.13404667366950862,
+          "FK_excursion_rms_max_m": 0.05316792243580201,
+          "left_censored": false,
+          "right_censored": false,
+          "semantic_truth": "UNKNOWN"
+        },
+        {
+          "cells_half_open": [
+            328,
+            359
+          ],
+          "duration_seconds": 1.0333333333333334,
+          "angular_excursion_max_rad": 0.16240452120392865,
+          "FK_excursion_rms_max_m": 0.02534224286246147,
+          "left_censored": false,
+          "right_censored": true,
+          "semantic_truth": "UNKNOWN"
+        }
+      ],
+      "FK_D3_q95": 43.28215792104529,
+      "FK_D3_max": 405.9321441892502,
+      "FK_activity_path_mean_m": 1.0019136114290745,
+      "FK_motion_range_rms_m": 0.11387171156690992,
+      "world_root_contact": "UNKNOWN",
+      "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+      "semantic_hold": "UNKNOWN"
+    },
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "metrics": {
+        "gap_D2": 0.8538948540104987,
+        "gap_D3": 10.050773822628702,
+        "boundary_D3": 14.524792694727974,
+        "sampled_boundary_rate_jump": 0.020204604144458932,
+        "sampled_boundary_acc_jump": 1.2334063448920412,
+        "shoulder_wrist_min_m": 0.42050012079147236,
+        "wrist_separation_max_m": 1.0506378372423806,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      },
+      "transported_boundary_velocity_increment_radps": 0.018923745505817116,
+      "transported_boundary_acceleration_increment_radps2": 0.26169259814944135,
+      "transported_rate_increment_indices": [
+        28,
+        77
+      ],
+      "transported_acceleration_increment_indices": [
+        27,
+        77
+      ],
+      "FK_path_length_mean_m": 0.17501246716537947,
+      "FK_endpoint_chord_mean_m": 0.16171469394984603,
+      "FK_path_to_endpoint_chord_ratio": 1.0822298388027596,
+      "FK_motion_range_rms_m": 0.04447658926762859,
+      "gap_mean_joint_speed_radps": 0.21878885257676123,
+      "adjacent_core_mean_joint_speed_radps": 0.030376554092369668,
+      "gap_to_adjacent_core_speed_ratio": 7.202556679452957,
+      "hidden_SO3_error_rad": null,
+      "hidden_FK_error_m": null,
+      "evaluation_scope": "NO_HIDDEN_TRUTH_CROSS_SOURCE_NUMERICAL_DIAGNOSTICS_NOT_NATIVE24",
+      "proof": {
+        "available_boundary_frame_indices": [
+          26,
+          27,
+          28,
+          29,
+          78,
+          79,
+          80,
+          81
+        ],
+        "G1_actual_boundary_read_indices": [
+          27,
+          28,
+          29,
+          78,
+          79,
+          80
+        ],
+        "G0_actual_boundary_read_indices": null,
+        "hidden_read": false,
+        "phase_labels_used": false,
+        "rejection_fallback": false,
+        "guards": {
+          "G1": {
+            "status": "GEOMETRICALLY_ADMITTED_NOT_PHYSICS",
+            "selected_segments": 4,
+            "local_chart_radius_rad": 3.0915926535897933,
+            "trials": [
+              {
+                "segments": 4,
+                "maximum_chart_rad": 0.29509578668483294,
+                "jet_residual": 6.537739100087592e-17,
+                "eligible": true
+              }
+            ],
+            "hidden_read": false,
+            "endpoint_jets": "OBSERVED_THREE_FRAME_BODY_RATE_AND_ACCELERATION_WITH_RIGHT_JACOBIAN",
+            "internal_anchor": "SHORTEST_GEODESIC_NO_HIDDEN_POSE",
+            "physical_boundary_jet_residual": 6.537739100087592e-17
+          }
+        }
+      },
+      "bridge_sha256": "1aeb6ad1df2080adc7d81ecc66c8efc78fd78d2c05bf58be25976faa3174e13c",
+      "inherited": false
+    },
+    "full_rotation_sha256": "cc92b7f6e0c2bbc13926e477698caa76257ac4674d763861dbefb2998e8a7944",
+    "target_frames": 360,
+    "protected_four_frames_exact": true
+  },
+  {
+    "case_key": "e5722e89378a4fae9c0a660d",
+    "method": "original_Uniform",
+    "source_uid": "male_pipa_1",
+    "source_interval": [
+      2916,
+      3454
+    ],
+    "candidate_uid": "87b811293ce53e0f2d4eb8dc235ff39d661cc478946bd5650d8416dcf5aca9c4",
+    "audit": {
+      "candidate_uid": "87b811293ce53e0f2d4eb8dc235ff39d661cc478946bd5650d8416dcf5aca9c4",
+      "rotation_sha256": "2262ad782a0cdebaaa6d5e8bf0184ac0d7138ea54c811e7ab317003abd8b4452",
+      "bridge_screen": true,
+      "quality": "NOT_EVALUABLE",
+      "native24": "NOT_EVALUABLE"
+    },
+    "GTWLocal": 0.31750508651498316,
+    "mapped_low_seconds": 0.8918684047175608,
+    "core": {
+      "frames": 450,
+      "time_between_centers_seconds": 14.966666666666667,
+      "low_cell_fraction": 0.0556792873051225,
+      "longest_low_seconds": 0.7,
+      "low_runs": [],
+      "FK_D3_q95": 752.9607453598245,
+      "FK_D3_max": 2667.2821177025644,
+      "FK_activity_path_mean_m": 13.02372019652036,
+      "FK_motion_range_rms_m": 0.15793278930193608,
+      "world_root_contact": "UNKNOWN",
+      "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+      "semantic_hold": "UNKNOWN"
+    },
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "metrics": {
+        "gap_D2": 4.571117743241753,
+        "gap_D3": 61.96450061566745,
+        "boundary_D3": 125.00522376876035,
+        "sampled_boundary_rate_jump": 0.3462433853785817,
+        "sampled_boundary_acc_jump": 12.891788756697649,
+        "shoulder_wrist_min_m": 0.42123503007066665,
+        "wrist_separation_max_m": 1.2050739022469095,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      },
+      "transported_boundary_velocity_increment_radps": 0.28375807921057805,
+      "transported_boundary_acceleration_increment_radps2": 2.1976918220192987,
+      "transported_rate_increment_indices": [
+        28,
+        77
+      ],
+      "transported_acceleration_increment_indices": [
+        27,
+        77
+      ],
+      "FK_path_length_mean_m": 0.27402225230106864,
+      "FK_endpoint_chord_mean_m": 0.1624902091024101,
+      "FK_path_to_endpoint_chord_ratio": 1.6863923913616543,
+      "FK_motion_range_rms_m": 0.03380066835526233,
+      "gap_mean_joint_speed_radps": 0.433705947235091,
+      "adjacent_core_mean_joint_speed_radps": 1.0360582104920433,
+      "gap_to_adjacent_core_speed_ratio": 0.4186115633687377,
+      "hidden_SO3_error_rad": null,
+      "hidden_FK_error_m": null,
+      "evaluation_scope": "NO_HIDDEN_TRUTH_CROSS_SOURCE_NUMERICAL_DIAGNOSTICS_NOT_NATIVE24",
+      "proof": {
+        "available_boundary_frame_indices": [
+          26,
+          27,
+          28,
+          29,
+          78,
+          79,
+          80,
+          81
+        ],
+        "G1_actual_boundary_read_indices": [
+          27,
+          28,
+          29,
+          78,
+          79,
+          80
+        ],
+        "G0_actual_boundary_read_indices": null,
+        "hidden_read": false,
+        "phase_labels_used": false,
+        "rejection_fallback": false,
+        "guards": {
+          "G1": {
+            "status": "GEOMETRICALLY_ADMITTED_NOT_PHYSICS",
+            "selected_segments": 4,
+            "local_chart_radius_rad": 3.0915926535897933,
+            "trials": [
+              {
+                "segments": 4,
+                "maximum_chart_rad": 0.394391345343002,
+                "jet_residual": 1.4302795059428774e-15,
+                "eligible": true
+              }
+            ],
+            "hidden_read": false,
+            "endpoint_jets": "OBSERVED_THREE_FRAME_BODY_RATE_AND_ACCELERATION_WITH_RIGHT_JACOBIAN",
+            "internal_anchor": "SHORTEST_GEODESIC_NO_HIDDEN_POSE",
+            "physical_boundary_jet_residual": 1.4302795059428774e-15
+          }
+        }
+      },
+      "bridge_sha256": "b56af8e3389e9df919bade2e8470c07d1e5c14a387c66c980c46456e897e37a8",
+      "inherited": false
+    },
+    "full_rotation_sha256": "2f48d5184a60432b9d5bd9abf8688be5ecf23ad88b66385267fc6399e3785da6",
+    "target_frames": 450,
+    "protected_four_frames_exact": true
+  },
+  {
+    "case_key": "e5722e89378a4fae9c0a660d",
+    "method": "original_GTWLocal",
+    "source_uid": "male_pipa_1",
+    "source_interval": [
+      2916,
+      3454
+    ],
+    "candidate_uid": "87b811293ce53e0f2d4eb8dc235ff39d661cc478946bd5650d8416dcf5aca9c4",
+    "audit": {
+      "candidate_uid": "87b811293ce53e0f2d4eb8dc235ff39d661cc478946bd5650d8416dcf5aca9c4",
+      "rotation_sha256": "2262ad782a0cdebaaa6d5e8bf0184ac0d7138ea54c811e7ab317003abd8b4452",
+      "bridge_screen": true,
+      "quality": "NOT_EVALUABLE",
+      "native24": "NOT_EVALUABLE"
+    },
+    "GTWLocal": 0.31750508651498316,
+    "mapped_low_seconds": 0.8918684047175608,
+    "core": {
+      "frames": 450,
+      "time_between_centers_seconds": 14.966666666666667,
+      "low_cell_fraction": 0.0556792873051225,
+      "longest_low_seconds": 0.7,
+      "low_runs": [],
+      "FK_D3_q95": 752.9607453598245,
+      "FK_D3_max": 2667.2821177025644,
+      "FK_activity_path_mean_m": 13.02372019652036,
+      "FK_motion_range_rms_m": 0.15793278930193608,
+      "world_root_contact": "UNKNOWN",
+      "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+      "semantic_hold": "UNKNOWN"
+    },
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "metrics": {
+        "gap_D2": 4.571117743241753,
+        "gap_D3": 61.96450061566745,
+        "boundary_D3": 125.00522376876035,
+        "sampled_boundary_rate_jump": 0.3462433853785817,
+        "sampled_boundary_acc_jump": 12.891788756697649,
+        "shoulder_wrist_min_m": 0.42123503007066665,
+        "wrist_separation_max_m": 1.2050739022469095,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      },
+      "transported_boundary_velocity_increment_radps": 0.28375807921057805,
+      "transported_boundary_acceleration_increment_radps2": 2.1976918220192987,
+      "transported_rate_increment_indices": [
+        28,
+        77
+      ],
+      "transported_acceleration_increment_indices": [
+        27,
+        77
+      ],
+      "FK_path_length_mean_m": 0.27402225230106864,
+      "FK_endpoint_chord_mean_m": 0.1624902091024101,
+      "FK_path_to_endpoint_chord_ratio": 1.6863923913616543,
+      "FK_motion_range_rms_m": 0.03380066835526233,
+      "gap_mean_joint_speed_radps": 0.433705947235091,
+      "adjacent_core_mean_joint_speed_radps": 1.0360582104920433,
+      "gap_to_adjacent_core_speed_ratio": 0.4186115633687377,
+      "hidden_SO3_error_rad": null,
+      "hidden_FK_error_m": null,
+      "evaluation_scope": "NO_HIDDEN_TRUTH_CROSS_SOURCE_NUMERICAL_DIAGNOSTICS_NOT_NATIVE24",
+      "proof": {
+        "available_boundary_frame_indices": [
+          26,
+          27,
+          28,
+          29,
+          78,
+          79,
+          80,
+          81
+        ],
+        "G1_actual_boundary_read_indices": [
+          27,
+          28,
+          29,
+          78,
+          79,
+          80
+        ],
+        "G0_actual_boundary_read_indices": null,
+        "hidden_read": false,
+        "phase_labels_used": false,
+        "rejection_fallback": false,
+        "guards": {
+          "G1": {
+            "status": "GEOMETRICALLY_ADMITTED_NOT_PHYSICS",
+            "selected_segments": 4,
+            "local_chart_radius_rad": 3.0915926535897933,
+            "trials": [
+              {
+                "segments": 4,
+                "maximum_chart_rad": 0.394391345343002,
+                "jet_residual": 1.4302795059428774e-15,
+                "eligible": true
+              }
+            ],
+            "hidden_read": false,
+            "endpoint_jets": "OBSERVED_THREE_FRAME_BODY_RATE_AND_ACCELERATION_WITH_RIGHT_JACOBIAN",
+            "internal_anchor": "SHORTEST_GEODESIC_NO_HIDDEN_POSE",
+            "physical_boundary_jet_residual": 1.4302795059428774e-15
+          }
+        }
+      },
+      "bridge_sha256": "b56af8e3389e9df919bade2e8470c07d1e5c14a387c66c980c46456e897e37a8",
+      "inherited": false
+    },
+    "full_rotation_sha256": "2f48d5184a60432b9d5bd9abf8688be5ecf23ad88b66385267fc6399e3785da6",
+    "target_frames": 450,
+    "protected_four_frames_exact": true
+  },
+  {
+    "case_key": "b7b2ddb39b2addc9619fc709",
+    "method": "original_Uniform",
+    "source_uid": "male_pipa_2",
+    "source_interval": [
+      1420,
+      1769
+    ],
+    "candidate_uid": "2ca0db6e4a17c4275c231bedfd06974ca132acfba84b5919379e18af634b2166",
+    "audit": {
+      "candidate_uid": "2ca0db6e4a17c4275c231bedfd06974ca132acfba84b5919379e18af634b2166",
+      "rotation_sha256": "3006fdf1ea70e0c89f0d4c568ff4aee0e6fc3f5db103c2e4a7bf9a636375ab7e",
+      "bridge_screen": true,
+      "quality": "NOT_EVALUABLE",
+      "native24": "NOT_EVALUABLE"
+    },
+    "GTWLocal": 0.11579713193098852,
+    "mapped_low_seconds": 2.5790229885057507,
+    "core": {
+      "frames": 360,
+      "time_between_centers_seconds": 11.966666666666667,
+      "low_cell_fraction": 0.38440111420612816,
+      "longest_low_seconds": 2.966666666666667,
+      "low_runs": [
+        {
+          "cells_half_open": [
+            63,
+            152
+          ],
+          "duration_seconds": 2.966666666666667,
+          "angular_excursion_max_rad": 0.175097358196143,
+          "FK_excursion_rms_max_m": 0.05119544456926711,
+          "left_censored": false,
+          "right_censored": false,
+          "semantic_truth": "UNKNOWN"
+        }
+      ],
+      "FK_D3_q95": 141.80749671712954,
+      "FK_D3_max": 305.7780798385604,
+      "FK_activity_path_mean_m": 1.46718879707565,
+      "FK_motion_range_rms_m": 0.11128721920226742,
+      "world_root_contact": "UNKNOWN",
+      "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+      "semantic_hold": "UNKNOWN"
+    },
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "metrics": {
+        "gap_D2": 3.0437328936838086,
+        "gap_D3": 40.20687511975315,
+        "boundary_D3": 57.16536389845739,
+        "sampled_boundary_rate_jump": 0.07628936273818364,
+        "sampled_boundary_acc_jump": 3.3685834707746185,
+        "shoulder_wrist_min_m": 0.25285969416697457,
+        "wrist_separation_max_m": 1.0728399015086667,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      },
+      "transported_boundary_velocity_increment_radps": 0.04913753105950792,
+      "transported_boundary_acceleration_increment_radps2": 0.6168999336051413,
+      "transported_rate_increment_indices": [
+        28,
+        77
+      ],
+      "transported_acceleration_increment_indices": [
+        27,
+        77
+      ],
+      "FK_path_length_mean_m": 0.6305058711983691,
+      "FK_endpoint_chord_mean_m": 0.3829559309698553,
+      "FK_path_to_endpoint_chord_ratio": 1.6464188701858748,
+      "FK_motion_range_rms_m": 0.12059794098941422,
+      "gap_mean_joint_speed_radps": 0.38300360023118096,
+      "adjacent_core_mean_joint_speed_radps": 0.1063110983832924,
+      "gap_to_adjacent_core_speed_ratio": 3.6026680756350165,
+      "hidden_SO3_error_rad": null,
+      "hidden_FK_error_m": null,
+      "evaluation_scope": "NO_HIDDEN_TRUTH_CROSS_SOURCE_NUMERICAL_DIAGNOSTICS_NOT_NATIVE24",
+      "proof": {
+        "available_boundary_frame_indices": [
+          26,
+          27,
+          28,
+          29,
+          78,
+          79,
+          80,
+          81
+        ],
+        "G1_actual_boundary_read_indices": [
+          27,
+          28,
+          29,
+          78,
+          79,
+          80
+        ],
+        "G0_actual_boundary_read_indices": null,
+        "hidden_read": false,
+        "phase_labels_used": false,
+        "rejection_fallback": false,
+        "guards": {
+          "G1": {
+            "status": "GEOMETRICALLY_ADMITTED_NOT_PHYSICS",
+            "selected_segments": 4,
+            "local_chart_radius_rad": 3.0915926535897933,
+            "trials": [
+              {
+                "segments": 4,
+                "maximum_chart_rad": 0.6965011856302008,
+                "jet_residual": 8.933825901280557e-16,
+                "eligible": true
+              }
+            ],
+            "hidden_read": false,
+            "endpoint_jets": "OBSERVED_THREE_FRAME_BODY_RATE_AND_ACCELERATION_WITH_RIGHT_JACOBIAN",
+            "internal_anchor": "SHORTEST_GEODESIC_NO_HIDDEN_POSE",
+            "physical_boundary_jet_residual": 8.933825901280557e-16
+          }
+        }
+      },
+      "bridge_sha256": "dd31f7afb920f15f82781a6735f7591734e7d0c6a5ee30569912f895495f6e7c",
+      "inherited": false
+    },
+    "full_rotation_sha256": "db0b252639c4b3df56c9a8441e980cb35f9c069e1f03675cb729ab13d7d75e84",
+    "target_frames": 360,
+    "protected_four_frames_exact": true
+  },
+  {
+    "case_key": "b7b2ddb39b2addc9619fc709",
+    "method": "original_GTWLocal",
+    "source_uid": "male_pipa_2",
+    "source_interval": [
+      1420,
+      1769
+    ],
+    "candidate_uid": "5fa01561e3be858e09a0a5b9231761376254305a870511145a6a6ede8e9800ce",
+    "audit": {
+      "candidate_uid": "5fa01561e3be858e09a0a5b9231761376254305a870511145a6a6ede8e9800ce",
+      "rotation_sha256": "e93f546b0697e9bfc0fbbf1c3f9328a6ff0cf087156a94dd4832e386ca24ab27",
+      "bridge_screen": true,
+      "quality": "NOT_EVALUABLE",
+      "native24": "NOT_EVALUABLE"
+    },
+    "GTWLocal": 0.11162085008643322,
+    "mapped_low_seconds": 2.976430850639573,
+    "core": {
+      "frames": 360,
+      "time_between_centers_seconds": 11.966666666666667,
+      "low_cell_fraction": 0.40668523676880225,
+      "longest_low_seconds": 3.3666666666666667,
+      "low_runs": [
+        {
+          "cells_half_open": [
+            63,
+            164
+          ],
+          "duration_seconds": 3.3666666666666667,
+          "angular_excursion_max_rad": 0.17514466655990868,
+          "FK_excursion_rms_max_m": 0.05119669405973773,
+          "left_censored": false,
+          "right_censored": false,
+          "semantic_truth": "UNKNOWN"
+        }
+      ],
+      "FK_D3_q95": 161.2048295985702,
+      "FK_D3_max": 356.6349133310909,
+      "FK_activity_path_mean_m": 1.4681064412787983,
+      "FK_motion_range_rms_m": 0.11028891687182274,
+      "world_root_contact": "UNKNOWN",
+      "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+      "semantic_hold": "UNKNOWN"
+    },
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "metrics": {
+        "gap_D2": 3.0437328936838086,
+        "gap_D3": 40.20687511975315,
+        "boundary_D3": 57.16536389845739,
+        "sampled_boundary_rate_jump": 0.07628936273818364,
+        "sampled_boundary_acc_jump": 3.3685834707746185,
+        "shoulder_wrist_min_m": 0.25285969416697457,
+        "wrist_separation_max_m": 1.0728399015086667,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      },
+      "transported_boundary_velocity_increment_radps": 0.04913753105950792,
+      "transported_boundary_acceleration_increment_radps2": 0.6168999336051413,
+      "transported_rate_increment_indices": [
+        28,
+        77
+      ],
+      "transported_acceleration_increment_indices": [
+        27,
+        77
+      ],
+      "FK_path_length_mean_m": 0.6305058711983691,
+      "FK_endpoint_chord_mean_m": 0.3829559309698553,
+      "FK_path_to_endpoint_chord_ratio": 1.6464188701858748,
+      "FK_motion_range_rms_m": 0.12059794098941422,
+      "gap_mean_joint_speed_radps": 0.38300360023118096,
+      "adjacent_core_mean_joint_speed_radps": 0.1063110983832924,
+      "gap_to_adjacent_core_speed_ratio": 3.6026680756350165,
+      "hidden_SO3_error_rad": null,
+      "hidden_FK_error_m": null,
+      "evaluation_scope": "NO_HIDDEN_TRUTH_CROSS_SOURCE_NUMERICAL_DIAGNOSTICS_NOT_NATIVE24",
+      "proof": {
+        "available_boundary_frame_indices": [
+          26,
+          27,
+          28,
+          29,
+          78,
+          79,
+          80,
+          81
+        ],
+        "G1_actual_boundary_read_indices": [
+          27,
+          28,
+          29,
+          78,
+          79,
+          80
+        ],
+        "G0_actual_boundary_read_indices": null,
+        "hidden_read": false,
+        "phase_labels_used": false,
+        "rejection_fallback": false,
+        "guards": {
+          "G1": {
+            "status": "GEOMETRICALLY_ADMITTED_NOT_PHYSICS",
+            "selected_segments": 4,
+            "local_chart_radius_rad": 3.0915926535897933,
+            "trials": [
+              {
+                "segments": 4,
+                "maximum_chart_rad": 0.6965011856302008,
+                "jet_residual": 8.933825901280557e-16,
+                "eligible": true
+              }
+            ],
+            "hidden_read": false,
+            "endpoint_jets": "OBSERVED_THREE_FRAME_BODY_RATE_AND_ACCELERATION_WITH_RIGHT_JACOBIAN",
+            "internal_anchor": "SHORTEST_GEODESIC_NO_HIDDEN_POSE",
+            "physical_boundary_jet_residual": 8.933825901280557e-16
+          }
+        }
+      },
+      "bridge_sha256": "dd31f7afb920f15f82781a6735f7591734e7d0c6a5ee30569912f895495f6e7c",
+      "inherited": false
+    },
+    "full_rotation_sha256": "3e985d070fbe58cb12316d36034c1539229663ff0e6c962c9a011ee8734b92ae",
+    "target_frames": 360,
+    "protected_four_frames_exact": true
+  },
+  {
+    "case_key": "f98054618c10bac0a98674d3",
+    "method": "original_Uniform",
+    "source_uid": "male_ribbon",
+    "source_interval": [
+      0,
+      358
+    ],
+    "candidate_uid": "24d1d1366a9f369f551070b50161494d84fd6c22655d76e0f89ac87374ec1b58",
+    "audit": {
+      "candidate_uid": "24d1d1366a9f369f551070b50161494d84fd6c22655d76e0f89ac87374ec1b58",
+      "rotation_sha256": "a255bdb7b5732858f4bf703f42afa58556c194e801b0b079a17a1732d457e4d0",
+      "bridge_screen": false,
+      "quality": "NOT_EVALUABLE",
+      "native24": "NOT_EVALUABLE"
+    },
+    "GTWLocal": 0.16090579201778368,
+    "mapped_low_seconds": 4.3576097105508875,
+    "core": {
+      "frames": 360,
+      "time_between_centers_seconds": 11.966666666666667,
+      "low_cell_fraction": 0.40947075208913647,
+      "longest_low_seconds": 1.7,
+      "low_runs": [
+        {
+          "cells_half_open": [
+            9,
+            52
+          ],
+          "duration_seconds": 1.4333333333333333,
+          "angular_excursion_max_rad": 0.16223281860377348,
+          "FK_excursion_rms_max_m": 0.0213681661956305,
+          "left_censored": false,
+          "right_censored": false,
+          "semantic_truth": "UNKNOWN"
+        },
+        {
+          "cells_half_open": [
+            95,
+            132
+          ],
+          "duration_seconds": 1.2333333333333334,
+          "angular_excursion_max_rad": 0.10240352026994805,
+          "FK_excursion_rms_max_m": 0.024889639331989382,
+          "left_censored": false,
+          "right_censored": false,
+          "semantic_truth": "UNKNOWN"
+        },
+        {
+          "cells_half_open": [
+            177,
+            228
+          ],
+          "duration_seconds": 1.7,
+          "angular_excursion_max_rad": 0.08410100935949477,
+          "FK_excursion_rms_max_m": 0.018496758763713983,
+          "left_censored": false,
+          "right_censored": false,
+          "semantic_truth": "UNKNOWN"
+        }
+      ],
+      "FK_D3_q95": 296.0250229165446,
+      "FK_D3_max": 872.346742751023,
+      "FK_activity_path_mean_m": 3.469038905433584,
+      "FK_motion_range_rms_m": 0.1639167027750728,
+      "world_root_contact": "UNKNOWN",
+      "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+      "semantic_hold": "UNKNOWN"
+    },
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": false,
+      "metrics": {
+        "gap_D2": 6.88780886464521,
+        "gap_D3": 102.62111849018217,
+        "boundary_D3": 157.91097992123565,
+        "sampled_boundary_rate_jump": 1.0330540094755074,
+        "sampled_boundary_acc_jump": 26.97361822763583,
+        "shoulder_wrist_min_m": 0.09489912338094487,
+        "wrist_separation_max_m": 1.0517712361014766,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      },
+      "transported_boundary_velocity_increment_radps": 0.5276341252744772,
+      "transported_boundary_acceleration_increment_radps2": 3.4205448487796004,
+      "transported_rate_increment_indices": [
+        28,
+        77
+      ],
+      "transported_acceleration_increment_indices": [
+        27,
+        77
+      ],
+      "FK_path_length_mean_m": 0.4876568176528904,
+      "FK_endpoint_chord_mean_m": 0.2813921336234015,
+      "FK_path_to_endpoint_chord_ratio": 1.7330151037752224,
+      "FK_motion_range_rms_m": 0.09260600818971648,
+      "gap_mean_joint_speed_radps": 0.6625889997024021,
+      "adjacent_core_mean_joint_speed_radps": 0.938121103417808,
+      "gap_to_adjacent_core_speed_ratio": 0.7062936728407729,
+      "hidden_SO3_error_rad": null,
+      "hidden_FK_error_m": null,
+      "evaluation_scope": "NO_HIDDEN_TRUTH_CROSS_SOURCE_NUMERICAL_DIAGNOSTICS_NOT_NATIVE24",
+      "proof": {
+        "available_boundary_frame_indices": [
+          26,
+          27,
+          28,
+          29,
+          78,
+          79,
+          80,
+          81
+        ],
+        "G1_actual_boundary_read_indices": [
+          27,
+          28,
+          29,
+          78,
+          79,
+          80
+        ],
+        "G0_actual_boundary_read_indices": null,
+        "hidden_read": false,
+        "phase_labels_used": false,
+        "rejection_fallback": false,
+        "guards": {
+          "G1": {
+            "status": "GEOMETRICALLY_ADMITTED_NOT_PHYSICS",
+            "selected_segments": 4,
+            "local_chart_radius_rad": 3.0915926535897933,
+            "trials": [
+              {
+                "segments": 4,
+                "maximum_chart_rad": 1.1468127429745385,
+                "jet_residual": 8.959846753420209e-16,
+                "eligible": true
+              }
+            ],
+            "hidden_read": false,
+            "endpoint_jets": "OBSERVED_THREE_FRAME_BODY_RATE_AND_ACCELERATION_WITH_RIGHT_JACOBIAN",
+            "internal_anchor": "SHORTEST_GEODESIC_NO_HIDDEN_POSE",
+            "physical_boundary_jet_residual": 8.959846753420209e-16
+          }
+        }
+      },
+      "bridge_sha256": "4e0bab469c4df502ee2a1f94ee64d014cc4db350a63354dd84deefb9bebb6440",
+      "inherited": false
+    },
+    "full_rotation_sha256": "d96bbb48169062253fea16a3f8d463d99ea71d8c19c378d4f04d08edf33ecea8",
+    "target_frames": 360,
+    "protected_four_frames_exact": true
+  },
+  {
+    "case_key": "f98054618c10bac0a98674d3",
+    "method": "original_GTWLocal",
+    "source_uid": "male_ribbon",
+    "source_interval": [
+      0,
+      358
+    ],
+    "candidate_uid": "0797051834bbfd930ad2704c04f7b67b29b595a9b3e19f748a4cfae0d944ab35",
+    "audit": {
+      "candidate_uid": "0797051834bbfd930ad2704c04f7b67b29b595a9b3e19f748a4cfae0d944ab35",
+      "rotation_sha256": "2f652c5a86465db20793348ddc4b6643a6242157467b5d89c308153164826b0f",
+      "bridge_screen": false,
+      "quality": "NOT_EVALUABLE",
+      "native24": "NOT_EVALUABLE"
+    },
+    "GTWLocal": 0.15840858902671978,
+    "mapped_low_seconds": 4.509386144254048,
+    "core": {
+      "frames": 360,
+      "time_between_centers_seconds": 11.966666666666667,
+      "low_cell_fraction": 0.4233983286908078,
+      "longest_low_seconds": 1.7,
+      "low_runs": [
+        {
+          "cells_half_open": [
+            9,
+            52
+          ],
+          "duration_seconds": 1.4333333333333333,
+          "angular_excursion_max_rad": 0.16223281860377356,
+          "FK_excursion_rms_max_m": 0.021368166195630527,
+          "left_censored": false,
+          "right_censored": false,
+          "semantic_truth": "UNKNOWN"
+        },
+        {
+          "cells_half_open": [
+            95,
+            138
+          ],
+          "duration_seconds": 1.4333333333333333,
+          "angular_excursion_max_rad": 0.10264823186991491,
+          "FK_excursion_rms_max_m": 0.02489382628468163,
+          "left_censored": false,
+          "right_censored": false,
+          "semantic_truth": "UNKNOWN"
+        },
+        {
+          "cells_half_open": [
+            181,
+            232
+          ],
+          "duration_seconds": 1.7,
+          "angular_excursion_max_rad": 0.09610480843558966,
+          "FK_excursion_rms_max_m": 0.02009100649892274,
+          "left_censored": false,
+          "right_censored": false,
+          "semantic_truth": "UNKNOWN"
+        }
+      ],
+      "FK_D3_q95": 313.0685122195171,
+      "FK_D3_max": 784.9099172266066,
+      "FK_activity_path_mean_m": 3.4734009571671027,
+      "FK_motion_range_rms_m": 0.16364846869075833,
+      "world_root_contact": "UNKNOWN",
+      "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+      "semantic_hold": "UNKNOWN"
+    },
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": false,
+      "metrics": {
+        "gap_D2": 6.88780886464521,
+        "gap_D3": 102.62111849018217,
+        "boundary_D3": 157.91097992123565,
+        "sampled_boundary_rate_jump": 1.0330540094755074,
+        "sampled_boundary_acc_jump": 26.97361822763583,
+        "shoulder_wrist_min_m": 0.09489912338094487,
+        "wrist_separation_max_m": 1.0517712361014766,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      },
+      "transported_boundary_velocity_increment_radps": 0.5276341252744772,
+      "transported_boundary_acceleration_increment_radps2": 3.4205448487796004,
+      "transported_rate_increment_indices": [
+        28,
+        77
+      ],
+      "transported_acceleration_increment_indices": [
+        27,
+        77
+      ],
+      "FK_path_length_mean_m": 0.4876568176528904,
+      "FK_endpoint_chord_mean_m": 0.2813921336234015,
+      "FK_path_to_endpoint_chord_ratio": 1.7330151037752224,
+      "FK_motion_range_rms_m": 0.09260600818971648,
+      "gap_mean_joint_speed_radps": 0.6625889997024021,
+      "adjacent_core_mean_joint_speed_radps": 0.938121103417808,
+      "gap_to_adjacent_core_speed_ratio": 0.7062936728407729,
+      "hidden_SO3_error_rad": null,
+      "hidden_FK_error_m": null,
+      "evaluation_scope": "NO_HIDDEN_TRUTH_CROSS_SOURCE_NUMERICAL_DIAGNOSTICS_NOT_NATIVE24",
+      "proof": {
+        "available_boundary_frame_indices": [
+          26,
+          27,
+          28,
+          29,
+          78,
+          79,
+          80,
+          81
+        ],
+        "G1_actual_boundary_read_indices": [
+          27,
+          28,
+          29,
+          78,
+          79,
+          80
+        ],
+        "G0_actual_boundary_read_indices": null,
+        "hidden_read": false,
+        "phase_labels_used": false,
+        "rejection_fallback": false,
+        "guards": {
+          "G1": {
+            "status": "GEOMETRICALLY_ADMITTED_NOT_PHYSICS",
+            "selected_segments": 4,
+            "local_chart_radius_rad": 3.0915926535897933,
+            "trials": [
+              {
+                "segments": 4,
+                "maximum_chart_rad": 1.1468127429745385,
+                "jet_residual": 8.959846753420209e-16,
+                "eligible": true
+              }
+            ],
+            "hidden_read": false,
+            "endpoint_jets": "OBSERVED_THREE_FRAME_BODY_RATE_AND_ACCELERATION_WITH_RIGHT_JACOBIAN",
+            "internal_anchor": "SHORTEST_GEODESIC_NO_HIDDEN_POSE",
+            "physical_boundary_jet_residual": 8.959846753420209e-16
+          }
+        }
+      },
+      "bridge_sha256": "4e0bab469c4df502ee2a1f94ee64d014cc4db350a63354dd84deefb9bebb6440",
+      "inherited": false
+    },
+    "full_rotation_sha256": "b55335f3ab182ed1d74835c52060dfd5715dc89cf8c082d6153c71744d78ab84",
+    "target_frames": 360,
+    "protected_four_frames_exact": true
+  }
+]

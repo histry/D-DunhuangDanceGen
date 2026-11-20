@@ -1,0 +1,302 @@
+[
+  {
+    "case_key": "f8d91db44c816c9c6b18cfb8",
+    "source": "original",
+    "decision": {
+      "candidate_uid": "c897d7408d1a3b8078984920b4e39a847895ad34507db78b35259072c229086c",
+      "rule": "Uniform",
+      "scope": "MECHANISM_DIAGNOSTIC_ONLY",
+      "can_route": false
+    }
+  },
+  {
+    "case_key": "f8d91db44c816c9c6b18cfb8",
+    "source": "original",
+    "decision": {
+      "candidate_uid": "867362b23c31a2b89ba9ab9b675d176a86132dfc2a693ea7040025a4e0d966ba",
+      "rule": "GTWLocal",
+      "scope": "MECHANISM_DIAGNOSTIC_ONLY",
+      "can_route": false
+    }
+  },
+  {
+    "case_key": "f8d91db44c816c9c6b18cfb8",
+    "source": "original",
+    "decision": {
+      "candidate_uid": "c4416cf5729b03522cef56f04c509aaabd28fd4e5623bb2b0a18c2ce98720ac3",
+      "rule": "MinHoldDiagnostic",
+      "scope": "MECHANISM_DIAGNOSTIC_ONLY",
+      "can_route": false
+    }
+  },
+  {
+    "case_key": "f8d91db44c816c9c6b18cfb8",
+    "source": "alternative",
+    "decision": {
+      "candidate_uid": "d29d72924678086cab5ae5e44f8f100bdfeb3387120c9c940c7e2fd4858c2872",
+      "rule": "Uniform",
+      "scope": "MECHANISM_DIAGNOSTIC_ONLY",
+      "can_route": false
+    }
+  },
+  {
+    "case_key": "f8d91db44c816c9c6b18cfb8",
+    "source": "alternative",
+    "decision": {
+      "candidate_uid": "d29d72924678086cab5ae5e44f8f100bdfeb3387120c9c940c7e2fd4858c2872",
+      "rule": "GTWLocal",
+      "scope": "MECHANISM_DIAGNOSTIC_ONLY",
+      "can_route": false
+    }
+  },
+  {
+    "case_key": "f8d91db44c816c9c6b18cfb8",
+    "source": "alternative",
+    "decision": {
+      "candidate_uid": "d29d72924678086cab5ae5e44f8f100bdfeb3387120c9c940c7e2fd4858c2872",
+      "rule": "MinHoldDiagnostic",
+      "scope": "MECHANISM_DIAGNOSTIC_ONLY",
+      "can_route": false
+    }
+  },
+  {
+    "case_key": "4a69181188a9e248a0a6330b",
+    "source": "original",
+    "decision": {
+      "candidate_uid": "1fcf7f831ae758fbc0ade5b1ef2ee0890ca6fe36dbbfc165bd68ac47690248d8",
+      "rule": "Uniform",
+      "scope": "MECHANISM_DIAGNOSTIC_ONLY",
+      "can_route": false
+    }
+  },
+  {
+    "case_key": "4a69181188a9e248a0a6330b",
+    "source": "original",
+    "decision": {
+      "candidate_uid": "c897a77f5c74b552291b37f46a83e436f83be885a75b079d3c0291a51894762f",
+      "rule": "GTWLocal",
+      "scope": "MECHANISM_DIAGNOSTIC_ONLY",
+      "can_route": false
+    }
+  },
+  {
+    "case_key": "4a69181188a9e248a0a6330b",
+    "source": "original",
+    "decision": {
+      "candidate_uid": "c897a77f5c74b552291b37f46a83e436f83be885a75b079d3c0291a51894762f",
+      "rule": "MinHoldDiagnostic",
+      "scope": "MECHANISM_DIAGNOSTIC_ONLY",
+      "can_route": false
+    }
+  },
+  {
+    "case_key": "4a69181188a9e248a0a6330b",
+    "source": "alternative",
+    "decision": {
+      "candidate_uid": "084dbdf6777d0c4ee29b54d5ae2436c22fe53dcb3332f3ecd666691b0167ea43",
+      "rule": "Uniform",
+      "scope": "MECHANISM_DIAGNOSTIC_ONLY",
+      "can_route": false
+    }
+  },
+  {
+    "case_key": "4a69181188a9e248a0a6330b",
+    "source": "alternative",
+    "decision": {
+      "candidate_uid": "084dbdf6777d0c4ee29b54d5ae2436c22fe53dcb3332f3ecd666691b0167ea43",
+      "rule": "GTWLocal",
+      "scope": "MECHANISM_DIAGNOSTIC_ONLY",
+      "can_route": false
+    }
+  },
+  {
+    "case_key": "4a69181188a9e248a0a6330b",
+    "source": "alternative",
+    "decision": {
+      "candidate_uid": "084dbdf6777d0c4ee29b54d5ae2436c22fe53dcb3332f3ecd666691b0167ea43",
+      "rule": "MinHoldDiagnostic",
+      "scope": "MECHANISM_DIAGNOSTIC_ONLY",
+      "can_route": false
+    }
+  },
+  {
+    "case_key": "73cb91d45a9d9530430d1650",
+    "source": "original",
+    "decision": {
+      "candidate_uid": "9137d981f1f9a3c860b128e13893e4eed52834403022f488408951915af49426",
+      "rule": "Uniform",
+      "scope": "MECHANISM_DIAGNOSTIC_ONLY",
+      "can_route": false
+    }
+  },
+  {
+    "case_key": "73cb91d45a9d9530430d1650",
+    "source": "original",
+    "decision": {
+      "candidate_uid": "04d53f5322ffb674e09099aef23b845c950f679029cf3ee6ed3c17edd2ccd6d4",
+      "rule": "GTWLocal",
+      "scope": "MECHANISM_DIAGNOSTIC_ONLY",
+      "can_route": false
+    }
+  },
+  {
+    "case_key": "73cb91d45a9d9530430d1650",
+    "source": "original",
+    "decision": {
+      "candidate_uid": "ed38c55f617f4d4b35e415b13705d9000f2fdfc98909f2d3d90153d95767801d",
+      "rule": "MinHoldDiagnostic",
+      "scope": "MECHANISM_DIAGNOSTIC_ONLY",
+      "can_route": false
+    }
+  },
+  {
+    "case_key": "73cb91d45a9d9530430d1650",
+    "source": "alternative",
+    "decision": {
+      "candidate_uid": "d2b62ebdaa527a27c67d10877aa89551672a48805961bff9aa9f35a4016c74df",
+      "rule": "Uniform",
+      "scope": "MECHANISM_DIAGNOSTIC_ONLY",
+      "can_route": false
+    }
+  },
+  {
+    "case_key": "73cb91d45a9d9530430d1650",
+    "source": "alternative",
+    "decision": {
+      "candidate_uid": "d2b62ebdaa527a27c67d10877aa89551672a48805961bff9aa9f35a4016c74df",
+      "rule": "GTWLocal",
+      "scope": "MECHANISM_DIAGNOSTIC_ONLY",
+      "can_route": false
+    }
+  },
+  {
+    "case_key": "73cb91d45a9d9530430d1650",
+    "source": "alternative",
+    "decision": {
+      "candidate_uid": "d2b62ebdaa527a27c67d10877aa89551672a48805961bff9aa9f35a4016c74df",
+      "rule": "MinHoldDiagnostic",
+      "scope": "MECHANISM_DIAGNOSTIC_ONLY",
+      "can_route": false
+    }
+  },
+  {
+    "case_key": "e5722e89378a4fae9c0a660d",
+    "source": "original",
+    "decision": {
+      "candidate_uid": "87b811293ce53e0f2d4eb8dc235ff39d661cc478946bd5650d8416dcf5aca9c4",
+      "rule": "Uniform",
+      "scope": "MECHANISM_DIAGNOSTIC_ONLY",
+      "can_route": false
+    }
+  },
+  {
+    "case_key": "e5722e89378a4fae9c0a660d",
+    "source": "original",
+    "decision": {
+      "candidate_uid": "87b811293ce53e0f2d4eb8dc235ff39d661cc478946bd5650d8416dcf5aca9c4",
+      "rule": "GTWLocal",
+      "scope": "MECHANISM_DIAGNOSTIC_ONLY",
+      "can_route": false
+    }
+  },
+  {
+    "case_key": "e5722e89378a4fae9c0a660d",
+    "source": "original",
+    "decision": {
+      "candidate_uid": "87b811293ce53e0f2d4eb8dc235ff39d661cc478946bd5650d8416dcf5aca9c4",
+      "rule": "MinHoldDiagnostic",
+      "scope": "MECHANISM_DIAGNOSTIC_ONLY",
+      "can_route": false
+    }
+  },
+  {
+    "case_key": "b7b2ddb39b2addc9619fc709",
+    "source": "original",
+    "decision": {
+      "candidate_uid": "2ca0db6e4a17c4275c231bedfd06974ca132acfba84b5919379e18af634b2166",
+      "rule": "Uniform",
+      "scope": "MECHANISM_DIAGNOSTIC_ONLY",
+      "can_route": false
+    }
+  },
+  {
+    "case_key": "b7b2ddb39b2addc9619fc709",
+    "source": "original",
+    "decision": {
+      "candidate_uid": "5fa01561e3be858e09a0a5b9231761376254305a870511145a6a6ede8e9800ce",
+      "rule": "GTWLocal",
+      "scope": "MECHANISM_DIAGNOSTIC_ONLY",
+      "can_route": false
+    }
+  },
+  {
+    "case_key": "b7b2ddb39b2addc9619fc709",
+    "source": "original",
+    "decision": {
+      "candidate_uid": "116d8660efa7d69052ba824b8918b16ad740564a26bd1863a1e56dd2cdb2b100",
+      "rule": "MinHoldDiagnostic",
+      "scope": "MECHANISM_DIAGNOSTIC_ONLY",
+      "can_route": false
+    }
+  },
+  {
+    "case_key": "f98054618c10bac0a98674d3",
+    "source": "original",
+    "decision": {
+      "candidate_uid": "24d1d1366a9f369f551070b50161494d84fd6c22655d76e0f89ac87374ec1b58",
+      "rule": "Uniform",
+      "scope": "MECHANISM_DIAGNOSTIC_ONLY",
+      "can_route": false
+    }
+  },
+  {
+    "case_key": "f98054618c10bac0a98674d3",
+    "source": "original",
+    "decision": {
+      "candidate_uid": "0797051834bbfd930ad2704c04f7b67b29b595a9b3e19f748a4cfae0d944ab35",
+      "rule": "GTWLocal",
+      "scope": "MECHANISM_DIAGNOSTIC_ONLY",
+      "can_route": false
+    }
+  },
+  {
+    "case_key": "f98054618c10bac0a98674d3",
+    "source": "original",
+    "decision": {
+      "candidate_uid": "4fd6245189b20c9e2e25fb1e89f936277b082e984d544d98cfc6cacf3d34b73a",
+      "rule": "MinHoldDiagnostic",
+      "scope": "MECHANISM_DIAGNOSTIC_ONLY",
+      "can_route": false
+    }
+  },
+  {
+    "case_key": "f98054618c10bac0a98674d3",
+    "source": "alternative",
+    "decision": {
+      "candidate_uid": "0af21dc56647ddbf1fff672e4e145fa1180dbc98f03a7c778814b95c7a57ad32",
+      "rule": "Uniform",
+      "scope": "MECHANISM_DIAGNOSTIC_ONLY",
+      "can_route": false
+    }
+  },
+  {
+    "case_key": "f98054618c10bac0a98674d3",
+    "source": "alternative",
+    "decision": {
+      "candidate_uid": "0af21dc56647ddbf1fff672e4e145fa1180dbc98f03a7c778814b95c7a57ad32",
+      "rule": "GTWLocal",
+      "scope": "MECHANISM_DIAGNOSTIC_ONLY",
+      "can_route": false
+    }
+  },
+  {
+    "case_key": "f98054618c10bac0a98674d3",
+    "source": "alternative",
+    "decision": {
+      "candidate_uid": "0af21dc56647ddbf1fff672e4e145fa1180dbc98f03a7c778814b95c7a57ad32",
+      "rule": "MinHoldDiagnostic",
+      "scope": "MECHANISM_DIAGNOSTIC_ONLY",
+      "can_route": false
+    }
+  }
+]

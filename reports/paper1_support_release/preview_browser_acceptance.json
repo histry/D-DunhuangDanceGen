@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "scope": "MAIN_PREVIEW_BEFORE_SOURCE_REPLACEMENT_CONTROLS",
+  "observed_cases": 6,
+  "raw_track_options": 14,
+  "step_observation": "0->1 frames; 0.000->0.033 seconds",
+  "variable_budget_observation": "male_pipa_1: Core450; pair948; seek460=15.333s",
+  "play_observation": "pair460->469 at playbackRate0.5; pause verified",
+  "original_speed": "independent natural source clock; raw male_drum_1 observed frame157/359",
+  "initial_service_defect": "Audio seeking reset to zero because temporary HTTP server lacked Range support",
+  "service_correction": "127.0.0.1 whitelist-only service now serves byte Range206; step and seek rechecked",
+  "perceptual_quality": "NOT_EVALUABLE",
+  "formal_human_records": 0,
+  "manifest_sha256": "1af4c94c3cfd432adf74e3d66018e5f4c44d1c3f41975366c85d235b84f89e21",
+  "roundoff_correction_rechecked_in_browser": true
+}

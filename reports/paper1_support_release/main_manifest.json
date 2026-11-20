@@ -1,0 +1,28 @@
+{
+  "code": {
+    "__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "contracts.py": "b223b48cecbedce6f67830129469461ca0be848052ce4c449fc25fec266ca679",
+    "protocol.json": "e584c22fd0f150ec2b58add2709fb0c9a53b9ef14a2d3f4027f176903141203f",
+    "study.py": "bbd4196e631be0b2679e7e3f55cd67b19fb19033fa5d4bdb1632e13f77352df2",
+    "test_contracts.py": "59ab58547958f1d8b909d796076b40b7e9d1fd6a263504c6fd0ca8526cc26d42",
+    "verify.py": "f3be468e231087f861a3c1067d0fe6fd33082d98d91fc68f160290e45dc86873",
+    "view.py": "844227341c6c4bd0ca9e8488a2f3b02337a0d918e24983f98e013a78e84fbf8d",
+    "viewer.html": "c866f21ff57fa78d4d2f62600ad30cdb12e660694e7df39a6ae87c5188ec930b"
+  },
+  "dependencies": {
+    "complete_r36/core.py": "03f296665e48ca2fa2ef8a866baaf2b4b786afeb22f468b6faeedac7225e9901",
+    "warp_coupling_r53/warp_lattice.py": "ff804bc34a81943f7549171af6bf3f1bfe5534d4bb2bc7df6071e30130f5e2ba",
+    "hold_timing/metrics.py": "45ace4b8d52b19af6e68f60b2b0168f1babbf47acbcd6a24f800c6b1ed3f1cd6",
+    "gtw_kinematic_baseline/features.py": "d6920145393c340d571405833837f26dd49aeaffb6a0c216db1d479683e246ac",
+    "duration_r62/cross_source.py": "d2a5dc233621d3f653ddd2a3f2721d7edb3340f580fe08704a06ffef549e8dce",
+    "manifold_bridge_r47/geometry.py": "4646ff82c2775b32e893335abe0aac43cdd4dfbabc643d230e8985a347adea7f"
+  },
+  "files": {
+    "arrays.npz": "02579026c2c4105474e6b894568d5ddb00b354a57fd484b74a46bb7201fa8569",
+    "decisions.json": "48ce84a1eca68394c3085166a7dce811f81adff604b5707343a6c03b0c0d012e",
+    "pools.json": "aa6ec19b700e6bcf9cfec5679079761f1358bf0623108d8e1d2af823982f7c03",
+    "records.json": "32e1d8a68a23418b7d3d2eba561c790e336ba61f54f2305b91e7b33e31385b6e",
+    "registration.json": "dd525e32ac4817451fb2229e3c535c92d173c1eeaada72a4121dfd7a1df989cd",
+    "summary.json": "8ec2bea2dd0e09f2377f096a52f6938106e19908f60cacc4a6ac8323c3325e05"
+  }
+}

@@ -1,0 +1,226 @@
+{
+  "effects": [
+    {
+      "case_key": "f8d91db44c816c9c6b18cfb8",
+      "source_uid": "female_FeiTian",
+      "target_frames": 240,
+      "timing_only": {
+        "longest_low_seconds": -1.0666666666666664,
+        "mapped_source_low_seconds": -0.1986230142688168,
+        "FK_D3_q95": -18.215530351386207,
+        "FK_activity_path_mean_m": 0.0004293235555068442
+      },
+      "timing_only_G1_identical": true,
+      "source_only_uniform": {
+        "longest_low_seconds": -1.7,
+        "mapped_source_low_seconds": -2.3165484633569626,
+        "FK_D3_q95": 4.445650347185776,
+        "FK_activity_path_mean_m": 0.35939198104840053
+      },
+      "source_and_clock": {
+        "longest_low_seconds": -1.7,
+        "mapped_source_low_seconds": -2.3165484633569626,
+        "FK_D3_q95": 4.445650347185776,
+        "FK_activity_path_mean_m": 0.35939198104840053
+      },
+      "alternative_status": "AVAILABLE",
+      "source_confound": "SAME_RECORDING_DIFFERENT_SOURCE_CONTENT_AND_UP_TO_10_PERCENT_NATURAL_LENGTH_DIFFERENCE; FINITE_CLOCK_POOLS_DIFFER; NOT_PURE_WARP_EFFECT",
+      "quality": "NOT_EVALUABLE"
+    },
+    {
+      "case_key": "4a69181188a9e248a0a6330b",
+      "source_uid": "female_lotus",
+      "target_frames": 240,
+      "timing_only": {
+        "longest_low_seconds": -0.09999999999999987,
+        "mapped_source_low_seconds": -0.04895605149271853,
+        "FK_D3_q95": -9.756560763315264,
+        "FK_activity_path_mean_m": -0.002808443711781128
+      },
+      "timing_only_G1_identical": true,
+      "source_only_uniform": {
+        "longest_low_seconds": -1.6666666666666665,
+        "mapped_source_low_seconds": -2.144871794871797,
+        "FK_D3_q95": 282.3926855914103,
+        "FK_activity_path_mean_m": 2.183342129189637
+      },
+      "source_and_clock": {
+        "longest_low_seconds": -1.6666666666666665,
+        "mapped_source_low_seconds": -2.144871794871797,
+        "FK_D3_q95": 282.3926855914103,
+        "FK_activity_path_mean_m": 2.183342129189637
+      },
+      "alternative_status": "AVAILABLE",
+      "source_confound": "SAME_RECORDING_DIFFERENT_SOURCE_CONTENT_AND_UP_TO_10_PERCENT_NATURAL_LENGTH_DIFFERENCE; FINITE_CLOCK_POOLS_DIFFER; NOT_PURE_WARP_EFFECT",
+      "quality": "NOT_EVALUABLE"
+    },
+    {
+      "case_key": "73cb91d45a9d9530430d1650",
+      "source_uid": "male_meditation",
+      "target_frames": 360,
+      "timing_only": {
+        "longest_low_seconds": -0.7,
+        "mapped_source_low_seconds": -0.15926380755135572,
+        "FK_D3_q95": -2.8123731137783707,
+        "FK_activity_path_mean_m": 0.00027338840224810923
+      },
+      "timing_only_G1_identical": true,
+      "source_only_uniform": {
+        "longest_low_seconds": -0.5333333333333334,
+        "mapped_source_low_seconds": -2.1924161034274867,
+        "FK_D3_q95": 54.784771961293245,
+        "FK_activity_path_mean_m": 0.7545247911539132
+      },
+      "source_and_clock": {
+        "longest_low_seconds": -0.5333333333333334,
+        "mapped_source_low_seconds": -2.1924161034274867,
+        "FK_D3_q95": 54.784771961293245,
+        "FK_activity_path_mean_m": 0.7545247911539132
+      },
+      "alternative_status": "AVAILABLE",
+      "source_confound": "SAME_RECORDING_DIFFERENT_SOURCE_CONTENT_AND_UP_TO_10_PERCENT_NATURAL_LENGTH_DIFFERENCE; FINITE_CLOCK_POOLS_DIFFER; NOT_PURE_WARP_EFFECT",
+      "quality": "NOT_EVALUABLE"
+    },
+    {
+      "case_key": "e5722e89378a4fae9c0a660d",
+      "source_uid": "male_pipa_1",
+      "target_frames": 450,
+      "timing_only": {
+        "longest_low_seconds": 0.0,
+        "mapped_source_low_seconds": 0.0,
+        "FK_D3_q95": 0.0,
+        "FK_activity_path_mean_m": 0.0
+      },
+      "timing_only_G1_identical": true,
+      "source_only_uniform": null,
+      "source_and_clock": null,
+      "alternative_status": "MISSING_MATCHED_SOURCE",
+      "source_confound": "SAME_RECORDING_DIFFERENT_SOURCE_CONTENT_AND_UP_TO_10_PERCENT_NATURAL_LENGTH_DIFFERENCE; FINITE_CLOCK_POOLS_DIFFER; NOT_PURE_WARP_EFFECT",
+      "quality": "NOT_EVALUABLE"
+    },
+    {
+      "case_key": "b7b2ddb39b2addc9619fc709",
+      "source_uid": "male_pipa_2",
+      "target_frames": 360,
+      "timing_only": {
+        "longest_low_seconds": 0.3999999999999999,
+        "mapped_source_low_seconds": 0.3974078621338224,
+        "FK_D3_q95": 19.39733288144066,
+        "FK_activity_path_mean_m": 0.0009176442031482157
+      },
+      "timing_only_G1_identical": true,
+      "source_only_uniform": null,
+      "source_and_clock": null,
+      "alternative_status": "MISSING_MATCHED_SOURCE",
+      "source_confound": "SAME_RECORDING_DIFFERENT_SOURCE_CONTENT_AND_UP_TO_10_PERCENT_NATURAL_LENGTH_DIFFERENCE; FINITE_CLOCK_POOLS_DIFFER; NOT_PURE_WARP_EFFECT",
+      "quality": "NOT_EVALUABLE"
+    },
+    {
+      "case_key": "f98054618c10bac0a98674d3",
+      "source_uid": "male_ribbon",
+      "target_frames": 360,
+      "timing_only": {
+        "longest_low_seconds": 0.0,
+        "mapped_source_low_seconds": 0.1517764337031604,
+        "FK_D3_q95": 17.043489302972546,
+        "FK_activity_path_mean_m": 0.004362051733518779
+      },
+      "timing_only_G1_identical": true,
+      "source_only_uniform": {
+        "longest_low_seconds": -1.7,
+        "mapped_source_low_seconds": -4.3576097105508875,
+        "FK_D3_q95": 6.490844776052768,
+        "FK_activity_path_mean_m": 5.677258032023987
+      },
+      "source_and_clock": {
+        "longest_low_seconds": -1.7,
+        "mapped_source_low_seconds": -4.3576097105508875,
+        "FK_D3_q95": 6.490844776052768,
+        "FK_activity_path_mean_m": 5.677258032023987
+      },
+      "alternative_status": "AVAILABLE",
+      "source_confound": "SAME_RECORDING_DIFFERENT_SOURCE_CONTENT_AND_UP_TO_10_PERCENT_NATURAL_LENGTH_DIFFERENCE; FINITE_CLOCK_POOLS_DIFFER; NOT_PURE_WARP_EFFECT",
+      "quality": "NOT_EVALUABLE"
+    }
+  ],
+  "capacity_ranges": [
+    {
+      "case_key": "f8d91db44c816c9c6b18cfb8",
+      "source": "original",
+      "candidates": 9,
+      "minimum_mapped_source_low_seconds": 2.1042143511129288,
+      "maximum_mapped_source_low_seconds": 2.686754815742071
+    },
+    {
+      "case_key": "f8d91db44c816c9c6b18cfb8",
+      "source": "alternative",
+      "candidates": 1,
+      "minimum_mapped_source_low_seconds": 0,
+      "maximum_mapped_source_low_seconds": 0
+    },
+    {
+      "case_key": "4a69181188a9e248a0a6330b",
+      "source": "original",
+      "candidates": 6,
+      "minimum_mapped_source_low_seconds": 2.0959157433790785,
+      "maximum_mapped_source_low_seconds": 2.4903647465882717
+    },
+    {
+      "case_key": "4a69181188a9e248a0a6330b",
+      "source": "alternative",
+      "candidates": 1,
+      "minimum_mapped_source_low_seconds": 0,
+      "maximum_mapped_source_low_seconds": 0
+    },
+    {
+      "case_key": "73cb91d45a9d9530430d1650",
+      "source": "original",
+      "candidates": 24,
+      "minimum_mapped_source_low_seconds": 3.9527832400746705,
+      "maximum_mapped_source_low_seconds": 4.595533382110283
+    },
+    {
+      "case_key": "73cb91d45a9d9530430d1650",
+      "source": "alternative",
+      "candidates": 1,
+      "minimum_mapped_source_low_seconds": 1.9221070811744376,
+      "maximum_mapped_source_low_seconds": 1.9221070811744376
+    },
+    {
+      "case_key": "e5722e89378a4fae9c0a660d",
+      "source": "original",
+      "candidates": 7,
+      "minimum_mapped_source_low_seconds": 0.8918684047175608,
+      "maximum_mapped_source_low_seconds": 1.2885481571583455
+    },
+    {
+      "case_key": "b7b2ddb39b2addc9619fc709",
+      "source": "original",
+      "candidates": 27,
+      "minimum_mapped_source_low_seconds": 1.9828366659045655,
+      "maximum_mapped_source_low_seconds": 3.175494242354008
+    },
+    {
+      "case_key": "f98054618c10bac0a98674d3",
+      "source": "original",
+      "candidates": 14,
+      "minimum_mapped_source_low_seconds": 4.158005485769717,
+      "maximum_mapped_source_low_seconds": 4.557429075929238
+    },
+    {
+      "case_key": "f98054618c10bac0a98674d3",
+      "source": "alternative",
+      "candidates": 1,
+      "minimum_mapped_source_low_seconds": 0,
+      "maximum_mapped_source_low_seconds": 0
+    }
+  ],
+  "original_GTW_changed": 5,
+  "original_GTW_longer_low": 1,
+  "source_alternatives": 4,
+  "fixed_source_bridge_invariance": true,
+  "independent_music_quality": "NOT_EVALUABLE",
+  "human_records": 0,
+  "R74": "NOT_STARTED",
+  "can_route": false
+}

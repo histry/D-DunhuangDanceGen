@@ -1,0 +1,104 @@
+{
+  "status": "PASS",
+  "files": [
+    {
+      "path": "main/viewer/index.html",
+      "bytes": 7833321,
+      "sha256": "82382509251bb62ec9e4a0a1835088e8615ff38aa23b2806c56bc2f2f0aedc1e"
+    },
+    {
+      "path": "main/viewer/music_0_240.wav",
+      "bytes": 1126478,
+      "sha256": "483cd1676926d0ae8ea553428f8a967152e84eadbc88882888d01b653ad41c8c"
+    },
+    {
+      "path": "main/viewer/music_0_450.wav",
+      "bytes": 2022478,
+      "sha256": "d9a725e0fe339a6e01c31eae9591768da8ce749b38dcaf03bbb5e9bf830ec659"
+    },
+    {
+      "path": "main/viewer/music_1_240.wav",
+      "bytes": 1126478,
+      "sha256": "13e03b3940f72cebcc219aadfe76ec59cfa7349bfc51b6c6230e2d624da57422"
+    },
+    {
+      "path": "main/viewer/music_1_360.wav",
+      "bytes": 1638478,
+      "sha256": "658ba22093e813fe2dc7c2d6df98fc8cacbc3ca4aff5cc1332d0e8ec48d12175"
+    },
+    {
+      "path": "main/viewer/music_2_360.wav",
+      "bytes": 1638478,
+      "sha256": "04683148e3c6fd8512d800a82fac39a28d5cb8f77e69724c995ab2cd00b21348"
+    },
+    {
+      "path": "main/viewer/protocol.json",
+      "bytes": 1427,
+      "sha256": "3219d7d629a7c5a89a7feffd0bbbc39ff747e1427518d47e854783a2b9b3ced1"
+    },
+    {
+      "path": "main/viewer/sources.html",
+      "bytes": 2645688,
+      "sha256": "a158e22723098cfa2d3320a6f0d7ea7c46ab46f5278d1ce2c7213006960a7279"
+    },
+    {
+      "path": "controls/viewer/index.html",
+      "bytes": 17165341,
+      "sha256": "f1efe2b6f45625747a181b5b176ad41eb8f911a68d7ee50e1bae3dd21531ec5a"
+    },
+    {
+      "path": "controls/viewer/music_0_240.wav",
+      "bytes": 1126478,
+      "sha256": "483cd1676926d0ae8ea553428f8a967152e84eadbc88882888d01b653ad41c8c"
+    },
+    {
+      "path": "controls/viewer/music_0_450.wav",
+      "bytes": 2022478,
+      "sha256": "d9a725e0fe339a6e01c31eae9591768da8ce749b38dcaf03bbb5e9bf830ec659"
+    },
+    {
+      "path": "controls/viewer/music_1_240.wav",
+      "bytes": 1126478,
+      "sha256": "13e03b3940f72cebcc219aadfe76ec59cfa7349bfc51b6c6230e2d624da57422"
+    },
+    {
+      "path": "controls/viewer/music_1_360.wav",
+      "bytes": 1638478,
+      "sha256": "658ba22093e813fe2dc7c2d6df98fc8cacbc3ca4aff5cc1332d0e8ec48d12175"
+    },
+    {
+      "path": "controls/viewer/music_2_360.wav",
+      "bytes": 1638478,
+      "sha256": "04683148e3c6fd8512d800a82fac39a28d5cb8f77e69724c995ab2cd00b21348"
+    },
+    {
+      "path": "controls/viewer/music_coordination.html",
+      "bytes": 9469403,
+      "sha256": "991e68f5d1985624a54daf5a411ba2357b715a89e1c3df61a7257970175b7d68"
+    },
+    {
+      "path": "controls/viewer/naturalness.html",
+      "bytes": 9469396,
+      "sha256": "740b8ebc624c665f2aab8bbaa28e2e67eb9bf9a91816f8a959ae52ede4517f7b"
+    },
+    {
+      "path": "controls/viewer/protocol.json",
+      "bytes": 1859,
+      "sha256": "7e0e975c477165af31dcd9847d0db8a93a22376d96e3df3ceab3ace73a405766"
+    },
+    {
+      "path": "controls/viewer/sources.html",
+      "bytes": 2645688,
+      "sha256": "a158e22723098cfa2d3320a6f0d7ea7c46ab46f5278d1ce2c7213006960a7279"
+    },
+    {
+      "path": "index.html",
+      "bytes": 1195,
+      "sha256": "2b10dbf40df6871fe7b0a45561d1e9b45d26514298d9731019686724a3e92cbf"
+    }
+  ],
+  "total_bytes": 64338098,
+  "raw_rotation_npz": false,
+  "admin_mapping_transferred": false,
+  "public_media": false
+}

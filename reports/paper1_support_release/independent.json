@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "fresh_process": true,
+  "results": {
+    "main": {
+      "exact": true,
+      "differences": [],
+      "manifest_sha256": "1af4c94c3cfd432adf74e3d66018e5f4c44d1c3f41975366c85d235b84f89e21"
+    },
+    "controls": {
+      "exact": true,
+      "differences": [],
+      "manifest_sha256": "2e1597ea4ca59ae71fbc0e7ecc21fd7d32da54bfd55f9a748a1369f2fda2f10e"
+    }
+  },
+  "optimizer_calls": 0,
+  "training_steps": 0,
+  "human_records": 0,
+  "can_route": false
+}

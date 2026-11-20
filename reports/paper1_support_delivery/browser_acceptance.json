@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "source_options": 14,
+  "source_preview": "FIRST_12_SECONDS_NATURAL_30FPS",
+  "main_before_controls": true,
+  "corrected_main_rechecked": true,
+  "controls_case": "male_meditation",
+  "frame_step": "0->1 / 0.000->0.033s",
+  "variable_pair": "male_pipa_1 450+48+450=948; seek460->461 / 15.333->15.367s",
+  "rejected_case": "male_ribbon: all six arms visibly labelled G1 not passed",
+  "naturalness": "Project7 silent; frame1/767",
+  "music": "Project10 audio; frame461/947; Project16 unavailable",
+  "ratings_written": 0,
+  "screenshot_sha256": "0a1751859ec746b96399b42d5e851b1099dfe27ab787d01f25f6626ca871ac92",
+  "screenshot_path": "outputs/paper1_support_01/receipts/browser_acceptance.jpg",
+  "temporary_service": "127.0.0.1:56771 whitelist and Range206",
+  "perceptual_quality": "NOT_EVALUABLE"
+}

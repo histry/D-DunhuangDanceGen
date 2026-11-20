@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "differences": [],
+  "scientific_producer_code_unchanged": true,
+  "formal_and_legacy_baselines_unchanged": true,
+  "head": "0836488e025a6b999432979970305c2117f7c81c",
+  "changed_paths": [
+    ".gitattributes",
+    "README.md",
+    "docs/PAPER1_RESEARCH_INDEX.md",
+    "src/dunhuang/research/paper1_support/README.md",
+    "src/dunhuang/research/paper1_support/__init__.py",
+    "src/dunhuang/research/paper1_support/contracts.py",
+    "src/dunhuang/research/paper1_support/postprocess.py",
+    "src/dunhuang/research/paper1_support/protocol.json",
+    "src/dunhuang/research/paper1_support/study.py",
+    "src/dunhuang/research/paper1_support/test_contracts.py",
+    "src/dunhuang/research/paper1_support/verify.py",
+    "src/dunhuang/research/paper1_support/view.py",
+    "src/dunhuang/research/paper1_support/viewer.html"
+  ],
+  "temporary_asset_uploads": []
+}

@@ -21,3 +21,7 @@ PYTHONPATH=src python -m dunhuang.research.paper1_support.verify
 ```
 
 当前没有独立人类偏好；音乐质量、定势艺术意义、世界Root／接触和Native24保持不可评。无网络训练、R74、SDMR路由或整曲准入升级。历史源代码与回执属于复验依赖，不作无依据删除。
+
+归因、匿名评价和统一入口分别由 `postprocess attribution`、`postprocess reviews`、`postprocess index` 生成（均为 `python -m dunhuang.research.paper1_support.postprocess ...`）。匿名顺序只在首次生成时创建，管理员映射保留在私有 `controls/admin`，不重抽顺序挑结果。
+
+真实记录导入复用 `python -m dunhuang.research.gtw_kinematic_baseline.reviews --admin outputs/paper1_support_01/controls/admin/map.json --roster <独立核验名册> --reviews <本人实际记录JSON> --out <全新统计路径>`。未提供记录不填充同分、不生成偏好；至少每项两位独立合格评价者后才汇总来源级描述。

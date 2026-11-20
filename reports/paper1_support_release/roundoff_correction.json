@@ -1,0 +1,7 @@
+{
+  "reason": "Interpolation roundoff created a visually identical clock and a 5e-17 GTW score difference; exact hash alone overstated independent executions",
+  "dedup_source_frames": 1e-09,
+  "gtw_tie": 1e-10,
+  "first_run_preserved": true,
+  "outcome_thresholds_changed": false
+}

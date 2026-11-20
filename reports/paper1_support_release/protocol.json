@@ -1,0 +1,37 @@
+{
+  "schema": "PAPER1_SUPPORT_Q01",
+  "parent": "0ea42aa739dc8fb9f53621eb8b563f746fc53671",
+  "source_manifest_sha256": "29dee9f39b6669ba2e1683a9581a2df4512a42c7c696b8ff09279a84dd91ae8d",
+  "hold_audit_manifest": "7bb08a0c606b83764eec2aed91063376bcb2c448beab204989e0a07be9381b80",
+  "target_frames": [
+    240,
+    360,
+    450
+  ],
+  "offset_grid": [
+    -24,
+    -12,
+    -6,
+    0,
+    6,
+    12,
+    24
+  ],
+  "rate_limits": [
+    0.75,
+    1.33
+  ],
+  "bridge_frames": 48,
+  "selection": "ONE_EARLIEST_R47_UNIT_PER_SOLO_SOURCE_WITH_WHOLE_LOW_RUN_AND_30_ACTIVE_CELLS_EACH_SIDE; SMALLEST_LEGAL_TARGET_BUDGET",
+  "clock_domain": "R53_DAG_WITH_FIXED_FIRST_LAST_FOUR_SAMPLES_AND_TWO_HOLD_BOUNDARIES; EXHAUSTIVE_FINITE_GRID_NOT_CONTINUOUS_OPTIMUM",
+  "alternative": "SAME_RECORDING_R47_UNIT_WITH_SMALLEST_NATURAL_LOW_FRACTION_WITHIN_10_PERCENT_SOURCE_LENGTH_DIFFERENCE_AND_SAME_LEGAL_TARGET_BUDGET; RETAIN_MISSING",
+  "main_rule": "FROZEN_GTWLOCAL_MINIMUM_ON_SHARED_FINITE_POOL",
+  "numerical_clock_dedup_absolute_source_frames": 1e-09,
+  "GTW_tie_absolute_tolerance": 1e-10,
+  "controls_after_preview": true,
+  "human_records": 0,
+  "quality": "NOT_EVALUABLE",
+  "can_route": false,
+  "new_training_steps": 0,
+  "R74": "NOT_STARTED"
+}
