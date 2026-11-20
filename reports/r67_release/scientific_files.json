@@ -1,0 +1,512 @@
+{
+  "raw_artifact_bytes_copied": false,
+  "stages": {
+    "controls": {
+      "artifact_bytes_copied": false,
+      "binding": {
+        "code": {
+          "__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "candidates.py": "02c56fc144af0c8ffcee4d18bda1b795500f8c5bb35128b38300695d2488b2d1",
+          "common.py": "fb1e4c9a95f7872d86ac3ae0a86d3a629cdd64ae3da44f5c8576ef501562024a",
+          "connectivity.py": "e1b5ea6c2ebf4b7dffd9594e79c544033c2da95d8d381fd8a7491a829c61db25",
+          "encoder.py": "40a90219358d5ebefe2b30458afced913c9143a5d123fc07e11ec7971432b62e",
+          "metrics.py": "1a88a4eb2d2cc21cb9375f4c4b671451116b70bf05caf2bf26acf8063385210f",
+          "phase_audit.py": "d4a42625335a5e3eaeb82a94063ede26a2a1837bbb0c92a90661c6d3a3cbd3a5",
+          "phase_viewer.py": "f102cb28ae7fd1c55e74abba94313f299c82d17f6145645b3202727d09fba018",
+          "population.py": "9d0574eaf7501388109188adc456dd67559baa2c213ee2d6254033d06b4b5682",
+          "protocol.json": "f30b9e165b35047c89ec33e25f5495f44df7a97fc61c25a4e7999cf65965ffb8",
+          "readout.py": "b0308bbf9ebbbab35f1008a0fb9a1d6a608158d5da36e15c265a8b739d8404eb",
+          "study.py": "3093ad7f88626ef9dc5e5076d42b1c14502fadbbfd45e760fb9a3d4b7c4d3144",
+          "viewer.html": "a4da1bc1b2a393a8ea82f98d67fe5011e6105c2c759a3f62fba04e8f9e14e7b5",
+          "viewer.py": "18deb2d17c41b04d4cb228b795daed4168c811defb42adbb0839d20f942074a0"
+        },
+        "commit": "76376d64f82c124c36b95aeb7d71f3fbd19ae149",
+        "dependencies": {
+          "src/dunhuang/contracts.py": "7aaedf151cde42b9eb70b4000309f39fb2f2eec3e2f4a3f0fdbb4bf7ff1c141e",
+          "src/dunhuang/io.py": "b5577ed27991c175db342b3b2bd9626df801158e90da2b103ea4d6fe71a1d926",
+          "src/dunhuang/planning/planner.py": "86b98f7cd9a2d757165235a7299dff97e61096e409b160bcdc7aaf56ce5e02ac",
+          "src/dunhuang/research/bridge_dynamics_r48/study.py": "139067514b35012d5f360c73ac53ee5a49f9f336fa5c3dcf889d1d268c23e228",
+          "src/dunhuang/research/budget_r63/engine.py": "eaf61a98b7aef810fc9ca9a8307c1d327235998256f3daa4309c8dabcdee490a",
+          "src/dunhuang/research/budget_r63/population.py": "f54e94551fe31bbdd4c8e56352e0ce513660a0f4af94db96dfff9d201e99737e",
+          "src/dunhuang/research/complete_r36/core.py": "03f296665e48ca2fa2ef8a866baaf2b4b786afeb22f468b6faeedac7225e9901",
+          "src/dunhuang/research/complete_r36/music.py": "6b607d336a3593fe86c172eb964104ee8b696488e3469e4b386647ce6acc5f9b",
+          "src/dunhuang/research/duration_r62/cross_source.py": "d2a5dc233621d3f653ddd2a3f2721d7edb3340f580fe08704a06ffef549e8dce",
+          "src/dunhuang/research/duration_r62/protocol.json": "15056609e9604988c0b43c8417abd254b80fb7e094002c3e597a2b3bac30ad8a",
+          "src/dunhuang/research/edit_support_r61/fixed_gap.py": "cdb2eb0205ebdbd6f60859323e5668f69d9d4724b69c3aab523faa93f1436c56",
+          "src/dunhuang/research/event_alignment_r49/common.py": "5e124a4362e35a2e32646314f3f3e4a6aa190695c177b5118968679fdc29c9ef",
+          "src/dunhuang/research/manifold_bridge_r47/config.json": "b6f85af0569bf34577561df17e2fe9b4a03076fad4c148aeff5edf660f3c9f4b",
+          "src/dunhuang/research/manifold_bridge_r47/geometry.py": "4646ff82c2775b32e893335abe0aac43cdd4dfbabc643d230e8985a347adea7f",
+          "src/dunhuang/research/music_structure_r56/music.py": "7fab45ec0aabb38f9737c98e3334d2437a5f51db8ff9fd684b688ed63b3dba79",
+          "src/dunhuang/research/music_structure_r56/protocol.json": "d33cd42903bdff19a4ac4e6729bf6b299d40aace24c067d69c8b1c3de9f49737",
+          "src/dunhuang/research/paired_benchmark_r59/data.py": "9d99419d7ca201364fed6b21ccfdacd79781ac1ca9200a274f1cd8f7ab412181",
+          "src/dunhuang/research/paired_event_r41/events.py": "e6bbb769f9ed37b9743113a5c0a84139300bfc2e957a1b4315c041d2e1fb3759",
+          "src/dunhuang/research/paired_event_r41/model.py": "3188778c5f2a6186ebb23cce6a7bae7eeebaf22d09a652eecdd171997b23f95d",
+          "src/dunhuang/research/rhythm_r66/metrics.py": "c2e5fae5d5c1823b7b7f335002bdd9d29ea9a821e08efa436d3bde0dd3033267",
+          "src/dunhuang/research/rhythm_r66/population_b.py": "6665e2f8b884fcaa2db1d7de34cb2968c8513e8a4e314205170a51118d00da00",
+          "src/dunhuang/research/source_tasks/common.py": "2c14c2c6aeea76b694d56d94dedf861007ec5b2a60263cd82ee7b947abdc9709",
+          "src/dunhuang/research/timing_r64/music.py": "0c0e8b5bfa805fe53c1d48a6a5ae23df4fc9120a46620818b1719f7f6c6e0206",
+          "src/dunhuang/research/timing_validity_r66/engine.py": "d35fd2828f32732ddb96ff3944239eab74250cd59caf30c93737c2d6c871caff",
+          "src/dunhuang/research/transition_r37/content.py": "c9ee4734ba0a644086c4da2b3af90ce0fe4720cde11ac85e989099bef6e82070",
+          "src/dunhuang/research/warp_coupling_r53/common.py": "dc94b1346ef986b0c4fab09eb090dceb08b46f3af0e807a940dcf4476cd88d1c",
+          "src/dunhuang/research/warp_coupling_r53/warp_lattice.py": "ff804bc34a81943f7549171af6bf3f1bfe5534d4bb2bc7df6071e30130f5e2ba"
+        }
+      },
+      "files": [
+        {
+          "bytes": 113028109,
+          "path": "arrays.npz",
+          "sha256": "c2e8a5b794871ee65039e261155c8262708065df3fec2b18ed9c080ea660a8a9",
+          "stage": "controls"
+        },
+        {
+          "bytes": 2584207,
+          "path": "banks.json",
+          "sha256": "6d0475cd085b0da9d3975e5480e8a195560a0053418b4f850fca4b5109d0762a",
+          "stage": "controls"
+        },
+        {
+          "bytes": 99280,
+          "path": "population.json",
+          "sha256": "df5a5e21a603946249ab3e6739006cf960f2a39bdde93893f4c3c244d107f4cb",
+          "stage": "controls"
+        },
+        {
+          "bytes": 15241321,
+          "path": "proofs.json",
+          "sha256": "44792b93dfc3f4db6bca120682139213ea5b83b8810e10c98c4507e5641037c8",
+          "stage": "controls"
+        },
+        {
+          "bytes": 8965,
+          "path": "registration.json",
+          "sha256": "dcf550382afd481280649641c6adf218855984414157b4b53d3f725f61558db6",
+          "stage": "controls"
+        },
+        {
+          "bytes": 277948,
+          "path": "rows.json",
+          "sha256": "ee581bc51f541e637fe093731332e15b82d2835e55bd8c8331ba45e09c418781",
+          "stage": "controls"
+        },
+        {
+          "bytes": 7458760,
+          "path": "summary.json",
+          "sha256": "3ea7c86a8edf1feedaaa834e4e045a7aac98d70c1b93acdf4d444c5ac778b274",
+          "stage": "controls"
+        }
+      ],
+      "manifest_sha256": "1b90abd0e24f55ce81dee937649f930a70fd79579f2d3167e3b3cf8a37c53ed1",
+      "status": "ALL_MANIFEST_BYTES_REHASHED_EXACT"
+    },
+    "main": {
+      "artifact_bytes_copied": false,
+      "binding": {
+        "code": {
+          "__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "candidates.py": "02c56fc144af0c8ffcee4d18bda1b795500f8c5bb35128b38300695d2488b2d1",
+          "common.py": "fb1e4c9a95f7872d86ac3ae0a86d3a629cdd64ae3da44f5c8576ef501562024a",
+          "connectivity.py": "e1b5ea6c2ebf4b7dffd9594e79c544033c2da95d8d381fd8a7491a829c61db25",
+          "encoder.py": "40a90219358d5ebefe2b30458afced913c9143a5d123fc07e11ec7971432b62e",
+          "metrics.py": "1a88a4eb2d2cc21cb9375f4c4b671451116b70bf05caf2bf26acf8063385210f",
+          "phase_audit.py": "d4a42625335a5e3eaeb82a94063ede26a2a1837bbb0c92a90661c6d3a3cbd3a5",
+          "phase_viewer.py": "f102cb28ae7fd1c55e74abba94313f299c82d17f6145645b3202727d09fba018",
+          "population.py": "9d0574eaf7501388109188adc456dd67559baa2c213ee2d6254033d06b4b5682",
+          "protocol.json": "f30b9e165b35047c89ec33e25f5495f44df7a97fc61c25a4e7999cf65965ffb8",
+          "readout.py": "b0308bbf9ebbbab35f1008a0fb9a1d6a608158d5da36e15c265a8b739d8404eb",
+          "study.py": "3093ad7f88626ef9dc5e5076d42b1c14502fadbbfd45e760fb9a3d4b7c4d3144",
+          "viewer.html": "a4da1bc1b2a393a8ea82f98d67fe5011e6105c2c759a3f62fba04e8f9e14e7b5",
+          "viewer.py": "18deb2d17c41b04d4cb228b795daed4168c811defb42adbb0839d20f942074a0"
+        },
+        "commit": "76376d64f82c124c36b95aeb7d71f3fbd19ae149",
+        "dependencies": {
+          "src/dunhuang/contracts.py": "7aaedf151cde42b9eb70b4000309f39fb2f2eec3e2f4a3f0fdbb4bf7ff1c141e",
+          "src/dunhuang/io.py": "b5577ed27991c175db342b3b2bd9626df801158e90da2b103ea4d6fe71a1d926",
+          "src/dunhuang/planning/planner.py": "86b98f7cd9a2d757165235a7299dff97e61096e409b160bcdc7aaf56ce5e02ac",
+          "src/dunhuang/research/bridge_dynamics_r48/study.py": "139067514b35012d5f360c73ac53ee5a49f9f336fa5c3dcf889d1d268c23e228",
+          "src/dunhuang/research/budget_r63/engine.py": "eaf61a98b7aef810fc9ca9a8307c1d327235998256f3daa4309c8dabcdee490a",
+          "src/dunhuang/research/budget_r63/population.py": "f54e94551fe31bbdd4c8e56352e0ce513660a0f4af94db96dfff9d201e99737e",
+          "src/dunhuang/research/complete_r36/core.py": "03f296665e48ca2fa2ef8a866baaf2b4b786afeb22f468b6faeedac7225e9901",
+          "src/dunhuang/research/complete_r36/music.py": "6b607d336a3593fe86c172eb964104ee8b696488e3469e4b386647ce6acc5f9b",
+          "src/dunhuang/research/duration_r62/cross_source.py": "d2a5dc233621d3f653ddd2a3f2721d7edb3340f580fe08704a06ffef549e8dce",
+          "src/dunhuang/research/duration_r62/protocol.json": "15056609e9604988c0b43c8417abd254b80fb7e094002c3e597a2b3bac30ad8a",
+          "src/dunhuang/research/edit_support_r61/fixed_gap.py": "cdb2eb0205ebdbd6f60859323e5668f69d9d4724b69c3aab523faa93f1436c56",
+          "src/dunhuang/research/event_alignment_r49/common.py": "5e124a4362e35a2e32646314f3f3e4a6aa190695c177b5118968679fdc29c9ef",
+          "src/dunhuang/research/manifold_bridge_r47/config.json": "b6f85af0569bf34577561df17e2fe9b4a03076fad4c148aeff5edf660f3c9f4b",
+          "src/dunhuang/research/manifold_bridge_r47/geometry.py": "4646ff82c2775b32e893335abe0aac43cdd4dfbabc643d230e8985a347adea7f",
+          "src/dunhuang/research/music_structure_r56/music.py": "7fab45ec0aabb38f9737c98e3334d2437a5f51db8ff9fd684b688ed63b3dba79",
+          "src/dunhuang/research/music_structure_r56/protocol.json": "d33cd42903bdff19a4ac4e6729bf6b299d40aace24c067d69c8b1c3de9f49737",
+          "src/dunhuang/research/paired_benchmark_r59/data.py": "9d99419d7ca201364fed6b21ccfdacd79781ac1ca9200a274f1cd8f7ab412181",
+          "src/dunhuang/research/paired_event_r41/events.py": "e6bbb769f9ed37b9743113a5c0a84139300bfc2e957a1b4315c041d2e1fb3759",
+          "src/dunhuang/research/paired_event_r41/model.py": "3188778c5f2a6186ebb23cce6a7bae7eeebaf22d09a652eecdd171997b23f95d",
+          "src/dunhuang/research/rhythm_r66/metrics.py": "c2e5fae5d5c1823b7b7f335002bdd9d29ea9a821e08efa436d3bde0dd3033267",
+          "src/dunhuang/research/rhythm_r66/population_b.py": "6665e2f8b884fcaa2db1d7de34cb2968c8513e8a4e314205170a51118d00da00",
+          "src/dunhuang/research/source_tasks/common.py": "2c14c2c6aeea76b694d56d94dedf861007ec5b2a60263cd82ee7b947abdc9709",
+          "src/dunhuang/research/timing_r64/music.py": "0c0e8b5bfa805fe53c1d48a6a5ae23df4fc9120a46620818b1719f7f6c6e0206",
+          "src/dunhuang/research/timing_validity_r66/engine.py": "d35fd2828f32732ddb96ff3944239eab74250cd59caf30c93737c2d6c871caff",
+          "src/dunhuang/research/transition_r37/content.py": "c9ee4734ba0a644086c4da2b3af90ce0fe4720cde11ac85e989099bef6e82070",
+          "src/dunhuang/research/warp_coupling_r53/common.py": "dc94b1346ef986b0c4fab09eb090dceb08b46f3af0e807a940dcf4476cd88d1c",
+          "src/dunhuang/research/warp_coupling_r53/warp_lattice.py": "ff804bc34a81943f7549171af6bf3f1bfe5534d4bb2bc7df6071e30130f5e2ba"
+        }
+      },
+      "files": [
+        {
+          "bytes": 195795660,
+          "path": "arrays.npz",
+          "sha256": "737e9ddfad3984bb7964bc1f969c659a71d862ad8e7fc7e1b6754e5328065148",
+          "stage": "main"
+        },
+        {
+          "bytes": 2388681,
+          "path": "banks.json",
+          "sha256": "dd6be61355ab88eab53fc2c30ff2dc956e7f018e3d3e66197791ad57a15439f8",
+          "stage": "main"
+        },
+        {
+          "bytes": 771499,
+          "path": "population.json",
+          "sha256": "d059f09aba89ba2751a6e4413eb2614bbdd3e0153709d0cc30d7ec8f48702d88",
+          "stage": "main"
+        },
+        {
+          "bytes": 144531,
+          "path": "readouts/r66b00_6280fdcb23109a34.json",
+          "sha256": "d9598786d3a67c2c937000d30eb0b787432d63fe082b916e08c39fa522eb597c",
+          "stage": "main"
+        },
+        {
+          "bytes": 124772,
+          "path": "readouts/r66b01_ca3f06a9b37a47ff.json",
+          "sha256": "ee486111c2223d16ac29a4df34268e971e09cb2358b4298a8cd1833388058100",
+          "stage": "main"
+        },
+        {
+          "bytes": 144452,
+          "path": "readouts/r66b02_70c9ebdda89155ec.json",
+          "sha256": "65879a3516341137f6065ffbcf1e8d7cf4473a419b905146e374451b5c1b19c8",
+          "stage": "main"
+        },
+        {
+          "bytes": 144675,
+          "path": "readouts/r66b03_a9c01b65dc66d062.json",
+          "sha256": "3893752b241ccaf91eaf7d838140528446b9180b85366c9617f0bedcd05afd8a",
+          "stage": "main"
+        },
+        {
+          "bytes": 119861,
+          "path": "readouts/r66b04_c4ded6ddc2d6940d.json",
+          "sha256": "2799a140bc99efaf42fb57d6bc8713e2c2727d6e10261134d19949880e657915",
+          "stage": "main"
+        },
+        {
+          "bytes": 144461,
+          "path": "readouts/r66b05_56fb0e6ccb0310ef.json",
+          "sha256": "83208e868afdb043829405f92851860419984c78d5dde5ca3784bcb8b0413d66",
+          "stage": "main"
+        },
+        {
+          "bytes": 124731,
+          "path": "readouts/r66b06_0a8028422bbfb1c4.json",
+          "sha256": "c3288226b05dec4f54d383d778763e4a22da159090af7e5bc405276b37b1c8f4",
+          "stage": "main"
+        },
+        {
+          "bytes": 144456,
+          "path": "readouts/r66b07_4717682e3be3dd02.json",
+          "sha256": "0f9e5c99344c835e323e3b58c26b35e6f19e0e650e7e199b3f65c16dea6a2190",
+          "stage": "main"
+        },
+        {
+          "bytes": 144513,
+          "path": "readouts/r66b08_a7e0cdf241d7a758.json",
+          "sha256": "92d88e88340bbf4e7b423cd01880d9c17e3ebbb8795098f9339a2ac3cb32c020",
+          "stage": "main"
+        },
+        {
+          "bytes": 134613,
+          "path": "readouts/r66b09_43aba2362b9199f7.json",
+          "sha256": "f88ffd94f420f508be7dd58f7c34ae2bd0d7f36989d8c61852718677094a5a83",
+          "stage": "main"
+        },
+        {
+          "bytes": 144461,
+          "path": "readouts/r66b10_f449ca842cdeb74f.json",
+          "sha256": "182202ed3b4f91a57fc7efa7e65892dd36021ba8e509bf9b089d627f5e8b5e51",
+          "stage": "main"
+        },
+        {
+          "bytes": 144603,
+          "path": "readouts/r66b11_73f9e95e0fef2d60.json",
+          "sha256": "6ed395be220ef6158f64883b3b4dbe174e1bd356fa84558dd32ca02126bd1d75",
+          "stage": "main"
+        },
+        {
+          "bytes": 8620387,
+          "path": "records.json",
+          "sha256": "678187519048c4b6d3c7e70d8c153dcd394c985aec4d0daf58bb441a8385c759",
+          "stage": "main"
+        },
+        {
+          "bytes": 9339,
+          "path": "registration.json",
+          "sha256": "2c73d6c5adfbc7e06b3f2d409abeb14d8b7413b6b55c32243d75ce9fda8f48fe",
+          "stage": "main"
+        },
+        {
+          "bytes": 492,
+          "path": "selections/r66b00_6280fdcb23109a34.json",
+          "sha256": "fd741104ce5ef9520406b755d3fab42c09a69c75b9e250b360848439f5a608fd",
+          "stage": "main"
+        },
+        {
+          "bytes": 492,
+          "path": "selections/r66b01_ca3f06a9b37a47ff.json",
+          "sha256": "e7560e576975160d51079940fa21bb0926b96259d728d9a5236479e7e966e41d",
+          "stage": "main"
+        },
+        {
+          "bytes": 496,
+          "path": "selections/r66b02_70c9ebdda89155ec.json",
+          "sha256": "1db5c77c10e243f63874c0c39e8e3a7843ccc5c525efcc66a49abc697c83114f",
+          "stage": "main"
+        },
+        {
+          "bytes": 500,
+          "path": "selections/r66b03_a9c01b65dc66d062.json",
+          "sha256": "b52de6cd696740711ce88f6a2bf322c6655f875928ae2975dc78471bb0e0912c",
+          "stage": "main"
+        },
+        {
+          "bytes": 492,
+          "path": "selections/r66b04_c4ded6ddc2d6940d.json",
+          "sha256": "fff3bf8e07006f4069fb5e64d46a3c7849a7238c4d30b3f3bbe726f05968950a",
+          "stage": "main"
+        },
+        {
+          "bytes": 492,
+          "path": "selections/r66b05_56fb0e6ccb0310ef.json",
+          "sha256": "858bbf0a5fba8543b8a3f7099804e4e1c159bd6af7efa4f17eeaec86ed2d12ce",
+          "stage": "main"
+        },
+        {
+          "bytes": 492,
+          "path": "selections/r66b06_0a8028422bbfb1c4.json",
+          "sha256": "af1910f0d3194d3edb227b713f263f09b35568f64d0e414f509b8898505bdb46",
+          "stage": "main"
+        },
+        {
+          "bytes": 492,
+          "path": "selections/r66b07_4717682e3be3dd02.json",
+          "sha256": "41a33e20c0461762cdbff38ffcea751171a71460baaa3f809c352f4f14f59ae7",
+          "stage": "main"
+        },
+        {
+          "bytes": 492,
+          "path": "selections/r66b08_a7e0cdf241d7a758.json",
+          "sha256": "b24c139a04034d2a49629825d5757bd9d4831b26ccb44af96918adfd61d567eb",
+          "stage": "main"
+        },
+        {
+          "bytes": 492,
+          "path": "selections/r66b09_43aba2362b9199f7.json",
+          "sha256": "ccdc6e4446c86bfa36c0639e731a0c207e6b37473fd1ce61cd52b9f58740d4ff",
+          "stage": "main"
+        },
+        {
+          "bytes": 500,
+          "path": "selections/r66b10_f449ca842cdeb74f.json",
+          "sha256": "0750acbc9aef98f90eee286d7a80020bb5ee2a828e3914539525e7f2d63a69ad",
+          "stage": "main"
+        },
+        {
+          "bytes": 494,
+          "path": "selections/r66b11_73f9e95e0fef2d60.json",
+          "sha256": "9fc765aa11674b4f7c659c0eff8a3d03b68efdbd0d1d81887b5cb29b2c83c437",
+          "stage": "main"
+        },
+        {
+          "bytes": 352878,
+          "path": "viewer/36ce6f03d7a8_1536_1776.wav",
+          "sha256": "13d629d11e2ff8777c6d79cf6d47e0108cf4c918c35f1c50ca3c482e42bac655",
+          "stage": "main"
+        },
+        {
+          "bytes": 352878,
+          "path": "viewer/cd8f37bb78c3_1390_1630.wav",
+          "sha256": "62bba0dd9905fe720dc7f60e0d5484778991ada10e8946b4215ca5f01b1f6eab",
+          "stage": "main"
+        },
+        {
+          "bytes": 352878,
+          "path": "viewer/cd8f37bb78c3_1534_1774.wav",
+          "sha256": "9a8ce0742bfaaa70f9fd34ff4a45ec6a900ba5e058e57a1248981472cf863477",
+          "stage": "main"
+        },
+        {
+          "bytes": 352878,
+          "path": "viewer/cd8f37bb78c3_1535_1775.wav",
+          "sha256": "f0bc4fcea063991c264b07537270dfeb318995be87565572439923fe8692e1e4",
+          "stage": "main"
+        },
+        {
+          "bytes": 352878,
+          "path": "viewer/d1dc8fbd2897_1392_1632.wav",
+          "sha256": "9295c4a8172f886ea05846ca21684ea48500992be7ca4fd2af4e9d0b5ae9312f",
+          "stage": "main"
+        },
+        {
+          "bytes": 352878,
+          "path": "viewer/d1dc8fbd2897_1536_1776.wav",
+          "sha256": "60c57fa75f7364325fb807dd87b466fee98dca5795449c478605602a45ed86ee",
+          "stage": "main"
+        },
+        {
+          "bytes": 8067327,
+          "path": "viewer/index.html",
+          "sha256": "40e3452b7645dadb61e5b5cdc95bc9394c2daffcc8a499f8f1bf1c6184ba1a3c",
+          "stage": "main"
+        },
+        {
+          "bytes": 2997,
+          "path": "viewer/protocol.json",
+          "sha256": "004fd2e27f947a2be90204e861f2dc6691060519af054b233197ef9ecca28301",
+          "stage": "main"
+        },
+        {
+          "bytes": 1548,
+          "path": "viewer_manifest.json",
+          "sha256": "a2c963fae860a3c434eb4d0b74f23586963a0a6380b4ddff3dd3d5842c2f465e",
+          "stage": "main"
+        }
+      ],
+      "manifest_sha256": "ebea56cdcc58158f987bd2f7fe9a8292e4a001a3584b2159c0e981cc583040ed",
+      "status": "ALL_MANIFEST_BYTES_REHASHED_EXACT"
+    },
+    "phase_audit": {
+      "artifact_bytes_copied": false,
+      "binding": {
+        "code": {
+          "__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "candidates.py": "02c56fc144af0c8ffcee4d18bda1b795500f8c5bb35128b38300695d2488b2d1",
+          "common.py": "fb1e4c9a95f7872d86ac3ae0a86d3a629cdd64ae3da44f5c8576ef501562024a",
+          "connectivity.py": "e1b5ea6c2ebf4b7dffd9594e79c544033c2da95d8d381fd8a7491a829c61db25",
+          "encoder.py": "40a90219358d5ebefe2b30458afced913c9143a5d123fc07e11ec7971432b62e",
+          "metrics.py": "1a88a4eb2d2cc21cb9375f4c4b671451116b70bf05caf2bf26acf8063385210f",
+          "phase_audit.py": "d4a42625335a5e3eaeb82a94063ede26a2a1837bbb0c92a90661c6d3a3cbd3a5",
+          "phase_viewer.py": "33fb88765e66d92a2a3f4232c00657a40705a5d70846be8fb90c0068ff288c52",
+          "population.py": "9d0574eaf7501388109188adc456dd67559baa2c213ee2d6254033d06b4b5682",
+          "protocol.json": "f30b9e165b35047c89ec33e25f5495f44df7a97fc61c25a4e7999cf65965ffb8",
+          "readout.py": "b0308bbf9ebbbab35f1008a0fb9a1d6a608158d5da36e15c265a8b739d8404eb",
+          "study.py": "f3b7e38d896bbc27eac3e776d81c87093bd925a4fed9410d1ad07d8612d3f216",
+          "viewer.html": "0d7ae13b23c6c4617a405065a4d6bf40e15a99ba6aca701647e763e87bec51eb",
+          "viewer.py": "18deb2d17c41b04d4cb228b795daed4168c811defb42adbb0839d20f942074a0"
+        },
+        "commit": "706cd368764c51975a683b7d1ae2b44a4e11034b",
+        "dependencies": {
+          "src/dunhuang/contracts.py": "7aaedf151cde42b9eb70b4000309f39fb2f2eec3e2f4a3f0fdbb4bf7ff1c141e",
+          "src/dunhuang/io.py": "b5577ed27991c175db342b3b2bd9626df801158e90da2b103ea4d6fe71a1d926",
+          "src/dunhuang/planning/planner.py": "86b98f7cd9a2d757165235a7299dff97e61096e409b160bcdc7aaf56ce5e02ac",
+          "src/dunhuang/research/bridge_dynamics_r48/study.py": "139067514b35012d5f360c73ac53ee5a49f9f336fa5c3dcf889d1d268c23e228",
+          "src/dunhuang/research/budget_r63/engine.py": "eaf61a98b7aef810fc9ca9a8307c1d327235998256f3daa4309c8dabcdee490a",
+          "src/dunhuang/research/budget_r63/population.py": "f54e94551fe31bbdd4c8e56352e0ce513660a0f4af94db96dfff9d201e99737e",
+          "src/dunhuang/research/complete_r36/core.py": "03f296665e48ca2fa2ef8a866baaf2b4b786afeb22f468b6faeedac7225e9901",
+          "src/dunhuang/research/complete_r36/music.py": "6b607d336a3593fe86c172eb964104ee8b696488e3469e4b386647ce6acc5f9b",
+          "src/dunhuang/research/duration_r62/cross_source.py": "d2a5dc233621d3f653ddd2a3f2721d7edb3340f580fe08704a06ffef549e8dce",
+          "src/dunhuang/research/duration_r62/protocol.json": "15056609e9604988c0b43c8417abd254b80fb7e094002c3e597a2b3bac30ad8a",
+          "src/dunhuang/research/edit_support_r61/fixed_gap.py": "cdb2eb0205ebdbd6f60859323e5668f69d9d4724b69c3aab523faa93f1436c56",
+          "src/dunhuang/research/event_alignment_r49/common.py": "5e124a4362e35a2e32646314f3f3e4a6aa190695c177b5118968679fdc29c9ef",
+          "src/dunhuang/research/manifold_bridge_r47/config.json": "b6f85af0569bf34577561df17e2fe9b4a03076fad4c148aeff5edf660f3c9f4b",
+          "src/dunhuang/research/manifold_bridge_r47/geometry.py": "4646ff82c2775b32e893335abe0aac43cdd4dfbabc643d230e8985a347adea7f",
+          "src/dunhuang/research/music_structure_r56/music.py": "7fab45ec0aabb38f9737c98e3334d2437a5f51db8ff9fd684b688ed63b3dba79",
+          "src/dunhuang/research/music_structure_r56/protocol.json": "d33cd42903bdff19a4ac4e6729bf6b299d40aace24c067d69c8b1c3de9f49737",
+          "src/dunhuang/research/paired_benchmark_r59/data.py": "9d99419d7ca201364fed6b21ccfdacd79781ac1ca9200a274f1cd8f7ab412181",
+          "src/dunhuang/research/paired_event_r41/events.py": "e6bbb769f9ed37b9743113a5c0a84139300bfc2e957a1b4315c041d2e1fb3759",
+          "src/dunhuang/research/paired_event_r41/model.py": "3188778c5f2a6186ebb23cce6a7bae7eeebaf22d09a652eecdd171997b23f95d",
+          "src/dunhuang/research/rhythm_r66/metrics.py": "c2e5fae5d5c1823b7b7f335002bdd9d29ea9a821e08efa436d3bde0dd3033267",
+          "src/dunhuang/research/rhythm_r66/population_b.py": "6665e2f8b884fcaa2db1d7de34cb2968c8513e8a4e314205170a51118d00da00",
+          "src/dunhuang/research/source_tasks/common.py": "2c14c2c6aeea76b694d56d94dedf861007ec5b2a60263cd82ee7b947abdc9709",
+          "src/dunhuang/research/timing_r64/music.py": "0c0e8b5bfa805fe53c1d48a6a5ae23df4fc9120a46620818b1719f7f6c6e0206",
+          "src/dunhuang/research/timing_validity_r66/engine.py": "d35fd2828f32732ddb96ff3944239eab74250cd59caf30c93737c2d6c871caff",
+          "src/dunhuang/research/transition_r37/content.py": "c9ee4734ba0a644086c4da2b3af90ce0fe4720cde11ac85e989099bef6e82070",
+          "src/dunhuang/research/warp_coupling_r53/common.py": "dc94b1346ef986b0c4fab09eb090dceb08b46f3af0e807a940dcf4476cd88d1c",
+          "src/dunhuang/research/warp_coupling_r53/warp_lattice.py": "ff804bc34a81943f7549171af6bf3f1bfe5534d4bb2bc7df6071e30130f5e2ba"
+        }
+      },
+      "files": [
+        {
+          "bytes": 109034,
+          "path": "r66_detector_consistency.json",
+          "sha256": "b4be93e34c60ed28651ca354ddf2cfa07da0e213efe69eca72a95f501fbb2b1c",
+          "stage": "phase_audit"
+        },
+        {
+          "bytes": 5818,
+          "path": "registration.json",
+          "sha256": "224bcc1c68e299ace5315318c0a5726dde5f584eddf6c61be2b01c95eea017e0",
+          "stage": "phase_audit"
+        },
+        {
+          "bytes": 2835155,
+          "path": "rows.json",
+          "sha256": "f7ee784b772c990a74cc72c412143b7488b3e9b1f4d4c81b689fe14bc595513b",
+          "stage": "phase_audit"
+        },
+        {
+          "bytes": 4412378,
+          "path": "scores.npz",
+          "sha256": "413fc2ee2658c67bb92a59d49aea3c8d2e6bfefd88646f5278d0a371665d0725",
+          "stage": "phase_audit"
+        },
+        {
+          "bytes": 584768,
+          "path": "source_proofs.json",
+          "sha256": "d9ad67a43983b2361a4ff55e32bbf1c3d1ffa9ea3bee612fcf75483259417152",
+          "stage": "phase_audit"
+        },
+        {
+          "bytes": 2992385,
+          "path": "summary.json",
+          "sha256": "a2a07d86b98e218ee611d2a95f03d5d00c6a8c25657dfccdc6d360a1e076dc5d",
+          "stage": "phase_audit"
+        },
+        {
+          "bytes": 352896,
+          "path": "viewer/216689383ed9_24_264.wav",
+          "sha256": "75a3ddb486190842e4a8f4817fcf9c14cbb9f49f1316bfcc386156dfbdffaf9c",
+          "stage": "phase_audit"
+        },
+        {
+          "bytes": 352896,
+          "path": "viewer/2ceb5b4f476e_24_264.wav",
+          "sha256": "c27ec8b6781259eacda1af778ffa871ed9c6629406bb5460e0b9b6e5f459bb6f",
+          "stage": "phase_audit"
+        },
+        {
+          "bytes": 352896,
+          "path": "viewer/da9cf3346216_40_280.wav",
+          "sha256": "9e0ad05455668f7ca54bcb867da560a01c28f7e7ab7cec3ec62af9b7a68c1c77",
+          "stage": "phase_audit"
+        },
+        {
+          "bytes": 480119,
+          "path": "viewer/index.html",
+          "sha256": "cf08746723176ad48e59306dc95e0837f76bfb0e654b86dc30e3543d9559d531",
+          "stage": "phase_audit"
+        },
+        {
+          "bytes": 2020,
+          "path": "viewer/protocol.json",
+          "sha256": "a1ea4b567c0e61407bb7a4e3fcdfbb8679d435d6bce2e2d1c171d74af100c218",
+          "stage": "phase_audit"
+        },
+        {
+          "bytes": 999,
+          "path": "viewer_manifest.json",
+          "sha256": "41ae1fff562112b87c0a731ff6190c6e641fc4c3459d497662b8cac92168a993",
+          "stage": "phase_audit"
+        }
+      ],
+      "manifest_sha256": "46250785e432e408ae379998e008064c0638c21c9aed8210adfee39ced8bf4ca",
+      "status": "ALL_MANIFEST_BYTES_REHASHED_EXACT"
+    }
+  }
+}

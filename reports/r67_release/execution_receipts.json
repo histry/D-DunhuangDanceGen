@@ -1,0 +1,135 @@
+{
+  "missing_receipt_does_not_imply_success": true,
+  "records": [
+    {
+      "projection": {
+        "commit": "76376d64f82c124c36b95aeb7d71f3fbd19ae149",
+        "completed_at": "2026-11-20T06:48:27.897439+00:00",
+        "exit_status": 0,
+        "log_sha256": "432cd6e4d2116213b340f562720f857628f1f57b3e0d02479d1e0857433cc718",
+        "neural_training_steps": 0,
+        "new_planner_searches": 0,
+        "stage": "controls",
+        "tmux_session": "ddg_r67_controls_01"
+      },
+      "receipt": "execution_controls.json",
+      "scope": "WHITELISTED_EXECUTION_METADATA",
+      "source_sha256": "fc7559e4b17b825bfe72a19ccae205dfc3110eee2f71910a300647f228bf6125"
+    },
+    {
+      "projection": {
+        "commit": "76376d64f82c124c36b95aeb7d71f3fbd19ae149",
+        "completed_at": "2026-11-20T06:44:01.390907+00:00",
+        "exit_status": 0,
+        "log_sha256": "8a95bf0d1ad740b5f034a76892cf8cbdb1b975099edfe37708cb2c39c0b5cb9e",
+        "neural_training_steps": 0,
+        "new_planner_searches": 0,
+        "stage": "main",
+        "tmux_session": "ddg_r67_main_fixed_01"
+      },
+      "receipt": "execution_main.json",
+      "scope": "WHITELISTED_EXECUTION_METADATA",
+      "source_sha256": "bff4805d81a7cc9c8cb91b99066e82148ffd72900cf2063315c5588e812b2eaf"
+    },
+    {
+      "projection": {
+        "commit": "706cd368764c51975a683b7d1ae2b44a4e11034b",
+        "completed_at": "2026-11-20T06:26:36.618771+00:00",
+        "exit_status": 0,
+        "log_sha256": "b004b9787d5679f756b77767e8172016ebf67a8141f6f1da2f1ef8e237415098",
+        "neural_training_steps": 0,
+        "new_planner_searches": 0,
+        "stage": "phase_audit",
+        "tmux_session": "ddg_r67_preview_01"
+      },
+      "receipt": "execution_phase_audit.json",
+      "scope": "WHITELISTED_EXECUTION_METADATA",
+      "source_sha256": "771eb4bca9bb95b854d12d5e5be04475bb8625a41792bac58ab78ef1ef58a38d"
+    },
+    {
+      "projection": {
+        "commit": "76376d64f82c124c36b95aeb7d71f3fbd19ae149",
+        "completed_at": "2026-11-20T06:50:51.871381+00:00",
+        "exit_status": 0,
+        "log_sha256": "432cd6e4d2116213b340f562720f857628f1f57b3e0d02479d1e0857433cc718",
+        "neural_training_steps": 0,
+        "new_planner_searches": 0,
+        "stage": "verify_controls",
+        "tmux_session": "ddg_r67_verify_controls_01"
+      },
+      "receipt": "execution_verify_controls.json",
+      "scope": "WHITELISTED_EXECUTION_METADATA",
+      "source_sha256": "72f8d32dd90d4aef0b393c4391090236d2f318b32443135e025447a4488bc609"
+    },
+    {
+      "projection": {
+        "commit": "76376d64f82c124c36b95aeb7d71f3fbd19ae149",
+        "completed_at": "2026-11-20T06:48:40.939337+00:00",
+        "exit_status": 0,
+        "log_sha256": "8a95bf0d1ad740b5f034a76892cf8cbdb1b975099edfe37708cb2c39c0b5cb9e",
+        "neural_training_steps": 0,
+        "new_planner_searches": 0,
+        "stage": "verify_main",
+        "tmux_session": "ddg_r67_verify_main_01"
+      },
+      "receipt": "execution_verify_main.json",
+      "scope": "WHITELISTED_EXECUTION_METADATA",
+      "source_sha256": "7ecb84214dfb36a107e71a60f5958b5363e186e3cc1af18e0380760438a134f0"
+    },
+    {
+      "projection": {
+        "commit": "706cd368764c51975a683b7d1ae2b44a4e11034b",
+        "completed_at": "2026-11-20T06:33:18.427163+00:00",
+        "exit_status": 0,
+        "log_sha256": "b004b9787d5679f756b77767e8172016ebf67a8141f6f1da2f1ef8e237415098",
+        "neural_training_steps": 0,
+        "new_planner_searches": 0,
+        "stage": "verify_phase_audit",
+        "tmux_session": "ddg_r67_verify_phase_audit_01"
+      },
+      "receipt": "execution_verify_phase_audit.json",
+      "scope": "WHITELISTED_EXECUTION_METADATA",
+      "source_sha256": "f4515b768fa7292536192f601b4c2465c954e03800ffd5fec53060afdac8a2cb"
+    },
+    {
+      "projection": {
+        "commit": "706cd368764c51975a683b7d1ae2b44a4e11034b"
+      },
+      "receipt": "synchronization.json",
+      "scope": "WHITELISTED_EXECUTION_METADATA",
+      "source_sha256": "e8df5438ff3fe7ff7228d92edb73d57216e10cdc3c7a2818c7879ecbedecbc44"
+    },
+    {
+      "projection": {
+        "commit": "76376d64f82c124c36b95aeb7d71f3fbd19ae149"
+      },
+      "receipt": "synchronization_fix.json",
+      "scope": "WHITELISTED_EXECUTION_METADATA",
+      "source_sha256": "ff9e7c0b5f366cc955d02a206f96545a5803ecd6a63f1ce8cf483f91c68245cf"
+    },
+    {
+      "projection": {
+        "commit": "891c43907679f2cf6368e3b91a73976533d34183"
+      },
+      "receipt": "synchronization_release.json",
+      "scope": "WHITELISTED_EXECUTION_METADATA",
+      "source_sha256": "28ad3d396fc07d90deed55edeff1380053f498913c1993ce03297c1e6c61aa09"
+    }
+  ],
+  "retained_failed_receipts": [
+    {
+      "path": "failures/main_706/execution_main.json",
+      "projection": {
+        "commit": "706cd368764c51975a683b7d1ae2b44a4e11034b",
+        "completed_at": "2026-11-20T06:27:40.830316+00:00",
+        "exit_status": 1,
+        "log_sha256": "a449c01666edc46a8ed0e477a10c039797da14d55cb513b3a0e8e3e176e0e982",
+        "neural_training_steps": 0,
+        "new_planner_searches": 0,
+        "stage": "main",
+        "tmux_session": "ddg_r67_preview_01"
+      },
+      "source_sha256": "22866b2db444f85d1bf9659fc4efab417e74c5f84242434beb2bee813da81bbd"
+    }
+  ]
+}

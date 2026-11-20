@@ -1,0 +1,259 @@
+{
+  "cases": [
+    {
+      "audio_sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f",
+      "baseline_core_R_sha256": "f87f92d70ec29a8276a058b918db2cfd3b4b540739a0e50188f4653fc31d6e82",
+      "event_uid": "r47:c1f1efc803495ee700d67db1",
+      "key": "r66b00_6280fdcb23109a34",
+      "music_id": "dunhuangwu3",
+      "parent_case_key": "dev04_e30e53c50dca06db19dd5e34",
+      "parent_record_key": "dev04_e30e53c50dca06db19dd5e34_o0_g48",
+      "parent_side": "left",
+      "songidx": 1,
+      "source_R_sha256": "ddaba2b9a430bd12773337b2cbd4c49e3eb08e95f49ea34a38a1808e9988c074",
+      "source_interval": [
+        2660,
+        2896
+      ],
+      "source_uid": "female_FeiTian",
+      "target_interval": [
+        1390,
+        1630
+      ]
+    },
+    {
+      "audio_sha256": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c",
+      "baseline_core_R_sha256": "3d8ed734134236bd51419cb32bbfdbc2c1a2db735d004dab78725a40188bccad",
+      "event_uid": "r47:1b228a3e5bd8f536ebd033b8",
+      "key": "r66b01_ca3f06a9b37a47ff",
+      "music_id": "dunhuangwu2",
+      "parent_case_key": "eval00_e34847b5d9a9a3d0897f86e5",
+      "parent_record_key": "eval00_e34847b5d9a9a3d0897f86e5_o0_g48",
+      "parent_side": "left",
+      "songidx": 0,
+      "source_R_sha256": "22303cf144322052abd17c57205cab0384f608258436cd8eb9e3d2136fa618f0",
+      "source_interval": [
+        1864,
+        2109
+      ],
+      "source_uid": "female_lotus",
+      "target_interval": [
+        1536,
+        1776
+      ]
+    },
+    {
+      "audio_sha256": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33",
+      "baseline_core_R_sha256": "e53089154a320286864d60a0d1fdd60291a13ad2a51a2545fe7b0795169bf3a1",
+      "event_uid": "r47:7a9d007ab852687d2d6830e3",
+      "key": "r66b02_70c9ebdda89155ec",
+      "music_id": "dunhuangwu4",
+      "parent_case_key": "eval05_01058fc334f90b9f0ec20267",
+      "parent_record_key": "eval05_01058fc334f90b9f0ec20267_o0_g48",
+      "parent_side": "left",
+      "songidx": 2,
+      "source_R_sha256": "a656c72bee24ed6fe9d61cf8098caab4bd6bcc88cc979a9666df224e9a70cf2b",
+      "source_interval": [
+        2551,
+        2789
+      ],
+      "source_uid": "female_meditation",
+      "target_interval": [
+        1536,
+        1776
+      ]
+    },
+    {
+      "audio_sha256": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c",
+      "baseline_core_R_sha256": "b6fb6771c67b1656a0ea9822e7d0f5ea4dece556c265c086dc0f4815ec530660",
+      "event_uid": "r47:2b2df7fad8e937cc7ce5507b",
+      "key": "r66b03_a9c01b65dc66d062",
+      "music_id": "dunhuangwu2",
+      "parent_case_key": "eval09_3166381a1b643a6189b9adbb",
+      "parent_record_key": "eval09_3166381a1b643a6189b9adbb_o0_g48",
+      "parent_side": "left",
+      "songidx": 0,
+      "source_R_sha256": "001cd551f3f325a74f093cf30aa63db1f5a660e2cd112ba4eefb6311e2dd8d26",
+      "source_interval": [
+        1071,
+        1317
+      ],
+      "source_uid": "male_meditation",
+      "target_interval": [
+        1536,
+        1776
+      ]
+    },
+    {
+      "audio_sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f",
+      "baseline_core_R_sha256": "88a70f01fc0563d2341638e80908f5c20f7671d67453185c803390be2d0de1a4",
+      "event_uid": "r47:bacef9a1c3f2e8cb8e6eab24",
+      "key": "r66b04_c4ded6ddc2d6940d",
+      "music_id": "dunhuangwu3",
+      "parent_case_key": "eval13_aa20a2ad3283d14ae8686707",
+      "parent_record_key": "eval13_aa20a2ad3283d14ae8686707_o0_g48",
+      "parent_side": "left",
+      "songidx": 1,
+      "source_R_sha256": "93f9bff7b274671c812167c4465937f290944c48dd8ebad3506f331d8c245449",
+      "source_interval": [
+        559,
+        793
+      ],
+      "source_uid": "male_pipa_1",
+      "target_interval": [
+        1535,
+        1775
+      ]
+    },
+    {
+      "audio_sha256": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33",
+      "baseline_core_R_sha256": "f2387cf40eeea11b533fed7b1d9614e7292ce4fe1353f83b6fd68f91eb581a0d",
+      "event_uid": "r47:a74b575f952414f4396bad53",
+      "key": "r66b05_56fb0e6ccb0310ef",
+      "music_id": "dunhuangwu4",
+      "parent_case_key": "dev07_8bf597d5ede30ff3ec4cd27a",
+      "parent_record_key": "dev07_8bf597d5ede30ff3ec4cd27a_o0_g48",
+      "parent_side": "left",
+      "songidx": 2,
+      "source_R_sha256": "3bdd964a06ccf8e88b0fabdb6e0d6d4ce7fbd215b87739f28b5f26d9c69c7ee1",
+      "source_interval": [
+        2473,
+        2709
+      ],
+      "source_uid": "male_pipa_2",
+      "target_interval": [
+        1392,
+        1632
+      ]
+    },
+    {
+      "audio_sha256": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c",
+      "baseline_core_R_sha256": "1fdd5a3572f646e400bd254a647173b3ceeb17ca58eaf7182f6a34e4a2a9ad6b",
+      "event_uid": "r47:c410f0e637b8f1aef9847183",
+      "key": "r66b06_0a8028422bbfb1c4",
+      "music_id": "dunhuangwu2",
+      "parent_case_key": "eval18_8eb4693f7b6fa54bfd95cce6",
+      "parent_record_key": "eval18_8eb4693f7b6fa54bfd95cce6_o0_g48",
+      "parent_side": "left",
+      "songidx": 0,
+      "source_R_sha256": "96c022c0423c40ccc5ae241fb7c8bbf6c3510964183a75d5aa97a5d28dfd932b",
+      "source_interval": [
+        948,
+        1197
+      ],
+      "source_uid": "male_ribbon",
+      "target_interval": [
+        1536,
+        1776
+      ]
+    },
+    {
+      "audio_sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f",
+      "baseline_core_R_sha256": "1ca7a292e921c516c3d4b3f7af13a798e4eac76839d35393c6580231af7df134",
+      "event_uid": "r47:afdc7bb3f1539b3ddd8517b9",
+      "key": "r66b07_4717682e3be3dd02",
+      "music_id": "dunhuangwu3",
+      "parent_case_key": "dev03_d5b76e9b8fa1f327945991eb",
+      "parent_record_key": "dev03_d5b76e9b8fa1f327945991eb_o0_g48",
+      "parent_side": "left",
+      "songidx": 1,
+      "source_R_sha256": "407cbc82fc35b42f6047200d037636714762d630bae70608f5f02ed67d78b3c5",
+      "source_interval": [
+        2020,
+        2268
+      ],
+      "source_uid": "male_ribbon_FenHe",
+      "target_interval": [
+        1534,
+        1774
+      ]
+    },
+    {
+      "audio_sha256": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33",
+      "baseline_core_R_sha256": "e198296f1db3a0b0c05b37de673d450841820b6d243621ec6d10f0fef2b8e452",
+      "event_uid": "r47:c1f1efc803495ee700d67db1",
+      "key": "r66b08_a7e0cdf241d7a758",
+      "music_id": "dunhuangwu4",
+      "parent_case_key": "dev06_3e7a15bd0ee5b6c38cac3d8c",
+      "parent_record_key": "dev06_3e7a15bd0ee5b6c38cac3d8c_o0_g48",
+      "parent_side": "left",
+      "songidx": 2,
+      "source_R_sha256": "ddaba2b9a430bd12773337b2cbd4c49e3eb08e95f49ea34a38a1808e9988c074",
+      "source_interval": [
+        2660,
+        2896
+      ],
+      "source_uid": "female_FeiTian",
+      "target_interval": [
+        1536,
+        1776
+      ]
+    },
+    {
+      "audio_sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f",
+      "baseline_core_R_sha256": "e7ec815811792d7e28e47a0d168b8fdf81b462e62f71d7c95be1d78f4a10a727",
+      "event_uid": "r47:1b228a3e5bd8f536ebd033b8",
+      "key": "r66b09_43aba2362b9199f7",
+      "music_id": "dunhuangwu3",
+      "parent_case_key": "eval01_921806a175ae48fe4c3a1ea8",
+      "parent_record_key": "eval01_921806a175ae48fe4c3a1ea8_o0_g48",
+      "parent_side": "left",
+      "songidx": 1,
+      "source_R_sha256": "22303cf144322052abd17c57205cab0384f608258436cd8eb9e3d2136fa618f0",
+      "source_interval": [
+        1864,
+        2109
+      ],
+      "source_uid": "female_lotus",
+      "target_interval": [
+        1535,
+        1775
+      ]
+    },
+    {
+      "audio_sha256": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c",
+      "baseline_core_R_sha256": "5c9b9affa86b54298b4b510cc43c637e74e0912f261c1fe76dff5976ee2243f5",
+      "event_uid": "r47:7a9d007ab852687d2d6830e3",
+      "key": "r66b10_f449ca842cdeb74f",
+      "music_id": "dunhuangwu2",
+      "parent_case_key": "eval06_87c8726999c794d11fb4be80",
+      "parent_record_key": "eval06_87c8726999c794d11fb4be80_o0_g48",
+      "parent_side": "left",
+      "songidx": 0,
+      "source_R_sha256": "a656c72bee24ed6fe9d61cf8098caab4bd6bcc88cc979a9666df224e9a70cf2b",
+      "source_interval": [
+        2551,
+        2789
+      ],
+      "source_uid": "female_meditation",
+      "target_interval": [
+        1536,
+        1776
+      ]
+    },
+    {
+      "audio_sha256": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33",
+      "baseline_core_R_sha256": "f9dc8627abd50648e81d3e1cdc731a69f43220e2a612dfd91f87bdd6bd30a2c1",
+      "event_uid": "r47:2b2df7fad8e937cc7ce5507b",
+      "key": "r66b11_73f9e95e0fef2d60",
+      "music_id": "dunhuangwu4",
+      "parent_case_key": "eval08_8294c34c2824afb40734545a",
+      "parent_record_key": "eval08_8294c34c2824afb40734545a_o0_g48",
+      "parent_side": "left",
+      "songidx": 2,
+      "source_R_sha256": "001cd551f3f325a74f093cf30aa63db1f5a660e2cd112ba4eefb6311e2dd8d26",
+      "source_interval": [
+        1071,
+        1317
+      ],
+      "source_uid": "male_meditation",
+      "target_interval": [
+        1536,
+        1776
+      ]
+    }
+  ],
+  "music_tracks": 3,
+  "scope": "FROZEN_R66B_TWELVE_DISPLAY_POSITIONS_EIGHT_SOURCE_INTERVALS",
+  "source_intervals": 8
+}

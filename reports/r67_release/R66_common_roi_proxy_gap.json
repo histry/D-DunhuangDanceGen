@@ -1,0 +1,2147 @@
+{
+  "Native24": "NOT_EVALUABLE",
+  "ROI_local_half_open": [
+    3,
+    237
+  ],
+  "artistic_quality": "NOT_EVALUABLE",
+  "audio_clock": "TRUE_FULL_AUDIO_A_PLUS_LOCAL_FRAME_ONCE_NO_SHIFT_CONTROL",
+  "balance": "CROSS_MUSIC_CASES_WITHIN_SOURCE_INTERVAL_THEN_EQUAL_SOURCE_INTERVALS; NO_12_CASE_IID_CI",
+  "can_route": false,
+  "derivation": "DECLARED_PUBLICATION_DIAGNOSTIC_FROM_FROZEN_R66_R64; NOT_PART_OF_RUNNING_R67_SCIENTIFIC_MANIFEST",
+  "difference_definition": "MAPPED_SOURCE_PROXY_MINUS_REDETECTED_OUTPUT_PROXY; POSITIVE_IS_HIGHER_MAPPED_PROXY",
+  "event_count_or_peak_location_difference_is_not_a_bug_or_artistic_label": true,
+  "human_reviewed": false,
+  "independent_replay_coverage": "NOT_AUTOMATICALLY_INHERITED_FROM_R67_REPLAY",
+  "inputs": {
+    "R64_clock_sha256": "0a7bd68287f1d98e81639fb3545d78ddca9ae22f01abb89e333eef6587d30247",
+    "R64_public_scientific_directory_sha256": "b3300fed3dfea05ec840bd0304696126791336cffa92c2b549739ed967fc945f",
+    "R64_reward_implementation_sha256": "0c0e8b5bfa805fe53c1d48a6a5ae23df4fc9120a46620818b1719f7f6c6e0206",
+    "R66_manifest_sha256": "e7c918d8c5274a2d68937c81b872f806dc22306c14254f7658595355525ed5c3",
+    "R66_population_sha256": "e539b2be7d498e70c724125aa489c48024244aae20d30a0c4b4cff5cc19a4133",
+    "R66_result_sha256": "6f9fd9c7cb68cea457af8c663794aa46695406b189e3e255d8a1538ff3788244"
+  },
+  "methods": {
+    "E1W": {
+      "ci95": null,
+      "evaluable_cases": 10,
+      "evaluable_source_intervals": 7,
+      "negative_gap_source_interval_means": 4,
+      "positive_gap_source_interval_means": 3,
+      "registered_cases": 12,
+      "registered_source_intervals": 8,
+      "source_interval_balanced_mean_mapped_minus_output_primary": -0.02914824320551867,
+      "source_interval_means": [
+        {
+          "evaluable_common_ROI_cases": 2,
+          "mean_mapped_minus_output_primary": 0.019637040978720044,
+          "mean_mapped_peak_count": 22.0,
+          "mean_redetected_peak_count": 23.5,
+          "negative_gap_cases": 0,
+          "positive_gap_cases": 2,
+          "registered_music_cases": 2,
+          "source_interval": [
+            2660,
+            2896
+          ],
+          "source_uid": "female_FeiTian",
+          "tied_gap_cases": 0
+        },
+        {
+          "evaluable_common_ROI_cases": 2,
+          "mean_mapped_minus_output_primary": -0.029873426088016797,
+          "mean_mapped_peak_count": 16.0,
+          "mean_redetected_peak_count": 20.5,
+          "negative_gap_cases": 1,
+          "positive_gap_cases": 1,
+          "registered_music_cases": 2,
+          "source_interval": [
+            1864,
+            2109
+          ],
+          "source_uid": "female_lotus",
+          "tied_gap_cases": 0
+        },
+        {
+          "evaluable_common_ROI_cases": 2,
+          "mean_mapped_minus_output_primary": -0.0239585419325809,
+          "mean_mapped_peak_count": 23.0,
+          "mean_redetected_peak_count": 22.5,
+          "negative_gap_cases": 2,
+          "positive_gap_cases": 0,
+          "registered_music_cases": 2,
+          "source_interval": [
+            2551,
+            2789
+          ],
+          "source_uid": "female_meditation",
+          "tied_gap_cases": 0
+        },
+        {
+          "evaluable_common_ROI_cases": 0,
+          "mean_mapped_minus_output_primary": null,
+          "mean_mapped_peak_count": null,
+          "mean_redetected_peak_count": null,
+          "negative_gap_cases": 0,
+          "positive_gap_cases": 0,
+          "registered_music_cases": 2,
+          "source_interval": [
+            1071,
+            1317
+          ],
+          "source_uid": "male_meditation",
+          "tied_gap_cases": 0
+        },
+        {
+          "evaluable_common_ROI_cases": 1,
+          "mean_mapped_minus_output_primary": -0.2199476150988393,
+          "mean_mapped_peak_count": 1.0,
+          "mean_redetected_peak_count": 18.0,
+          "negative_gap_cases": 1,
+          "positive_gap_cases": 0,
+          "registered_music_cases": 1,
+          "source_interval": [
+            559,
+            793
+          ],
+          "source_uid": "male_pipa_1",
+          "tied_gap_cases": 0
+        },
+        {
+          "evaluable_common_ROI_cases": 1,
+          "mean_mapped_minus_output_primary": 0.042589385920924094,
+          "mean_mapped_peak_count": 20.0,
+          "mean_redetected_peak_count": 20.0,
+          "negative_gap_cases": 0,
+          "positive_gap_cases": 1,
+          "registered_music_cases": 1,
+          "source_interval": [
+            2473,
+            2709
+          ],
+          "source_uid": "male_pipa_2",
+          "tied_gap_cases": 0
+        },
+        {
+          "evaluable_common_ROI_cases": 1,
+          "mean_mapped_minus_output_primary": 0.011125821794335133,
+          "mean_mapped_peak_count": 26.0,
+          "mean_redetected_peak_count": 25.0,
+          "negative_gap_cases": 0,
+          "positive_gap_cases": 1,
+          "registered_music_cases": 1,
+          "source_interval": [
+            948,
+            1197
+          ],
+          "source_uid": "male_ribbon",
+          "tied_gap_cases": 0
+        },
+        {
+          "evaluable_common_ROI_cases": 1,
+          "mean_mapped_minus_output_primary": -0.0036103680131729377,
+          "mean_mapped_peak_count": 21.0,
+          "mean_redetected_peak_count": 16.0,
+          "negative_gap_cases": 1,
+          "positive_gap_cases": 0,
+          "registered_music_cases": 1,
+          "source_interval": [
+            2020,
+            2268
+          ],
+          "source_uid": "male_ribbon_FenHe",
+          "tied_gap_cases": 0
+        }
+      ],
+      "tied_gap_source_interval_means": 0
+    },
+    "Rhythm": {
+      "ci95": null,
+      "evaluable_cases": 10,
+      "evaluable_source_intervals": 7,
+      "negative_gap_source_interval_means": 3,
+      "positive_gap_source_interval_means": 4,
+      "registered_cases": 12,
+      "registered_source_intervals": 8,
+      "source_interval_balanced_mean_mapped_minus_output_primary": 0.06945816629629928,
+      "source_interval_means": [
+        {
+          "evaluable_common_ROI_cases": 2,
+          "mean_mapped_minus_output_primary": 0.01648815949604937,
+          "mean_mapped_peak_count": 22.0,
+          "mean_redetected_peak_count": 21.0,
+          "negative_gap_cases": 0,
+          "positive_gap_cases": 2,
+          "registered_music_cases": 2,
+          "source_interval": [
+            2660,
+            2896
+          ],
+          "source_uid": "female_FeiTian",
+          "tied_gap_cases": 0
+        },
+        {
+          "evaluable_common_ROI_cases": 2,
+          "mean_mapped_minus_output_primary": -0.05695441793568645,
+          "mean_mapped_peak_count": 16.0,
+          "mean_redetected_peak_count": 19.5,
+          "negative_gap_cases": 2,
+          "positive_gap_cases": 0,
+          "registered_music_cases": 2,
+          "source_interval": [
+            1864,
+            2109
+          ],
+          "source_uid": "female_lotus",
+          "tied_gap_cases": 0
+        },
+        {
+          "evaluable_common_ROI_cases": 2,
+          "mean_mapped_minus_output_primary": -0.01224020696179931,
+          "mean_mapped_peak_count": 23.0,
+          "mean_redetected_peak_count": 21.0,
+          "negative_gap_cases": 1,
+          "positive_gap_cases": 1,
+          "registered_music_cases": 2,
+          "source_interval": [
+            2551,
+            2789
+          ],
+          "source_uid": "female_meditation",
+          "tied_gap_cases": 0
+        },
+        {
+          "evaluable_common_ROI_cases": 0,
+          "mean_mapped_minus_output_primary": null,
+          "mean_mapped_peak_count": null,
+          "mean_redetected_peak_count": null,
+          "negative_gap_cases": 0,
+          "positive_gap_cases": 0,
+          "registered_music_cases": 2,
+          "source_interval": [
+            1071,
+            1317
+          ],
+          "source_uid": "male_meditation",
+          "tied_gap_cases": 0
+        },
+        {
+          "evaluable_common_ROI_cases": 1,
+          "mean_mapped_minus_output_primary": 0.5245942922607717,
+          "mean_mapped_peak_count": 1.0,
+          "mean_redetected_peak_count": 17.0,
+          "negative_gap_cases": 0,
+          "positive_gap_cases": 1,
+          "registered_music_cases": 1,
+          "source_interval": [
+            559,
+            793
+          ],
+          "source_uid": "male_pipa_1",
+          "tied_gap_cases": 0
+        },
+        {
+          "evaluable_common_ROI_cases": 1,
+          "mean_mapped_minus_output_primary": 0.02136066362809641,
+          "mean_mapped_peak_count": 20.0,
+          "mean_redetected_peak_count": 19.0,
+          "negative_gap_cases": 0,
+          "positive_gap_cases": 1,
+          "registered_music_cases": 1,
+          "source_interval": [
+            2473,
+            2709
+          ],
+          "source_uid": "male_pipa_2",
+          "tied_gap_cases": 0
+        },
+        {
+          "evaluable_common_ROI_cases": 1,
+          "mean_mapped_minus_output_primary": 0.0018156309451793917,
+          "mean_mapped_peak_count": 26.0,
+          "mean_redetected_peak_count": 27.0,
+          "negative_gap_cases": 0,
+          "positive_gap_cases": 1,
+          "registered_music_cases": 1,
+          "source_interval": [
+            948,
+            1197
+          ],
+          "source_uid": "male_ribbon",
+          "tied_gap_cases": 0
+        },
+        {
+          "evaluable_common_ROI_cases": 1,
+          "mean_mapped_minus_output_primary": -0.008856957358516104,
+          "mean_mapped_peak_count": 21.0,
+          "mean_redetected_peak_count": 14.0,
+          "negative_gap_cases": 1,
+          "positive_gap_cases": 0,
+          "registered_music_cases": 1,
+          "source_interval": [
+            2020,
+            2268
+          ],
+          "source_uid": "male_ribbon_FenHe",
+          "tied_gap_cases": 0
+        }
+      ],
+      "tied_gap_source_interval_means": 0
+    },
+    "Uniform": {
+      "ci95": null,
+      "evaluable_cases": 10,
+      "evaluable_source_intervals": 7,
+      "negative_gap_source_interval_means": 3,
+      "positive_gap_source_interval_means": 4,
+      "registered_cases": 12,
+      "registered_source_intervals": 8,
+      "source_interval_balanced_mean_mapped_minus_output_primary": -0.00770845364398954,
+      "source_interval_means": [
+        {
+          "evaluable_common_ROI_cases": 2,
+          "mean_mapped_minus_output_primary": 0.01648815949604937,
+          "mean_mapped_peak_count": 22.0,
+          "mean_redetected_peak_count": 21.0,
+          "negative_gap_cases": 0,
+          "positive_gap_cases": 2,
+          "registered_music_cases": 2,
+          "source_interval": [
+            2660,
+            2896
+          ],
+          "source_uid": "female_FeiTian",
+          "tied_gap_cases": 0
+        },
+        {
+          "evaluable_common_ROI_cases": 2,
+          "mean_mapped_minus_output_primary": -0.009516220967634936,
+          "mean_mapped_peak_count": 16.0,
+          "mean_redetected_peak_count": 20.0,
+          "negative_gap_cases": 1,
+          "positive_gap_cases": 1,
+          "registered_music_cases": 2,
+          "source_interval": [
+            1864,
+            2109
+          ],
+          "source_uid": "female_lotus",
+          "tied_gap_cases": 0
+        },
+        {
+          "evaluable_common_ROI_cases": 2,
+          "mean_mapped_minus_output_primary": 0.046981137572056964,
+          "mean_mapped_peak_count": 23.0,
+          "mean_redetected_peak_count": 21.0,
+          "negative_gap_cases": 0,
+          "positive_gap_cases": 2,
+          "registered_music_cases": 2,
+          "source_interval": [
+            2551,
+            2789
+          ],
+          "source_uid": "female_meditation",
+          "tied_gap_cases": 0
+        },
+        {
+          "evaluable_common_ROI_cases": 0,
+          "mean_mapped_minus_output_primary": null,
+          "mean_mapped_peak_count": null,
+          "mean_redetected_peak_count": null,
+          "negative_gap_cases": 0,
+          "positive_gap_cases": 0,
+          "registered_music_cases": 2,
+          "source_interval": [
+            1071,
+            1317
+          ],
+          "source_uid": "male_meditation",
+          "tied_gap_cases": 0
+        },
+        {
+          "evaluable_common_ROI_cases": 1,
+          "mean_mapped_minus_output_primary": -0.12223158882315788,
+          "mean_mapped_peak_count": 1.0,
+          "mean_redetected_peak_count": 18.0,
+          "negative_gap_cases": 1,
+          "positive_gap_cases": 0,
+          "registered_music_cases": 1,
+          "source_interval": [
+            559,
+            793
+          ],
+          "source_uid": "male_pipa_1",
+          "tied_gap_cases": 0
+        },
+        {
+          "evaluable_common_ROI_cases": 1,
+          "mean_mapped_minus_output_primary": 0.02136066362809641,
+          "mean_mapped_peak_count": 20.0,
+          "mean_redetected_peak_count": 19.0,
+          "negative_gap_cases": 0,
+          "positive_gap_cases": 1,
+          "registered_music_cases": 1,
+          "source_interval": [
+            2473,
+            2709
+          ],
+          "source_uid": "male_pipa_2",
+          "tied_gap_cases": 0
+        },
+        {
+          "evaluable_common_ROI_cases": 1,
+          "mean_mapped_minus_output_primary": 0.0018156309451793917,
+          "mean_mapped_peak_count": 26.0,
+          "mean_redetected_peak_count": 27.0,
+          "negative_gap_cases": 0,
+          "positive_gap_cases": 1,
+          "registered_music_cases": 1,
+          "source_interval": [
+            948,
+            1197
+          ],
+          "source_uid": "male_ribbon",
+          "tied_gap_cases": 0
+        },
+        {
+          "evaluable_common_ROI_cases": 1,
+          "mean_mapped_minus_output_primary": -0.008856957358516104,
+          "mean_mapped_peak_count": 21.0,
+          "mean_redetected_peak_count": 14.0,
+          "negative_gap_cases": 1,
+          "positive_gap_cases": 0,
+          "registered_music_cases": 1,
+          "source_interval": [
+            2020,
+            2268
+          ],
+          "source_uid": "male_ribbon_FenHe",
+          "tied_gap_cases": 0
+        }
+      ],
+      "tied_gap_source_interval_means": 0
+    }
+  },
+  "output_peaks_source": "ALREADY_REDETECTED_ON_ACTUAL_R66_OUTPUT_NO_NEW_DETECTOR",
+  "records": [
+    {
+      "audio_sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f",
+      "case_key": "r66b00_6280fdcb23109a34",
+      "mapped_minus_output_primary": 0.02455088069262079,
+      "mapped_peak_count": 22,
+      "mapped_source_proxy": {
+        "beat": {
+          "accepted_event_count": 22,
+          "evidence_count": 219,
+          "mean_nearest_error_frames": 4.384332688587992,
+          "score": 0.4256446298488536
+        },
+        "primary": 0.3559314280157388,
+        "weighted_accent": {
+          "accepted_event_count": 22,
+          "evidence_count": 389,
+          "mean_nearest_error_frames": 3.3675048355899393,
+          "score": 0.286218226182624
+        }
+      },
+      "method": "Uniform",
+      "reason": null,
+      "redetected_output_proxy": {
+        "beat": {
+          "accepted_event_count": 21,
+          "evidence_count": 219,
+          "mean_nearest_error_frames": 4.523809523809524,
+          "score": 0.4003683716012304
+        },
+        "primary": 0.331380547323118,
+        "weighted_accent": {
+          "accepted_event_count": 21,
+          "evidence_count": 389,
+          "mean_nearest_error_frames": 3.3333333333333335,
+          "score": 0.2623927230450056
+        }
+      },
+      "redetected_peak_count": 21,
+      "source_interval": [
+        2660,
+        2896
+      ],
+      "source_uid": "female_FeiTian",
+      "status": "LEGAL",
+      "target_interval": [
+        1390,
+        1630
+      ]
+    },
+    {
+      "audio_sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f",
+      "case_key": "r66b00_6280fdcb23109a34",
+      "mapped_minus_output_primary": 0.011963123894477512,
+      "mapped_peak_count": 22,
+      "mapped_source_proxy": {
+        "beat": {
+          "accepted_event_count": 22,
+          "evidence_count": 219,
+          "mean_nearest_error_frames": 3.421605946794681,
+          "score": 0.5452772803932235
+        },
+        "primary": 0.4443999196137326,
+        "weighted_accent": {
+          "accepted_event_count": 22,
+          "evidence_count": 389,
+          "mean_nearest_error_frames": 3.020591136481833,
+          "score": 0.3435225588342417
+        }
+      },
+      "method": "E1W",
+      "reason": null,
+      "redetected_output_proxy": {
+        "beat": {
+          "accepted_event_count": 25,
+          "evidence_count": 219,
+          "mean_nearest_error_frames": 3.6,
+          "score": 0.5249148296892558
+        },
+        "primary": 0.4324367957192551,
+        "weighted_accent": {
+          "accepted_event_count": 25,
+          "evidence_count": 389,
+          "mean_nearest_error_frames": 2.84,
+          "score": 0.3399587617492543
+        }
+      },
+      "redetected_peak_count": 25,
+      "source_interval": [
+        2660,
+        2896
+      ],
+      "source_uid": "female_FeiTian",
+      "status": "LEGAL",
+      "target_interval": [
+        1390,
+        1630
+      ]
+    },
+    {
+      "audio_sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f",
+      "case_key": "r66b00_6280fdcb23109a34",
+      "mapped_minus_output_primary": 0.02455088069262079,
+      "mapped_peak_count": 22,
+      "mapped_source_proxy": {
+        "beat": {
+          "accepted_event_count": 22,
+          "evidence_count": 219,
+          "mean_nearest_error_frames": 4.384332688587992,
+          "score": 0.4256446298488536
+        },
+        "primary": 0.3559314280157388,
+        "weighted_accent": {
+          "accepted_event_count": 22,
+          "evidence_count": 389,
+          "mean_nearest_error_frames": 3.3675048355899393,
+          "score": 0.286218226182624
+        }
+      },
+      "method": "Rhythm",
+      "reason": null,
+      "redetected_output_proxy": {
+        "beat": {
+          "accepted_event_count": 21,
+          "evidence_count": 219,
+          "mean_nearest_error_frames": 4.523809523809524,
+          "score": 0.4003683716012304
+        },
+        "primary": 0.331380547323118,
+        "weighted_accent": {
+          "accepted_event_count": 21,
+          "evidence_count": 389,
+          "mean_nearest_error_frames": 3.3333333333333335,
+          "score": 0.2623927230450056
+        }
+      },
+      "redetected_peak_count": 21,
+      "source_interval": [
+        2660,
+        2896
+      ],
+      "source_uid": "female_FeiTian",
+      "status": "LEGAL",
+      "target_interval": [
+        1390,
+        1630
+      ]
+    },
+    {
+      "audio_sha256": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c",
+      "case_key": "r66b01_ca3f06a9b37a47ff",
+      "mapped_minus_output_primary": -0.03480632802390088,
+      "mapped_peak_count": 16,
+      "mapped_source_proxy": {
+        "beat": {
+          "accepted_event_count": 16,
+          "evidence_count": 173,
+          "mean_nearest_error_frames": 5.008965163934448,
+          "score": 0.32620677694813693
+        },
+        "primary": 0.26473999536685927,
+        "weighted_accent": {
+          "accepted_event_count": 16,
+          "evidence_count": 271,
+          "mean_nearest_error_frames": 2.912653688524557,
+          "score": 0.2032732137855816
+        }
+      },
+      "method": "Uniform",
+      "reason": null,
+      "redetected_output_proxy": {
+        "beat": {
+          "accepted_event_count": 20,
+          "evidence_count": 173,
+          "mean_nearest_error_frames": 4.35,
+          "score": 0.4103401566208307
+        },
+        "primary": 0.29954632339076015,
+        "weighted_accent": {
+          "accepted_event_count": 20,
+          "evidence_count": 271,
+          "mean_nearest_error_frames": 3.25,
+          "score": 0.18875249016068968
+        }
+      },
+      "redetected_peak_count": 20,
+      "source_interval": [
+        1864,
+        2109
+      ],
+      "source_uid": "female_lotus",
+      "status": "LEGAL",
+      "target_interval": [
+        1536,
+        1776
+      ]
+    },
+    {
+      "audio_sha256": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c",
+      "case_key": "r66b01_ca3f06a9b37a47ff",
+      "mapped_minus_output_primary": -0.06740477386900057,
+      "mapped_peak_count": 16,
+      "mapped_source_proxy": {
+        "beat": {
+          "accepted_event_count": 16,
+          "evidence_count": 173,
+          "mean_nearest_error_frames": 3.164767080745321,
+          "score": 0.6253111175393374
+        },
+        "primary": 0.4108202949928301,
+        "weighted_accent": {
+          "accepted_event_count": 16,
+          "evidence_count": 271,
+          "mean_nearest_error_frames": 3.225326086956528,
+          "score": 0.19632947244632282
+        }
+      },
+      "method": "E1W",
+      "reason": null,
+      "redetected_output_proxy": {
+        "beat": {
+          "accepted_event_count": 19,
+          "evidence_count": 173,
+          "mean_nearest_error_frames": 2.0526315789473686,
+          "score": 0.7337386072667232
+        },
+        "primary": 0.4782250688618307,
+        "weighted_accent": {
+          "accepted_event_count": 19,
+          "evidence_count": 271,
+          "mean_nearest_error_frames": 2.736842105263158,
+          "score": 0.2227115304569382
+        }
+      },
+      "redetected_peak_count": 19,
+      "source_interval": [
+        1864,
+        2109
+      ],
+      "source_uid": "female_lotus",
+      "status": "LEGAL",
+      "target_interval": [
+        1536,
+        1776
+      ]
+    },
+    {
+      "audio_sha256": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c",
+      "case_key": "r66b01_ca3f06a9b37a47ff",
+      "mapped_minus_output_primary": -0.05634021328440475,
+      "mapped_peak_count": 16,
+      "mapped_source_proxy": {
+        "beat": {
+          "accepted_event_count": 16,
+          "evidence_count": 173,
+          "mean_nearest_error_frames": 3.3482654546882458,
+          "score": 0.6356019086269523
+        },
+        "primary": 0.42054887523365847,
+        "weighted_accent": {
+          "accepted_event_count": 16,
+          "evidence_count": 271,
+          "mean_nearest_error_frames": 3.1228902518613637,
+          "score": 0.20549584184036462
+        }
+      },
+      "method": "Rhythm",
+      "reason": null,
+      "redetected_output_proxy": {
+        "beat": {
+          "accepted_event_count": 19,
+          "evidence_count": 173,
+          "mean_nearest_error_frames": 2.3157894736842106,
+          "score": 0.7414184984280128
+        },
+        "primary": 0.4768890885180632,
+        "weighted_accent": {
+          "accepted_event_count": 19,
+          "evidence_count": 271,
+          "mean_nearest_error_frames": 2.8421052631578947,
+          "score": 0.21235967860811367
+        }
+      },
+      "redetected_peak_count": 19,
+      "source_interval": [
+        1864,
+        2109
+      ],
+      "source_uid": "female_lotus",
+      "status": "LEGAL",
+      "target_interval": [
+        1536,
+        1776
+      ]
+    },
+    {
+      "audio_sha256": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33",
+      "case_key": "r66b02_70c9ebdda89155ec",
+      "mapped_minus_output_primary": 0.09097826707875051,
+      "mapped_peak_count": 23,
+      "mapped_source_proxy": {
+        "beat": {
+          "accepted_event_count": 23,
+          "evidence_count": 239,
+          "mean_nearest_error_frames": 3.5129334067143407,
+          "score": 0.5226337436650803
+        },
+        "primary": 0.4319956237831409,
+        "weighted_accent": {
+          "accepted_event_count": 23,
+          "evidence_count": 274,
+          "mean_nearest_error_frames": 3.9561548339753916,
+          "score": 0.34135750390120145
+        }
+      },
+      "method": "Uniform",
+      "reason": null,
+      "redetected_output_proxy": {
+        "beat": {
+          "accepted_event_count": 21,
+          "evidence_count": 239,
+          "mean_nearest_error_frames": 4.095238095238095,
+          "score": 0.42655853225134405
+        },
+        "primary": 0.3410173567043904,
+        "weighted_accent": {
+          "accepted_event_count": 21,
+          "evidence_count": 274,
+          "mean_nearest_error_frames": 4.476190476190476,
+          "score": 0.2554761811574367
+        }
+      },
+      "redetected_peak_count": 21,
+      "source_interval": [
+        2551,
+        2789
+      ],
+      "source_uid": "female_meditation",
+      "status": "LEGAL",
+      "target_interval": [
+        1536,
+        1776
+      ]
+    },
+    {
+      "audio_sha256": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33",
+      "case_key": "r66b02_70c9ebdda89155ec",
+      "mapped_minus_output_primary": -0.021212150910113747,
+      "mapped_peak_count": 23,
+      "mapped_source_proxy": {
+        "beat": {
+          "accepted_event_count": 23,
+          "evidence_count": 239,
+          "mean_nearest_error_frames": 2.8128615854016457,
+          "score": 0.6143407788142372
+        },
+        "primary": 0.5355421702883245,
+        "weighted_accent": {
+          "accepted_event_count": 23,
+          "evidence_count": 274,
+          "mean_nearest_error_frames": 3.065035498445132,
+          "score": 0.4567435617624118
+        }
+      },
+      "method": "E1W",
+      "reason": null,
+      "redetected_output_proxy": {
+        "beat": {
+          "accepted_event_count": 22,
+          "evidence_count": 239,
+          "mean_nearest_error_frames": 2.590909090909091,
+          "score": 0.644066805545708
+        },
+        "primary": 0.5567543211984383,
+        "weighted_accent": {
+          "accepted_event_count": 22,
+          "evidence_count": 274,
+          "mean_nearest_error_frames": 2.909090909090909,
+          "score": 0.4694418368511684
+        }
+      },
+      "redetected_peak_count": 22,
+      "source_interval": [
+        2551,
+        2789
+      ],
+      "source_uid": "female_meditation",
+      "status": "LEGAL",
+      "target_interval": [
+        1536,
+        1776
+      ]
+    },
+    {
+      "audio_sha256": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33",
+      "case_key": "r66b02_70c9ebdda89155ec",
+      "mapped_minus_output_primary": -0.02746442198896204,
+      "mapped_peak_count": 23,
+      "mapped_source_proxy": {
+        "beat": {
+          "accepted_event_count": 23,
+          "evidence_count": 239,
+          "mean_nearest_error_frames": 2.048347634568156,
+          "score": 0.764715277571061
+        },
+        "primary": 0.6779450685473265,
+        "weighted_accent": {
+          "accepted_event_count": 23,
+          "evidence_count": 274,
+          "mean_nearest_error_frames": 2.5303058700419965,
+          "score": 0.5911748595235921
+        }
+      },
+      "method": "Rhythm",
+      "reason": null,
+      "redetected_output_proxy": {
+        "beat": {
+          "accepted_event_count": 21,
+          "evidence_count": 239,
+          "mean_nearest_error_frames": 1.6666666666666667,
+          "score": 0.8113678788761126
+        },
+        "primary": 0.7054094905362885,
+        "weighted_accent": {
+          "accepted_event_count": 21,
+          "evidence_count": 274,
+          "mean_nearest_error_frames": 2.380952380952381,
+          "score": 0.5994511021964645
+        }
+      },
+      "redetected_peak_count": 21,
+      "source_interval": [
+        2551,
+        2789
+      ],
+      "source_uid": "female_meditation",
+      "status": "LEGAL",
+      "target_interval": [
+        1536,
+        1776
+      ]
+    },
+    {
+      "audio_sha256": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c",
+      "case_key": "r66b03_a9c01b65dc66d062",
+      "mapped_minus_output_primary": null,
+      "mapped_peak_count": 0,
+      "mapped_source_proxy": {
+        "beat": {
+          "accepted_event_count": 0,
+          "evidence_count": 173,
+          "mean_nearest_error_frames": null,
+          "score": null
+        },
+        "primary": null,
+        "weighted_accent": {
+          "accepted_event_count": 0,
+          "evidence_count": 271,
+          "mean_nearest_error_frames": null,
+          "score": null
+        }
+      },
+      "method": "Uniform",
+      "reason": "EMPTY_PEAK_SET_OR_AUDIO_EVIDENCE_NOT_A_ZERO_SCORE",
+      "redetected_output_proxy": {
+        "beat": {
+          "accepted_event_count": 0,
+          "evidence_count": 173,
+          "mean_nearest_error_frames": null,
+          "score": null
+        },
+        "primary": null,
+        "weighted_accent": {
+          "accepted_event_count": 0,
+          "evidence_count": 271,
+          "mean_nearest_error_frames": null,
+          "score": null
+        }
+      },
+      "redetected_peak_count": 0,
+      "source_interval": [
+        1071,
+        1317
+      ],
+      "source_uid": "male_meditation",
+      "status": "LEGAL",
+      "target_interval": [
+        1536,
+        1776
+      ]
+    },
+    {
+      "audio_sha256": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c",
+      "case_key": "r66b03_a9c01b65dc66d062",
+      "mapped_minus_output_primary": null,
+      "mapped_peak_count": 0,
+      "mapped_source_proxy": {
+        "beat": {
+          "accepted_event_count": 0,
+          "evidence_count": 173,
+          "mean_nearest_error_frames": null,
+          "score": null
+        },
+        "primary": null,
+        "weighted_accent": {
+          "accepted_event_count": 0,
+          "evidence_count": 271,
+          "mean_nearest_error_frames": null,
+          "score": null
+        }
+      },
+      "method": "E1W",
+      "reason": "EMPTY_PEAK_SET_OR_AUDIO_EVIDENCE_NOT_A_ZERO_SCORE",
+      "redetected_output_proxy": {
+        "beat": {
+          "accepted_event_count": 0,
+          "evidence_count": 173,
+          "mean_nearest_error_frames": null,
+          "score": null
+        },
+        "primary": null,
+        "weighted_accent": {
+          "accepted_event_count": 0,
+          "evidence_count": 271,
+          "mean_nearest_error_frames": null,
+          "score": null
+        }
+      },
+      "redetected_peak_count": 0,
+      "source_interval": [
+        1071,
+        1317
+      ],
+      "source_uid": "male_meditation",
+      "status": "LEGAL",
+      "target_interval": [
+        1536,
+        1776
+      ]
+    },
+    {
+      "audio_sha256": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c",
+      "case_key": "r66b03_a9c01b65dc66d062",
+      "mapped_minus_output_primary": null,
+      "mapped_peak_count": null,
+      "mapped_source_proxy": null,
+      "method": "Rhythm",
+      "reason": "SPEED_PEAK_OR_AUDIO_PROXY_EVIDENCE_MISSING",
+      "redetected_output_proxy": null,
+      "redetected_peak_count": null,
+      "source_interval": [
+        1071,
+        1317
+      ],
+      "source_uid": "male_meditation",
+      "status": "NOT_EVALUABLE",
+      "target_interval": [
+        1536,
+        1776
+      ]
+    },
+    {
+      "audio_sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f",
+      "case_key": "r66b04_c4ded6ddc2d6940d",
+      "mapped_minus_output_primary": -0.12223158882315788,
+      "mapped_peak_count": 1,
+      "mapped_source_proxy": {
+        "beat": {
+          "accepted_event_count": 1,
+          "evidence_count": 219,
+          "mean_nearest_error_frames": 5.884120171673885,
+          "score": 0.1460957882360082
+        },
+        "primary": 0.10469076216856393,
+        "weighted_accent": {
+          "accepted_event_count": 1,
+          "evidence_count": 389,
+          "mean_nearest_error_frames": 6.884120171673885,
+          "score": 0.06328573610111966
+        }
+      },
+      "method": "Uniform",
+      "reason": null,
+      "redetected_output_proxy": {
+        "beat": {
+          "accepted_event_count": 18,
+          "evidence_count": 219,
+          "mean_nearest_error_frames": 5.277777777777778,
+          "score": 0.2626805406648476
+        },
+        "primary": 0.2269223509917218,
+        "weighted_accent": {
+          "accepted_event_count": 18,
+          "evidence_count": 389,
+          "mean_nearest_error_frames": 5.055555555555555,
+          "score": 0.19116416131859604
+        }
+      },
+      "redetected_peak_count": 18,
+      "source_interval": [
+        559,
+        793
+      ],
+      "source_uid": "male_pipa_1",
+      "status": "LEGAL",
+      "target_interval": [
+        1535,
+        1775
+      ]
+    },
+    {
+      "audio_sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f",
+      "case_key": "r66b04_c4ded6ddc2d6940d",
+      "mapped_minus_output_primary": -0.2199476150988393,
+      "mapped_peak_count": 1,
+      "mapped_source_proxy": {
+        "beat": {
+          "accepted_event_count": 1,
+          "evidence_count": 219,
+          "mean_nearest_error_frames": 7.109375,
+          "score": 0.06032816085761137
+        },
+        "primary": 0.04156746127245682,
+        "weighted_accent": {
+          "accepted_event_count": 1,
+          "evidence_count": 389,
+          "mean_nearest_error_frames": 7.890625,
+          "score": 0.022806761687302272
+        }
+      },
+      "method": "E1W",
+      "reason": null,
+      "redetected_output_proxy": {
+        "beat": {
+          "accepted_event_count": 18,
+          "evidence_count": 219,
+          "mean_nearest_error_frames": 5.277777777777778,
+          "score": 0.2767126407980506
+        },
+        "primary": 0.2615150763712961,
+        "weighted_accent": {
+          "accepted_event_count": 18,
+          "evidence_count": 389,
+          "mean_nearest_error_frames": 4.555555555555555,
+          "score": 0.24631751194454163
+        }
+      },
+      "redetected_peak_count": 18,
+      "source_interval": [
+        559,
+        793
+      ],
+      "source_uid": "male_pipa_1",
+      "status": "LEGAL",
+      "target_interval": [
+        1535,
+        1775
+      ]
+    },
+    {
+      "audio_sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f",
+      "case_key": "r66b04_c4ded6ddc2d6940d",
+      "mapped_minus_output_primary": 0.5245942922607717,
+      "mapped_peak_count": 1,
+      "mapped_source_proxy": {
+        "beat": {
+          "accepted_event_count": 1,
+          "evidence_count": 219,
+          "mean_nearest_error_frames": 0.1149835766848355,
+          "score": 0.9992657573044518
+        },
+        "primary": 0.9211406204401706,
+        "weighted_accent": {
+          "accepted_event_count": 1,
+          "evidence_count": 389,
+          "mean_nearest_error_frames": 0.8850164233151645,
+          "score": 0.8430154835758894
+        }
+      },
+      "method": "Rhythm",
+      "reason": null,
+      "redetected_output_proxy": {
+        "beat": {
+          "accepted_event_count": 17,
+          "evidence_count": 219,
+          "mean_nearest_error_frames": 3.8823529411764706,
+          "score": 0.46726972300075076
+        },
+        "primary": 0.39654632817939894,
+        "weighted_accent": {
+          "accepted_event_count": 17,
+          "evidence_count": 389,
+          "mean_nearest_error_frames": 4.176470588235294,
+          "score": 0.3258229333580472
+        }
+      },
+      "redetected_peak_count": 17,
+      "source_interval": [
+        559,
+        793
+      ],
+      "source_uid": "male_pipa_1",
+      "status": "LEGAL",
+      "target_interval": [
+        1535,
+        1775
+      ]
+    },
+    {
+      "audio_sha256": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33",
+      "case_key": "r66b05_56fb0e6ccb0310ef",
+      "mapped_minus_output_primary": 0.02136066362809641,
+      "mapped_peak_count": 20,
+      "mapped_source_proxy": {
+        "beat": {
+          "accepted_event_count": 20,
+          "evidence_count": 239,
+          "mean_nearest_error_frames": 3.810638297872322,
+          "score": 0.4919861469400252
+        },
+        "primary": 0.4692126539520274,
+        "weighted_accent": {
+          "accepted_event_count": 20,
+          "evidence_count": 274,
+          "mean_nearest_error_frames": 3.224680851063783,
+          "score": 0.4464391609640296
+        }
+      },
+      "method": "Uniform",
+      "reason": null,
+      "redetected_output_proxy": {
+        "beat": {
+          "accepted_event_count": 19,
+          "evidence_count": 239,
+          "mean_nearest_error_frames": 3.8947368421052633,
+          "score": 0.4747417851625815
+        },
+        "primary": 0.44785199032393097,
+        "weighted_accent": {
+          "accepted_event_count": 19,
+          "evidence_count": 274,
+          "mean_nearest_error_frames": 3.4210526315789473,
+          "score": 0.42096219548528047
+        }
+      },
+      "redetected_peak_count": 19,
+      "source_interval": [
+        2473,
+        2709
+      ],
+      "source_uid": "male_pipa_2",
+      "status": "LEGAL",
+      "target_interval": [
+        1392,
+        1632
+      ]
+    },
+    {
+      "audio_sha256": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33",
+      "case_key": "r66b05_56fb0e6ccb0310ef",
+      "mapped_minus_output_primary": 0.042589385920924094,
+      "mapped_peak_count": 20,
+      "mapped_source_proxy": {
+        "beat": {
+          "accepted_event_count": 20,
+          "evidence_count": 239,
+          "mean_nearest_error_frames": 2.3302439024389856,
+          "score": 0.7079377721141087
+        },
+        "primary": 0.6240983670803191,
+        "weighted_accent": {
+          "accepted_event_count": 20,
+          "evidence_count": 274,
+          "mean_nearest_error_frames": 2.5302439024389853,
+          "score": 0.5402589620465293
+        }
+      },
+      "method": "E1W",
+      "reason": null,
+      "redetected_output_proxy": {
+        "beat": {
+          "accepted_event_count": 20,
+          "evidence_count": 239,
+          "mean_nearest_error_frames": 2.55,
+          "score": 0.6747075094133902
+        },
+        "primary": 0.581508981159395,
+        "weighted_accent": {
+          "accepted_event_count": 20,
+          "evidence_count": 274,
+          "mean_nearest_error_frames": 3.0,
+          "score": 0.4883104529053998
+        }
+      },
+      "redetected_peak_count": 20,
+      "source_interval": [
+        2473,
+        2709
+      ],
+      "source_uid": "male_pipa_2",
+      "status": "LEGAL",
+      "target_interval": [
+        1392,
+        1632
+      ]
+    },
+    {
+      "audio_sha256": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33",
+      "case_key": "r66b05_56fb0e6ccb0310ef",
+      "mapped_minus_output_primary": 0.02136066362809641,
+      "mapped_peak_count": 20,
+      "mapped_source_proxy": {
+        "beat": {
+          "accepted_event_count": 20,
+          "evidence_count": 239,
+          "mean_nearest_error_frames": 3.810638297872322,
+          "score": 0.4919861469400252
+        },
+        "primary": 0.4692126539520274,
+        "weighted_accent": {
+          "accepted_event_count": 20,
+          "evidence_count": 274,
+          "mean_nearest_error_frames": 3.224680851063783,
+          "score": 0.4464391609640296
+        }
+      },
+      "method": "Rhythm",
+      "reason": null,
+      "redetected_output_proxy": {
+        "beat": {
+          "accepted_event_count": 19,
+          "evidence_count": 239,
+          "mean_nearest_error_frames": 3.8947368421052633,
+          "score": 0.4747417851625815
+        },
+        "primary": 0.44785199032393097,
+        "weighted_accent": {
+          "accepted_event_count": 19,
+          "evidence_count": 274,
+          "mean_nearest_error_frames": 3.4210526315789473,
+          "score": 0.42096219548528047
+        }
+      },
+      "redetected_peak_count": 19,
+      "source_interval": [
+        2473,
+        2709
+      ],
+      "source_uid": "male_pipa_2",
+      "status": "LEGAL",
+      "target_interval": [
+        1392,
+        1632
+      ]
+    },
+    {
+      "audio_sha256": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c",
+      "case_key": "r66b06_0a8028422bbfb1c4",
+      "mapped_minus_output_primary": 0.0018156309451793917,
+      "mapped_peak_count": 26,
+      "mapped_source_proxy": {
+        "beat": {
+          "accepted_event_count": 26,
+          "evidence_count": 173,
+          "mean_nearest_error_frames": 4.948821339950401,
+          "score": 0.38114688647745354
+        },
+        "primary": 0.2793517275331972,
+        "weighted_accent": {
+          "accepted_event_count": 26,
+          "evidence_count": 271,
+          "mean_nearest_error_frames": 3.163151364764251,
+          "score": 0.17755656858894084
+        }
+      },
+      "method": "Uniform",
+      "reason": null,
+      "redetected_output_proxy": {
+        "beat": {
+          "accepted_event_count": 27,
+          "evidence_count": 173,
+          "mean_nearest_error_frames": 4.925925925925926,
+          "score": 0.3752441013672342
+        },
+        "primary": 0.2775360965880178,
+        "weighted_accent": {
+          "accepted_event_count": 27,
+          "evidence_count": 271,
+          "mean_nearest_error_frames": 3.1481481481481484,
+          "score": 0.1798280918088014
+        }
+      },
+      "redetected_peak_count": 27,
+      "source_interval": [
+        948,
+        1197
+      ],
+      "source_uid": "male_ribbon",
+      "status": "LEGAL",
+      "target_interval": [
+        1536,
+        1776
+      ]
+    },
+    {
+      "audio_sha256": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c",
+      "case_key": "r66b06_0a8028422bbfb1c4",
+      "mapped_minus_output_primary": 0.011125821794335133,
+      "mapped_peak_count": 26,
+      "mapped_source_proxy": {
+        "beat": {
+          "accepted_event_count": 26,
+          "evidence_count": 173,
+          "mean_nearest_error_frames": 4.963775934567225,
+          "score": 0.4256434912528028
+        },
+        "primary": 0.32665384481675264,
+        "weighted_accent": {
+          "accepted_event_count": 26,
+          "evidence_count": 271,
+          "mean_nearest_error_frames": 2.3815880362854807,
+          "score": 0.2276641983807025
+        }
+      },
+      "method": "E1W",
+      "reason": null,
+      "redetected_output_proxy": {
+        "beat": {
+          "accepted_event_count": 25,
+          "evidence_count": 173,
+          "mean_nearest_error_frames": 5.16,
+          "score": 0.3963412016470227
+        },
+        "primary": 0.3155280230224175,
+        "weighted_accent": {
+          "accepted_event_count": 25,
+          "evidence_count": 271,
+          "mean_nearest_error_frames": 2.28,
+          "score": 0.23471484439781232
+        }
+      },
+      "redetected_peak_count": 25,
+      "source_interval": [
+        948,
+        1197
+      ],
+      "source_uid": "male_ribbon",
+      "status": "LEGAL",
+      "target_interval": [
+        1536,
+        1776
+      ]
+    },
+    {
+      "audio_sha256": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c",
+      "case_key": "r66b06_0a8028422bbfb1c4",
+      "mapped_minus_output_primary": 0.0018156309451793917,
+      "mapped_peak_count": 26,
+      "mapped_source_proxy": {
+        "beat": {
+          "accepted_event_count": 26,
+          "evidence_count": 173,
+          "mean_nearest_error_frames": 4.948821339950401,
+          "score": 0.38114688647745354
+        },
+        "primary": 0.2793517275331972,
+        "weighted_accent": {
+          "accepted_event_count": 26,
+          "evidence_count": 271,
+          "mean_nearest_error_frames": 3.163151364764251,
+          "score": 0.17755656858894084
+        }
+      },
+      "method": "Rhythm",
+      "reason": null,
+      "redetected_output_proxy": {
+        "beat": {
+          "accepted_event_count": 27,
+          "evidence_count": 173,
+          "mean_nearest_error_frames": 4.925925925925926,
+          "score": 0.3752441013672342
+        },
+        "primary": 0.2775360965880178,
+        "weighted_accent": {
+          "accepted_event_count": 27,
+          "evidence_count": 271,
+          "mean_nearest_error_frames": 3.1481481481481484,
+          "score": 0.1798280918088014
+        }
+      },
+      "redetected_peak_count": 27,
+      "source_interval": [
+        948,
+        1197
+      ],
+      "source_uid": "male_ribbon",
+      "status": "LEGAL",
+      "target_interval": [
+        1536,
+        1776
+      ]
+    },
+    {
+      "audio_sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f",
+      "case_key": "r66b07_4717682e3be3dd02",
+      "mapped_minus_output_primary": -0.008856957358516104,
+      "mapped_peak_count": 21,
+      "mapped_source_proxy": {
+        "beat": {
+          "accepted_event_count": 21,
+          "evidence_count": 219,
+          "mean_nearest_error_frames": 3.0844418739155635,
+          "score": 0.5935268031108867
+        },
+        "primary": 0.5522861744214996,
+        "weighted_accent": {
+          "accepted_event_count": 21,
+          "evidence_count": 389,
+          "mean_nearest_error_frames": 2.2718334297281304,
+          "score": 0.5110455457321126
+        }
+      },
+      "method": "Uniform",
+      "reason": null,
+      "redetected_output_proxy": {
+        "beat": {
+          "accepted_event_count": 14,
+          "evidence_count": 219,
+          "mean_nearest_error_frames": 3.142857142857143,
+          "score": 0.5860286326320923
+        },
+        "primary": 0.5611431317800157,
+        "weighted_accent": {
+          "accepted_event_count": 14,
+          "evidence_count": 389,
+          "mean_nearest_error_frames": 2.357142857142857,
+          "score": 0.5362576309279392
+        }
+      },
+      "redetected_peak_count": 14,
+      "source_interval": [
+        2020,
+        2268
+      ],
+      "source_uid": "male_ribbon_FenHe",
+      "status": "LEGAL",
+      "target_interval": [
+        1534,
+        1774
+      ]
+    },
+    {
+      "audio_sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f",
+      "case_key": "r66b07_4717682e3be3dd02",
+      "mapped_minus_output_primary": -0.0036103680131729377,
+      "mapped_peak_count": 21,
+      "mapped_source_proxy": {
+        "beat": {
+          "accepted_event_count": 21,
+          "evidence_count": 219,
+          "mean_nearest_error_frames": 2.7527705005966037,
+          "score": 0.6399503451481845
+        },
+        "primary": 0.5753757828401649,
+        "weighted_accent": {
+          "accepted_event_count": 21,
+          "evidence_count": 389,
+          "mean_nearest_error_frames": 2.040452713744636,
+          "score": 0.5108012205321454
+        }
+      },
+      "method": "E1W",
+      "reason": null,
+      "redetected_output_proxy": {
+        "beat": {
+          "accepted_event_count": 16,
+          "evidence_count": 219,
+          "mean_nearest_error_frames": 2.625,
+          "score": 0.6442442132963841
+        },
+        "primary": 0.5789861508533378,
+        "weighted_accent": {
+          "accepted_event_count": 16,
+          "evidence_count": 389,
+          "mean_nearest_error_frames": 2.0625,
+          "score": 0.5137280884102915
+        }
+      },
+      "redetected_peak_count": 16,
+      "source_interval": [
+        2020,
+        2268
+      ],
+      "source_uid": "male_ribbon_FenHe",
+      "status": "LEGAL",
+      "target_interval": [
+        1534,
+        1774
+      ]
+    },
+    {
+      "audio_sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f",
+      "case_key": "r66b07_4717682e3be3dd02",
+      "mapped_minus_output_primary": -0.008856957358516104,
+      "mapped_peak_count": 21,
+      "mapped_source_proxy": {
+        "beat": {
+          "accepted_event_count": 21,
+          "evidence_count": 219,
+          "mean_nearest_error_frames": 3.0844418739155635,
+          "score": 0.5935268031108867
+        },
+        "primary": 0.5522861744214996,
+        "weighted_accent": {
+          "accepted_event_count": 21,
+          "evidence_count": 389,
+          "mean_nearest_error_frames": 2.2718334297281304,
+          "score": 0.5110455457321126
+        }
+      },
+      "method": "Rhythm",
+      "reason": null,
+      "redetected_output_proxy": {
+        "beat": {
+          "accepted_event_count": 14,
+          "evidence_count": 219,
+          "mean_nearest_error_frames": 3.142857142857143,
+          "score": 0.5860286326320923
+        },
+        "primary": 0.5611431317800157,
+        "weighted_accent": {
+          "accepted_event_count": 14,
+          "evidence_count": 389,
+          "mean_nearest_error_frames": 2.357142857142857,
+          "score": 0.5362576309279392
+        }
+      },
+      "redetected_peak_count": 14,
+      "source_interval": [
+        2020,
+        2268
+      ],
+      "source_uid": "male_ribbon_FenHe",
+      "status": "LEGAL",
+      "target_interval": [
+        1534,
+        1774
+      ]
+    },
+    {
+      "audio_sha256": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33",
+      "case_key": "r66b08_a7e0cdf241d7a758",
+      "mapped_minus_output_primary": 0.00842543829947795,
+      "mapped_peak_count": 22,
+      "mapped_source_proxy": {
+        "beat": {
+          "accepted_event_count": 22,
+          "evidence_count": 239,
+          "mean_nearest_error_frames": 3.8582205029013865,
+          "score": 0.4671435158696255
+        },
+        "primary": 0.4370754420706972,
+        "weighted_accent": {
+          "accepted_event_count": 22,
+          "evidence_count": 274,
+          "mean_nearest_error_frames": 3.3725338491296126,
+          "score": 0.4070073682717689
+        }
+      },
+      "method": "Uniform",
+      "reason": null,
+      "redetected_output_proxy": {
+        "beat": {
+          "accepted_event_count": 21,
+          "evidence_count": 239,
+          "mean_nearest_error_frames": 4.095238095238095,
+          "score": 0.4359629333997137
+        },
+        "primary": 0.42865000377121926,
+        "weighted_accent": {
+          "accepted_event_count": 21,
+          "evidence_count": 274,
+          "mean_nearest_error_frames": 3.2857142857142856,
+          "score": 0.4213370741427248
+        }
+      },
+      "redetected_peak_count": 21,
+      "source_interval": [
+        2660,
+        2896
+      ],
+      "source_uid": "female_FeiTian",
+      "status": "LEGAL",
+      "target_interval": [
+        1536,
+        1776
+      ]
+    },
+    {
+      "audio_sha256": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33",
+      "case_key": "r66b08_a7e0cdf241d7a758",
+      "mapped_minus_output_primary": 0.027310958062962576,
+      "mapped_peak_count": 22,
+      "mapped_source_proxy": {
+        "beat": {
+          "accepted_event_count": 22,
+          "evidence_count": 239,
+          "mean_nearest_error_frames": 3.333186456400685,
+          "score": 0.5353338369537912
+        },
+        "primary": 0.47743049618052513,
+        "weighted_accent": {
+          "accepted_event_count": 22,
+          "evidence_count": 274,
+          "mean_nearest_error_frames": 3.8059137291279823,
+          "score": 0.4195271554072591
+        }
+      },
+      "method": "E1W",
+      "reason": null,
+      "redetected_output_proxy": {
+        "beat": {
+          "accepted_event_count": 22,
+          "evidence_count": 239,
+          "mean_nearest_error_frames": 3.5454545454545454,
+          "score": 0.507037223666472
+        },
+        "primary": 0.45011953811756256,
+        "weighted_accent": {
+          "accepted_event_count": 22,
+          "evidence_count": 274,
+          "mean_nearest_error_frames": 3.9545454545454546,
+          "score": 0.3932018525686532
+        }
+      },
+      "redetected_peak_count": 22,
+      "source_interval": [
+        2660,
+        2896
+      ],
+      "source_uid": "female_FeiTian",
+      "status": "LEGAL",
+      "target_interval": [
+        1536,
+        1776
+      ]
+    },
+    {
+      "audio_sha256": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33",
+      "case_key": "r66b08_a7e0cdf241d7a758",
+      "mapped_minus_output_primary": 0.00842543829947795,
+      "mapped_peak_count": 22,
+      "mapped_source_proxy": {
+        "beat": {
+          "accepted_event_count": 22,
+          "evidence_count": 239,
+          "mean_nearest_error_frames": 3.8582205029013865,
+          "score": 0.4671435158696255
+        },
+        "primary": 0.4370754420706972,
+        "weighted_accent": {
+          "accepted_event_count": 22,
+          "evidence_count": 274,
+          "mean_nearest_error_frames": 3.3725338491296126,
+          "score": 0.4070073682717689
+        }
+      },
+      "method": "Rhythm",
+      "reason": null,
+      "redetected_output_proxy": {
+        "beat": {
+          "accepted_event_count": 21,
+          "evidence_count": 239,
+          "mean_nearest_error_frames": 4.095238095238095,
+          "score": 0.4359629333997137
+        },
+        "primary": 0.42865000377121926,
+        "weighted_accent": {
+          "accepted_event_count": 21,
+          "evidence_count": 274,
+          "mean_nearest_error_frames": 3.2857142857142856,
+          "score": 0.4213370741427248
+        }
+      },
+      "redetected_peak_count": 21,
+      "source_interval": [
+        2660,
+        2896
+      ],
+      "source_uid": "female_FeiTian",
+      "status": "LEGAL",
+      "target_interval": [
+        1536,
+        1776
+      ]
+    },
+    {
+      "audio_sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f",
+      "case_key": "r66b09_43aba2362b9199f7",
+      "mapped_minus_output_primary": 0.015773886088631006,
+      "mapped_peak_count": 16,
+      "mapped_source_proxy": {
+        "beat": {
+          "accepted_event_count": 16,
+          "evidence_count": 219,
+          "mean_nearest_error_frames": 4.132428278688536,
+          "score": 0.45356348741704444
+        },
+        "primary": 0.44604883910579396,
+        "weighted_accent": {
+          "accepted_event_count": 16,
+          "evidence_count": 389,
+          "mean_nearest_error_frames": 2.104252049180303,
+          "score": 0.4385341907945434
+        }
+      },
+      "method": "Uniform",
+      "reason": null,
+      "redetected_output_proxy": {
+        "beat": {
+          "accepted_event_count": 20,
+          "evidence_count": 219,
+          "mean_nearest_error_frames": 4.15,
+          "score": 0.46505199433988753
+        },
+        "primary": 0.43027495301716295,
+        "weighted_accent": {
+          "accepted_event_count": 20,
+          "evidence_count": 389,
+          "mean_nearest_error_frames": 2.5,
+          "score": 0.3954979116944384
+        }
+      },
+      "redetected_peak_count": 20,
+      "source_interval": [
+        1864,
+        2109
+      ],
+      "source_uid": "female_lotus",
+      "status": "LEGAL",
+      "target_interval": [
+        1535,
+        1775
+      ]
+    },
+    {
+      "audio_sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f",
+      "case_key": "r66b09_43aba2362b9199f7",
+      "mapped_minus_output_primary": 0.0076579216929669736,
+      "mapped_peak_count": 16,
+      "mapped_source_proxy": {
+        "beat": {
+          "accepted_event_count": 16,
+          "evidence_count": 219,
+          "mean_nearest_error_frames": 2.8474999999999824,
+          "score": 0.6308641998994786
+        },
+        "primary": 0.5387297976681781,
+        "weighted_accent": {
+          "accepted_event_count": 16,
+          "evidence_count": 389,
+          "mean_nearest_error_frames": 1.8175000000000097,
+          "score": 0.44659539543687754
+        }
+      },
+      "method": "E1W",
+      "reason": null,
+      "redetected_output_proxy": {
+        "beat": {
+          "accepted_event_count": 22,
+          "evidence_count": 219,
+          "mean_nearest_error_frames": 2.909090909090909,
+          "score": 0.6279840331200975
+        },
+        "primary": 0.5310718759752111,
+        "weighted_accent": {
+          "accepted_event_count": 22,
+          "evidence_count": 389,
+          "mean_nearest_error_frames": 2.0454545454545454,
+          "score": 0.43415971883032467
+        }
+      },
+      "redetected_peak_count": 22,
+      "source_interval": [
+        1864,
+        2109
+      ],
+      "source_uid": "female_lotus",
+      "status": "LEGAL",
+      "target_interval": [
+        1535,
+        1775
+      ]
+    },
+    {
+      "audio_sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f",
+      "case_key": "r66b09_43aba2362b9199f7",
+      "mapped_minus_output_primary": -0.057568622586968154,
+      "mapped_peak_count": 16,
+      "mapped_source_proxy": {
+        "beat": {
+          "accepted_event_count": 16,
+          "evidence_count": 219,
+          "mean_nearest_error_frames": 2.603759388628518,
+          "score": 0.6539257354650221
+        },
+        "primary": 0.5581035204369658,
+        "weighted_accent": {
+          "accepted_event_count": 16,
+          "evidence_count": 389,
+          "mean_nearest_error_frames": 2.1522676301186863,
+          "score": 0.46228130540890955
+        }
+      },
+      "method": "Rhythm",
+      "reason": null,
+      "redetected_output_proxy": {
+        "beat": {
+          "accepted_event_count": 20,
+          "evidence_count": 219,
+          "mean_nearest_error_frames": 2.2,
+          "score": 0.7084880071356048
+        },
+        "primary": 0.6156721430239339,
+        "weighted_accent": {
+          "accepted_event_count": 20,
+          "evidence_count": 389,
+          "mean_nearest_error_frames": 1.95,
+          "score": 0.522856278912263
+        }
+      },
+      "redetected_peak_count": 20,
+      "source_interval": [
+        1864,
+        2109
+      ],
+      "source_uid": "female_lotus",
+      "status": "LEGAL",
+      "target_interval": [
+        1535,
+        1775
+      ]
+    },
+    {
+      "audio_sha256": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c",
+      "case_key": "r66b10_f449ca842cdeb74f",
+      "mapped_minus_output_primary": 0.0029840080653634193,
+      "mapped_peak_count": 23,
+      "mapped_source_proxy": {
+        "beat": {
+          "accepted_event_count": 23,
+          "evidence_count": 173,
+          "mean_nearest_error_frames": 5.458631443771695,
+          "score": 0.3725834381642594
+        },
+        "primary": 0.29829913161501603,
+        "weighted_accent": {
+          "accepted_event_count": 23,
+          "evidence_count": 271,
+          "mean_nearest_error_frames": 2.2713263621354085,
+          "score": 0.22401482506577272
+        }
+      },
+      "method": "Uniform",
+      "reason": null,
+      "redetected_output_proxy": {
+        "beat": {
+          "accepted_event_count": 21,
+          "evidence_count": 173,
+          "mean_nearest_error_frames": 4.904761904761905,
+          "score": 0.39268481065639727
+        },
+        "primary": 0.2953151235496526,
+        "weighted_accent": {
+          "accepted_event_count": 21,
+          "evidence_count": 271,
+          "mean_nearest_error_frames": 2.9047619047619047,
+          "score": 0.1979454364429079
+        }
+      },
+      "redetected_peak_count": 21,
+      "source_interval": [
+        2551,
+        2789
+      ],
+      "source_uid": "female_meditation",
+      "status": "LEGAL",
+      "target_interval": [
+        1536,
+        1776
+      ]
+    },
+    {
+      "audio_sha256": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c",
+      "case_key": "r66b10_f449ca842cdeb74f",
+      "mapped_minus_output_primary": -0.026704932955048055,
+      "mapped_peak_count": 23,
+      "mapped_source_proxy": {
+        "beat": {
+          "accepted_event_count": 23,
+          "evidence_count": 173,
+          "mean_nearest_error_frames": 4.328841232265137,
+          "score": 0.4913168977656575
+        },
+        "primary": 0.35679248143430486,
+        "weighted_accent": {
+          "accepted_event_count": 23,
+          "evidence_count": 271,
+          "mean_nearest_error_frames": 2.3636238409608565,
+          "score": 0.22226806510295224
+        }
+      },
+      "method": "E1W",
+      "reason": null,
+      "redetected_output_proxy": {
+        "beat": {
+          "accepted_event_count": 23,
+          "evidence_count": 173,
+          "mean_nearest_error_frames": 3.9130434782608696,
+          "score": 0.5368103113066081
+        },
+        "primary": 0.3834974143893529,
+        "weighted_accent": {
+          "accepted_event_count": 23,
+          "evidence_count": 271,
+          "mean_nearest_error_frames": 2.1739130434782608,
+          "score": 0.23018451747209775
+        }
+      },
+      "redetected_peak_count": 23,
+      "source_interval": [
+        2551,
+        2789
+      ],
+      "source_uid": "female_meditation",
+      "status": "LEGAL",
+      "target_interval": [
+        1536,
+        1776
+      ]
+    },
+    {
+      "audio_sha256": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c",
+      "case_key": "r66b10_f449ca842cdeb74f",
+      "mapped_minus_output_primary": 0.0029840080653634193,
+      "mapped_peak_count": 23,
+      "mapped_source_proxy": {
+        "beat": {
+          "accepted_event_count": 23,
+          "evidence_count": 173,
+          "mean_nearest_error_frames": 5.458631443771695,
+          "score": 0.3725834381642594
+        },
+        "primary": 0.29829913161501603,
+        "weighted_accent": {
+          "accepted_event_count": 23,
+          "evidence_count": 271,
+          "mean_nearest_error_frames": 2.2713263621354085,
+          "score": 0.22401482506577272
+        }
+      },
+      "method": "Rhythm",
+      "reason": null,
+      "redetected_output_proxy": {
+        "beat": {
+          "accepted_event_count": 21,
+          "evidence_count": 173,
+          "mean_nearest_error_frames": 4.904761904761905,
+          "score": 0.39268481065639727
+        },
+        "primary": 0.2953151235496526,
+        "weighted_accent": {
+          "accepted_event_count": 21,
+          "evidence_count": 271,
+          "mean_nearest_error_frames": 2.9047619047619047,
+          "score": 0.1979454364429079
+        }
+      },
+      "redetected_peak_count": 21,
+      "source_interval": [
+        2551,
+        2789
+      ],
+      "source_uid": "female_meditation",
+      "status": "LEGAL",
+      "target_interval": [
+        1536,
+        1776
+      ]
+    },
+    {
+      "audio_sha256": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33",
+      "case_key": "r66b11_73f9e95e0fef2d60",
+      "mapped_minus_output_primary": null,
+      "mapped_peak_count": 0,
+      "mapped_source_proxy": {
+        "beat": {
+          "accepted_event_count": 0,
+          "evidence_count": 239,
+          "mean_nearest_error_frames": null,
+          "score": null
+        },
+        "primary": null,
+        "weighted_accent": {
+          "accepted_event_count": 0,
+          "evidence_count": 274,
+          "mean_nearest_error_frames": null,
+          "score": null
+        }
+      },
+      "method": "Uniform",
+      "reason": "EMPTY_PEAK_SET_OR_AUDIO_EVIDENCE_NOT_A_ZERO_SCORE",
+      "redetected_output_proxy": {
+        "beat": {
+          "accepted_event_count": 0,
+          "evidence_count": 239,
+          "mean_nearest_error_frames": null,
+          "score": null
+        },
+        "primary": null,
+        "weighted_accent": {
+          "accepted_event_count": 0,
+          "evidence_count": 274,
+          "mean_nearest_error_frames": null,
+          "score": null
+        }
+      },
+      "redetected_peak_count": 0,
+      "source_interval": [
+        1071,
+        1317
+      ],
+      "source_uid": "male_meditation",
+      "status": "LEGAL",
+      "target_interval": [
+        1536,
+        1776
+      ]
+    },
+    {
+      "audio_sha256": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33",
+      "case_key": "r66b11_73f9e95e0fef2d60",
+      "mapped_minus_output_primary": null,
+      "mapped_peak_count": 0,
+      "mapped_source_proxy": {
+        "beat": {
+          "accepted_event_count": 0,
+          "evidence_count": 239,
+          "mean_nearest_error_frames": null,
+          "score": null
+        },
+        "primary": null,
+        "weighted_accent": {
+          "accepted_event_count": 0,
+          "evidence_count": 274,
+          "mean_nearest_error_frames": null,
+          "score": null
+        }
+      },
+      "method": "E1W",
+      "reason": "EMPTY_PEAK_SET_OR_AUDIO_EVIDENCE_NOT_A_ZERO_SCORE",
+      "redetected_output_proxy": {
+        "beat": {
+          "accepted_event_count": 0,
+          "evidence_count": 239,
+          "mean_nearest_error_frames": null,
+          "score": null
+        },
+        "primary": null,
+        "weighted_accent": {
+          "accepted_event_count": 0,
+          "evidence_count": 274,
+          "mean_nearest_error_frames": null,
+          "score": null
+        }
+      },
+      "redetected_peak_count": 0,
+      "source_interval": [
+        1071,
+        1317
+      ],
+      "source_uid": "male_meditation",
+      "status": "LEGAL",
+      "target_interval": [
+        1536,
+        1776
+      ]
+    },
+    {
+      "audio_sha256": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33",
+      "case_key": "r66b11_73f9e95e0fef2d60",
+      "mapped_minus_output_primary": null,
+      "mapped_peak_count": null,
+      "mapped_source_proxy": null,
+      "method": "Rhythm",
+      "reason": "SPEED_PEAK_OR_AUDIO_PROXY_EVIDENCE_MISSING",
+      "redetected_output_proxy": null,
+      "redetected_peak_count": null,
+      "source_interval": [
+        1071,
+        1317
+      ],
+      "source_uid": "male_meditation",
+      "status": "NOT_EVALUABLE",
+      "target_interval": [
+        1536,
+        1776
+      ]
+    }
+  ],
+  "registered_records": 36,
+  "reward": {
+    "accent_strength": "INTERPOLATED_FROM_FROZEN_FULL_CLOCK_AT_ACCENT_EVENT_FRAMES",
+    "beat_weight": 0.5,
+    "implementation": "ORIGINAL_R64_MUSIC_PY__reward",
+    "sigma_frames": 3,
+    "weighted_accent_weight": 0.5
+  },
+  "schema": "R67_PUBLICATION_R66_COMMON_ROI_PROXY_GAP_V1",
+  "scope": "DESCRIPTIVE_OVERESTIMATION_DIAGNOSTIC_NOT_HUMAN_ACCENT_TRUTH",
+  "source_must_have_whole_evidence_inside_Core": true
+}

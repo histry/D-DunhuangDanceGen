@@ -1,0 +1,128 @@
+{
+  "version": "R67_FROZEN_LEGAL_WARP_R41_DIAGNOSIS_V1",
+  "parent_commit": "601ebc81faa2695e3dda841a5f888d73fd4fc9f4",
+  "seed": 67067,
+  "ks": [
+    1,
+    4,
+    8,
+    16
+  ],
+  "primary_ks": [
+    1,
+    16
+  ],
+  "max_k": 16,
+  "frames": 240,
+  "checkpoint_sha256": "212148e7cd86b482cc7734035725b1165edcd7a1c35e03fa513f6982f440e772",
+  "normalizer_sha256": "80a83d6f7a5f1bca62d3298cba206a871188f5c6b1519ab4a897672c7c986e35",
+  "r59_manifest": "outputs/paired_benchmark_r59_01/data/manifest.json",
+  "r59_manifest_sha256": "5d66076438baba182176576de91fb7ca53c7398b612db3211e1cb461cede9c38",
+  "candidate_rule": "FROZEN_E1W_BASELINE_FIRST_THEN_R53_BEST16_Q_DEDUP_ATOL1E-9; NO_SCORE_USED_NO_PADDING",
+  "source_to_target_rates": [
+    0.75,
+    1.33
+  ],
+  "readouts": [
+    "Single64",
+    "Multi64",
+    "UniformReadout64"
+  ],
+  "scale_weights": [
+    0.5,
+    0.25,
+    0.25
+  ],
+  "feature_controls": [
+    "actual",
+    "zero",
+    "swap"
+  ],
+  "token_budget": [
+    32,
+    16,
+    16
+  ],
+  "single_tokens": 64,
+  "pool_norm_epsilon": 1e-08,
+  "common_support": "MAX_BANK_AND_ALL_MUSIC_CONTROLS_VALID_TOKEN_INTERSECTION; SAME_MASK_ALL_K_AND_READOUTS",
+  "paired_population": "12_EXISTING_AIST_VAL_RECORDINGS_SIX_EXPOSED_MUSIC_GROUPS; CENTRED240_NO_REPLACEMENT",
+  "paired_states": [
+    "untouched",
+    "injected"
+  ],
+  "synthetic_domain": "R53_LATTICE_WITH_REGISTERED_NEUTRAL_GRID_NODES_48_96_144_192_AND_TARGET_GRID_STEP6; NOT_DETECTED_EVENT_LABELS",
+  "injection": "FREEZE_BANK_THEN_HASH_SELECT_EXISTING_NONBASELINE_REVERSIBLE_MAP; COMPOSITION_TRUTH_AND_BANK_ORACLE; NO_CANDIDATE_ADDED",
+  "metric": "NEGATIVE_COMPOSED_PHYSICAL_CLOCK_MAE; ORACLE_REGRET; TIE_EXPECTATION; MUSIC_GROUP_BOOTSTRAP",
+  "bootstrap_draws": 3000,
+  "phase_audit": {
+    "parent": "outputs/timing_validity_r66_01",
+    "queries": 338,
+    "trim_each_side": 30,
+    "offsets": [
+      -15,
+      -8,
+      0,
+      8,
+      15
+    ],
+    "lags": [
+      -15,
+      -14,
+      -13,
+      -12,
+      -11,
+      -10,
+      -9,
+      -8,
+      -7,
+      -6,
+      -5,
+      -4,
+      -3,
+      -2,
+      -1,
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "types": [
+      "speed_peak",
+      "motion_onset",
+      "deceleration",
+      "pose_hold",
+      "root_turn_span",
+      "direction_turn"
+    ],
+    "latency_selection": false,
+    "scope": "DESCRIPTIVE_ALL_REGISTERED_LAGS_NOT_BEST_LAG_QUALIFICATION; NO_NEW_REWARD",
+    "pose_extrema": "NOT_EVALUABLE_NO_REGISTERED_DETECTOR"
+  },
+  "neural_training_steps": 0,
+  "new_planner_searches": 0,
+  "bridge_solves": 0,
+  "human_reviewed": false,
+  "semantic_event_truth": "UNKNOWN",
+  "artistic_quality": "NOT_EVALUABLE",
+  "Native24": "NOT_EVALUABLE",
+  "can_route": false,
+  "allowed_after_negative": "ONE_FIXED_BUDGET_COMPLETE_2X2; NO_WEIGHT_OR_POPULATION_CHANGE",
+  "proposal_learning": "NOT_RUN_CHANGES_CANDIDATE_GENERATOR; SEPARATE_FUTURE_STUDY",
+  "interaction_interpretation": "WITH_FIXED_EVENT_K1_HAS_ONE_WARP_SO_CLOCK_ERROR_INTERACTION_REDUCES_K16_SELECTOR_DIFFERENCE; NOT_GENERAL_SYNERGY_PROOF",
+  "local_bridge": "ALL_CHANGE_CANDIDATES_REBUILD_G1_FIXED_NEIGHBOR_AND_GAP48_ORIGINAL_SCREEN; NO_NATIVE24_QUALIFICATION",
+  "change_raw50_feature_arrays_sha256": "14fcea9bfe6457a552496ca34469b4e8c06503c8935475ff930614089197d93e",
+  "r64_music_clocks_sha256": "0a7bd68287f1d98e81639fb3545d78ddca9ae22f01abb89e333eef6587d30247"
+}

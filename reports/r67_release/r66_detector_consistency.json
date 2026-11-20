@@ -1,0 +1,3292 @@
+[
+  {
+    "case_key": "r66b00_6280fdcb23109a34",
+    "detector_counts_scope": "ONE_TO_ONE_REGION_MATCHES_WITHIN3_REPORTED_SEPARATELY_FROM_PROXY_SCORE",
+    "diagnostic": {
+      "mapped_alignment": {
+        "accent": {
+          "evidence_count": 389,
+          "gaussian3_score": 0.286218226182624,
+          "mean_nearest_error_frames": 3.3675048355899393,
+          "mean_nearest_error_seconds": 0.11225016118633131,
+          "query_count": 22,
+          "status": "PROXY_ONLY"
+        },
+        "alternate_onset": {
+          "evidence_count": 0,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 22,
+          "status": "NOT_EVALUABLE"
+        },
+        "beat": {
+          "evidence_count": 219,
+          "gaussian3_score": 0.4256446298488536,
+          "mean_nearest_error_frames": 4.384332688587992,
+          "mean_nearest_error_seconds": 0.14614442295293306,
+          "query_count": 22,
+          "status": "PROXY_ONLY"
+        },
+        "primary_half_beat_half_accent": 0.3559314280157388,
+        "scope": "MANY_TO_NEAREST_AUDIO_PROXY_DIAGNOSTIC_NOT_EVENT_TRUTH_OR_ARTISTIC_QUALITY"
+      },
+      "output_alignment": {
+        "accent": {
+          "evidence_count": 389,
+          "gaussian3_score": 0.2623927230450056,
+          "mean_nearest_error_frames": 3.3333333333333335,
+          "mean_nearest_error_seconds": 0.11111111111111112,
+          "query_count": 21,
+          "status": "PROXY_ONLY"
+        },
+        "alternate_onset": {
+          "evidence_count": 0,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 21,
+          "status": "NOT_EVALUABLE"
+        },
+        "beat": {
+          "evidence_count": 219,
+          "gaussian3_score": 0.4003683716012304,
+          "mean_nearest_error_frames": 4.523809523809524,
+          "mean_nearest_error_seconds": 0.15079365079365079,
+          "query_count": 21,
+          "status": "PROXY_ONLY"
+        },
+        "primary_half_beat_half_accent": 0.331380547323118,
+        "scope": "MANY_TO_NEAREST_AUDIO_PROXY_DIAGNOSTIC_NOT_EVENT_TRUTH_OR_ARTISTIC_QUALITY"
+      },
+      "reason": "OUTPUT_SPEED_EQUALS_SOURCE_SPEED_TIMES_INVERSE_CLOCK_RATE; MAXIMA_NEED_NOT_BE_INVARIANT",
+      "regions": [
+        {
+          "mapped_source_peaks": 7,
+          "mean_assigned_distance_frames": 0.3439716312056926,
+          "one_to_one_within3_count": 6,
+          "redetected_output_peaks": 6,
+          "region": "upper",
+          "source_fraction_within3": 0.8571428571428571
+        },
+        {
+          "mapped_source_peaks": 9,
+          "mean_assigned_distance_frames": 0.33404255319151677,
+          "one_to_one_within3_count": 8,
+          "redetected_output_peaks": 8,
+          "region": "lower",
+          "source_fraction_within3": 0.8888888888888888
+        },
+        {
+          "mapped_source_peaks": 6,
+          "mean_assigned_distance_frames": 0.3489361702127998,
+          "one_to_one_within3_count": 6,
+          "redetected_output_peaks": 7,
+          "region": "trunk",
+          "source_fraction_within3": 1.0
+        }
+      ],
+      "status": "DETECTOR_CONSISTENCY_ONLY_NOT_EVENT_TRUTH"
+    },
+    "mapped_source_music_score_as_R66_recorded": 0.3559314280157388,
+    "method": "Uniform",
+    "original_ROIs_differ": true,
+    "redetected_output_music_score_as_R66_recorded": 0.331380547323118,
+    "score_difference_scope": "ORIGINAL_R66_ALIGNMENT_ROIS_DIFFER; NO_SYSTEMATIC_OVERESTIMATION_INFERENCE_FROM_THESE_FIELDS",
+    "source_uid": "female_FeiTian"
+  },
+  {
+    "case_key": "r66b00_6280fdcb23109a34",
+    "detector_counts_scope": "ONE_TO_ONE_REGION_MATCHES_WITHIN3_REPORTED_SEPARATELY_FROM_PROXY_SCORE",
+    "diagnostic": {
+      "mapped_alignment": {
+        "accent": {
+          "evidence_count": 389,
+          "gaussian3_score": 0.3435225588342417,
+          "mean_nearest_error_frames": 3.020591136481833,
+          "mean_nearest_error_seconds": 0.1006863712160611,
+          "query_count": 22,
+          "status": "PROXY_ONLY"
+        },
+        "alternate_onset": {
+          "evidence_count": 0,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 22,
+          "status": "NOT_EVALUABLE"
+        },
+        "beat": {
+          "evidence_count": 219,
+          "gaussian3_score": 0.5452772803932235,
+          "mean_nearest_error_frames": 3.421605946794681,
+          "mean_nearest_error_seconds": 0.1140535315598227,
+          "query_count": 22,
+          "status": "PROXY_ONLY"
+        },
+        "primary_half_beat_half_accent": 0.4443999196137326,
+        "scope": "MANY_TO_NEAREST_AUDIO_PROXY_DIAGNOSTIC_NOT_EVENT_TRUTH_OR_ARTISTIC_QUALITY"
+      },
+      "output_alignment": {
+        "accent": {
+          "evidence_count": 389,
+          "gaussian3_score": 0.3399587617492543,
+          "mean_nearest_error_frames": 2.84,
+          "mean_nearest_error_seconds": 0.09466666666666666,
+          "query_count": 25,
+          "status": "PROXY_ONLY"
+        },
+        "alternate_onset": {
+          "evidence_count": 0,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 25,
+          "status": "NOT_EVALUABLE"
+        },
+        "beat": {
+          "evidence_count": 219,
+          "gaussian3_score": 0.5249148296892558,
+          "mean_nearest_error_frames": 3.6,
+          "mean_nearest_error_seconds": 0.12000000000000001,
+          "query_count": 25,
+          "status": "PROXY_ONLY"
+        },
+        "primary_half_beat_half_accent": 0.4324367957192551,
+        "scope": "MANY_TO_NEAREST_AUDIO_PROXY_DIAGNOSTIC_NOT_EVENT_TRUTH_OR_ARTISTIC_QUALITY"
+      },
+      "reason": "OUTPUT_SPEED_EQUALS_SOURCE_SPEED_TIMES_INVERSE_CLOCK_RATE; MAXIMA_NEED_NOT_BE_INVARIANT",
+      "regions": [
+        {
+          "mapped_source_peaks": 7,
+          "mean_assigned_distance_frames": 0.4392857142856883,
+          "one_to_one_within3_count": 7,
+          "redetected_output_peaks": 8,
+          "region": "upper",
+          "source_fraction_within3": 1.0
+        },
+        {
+          "mapped_source_peaks": 9,
+          "mean_assigned_distance_frames": 0.2399098919927651,
+          "one_to_one_within3_count": 9,
+          "redetected_output_peaks": 9,
+          "region": "lower",
+          "source_fraction_within3": 1.0
+        },
+        {
+          "mapped_source_peaks": 6,
+          "mean_assigned_distance_frames": 0.2275202322308599,
+          "one_to_one_within3_count": 6,
+          "redetected_output_peaks": 8,
+          "region": "trunk",
+          "source_fraction_within3": 1.0
+        }
+      ],
+      "status": "DETECTOR_CONSISTENCY_ONLY_NOT_EVENT_TRUTH"
+    },
+    "mapped_source_music_score_as_R66_recorded": 0.4443999196137326,
+    "method": "E1W",
+    "original_ROIs_differ": true,
+    "redetected_output_music_score_as_R66_recorded": 0.4324367957192551,
+    "score_difference_scope": "ORIGINAL_R66_ALIGNMENT_ROIS_DIFFER; NO_SYSTEMATIC_OVERESTIMATION_INFERENCE_FROM_THESE_FIELDS",
+    "source_uid": "female_FeiTian"
+  },
+  {
+    "case_key": "r66b00_6280fdcb23109a34",
+    "detector_counts_scope": "ONE_TO_ONE_REGION_MATCHES_WITHIN3_REPORTED_SEPARATELY_FROM_PROXY_SCORE",
+    "diagnostic": {
+      "mapped_alignment": {
+        "accent": {
+          "evidence_count": 389,
+          "gaussian3_score": 0.286218226182624,
+          "mean_nearest_error_frames": 3.3675048355899393,
+          "mean_nearest_error_seconds": 0.11225016118633131,
+          "query_count": 22,
+          "status": "PROXY_ONLY"
+        },
+        "alternate_onset": {
+          "evidence_count": 0,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 22,
+          "status": "NOT_EVALUABLE"
+        },
+        "beat": {
+          "evidence_count": 219,
+          "gaussian3_score": 0.4256446298488536,
+          "mean_nearest_error_frames": 4.384332688587992,
+          "mean_nearest_error_seconds": 0.14614442295293306,
+          "query_count": 22,
+          "status": "PROXY_ONLY"
+        },
+        "primary_half_beat_half_accent": 0.3559314280157388,
+        "scope": "MANY_TO_NEAREST_AUDIO_PROXY_DIAGNOSTIC_NOT_EVENT_TRUTH_OR_ARTISTIC_QUALITY"
+      },
+      "output_alignment": {
+        "accent": {
+          "evidence_count": 389,
+          "gaussian3_score": 0.2623927230450056,
+          "mean_nearest_error_frames": 3.3333333333333335,
+          "mean_nearest_error_seconds": 0.11111111111111112,
+          "query_count": 21,
+          "status": "PROXY_ONLY"
+        },
+        "alternate_onset": {
+          "evidence_count": 0,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 21,
+          "status": "NOT_EVALUABLE"
+        },
+        "beat": {
+          "evidence_count": 219,
+          "gaussian3_score": 0.4003683716012304,
+          "mean_nearest_error_frames": 4.523809523809524,
+          "mean_nearest_error_seconds": 0.15079365079365079,
+          "query_count": 21,
+          "status": "PROXY_ONLY"
+        },
+        "primary_half_beat_half_accent": 0.331380547323118,
+        "scope": "MANY_TO_NEAREST_AUDIO_PROXY_DIAGNOSTIC_NOT_EVENT_TRUTH_OR_ARTISTIC_QUALITY"
+      },
+      "reason": "OUTPUT_SPEED_EQUALS_SOURCE_SPEED_TIMES_INVERSE_CLOCK_RATE; MAXIMA_NEED_NOT_BE_INVARIANT",
+      "regions": [
+        {
+          "mapped_source_peaks": 7,
+          "mean_assigned_distance_frames": 0.3439716312056926,
+          "one_to_one_within3_count": 6,
+          "redetected_output_peaks": 6,
+          "region": "upper",
+          "source_fraction_within3": 0.8571428571428571
+        },
+        {
+          "mapped_source_peaks": 9,
+          "mean_assigned_distance_frames": 0.33404255319151677,
+          "one_to_one_within3_count": 8,
+          "redetected_output_peaks": 8,
+          "region": "lower",
+          "source_fraction_within3": 0.8888888888888888
+        },
+        {
+          "mapped_source_peaks": 6,
+          "mean_assigned_distance_frames": 0.3489361702127998,
+          "one_to_one_within3_count": 6,
+          "redetected_output_peaks": 7,
+          "region": "trunk",
+          "source_fraction_within3": 1.0
+        }
+      ],
+      "status": "DETECTOR_CONSISTENCY_ONLY_NOT_EVENT_TRUTH"
+    },
+    "mapped_source_music_score_as_R66_recorded": 0.3559314280157388,
+    "method": "Rhythm",
+    "original_ROIs_differ": true,
+    "redetected_output_music_score_as_R66_recorded": 0.331380547323118,
+    "score_difference_scope": "ORIGINAL_R66_ALIGNMENT_ROIS_DIFFER; NO_SYSTEMATIC_OVERESTIMATION_INFERENCE_FROM_THESE_FIELDS",
+    "source_uid": "female_FeiTian"
+  },
+  {
+    "case_key": "r66b01_ca3f06a9b37a47ff",
+    "detector_counts_scope": "ONE_TO_ONE_REGION_MATCHES_WITHIN3_REPORTED_SEPARATELY_FROM_PROXY_SCORE",
+    "diagnostic": {
+      "mapped_alignment": {
+        "accent": {
+          "evidence_count": 271,
+          "gaussian3_score": 0.2032732137855816,
+          "mean_nearest_error_frames": 2.912653688524557,
+          "mean_nearest_error_seconds": 0.0970884562841519,
+          "query_count": 16,
+          "status": "PROXY_ONLY"
+        },
+        "alternate_onset": {
+          "evidence_count": 0,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 16,
+          "status": "NOT_EVALUABLE"
+        },
+        "beat": {
+          "evidence_count": 173,
+          "gaussian3_score": 0.32620677694813693,
+          "mean_nearest_error_frames": 5.008965163934448,
+          "mean_nearest_error_seconds": 0.1669655054644816,
+          "query_count": 16,
+          "status": "PROXY_ONLY"
+        },
+        "primary_half_beat_half_accent": 0.26473999536685927,
+        "scope": "MANY_TO_NEAREST_AUDIO_PROXY_DIAGNOSTIC_NOT_EVENT_TRUTH_OR_ARTISTIC_QUALITY"
+      },
+      "output_alignment": {
+        "accent": {
+          "evidence_count": 271,
+          "gaussian3_score": 0.18875249016068968,
+          "mean_nearest_error_frames": 3.25,
+          "mean_nearest_error_seconds": 0.10833333333333334,
+          "query_count": 20,
+          "status": "PROXY_ONLY"
+        },
+        "alternate_onset": {
+          "evidence_count": 0,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 20,
+          "status": "NOT_EVALUABLE"
+        },
+        "beat": {
+          "evidence_count": 173,
+          "gaussian3_score": 0.4103401566208307,
+          "mean_nearest_error_frames": 4.35,
+          "mean_nearest_error_seconds": 0.145,
+          "query_count": 20,
+          "status": "PROXY_ONLY"
+        },
+        "primary_half_beat_half_accent": 0.29954632339076015,
+        "scope": "MANY_TO_NEAREST_AUDIO_PROXY_DIAGNOSTIC_NOT_EVENT_TRUTH_OR_ARTISTIC_QUALITY"
+      },
+      "reason": "OUTPUT_SPEED_EQUALS_SOURCE_SPEED_TIMES_INVERSE_CLOCK_RATE; MAXIMA_NEED_NOT_BE_INVARIANT",
+      "regions": [
+        {
+          "mapped_source_peaks": 6,
+          "mean_assigned_distance_frames": 1.5942622950819547,
+          "one_to_one_within3_count": 4,
+          "redetected_output_peaks": 5,
+          "region": "upper",
+          "source_fraction_within3": 0.6666666666666666
+        },
+        {
+          "mapped_source_peaks": 5,
+          "mean_assigned_distance_frames": 0.37131147540983067,
+          "one_to_one_within3_count": 5,
+          "redetected_output_peaks": 8,
+          "region": "lower",
+          "source_fraction_within3": 1.0
+        },
+        {
+          "mapped_source_peaks": 5,
+          "mean_assigned_distance_frames": 0.23196721311475982,
+          "one_to_one_within3_count": 5,
+          "redetected_output_peaks": 7,
+          "region": "trunk",
+          "source_fraction_within3": 1.0
+        }
+      ],
+      "status": "DETECTOR_CONSISTENCY_ONLY_NOT_EVENT_TRUTH"
+    },
+    "mapped_source_music_score_as_R66_recorded": 0.26473999536685927,
+    "method": "Uniform",
+    "original_ROIs_differ": true,
+    "redetected_output_music_score_as_R66_recorded": 0.29954632339076015,
+    "score_difference_scope": "ORIGINAL_R66_ALIGNMENT_ROIS_DIFFER; NO_SYSTEMATIC_OVERESTIMATION_INFERENCE_FROM_THESE_FIELDS",
+    "source_uid": "female_lotus"
+  },
+  {
+    "case_key": "r66b01_ca3f06a9b37a47ff",
+    "detector_counts_scope": "ONE_TO_ONE_REGION_MATCHES_WITHIN3_REPORTED_SEPARATELY_FROM_PROXY_SCORE",
+    "diagnostic": {
+      "mapped_alignment": {
+        "accent": {
+          "evidence_count": 271,
+          "gaussian3_score": 0.19632947244632282,
+          "mean_nearest_error_frames": 3.225326086956528,
+          "mean_nearest_error_seconds": 0.1075108695652176,
+          "query_count": 16,
+          "status": "PROXY_ONLY"
+        },
+        "alternate_onset": {
+          "evidence_count": 0,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 16,
+          "status": "NOT_EVALUABLE"
+        },
+        "beat": {
+          "evidence_count": 173,
+          "gaussian3_score": 0.6253111175393374,
+          "mean_nearest_error_frames": 3.164767080745321,
+          "mean_nearest_error_seconds": 0.10549223602484403,
+          "query_count": 16,
+          "status": "PROXY_ONLY"
+        },
+        "primary_half_beat_half_accent": 0.4108202949928301,
+        "scope": "MANY_TO_NEAREST_AUDIO_PROXY_DIAGNOSTIC_NOT_EVENT_TRUTH_OR_ARTISTIC_QUALITY"
+      },
+      "output_alignment": {
+        "accent": {
+          "evidence_count": 271,
+          "gaussian3_score": 0.2227115304569382,
+          "mean_nearest_error_frames": 2.736842105263158,
+          "mean_nearest_error_seconds": 0.0912280701754386,
+          "query_count": 19,
+          "status": "PROXY_ONLY"
+        },
+        "alternate_onset": {
+          "evidence_count": 0,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 19,
+          "status": "NOT_EVALUABLE"
+        },
+        "beat": {
+          "evidence_count": 173,
+          "gaussian3_score": 0.7337386072667232,
+          "mean_nearest_error_frames": 2.0526315789473686,
+          "mean_nearest_error_seconds": 0.06842105263157895,
+          "query_count": 19,
+          "status": "PROXY_ONLY"
+        },
+        "primary_half_beat_half_accent": 0.4782250688618307,
+        "scope": "MANY_TO_NEAREST_AUDIO_PROXY_DIAGNOSTIC_NOT_EVENT_TRUTH_OR_ARTISTIC_QUALITY"
+      },
+      "reason": "OUTPUT_SPEED_EQUALS_SOURCE_SPEED_TIMES_INVERSE_CLOCK_RATE; MAXIMA_NEED_NOT_BE_INVARIANT",
+      "regions": [
+        {
+          "mapped_source_peaks": 6,
+          "mean_assigned_distance_frames": 14.596422360248436,
+          "one_to_one_within3_count": 4,
+          "redetected_output_peaks": 5,
+          "region": "upper",
+          "source_fraction_within3": 0.6666666666666666
+        },
+        {
+          "mapped_source_peaks": 5,
+          "mean_assigned_distance_frames": 2.0420869565217172,
+          "one_to_one_within3_count": 4,
+          "redetected_output_peaks": 7,
+          "region": "lower",
+          "source_fraction_within3": 0.8
+        },
+        {
+          "mapped_source_peaks": 5,
+          "mean_assigned_distance_frames": 0.10474534161491818,
+          "one_to_one_within3_count": 5,
+          "redetected_output_peaks": 7,
+          "region": "trunk",
+          "source_fraction_within3": 1.0
+        }
+      ],
+      "status": "DETECTOR_CONSISTENCY_ONLY_NOT_EVENT_TRUTH"
+    },
+    "mapped_source_music_score_as_R66_recorded": 0.4108202949928301,
+    "method": "E1W",
+    "original_ROIs_differ": true,
+    "redetected_output_music_score_as_R66_recorded": 0.4782250688618307,
+    "score_difference_scope": "ORIGINAL_R66_ALIGNMENT_ROIS_DIFFER; NO_SYSTEMATIC_OVERESTIMATION_INFERENCE_FROM_THESE_FIELDS",
+    "source_uid": "female_lotus"
+  },
+  {
+    "case_key": "r66b01_ca3f06a9b37a47ff",
+    "detector_counts_scope": "ONE_TO_ONE_REGION_MATCHES_WITHIN3_REPORTED_SEPARATELY_FROM_PROXY_SCORE",
+    "diagnostic": {
+      "mapped_alignment": {
+        "accent": {
+          "evidence_count": 271,
+          "gaussian3_score": 0.20549584184036462,
+          "mean_nearest_error_frames": 3.1228902518613637,
+          "mean_nearest_error_seconds": 0.10409634172871213,
+          "query_count": 16,
+          "status": "PROXY_ONLY"
+        },
+        "alternate_onset": {
+          "evidence_count": 0,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 16,
+          "status": "NOT_EVALUABLE"
+        },
+        "beat": {
+          "evidence_count": 173,
+          "gaussian3_score": 0.6356019086269523,
+          "mean_nearest_error_frames": 3.3482654546882458,
+          "mean_nearest_error_seconds": 0.1116088484896082,
+          "query_count": 16,
+          "status": "PROXY_ONLY"
+        },
+        "primary_half_beat_half_accent": 0.42054887523365847,
+        "scope": "MANY_TO_NEAREST_AUDIO_PROXY_DIAGNOSTIC_NOT_EVENT_TRUTH_OR_ARTISTIC_QUALITY"
+      },
+      "output_alignment": {
+        "accent": {
+          "evidence_count": 271,
+          "gaussian3_score": 0.21235967860811367,
+          "mean_nearest_error_frames": 2.8421052631578947,
+          "mean_nearest_error_seconds": 0.09473684210526316,
+          "query_count": 19,
+          "status": "PROXY_ONLY"
+        },
+        "alternate_onset": {
+          "evidence_count": 0,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 19,
+          "status": "NOT_EVALUABLE"
+        },
+        "beat": {
+          "evidence_count": 173,
+          "gaussian3_score": 0.7414184984280128,
+          "mean_nearest_error_frames": 2.3157894736842106,
+          "mean_nearest_error_seconds": 0.07719298245614035,
+          "query_count": 19,
+          "status": "PROXY_ONLY"
+        },
+        "primary_half_beat_half_accent": 0.4768890885180632,
+        "scope": "MANY_TO_NEAREST_AUDIO_PROXY_DIAGNOSTIC_NOT_EVENT_TRUTH_OR_ARTISTIC_QUALITY"
+      },
+      "reason": "OUTPUT_SPEED_EQUALS_SOURCE_SPEED_TIMES_INVERSE_CLOCK_RATE; MAXIMA_NEED_NOT_BE_INVARIANT",
+      "regions": [
+        {
+          "mapped_source_peaks": 6,
+          "mean_assigned_distance_frames": 8.255835005040346,
+          "one_to_one_within3_count": 3,
+          "redetected_output_peaks": 5,
+          "region": "upper",
+          "source_fraction_within3": 0.5
+        },
+        {
+          "mapped_source_peaks": 5,
+          "mean_assigned_distance_frames": 2.5670325820796096,
+          "one_to_one_within3_count": 4,
+          "redetected_output_peaks": 7,
+          "region": "lower",
+          "source_fraction_within3": 0.8
+        },
+        {
+          "mapped_source_peaks": 5,
+          "mean_assigned_distance_frames": 1.874755716344886,
+          "one_to_one_within3_count": 3,
+          "redetected_output_peaks": 7,
+          "region": "trunk",
+          "source_fraction_within3": 0.6
+        }
+      ],
+      "status": "DETECTOR_CONSISTENCY_ONLY_NOT_EVENT_TRUTH"
+    },
+    "mapped_source_music_score_as_R66_recorded": 0.42054887523365847,
+    "method": "Rhythm",
+    "original_ROIs_differ": true,
+    "redetected_output_music_score_as_R66_recorded": 0.4768890885180632,
+    "score_difference_scope": "ORIGINAL_R66_ALIGNMENT_ROIS_DIFFER; NO_SYSTEMATIC_OVERESTIMATION_INFERENCE_FROM_THESE_FIELDS",
+    "source_uid": "female_lotus"
+  },
+  {
+    "case_key": "r66b02_70c9ebdda89155ec",
+    "detector_counts_scope": "ONE_TO_ONE_REGION_MATCHES_WITHIN3_REPORTED_SEPARATELY_FROM_PROXY_SCORE",
+    "diagnostic": {
+      "mapped_alignment": {
+        "accent": {
+          "evidence_count": 274,
+          "gaussian3_score": 0.34135750390120145,
+          "mean_nearest_error_frames": 3.9561548339753916,
+          "mean_nearest_error_seconds": 0.13187182779917972,
+          "query_count": 23,
+          "status": "PROXY_ONLY"
+        },
+        "alternate_onset": {
+          "evidence_count": 0,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 23,
+          "status": "NOT_EVALUABLE"
+        },
+        "beat": {
+          "evidence_count": 239,
+          "gaussian3_score": 0.5226337436650803,
+          "mean_nearest_error_frames": 3.5129334067143407,
+          "mean_nearest_error_seconds": 0.11709778022381136,
+          "query_count": 23,
+          "status": "PROXY_ONLY"
+        },
+        "primary_half_beat_half_accent": 0.4319956237831409,
+        "scope": "MANY_TO_NEAREST_AUDIO_PROXY_DIAGNOSTIC_NOT_EVENT_TRUTH_OR_ARTISTIC_QUALITY"
+      },
+      "output_alignment": {
+        "accent": {
+          "evidence_count": 274,
+          "gaussian3_score": 0.2554761811574367,
+          "mean_nearest_error_frames": 4.476190476190476,
+          "mean_nearest_error_seconds": 0.1492063492063492,
+          "query_count": 21,
+          "status": "PROXY_ONLY"
+        },
+        "alternate_onset": {
+          "evidence_count": 0,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 21,
+          "status": "NOT_EVALUABLE"
+        },
+        "beat": {
+          "evidence_count": 239,
+          "gaussian3_score": 0.42655853225134405,
+          "mean_nearest_error_frames": 4.095238095238095,
+          "mean_nearest_error_seconds": 0.1365079365079365,
+          "query_count": 21,
+          "status": "PROXY_ONLY"
+        },
+        "primary_half_beat_half_accent": 0.3410173567043904,
+        "scope": "MANY_TO_NEAREST_AUDIO_PROXY_DIAGNOSTIC_NOT_EVENT_TRUTH_OR_ARTISTIC_QUALITY"
+      },
+      "reason": "OUTPUT_SPEED_EQUALS_SOURCE_SPEED_TIMES_INVERSE_CLOCK_RATE; MAXIMA_NEED_NOT_BE_INVARIANT",
+      "regions": [
+        {
+          "mapped_source_peaks": 8,
+          "mean_assigned_distance_frames": 0.23347398030943692,
+          "one_to_one_within3_count": 6,
+          "redetected_output_peaks": 6,
+          "region": "upper",
+          "source_fraction_within3": 0.75
+        },
+        {
+          "mapped_source_peaks": 8,
+          "mean_assigned_distance_frames": 0.9973628691982972,
+          "one_to_one_within3_count": 7,
+          "redetected_output_peaks": 8,
+          "region": "lower",
+          "source_fraction_within3": 0.875
+        },
+        {
+          "mapped_source_peaks": 7,
+          "mean_assigned_distance_frames": 0.9704641350211247,
+          "one_to_one_within3_count": 6,
+          "redetected_output_peaks": 7,
+          "region": "trunk",
+          "source_fraction_within3": 0.8571428571428571
+        }
+      ],
+      "status": "DETECTOR_CONSISTENCY_ONLY_NOT_EVENT_TRUTH"
+    },
+    "mapped_source_music_score_as_R66_recorded": 0.4319956237831409,
+    "method": "Uniform",
+    "original_ROIs_differ": true,
+    "redetected_output_music_score_as_R66_recorded": 0.3410173567043904,
+    "score_difference_scope": "ORIGINAL_R66_ALIGNMENT_ROIS_DIFFER; NO_SYSTEMATIC_OVERESTIMATION_INFERENCE_FROM_THESE_FIELDS",
+    "source_uid": "female_meditation"
+  },
+  {
+    "case_key": "r66b02_70c9ebdda89155ec",
+    "detector_counts_scope": "ONE_TO_ONE_REGION_MATCHES_WITHIN3_REPORTED_SEPARATELY_FROM_PROXY_SCORE",
+    "diagnostic": {
+      "mapped_alignment": {
+        "accent": {
+          "evidence_count": 274,
+          "gaussian3_score": 0.4567435617624118,
+          "mean_nearest_error_frames": 3.065035498445132,
+          "mean_nearest_error_seconds": 0.10216784994817106,
+          "query_count": 23,
+          "status": "PROXY_ONLY"
+        },
+        "alternate_onset": {
+          "evidence_count": 0,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 23,
+          "status": "NOT_EVALUABLE"
+        },
+        "beat": {
+          "evidence_count": 239,
+          "gaussian3_score": 0.6143407788142372,
+          "mean_nearest_error_frames": 2.8128615854016457,
+          "mean_nearest_error_seconds": 0.09376205284672152,
+          "query_count": 23,
+          "status": "PROXY_ONLY"
+        },
+        "primary_half_beat_half_accent": 0.5355421702883245,
+        "scope": "MANY_TO_NEAREST_AUDIO_PROXY_DIAGNOSTIC_NOT_EVENT_TRUTH_OR_ARTISTIC_QUALITY"
+      },
+      "output_alignment": {
+        "accent": {
+          "evidence_count": 274,
+          "gaussian3_score": 0.4694418368511684,
+          "mean_nearest_error_frames": 2.909090909090909,
+          "mean_nearest_error_seconds": 0.09696969696969697,
+          "query_count": 22,
+          "status": "PROXY_ONLY"
+        },
+        "alternate_onset": {
+          "evidence_count": 0,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 22,
+          "status": "NOT_EVALUABLE"
+        },
+        "beat": {
+          "evidence_count": 239,
+          "gaussian3_score": 0.644066805545708,
+          "mean_nearest_error_frames": 2.590909090909091,
+          "mean_nearest_error_seconds": 0.08636363636363636,
+          "query_count": 22,
+          "status": "PROXY_ONLY"
+        },
+        "primary_half_beat_half_accent": 0.5567543211984383,
+        "scope": "MANY_TO_NEAREST_AUDIO_PROXY_DIAGNOSTIC_NOT_EVENT_TRUTH_OR_ARTISTIC_QUALITY"
+      },
+      "reason": "OUTPUT_SPEED_EQUALS_SOURCE_SPEED_TIMES_INVERSE_CLOCK_RATE; MAXIMA_NEED_NOT_BE_INVARIANT",
+      "regions": [
+        {
+          "mapped_source_peaks": 8,
+          "mean_assigned_distance_frames": 0.0,
+          "one_to_one_within3_count": 7,
+          "redetected_output_peaks": 7,
+          "region": "upper",
+          "source_fraction_within3": 0.875
+        },
+        {
+          "mapped_source_peaks": 8,
+          "mean_assigned_distance_frames": 0.12233468286098947,
+          "one_to_one_within3_count": 8,
+          "redetected_output_peaks": 8,
+          "region": "lower",
+          "source_fraction_within3": 1.0
+        },
+        {
+          "mapped_source_peaks": 7,
+          "mean_assigned_distance_frames": 0.1998843262001004,
+          "one_to_one_within3_count": 7,
+          "redetected_output_peaks": 7,
+          "region": "trunk",
+          "source_fraction_within3": 1.0
+        }
+      ],
+      "status": "DETECTOR_CONSISTENCY_ONLY_NOT_EVENT_TRUTH"
+    },
+    "mapped_source_music_score_as_R66_recorded": 0.5355421702883245,
+    "method": "E1W",
+    "original_ROIs_differ": true,
+    "redetected_output_music_score_as_R66_recorded": 0.5567543211984383,
+    "score_difference_scope": "ORIGINAL_R66_ALIGNMENT_ROIS_DIFFER; NO_SYSTEMATIC_OVERESTIMATION_INFERENCE_FROM_THESE_FIELDS",
+    "source_uid": "female_meditation"
+  },
+  {
+    "case_key": "r66b02_70c9ebdda89155ec",
+    "detector_counts_scope": "ONE_TO_ONE_REGION_MATCHES_WITHIN3_REPORTED_SEPARATELY_FROM_PROXY_SCORE",
+    "diagnostic": {
+      "mapped_alignment": {
+        "accent": {
+          "evidence_count": 274,
+          "gaussian3_score": 0.5911748595235921,
+          "mean_nearest_error_frames": 2.5303058700419965,
+          "mean_nearest_error_seconds": 0.08434352900139988,
+          "query_count": 23,
+          "status": "PROXY_ONLY"
+        },
+        "alternate_onset": {
+          "evidence_count": 0,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 23,
+          "status": "NOT_EVALUABLE"
+        },
+        "beat": {
+          "evidence_count": 239,
+          "gaussian3_score": 0.764715277571061,
+          "mean_nearest_error_frames": 2.048347634568156,
+          "mean_nearest_error_seconds": 0.06827825448560519,
+          "query_count": 23,
+          "status": "PROXY_ONLY"
+        },
+        "primary_half_beat_half_accent": 0.6779450685473265,
+        "scope": "MANY_TO_NEAREST_AUDIO_PROXY_DIAGNOSTIC_NOT_EVENT_TRUTH_OR_ARTISTIC_QUALITY"
+      },
+      "output_alignment": {
+        "accent": {
+          "evidence_count": 274,
+          "gaussian3_score": 0.5994511021964645,
+          "mean_nearest_error_frames": 2.380952380952381,
+          "mean_nearest_error_seconds": 0.07936507936507936,
+          "query_count": 21,
+          "status": "PROXY_ONLY"
+        },
+        "alternate_onset": {
+          "evidence_count": 0,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 21,
+          "status": "NOT_EVALUABLE"
+        },
+        "beat": {
+          "evidence_count": 239,
+          "gaussian3_score": 0.8113678788761126,
+          "mean_nearest_error_frames": 1.6666666666666667,
+          "mean_nearest_error_seconds": 0.05555555555555556,
+          "query_count": 21,
+          "status": "PROXY_ONLY"
+        },
+        "primary_half_beat_half_accent": 0.7054094905362885,
+        "scope": "MANY_TO_NEAREST_AUDIO_PROXY_DIAGNOSTIC_NOT_EVENT_TRUTH_OR_ARTISTIC_QUALITY"
+      },
+      "reason": "OUTPUT_SPEED_EQUALS_SOURCE_SPEED_TIMES_INVERSE_CLOCK_RATE; MAXIMA_NEED_NOT_BE_INVARIANT",
+      "regions": [
+        {
+          "mapped_source_peaks": 8,
+          "mean_assigned_distance_frames": 0.22326189949870923,
+          "one_to_one_within3_count": 6,
+          "redetected_output_peaks": 6,
+          "region": "upper",
+          "source_fraction_within3": 0.75
+        },
+        {
+          "mapped_source_peaks": 8,
+          "mean_assigned_distance_frames": 0.30479823947026086,
+          "one_to_one_within3_count": 8,
+          "redetected_output_peaks": 8,
+          "region": "lower",
+          "source_fraction_within3": 1.0
+        },
+        {
+          "mapped_source_peaks": 7,
+          "mean_assigned_distance_frames": 0.2513505898761735,
+          "one_to_one_within3_count": 7,
+          "redetected_output_peaks": 7,
+          "region": "trunk",
+          "source_fraction_within3": 1.0
+        }
+      ],
+      "status": "DETECTOR_CONSISTENCY_ONLY_NOT_EVENT_TRUTH"
+    },
+    "mapped_source_music_score_as_R66_recorded": 0.6779450685473265,
+    "method": "Rhythm",
+    "original_ROIs_differ": true,
+    "redetected_output_music_score_as_R66_recorded": 0.7054094905362885,
+    "score_difference_scope": "ORIGINAL_R66_ALIGNMENT_ROIS_DIFFER; NO_SYSTEMATIC_OVERESTIMATION_INFERENCE_FROM_THESE_FIELDS",
+    "source_uid": "female_meditation"
+  },
+  {
+    "case_key": "r66b03_a9c01b65dc66d062",
+    "detector_counts_scope": "ONE_TO_ONE_REGION_MATCHES_WITHIN3_REPORTED_SEPARATELY_FROM_PROXY_SCORE",
+    "diagnostic": {
+      "mapped_alignment": {
+        "accent": {
+          "evidence_count": 271,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 0,
+          "status": "NOT_EVALUABLE"
+        },
+        "alternate_onset": {
+          "evidence_count": 0,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 0,
+          "status": "NOT_EVALUABLE"
+        },
+        "beat": {
+          "evidence_count": 173,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 0,
+          "status": "NOT_EVALUABLE"
+        },
+        "primary_half_beat_half_accent": null,
+        "scope": "MANY_TO_NEAREST_AUDIO_PROXY_DIAGNOSTIC_NOT_EVENT_TRUTH_OR_ARTISTIC_QUALITY"
+      },
+      "output_alignment": {
+        "accent": {
+          "evidence_count": 271,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 0,
+          "status": "NOT_EVALUABLE"
+        },
+        "alternate_onset": {
+          "evidence_count": 0,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 0,
+          "status": "NOT_EVALUABLE"
+        },
+        "beat": {
+          "evidence_count": 173,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 0,
+          "status": "NOT_EVALUABLE"
+        },
+        "primary_half_beat_half_accent": null,
+        "scope": "MANY_TO_NEAREST_AUDIO_PROXY_DIAGNOSTIC_NOT_EVENT_TRUTH_OR_ARTISTIC_QUALITY"
+      },
+      "reason": "OUTPUT_SPEED_EQUALS_SOURCE_SPEED_TIMES_INVERSE_CLOCK_RATE; MAXIMA_NEED_NOT_BE_INVARIANT",
+      "regions": [
+        {
+          "mapped_source_peaks": 0,
+          "mean_assigned_distance_frames": null,
+          "one_to_one_within3_count": 0,
+          "redetected_output_peaks": 0,
+          "region": "upper",
+          "source_fraction_within3": null
+        },
+        {
+          "mapped_source_peaks": 0,
+          "mean_assigned_distance_frames": null,
+          "one_to_one_within3_count": 0,
+          "redetected_output_peaks": 0,
+          "region": "lower",
+          "source_fraction_within3": null
+        },
+        {
+          "mapped_source_peaks": 0,
+          "mean_assigned_distance_frames": null,
+          "one_to_one_within3_count": 0,
+          "redetected_output_peaks": 0,
+          "region": "trunk",
+          "source_fraction_within3": null
+        }
+      ],
+      "status": "DETECTOR_CONSISTENCY_ONLY_NOT_EVENT_TRUTH"
+    },
+    "mapped_source_music_score_as_R66_recorded": null,
+    "method": "Uniform",
+    "original_ROIs_differ": true,
+    "redetected_output_music_score_as_R66_recorded": null,
+    "score_difference_scope": "ORIGINAL_R66_ALIGNMENT_ROIS_DIFFER; NO_SYSTEMATIC_OVERESTIMATION_INFERENCE_FROM_THESE_FIELDS",
+    "source_uid": "male_meditation"
+  },
+  {
+    "case_key": "r66b03_a9c01b65dc66d062",
+    "detector_counts_scope": "ONE_TO_ONE_REGION_MATCHES_WITHIN3_REPORTED_SEPARATELY_FROM_PROXY_SCORE",
+    "diagnostic": {
+      "mapped_alignment": {
+        "accent": {
+          "evidence_count": 271,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 0,
+          "status": "NOT_EVALUABLE"
+        },
+        "alternate_onset": {
+          "evidence_count": 0,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 0,
+          "status": "NOT_EVALUABLE"
+        },
+        "beat": {
+          "evidence_count": 173,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 0,
+          "status": "NOT_EVALUABLE"
+        },
+        "primary_half_beat_half_accent": null,
+        "scope": "MANY_TO_NEAREST_AUDIO_PROXY_DIAGNOSTIC_NOT_EVENT_TRUTH_OR_ARTISTIC_QUALITY"
+      },
+      "output_alignment": {
+        "accent": {
+          "evidence_count": 271,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 0,
+          "status": "NOT_EVALUABLE"
+        },
+        "alternate_onset": {
+          "evidence_count": 0,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 0,
+          "status": "NOT_EVALUABLE"
+        },
+        "beat": {
+          "evidence_count": 173,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 0,
+          "status": "NOT_EVALUABLE"
+        },
+        "primary_half_beat_half_accent": null,
+        "scope": "MANY_TO_NEAREST_AUDIO_PROXY_DIAGNOSTIC_NOT_EVENT_TRUTH_OR_ARTISTIC_QUALITY"
+      },
+      "reason": "OUTPUT_SPEED_EQUALS_SOURCE_SPEED_TIMES_INVERSE_CLOCK_RATE; MAXIMA_NEED_NOT_BE_INVARIANT",
+      "regions": [
+        {
+          "mapped_source_peaks": 0,
+          "mean_assigned_distance_frames": null,
+          "one_to_one_within3_count": 0,
+          "redetected_output_peaks": 0,
+          "region": "upper",
+          "source_fraction_within3": null
+        },
+        {
+          "mapped_source_peaks": 0,
+          "mean_assigned_distance_frames": null,
+          "one_to_one_within3_count": 0,
+          "redetected_output_peaks": 0,
+          "region": "lower",
+          "source_fraction_within3": null
+        },
+        {
+          "mapped_source_peaks": 0,
+          "mean_assigned_distance_frames": null,
+          "one_to_one_within3_count": 0,
+          "redetected_output_peaks": 0,
+          "region": "trunk",
+          "source_fraction_within3": null
+        }
+      ],
+      "status": "DETECTOR_CONSISTENCY_ONLY_NOT_EVENT_TRUTH"
+    },
+    "mapped_source_music_score_as_R66_recorded": null,
+    "method": "E1W",
+    "original_ROIs_differ": true,
+    "redetected_output_music_score_as_R66_recorded": null,
+    "score_difference_scope": "ORIGINAL_R66_ALIGNMENT_ROIS_DIFFER; NO_SYSTEMATIC_OVERESTIMATION_INFERENCE_FROM_THESE_FIELDS",
+    "source_uid": "male_meditation"
+  },
+  {
+    "case_key": "r66b03_a9c01b65dc66d062",
+    "detector_counts_scope": "ONE_TO_ONE_REGION_MATCHES_WITHIN3_REPORTED_SEPARATELY_FROM_PROXY_SCORE",
+    "diagnostic": {
+      "status": "NOT_EVALUABLE"
+    },
+    "mapped_source_music_score_as_R66_recorded": null,
+    "method": "Rhythm",
+    "original_ROIs_differ": true,
+    "redetected_output_music_score_as_R66_recorded": null,
+    "score_difference_scope": "ORIGINAL_R66_ALIGNMENT_ROIS_DIFFER; NO_SYSTEMATIC_OVERESTIMATION_INFERENCE_FROM_THESE_FIELDS",
+    "source_uid": "male_meditation"
+  },
+  {
+    "case_key": "r66b04_c4ded6ddc2d6940d",
+    "detector_counts_scope": "ONE_TO_ONE_REGION_MATCHES_WITHIN3_REPORTED_SEPARATELY_FROM_PROXY_SCORE",
+    "diagnostic": {
+      "mapped_alignment": {
+        "accent": {
+          "evidence_count": 389,
+          "gaussian3_score": 0.06328573610111966,
+          "mean_nearest_error_frames": 6.884120171673885,
+          "mean_nearest_error_seconds": 0.2294706723891295,
+          "query_count": 1,
+          "status": "PROXY_ONLY"
+        },
+        "alternate_onset": {
+          "evidence_count": 0,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 1,
+          "status": "NOT_EVALUABLE"
+        },
+        "beat": {
+          "evidence_count": 219,
+          "gaussian3_score": 0.1460957882360082,
+          "mean_nearest_error_frames": 5.884120171673885,
+          "mean_nearest_error_seconds": 0.19613733905579617,
+          "query_count": 1,
+          "status": "PROXY_ONLY"
+        },
+        "primary_half_beat_half_accent": 0.10469076216856393,
+        "scope": "MANY_TO_NEAREST_AUDIO_PROXY_DIAGNOSTIC_NOT_EVENT_TRUTH_OR_ARTISTIC_QUALITY"
+      },
+      "output_alignment": {
+        "accent": {
+          "evidence_count": 389,
+          "gaussian3_score": 0.19116416131859604,
+          "mean_nearest_error_frames": 5.055555555555555,
+          "mean_nearest_error_seconds": 0.1685185185185185,
+          "query_count": 18,
+          "status": "PROXY_ONLY"
+        },
+        "alternate_onset": {
+          "evidence_count": 0,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 18,
+          "status": "NOT_EVALUABLE"
+        },
+        "beat": {
+          "evidence_count": 219,
+          "gaussian3_score": 0.2626805406648476,
+          "mean_nearest_error_frames": 5.277777777777778,
+          "mean_nearest_error_seconds": 0.17592592592592593,
+          "query_count": 18,
+          "status": "PROXY_ONLY"
+        },
+        "primary_half_beat_half_accent": 0.2269223509917218,
+        "scope": "MANY_TO_NEAREST_AUDIO_PROXY_DIAGNOSTIC_NOT_EVENT_TRUTH_OR_ARTISTIC_QUALITY"
+      },
+      "reason": "OUTPUT_SPEED_EQUALS_SOURCE_SPEED_TIMES_INVERSE_CLOCK_RATE; MAXIMA_NEED_NOT_BE_INVARIANT",
+      "regions": [
+        {
+          "mapped_source_peaks": 0,
+          "mean_assigned_distance_frames": null,
+          "one_to_one_within3_count": 0,
+          "redetected_output_peaks": 7,
+          "region": "upper",
+          "source_fraction_within3": null
+        },
+        {
+          "mapped_source_peaks": 1,
+          "mean_assigned_distance_frames": 0.11587982832618593,
+          "one_to_one_within3_count": 1,
+          "redetected_output_peaks": 7,
+          "region": "lower",
+          "source_fraction_within3": 1.0
+        },
+        {
+          "mapped_source_peaks": 0,
+          "mean_assigned_distance_frames": null,
+          "one_to_one_within3_count": 0,
+          "redetected_output_peaks": 4,
+          "region": "trunk",
+          "source_fraction_within3": null
+        }
+      ],
+      "status": "DETECTOR_CONSISTENCY_ONLY_NOT_EVENT_TRUTH"
+    },
+    "mapped_source_music_score_as_R66_recorded": 0.10469076216856393,
+    "method": "Uniform",
+    "original_ROIs_differ": true,
+    "redetected_output_music_score_as_R66_recorded": 0.2269223509917218,
+    "score_difference_scope": "ORIGINAL_R66_ALIGNMENT_ROIS_DIFFER; NO_SYSTEMATIC_OVERESTIMATION_INFERENCE_FROM_THESE_FIELDS",
+    "source_uid": "male_pipa_1"
+  },
+  {
+    "case_key": "r66b04_c4ded6ddc2d6940d",
+    "detector_counts_scope": "ONE_TO_ONE_REGION_MATCHES_WITHIN3_REPORTED_SEPARATELY_FROM_PROXY_SCORE",
+    "diagnostic": {
+      "mapped_alignment": {
+        "accent": {
+          "evidence_count": 389,
+          "gaussian3_score": 0.022806761687302272,
+          "mean_nearest_error_frames": 7.890625,
+          "mean_nearest_error_seconds": 0.2630208333333333,
+          "query_count": 1,
+          "status": "PROXY_ONLY"
+        },
+        "alternate_onset": {
+          "evidence_count": 0,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 1,
+          "status": "NOT_EVALUABLE"
+        },
+        "beat": {
+          "evidence_count": 219,
+          "gaussian3_score": 0.06032816085761137,
+          "mean_nearest_error_frames": 7.109375,
+          "mean_nearest_error_seconds": 0.23697916666666666,
+          "query_count": 1,
+          "status": "PROXY_ONLY"
+        },
+        "primary_half_beat_half_accent": 0.04156746127245682,
+        "scope": "MANY_TO_NEAREST_AUDIO_PROXY_DIAGNOSTIC_NOT_EVENT_TRUTH_OR_ARTISTIC_QUALITY"
+      },
+      "output_alignment": {
+        "accent": {
+          "evidence_count": 389,
+          "gaussian3_score": 0.24631751194454163,
+          "mean_nearest_error_frames": 4.555555555555555,
+          "mean_nearest_error_seconds": 0.15185185185185185,
+          "query_count": 18,
+          "status": "PROXY_ONLY"
+        },
+        "alternate_onset": {
+          "evidence_count": 0,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 18,
+          "status": "NOT_EVALUABLE"
+        },
+        "beat": {
+          "evidence_count": 219,
+          "gaussian3_score": 0.2767126407980506,
+          "mean_nearest_error_frames": 5.277777777777778,
+          "mean_nearest_error_seconds": 0.17592592592592593,
+          "query_count": 18,
+          "status": "PROXY_ONLY"
+        },
+        "primary_half_beat_half_accent": 0.2615150763712961,
+        "scope": "MANY_TO_NEAREST_AUDIO_PROXY_DIAGNOSTIC_NOT_EVENT_TRUTH_OR_ARTISTIC_QUALITY"
+      },
+      "reason": "OUTPUT_SPEED_EQUALS_SOURCE_SPEED_TIMES_INVERSE_CLOCK_RATE; MAXIMA_NEED_NOT_BE_INVARIANT",
+      "regions": [
+        {
+          "mapped_source_peaks": 0,
+          "mean_assigned_distance_frames": null,
+          "one_to_one_within3_count": 0,
+          "redetected_output_peaks": 7,
+          "region": "upper",
+          "source_fraction_within3": null
+        },
+        {
+          "mapped_source_peaks": 1,
+          "mean_assigned_distance_frames": 0.10937500000002842,
+          "one_to_one_within3_count": 1,
+          "redetected_output_peaks": 7,
+          "region": "lower",
+          "source_fraction_within3": 1.0
+        },
+        {
+          "mapped_source_peaks": 0,
+          "mean_assigned_distance_frames": null,
+          "one_to_one_within3_count": 0,
+          "redetected_output_peaks": 4,
+          "region": "trunk",
+          "source_fraction_within3": null
+        }
+      ],
+      "status": "DETECTOR_CONSISTENCY_ONLY_NOT_EVENT_TRUTH"
+    },
+    "mapped_source_music_score_as_R66_recorded": 0.04156746127245682,
+    "method": "E1W",
+    "original_ROIs_differ": true,
+    "redetected_output_music_score_as_R66_recorded": 0.2615150763712961,
+    "score_difference_scope": "ORIGINAL_R66_ALIGNMENT_ROIS_DIFFER; NO_SYSTEMATIC_OVERESTIMATION_INFERENCE_FROM_THESE_FIELDS",
+    "source_uid": "male_pipa_1"
+  },
+  {
+    "case_key": "r66b04_c4ded6ddc2d6940d",
+    "detector_counts_scope": "ONE_TO_ONE_REGION_MATCHES_WITHIN3_REPORTED_SEPARATELY_FROM_PROXY_SCORE",
+    "diagnostic": {
+      "mapped_alignment": {
+        "accent": {
+          "evidence_count": 389,
+          "gaussian3_score": 0.8430154835758894,
+          "mean_nearest_error_frames": 0.8850164233151645,
+          "mean_nearest_error_seconds": 0.02950054744383882,
+          "query_count": 1,
+          "status": "PROXY_ONLY"
+        },
+        "alternate_onset": {
+          "evidence_count": 0,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 1,
+          "status": "NOT_EVALUABLE"
+        },
+        "beat": {
+          "evidence_count": 219,
+          "gaussian3_score": 0.9992657573044518,
+          "mean_nearest_error_frames": 0.1149835766848355,
+          "mean_nearest_error_seconds": 0.0038327858894945167,
+          "query_count": 1,
+          "status": "PROXY_ONLY"
+        },
+        "primary_half_beat_half_accent": 0.9211406204401706,
+        "scope": "MANY_TO_NEAREST_AUDIO_PROXY_DIAGNOSTIC_NOT_EVENT_TRUTH_OR_ARTISTIC_QUALITY"
+      },
+      "output_alignment": {
+        "accent": {
+          "evidence_count": 389,
+          "gaussian3_score": 0.3258229333580472,
+          "mean_nearest_error_frames": 4.176470588235294,
+          "mean_nearest_error_seconds": 0.1392156862745098,
+          "query_count": 17,
+          "status": "PROXY_ONLY"
+        },
+        "alternate_onset": {
+          "evidence_count": 0,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 17,
+          "status": "NOT_EVALUABLE"
+        },
+        "beat": {
+          "evidence_count": 219,
+          "gaussian3_score": 0.46726972300075076,
+          "mean_nearest_error_frames": 3.8823529411764706,
+          "mean_nearest_error_seconds": 0.12941176470588237,
+          "query_count": 17,
+          "status": "PROXY_ONLY"
+        },
+        "primary_half_beat_half_accent": 0.39654632817939894,
+        "scope": "MANY_TO_NEAREST_AUDIO_PROXY_DIAGNOSTIC_NOT_EVENT_TRUTH_OR_ARTISTIC_QUALITY"
+      },
+      "reason": "OUTPUT_SPEED_EQUALS_SOURCE_SPEED_TIMES_INVERSE_CLOCK_RATE; MAXIMA_NEED_NOT_BE_INVARIANT",
+      "regions": [
+        {
+          "mapped_source_peaks": 0,
+          "mean_assigned_distance_frames": null,
+          "one_to_one_within3_count": 0,
+          "redetected_output_peaks": 7,
+          "region": "upper",
+          "source_fraction_within3": null
+        },
+        {
+          "mapped_source_peaks": 1,
+          "mean_assigned_distance_frames": 0.11498357668493497,
+          "one_to_one_within3_count": 1,
+          "redetected_output_peaks": 7,
+          "region": "lower",
+          "source_fraction_within3": 1.0
+        },
+        {
+          "mapped_source_peaks": 0,
+          "mean_assigned_distance_frames": null,
+          "one_to_one_within3_count": 0,
+          "redetected_output_peaks": 3,
+          "region": "trunk",
+          "source_fraction_within3": null
+        }
+      ],
+      "status": "DETECTOR_CONSISTENCY_ONLY_NOT_EVENT_TRUTH"
+    },
+    "mapped_source_music_score_as_R66_recorded": 0.9211406204401706,
+    "method": "Rhythm",
+    "original_ROIs_differ": true,
+    "redetected_output_music_score_as_R66_recorded": 0.39654632817939894,
+    "score_difference_scope": "ORIGINAL_R66_ALIGNMENT_ROIS_DIFFER; NO_SYSTEMATIC_OVERESTIMATION_INFERENCE_FROM_THESE_FIELDS",
+    "source_uid": "male_pipa_1"
+  },
+  {
+    "case_key": "r66b05_56fb0e6ccb0310ef",
+    "detector_counts_scope": "ONE_TO_ONE_REGION_MATCHES_WITHIN3_REPORTED_SEPARATELY_FROM_PROXY_SCORE",
+    "diagnostic": {
+      "mapped_alignment": {
+        "accent": {
+          "evidence_count": 274,
+          "gaussian3_score": 0.4464391609640296,
+          "mean_nearest_error_frames": 3.224680851063783,
+          "mean_nearest_error_seconds": 0.10748936170212611,
+          "query_count": 20,
+          "status": "PROXY_ONLY"
+        },
+        "alternate_onset": {
+          "evidence_count": 0,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 20,
+          "status": "NOT_EVALUABLE"
+        },
+        "beat": {
+          "evidence_count": 239,
+          "gaussian3_score": 0.4919861469400252,
+          "mean_nearest_error_frames": 3.810638297872322,
+          "mean_nearest_error_seconds": 0.12702127659574405,
+          "query_count": 20,
+          "status": "PROXY_ONLY"
+        },
+        "primary_half_beat_half_accent": 0.4692126539520274,
+        "scope": "MANY_TO_NEAREST_AUDIO_PROXY_DIAGNOSTIC_NOT_EVENT_TRUTH_OR_ARTISTIC_QUALITY"
+      },
+      "output_alignment": {
+        "accent": {
+          "evidence_count": 274,
+          "gaussian3_score": 0.42096219548528047,
+          "mean_nearest_error_frames": 3.4210526315789473,
+          "mean_nearest_error_seconds": 0.11403508771929824,
+          "query_count": 19,
+          "status": "PROXY_ONLY"
+        },
+        "alternate_onset": {
+          "evidence_count": 0,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 19,
+          "status": "NOT_EVALUABLE"
+        },
+        "beat": {
+          "evidence_count": 239,
+          "gaussian3_score": 0.4747417851625815,
+          "mean_nearest_error_frames": 3.8947368421052633,
+          "mean_nearest_error_seconds": 0.1298245614035088,
+          "query_count": 19,
+          "status": "PROXY_ONLY"
+        },
+        "primary_half_beat_half_accent": 0.44785199032393097,
+        "scope": "MANY_TO_NEAREST_AUDIO_PROXY_DIAGNOSTIC_NOT_EVENT_TRUTH_OR_ARTISTIC_QUALITY"
+      },
+      "reason": "OUTPUT_SPEED_EQUALS_SOURCE_SPEED_TIMES_INVERSE_CLOCK_RATE; MAXIMA_NEED_NOT_BE_INVARIANT",
+      "regions": [
+        {
+          "mapped_source_peaks": 6,
+          "mean_assigned_distance_frames": 0.332978723404306,
+          "one_to_one_within3_count": 4,
+          "redetected_output_peaks": 4,
+          "region": "upper",
+          "source_fraction_within3": 0.6666666666666666
+        },
+        {
+          "mapped_source_peaks": 8,
+          "mean_assigned_distance_frames": 12.11610942249244,
+          "one_to_one_within3_count": 5,
+          "redetected_output_peaks": 7,
+          "region": "lower",
+          "source_fraction_within3": 0.625
+        },
+        {
+          "mapped_source_peaks": 6,
+          "mean_assigned_distance_frames": 0.1936170212766252,
+          "one_to_one_within3_count": 6,
+          "redetected_output_peaks": 8,
+          "region": "trunk",
+          "source_fraction_within3": 1.0
+        }
+      ],
+      "status": "DETECTOR_CONSISTENCY_ONLY_NOT_EVENT_TRUTH"
+    },
+    "mapped_source_music_score_as_R66_recorded": 0.4692126539520274,
+    "method": "Uniform",
+    "original_ROIs_differ": true,
+    "redetected_output_music_score_as_R66_recorded": 0.44785199032393097,
+    "score_difference_scope": "ORIGINAL_R66_ALIGNMENT_ROIS_DIFFER; NO_SYSTEMATIC_OVERESTIMATION_INFERENCE_FROM_THESE_FIELDS",
+    "source_uid": "male_pipa_2"
+  },
+  {
+    "case_key": "r66b05_56fb0e6ccb0310ef",
+    "detector_counts_scope": "ONE_TO_ONE_REGION_MATCHES_WITHIN3_REPORTED_SEPARATELY_FROM_PROXY_SCORE",
+    "diagnostic": {
+      "mapped_alignment": {
+        "accent": {
+          "evidence_count": 274,
+          "gaussian3_score": 0.5402589620465293,
+          "mean_nearest_error_frames": 2.5302439024389853,
+          "mean_nearest_error_seconds": 0.08434146341463285,
+          "query_count": 20,
+          "status": "PROXY_ONLY"
+        },
+        "alternate_onset": {
+          "evidence_count": 0,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 20,
+          "status": "NOT_EVALUABLE"
+        },
+        "beat": {
+          "evidence_count": 239,
+          "gaussian3_score": 0.7079377721141087,
+          "mean_nearest_error_frames": 2.3302439024389856,
+          "mean_nearest_error_seconds": 0.0776747967479662,
+          "query_count": 20,
+          "status": "PROXY_ONLY"
+        },
+        "primary_half_beat_half_accent": 0.6240983670803191,
+        "scope": "MANY_TO_NEAREST_AUDIO_PROXY_DIAGNOSTIC_NOT_EVENT_TRUTH_OR_ARTISTIC_QUALITY"
+      },
+      "output_alignment": {
+        "accent": {
+          "evidence_count": 274,
+          "gaussian3_score": 0.4883104529053998,
+          "mean_nearest_error_frames": 3.0,
+          "mean_nearest_error_seconds": 0.1,
+          "query_count": 20,
+          "status": "PROXY_ONLY"
+        },
+        "alternate_onset": {
+          "evidence_count": 0,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 20,
+          "status": "NOT_EVALUABLE"
+        },
+        "beat": {
+          "evidence_count": 239,
+          "gaussian3_score": 0.6747075094133902,
+          "mean_nearest_error_frames": 2.55,
+          "mean_nearest_error_seconds": 0.08499999999999999,
+          "query_count": 20,
+          "status": "PROXY_ONLY"
+        },
+        "primary_half_beat_half_accent": 0.581508981159395,
+        "scope": "MANY_TO_NEAREST_AUDIO_PROXY_DIAGNOSTIC_NOT_EVENT_TRUTH_OR_ARTISTIC_QUALITY"
+      },
+      "reason": "OUTPUT_SPEED_EQUALS_SOURCE_SPEED_TIMES_INVERSE_CLOCK_RATE; MAXIMA_NEED_NOT_BE_INVARIANT",
+      "regions": [
+        {
+          "mapped_source_peaks": 6,
+          "mean_assigned_distance_frames": 0.5548780487804331,
+          "one_to_one_within3_count": 6,
+          "redetected_output_peaks": 6,
+          "region": "upper",
+          "source_fraction_within3": 1.0
+        },
+        {
+          "mapped_source_peaks": 8,
+          "mean_assigned_distance_frames": 19.4185975609756,
+          "one_to_one_within3_count": 1,
+          "redetected_output_peaks": 8,
+          "region": "lower",
+          "source_fraction_within3": 0.125
+        },
+        {
+          "mapped_source_peaks": 6,
+          "mean_assigned_distance_frames": 0.3739837398374182,
+          "one_to_one_within3_count": 6,
+          "redetected_output_peaks": 6,
+          "region": "trunk",
+          "source_fraction_within3": 1.0
+        }
+      ],
+      "status": "DETECTOR_CONSISTENCY_ONLY_NOT_EVENT_TRUTH"
+    },
+    "mapped_source_music_score_as_R66_recorded": 0.6240983670803191,
+    "method": "E1W",
+    "original_ROIs_differ": true,
+    "redetected_output_music_score_as_R66_recorded": 0.581508981159395,
+    "score_difference_scope": "ORIGINAL_R66_ALIGNMENT_ROIS_DIFFER; NO_SYSTEMATIC_OVERESTIMATION_INFERENCE_FROM_THESE_FIELDS",
+    "source_uid": "male_pipa_2"
+  },
+  {
+    "case_key": "r66b05_56fb0e6ccb0310ef",
+    "detector_counts_scope": "ONE_TO_ONE_REGION_MATCHES_WITHIN3_REPORTED_SEPARATELY_FROM_PROXY_SCORE",
+    "diagnostic": {
+      "mapped_alignment": {
+        "accent": {
+          "evidence_count": 274,
+          "gaussian3_score": 0.4464391609640296,
+          "mean_nearest_error_frames": 3.224680851063783,
+          "mean_nearest_error_seconds": 0.10748936170212611,
+          "query_count": 20,
+          "status": "PROXY_ONLY"
+        },
+        "alternate_onset": {
+          "evidence_count": 0,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 20,
+          "status": "NOT_EVALUABLE"
+        },
+        "beat": {
+          "evidence_count": 239,
+          "gaussian3_score": 0.4919861469400252,
+          "mean_nearest_error_frames": 3.810638297872322,
+          "mean_nearest_error_seconds": 0.12702127659574405,
+          "query_count": 20,
+          "status": "PROXY_ONLY"
+        },
+        "primary_half_beat_half_accent": 0.4692126539520274,
+        "scope": "MANY_TO_NEAREST_AUDIO_PROXY_DIAGNOSTIC_NOT_EVENT_TRUTH_OR_ARTISTIC_QUALITY"
+      },
+      "output_alignment": {
+        "accent": {
+          "evidence_count": 274,
+          "gaussian3_score": 0.42096219548528047,
+          "mean_nearest_error_frames": 3.4210526315789473,
+          "mean_nearest_error_seconds": 0.11403508771929824,
+          "query_count": 19,
+          "status": "PROXY_ONLY"
+        },
+        "alternate_onset": {
+          "evidence_count": 0,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 19,
+          "status": "NOT_EVALUABLE"
+        },
+        "beat": {
+          "evidence_count": 239,
+          "gaussian3_score": 0.4747417851625815,
+          "mean_nearest_error_frames": 3.8947368421052633,
+          "mean_nearest_error_seconds": 0.1298245614035088,
+          "query_count": 19,
+          "status": "PROXY_ONLY"
+        },
+        "primary_half_beat_half_accent": 0.44785199032393097,
+        "scope": "MANY_TO_NEAREST_AUDIO_PROXY_DIAGNOSTIC_NOT_EVENT_TRUTH_OR_ARTISTIC_QUALITY"
+      },
+      "reason": "OUTPUT_SPEED_EQUALS_SOURCE_SPEED_TIMES_INVERSE_CLOCK_RATE; MAXIMA_NEED_NOT_BE_INVARIANT",
+      "regions": [
+        {
+          "mapped_source_peaks": 6,
+          "mean_assigned_distance_frames": 0.332978723404306,
+          "one_to_one_within3_count": 4,
+          "redetected_output_peaks": 4,
+          "region": "upper",
+          "source_fraction_within3": 0.6666666666666666
+        },
+        {
+          "mapped_source_peaks": 8,
+          "mean_assigned_distance_frames": 12.11610942249244,
+          "one_to_one_within3_count": 5,
+          "redetected_output_peaks": 7,
+          "region": "lower",
+          "source_fraction_within3": 0.625
+        },
+        {
+          "mapped_source_peaks": 6,
+          "mean_assigned_distance_frames": 0.1936170212766252,
+          "one_to_one_within3_count": 6,
+          "redetected_output_peaks": 8,
+          "region": "trunk",
+          "source_fraction_within3": 1.0
+        }
+      ],
+      "status": "DETECTOR_CONSISTENCY_ONLY_NOT_EVENT_TRUTH"
+    },
+    "mapped_source_music_score_as_R66_recorded": 0.4692126539520274,
+    "method": "Rhythm",
+    "original_ROIs_differ": true,
+    "redetected_output_music_score_as_R66_recorded": 0.44785199032393097,
+    "score_difference_scope": "ORIGINAL_R66_ALIGNMENT_ROIS_DIFFER; NO_SYSTEMATIC_OVERESTIMATION_INFERENCE_FROM_THESE_FIELDS",
+    "source_uid": "male_pipa_2"
+  },
+  {
+    "case_key": "r66b06_0a8028422bbfb1c4",
+    "detector_counts_scope": "ONE_TO_ONE_REGION_MATCHES_WITHIN3_REPORTED_SEPARATELY_FROM_PROXY_SCORE",
+    "diagnostic": {
+      "mapped_alignment": {
+        "accent": {
+          "evidence_count": 271,
+          "gaussian3_score": 0.17755656858894084,
+          "mean_nearest_error_frames": 3.163151364764251,
+          "mean_nearest_error_seconds": 0.10543837882547503,
+          "query_count": 26,
+          "status": "PROXY_ONLY"
+        },
+        "alternate_onset": {
+          "evidence_count": 0,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 26,
+          "status": "NOT_EVALUABLE"
+        },
+        "beat": {
+          "evidence_count": 173,
+          "gaussian3_score": 0.38114688647745354,
+          "mean_nearest_error_frames": 4.948821339950401,
+          "mean_nearest_error_seconds": 0.16496071133168003,
+          "query_count": 26,
+          "status": "PROXY_ONLY"
+        },
+        "primary_half_beat_half_accent": 0.2793517275331972,
+        "scope": "MANY_TO_NEAREST_AUDIO_PROXY_DIAGNOSTIC_NOT_EVENT_TRUTH_OR_ARTISTIC_QUALITY"
+      },
+      "output_alignment": {
+        "accent": {
+          "evidence_count": 271,
+          "gaussian3_score": 0.1798280918088014,
+          "mean_nearest_error_frames": 3.1481481481481484,
+          "mean_nearest_error_seconds": 0.10493827160493828,
+          "query_count": 27,
+          "status": "PROXY_ONLY"
+        },
+        "alternate_onset": {
+          "evidence_count": 0,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 27,
+          "status": "NOT_EVALUABLE"
+        },
+        "beat": {
+          "evidence_count": 173,
+          "gaussian3_score": 0.3752441013672342,
+          "mean_nearest_error_frames": 4.925925925925926,
+          "mean_nearest_error_seconds": 0.16419753086419753,
+          "query_count": 27,
+          "status": "PROXY_ONLY"
+        },
+        "primary_half_beat_half_accent": 0.2775360965880178,
+        "scope": "MANY_TO_NEAREST_AUDIO_PROXY_DIAGNOSTIC_NOT_EVENT_TRUTH_OR_ARTISTIC_QUALITY"
+      },
+      "reason": "OUTPUT_SPEED_EQUALS_SOURCE_SPEED_TIMES_INVERSE_CLOCK_RATE; MAXIMA_NEED_NOT_BE_INVARIANT",
+      "regions": [
+        {
+          "mapped_source_peaks": 7,
+          "mean_assigned_distance_frames": 0.26728110599075655,
+          "one_to_one_within3_count": 7,
+          "redetected_output_peaks": 7,
+          "region": "upper",
+          "source_fraction_within3": 1.0
+        },
+        {
+          "mapped_source_peaks": 10,
+          "mean_assigned_distance_frames": 0.27499999999999075,
+          "one_to_one_within3_count": 10,
+          "redetected_output_peaks": 11,
+          "region": "lower",
+          "source_fraction_within3": 1.0
+        },
+        {
+          "mapped_source_peaks": 9,
+          "mean_assigned_distance_frames": 0.26075268817204506,
+          "one_to_one_within3_count": 9,
+          "redetected_output_peaks": 9,
+          "region": "trunk",
+          "source_fraction_within3": 1.0
+        }
+      ],
+      "status": "DETECTOR_CONSISTENCY_ONLY_NOT_EVENT_TRUTH"
+    },
+    "mapped_source_music_score_as_R66_recorded": 0.2793517275331972,
+    "method": "Uniform",
+    "original_ROIs_differ": true,
+    "redetected_output_music_score_as_R66_recorded": 0.2775360965880178,
+    "score_difference_scope": "ORIGINAL_R66_ALIGNMENT_ROIS_DIFFER; NO_SYSTEMATIC_OVERESTIMATION_INFERENCE_FROM_THESE_FIELDS",
+    "source_uid": "male_ribbon"
+  },
+  {
+    "case_key": "r66b06_0a8028422bbfb1c4",
+    "detector_counts_scope": "ONE_TO_ONE_REGION_MATCHES_WITHIN3_REPORTED_SEPARATELY_FROM_PROXY_SCORE",
+    "diagnostic": {
+      "mapped_alignment": {
+        "accent": {
+          "evidence_count": 271,
+          "gaussian3_score": 0.2276641983807025,
+          "mean_nearest_error_frames": 2.3815880362854807,
+          "mean_nearest_error_seconds": 0.07938626787618269,
+          "query_count": 26,
+          "status": "PROXY_ONLY"
+        },
+        "alternate_onset": {
+          "evidence_count": 0,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 26,
+          "status": "NOT_EVALUABLE"
+        },
+        "beat": {
+          "evidence_count": 173,
+          "gaussian3_score": 0.4256434912528028,
+          "mean_nearest_error_frames": 4.963775934567225,
+          "mean_nearest_error_seconds": 0.16545919781890753,
+          "query_count": 26,
+          "status": "PROXY_ONLY"
+        },
+        "primary_half_beat_half_accent": 0.32665384481675264,
+        "scope": "MANY_TO_NEAREST_AUDIO_PROXY_DIAGNOSTIC_NOT_EVENT_TRUTH_OR_ARTISTIC_QUALITY"
+      },
+      "output_alignment": {
+        "accent": {
+          "evidence_count": 271,
+          "gaussian3_score": 0.23471484439781232,
+          "mean_nearest_error_frames": 2.28,
+          "mean_nearest_error_seconds": 0.076,
+          "query_count": 25,
+          "status": "PROXY_ONLY"
+        },
+        "alternate_onset": {
+          "evidence_count": 0,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 25,
+          "status": "NOT_EVALUABLE"
+        },
+        "beat": {
+          "evidence_count": 173,
+          "gaussian3_score": 0.3963412016470227,
+          "mean_nearest_error_frames": 5.16,
+          "mean_nearest_error_seconds": 0.17200000000000001,
+          "query_count": 25,
+          "status": "PROXY_ONLY"
+        },
+        "primary_half_beat_half_accent": 0.3155280230224175,
+        "scope": "MANY_TO_NEAREST_AUDIO_PROXY_DIAGNOSTIC_NOT_EVENT_TRUTH_OR_ARTISTIC_QUALITY"
+      },
+      "reason": "OUTPUT_SPEED_EQUALS_SOURCE_SPEED_TIMES_INVERSE_CLOCK_RATE; MAXIMA_NEED_NOT_BE_INVARIANT",
+      "regions": [
+        {
+          "mapped_source_peaks": 7,
+          "mean_assigned_distance_frames": 0.238700812015795,
+          "one_to_one_within3_count": 7,
+          "redetected_output_peaks": 7,
+          "region": "upper",
+          "source_fraction_within3": 1.0
+        },
+        {
+          "mapped_source_peaks": 10,
+          "mean_assigned_distance_frames": 13.142813376577854,
+          "one_to_one_within3_count": 7,
+          "redetected_output_peaks": 10,
+          "region": "lower",
+          "source_fraction_within3": 0.7
+        },
+        {
+          "mapped_source_peaks": 9,
+          "mean_assigned_distance_frames": 1.065824664952471,
+          "one_to_one_within3_count": 7,
+          "redetected_output_peaks": 8,
+          "region": "trunk",
+          "source_fraction_within3": 0.7777777777777778
+        }
+      ],
+      "status": "DETECTOR_CONSISTENCY_ONLY_NOT_EVENT_TRUTH"
+    },
+    "mapped_source_music_score_as_R66_recorded": 0.32665384481675264,
+    "method": "E1W",
+    "original_ROIs_differ": true,
+    "redetected_output_music_score_as_R66_recorded": 0.3155280230224175,
+    "score_difference_scope": "ORIGINAL_R66_ALIGNMENT_ROIS_DIFFER; NO_SYSTEMATIC_OVERESTIMATION_INFERENCE_FROM_THESE_FIELDS",
+    "source_uid": "male_ribbon"
+  },
+  {
+    "case_key": "r66b06_0a8028422bbfb1c4",
+    "detector_counts_scope": "ONE_TO_ONE_REGION_MATCHES_WITHIN3_REPORTED_SEPARATELY_FROM_PROXY_SCORE",
+    "diagnostic": {
+      "mapped_alignment": {
+        "accent": {
+          "evidence_count": 271,
+          "gaussian3_score": 0.17755656858894084,
+          "mean_nearest_error_frames": 3.163151364764251,
+          "mean_nearest_error_seconds": 0.10543837882547503,
+          "query_count": 26,
+          "status": "PROXY_ONLY"
+        },
+        "alternate_onset": {
+          "evidence_count": 0,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 26,
+          "status": "NOT_EVALUABLE"
+        },
+        "beat": {
+          "evidence_count": 173,
+          "gaussian3_score": 0.38114688647745354,
+          "mean_nearest_error_frames": 4.948821339950401,
+          "mean_nearest_error_seconds": 0.16496071133168003,
+          "query_count": 26,
+          "status": "PROXY_ONLY"
+        },
+        "primary_half_beat_half_accent": 0.2793517275331972,
+        "scope": "MANY_TO_NEAREST_AUDIO_PROXY_DIAGNOSTIC_NOT_EVENT_TRUTH_OR_ARTISTIC_QUALITY"
+      },
+      "output_alignment": {
+        "accent": {
+          "evidence_count": 271,
+          "gaussian3_score": 0.1798280918088014,
+          "mean_nearest_error_frames": 3.1481481481481484,
+          "mean_nearest_error_seconds": 0.10493827160493828,
+          "query_count": 27,
+          "status": "PROXY_ONLY"
+        },
+        "alternate_onset": {
+          "evidence_count": 0,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 27,
+          "status": "NOT_EVALUABLE"
+        },
+        "beat": {
+          "evidence_count": 173,
+          "gaussian3_score": 0.3752441013672342,
+          "mean_nearest_error_frames": 4.925925925925926,
+          "mean_nearest_error_seconds": 0.16419753086419753,
+          "query_count": 27,
+          "status": "PROXY_ONLY"
+        },
+        "primary_half_beat_half_accent": 0.2775360965880178,
+        "scope": "MANY_TO_NEAREST_AUDIO_PROXY_DIAGNOSTIC_NOT_EVENT_TRUTH_OR_ARTISTIC_QUALITY"
+      },
+      "reason": "OUTPUT_SPEED_EQUALS_SOURCE_SPEED_TIMES_INVERSE_CLOCK_RATE; MAXIMA_NEED_NOT_BE_INVARIANT",
+      "regions": [
+        {
+          "mapped_source_peaks": 7,
+          "mean_assigned_distance_frames": 0.26728110599075655,
+          "one_to_one_within3_count": 7,
+          "redetected_output_peaks": 7,
+          "region": "upper",
+          "source_fraction_within3": 1.0
+        },
+        {
+          "mapped_source_peaks": 10,
+          "mean_assigned_distance_frames": 0.27499999999999075,
+          "one_to_one_within3_count": 10,
+          "redetected_output_peaks": 11,
+          "region": "lower",
+          "source_fraction_within3": 1.0
+        },
+        {
+          "mapped_source_peaks": 9,
+          "mean_assigned_distance_frames": 0.26075268817204506,
+          "one_to_one_within3_count": 9,
+          "redetected_output_peaks": 9,
+          "region": "trunk",
+          "source_fraction_within3": 1.0
+        }
+      ],
+      "status": "DETECTOR_CONSISTENCY_ONLY_NOT_EVENT_TRUTH"
+    },
+    "mapped_source_music_score_as_R66_recorded": 0.2793517275331972,
+    "method": "Rhythm",
+    "original_ROIs_differ": true,
+    "redetected_output_music_score_as_R66_recorded": 0.2775360965880178,
+    "score_difference_scope": "ORIGINAL_R66_ALIGNMENT_ROIS_DIFFER; NO_SYSTEMATIC_OVERESTIMATION_INFERENCE_FROM_THESE_FIELDS",
+    "source_uid": "male_ribbon"
+  },
+  {
+    "case_key": "r66b07_4717682e3be3dd02",
+    "detector_counts_scope": "ONE_TO_ONE_REGION_MATCHES_WITHIN3_REPORTED_SEPARATELY_FROM_PROXY_SCORE",
+    "diagnostic": {
+      "mapped_alignment": {
+        "accent": {
+          "evidence_count": 389,
+          "gaussian3_score": 0.5110455457321126,
+          "mean_nearest_error_frames": 2.2718334297281304,
+          "mean_nearest_error_seconds": 0.07572778099093767,
+          "query_count": 21,
+          "status": "PROXY_ONLY"
+        },
+        "alternate_onset": {
+          "evidence_count": 0,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 21,
+          "status": "NOT_EVALUABLE"
+        },
+        "beat": {
+          "evidence_count": 219,
+          "gaussian3_score": 0.5935268031108867,
+          "mean_nearest_error_frames": 3.0844418739155635,
+          "mean_nearest_error_seconds": 0.10281472913051878,
+          "query_count": 21,
+          "status": "PROXY_ONLY"
+        },
+        "primary_half_beat_half_accent": 0.5522861744214996,
+        "scope": "MANY_TO_NEAREST_AUDIO_PROXY_DIAGNOSTIC_NOT_EVENT_TRUTH_OR_ARTISTIC_QUALITY"
+      },
+      "output_alignment": {
+        "accent": {
+          "evidence_count": 389,
+          "gaussian3_score": 0.5362576309279392,
+          "mean_nearest_error_frames": 2.357142857142857,
+          "mean_nearest_error_seconds": 0.07857142857142857,
+          "query_count": 14,
+          "status": "PROXY_ONLY"
+        },
+        "alternate_onset": {
+          "evidence_count": 0,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 14,
+          "status": "NOT_EVALUABLE"
+        },
+        "beat": {
+          "evidence_count": 219,
+          "gaussian3_score": 0.5860286326320923,
+          "mean_nearest_error_frames": 3.142857142857143,
+          "mean_nearest_error_seconds": 0.10476190476190476,
+          "query_count": 14,
+          "status": "PROXY_ONLY"
+        },
+        "primary_half_beat_half_accent": 0.5611431317800157,
+        "scope": "MANY_TO_NEAREST_AUDIO_PROXY_DIAGNOSTIC_NOT_EVENT_TRUTH_OR_ARTISTIC_QUALITY"
+      },
+      "reason": "OUTPUT_SPEED_EQUALS_SOURCE_SPEED_TIMES_INVERSE_CLOCK_RATE; MAXIMA_NEED_NOT_BE_INVARIANT",
+      "regions": [
+        {
+          "mapped_source_peaks": 6,
+          "mean_assigned_distance_frames": 3.712550607287382,
+          "one_to_one_within3_count": 3,
+          "redetected_output_peaks": 5,
+          "region": "upper",
+          "source_fraction_within3": 0.5
+        },
+        {
+          "mapped_source_peaks": 6,
+          "mean_assigned_distance_frames": 0.4777327935222502,
+          "one_to_one_within3_count": 5,
+          "redetected_output_peaks": 5,
+          "region": "lower",
+          "source_fraction_within3": 0.8333333333333334
+        },
+        {
+          "mapped_source_peaks": 9,
+          "mean_assigned_distance_frames": 1.562753036437229,
+          "one_to_one_within3_count": 3,
+          "redetected_output_peaks": 4,
+          "region": "trunk",
+          "source_fraction_within3": 0.3333333333333333
+        }
+      ],
+      "status": "DETECTOR_CONSISTENCY_ONLY_NOT_EVENT_TRUTH"
+    },
+    "mapped_source_music_score_as_R66_recorded": 0.5522861744214996,
+    "method": "Uniform",
+    "original_ROIs_differ": true,
+    "redetected_output_music_score_as_R66_recorded": 0.5611431317800157,
+    "score_difference_scope": "ORIGINAL_R66_ALIGNMENT_ROIS_DIFFER; NO_SYSTEMATIC_OVERESTIMATION_INFERENCE_FROM_THESE_FIELDS",
+    "source_uid": "male_ribbon_FenHe"
+  },
+  {
+    "case_key": "r66b07_4717682e3be3dd02",
+    "detector_counts_scope": "ONE_TO_ONE_REGION_MATCHES_WITHIN3_REPORTED_SEPARATELY_FROM_PROXY_SCORE",
+    "diagnostic": {
+      "mapped_alignment": {
+        "accent": {
+          "evidence_count": 389,
+          "gaussian3_score": 0.5108012205321454,
+          "mean_nearest_error_frames": 2.040452713744636,
+          "mean_nearest_error_seconds": 0.06801509045815453,
+          "query_count": 21,
+          "status": "PROXY_ONLY"
+        },
+        "alternate_onset": {
+          "evidence_count": 0,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 21,
+          "status": "NOT_EVALUABLE"
+        },
+        "beat": {
+          "evidence_count": 219,
+          "gaussian3_score": 0.6399503451481845,
+          "mean_nearest_error_frames": 2.7527705005966037,
+          "mean_nearest_error_seconds": 0.09175901668655345,
+          "query_count": 21,
+          "status": "PROXY_ONLY"
+        },
+        "primary_half_beat_half_accent": 0.5753757828401649,
+        "scope": "MANY_TO_NEAREST_AUDIO_PROXY_DIAGNOSTIC_NOT_EVENT_TRUTH_OR_ARTISTIC_QUALITY"
+      },
+      "output_alignment": {
+        "accent": {
+          "evidence_count": 389,
+          "gaussian3_score": 0.5137280884102915,
+          "mean_nearest_error_frames": 2.0625,
+          "mean_nearest_error_seconds": 0.06875,
+          "query_count": 16,
+          "status": "PROXY_ONLY"
+        },
+        "alternate_onset": {
+          "evidence_count": 0,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 16,
+          "status": "NOT_EVALUABLE"
+        },
+        "beat": {
+          "evidence_count": 219,
+          "gaussian3_score": 0.6442442132963841,
+          "mean_nearest_error_frames": 2.625,
+          "mean_nearest_error_seconds": 0.0875,
+          "query_count": 16,
+          "status": "PROXY_ONLY"
+        },
+        "primary_half_beat_half_accent": 0.5789861508533378,
+        "scope": "MANY_TO_NEAREST_AUDIO_PROXY_DIAGNOSTIC_NOT_EVENT_TRUTH_OR_ARTISTIC_QUALITY"
+      },
+      "reason": "OUTPUT_SPEED_EQUALS_SOURCE_SPEED_TIMES_INVERSE_CLOCK_RATE; MAXIMA_NEED_NOT_BE_INVARIANT",
+      "regions": [
+        {
+          "mapped_source_peaks": 6,
+          "mean_assigned_distance_frames": 1.7161577161577195,
+          "one_to_one_within3_count": 5,
+          "redetected_output_peaks": 6,
+          "region": "upper",
+          "source_fraction_within3": 0.8333333333333334
+        },
+        {
+          "mapped_source_peaks": 6,
+          "mean_assigned_distance_frames": 0.12356014964716995,
+          "one_to_one_within3_count": 6,
+          "redetected_output_peaks": 6,
+          "region": "lower",
+          "source_fraction_within3": 1.0
+        },
+        {
+          "mapped_source_peaks": 9,
+          "mean_assigned_distance_frames": 0.09588981980288658,
+          "one_to_one_within3_count": 4,
+          "redetected_output_peaks": 4,
+          "region": "trunk",
+          "source_fraction_within3": 0.4444444444444444
+        }
+      ],
+      "status": "DETECTOR_CONSISTENCY_ONLY_NOT_EVENT_TRUTH"
+    },
+    "mapped_source_music_score_as_R66_recorded": 0.5753757828401649,
+    "method": "E1W",
+    "original_ROIs_differ": true,
+    "redetected_output_music_score_as_R66_recorded": 0.5789861508533378,
+    "score_difference_scope": "ORIGINAL_R66_ALIGNMENT_ROIS_DIFFER; NO_SYSTEMATIC_OVERESTIMATION_INFERENCE_FROM_THESE_FIELDS",
+    "source_uid": "male_ribbon_FenHe"
+  },
+  {
+    "case_key": "r66b07_4717682e3be3dd02",
+    "detector_counts_scope": "ONE_TO_ONE_REGION_MATCHES_WITHIN3_REPORTED_SEPARATELY_FROM_PROXY_SCORE",
+    "diagnostic": {
+      "mapped_alignment": {
+        "accent": {
+          "evidence_count": 389,
+          "gaussian3_score": 0.5110455457321126,
+          "mean_nearest_error_frames": 2.2718334297281304,
+          "mean_nearest_error_seconds": 0.07572778099093767,
+          "query_count": 21,
+          "status": "PROXY_ONLY"
+        },
+        "alternate_onset": {
+          "evidence_count": 0,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 21,
+          "status": "NOT_EVALUABLE"
+        },
+        "beat": {
+          "evidence_count": 219,
+          "gaussian3_score": 0.5935268031108867,
+          "mean_nearest_error_frames": 3.0844418739155635,
+          "mean_nearest_error_seconds": 0.10281472913051878,
+          "query_count": 21,
+          "status": "PROXY_ONLY"
+        },
+        "primary_half_beat_half_accent": 0.5522861744214996,
+        "scope": "MANY_TO_NEAREST_AUDIO_PROXY_DIAGNOSTIC_NOT_EVENT_TRUTH_OR_ARTISTIC_QUALITY"
+      },
+      "output_alignment": {
+        "accent": {
+          "evidence_count": 389,
+          "gaussian3_score": 0.5362576309279392,
+          "mean_nearest_error_frames": 2.357142857142857,
+          "mean_nearest_error_seconds": 0.07857142857142857,
+          "query_count": 14,
+          "status": "PROXY_ONLY"
+        },
+        "alternate_onset": {
+          "evidence_count": 0,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 14,
+          "status": "NOT_EVALUABLE"
+        },
+        "beat": {
+          "evidence_count": 219,
+          "gaussian3_score": 0.5860286326320923,
+          "mean_nearest_error_frames": 3.142857142857143,
+          "mean_nearest_error_seconds": 0.10476190476190476,
+          "query_count": 14,
+          "status": "PROXY_ONLY"
+        },
+        "primary_half_beat_half_accent": 0.5611431317800157,
+        "scope": "MANY_TO_NEAREST_AUDIO_PROXY_DIAGNOSTIC_NOT_EVENT_TRUTH_OR_ARTISTIC_QUALITY"
+      },
+      "reason": "OUTPUT_SPEED_EQUALS_SOURCE_SPEED_TIMES_INVERSE_CLOCK_RATE; MAXIMA_NEED_NOT_BE_INVARIANT",
+      "regions": [
+        {
+          "mapped_source_peaks": 6,
+          "mean_assigned_distance_frames": 3.712550607287382,
+          "one_to_one_within3_count": 3,
+          "redetected_output_peaks": 5,
+          "region": "upper",
+          "source_fraction_within3": 0.5
+        },
+        {
+          "mapped_source_peaks": 6,
+          "mean_assigned_distance_frames": 0.4777327935222502,
+          "one_to_one_within3_count": 5,
+          "redetected_output_peaks": 5,
+          "region": "lower",
+          "source_fraction_within3": 0.8333333333333334
+        },
+        {
+          "mapped_source_peaks": 9,
+          "mean_assigned_distance_frames": 1.562753036437229,
+          "one_to_one_within3_count": 3,
+          "redetected_output_peaks": 4,
+          "region": "trunk",
+          "source_fraction_within3": 0.3333333333333333
+        }
+      ],
+      "status": "DETECTOR_CONSISTENCY_ONLY_NOT_EVENT_TRUTH"
+    },
+    "mapped_source_music_score_as_R66_recorded": 0.5522861744214996,
+    "method": "Rhythm",
+    "original_ROIs_differ": true,
+    "redetected_output_music_score_as_R66_recorded": 0.5611431317800157,
+    "score_difference_scope": "ORIGINAL_R66_ALIGNMENT_ROIS_DIFFER; NO_SYSTEMATIC_OVERESTIMATION_INFERENCE_FROM_THESE_FIELDS",
+    "source_uid": "male_ribbon_FenHe"
+  },
+  {
+    "case_key": "r66b08_a7e0cdf241d7a758",
+    "detector_counts_scope": "ONE_TO_ONE_REGION_MATCHES_WITHIN3_REPORTED_SEPARATELY_FROM_PROXY_SCORE",
+    "diagnostic": {
+      "mapped_alignment": {
+        "accent": {
+          "evidence_count": 274,
+          "gaussian3_score": 0.4070073682717689,
+          "mean_nearest_error_frames": 3.3725338491296126,
+          "mean_nearest_error_seconds": 0.11241779497098708,
+          "query_count": 22,
+          "status": "PROXY_ONLY"
+        },
+        "alternate_onset": {
+          "evidence_count": 0,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 22,
+          "status": "NOT_EVALUABLE"
+        },
+        "beat": {
+          "evidence_count": 239,
+          "gaussian3_score": 0.4671435158696255,
+          "mean_nearest_error_frames": 3.8582205029013865,
+          "mean_nearest_error_seconds": 0.1286073500967129,
+          "query_count": 22,
+          "status": "PROXY_ONLY"
+        },
+        "primary_half_beat_half_accent": 0.4370754420706972,
+        "scope": "MANY_TO_NEAREST_AUDIO_PROXY_DIAGNOSTIC_NOT_EVENT_TRUTH_OR_ARTISTIC_QUALITY"
+      },
+      "output_alignment": {
+        "accent": {
+          "evidence_count": 274,
+          "gaussian3_score": 0.4213370741427248,
+          "mean_nearest_error_frames": 3.2857142857142856,
+          "mean_nearest_error_seconds": 0.10952380952380952,
+          "query_count": 21,
+          "status": "PROXY_ONLY"
+        },
+        "alternate_onset": {
+          "evidence_count": 0,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 21,
+          "status": "NOT_EVALUABLE"
+        },
+        "beat": {
+          "evidence_count": 239,
+          "gaussian3_score": 0.4359629333997137,
+          "mean_nearest_error_frames": 4.095238095238095,
+          "mean_nearest_error_seconds": 0.1365079365079365,
+          "query_count": 21,
+          "status": "PROXY_ONLY"
+        },
+        "primary_half_beat_half_accent": 0.42865000377121926,
+        "scope": "MANY_TO_NEAREST_AUDIO_PROXY_DIAGNOSTIC_NOT_EVENT_TRUTH_OR_ARTISTIC_QUALITY"
+      },
+      "reason": "OUTPUT_SPEED_EQUALS_SOURCE_SPEED_TIMES_INVERSE_CLOCK_RATE; MAXIMA_NEED_NOT_BE_INVARIANT",
+      "regions": [
+        {
+          "mapped_source_peaks": 7,
+          "mean_assigned_distance_frames": 0.3439716312056926,
+          "one_to_one_within3_count": 6,
+          "redetected_output_peaks": 6,
+          "region": "upper",
+          "source_fraction_within3": 0.8571428571428571
+        },
+        {
+          "mapped_source_peaks": 9,
+          "mean_assigned_distance_frames": 0.33404255319151677,
+          "one_to_one_within3_count": 8,
+          "redetected_output_peaks": 8,
+          "region": "lower",
+          "source_fraction_within3": 0.8888888888888888
+        },
+        {
+          "mapped_source_peaks": 6,
+          "mean_assigned_distance_frames": 0.3489361702127998,
+          "one_to_one_within3_count": 6,
+          "redetected_output_peaks": 7,
+          "region": "trunk",
+          "source_fraction_within3": 1.0
+        }
+      ],
+      "status": "DETECTOR_CONSISTENCY_ONLY_NOT_EVENT_TRUTH"
+    },
+    "mapped_source_music_score_as_R66_recorded": 0.4370754420706972,
+    "method": "Uniform",
+    "original_ROIs_differ": true,
+    "redetected_output_music_score_as_R66_recorded": 0.42865000377121926,
+    "score_difference_scope": "ORIGINAL_R66_ALIGNMENT_ROIS_DIFFER; NO_SYSTEMATIC_OVERESTIMATION_INFERENCE_FROM_THESE_FIELDS",
+    "source_uid": "female_FeiTian"
+  },
+  {
+    "case_key": "r66b08_a7e0cdf241d7a758",
+    "detector_counts_scope": "ONE_TO_ONE_REGION_MATCHES_WITHIN3_REPORTED_SEPARATELY_FROM_PROXY_SCORE",
+    "diagnostic": {
+      "mapped_alignment": {
+        "accent": {
+          "evidence_count": 274,
+          "gaussian3_score": 0.4195271554072591,
+          "mean_nearest_error_frames": 3.8059137291279823,
+          "mean_nearest_error_seconds": 0.12686379097093275,
+          "query_count": 22,
+          "status": "PROXY_ONLY"
+        },
+        "alternate_onset": {
+          "evidence_count": 0,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 22,
+          "status": "NOT_EVALUABLE"
+        },
+        "beat": {
+          "evidence_count": 239,
+          "gaussian3_score": 0.5353338369537912,
+          "mean_nearest_error_frames": 3.333186456400685,
+          "mean_nearest_error_seconds": 0.11110621521335616,
+          "query_count": 22,
+          "status": "PROXY_ONLY"
+        },
+        "primary_half_beat_half_accent": 0.47743049618052513,
+        "scope": "MANY_TO_NEAREST_AUDIO_PROXY_DIAGNOSTIC_NOT_EVENT_TRUTH_OR_ARTISTIC_QUALITY"
+      },
+      "output_alignment": {
+        "accent": {
+          "evidence_count": 274,
+          "gaussian3_score": 0.3932018525686532,
+          "mean_nearest_error_frames": 3.9545454545454546,
+          "mean_nearest_error_seconds": 0.1318181818181818,
+          "query_count": 22,
+          "status": "PROXY_ONLY"
+        },
+        "alternate_onset": {
+          "evidence_count": 0,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 22,
+          "status": "NOT_EVALUABLE"
+        },
+        "beat": {
+          "evidence_count": 239,
+          "gaussian3_score": 0.507037223666472,
+          "mean_nearest_error_frames": 3.5454545454545454,
+          "mean_nearest_error_seconds": 0.11818181818181818,
+          "query_count": 22,
+          "status": "PROXY_ONLY"
+        },
+        "primary_half_beat_half_accent": 0.45011953811756256,
+        "scope": "MANY_TO_NEAREST_AUDIO_PROXY_DIAGNOSTIC_NOT_EVENT_TRUTH_OR_ARTISTIC_QUALITY"
+      },
+      "reason": "OUTPUT_SPEED_EQUALS_SOURCE_SPEED_TIMES_INVERSE_CLOCK_RATE; MAXIMA_NEED_NOT_BE_INVARIANT",
+      "regions": [
+        {
+          "mapped_source_peaks": 7,
+          "mean_assigned_distance_frames": 0.5499999999999952,
+          "one_to_one_within3_count": 7,
+          "redetected_output_peaks": 7,
+          "region": "upper",
+          "source_fraction_within3": 1.0
+        },
+        {
+          "mapped_source_peaks": 9,
+          "mean_assigned_distance_frames": 3.0929705215419654,
+          "one_to_one_within3_count": 6,
+          "redetected_output_peaks": 9,
+          "region": "lower",
+          "source_fraction_within3": 0.6666666666666666
+        },
+        {
+          "mapped_source_peaks": 6,
+          "mean_assigned_distance_frames": 2.6454931972788693,
+          "one_to_one_within3_count": 4,
+          "redetected_output_peaks": 6,
+          "region": "trunk",
+          "source_fraction_within3": 0.6666666666666666
+        }
+      ],
+      "status": "DETECTOR_CONSISTENCY_ONLY_NOT_EVENT_TRUTH"
+    },
+    "mapped_source_music_score_as_R66_recorded": 0.47743049618052513,
+    "method": "E1W",
+    "original_ROIs_differ": true,
+    "redetected_output_music_score_as_R66_recorded": 0.45011953811756256,
+    "score_difference_scope": "ORIGINAL_R66_ALIGNMENT_ROIS_DIFFER; NO_SYSTEMATIC_OVERESTIMATION_INFERENCE_FROM_THESE_FIELDS",
+    "source_uid": "female_FeiTian"
+  },
+  {
+    "case_key": "r66b08_a7e0cdf241d7a758",
+    "detector_counts_scope": "ONE_TO_ONE_REGION_MATCHES_WITHIN3_REPORTED_SEPARATELY_FROM_PROXY_SCORE",
+    "diagnostic": {
+      "mapped_alignment": {
+        "accent": {
+          "evidence_count": 274,
+          "gaussian3_score": 0.4070073682717689,
+          "mean_nearest_error_frames": 3.3725338491296126,
+          "mean_nearest_error_seconds": 0.11241779497098708,
+          "query_count": 22,
+          "status": "PROXY_ONLY"
+        },
+        "alternate_onset": {
+          "evidence_count": 0,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 22,
+          "status": "NOT_EVALUABLE"
+        },
+        "beat": {
+          "evidence_count": 239,
+          "gaussian3_score": 0.4671435158696255,
+          "mean_nearest_error_frames": 3.8582205029013865,
+          "mean_nearest_error_seconds": 0.1286073500967129,
+          "query_count": 22,
+          "status": "PROXY_ONLY"
+        },
+        "primary_half_beat_half_accent": 0.4370754420706972,
+        "scope": "MANY_TO_NEAREST_AUDIO_PROXY_DIAGNOSTIC_NOT_EVENT_TRUTH_OR_ARTISTIC_QUALITY"
+      },
+      "output_alignment": {
+        "accent": {
+          "evidence_count": 274,
+          "gaussian3_score": 0.4213370741427248,
+          "mean_nearest_error_frames": 3.2857142857142856,
+          "mean_nearest_error_seconds": 0.10952380952380952,
+          "query_count": 21,
+          "status": "PROXY_ONLY"
+        },
+        "alternate_onset": {
+          "evidence_count": 0,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 21,
+          "status": "NOT_EVALUABLE"
+        },
+        "beat": {
+          "evidence_count": 239,
+          "gaussian3_score": 0.4359629333997137,
+          "mean_nearest_error_frames": 4.095238095238095,
+          "mean_nearest_error_seconds": 0.1365079365079365,
+          "query_count": 21,
+          "status": "PROXY_ONLY"
+        },
+        "primary_half_beat_half_accent": 0.42865000377121926,
+        "scope": "MANY_TO_NEAREST_AUDIO_PROXY_DIAGNOSTIC_NOT_EVENT_TRUTH_OR_ARTISTIC_QUALITY"
+      },
+      "reason": "OUTPUT_SPEED_EQUALS_SOURCE_SPEED_TIMES_INVERSE_CLOCK_RATE; MAXIMA_NEED_NOT_BE_INVARIANT",
+      "regions": [
+        {
+          "mapped_source_peaks": 7,
+          "mean_assigned_distance_frames": 0.3439716312056926,
+          "one_to_one_within3_count": 6,
+          "redetected_output_peaks": 6,
+          "region": "upper",
+          "source_fraction_within3": 0.8571428571428571
+        },
+        {
+          "mapped_source_peaks": 9,
+          "mean_assigned_distance_frames": 0.33404255319151677,
+          "one_to_one_within3_count": 8,
+          "redetected_output_peaks": 8,
+          "region": "lower",
+          "source_fraction_within3": 0.8888888888888888
+        },
+        {
+          "mapped_source_peaks": 6,
+          "mean_assigned_distance_frames": 0.3489361702127998,
+          "one_to_one_within3_count": 6,
+          "redetected_output_peaks": 7,
+          "region": "trunk",
+          "source_fraction_within3": 1.0
+        }
+      ],
+      "status": "DETECTOR_CONSISTENCY_ONLY_NOT_EVENT_TRUTH"
+    },
+    "mapped_source_music_score_as_R66_recorded": 0.4370754420706972,
+    "method": "Rhythm",
+    "original_ROIs_differ": true,
+    "redetected_output_music_score_as_R66_recorded": 0.42865000377121926,
+    "score_difference_scope": "ORIGINAL_R66_ALIGNMENT_ROIS_DIFFER; NO_SYSTEMATIC_OVERESTIMATION_INFERENCE_FROM_THESE_FIELDS",
+    "source_uid": "female_FeiTian"
+  },
+  {
+    "case_key": "r66b09_43aba2362b9199f7",
+    "detector_counts_scope": "ONE_TO_ONE_REGION_MATCHES_WITHIN3_REPORTED_SEPARATELY_FROM_PROXY_SCORE",
+    "diagnostic": {
+      "mapped_alignment": {
+        "accent": {
+          "evidence_count": 389,
+          "gaussian3_score": 0.4385341907945434,
+          "mean_nearest_error_frames": 2.104252049180303,
+          "mean_nearest_error_seconds": 0.07014173497267677,
+          "query_count": 16,
+          "status": "PROXY_ONLY"
+        },
+        "alternate_onset": {
+          "evidence_count": 0,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 16,
+          "status": "NOT_EVALUABLE"
+        },
+        "beat": {
+          "evidence_count": 219,
+          "gaussian3_score": 0.45356348741704444,
+          "mean_nearest_error_frames": 4.132428278688536,
+          "mean_nearest_error_seconds": 0.13774760928961788,
+          "query_count": 16,
+          "status": "PROXY_ONLY"
+        },
+        "primary_half_beat_half_accent": 0.44604883910579396,
+        "scope": "MANY_TO_NEAREST_AUDIO_PROXY_DIAGNOSTIC_NOT_EVENT_TRUTH_OR_ARTISTIC_QUALITY"
+      },
+      "output_alignment": {
+        "accent": {
+          "evidence_count": 389,
+          "gaussian3_score": 0.3954979116944384,
+          "mean_nearest_error_frames": 2.5,
+          "mean_nearest_error_seconds": 0.08333333333333333,
+          "query_count": 20,
+          "status": "PROXY_ONLY"
+        },
+        "alternate_onset": {
+          "evidence_count": 0,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 20,
+          "status": "NOT_EVALUABLE"
+        },
+        "beat": {
+          "evidence_count": 219,
+          "gaussian3_score": 0.46505199433988753,
+          "mean_nearest_error_frames": 4.15,
+          "mean_nearest_error_seconds": 0.13833333333333334,
+          "query_count": 20,
+          "status": "PROXY_ONLY"
+        },
+        "primary_half_beat_half_accent": 0.43027495301716295,
+        "scope": "MANY_TO_NEAREST_AUDIO_PROXY_DIAGNOSTIC_NOT_EVENT_TRUTH_OR_ARTISTIC_QUALITY"
+      },
+      "reason": "OUTPUT_SPEED_EQUALS_SOURCE_SPEED_TIMES_INVERSE_CLOCK_RATE; MAXIMA_NEED_NOT_BE_INVARIANT",
+      "regions": [
+        {
+          "mapped_source_peaks": 6,
+          "mean_assigned_distance_frames": 1.5942622950819547,
+          "one_to_one_within3_count": 4,
+          "redetected_output_peaks": 5,
+          "region": "upper",
+          "source_fraction_within3": 0.6666666666666666
+        },
+        {
+          "mapped_source_peaks": 5,
+          "mean_assigned_distance_frames": 0.37131147540983067,
+          "one_to_one_within3_count": 5,
+          "redetected_output_peaks": 8,
+          "region": "lower",
+          "source_fraction_within3": 1.0
+        },
+        {
+          "mapped_source_peaks": 5,
+          "mean_assigned_distance_frames": 0.23196721311475982,
+          "one_to_one_within3_count": 5,
+          "redetected_output_peaks": 7,
+          "region": "trunk",
+          "source_fraction_within3": 1.0
+        }
+      ],
+      "status": "DETECTOR_CONSISTENCY_ONLY_NOT_EVENT_TRUTH"
+    },
+    "mapped_source_music_score_as_R66_recorded": 0.44604883910579396,
+    "method": "Uniform",
+    "original_ROIs_differ": true,
+    "redetected_output_music_score_as_R66_recorded": 0.43027495301716295,
+    "score_difference_scope": "ORIGINAL_R66_ALIGNMENT_ROIS_DIFFER; NO_SYSTEMATIC_OVERESTIMATION_INFERENCE_FROM_THESE_FIELDS",
+    "source_uid": "female_lotus"
+  },
+  {
+    "case_key": "r66b09_43aba2362b9199f7",
+    "detector_counts_scope": "ONE_TO_ONE_REGION_MATCHES_WITHIN3_REPORTED_SEPARATELY_FROM_PROXY_SCORE",
+    "diagnostic": {
+      "mapped_alignment": {
+        "accent": {
+          "evidence_count": 389,
+          "gaussian3_score": 0.44659539543687754,
+          "mean_nearest_error_frames": 1.8175000000000097,
+          "mean_nearest_error_seconds": 0.060583333333333655,
+          "query_count": 16,
+          "status": "PROXY_ONLY"
+        },
+        "alternate_onset": {
+          "evidence_count": 0,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 16,
+          "status": "NOT_EVALUABLE"
+        },
+        "beat": {
+          "evidence_count": 219,
+          "gaussian3_score": 0.6308641998994786,
+          "mean_nearest_error_frames": 2.8474999999999824,
+          "mean_nearest_error_seconds": 0.09491666666666608,
+          "query_count": 16,
+          "status": "PROXY_ONLY"
+        },
+        "primary_half_beat_half_accent": 0.5387297976681781,
+        "scope": "MANY_TO_NEAREST_AUDIO_PROXY_DIAGNOSTIC_NOT_EVENT_TRUTH_OR_ARTISTIC_QUALITY"
+      },
+      "output_alignment": {
+        "accent": {
+          "evidence_count": 389,
+          "gaussian3_score": 0.43415971883032467,
+          "mean_nearest_error_frames": 2.0454545454545454,
+          "mean_nearest_error_seconds": 0.06818181818181818,
+          "query_count": 22,
+          "status": "PROXY_ONLY"
+        },
+        "alternate_onset": {
+          "evidence_count": 0,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 22,
+          "status": "NOT_EVALUABLE"
+        },
+        "beat": {
+          "evidence_count": 219,
+          "gaussian3_score": 0.6279840331200975,
+          "mean_nearest_error_frames": 2.909090909090909,
+          "mean_nearest_error_seconds": 0.09696969696969697,
+          "query_count": 22,
+          "status": "PROXY_ONLY"
+        },
+        "primary_half_beat_half_accent": 0.5310718759752111,
+        "scope": "MANY_TO_NEAREST_AUDIO_PROXY_DIAGNOSTIC_NOT_EVENT_TRUTH_OR_ARTISTIC_QUALITY"
+      },
+      "reason": "OUTPUT_SPEED_EQUALS_SOURCE_SPEED_TIMES_INVERSE_CLOCK_RATE; MAXIMA_NEED_NOT_BE_INVARIANT",
+      "regions": [
+        {
+          "mapped_source_peaks": 6,
+          "mean_assigned_distance_frames": 0.18666666666664966,
+          "one_to_one_within3_count": 6,
+          "redetected_output_peaks": 6,
+          "region": "upper",
+          "source_fraction_within3": 1.0
+        },
+        {
+          "mapped_source_peaks": 5,
+          "mean_assigned_distance_frames": 0.2239999999999796,
+          "one_to_one_within3_count": 5,
+          "redetected_output_peaks": 9,
+          "region": "lower",
+          "source_fraction_within3": 1.0
+        },
+        {
+          "mapped_source_peaks": 5,
+          "mean_assigned_distance_frames": 0.0640000000000029,
+          "one_to_one_within3_count": 5,
+          "redetected_output_peaks": 7,
+          "region": "trunk",
+          "source_fraction_within3": 1.0
+        }
+      ],
+      "status": "DETECTOR_CONSISTENCY_ONLY_NOT_EVENT_TRUTH"
+    },
+    "mapped_source_music_score_as_R66_recorded": 0.5387297976681781,
+    "method": "E1W",
+    "original_ROIs_differ": true,
+    "redetected_output_music_score_as_R66_recorded": 0.5310718759752111,
+    "score_difference_scope": "ORIGINAL_R66_ALIGNMENT_ROIS_DIFFER; NO_SYSTEMATIC_OVERESTIMATION_INFERENCE_FROM_THESE_FIELDS",
+    "source_uid": "female_lotus"
+  },
+  {
+    "case_key": "r66b09_43aba2362b9199f7",
+    "detector_counts_scope": "ONE_TO_ONE_REGION_MATCHES_WITHIN3_REPORTED_SEPARATELY_FROM_PROXY_SCORE",
+    "diagnostic": {
+      "mapped_alignment": {
+        "accent": {
+          "evidence_count": 389,
+          "gaussian3_score": 0.46228130540890955,
+          "mean_nearest_error_frames": 2.1522676301186863,
+          "mean_nearest_error_seconds": 0.07174225433728955,
+          "query_count": 16,
+          "status": "PROXY_ONLY"
+        },
+        "alternate_onset": {
+          "evidence_count": 0,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 16,
+          "status": "NOT_EVALUABLE"
+        },
+        "beat": {
+          "evidence_count": 219,
+          "gaussian3_score": 0.6539257354650221,
+          "mean_nearest_error_frames": 2.603759388628518,
+          "mean_nearest_error_seconds": 0.0867919796209506,
+          "query_count": 16,
+          "status": "PROXY_ONLY"
+        },
+        "primary_half_beat_half_accent": 0.5581035204369658,
+        "scope": "MANY_TO_NEAREST_AUDIO_PROXY_DIAGNOSTIC_NOT_EVENT_TRUTH_OR_ARTISTIC_QUALITY"
+      },
+      "output_alignment": {
+        "accent": {
+          "evidence_count": 389,
+          "gaussian3_score": 0.522856278912263,
+          "mean_nearest_error_frames": 1.95,
+          "mean_nearest_error_seconds": 0.065,
+          "query_count": 20,
+          "status": "PROXY_ONLY"
+        },
+        "alternate_onset": {
+          "evidence_count": 0,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 20,
+          "status": "NOT_EVALUABLE"
+        },
+        "beat": {
+          "evidence_count": 219,
+          "gaussian3_score": 0.7084880071356048,
+          "mean_nearest_error_frames": 2.2,
+          "mean_nearest_error_seconds": 0.07333333333333333,
+          "query_count": 20,
+          "status": "PROXY_ONLY"
+        },
+        "primary_half_beat_half_accent": 0.6156721430239339,
+        "scope": "MANY_TO_NEAREST_AUDIO_PROXY_DIAGNOSTIC_NOT_EVENT_TRUTH_OR_ARTISTIC_QUALITY"
+      },
+      "reason": "OUTPUT_SPEED_EQUALS_SOURCE_SPEED_TIMES_INVERSE_CLOCK_RATE; MAXIMA_NEED_NOT_BE_INVARIANT",
+      "regions": [
+        {
+          "mapped_source_peaks": 6,
+          "mean_assigned_distance_frames": 0.17310307244199946,
+          "one_to_one_within3_count": 5,
+          "redetected_output_peaks": 5,
+          "region": "upper",
+          "source_fraction_within3": 0.8333333333333334
+        },
+        {
+          "mapped_source_peaks": 5,
+          "mean_assigned_distance_frames": 0.16423948663723847,
+          "one_to_one_within3_count": 5,
+          "redetected_output_peaks": 8,
+          "region": "lower",
+          "source_fraction_within3": 1.0
+        },
+        {
+          "mapped_source_peaks": 5,
+          "mean_assigned_distance_frames": 0.843175010266151,
+          "one_to_one_within3_count": 4,
+          "redetected_output_peaks": 7,
+          "region": "trunk",
+          "source_fraction_within3": 0.8
+        }
+      ],
+      "status": "DETECTOR_CONSISTENCY_ONLY_NOT_EVENT_TRUTH"
+    },
+    "mapped_source_music_score_as_R66_recorded": 0.5581035204369658,
+    "method": "Rhythm",
+    "original_ROIs_differ": true,
+    "redetected_output_music_score_as_R66_recorded": 0.6156721430239339,
+    "score_difference_scope": "ORIGINAL_R66_ALIGNMENT_ROIS_DIFFER; NO_SYSTEMATIC_OVERESTIMATION_INFERENCE_FROM_THESE_FIELDS",
+    "source_uid": "female_lotus"
+  },
+  {
+    "case_key": "r66b10_f449ca842cdeb74f",
+    "detector_counts_scope": "ONE_TO_ONE_REGION_MATCHES_WITHIN3_REPORTED_SEPARATELY_FROM_PROXY_SCORE",
+    "diagnostic": {
+      "mapped_alignment": {
+        "accent": {
+          "evidence_count": 271,
+          "gaussian3_score": 0.22401482506577272,
+          "mean_nearest_error_frames": 2.2713263621354085,
+          "mean_nearest_error_seconds": 0.07571087873784695,
+          "query_count": 23,
+          "status": "PROXY_ONLY"
+        },
+        "alternate_onset": {
+          "evidence_count": 0,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 23,
+          "status": "NOT_EVALUABLE"
+        },
+        "beat": {
+          "evidence_count": 173,
+          "gaussian3_score": 0.3725834381642594,
+          "mean_nearest_error_frames": 5.458631443771695,
+          "mean_nearest_error_seconds": 0.1819543814590565,
+          "query_count": 23,
+          "status": "PROXY_ONLY"
+        },
+        "primary_half_beat_half_accent": 0.29829913161501603,
+        "scope": "MANY_TO_NEAREST_AUDIO_PROXY_DIAGNOSTIC_NOT_EVENT_TRUTH_OR_ARTISTIC_QUALITY"
+      },
+      "output_alignment": {
+        "accent": {
+          "evidence_count": 271,
+          "gaussian3_score": 0.1979454364429079,
+          "mean_nearest_error_frames": 2.9047619047619047,
+          "mean_nearest_error_seconds": 0.09682539682539683,
+          "query_count": 21,
+          "status": "PROXY_ONLY"
+        },
+        "alternate_onset": {
+          "evidence_count": 0,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 21,
+          "status": "NOT_EVALUABLE"
+        },
+        "beat": {
+          "evidence_count": 173,
+          "gaussian3_score": 0.39268481065639727,
+          "mean_nearest_error_frames": 4.904761904761905,
+          "mean_nearest_error_seconds": 0.1634920634920635,
+          "query_count": 21,
+          "status": "PROXY_ONLY"
+        },
+        "primary_half_beat_half_accent": 0.2953151235496526,
+        "scope": "MANY_TO_NEAREST_AUDIO_PROXY_DIAGNOSTIC_NOT_EVENT_TRUTH_OR_ARTISTIC_QUALITY"
+      },
+      "reason": "OUTPUT_SPEED_EQUALS_SOURCE_SPEED_TIMES_INVERSE_CLOCK_RATE; MAXIMA_NEED_NOT_BE_INVARIANT",
+      "regions": [
+        {
+          "mapped_source_peaks": 8,
+          "mean_assigned_distance_frames": 0.23347398030943692,
+          "one_to_one_within3_count": 6,
+          "redetected_output_peaks": 6,
+          "region": "upper",
+          "source_fraction_within3": 0.75
+        },
+        {
+          "mapped_source_peaks": 8,
+          "mean_assigned_distance_frames": 0.9973628691982972,
+          "one_to_one_within3_count": 7,
+          "redetected_output_peaks": 8,
+          "region": "lower",
+          "source_fraction_within3": 0.875
+        },
+        {
+          "mapped_source_peaks": 7,
+          "mean_assigned_distance_frames": 0.9704641350211247,
+          "one_to_one_within3_count": 6,
+          "redetected_output_peaks": 7,
+          "region": "trunk",
+          "source_fraction_within3": 0.8571428571428571
+        }
+      ],
+      "status": "DETECTOR_CONSISTENCY_ONLY_NOT_EVENT_TRUTH"
+    },
+    "mapped_source_music_score_as_R66_recorded": 0.29829913161501603,
+    "method": "Uniform",
+    "original_ROIs_differ": true,
+    "redetected_output_music_score_as_R66_recorded": 0.2953151235496526,
+    "score_difference_scope": "ORIGINAL_R66_ALIGNMENT_ROIS_DIFFER; NO_SYSTEMATIC_OVERESTIMATION_INFERENCE_FROM_THESE_FIELDS",
+    "source_uid": "female_meditation"
+  },
+  {
+    "case_key": "r66b10_f449ca842cdeb74f",
+    "detector_counts_scope": "ONE_TO_ONE_REGION_MATCHES_WITHIN3_REPORTED_SEPARATELY_FROM_PROXY_SCORE",
+    "diagnostic": {
+      "mapped_alignment": {
+        "accent": {
+          "evidence_count": 271,
+          "gaussian3_score": 0.22226806510295224,
+          "mean_nearest_error_frames": 2.3636238409608565,
+          "mean_nearest_error_seconds": 0.07878746136536188,
+          "query_count": 23,
+          "status": "PROXY_ONLY"
+        },
+        "alternate_onset": {
+          "evidence_count": 0,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 23,
+          "status": "NOT_EVALUABLE"
+        },
+        "beat": {
+          "evidence_count": 173,
+          "gaussian3_score": 0.4913168977656575,
+          "mean_nearest_error_frames": 4.328841232265137,
+          "mean_nearest_error_seconds": 0.1442947077421712,
+          "query_count": 23,
+          "status": "PROXY_ONLY"
+        },
+        "primary_half_beat_half_accent": 0.35679248143430486,
+        "scope": "MANY_TO_NEAREST_AUDIO_PROXY_DIAGNOSTIC_NOT_EVENT_TRUTH_OR_ARTISTIC_QUALITY"
+      },
+      "output_alignment": {
+        "accent": {
+          "evidence_count": 271,
+          "gaussian3_score": 0.23018451747209775,
+          "mean_nearest_error_frames": 2.1739130434782608,
+          "mean_nearest_error_seconds": 0.07246376811594203,
+          "query_count": 23,
+          "status": "PROXY_ONLY"
+        },
+        "alternate_onset": {
+          "evidence_count": 0,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 23,
+          "status": "NOT_EVALUABLE"
+        },
+        "beat": {
+          "evidence_count": 173,
+          "gaussian3_score": 0.5368103113066081,
+          "mean_nearest_error_frames": 3.9130434782608696,
+          "mean_nearest_error_seconds": 0.13043478260869565,
+          "query_count": 23,
+          "status": "PROXY_ONLY"
+        },
+        "primary_half_beat_half_accent": 0.3834974143893529,
+        "scope": "MANY_TO_NEAREST_AUDIO_PROXY_DIAGNOSTIC_NOT_EVENT_TRUTH_OR_ARTISTIC_QUALITY"
+      },
+      "reason": "OUTPUT_SPEED_EQUALS_SOURCE_SPEED_TIMES_INVERSE_CLOCK_RATE; MAXIMA_NEED_NOT_BE_INVARIANT",
+      "regions": [
+        {
+          "mapped_source_peaks": 8,
+          "mean_assigned_distance_frames": 0.10146862483308285,
+          "one_to_one_within3_count": 7,
+          "redetected_output_peaks": 7,
+          "region": "upper",
+          "source_fraction_within3": 0.875
+        },
+        {
+          "mapped_source_peaks": 8,
+          "mean_assigned_distance_frames": 0.36508885441495975,
+          "one_to_one_within3_count": 8,
+          "redetected_output_peaks": 9,
+          "region": "lower",
+          "source_fraction_within3": 1.0
+        },
+        {
+          "mapped_source_peaks": 7,
+          "mean_assigned_distance_frames": 1.0194422072434033,
+          "one_to_one_within3_count": 6,
+          "redetected_output_peaks": 7,
+          "region": "trunk",
+          "source_fraction_within3": 0.8571428571428571
+        }
+      ],
+      "status": "DETECTOR_CONSISTENCY_ONLY_NOT_EVENT_TRUTH"
+    },
+    "mapped_source_music_score_as_R66_recorded": 0.35679248143430486,
+    "method": "E1W",
+    "original_ROIs_differ": true,
+    "redetected_output_music_score_as_R66_recorded": 0.3834974143893529,
+    "score_difference_scope": "ORIGINAL_R66_ALIGNMENT_ROIS_DIFFER; NO_SYSTEMATIC_OVERESTIMATION_INFERENCE_FROM_THESE_FIELDS",
+    "source_uid": "female_meditation"
+  },
+  {
+    "case_key": "r66b10_f449ca842cdeb74f",
+    "detector_counts_scope": "ONE_TO_ONE_REGION_MATCHES_WITHIN3_REPORTED_SEPARATELY_FROM_PROXY_SCORE",
+    "diagnostic": {
+      "mapped_alignment": {
+        "accent": {
+          "evidence_count": 271,
+          "gaussian3_score": 0.22401482506577272,
+          "mean_nearest_error_frames": 2.2713263621354085,
+          "mean_nearest_error_seconds": 0.07571087873784695,
+          "query_count": 23,
+          "status": "PROXY_ONLY"
+        },
+        "alternate_onset": {
+          "evidence_count": 0,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 23,
+          "status": "NOT_EVALUABLE"
+        },
+        "beat": {
+          "evidence_count": 173,
+          "gaussian3_score": 0.3725834381642594,
+          "mean_nearest_error_frames": 5.458631443771695,
+          "mean_nearest_error_seconds": 0.1819543814590565,
+          "query_count": 23,
+          "status": "PROXY_ONLY"
+        },
+        "primary_half_beat_half_accent": 0.29829913161501603,
+        "scope": "MANY_TO_NEAREST_AUDIO_PROXY_DIAGNOSTIC_NOT_EVENT_TRUTH_OR_ARTISTIC_QUALITY"
+      },
+      "output_alignment": {
+        "accent": {
+          "evidence_count": 271,
+          "gaussian3_score": 0.1979454364429079,
+          "mean_nearest_error_frames": 2.9047619047619047,
+          "mean_nearest_error_seconds": 0.09682539682539683,
+          "query_count": 21,
+          "status": "PROXY_ONLY"
+        },
+        "alternate_onset": {
+          "evidence_count": 0,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 21,
+          "status": "NOT_EVALUABLE"
+        },
+        "beat": {
+          "evidence_count": 173,
+          "gaussian3_score": 0.39268481065639727,
+          "mean_nearest_error_frames": 4.904761904761905,
+          "mean_nearest_error_seconds": 0.1634920634920635,
+          "query_count": 21,
+          "status": "PROXY_ONLY"
+        },
+        "primary_half_beat_half_accent": 0.2953151235496526,
+        "scope": "MANY_TO_NEAREST_AUDIO_PROXY_DIAGNOSTIC_NOT_EVENT_TRUTH_OR_ARTISTIC_QUALITY"
+      },
+      "reason": "OUTPUT_SPEED_EQUALS_SOURCE_SPEED_TIMES_INVERSE_CLOCK_RATE; MAXIMA_NEED_NOT_BE_INVARIANT",
+      "regions": [
+        {
+          "mapped_source_peaks": 8,
+          "mean_assigned_distance_frames": 0.23347398030943692,
+          "one_to_one_within3_count": 6,
+          "redetected_output_peaks": 6,
+          "region": "upper",
+          "source_fraction_within3": 0.75
+        },
+        {
+          "mapped_source_peaks": 8,
+          "mean_assigned_distance_frames": 0.9973628691982972,
+          "one_to_one_within3_count": 7,
+          "redetected_output_peaks": 8,
+          "region": "lower",
+          "source_fraction_within3": 0.875
+        },
+        {
+          "mapped_source_peaks": 7,
+          "mean_assigned_distance_frames": 0.9704641350211247,
+          "one_to_one_within3_count": 6,
+          "redetected_output_peaks": 7,
+          "region": "trunk",
+          "source_fraction_within3": 0.8571428571428571
+        }
+      ],
+      "status": "DETECTOR_CONSISTENCY_ONLY_NOT_EVENT_TRUTH"
+    },
+    "mapped_source_music_score_as_R66_recorded": 0.29829913161501603,
+    "method": "Rhythm",
+    "original_ROIs_differ": true,
+    "redetected_output_music_score_as_R66_recorded": 0.2953151235496526,
+    "score_difference_scope": "ORIGINAL_R66_ALIGNMENT_ROIS_DIFFER; NO_SYSTEMATIC_OVERESTIMATION_INFERENCE_FROM_THESE_FIELDS",
+    "source_uid": "female_meditation"
+  },
+  {
+    "case_key": "r66b11_73f9e95e0fef2d60",
+    "detector_counts_scope": "ONE_TO_ONE_REGION_MATCHES_WITHIN3_REPORTED_SEPARATELY_FROM_PROXY_SCORE",
+    "diagnostic": {
+      "mapped_alignment": {
+        "accent": {
+          "evidence_count": 274,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 0,
+          "status": "NOT_EVALUABLE"
+        },
+        "alternate_onset": {
+          "evidence_count": 0,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 0,
+          "status": "NOT_EVALUABLE"
+        },
+        "beat": {
+          "evidence_count": 239,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 0,
+          "status": "NOT_EVALUABLE"
+        },
+        "primary_half_beat_half_accent": null,
+        "scope": "MANY_TO_NEAREST_AUDIO_PROXY_DIAGNOSTIC_NOT_EVENT_TRUTH_OR_ARTISTIC_QUALITY"
+      },
+      "output_alignment": {
+        "accent": {
+          "evidence_count": 274,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 0,
+          "status": "NOT_EVALUABLE"
+        },
+        "alternate_onset": {
+          "evidence_count": 0,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 0,
+          "status": "NOT_EVALUABLE"
+        },
+        "beat": {
+          "evidence_count": 239,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 0,
+          "status": "NOT_EVALUABLE"
+        },
+        "primary_half_beat_half_accent": null,
+        "scope": "MANY_TO_NEAREST_AUDIO_PROXY_DIAGNOSTIC_NOT_EVENT_TRUTH_OR_ARTISTIC_QUALITY"
+      },
+      "reason": "OUTPUT_SPEED_EQUALS_SOURCE_SPEED_TIMES_INVERSE_CLOCK_RATE; MAXIMA_NEED_NOT_BE_INVARIANT",
+      "regions": [
+        {
+          "mapped_source_peaks": 0,
+          "mean_assigned_distance_frames": null,
+          "one_to_one_within3_count": 0,
+          "redetected_output_peaks": 0,
+          "region": "upper",
+          "source_fraction_within3": null
+        },
+        {
+          "mapped_source_peaks": 0,
+          "mean_assigned_distance_frames": null,
+          "one_to_one_within3_count": 0,
+          "redetected_output_peaks": 0,
+          "region": "lower",
+          "source_fraction_within3": null
+        },
+        {
+          "mapped_source_peaks": 0,
+          "mean_assigned_distance_frames": null,
+          "one_to_one_within3_count": 0,
+          "redetected_output_peaks": 0,
+          "region": "trunk",
+          "source_fraction_within3": null
+        }
+      ],
+      "status": "DETECTOR_CONSISTENCY_ONLY_NOT_EVENT_TRUTH"
+    },
+    "mapped_source_music_score_as_R66_recorded": null,
+    "method": "Uniform",
+    "original_ROIs_differ": true,
+    "redetected_output_music_score_as_R66_recorded": null,
+    "score_difference_scope": "ORIGINAL_R66_ALIGNMENT_ROIS_DIFFER; NO_SYSTEMATIC_OVERESTIMATION_INFERENCE_FROM_THESE_FIELDS",
+    "source_uid": "male_meditation"
+  },
+  {
+    "case_key": "r66b11_73f9e95e0fef2d60",
+    "detector_counts_scope": "ONE_TO_ONE_REGION_MATCHES_WITHIN3_REPORTED_SEPARATELY_FROM_PROXY_SCORE",
+    "diagnostic": {
+      "mapped_alignment": {
+        "accent": {
+          "evidence_count": 274,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 0,
+          "status": "NOT_EVALUABLE"
+        },
+        "alternate_onset": {
+          "evidence_count": 0,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 0,
+          "status": "NOT_EVALUABLE"
+        },
+        "beat": {
+          "evidence_count": 239,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 0,
+          "status": "NOT_EVALUABLE"
+        },
+        "primary_half_beat_half_accent": null,
+        "scope": "MANY_TO_NEAREST_AUDIO_PROXY_DIAGNOSTIC_NOT_EVENT_TRUTH_OR_ARTISTIC_QUALITY"
+      },
+      "output_alignment": {
+        "accent": {
+          "evidence_count": 274,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 0,
+          "status": "NOT_EVALUABLE"
+        },
+        "alternate_onset": {
+          "evidence_count": 0,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 0,
+          "status": "NOT_EVALUABLE"
+        },
+        "beat": {
+          "evidence_count": 239,
+          "gaussian3_score": null,
+          "mean_nearest_error_frames": null,
+          "mean_nearest_error_seconds": null,
+          "query_count": 0,
+          "status": "NOT_EVALUABLE"
+        },
+        "primary_half_beat_half_accent": null,
+        "scope": "MANY_TO_NEAREST_AUDIO_PROXY_DIAGNOSTIC_NOT_EVENT_TRUTH_OR_ARTISTIC_QUALITY"
+      },
+      "reason": "OUTPUT_SPEED_EQUALS_SOURCE_SPEED_TIMES_INVERSE_CLOCK_RATE; MAXIMA_NEED_NOT_BE_INVARIANT",
+      "regions": [
+        {
+          "mapped_source_peaks": 0,
+          "mean_assigned_distance_frames": null,
+          "one_to_one_within3_count": 0,
+          "redetected_output_peaks": 0,
+          "region": "upper",
+          "source_fraction_within3": null
+        },
+        {
+          "mapped_source_peaks": 0,
+          "mean_assigned_distance_frames": null,
+          "one_to_one_within3_count": 0,
+          "redetected_output_peaks": 0,
+          "region": "lower",
+          "source_fraction_within3": null
+        },
+        {
+          "mapped_source_peaks": 0,
+          "mean_assigned_distance_frames": null,
+          "one_to_one_within3_count": 0,
+          "redetected_output_peaks": 0,
+          "region": "trunk",
+          "source_fraction_within3": null
+        }
+      ],
+      "status": "DETECTOR_CONSISTENCY_ONLY_NOT_EVENT_TRUTH"
+    },
+    "mapped_source_music_score_as_R66_recorded": null,
+    "method": "E1W",
+    "original_ROIs_differ": true,
+    "redetected_output_music_score_as_R66_recorded": null,
+    "score_difference_scope": "ORIGINAL_R66_ALIGNMENT_ROIS_DIFFER; NO_SYSTEMATIC_OVERESTIMATION_INFERENCE_FROM_THESE_FIELDS",
+    "source_uid": "male_meditation"
+  },
+  {
+    "case_key": "r66b11_73f9e95e0fef2d60",
+    "detector_counts_scope": "ONE_TO_ONE_REGION_MATCHES_WITHIN3_REPORTED_SEPARATELY_FROM_PROXY_SCORE",
+    "diagnostic": {
+      "status": "NOT_EVALUABLE"
+    },
+    "mapped_source_music_score_as_R66_recorded": null,
+    "method": "Rhythm",
+    "original_ROIs_differ": true,
+    "redetected_output_music_score_as_R66_recorded": null,
+    "score_difference_scope": "ORIGINAL_R66_ALIGNMENT_ROIS_DIFFER; NO_SYSTEMATIC_OVERESTIMATION_INFERENCE_FROM_THESE_FIELDS",
+    "source_uid": "male_meditation"
+  }
+]
