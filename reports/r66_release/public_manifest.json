@@ -71,6 +71,31 @@
       "sha256": "b04103006b1c5657571f787ab77bf731be059cd9ac0a538a5515cd1e08936c3f"
     },
     {
+      "path": "local_controls_delivery.json",
+      "bytes": 225,
+      "sha256": "1788b5b6bfdbd1353e02da2e8d027a2b443f9a9d856d95f612fb54ce37fcbfbd"
+    },
+    {
+      "path": "local_http_closed.json",
+      "bytes": 211,
+      "sha256": "1b81f43c07f5d19554811e952b224de346b944c1b63090521ea978fb25004752"
+    },
+    {
+      "path": "local_main_browser.json",
+      "bytes": 215,
+      "sha256": "bb0d29185d7ca35904f5bc54fbddae85d8cc9101a9d76407fa4ad57e80db18e5"
+    },
+    {
+      "path": "local_main_delivery.json",
+      "bytes": 217,
+      "sha256": "04ca07fb3c026ab355b1f660f6638ed52b7773bd8921079153715df611f25cd0"
+    },
+    {
+      "path": "local_regression.json",
+      "bytes": 352,
+      "sha256": "8545330c80bf510bfd08bdf1088caddda5e29723aaa17afc753f09fc3d0498b8"
+    },
+    {
       "bytes": 4377,
       "path": "publication_inputs.json",
       "sha256": "000ac9b7f56c8426a1bb0de90981851e0a665fb605b7e61b57c1ddb66f33b483"
@@ -92,5 +117,6 @@
     }
   ],
   "qualification": "DIAGNOSTIC_ONLY_NO_QUALITY_WINNER",
-  "self_excluded": true
+  "self_excluded": true,
+  "client_added_receipt_hashes_no_media": true
 }
