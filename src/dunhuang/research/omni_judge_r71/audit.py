@@ -42,5 +42,38 @@ def run():
     print('R71_INDEPENDENT_MOTION_MEDIA_EXACT', len(measured), len(videos), flush=True)
 
 
+def audit_controls():
+    baseline={(j['pair_id'],j['order']):j for j in read(ROOT/'jobs.json')}
+    def video_hash(path):
+        return subprocess.check_output(['ffmpeg','-v','error','-i',str(path),'-map','0:v:0','-c','copy','-f','hash','-hash','sha256','-'],text=True).strip()
+    def audio(path):
+        raw=subprocess.check_output(['ffmpeg','-v','error','-i',str(path),'-map','0:a:0','-ac','1','-ar','16000','-f','f32le','-'])
+        a=np.frombuffer(raw,dtype='<f4')[:281600]
+        assert len(a)==281600 and np.isfinite(a).all()
+        return a
+    cache={k:(video_hash(j['video']),audio(j['video'])) for k,j in baseline.items()}
+    rows=[]
+    for j in read(ROOT/'jobs_controls.json'):
+        key=j['pair_id'],j['order'];h,ref=cache[key]
+        assert sha(j['video'])==j['sha256'] and video_hash(j['video'])==h
+        row=dict(pair_id=j['pair_id'],order=j['order'],condition=j['condition'],same_video_bitstream=True)
+        if j['condition']=='muted':
+            assert j['video']==baseline[key]['video']
+            row['audio_policy']='NOT_PASSED_TO_PROCESSOR_OR_GENERATOR'
+        elif j['condition']=='shift500ms':
+            a=audio(j['video']);corr=float(np.corrcoef(a[8000:],ref[:-8000])[0,1]);silence=float(np.sqrt(np.mean(a[:7200]**2)))
+            assert corr>.98 and silence<1e-3
+            row.update(non_circular_shift_samples=8000,shift_correlation=corr,leading_450ms_rms=silence)
+        else:
+            assert j['audio_donor']['raw_audio_sha256']!=j['original_raw_audio_sha256']
+            a=audio(j['video']);donor=audio(SOURCE/'viewer'/j['audio_donor']['path']);corr=float(np.corrcoef(a,donor)[0,1])
+            assert corr>.98
+            row.update(different_recording=True,donor_correlation=corr)
+        rows.append(row)
+    write(ROOT/'receipts/independent_audio_controls.json',dict(fresh_process=True,rows=rows,human_reviewed=False))
+    assert len(rows)==18
+    print('R71_AUDIO_CONTROLS_EXACT',len(rows),flush=True)
+
+
 if __name__ == '__main__':
-    run()
+    audit_controls() if '--controls' in sys.argv else run()
