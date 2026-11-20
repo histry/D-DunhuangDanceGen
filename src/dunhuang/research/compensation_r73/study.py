@@ -7,6 +7,7 @@ from scipy.signal import find_peaks
 from . import warp
 from dunhuang.research.local_timing_r68.common import read,write,sha
 from dunhuang.research.local_timing_r68.study import select_event,plain,pair_metrics
+from dunhuang.research.local_timing_r68.metrics import measure as region_measure
 from dunhuang.research.sdmr_warp_rank import connectivity
 from dunhuang.research.complete_r36.core import rotation_sample,relative_fk
 from dunhuang.research.paired_event_r41.events import profiles
@@ -88,6 +89,8 @@ def run(mode='preview',destination=None):
                     core_dynamics=_motion(R,relative_fk(R,ctx['J'],ctx['parents']),False),
                     bridge_identical_to_rebuilt_baseline=array_hash(geo['bridge_R'])==array_hash(bgeo['bridge_R']) if 'bridge_R' in geo else None,
                     event_semantics='UNKNOWN',human_reviewed=False,Native24='NOT_EVALUABLE')
+                event_mask=abs(np.arange(240)-expected)<=8
+                row['region_dynamics']=region_measure(R,R0,ctx['J'],ctx['parents'],p['q'],q0,event_mask,p['edited_mask'],support_mask=p['edited_mask'],guard_frames=4,include_curves=False)
                 if 'full_R' in geo:row['pair_dynamics']=pair_metrics(geo['full_R'],ctx['J'],ctx['parents'])
                 rows.append(row);group['methods'].append(method)
                 for n,a in dict(R=R,q=p['q'],offset=p['offset'],edited_mask=p['edited_mask'],compensation_mask=p['compensation_mask'],**geo).items():arrays[key+'__'+method+'__'+n]=a

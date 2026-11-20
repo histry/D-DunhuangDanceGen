@@ -8,7 +8,6 @@ all registered dose criteria match. No semantic phase labels are manufactured.
 import itertools
 import numpy as np
 from numpy.polynomial import Polynomial
-from scipy.optimize import brentq
 from dunhuang.research.local_timing_r68 import warp as old
 
 S=Polynomial([0,0,0,0,35,-84,70,-20])
@@ -63,9 +62,13 @@ def solve(case,proposal,delta):
     if baseline['status']!='LEGAL' or not .75<=min(rates)<=max(rates)<=1.33:return dict(result,reason='FROZEN_RATE_LIMIT')
     t=np.arange(240,dtype=float);q0=baseline['q'];q=q0.copy()
     changed=abs(field(t,segments))>1e-12
-    for i in np.flatnonzero(changed):
-        u=brentq(lambda u:u+delta*field(u,segments)-t[i],0,239,xtol=1e-11)
-        q[i]=np.interp(u,base[:,1],base[:,0])
+    lo=np.zeros(240);hi=np.full(240,239.)
+    for _ in range(60):
+        mid=(lo+hi)/2;lower=mid+delta*field(mid,segments)<t
+        lo=np.where(lower,mid,lo);hi=np.where(lower,hi,mid)
+    inverse=(lo+hi)/2;inverse[~changed]=t[~changed]
+    if np.max(abs(inverse+delta*field(inverse,segments)-t))>1e-8:raise AssertionError('Inverse residual')
+    q[changed]=np.interp(inverse[changed],base[:,1],base[:,0])
     if not np.array_equal(q[:4],q0[:4]) or not np.array_equal(q[-4:],q0[-4:]):raise AssertionError('Protected edge changed')
     if not (np.diff(q)>0).all() or q[0]!=q0[0] or q[-1]!=q0[-1]:raise AssertionError('Support/order changed')
     energy={}
@@ -76,7 +79,7 @@ def solve(case,proposal,delta):
               source_shift_rms=float(np.sqrt(np.mean((q-q0)**2))),source_shift_max=float(abs(q-q0).max()),
               postmap_derivative_energy=energy,unchanged_edge_frames=4)
     return dict(result,status='LEGAL',reason=None,q=q,dose=dose,
-                offset=delta*field(t,segments),compensation_mask=abs(field(t,segments,1))>1e-12,edited_mask=changed)
+                offset=delta*field(t,segments),compensation_mask=abs(field(inverse,segments,1))>1e-12,edited_mask=changed)
 
 def relative_gap(a,b):return abs(a-b)/max(abs(a),abs(b),1e-12)
 
@@ -88,4 +91,4 @@ def match(a,b):
     curvature=relative_gap(a['dose']['postmap_derivative_energy']['2'],b['dose']['postmap_derivative_energy']['2'])
     return dict(eligible=max(gaps.values())<=.05 and curvature<=.05 and peak<=1.,gaps=gaps,peak_gap_frames=peak,
                 curvature_energy_gap=relative_gap(a['dose']['postmap_derivative_energy']['2'],b['dose']['postmap_derivative_energy']['2']),
-                phase_semantics='UNKNOWN',budget_scope='RMS_MAX_CLOCK_SHIFT_FIRST_AND_SECOND_RATE_ENERGY; CURVATURE_MISMATCH_EXCLUDES_PRIMARY')
+                phase_semantics='UNKNOWN',budget_scope='RMS_AND_MAX_CLOCK_SHIFT_AND_FIRST_RATE_ENERGY; CURVATURE_REPORTED_SEPARATELY')

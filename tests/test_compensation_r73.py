@@ -9,6 +9,9 @@ def test_same_anchor_edge_contract_and_signed_dose():
         assert np.array_equal(r['q'][:4],np.arange(4)) and np.array_equal(r['q'][-4:],np.arange(236,240))
         assert abs(field(120,p['segments'])-1)<1e-10
         assert np.all(np.diff(r['q'])>0)
+        inverse=r['q']
+        assert np.array_equal(r['compensation_mask'],abs(field(inverse,p['segments'],1))>1e-12)
+        assert np.max(abs(inverse+delta*field(inverse,p['segments'])-np.arange(240)))<1e-8
 
 def test_distributed_not_falsely_claimed_same_curvature_budget():
     case=dict(time_warp=[[0,0],[239,239]],target_interval=[0,240]);ps=proposals(120,np.ones(240))
