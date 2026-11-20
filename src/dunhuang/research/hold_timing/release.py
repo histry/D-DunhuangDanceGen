@@ -27,6 +27,8 @@ def run():
  write(out/'attribution.json',read(ROOT/'attribution/records.json'))
  for source,target in [('audit/calibration.json','calibration.json'),('audit/summary.json','audit_summary.json'),('controls/summary.json','controls_summary.json'),('controls/registration.json','controls_registration.json'),('controls/readout.json','readout.json'),('receipts/preview_browser_acceptance.json','preview_browser_acceptance.json'),('receipts/independent.json','independent.json'),('audit/manifest.json','audit_manifest.json'),('controls/manifest.json','controls_manifest.json')]:write(out/target,read(ROOT/source))
  write(out/'protocol.json',CFG)
+ oldselections=read('outputs/gtw_baseline_01/controls/selections.json');oldgroups=read('outputs/compensation_r73_01/controls/groups.json')
+ write(out/'historical_decisions.json',dict(GTW_selection_status=dict(Counter(v['status'] for v in oldselections)),GTW_missing_selections=[{k:v.get(k) for k in ['unit','case_index','delta','protocol','method','status','eligible_count','candidate_pool_sha256']} for v in oldselections if v['status']!='SELECTED'],R73_group_status=dict(Counter(v['status'] for v in oldgroups)),R73_groups=[{k:v.get(k) for k in ['case_key','case_index','delta','status','methods']} for v in oldgroups],scope='MISSING_DECISION_POSITIONS_ARE_NOT_SAVED_TRAJECTORIES'))
  capacity=[]
  for c in cases:
   a,b=c['source_interval'];own=[v for v in candidates if v['case_key']==c['key']]
