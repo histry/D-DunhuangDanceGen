@@ -18,7 +18,7 @@ def build(mode='preview'):
             label=r['method']+' · '+('G1原门通过' if r.get('connection',{}).get('passes_original_screen') else 'G1未通过／无执行')
             variants.append(dict(label=label,method=r['method'],P=None if R is None else np.round(relative_fk(R,ctx['J'],ctx['parents']),4).tolist()))
         # Missing methods are placeholders, never silently replaced.
-        for method in ['A_GTWLocal','A_GTWExtended','A_GTWContext']:
+        for method in [p+'_'+m for p in (['A','B'] if mode=='controls' else ['A']) for m in ['GTWLocal','GTWExtended','GTWContext']]:
             if not any(v['method']==method for v in variants):variants.append(dict(label=method,method=method,P=None))
         audio=next(a for a in audiofiles.values() if a['raw_audio_sha256']==case['audio_sha256'] and a['pair_music_interval']==case['pair_music_interval'])
         dest=out/audio['path'];dest.parent.mkdir(exist_ok=True);source=Path('outputs/retiming_baselines_r69_01/main/viewer')/audio['path'];assert sha(source)==audio['sha256'];shutil.copyfile(source,dest)
@@ -29,6 +29,10 @@ def build(mode='preview'):
         (out/name).write_bytes(template.replace('__TITLE__',title).replace('__DATA__',json.dumps(data,ensure_ascii=False,separators=(',',':'))).encode('utf8'))
     common=dict(parents=ctx['parents'].tolist(),pack_id='gtw_'+sha(root/'manifest.json')[:20],anonymous=False,task='music_coordination',intro='GTW思想适配，非原算法完整复现。相同来源／240帧Core／48帧G1；主比较三评分器共享实际峰与候选池。E1W和Uniform是不同对齐目标的参考。没有人工偏好，未宣称质量胜出。')
     html('index.html','GTW 强运动学基线 · 实际对照',dict(common,items=payload))
+    if mode=='controls':
+        write(out/'protocol.json',dict(source_manifest_sha256=sha(root/'manifest.json'),human_pack='FROZEN_PREVIEW_PACK_ONLY',human_records=0,R74='NOT_STARTED'))
+        write(root/'viewer_delivery.json',dict(files=[dict(path=p.relative_to(root).as_posix(),sha256=sha(p),bytes=p.stat().st_size) for p in sorted(out.rglob('*')) if p.is_file()]))
+        print('GTW_VIEW_READY',mode,len(payload),flush=True);return
     seed=secrets.token_bytes(32);admin=[];anonymous=[]
     for item in payload:
         by={v['method']:v for v in item['variants']}

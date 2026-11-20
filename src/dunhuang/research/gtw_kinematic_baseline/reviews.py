@@ -37,7 +37,7 @@ def summarize(documents,admin,roster=None):
         output.append(dict(task=task,contrast=contrast,source_uid=source,qualified_items=len(valid),source_mean=sum(valid)/len(valid) if valid else None))
     import numpy as np
     comparisons={};rng=np.random.default_rng(73001)
-    for task,contrast in {(r['task'],r['contrast']) for r in output}:
+    for task,contrast in sorted({(r['task'],r['contrast']) for r in output}):
         values=np.array([r['source_mean'] for r in output if r['task']==task and r['contrast']==contrast and r['source_mean'] is not None])
         interval=None if len(values)<2 else np.quantile(rng.choice(values,(2000,len(values)),replace=True).mean(axis=1),[.025,.975]).tolist()
         comparisons[task+'__'+contrast]=dict(recordings=len(values),mean=None if not len(values) else float(values.mean()),source_bootstrap_95=interval)
