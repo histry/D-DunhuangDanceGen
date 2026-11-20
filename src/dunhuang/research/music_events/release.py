@@ -10,7 +10,7 @@ def run():
     verified=read(ROOT/'receipts/independent_metrics.json');assert verified['status']=='PASS'
     out=Path('reports/music_events_release');out.mkdir(exist_ok=False);songs=[]
     for p in sorted((ROOT/'main').glob('*/catalog.json')):
-        c=read(p);songs.append(dict(name=p.parent.name,audio_sha256=c['audio_sha256'],duration_seconds=c['duration_seconds'],audio_samples=c['audio_samples'],sample_rate=c['sample_rate'],frames=c['frames'],
+        c=read(p);songs.append(dict(name=Path(c['audio_path']).stem,audio_sha256=c['audio_sha256'],duration_seconds=c['duration_seconds'],audio_samples=c['audio_samples'],sample_rate=c['sample_rate'],frames=c['frames'],
             event_counts=dict(Counter(e['source']+':'+e['kind'] for e in c['events'])),comparison=c['comparison'],stability=c['stability'],phrase_status=c['phrase_status'],accuracy=c['accuracy']))
     write(out/'songs.json',songs)
     for source,target in [('paired/scores.json','paired_scores.json'),('paired/summary.json','paired_summary.json'),('saved_motion_diagnostics/scores.json','saved_motion_scores.json'),('saved_motion_diagnostics/qualification.json','saved_motion_qualification.json'),
