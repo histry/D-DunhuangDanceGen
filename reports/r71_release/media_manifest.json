@@ -1,0 +1,70 @@
+{
+  "eligible": 56,
+  "human_reviewed": false,
+  "jobs": [
+    {
+      "condition": "correct_audio",
+      "duration": 17.6,
+      "fps": 30,
+      "frames": 528,
+      "order": "AB",
+      "pair_id": "323775790ec6c4b1b4f19392",
+      "sha256": "a0f0652d7a227225fe28b8df419273e0268ba49fdcd51cf6866a328188e93d21",
+      "video": "outputs/omni_judge_r71_01/media_v2/323775790ec6c4b1b4f19392_AB.mp4"
+    },
+    {
+      "condition": "correct_audio",
+      "duration": 17.6,
+      "fps": 30,
+      "frames": 528,
+      "order": "BA",
+      "pair_id": "323775790ec6c4b1b4f19392",
+      "sha256": "b562723b60b714665f6a1406758b3ae7ea3b83e963b3198983d95c45919f6361",
+      "video": "outputs/omni_judge_r71_01/media_v2/323775790ec6c4b1b4f19392_BA.mp4"
+    },
+    {
+      "condition": "correct_audio",
+      "duration": 17.6,
+      "fps": 30,
+      "frames": 528,
+      "order": "AB",
+      "pair_id": "af0f55fbbda1535f9e7cf1a2",
+      "sha256": "dc9c6048bead8f54dd2cf51ed9eba9dd4b46a5d24e08a5af8433e52c5a61f646",
+      "video": "outputs/omni_judge_r71_01/media_v2/af0f55fbbda1535f9e7cf1a2_AB.mp4"
+    },
+    {
+      "condition": "correct_audio",
+      "duration": 17.6,
+      "fps": 30,
+      "frames": 528,
+      "order": "BA",
+      "pair_id": "af0f55fbbda1535f9e7cf1a2",
+      "sha256": "010c182e5aac1fa820163b47520236ca3e949f963a930dc9deea94c17ce528bc",
+      "video": "outputs/omni_judge_r71_01/media_v2/af0f55fbbda1535f9e7cf1a2_BA.mp4"
+    },
+    {
+      "condition": "correct_audio",
+      "duration": 17.6,
+      "fps": 30,
+      "frames": 528,
+      "order": "AB",
+      "pair_id": "feffc187902823c9c11bc4ec",
+      "sha256": "859629f7a77229c8ac7cac3e798b6fc6b4e71bb1b11ae7e391744794e06728fa",
+      "video": "outputs/omni_judge_r71_01/media_v2/feffc187902823c9c11bc4ec_AB.mp4"
+    },
+    {
+      "condition": "correct_audio",
+      "duration": 17.6,
+      "fps": 30,
+      "frames": 528,
+      "order": "BA",
+      "pair_id": "feffc187902823c9c11bc4ec",
+      "sha256": "7dc63091cac1d1d2fb34c3b40dbc15e51c6b478c4eaa406b8a79c08f6dd13773",
+      "video": "outputs/omni_judge_r71_01/media_v2/feffc187902823c9c11bc4ec_BA.mp4"
+    }
+  ],
+  "missing_not_replaced": 4,
+  "registered": 60,
+  "scope": "pilot",
+  "source_manifest_sha256": "57ea35f5d7bd1d5d63da065e46e59951698d78b05c844de9aae711f890b08abe"
+}

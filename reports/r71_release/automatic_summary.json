@@ -1,0 +1,339 @@
+{
+  "Native24": "NOT_EVALUABLE",
+  "artistic_quality": "NOT_EVALUABLE",
+  "human_agreement": "NOT_EVALUABLE",
+  "human_calibrated": false,
+  "human_reviewed": false,
+  "quality_winner": null,
+  "stages": {
+    "controls": {
+      "dimensions": {
+        "continuity": {
+          "normalized_response_counts": [
+            {
+              "condition": "muted",
+              "count": 6,
+              "response": "TIE"
+            },
+            {
+              "condition": "shift500ms",
+              "count": 1,
+              "response": "INVALID_SCHEMA"
+            },
+            {
+              "condition": "shift500ms",
+              "count": 5,
+              "response": "TIE"
+            },
+            {
+              "condition": "wrong_music",
+              "count": 6,
+              "response": "INVALID_SCHEMA"
+            }
+          ],
+          "order_consistency": [
+            {
+              "condition": "muted",
+              "count": 3,
+              "status": "AGREE"
+            },
+            {
+              "condition": "shift500ms",
+              "count": 2,
+              "status": "AGREE"
+            },
+            {
+              "condition": "shift500ms",
+              "count": 1,
+              "status": "INVALID_SCHEMA"
+            },
+            {
+              "condition": "wrong_music",
+              "count": 3,
+              "status": "INVALID_SCHEMA"
+            }
+          ]
+        },
+        "music_coordination": {
+          "normalized_response_counts": [
+            {
+              "condition": "muted",
+              "count": 6,
+              "response": "TIE"
+            },
+            {
+              "condition": "shift500ms",
+              "count": 1,
+              "response": "INVALID_SCHEMA"
+            },
+            {
+              "condition": "shift500ms",
+              "count": 5,
+              "response": "TIE"
+            },
+            {
+              "condition": "wrong_music",
+              "count": 6,
+              "response": "INVALID_SCHEMA"
+            }
+          ],
+          "order_consistency": [
+            {
+              "condition": "muted",
+              "count": 3,
+              "status": "AGREE"
+            },
+            {
+              "condition": "shift500ms",
+              "count": 2,
+              "status": "AGREE"
+            },
+            {
+              "condition": "shift500ms",
+              "count": 1,
+              "status": "INVALID_SCHEMA"
+            },
+            {
+              "condition": "wrong_music",
+              "count": 3,
+              "status": "INVALID_SCHEMA"
+            }
+          ]
+        },
+        "naturalness": {
+          "normalized_response_counts": [
+            {
+              "condition": "muted",
+              "count": 6,
+              "response": "TIE"
+            },
+            {
+              "condition": "shift500ms",
+              "count": 1,
+              "response": "INVALID_SCHEMA"
+            },
+            {
+              "condition": "shift500ms",
+              "count": 5,
+              "response": "TIE"
+            },
+            {
+              "condition": "wrong_music",
+              "count": 6,
+              "response": "INVALID_SCHEMA"
+            }
+          ],
+          "order_consistency": [
+            {
+              "condition": "muted",
+              "count": 3,
+              "status": "AGREE"
+            },
+            {
+              "condition": "shift500ms",
+              "count": 2,
+              "status": "AGREE"
+            },
+            {
+              "condition": "shift500ms",
+              "count": 1,
+              "status": "INVALID_SCHEMA"
+            },
+            {
+              "condition": "wrong_music",
+              "count": 3,
+              "status": "INVALID_SCHEMA"
+            }
+          ]
+        },
+        "richness": {
+          "normalized_response_counts": [
+            {
+              "condition": "muted",
+              "count": 6,
+              "response": "TIE"
+            },
+            {
+              "condition": "shift500ms",
+              "count": 1,
+              "response": "INVALID_SCHEMA"
+            },
+            {
+              "condition": "shift500ms",
+              "count": 5,
+              "response": "TIE"
+            },
+            {
+              "condition": "wrong_music",
+              "count": 6,
+              "response": "INVALID_SCHEMA"
+            }
+          ],
+          "order_consistency": [
+            {
+              "condition": "muted",
+              "count": 3,
+              "status": "AGREE"
+            },
+            {
+              "condition": "shift500ms",
+              "count": 2,
+              "status": "AGREE"
+            },
+            {
+              "condition": "shift500ms",
+              "count": 1,
+              "status": "INVALID_SCHEMA"
+            },
+            {
+              "condition": "wrong_music",
+              "count": 3,
+              "status": "INVALID_SCHEMA"
+            }
+          ]
+        },
+        "transition_timing": {
+          "normalized_response_counts": [
+            {
+              "condition": "muted",
+              "count": 6,
+              "response": "TIE"
+            },
+            {
+              "condition": "shift500ms",
+              "count": 1,
+              "response": "INVALID_SCHEMA"
+            },
+            {
+              "condition": "shift500ms",
+              "count": 3,
+              "response": "TIE"
+            },
+            {
+              "condition": "shift500ms",
+              "count": 2,
+              "response": "UNSURE"
+            },
+            {
+              "condition": "wrong_music",
+              "count": 6,
+              "response": "INVALID_SCHEMA"
+            }
+          ],
+          "order_consistency": [
+            {
+              "condition": "muted",
+              "count": 3,
+              "status": "AGREE"
+            },
+            {
+              "condition": "shift500ms",
+              "count": 2,
+              "status": "AGREE"
+            },
+            {
+              "condition": "shift500ms",
+              "count": 1,
+              "status": "INVALID_SCHEMA"
+            },
+            {
+              "condition": "wrong_music",
+              "count": 3,
+              "status": "INVALID_SCHEMA"
+            }
+          ]
+        }
+      },
+      "inferences": 18,
+      "interpretation": "DESCRIPTIVE_AUTOMATIC_RESPONSES_NOT_INDEPENDENT_HUMAN_OR_MUSIC_VALIDITY",
+      "registered_pairs": 9
+    },
+    "pilot": {
+      "dimensions": {
+        "continuity": {
+          "normalized_response_counts": [
+            {
+              "condition": "correct_audio",
+              "count": 6,
+              "response": "TIE"
+            }
+          ],
+          "order_consistency": [
+            {
+              "condition": "correct_audio",
+              "count": 3,
+              "status": "AGREE"
+            }
+          ]
+        },
+        "music_coordination": {
+          "normalized_response_counts": [
+            {
+              "condition": "correct_audio",
+              "count": 6,
+              "response": "TIE"
+            }
+          ],
+          "order_consistency": [
+            {
+              "condition": "correct_audio",
+              "count": 3,
+              "status": "AGREE"
+            }
+          ]
+        },
+        "naturalness": {
+          "normalized_response_counts": [
+            {
+              "condition": "correct_audio",
+              "count": 6,
+              "response": "TIE"
+            }
+          ],
+          "order_consistency": [
+            {
+              "condition": "correct_audio",
+              "count": 3,
+              "status": "AGREE"
+            }
+          ]
+        },
+        "richness": {
+          "normalized_response_counts": [
+            {
+              "condition": "correct_audio",
+              "count": 6,
+              "response": "TIE"
+            }
+          ],
+          "order_consistency": [
+            {
+              "condition": "correct_audio",
+              "count": 3,
+              "status": "AGREE"
+            }
+          ]
+        },
+        "transition_timing": {
+          "normalized_response_counts": [
+            {
+              "condition": "correct_audio",
+              "count": 6,
+              "response": "TIE"
+            }
+          ],
+          "order_consistency": [
+            {
+              "condition": "correct_audio",
+              "count": 3,
+              "status": "AGREE"
+            }
+          ]
+        }
+      },
+      "inferences": 6,
+      "interpretation": "DESCRIPTIVE_AUTOMATIC_RESPONSES_NOT_INDEPENDENT_HUMAN_OR_MUSIC_VALIDITY",
+      "registered_pairs": 3
+    }
+  }
+}

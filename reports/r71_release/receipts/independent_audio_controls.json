@@ -1,0 +1,150 @@
+{
+  "fresh_process": true,
+  "human_reviewed": false,
+  "rows": [
+    {
+      "audio_policy": "NOT_PASSED_TO_PROCESSOR_OR_GENERATOR",
+      "condition": "muted",
+      "order": "AB",
+      "pair_id": "323775790ec6c4b1b4f19392",
+      "same_video_bitstream": true
+    },
+    {
+      "condition": "shift500ms",
+      "leading_450ms_rms": 0.0,
+      "non_circular_shift_samples": 8000,
+      "order": "AB",
+      "pair_id": "323775790ec6c4b1b4f19392",
+      "same_video_bitstream": true,
+      "shift_correlation": 0.9997031688049841
+    },
+    {
+      "condition": "wrong_music",
+      "different_recording": true,
+      "donor_correlation": 0.9997094804872736,
+      "order": "AB",
+      "pair_id": "323775790ec6c4b1b4f19392",
+      "same_video_bitstream": true
+    },
+    {
+      "audio_policy": "NOT_PASSED_TO_PROCESSOR_OR_GENERATOR",
+      "condition": "muted",
+      "order": "BA",
+      "pair_id": "323775790ec6c4b1b4f19392",
+      "same_video_bitstream": true
+    },
+    {
+      "condition": "shift500ms",
+      "leading_450ms_rms": 0.0,
+      "non_circular_shift_samples": 8000,
+      "order": "BA",
+      "pair_id": "323775790ec6c4b1b4f19392",
+      "same_video_bitstream": true,
+      "shift_correlation": 0.9997031688049841
+    },
+    {
+      "condition": "wrong_music",
+      "different_recording": true,
+      "donor_correlation": 0.9997094804872736,
+      "order": "BA",
+      "pair_id": "323775790ec6c4b1b4f19392",
+      "same_video_bitstream": true
+    },
+    {
+      "audio_policy": "NOT_PASSED_TO_PROCESSOR_OR_GENERATOR",
+      "condition": "muted",
+      "order": "AB",
+      "pair_id": "af0f55fbbda1535f9e7cf1a2",
+      "same_video_bitstream": true
+    },
+    {
+      "condition": "shift500ms",
+      "leading_450ms_rms": 0.0,
+      "non_circular_shift_samples": 8000,
+      "order": "AB",
+      "pair_id": "af0f55fbbda1535f9e7cf1a2",
+      "same_video_bitstream": true,
+      "shift_correlation": 0.9996732907800241
+    },
+    {
+      "condition": "wrong_music",
+      "different_recording": true,
+      "donor_correlation": 0.9997094804872736,
+      "order": "AB",
+      "pair_id": "af0f55fbbda1535f9e7cf1a2",
+      "same_video_bitstream": true
+    },
+    {
+      "audio_policy": "NOT_PASSED_TO_PROCESSOR_OR_GENERATOR",
+      "condition": "muted",
+      "order": "BA",
+      "pair_id": "af0f55fbbda1535f9e7cf1a2",
+      "same_video_bitstream": true
+    },
+    {
+      "condition": "shift500ms",
+      "leading_450ms_rms": 0.0,
+      "non_circular_shift_samples": 8000,
+      "order": "BA",
+      "pair_id": "af0f55fbbda1535f9e7cf1a2",
+      "same_video_bitstream": true,
+      "shift_correlation": 0.9996732907800241
+    },
+    {
+      "condition": "wrong_music",
+      "different_recording": true,
+      "donor_correlation": 0.9997094804872736,
+      "order": "BA",
+      "pair_id": "af0f55fbbda1535f9e7cf1a2",
+      "same_video_bitstream": true
+    },
+    {
+      "audio_policy": "NOT_PASSED_TO_PROCESSOR_OR_GENERATOR",
+      "condition": "muted",
+      "order": "AB",
+      "pair_id": "feffc187902823c9c11bc4ec",
+      "same_video_bitstream": true
+    },
+    {
+      "condition": "shift500ms",
+      "leading_450ms_rms": 0.0,
+      "non_circular_shift_samples": 8000,
+      "order": "AB",
+      "pair_id": "feffc187902823c9c11bc4ec",
+      "same_video_bitstream": true,
+      "shift_correlation": 0.9996537224066065
+    },
+    {
+      "condition": "wrong_music",
+      "different_recording": true,
+      "donor_correlation": 0.9997094804872736,
+      "order": "AB",
+      "pair_id": "feffc187902823c9c11bc4ec",
+      "same_video_bitstream": true
+    },
+    {
+      "audio_policy": "NOT_PASSED_TO_PROCESSOR_OR_GENERATOR",
+      "condition": "muted",
+      "order": "BA",
+      "pair_id": "feffc187902823c9c11bc4ec",
+      "same_video_bitstream": true
+    },
+    {
+      "condition": "shift500ms",
+      "leading_450ms_rms": 0.0,
+      "non_circular_shift_samples": 8000,
+      "order": "BA",
+      "pair_id": "feffc187902823c9c11bc4ec",
+      "same_video_bitstream": true,
+      "shift_correlation": 0.9996537224066065
+    },
+    {
+      "condition": "wrong_music",
+      "different_recording": true,
+      "donor_correlation": 0.9997094804872736,
+      "order": "BA",
+      "pair_id": "feffc187902823c9c11bc4ec",
+      "same_video_bitstream": true
+    }
+  ]
+}

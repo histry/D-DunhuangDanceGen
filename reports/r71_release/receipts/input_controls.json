@@ -1,0 +1,2036 @@
+{
+  "passed": true,
+  "model_loaded": false,
+  "generation_calls": 0,
+  "jobs_sha256": "8d9dd5014887c5dbe5eeb55adc2ca8c301c251c74c2dd9dbf78f29247a4641b6",
+  "rows": [
+    {
+      "job": {
+        "condition": "muted",
+        "duration": 17.6,
+        "fps": 30,
+        "frames": 528,
+        "order": "AB",
+        "pair_id": "323775790ec6c4b1b4f19392",
+        "sha256": "a0f0652d7a227225fe28b8df419273e0268ba49fdcd51cf6866a328188e93d21",
+        "video": "outputs/omni_judge_r71_01/media_v2/323775790ec6c4b1b4f19392_AB.mp4"
+      },
+      "sampled_video_shapes": [
+        [
+          16,
+          3,
+          252,
+          448
+        ]
+      ],
+      "audio_sample_shapes": [],
+      "processor_shapes": {
+        "input_ids": [
+          1,
+          1319
+        ],
+        "attention_mask": [
+          1,
+          1319
+        ],
+        "pixel_values_videos": [
+          4608,
+          1176
+        ],
+        "video_grid_thw": [
+          1,
+          3
+        ],
+        "video_second_per_grid": [
+          1
+        ]
+      },
+      "processor_tensor_sha256": {
+        "input_ids": "968aec46ec55ea5b5a8e0f51c90a2b41d527af3323b54910f8e9edae6b44939f",
+        "attention_mask": "f9e7bb558511a3845fb014919ef915170febf25c28fc3458960610cb8de83268",
+        "pixel_values_videos": "a99f8b8af268998f5a747d2157fec117666f6670f8df9751ded72a7730b3641a",
+        "video_grid_thw": "f6bf592534a3e4bf87498a766b19a819356404f824befb7699b55002052f030a",
+        "video_second_per_grid": "638737eff9ac13fda3e6b8fe2c2f2128775794a7cacc1857661e8af99369c527"
+      },
+      "video_seconds_per_grid": [
+        2.200000047683716
+      ],
+      "video_frame_metadata": [
+        {
+          "source_fps": 30,
+          "total_frames": 528,
+          "frame_indices": [
+            0,
+            35,
+            70,
+            105,
+            141,
+            176,
+            211,
+            246,
+            281,
+            316,
+            351,
+            386,
+            422,
+            457,
+            492,
+            527
+          ],
+          "frame_times_seconds": [
+            0.0,
+            1.1666666666666667,
+            2.3333333333333335,
+            3.5,
+            4.7,
+            5.866666666666666,
+            7.033333333333333,
+            8.2,
+            9.366666666666667,
+            10.533333333333333,
+            11.7,
+            12.866666666666667,
+            14.066666666666666,
+            15.233333333333333,
+            16.4,
+            17.566666666666666
+          ],
+          "duration_seconds": 17.6
+        }
+      ],
+      "actual_sample_fps": [
+        0.9090909090909092
+      ],
+      "use_audio_in_video": false
+    },
+    {
+      "job": {
+        "condition": "shift500ms",
+        "duration": 17.6,
+        "fps": 30,
+        "frames": 528,
+        "order": "AB",
+        "pair_id": "323775790ec6c4b1b4f19392",
+        "sha256": "d838bc3e3e56b00c6f262a54c16939ed937c976ce24f907fc5d0d7d0fa3a1743",
+        "video": "outputs/omni_judge_r71_01/media_controls_v2/323775790ec6c4b1b4f19392_AB_shift500ms.mp4"
+      },
+      "sampled_video_shapes": [
+        [
+          16,
+          3,
+          252,
+          448
+        ]
+      ],
+      "audio_sample_shapes": [
+        [
+          281612
+        ]
+      ],
+      "processor_shapes": {
+        "input_ids": [
+          1,
+          1761
+        ],
+        "attention_mask": [
+          1,
+          1761
+        ],
+        "pixel_values_videos": [
+          4608,
+          1176
+        ],
+        "video_grid_thw": [
+          1,
+          3
+        ],
+        "video_second_per_grid": [
+          1
+        ],
+        "feature_attention_mask": [
+          1,
+          30000
+        ],
+        "input_features": [
+          1,
+          128,
+          30000
+        ]
+      },
+      "processor_tensor_sha256": {
+        "input_ids": "71b1e0ec0ec15c7c37a3eaba9902c8365143c765fbc103b89cfac95e39a8498a",
+        "attention_mask": "6da68347afb2308b82303f407bd6847db7114ecd6c747a9a17f6342c487427f7",
+        "pixel_values_videos": "a99f8b8af268998f5a747d2157fec117666f6670f8df9751ded72a7730b3641a",
+        "video_grid_thw": "f6bf592534a3e4bf87498a766b19a819356404f824befb7699b55002052f030a",
+        "video_second_per_grid": "638737eff9ac13fda3e6b8fe2c2f2128775794a7cacc1857661e8af99369c527",
+        "feature_attention_mask": "1f308efdbf4826a321db41eec83e3ef28670b1d1a33b1c36b3aafebce4c9ce62",
+        "input_features": "0fe21b1be3be9d411df88b082695ba9de019ec758a4ada86acec68f3f3f889b6"
+      },
+      "video_seconds_per_grid": [
+        2.200000047683716
+      ],
+      "video_frame_metadata": [
+        {
+          "source_fps": 30,
+          "total_frames": 528,
+          "frame_indices": [
+            0,
+            35,
+            70,
+            105,
+            141,
+            176,
+            211,
+            246,
+            281,
+            316,
+            351,
+            386,
+            422,
+            457,
+            492,
+            527
+          ],
+          "frame_times_seconds": [
+            0.0,
+            1.1666666666666667,
+            2.3333333333333335,
+            3.5,
+            4.7,
+            5.866666666666666,
+            7.033333333333333,
+            8.2,
+            9.366666666666667,
+            10.533333333333333,
+            11.7,
+            12.866666666666667,
+            14.066666666666666,
+            15.233333333333333,
+            16.4,
+            17.566666666666666
+          ],
+          "duration_seconds": 17.6
+        }
+      ],
+      "actual_sample_fps": [
+        0.9090909090909092
+      ],
+      "use_audio_in_video": true
+    },
+    {
+      "job": {
+        "condition": "wrong_music",
+        "duration": 17.6,
+        "fps": 30,
+        "frames": 528,
+        "order": "AB",
+        "pair_id": "323775790ec6c4b1b4f19392",
+        "sha256": "c7a4c2f98ce9d4418371a2f453fd0a8e7c51f76cec8f5e79bdd391562cc34f27",
+        "video": "outputs/omni_judge_r71_01/media_controls_v2/323775790ec6c4b1b4f19392_AB_wrong_music.mp4",
+        "audio_donor": {
+          "path": "audio/36ce6f03d7a8_1536_2064.wav",
+          "bytes": 776238,
+          "sha256": "f3b181e0b6bc695f92abbeb6b46f5c424993d29b12464212310f2c6c13ed22c5",
+          "raw_audio_sha256": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c",
+          "pair_music_interval": [
+            1536,
+            2064
+          ]
+        },
+        "original_raw_audio_sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f"
+      },
+      "sampled_video_shapes": [
+        [
+          16,
+          3,
+          252,
+          448
+        ]
+      ],
+      "audio_sample_shapes": [
+        [
+          281612
+        ]
+      ],
+      "processor_shapes": {
+        "input_ids": [
+          1,
+          1761
+        ],
+        "attention_mask": [
+          1,
+          1761
+        ],
+        "pixel_values_videos": [
+          4608,
+          1176
+        ],
+        "video_grid_thw": [
+          1,
+          3
+        ],
+        "video_second_per_grid": [
+          1
+        ],
+        "feature_attention_mask": [
+          1,
+          30000
+        ],
+        "input_features": [
+          1,
+          128,
+          30000
+        ]
+      },
+      "processor_tensor_sha256": {
+        "input_ids": "71b1e0ec0ec15c7c37a3eaba9902c8365143c765fbc103b89cfac95e39a8498a",
+        "attention_mask": "6da68347afb2308b82303f407bd6847db7114ecd6c747a9a17f6342c487427f7",
+        "pixel_values_videos": "a99f8b8af268998f5a747d2157fec117666f6670f8df9751ded72a7730b3641a",
+        "video_grid_thw": "f6bf592534a3e4bf87498a766b19a819356404f824befb7699b55002052f030a",
+        "video_second_per_grid": "638737eff9ac13fda3e6b8fe2c2f2128775794a7cacc1857661e8af99369c527",
+        "feature_attention_mask": "1f308efdbf4826a321db41eec83e3ef28670b1d1a33b1c36b3aafebce4c9ce62",
+        "input_features": "2a7f21af656dc187c31e1ced5e79ea59278aa994b543165e176a94c73fb6d15e"
+      },
+      "video_seconds_per_grid": [
+        2.200000047683716
+      ],
+      "video_frame_metadata": [
+        {
+          "source_fps": 30,
+          "total_frames": 528,
+          "frame_indices": [
+            0,
+            35,
+            70,
+            105,
+            141,
+            176,
+            211,
+            246,
+            281,
+            316,
+            351,
+            386,
+            422,
+            457,
+            492,
+            527
+          ],
+          "frame_times_seconds": [
+            0.0,
+            1.1666666666666667,
+            2.3333333333333335,
+            3.5,
+            4.7,
+            5.866666666666666,
+            7.033333333333333,
+            8.2,
+            9.366666666666667,
+            10.533333333333333,
+            11.7,
+            12.866666666666667,
+            14.066666666666666,
+            15.233333333333333,
+            16.4,
+            17.566666666666666
+          ],
+          "duration_seconds": 17.6
+        }
+      ],
+      "actual_sample_fps": [
+        0.9090909090909092
+      ],
+      "use_audio_in_video": true
+    },
+    {
+      "job": {
+        "condition": "muted",
+        "duration": 17.6,
+        "fps": 30,
+        "frames": 528,
+        "order": "BA",
+        "pair_id": "323775790ec6c4b1b4f19392",
+        "sha256": "b562723b60b714665f6a1406758b3ae7ea3b83e963b3198983d95c45919f6361",
+        "video": "outputs/omni_judge_r71_01/media_v2/323775790ec6c4b1b4f19392_BA.mp4"
+      },
+      "sampled_video_shapes": [
+        [
+          16,
+          3,
+          252,
+          448
+        ]
+      ],
+      "audio_sample_shapes": [],
+      "processor_shapes": {
+        "input_ids": [
+          1,
+          1319
+        ],
+        "attention_mask": [
+          1,
+          1319
+        ],
+        "pixel_values_videos": [
+          4608,
+          1176
+        ],
+        "video_grid_thw": [
+          1,
+          3
+        ],
+        "video_second_per_grid": [
+          1
+        ]
+      },
+      "processor_tensor_sha256": {
+        "input_ids": "968aec46ec55ea5b5a8e0f51c90a2b41d527af3323b54910f8e9edae6b44939f",
+        "attention_mask": "f9e7bb558511a3845fb014919ef915170febf25c28fc3458960610cb8de83268",
+        "pixel_values_videos": "44de3205584899b9e0117cf6c1b3ff658b3037c8cbb843ff60611b0336a88c37",
+        "video_grid_thw": "f6bf592534a3e4bf87498a766b19a819356404f824befb7699b55002052f030a",
+        "video_second_per_grid": "638737eff9ac13fda3e6b8fe2c2f2128775794a7cacc1857661e8af99369c527"
+      },
+      "video_seconds_per_grid": [
+        2.200000047683716
+      ],
+      "video_frame_metadata": [
+        {
+          "source_fps": 30,
+          "total_frames": 528,
+          "frame_indices": [
+            0,
+            35,
+            70,
+            105,
+            141,
+            176,
+            211,
+            246,
+            281,
+            316,
+            351,
+            386,
+            422,
+            457,
+            492,
+            527
+          ],
+          "frame_times_seconds": [
+            0.0,
+            1.1666666666666667,
+            2.3333333333333335,
+            3.5,
+            4.7,
+            5.866666666666666,
+            7.033333333333333,
+            8.2,
+            9.366666666666667,
+            10.533333333333333,
+            11.7,
+            12.866666666666667,
+            14.066666666666666,
+            15.233333333333333,
+            16.4,
+            17.566666666666666
+          ],
+          "duration_seconds": 17.6
+        }
+      ],
+      "actual_sample_fps": [
+        0.9090909090909092
+      ],
+      "use_audio_in_video": false
+    },
+    {
+      "job": {
+        "condition": "shift500ms",
+        "duration": 17.6,
+        "fps": 30,
+        "frames": 528,
+        "order": "BA",
+        "pair_id": "323775790ec6c4b1b4f19392",
+        "sha256": "0ff04e7385d1a54308bf201b121760fbd43adce47bf638067ee249334358d446",
+        "video": "outputs/omni_judge_r71_01/media_controls_v2/323775790ec6c4b1b4f19392_BA_shift500ms.mp4"
+      },
+      "sampled_video_shapes": [
+        [
+          16,
+          3,
+          252,
+          448
+        ]
+      ],
+      "audio_sample_shapes": [
+        [
+          281612
+        ]
+      ],
+      "processor_shapes": {
+        "input_ids": [
+          1,
+          1761
+        ],
+        "attention_mask": [
+          1,
+          1761
+        ],
+        "pixel_values_videos": [
+          4608,
+          1176
+        ],
+        "video_grid_thw": [
+          1,
+          3
+        ],
+        "video_second_per_grid": [
+          1
+        ],
+        "feature_attention_mask": [
+          1,
+          30000
+        ],
+        "input_features": [
+          1,
+          128,
+          30000
+        ]
+      },
+      "processor_tensor_sha256": {
+        "input_ids": "71b1e0ec0ec15c7c37a3eaba9902c8365143c765fbc103b89cfac95e39a8498a",
+        "attention_mask": "6da68347afb2308b82303f407bd6847db7114ecd6c747a9a17f6342c487427f7",
+        "pixel_values_videos": "44de3205584899b9e0117cf6c1b3ff658b3037c8cbb843ff60611b0336a88c37",
+        "video_grid_thw": "f6bf592534a3e4bf87498a766b19a819356404f824befb7699b55002052f030a",
+        "video_second_per_grid": "638737eff9ac13fda3e6b8fe2c2f2128775794a7cacc1857661e8af99369c527",
+        "feature_attention_mask": "1f308efdbf4826a321db41eec83e3ef28670b1d1a33b1c36b3aafebce4c9ce62",
+        "input_features": "0fe21b1be3be9d411df88b082695ba9de019ec758a4ada86acec68f3f3f889b6"
+      },
+      "video_seconds_per_grid": [
+        2.200000047683716
+      ],
+      "video_frame_metadata": [
+        {
+          "source_fps": 30,
+          "total_frames": 528,
+          "frame_indices": [
+            0,
+            35,
+            70,
+            105,
+            141,
+            176,
+            211,
+            246,
+            281,
+            316,
+            351,
+            386,
+            422,
+            457,
+            492,
+            527
+          ],
+          "frame_times_seconds": [
+            0.0,
+            1.1666666666666667,
+            2.3333333333333335,
+            3.5,
+            4.7,
+            5.866666666666666,
+            7.033333333333333,
+            8.2,
+            9.366666666666667,
+            10.533333333333333,
+            11.7,
+            12.866666666666667,
+            14.066666666666666,
+            15.233333333333333,
+            16.4,
+            17.566666666666666
+          ],
+          "duration_seconds": 17.6
+        }
+      ],
+      "actual_sample_fps": [
+        0.9090909090909092
+      ],
+      "use_audio_in_video": true
+    },
+    {
+      "job": {
+        "condition": "wrong_music",
+        "duration": 17.6,
+        "fps": 30,
+        "frames": 528,
+        "order": "BA",
+        "pair_id": "323775790ec6c4b1b4f19392",
+        "sha256": "5c0c9f5f63d8a34ac00e6cb2821656e60defee18bb966e0130f40aa233c72a11",
+        "video": "outputs/omni_judge_r71_01/media_controls_v2/323775790ec6c4b1b4f19392_BA_wrong_music.mp4",
+        "audio_donor": {
+          "path": "audio/36ce6f03d7a8_1536_2064.wav",
+          "bytes": 776238,
+          "sha256": "f3b181e0b6bc695f92abbeb6b46f5c424993d29b12464212310f2c6c13ed22c5",
+          "raw_audio_sha256": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c",
+          "pair_music_interval": [
+            1536,
+            2064
+          ]
+        },
+        "original_raw_audio_sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f"
+      },
+      "sampled_video_shapes": [
+        [
+          16,
+          3,
+          252,
+          448
+        ]
+      ],
+      "audio_sample_shapes": [
+        [
+          281612
+        ]
+      ],
+      "processor_shapes": {
+        "input_ids": [
+          1,
+          1761
+        ],
+        "attention_mask": [
+          1,
+          1761
+        ],
+        "pixel_values_videos": [
+          4608,
+          1176
+        ],
+        "video_grid_thw": [
+          1,
+          3
+        ],
+        "video_second_per_grid": [
+          1
+        ],
+        "feature_attention_mask": [
+          1,
+          30000
+        ],
+        "input_features": [
+          1,
+          128,
+          30000
+        ]
+      },
+      "processor_tensor_sha256": {
+        "input_ids": "71b1e0ec0ec15c7c37a3eaba9902c8365143c765fbc103b89cfac95e39a8498a",
+        "attention_mask": "6da68347afb2308b82303f407bd6847db7114ecd6c747a9a17f6342c487427f7",
+        "pixel_values_videos": "44de3205584899b9e0117cf6c1b3ff658b3037c8cbb843ff60611b0336a88c37",
+        "video_grid_thw": "f6bf592534a3e4bf87498a766b19a819356404f824befb7699b55002052f030a",
+        "video_second_per_grid": "638737eff9ac13fda3e6b8fe2c2f2128775794a7cacc1857661e8af99369c527",
+        "feature_attention_mask": "1f308efdbf4826a321db41eec83e3ef28670b1d1a33b1c36b3aafebce4c9ce62",
+        "input_features": "2a7f21af656dc187c31e1ced5e79ea59278aa994b543165e176a94c73fb6d15e"
+      },
+      "video_seconds_per_grid": [
+        2.200000047683716
+      ],
+      "video_frame_metadata": [
+        {
+          "source_fps": 30,
+          "total_frames": 528,
+          "frame_indices": [
+            0,
+            35,
+            70,
+            105,
+            141,
+            176,
+            211,
+            246,
+            281,
+            316,
+            351,
+            386,
+            422,
+            457,
+            492,
+            527
+          ],
+          "frame_times_seconds": [
+            0.0,
+            1.1666666666666667,
+            2.3333333333333335,
+            3.5,
+            4.7,
+            5.866666666666666,
+            7.033333333333333,
+            8.2,
+            9.366666666666667,
+            10.533333333333333,
+            11.7,
+            12.866666666666667,
+            14.066666666666666,
+            15.233333333333333,
+            16.4,
+            17.566666666666666
+          ],
+          "duration_seconds": 17.6
+        }
+      ],
+      "actual_sample_fps": [
+        0.9090909090909092
+      ],
+      "use_audio_in_video": true
+    },
+    {
+      "job": {
+        "condition": "muted",
+        "duration": 17.6,
+        "fps": 30,
+        "frames": 528,
+        "order": "AB",
+        "pair_id": "af0f55fbbda1535f9e7cf1a2",
+        "sha256": "dc9c6048bead8f54dd2cf51ed9eba9dd4b46a5d24e08a5af8433e52c5a61f646",
+        "video": "outputs/omni_judge_r71_01/media_v2/af0f55fbbda1535f9e7cf1a2_AB.mp4"
+      },
+      "sampled_video_shapes": [
+        [
+          16,
+          3,
+          252,
+          448
+        ]
+      ],
+      "audio_sample_shapes": [],
+      "processor_shapes": {
+        "input_ids": [
+          1,
+          1319
+        ],
+        "attention_mask": [
+          1,
+          1319
+        ],
+        "pixel_values_videos": [
+          4608,
+          1176
+        ],
+        "video_grid_thw": [
+          1,
+          3
+        ],
+        "video_second_per_grid": [
+          1
+        ]
+      },
+      "processor_tensor_sha256": {
+        "input_ids": "968aec46ec55ea5b5a8e0f51c90a2b41d527af3323b54910f8e9edae6b44939f",
+        "attention_mask": "f9e7bb558511a3845fb014919ef915170febf25c28fc3458960610cb8de83268",
+        "pixel_values_videos": "762d3475d29f4b43f75fb857ffcb65cc5bcb454a44de72112974832b1ebf7bd2",
+        "video_grid_thw": "f6bf592534a3e4bf87498a766b19a819356404f824befb7699b55002052f030a",
+        "video_second_per_grid": "638737eff9ac13fda3e6b8fe2c2f2128775794a7cacc1857661e8af99369c527"
+      },
+      "video_seconds_per_grid": [
+        2.200000047683716
+      ],
+      "video_frame_metadata": [
+        {
+          "source_fps": 30,
+          "total_frames": 528,
+          "frame_indices": [
+            0,
+            35,
+            70,
+            105,
+            141,
+            176,
+            211,
+            246,
+            281,
+            316,
+            351,
+            386,
+            422,
+            457,
+            492,
+            527
+          ],
+          "frame_times_seconds": [
+            0.0,
+            1.1666666666666667,
+            2.3333333333333335,
+            3.5,
+            4.7,
+            5.866666666666666,
+            7.033333333333333,
+            8.2,
+            9.366666666666667,
+            10.533333333333333,
+            11.7,
+            12.866666666666667,
+            14.066666666666666,
+            15.233333333333333,
+            16.4,
+            17.566666666666666
+          ],
+          "duration_seconds": 17.6
+        }
+      ],
+      "actual_sample_fps": [
+        0.9090909090909092
+      ],
+      "use_audio_in_video": false
+    },
+    {
+      "job": {
+        "condition": "shift500ms",
+        "duration": 17.6,
+        "fps": 30,
+        "frames": 528,
+        "order": "AB",
+        "pair_id": "af0f55fbbda1535f9e7cf1a2",
+        "sha256": "ed3e3f3fdcff101c11fa34aafa489ec1aeaf80f73dba32d8b8f0ef8ccf47b7b8",
+        "video": "outputs/omni_judge_r71_01/media_controls_v2/af0f55fbbda1535f9e7cf1a2_AB_shift500ms.mp4"
+      },
+      "sampled_video_shapes": [
+        [
+          16,
+          3,
+          252,
+          448
+        ]
+      ],
+      "audio_sample_shapes": [
+        [
+          281612
+        ]
+      ],
+      "processor_shapes": {
+        "input_ids": [
+          1,
+          1761
+        ],
+        "attention_mask": [
+          1,
+          1761
+        ],
+        "pixel_values_videos": [
+          4608,
+          1176
+        ],
+        "video_grid_thw": [
+          1,
+          3
+        ],
+        "video_second_per_grid": [
+          1
+        ],
+        "feature_attention_mask": [
+          1,
+          30000
+        ],
+        "input_features": [
+          1,
+          128,
+          30000
+        ]
+      },
+      "processor_tensor_sha256": {
+        "input_ids": "71b1e0ec0ec15c7c37a3eaba9902c8365143c765fbc103b89cfac95e39a8498a",
+        "attention_mask": "6da68347afb2308b82303f407bd6847db7114ecd6c747a9a17f6342c487427f7",
+        "pixel_values_videos": "762d3475d29f4b43f75fb857ffcb65cc5bcb454a44de72112974832b1ebf7bd2",
+        "video_grid_thw": "f6bf592534a3e4bf87498a766b19a819356404f824befb7699b55002052f030a",
+        "video_second_per_grid": "638737eff9ac13fda3e6b8fe2c2f2128775794a7cacc1857661e8af99369c527",
+        "feature_attention_mask": "1f308efdbf4826a321db41eec83e3ef28670b1d1a33b1c36b3aafebce4c9ce62",
+        "input_features": "5a2e2b2e1acec3a9139649221d3d35248339b013fdf48ef8e2d515e6c34f12d1"
+      },
+      "video_seconds_per_grid": [
+        2.200000047683716
+      ],
+      "video_frame_metadata": [
+        {
+          "source_fps": 30,
+          "total_frames": 528,
+          "frame_indices": [
+            0,
+            35,
+            70,
+            105,
+            141,
+            176,
+            211,
+            246,
+            281,
+            316,
+            351,
+            386,
+            422,
+            457,
+            492,
+            527
+          ],
+          "frame_times_seconds": [
+            0.0,
+            1.1666666666666667,
+            2.3333333333333335,
+            3.5,
+            4.7,
+            5.866666666666666,
+            7.033333333333333,
+            8.2,
+            9.366666666666667,
+            10.533333333333333,
+            11.7,
+            12.866666666666667,
+            14.066666666666666,
+            15.233333333333333,
+            16.4,
+            17.566666666666666
+          ],
+          "duration_seconds": 17.6
+        }
+      ],
+      "actual_sample_fps": [
+        0.9090909090909092
+      ],
+      "use_audio_in_video": true
+    },
+    {
+      "job": {
+        "condition": "wrong_music",
+        "duration": 17.6,
+        "fps": 30,
+        "frames": 528,
+        "order": "AB",
+        "pair_id": "af0f55fbbda1535f9e7cf1a2",
+        "sha256": "ffcad4bc218b4a4bb936d118f4fa9bde0a904c19b5e544e4aa6cf2dad03db6d6",
+        "video": "outputs/omni_judge_r71_01/media_controls_v2/af0f55fbbda1535f9e7cf1a2_AB_wrong_music.mp4",
+        "audio_donor": {
+          "path": "audio/36ce6f03d7a8_1536_2064.wav",
+          "bytes": 776238,
+          "sha256": "f3b181e0b6bc695f92abbeb6b46f5c424993d29b12464212310f2c6c13ed22c5",
+          "raw_audio_sha256": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c",
+          "pair_music_interval": [
+            1536,
+            2064
+          ]
+        },
+        "original_raw_audio_sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f"
+      },
+      "sampled_video_shapes": [
+        [
+          16,
+          3,
+          252,
+          448
+        ]
+      ],
+      "audio_sample_shapes": [
+        [
+          281612
+        ]
+      ],
+      "processor_shapes": {
+        "input_ids": [
+          1,
+          1761
+        ],
+        "attention_mask": [
+          1,
+          1761
+        ],
+        "pixel_values_videos": [
+          4608,
+          1176
+        ],
+        "video_grid_thw": [
+          1,
+          3
+        ],
+        "video_second_per_grid": [
+          1
+        ],
+        "feature_attention_mask": [
+          1,
+          30000
+        ],
+        "input_features": [
+          1,
+          128,
+          30000
+        ]
+      },
+      "processor_tensor_sha256": {
+        "input_ids": "71b1e0ec0ec15c7c37a3eaba9902c8365143c765fbc103b89cfac95e39a8498a",
+        "attention_mask": "6da68347afb2308b82303f407bd6847db7114ecd6c747a9a17f6342c487427f7",
+        "pixel_values_videos": "762d3475d29f4b43f75fb857ffcb65cc5bcb454a44de72112974832b1ebf7bd2",
+        "video_grid_thw": "f6bf592534a3e4bf87498a766b19a819356404f824befb7699b55002052f030a",
+        "video_second_per_grid": "638737eff9ac13fda3e6b8fe2c2f2128775794a7cacc1857661e8af99369c527",
+        "feature_attention_mask": "1f308efdbf4826a321db41eec83e3ef28670b1d1a33b1c36b3aafebce4c9ce62",
+        "input_features": "2a7f21af656dc187c31e1ced5e79ea59278aa994b543165e176a94c73fb6d15e"
+      },
+      "video_seconds_per_grid": [
+        2.200000047683716
+      ],
+      "video_frame_metadata": [
+        {
+          "source_fps": 30,
+          "total_frames": 528,
+          "frame_indices": [
+            0,
+            35,
+            70,
+            105,
+            141,
+            176,
+            211,
+            246,
+            281,
+            316,
+            351,
+            386,
+            422,
+            457,
+            492,
+            527
+          ],
+          "frame_times_seconds": [
+            0.0,
+            1.1666666666666667,
+            2.3333333333333335,
+            3.5,
+            4.7,
+            5.866666666666666,
+            7.033333333333333,
+            8.2,
+            9.366666666666667,
+            10.533333333333333,
+            11.7,
+            12.866666666666667,
+            14.066666666666666,
+            15.233333333333333,
+            16.4,
+            17.566666666666666
+          ],
+          "duration_seconds": 17.6
+        }
+      ],
+      "actual_sample_fps": [
+        0.9090909090909092
+      ],
+      "use_audio_in_video": true
+    },
+    {
+      "job": {
+        "condition": "muted",
+        "duration": 17.6,
+        "fps": 30,
+        "frames": 528,
+        "order": "BA",
+        "pair_id": "af0f55fbbda1535f9e7cf1a2",
+        "sha256": "010c182e5aac1fa820163b47520236ca3e949f963a930dc9deea94c17ce528bc",
+        "video": "outputs/omni_judge_r71_01/media_v2/af0f55fbbda1535f9e7cf1a2_BA.mp4"
+      },
+      "sampled_video_shapes": [
+        [
+          16,
+          3,
+          252,
+          448
+        ]
+      ],
+      "audio_sample_shapes": [],
+      "processor_shapes": {
+        "input_ids": [
+          1,
+          1319
+        ],
+        "attention_mask": [
+          1,
+          1319
+        ],
+        "pixel_values_videos": [
+          4608,
+          1176
+        ],
+        "video_grid_thw": [
+          1,
+          3
+        ],
+        "video_second_per_grid": [
+          1
+        ]
+      },
+      "processor_tensor_sha256": {
+        "input_ids": "968aec46ec55ea5b5a8e0f51c90a2b41d527af3323b54910f8e9edae6b44939f",
+        "attention_mask": "f9e7bb558511a3845fb014919ef915170febf25c28fc3458960610cb8de83268",
+        "pixel_values_videos": "b4b31263d0004c9da2f25d2b88807840925794a23e6f611c24e3a2bcbb4657e8",
+        "video_grid_thw": "f6bf592534a3e4bf87498a766b19a819356404f824befb7699b55002052f030a",
+        "video_second_per_grid": "638737eff9ac13fda3e6b8fe2c2f2128775794a7cacc1857661e8af99369c527"
+      },
+      "video_seconds_per_grid": [
+        2.200000047683716
+      ],
+      "video_frame_metadata": [
+        {
+          "source_fps": 30,
+          "total_frames": 528,
+          "frame_indices": [
+            0,
+            35,
+            70,
+            105,
+            141,
+            176,
+            211,
+            246,
+            281,
+            316,
+            351,
+            386,
+            422,
+            457,
+            492,
+            527
+          ],
+          "frame_times_seconds": [
+            0.0,
+            1.1666666666666667,
+            2.3333333333333335,
+            3.5,
+            4.7,
+            5.866666666666666,
+            7.033333333333333,
+            8.2,
+            9.366666666666667,
+            10.533333333333333,
+            11.7,
+            12.866666666666667,
+            14.066666666666666,
+            15.233333333333333,
+            16.4,
+            17.566666666666666
+          ],
+          "duration_seconds": 17.6
+        }
+      ],
+      "actual_sample_fps": [
+        0.9090909090909092
+      ],
+      "use_audio_in_video": false
+    },
+    {
+      "job": {
+        "condition": "shift500ms",
+        "duration": 17.6,
+        "fps": 30,
+        "frames": 528,
+        "order": "BA",
+        "pair_id": "af0f55fbbda1535f9e7cf1a2",
+        "sha256": "a662205fddc22becbb05b0e32d36f6a554b59f5405b4f11569ee950464b2e121",
+        "video": "outputs/omni_judge_r71_01/media_controls_v2/af0f55fbbda1535f9e7cf1a2_BA_shift500ms.mp4"
+      },
+      "sampled_video_shapes": [
+        [
+          16,
+          3,
+          252,
+          448
+        ]
+      ],
+      "audio_sample_shapes": [
+        [
+          281612
+        ]
+      ],
+      "processor_shapes": {
+        "input_ids": [
+          1,
+          1761
+        ],
+        "attention_mask": [
+          1,
+          1761
+        ],
+        "pixel_values_videos": [
+          4608,
+          1176
+        ],
+        "video_grid_thw": [
+          1,
+          3
+        ],
+        "video_second_per_grid": [
+          1
+        ],
+        "feature_attention_mask": [
+          1,
+          30000
+        ],
+        "input_features": [
+          1,
+          128,
+          30000
+        ]
+      },
+      "processor_tensor_sha256": {
+        "input_ids": "71b1e0ec0ec15c7c37a3eaba9902c8365143c765fbc103b89cfac95e39a8498a",
+        "attention_mask": "6da68347afb2308b82303f407bd6847db7114ecd6c747a9a17f6342c487427f7",
+        "pixel_values_videos": "b4b31263d0004c9da2f25d2b88807840925794a23e6f611c24e3a2bcbb4657e8",
+        "video_grid_thw": "f6bf592534a3e4bf87498a766b19a819356404f824befb7699b55002052f030a",
+        "video_second_per_grid": "638737eff9ac13fda3e6b8fe2c2f2128775794a7cacc1857661e8af99369c527",
+        "feature_attention_mask": "1f308efdbf4826a321db41eec83e3ef28670b1d1a33b1c36b3aafebce4c9ce62",
+        "input_features": "5a2e2b2e1acec3a9139649221d3d35248339b013fdf48ef8e2d515e6c34f12d1"
+      },
+      "video_seconds_per_grid": [
+        2.200000047683716
+      ],
+      "video_frame_metadata": [
+        {
+          "source_fps": 30,
+          "total_frames": 528,
+          "frame_indices": [
+            0,
+            35,
+            70,
+            105,
+            141,
+            176,
+            211,
+            246,
+            281,
+            316,
+            351,
+            386,
+            422,
+            457,
+            492,
+            527
+          ],
+          "frame_times_seconds": [
+            0.0,
+            1.1666666666666667,
+            2.3333333333333335,
+            3.5,
+            4.7,
+            5.866666666666666,
+            7.033333333333333,
+            8.2,
+            9.366666666666667,
+            10.533333333333333,
+            11.7,
+            12.866666666666667,
+            14.066666666666666,
+            15.233333333333333,
+            16.4,
+            17.566666666666666
+          ],
+          "duration_seconds": 17.6
+        }
+      ],
+      "actual_sample_fps": [
+        0.9090909090909092
+      ],
+      "use_audio_in_video": true
+    },
+    {
+      "job": {
+        "condition": "wrong_music",
+        "duration": 17.6,
+        "fps": 30,
+        "frames": 528,
+        "order": "BA",
+        "pair_id": "af0f55fbbda1535f9e7cf1a2",
+        "sha256": "c13803e7c472ef6a303eed47d6436d741cb56e9e1255a4c4112e91b53ecbf195",
+        "video": "outputs/omni_judge_r71_01/media_controls_v2/af0f55fbbda1535f9e7cf1a2_BA_wrong_music.mp4",
+        "audio_donor": {
+          "path": "audio/36ce6f03d7a8_1536_2064.wav",
+          "bytes": 776238,
+          "sha256": "f3b181e0b6bc695f92abbeb6b46f5c424993d29b12464212310f2c6c13ed22c5",
+          "raw_audio_sha256": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c",
+          "pair_music_interval": [
+            1536,
+            2064
+          ]
+        },
+        "original_raw_audio_sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f"
+      },
+      "sampled_video_shapes": [
+        [
+          16,
+          3,
+          252,
+          448
+        ]
+      ],
+      "audio_sample_shapes": [
+        [
+          281612
+        ]
+      ],
+      "processor_shapes": {
+        "input_ids": [
+          1,
+          1761
+        ],
+        "attention_mask": [
+          1,
+          1761
+        ],
+        "pixel_values_videos": [
+          4608,
+          1176
+        ],
+        "video_grid_thw": [
+          1,
+          3
+        ],
+        "video_second_per_grid": [
+          1
+        ],
+        "feature_attention_mask": [
+          1,
+          30000
+        ],
+        "input_features": [
+          1,
+          128,
+          30000
+        ]
+      },
+      "processor_tensor_sha256": {
+        "input_ids": "71b1e0ec0ec15c7c37a3eaba9902c8365143c765fbc103b89cfac95e39a8498a",
+        "attention_mask": "6da68347afb2308b82303f407bd6847db7114ecd6c747a9a17f6342c487427f7",
+        "pixel_values_videos": "b4b31263d0004c9da2f25d2b88807840925794a23e6f611c24e3a2bcbb4657e8",
+        "video_grid_thw": "f6bf592534a3e4bf87498a766b19a819356404f824befb7699b55002052f030a",
+        "video_second_per_grid": "638737eff9ac13fda3e6b8fe2c2f2128775794a7cacc1857661e8af99369c527",
+        "feature_attention_mask": "1f308efdbf4826a321db41eec83e3ef28670b1d1a33b1c36b3aafebce4c9ce62",
+        "input_features": "2a7f21af656dc187c31e1ced5e79ea59278aa994b543165e176a94c73fb6d15e"
+      },
+      "video_seconds_per_grid": [
+        2.200000047683716
+      ],
+      "video_frame_metadata": [
+        {
+          "source_fps": 30,
+          "total_frames": 528,
+          "frame_indices": [
+            0,
+            35,
+            70,
+            105,
+            141,
+            176,
+            211,
+            246,
+            281,
+            316,
+            351,
+            386,
+            422,
+            457,
+            492,
+            527
+          ],
+          "frame_times_seconds": [
+            0.0,
+            1.1666666666666667,
+            2.3333333333333335,
+            3.5,
+            4.7,
+            5.866666666666666,
+            7.033333333333333,
+            8.2,
+            9.366666666666667,
+            10.533333333333333,
+            11.7,
+            12.866666666666667,
+            14.066666666666666,
+            15.233333333333333,
+            16.4,
+            17.566666666666666
+          ],
+          "duration_seconds": 17.6
+        }
+      ],
+      "actual_sample_fps": [
+        0.9090909090909092
+      ],
+      "use_audio_in_video": true
+    },
+    {
+      "job": {
+        "condition": "muted",
+        "duration": 17.6,
+        "fps": 30,
+        "frames": 528,
+        "order": "AB",
+        "pair_id": "feffc187902823c9c11bc4ec",
+        "sha256": "859629f7a77229c8ac7cac3e798b6fc6b4e71bb1b11ae7e391744794e06728fa",
+        "video": "outputs/omni_judge_r71_01/media_v2/feffc187902823c9c11bc4ec_AB.mp4"
+      },
+      "sampled_video_shapes": [
+        [
+          16,
+          3,
+          252,
+          448
+        ]
+      ],
+      "audio_sample_shapes": [],
+      "processor_shapes": {
+        "input_ids": [
+          1,
+          1319
+        ],
+        "attention_mask": [
+          1,
+          1319
+        ],
+        "pixel_values_videos": [
+          4608,
+          1176
+        ],
+        "video_grid_thw": [
+          1,
+          3
+        ],
+        "video_second_per_grid": [
+          1
+        ]
+      },
+      "processor_tensor_sha256": {
+        "input_ids": "968aec46ec55ea5b5a8e0f51c90a2b41d527af3323b54910f8e9edae6b44939f",
+        "attention_mask": "f9e7bb558511a3845fb014919ef915170febf25c28fc3458960610cb8de83268",
+        "pixel_values_videos": "519b73969af3b5a767e4ab405b561bcd17d41442cd49bb84c010d50feb7e203d",
+        "video_grid_thw": "f6bf592534a3e4bf87498a766b19a819356404f824befb7699b55002052f030a",
+        "video_second_per_grid": "638737eff9ac13fda3e6b8fe2c2f2128775794a7cacc1857661e8af99369c527"
+      },
+      "video_seconds_per_grid": [
+        2.200000047683716
+      ],
+      "video_frame_metadata": [
+        {
+          "source_fps": 30,
+          "total_frames": 528,
+          "frame_indices": [
+            0,
+            35,
+            70,
+            105,
+            141,
+            176,
+            211,
+            246,
+            281,
+            316,
+            351,
+            386,
+            422,
+            457,
+            492,
+            527
+          ],
+          "frame_times_seconds": [
+            0.0,
+            1.1666666666666667,
+            2.3333333333333335,
+            3.5,
+            4.7,
+            5.866666666666666,
+            7.033333333333333,
+            8.2,
+            9.366666666666667,
+            10.533333333333333,
+            11.7,
+            12.866666666666667,
+            14.066666666666666,
+            15.233333333333333,
+            16.4,
+            17.566666666666666
+          ],
+          "duration_seconds": 17.6
+        }
+      ],
+      "actual_sample_fps": [
+        0.9090909090909092
+      ],
+      "use_audio_in_video": false
+    },
+    {
+      "job": {
+        "condition": "shift500ms",
+        "duration": 17.6,
+        "fps": 30,
+        "frames": 528,
+        "order": "AB",
+        "pair_id": "feffc187902823c9c11bc4ec",
+        "sha256": "9b06f908543f8c50286473daa57f022bead74f0df8af0be5a074181d51ac134a",
+        "video": "outputs/omni_judge_r71_01/media_controls_v2/feffc187902823c9c11bc4ec_AB_shift500ms.mp4"
+      },
+      "sampled_video_shapes": [
+        [
+          16,
+          3,
+          252,
+          448
+        ]
+      ],
+      "audio_sample_shapes": [
+        [
+          281612
+        ]
+      ],
+      "processor_shapes": {
+        "input_ids": [
+          1,
+          1761
+        ],
+        "attention_mask": [
+          1,
+          1761
+        ],
+        "pixel_values_videos": [
+          4608,
+          1176
+        ],
+        "video_grid_thw": [
+          1,
+          3
+        ],
+        "video_second_per_grid": [
+          1
+        ],
+        "feature_attention_mask": [
+          1,
+          30000
+        ],
+        "input_features": [
+          1,
+          128,
+          30000
+        ]
+      },
+      "processor_tensor_sha256": {
+        "input_ids": "71b1e0ec0ec15c7c37a3eaba9902c8365143c765fbc103b89cfac95e39a8498a",
+        "attention_mask": "6da68347afb2308b82303f407bd6847db7114ecd6c747a9a17f6342c487427f7",
+        "pixel_values_videos": "519b73969af3b5a767e4ab405b561bcd17d41442cd49bb84c010d50feb7e203d",
+        "video_grid_thw": "f6bf592534a3e4bf87498a766b19a819356404f824befb7699b55002052f030a",
+        "video_second_per_grid": "638737eff9ac13fda3e6b8fe2c2f2128775794a7cacc1857661e8af99369c527",
+        "feature_attention_mask": "1f308efdbf4826a321db41eec83e3ef28670b1d1a33b1c36b3aafebce4c9ce62",
+        "input_features": "16951425c744ca3aae84d30e22574fe83f92d244de7dd901893a00294c411c5a"
+      },
+      "video_seconds_per_grid": [
+        2.200000047683716
+      ],
+      "video_frame_metadata": [
+        {
+          "source_fps": 30,
+          "total_frames": 528,
+          "frame_indices": [
+            0,
+            35,
+            70,
+            105,
+            141,
+            176,
+            211,
+            246,
+            281,
+            316,
+            351,
+            386,
+            422,
+            457,
+            492,
+            527
+          ],
+          "frame_times_seconds": [
+            0.0,
+            1.1666666666666667,
+            2.3333333333333335,
+            3.5,
+            4.7,
+            5.866666666666666,
+            7.033333333333333,
+            8.2,
+            9.366666666666667,
+            10.533333333333333,
+            11.7,
+            12.866666666666667,
+            14.066666666666666,
+            15.233333333333333,
+            16.4,
+            17.566666666666666
+          ],
+          "duration_seconds": 17.6
+        }
+      ],
+      "actual_sample_fps": [
+        0.9090909090909092
+      ],
+      "use_audio_in_video": true
+    },
+    {
+      "job": {
+        "condition": "wrong_music",
+        "duration": 17.6,
+        "fps": 30,
+        "frames": 528,
+        "order": "AB",
+        "pair_id": "feffc187902823c9c11bc4ec",
+        "sha256": "c2a548d323856aa9280510ac3ebf2a4cb253eac2a503b9475a4156d16d099f6d",
+        "video": "outputs/omni_judge_r71_01/media_controls_v2/feffc187902823c9c11bc4ec_AB_wrong_music.mp4",
+        "audio_donor": {
+          "path": "audio/36ce6f03d7a8_1536_2064.wav",
+          "bytes": 776238,
+          "sha256": "f3b181e0b6bc695f92abbeb6b46f5c424993d29b12464212310f2c6c13ed22c5",
+          "raw_audio_sha256": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c",
+          "pair_music_interval": [
+            1536,
+            2064
+          ]
+        },
+        "original_raw_audio_sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f"
+      },
+      "sampled_video_shapes": [
+        [
+          16,
+          3,
+          252,
+          448
+        ]
+      ],
+      "audio_sample_shapes": [
+        [
+          281612
+        ]
+      ],
+      "processor_shapes": {
+        "input_ids": [
+          1,
+          1761
+        ],
+        "attention_mask": [
+          1,
+          1761
+        ],
+        "pixel_values_videos": [
+          4608,
+          1176
+        ],
+        "video_grid_thw": [
+          1,
+          3
+        ],
+        "video_second_per_grid": [
+          1
+        ],
+        "feature_attention_mask": [
+          1,
+          30000
+        ],
+        "input_features": [
+          1,
+          128,
+          30000
+        ]
+      },
+      "processor_tensor_sha256": {
+        "input_ids": "71b1e0ec0ec15c7c37a3eaba9902c8365143c765fbc103b89cfac95e39a8498a",
+        "attention_mask": "6da68347afb2308b82303f407bd6847db7114ecd6c747a9a17f6342c487427f7",
+        "pixel_values_videos": "519b73969af3b5a767e4ab405b561bcd17d41442cd49bb84c010d50feb7e203d",
+        "video_grid_thw": "f6bf592534a3e4bf87498a766b19a819356404f824befb7699b55002052f030a",
+        "video_second_per_grid": "638737eff9ac13fda3e6b8fe2c2f2128775794a7cacc1857661e8af99369c527",
+        "feature_attention_mask": "1f308efdbf4826a321db41eec83e3ef28670b1d1a33b1c36b3aafebce4c9ce62",
+        "input_features": "2a7f21af656dc187c31e1ced5e79ea59278aa994b543165e176a94c73fb6d15e"
+      },
+      "video_seconds_per_grid": [
+        2.200000047683716
+      ],
+      "video_frame_metadata": [
+        {
+          "source_fps": 30,
+          "total_frames": 528,
+          "frame_indices": [
+            0,
+            35,
+            70,
+            105,
+            141,
+            176,
+            211,
+            246,
+            281,
+            316,
+            351,
+            386,
+            422,
+            457,
+            492,
+            527
+          ],
+          "frame_times_seconds": [
+            0.0,
+            1.1666666666666667,
+            2.3333333333333335,
+            3.5,
+            4.7,
+            5.866666666666666,
+            7.033333333333333,
+            8.2,
+            9.366666666666667,
+            10.533333333333333,
+            11.7,
+            12.866666666666667,
+            14.066666666666666,
+            15.233333333333333,
+            16.4,
+            17.566666666666666
+          ],
+          "duration_seconds": 17.6
+        }
+      ],
+      "actual_sample_fps": [
+        0.9090909090909092
+      ],
+      "use_audio_in_video": true
+    },
+    {
+      "job": {
+        "condition": "muted",
+        "duration": 17.6,
+        "fps": 30,
+        "frames": 528,
+        "order": "BA",
+        "pair_id": "feffc187902823c9c11bc4ec",
+        "sha256": "7dc63091cac1d1d2fb34c3b40dbc15e51c6b478c4eaa406b8a79c08f6dd13773",
+        "video": "outputs/omni_judge_r71_01/media_v2/feffc187902823c9c11bc4ec_BA.mp4"
+      },
+      "sampled_video_shapes": [
+        [
+          16,
+          3,
+          252,
+          448
+        ]
+      ],
+      "audio_sample_shapes": [],
+      "processor_shapes": {
+        "input_ids": [
+          1,
+          1319
+        ],
+        "attention_mask": [
+          1,
+          1319
+        ],
+        "pixel_values_videos": [
+          4608,
+          1176
+        ],
+        "video_grid_thw": [
+          1,
+          3
+        ],
+        "video_second_per_grid": [
+          1
+        ]
+      },
+      "processor_tensor_sha256": {
+        "input_ids": "968aec46ec55ea5b5a8e0f51c90a2b41d527af3323b54910f8e9edae6b44939f",
+        "attention_mask": "f9e7bb558511a3845fb014919ef915170febf25c28fc3458960610cb8de83268",
+        "pixel_values_videos": "6d46398a0ebb7f18d89189dacbdc87f4136b138269dbced3e726a9315c643d08",
+        "video_grid_thw": "f6bf592534a3e4bf87498a766b19a819356404f824befb7699b55002052f030a",
+        "video_second_per_grid": "638737eff9ac13fda3e6b8fe2c2f2128775794a7cacc1857661e8af99369c527"
+      },
+      "video_seconds_per_grid": [
+        2.200000047683716
+      ],
+      "video_frame_metadata": [
+        {
+          "source_fps": 30,
+          "total_frames": 528,
+          "frame_indices": [
+            0,
+            35,
+            70,
+            105,
+            141,
+            176,
+            211,
+            246,
+            281,
+            316,
+            351,
+            386,
+            422,
+            457,
+            492,
+            527
+          ],
+          "frame_times_seconds": [
+            0.0,
+            1.1666666666666667,
+            2.3333333333333335,
+            3.5,
+            4.7,
+            5.866666666666666,
+            7.033333333333333,
+            8.2,
+            9.366666666666667,
+            10.533333333333333,
+            11.7,
+            12.866666666666667,
+            14.066666666666666,
+            15.233333333333333,
+            16.4,
+            17.566666666666666
+          ],
+          "duration_seconds": 17.6
+        }
+      ],
+      "actual_sample_fps": [
+        0.9090909090909092
+      ],
+      "use_audio_in_video": false
+    },
+    {
+      "job": {
+        "condition": "shift500ms",
+        "duration": 17.6,
+        "fps": 30,
+        "frames": 528,
+        "order": "BA",
+        "pair_id": "feffc187902823c9c11bc4ec",
+        "sha256": "f7d97421236df2ecf68a10da4253ae25536c10baedc52c587020c49c27ebc1bf",
+        "video": "outputs/omni_judge_r71_01/media_controls_v2/feffc187902823c9c11bc4ec_BA_shift500ms.mp4"
+      },
+      "sampled_video_shapes": [
+        [
+          16,
+          3,
+          252,
+          448
+        ]
+      ],
+      "audio_sample_shapes": [
+        [
+          281612
+        ]
+      ],
+      "processor_shapes": {
+        "input_ids": [
+          1,
+          1761
+        ],
+        "attention_mask": [
+          1,
+          1761
+        ],
+        "pixel_values_videos": [
+          4608,
+          1176
+        ],
+        "video_grid_thw": [
+          1,
+          3
+        ],
+        "video_second_per_grid": [
+          1
+        ],
+        "feature_attention_mask": [
+          1,
+          30000
+        ],
+        "input_features": [
+          1,
+          128,
+          30000
+        ]
+      },
+      "processor_tensor_sha256": {
+        "input_ids": "71b1e0ec0ec15c7c37a3eaba9902c8365143c765fbc103b89cfac95e39a8498a",
+        "attention_mask": "6da68347afb2308b82303f407bd6847db7114ecd6c747a9a17f6342c487427f7",
+        "pixel_values_videos": "6d46398a0ebb7f18d89189dacbdc87f4136b138269dbced3e726a9315c643d08",
+        "video_grid_thw": "f6bf592534a3e4bf87498a766b19a819356404f824befb7699b55002052f030a",
+        "video_second_per_grid": "638737eff9ac13fda3e6b8fe2c2f2128775794a7cacc1857661e8af99369c527",
+        "feature_attention_mask": "1f308efdbf4826a321db41eec83e3ef28670b1d1a33b1c36b3aafebce4c9ce62",
+        "input_features": "16951425c744ca3aae84d30e22574fe83f92d244de7dd901893a00294c411c5a"
+      },
+      "video_seconds_per_grid": [
+        2.200000047683716
+      ],
+      "video_frame_metadata": [
+        {
+          "source_fps": 30,
+          "total_frames": 528,
+          "frame_indices": [
+            0,
+            35,
+            70,
+            105,
+            141,
+            176,
+            211,
+            246,
+            281,
+            316,
+            351,
+            386,
+            422,
+            457,
+            492,
+            527
+          ],
+          "frame_times_seconds": [
+            0.0,
+            1.1666666666666667,
+            2.3333333333333335,
+            3.5,
+            4.7,
+            5.866666666666666,
+            7.033333333333333,
+            8.2,
+            9.366666666666667,
+            10.533333333333333,
+            11.7,
+            12.866666666666667,
+            14.066666666666666,
+            15.233333333333333,
+            16.4,
+            17.566666666666666
+          ],
+          "duration_seconds": 17.6
+        }
+      ],
+      "actual_sample_fps": [
+        0.9090909090909092
+      ],
+      "use_audio_in_video": true
+    },
+    {
+      "job": {
+        "condition": "wrong_music",
+        "duration": 17.6,
+        "fps": 30,
+        "frames": 528,
+        "order": "BA",
+        "pair_id": "feffc187902823c9c11bc4ec",
+        "sha256": "30686151a33398df4685251ed9d424c3faeb833e5ba7de613cea224c80a92001",
+        "video": "outputs/omni_judge_r71_01/media_controls_v2/feffc187902823c9c11bc4ec_BA_wrong_music.mp4",
+        "audio_donor": {
+          "path": "audio/36ce6f03d7a8_1536_2064.wav",
+          "bytes": 776238,
+          "sha256": "f3b181e0b6bc695f92abbeb6b46f5c424993d29b12464212310f2c6c13ed22c5",
+          "raw_audio_sha256": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c",
+          "pair_music_interval": [
+            1536,
+            2064
+          ]
+        },
+        "original_raw_audio_sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f"
+      },
+      "sampled_video_shapes": [
+        [
+          16,
+          3,
+          252,
+          448
+        ]
+      ],
+      "audio_sample_shapes": [
+        [
+          281612
+        ]
+      ],
+      "processor_shapes": {
+        "input_ids": [
+          1,
+          1761
+        ],
+        "attention_mask": [
+          1,
+          1761
+        ],
+        "pixel_values_videos": [
+          4608,
+          1176
+        ],
+        "video_grid_thw": [
+          1,
+          3
+        ],
+        "video_second_per_grid": [
+          1
+        ],
+        "feature_attention_mask": [
+          1,
+          30000
+        ],
+        "input_features": [
+          1,
+          128,
+          30000
+        ]
+      },
+      "processor_tensor_sha256": {
+        "input_ids": "71b1e0ec0ec15c7c37a3eaba9902c8365143c765fbc103b89cfac95e39a8498a",
+        "attention_mask": "6da68347afb2308b82303f407bd6847db7114ecd6c747a9a17f6342c487427f7",
+        "pixel_values_videos": "6d46398a0ebb7f18d89189dacbdc87f4136b138269dbced3e726a9315c643d08",
+        "video_grid_thw": "f6bf592534a3e4bf87498a766b19a819356404f824befb7699b55002052f030a",
+        "video_second_per_grid": "638737eff9ac13fda3e6b8fe2c2f2128775794a7cacc1857661e8af99369c527",
+        "feature_attention_mask": "1f308efdbf4826a321db41eec83e3ef28670b1d1a33b1c36b3aafebce4c9ce62",
+        "input_features": "2a7f21af656dc187c31e1ced5e79ea59278aa994b543165e176a94c73fb6d15e"
+      },
+      "video_seconds_per_grid": [
+        2.200000047683716
+      ],
+      "video_frame_metadata": [
+        {
+          "source_fps": 30,
+          "total_frames": 528,
+          "frame_indices": [
+            0,
+            35,
+            70,
+            105,
+            141,
+            176,
+            211,
+            246,
+            281,
+            316,
+            351,
+            386,
+            422,
+            457,
+            492,
+            527
+          ],
+          "frame_times_seconds": [
+            0.0,
+            1.1666666666666667,
+            2.3333333333333335,
+            3.5,
+            4.7,
+            5.866666666666666,
+            7.033333333333333,
+            8.2,
+            9.366666666666667,
+            10.533333333333333,
+            11.7,
+            12.866666666666667,
+            14.066666666666666,
+            15.233333333333333,
+            16.4,
+            17.566666666666666
+          ],
+          "duration_seconds": 17.6
+        }
+      ],
+      "actual_sample_fps": [
+        0.9090909090909092
+      ],
+      "use_audio_in_video": true
+    }
+  ]
+}

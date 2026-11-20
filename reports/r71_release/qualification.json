@@ -1,0 +1,37 @@
+{
+  "MotionCritic": "INPUT_CONTRACT_NOT_ADMITTED",
+  "Native24": "NOT_EVALUABLE",
+  "artistic_quality": "NOT_EVALUABLE",
+  "automatic_judge_can_rank_quality": false,
+  "can_route": false,
+  "control_inferences": 18,
+  "control_structured": 11,
+  "controls_with_out_of_support_raw_intervals": 7,
+  "eligible_pairs": 56,
+  "excluded_pairs": 4,
+  "executed_full_ordered_comparisons": 0,
+  "fresh_process_replay_exact": true,
+  "fresh_process_replay_inferences": 1,
+  "full112_status": "PREPARED_NOT_EXECUTED_RELIABILITY_GATE_NOT_MET",
+  "human_agreement": "NOT_EVALUABLE",
+  "human_reviewed": false,
+  "independent_motion_differences": 0,
+  "independent_motion_rows": 69,
+  "muted_music_response_counts": {
+    "TIE": 6
+  },
+  "new_training_steps": 0,
+  "pilot_inferences": 6,
+  "pilot_structured": 6,
+  "prepared_full_ordered_comparisons": 112,
+  "quality_winner": null,
+  "registered_pairs": 60,
+  "reliability_reasons": [
+    "MISSING_AUDIO_ABSTENTION_CONTRACT_NOT_MET",
+    "CONTROL_OUTPUT_SCHEMA_FAILURES",
+    "RAW_TIME_EVIDENCE_OUTSIDE_VIDEO_SUPPORT"
+  ],
+  "scientific_code_commit": "d5d92610d73a443c0c7677a841cada6c36a26fb9",
+  "scope": "FIXED_QUANTIZED_MODEL_PROMPT_SPARSE_BODY22_SKELETON_PRESET; NOT_A_GLOBAL_MODEL_VERDICT",
+  "valid_human_records": 0
+}

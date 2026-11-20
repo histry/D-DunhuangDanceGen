@@ -1,0 +1,398 @@
+{
+  "distinct_full_rotation_pairs": 56,
+  "eligible_pairs": 56,
+  "pairs": [
+    {
+      "case_index": 0,
+      "identical_full_rotations": false,
+      "method": "Uniform",
+      "pair_id": "68437ff986c6f23f2e9e7f6a",
+      "pilot": false
+    },
+    {
+      "case_index": 0,
+      "identical_full_rotations": false,
+      "method": "BeatDP",
+      "pair_id": "aabe153342e45704c0f5faad",
+      "pilot": false
+    },
+    {
+      "case_index": 0,
+      "identical_full_rotations": false,
+      "method": "RhythmDTW",
+      "pair_id": "71c9c31bfea6c5e1853a7bc7",
+      "pilot": false
+    },
+    {
+      "case_index": 0,
+      "identical_full_rotations": false,
+      "method": "Single64",
+      "pair_id": "323775790ec6c4b1b4f19392",
+      "pilot": true
+    },
+    {
+      "case_index": 0,
+      "identical_full_rotations": false,
+      "method": "Multi64",
+      "pair_id": "a8ab454aa2c1a4fc5af8e756",
+      "pilot": false
+    },
+    {
+      "case_index": 1,
+      "identical_full_rotations": false,
+      "method": "Uniform",
+      "pair_id": "3588581d78705dc180007282",
+      "pilot": false
+    },
+    {
+      "case_index": 1,
+      "identical_full_rotations": false,
+      "method": "BeatDP",
+      "pair_id": "ca94ab55dccdfb81dc16ac05",
+      "pilot": false
+    },
+    {
+      "case_index": 1,
+      "identical_full_rotations": false,
+      "method": "RhythmDTW",
+      "pair_id": "0d6e3a8c222b67a82082e9af",
+      "pilot": false
+    },
+    {
+      "case_index": 1,
+      "identical_full_rotations": false,
+      "method": "Single64",
+      "pair_id": "4290d1b6b4134ceb49fc4c98",
+      "pilot": false
+    },
+    {
+      "case_index": 1,
+      "identical_full_rotations": false,
+      "method": "Multi64",
+      "pair_id": "02e47bac91e53a2e92e84ce9",
+      "pilot": false
+    },
+    {
+      "case_index": 2,
+      "identical_full_rotations": false,
+      "method": "Uniform",
+      "pair_id": "7e00efe62e15f1b4a3e8c366",
+      "pilot": false
+    },
+    {
+      "case_index": 2,
+      "identical_full_rotations": false,
+      "method": "BeatDP",
+      "pair_id": "ae4d26b44b1a6551a468346a",
+      "pilot": false
+    },
+    {
+      "case_index": 2,
+      "identical_full_rotations": false,
+      "method": "RhythmDTW",
+      "pair_id": "c8e09bcfb9917f54c2900828",
+      "pilot": false
+    },
+    {
+      "case_index": 2,
+      "identical_full_rotations": false,
+      "method": "Single64",
+      "pair_id": "3c1fc5e0e4f41cbd86194dd4",
+      "pilot": false
+    },
+    {
+      "case_index": 2,
+      "identical_full_rotations": false,
+      "method": "Multi64",
+      "pair_id": "cdb04e8c889efd961d861b69",
+      "pilot": false
+    },
+    {
+      "case_index": 3,
+      "identical_full_rotations": false,
+      "method": "Uniform",
+      "pair_id": "c924b0a224b268fa7c95733e",
+      "pilot": false
+    },
+    {
+      "case_index": 3,
+      "identical_full_rotations": false,
+      "method": "RhythmDTW",
+      "pair_id": "22d7f6d77804b54e323b3501",
+      "pilot": false
+    },
+    {
+      "case_index": 3,
+      "identical_full_rotations": false,
+      "method": "Single64",
+      "pair_id": "6d5745b1531f1a052697c308",
+      "pilot": false
+    },
+    {
+      "case_index": 3,
+      "identical_full_rotations": false,
+      "method": "Multi64",
+      "pair_id": "3bf3700b030ec3c17509fea0",
+      "pilot": false
+    },
+    {
+      "case_index": 4,
+      "identical_full_rotations": false,
+      "method": "Uniform",
+      "pair_id": "5c0e98e5236151d73887269e",
+      "pilot": false
+    },
+    {
+      "case_index": 4,
+      "identical_full_rotations": false,
+      "method": "RhythmDTW",
+      "pair_id": "1c62b46222fd2f88e4ae49df",
+      "pilot": false
+    },
+    {
+      "case_index": 4,
+      "identical_full_rotations": false,
+      "method": "Single64",
+      "pair_id": "af0f55fbbda1535f9e7cf1a2",
+      "pilot": true
+    },
+    {
+      "case_index": 4,
+      "identical_full_rotations": false,
+      "method": "Multi64",
+      "pair_id": "ed7451b7668912d531ca5750",
+      "pilot": false
+    },
+    {
+      "case_index": 5,
+      "identical_full_rotations": false,
+      "method": "Uniform",
+      "pair_id": "8d2a29baa0c923594c9a224e",
+      "pilot": false
+    },
+    {
+      "case_index": 5,
+      "identical_full_rotations": false,
+      "method": "BeatDP",
+      "pair_id": "3c889133e0f3b24174f78b4c",
+      "pilot": false
+    },
+    {
+      "case_index": 5,
+      "identical_full_rotations": false,
+      "method": "Single64",
+      "pair_id": "299dc738291c65b835fa1070",
+      "pilot": false
+    },
+    {
+      "case_index": 5,
+      "identical_full_rotations": false,
+      "method": "Multi64",
+      "pair_id": "ecaba495414f9c6a70170f51",
+      "pilot": false
+    },
+    {
+      "case_index": 6,
+      "identical_full_rotations": false,
+      "method": "Uniform",
+      "pair_id": "1318daca151b68f2da9b2721",
+      "pilot": false
+    },
+    {
+      "case_index": 6,
+      "identical_full_rotations": false,
+      "method": "BeatDP",
+      "pair_id": "e23f8af1657f399b74dcf6d2",
+      "pilot": false
+    },
+    {
+      "case_index": 6,
+      "identical_full_rotations": false,
+      "method": "RhythmDTW",
+      "pair_id": "3d7182d4ed07cbb681c6307d",
+      "pilot": false
+    },
+    {
+      "case_index": 6,
+      "identical_full_rotations": false,
+      "method": "Single64",
+      "pair_id": "089395c68e4c6601bf1f8573",
+      "pilot": false
+    },
+    {
+      "case_index": 6,
+      "identical_full_rotations": false,
+      "method": "Multi64",
+      "pair_id": "7bd1f1dab021b150598c8eab",
+      "pilot": false
+    },
+    {
+      "case_index": 7,
+      "identical_full_rotations": false,
+      "method": "Uniform",
+      "pair_id": "4a94a991ddd63db5173eb9c8",
+      "pilot": false
+    },
+    {
+      "case_index": 7,
+      "identical_full_rotations": false,
+      "method": "BeatDP",
+      "pair_id": "8386e915311079313f9a6008",
+      "pilot": false
+    },
+    {
+      "case_index": 7,
+      "identical_full_rotations": false,
+      "method": "RhythmDTW",
+      "pair_id": "916f9ae52f41ffde4ca415e4",
+      "pilot": false
+    },
+    {
+      "case_index": 7,
+      "identical_full_rotations": false,
+      "method": "Single64",
+      "pair_id": "feffc187902823c9c11bc4ec",
+      "pilot": true
+    },
+    {
+      "case_index": 7,
+      "identical_full_rotations": false,
+      "method": "Multi64",
+      "pair_id": "a2f850ce0adea45c56630d74",
+      "pilot": false
+    },
+    {
+      "case_index": 8,
+      "identical_full_rotations": false,
+      "method": "Uniform",
+      "pair_id": "75b5d7504d808b22d077f6f6",
+      "pilot": false
+    },
+    {
+      "case_index": 8,
+      "identical_full_rotations": false,
+      "method": "BeatDP",
+      "pair_id": "baa12aa5eadd7f3145a3fb4f",
+      "pilot": false
+    },
+    {
+      "case_index": 8,
+      "identical_full_rotations": false,
+      "method": "RhythmDTW",
+      "pair_id": "e049777acc71cb6f3f5c8e90",
+      "pilot": false
+    },
+    {
+      "case_index": 8,
+      "identical_full_rotations": false,
+      "method": "Single64",
+      "pair_id": "c60fef17dea322fe2a08bf57",
+      "pilot": false
+    },
+    {
+      "case_index": 8,
+      "identical_full_rotations": false,
+      "method": "Multi64",
+      "pair_id": "d86a69b4acbb932ebb2ee005",
+      "pilot": false
+    },
+    {
+      "case_index": 9,
+      "identical_full_rotations": false,
+      "method": "Uniform",
+      "pair_id": "3115d06da235080fb3883475",
+      "pilot": false
+    },
+    {
+      "case_index": 9,
+      "identical_full_rotations": false,
+      "method": "BeatDP",
+      "pair_id": "44025bf2825ca82a90a7551a",
+      "pilot": false
+    },
+    {
+      "case_index": 9,
+      "identical_full_rotations": false,
+      "method": "RhythmDTW",
+      "pair_id": "7be34a566d00c67a917eece5",
+      "pilot": false
+    },
+    {
+      "case_index": 9,
+      "identical_full_rotations": false,
+      "method": "Single64",
+      "pair_id": "1fb48c617cf5b89c47ecdd1b",
+      "pilot": false
+    },
+    {
+      "case_index": 9,
+      "identical_full_rotations": false,
+      "method": "Multi64",
+      "pair_id": "2f494cf46a0695dcd725e416",
+      "pilot": false
+    },
+    {
+      "case_index": 10,
+      "identical_full_rotations": false,
+      "method": "Uniform",
+      "pair_id": "884cfa2cb683c5262b0752e0",
+      "pilot": false
+    },
+    {
+      "case_index": 10,
+      "identical_full_rotations": false,
+      "method": "BeatDP",
+      "pair_id": "6869b43833504e4c29f963f6",
+      "pilot": false
+    },
+    {
+      "case_index": 10,
+      "identical_full_rotations": false,
+      "method": "RhythmDTW",
+      "pair_id": "26a4cbb0e5c9ba3757e1316e",
+      "pilot": false
+    },
+    {
+      "case_index": 10,
+      "identical_full_rotations": false,
+      "method": "Single64",
+      "pair_id": "0a86c091da2e3b0fa0fb9bc8",
+      "pilot": false
+    },
+    {
+      "case_index": 10,
+      "identical_full_rotations": false,
+      "method": "Multi64",
+      "pair_id": "701d1212cf5953867f9609ae",
+      "pilot": false
+    },
+    {
+      "case_index": 11,
+      "identical_full_rotations": false,
+      "method": "Uniform",
+      "pair_id": "27ed34ce06f87d6611b16ab8",
+      "pilot": false
+    },
+    {
+      "case_index": 11,
+      "identical_full_rotations": false,
+      "method": "RhythmDTW",
+      "pair_id": "0a86fd20627d65d4f4e21058",
+      "pilot": false
+    },
+    {
+      "case_index": 11,
+      "identical_full_rotations": false,
+      "method": "Single64",
+      "pair_id": "7846e85979e9f5c469617bf2",
+      "pilot": false
+    },
+    {
+      "case_index": 11,
+      "identical_full_rotations": false,
+      "method": "Multi64",
+      "pair_id": "db1266fb1a87aa47bf9969f4",
+      "pilot": false
+    }
+  ]
+}

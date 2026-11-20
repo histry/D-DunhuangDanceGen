@@ -1,0 +1,148 @@
+{
+  "job": {
+    "condition": "wrong_music",
+    "duration": 17.6,
+    "fps": 30,
+    "frames": 528,
+    "order": "AB",
+    "pair_id": "feffc187902823c9c11bc4ec",
+    "sha256": "c2a548d323856aa9280510ac3ebf2a4cb253eac2a503b9475a4156d16d099f6d",
+    "video": "outputs/omni_judge_r71_01/media_controls_v2/feffc187902823c9c11bc4ec_AB_wrong_music.mp4",
+    "audio_donor": {
+      "path": "audio/36ce6f03d7a8_1536_2064.wav",
+      "bytes": 776238,
+      "sha256": "f3b181e0b6bc695f92abbeb6b46f5c424993d29b12464212310f2c6c13ed22c5",
+      "raw_audio_sha256": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c",
+      "pair_music_interval": [
+        1536,
+        2064
+      ]
+    },
+    "original_raw_audio_sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f"
+  },
+  "model_revision": "file_manifest_sha256:72c1207cd2a8d195818baf6190a4c56ca7606f12eaa965d78ebb90d7a8eec0ee",
+  "official_code_commit": "d8a31ca56c0456b6edfcbcbf4bdbb6ae2200ef42",
+  "prompt": "你将看到同一音乐下并排的两段骨架动作，左为A，右为B。忽略外观。分别比较音乐协调、自然性、转场时机、连续性、幅度与动态丰富度。不得只因速度快或拍点密就判好；看不出差异允许TIE，缺少必要音频或视觉证据必须UNSURE。不要判断敦煌文化真实性。只输出JSON，字段 music_coordination,naturalness,transition_timing,continuity,richness，各字段为{preference:A或B或TIE或UNSURE,timestamps_seconds:[],reason:简短实际证据}。不要虚构时间点。",
+  "sampled_video_shapes": [
+    [
+      16,
+      3,
+      252,
+      448
+    ]
+  ],
+  "audio_sample_shapes": [
+    [
+      281612
+    ]
+  ],
+  "processor_shapes": {
+    "input_ids": [
+      1,
+      1761
+    ],
+    "attention_mask": [
+      1,
+      1761
+    ],
+    "pixel_values_videos": [
+      4608,
+      1176
+    ],
+    "video_grid_thw": [
+      1,
+      3
+    ],
+    "video_second_per_grid": [
+      1
+    ],
+    "feature_attention_mask": [
+      1,
+      30000
+    ],
+    "input_features": [
+      1,
+      128,
+      30000
+    ]
+  },
+  "processor_tensor_sha256": {
+    "input_ids": "71b1e0ec0ec15c7c37a3eaba9902c8365143c765fbc103b89cfac95e39a8498a",
+    "attention_mask": "6da68347afb2308b82303f407bd6847db7114ecd6c747a9a17f6342c487427f7",
+    "pixel_values_videos": "519b73969af3b5a767e4ab405b561bcd17d41442cd49bb84c010d50feb7e203d",
+    "video_grid_thw": "f6bf592534a3e4bf87498a766b19a819356404f824befb7699b55002052f030a",
+    "video_second_per_grid": "638737eff9ac13fda3e6b8fe2c2f2128775794a7cacc1857661e8af99369c527",
+    "feature_attention_mask": "1f308efdbf4826a321db41eec83e3ef28670b1d1a33b1c36b3aafebce4c9ce62",
+    "input_features": "2a7f21af656dc187c31e1ced5e79ea59278aa994b543165e176a94c73fb6d15e"
+  },
+  "video_seconds_per_grid": [
+    2.200000047683716
+  ],
+  "video_frame_metadata": [
+    {
+      "source_fps": 30,
+      "total_frames": 528,
+      "frame_indices": [
+        0,
+        35,
+        70,
+        105,
+        141,
+        176,
+        211,
+        246,
+        281,
+        316,
+        351,
+        386,
+        422,
+        457,
+        492,
+        527
+      ],
+      "frame_times_seconds": [
+        0.0,
+        1.1666666666666667,
+        2.3333333333333335,
+        3.5,
+        4.7,
+        5.866666666666666,
+        7.033333333333333,
+        8.2,
+        9.366666666666667,
+        10.533333333333333,
+        11.7,
+        12.866666666666667,
+        14.066666666666666,
+        15.233333333333333,
+        16.4,
+        17.566666666666666
+      ],
+      "duration_seconds": 17.6
+    }
+  ],
+  "actual_sample_fps": [
+    0.9090909090909092
+  ],
+  "use_audio_in_video": true,
+  "requested_fps": 1,
+  "text_entrypoint": "official_multimodal_thinker.generate",
+  "video_reader": "torchvision",
+  "seed": 71071,
+  "attention_implementation": "sdpa",
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "torch_version": "2.6.0+cu124",
+  "load_peak_bytes": {
+    "allocated": 15047875072,
+    "reserved": 15508439040
+  },
+  "raw_response": "```json\n{\n  \"music_coordination\": {\n    \"preference\": \"TIE\",\n    \"timestamps_seconds\": [\n      \"0.00-1.00\",\n      \"1.50-2.50\",\n      \"3.00-4.00\",\n      \"4.50-5.50\",\n      \"6.00-7.00\",\n      \"7.50-8.50\",\n      \"9.00-10.00\",\n      \"10.50-11.50\",\n      \"12.00-13.00\",\n      \"13.50-14.50\",\n      \"15.00-16.00\",\n      \"16.50-17.50\",\n      \"18.00-19.00\"\n    ],\n    \"reason\": \"音乐在两段动作中都保持协调，没有明显偏好\"\n  },\n  \"naturalness\": {\n    \"preference\": \"TIE\",\n    \"timestamps_seconds\": [\n      \"0.00-1.00\",\n      \"1.50-2.50\",\n      \"3.00-4.00\",\n      \"4.50-5.50\",\n      \"6.00-7.00\",\n      \"7.50-8.50\",\n      \"9.00-10.00\",\n      \"10.50-11.50\",\n      \"12.00-13.00\",\n      \"13.50-14.50\",\n      \"15.00-16.00\",\n      \"16.50-17.50\",\n      \"18.00-19.00\"\n    ],\n    \"reason\": \"两段动作的自然性在音乐下都表现良好，没有明显偏好\"\n  },\n  \"transition_timing\": {\n    \"preference\": \"TIE\",\n    \"timestamps_seconds\": [\n      \"0.00-1.00\",\n      \"1.50-2.50\",\n      \"3.00-4.00\",\n      \"4.50-5.50\",\n      \"6.00-7.",
+  "parsed": null,
+  "seconds": 71.45120938704349,
+  "peak_allocated_bytes": 10311619584,
+  "peak_reserved_bytes": 10622074880,
+  "automatic_judgment": true,
+  "human_reviewed": false,
+  "human_agreement": "NOT_EVALUABLE",
+  "Native24": "NOT_EVALUABLE"
+}

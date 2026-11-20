@@ -1,0 +1,148 @@
+{
+  "job": {
+    "condition": "muted",
+    "duration": 17.6,
+    "fps": 30,
+    "frames": 528,
+    "order": "BA",
+    "pair_id": "323775790ec6c4b1b4f19392",
+    "sha256": "b562723b60b714665f6a1406758b3ae7ea3b83e963b3198983d95c45919f6361",
+    "video": "outputs/omni_judge_r71_01/media_v2/323775790ec6c4b1b4f19392_BA.mp4"
+  },
+  "model_revision": "file_manifest_sha256:72c1207cd2a8d195818baf6190a4c56ca7606f12eaa965d78ebb90d7a8eec0ee",
+  "official_code_commit": "d8a31ca56c0456b6edfcbcbf4bdbb6ae2200ef42",
+  "prompt": "你将看到同一音乐下并排的两段骨架动作，左为A，右为B。忽略外观。分别比较音乐协调、自然性、转场时机、连续性、幅度与动态丰富度。不得只因速度快或拍点密就判好；看不出差异允许TIE，缺少必要音频或视觉证据必须UNSURE。不要判断敦煌文化真实性。只输出JSON，字段 music_coordination,naturalness,transition_timing,continuity,richness，各字段为{preference:A或B或TIE或UNSURE,timestamps_seconds:[],reason:简短实际证据}。不要虚构时间点。",
+  "sampled_video_shapes": [
+    [
+      16,
+      3,
+      252,
+      448
+    ]
+  ],
+  "audio_sample_shapes": [],
+  "processor_shapes": {
+    "input_ids": [
+      1,
+      1319
+    ],
+    "attention_mask": [
+      1,
+      1319
+    ],
+    "pixel_values_videos": [
+      4608,
+      1176
+    ],
+    "video_grid_thw": [
+      1,
+      3
+    ],
+    "video_second_per_grid": [
+      1
+    ]
+  },
+  "processor_tensor_sha256": {
+    "input_ids": "968aec46ec55ea5b5a8e0f51c90a2b41d527af3323b54910f8e9edae6b44939f",
+    "attention_mask": "f9e7bb558511a3845fb014919ef915170febf25c28fc3458960610cb8de83268",
+    "pixel_values_videos": "44de3205584899b9e0117cf6c1b3ff658b3037c8cbb843ff60611b0336a88c37",
+    "video_grid_thw": "f6bf592534a3e4bf87498a766b19a819356404f824befb7699b55002052f030a",
+    "video_second_per_grid": "638737eff9ac13fda3e6b8fe2c2f2128775794a7cacc1857661e8af99369c527"
+  },
+  "video_seconds_per_grid": [
+    2.200000047683716
+  ],
+  "video_frame_metadata": [
+    {
+      "source_fps": 30,
+      "total_frames": 528,
+      "frame_indices": [
+        0,
+        35,
+        70,
+        105,
+        141,
+        176,
+        211,
+        246,
+        281,
+        316,
+        351,
+        386,
+        422,
+        457,
+        492,
+        527
+      ],
+      "frame_times_seconds": [
+        0.0,
+        1.1666666666666667,
+        2.3333333333333335,
+        3.5,
+        4.7,
+        5.866666666666666,
+        7.033333333333333,
+        8.2,
+        9.366666666666667,
+        10.533333333333333,
+        11.7,
+        12.866666666666667,
+        14.066666666666666,
+        15.233333333333333,
+        16.4,
+        17.566666666666666
+      ],
+      "duration_seconds": 17.6
+    }
+  ],
+  "actual_sample_fps": [
+    0.9090909090909092
+  ],
+  "use_audio_in_video": false,
+  "requested_fps": 1,
+  "text_entrypoint": "official_multimodal_thinker.generate",
+  "video_reader": "torchvision",
+  "seed": 71071,
+  "attention_implementation": "sdpa",
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "torch_version": "2.6.0+cu124",
+  "load_peak_bytes": {
+    "allocated": 15047875072,
+    "reserved": 15508439040
+  },
+  "raw_response": "```json\n{\n  \"music_coordination\": {\n    \"preference\": \"TIE\",\n    \"timestamps_seconds\": [],\n    \"reason\": \"两段动作在音乐协调性上表现相似，难以区分优劣。\"\n  },\n  \"naturalness\": {\n    \"preference\": \"TIE\",\n    \"timestamps_seconds\": [],\n    \"reason\": \"两段动作在自然性上表现相似，难以区分优劣。\"\n  },\n  \"transition_timing\": {\n    \"preference\": \"TIE\",\n    \"timestamps_seconds\": [],\n    \"reason\": \"两段动作在转场时机上表现相似，难以区分优劣。\"\n  },\n  \"continuity\": {\n    \"preference\": \"TIE\",\n    \"timestamps_seconds\": [],\n    \"reason\": \"两段动作在连续性上表现相似，难以区分优劣。\"\n  },\n  \"richness\": {\n    \"preference\": \"TIE\",\n    \"timestamps_seconds\": [],\n    \"reason\": \"两段动作在幅度与动态丰富度上表现相似，难以区分优劣。\"\n  }\n}\n```",
+  "parsed": {
+    "music_coordination": {
+      "preference": "TIE",
+      "timestamps_seconds": [],
+      "reason": "两段动作在音乐协调性上表现相似，难以区分优劣。"
+    },
+    "naturalness": {
+      "preference": "TIE",
+      "timestamps_seconds": [],
+      "reason": "两段动作在自然性上表现相似，难以区分优劣。"
+    },
+    "transition_timing": {
+      "preference": "TIE",
+      "timestamps_seconds": [],
+      "reason": "两段动作在转场时机上表现相似，难以区分优劣。"
+    },
+    "continuity": {
+      "preference": "TIE",
+      "timestamps_seconds": [],
+      "reason": "两段动作在连续性上表现相似，难以区分优劣。"
+    },
+    "richness": {
+      "preference": "TIE",
+      "timestamps_seconds": [],
+      "reason": "两段动作在幅度与动态丰富度上表现相似，难以区分优劣。"
+    }
+  },
+  "seconds": 33.04469657782465,
+  "peak_allocated_bytes": 10288775168,
+  "peak_reserved_bytes": 10588520448,
+  "automatic_judgment": true,
+  "human_reviewed": false,
+  "human_agreement": "NOT_EVALUABLE",
+  "Native24": "NOT_EVALUABLE"
+}

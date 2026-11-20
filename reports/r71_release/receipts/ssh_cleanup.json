@@ -1,0 +1,54 @@
+{
+  "server_removed": [
+    {
+      "path": "/tmp/ddg_r71_f0bc1cb_9ed2.bundle",
+      "sha256": "e21b03c1c77664d604d73bd254e2b515748ebcba0e3a79418ecf7d125af52b2e",
+      "bytes": 1030
+    },
+    {
+      "path": "/tmp/ddg_r71_qwen_d8a31ca_9ed2.bundle",
+      "sha256": "2daffe4e73ba2f7067d131f376784c4743390e41f61de03de98d416a6714a7bd",
+      "bytes": 15623955
+    },
+    {
+      "path": "/tmp/ddg_r71_decoder_38938d5_9ed2.bundle",
+      "sha256": "3df6f34786d7f24873d1b8d612f964b68f7691fd95353ad7d6c1bc54dfe53e6d",
+      "bytes": 1345
+    },
+    {
+      "path": "/tmp/ddg_r71_thinker_5232c30_9ed2.bundle",
+      "sha256": "b20b1dc027b6a8ccadaa96d97a83a847700d574d52d1cdb97829f248c44c844e",
+      "bytes": 1402
+    },
+    {
+      "path": "/tmp/ddg_r71_utf8_835e408_9ed2.bundle",
+      "sha256": "bd7f562bbf8c799a9a782091ade19ef457ee0fe70893f9402690b2afb4081025",
+      "bytes": 1477
+    },
+    {
+      "path": "/tmp/ddg_r71_clock_7bca7cc_9ed2.bundle",
+      "sha256": "1b3e3dd873939a036aeea6b5dcaa266e96b4e3c798044735f7fe1454a8751ae9",
+      "bytes": 2687
+    },
+    {
+      "path": "/tmp/ddg_r71_preflight_d5d9261_9ed2.bundle",
+      "sha256": "2d8c44e6ef4cc1f1f520e62860ad687fde9ef28f391ad2a81ec5ccbcaf94c365",
+      "bytes": 1690
+    },
+    {
+      "path": "/tmp/ddg_r71_diagnostics_c594e9e_9ed2.bundle",
+      "sha256": "cd461e6325e3ae8bcf46f28ae13e8c7f7bc8fd33ae8855cefcbe3004e7b84a47",
+      "bytes": 7079
+    }
+  ],
+  "server_remaining_owned_files": [],
+  "scientific_outputs_preserved": true,
+  "model_assets_preserved": true,
+  "local_removed": [
+    "C:/Users/li/Documents/敦煌舞视频生成/outputs/r71_ssh_temp",
+    "C:/Users/li/Documents/敦煌舞视频生成/outputs/r71_stage",
+    "C:/Users/li/Documents/敦煌舞视频生成/outputs/r71_setup.sh"
+  ],
+  "local_remaining_owned_files": [],
+  "loopback_http_service_closed": true
+}

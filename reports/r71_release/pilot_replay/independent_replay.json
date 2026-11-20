@@ -1,0 +1,23 @@
+{
+  "fresh_process": true,
+  "compared_fields": [
+    "job",
+    "model_revision",
+    "official_code_commit",
+    "prompt",
+    "sampled_video_shapes",
+    "audio_sample_shapes",
+    "processor_shapes",
+    "processor_tensor_sha256",
+    "video_seconds_per_grid",
+    "video_frame_metadata",
+    "actual_sample_fps",
+    "use_audio_in_video",
+    "raw_response",
+    "parsed"
+  ],
+  "differences": [],
+  "exact": true,
+  "optimizer_calls": 0,
+  "human_reviewed": false
+}
