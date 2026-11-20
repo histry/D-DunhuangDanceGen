@@ -40,6 +40,9 @@ def run(replay=False,full=False,controls=False):
   audios,images,videos=process_mm_info(message,use_audio_in_video=use_audio)
   inputs=processor(text=text,audio=audios,images=images,videos=videos,return_tensors='pt',padding=True,use_audio_in_video=use_audio,fps=1.0)
   shapes={k:list(v.shape) for k,v in inputs.items() if hasattr(v,'shape')}
+  input_hashes={k:hashlib.sha256(v.detach().cpu().contiguous().view(torch.uint8).numpy().tobytes()).hexdigest() for k,v in inputs.items() if torch.is_tensor(v)}
+  grid=inputs.get('video_second_per_grid',inputs.get('second_per_grid_ts'))
+  if hasattr(grid,'tolist'):grid=grid.tolist()
   if not videos or use_audio and not audios:raise ValueError('Required modalities did not enter the processor')
   torch.manual_seed(71071);torch.cuda.manual_seed_all(71071);torch.cuda.reset_peak_memory_stats();tick=time.perf_counter()
   inputs=inputs.to('cuda')
@@ -47,14 +50,14 @@ def run(replay=False,full=False,controls=False):
   if isinstance(ids,tuple):raise ValueError('Text-only inference unexpectedly returned audio tuple')
   raw=processor.batch_decode(ids[:,inputs['input_ids'].shape[1]:],skip_special_tokens=True,clean_up_tokenization_spaces=False)[0]
   row=dict(job=job,model_revision=json.loads((ROOT/'receipts/model_registration.json').read_text())['revision'],official_code_commit=commit,prompt=PROMPT,
-   sampled_video_shapes=[list(v.shape) for v in videos],audio_sample_shapes=[list(v.shape) for v in (audios or [])],processor_shapes=shapes,
+   sampled_video_shapes=[list(v.shape) for v in videos],audio_sample_shapes=[list(v.shape) for v in (audios or [])],processor_shapes=shapes,processor_tensor_sha256=input_hashes,video_seconds_per_grid=grid,use_audio_in_video=use_audio,
    requested_fps=1,seed=71071,attention_implementation='sdpa',gpu=torch.cuda.get_device_name(),torch_version=torch.__version__,load_peak_bytes=load_peak,raw_response=raw,parsed=parse(raw),seconds=time.perf_counter()-tick,peak_allocated_bytes=torch.cuda.max_memory_allocated(),peak_reserved_bytes=torch.cuda.max_memory_reserved(),
    automatic_judgment=True,human_reviewed=False,human_agreement='NOT_EVALUABLE',Native24='NOT_EVALUABLE')
   (output/(str(index)+'.json')).write_text(json.dumps(row,ensure_ascii=False,indent=2));rows.append(row);print('R71_INFERENCE',index+1,len(jobs),row['peak_allocated_bytes'],row['parsed'] is not None,flush=True)
  (output/'summary.json').write_text(json.dumps(dict(inferences=len(rows),structured=sum(r['parsed'] is not None for r in rows),human_reviewed=False,quality_winner=None,seconds_including_load=time.perf_counter()-start),indent=2))
  if replay:
   previous=json.loads((ROOT/'pilot/0.json').read_text());current=rows[0]
-  fields=['job','model_revision','official_code_commit','prompt','sampled_video_shapes','audio_sample_shapes','processor_shapes','raw_response','parsed']
+  fields=['job','model_revision','official_code_commit','prompt','sampled_video_shapes','audio_sample_shapes','processor_shapes','processor_tensor_sha256','video_seconds_per_grid','use_audio_in_video','raw_response','parsed']
   differences=[f for f in fields if previous[f]!=current[f]]
   (output/'independent_replay.json').write_text(json.dumps(dict(fresh_process=True,compared_fields=fields,differences=differences,exact=not differences,optimizer_calls=0,human_reviewed=False),indent=2))
 if __name__=='__main__':run('--replay' in sys.argv,'--full' in sys.argv,'--controls' in sys.argv)
