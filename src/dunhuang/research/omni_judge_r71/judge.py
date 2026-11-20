@@ -14,6 +14,7 @@ def parse(raw):
   return obj
  except (ValueError,KeyError,AssertionError,TypeError):return None
 def run(replay=False,full=False,controls=False):
+ os.environ['FORCE_QWENVL_VIDEO_READER']='torchvision'
  import torch
  from transformers import Qwen2_5OmniProcessor
  from qwen_omni_utils import process_mm_info
@@ -51,7 +52,7 @@ def run(replay=False,full=False,controls=False):
   raw=processor.batch_decode(ids[:,inputs['input_ids'].shape[1]:],skip_special_tokens=True,clean_up_tokenization_spaces=False)[0]
   row=dict(job=job,model_revision=json.loads((ROOT/'receipts/model_registration.json').read_text())['revision'],official_code_commit=commit,prompt=PROMPT,
    sampled_video_shapes=[list(v.shape) for v in videos],audio_sample_shapes=[list(v.shape) for v in (audios or [])],processor_shapes=shapes,processor_tensor_sha256=input_hashes,video_seconds_per_grid=grid,use_audio_in_video=use_audio,
-   requested_fps=1,seed=71071,attention_implementation='sdpa',gpu=torch.cuda.get_device_name(),torch_version=torch.__version__,load_peak_bytes=load_peak,raw_response=raw,parsed=parse(raw),seconds=time.perf_counter()-tick,peak_allocated_bytes=torch.cuda.max_memory_allocated(),peak_reserved_bytes=torch.cuda.max_memory_reserved(),
+   requested_fps=1,video_reader='torchvision',seed=71071,attention_implementation='sdpa',gpu=torch.cuda.get_device_name(),torch_version=torch.__version__,load_peak_bytes=load_peak,raw_response=raw,parsed=parse(raw),seconds=time.perf_counter()-tick,peak_allocated_bytes=torch.cuda.max_memory_allocated(),peak_reserved_bytes=torch.cuda.max_memory_reserved(),
    automatic_judgment=True,human_reviewed=False,human_agreement='NOT_EVALUABLE',Native24='NOT_EVALUABLE')
   (output/(str(index)+'.json')).write_text(json.dumps(row,ensure_ascii=False,indent=2));rows.append(row);print('R71_INFERENCE',index+1,len(jobs),row['peak_allocated_bytes'],row['parsed'] is not None,flush=True)
  (output/'summary.json').write_text(json.dumps(dict(inferences=len(rows),structured=sum(r['parsed'] is not None for r in rows),human_reviewed=False,quality_winner=None,seconds_including_load=time.perf_counter()-start),indent=2))
