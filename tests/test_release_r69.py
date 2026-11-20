@@ -14,11 +14,11 @@ def test_publication_excludes_private_blind_map_raw_motion_and_payload(tmp_path)
  (root/'viewer/index.html').write_text('PRIVATE_COORDINATES_PAYLOAD_DO_NOT_COPY')
  (root/'arrays.npz').write_bytes(b'PRIVATE_MOTION_DO_NOT_COPY')
  s.write(root/'manifest.json',dict(binding=dict(commit='frozen'),files={p.relative_to(root).as_posix():s.sha(p) for p in root.rglob('*') if p.is_file()}))
- out=tmp_path/'public';s.export(root,out,tmp_path/'execution')
+ out=tmp_path/'public';s.export(root,out,tmp_path/'execution',parent_root=tmp_path/'no_parent')
  text=''.join(p.read_text() for p in out.iterdir())
  assert 'PRIVATE_BLIND_SEED_DO_NOT_COPY' not in text and 'PRIVATE_COORDINATES_PAYLOAD_DO_NOT_COPY' not in text and 'PRIVATE_MOTION_DO_NOT_COPY' not in text
  assert s.read(out/'records.json')==[dict(case_key='case',method='E1W')]
  assert s.read(out/'qualification.json')['independent']=='NOT_AVAILABLE'
  manifest=s.read(out/'public_manifest.json')
  assert all(s.sha(out/v['path'])==v['sha256'] for v in manifest['files'])
- with pytest.raises(ValueError,match='Fresh'):s.export(root,out,tmp_path/'execution')
+ with pytest.raises(ValueError,match='Fresh'):s.export(root,out,tmp_path/'execution',parent_root=tmp_path/'no_parent')
