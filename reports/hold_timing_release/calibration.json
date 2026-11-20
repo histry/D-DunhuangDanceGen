@@ -1,0 +1,157 @@
+{
+  "thresholds": {
+    "0.1": {
+      "body": {
+        "angular": 0.14469793749378052,
+        "linear": 0.060959573630877395,
+        "train_source_angular_quantiles": [
+          0.06587829834645707,
+          0.1428599470362543,
+          0.14653592795130674,
+          0.25120823410958787
+        ],
+        "train_source_FK_quantiles": [
+          0.028906528821483025,
+          0.06262725327969157,
+          0.05929189398206322,
+          0.13249270427975499
+        ]
+      },
+      "upper": {
+        "angular": 0.12008185950022723,
+        "linear": 0.0553136695236969,
+        "train_source_angular_quantiles": [
+          0.065957311765741,
+          0.11848550970747415,
+          0.12167820929298033,
+          0.21284138052424537
+        ],
+        "train_source_FK_quantiles": [
+          0.029119248731763737,
+          0.05112872409191542,
+          0.059498614955478375,
+          0.13742375262455814
+        ]
+      }
+    },
+    "0.2": {
+      "body": {
+        "angular": 0.2,
+        "linear": 0.13918177108259658,
+        "train_source_angular_quantiles": [
+          0.14350812247533706,
+          0.29297407271424697,
+          0.26706276513055077,
+          0.5788354264782284
+        ],
+        "train_source_FK_quantiles": [
+          0.06358183495541174,
+          0.1291870206356918,
+          0.14917652152950137,
+          0.3436863541764826
+        ]
+      },
+      "upper": {
+        "angular": 0.2,
+        "linear": 0.12449343125913467,
+        "train_source_angular_quantiles": [
+          0.14903346395787725,
+          0.2235308018155005,
+          0.22541263682762827,
+          0.4477986928089808
+        ],
+        "train_source_FK_quantiles": [
+          0.06662865277441846,
+          0.09028850633451248,
+          0.15869835618375688,
+          0.2873221913594245
+        ]
+      }
+    },
+    "0.3": {
+      "body": {
+        "angular": 0.2,
+        "linear": 0.22273760955435426,
+        "train_source_angular_quantiles": [
+          0.25664062385957037,
+          0.4746001944140365,
+          0.46349542413508354,
+          0.9712350141372839
+        ],
+        "train_source_FK_quantiles": [
+          0.11818282835016267,
+          0.21532126261933957,
+          0.23015395648936895,
+          0.5598683505032088
+        ]
+      },
+      "upper": {
+        "angular": 0.2,
+        "linear": 0.1990246981560479,
+        "train_source_angular_quantiles": [
+          0.25773657257512034,
+          0.3599030632204782,
+          0.44272966587923035,
+          0.6636754254282655
+        ],
+        "train_source_FK_quantiles": [
+          0.12096510784871244,
+          0.15535772227050698,
+          0.24269167404158878,
+          0.5104255234864786
+        ]
+      }
+    }
+  },
+  "primary_quantile": 0.2,
+  "minimum_run_cells": 30,
+  "training_sources": [
+    {
+      "source_uid": "female_FeiTian",
+      "native_sha256": "50436001fab4f0aa45610b0723cebd7ee93592f3039adc133c270902b3c9fab4"
+    },
+    {
+      "source_uid": "female_lotus",
+      "native_sha256": "5cebda88bce0ff6ecbff76890f6ea9c2af237aab62a7dc95f23bb40972af8675"
+    },
+    {
+      "source_uid": "male_pipa_1",
+      "native_sha256": "59f14fedc9b7c89e269a7cd5f2cf23807080d9f6f980127c4b19d9487a413788"
+    },
+    {
+      "source_uid": "male_ribbon",
+      "native_sha256": "c8900b68ae468ce8c7b745bf59af61b15ee9ab83d99a4d5f279f25e11c940b2e"
+    }
+  ],
+  "training_source_rotation_hashes": {
+    "female_FeiTian": "ddaba2b9a430bd12773337b2cbd4c49e3eb08e95f49ea34a38a1808e9988c074",
+    "female_lotus": "22303cf144322052abd17c57205cab0384f608258436cd8eb9e3d2136fa618f0",
+    "male_pipa_1": "93f9bff7b274671c812167c4465937f290944c48dd8ebad3506f331d8c245449",
+    "male_ribbon": "96c022c0423c40ccc5ae241fb7c8bbf6c3510964183a75d5aa97a5d28dfd932b"
+  },
+  "cap_sources": [
+    {
+      "source_uid": "female_FeiTian",
+      "runs": 22,
+      "q75_seconds": 3.1999999999999997
+    },
+    {
+      "source_uid": "female_lotus",
+      "runs": 8,
+      "q75_seconds": 2.283333333333333
+    },
+    {
+      "source_uid": "male_pipa_1",
+      "runs": 4,
+      "q75_seconds": 2.541666666666667
+    },
+    {
+      "source_uid": "male_ribbon",
+      "runs": 4,
+      "q75_seconds": 1.5
+    }
+  ],
+  "fixed_cap_seconds": 2.4125,
+  "cap_qualification": "SOURCE_STATISTIC_NOT_HUMAN_TOLERANCE",
+  "world_root_contact": "UNKNOWN"
+}

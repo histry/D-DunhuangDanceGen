@@ -1,0 +1,70 @@
+{
+  "audit_manifest_sha256": "7bb08a0c606b83764eec2aed91063376bcb2c448beab204989e0a07be9381b80",
+  "protocol": {
+    "schema": "HOLD_TIMING_Q01",
+    "parent": "39ed334891f9f89bcdf431220637317565fa67ad",
+    "preview": "ALL12_HISTORICAL_SOURCE_CASES_BEFORE_CONTROLS",
+    "historical_studies": [
+      "R69",
+      "R73",
+      "GTW"
+    ],
+    "R69_manifest": "57ea35f5d7bd1d5d63da065e46e59951698d78b05c844de9aae711f890b08abe",
+    "R73_manifest": "05f3cf963c8d92f49e2da3020ac68c484a28da6777781527399ff448fd8f0192",
+    "GTW_manifest": "9f9419779c1a9335b9c55f6536db691e1873a95be17d4d0f2a3861300785454c",
+    "calibration": "FOUR_FROZEN_R47_TRAIN_RECORDINGS_ONLY_MEDIAN_PER_SOURCE_Q20_ANGULAR_AND_FK_SPEED",
+    "sensitivity_quantiles": [
+      0.1,
+      0.2,
+      0.3
+    ],
+    "angular_cap_radps": 0.2,
+    "minimum_detected_run_cells": 30,
+    "hold_cap": "MEDIAN_PER_TRAIN_SOURCE_Q75_RUN_DURATION_NOT_HUMAN_TOLERANCE",
+    "candidate_domain": "EXISTING_R73_ALL_FOUR_DOSES_LEGAL_PROPOSALS_PLUS_E1W_AND_UNIFORM_DEDUP_CLOCK_SHA",
+    "frames": 240,
+    "bridge_frames": 48,
+    "rate_limits": [
+      0.75,
+      1.33
+    ],
+    "hold_selection": "LEXICOGRAPHIC_EXCESS_THEN_GTW_LOCAL_THEN_CLOCK_SHIFT_THEN_ID; UNCALIBRATED_MECHANISM_ONLY",
+    "music_proxy": "MEAN_FULLSONG_RANKED_ENERGY_AND_Q95_ONSET; AUTOMATIC_NOT_ARTISTIC_TRUTH",
+    "music_cap_multiplier": "1.33-(1.33-0.75)*MEAN_PROXY_IN_MAPPED_SOURCE_LOW_INTERVAL",
+    "wrong_music": "NEXT_REGISTERED_DUNHUANG_FULL_SONG_SAME_ABSOLUTE_SUPPORT_NO_WRAP",
+    "sdmr": "FROZEN_R41_SINGLE64_MULTI64_ACTUAL_ROTATION_REENCODING_SHARED_SUPPORT",
+    "fusion": "PARETO_READOUT_ONLY; DECISION_ABSTAINS_TO_E1W_WITHOUT_CALIBRATED_MUSIC_MARGIN",
+    "human_records": 0,
+    "new_training_steps": 0,
+    "can_route": false,
+    "R74": "NOT_STARTED"
+  },
+  "binding": {
+    "code": {
+      "study.py": "d45d5f36eddfe4ddd6d6156cbafb864ebab690a0ada334bacdf04c89f7f54fa9",
+      "metrics.py": "45ace4b8d52b19af6e68f60b2b0168f1babbf47acbcd6a24f800c6b1ed3f1cd6",
+      "protocol.json": "c56fc70c47f86dd8917015450cddd09fd28e3557a06335002f6a46e089d4c8ef"
+    },
+    "dependencies": {
+      "gtw_kinematic_baseline/features.py": "d6920145393c340d571405833837f26dd49aeaffb6a0c216db1d479683e246ac",
+      "compensation_r73/warp.py": "1c314e70159331ac26a0aa10dcd7f59e4582592307057ae4adb4ddf2c402acfc",
+      "sdmr_warp_rank/encoder.py": "40a90219358d5ebefe2b30458afced913c9143a5d123fc07e11ec7971432b62e",
+      "sdmr_warp_rank/readout.py": "b0308bbf9ebbbab35f1008a0fb9a1d6a608158d5da36e15c265a8b739d8404eb",
+      "sdmr_warp_rank/connectivity.py": "e1b5ea6c2ebf4b7dffd9594e79c544033c2da95d8d381fd8a7491a829c61db25",
+      "complete_r36/core.py": "03f296665e48ca2fa2ef8a866baaf2b4b786afeb22f468b6faeedac7225e9901"
+    }
+  },
+  "controls_code_sha256": "b0490d6903b0539d17f2e9d51941ebda9753e6aa3504f8d895429f3e376cd32c",
+  "encoder": {
+    "checkpoint_sha256": "212148e7cd86b482cc7734035725b1165edcd7a1c35e03fa513f6982f440e772",
+    "manifest_sha256": "4b6b884550b120b685b2867996ac5bb7e2efceab127a2b7901d4001af482405e",
+    "normalizer_sha256": "80a83d6f7a5f1bca62d3298cba206a871188f5c6b1519ab4a897672c7c986e35",
+    "device": "cpu"
+  },
+  "weights_before": "73981b85df4839218b7c69cab33939887ca438e77da26caa792434f1a5a322b2",
+  "weights_after": "73981b85df4839218b7c69cab33939887ca438e77da26caa792434f1a5a322b2",
+  "reference_scope": "SAME_FULL_SOURCE_INTERVAL_PLUS_AVAILABLE30_FRAMES",
+  "alignment_task": "HOLD_SELECTION_NO_FIXED_ACTUAL_PEAK_STRATUM_NOT_ORIGINAL_GTW_PROTOCOL_A",
+  "music_quality": "NOT_EVALUABLE",
+  "can_route": false
+}

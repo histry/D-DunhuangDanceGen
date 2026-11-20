@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "fresh_process": true,
+  "results": {
+    "audit": {
+      "exact": true,
+      "differences": [],
+      "manifest_sha256": "7bb08a0c606b83764eec2aed91063376bcb2c448beab204989e0a07be9381b80"
+    },
+    "controls": {
+      "exact": true,
+      "differences": [],
+      "manifest_sha256": "3af8de66bc4e170705b5d73169d75521b6c0dd86883fcb86a0b54ffcd8a21a65"
+    }
+  },
+  "training_steps": 0,
+  "optimizer_calls": 0,
+  "human_records": 0,
+  "quality": "NOT_EVALUABLE",
+  "can_route": false
+}

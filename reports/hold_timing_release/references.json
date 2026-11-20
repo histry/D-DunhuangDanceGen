@@ -1,0 +1,1054 @@
+[
+  {
+    "case_key": "r66b00_6280fdcb23109a34",
+    "source_uid": "female_FeiTian",
+    "source_interval": [
+      2660,
+      2896
+    ],
+    "natural": {
+      "regions": {
+        "body": {
+          "frames": 236,
+          "time_between_centers_seconds": 7.833333333333333,
+          "low_cell_fraction": 0.06382978723404255,
+          "longest_low_seconds": 0.16666666666666666,
+          "low_runs": [],
+          "FK_D3_q95": 257.9392073332087,
+          "FK_D3_max": 845.7073540259336,
+          "FK_activity_path_mean_m": 3.9034928338419124,
+          "FK_motion_range_rms_m": 0.17037045402817924,
+          "world_root_contact": "UNKNOWN",
+          "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+          "semantic_hold": "UNKNOWN"
+        },
+        "upper": {
+          "frames": 236,
+          "time_between_centers_seconds": 7.833333333333333,
+          "low_cell_fraction": 0.05531914893617021,
+          "longest_low_seconds": 0.16666666666666666,
+          "low_runs": [],
+          "FK_D3_q95": 257.9392073332087,
+          "FK_D3_max": 845.7073540259336,
+          "FK_activity_path_mean_m": 3.9034928338419124,
+          "FK_motion_range_rms_m": 0.17037045402817924,
+          "world_root_contact": "UNKNOWN",
+          "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+          "semantic_hold": "UNKNOWN"
+        }
+      },
+      "sensitivity": {
+        "0.1": {
+          "body": {
+            "low_fraction": 0.029787234042553193,
+            "longest_seconds": 0.1
+          },
+          "upper": {
+            "low_fraction": 0.00851063829787234,
+            "longest_seconds": 0.03333333333333333
+          }
+        },
+        "0.2": {
+          "body": {
+            "low_fraction": 0.06382978723404255,
+            "longest_seconds": 0.16666666666666666
+          },
+          "upper": {
+            "low_fraction": 0.05531914893617021,
+            "longest_seconds": 0.16666666666666666
+          }
+        },
+        "0.3": {
+          "body": {
+            "low_fraction": 0.06382978723404255,
+            "longest_seconds": 0.16666666666666666
+          },
+          "upper": {
+            "low_fraction": 0.05531914893617021,
+            "longest_seconds": 0.16666666666666666
+          }
+        }
+      }
+    },
+    "source_holds": []
+  },
+  {
+    "case_key": "r66b01_ca3f06a9b37a47ff",
+    "source_uid": "female_lotus",
+    "source_interval": [
+      1864,
+      2109
+    ],
+    "natural": {
+      "regions": {
+        "body": {
+          "frames": 245,
+          "time_between_centers_seconds": 8.133333333333333,
+          "low_cell_fraction": 0.1598360655737705,
+          "longest_low_seconds": 0.4,
+          "low_runs": [],
+          "FK_D3_q95": 245.96348489838957,
+          "FK_D3_max": 367.8078636783137,
+          "FK_activity_path_mean_m": 2.1595075828570316,
+          "FK_motion_range_rms_m": 0.1365261099087388,
+          "world_root_contact": "UNKNOWN",
+          "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+          "semantic_hold": "UNKNOWN"
+        },
+        "upper": {
+          "frames": 245,
+          "time_between_centers_seconds": 8.133333333333333,
+          "low_cell_fraction": 0.1721311475409836,
+          "longest_low_seconds": 0.5333333333333333,
+          "low_runs": [],
+          "FK_D3_q95": 245.96348489838957,
+          "FK_D3_max": 367.8078636783137,
+          "FK_activity_path_mean_m": 2.1595075828570316,
+          "FK_motion_range_rms_m": 0.1365261099087388,
+          "world_root_contact": "UNKNOWN",
+          "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+          "semantic_hold": "UNKNOWN"
+        }
+      },
+      "sensitivity": {
+        "0.1": {
+          "body": {
+            "low_fraction": 0.11065573770491803,
+            "longest_seconds": 0.3
+          },
+          "upper": {
+            "low_fraction": 0.06557377049180328,
+            "longest_seconds": 0.1
+          }
+        },
+        "0.2": {
+          "body": {
+            "low_fraction": 0.1598360655737705,
+            "longest_seconds": 0.4
+          },
+          "upper": {
+            "low_fraction": 0.1721311475409836,
+            "longest_seconds": 0.5333333333333333
+          }
+        },
+        "0.3": {
+          "body": {
+            "low_fraction": 0.1598360655737705,
+            "longest_seconds": 0.4
+          },
+          "upper": {
+            "low_fraction": 0.1721311475409836,
+            "longest_seconds": 0.5333333333333333
+          }
+        }
+      }
+    },
+    "source_holds": []
+  },
+  {
+    "case_key": "r66b02_70c9ebdda89155ec",
+    "source_uid": "female_meditation",
+    "source_interval": [
+      2551,
+      2789
+    ],
+    "natural": {
+      "regions": {
+        "body": {
+          "frames": 238,
+          "time_between_centers_seconds": 7.9,
+          "low_cell_fraction": 0.3037974683544304,
+          "longest_low_seconds": 0.9,
+          "low_runs": [],
+          "FK_D3_q95": 225.61702825175925,
+          "FK_D3_max": 467.3540919626931,
+          "FK_activity_path_mean_m": 1.1389589345142708,
+          "FK_motion_range_rms_m": 0.05709900465451426,
+          "world_root_contact": "UNKNOWN",
+          "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+          "semantic_hold": "UNKNOWN"
+        },
+        "upper": {
+          "frames": 238,
+          "time_between_centers_seconds": 7.9,
+          "low_cell_fraction": 0.2489451476793249,
+          "longest_low_seconds": 0.6,
+          "low_runs": [],
+          "FK_D3_q95": 225.61702825175925,
+          "FK_D3_max": 467.3540919626931,
+          "FK_activity_path_mean_m": 1.1389589345142708,
+          "FK_motion_range_rms_m": 0.05709900465451426,
+          "world_root_contact": "UNKNOWN",
+          "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+          "semantic_hold": "UNKNOWN"
+        }
+      },
+      "sensitivity": {
+        "0.1": {
+          "body": {
+            "low_fraction": 0.1729957805907173,
+            "longest_seconds": 0.6
+          },
+          "upper": {
+            "low_fraction": 0.1350210970464135,
+            "longest_seconds": 0.5333333333333333
+          }
+        },
+        "0.2": {
+          "body": {
+            "low_fraction": 0.3037974683544304,
+            "longest_seconds": 0.9
+          },
+          "upper": {
+            "low_fraction": 0.2489451476793249,
+            "longest_seconds": 0.6
+          }
+        },
+        "0.3": {
+          "body": {
+            "low_fraction": 0.3037974683544304,
+            "longest_seconds": 0.9
+          },
+          "upper": {
+            "low_fraction": 0.29957805907172996,
+            "longest_seconds": 0.6666666666666666
+          }
+        }
+      }
+    },
+    "source_holds": [
+      {
+        "source_cells_half_open": [
+          2522,
+          2557
+        ],
+        "source_supported_frame_centers": [
+          2551.0,
+          2557.0
+        ],
+        "target_frame_centers": [
+          0.0,
+          6.0
+        ],
+        "natural_supported_seconds": 0.2,
+        "target_seconds": 0.2,
+        "minimum_seconds_at_rate_075": 0.15,
+        "maximum_seconds_at_rate_133": 0.266,
+        "clipped_by_core": true,
+        "source_role": "AUTOMATIC_LOW_ACTIVITY_NOT_ARTISTIC_HOLD"
+      },
+      {
+        "source_cells_half_open": [
+          2769,
+          2812
+        ],
+        "source_supported_frame_centers": [
+          2769.0,
+          2788.0
+        ],
+        "target_frame_centers": [
+          218.0,
+          237.0
+        ],
+        "natural_supported_seconds": 0.6333333333333333,
+        "target_seconds": 0.6333333333333333,
+        "minimum_seconds_at_rate_075": 0.475,
+        "maximum_seconds_at_rate_133": 0.8423333333333335,
+        "clipped_by_core": true,
+        "source_role": "AUTOMATIC_LOW_ACTIVITY_NOT_ARTISTIC_HOLD"
+      }
+    ]
+  },
+  {
+    "case_key": "r66b03_a9c01b65dc66d062",
+    "source_uid": "male_meditation",
+    "source_interval": [
+      1071,
+      1317
+    ],
+    "natural": {
+      "regions": {
+        "body": {
+          "frames": 246,
+          "time_between_centers_seconds": 8.166666666666666,
+          "low_cell_fraction": 1.0,
+          "longest_low_seconds": 8.166666666666666,
+          "low_runs": [
+            {
+              "cells_half_open": [
+                0,
+                245
+              ],
+              "duration_seconds": 8.166666666666666,
+              "angular_excursion_max_rad": 0.3594606368086327,
+              "FK_excursion_rms_max_m": 0.03870504354889745,
+              "left_censored": true,
+              "right_censored": true,
+              "semantic_truth": "UNKNOWN"
+            }
+          ],
+          "FK_D3_q95": 25.332202061514163,
+          "FK_D3_max": 39.83928563313284,
+          "FK_activity_path_mean_m": 0.11279232245523199,
+          "FK_motion_range_rms_m": 0.008823306356874066,
+          "world_root_contact": "UNKNOWN",
+          "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+          "semantic_hold": "UNKNOWN"
+        },
+        "upper": {
+          "frames": 246,
+          "time_between_centers_seconds": 8.166666666666666,
+          "low_cell_fraction": 1.0,
+          "longest_low_seconds": 8.166666666666666,
+          "low_runs": [
+            {
+              "cells_half_open": [
+                0,
+                245
+              ],
+              "duration_seconds": 8.166666666666666,
+              "angular_excursion_max_rad": 0.3594606368086327,
+              "FK_excursion_rms_max_m": 0.03870504354889745,
+              "left_censored": true,
+              "right_censored": true,
+              "semantic_truth": "UNKNOWN"
+            }
+          ],
+          "FK_D3_q95": 25.332202061514163,
+          "FK_D3_max": 39.83928563313284,
+          "FK_activity_path_mean_m": 0.11279232245523199,
+          "FK_motion_range_rms_m": 0.008823306356874066,
+          "world_root_contact": "UNKNOWN",
+          "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+          "semantic_hold": "UNKNOWN"
+        }
+      },
+      "sensitivity": {
+        "0.1": {
+          "body": {
+            "low_fraction": 1.0,
+            "longest_seconds": 8.166666666666666
+          },
+          "upper": {
+            "low_fraction": 0.9959183673469387,
+            "longest_seconds": 7.966666666666667
+          }
+        },
+        "0.2": {
+          "body": {
+            "low_fraction": 1.0,
+            "longest_seconds": 8.166666666666666
+          },
+          "upper": {
+            "low_fraction": 1.0,
+            "longest_seconds": 8.166666666666666
+          }
+        },
+        "0.3": {
+          "body": {
+            "low_fraction": 1.0,
+            "longest_seconds": 8.166666666666666
+          },
+          "upper": {
+            "low_fraction": 1.0,
+            "longest_seconds": 8.166666666666666
+          }
+        }
+      }
+    },
+    "source_holds": [
+      {
+        "source_cells_half_open": [
+          1037,
+          1330
+        ],
+        "source_supported_frame_centers": [
+          1071.0,
+          1316.0
+        ],
+        "target_frame_centers": [
+          0.0,
+          245.0
+        ],
+        "natural_supported_seconds": 8.166666666666666,
+        "target_seconds": 8.166666666666666,
+        "minimum_seconds_at_rate_075": 6.125,
+        "maximum_seconds_at_rate_133": 10.861666666666668,
+        "clipped_by_core": true,
+        "source_role": "AUTOMATIC_LOW_ACTIVITY_NOT_ARTISTIC_HOLD"
+      }
+    ]
+  },
+  {
+    "case_key": "r66b04_c4ded6ddc2d6940d",
+    "source_uid": "male_pipa_1",
+    "source_interval": [
+      559,
+      793
+    ],
+    "natural": {
+      "regions": {
+        "body": {
+          "frames": 234,
+          "time_between_centers_seconds": 7.766666666666667,
+          "low_cell_fraction": 0.23605150214592274,
+          "longest_low_seconds": 0.6666666666666666,
+          "low_runs": [],
+          "FK_D3_q95": 94.70753063631712,
+          "FK_D3_max": 308.49693329337356,
+          "FK_activity_path_mean_m": 0.934644088874737,
+          "FK_motion_range_rms_m": 0.1564606160121282,
+          "world_root_contact": "UNKNOWN",
+          "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+          "semantic_hold": "UNKNOWN"
+        },
+        "upper": {
+          "frames": 234,
+          "time_between_centers_seconds": 7.766666666666667,
+          "low_cell_fraction": 0.1888412017167382,
+          "longest_low_seconds": 0.6666666666666666,
+          "low_runs": [],
+          "FK_D3_q95": 94.70753063631712,
+          "FK_D3_max": 308.49693329337356,
+          "FK_activity_path_mean_m": 0.934644088874737,
+          "FK_motion_range_rms_m": 0.1564606160121282,
+          "world_root_contact": "UNKNOWN",
+          "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+          "semantic_hold": "UNKNOWN"
+        }
+      },
+      "sensitivity": {
+        "0.1": {
+          "body": {
+            "low_fraction": 0.15021459227467812,
+            "longest_seconds": 0.4666666666666667
+          },
+          "upper": {
+            "low_fraction": 0.09871244635193133,
+            "longest_seconds": 0.16666666666666666
+          }
+        },
+        "0.2": {
+          "body": {
+            "low_fraction": 0.23605150214592274,
+            "longest_seconds": 0.6666666666666666
+          },
+          "upper": {
+            "low_fraction": 0.1888412017167382,
+            "longest_seconds": 0.6666666666666666
+          }
+        },
+        "0.3": {
+          "body": {
+            "low_fraction": 0.2875536480686695,
+            "longest_seconds": 0.6666666666666666
+          },
+          "upper": {
+            "low_fraction": 0.296137339055794,
+            "longest_seconds": 0.6666666666666666
+          }
+        }
+      }
+    },
+    "source_holds": []
+  },
+  {
+    "case_key": "r66b05_56fb0e6ccb0310ef",
+    "source_uid": "male_pipa_2",
+    "source_interval": [
+      2473,
+      2709
+    ],
+    "natural": {
+      "regions": {
+        "body": {
+          "frames": 236,
+          "time_between_centers_seconds": 7.833333333333333,
+          "low_cell_fraction": 0.07234042553191489,
+          "longest_low_seconds": 0.3,
+          "low_runs": [],
+          "FK_D3_q95": 550.3392078912126,
+          "FK_D3_max": 2388.6379605814445,
+          "FK_activity_path_mean_m": 5.799441075462474,
+          "FK_motion_range_rms_m": 0.1759973659164597,
+          "world_root_contact": "UNKNOWN",
+          "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+          "semantic_hold": "UNKNOWN"
+        },
+        "upper": {
+          "frames": 236,
+          "time_between_centers_seconds": 7.833333333333333,
+          "low_cell_fraction": 0.06808510638297872,
+          "longest_low_seconds": 0.3333333333333333,
+          "low_runs": [],
+          "FK_D3_q95": 550.3392078912126,
+          "FK_D3_max": 2388.6379605814445,
+          "FK_activity_path_mean_m": 5.799441075462474,
+          "FK_motion_range_rms_m": 0.1759973659164597,
+          "world_root_contact": "UNKNOWN",
+          "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+          "semantic_hold": "UNKNOWN"
+        }
+      },
+      "sensitivity": {
+        "0.1": {
+          "body": {
+            "low_fraction": 0.0,
+            "longest_seconds": 0.0
+          },
+          "upper": {
+            "low_fraction": 0.01702127659574468,
+            "longest_seconds": 0.1
+          }
+        },
+        "0.2": {
+          "body": {
+            "low_fraction": 0.07234042553191489,
+            "longest_seconds": 0.3
+          },
+          "upper": {
+            "low_fraction": 0.06808510638297872,
+            "longest_seconds": 0.3333333333333333
+          }
+        },
+        "0.3": {
+          "body": {
+            "low_fraction": 0.07234042553191489,
+            "longest_seconds": 0.3
+          },
+          "upper": {
+            "low_fraction": 0.06808510638297872,
+            "longest_seconds": 0.3333333333333333
+          }
+        }
+      }
+    },
+    "source_holds": []
+  },
+  {
+    "case_key": "r66b06_0a8028422bbfb1c4",
+    "source_uid": "male_ribbon",
+    "source_interval": [
+      948,
+      1197
+    ],
+    "natural": {
+      "regions": {
+        "body": {
+          "frames": 249,
+          "time_between_centers_seconds": 8.266666666666667,
+          "low_cell_fraction": 0.008064516129032258,
+          "longest_low_seconds": 0.06666666666666667,
+          "low_runs": [],
+          "FK_D3_q95": 349.00025819640103,
+          "FK_D3_max": 763.2546262392119,
+          "FK_activity_path_mean_m": 4.892396827765523,
+          "FK_motion_range_rms_m": 0.15494369852769438,
+          "world_root_contact": "UNKNOWN",
+          "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+          "semantic_hold": "UNKNOWN"
+        },
+        "upper": {
+          "frames": 249,
+          "time_between_centers_seconds": 8.266666666666667,
+          "low_cell_fraction": 0.0,
+          "longest_low_seconds": 0.0,
+          "low_runs": [],
+          "FK_D3_q95": 349.00025819640103,
+          "FK_D3_max": 763.2546262392119,
+          "FK_activity_path_mean_m": 4.892396827765523,
+          "FK_motion_range_rms_m": 0.15494369852769438,
+          "world_root_contact": "UNKNOWN",
+          "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+          "semantic_hold": "UNKNOWN"
+        }
+      },
+      "sensitivity": {
+        "0.1": {
+          "body": {
+            "low_fraction": 0.0,
+            "longest_seconds": 0.0
+          },
+          "upper": {
+            "low_fraction": 0.0,
+            "longest_seconds": 0.0
+          }
+        },
+        "0.2": {
+          "body": {
+            "low_fraction": 0.008064516129032258,
+            "longest_seconds": 0.06666666666666667
+          },
+          "upper": {
+            "low_fraction": 0.0,
+            "longest_seconds": 0.0
+          }
+        },
+        "0.3": {
+          "body": {
+            "low_fraction": 0.008064516129032258,
+            "longest_seconds": 0.06666666666666667
+          },
+          "upper": {
+            "low_fraction": 0.0,
+            "longest_seconds": 0.0
+          }
+        }
+      }
+    },
+    "source_holds": []
+  },
+  {
+    "case_key": "r66b07_4717682e3be3dd02",
+    "source_uid": "male_ribbon_FenHe",
+    "source_interval": [
+      2020,
+      2268
+    ],
+    "natural": {
+      "regions": {
+        "body": {
+          "frames": 248,
+          "time_between_centers_seconds": 8.233333333333333,
+          "low_cell_fraction": 0.12550607287449392,
+          "longest_low_seconds": 0.23333333333333334,
+          "low_runs": [],
+          "FK_D3_q95": 693.1106140118326,
+          "FK_D3_max": 1209.8912107841718,
+          "FK_activity_path_mean_m": 4.948353111080139,
+          "FK_motion_range_rms_m": 0.18480195879233877,
+          "world_root_contact": "UNKNOWN",
+          "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+          "semantic_hold": "UNKNOWN"
+        },
+        "upper": {
+          "frames": 248,
+          "time_between_centers_seconds": 8.233333333333333,
+          "low_cell_fraction": 0.08906882591093117,
+          "longest_low_seconds": 0.23333333333333334,
+          "low_runs": [],
+          "FK_D3_q95": 693.1106140118326,
+          "FK_D3_max": 1209.8912107841718,
+          "FK_activity_path_mean_m": 4.948353111080139,
+          "FK_motion_range_rms_m": 0.18480195879233877,
+          "world_root_contact": "UNKNOWN",
+          "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+          "semantic_hold": "UNKNOWN"
+        }
+      },
+      "sensitivity": {
+        "0.1": {
+          "body": {
+            "low_fraction": 0.044534412955465584,
+            "longest_seconds": 0.16666666666666666
+          },
+          "upper": {
+            "low_fraction": 0.0,
+            "longest_seconds": 0.0
+          }
+        },
+        "0.2": {
+          "body": {
+            "low_fraction": 0.12550607287449392,
+            "longest_seconds": 0.23333333333333334
+          },
+          "upper": {
+            "low_fraction": 0.08906882591093117,
+            "longest_seconds": 0.23333333333333334
+          }
+        },
+        "0.3": {
+          "body": {
+            "low_fraction": 0.13360323886639677,
+            "longest_seconds": 0.23333333333333334
+          },
+          "upper": {
+            "low_fraction": 0.10931174089068826,
+            "longest_seconds": 0.23333333333333334
+          }
+        }
+      }
+    },
+    "source_holds": []
+  },
+  {
+    "case_key": "r66b08_a7e0cdf241d7a758",
+    "source_uid": "female_FeiTian",
+    "source_interval": [
+      2660,
+      2896
+    ],
+    "natural": {
+      "regions": {
+        "body": {
+          "frames": 236,
+          "time_between_centers_seconds": 7.833333333333333,
+          "low_cell_fraction": 0.06382978723404255,
+          "longest_low_seconds": 0.16666666666666666,
+          "low_runs": [],
+          "FK_D3_q95": 257.9392073332087,
+          "FK_D3_max": 845.7073540259336,
+          "FK_activity_path_mean_m": 3.9034928338419124,
+          "FK_motion_range_rms_m": 0.17037045402817924,
+          "world_root_contact": "UNKNOWN",
+          "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+          "semantic_hold": "UNKNOWN"
+        },
+        "upper": {
+          "frames": 236,
+          "time_between_centers_seconds": 7.833333333333333,
+          "low_cell_fraction": 0.05531914893617021,
+          "longest_low_seconds": 0.16666666666666666,
+          "low_runs": [],
+          "FK_D3_q95": 257.9392073332087,
+          "FK_D3_max": 845.7073540259336,
+          "FK_activity_path_mean_m": 3.9034928338419124,
+          "FK_motion_range_rms_m": 0.17037045402817924,
+          "world_root_contact": "UNKNOWN",
+          "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+          "semantic_hold": "UNKNOWN"
+        }
+      },
+      "sensitivity": {
+        "0.1": {
+          "body": {
+            "low_fraction": 0.029787234042553193,
+            "longest_seconds": 0.1
+          },
+          "upper": {
+            "low_fraction": 0.00851063829787234,
+            "longest_seconds": 0.03333333333333333
+          }
+        },
+        "0.2": {
+          "body": {
+            "low_fraction": 0.06382978723404255,
+            "longest_seconds": 0.16666666666666666
+          },
+          "upper": {
+            "low_fraction": 0.05531914893617021,
+            "longest_seconds": 0.16666666666666666
+          }
+        },
+        "0.3": {
+          "body": {
+            "low_fraction": 0.06382978723404255,
+            "longest_seconds": 0.16666666666666666
+          },
+          "upper": {
+            "low_fraction": 0.05531914893617021,
+            "longest_seconds": 0.16666666666666666
+          }
+        }
+      }
+    },
+    "source_holds": []
+  },
+  {
+    "case_key": "r66b09_43aba2362b9199f7",
+    "source_uid": "female_lotus",
+    "source_interval": [
+      1864,
+      2109
+    ],
+    "natural": {
+      "regions": {
+        "body": {
+          "frames": 245,
+          "time_between_centers_seconds": 8.133333333333333,
+          "low_cell_fraction": 0.1598360655737705,
+          "longest_low_seconds": 0.4,
+          "low_runs": [],
+          "FK_D3_q95": 245.96348489838957,
+          "FK_D3_max": 367.8078636783137,
+          "FK_activity_path_mean_m": 2.1595075828570316,
+          "FK_motion_range_rms_m": 0.1365261099087388,
+          "world_root_contact": "UNKNOWN",
+          "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+          "semantic_hold": "UNKNOWN"
+        },
+        "upper": {
+          "frames": 245,
+          "time_between_centers_seconds": 8.133333333333333,
+          "low_cell_fraction": 0.1721311475409836,
+          "longest_low_seconds": 0.5333333333333333,
+          "low_runs": [],
+          "FK_D3_q95": 245.96348489838957,
+          "FK_D3_max": 367.8078636783137,
+          "FK_activity_path_mean_m": 2.1595075828570316,
+          "FK_motion_range_rms_m": 0.1365261099087388,
+          "world_root_contact": "UNKNOWN",
+          "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+          "semantic_hold": "UNKNOWN"
+        }
+      },
+      "sensitivity": {
+        "0.1": {
+          "body": {
+            "low_fraction": 0.11065573770491803,
+            "longest_seconds": 0.3
+          },
+          "upper": {
+            "low_fraction": 0.06557377049180328,
+            "longest_seconds": 0.1
+          }
+        },
+        "0.2": {
+          "body": {
+            "low_fraction": 0.1598360655737705,
+            "longest_seconds": 0.4
+          },
+          "upper": {
+            "low_fraction": 0.1721311475409836,
+            "longest_seconds": 0.5333333333333333
+          }
+        },
+        "0.3": {
+          "body": {
+            "low_fraction": 0.1598360655737705,
+            "longest_seconds": 0.4
+          },
+          "upper": {
+            "low_fraction": 0.1721311475409836,
+            "longest_seconds": 0.5333333333333333
+          }
+        }
+      }
+    },
+    "source_holds": []
+  },
+  {
+    "case_key": "r66b10_f449ca842cdeb74f",
+    "source_uid": "female_meditation",
+    "source_interval": [
+      2551,
+      2789
+    ],
+    "natural": {
+      "regions": {
+        "body": {
+          "frames": 238,
+          "time_between_centers_seconds": 7.9,
+          "low_cell_fraction": 0.3037974683544304,
+          "longest_low_seconds": 0.9,
+          "low_runs": [],
+          "FK_D3_q95": 225.61702825175925,
+          "FK_D3_max": 467.3540919626931,
+          "FK_activity_path_mean_m": 1.1389589345142708,
+          "FK_motion_range_rms_m": 0.05709900465451426,
+          "world_root_contact": "UNKNOWN",
+          "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+          "semantic_hold": "UNKNOWN"
+        },
+        "upper": {
+          "frames": 238,
+          "time_between_centers_seconds": 7.9,
+          "low_cell_fraction": 0.2489451476793249,
+          "longest_low_seconds": 0.6,
+          "low_runs": [],
+          "FK_D3_q95": 225.61702825175925,
+          "FK_D3_max": 467.3540919626931,
+          "FK_activity_path_mean_m": 1.1389589345142708,
+          "FK_motion_range_rms_m": 0.05709900465451426,
+          "world_root_contact": "UNKNOWN",
+          "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+          "semantic_hold": "UNKNOWN"
+        }
+      },
+      "sensitivity": {
+        "0.1": {
+          "body": {
+            "low_fraction": 0.1729957805907173,
+            "longest_seconds": 0.6
+          },
+          "upper": {
+            "low_fraction": 0.1350210970464135,
+            "longest_seconds": 0.5333333333333333
+          }
+        },
+        "0.2": {
+          "body": {
+            "low_fraction": 0.3037974683544304,
+            "longest_seconds": 0.9
+          },
+          "upper": {
+            "low_fraction": 0.2489451476793249,
+            "longest_seconds": 0.6
+          }
+        },
+        "0.3": {
+          "body": {
+            "low_fraction": 0.3037974683544304,
+            "longest_seconds": 0.9
+          },
+          "upper": {
+            "low_fraction": 0.29957805907172996,
+            "longest_seconds": 0.6666666666666666
+          }
+        }
+      }
+    },
+    "source_holds": [
+      {
+        "source_cells_half_open": [
+          2522,
+          2557
+        ],
+        "source_supported_frame_centers": [
+          2551.0,
+          2557.0
+        ],
+        "target_frame_centers": [
+          0.0,
+          6.0
+        ],
+        "natural_supported_seconds": 0.2,
+        "target_seconds": 0.2,
+        "minimum_seconds_at_rate_075": 0.15,
+        "maximum_seconds_at_rate_133": 0.266,
+        "clipped_by_core": true,
+        "source_role": "AUTOMATIC_LOW_ACTIVITY_NOT_ARTISTIC_HOLD"
+      },
+      {
+        "source_cells_half_open": [
+          2769,
+          2812
+        ],
+        "source_supported_frame_centers": [
+          2769.0,
+          2788.0
+        ],
+        "target_frame_centers": [
+          218.0,
+          237.0
+        ],
+        "natural_supported_seconds": 0.6333333333333333,
+        "target_seconds": 0.6333333333333333,
+        "minimum_seconds_at_rate_075": 0.475,
+        "maximum_seconds_at_rate_133": 0.8423333333333335,
+        "clipped_by_core": true,
+        "source_role": "AUTOMATIC_LOW_ACTIVITY_NOT_ARTISTIC_HOLD"
+      }
+    ]
+  },
+  {
+    "case_key": "r66b11_73f9e95e0fef2d60",
+    "source_uid": "male_meditation",
+    "source_interval": [
+      1071,
+      1317
+    ],
+    "natural": {
+      "regions": {
+        "body": {
+          "frames": 246,
+          "time_between_centers_seconds": 8.166666666666666,
+          "low_cell_fraction": 1.0,
+          "longest_low_seconds": 8.166666666666666,
+          "low_runs": [
+            {
+              "cells_half_open": [
+                0,
+                245
+              ],
+              "duration_seconds": 8.166666666666666,
+              "angular_excursion_max_rad": 0.3594606368086327,
+              "FK_excursion_rms_max_m": 0.03870504354889745,
+              "left_censored": true,
+              "right_censored": true,
+              "semantic_truth": "UNKNOWN"
+            }
+          ],
+          "FK_D3_q95": 25.332202061514163,
+          "FK_D3_max": 39.83928563313284,
+          "FK_activity_path_mean_m": 0.11279232245523199,
+          "FK_motion_range_rms_m": 0.008823306356874066,
+          "world_root_contact": "UNKNOWN",
+          "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+          "semantic_hold": "UNKNOWN"
+        },
+        "upper": {
+          "frames": 246,
+          "time_between_centers_seconds": 8.166666666666666,
+          "low_cell_fraction": 1.0,
+          "longest_low_seconds": 8.166666666666666,
+          "low_runs": [
+            {
+              "cells_half_open": [
+                0,
+                245
+              ],
+              "duration_seconds": 8.166666666666666,
+              "angular_excursion_max_rad": 0.3594606368086327,
+              "FK_excursion_rms_max_m": 0.03870504354889745,
+              "left_censored": true,
+              "right_censored": true,
+              "semantic_truth": "UNKNOWN"
+            }
+          ],
+          "FK_D3_q95": 25.332202061514163,
+          "FK_D3_max": 39.83928563313284,
+          "FK_activity_path_mean_m": 0.11279232245523199,
+          "FK_motion_range_rms_m": 0.008823306356874066,
+          "world_root_contact": "UNKNOWN",
+          "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+          "semantic_hold": "UNKNOWN"
+        }
+      },
+      "sensitivity": {
+        "0.1": {
+          "body": {
+            "low_fraction": 1.0,
+            "longest_seconds": 8.166666666666666
+          },
+          "upper": {
+            "low_fraction": 0.9959183673469387,
+            "longest_seconds": 7.966666666666667
+          }
+        },
+        "0.2": {
+          "body": {
+            "low_fraction": 1.0,
+            "longest_seconds": 8.166666666666666
+          },
+          "upper": {
+            "low_fraction": 1.0,
+            "longest_seconds": 8.166666666666666
+          }
+        },
+        "0.3": {
+          "body": {
+            "low_fraction": 1.0,
+            "longest_seconds": 8.166666666666666
+          },
+          "upper": {
+            "low_fraction": 1.0,
+            "longest_seconds": 8.166666666666666
+          }
+        }
+      }
+    },
+    "source_holds": [
+      {
+        "source_cells_half_open": [
+          1037,
+          1330
+        ],
+        "source_supported_frame_centers": [
+          1071.0,
+          1316.0
+        ],
+        "target_frame_centers": [
+          0.0,
+          245.0
+        ],
+        "natural_supported_seconds": 8.166666666666666,
+        "target_seconds": 8.166666666666666,
+        "minimum_seconds_at_rate_075": 6.125,
+        "maximum_seconds_at_rate_133": 10.861666666666668,
+        "clipped_by_core": true,
+        "source_role": "AUTOMATIC_LOW_ACTIVITY_NOT_ARTISTIC_HOLD"
+      }
+    ]
+  }
+]

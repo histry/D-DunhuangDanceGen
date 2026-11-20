@@ -1,0 +1,5357 @@
+[
+  {
+    "study": "R69",
+    "unit": "r66b00_6280fdcb23109a34",
+    "case_key": "r66b00_6280fdcb23109a34",
+    "method": "Uniform",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R69",
+    "unit": "r66b00_6280fdcb23109a34",
+    "case_key": "r66b00_6280fdcb23109a34",
+    "method": "E1W",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R69",
+    "unit": "r66b00_6280fdcb23109a34",
+    "case_key": "r66b00_6280fdcb23109a34",
+    "method": "BeatDP",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R69",
+    "unit": "r66b00_6280fdcb23109a34",
+    "case_key": "r66b00_6280fdcb23109a34",
+    "method": "RhythmDTW",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R69",
+    "unit": "r66b00_6280fdcb23109a34",
+    "case_key": "r66b00_6280fdcb23109a34",
+    "method": "Single64",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R69",
+    "unit": "r66b00_6280fdcb23109a34",
+    "case_key": "r66b00_6280fdcb23109a34",
+    "method": "Multi64",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R69",
+    "unit": "r66b01_ca3f06a9b37a47ff",
+    "case_key": "r66b01_ca3f06a9b37a47ff",
+    "method": "Uniform",
+    "source_uid": "female_lotus",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R69",
+    "unit": "r66b01_ca3f06a9b37a47ff",
+    "case_key": "r66b01_ca3f06a9b37a47ff",
+    "method": "E1W",
+    "source_uid": "female_lotus",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R69",
+    "unit": "r66b01_ca3f06a9b37a47ff",
+    "case_key": "r66b01_ca3f06a9b37a47ff",
+    "method": "BeatDP",
+    "source_uid": "female_lotus",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R69",
+    "unit": "r66b01_ca3f06a9b37a47ff",
+    "case_key": "r66b01_ca3f06a9b37a47ff",
+    "method": "RhythmDTW",
+    "source_uid": "female_lotus",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R69",
+    "unit": "r66b01_ca3f06a9b37a47ff",
+    "case_key": "r66b01_ca3f06a9b37a47ff",
+    "method": "Single64",
+    "source_uid": "female_lotus",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R69",
+    "unit": "r66b01_ca3f06a9b37a47ff",
+    "case_key": "r66b01_ca3f06a9b37a47ff",
+    "method": "Multi64",
+    "source_uid": "female_lotus",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R69",
+    "unit": "r66b02_70c9ebdda89155ec",
+    "case_key": "r66b02_70c9ebdda89155ec",
+    "method": "Uniform",
+    "source_uid": "female_meditation",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R69",
+    "unit": "r66b02_70c9ebdda89155ec",
+    "case_key": "r66b02_70c9ebdda89155ec",
+    "method": "E1W",
+    "source_uid": "female_meditation",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R69",
+    "unit": "r66b02_70c9ebdda89155ec",
+    "case_key": "r66b02_70c9ebdda89155ec",
+    "method": "BeatDP",
+    "source_uid": "female_meditation",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R69",
+    "unit": "r66b02_70c9ebdda89155ec",
+    "case_key": "r66b02_70c9ebdda89155ec",
+    "method": "RhythmDTW",
+    "source_uid": "female_meditation",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R69",
+    "unit": "r66b02_70c9ebdda89155ec",
+    "case_key": "r66b02_70c9ebdda89155ec",
+    "method": "Single64",
+    "source_uid": "female_meditation",
+    "runs": [
+      {
+        "target_cells": [
+          50,
+          84
+        ],
+        "target_seconds": 1.1333333333333333,
+        "source_frame_centers": [
+          2594.046972673692,
+          2621.3914984818716
+        ],
+        "source_natural_seconds": 0.9114841936059899,
+        "source_low_support_fraction": 0.9856827474494178,
+        "all_source_support_low": false,
+        "added_seconds": 0.22184913972734346,
+        "source_to_target_mean_rate": 1.2433932933599976,
+        "angular_excursion_max_rad": 0.14422079722180595,
+        "FK_excursion_rms_max_m": 0.02895820021081056,
+        "semantic_quality": "UNKNOWN"
+      }
+    ],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R69",
+    "unit": "r66b02_70c9ebdda89155ec",
+    "case_key": "r66b02_70c9ebdda89155ec",
+    "method": "Multi64",
+    "source_uid": "female_meditation",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R69",
+    "unit": "r66b03_a9c01b65dc66d062",
+    "case_key": "r66b03_a9c01b65dc66d062",
+    "method": "Uniform",
+    "source_uid": "male_meditation",
+    "runs": [
+      {
+        "target_cells": [
+          0,
+          239
+        ],
+        "target_seconds": 7.966666666666667,
+        "source_frame_centers": [
+          1071.0,
+          1316.0
+        ],
+        "source_natural_seconds": 8.166666666666666,
+        "source_low_support_fraction": 1.0,
+        "all_source_support_low": true,
+        "added_seconds": -0.2,
+        "source_to_target_mean_rate": 0.9755102040816327,
+        "angular_excursion_max_rad": 0.3593609196773658,
+        "FK_excursion_rms_max_m": 0.03870504354889745,
+        "semantic_quality": "UNKNOWN"
+      }
+    ],
+    "whole_core_source_low_support": true
+  },
+  {
+    "study": "R69",
+    "unit": "r66b03_a9c01b65dc66d062",
+    "case_key": "r66b03_a9c01b65dc66d062",
+    "method": "E1W",
+    "source_uid": "male_meditation",
+    "runs": [
+      {
+        "target_cells": [
+          0,
+          239
+        ],
+        "target_seconds": 7.966666666666667,
+        "source_frame_centers": [
+          1071.0,
+          1316.0
+        ],
+        "source_natural_seconds": 8.166666666666666,
+        "source_low_support_fraction": 1.0,
+        "all_source_support_low": true,
+        "added_seconds": -0.2,
+        "source_to_target_mean_rate": 0.9755102040816327,
+        "angular_excursion_max_rad": 0.359416635503638,
+        "FK_excursion_rms_max_m": 0.03870504354889745,
+        "semantic_quality": "UNKNOWN"
+      }
+    ],
+    "whole_core_source_low_support": true
+  },
+  {
+    "study": "R69",
+    "unit": "r66b03_a9c01b65dc66d062",
+    "case_key": "r66b03_a9c01b65dc66d062",
+    "method": "RhythmDTW",
+    "source_uid": "male_meditation",
+    "runs": [
+      {
+        "target_cells": [
+          0,
+          239
+        ],
+        "target_seconds": 7.966666666666667,
+        "source_frame_centers": [
+          1071.0,
+          1316.0
+        ],
+        "source_natural_seconds": 8.166666666666666,
+        "source_low_support_fraction": 1.0,
+        "all_source_support_low": true,
+        "added_seconds": -0.2,
+        "source_to_target_mean_rate": 0.9755102040816327,
+        "angular_excursion_max_rad": 0.3593609196773658,
+        "FK_excursion_rms_max_m": 0.03870504354889745,
+        "semantic_quality": "UNKNOWN"
+      }
+    ],
+    "whole_core_source_low_support": true
+  },
+  {
+    "study": "R69",
+    "unit": "r66b03_a9c01b65dc66d062",
+    "case_key": "r66b03_a9c01b65dc66d062",
+    "method": "Single64",
+    "source_uid": "male_meditation",
+    "runs": [
+      {
+        "target_cells": [
+          0,
+          239
+        ],
+        "target_seconds": 7.966666666666667,
+        "source_frame_centers": [
+          1071.0,
+          1316.0
+        ],
+        "source_natural_seconds": 8.166666666666666,
+        "source_low_support_fraction": 1.0,
+        "all_source_support_low": true,
+        "added_seconds": -0.2,
+        "source_to_target_mean_rate": 0.9755102040816327,
+        "angular_excursion_max_rad": 0.3593609196773658,
+        "FK_excursion_rms_max_m": 0.03870504354889745,
+        "semantic_quality": "UNKNOWN"
+      }
+    ],
+    "whole_core_source_low_support": true
+  },
+  {
+    "study": "R69",
+    "unit": "r66b03_a9c01b65dc66d062",
+    "case_key": "r66b03_a9c01b65dc66d062",
+    "method": "Multi64",
+    "source_uid": "male_meditation",
+    "runs": [
+      {
+        "target_cells": [
+          0,
+          239
+        ],
+        "target_seconds": 7.966666666666667,
+        "source_frame_centers": [
+          1071.0,
+          1316.0
+        ],
+        "source_natural_seconds": 8.166666666666666,
+        "source_low_support_fraction": 1.0,
+        "all_source_support_low": true,
+        "added_seconds": -0.2,
+        "source_to_target_mean_rate": 0.9755102040816327,
+        "angular_excursion_max_rad": 0.3593609196773658,
+        "FK_excursion_rms_max_m": 0.03870504354889745,
+        "semantic_quality": "UNKNOWN"
+      }
+    ],
+    "whole_core_source_low_support": true
+  },
+  {
+    "study": "R69",
+    "unit": "r66b04_c4ded6ddc2d6940d",
+    "case_key": "r66b04_c4ded6ddc2d6940d",
+    "method": "Uniform",
+    "source_uid": "male_pipa_1",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R69",
+    "unit": "r66b04_c4ded6ddc2d6940d",
+    "case_key": "r66b04_c4ded6ddc2d6940d",
+    "method": "E1W",
+    "source_uid": "male_pipa_1",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R69",
+    "unit": "r66b04_c4ded6ddc2d6940d",
+    "case_key": "r66b04_c4ded6ddc2d6940d",
+    "method": "RhythmDTW",
+    "source_uid": "male_pipa_1",
+    "runs": [
+      {
+        "target_cells": [
+          173,
+          203
+        ],
+        "target_seconds": 1.0,
+        "source_frame_centers": [
+          740.0,
+          762.9411764705883
+        ],
+        "source_natural_seconds": 0.764705882352943,
+        "source_low_support_fraction": 0.912820512820513,
+        "all_source_support_low": false,
+        "added_seconds": 0.23529411764705704,
+        "source_to_target_mean_rate": 1.3076923076923046,
+        "angular_excursion_max_rad": 0.26275749169818047,
+        "FK_excursion_rms_max_m": 0.02730945688235816,
+        "semantic_quality": "UNKNOWN"
+      },
+      {
+        "target_cells": [
+          204,
+          234
+        ],
+        "target_seconds": 1.0,
+        "source_frame_centers": [
+          763.7058823529412,
+          787.9375
+        ],
+        "source_natural_seconds": 0.8077205882352928,
+        "source_low_support_fraction": 0.9053254437869838,
+        "all_source_support_low": false,
+        "added_seconds": 0.19227941176470723,
+        "source_to_target_mean_rate": 1.238051888939465,
+        "angular_excursion_max_rad": 0.10795265922214846,
+        "FK_excursion_rms_max_m": 0.018250387002938098,
+        "semantic_quality": "UNKNOWN"
+      }
+    ],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R69",
+    "unit": "r66b04_c4ded6ddc2d6940d",
+    "case_key": "r66b04_c4ded6ddc2d6940d",
+    "method": "Single64",
+    "source_uid": "male_pipa_1",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R69",
+    "unit": "r66b04_c4ded6ddc2d6940d",
+    "case_key": "r66b04_c4ded6ddc2d6940d",
+    "method": "Multi64",
+    "source_uid": "male_pipa_1",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R69",
+    "unit": "r66b05_56fb0e6ccb0310ef",
+    "case_key": "r66b05_56fb0e6ccb0310ef",
+    "method": "Uniform",
+    "source_uid": "male_pipa_2",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R69",
+    "unit": "r66b05_56fb0e6ccb0310ef",
+    "case_key": "r66b05_56fb0e6ccb0310ef",
+    "method": "E1W",
+    "source_uid": "male_pipa_2",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R69",
+    "unit": "r66b05_56fb0e6ccb0310ef",
+    "case_key": "r66b05_56fb0e6ccb0310ef",
+    "method": "BeatDP",
+    "source_uid": "male_pipa_2",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R69",
+    "unit": "r66b05_56fb0e6ccb0310ef",
+    "case_key": "r66b05_56fb0e6ccb0310ef",
+    "method": "RhythmDTW",
+    "source_uid": "male_pipa_2",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R69",
+    "unit": "r66b05_56fb0e6ccb0310ef",
+    "case_key": "r66b05_56fb0e6ccb0310ef",
+    "method": "Single64",
+    "source_uid": "male_pipa_2",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R69",
+    "unit": "r66b05_56fb0e6ccb0310ef",
+    "case_key": "r66b05_56fb0e6ccb0310ef",
+    "method": "Multi64",
+    "source_uid": "male_pipa_2",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R69",
+    "unit": "r66b06_0a8028422bbfb1c4",
+    "case_key": "r66b06_0a8028422bbfb1c4",
+    "method": "Uniform",
+    "source_uid": "male_ribbon",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R69",
+    "unit": "r66b06_0a8028422bbfb1c4",
+    "case_key": "r66b06_0a8028422bbfb1c4",
+    "method": "E1W",
+    "source_uid": "male_ribbon",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R69",
+    "unit": "r66b06_0a8028422bbfb1c4",
+    "case_key": "r66b06_0a8028422bbfb1c4",
+    "method": "BeatDP",
+    "source_uid": "male_ribbon",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R69",
+    "unit": "r66b06_0a8028422bbfb1c4",
+    "case_key": "r66b06_0a8028422bbfb1c4",
+    "method": "RhythmDTW",
+    "source_uid": "male_ribbon",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R69",
+    "unit": "r66b06_0a8028422bbfb1c4",
+    "case_key": "r66b06_0a8028422bbfb1c4",
+    "method": "Single64",
+    "source_uid": "male_ribbon",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R69",
+    "unit": "r66b06_0a8028422bbfb1c4",
+    "case_key": "r66b06_0a8028422bbfb1c4",
+    "method": "Multi64",
+    "source_uid": "male_ribbon",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R69",
+    "unit": "r66b07_4717682e3be3dd02",
+    "case_key": "r66b07_4717682e3be3dd02",
+    "method": "Uniform",
+    "source_uid": "male_ribbon_FenHe",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R69",
+    "unit": "r66b07_4717682e3be3dd02",
+    "case_key": "r66b07_4717682e3be3dd02",
+    "method": "E1W",
+    "source_uid": "male_ribbon_FenHe",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R69",
+    "unit": "r66b07_4717682e3be3dd02",
+    "case_key": "r66b07_4717682e3be3dd02",
+    "method": "BeatDP",
+    "source_uid": "male_ribbon_FenHe",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R69",
+    "unit": "r66b07_4717682e3be3dd02",
+    "case_key": "r66b07_4717682e3be3dd02",
+    "method": "RhythmDTW",
+    "source_uid": "male_ribbon_FenHe",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R69",
+    "unit": "r66b07_4717682e3be3dd02",
+    "case_key": "r66b07_4717682e3be3dd02",
+    "method": "Single64",
+    "source_uid": "male_ribbon_FenHe",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R69",
+    "unit": "r66b07_4717682e3be3dd02",
+    "case_key": "r66b07_4717682e3be3dd02",
+    "method": "Multi64",
+    "source_uid": "male_ribbon_FenHe",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R69",
+    "unit": "r66b08_a7e0cdf241d7a758",
+    "case_key": "r66b08_a7e0cdf241d7a758",
+    "method": "Uniform",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R69",
+    "unit": "r66b08_a7e0cdf241d7a758",
+    "case_key": "r66b08_a7e0cdf241d7a758",
+    "method": "E1W",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R69",
+    "unit": "r66b08_a7e0cdf241d7a758",
+    "case_key": "r66b08_a7e0cdf241d7a758",
+    "method": "BeatDP",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R69",
+    "unit": "r66b08_a7e0cdf241d7a758",
+    "case_key": "r66b08_a7e0cdf241d7a758",
+    "method": "RhythmDTW",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R69",
+    "unit": "r66b08_a7e0cdf241d7a758",
+    "case_key": "r66b08_a7e0cdf241d7a758",
+    "method": "Single64",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R69",
+    "unit": "r66b08_a7e0cdf241d7a758",
+    "case_key": "r66b08_a7e0cdf241d7a758",
+    "method": "Multi64",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R69",
+    "unit": "r66b09_43aba2362b9199f7",
+    "case_key": "r66b09_43aba2362b9199f7",
+    "method": "Uniform",
+    "source_uid": "female_lotus",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R69",
+    "unit": "r66b09_43aba2362b9199f7",
+    "case_key": "r66b09_43aba2362b9199f7",
+    "method": "E1W",
+    "source_uid": "female_lotus",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R69",
+    "unit": "r66b09_43aba2362b9199f7",
+    "case_key": "r66b09_43aba2362b9199f7",
+    "method": "BeatDP",
+    "source_uid": "female_lotus",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R69",
+    "unit": "r66b09_43aba2362b9199f7",
+    "case_key": "r66b09_43aba2362b9199f7",
+    "method": "RhythmDTW",
+    "source_uid": "female_lotus",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R69",
+    "unit": "r66b09_43aba2362b9199f7",
+    "case_key": "r66b09_43aba2362b9199f7",
+    "method": "Single64",
+    "source_uid": "female_lotus",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R69",
+    "unit": "r66b09_43aba2362b9199f7",
+    "case_key": "r66b09_43aba2362b9199f7",
+    "method": "Multi64",
+    "source_uid": "female_lotus",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R69",
+    "unit": "r66b10_f449ca842cdeb74f",
+    "case_key": "r66b10_f449ca842cdeb74f",
+    "method": "Uniform",
+    "source_uid": "female_meditation",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R69",
+    "unit": "r66b10_f449ca842cdeb74f",
+    "case_key": "r66b10_f449ca842cdeb74f",
+    "method": "E1W",
+    "source_uid": "female_meditation",
+    "runs": [
+      {
+        "target_cells": [
+          42,
+          72
+        ],
+        "target_seconds": 1.0,
+        "source_frame_centers": [
+          2593.5806451612902,
+          2621.1612903225805
+        ],
+        "source_natural_seconds": 0.9193548387096749,
+        "source_low_support_fraction": 0.9789473684210552,
+        "all_source_support_low": false,
+        "added_seconds": 0.08064516129032502,
+        "source_to_target_mean_rate": 1.087719298245617,
+        "angular_excursion_max_rad": 0.14502607629996375,
+        "FK_excursion_rms_max_m": 0.02879433739803247,
+        "semantic_quality": "UNKNOWN"
+      }
+    ],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R69",
+    "unit": "r66b10_f449ca842cdeb74f",
+    "case_key": "r66b10_f449ca842cdeb74f",
+    "method": "BeatDP",
+    "source_uid": "female_meditation",
+    "runs": [
+      {
+        "target_cells": [
+          42,
+          72
+        ],
+        "target_seconds": 1.0,
+        "source_frame_centers": [
+          2593.5806451612902,
+          2621.1612903225805
+        ],
+        "source_natural_seconds": 0.9193548387096749,
+        "source_low_support_fraction": 0.9789473684210552,
+        "all_source_support_low": false,
+        "added_seconds": 0.08064516129032502,
+        "source_to_target_mean_rate": 1.087719298245617,
+        "angular_excursion_max_rad": 0.14502607629996375,
+        "FK_excursion_rms_max_m": 0.02879433739803247,
+        "semantic_quality": "UNKNOWN"
+      }
+    ],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R69",
+    "unit": "r66b10_f449ca842cdeb74f",
+    "case_key": "r66b10_f449ca842cdeb74f",
+    "method": "RhythmDTW",
+    "source_uid": "female_meditation",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R69",
+    "unit": "r66b10_f449ca842cdeb74f",
+    "case_key": "r66b10_f449ca842cdeb74f",
+    "method": "Single64",
+    "source_uid": "female_meditation",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R69",
+    "unit": "r66b10_f449ca842cdeb74f",
+    "case_key": "r66b10_f449ca842cdeb74f",
+    "method": "Multi64",
+    "source_uid": "female_meditation",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R69",
+    "unit": "r66b11_73f9e95e0fef2d60",
+    "case_key": "r66b11_73f9e95e0fef2d60",
+    "method": "Uniform",
+    "source_uid": "male_meditation",
+    "runs": [
+      {
+        "target_cells": [
+          0,
+          239
+        ],
+        "target_seconds": 7.966666666666667,
+        "source_frame_centers": [
+          1071.0,
+          1316.0
+        ],
+        "source_natural_seconds": 8.166666666666666,
+        "source_low_support_fraction": 1.0,
+        "all_source_support_low": true,
+        "added_seconds": -0.2,
+        "source_to_target_mean_rate": 0.9755102040816327,
+        "angular_excursion_max_rad": 0.3593609196773658,
+        "FK_excursion_rms_max_m": 0.03870504354889745,
+        "semantic_quality": "UNKNOWN"
+      }
+    ],
+    "whole_core_source_low_support": true
+  },
+  {
+    "study": "R69",
+    "unit": "r66b11_73f9e95e0fef2d60",
+    "case_key": "r66b11_73f9e95e0fef2d60",
+    "method": "E1W",
+    "source_uid": "male_meditation",
+    "runs": [
+      {
+        "target_cells": [
+          0,
+          239
+        ],
+        "target_seconds": 7.966666666666667,
+        "source_frame_centers": [
+          1071.0,
+          1316.0
+        ],
+        "source_natural_seconds": 8.166666666666666,
+        "source_low_support_fraction": 1.0,
+        "all_source_support_low": true,
+        "added_seconds": -0.2,
+        "source_to_target_mean_rate": 0.9755102040816327,
+        "angular_excursion_max_rad": 0.35931863743003534,
+        "FK_excursion_rms_max_m": 0.03870504354889745,
+        "semantic_quality": "UNKNOWN"
+      }
+    ],
+    "whole_core_source_low_support": true
+  },
+  {
+    "study": "R69",
+    "unit": "r66b11_73f9e95e0fef2d60",
+    "case_key": "r66b11_73f9e95e0fef2d60",
+    "method": "RhythmDTW",
+    "source_uid": "male_meditation",
+    "runs": [
+      {
+        "target_cells": [
+          0,
+          239
+        ],
+        "target_seconds": 7.966666666666667,
+        "source_frame_centers": [
+          1071.0,
+          1316.0
+        ],
+        "source_natural_seconds": 8.166666666666666,
+        "source_low_support_fraction": 1.0,
+        "all_source_support_low": true,
+        "added_seconds": -0.2,
+        "source_to_target_mean_rate": 0.9755102040816327,
+        "angular_excursion_max_rad": 0.3593126018340365,
+        "FK_excursion_rms_max_m": 0.03870504354889745,
+        "semantic_quality": "UNKNOWN"
+      }
+    ],
+    "whole_core_source_low_support": true
+  },
+  {
+    "study": "R69",
+    "unit": "r66b11_73f9e95e0fef2d60",
+    "case_key": "r66b11_73f9e95e0fef2d60",
+    "method": "Single64",
+    "source_uid": "male_meditation",
+    "runs": [
+      {
+        "target_cells": [
+          0,
+          239
+        ],
+        "target_seconds": 7.966666666666667,
+        "source_frame_centers": [
+          1071.0,
+          1316.0
+        ],
+        "source_natural_seconds": 8.166666666666666,
+        "source_low_support_fraction": 1.0,
+        "all_source_support_low": true,
+        "added_seconds": -0.2,
+        "source_to_target_mean_rate": 0.9755102040816327,
+        "angular_excursion_max_rad": 0.35931863743003534,
+        "FK_excursion_rms_max_m": 0.03870504354889745,
+        "semantic_quality": "UNKNOWN"
+      }
+    ],
+    "whole_core_source_low_support": true
+  },
+  {
+    "study": "R69",
+    "unit": "r66b11_73f9e95e0fef2d60",
+    "case_key": "r66b11_73f9e95e0fef2d60",
+    "method": "Multi64",
+    "source_uid": "male_meditation",
+    "runs": [
+      {
+        "target_cells": [
+          0,
+          239
+        ],
+        "target_seconds": 7.966666666666667,
+        "source_frame_centers": [
+          1071.0,
+          1316.0
+        ],
+        "source_natural_seconds": 8.166666666666666,
+        "source_low_support_fraction": 1.0,
+        "all_source_support_low": true,
+        "added_seconds": -0.2,
+        "source_to_target_mean_rate": 0.9755102040816327,
+        "angular_excursion_max_rad": 0.35931863743003534,
+        "FK_excursion_rms_max_m": 0.03870504354889745,
+        "semantic_quality": "UNKNOWN"
+      }
+    ],
+    "whole_core_source_low_support": true
+  },
+  {
+    "study": "R73",
+    "unit": "r66b00_6280fdcb23109a34",
+    "case_key": "r66b00_6280fdcb23109a34",
+    "method": "E1W",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b00_6280fdcb23109a34",
+    "case_key": "r66b00_6280fdcb23109a34",
+    "method": "High_+6",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b00_6280fdcb23109a34",
+    "case_key": "r66b00_6280fdcb23109a34",
+    "method": "Low_+6",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b00_6280fdcb23109a34",
+    "case_key": "r66b00_6280fdcb23109a34",
+    "method": "Distributed_+6",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b00_6280fdcb23109a34",
+    "case_key": "r66b00_6280fdcb23109a34",
+    "method": "High_-6",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b00_6280fdcb23109a34",
+    "case_key": "r66b00_6280fdcb23109a34",
+    "method": "Low_-6",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b00_6280fdcb23109a34",
+    "case_key": "r66b00_6280fdcb23109a34",
+    "method": "Distributed_-6",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b00_6280fdcb23109a34",
+    "case_key": "r66b00_6280fdcb23109a34",
+    "method": "High_+3",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b00_6280fdcb23109a34",
+    "case_key": "r66b00_6280fdcb23109a34",
+    "method": "Low_+3",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b00_6280fdcb23109a34",
+    "case_key": "r66b00_6280fdcb23109a34",
+    "method": "Distributed_+3",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b00_6280fdcb23109a34",
+    "case_key": "r66b00_6280fdcb23109a34",
+    "method": "High_-3",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b00_6280fdcb23109a34",
+    "case_key": "r66b00_6280fdcb23109a34",
+    "method": "Low_-3",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b00_6280fdcb23109a34",
+    "case_key": "r66b00_6280fdcb23109a34",
+    "method": "Distributed_-3",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b01_ca3f06a9b37a47ff",
+    "case_key": "r66b01_ca3f06a9b37a47ff",
+    "method": "E1W",
+    "source_uid": "female_lotus",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b01_ca3f06a9b37a47ff",
+    "case_key": "r66b01_ca3f06a9b37a47ff",
+    "method": "High_+6",
+    "source_uid": "female_lotus",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b01_ca3f06a9b37a47ff",
+    "case_key": "r66b01_ca3f06a9b37a47ff",
+    "method": "Low_+6",
+    "source_uid": "female_lotus",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b01_ca3f06a9b37a47ff",
+    "case_key": "r66b01_ca3f06a9b37a47ff",
+    "method": "Distributed_+6",
+    "source_uid": "female_lotus",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b01_ca3f06a9b37a47ff",
+    "case_key": "r66b01_ca3f06a9b37a47ff",
+    "method": "Low_-6",
+    "source_uid": "female_lotus",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b01_ca3f06a9b37a47ff",
+    "case_key": "r66b01_ca3f06a9b37a47ff",
+    "method": "High_+3",
+    "source_uid": "female_lotus",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b01_ca3f06a9b37a47ff",
+    "case_key": "r66b01_ca3f06a9b37a47ff",
+    "method": "Low_+3",
+    "source_uid": "female_lotus",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b01_ca3f06a9b37a47ff",
+    "case_key": "r66b01_ca3f06a9b37a47ff",
+    "method": "Distributed_+3",
+    "source_uid": "female_lotus",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b01_ca3f06a9b37a47ff",
+    "case_key": "r66b01_ca3f06a9b37a47ff",
+    "method": "High_-3",
+    "source_uid": "female_lotus",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b01_ca3f06a9b37a47ff",
+    "case_key": "r66b01_ca3f06a9b37a47ff",
+    "method": "Low_-3",
+    "source_uid": "female_lotus",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b01_ca3f06a9b37a47ff",
+    "case_key": "r66b01_ca3f06a9b37a47ff",
+    "method": "Distributed_-3",
+    "source_uid": "female_lotus",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b02_70c9ebdda89155ec",
+    "case_key": "r66b02_70c9ebdda89155ec",
+    "method": "E1W",
+    "source_uid": "female_meditation",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b02_70c9ebdda89155ec",
+    "case_key": "r66b02_70c9ebdda89155ec",
+    "method": "Low_+6",
+    "source_uid": "female_meditation",
+    "runs": [
+      {
+        "target_cells": [
+          42,
+          75
+        ],
+        "target_seconds": 1.1,
+        "source_frame_centers": [
+          2593.6867946437387,
+          2621.090868294171
+        ],
+        "source_natural_seconds": 0.9134691216810703,
+        "source_low_support_fraction": 0.985254978672642,
+        "all_source_support_low": false,
+        "added_seconds": 0.18653087831892964,
+        "source_to_target_mean_rate": 1.2042005294887848,
+        "angular_excursion_max_rad": 0.14429713739362954,
+        "FK_excursion_rms_max_m": 0.028587270906693593,
+        "semantic_quality": "UNKNOWN"
+      }
+    ],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b02_70c9ebdda89155ec",
+    "case_key": "r66b02_70c9ebdda89155ec",
+    "method": "High_-6",
+    "source_uid": "female_meditation",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b02_70c9ebdda89155ec",
+    "case_key": "r66b02_70c9ebdda89155ec",
+    "method": "Low_-6",
+    "source_uid": "female_meditation",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b02_70c9ebdda89155ec",
+    "case_key": "r66b02_70c9ebdda89155ec",
+    "method": "High_+3",
+    "source_uid": "female_meditation",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b02_70c9ebdda89155ec",
+    "case_key": "r66b02_70c9ebdda89155ec",
+    "method": "Low_+3",
+    "source_uid": "female_meditation",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b02_70c9ebdda89155ec",
+    "case_key": "r66b02_70c9ebdda89155ec",
+    "method": "Distributed_+3",
+    "source_uid": "female_meditation",
+    "runs": [
+      {
+        "target_cells": [
+          37,
+          70
+        ],
+        "target_seconds": 1.1,
+        "source_frame_centers": [
+          2588.70339240752,
+          2620.584745762712
+        ],
+        "source_natural_seconds": 1.0627117785064002,
+        "source_low_support_fraction": 0.9593302210845787,
+        "all_source_support_low": false,
+        "added_seconds": 0.03728822149359985,
+        "source_to_target_mean_rate": 1.0350878029657364,
+        "angular_excursion_max_rad": 0.14751510988300987,
+        "FK_excursion_rms_max_m": 0.029057293752306403,
+        "semantic_quality": "UNKNOWN"
+      }
+    ],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b02_70c9ebdda89155ec",
+    "case_key": "r66b02_70c9ebdda89155ec",
+    "method": "High_-3",
+    "source_uid": "female_meditation",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b02_70c9ebdda89155ec",
+    "case_key": "r66b02_70c9ebdda89155ec",
+    "method": "Low_-3",
+    "source_uid": "female_meditation",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b02_70c9ebdda89155ec",
+    "case_key": "r66b02_70c9ebdda89155ec",
+    "method": "Distributed_-3",
+    "source_uid": "female_meditation",
+    "runs": [
+      {
+        "target_cells": [
+          34,
+          67
+        ],
+        "target_seconds": 1.1,
+        "source_frame_centers": [
+          2588.703387253388,
+          2620.584745762712
+        ],
+        "source_natural_seconds": 1.0627119503107982,
+        "source_low_support_fraction": 0.959330065993492,
+        "all_source_support_low": false,
+        "added_seconds": 0.037288049689201824,
+        "source_to_target_mean_rate": 1.035087635627224,
+        "angular_excursion_max_rad": 0.14751510391961453,
+        "FK_excursion_rms_max_m": 0.02905729242777263,
+        "semantic_quality": "UNKNOWN"
+      }
+    ],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b03_a9c01b65dc66d062",
+    "case_key": "r66b03_a9c01b65dc66d062",
+    "method": "E1W",
+    "source_uid": "male_meditation",
+    "runs": [
+      {
+        "target_cells": [
+          0,
+          239
+        ],
+        "target_seconds": 7.966666666666667,
+        "source_frame_centers": [
+          1071.0,
+          1316.0
+        ],
+        "source_natural_seconds": 8.166666666666666,
+        "source_low_support_fraction": 1.0,
+        "all_source_support_low": true,
+        "added_seconds": -0.2,
+        "source_to_target_mean_rate": 0.9755102040816327,
+        "angular_excursion_max_rad": 0.359416635503638,
+        "FK_excursion_rms_max_m": 0.03870504354889745,
+        "semantic_quality": "UNKNOWN"
+      }
+    ],
+    "whole_core_source_low_support": true
+  },
+  {
+    "study": "R73",
+    "unit": "r66b04_c4ded6ddc2d6940d",
+    "case_key": "r66b04_c4ded6ddc2d6940d",
+    "method": "E1W",
+    "source_uid": "male_pipa_1",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b05_56fb0e6ccb0310ef",
+    "case_key": "r66b05_56fb0e6ccb0310ef",
+    "method": "E1W",
+    "source_uid": "male_pipa_2",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b05_56fb0e6ccb0310ef",
+    "case_key": "r66b05_56fb0e6ccb0310ef",
+    "method": "Low_+6",
+    "source_uid": "male_pipa_2",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b05_56fb0e6ccb0310ef",
+    "case_key": "r66b05_56fb0e6ccb0310ef",
+    "method": "High_-6",
+    "source_uid": "male_pipa_2",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b05_56fb0e6ccb0310ef",
+    "case_key": "r66b05_56fb0e6ccb0310ef",
+    "method": "Low_-6",
+    "source_uid": "male_pipa_2",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b05_56fb0e6ccb0310ef",
+    "case_key": "r66b05_56fb0e6ccb0310ef",
+    "method": "Distributed_-6",
+    "source_uid": "male_pipa_2",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b05_56fb0e6ccb0310ef",
+    "case_key": "r66b05_56fb0e6ccb0310ef",
+    "method": "High_+3",
+    "source_uid": "male_pipa_2",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b05_56fb0e6ccb0310ef",
+    "case_key": "r66b05_56fb0e6ccb0310ef",
+    "method": "Low_+3",
+    "source_uid": "male_pipa_2",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b05_56fb0e6ccb0310ef",
+    "case_key": "r66b05_56fb0e6ccb0310ef",
+    "method": "Distributed_+3",
+    "source_uid": "male_pipa_2",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b05_56fb0e6ccb0310ef",
+    "case_key": "r66b05_56fb0e6ccb0310ef",
+    "method": "High_-3",
+    "source_uid": "male_pipa_2",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b05_56fb0e6ccb0310ef",
+    "case_key": "r66b05_56fb0e6ccb0310ef",
+    "method": "Low_-3",
+    "source_uid": "male_pipa_2",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b05_56fb0e6ccb0310ef",
+    "case_key": "r66b05_56fb0e6ccb0310ef",
+    "method": "Distributed_-3",
+    "source_uid": "male_pipa_2",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b06_0a8028422bbfb1c4",
+    "case_key": "r66b06_0a8028422bbfb1c4",
+    "method": "E1W",
+    "source_uid": "male_ribbon",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b06_0a8028422bbfb1c4",
+    "case_key": "r66b06_0a8028422bbfb1c4",
+    "method": "Low_-6",
+    "source_uid": "male_ribbon",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b06_0a8028422bbfb1c4",
+    "case_key": "r66b06_0a8028422bbfb1c4",
+    "method": "Distributed_-6",
+    "source_uid": "male_ribbon",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b06_0a8028422bbfb1c4",
+    "case_key": "r66b06_0a8028422bbfb1c4",
+    "method": "High_+3",
+    "source_uid": "male_ribbon",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b06_0a8028422bbfb1c4",
+    "case_key": "r66b06_0a8028422bbfb1c4",
+    "method": "Low_+3",
+    "source_uid": "male_ribbon",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b06_0a8028422bbfb1c4",
+    "case_key": "r66b06_0a8028422bbfb1c4",
+    "method": "Distributed_+3",
+    "source_uid": "male_ribbon",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b06_0a8028422bbfb1c4",
+    "case_key": "r66b06_0a8028422bbfb1c4",
+    "method": "High_-3",
+    "source_uid": "male_ribbon",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b06_0a8028422bbfb1c4",
+    "case_key": "r66b06_0a8028422bbfb1c4",
+    "method": "Low_-3",
+    "source_uid": "male_ribbon",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b06_0a8028422bbfb1c4",
+    "case_key": "r66b06_0a8028422bbfb1c4",
+    "method": "Distributed_-3",
+    "source_uid": "male_ribbon",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b07_4717682e3be3dd02",
+    "case_key": "r66b07_4717682e3be3dd02",
+    "method": "E1W",
+    "source_uid": "male_ribbon_FenHe",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b07_4717682e3be3dd02",
+    "case_key": "r66b07_4717682e3be3dd02",
+    "method": "High_+6",
+    "source_uid": "male_ribbon_FenHe",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b07_4717682e3be3dd02",
+    "case_key": "r66b07_4717682e3be3dd02",
+    "method": "Low_+6",
+    "source_uid": "male_ribbon_FenHe",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b07_4717682e3be3dd02",
+    "case_key": "r66b07_4717682e3be3dd02",
+    "method": "High_-6",
+    "source_uid": "male_ribbon_FenHe",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b07_4717682e3be3dd02",
+    "case_key": "r66b07_4717682e3be3dd02",
+    "method": "High_+3",
+    "source_uid": "male_ribbon_FenHe",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b07_4717682e3be3dd02",
+    "case_key": "r66b07_4717682e3be3dd02",
+    "method": "Low_+3",
+    "source_uid": "male_ribbon_FenHe",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b07_4717682e3be3dd02",
+    "case_key": "r66b07_4717682e3be3dd02",
+    "method": "Distributed_+3",
+    "source_uid": "male_ribbon_FenHe",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b07_4717682e3be3dd02",
+    "case_key": "r66b07_4717682e3be3dd02",
+    "method": "High_-3",
+    "source_uid": "male_ribbon_FenHe",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b07_4717682e3be3dd02",
+    "case_key": "r66b07_4717682e3be3dd02",
+    "method": "Low_-3",
+    "source_uid": "male_ribbon_FenHe",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b07_4717682e3be3dd02",
+    "case_key": "r66b07_4717682e3be3dd02",
+    "method": "Distributed_-3",
+    "source_uid": "male_ribbon_FenHe",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b08_a7e0cdf241d7a758",
+    "case_key": "r66b08_a7e0cdf241d7a758",
+    "method": "E1W",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b08_a7e0cdf241d7a758",
+    "case_key": "r66b08_a7e0cdf241d7a758",
+    "method": "High_-6",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b08_a7e0cdf241d7a758",
+    "case_key": "r66b08_a7e0cdf241d7a758",
+    "method": "Low_-6",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b08_a7e0cdf241d7a758",
+    "case_key": "r66b08_a7e0cdf241d7a758",
+    "method": "High_-3",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b08_a7e0cdf241d7a758",
+    "case_key": "r66b08_a7e0cdf241d7a758",
+    "method": "Low_-3",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b08_a7e0cdf241d7a758",
+    "case_key": "r66b08_a7e0cdf241d7a758",
+    "method": "Distributed_-3",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b09_43aba2362b9199f7",
+    "case_key": "r66b09_43aba2362b9199f7",
+    "method": "E1W",
+    "source_uid": "female_lotus",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b09_43aba2362b9199f7",
+    "case_key": "r66b09_43aba2362b9199f7",
+    "method": "High_-3",
+    "source_uid": "female_lotus",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b10_f449ca842cdeb74f",
+    "case_key": "r66b10_f449ca842cdeb74f",
+    "method": "E1W",
+    "source_uid": "female_meditation",
+    "runs": [
+      {
+        "target_cells": [
+          42,
+          72
+        ],
+        "target_seconds": 1.0,
+        "source_frame_centers": [
+          2593.5806451612902,
+          2621.1612903225805
+        ],
+        "source_natural_seconds": 0.9193548387096749,
+        "source_low_support_fraction": 0.9789473684210552,
+        "all_source_support_low": false,
+        "added_seconds": 0.08064516129032502,
+        "source_to_target_mean_rate": 1.087719298245617,
+        "angular_excursion_max_rad": 0.14502607629996375,
+        "FK_excursion_rms_max_m": 0.02879433739803247,
+        "semantic_quality": "UNKNOWN"
+      }
+    ],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b10_f449ca842cdeb74f",
+    "case_key": "r66b10_f449ca842cdeb74f",
+    "method": "High_+6",
+    "source_uid": "female_meditation",
+    "runs": [
+      {
+        "target_cells": [
+          42,
+          75
+        ],
+        "target_seconds": 1.1,
+        "source_frame_centers": [
+          2593.5806353522275,
+          2621.4656395677616
+        ],
+        "source_natural_seconds": 0.9295001405178027,
+        "source_low_support_fraction": 0.968262360346316,
+        "all_source_support_low": false,
+        "added_seconds": 0.17049985948219729,
+        "source_to_target_mean_rate": 1.1834317737566085,
+        "angular_excursion_max_rad": 0.1463319559704675,
+        "FK_excursion_rms_max_m": 0.029372172127208614,
+        "semantic_quality": "UNKNOWN"
+      }
+    ],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b10_f449ca842cdeb74f",
+    "case_key": "r66b10_f449ca842cdeb74f",
+    "method": "Low_+6",
+    "source_uid": "female_meditation",
+    "runs": [
+      {
+        "target_cells": [
+          40,
+          78
+        ],
+        "target_seconds": 1.2666666666666666,
+        "source_frame_centers": [
+          2588.8314526148547,
+          2621.1612903225805
+        ],
+        "source_natural_seconds": 1.0776612569241935,
+        "source_low_support_fraction": 0.9588665517053303,
+        "all_source_support_low": false,
+        "added_seconds": 0.1890054097424733,
+        "source_to_target_mean_rate": 1.1753848053162115,
+        "angular_excursion_max_rad": 0.15141085304146376,
+        "FK_excursion_rms_max_m": 0.029884824174911558,
+        "semantic_quality": "UNKNOWN"
+      }
+    ],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b10_f449ca842cdeb74f",
+    "case_key": "r66b10_f449ca842cdeb74f",
+    "method": "Distributed_+6",
+    "source_uid": "female_meditation",
+    "runs": [
+      {
+        "target_cells": [
+          45,
+          75
+        ],
+        "target_seconds": 1.0,
+        "source_frame_centers": [
+          2593.5806451612902,
+          2621.1612903225805
+        ],
+        "source_natural_seconds": 0.9193548387096749,
+        "source_low_support_fraction": 0.9789473684210552,
+        "all_source_support_low": false,
+        "added_seconds": 0.08064516129032502,
+        "source_to_target_mean_rate": 1.087719298245617,
+        "angular_excursion_max_rad": 0.14502607629996375,
+        "FK_excursion_rms_max_m": 0.02879433739803247,
+        "semantic_quality": "UNKNOWN"
+      }
+    ],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b10_f449ca842cdeb74f",
+    "case_key": "r66b10_f449ca842cdeb74f",
+    "method": "High_-6",
+    "source_uid": "female_meditation",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b10_f449ca842cdeb74f",
+    "case_key": "r66b10_f449ca842cdeb74f",
+    "method": "Low_-6",
+    "source_uid": "female_meditation",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b10_f449ca842cdeb74f",
+    "case_key": "r66b10_f449ca842cdeb74f",
+    "method": "High_+3",
+    "source_uid": "female_meditation",
+    "runs": [
+      {
+        "target_cells": [
+          42,
+          73
+        ],
+        "target_seconds": 1.0333333333333334,
+        "source_frame_centers": [
+          2593.5806402566554,
+          2620.9085810819097
+        ],
+        "source_natural_seconds": 0.9109313608418081,
+        "source_low_support_fraction": 0.9846545429080767,
+        "all_source_support_low": false,
+        "added_seconds": 0.12240197249152515,
+        "source_to_target_mean_rate": 1.134370137809737,
+        "angular_excursion_max_rad": 0.14366261138372347,
+        "FK_excursion_rms_max_m": 0.028384175411882914,
+        "semantic_quality": "UNKNOWN"
+      }
+    ],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b10_f449ca842cdeb74f",
+    "case_key": "r66b10_f449ca842cdeb74f",
+    "method": "Low_+3",
+    "source_uid": "female_meditation",
+    "runs": [
+      {
+        "target_cells": [
+          39,
+          75
+        ],
+        "target_seconds": 1.2,
+        "source_frame_centers": [
+          2589.3190234999115,
+          2621.1612903225805
+        ],
+        "source_natural_seconds": 1.0614088940889663,
+        "source_low_support_fraction": 0.9635299104474008,
+        "all_source_support_low": false,
+        "added_seconds": 0.13859110591103369,
+        "source_to_target_mean_rate": 1.13057277613072,
+        "angular_excursion_max_rad": 0.15136702096430021,
+        "FK_excursion_rms_max_m": 0.029956570827017737,
+        "semantic_quality": "UNKNOWN"
+      }
+    ],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b10_f449ca842cdeb74f",
+    "case_key": "r66b10_f449ca842cdeb74f",
+    "method": "Distributed_+3",
+    "source_uid": "female_meditation",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b10_f449ca842cdeb74f",
+    "case_key": "r66b10_f449ca842cdeb74f",
+    "method": "High_-3",
+    "source_uid": "female_meditation",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b10_f449ca842cdeb74f",
+    "case_key": "r66b10_f449ca842cdeb74f",
+    "method": "Low_-3",
+    "source_uid": "female_meditation",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b10_f449ca842cdeb74f",
+    "case_key": "r66b10_f449ca842cdeb74f",
+    "method": "Distributed_-3",
+    "source_uid": "female_meditation",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "R73",
+    "unit": "r66b11_73f9e95e0fef2d60",
+    "case_key": "r66b11_73f9e95e0fef2d60",
+    "method": "E1W",
+    "source_uid": "male_meditation",
+    "runs": [
+      {
+        "target_cells": [
+          0,
+          239
+        ],
+        "target_seconds": 7.966666666666667,
+        "source_frame_centers": [
+          1071.0,
+          1316.0
+        ],
+        "source_natural_seconds": 8.166666666666666,
+        "source_low_support_fraction": 1.0,
+        "all_source_support_low": true,
+        "added_seconds": -0.2,
+        "source_to_target_mean_rate": 0.9755102040816327,
+        "angular_excursion_max_rad": 0.35931863743003534,
+        "FK_excursion_rms_max_m": 0.03870504354889745,
+        "semantic_quality": "UNKNOWN"
+      }
+    ],
+    "whole_core_source_low_support": true
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b00_6280fdcb23109a34_+6",
+    "case_key": "r66b00_6280fdcb23109a34",
+    "method": "E1W",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b00_6280fdcb23109a34_+6",
+    "case_key": "r66b00_6280fdcb23109a34",
+    "method": "Uniform",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b00_6280fdcb23109a34_+6",
+    "case_key": "r66b00_6280fdcb23109a34",
+    "method": "A_GTWLocal",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b00_6280fdcb23109a34_+6",
+    "case_key": "r66b00_6280fdcb23109a34",
+    "method": "A_GTWExtended",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b00_6280fdcb23109a34_+6",
+    "case_key": "r66b00_6280fdcb23109a34",
+    "method": "A_GTWContext",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b00_6280fdcb23109a34_+6",
+    "case_key": "r66b00_6280fdcb23109a34",
+    "method": "B_GTWLocal",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b00_6280fdcb23109a34_+6",
+    "case_key": "r66b00_6280fdcb23109a34",
+    "method": "B_GTWExtended",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b00_6280fdcb23109a34_+6",
+    "case_key": "r66b00_6280fdcb23109a34",
+    "method": "B_GTWContext",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b00_6280fdcb23109a34_-6",
+    "case_key": "r66b00_6280fdcb23109a34",
+    "method": "E1W",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b00_6280fdcb23109a34_-6",
+    "case_key": "r66b00_6280fdcb23109a34",
+    "method": "Uniform",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b00_6280fdcb23109a34_-6",
+    "case_key": "r66b00_6280fdcb23109a34",
+    "method": "A_GTWLocal",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b00_6280fdcb23109a34_-6",
+    "case_key": "r66b00_6280fdcb23109a34",
+    "method": "A_GTWExtended",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b00_6280fdcb23109a34_-6",
+    "case_key": "r66b00_6280fdcb23109a34",
+    "method": "A_GTWContext",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b00_6280fdcb23109a34_-6",
+    "case_key": "r66b00_6280fdcb23109a34",
+    "method": "B_GTWLocal",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b00_6280fdcb23109a34_-6",
+    "case_key": "r66b00_6280fdcb23109a34",
+    "method": "B_GTWExtended",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b00_6280fdcb23109a34_-6",
+    "case_key": "r66b00_6280fdcb23109a34",
+    "method": "B_GTWContext",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b00_6280fdcb23109a34_+3",
+    "case_key": "r66b00_6280fdcb23109a34",
+    "method": "E1W",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b00_6280fdcb23109a34_+3",
+    "case_key": "r66b00_6280fdcb23109a34",
+    "method": "Uniform",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b00_6280fdcb23109a34_+3",
+    "case_key": "r66b00_6280fdcb23109a34",
+    "method": "A_GTWLocal",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b00_6280fdcb23109a34_+3",
+    "case_key": "r66b00_6280fdcb23109a34",
+    "method": "A_GTWExtended",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b00_6280fdcb23109a34_+3",
+    "case_key": "r66b00_6280fdcb23109a34",
+    "method": "A_GTWContext",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b00_6280fdcb23109a34_+3",
+    "case_key": "r66b00_6280fdcb23109a34",
+    "method": "B_GTWLocal",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b00_6280fdcb23109a34_+3",
+    "case_key": "r66b00_6280fdcb23109a34",
+    "method": "B_GTWExtended",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b00_6280fdcb23109a34_+3",
+    "case_key": "r66b00_6280fdcb23109a34",
+    "method": "B_GTWContext",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b00_6280fdcb23109a34_-3",
+    "case_key": "r66b00_6280fdcb23109a34",
+    "method": "E1W",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b00_6280fdcb23109a34_-3",
+    "case_key": "r66b00_6280fdcb23109a34",
+    "method": "Uniform",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b00_6280fdcb23109a34_-3",
+    "case_key": "r66b00_6280fdcb23109a34",
+    "method": "A_GTWLocal",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b00_6280fdcb23109a34_-3",
+    "case_key": "r66b00_6280fdcb23109a34",
+    "method": "A_GTWExtended",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b00_6280fdcb23109a34_-3",
+    "case_key": "r66b00_6280fdcb23109a34",
+    "method": "A_GTWContext",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b00_6280fdcb23109a34_-3",
+    "case_key": "r66b00_6280fdcb23109a34",
+    "method": "B_GTWLocal",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b00_6280fdcb23109a34_-3",
+    "case_key": "r66b00_6280fdcb23109a34",
+    "method": "B_GTWExtended",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b00_6280fdcb23109a34_-3",
+    "case_key": "r66b00_6280fdcb23109a34",
+    "method": "B_GTWContext",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b01_ca3f06a9b37a47ff_+6",
+    "case_key": "r66b01_ca3f06a9b37a47ff",
+    "method": "E1W",
+    "source_uid": "female_lotus",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b01_ca3f06a9b37a47ff_+6",
+    "case_key": "r66b01_ca3f06a9b37a47ff",
+    "method": "Uniform",
+    "source_uid": "female_lotus",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b01_ca3f06a9b37a47ff_+6",
+    "case_key": "r66b01_ca3f06a9b37a47ff",
+    "method": "A_GTWLocal",
+    "source_uid": "female_lotus",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b01_ca3f06a9b37a47ff_+6",
+    "case_key": "r66b01_ca3f06a9b37a47ff",
+    "method": "A_GTWExtended",
+    "source_uid": "female_lotus",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b01_ca3f06a9b37a47ff_+6",
+    "case_key": "r66b01_ca3f06a9b37a47ff",
+    "method": "A_GTWContext",
+    "source_uid": "female_lotus",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b01_ca3f06a9b37a47ff_+6",
+    "case_key": "r66b01_ca3f06a9b37a47ff",
+    "method": "B_GTWLocal",
+    "source_uid": "female_lotus",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b01_ca3f06a9b37a47ff_+6",
+    "case_key": "r66b01_ca3f06a9b37a47ff",
+    "method": "B_GTWExtended",
+    "source_uid": "female_lotus",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b01_ca3f06a9b37a47ff_+6",
+    "case_key": "r66b01_ca3f06a9b37a47ff",
+    "method": "B_GTWContext",
+    "source_uid": "female_lotus",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b01_ca3f06a9b37a47ff_-6",
+    "case_key": "r66b01_ca3f06a9b37a47ff",
+    "method": "E1W",
+    "source_uid": "female_lotus",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b01_ca3f06a9b37a47ff_-6",
+    "case_key": "r66b01_ca3f06a9b37a47ff",
+    "method": "Uniform",
+    "source_uid": "female_lotus",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b01_ca3f06a9b37a47ff_-6",
+    "case_key": "r66b01_ca3f06a9b37a47ff",
+    "method": "A_GTWLocal",
+    "source_uid": "female_lotus",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b01_ca3f06a9b37a47ff_-6",
+    "case_key": "r66b01_ca3f06a9b37a47ff",
+    "method": "A_GTWExtended",
+    "source_uid": "female_lotus",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b01_ca3f06a9b37a47ff_-6",
+    "case_key": "r66b01_ca3f06a9b37a47ff",
+    "method": "A_GTWContext",
+    "source_uid": "female_lotus",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b01_ca3f06a9b37a47ff_-6",
+    "case_key": "r66b01_ca3f06a9b37a47ff",
+    "method": "B_GTWLocal",
+    "source_uid": "female_lotus",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b01_ca3f06a9b37a47ff_-6",
+    "case_key": "r66b01_ca3f06a9b37a47ff",
+    "method": "B_GTWExtended",
+    "source_uid": "female_lotus",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b01_ca3f06a9b37a47ff_-6",
+    "case_key": "r66b01_ca3f06a9b37a47ff",
+    "method": "B_GTWContext",
+    "source_uid": "female_lotus",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b01_ca3f06a9b37a47ff_+3",
+    "case_key": "r66b01_ca3f06a9b37a47ff",
+    "method": "E1W",
+    "source_uid": "female_lotus",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b01_ca3f06a9b37a47ff_+3",
+    "case_key": "r66b01_ca3f06a9b37a47ff",
+    "method": "Uniform",
+    "source_uid": "female_lotus",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b01_ca3f06a9b37a47ff_+3",
+    "case_key": "r66b01_ca3f06a9b37a47ff",
+    "method": "A_GTWLocal",
+    "source_uid": "female_lotus",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b01_ca3f06a9b37a47ff_+3",
+    "case_key": "r66b01_ca3f06a9b37a47ff",
+    "method": "A_GTWExtended",
+    "source_uid": "female_lotus",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b01_ca3f06a9b37a47ff_+3",
+    "case_key": "r66b01_ca3f06a9b37a47ff",
+    "method": "A_GTWContext",
+    "source_uid": "female_lotus",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b01_ca3f06a9b37a47ff_+3",
+    "case_key": "r66b01_ca3f06a9b37a47ff",
+    "method": "B_GTWLocal",
+    "source_uid": "female_lotus",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b01_ca3f06a9b37a47ff_+3",
+    "case_key": "r66b01_ca3f06a9b37a47ff",
+    "method": "B_GTWExtended",
+    "source_uid": "female_lotus",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b01_ca3f06a9b37a47ff_+3",
+    "case_key": "r66b01_ca3f06a9b37a47ff",
+    "method": "B_GTWContext",
+    "source_uid": "female_lotus",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b01_ca3f06a9b37a47ff_-3",
+    "case_key": "r66b01_ca3f06a9b37a47ff",
+    "method": "E1W",
+    "source_uid": "female_lotus",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b01_ca3f06a9b37a47ff_-3",
+    "case_key": "r66b01_ca3f06a9b37a47ff",
+    "method": "Uniform",
+    "source_uid": "female_lotus",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b01_ca3f06a9b37a47ff_-3",
+    "case_key": "r66b01_ca3f06a9b37a47ff",
+    "method": "A_GTWLocal",
+    "source_uid": "female_lotus",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b01_ca3f06a9b37a47ff_-3",
+    "case_key": "r66b01_ca3f06a9b37a47ff",
+    "method": "A_GTWExtended",
+    "source_uid": "female_lotus",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b01_ca3f06a9b37a47ff_-3",
+    "case_key": "r66b01_ca3f06a9b37a47ff",
+    "method": "A_GTWContext",
+    "source_uid": "female_lotus",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b01_ca3f06a9b37a47ff_-3",
+    "case_key": "r66b01_ca3f06a9b37a47ff",
+    "method": "B_GTWLocal",
+    "source_uid": "female_lotus",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b01_ca3f06a9b37a47ff_-3",
+    "case_key": "r66b01_ca3f06a9b37a47ff",
+    "method": "B_GTWExtended",
+    "source_uid": "female_lotus",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b01_ca3f06a9b37a47ff_-3",
+    "case_key": "r66b01_ca3f06a9b37a47ff",
+    "method": "B_GTWContext",
+    "source_uid": "female_lotus",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b02_70c9ebdda89155ec_+6",
+    "case_key": "r66b02_70c9ebdda89155ec",
+    "method": "E1W",
+    "source_uid": "female_meditation",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b02_70c9ebdda89155ec_+6",
+    "case_key": "r66b02_70c9ebdda89155ec",
+    "method": "Uniform",
+    "source_uid": "female_meditation",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b02_70c9ebdda89155ec_+6",
+    "case_key": "r66b02_70c9ebdda89155ec",
+    "method": "A_GTWLocal",
+    "source_uid": "female_meditation",
+    "runs": [
+      {
+        "target_cells": [
+          42,
+          75
+        ],
+        "target_seconds": 1.1,
+        "source_frame_centers": [
+          2593.6867946437387,
+          2621.090868294171
+        ],
+        "source_natural_seconds": 0.9134691216810703,
+        "source_low_support_fraction": 0.985254978672642,
+        "all_source_support_low": false,
+        "added_seconds": 0.18653087831892964,
+        "source_to_target_mean_rate": 1.2042005294887848,
+        "angular_excursion_max_rad": 0.14429713739362954,
+        "FK_excursion_rms_max_m": 0.028587270906693593,
+        "semantic_quality": "UNKNOWN"
+      }
+    ],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b02_70c9ebdda89155ec_+6",
+    "case_key": "r66b02_70c9ebdda89155ec",
+    "method": "A_GTWExtended",
+    "source_uid": "female_meditation",
+    "runs": [
+      {
+        "target_cells": [
+          42,
+          75
+        ],
+        "target_seconds": 1.1,
+        "source_frame_centers": [
+          2593.983629558787,
+          2621.2507717334734
+        ],
+        "source_natural_seconds": 0.9089047391562114,
+        "source_low_support_fraction": 0.990202780585699,
+        "all_source_support_low": false,
+        "added_seconds": 0.1910952608437886,
+        "source_to_target_mean_rate": 1.2102478429380765,
+        "angular_excursion_max_rad": 0.14378716737358033,
+        "FK_excursion_rms_max_m": 0.02868680208962693,
+        "semantic_quality": "UNKNOWN"
+      }
+    ],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b02_70c9ebdda89155ec_+6",
+    "case_key": "r66b02_70c9ebdda89155ec",
+    "method": "A_GTWContext",
+    "source_uid": "female_meditation",
+    "runs": [
+      {
+        "target_cells": [
+          42,
+          75
+        ],
+        "target_seconds": 1.1,
+        "source_frame_centers": [
+          2593.983629558787,
+          2621.2507717334734
+        ],
+        "source_natural_seconds": 0.9089047391562114,
+        "source_low_support_fraction": 0.990202780585699,
+        "all_source_support_low": false,
+        "added_seconds": 0.1910952608437886,
+        "source_to_target_mean_rate": 1.2102478429380765,
+        "angular_excursion_max_rad": 0.14378716737358033,
+        "FK_excursion_rms_max_m": 0.02868680208962693,
+        "semantic_quality": "UNKNOWN"
+      }
+    ],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b02_70c9ebdda89155ec_+6",
+    "case_key": "r66b02_70c9ebdda89155ec",
+    "method": "B_GTWLocal",
+    "source_uid": "female_meditation",
+    "runs": [
+      {
+        "target_cells": [
+          42,
+          75
+        ],
+        "target_seconds": 1.1,
+        "source_frame_centers": [
+          2593.6867946437387,
+          2621.090868294171
+        ],
+        "source_natural_seconds": 0.9134691216810703,
+        "source_low_support_fraction": 0.985254978672642,
+        "all_source_support_low": false,
+        "added_seconds": 0.18653087831892964,
+        "source_to_target_mean_rate": 1.2042005294887848,
+        "angular_excursion_max_rad": 0.14429713739362954,
+        "FK_excursion_rms_max_m": 0.028587270906693593,
+        "semantic_quality": "UNKNOWN"
+      }
+    ],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b02_70c9ebdda89155ec_+6",
+    "case_key": "r66b02_70c9ebdda89155ec",
+    "method": "B_GTWExtended",
+    "source_uid": "female_meditation",
+    "runs": [
+      {
+        "target_cells": [
+          41,
+          74
+        ],
+        "target_seconds": 1.1,
+        "source_frame_centers": [
+          2593.714871799218,
+          2620.8595528357146
+        ],
+        "source_natural_seconds": 0.9048227012165474,
+        "source_low_support_fraction": 0.9894959826421059,
+        "all_source_support_low": false,
+        "added_seconds": 0.1951772987834526,
+        "source_to_target_mean_rate": 1.2157077828850158,
+        "angular_excursion_max_rad": 0.14276012562273122,
+        "FK_excursion_rms_max_m": 0.028230612406273038,
+        "semantic_quality": "UNKNOWN"
+      }
+    ],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b02_70c9ebdda89155ec_+6",
+    "case_key": "r66b02_70c9ebdda89155ec",
+    "method": "B_GTWContext",
+    "source_uid": "female_meditation",
+    "runs": [
+      {
+        "target_cells": [
+          42,
+          75
+        ],
+        "target_seconds": 1.1,
+        "source_frame_centers": [
+          2593.983629558787,
+          2621.2507717334734
+        ],
+        "source_natural_seconds": 0.9089047391562114,
+        "source_low_support_fraction": 0.990202780585699,
+        "all_source_support_low": false,
+        "added_seconds": 0.1910952608437886,
+        "source_to_target_mean_rate": 1.2102478429380765,
+        "angular_excursion_max_rad": 0.14378716737358033,
+        "FK_excursion_rms_max_m": 0.02868680208962693,
+        "semantic_quality": "UNKNOWN"
+      }
+    ],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b02_70c9ebdda89155ec_-6",
+    "case_key": "r66b02_70c9ebdda89155ec",
+    "method": "E1W",
+    "source_uid": "female_meditation",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b02_70c9ebdda89155ec_-6",
+    "case_key": "r66b02_70c9ebdda89155ec",
+    "method": "Uniform",
+    "source_uid": "female_meditation",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b02_70c9ebdda89155ec_-6",
+    "case_key": "r66b02_70c9ebdda89155ec",
+    "method": "A_GTWLocal",
+    "source_uid": "female_meditation",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b02_70c9ebdda89155ec_-6",
+    "case_key": "r66b02_70c9ebdda89155ec",
+    "method": "A_GTWExtended",
+    "source_uid": "female_meditation",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b02_70c9ebdda89155ec_-6",
+    "case_key": "r66b02_70c9ebdda89155ec",
+    "method": "A_GTWContext",
+    "source_uid": "female_meditation",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b02_70c9ebdda89155ec_-6",
+    "case_key": "r66b02_70c9ebdda89155ec",
+    "method": "B_GTWLocal",
+    "source_uid": "female_meditation",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b02_70c9ebdda89155ec_-6",
+    "case_key": "r66b02_70c9ebdda89155ec",
+    "method": "B_GTWExtended",
+    "source_uid": "female_meditation",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b02_70c9ebdda89155ec_-6",
+    "case_key": "r66b02_70c9ebdda89155ec",
+    "method": "B_GTWContext",
+    "source_uid": "female_meditation",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b02_70c9ebdda89155ec_+3",
+    "case_key": "r66b02_70c9ebdda89155ec",
+    "method": "E1W",
+    "source_uid": "female_meditation",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b02_70c9ebdda89155ec_+3",
+    "case_key": "r66b02_70c9ebdda89155ec",
+    "method": "Uniform",
+    "source_uid": "female_meditation",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b02_70c9ebdda89155ec_+3",
+    "case_key": "r66b02_70c9ebdda89155ec",
+    "method": "A_GTWLocal",
+    "source_uid": "female_meditation",
+    "runs": [
+      {
+        "target_cells": [
+          42,
+          72
+        ],
+        "target_seconds": 1.0,
+        "source_frame_centers": [
+          2594.2768597618683,
+          2621.079417582777
+        ],
+        "source_natural_seconds": 0.8934185940302845,
+        "source_low_support_fraction": 0.9970369401567007,
+        "all_source_support_low": false,
+        "added_seconds": 0.10658140596971559,
+        "source_to_target_mean_rate": 1.1192961582419256,
+        "angular_excursion_max_rad": 0.14236445337229423,
+        "FK_excursion_rms_max_m": 0.028442401751511668,
+        "semantic_quality": "UNKNOWN"
+      }
+    ],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b02_70c9ebdda89155ec_+3",
+    "case_key": "r66b02_70c9ebdda89155ec",
+    "method": "A_GTWExtended",
+    "source_uid": "female_meditation",
+    "runs": [
+      {
+        "target_cells": [
+          42,
+          72
+        ],
+        "target_seconds": 1.0,
+        "source_frame_centers": [
+          2594.2768597618683,
+          2621.079417582777
+        ],
+        "source_natural_seconds": 0.8934185940302845,
+        "source_low_support_fraction": 0.9970369401567007,
+        "all_source_support_low": false,
+        "added_seconds": 0.10658140596971559,
+        "source_to_target_mean_rate": 1.1192961582419256,
+        "angular_excursion_max_rad": 0.14236445337229423,
+        "FK_excursion_rms_max_m": 0.028442401751511668,
+        "semantic_quality": "UNKNOWN"
+      }
+    ],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b02_70c9ebdda89155ec_+3",
+    "case_key": "r66b02_70c9ebdda89155ec",
+    "method": "A_GTWContext",
+    "source_uid": "female_meditation",
+    "runs": [
+      {
+        "target_cells": [
+          42,
+          72
+        ],
+        "target_seconds": 1.0,
+        "source_frame_centers": [
+          2594.2768597618683,
+          2621.079417582777
+        ],
+        "source_natural_seconds": 0.8934185940302845,
+        "source_low_support_fraction": 0.9970369401567007,
+        "all_source_support_low": false,
+        "added_seconds": 0.10658140596971559,
+        "source_to_target_mean_rate": 1.1192961582419256,
+        "angular_excursion_max_rad": 0.14236445337229423,
+        "FK_excursion_rms_max_m": 0.028442401751511668,
+        "semantic_quality": "UNKNOWN"
+      }
+    ],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b02_70c9ebdda89155ec_+3",
+    "case_key": "r66b02_70c9ebdda89155ec",
+    "method": "B_GTWLocal",
+    "source_uid": "female_meditation",
+    "runs": [
+      {
+        "target_cells": [
+          42,
+          72
+        ],
+        "target_seconds": 1.0,
+        "source_frame_centers": [
+          2594.2768597618683,
+          2621.079417582777
+        ],
+        "source_natural_seconds": 0.8934185940302845,
+        "source_low_support_fraction": 0.9970369401567007,
+        "all_source_support_low": false,
+        "added_seconds": 0.10658140596971559,
+        "source_to_target_mean_rate": 1.1192961582419256,
+        "angular_excursion_max_rad": 0.14236445337229423,
+        "FK_excursion_rms_max_m": 0.028442401751511668,
+        "semantic_quality": "UNKNOWN"
+      }
+    ],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b02_70c9ebdda89155ec_+3",
+    "case_key": "r66b02_70c9ebdda89155ec",
+    "method": "B_GTWExtended",
+    "source_uid": "female_meditation",
+    "runs": [
+      {
+        "target_cells": [
+          42,
+          72
+        ],
+        "target_seconds": 1.0,
+        "source_frame_centers": [
+          2594.2768597618683,
+          2621.079417582777
+        ],
+        "source_natural_seconds": 0.8934185940302845,
+        "source_low_support_fraction": 0.9970369401567007,
+        "all_source_support_low": false,
+        "added_seconds": 0.10658140596971559,
+        "source_to_target_mean_rate": 1.1192961582419256,
+        "angular_excursion_max_rad": 0.14236445337229423,
+        "FK_excursion_rms_max_m": 0.028442401751511668,
+        "semantic_quality": "UNKNOWN"
+      }
+    ],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b02_70c9ebdda89155ec_+3",
+    "case_key": "r66b02_70c9ebdda89155ec",
+    "method": "B_GTWContext",
+    "source_uid": "female_meditation",
+    "runs": [
+      {
+        "target_cells": [
+          42,
+          72
+        ],
+        "target_seconds": 1.0,
+        "source_frame_centers": [
+          2594.2768597618683,
+          2621.079417582777
+        ],
+        "source_natural_seconds": 0.8934185940302845,
+        "source_low_support_fraction": 0.9970369401567007,
+        "all_source_support_low": false,
+        "added_seconds": 0.10658140596971559,
+        "source_to_target_mean_rate": 1.1192961582419256,
+        "angular_excursion_max_rad": 0.14236445337229423,
+        "FK_excursion_rms_max_m": 0.028442401751511668,
+        "semantic_quality": "UNKNOWN"
+      }
+    ],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b02_70c9ebdda89155ec_-3",
+    "case_key": "r66b02_70c9ebdda89155ec",
+    "method": "E1W",
+    "source_uid": "female_meditation",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b02_70c9ebdda89155ec_-3",
+    "case_key": "r66b02_70c9ebdda89155ec",
+    "method": "Uniform",
+    "source_uid": "female_meditation",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b02_70c9ebdda89155ec_-3",
+    "case_key": "r66b02_70c9ebdda89155ec",
+    "method": "A_GTWLocal",
+    "source_uid": "female_meditation",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b02_70c9ebdda89155ec_-3",
+    "case_key": "r66b02_70c9ebdda89155ec",
+    "method": "A_GTWExtended",
+    "source_uid": "female_meditation",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b02_70c9ebdda89155ec_-3",
+    "case_key": "r66b02_70c9ebdda89155ec",
+    "method": "A_GTWContext",
+    "source_uid": "female_meditation",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b02_70c9ebdda89155ec_-3",
+    "case_key": "r66b02_70c9ebdda89155ec",
+    "method": "B_GTWLocal",
+    "source_uid": "female_meditation",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b02_70c9ebdda89155ec_-3",
+    "case_key": "r66b02_70c9ebdda89155ec",
+    "method": "B_GTWExtended",
+    "source_uid": "female_meditation",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b02_70c9ebdda89155ec_-3",
+    "case_key": "r66b02_70c9ebdda89155ec",
+    "method": "B_GTWContext",
+    "source_uid": "female_meditation",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b03_a9c01b65dc66d062_+6",
+    "case_key": "r66b03_a9c01b65dc66d062",
+    "method": "E1W",
+    "source_uid": "male_meditation",
+    "runs": [
+      {
+        "target_cells": [
+          0,
+          239
+        ],
+        "target_seconds": 7.966666666666667,
+        "source_frame_centers": [
+          1071.0,
+          1316.0
+        ],
+        "source_natural_seconds": 8.166666666666666,
+        "source_low_support_fraction": 1.0,
+        "all_source_support_low": true,
+        "added_seconds": -0.2,
+        "source_to_target_mean_rate": 0.9755102040816327,
+        "angular_excursion_max_rad": 0.359416635503638,
+        "FK_excursion_rms_max_m": 0.03870504354889745,
+        "semantic_quality": "UNKNOWN"
+      }
+    ],
+    "whole_core_source_low_support": true
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b03_a9c01b65dc66d062_+6",
+    "case_key": "r66b03_a9c01b65dc66d062",
+    "method": "Uniform",
+    "source_uid": "male_meditation",
+    "runs": [
+      {
+        "target_cells": [
+          0,
+          239
+        ],
+        "target_seconds": 7.966666666666667,
+        "source_frame_centers": [
+          1071.0,
+          1316.0
+        ],
+        "source_natural_seconds": 8.166666666666666,
+        "source_low_support_fraction": 1.0,
+        "all_source_support_low": true,
+        "added_seconds": -0.2,
+        "source_to_target_mean_rate": 0.9755102040816327,
+        "angular_excursion_max_rad": 0.3593609196773658,
+        "FK_excursion_rms_max_m": 0.03870504354889745,
+        "semantic_quality": "UNKNOWN"
+      }
+    ],
+    "whole_core_source_low_support": true
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b03_a9c01b65dc66d062_-6",
+    "case_key": "r66b03_a9c01b65dc66d062",
+    "method": "E1W",
+    "source_uid": "male_meditation",
+    "runs": [
+      {
+        "target_cells": [
+          0,
+          239
+        ],
+        "target_seconds": 7.966666666666667,
+        "source_frame_centers": [
+          1071.0,
+          1316.0
+        ],
+        "source_natural_seconds": 8.166666666666666,
+        "source_low_support_fraction": 1.0,
+        "all_source_support_low": true,
+        "added_seconds": -0.2,
+        "source_to_target_mean_rate": 0.9755102040816327,
+        "angular_excursion_max_rad": 0.359416635503638,
+        "FK_excursion_rms_max_m": 0.03870504354889745,
+        "semantic_quality": "UNKNOWN"
+      }
+    ],
+    "whole_core_source_low_support": true
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b03_a9c01b65dc66d062_-6",
+    "case_key": "r66b03_a9c01b65dc66d062",
+    "method": "Uniform",
+    "source_uid": "male_meditation",
+    "runs": [
+      {
+        "target_cells": [
+          0,
+          239
+        ],
+        "target_seconds": 7.966666666666667,
+        "source_frame_centers": [
+          1071.0,
+          1316.0
+        ],
+        "source_natural_seconds": 8.166666666666666,
+        "source_low_support_fraction": 1.0,
+        "all_source_support_low": true,
+        "added_seconds": -0.2,
+        "source_to_target_mean_rate": 0.9755102040816327,
+        "angular_excursion_max_rad": 0.3593609196773658,
+        "FK_excursion_rms_max_m": 0.03870504354889745,
+        "semantic_quality": "UNKNOWN"
+      }
+    ],
+    "whole_core_source_low_support": true
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b03_a9c01b65dc66d062_+3",
+    "case_key": "r66b03_a9c01b65dc66d062",
+    "method": "E1W",
+    "source_uid": "male_meditation",
+    "runs": [
+      {
+        "target_cells": [
+          0,
+          239
+        ],
+        "target_seconds": 7.966666666666667,
+        "source_frame_centers": [
+          1071.0,
+          1316.0
+        ],
+        "source_natural_seconds": 8.166666666666666,
+        "source_low_support_fraction": 1.0,
+        "all_source_support_low": true,
+        "added_seconds": -0.2,
+        "source_to_target_mean_rate": 0.9755102040816327,
+        "angular_excursion_max_rad": 0.359416635503638,
+        "FK_excursion_rms_max_m": 0.03870504354889745,
+        "semantic_quality": "UNKNOWN"
+      }
+    ],
+    "whole_core_source_low_support": true
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b03_a9c01b65dc66d062_+3",
+    "case_key": "r66b03_a9c01b65dc66d062",
+    "method": "Uniform",
+    "source_uid": "male_meditation",
+    "runs": [
+      {
+        "target_cells": [
+          0,
+          239
+        ],
+        "target_seconds": 7.966666666666667,
+        "source_frame_centers": [
+          1071.0,
+          1316.0
+        ],
+        "source_natural_seconds": 8.166666666666666,
+        "source_low_support_fraction": 1.0,
+        "all_source_support_low": true,
+        "added_seconds": -0.2,
+        "source_to_target_mean_rate": 0.9755102040816327,
+        "angular_excursion_max_rad": 0.3593609196773658,
+        "FK_excursion_rms_max_m": 0.03870504354889745,
+        "semantic_quality": "UNKNOWN"
+      }
+    ],
+    "whole_core_source_low_support": true
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b03_a9c01b65dc66d062_-3",
+    "case_key": "r66b03_a9c01b65dc66d062",
+    "method": "E1W",
+    "source_uid": "male_meditation",
+    "runs": [
+      {
+        "target_cells": [
+          0,
+          239
+        ],
+        "target_seconds": 7.966666666666667,
+        "source_frame_centers": [
+          1071.0,
+          1316.0
+        ],
+        "source_natural_seconds": 8.166666666666666,
+        "source_low_support_fraction": 1.0,
+        "all_source_support_low": true,
+        "added_seconds": -0.2,
+        "source_to_target_mean_rate": 0.9755102040816327,
+        "angular_excursion_max_rad": 0.359416635503638,
+        "FK_excursion_rms_max_m": 0.03870504354889745,
+        "semantic_quality": "UNKNOWN"
+      }
+    ],
+    "whole_core_source_low_support": true
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b03_a9c01b65dc66d062_-3",
+    "case_key": "r66b03_a9c01b65dc66d062",
+    "method": "Uniform",
+    "source_uid": "male_meditation",
+    "runs": [
+      {
+        "target_cells": [
+          0,
+          239
+        ],
+        "target_seconds": 7.966666666666667,
+        "source_frame_centers": [
+          1071.0,
+          1316.0
+        ],
+        "source_natural_seconds": 8.166666666666666,
+        "source_low_support_fraction": 1.0,
+        "all_source_support_low": true,
+        "added_seconds": -0.2,
+        "source_to_target_mean_rate": 0.9755102040816327,
+        "angular_excursion_max_rad": 0.3593609196773658,
+        "FK_excursion_rms_max_m": 0.03870504354889745,
+        "semantic_quality": "UNKNOWN"
+      }
+    ],
+    "whole_core_source_low_support": true
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b04_c4ded6ddc2d6940d_+6",
+    "case_key": "r66b04_c4ded6ddc2d6940d",
+    "method": "E1W",
+    "source_uid": "male_pipa_1",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b04_c4ded6ddc2d6940d_+6",
+    "case_key": "r66b04_c4ded6ddc2d6940d",
+    "method": "Uniform",
+    "source_uid": "male_pipa_1",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b04_c4ded6ddc2d6940d_-6",
+    "case_key": "r66b04_c4ded6ddc2d6940d",
+    "method": "E1W",
+    "source_uid": "male_pipa_1",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b04_c4ded6ddc2d6940d_-6",
+    "case_key": "r66b04_c4ded6ddc2d6940d",
+    "method": "Uniform",
+    "source_uid": "male_pipa_1",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b04_c4ded6ddc2d6940d_+3",
+    "case_key": "r66b04_c4ded6ddc2d6940d",
+    "method": "E1W",
+    "source_uid": "male_pipa_1",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b04_c4ded6ddc2d6940d_+3",
+    "case_key": "r66b04_c4ded6ddc2d6940d",
+    "method": "Uniform",
+    "source_uid": "male_pipa_1",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b04_c4ded6ddc2d6940d_-3",
+    "case_key": "r66b04_c4ded6ddc2d6940d",
+    "method": "E1W",
+    "source_uid": "male_pipa_1",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b04_c4ded6ddc2d6940d_-3",
+    "case_key": "r66b04_c4ded6ddc2d6940d",
+    "method": "Uniform",
+    "source_uid": "male_pipa_1",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b05_56fb0e6ccb0310ef_+6",
+    "case_key": "r66b05_56fb0e6ccb0310ef",
+    "method": "E1W",
+    "source_uid": "male_pipa_2",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b05_56fb0e6ccb0310ef_+6",
+    "case_key": "r66b05_56fb0e6ccb0310ef",
+    "method": "Uniform",
+    "source_uid": "male_pipa_2",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b05_56fb0e6ccb0310ef_+6",
+    "case_key": "r66b05_56fb0e6ccb0310ef",
+    "method": "A_GTWLocal",
+    "source_uid": "male_pipa_2",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b05_56fb0e6ccb0310ef_+6",
+    "case_key": "r66b05_56fb0e6ccb0310ef",
+    "method": "A_GTWExtended",
+    "source_uid": "male_pipa_2",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b05_56fb0e6ccb0310ef_+6",
+    "case_key": "r66b05_56fb0e6ccb0310ef",
+    "method": "A_GTWContext",
+    "source_uid": "male_pipa_2",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b05_56fb0e6ccb0310ef_+6",
+    "case_key": "r66b05_56fb0e6ccb0310ef",
+    "method": "B_GTWLocal",
+    "source_uid": "male_pipa_2",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b05_56fb0e6ccb0310ef_+6",
+    "case_key": "r66b05_56fb0e6ccb0310ef",
+    "method": "B_GTWExtended",
+    "source_uid": "male_pipa_2",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b05_56fb0e6ccb0310ef_+6",
+    "case_key": "r66b05_56fb0e6ccb0310ef",
+    "method": "B_GTWContext",
+    "source_uid": "male_pipa_2",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b05_56fb0e6ccb0310ef_-6",
+    "case_key": "r66b05_56fb0e6ccb0310ef",
+    "method": "E1W",
+    "source_uid": "male_pipa_2",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b05_56fb0e6ccb0310ef_-6",
+    "case_key": "r66b05_56fb0e6ccb0310ef",
+    "method": "Uniform",
+    "source_uid": "male_pipa_2",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b05_56fb0e6ccb0310ef_-6",
+    "case_key": "r66b05_56fb0e6ccb0310ef",
+    "method": "A_GTWLocal",
+    "source_uid": "male_pipa_2",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b05_56fb0e6ccb0310ef_-6",
+    "case_key": "r66b05_56fb0e6ccb0310ef",
+    "method": "A_GTWExtended",
+    "source_uid": "male_pipa_2",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b05_56fb0e6ccb0310ef_-6",
+    "case_key": "r66b05_56fb0e6ccb0310ef",
+    "method": "A_GTWContext",
+    "source_uid": "male_pipa_2",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b05_56fb0e6ccb0310ef_-6",
+    "case_key": "r66b05_56fb0e6ccb0310ef",
+    "method": "B_GTWLocal",
+    "source_uid": "male_pipa_2",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b05_56fb0e6ccb0310ef_-6",
+    "case_key": "r66b05_56fb0e6ccb0310ef",
+    "method": "B_GTWExtended",
+    "source_uid": "male_pipa_2",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b05_56fb0e6ccb0310ef_-6",
+    "case_key": "r66b05_56fb0e6ccb0310ef",
+    "method": "B_GTWContext",
+    "source_uid": "male_pipa_2",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b05_56fb0e6ccb0310ef_+3",
+    "case_key": "r66b05_56fb0e6ccb0310ef",
+    "method": "E1W",
+    "source_uid": "male_pipa_2",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b05_56fb0e6ccb0310ef_+3",
+    "case_key": "r66b05_56fb0e6ccb0310ef",
+    "method": "Uniform",
+    "source_uid": "male_pipa_2",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b05_56fb0e6ccb0310ef_+3",
+    "case_key": "r66b05_56fb0e6ccb0310ef",
+    "method": "A_GTWLocal",
+    "source_uid": "male_pipa_2",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b05_56fb0e6ccb0310ef_+3",
+    "case_key": "r66b05_56fb0e6ccb0310ef",
+    "method": "A_GTWExtended",
+    "source_uid": "male_pipa_2",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b05_56fb0e6ccb0310ef_+3",
+    "case_key": "r66b05_56fb0e6ccb0310ef",
+    "method": "A_GTWContext",
+    "source_uid": "male_pipa_2",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b05_56fb0e6ccb0310ef_+3",
+    "case_key": "r66b05_56fb0e6ccb0310ef",
+    "method": "B_GTWLocal",
+    "source_uid": "male_pipa_2",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b05_56fb0e6ccb0310ef_+3",
+    "case_key": "r66b05_56fb0e6ccb0310ef",
+    "method": "B_GTWExtended",
+    "source_uid": "male_pipa_2",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b05_56fb0e6ccb0310ef_+3",
+    "case_key": "r66b05_56fb0e6ccb0310ef",
+    "method": "B_GTWContext",
+    "source_uid": "male_pipa_2",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b05_56fb0e6ccb0310ef_-3",
+    "case_key": "r66b05_56fb0e6ccb0310ef",
+    "method": "E1W",
+    "source_uid": "male_pipa_2",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b05_56fb0e6ccb0310ef_-3",
+    "case_key": "r66b05_56fb0e6ccb0310ef",
+    "method": "Uniform",
+    "source_uid": "male_pipa_2",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b05_56fb0e6ccb0310ef_-3",
+    "case_key": "r66b05_56fb0e6ccb0310ef",
+    "method": "A_GTWLocal",
+    "source_uid": "male_pipa_2",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b05_56fb0e6ccb0310ef_-3",
+    "case_key": "r66b05_56fb0e6ccb0310ef",
+    "method": "A_GTWExtended",
+    "source_uid": "male_pipa_2",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b05_56fb0e6ccb0310ef_-3",
+    "case_key": "r66b05_56fb0e6ccb0310ef",
+    "method": "A_GTWContext",
+    "source_uid": "male_pipa_2",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b05_56fb0e6ccb0310ef_-3",
+    "case_key": "r66b05_56fb0e6ccb0310ef",
+    "method": "B_GTWLocal",
+    "source_uid": "male_pipa_2",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b05_56fb0e6ccb0310ef_-3",
+    "case_key": "r66b05_56fb0e6ccb0310ef",
+    "method": "B_GTWExtended",
+    "source_uid": "male_pipa_2",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b05_56fb0e6ccb0310ef_-3",
+    "case_key": "r66b05_56fb0e6ccb0310ef",
+    "method": "B_GTWContext",
+    "source_uid": "male_pipa_2",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b06_0a8028422bbfb1c4_+6",
+    "case_key": "r66b06_0a8028422bbfb1c4",
+    "method": "E1W",
+    "source_uid": "male_ribbon",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b06_0a8028422bbfb1c4_+6",
+    "case_key": "r66b06_0a8028422bbfb1c4",
+    "method": "Uniform",
+    "source_uid": "male_ribbon",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b06_0a8028422bbfb1c4_-6",
+    "case_key": "r66b06_0a8028422bbfb1c4",
+    "method": "E1W",
+    "source_uid": "male_ribbon",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b06_0a8028422bbfb1c4_-6",
+    "case_key": "r66b06_0a8028422bbfb1c4",
+    "method": "Uniform",
+    "source_uid": "male_ribbon",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b06_0a8028422bbfb1c4_-6",
+    "case_key": "r66b06_0a8028422bbfb1c4",
+    "method": "A_GTWLocal",
+    "source_uid": "male_ribbon",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b06_0a8028422bbfb1c4_-6",
+    "case_key": "r66b06_0a8028422bbfb1c4",
+    "method": "A_GTWExtended",
+    "source_uid": "male_ribbon",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b06_0a8028422bbfb1c4_-6",
+    "case_key": "r66b06_0a8028422bbfb1c4",
+    "method": "A_GTWContext",
+    "source_uid": "male_ribbon",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b06_0a8028422bbfb1c4_-6",
+    "case_key": "r66b06_0a8028422bbfb1c4",
+    "method": "B_GTWLocal",
+    "source_uid": "male_ribbon",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b06_0a8028422bbfb1c4_-6",
+    "case_key": "r66b06_0a8028422bbfb1c4",
+    "method": "B_GTWExtended",
+    "source_uid": "male_ribbon",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b06_0a8028422bbfb1c4_-6",
+    "case_key": "r66b06_0a8028422bbfb1c4",
+    "method": "B_GTWContext",
+    "source_uid": "male_ribbon",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b06_0a8028422bbfb1c4_+3",
+    "case_key": "r66b06_0a8028422bbfb1c4",
+    "method": "E1W",
+    "source_uid": "male_ribbon",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b06_0a8028422bbfb1c4_+3",
+    "case_key": "r66b06_0a8028422bbfb1c4",
+    "method": "Uniform",
+    "source_uid": "male_ribbon",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b06_0a8028422bbfb1c4_+3",
+    "case_key": "r66b06_0a8028422bbfb1c4",
+    "method": "A_GTWLocal",
+    "source_uid": "male_ribbon",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b06_0a8028422bbfb1c4_+3",
+    "case_key": "r66b06_0a8028422bbfb1c4",
+    "method": "A_GTWExtended",
+    "source_uid": "male_ribbon",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b06_0a8028422bbfb1c4_+3",
+    "case_key": "r66b06_0a8028422bbfb1c4",
+    "method": "A_GTWContext",
+    "source_uid": "male_ribbon",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b06_0a8028422bbfb1c4_+3",
+    "case_key": "r66b06_0a8028422bbfb1c4",
+    "method": "B_GTWLocal",
+    "source_uid": "male_ribbon",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b06_0a8028422bbfb1c4_+3",
+    "case_key": "r66b06_0a8028422bbfb1c4",
+    "method": "B_GTWExtended",
+    "source_uid": "male_ribbon",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b06_0a8028422bbfb1c4_+3",
+    "case_key": "r66b06_0a8028422bbfb1c4",
+    "method": "B_GTWContext",
+    "source_uid": "male_ribbon",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b06_0a8028422bbfb1c4_-3",
+    "case_key": "r66b06_0a8028422bbfb1c4",
+    "method": "E1W",
+    "source_uid": "male_ribbon",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b06_0a8028422bbfb1c4_-3",
+    "case_key": "r66b06_0a8028422bbfb1c4",
+    "method": "Uniform",
+    "source_uid": "male_ribbon",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b06_0a8028422bbfb1c4_-3",
+    "case_key": "r66b06_0a8028422bbfb1c4",
+    "method": "A_GTWLocal",
+    "source_uid": "male_ribbon",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b06_0a8028422bbfb1c4_-3",
+    "case_key": "r66b06_0a8028422bbfb1c4",
+    "method": "A_GTWExtended",
+    "source_uid": "male_ribbon",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b06_0a8028422bbfb1c4_-3",
+    "case_key": "r66b06_0a8028422bbfb1c4",
+    "method": "A_GTWContext",
+    "source_uid": "male_ribbon",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b06_0a8028422bbfb1c4_-3",
+    "case_key": "r66b06_0a8028422bbfb1c4",
+    "method": "B_GTWLocal",
+    "source_uid": "male_ribbon",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b06_0a8028422bbfb1c4_-3",
+    "case_key": "r66b06_0a8028422bbfb1c4",
+    "method": "B_GTWExtended",
+    "source_uid": "male_ribbon",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b06_0a8028422bbfb1c4_-3",
+    "case_key": "r66b06_0a8028422bbfb1c4",
+    "method": "B_GTWContext",
+    "source_uid": "male_ribbon",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b07_4717682e3be3dd02_+6",
+    "case_key": "r66b07_4717682e3be3dd02",
+    "method": "E1W",
+    "source_uid": "male_ribbon_FenHe",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b07_4717682e3be3dd02_+6",
+    "case_key": "r66b07_4717682e3be3dd02",
+    "method": "Uniform",
+    "source_uid": "male_ribbon_FenHe",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b07_4717682e3be3dd02_+6",
+    "case_key": "r66b07_4717682e3be3dd02",
+    "method": "A_GTWLocal",
+    "source_uid": "male_ribbon_FenHe",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b07_4717682e3be3dd02_+6",
+    "case_key": "r66b07_4717682e3be3dd02",
+    "method": "A_GTWExtended",
+    "source_uid": "male_ribbon_FenHe",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b07_4717682e3be3dd02_+6",
+    "case_key": "r66b07_4717682e3be3dd02",
+    "method": "A_GTWContext",
+    "source_uid": "male_ribbon_FenHe",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b07_4717682e3be3dd02_+6",
+    "case_key": "r66b07_4717682e3be3dd02",
+    "method": "B_GTWLocal",
+    "source_uid": "male_ribbon_FenHe",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b07_4717682e3be3dd02_+6",
+    "case_key": "r66b07_4717682e3be3dd02",
+    "method": "B_GTWExtended",
+    "source_uid": "male_ribbon_FenHe",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b07_4717682e3be3dd02_+6",
+    "case_key": "r66b07_4717682e3be3dd02",
+    "method": "B_GTWContext",
+    "source_uid": "male_ribbon_FenHe",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b07_4717682e3be3dd02_-6",
+    "case_key": "r66b07_4717682e3be3dd02",
+    "method": "E1W",
+    "source_uid": "male_ribbon_FenHe",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b07_4717682e3be3dd02_-6",
+    "case_key": "r66b07_4717682e3be3dd02",
+    "method": "Uniform",
+    "source_uid": "male_ribbon_FenHe",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b07_4717682e3be3dd02_-6",
+    "case_key": "r66b07_4717682e3be3dd02",
+    "method": "A_GTWLocal",
+    "source_uid": "male_ribbon_FenHe",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b07_4717682e3be3dd02_-6",
+    "case_key": "r66b07_4717682e3be3dd02",
+    "method": "A_GTWExtended",
+    "source_uid": "male_ribbon_FenHe",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b07_4717682e3be3dd02_-6",
+    "case_key": "r66b07_4717682e3be3dd02",
+    "method": "A_GTWContext",
+    "source_uid": "male_ribbon_FenHe",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b07_4717682e3be3dd02_-6",
+    "case_key": "r66b07_4717682e3be3dd02",
+    "method": "B_GTWLocal",
+    "source_uid": "male_ribbon_FenHe",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b07_4717682e3be3dd02_-6",
+    "case_key": "r66b07_4717682e3be3dd02",
+    "method": "B_GTWExtended",
+    "source_uid": "male_ribbon_FenHe",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b07_4717682e3be3dd02_-6",
+    "case_key": "r66b07_4717682e3be3dd02",
+    "method": "B_GTWContext",
+    "source_uid": "male_ribbon_FenHe",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b07_4717682e3be3dd02_+3",
+    "case_key": "r66b07_4717682e3be3dd02",
+    "method": "E1W",
+    "source_uid": "male_ribbon_FenHe",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b07_4717682e3be3dd02_+3",
+    "case_key": "r66b07_4717682e3be3dd02",
+    "method": "Uniform",
+    "source_uid": "male_ribbon_FenHe",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b07_4717682e3be3dd02_+3",
+    "case_key": "r66b07_4717682e3be3dd02",
+    "method": "A_GTWLocal",
+    "source_uid": "male_ribbon_FenHe",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b07_4717682e3be3dd02_+3",
+    "case_key": "r66b07_4717682e3be3dd02",
+    "method": "A_GTWExtended",
+    "source_uid": "male_ribbon_FenHe",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b07_4717682e3be3dd02_+3",
+    "case_key": "r66b07_4717682e3be3dd02",
+    "method": "A_GTWContext",
+    "source_uid": "male_ribbon_FenHe",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b07_4717682e3be3dd02_+3",
+    "case_key": "r66b07_4717682e3be3dd02",
+    "method": "B_GTWLocal",
+    "source_uid": "male_ribbon_FenHe",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b07_4717682e3be3dd02_+3",
+    "case_key": "r66b07_4717682e3be3dd02",
+    "method": "B_GTWExtended",
+    "source_uid": "male_ribbon_FenHe",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b07_4717682e3be3dd02_+3",
+    "case_key": "r66b07_4717682e3be3dd02",
+    "method": "B_GTWContext",
+    "source_uid": "male_ribbon_FenHe",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b07_4717682e3be3dd02_-3",
+    "case_key": "r66b07_4717682e3be3dd02",
+    "method": "E1W",
+    "source_uid": "male_ribbon_FenHe",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b07_4717682e3be3dd02_-3",
+    "case_key": "r66b07_4717682e3be3dd02",
+    "method": "Uniform",
+    "source_uid": "male_ribbon_FenHe",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b07_4717682e3be3dd02_-3",
+    "case_key": "r66b07_4717682e3be3dd02",
+    "method": "A_GTWLocal",
+    "source_uid": "male_ribbon_FenHe",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b07_4717682e3be3dd02_-3",
+    "case_key": "r66b07_4717682e3be3dd02",
+    "method": "A_GTWExtended",
+    "source_uid": "male_ribbon_FenHe",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b07_4717682e3be3dd02_-3",
+    "case_key": "r66b07_4717682e3be3dd02",
+    "method": "A_GTWContext",
+    "source_uid": "male_ribbon_FenHe",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b07_4717682e3be3dd02_-3",
+    "case_key": "r66b07_4717682e3be3dd02",
+    "method": "B_GTWLocal",
+    "source_uid": "male_ribbon_FenHe",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b07_4717682e3be3dd02_-3",
+    "case_key": "r66b07_4717682e3be3dd02",
+    "method": "B_GTWExtended",
+    "source_uid": "male_ribbon_FenHe",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b07_4717682e3be3dd02_-3",
+    "case_key": "r66b07_4717682e3be3dd02",
+    "method": "B_GTWContext",
+    "source_uid": "male_ribbon_FenHe",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b08_a7e0cdf241d7a758_+6",
+    "case_key": "r66b08_a7e0cdf241d7a758",
+    "method": "E1W",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b08_a7e0cdf241d7a758_+6",
+    "case_key": "r66b08_a7e0cdf241d7a758",
+    "method": "Uniform",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b08_a7e0cdf241d7a758_+6",
+    "case_key": "r66b08_a7e0cdf241d7a758",
+    "method": "A_GTWLocal",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b08_a7e0cdf241d7a758_+6",
+    "case_key": "r66b08_a7e0cdf241d7a758",
+    "method": "A_GTWExtended",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b08_a7e0cdf241d7a758_+6",
+    "case_key": "r66b08_a7e0cdf241d7a758",
+    "method": "A_GTWContext",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b08_a7e0cdf241d7a758_+6",
+    "case_key": "r66b08_a7e0cdf241d7a758",
+    "method": "B_GTWLocal",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b08_a7e0cdf241d7a758_+6",
+    "case_key": "r66b08_a7e0cdf241d7a758",
+    "method": "B_GTWExtended",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b08_a7e0cdf241d7a758_+6",
+    "case_key": "r66b08_a7e0cdf241d7a758",
+    "method": "B_GTWContext",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b08_a7e0cdf241d7a758_-6",
+    "case_key": "r66b08_a7e0cdf241d7a758",
+    "method": "E1W",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b08_a7e0cdf241d7a758_-6",
+    "case_key": "r66b08_a7e0cdf241d7a758",
+    "method": "Uniform",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b08_a7e0cdf241d7a758_-6",
+    "case_key": "r66b08_a7e0cdf241d7a758",
+    "method": "A_GTWLocal",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b08_a7e0cdf241d7a758_-6",
+    "case_key": "r66b08_a7e0cdf241d7a758",
+    "method": "A_GTWExtended",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b08_a7e0cdf241d7a758_-6",
+    "case_key": "r66b08_a7e0cdf241d7a758",
+    "method": "A_GTWContext",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b08_a7e0cdf241d7a758_-6",
+    "case_key": "r66b08_a7e0cdf241d7a758",
+    "method": "B_GTWLocal",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b08_a7e0cdf241d7a758_-6",
+    "case_key": "r66b08_a7e0cdf241d7a758",
+    "method": "B_GTWExtended",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b08_a7e0cdf241d7a758_-6",
+    "case_key": "r66b08_a7e0cdf241d7a758",
+    "method": "B_GTWContext",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b08_a7e0cdf241d7a758_+3",
+    "case_key": "r66b08_a7e0cdf241d7a758",
+    "method": "E1W",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b08_a7e0cdf241d7a758_+3",
+    "case_key": "r66b08_a7e0cdf241d7a758",
+    "method": "Uniform",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b08_a7e0cdf241d7a758_+3",
+    "case_key": "r66b08_a7e0cdf241d7a758",
+    "method": "A_GTWLocal",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b08_a7e0cdf241d7a758_+3",
+    "case_key": "r66b08_a7e0cdf241d7a758",
+    "method": "A_GTWExtended",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b08_a7e0cdf241d7a758_+3",
+    "case_key": "r66b08_a7e0cdf241d7a758",
+    "method": "A_GTWContext",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b08_a7e0cdf241d7a758_+3",
+    "case_key": "r66b08_a7e0cdf241d7a758",
+    "method": "B_GTWLocal",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b08_a7e0cdf241d7a758_+3",
+    "case_key": "r66b08_a7e0cdf241d7a758",
+    "method": "B_GTWExtended",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b08_a7e0cdf241d7a758_+3",
+    "case_key": "r66b08_a7e0cdf241d7a758",
+    "method": "B_GTWContext",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b08_a7e0cdf241d7a758_-3",
+    "case_key": "r66b08_a7e0cdf241d7a758",
+    "method": "E1W",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b08_a7e0cdf241d7a758_-3",
+    "case_key": "r66b08_a7e0cdf241d7a758",
+    "method": "Uniform",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b08_a7e0cdf241d7a758_-3",
+    "case_key": "r66b08_a7e0cdf241d7a758",
+    "method": "A_GTWLocal",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b08_a7e0cdf241d7a758_-3",
+    "case_key": "r66b08_a7e0cdf241d7a758",
+    "method": "A_GTWExtended",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b08_a7e0cdf241d7a758_-3",
+    "case_key": "r66b08_a7e0cdf241d7a758",
+    "method": "A_GTWContext",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b08_a7e0cdf241d7a758_-3",
+    "case_key": "r66b08_a7e0cdf241d7a758",
+    "method": "B_GTWLocal",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b08_a7e0cdf241d7a758_-3",
+    "case_key": "r66b08_a7e0cdf241d7a758",
+    "method": "B_GTWExtended",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b08_a7e0cdf241d7a758_-3",
+    "case_key": "r66b08_a7e0cdf241d7a758",
+    "method": "B_GTWContext",
+    "source_uid": "female_FeiTian",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b09_43aba2362b9199f7_+6",
+    "case_key": "r66b09_43aba2362b9199f7",
+    "method": "E1W",
+    "source_uid": "female_lotus",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b09_43aba2362b9199f7_+6",
+    "case_key": "r66b09_43aba2362b9199f7",
+    "method": "Uniform",
+    "source_uid": "female_lotus",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b09_43aba2362b9199f7_-6",
+    "case_key": "r66b09_43aba2362b9199f7",
+    "method": "E1W",
+    "source_uid": "female_lotus",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b09_43aba2362b9199f7_-6",
+    "case_key": "r66b09_43aba2362b9199f7",
+    "method": "Uniform",
+    "source_uid": "female_lotus",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b09_43aba2362b9199f7_+3",
+    "case_key": "r66b09_43aba2362b9199f7",
+    "method": "E1W",
+    "source_uid": "female_lotus",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b09_43aba2362b9199f7_+3",
+    "case_key": "r66b09_43aba2362b9199f7",
+    "method": "Uniform",
+    "source_uid": "female_lotus",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b09_43aba2362b9199f7_-3",
+    "case_key": "r66b09_43aba2362b9199f7",
+    "method": "E1W",
+    "source_uid": "female_lotus",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b09_43aba2362b9199f7_-3",
+    "case_key": "r66b09_43aba2362b9199f7",
+    "method": "Uniform",
+    "source_uid": "female_lotus",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b09_43aba2362b9199f7_-3",
+    "case_key": "r66b09_43aba2362b9199f7",
+    "method": "A_GTWLocal",
+    "source_uid": "female_lotus",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b09_43aba2362b9199f7_-3",
+    "case_key": "r66b09_43aba2362b9199f7",
+    "method": "A_GTWExtended",
+    "source_uid": "female_lotus",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b09_43aba2362b9199f7_-3",
+    "case_key": "r66b09_43aba2362b9199f7",
+    "method": "A_GTWContext",
+    "source_uid": "female_lotus",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b09_43aba2362b9199f7_-3",
+    "case_key": "r66b09_43aba2362b9199f7",
+    "method": "B_GTWLocal",
+    "source_uid": "female_lotus",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b09_43aba2362b9199f7_-3",
+    "case_key": "r66b09_43aba2362b9199f7",
+    "method": "B_GTWExtended",
+    "source_uid": "female_lotus",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b09_43aba2362b9199f7_-3",
+    "case_key": "r66b09_43aba2362b9199f7",
+    "method": "B_GTWContext",
+    "source_uid": "female_lotus",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b10_f449ca842cdeb74f_+6",
+    "case_key": "r66b10_f449ca842cdeb74f",
+    "method": "E1W",
+    "source_uid": "female_meditation",
+    "runs": [
+      {
+        "target_cells": [
+          42,
+          72
+        ],
+        "target_seconds": 1.0,
+        "source_frame_centers": [
+          2593.5806451612902,
+          2621.1612903225805
+        ],
+        "source_natural_seconds": 0.9193548387096749,
+        "source_low_support_fraction": 0.9789473684210552,
+        "all_source_support_low": false,
+        "added_seconds": 0.08064516129032502,
+        "source_to_target_mean_rate": 1.087719298245617,
+        "angular_excursion_max_rad": 0.14502607629996375,
+        "FK_excursion_rms_max_m": 0.02879433739803247,
+        "semantic_quality": "UNKNOWN"
+      }
+    ],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b10_f449ca842cdeb74f_+6",
+    "case_key": "r66b10_f449ca842cdeb74f",
+    "method": "Uniform",
+    "source_uid": "female_meditation",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b10_f449ca842cdeb74f_+6",
+    "case_key": "r66b10_f449ca842cdeb74f",
+    "method": "A_GTWLocal",
+    "source_uid": "female_meditation",
+    "runs": [
+      {
+        "target_cells": [
+          44,
+          78
+        ],
+        "target_seconds": 1.1333333333333333,
+        "source_frame_centers": [
+          2594.2107939780476,
+          2621.2261880054657
+        ],
+        "source_natural_seconds": 0.9005131342472699,
+        "source_low_support_fraction": 0.9916274400722735,
+        "all_source_support_low": false,
+        "added_seconds": 0.23282019908606344,
+        "source_to_target_mean_rate": 1.2585417027600332,
+        "angular_excursion_max_rad": 0.1431423064272854,
+        "FK_excursion_rms_max_m": 0.028696238436142853,
+        "semantic_quality": "UNKNOWN"
+      }
+    ],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b10_f449ca842cdeb74f_+6",
+    "case_key": "r66b10_f449ca842cdeb74f",
+    "method": "A_GTWExtended",
+    "source_uid": "female_meditation",
+    "runs": [
+      {
+        "target_cells": [
+          44,
+          78
+        ],
+        "target_seconds": 1.1333333333333333,
+        "source_frame_centers": [
+          2594.2107939780476,
+          2621.2261880054657
+        ],
+        "source_natural_seconds": 0.9005131342472699,
+        "source_low_support_fraction": 0.9916274400722735,
+        "all_source_support_low": false,
+        "added_seconds": 0.23282019908606344,
+        "source_to_target_mean_rate": 1.2585417027600332,
+        "angular_excursion_max_rad": 0.1431423064272854,
+        "FK_excursion_rms_max_m": 0.028696238436142853,
+        "semantic_quality": "UNKNOWN"
+      }
+    ],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b10_f449ca842cdeb74f_+6",
+    "case_key": "r66b10_f449ca842cdeb74f",
+    "method": "A_GTWContext",
+    "source_uid": "female_meditation",
+    "runs": [
+      {
+        "target_cells": [
+          45,
+          75
+        ],
+        "target_seconds": 1.0,
+        "source_frame_centers": [
+          2593.5806451612902,
+          2621.1612903225805
+        ],
+        "source_natural_seconds": 0.9193548387096749,
+        "source_low_support_fraction": 0.9789473684210552,
+        "all_source_support_low": false,
+        "added_seconds": 0.08064516129032502,
+        "source_to_target_mean_rate": 1.087719298245617,
+        "angular_excursion_max_rad": 0.14502607629996375,
+        "FK_excursion_rms_max_m": 0.02879433739803247,
+        "semantic_quality": "UNKNOWN"
+      }
+    ],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b10_f449ca842cdeb74f_+6",
+    "case_key": "r66b10_f449ca842cdeb74f",
+    "method": "B_GTWLocal",
+    "source_uid": "female_meditation",
+    "runs": [
+      {
+        "target_cells": [
+          44,
+          78
+        ],
+        "target_seconds": 1.1333333333333333,
+        "source_frame_centers": [
+          2594.2107939780476,
+          2621.2261880054657
+        ],
+        "source_natural_seconds": 0.9005131342472699,
+        "source_low_support_fraction": 0.9916274400722735,
+        "all_source_support_low": false,
+        "added_seconds": 0.23282019908606344,
+        "source_to_target_mean_rate": 1.2585417027600332,
+        "angular_excursion_max_rad": 0.1431423064272854,
+        "FK_excursion_rms_max_m": 0.028696238436142853,
+        "semantic_quality": "UNKNOWN"
+      }
+    ],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b10_f449ca842cdeb74f_+6",
+    "case_key": "r66b10_f449ca842cdeb74f",
+    "method": "B_GTWExtended",
+    "source_uid": "female_meditation",
+    "runs": [
+      {
+        "target_cells": [
+          44,
+          78
+        ],
+        "target_seconds": 1.1333333333333333,
+        "source_frame_centers": [
+          2594.2107939780476,
+          2621.2261880054657
+        ],
+        "source_natural_seconds": 0.9005131342472699,
+        "source_low_support_fraction": 0.9916274400722735,
+        "all_source_support_low": false,
+        "added_seconds": 0.23282019908606344,
+        "source_to_target_mean_rate": 1.2585417027600332,
+        "angular_excursion_max_rad": 0.1431423064272854,
+        "FK_excursion_rms_max_m": 0.028696238436142853,
+        "semantic_quality": "UNKNOWN"
+      }
+    ],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b10_f449ca842cdeb74f_+6",
+    "case_key": "r66b10_f449ca842cdeb74f",
+    "method": "B_GTWContext",
+    "source_uid": "female_meditation",
+    "runs": [
+      {
+        "target_cells": [
+          45,
+          75
+        ],
+        "target_seconds": 1.0,
+        "source_frame_centers": [
+          2593.5806451612902,
+          2621.1612903225805
+        ],
+        "source_natural_seconds": 0.9193548387096749,
+        "source_low_support_fraction": 0.9789473684210552,
+        "all_source_support_low": false,
+        "added_seconds": 0.08064516129032502,
+        "source_to_target_mean_rate": 1.087719298245617,
+        "angular_excursion_max_rad": 0.14502607629996375,
+        "FK_excursion_rms_max_m": 0.02879433739803247,
+        "semantic_quality": "UNKNOWN"
+      }
+    ],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b10_f449ca842cdeb74f_-6",
+    "case_key": "r66b10_f449ca842cdeb74f",
+    "method": "E1W",
+    "source_uid": "female_meditation",
+    "runs": [
+      {
+        "target_cells": [
+          42,
+          72
+        ],
+        "target_seconds": 1.0,
+        "source_frame_centers": [
+          2593.5806451612902,
+          2621.1612903225805
+        ],
+        "source_natural_seconds": 0.9193548387096749,
+        "source_low_support_fraction": 0.9789473684210552,
+        "all_source_support_low": false,
+        "added_seconds": 0.08064516129032502,
+        "source_to_target_mean_rate": 1.087719298245617,
+        "angular_excursion_max_rad": 0.14502607629996375,
+        "FK_excursion_rms_max_m": 0.02879433739803247,
+        "semantic_quality": "UNKNOWN"
+      }
+    ],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b10_f449ca842cdeb74f_-6",
+    "case_key": "r66b10_f449ca842cdeb74f",
+    "method": "Uniform",
+    "source_uid": "female_meditation",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b10_f449ca842cdeb74f_-6",
+    "case_key": "r66b10_f449ca842cdeb74f",
+    "method": "A_GTWLocal",
+    "source_uid": "female_meditation",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b10_f449ca842cdeb74f_-6",
+    "case_key": "r66b10_f449ca842cdeb74f",
+    "method": "A_GTWExtended",
+    "source_uid": "female_meditation",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b10_f449ca842cdeb74f_-6",
+    "case_key": "r66b10_f449ca842cdeb74f",
+    "method": "A_GTWContext",
+    "source_uid": "female_meditation",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b10_f449ca842cdeb74f_-6",
+    "case_key": "r66b10_f449ca842cdeb74f",
+    "method": "B_GTWLocal",
+    "source_uid": "female_meditation",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b10_f449ca842cdeb74f_-6",
+    "case_key": "r66b10_f449ca842cdeb74f",
+    "method": "B_GTWExtended",
+    "source_uid": "female_meditation",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b10_f449ca842cdeb74f_-6",
+    "case_key": "r66b10_f449ca842cdeb74f",
+    "method": "B_GTWContext",
+    "source_uid": "female_meditation",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b10_f449ca842cdeb74f_+3",
+    "case_key": "r66b10_f449ca842cdeb74f",
+    "method": "E1W",
+    "source_uid": "female_meditation",
+    "runs": [
+      {
+        "target_cells": [
+          42,
+          72
+        ],
+        "target_seconds": 1.0,
+        "source_frame_centers": [
+          2593.5806451612902,
+          2621.1612903225805
+        ],
+        "source_natural_seconds": 0.9193548387096749,
+        "source_low_support_fraction": 0.9789473684210552,
+        "all_source_support_low": false,
+        "added_seconds": 0.08064516129032502,
+        "source_to_target_mean_rate": 1.087719298245617,
+        "angular_excursion_max_rad": 0.14502607629996375,
+        "FK_excursion_rms_max_m": 0.02879433739803247,
+        "semantic_quality": "UNKNOWN"
+      }
+    ],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b10_f449ca842cdeb74f_+3",
+    "case_key": "r66b10_f449ca842cdeb74f",
+    "method": "Uniform",
+    "source_uid": "female_meditation",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b10_f449ca842cdeb74f_+3",
+    "case_key": "r66b10_f449ca842cdeb74f",
+    "method": "A_GTWLocal",
+    "source_uid": "female_meditation",
+    "runs": [
+      {
+        "target_cells": [
+          43,
+          75
+        ],
+        "target_seconds": 1.0666666666666667,
+        "source_frame_centers": [
+          2594.1871377809184,
+          2621.208936173058
+        ],
+        "source_natural_seconds": 0.9007266130713257,
+        "source_low_support_fraction": 0.9922678657420904,
+        "all_source_support_low": false,
+        "added_seconds": 0.16594005359534095,
+        "source_to_target_mean_rate": 1.1842291003587797,
+        "angular_excursion_max_rad": 0.14312137579877726,
+        "FK_excursion_rms_max_m": 0.02865562743270937,
+        "semantic_quality": "UNKNOWN"
+      }
+    ],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b10_f449ca842cdeb74f_+3",
+    "case_key": "r66b10_f449ca842cdeb74f",
+    "method": "A_GTWExtended",
+    "source_uid": "female_meditation",
+    "runs": [
+      {
+        "target_cells": [
+          43,
+          75
+        ],
+        "target_seconds": 1.0666666666666667,
+        "source_frame_centers": [
+          2593.9204655309427,
+          2621.194196566221
+        ],
+        "source_natural_seconds": 0.9091243678426053,
+        "source_low_support_fraction": 0.9899635647603882,
+        "all_source_support_low": false,
+        "added_seconds": 0.15754229882406132,
+        "source_to_target_mean_rate": 1.1732901508271267,
+        "angular_excursion_max_rad": 0.1437986246019176,
+        "FK_excursion_rms_max_m": 0.028621670786294455,
+        "semantic_quality": "UNKNOWN"
+      }
+    ],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b10_f449ca842cdeb74f_+3",
+    "case_key": "r66b10_f449ca842cdeb74f",
+    "method": "A_GTWContext",
+    "source_uid": "female_meditation",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b10_f449ca842cdeb74f_+3",
+    "case_key": "r66b10_f449ca842cdeb74f",
+    "method": "B_GTWLocal",
+    "source_uid": "female_meditation",
+    "runs": [
+      {
+        "target_cells": [
+          43,
+          75
+        ],
+        "target_seconds": 1.0666666666666667,
+        "source_frame_centers": [
+          2594.1871377809184,
+          2621.208936173058
+        ],
+        "source_natural_seconds": 0.9007266130713257,
+        "source_low_support_fraction": 0.9922678657420904,
+        "all_source_support_low": false,
+        "added_seconds": 0.16594005359534095,
+        "source_to_target_mean_rate": 1.1842291003587797,
+        "angular_excursion_max_rad": 0.14312137579877726,
+        "FK_excursion_rms_max_m": 0.02865562743270937,
+        "semantic_quality": "UNKNOWN"
+      }
+    ],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b10_f449ca842cdeb74f_+3",
+    "case_key": "r66b10_f449ca842cdeb74f",
+    "method": "B_GTWExtended",
+    "source_uid": "female_meditation",
+    "runs": [
+      {
+        "target_cells": [
+          43,
+          75
+        ],
+        "target_seconds": 1.0666666666666667,
+        "source_frame_centers": [
+          2593.9204655309427,
+          2621.194196566221
+        ],
+        "source_natural_seconds": 0.9091243678426053,
+        "source_low_support_fraction": 0.9899635647603882,
+        "all_source_support_low": false,
+        "added_seconds": 0.15754229882406132,
+        "source_to_target_mean_rate": 1.1732901508271267,
+        "angular_excursion_max_rad": 0.1437986246019176,
+        "FK_excursion_rms_max_m": 0.028621670786294455,
+        "semantic_quality": "UNKNOWN"
+      }
+    ],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b10_f449ca842cdeb74f_+3",
+    "case_key": "r66b10_f449ca842cdeb74f",
+    "method": "B_GTWContext",
+    "source_uid": "female_meditation",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b10_f449ca842cdeb74f_-3",
+    "case_key": "r66b10_f449ca842cdeb74f",
+    "method": "E1W",
+    "source_uid": "female_meditation",
+    "runs": [
+      {
+        "target_cells": [
+          42,
+          72
+        ],
+        "target_seconds": 1.0,
+        "source_frame_centers": [
+          2593.5806451612902,
+          2621.1612903225805
+        ],
+        "source_natural_seconds": 0.9193548387096749,
+        "source_low_support_fraction": 0.9789473684210552,
+        "all_source_support_low": false,
+        "added_seconds": 0.08064516129032502,
+        "source_to_target_mean_rate": 1.087719298245617,
+        "angular_excursion_max_rad": 0.14502607629996375,
+        "FK_excursion_rms_max_m": 0.02879433739803247,
+        "semantic_quality": "UNKNOWN"
+      }
+    ],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b10_f449ca842cdeb74f_-3",
+    "case_key": "r66b10_f449ca842cdeb74f",
+    "method": "Uniform",
+    "source_uid": "female_meditation",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b10_f449ca842cdeb74f_-3",
+    "case_key": "r66b10_f449ca842cdeb74f",
+    "method": "A_GTWLocal",
+    "source_uid": "female_meditation",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b10_f449ca842cdeb74f_-3",
+    "case_key": "r66b10_f449ca842cdeb74f",
+    "method": "A_GTWExtended",
+    "source_uid": "female_meditation",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b10_f449ca842cdeb74f_-3",
+    "case_key": "r66b10_f449ca842cdeb74f",
+    "method": "A_GTWContext",
+    "source_uid": "female_meditation",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b10_f449ca842cdeb74f_-3",
+    "case_key": "r66b10_f449ca842cdeb74f",
+    "method": "B_GTWLocal",
+    "source_uid": "female_meditation",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b10_f449ca842cdeb74f_-3",
+    "case_key": "r66b10_f449ca842cdeb74f",
+    "method": "B_GTWExtended",
+    "source_uid": "female_meditation",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b10_f449ca842cdeb74f_-3",
+    "case_key": "r66b10_f449ca842cdeb74f",
+    "method": "B_GTWContext",
+    "source_uid": "female_meditation",
+    "runs": [],
+    "whole_core_source_low_support": false
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b11_73f9e95e0fef2d60_+6",
+    "case_key": "r66b11_73f9e95e0fef2d60",
+    "method": "E1W",
+    "source_uid": "male_meditation",
+    "runs": [
+      {
+        "target_cells": [
+          0,
+          239
+        ],
+        "target_seconds": 7.966666666666667,
+        "source_frame_centers": [
+          1071.0,
+          1316.0
+        ],
+        "source_natural_seconds": 8.166666666666666,
+        "source_low_support_fraction": 1.0,
+        "all_source_support_low": true,
+        "added_seconds": -0.2,
+        "source_to_target_mean_rate": 0.9755102040816327,
+        "angular_excursion_max_rad": 0.35931863743003534,
+        "FK_excursion_rms_max_m": 0.03870504354889745,
+        "semantic_quality": "UNKNOWN"
+      }
+    ],
+    "whole_core_source_low_support": true
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b11_73f9e95e0fef2d60_+6",
+    "case_key": "r66b11_73f9e95e0fef2d60",
+    "method": "Uniform",
+    "source_uid": "male_meditation",
+    "runs": [
+      {
+        "target_cells": [
+          0,
+          239
+        ],
+        "target_seconds": 7.966666666666667,
+        "source_frame_centers": [
+          1071.0,
+          1316.0
+        ],
+        "source_natural_seconds": 8.166666666666666,
+        "source_low_support_fraction": 1.0,
+        "all_source_support_low": true,
+        "added_seconds": -0.2,
+        "source_to_target_mean_rate": 0.9755102040816327,
+        "angular_excursion_max_rad": 0.3593609196773658,
+        "FK_excursion_rms_max_m": 0.03870504354889745,
+        "semantic_quality": "UNKNOWN"
+      }
+    ],
+    "whole_core_source_low_support": true
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b11_73f9e95e0fef2d60_-6",
+    "case_key": "r66b11_73f9e95e0fef2d60",
+    "method": "E1W",
+    "source_uid": "male_meditation",
+    "runs": [
+      {
+        "target_cells": [
+          0,
+          239
+        ],
+        "target_seconds": 7.966666666666667,
+        "source_frame_centers": [
+          1071.0,
+          1316.0
+        ],
+        "source_natural_seconds": 8.166666666666666,
+        "source_low_support_fraction": 1.0,
+        "all_source_support_low": true,
+        "added_seconds": -0.2,
+        "source_to_target_mean_rate": 0.9755102040816327,
+        "angular_excursion_max_rad": 0.35931863743003534,
+        "FK_excursion_rms_max_m": 0.03870504354889745,
+        "semantic_quality": "UNKNOWN"
+      }
+    ],
+    "whole_core_source_low_support": true
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b11_73f9e95e0fef2d60_-6",
+    "case_key": "r66b11_73f9e95e0fef2d60",
+    "method": "Uniform",
+    "source_uid": "male_meditation",
+    "runs": [
+      {
+        "target_cells": [
+          0,
+          239
+        ],
+        "target_seconds": 7.966666666666667,
+        "source_frame_centers": [
+          1071.0,
+          1316.0
+        ],
+        "source_natural_seconds": 8.166666666666666,
+        "source_low_support_fraction": 1.0,
+        "all_source_support_low": true,
+        "added_seconds": -0.2,
+        "source_to_target_mean_rate": 0.9755102040816327,
+        "angular_excursion_max_rad": 0.3593609196773658,
+        "FK_excursion_rms_max_m": 0.03870504354889745,
+        "semantic_quality": "UNKNOWN"
+      }
+    ],
+    "whole_core_source_low_support": true
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b11_73f9e95e0fef2d60_+3",
+    "case_key": "r66b11_73f9e95e0fef2d60",
+    "method": "E1W",
+    "source_uid": "male_meditation",
+    "runs": [
+      {
+        "target_cells": [
+          0,
+          239
+        ],
+        "target_seconds": 7.966666666666667,
+        "source_frame_centers": [
+          1071.0,
+          1316.0
+        ],
+        "source_natural_seconds": 8.166666666666666,
+        "source_low_support_fraction": 1.0,
+        "all_source_support_low": true,
+        "added_seconds": -0.2,
+        "source_to_target_mean_rate": 0.9755102040816327,
+        "angular_excursion_max_rad": 0.35931863743003534,
+        "FK_excursion_rms_max_m": 0.03870504354889745,
+        "semantic_quality": "UNKNOWN"
+      }
+    ],
+    "whole_core_source_low_support": true
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b11_73f9e95e0fef2d60_+3",
+    "case_key": "r66b11_73f9e95e0fef2d60",
+    "method": "Uniform",
+    "source_uid": "male_meditation",
+    "runs": [
+      {
+        "target_cells": [
+          0,
+          239
+        ],
+        "target_seconds": 7.966666666666667,
+        "source_frame_centers": [
+          1071.0,
+          1316.0
+        ],
+        "source_natural_seconds": 8.166666666666666,
+        "source_low_support_fraction": 1.0,
+        "all_source_support_low": true,
+        "added_seconds": -0.2,
+        "source_to_target_mean_rate": 0.9755102040816327,
+        "angular_excursion_max_rad": 0.3593609196773658,
+        "FK_excursion_rms_max_m": 0.03870504354889745,
+        "semantic_quality": "UNKNOWN"
+      }
+    ],
+    "whole_core_source_low_support": true
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b11_73f9e95e0fef2d60_-3",
+    "case_key": "r66b11_73f9e95e0fef2d60",
+    "method": "E1W",
+    "source_uid": "male_meditation",
+    "runs": [
+      {
+        "target_cells": [
+          0,
+          239
+        ],
+        "target_seconds": 7.966666666666667,
+        "source_frame_centers": [
+          1071.0,
+          1316.0
+        ],
+        "source_natural_seconds": 8.166666666666666,
+        "source_low_support_fraction": 1.0,
+        "all_source_support_low": true,
+        "added_seconds": -0.2,
+        "source_to_target_mean_rate": 0.9755102040816327,
+        "angular_excursion_max_rad": 0.35931863743003534,
+        "FK_excursion_rms_max_m": 0.03870504354889745,
+        "semantic_quality": "UNKNOWN"
+      }
+    ],
+    "whole_core_source_low_support": true
+  },
+  {
+    "study": "GTW",
+    "unit": "r66b11_73f9e95e0fef2d60_-3",
+    "case_key": "r66b11_73f9e95e0fef2d60",
+    "method": "Uniform",
+    "source_uid": "male_meditation",
+    "runs": [
+      {
+        "target_cells": [
+          0,
+          239
+        ],
+        "target_seconds": 7.966666666666667,
+        "source_frame_centers": [
+          1071.0,
+          1316.0
+        ],
+        "source_natural_seconds": 8.166666666666666,
+        "source_low_support_fraction": 1.0,
+        "all_source_support_low": true,
+        "added_seconds": -0.2,
+        "source_to_target_mean_rate": 0.9755102040816327,
+        "angular_excursion_max_rad": 0.3593609196773658,
+        "FK_excursion_rms_max_m": 0.03870504354889745,
+        "semantic_quality": "UNKNOWN"
+      }
+    ],
+    "whole_core_source_low_support": true
+  }
+]

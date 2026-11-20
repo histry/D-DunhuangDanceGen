@@ -1,0 +1,25 @@
+{
+  "binding": {
+    "code": {
+      "study.py": "d45d5f36eddfe4ddd6d6156cbafb864ebab690a0ada334bacdf04c89f7f54fa9",
+      "metrics.py": "45ace4b8d52b19af6e68f60b2b0168f1babbf47acbcd6a24f800c6b1ed3f1cd6",
+      "protocol.json": "c56fc70c47f86dd8917015450cddd09fd28e3557a06335002f6a46e089d4c8ef"
+    },
+    "dependencies": {
+      "gtw_kinematic_baseline/features.py": "d6920145393c340d571405833837f26dd49aeaffb6a0c216db1d479683e246ac",
+      "compensation_r73/warp.py": "1c314e70159331ac26a0aa10dcd7f59e4582592307057ae4adb4ddf2c402acfc",
+      "sdmr_warp_rank/encoder.py": "40a90219358d5ebefe2b30458afced913c9143a5d123fc07e11ec7971432b62e",
+      "sdmr_warp_rank/readout.py": "b0308bbf9ebbbab35f1008a0fb9a1d6a608158d5da36e15c265a8b739d8404eb",
+      "sdmr_warp_rank/connectivity.py": "e1b5ea6c2ebf4b7dffd9594e79c544033c2da95d8d381fd8a7491a829c61db25",
+      "complete_r36/core.py": "03f296665e48ca2fa2ef8a866baaf2b4b786afeb22f468b6faeedac7225e9901"
+    }
+  },
+  "files": {
+    "calibration.json": "efbd0a5e18169260a2bc631d890f80b4afa6cea265d80b1018e5ef7e008b5f9e",
+    "natural_sources.json": "df97bda10aea6dbb238fce0fb68bdb1f4b67f23bfb1f3e9af4819824fd473bfc",
+    "records.json": "8db54ae5ffa88cccc045155690f74fa6a63fd6a746aed7ec05c662d665e868e8",
+    "references.json": "f52027150dcf9347cd61a6b56488c9d3adf31d409af912117b58476ee82b1c64",
+    "registration.json": "fd497c36dcd2fdd841a6445c4fa234f0b6a10e520c6fba3c07279c149884ed0f",
+    "summary.json": "c828e4146170cc5db13230aa342cf3d63172eb3f03b017a229ff765663bbac63"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "schema": "HOLD_TIMING_Q01",
+  "parent": "39ed334891f9f89bcdf431220637317565fa67ad",
+  "preview": "ALL12_HISTORICAL_SOURCE_CASES_BEFORE_CONTROLS",
+  "historical_studies": [
+    "R69",
+    "R73",
+    "GTW"
+  ],
+  "R69_manifest": "57ea35f5d7bd1d5d63da065e46e59951698d78b05c844de9aae711f890b08abe",
+  "R73_manifest": "05f3cf963c8d92f49e2da3020ac68c484a28da6777781527399ff448fd8f0192",
+  "GTW_manifest": "9f9419779c1a9335b9c55f6536db691e1873a95be17d4d0f2a3861300785454c",
+  "calibration": "FOUR_FROZEN_R47_TRAIN_RECORDINGS_ONLY_MEDIAN_PER_SOURCE_Q20_ANGULAR_AND_FK_SPEED",
+  "sensitivity_quantiles": [
+    0.1,
+    0.2,
+    0.3
+  ],
+  "angular_cap_radps": 0.2,
+  "minimum_detected_run_cells": 30,
+  "hold_cap": "MEDIAN_PER_TRAIN_SOURCE_Q75_RUN_DURATION_NOT_HUMAN_TOLERANCE",
+  "candidate_domain": "EXISTING_R73_ALL_FOUR_DOSES_LEGAL_PROPOSALS_PLUS_E1W_AND_UNIFORM_DEDUP_CLOCK_SHA",
+  "frames": 240,
+  "bridge_frames": 48,
+  "rate_limits": [
+    0.75,
+    1.33
+  ],
+  "hold_selection": "LEXICOGRAPHIC_EXCESS_THEN_GTW_LOCAL_THEN_CLOCK_SHIFT_THEN_ID; UNCALIBRATED_MECHANISM_ONLY",
+  "music_proxy": "MEAN_FULLSONG_RANKED_ENERGY_AND_Q95_ONSET; AUTOMATIC_NOT_ARTISTIC_TRUTH",
+  "music_cap_multiplier": "1.33-(1.33-0.75)*MEAN_PROXY_IN_MAPPED_SOURCE_LOW_INTERVAL",
+  "wrong_music": "NEXT_REGISTERED_DUNHUANG_FULL_SONG_SAME_ABSOLUTE_SUPPORT_NO_WRAP",
+  "sdmr": "FROZEN_R41_SINGLE64_MULTI64_ACTUAL_ROTATION_REENCODING_SHARED_SUPPORT",
+  "fusion": "PARETO_READOUT_ONLY; DECISION_ABSTAINS_TO_E1W_WITHOUT_CALIBRATED_MUSIC_MARGIN",
+  "human_records": 0,
+  "new_training_steps": 0,
+  "can_route": false,
+  "R74": "NOT_STARTED"
+}

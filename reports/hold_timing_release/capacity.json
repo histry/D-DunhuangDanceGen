@@ -1,0 +1,32 @@
+[
+  {
+    "case_key": "r66b03_a9c01b65dc66d062",
+    "source_uid": "male_meditation",
+    "source_interval": [
+      1071,
+      1317
+    ],
+    "pool": 2,
+    "whole_source_low_support": 2,
+    "target_durations_seconds": [
+      7.966666666666667,
+      7.966666666666667
+    ],
+    "scope": "CURRENT_FROZEN_SOURCE_AND_240_FRAME_BUDGET_NOT_GLOBAL_INFEASIBILITY"
+  },
+  {
+    "case_key": "r66b11_73f9e95e0fef2d60",
+    "source_uid": "male_meditation",
+    "source_interval": [
+      1071,
+      1317
+    ],
+    "pool": 2,
+    "whole_source_low_support": 2,
+    "target_durations_seconds": [
+      7.966666666666667,
+      7.966666666666667
+    ],
+    "scope": "CURRENT_FROZEN_SOURCE_AND_240_FRAME_BUDGET_NOT_GLOBAL_INFEASIBILITY"
+  }
+]
