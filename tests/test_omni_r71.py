@@ -73,7 +73,7 @@ def test_real_sample_rate_covers_full_video_not_requested_rate():
     video=[None]*16
     meta=dict(frames_indices=[round(i*527/15) for i in range(16)],total_num_frames=528,fps=30)
     videos,metadata,rates=video_clocks([(video,meta)])
-    assert rates==[16/17.6]
+    assert rates==pytest.approx([16/17.6],abs=1e-12)
     assert abs(8*(2/rates[0])-17.6)<1e-9
     assert metadata[0]['frame_times_seconds'][-1]==527/30
 
