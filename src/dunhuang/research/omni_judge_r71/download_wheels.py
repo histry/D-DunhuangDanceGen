@@ -26,7 +26,10 @@ def main():
         assert len(urls) == 1, (package, urls)
         url = urls[0]
         expected = urlsplit(url).fragment.removeprefix('sha256=')
-        assert urlsplit(url).hostname == 'download.pytorch.org' and len(expected)==64
+        assert urlsplit(url).hostname in ('download.pytorch.org','download-r2.pytorch.org','pypi.nvidia.com') and len(expected)==64
+        published_url = url
+        if urlsplit(url).hostname == 'pypi.nvidia.com':
+            url = 'https://download.pytorch.org/whl/cu124/' + Path(urlsplit(url).path).name
         target = folder / Path(urlsplit(url).path).name
         if not target.exists():
             with requests.get(url, headers={'Range':'bytes=0-0'}, stream=True, timeout=(15,30)) as response:
@@ -54,7 +57,7 @@ def main():
             partial.replace(target)
             for p in chunks: p.unlink()
         assert hashlib.sha256(target.read_bytes()).hexdigest()==expected
-        receipts.append(dict(package=package,version=version,url=url,sha256=expected,bytes=target.stat().st_size))
+        receipts.append(dict(package=package,version=version,url=url,published_url=published_url,sha256=expected,bytes=target.stat().st_size))
         print('OFFICIAL_WHEEL_VERIFIED',target.name,flush=True)
     (ROOT/'receipts/official_wheels.json').write_text(json.dumps(receipts,indent=2))
 
