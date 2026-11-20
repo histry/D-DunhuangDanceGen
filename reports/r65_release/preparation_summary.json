@@ -1,0 +1,24 @@
+{
+  "case_count": 29,
+  "frozen_method_outputs": 116,
+  "full_audio_items": 3,
+  "forms": 2,
+  "position_cell_count_range": [
+    7,
+    8
+  ],
+  "maximum_position_imbalance": 1,
+  "exact_position_counts_withheld_until_unblinding": true,
+  "identical_trajectory_group_count": 26,
+  "method_names": [
+    "Fixed48",
+    "BeatOnly",
+    "LocalBeat",
+    "ShuffledBeat"
+  ],
+  "all_cases_included": true,
+  "originals_and_duplicates_retained": true,
+  "assignment_mapping_and_seed_public": false,
+  "human_records": 0,
+  "human_reviewed": false
+}

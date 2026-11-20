@@ -1,0 +1,34 @@
+{
+  "binding": {
+    "commit": "a005719fa647e309e31336b78b2239986069e9cd",
+    "code": {
+      "__init__.py": "f6a8a51918a0bf885550b2fa43561620ccd5ecac7347a49cfa054a64032e37bc",
+      "common.py": "7a5bc68d829a2130366d2b55badb497596fb1d518d330d4d73def8b5e1f4228a",
+      "diagnostics.py": "22c883f86c1ad06ba4922b52b71b105c6cced666de39feb0c3d88d4f2a5760f6",
+      "metrics.py": "730564aa15d0b72cf6bb384a4e488da5c388def2b24323b9243005e64b02c551",
+      "music.html": "77a094d89dbead9b54dbdbcdc53de8e432c57378541f003cb39530a6779cd842",
+      "package.py": "b3a2aa96f003d1ecfa57638b3270804a4dee386a2046de72497e92d8e4ab2cdd",
+      "protocol.json": "f0ed609695336b32511c94c485bdf42ef5f5180070b54b51da1b55a5d71795d6",
+      "records.py": "7e6dd2431a382e052ca20678c21ecb335820b5ea80b63e2c4b54480efd1e3128",
+      "study.py": "3db0141a4dc734145978f2812de4749036593f2d99b1e808a8d687c66f3e2ce5",
+      "viewer.html": "3dc3219a82671a96e30fc05883caf59c7cb343a09d2f21021e191aac2e901b4f",
+      "viewer.py": "d2fa64a027d9677b258aec658ad28c096fee5320b314f338aef9682065e766bc"
+    }
+  },
+  "main_result_sha256": "e47cdb79b96c2d170873ce3c2eae193386cfa1e5bf204fee8439c6a22e341b97",
+  "controls_result_sha256": "e20326fc3543b241b883df68e6a52a71842ee075afe9f51437b880e6a2e6f3a4",
+  "packet_files_bytes_exact": true,
+  "blind_assignments_exact": true,
+  "actual_trajectories_fk_recomputed": 116,
+  "frozen_score_controls_exact": true,
+  "empty_human_analysis_exact": true,
+  "parent_files_unchanged": 156,
+  "human_records": 0,
+  "human_reviewed": false,
+  "quality_conclusion": "NOT_EVALUABLE",
+  "new_geometry_solves": 0,
+  "neural_training_steps": 0,
+  "optimizer_calls": 0,
+  "Native24": "NOT_EVALUABLE",
+  "can_route": false
+}

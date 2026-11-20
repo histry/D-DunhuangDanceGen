@@ -1,0 +1,14 @@
+{
+  "mode": "verify",
+  "pid": 3288848,
+  "command": [
+    "/home/disk/lsm/conda_envs/edge/bin/python",
+    "scripts/quality_r65.py",
+    "verify"
+  ],
+  "started": 1795147159.9313767,
+  "exit_status": 0,
+  "commit": "a005719fa647e309e31336b78b2239986069e9cd",
+  "ended": 1795147199.855429,
+  "log_sha256": "1a7ab9b21fdad6fd9358974cf30664ec61538c9d3049087737520986e1096e34"
+}
