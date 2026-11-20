@@ -21,6 +21,8 @@ def run():
     shutil.copyfile(ROOT/'receipts/pip_freeze.txt',out/'pip_freeze.txt')
     pop=read(ROOT/'paired/population.json');write(out/'population.json',dict(selection=pop['selection'],exposure=pop['exposure'],requested_groups=pop['requested_groups'],registered_groups=pop['registered_groups'],sources=[{k:s.get(k) for k in ['source_uid','dataset','role','audio_sha256','clock_scope','status','legacy_error']} for s in pop['sources']]))
     write(out/'qualification.json',dict(automatic_candidate_catalog=True,full_song_inference=len(songs),independent_human_records=0,music_structure_accuracy='NOT_EVALUABLE',music_quality_gain='NOT_EVALUABLE',phrase_truth='UNKNOWN',Native24='NOT_EVALUABLE',can_route=False,planner_upgraded=False,training_steps=0,source_binding=sha(ROOT/'main/manifest.json')))
+    for p in out.iterdir():
+        if p.is_file():p.write_bytes(p.read_bytes().replace(b'\r\n',b'\n'))
     write(out/'manifest.json',dict(files={p.name:sha(p) for p in sorted(out.iterdir()) if p.is_file()},media_copied=False,weights_copied=False))
     print('MUSIC_EVENTS_PUBLIC_EVIDENCE_READY',len(songs),flush=True)
 
