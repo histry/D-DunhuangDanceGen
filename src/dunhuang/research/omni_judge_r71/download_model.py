@@ -50,6 +50,53 @@ def main():
         if path.is_file() and path.stat().st_size == item['size'] and digest(path) == item['sha256']:
             return
         partial = path.with_name(path.name + '.partial')
+        if item['size'] > 100 * 1024 * 1024:
+            # Standard HTTP Range requests, four disjoint workers per large file.
+            # Preserve any verified-prefix-sized serial partial from the first attempt;
+            # admission still requires the full author-provided SHA256 afterwards.
+            offset = partial.stat().st_size if partial.exists() else 0
+            if offset > item['size']:
+                raise ValueError('Oversized partial: ' + str(partial))
+            segments = [(a, min(a + 64 * 1024 * 1024, item['size']) - 1)
+                        for a in range(offset, item['size'], 64 * 1024 * 1024)]
+
+            def segment(bounds):
+                a, b = bounds
+                chunk = path.with_name(path.name + f'.r71chunk{a}')
+                if chunk.exists() and chunk.stat().st_size == b-a+1:
+                    return chunk
+                for attempt in range(3):
+                    try:
+                        with requests.get(API + '/repo', params={'Revision': item['revision'], 'FilePath': item['path']},
+                                          headers={'Range': f'bytes={a}-{b}'}, stream=True, timeout=(20, 60)) as response:
+                            response.raise_for_status()
+                            if response.status_code != 206 or response.headers.get('Content-Range') != f'bytes {a}-{b}/{item["size"]}':
+                                raise ValueError('Unexpected official range response')
+                            with chunk.open('wb') as stream:
+                                for block in response.iter_content(4 * 1024 * 1024):
+                                    stream.write(block)
+                        assert chunk.stat().st_size == b-a+1
+                        print('MODEL_RANGE_RECEIVED', item['path'], a, b, flush=True)
+                        return chunk
+                    except (requests.RequestException, ValueError, AssertionError):
+                        if attempt == 2:
+                            raise
+                raise RuntimeError('Unreachable')
+
+            with concurrent.futures.ThreadPoolExecutor(max_workers=4) as ranges:
+                chunks = list(ranges.map(segment, segments))
+            with partial.open('ab') as stream:
+                for chunk in chunks:
+                    with chunk.open('rb') as source:
+                        for block in iter(lambda: source.read(8 * 1024 * 1024), b''):
+                            stream.write(block)
+            if partial.stat().st_size != item['size'] or digest(partial) != item['sha256']:
+                raise ValueError('Official range-assembled SHA256 mismatch: ' + item['path'])
+            partial.replace(path)
+            for chunk in chunks:
+                chunk.unlink()
+            print('MODEL_FILE_VERIFIED', item['path'], item['size'], flush=True)
+            return
         for attempt in range(3):
             try:
                 offset = partial.stat().st_size if partial.exists() else 0

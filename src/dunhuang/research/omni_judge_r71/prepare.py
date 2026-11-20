@@ -25,7 +25,8 @@ def render(P,parents,path):
  from PIL import Image,ImageDraw
  process=subprocess.Popen(['ffmpeg','-v','error','-nostdin','-f','rawvideo','-pix_fmt','rgb24','-s','320x360','-r','30','-i','-','-an','-c:v','libx264','-preset','fast','-crf','20','-pix_fmt','yuv420p',str(path)],stdin=subprocess.PIPE)
  for pose in P:
-  image=Image.new('RGB',(320,360),(16,33,50));d=ImageDraw.Draw(image);xy=[(160+125*(p[0]+.35*p[2]),290-125*(p[1]-.15*p[2])) for p in pose]
+  image=Image.new('RGB',(320,360),(16,33,50));d=ImageDraw.Draw(image);xy=[(160+125*(p[0]+.35*p[2]),180-125*(p[1]-.15*p[2])) for p in pose]
+  if not all(5<=x<315 and 5<=y<355 for x,y in xy):raise ValueError('Common camera cropped body; media not admitted')
   for j in range(1,22):d.line([xy[int(parents[j])],xy[j]],fill=(136,220,200),width=3)
   process.stdin.write(image.tobytes())
  process.stdin.close()
@@ -33,7 +34,7 @@ def render(P,parents,path):
 def prepare(scope='pilot'):
  from dunhuang.research.complete_r36.core import relative_fk
  from dunhuang.research.sdmr_warp_rank import connectivity
- root=ROOT/('media' if scope=='pilot' else 'media_full');root.mkdir(parents=True,exist_ok=False)
+ root=ROOT/('media_v2' if scope=='pilot' else 'media_full');root.mkdir(parents=True,exist_ok=False)
  assert sha(SOURCE/'manifest.json')=='57ea35f5d7bd1d5d63da065e46e59951698d78b05c844de9aae711f890b08abe'
  manifest=read(SOURCE/'manifest.json')
  for name,h in manifest['files'].items():
