@@ -70,7 +70,10 @@ def analyze(path,out,registration,run_demucs=True):
     activ.update({'allin1_'+k:v for k,v in result.activations.items()})
     ac,meta=acoustic(path);activ.update({'acoustic_'+k:v for k,v in ac.items()});rows=[]
     def add(times,kind,source):
-        for i,t in enumerate(times):rows.append(event(t,kind,source,samples,sr,i))
+        for i,t in enumerate(times):
+            key=source+'_'+kind;curve=activ.get(key);rate=50 if source=='beat_this' else 100
+            probability=None if curve is None or np.asarray(curve).ndim!=1 else float(curve[min(len(curve)-1,max(0,int(np.rint(t*rate))))])
+            rows.append(event(t,kind,source,samples,sr,i,raw_model_probability=probability,probability_is_calibrated_accuracy=False))
     add(beats,'beat','beat_this');add(downbeats,'downbeat','beat_this');add(result.beats,'beat','allin1');add(result.downbeats,'downbeat','allin1')
     segments=[dict(start=float(s.start),end=float(s.end),model_label=s.label,semantic_truth='UNKNOWN_NOT_DUNHUANG_FUNCTION_TRUTH') for s in result.segments]
     interior=[s['start'] for s in segments if 0<s['start']<duration and s['model_label'] not in ['start','end']]
