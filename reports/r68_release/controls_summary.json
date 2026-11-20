@@ -1,0 +1,711 @@
+{
+  "Native24": "NOT_EVALUABLE",
+  "artistic_quality": "NOT_EVALUABLE",
+  "can_route": false,
+  "case_keys_with_records": 12,
+  "methods": {
+    "A_early": {
+      "G1_original_screen_status_counts": {
+        "NOT_EVALUATED": 5,
+        "True": 7
+      },
+      "failure_reason_counts": {
+        "CONTINUOUS_SOURCE_TO_TARGET_RATE_OUTSIDE_FROZEN_LIMITS": 2,
+        "REGISTERED_TYPE_HAS_NO_ELIGIBLE_EVENT": 3
+      },
+      "metrics": {
+        "FK_D1_mean_mps": {
+          "ci95": null,
+          "evaluable_records": 7,
+          "evaluable_source_intervals": 5,
+          "maximum": 0.5924003218073225,
+          "minimum": 0.140766565729571,
+          "missing_records": 5,
+          "position_weighted_mean": 0.354876870775313,
+          "registered_records": 12,
+          "source_interval_balanced_mean": 0.3836120422511454
+        },
+        "FK_D2_p95_mps2": {
+          "ci95": null,
+          "evaluable_records": 7,
+          "evaluable_source_intervals": 5,
+          "maximum": 20.073257494721133,
+          "minimum": 3.5976945963176794,
+          "missing_records": 5,
+          "position_weighted_mean": 8.84047357801182,
+          "registered_records": 12,
+          "source_interval_balanced_mean": 10.020559630735622
+        },
+        "FK_D3_p95_mps3": {
+          "ci95": null,
+          "evaluable_records": 7,
+          "evaluable_source_intervals": 5,
+          "maximum": 399.4756075283629,
+          "minimum": 114.40067465903805,
+          "missing_records": 5,
+          "position_weighted_mean": 203.60524194111227,
+          "registered_records": 12,
+          "source_interval_balanced_mean": 228.66073104873357
+        },
+        "FK_high_band_fraction": {
+          "ci95": null,
+          "evaluable_records": 7,
+          "evaluable_source_intervals": 5,
+          "maximum": 0.02760256488212667,
+          "minimum": 0.004158900463082734,
+          "missing_records": 5,
+          "position_weighted_mean": 0.012163641389752972,
+          "registered_records": 12,
+          "source_interval_balanced_mean": 0.011549100699422454
+        },
+        "FK_speed_ratio": {
+          "ci95": null,
+          "evaluable_records": 7,
+          "evaluable_source_intervals": 5,
+          "maximum": 1.000918272918495,
+          "minimum": 0.9973842252320754,
+          "missing_records": 5,
+          "position_weighted_mean": 0.999409064229625,
+          "registered_records": 12,
+          "source_interval_balanced_mean": 0.9994907116301059
+        },
+        "G1_boundary_D3_mps3": {
+          "ci95": null,
+          "evaluable_records": 7,
+          "evaluable_source_intervals": 5,
+          "maximum": 308.44229176646417,
+          "minimum": 22.219644309139706,
+          "missing_records": 5,
+          "position_weighted_mean": 88.16643695930999,
+          "registered_records": 12,
+          "source_interval_balanced_mean": 99.00040310646031
+        },
+        "G1_gap_D3_mps3": {
+          "ci95": null,
+          "evaluable_records": 7,
+          "evaluable_source_intervals": 5,
+          "maximum": 196.53200720438915,
+          "minimum": 15.6058925967798,
+          "missing_records": 5,
+          "position_weighted_mean": 49.41922930152485,
+          "registered_records": 12,
+          "source_interval_balanced_mean": 58.91534808501568
+        },
+        "SO3_speed_ratio": {
+          "ci95": null,
+          "evaluable_records": 7,
+          "evaluable_source_intervals": 5,
+          "maximum": 1.001114221026387,
+          "minimum": 0.993733692734876,
+          "missing_records": 5,
+          "position_weighted_mean": 0.9976909883431695,
+          "registered_records": 12,
+          "source_interval_balanced_mean": 0.9980646553630121
+        },
+        "max_source_clock_change_frames": {
+          "ci95": null,
+          "evaluable_records": 7,
+          "evaluable_source_intervals": 5,
+          "maximum": 7.225416921521628,
+          "minimum": 5.632653061225028,
+          "missing_records": 5,
+          "position_weighted_mean": 6.239395491215483,
+          "registered_records": 12,
+          "source_interval_balanced_mean": 6.314742066717235
+        }
+      },
+      "records_with_actual_metrics": 7,
+      "registered_records": 12,
+      "status_counts": {
+        "LEGAL": 7,
+        "NOT_FEASIBLE": 2,
+        "NO_EVENT": 3
+      }
+    },
+    "A_late": {
+      "G1_original_screen_status_counts": {
+        "NOT_EVALUATED": 8,
+        "True": 4
+      },
+      "failure_reason_counts": {
+        "CONTINUOUS_SOURCE_TO_TARGET_RATE_OUTSIDE_FROZEN_LIMITS": 5,
+        "REGISTERED_TYPE_HAS_NO_ELIGIBLE_EVENT": 3
+      },
+      "metrics": {
+        "FK_D1_mean_mps": {
+          "ci95": null,
+          "evaluable_records": 4,
+          "evaluable_source_intervals": 3,
+          "maximum": 0.4251688539045878,
+          "minimum": 0.14061289039771702,
+          "missing_records": 8,
+          "position_weighted_mean": 0.3051291593606455,
+          "registered_records": 12,
+          "source_interval_balanced_mean": 0.2651450009224369
+        },
+        "FK_D2_p95_mps2": {
+          "ci95": null,
+          "evaluable_records": 4,
+          "evaluable_source_intervals": 3,
+          "maximum": 9.11552188515702,
+          "minimum": 3.608823279231923,
+          "missing_records": 8,
+          "position_weighted_mean": 7.451882096408053,
+          "registered_records": 12,
+          "source_interval_balanced_mean": 6.989966397355716
+        },
+        "FK_D3_p95_mps3": {
+          "ci95": null,
+          "evaluable_records": 4,
+          "evaluable_source_intervals": 3,
+          "maximum": 210.9848825656148,
+          "minimum": 120.92999269095472,
+          "missing_records": 8,
+          "position_weighted_mean": 180.97636121396593,
+          "registered_records": 12,
+          "source_interval_balanced_mean": 175.099443853098
+        },
+        "FK_high_band_fraction": {
+          "ci95": null,
+          "evaluable_records": 4,
+          "evaluable_source_intervals": 3,
+          "maximum": 0.015041891885718542,
+          "minimum": 0.004890064364095552,
+          "missing_records": 8,
+          "position_weighted_mean": 0.008541756027256455,
+          "registered_records": 12,
+          "source_interval_balanced_mean": 0.009651973814641902
+        },
+        "FK_speed_ratio": {
+          "ci95": null,
+          "evaluable_records": 4,
+          "evaluable_source_intervals": 3,
+          "maximum": 0.9999242808522524,
+          "minimum": 0.9982249099034938,
+          "missing_records": 8,
+          "position_weighted_mean": 0.9991513991317489,
+          "registered_records": 12,
+          "source_interval_balanced_mean": 0.9992477173333785
+        },
+        "G1_boundary_D3_mps3": {
+          "ci95": null,
+          "evaluable_records": 4,
+          "evaluable_source_intervals": 3,
+          "maximum": 101.06214412070402,
+          "minimum": 33.15898565922263,
+          "missing_records": 8,
+          "position_weighted_mean": 63.8163569289549,
+          "registered_records": 12,
+          "source_interval_balanced_mean": 64.91442624929105
+        },
+        "G1_gap_D3_mps3": {
+          "ci95": null,
+          "evaluable_records": 4,
+          "evaluable_source_intervals": 3,
+          "maximum": 31.128299267189973,
+          "minimum": 26.367070565063443,
+          "missing_records": 8,
+          "position_weighted_mean": 28.466604152436492,
+          "registered_records": 12,
+          "source_interval_balanced_mean": 28.6252159520451
+        },
+        "SO3_speed_ratio": {
+          "ci95": null,
+          "evaluable_records": 4,
+          "evaluable_source_intervals": 3,
+          "maximum": 1.0001696997327312,
+          "minimum": 0.9936432861504438,
+          "missing_records": 8,
+          "position_weighted_mean": 0.9967415863308868,
+          "registered_records": 12,
+          "source_interval_balanced_mean": 0.9968483933919977
+        },
+        "max_source_clock_change_frames": {
+          "ci95": null,
+          "evaluable_records": 4,
+          "evaluable_source_intervals": 3,
+          "maximum": 6.000000000001819,
+          "minimum": 5.612903225806804,
+          "missing_records": 8,
+          "position_weighted_mean": 5.791855901370809,
+          "registered_records": 12,
+          "source_interval_balanced_mean": 5.786990664192975
+        }
+      },
+      "records_with_actual_metrics": 4,
+      "registered_records": 12,
+      "status_counts": {
+        "LEGAL": 4,
+        "NOT_FEASIBLE": 5,
+        "NO_EVENT": 3
+      }
+    },
+    "B_early": {
+      "G1_original_screen_status_counts": {
+        "NOT_EVALUATED": 3,
+        "True": 9
+      },
+      "failure_reason_counts": {
+        "CONTINUOUS_SOURCE_TO_TARGET_RATE_OUTSIDE_FROZEN_LIMITS": 3
+      },
+      "metrics": {
+        "FK_D1_mean_mps": {
+          "ci95": null,
+          "evaluable_records": 9,
+          "evaluable_source_intervals": 7,
+          "maximum": 0.592256278455426,
+          "minimum": 0.094778654954028,
+          "missing_records": 3,
+          "position_weighted_mean": 0.34420995027680257,
+          "registered_records": 12,
+          "source_interval_balanced_mean": 0.3617082119979492
+        },
+        "FK_D2_p95_mps2": {
+          "ci95": null,
+          "evaluable_records": 9,
+          "evaluable_source_intervals": 7,
+          "maximum": 20.073257494721133,
+          "minimum": 1.317504466034857,
+          "missing_records": 3,
+          "position_weighted_mean": 8.823197384601448,
+          "registered_records": 12,
+          "source_interval_balanced_mean": 9.635031308417869
+        },
+        "FK_D3_p95_mps3": {
+          "ci95": null,
+          "evaluable_records": 9,
+          "evaluable_source_intervals": 7,
+          "maximum": 438.4930017449661,
+          "minimum": 45.998028980128865,
+          "missing_records": 3,
+          "position_weighted_mean": 213.0458303646032,
+          "registered_records": 12,
+          "source_interval_balanced_mean": 233.74249988946477
+        },
+        "FK_high_band_fraction": {
+          "ci95": null,
+          "evaluable_records": 9,
+          "evaluable_source_intervals": 7,
+          "maximum": 0.027538316058702134,
+          "minimum": 0.003687808922469567,
+          "missing_records": 3,
+          "position_weighted_mean": 0.012224574634884662,
+          "registered_records": 12,
+          "source_interval_balanced_mean": 0.011890149092673765
+        },
+        "FK_speed_ratio": {
+          "ci95": null,
+          "evaluable_records": 9,
+          "evaluable_source_intervals": 7,
+          "maximum": 1.0008564727622544,
+          "minimum": 0.9973947087105488,
+          "missing_records": 3,
+          "position_weighted_mean": 0.9992633591590308,
+          "registered_records": 12,
+          "source_interval_balanced_mean": 0.9993314491517464
+        },
+        "G1_boundary_D3_mps3": {
+          "ci95": null,
+          "evaluable_records": 9,
+          "evaluable_source_intervals": 7,
+          "maximum": 308.44229176646417,
+          "minimum": 21.21943690997584,
+          "missing_records": 3,
+          "position_weighted_mean": 74.35336867515593,
+          "registered_records": 12,
+          "source_interval_balanced_mean": 78.14532498479072
+        },
+        "G1_gap_D3_mps3": {
+          "ci95": null,
+          "evaluable_records": 9,
+          "evaluable_source_intervals": 7,
+          "maximum": 196.53200720438915,
+          "minimum": 14.749893888698349,
+          "missing_records": 3,
+          "position_weighted_mean": 41.731484353813954,
+          "registered_records": 12,
+          "source_interval_balanced_mean": 46.317927785532866
+        },
+        "SO3_speed_ratio": {
+          "ci95": null,
+          "evaluable_records": 9,
+          "evaluable_source_intervals": 7,
+          "maximum": 0.9994780883846953,
+          "minimum": 0.9924820680139478,
+          "missing_records": 3,
+          "position_weighted_mean": 0.9967798968297795,
+          "registered_records": 12,
+          "source_interval_balanced_mean": 0.9969562855312937
+        },
+        "max_source_clock_change_frames": {
+          "ci95": null,
+          "evaluable_records": 9,
+          "evaluable_source_intervals": 7,
+          "maximum": 6.9296477645202685,
+          "minimum": 5.424638895358157,
+          "missing_records": 3,
+          "position_weighted_mean": 6.009110863038624,
+          "registered_records": 12,
+          "source_interval_balanced_mean": 5.992598240705596
+        }
+      },
+      "records_with_actual_metrics": 9,
+      "registered_records": 12,
+      "status_counts": {
+        "LEGAL": 9,
+        "NOT_FEASIBLE": 3
+      }
+    },
+    "B_late": {
+      "G1_original_screen_status_counts": {
+        "NOT_EVALUATED": 7,
+        "True": 5
+      },
+      "failure_reason_counts": {
+        "CONTINUOUS_SOURCE_TO_TARGET_RATE_OUTSIDE_FROZEN_LIMITS": 7
+      },
+      "metrics": {
+        "FK_D1_mean_mps": {
+          "ci95": null,
+          "evaluable_records": 5,
+          "evaluable_source_intervals": 4,
+          "maximum": 0.4248527179508443,
+          "minimum": 0.09481496663677967,
+          "missing_records": 7,
+          "position_weighted_mean": 0.22400675712107027,
+          "registered_records": 12,
+          "source_interval_balanced_mean": 0.22254432593230752
+        },
+        "FK_D2_p95_mps2": {
+          "ci95": null,
+          "evaluable_records": 5,
+          "evaluable_source_intervals": 4,
+          "maximum": 8.523446719270163,
+          "minimum": 1.4555546077654178,
+          "missing_records": 7,
+          "position_weighted_mean": 5.684743736498624,
+          "registered_records": 12,
+          "source_interval_balanced_mean": 5.219681156927214
+        },
+        "FK_D3_p95_mps3": {
+          "ci95": null,
+          "evaluable_records": 5,
+          "evaluable_source_intervals": 4,
+          "maximum": 198.70361629444506,
+          "minimum": 48.717183122590754,
+          "missing_records": 7,
+          "position_weighted_mean": 140.53597049951628,
+          "registered_records": 12,
+          "source_interval_balanced_mean": 130.04534470436775
+        },
+        "FK_high_band_fraction": {
+          "ci95": null,
+          "evaluable_records": 5,
+          "evaluable_source_intervals": 4,
+          "maximum": 0.01576657434534605,
+          "minimum": 0.005086040797743024,
+          "missing_records": 7,
+          "position_weighted_mean": 0.010249986488624687,
+          "registered_records": 12,
+          "source_interval_balanced_mean": 0.010587062394320813
+        },
+        "FK_speed_ratio": {
+          "ci95": null,
+          "evaluable_records": 5,
+          "evaluable_source_intervals": 4,
+          "maximum": 0.9998767428672383,
+          "minimum": 0.9979500116366183,
+          "missing_records": 7,
+          "position_weighted_mean": 0.9992195679487941,
+          "registered_records": 12,
+          "source_interval_balanced_mean": 0.9992961156230105
+        },
+        "G1_boundary_D3_mps3": {
+          "ci95": null,
+          "evaluable_records": 5,
+          "evaluable_source_intervals": 4,
+          "maximum": 101.06214412070402,
+          "minimum": 21.21943690997584,
+          "missing_records": 7,
+          "position_weighted_mean": 50.454202353407354,
+          "registered_records": 12,
+          "source_interval_balanced_mean": 56.09550715190627
+        },
+        "G1_gap_D3_mps3": {
+          "ci95": null,
+          "evaluable_records": 5,
+          "evaluable_source_intervals": 4,
+          "maximum": 31.128299267189973,
+          "minimum": 14.749893888698349,
+          "missing_records": 7,
+          "position_weighted_mean": 23.812628932714155,
+          "registered_records": 12,
+          "source_interval_balanced_mean": 24.31947559520212
+        },
+        "SO3_speed_ratio": {
+          "ci95": null,
+          "evaluable_records": 5,
+          "evaluable_source_intervals": 4,
+          "maximum": 1.0000590195057177,
+          "minimum": 0.9918921612158725,
+          "missing_records": 7,
+          "position_weighted_mean": 0.9962625308470587,
+          "registered_records": 12,
+          "source_interval_balanced_mean": 0.9965529630106857
+        },
+        "max_source_clock_change_frames": {
+          "ci95": null,
+          "evaluable_records": 5,
+          "evaluable_source_intervals": 4,
+          "maximum": 6.000000000001364,
+          "minimum": 5.631899417728619,
+          "missing_records": 7,
+          "position_weighted_mean": 5.818779169116897,
+          "registered_records": 12,
+          "source_interval_balanced_mean": 5.7916595718373
+        }
+      },
+      "records_with_actual_metrics": 5,
+      "registered_records": 12,
+      "status_counts": {
+        "LEGAL": 5,
+        "NOT_FEASIBLE": 7
+      }
+    },
+    "E1W": {
+      "G1_original_screen_status_counts": {
+        "True": 12
+      },
+      "failure_reason_counts": {},
+      "metrics": {
+        "FK_D1_mean_mps": {
+          "ci95": null,
+          "evaluable_records": 12,
+          "evaluable_source_intervals": 8,
+          "maximum": 0.5927794039382296,
+          "minimum": 0.010572391731944198,
+          "missing_records": 0,
+          "position_weighted_mean": 0.2793282169160798,
+          "registered_records": 12,
+          "source_interval_balanced_mean": 0.31809066264518204
+        },
+        "FK_D2_p95_mps2": {
+          "ci95": null,
+          "evaluable_records": 12,
+          "evaluable_source_intervals": 8,
+          "maximum": 20.073257494721133,
+          "minimum": 0.37307171937363515,
+          "missing_records": 0,
+          "position_weighted_mean": 7.355356772929166,
+          "registered_records": 12,
+          "source_interval_balanced_mean": 8.494350113678282
+        },
+        "FK_D3_p95_mps3": {
+          "ci95": null,
+          "evaluable_records": 12,
+          "evaluable_source_intervals": 8,
+          "maximum": 531.4795978869427,
+          "minimum": 15.675124874661293,
+          "missing_records": 0,
+          "position_weighted_mean": 190.33008112640914,
+          "registered_records": 12,
+          "source_interval_balanced_mean": 221.48039048476448
+        },
+        "FK_high_band_fraction": {
+          "ci95": null,
+          "evaluable_records": 12,
+          "evaluable_source_intervals": 8,
+          "maximum": 0.09727461242024968,
+          "minimum": 0.004289687622274724,
+          "missing_records": 0,
+          "position_weighted_mean": 0.026227018226525886,
+          "registered_records": 12,
+          "source_interval_balanced_mean": 0.02290684083687905
+        },
+        "FK_speed_ratio": {
+          "ci95": null,
+          "evaluable_records": 12,
+          "evaluable_source_intervals": 8,
+          "maximum": 1.0,
+          "minimum": 1.0,
+          "missing_records": 0,
+          "position_weighted_mean": 1.0,
+          "registered_records": 12,
+          "source_interval_balanced_mean": 1.0
+        },
+        "G1_boundary_D3_mps3": {
+          "ci95": null,
+          "evaluable_records": 12,
+          "evaluable_source_intervals": 8,
+          "maximum": 308.44229176646417,
+          "minimum": 17.08236466877398,
+          "missing_records": 0,
+          "position_weighted_mean": 60.868764794605994,
+          "registered_records": 12,
+          "source_interval_balanced_mean": 70.13252647416975
+        },
+        "G1_gap_D3_mps3": {
+          "ci95": null,
+          "evaluable_records": 12,
+          "evaluable_source_intervals": 8,
+          "maximum": 196.53200720438915,
+          "minimum": 12.145520994858472,
+          "missing_records": 0,
+          "position_weighted_mean": 34.98509001512082,
+          "registered_records": 12,
+          "source_interval_balanced_mean": 41.62075813495311
+        },
+        "SO3_speed_ratio": {
+          "ci95": null,
+          "evaluable_records": 12,
+          "evaluable_source_intervals": 8,
+          "maximum": 1.0,
+          "minimum": 1.0,
+          "missing_records": 0,
+          "position_weighted_mean": 1.0,
+          "registered_records": 12,
+          "source_interval_balanced_mean": 1.0
+        },
+        "max_source_clock_change_frames": {
+          "ci95": null,
+          "evaluable_records": 12,
+          "evaluable_source_intervals": 8,
+          "maximum": 0.0,
+          "minimum": 0.0,
+          "missing_records": 0,
+          "position_weighted_mean": 0.0,
+          "registered_records": 12,
+          "source_interval_balanced_mean": 0.0
+        }
+      },
+      "records_with_actual_metrics": 12,
+      "registered_records": 12,
+      "status_counts": {
+        "LEGAL": 12
+      }
+    },
+    "Uniform": {
+      "G1_original_screen_status_counts": {
+        "True": 12
+      },
+      "failure_reason_counts": {},
+      "metrics": {
+        "FK_D1_mean_mps": {
+          "ci95": null,
+          "evaluable_records": 12,
+          "evaluable_source_intervals": 8,
+          "maximum": 0.5920128538791684,
+          "minimum": 0.010521909036106194,
+          "missing_records": 0,
+          "position_weighted_mean": 0.2790232256403653,
+          "registered_records": 12,
+          "source_interval_balanced_mean": 0.3178069604817254
+        },
+        "FK_D2_p95_mps2": {
+          "ci95": null,
+          "evaluable_records": 12,
+          "evaluable_source_intervals": 8,
+          "maximum": 19.701863783607255,
+          "minimum": 0.37703237030293324,
+          "missing_records": 0,
+          "position_weighted_mean": 6.9055582237592,
+          "registered_records": 12,
+          "source_interval_balanced_mean": 7.971507816725553
+        },
+        "FK_D3_p95_mps3": {
+          "ci95": null,
+          "evaluable_records": 12,
+          "evaluable_source_intervals": 8,
+          "maximum": 403.6982746270548,
+          "minimum": 14.49957071560069,
+          "missing_records": 0,
+          "position_weighted_mean": 166.81134043340214,
+          "registered_records": 12,
+          "source_interval_balanced_mean": 193.81371573656045
+        },
+        "FK_high_band_fraction": {
+          "ci95": null,
+          "evaluable_records": 12,
+          "evaluable_source_intervals": 8,
+          "maximum": 0.08620622388964339,
+          "minimum": 0.004182922447744227,
+          "missing_records": 0,
+          "position_weighted_mean": 0.02389606913745722,
+          "registered_records": 12,
+          "source_interval_balanced_mean": 0.020768769712024123
+        },
+        "FK_speed_ratio": {
+          "ci95": null,
+          "evaluable_records": 12,
+          "evaluable_source_intervals": 8,
+          "maximum": 1.000585514703063,
+          "minimum": 0.991414081331839,
+          "missing_records": 0,
+          "position_weighted_mean": 0.9976501824118248,
+          "registered_records": 12,
+          "source_interval_balanced_mean": 0.9981385876284516
+        },
+        "G1_boundary_D3_mps3": {
+          "ci95": null,
+          "evaluable_records": 12,
+          "evaluable_source_intervals": 8,
+          "maximum": 305.5503059711722,
+          "minimum": 17.253159440596953,
+          "missing_records": 0,
+          "position_weighted_mean": 60.36296521608821,
+          "registered_records": 12,
+          "source_interval_balanced_mean": 69.4793690670047
+        },
+        "G1_gap_D3_mps3": {
+          "ci95": null,
+          "evaluable_records": 12,
+          "evaluable_source_intervals": 8,
+          "maximum": 194.20356024483326,
+          "minimum": 12.235528043236986,
+          "missing_records": 0,
+          "position_weighted_mean": 34.683806192244504,
+          "registered_records": 12,
+          "source_interval_balanced_mean": 41.216309168269156
+        },
+        "SO3_speed_ratio": {
+          "ci95": null,
+          "evaluable_records": 12,
+          "evaluable_source_intervals": 8,
+          "maximum": 1.0003735717809241,
+          "minimum": 0.9778352733537673,
+          "missing_records": 0,
+          "position_weighted_mean": 0.9943924777154733,
+          "registered_records": 12,
+          "source_interval_balanced_mean": 0.9949470162366212
+        },
+        "max_source_clock_change_frames": {
+          "ci95": null,
+          "evaluable_records": 12,
+          "evaluable_source_intervals": 8,
+          "maximum": 8.857740585774081,
+          "minimum": 3.305439330543777,
+          "missing_records": 0,
+          "position_weighted_mean": 5.5191771269177154,
+          "registered_records": 12,
+          "source_interval_balanced_mean": 5.522228033472814
+        }
+      },
+      "records_with_actual_metrics": 12,
+      "registered_records": 12,
+      "status_counts": {
+        "LEGAL": 12
+      }
+    }
+  },
+  "missing_and_infeasible_not_zero_filled": true,
+  "quality_winner": null,
+  "registered_cases": 12,
+  "registered_records": 72,
+  "repeated_music_positions_are_not_independent_source_recordings": true,
+  "scope": "DESCRIPTIVE_ALL_REGISTERED_METHOD_ROWS_WITH_EXPLICIT_DENOMINATORS_NO_BEST_SELECTION",
+  "status_counts": {
+    "LEGAL": 49,
+    "NOT_FEASIBLE": 17,
+    "NO_EVENT": 6
+  }
+}

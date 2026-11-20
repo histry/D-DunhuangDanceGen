@@ -1,0 +1,425 @@
+{
+  "missing_receipt_is_not_success": true,
+  "records": [
+    {
+      "metadata": {
+        "bundle_sha256": "175e34cc7cfcf78662db06ed0e9c963cbff6cca1f66fc4df52c2ca19177d43ea",
+        "https_fetch_exit": 128,
+        "https_stderr": "fatal: 无法访问 'https://github.com/histry/D-DunhuangDanceGen.git/'：gnutls_handshake() failed: The TLS connection was non-properly terminated.\n",
+        "stderr": "/tmp/ddg_r68_attribution.bundle 可以\n来自 /tmp/ddg_r68_attribution.bundle\n * branch            main       -> FETCH_HEAD\n",
+        "stdout": "这个包中含有这个引用：\n35eb82e0ba5103bc2f8e596a20c6dc3c5f138801 refs/heads/main\n这个包需要这个引用：\nfb8909c2dd0c05537edd6114b5c947675cc5958e \n更新 fb8909c..35eb82e\nFast-forward\n scripts/attribution_r68.py    | 181 ++++++++++++++++++++++++++++++++++++++++++\n tests/test_attribution_r68.py | 112 ++++++++++++++++++++++++++\n 2 files changed, 293 insertions(+)\n create mode 100644 scripts/attribution_r68.py\n create mode 100644 tests/test_attribution_r68.py\n",
+        "synchronization_exit": 0,
+        "target": "35eb82e0ba5103bc2f8e596a20c6dc3c5f138801"
+      },
+      "name": "attribution_sync.json",
+      "sha256": "73052893960345fbe3c5642355723c74961dc7f7639943208047a617ee83ac7b"
+    },
+    {
+      "metadata": {
+        "commit": "fb8909c2dd0c05537edd6114b5c947675cc5958e",
+        "completed_at": "2026-11-20T07:36:06.936172+00:00",
+        "controls_executed": false,
+        "independent_exact": true,
+        "media_delivered": false,
+        "own_tmp_files_remaining": [],
+        "preview_files": 15,
+        "scientific_archives_preserved": true,
+        "source_manifest_sha256": "b8bc64aa967ee54323ea74d62b597ca1bb15f975884ea4eafde90b33a06b1bdf",
+        "status": "PREVIEW_VERIFIED_AWAITING_MEDIA_AUTHORIZATION"
+      },
+      "name": "checkpoint_cleanup.json",
+      "sha256": "7a767499c55fc02ae641cab672c64ef855bd084b27b3945c252c4966cb46c809"
+    },
+    {
+      "metadata": {
+        "commit": "fb8909c2dd0c05537edd6114b5c947675cc5958e",
+        "completed_at": "2026-11-20T08:02:03.858978+00:00",
+        "exit_status": 0,
+        "log_sha256": "e2529740d86b1c4030677787092068c87a50f9143205858a7873b864d07dd4f2",
+        "neural_training_steps": 0,
+        "new_planner_searches": 0,
+        "stage": "controls",
+        "tmux_session": "ddg_r68_controls_01"
+      },
+      "name": "execution_controls.json",
+      "sha256": "3620ee6687bf37b9345e9964885d1215fac6c42c8117a13af4dc48e046a87bce"
+    },
+    {
+      "metadata": {
+        "commit": "fb8909c2dd0c05537edd6114b5c947675cc5958e",
+        "completed_at": "2026-11-20T07:31:08.306922+00:00",
+        "exit_status": 0,
+        "log_sha256": "c71a3d8175f4689028891c02235c6d86649b884758d47794d70f5703f09782d4",
+        "neural_training_steps": 0,
+        "new_planner_searches": 0,
+        "stage": "preview",
+        "tmux_session": "ddg_r68_preview_01"
+      },
+      "name": "execution_preview.json",
+      "sha256": "8ff6dec7658c480a1f5888298ac60f83c5028999d6a2687bc37ee9184b1c20c3"
+    },
+    {
+      "metadata": {
+        "commit": "fb8909c2dd0c05537edd6114b5c947675cc5958e",
+        "completed_at": "2026-11-20T08:05:09.058432+00:00",
+        "exit_status": 0,
+        "log_sha256": "e2529740d86b1c4030677787092068c87a50f9143205858a7873b864d07dd4f2",
+        "neural_training_steps": 0,
+        "new_planner_searches": 0,
+        "stage": "verify_controls",
+        "tmux_session": "ddg_r68_verify_controls_01"
+      },
+      "name": "execution_verify_controls.json",
+      "sha256": "1d92a6123c1337b7c9b041fe109ca33a83b50630b33c7c31a9c43cc5a0a3bb61"
+    },
+    {
+      "metadata": {
+        "commit": "fb8909c2dd0c05537edd6114b5c947675cc5958e",
+        "completed_at": "2026-11-20T07:33:05.577925+00:00",
+        "exit_status": 0,
+        "log_sha256": "c71a3d8175f4689028891c02235c6d86649b884758d47794d70f5703f09782d4",
+        "neural_training_steps": 0,
+        "new_planner_searches": 0,
+        "stage": "verify_preview",
+        "tmux_session": "ddg_r68_verify_preview_01"
+      },
+      "name": "execution_verify_preview.json",
+      "sha256": "93a9dff12f026dda8d43d25d022f563ceac4583f8cf4f60b8885d244a123d634"
+    },
+    {
+      "metadata": {
+        "bundle_sha256": "7526baf9cee06841c0eebe7c1583bd9086bc5c8f6286680c64959337e06164f1",
+        "certificate_verification_disabled": false,
+        "client_github_latest_verified": true,
+        "commit": "fb8909c2dd0c05537edd6114b5c947675cc5958e",
+        "https_fetch_exit_status": 128,
+        "transport": "VERIFIED_PUBLIC_GIT_BUNDLE"
+      },
+      "name": "synchronization.json",
+      "sha256": "32b9c793ad5eb0b910ccd12b96bd3f20a3b98fdef994eb677eaf5a611d93804a"
+    },
+    {
+      "metadata": {
+        "alternate_music_changes_audio": true,
+        "alternate_music_keeps_card_diagnostics": true,
+        "alternate_music_keeps_frame": true,
+        "audio": {
+          "duration": 8,
+          "frame": "输出帧 129 / 239 · 4.300 秒",
+          "paused": false,
+          "rate": 0.5
+        },
+        "cases": [
+          {
+            "cards": 6,
+            "frame": "输出帧 121 / 239 · 4.033 秒",
+            "placeholders": 0,
+            "selected": "female_FeiTian / dunhuangwu3 / r66b00_6280fdcb23109a34"
+          },
+          {
+            "cards": 6,
+            "frame": "输出帧 121 / 239 · 4.033 秒",
+            "placeholders": 0,
+            "selected": "female_lotus / dunhuangwu2 / r66b01_ca3f06a9b37a47ff"
+          },
+          {
+            "cards": 6,
+            "frame": "输出帧 121 / 239 · 4.033 秒",
+            "placeholders": 2,
+            "selected": "female_meditation / dunhuangwu4 / r66b02_70c9ebdda89155ec"
+          },
+          {
+            "cards": 6,
+            "frame": "输出帧 121 / 239 · 4.033 秒",
+            "placeholders": 4,
+            "selected": "male_meditation / dunhuangwu2 / r66b03_a9c01b65dc66d062"
+          },
+          {
+            "cards": 6,
+            "frame": "输出帧 121 / 239 · 4.033 秒",
+            "placeholders": 2,
+            "selected": "male_pipa_1 / dunhuangwu3 / r66b04_c4ded6ddc2d6940d"
+          },
+          {
+            "cards": 6,
+            "frame": "输出帧 121 / 239 · 4.033 秒",
+            "placeholders": 2,
+            "selected": "male_pipa_2 / dunhuangwu4 / r66b05_56fb0e6ccb0310ef"
+          },
+          {
+            "cards": 6,
+            "frame": "输出帧 121 / 239 · 4.033 秒",
+            "placeholders": 2,
+            "selected": "male_ribbon / dunhuangwu2 / r66b06_0a8028422bbfb1c4"
+          },
+          {
+            "cards": 6,
+            "frame": "输出帧 121 / 239 · 4.033 秒",
+            "placeholders": 3,
+            "selected": "male_ribbon_FenHe / dunhuangwu3 / r66b07_4717682e3be3dd02"
+          },
+          {
+            "cards": 6,
+            "frame": "输出帧 121 / 239 · 4.033 秒",
+            "placeholders": 1,
+            "selected": "female_FeiTian / dunhuangwu4 / r66b08_a7e0cdf241d7a758"
+          },
+          {
+            "cards": 6,
+            "frame": "输出帧 121 / 239 · 4.033 秒",
+            "placeholders": 3,
+            "selected": "female_lotus / dunhuangwu3 / r66b09_43aba2362b9199f7"
+          },
+          {
+            "cards": 6,
+            "frame": "输出帧 121 / 239 · 4.033 秒",
+            "placeholders": 0,
+            "selected": "female_meditation / dunhuangwu2 / r66b10_f449ca842cdeb74f"
+          },
+          {
+            "cards": 6,
+            "frame": "输出帧 121 / 239 · 4.033 秒",
+            "placeholders": 4,
+            "selected": "male_meditation / dunhuangwu4 / r66b11_73f9e95e0fef2d60"
+          }
+        ],
+        "checked_at": "2026-11-20T08:09:59.474Z",
+        "pair_view": {
+          "cards": 2
+        },
+        "scope": "ACTUAL_LOCALHOST_BROWSER_INTERACTION_NOT_ARTISTIC_QUALITY",
+        "screenshot": "controls_browser.jpg",
+        "source_manifest_sha256": "eea30ac1695642da5318dd5bf5db9df46da2daaa342fa0f300dca1765ad46523",
+        "status": "PASS",
+        "step120_to121": "输出帧 121 / 239 · 4.033 秒"
+      },
+      "name": "delivery/controls_browser_acceptance.json",
+      "sha256": "e44bc266d9384e98d08c056999489ed74dd22bbd09467cbecd1be3ad52424343"
+    },
+    {
+      "metadata": {
+        "all_sha256_exact": true,
+        "batch": "R68_EXPLICITLY_AUTHORIZED_CONTROLS_TWO_FILES",
+        "delivered_at": "2026-11-20T08:04:57.074439+00:00",
+        "files": [
+          {
+            "bytes": 352878,
+            "path": "viewer/36ce6f03d7a8_1536_1776.wav",
+            "sha256": "13d629d11e2ff8777c6d79cf6d47e0108cf4c918c35f1c50ca3c482e42bac655"
+          },
+          {
+            "bytes": 352878,
+            "path": "viewer/cd8f37bb78c3_1390_1630.wav",
+            "sha256": "62bba0dd9905fe720dc7f60e0d5484778991ada10e8946b4215ca5f01b1f6eab"
+          },
+          {
+            "bytes": 352878,
+            "path": "viewer/cd8f37bb78c3_1534_1774.wav",
+            "sha256": "9a8ce0742bfaaa70f9fd34ff4a45ec6a900ba5e058e57a1248981472cf863477"
+          },
+          {
+            "bytes": 352878,
+            "path": "viewer/cd8f37bb78c3_1535_1775.wav",
+            "sha256": "f0bc4fcea063991c264b07537270dfeb318995be87565572439923fe8692e1e4"
+          },
+          {
+            "bytes": 352878,
+            "path": "viewer/d1dc8fbd2897_1392_1632.wav",
+            "sha256": "9295c4a8172f886ea05846ca21684ea48500992be7ca4fd2af4e9d0b5ae9312f"
+          },
+          {
+            "bytes": 352878,
+            "path": "viewer/d1dc8fbd2897_1536_1776.wav",
+            "sha256": "60c57fa75f7364325fb807dd87b466fee98dca5795449c478605602a45ed86ee"
+          },
+          {
+            "bytes": 9833200,
+            "path": "viewer/index.html",
+            "sha256": "c8dae4d9db5fa6aafa80a10caf66086c86a92045f8611108f77be9b364cc18ec"
+          },
+          {
+            "bytes": 3659,
+            "path": "viewer/protocol.json",
+            "sha256": "76f6ca99fa2d47faeca36b245534985d492521daf121ff8fcc43ebce0802b12c"
+          }
+        ],
+        "remote_bytes": 9836859,
+        "remote_files": 2,
+        "reused_local_audio_files": 6
+      },
+      "name": "delivery/controls_delivery.json",
+      "sha256": "28929c53fd7da4c7ba65ad34389614077c59f2778f34f20e6fd6a87b0e455eb9"
+    },
+    {
+      "metadata": {
+        "checked_at": "2026-11-20T08:10:54.4264844Z",
+        "listener_present": false,
+        "pid": 74428,
+        "port": 63942,
+        "status": "CLOSED"
+      },
+      "name": "delivery/http_controls_cleanup.json",
+      "sha256": "a5d4f33fc3f7e80d32703514b1c899edc72def23fe601322ba43eef254cd57fb"
+    },
+    {
+      "metadata": {
+        "listener_remaining": false,
+        "pid": 79728,
+        "port": 63942,
+        "scope": "THIS_RUN_WHITELIST_ONLY_READ_ONLY_LOCALHOST",
+        "status": "CLOSED_AFTER_PREVIEW_ACCEPTANCE"
+      },
+      "name": "delivery/http_preview_cleanup.json",
+      "sha256": "2ee5bd5e988a5b90cc5a19c236ebb9ad963be140b9bc366bb29e0cdec6419918"
+    },
+    {
+      "metadata": {
+        "artistic_quality": "NOT_EVALUABLE",
+        "case_checks": [
+          {
+            "caseIndex": 0,
+            "frame": "121",
+            "panelCount": 3,
+            "text": "A：upper_speed_peak / upper / 来源帧2786 / 证据[2785,2788)；B：upper_deceleration / upper / 来源帧2776 / 证据[2775,2778)。事件为自动运动学代理，语义阶段未知。"
+          },
+          {
+            "caseIndex": 1,
+            "frame": "121",
+            "panelCount": 3,
+            "text": "A：upper_speed_peak / upper / 来源帧2030 / 证据[2029,2032)；B：upper_deceleration / upper / 来源帧1990 / 证据[1989,1992)。事件为自动运动学代理，语义阶段未知。"
+          },
+          {
+            "caseIndex": 2,
+            "frame": "121",
+            "panelCount": 3,
+            "text": "A：upper_speed_peak / upper / 来源帧2662 / 证据[2661,2664)；B：upper_deceleration / upper / 来源帧2663 / 证据[2662,2665)。事件为自动运动学代理，语义阶段未知。"
+          },
+          {
+            "caseIndex": 3,
+            "frame": "121",
+            "panelCount": 3,
+            "text": "A：没有登记的合格事件；B：upper_deceleration / upper / 来源帧1188 / 证据[1187,1190)。事件为自动运动学代理，语义阶段未知。"
+          },
+          {
+            "caseIndex": 4,
+            "frame": "121",
+            "panelCount": 3,
+            "text": "A：没有登记的合格事件；B：upper_deceleration / upper / 来源帧675 / 证据[674,677)。事件为自动运动学代理，语义阶段未知。"
+          },
+          {
+            "caseIndex": 5,
+            "frame": "121",
+            "panelCount": 3,
+            "text": "A：upper_speed_peak / upper / 来源帧2606 / 证据[2605,2608)；B：upper_deceleration / upper / 来源帧2592 / 证据[2591,2594)。事件为自动运动学代理，语义阶段未知。"
+          },
+          {
+            "caseIndex": 6,
+            "frame": "121",
+            "panelCount": 3,
+            "text": "A：upper_speed_peak / upper / 来源帧1081 / 证据[1080,1083)；B：upper_deceleration / upper / 来源帧1059 / 证据[1058,1061)。事件为自动运动学代理，语义阶段未知。"
+          },
+          {
+            "caseIndex": 7,
+            "frame": "121",
+            "panelCount": 3,
+            "text": "A：upper_speed_peak / upper / 来源帧2153 / 证据[2152,2155)；B：upper_deceleration / upper / 来源帧2137 / 证据[2136,2139)。事件为自动运动学代理，语义阶段未知。"
+          },
+          {
+            "caseIndex": 8,
+            "frame": "121",
+            "panelCount": 3,
+            "text": "A：upper_speed_peak / upper / 来源帧2786 / 证据[2785,2788)；B：upper_deceleration / upper / 来源帧2776 / 证据[2775,2778)。事件为自动运动学代理，语义阶段未知。"
+          },
+          {
+            "caseIndex": 9,
+            "frame": "121",
+            "panelCount": 3,
+            "text": "A：upper_speed_peak / upper / 来源帧1947 / 证据[1946,1949)；B：upper_deceleration / upper / 来源帧1990 / 证据[1989,1992)。事件为自动运动学代理，语义阶段未知。"
+          },
+          {
+            "caseIndex": 10,
+            "frame": "121",
+            "panelCount": 3,
+            "text": "A：upper_speed_peak / upper / 来源帧2662 / 证据[2661,2664)；B：upper_deceleration / upper / 来源帧2663 / 证据[2662,2665)。事件为自动运动学代理，语义阶段未知。"
+          },
+          {
+            "caseIndex": 11,
+            "frame": "121",
+            "panelCount": 3,
+            "text": "A：没有登记的合格事件；B：upper_deceleration / upper / 来源帧1188 / 证据[1187,1190)。事件为自动运动学代理，语义阶段未知。"
+          }
+        ],
+        "delivered_html_sha256": "bc0644357ecd5e6a443d73f69fe8f3ea9464cbc55d1a17e25cc517c6fac363d4",
+        "frame120to121": true,
+        "independent_original30fps_player": true,
+        "master_play_pause_seek_rate": true,
+        "missing_event_placeholders_retained": true,
+        "native100to101": true,
+        "native_frame_unchanged_when_master_seek": true,
+        "paired_display_and_three_panels": true,
+        "scope": "ACTUAL_UI_ACCEPTANCE_NOT_HUMAN_ARTISTIC_LABEL",
+        "screenshot": "preview_browser.jpg",
+        "shared_audio_duration_seconds": 8,
+        "source_manifest_sha256": "b8bc64aa967ee54323ea74d62b597ca1bb15f975884ea4eafde90b33a06b1bdf",
+        "status": "PASS"
+      },
+      "name": "delivery/preview_browser_acceptance.json",
+      "sha256": "c388cac012ebe31eee19c6e99cf98aebcefa0e0648ed5a7efc12563bab83fe78"
+    },
+    {
+      "metadata": {
+        "all_sha256_exact": true,
+        "batch": "R68_EXPLICITLY_AUTHORIZED_PREVIEW_TWO_FILES",
+        "delivered_at": "2026-11-20T07:57:12.020924+00:00",
+        "files": [
+          {
+            "bytes": 352878,
+            "path": "viewer/36ce6f03d7a8_1536_1776.wav",
+            "sha256": "13d629d11e2ff8777c6d79cf6d47e0108cf4c918c35f1c50ca3c482e42bac655"
+          },
+          {
+            "bytes": 352878,
+            "path": "viewer/cd8f37bb78c3_1390_1630.wav",
+            "sha256": "62bba0dd9905fe720dc7f60e0d5484778991ada10e8946b4215ca5f01b1f6eab"
+          },
+          {
+            "bytes": 352878,
+            "path": "viewer/cd8f37bb78c3_1534_1774.wav",
+            "sha256": "9a8ce0742bfaaa70f9fd34ff4a45ec6a900ba5e058e57a1248981472cf863477"
+          },
+          {
+            "bytes": 352878,
+            "path": "viewer/cd8f37bb78c3_1535_1775.wav",
+            "sha256": "f0bc4fcea063991c264b07537270dfeb318995be87565572439923fe8692e1e4"
+          },
+          {
+            "bytes": 352878,
+            "path": "viewer/d1dc8fbd2897_1392_1632.wav",
+            "sha256": "9295c4a8172f886ea05846ca21684ea48500992be7ca4fd2af4e9d0b5ae9312f"
+          },
+          {
+            "bytes": 352878,
+            "path": "viewer/d1dc8fbd2897_1536_1776.wav",
+            "sha256": "60c57fa75f7364325fb807dd87b466fee98dca5795449c478605602a45ed86ee"
+          },
+          {
+            "bytes": 5543487,
+            "path": "viewer/index.html",
+            "sha256": "bc0644357ecd5e6a443d73f69fe8f3ea9464cbc55d1a17e25cc517c6fac363d4"
+          },
+          {
+            "bytes": 3615,
+            "path": "viewer/protocol.json",
+            "sha256": "8430f73731c509d5ad0a801e8c3e5adea5b473d264c691adbe21fa9d80ec58a1"
+          }
+        ],
+        "remote_bytes": 5547102,
+        "remote_files": 2,
+        "reused_local_audio_files": 6
+      },
+      "name": "delivery/preview_delivery.json",
+      "sha256": "6305ccea0197954e92e6fa3559ff9bde9f2074a3bb255dee8dc5555ec6ceffbe"
+    }
+  ],
+  "scope": "STRUCTURED_METADATA_ONLY_NO_LOG_TEXT_OR_MEDIA_PAYLOAD"
+}

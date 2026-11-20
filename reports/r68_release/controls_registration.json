@@ -1,0 +1,143 @@
+{
+  "all_candidates_before_measurements": true,
+  "binding": {
+    "code": {
+      "__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "common.py": "5f4cd528dd62ae943472f6213f1c87953191eb8cfcdd5e8fe05bf3cd24c64ca1",
+      "metrics.py": "699bf3a42efaec371c73fa372a6105ba9437fa700c2b6dca894720e2eedf5f67",
+      "protocol.json": "fff77af6c7c7ad5416cea9a732df94216676f8335875fd5aed9f34b1f29db841",
+      "study.py": "0a715a57537fe13d273b6ec92c1463e024368000da42568dadeca79fa74e9ba3",
+      "viewer.html": "43b23ba679d4bb99c1f6f4aa0b5f558b70f50a4867a48ed8fa6554aa0fb56f47",
+      "viewer.py": "2162f1f6f5d398efa6d49a331404b29284eb9d5dac7ef7f37f3cc8f918b69603",
+      "warp.py": "5d275c10191c4780b3fa4062b97ea8e0806ae4b20d75c993a752bccf2c6a8a53"
+    },
+    "commit": "fb8909c2dd0c05537edd6114b5c947675cc5958e",
+    "dependencies": {
+      "scripts/local_timing_r68.py": "2ed0129aba66f5603241b3c1799ba7f141ba48a37032081c91f4fa7a1529963a",
+      "src/dunhuang/contracts.py": "7aaedf151cde42b9eb70b4000309f39fb2f2eec3e2f4a3f0fdbb4bf7ff1c141e",
+      "src/dunhuang/io.py": "b5577ed27991c175db342b3b2bd9626df801158e90da2b103ea4d6fe71a1d926",
+      "src/dunhuang/planning/planner.py": "86b98f7cd9a2d757165235a7299dff97e61096e409b160bcdc7aaf56ce5e02ac",
+      "src/dunhuang/research/bridge_dynamics_r48/study.py": "139067514b35012d5f360c73ac53ee5a49f9f336fa5c3dcf889d1d268c23e228",
+      "src/dunhuang/research/budget_r63/engine.py": "eaf61a98b7aef810fc9ca9a8307c1d327235998256f3daa4309c8dabcdee490a",
+      "src/dunhuang/research/budget_r63/population.py": "f54e94551fe31bbdd4c8e56352e0ce513660a0f4af94db96dfff9d201e99737e",
+      "src/dunhuang/research/complete_r36/core.py": "03f296665e48ca2fa2ef8a866baaf2b4b786afeb22f468b6faeedac7225e9901",
+      "src/dunhuang/research/complete_r36/music.py": "6b607d336a3593fe86c172eb964104ee8b696488e3469e4b386647ce6acc5f9b",
+      "src/dunhuang/research/duration_r62/cross_source.py": "d2a5dc233621d3f653ddd2a3f2721d7edb3340f580fe08704a06ffef549e8dce",
+      "src/dunhuang/research/duration_r62/protocol.json": "15056609e9604988c0b43c8417abd254b80fb7e094002c3e597a2b3bac30ad8a",
+      "src/dunhuang/research/edit_support_r61/fixed_gap.py": "cdb2eb0205ebdbd6f60859323e5668f69d9d4724b69c3aab523faa93f1436c56",
+      "src/dunhuang/research/event_alignment_r49/common.py": "5e124a4362e35a2e32646314f3f3e4a6aa190695c177b5118968679fdc29c9ef",
+      "src/dunhuang/research/manifold_bridge_r47/config.json": "b6f85af0569bf34577561df17e2fe9b4a03076fad4c148aeff5edf660f3c9f4b",
+      "src/dunhuang/research/manifold_bridge_r47/geometry.py": "4646ff82c2775b32e893335abe0aac43cdd4dfbabc643d230e8985a347adea7f",
+      "src/dunhuang/research/music_structure_r56/music.py": "7fab45ec0aabb38f9737c98e3334d2437a5f51db8ff9fd684b688ed63b3dba79",
+      "src/dunhuang/research/music_structure_r56/protocol.json": "d33cd42903bdff19a4ac4e6729bf6b299d40aace24c067d69c8b1c3de9f49737",
+      "src/dunhuang/research/paired_benchmark_r59/data.py": "9d99419d7ca201364fed6b21ccfdacd79781ac1ca9200a274f1cd8f7ab412181",
+      "src/dunhuang/research/paired_event_r41/events.py": "e6bbb769f9ed37b9743113a5c0a84139300bfc2e957a1b4315c041d2e1fb3759",
+      "src/dunhuang/research/paired_event_r41/model.py": "3188778c5f2a6186ebb23cce6a7bae7eeebaf22d09a652eecdd171997b23f95d",
+      "src/dunhuang/research/rhythm_r66/metrics.py": "c2e5fae5d5c1823b7b7f335002bdd9d29ea9a821e08efa436d3bde0dd3033267",
+      "src/dunhuang/research/rhythm_r66/population_b.py": "6665e2f8b884fcaa2db1d7de34cb2968c8513e8a4e314205170a51118d00da00",
+      "src/dunhuang/research/rhythm_r66/roster.json": "4f250df98c6da1ff110f8d0c6c3bf2465665d08b3791cf9433a226d76032fa6b",
+      "src/dunhuang/research/sdmr_warp_rank/common.py": "fb1e4c9a95f7872d86ac3ae0a86d3a629cdd64ae3da44f5c8576ef501562024a",
+      "src/dunhuang/research/sdmr_warp_rank/connectivity.py": "e1b5ea6c2ebf4b7dffd9594e79c544033c2da95d8d381fd8a7491a829c61db25",
+      "src/dunhuang/research/source_tasks/common.py": "2c14c2c6aeea76b694d56d94dedf861007ec5b2a60263cd82ee7b947abdc9709",
+      "src/dunhuang/research/timing_r64/music.py": "0c0e8b5bfa805fe53c1d48a6a5ae23df4fc9120a46620818b1719f7f6c6e0206",
+      "src/dunhuang/research/timing_validity_r66/engine.py": "d35fd2828f32732ddb96ff3944239eab74250cd59caf30c93737c2d6c871caff",
+      "src/dunhuang/research/transition_r37/content.py": "c9ee4734ba0a644086c4da2b3af90ce0fe4720cde11ac85e989099bef6e82070",
+      "src/dunhuang/research/warp_coupling_r53/common.py": "dc94b1346ef986b0c4fab09eb090dceb08b46f3af0e807a940dcf4476cd88d1c",
+      "src/dunhuang/research/warp_coupling_r53/warp_lattice.py": "ff804bc34a81943f7549171af6bf3f1bfe5534d4bb2bc7df6071e30130f5e2ba"
+    }
+  },
+  "connectivity_counts": {
+    "actual_constructed": 49,
+    "actual_geometry_calls": 49,
+    "actual_screen_passed": 49,
+    "cached_geometry_reuses": 0,
+    "check_requests": 49
+  },
+  "original_numerical_gate": {
+    "D2": 11.601721832266323,
+    "D3": 284.73454603204124,
+    "scope": "TRAIN_SOURCE_Q95_BODY_RELATIVE_NUMERICAL_REFERENCE_NOT_NATIVE",
+    "shoulder_wrist_lower_m": 0.1974362962380649,
+    "sources": [
+      {
+        "native_sha256": "50436001fab4f0aa45610b0723cebd7ee93592f3039adc133c270902b3c9fab4",
+        "source_uid": "female_FeiTian"
+      },
+      {
+        "native_sha256": "5cebda88bce0ff6ecbff76890f6ea9c2af237aab62a7dc95f23bb40972af8675",
+        "source_uid": "female_lotus"
+      },
+      {
+        "native_sha256": "59f14fedc9b7c89e269a7cd5f2cf23807080d9f6f980127c4b19d9487a413788",
+        "source_uid": "male_pipa_1"
+      },
+      {
+        "native_sha256": "c8900b68ae468ce8c7b745bf59af61b15ee9ab83d99a4d5f279f25e11c940b2e",
+        "source_uid": "male_ribbon"
+      }
+    ]
+  },
+  "parent_manifest_sha256": "ebea56cdcc58158f987bd2f7fe9a8292e4a001a3584b2159c0e981cc583040ed",
+  "preview_acceptance_sha256": "c388cac012ebe31eee19c6e99cf98aebcefa0e0648ed5a7efc12563bab83fe78",
+  "protocol": {
+    "Native24": "NOT_EVALUABLE",
+    "baseline_smoothness": "ORIGINAL_PIECEWISE_LINEAR_E1W_UNCHANGED; NO_PCHIP_NO_SMOOTHING_COMPARISON",
+    "bridge": "RECOMPUTE_ORIGINAL_G1_FOR_EACH_EXECUTED_CORE; COMPARE_WITH_BASELINE_BRIDGE_BYTES; FULL_PAIR_METRICS_REEVALUATED",
+    "bump_half_width_target_frames": 60,
+    "can_route": false,
+    "control_methods": [
+      "E1W",
+      "Uniform",
+      "A_early",
+      "A_late",
+      "B_early",
+      "B_late"
+    ],
+    "controls_start": "ONLY_AFTER_PREVIEW_DELIVERY_AND_UI_ACCEPTANCE",
+    "core_frames": 240,
+    "dose": "SAME_REQUESTED_DELTA_AND_TARGET_SUPPORT; ACTUAL_SOURCE_SHIFT_AND_RATE_CHANGES_SAVED_NOT_ASSUMED_EQUAL",
+    "dynamics": "DIFFERENTIATE_WHOLE_CORE_THEN_SELECT_FULL_STENCILS; TARGET_COMPENSATION_EDIT_UNTOUCHED_AND_CROSS_BOUNDARY",
+    "event_region": "FIXED_BASELINE_EVIDENCE_PLUS_SIX_TARGET_FRAMES_EACH_SIDE; SHARED_BOTH_SIGNS",
+    "event_selection": "WHOLE_ORIGINAL_EVIDENCE_INSIDE_CORE_AND_BASELINE_MAPPED_CENTRE_IN_64_TO_175; NEAREST119.5_THEN_SOURCE_FRAME; NO_LEGALITY_SCORE_OR_QUALITY_RESELECTION",
+    "event_types": {
+      "A": "upper_speed_peak",
+      "B": "upper_deceleration"
+    },
+    "fps": 30,
+    "gap_frames": 48,
+    "human_reviewed": false,
+    "independent_music_quality": "NOT_EVALUABLE",
+    "map": "TAU_DELTA=F_COMPOSE_TAU_E1W; F(u)=u+delta*(1-((u-c)/60)^2)^4_INSIDE_OPEN_SUPPORT; IDENTITY_OUTSIDE",
+    "music_cross": "NEXT_REGISTERED_SONG_FIRST_IDENTITY_CASE_CLIP; IDENTICAL_SAVED_MOTION_DYNAMICS_BRIDGE; NOT_ENERGY_MATCHED_CAUSAL_OR_ARTISTIC_TEST",
+    "music_reward": "FROZEN_R64_PROXY_DIAGNOSTIC_ONLY_NO_OPTIMIZATION_OR_SELECTION",
+    "neural_training_steps": 0,
+    "new_planner_searches": 0,
+    "parent_code": "88adef4245e153a7a71960deab6e4d54f0b4222a",
+    "parent_r67_main_manifest_sha256": "ebea56cdcc58158f987bd2f7fe9a8292e4a001a3584b2159c0e981cc583040ed",
+    "population": "TWELVE_FROZEN_R66B_FIXED48_POSITIONS_EIGHT_SOURCE_INTERVALS_THREE_EXPOSED_MUSIC",
+    "preview_methods": [
+      "E1W",
+      "A_early",
+      "A_late"
+    ],
+    "protected_edge_frames": 4,
+    "rate_limits_dt_ds": [
+      0.75,
+      1.33
+    ],
+    "semantic_stage_truth": "UNKNOWN",
+    "spectral_diagnostic": "MEAN_REMOVED_FK_VELOCITY_RECTANGULAR_CORE_WINDOW; FIXED6_TO15HZ_POWER_FRACTION; DESCRIPTIVE_WITH_LEAKAGE_NOT_QUALITY_GATE",
+    "support": "STRICT_INTERNAL; Q_AND_ACTUAL_FIRST_LAST_FOUR_SO3_FRAMES_BYTE_IDENTICAL; NO_EVENT_OR_INFEASIBLE_KEPT_WITHOUT_REPLACEMENT",
+    "target_deltas_frames": [
+      -6,
+      6
+    ],
+    "version": "R68_LOCAL_COMPENSATED_TIME_INTERVENTION_V1"
+  },
+  "runtime": {
+    "numpy": "1.26.4",
+    "platform": "linux",
+    "python": "3.9.25 (main, Nov  3 2025, 22:33:05) \n[GCC 11.2.0]",
+    "scipy": "1.13.1"
+  }
+}

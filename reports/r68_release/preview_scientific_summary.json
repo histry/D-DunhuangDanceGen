@@ -1,0 +1,156 @@
+{
+  "Native24": "NOT_EVALUABLE",
+  "artistic_quality": "NOT_EVALUABLE",
+  "can_route": false,
+  "human_reviewed": false,
+  "methods": {
+    "A_early": {
+      "G1_passed_original_screen": 7,
+      "actual_bridge_identical_to_E1W": 7,
+      "changes_in_D3_are_not_quality_wins": true,
+      "legal": 7,
+      "no_artistic_label": true,
+      "registered": 12,
+      "source_interval_balanced_FK_D3_Q95_delta": -8.79399061814278,
+      "source_interval_means": [
+        {
+          "FK_D3_Q95_delta_mean": -7.462932386481242,
+          "actual_source_shift_mean": 5.8163265306134235,
+          "cases": 2,
+          "source_interval_identity": "female_FeiTian:[2660, 2896]"
+        },
+        {
+          "FK_D3_Q95_delta_mean": 0.0,
+          "actual_source_shift_mean": 5.8545203381040665,
+          "cases": 1,
+          "source_interval_identity": "female_lotus:[1864, 2109]"
+        },
+        {
+          "FK_D3_Q95_delta_mean": -10.9346094854224,
+          "actual_source_shift_mean": 6.285731574308784,
+          "cases": 2,
+          "source_interval_identity": "female_meditation:[2551, 2789]"
+        },
+        {
+          "FK_D3_Q95_delta_mean": -8.426295360630945,
+          "actual_source_shift_mean": 7.225416921521628,
+          "cases": 1,
+          "source_interval_identity": "male_pipa_2:[2473, 2709]"
+        },
+        {
+          "FK_D3_Q95_delta_mean": -17.146115858179314,
+          "actual_source_shift_mean": 6.391714969038276,
+          "cases": 1,
+          "source_interval_identity": "male_ribbon:[948, 1197]"
+        }
+      ],
+      "status_counts": {
+        "LEGAL": 7,
+        "NOT_FEASIBLE": 2,
+        "NO_EVENT": 3
+      },
+      "unique_legal_source_intervals": 5
+    },
+    "A_late": {
+      "G1_passed_original_screen": 4,
+      "actual_bridge_identical_to_E1W": 4,
+      "changes_in_D3_are_not_quality_wins": true,
+      "legal": 4,
+      "no_artistic_label": true,
+      "registered": 12,
+      "source_interval_balanced_FK_D3_Q95_delta": 6.671950970185421,
+      "source_interval_means": [
+        {
+          "FK_D3_Q95_delta_mean": 28.353004166276392,
+          "actual_source_shift_mean": 5.806451612904311,
+          "cases": 2,
+          "source_interval_identity": "female_FeiTian:[2660, 2896]"
+        },
+        {
+          "FK_D3_Q95_delta_mean": 0.0,
+          "actual_source_shift_mean": 5.854520379673431,
+          "cases": 1,
+          "source_interval_identity": "female_lotus:[1864, 2109]"
+        },
+        {
+          "FK_D3_Q95_delta_mean": -8.33715125572013,
+          "actual_source_shift_mean": 5.700000000001182,
+          "cases": 1,
+          "source_interval_identity": "female_meditation:[2551, 2789]"
+        }
+      ],
+      "status_counts": {
+        "LEGAL": 4,
+        "NOT_FEASIBLE": 5,
+        "NO_EVENT": 3
+      },
+      "unique_legal_source_intervals": 3
+    },
+    "E1W": {
+      "G1_passed_original_screen": 12,
+      "actual_bridge_identical_to_E1W": 12,
+      "changes_in_D3_are_not_quality_wins": true,
+      "legal": 12,
+      "no_artistic_label": true,
+      "registered": 12,
+      "source_interval_balanced_FK_D3_Q95_delta": 0.0,
+      "source_interval_means": [
+        {
+          "FK_D3_Q95_delta_mean": 0.0,
+          "actual_source_shift_mean": 0.0,
+          "cases": 2,
+          "source_interval_identity": "female_FeiTian:[2660, 2896]"
+        },
+        {
+          "FK_D3_Q95_delta_mean": 0.0,
+          "actual_source_shift_mean": 0.0,
+          "cases": 2,
+          "source_interval_identity": "female_lotus:[1864, 2109]"
+        },
+        {
+          "FK_D3_Q95_delta_mean": 0.0,
+          "actual_source_shift_mean": 0.0,
+          "cases": 2,
+          "source_interval_identity": "female_meditation:[2551, 2789]"
+        },
+        {
+          "FK_D3_Q95_delta_mean": 0.0,
+          "actual_source_shift_mean": 0.0,
+          "cases": 2,
+          "source_interval_identity": "male_meditation:[1071, 1317]"
+        },
+        {
+          "FK_D3_Q95_delta_mean": 0.0,
+          "actual_source_shift_mean": 0.0,
+          "cases": 1,
+          "source_interval_identity": "male_pipa_1:[559, 793]"
+        },
+        {
+          "FK_D3_Q95_delta_mean": 0.0,
+          "actual_source_shift_mean": 0.0,
+          "cases": 1,
+          "source_interval_identity": "male_pipa_2:[2473, 2709]"
+        },
+        {
+          "FK_D3_Q95_delta_mean": 0.0,
+          "actual_source_shift_mean": 0.0,
+          "cases": 1,
+          "source_interval_identity": "male_ribbon:[948, 1197]"
+        },
+        {
+          "FK_D3_Q95_delta_mean": 0.0,
+          "actual_source_shift_mean": 0.0,
+          "cases": 1,
+          "source_interval_identity": "male_ribbon_FenHe:[2020, 2268]"
+        }
+      ],
+      "status_counts": {
+        "LEGAL": 12
+      },
+      "unique_legal_source_intervals": 8
+    }
+  },
+  "neural_training_steps": 0,
+  "registered_rows": 36,
+  "stage_semantics": "UNKNOWN"
+}
