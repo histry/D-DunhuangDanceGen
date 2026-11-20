@@ -21,6 +21,14 @@ def assets():
         d=read(manifest)
         for r in d['files']:assert sha(r['path'])==r['sha256']
         return d
+    transported=ASSETS/'official_weights_lock.json'
+    if transported.exists():
+        lock=read(transported);files=[]
+        for r in lock['files']:
+            p=ASSETS/'models'/r['filename'];assert sha(p)==r['sha256'] and p.stat().st_size==r['bytes'];files.append(dict(r,path=str(p)))
+        d=dict(hf_repo=lock['hf_repo'],hf_revision=lock['hf_revision'],files=files,beat_this_checkpoint=str(ASSETS/'models/beat_this-final0.ckpt'),
+            transfer='OFFICIAL_HTTPS_BYTES_TRANSPORTED_LOCALLY; HF_FILES_VERIFIED_AGAINST_OFFICIAL_LFS_SHA256')
+        write(manifest,d);return d
     hf_rev=model_info('taejunkim/allinone').sha;files=[]
     # Official loader filenames, frozen repository checkout.
     import ast
@@ -62,7 +70,11 @@ def analyze(path,out,registration,run_demucs=True):
     import allin1
     import allin1.models.loaders as loader
     from huggingface_hub import hf_hub_download
-    loader.hf_hub_download=lambda repo_id,filename,cache_dir=None: hf_hub_download(repo_id,filename,revision=modelassets['hf_revision'],cache_dir=ASSETS/'hf',local_files_only=True)
+    filemap={Path(r['path']).name:r['path'] for r in modelassets['files']}
+    def fixed_file(repo_id,filename,cache_dir=None):
+        assert repo_id==modelassets['hf_repo'] and filename in filemap
+        return filemap[filename]
+    loader.hf_hub_download=fixed_file
     demix=out/'demix';spec=out/'spec'
     if run_demucs:
         subprocess.run([sys.executable,'-m','demucs.separate','--out',str(demix),'--name','htdemucs','--device','cuda','--shifts','0',str(path)],check=True)
