@@ -5,7 +5,8 @@ def event(seconds,kind,source,samples,sr,index,**extra):
     t=float(seconds)
     if not np.isfinite(t):raise ValueError('Nonfinite event time')
     n=(samples*30+sr-1)//sr;frame=int(np.rint(t*30))
-    return dict(uid=f'{source}:{kind}:{index}',kind=kind,source=source,seconds=t,
+    identity=extra.get('audio_sha256','CATALOG_LOCAL')
+    return dict(uid=f'{identity}:{source}:{kind}:{index}',kind=kind,source=source,seconds=t,
         audio_sample_position=t*sr,frame_float=t*30,nearest_frame=frame,
         seconds_supported=0<=t<samples/sr,nearest_frame_supported=0<=frame<n,
         annotation_status='AUTOMATIC_UNVALIDATED',semantic_truth='UNKNOWN',**extra)
@@ -32,3 +33,12 @@ def scale(x):
 def reward(motion_seconds,audio_events,shift=0.,sigma=.1):
     p=np.asarray(motion_seconds,float)+shift;e=np.asarray(audio_events,float)
     return float(np.exp(-np.min(abs(p[:,None]-e[None,:]),axis=1)**2/(2*sigma*sigma)).mean()) if len(p) and len(e) else None
+
+def stability(beats,duration):
+    b=np.asarray(beats,float);interval=np.diff(b)
+    return dict(events=len(b),temporal_coverage_fraction=float((b[-1]-b[0])/duration) if len(b)>1 else None,
+        median_interval_seconds=float(np.median(interval)) if len(interval) else None,
+        median_bpm=float(60/np.median(interval)) if len(interval) else None,
+        interval_cv=float(np.std(interval)/np.mean(interval)) if len(interval) else None,
+        longest_interbeat_gap_seconds=float(interval.max()) if len(interval) else None,
+        interpretation='DETECTOR_REGULARITY_AND_TEMPORAL_SPAN_NOT_RECALL_OR_METER_TRUTH')

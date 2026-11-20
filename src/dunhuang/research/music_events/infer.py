@@ -4,7 +4,7 @@ import json,os,sys,time,subprocess,random
 import numpy as np
 import soundfile as sf
 from scipy.signal import find_peaks
-from .catalog import event,agreement,scale
+from .catalog import event,agreement,scale,stability
 from .compat import install
 from dunhuang.research.local_timing_r68.common import read,write,sha
 from dunhuang.research.warp_coupling_r53.common import save_arrays,array_hash
@@ -73,7 +73,7 @@ def analyze(path,out,registration,run_demucs=True):
         for i,t in enumerate(times):
             key=source+'_'+kind;curve=activ.get(key);rate=50 if source=='beat_this' else 100
             probability=None if curve is None or np.asarray(curve).ndim!=1 else float(curve[min(len(curve)-1,max(0,int(np.rint(t*rate))))])
-            rows.append(event(t,kind,source,samples,sr,i,raw_model_probability=probability,probability_is_calibrated_accuracy=False))
+            rows.append(event(t,kind,source,samples,sr,i,audio_sha256=registration['audio_sha256'],raw_model_probability=probability,probability_is_calibrated_accuracy=False))
     add(beats,'beat','beat_this');add(downbeats,'downbeat','beat_this');add(result.beats,'beat','allin1');add(result.downbeats,'downbeat','allin1')
     segments=[dict(start=float(s.start),end=float(s.end),model_label=s.label,semantic_truth='UNKNOWN_NOT_DUNHUANG_FUNCTION_TRUTH') for s in result.segments]
     interior=[s['start'] for s in segments if 0<s['start']<duration and s['model_label'] not in ['start','end']]
@@ -87,7 +87,7 @@ def analyze(path,out,registration,run_demucs=True):
     comparison=dict(beat_this_vs_allin1_beat=agreement(beats,result.beats),beat_this_vs_allin1_downbeat=agreement(downbeats,result.downbeats))
     if legacy:comparison['beat_this_vs_R64']=agreement(beats,legacy['beat_seconds']);comparison['allin1_vs_R64']=agreement(result.beats,legacy['beat_seconds'])
     evidence=dict(schema='MusicEventCatalogV1',audio_path=str(path),audio_sha256=sha(path),sample_rate=sr,audio_samples=samples,duration_seconds=duration,frames=(samples*30+sr-1)//sr,fps=30,
-        events=rows,segments=segments,comparison=comparison,phrase_status='UNVALIDATED_CANDIDATES' if phrase else 'UNKNOWN_NO_MULTICUE_BOUNDARY',
+        events=rows,segments=segments,comparison=comparison,stability=dict(beat_this=stability(beats,duration),allin1=stability(result.beats,duration)),phrase_status='UNVALIDATED_CANDIDATES' if phrase else 'UNKNOWN_NO_MULTICUE_BOUNDARY',
         independent_annotations=None,accuracy='NOT_EVALUABLE',human_reviewed=False,can_route=False,model_manifest_sha256=sha(ASSETS/'model_manifest.json'),binding=binding())
     save_arrays(out/'activations.npz',activ);write(out/'catalog.json',evidence)
     write(out/'runtime.json',dict(seconds=time.perf_counter()-start,parent_peak_allocated_bytes=torch.cuda.max_memory_allocated(),demucs_subprocess_peak_not_included=True))

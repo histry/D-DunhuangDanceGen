@@ -20,3 +20,13 @@ def test_nonperiodic_clock_control_and_shift_direction():
     assert reward(times,times)==1
     assert all(reward(times,times,d)<1 for d in [-.5,-.25,.25,.5])
     assert reward([],times) is None
+
+def test_legacy_attention_alias_preserves_bias_and_kernel_arguments(monkeypatch):
+    import types,sys
+    from dunhuang.research.music_events.compat import install
+    calls=[];f=types.ModuleType('natten.functional');pkg=types.ModuleType('natten');pkg.functional=f
+    def qk(*args,**kwargs):calls.append((args,kwargs));return 'fixture'
+    f.na1d_qk=f.na2d_qk=qk;f.na1d_av=f.na2d_av=qk
+    monkeypatch.setitem(sys.modules,'natten',pkg);monkeypatch.setitem(sys.modules,'natten.functional',f)
+    install();assert f.natten1dqkrpb('q','k','bias',7,2)=='fixture'
+    assert calls[-1]==(('q','k'),{'kernel_size':7,'dilation':2,'rpb':'bias'})
