@@ -1,0 +1,112 @@
+{
+  "binding": {
+    "code": {
+      "__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "common.py": "749b860a0d6d43f0e7307b5ea3984f63e2c3b59d8b3396d356a2588a35bf75ec",
+      "protocol.json": "7958bfc8fe869474054b0addc2d3af172e420804640bf74071861dd74bd5f57e",
+      "reviewer.html": "736179057881ab508f443c63f94c385b2c1a20a6828bf16a41e96e4470d0d68b",
+      "reviews.py": "32ad0e54e46d9b21ac9c6a9af2bb4082a22e91271d9446b10d9d25eaa38932c7",
+      "solver.py": "8642ca5cbc70f3aa208f99deee21b32dc89608660238ac649c76b3ff5923914b",
+      "study.py": "8f472931feab35e02c03cb0e286e4b7202f4eba1ec3f2292247a8649d7359c54",
+      "viewer.html": "4390261f5f21d9cf16b39596fa7ba36abdd081d05a304d2ce8294ca0ef4005c8",
+      "viewer.py": "630a9044b49a328d7495534b34c703e2af1d59cf2e4decd506d9e8c866346731"
+    },
+    "commit": "8a433dbf97c4a6826b1b5c10aba7d5f0296e5baf",
+    "dependencies": {
+      "scripts/retiming_baselines_r69.py": "261acc62b3231780075883abe44362f9edf035bc67c01527cbd1ac03b1d71485",
+      "src/dunhuang/contracts.py": "7aaedf151cde42b9eb70b4000309f39fb2f2eec3e2f4a3f0fdbb4bf7ff1c141e",
+      "src/dunhuang/io.py": "b5577ed27991c175db342b3b2bd9626df801158e90da2b103ea4d6fe71a1d926",
+      "src/dunhuang/planning/planner.py": "86b98f7cd9a2d757165235a7299dff97e61096e409b160bcdc7aaf56ce5e02ac",
+      "src/dunhuang/research/bridge_dynamics_r48/study.py": "139067514b35012d5f360c73ac53ee5a49f9f336fa5c3dcf889d1d268c23e228",
+      "src/dunhuang/research/budget_r63/engine.py": "eaf61a98b7aef810fc9ca9a8307c1d327235998256f3daa4309c8dabcdee490a",
+      "src/dunhuang/research/budget_r63/population.py": "f54e94551fe31bbdd4c8e56352e0ce513660a0f4af94db96dfff9d201e99737e",
+      "src/dunhuang/research/complete_r36/core.py": "03f296665e48ca2fa2ef8a866baaf2b4b786afeb22f468b6faeedac7225e9901",
+      "src/dunhuang/research/complete_r36/music.py": "6b607d336a3593fe86c172eb964104ee8b696488e3469e4b386647ce6acc5f9b",
+      "src/dunhuang/research/duration_r62/cross_source.py": "d2a5dc233621d3f653ddd2a3f2721d7edb3340f580fe08704a06ffef549e8dce",
+      "src/dunhuang/research/duration_r62/protocol.json": "15056609e9604988c0b43c8417abd254b80fb7e094002c3e597a2b3bac30ad8a",
+      "src/dunhuang/research/edit_support_r61/fixed_gap.py": "cdb2eb0205ebdbd6f60859323e5668f69d9d4724b69c3aab523faa93f1436c56",
+      "src/dunhuang/research/event_alignment_r49/common.py": "5e124a4362e35a2e32646314f3f3e4a6aa190695c177b5118968679fdc29c9ef",
+      "src/dunhuang/research/local_timing_r68/common.py": "5f4cd528dd62ae943472f6213f1c87953191eb8cfcdd5e8fe05bf3cd24c64ca1",
+      "src/dunhuang/research/local_timing_r68/study.py": "0a715a57537fe13d273b6ec92c1463e024368000da42568dadeca79fa74e9ba3",
+      "src/dunhuang/research/local_timing_r68/viewer.py": "2162f1f6f5d398efa6d49a331404b29284eb9d5dac7ef7f37f3cc8f918b69603",
+      "src/dunhuang/research/local_timing_r68/warp.py": "5d275c10191c4780b3fa4062b97ea8e0806ae4b20d75c993a752bccf2c6a8a53",
+      "src/dunhuang/research/manifold_bridge_r47/config.json": "b6f85af0569bf34577561df17e2fe9b4a03076fad4c148aeff5edf660f3c9f4b",
+      "src/dunhuang/research/manifold_bridge_r47/geometry.py": "4646ff82c2775b32e893335abe0aac43cdd4dfbabc643d230e8985a347adea7f",
+      "src/dunhuang/research/music_structure_r56/music.py": "7fab45ec0aabb38f9737c98e3334d2437a5f51db8ff9fd684b688ed63b3dba79",
+      "src/dunhuang/research/music_structure_r56/protocol.json": "d33cd42903bdff19a4ac4e6729bf6b299d40aace24c067d69c8b1c3de9f49737",
+      "src/dunhuang/research/paired_benchmark_r59/data.py": "9d99419d7ca201364fed6b21ccfdacd79781ac1ca9200a274f1cd8f7ab412181",
+      "src/dunhuang/research/paired_event_r41/events.py": "e6bbb769f9ed37b9743113a5c0a84139300bfc2e957a1b4315c041d2e1fb3759",
+      "src/dunhuang/research/paired_event_r41/model.py": "3188778c5f2a6186ebb23cce6a7bae7eeebaf22d09a652eecdd171997b23f95d",
+      "src/dunhuang/research/rhythm_r66/metrics.py": "c2e5fae5d5c1823b7b7f335002bdd9d29ea9a821e08efa436d3bde0dd3033267",
+      "src/dunhuang/research/rhythm_r66/population_b.py": "6665e2f8b884fcaa2db1d7de34cb2968c8513e8a4e314205170a51118d00da00",
+      "src/dunhuang/research/sdmr_warp_rank/common.py": "fb1e4c9a95f7872d86ac3ae0a86d3a629cdd64ae3da44f5c8576ef501562024a",
+      "src/dunhuang/research/sdmr_warp_rank/connectivity.py": "e1b5ea6c2ebf4b7dffd9594e79c544033c2da95d8d381fd8a7491a829c61db25",
+      "src/dunhuang/research/source_tasks/common.py": "2c14c2c6aeea76b694d56d94dedf861007ec5b2a60263cd82ee7b947abdc9709",
+      "src/dunhuang/research/timing_r64/music.py": "0c0e8b5bfa805fe53c1d48a6a5ae23df4fc9120a46620818b1719f7f6c6e0206",
+      "src/dunhuang/research/timing_validity_r66/engine.py": "d35fd2828f32732ddb96ff3944239eab74250cd59caf30c93737c2d6c871caff",
+      "src/dunhuang/research/transition_r37/content.py": "c9ee4734ba0a644086c4da2b3af90ce0fe4720cde11ac85e989099bef6e82070",
+      "src/dunhuang/research/warp_coupling_r53/common.py": "dc94b1346ef986b0c4fab09eb090dceb08b46f3af0e807a940dcf4476cd88d1c",
+      "src/dunhuang/research/warp_coupling_r53/warp_lattice.py": "ff804bc34a81943f7549171af6bf3f1bfe5534d4bb2bc7df6071e30130f5e2ba"
+    }
+  },
+  "new_encoder_calls": 0,
+  "new_geometry_counters": {
+    "actual_constructed": 21,
+    "actual_geometry_calls": 21,
+    "actual_screen_passed": 20,
+    "cached_geometry_reuses": 0,
+    "check_requests": 21
+  },
+  "parent_manifests": {
+    "r67": "ebea56cdcc58158f987bd2f7fe9a8292e4a001a3584b2159c0e981cc583040ed",
+    "r68": "eea30ac1695642da5318dd5bf5db9df46da2daaa342fa0f300dca1765ad46523"
+  },
+  "protocol": {
+    "Native24": "NOT_EVALUABLE",
+    "artistic_quality": "NOT_EVALUABLE",
+    "beat_dp": "WHOLE_EVIDENCE_EXISTING_UPPER_SPEED_PEAKS; ORIGINAL_UNCALIBRATED_SCORE_WEIGHTS; MAX8_WEIGHT_THEN_FRAME; FIXED_UNIFORM_PLUS_INTEGER_NODE_DOMAIN; GAUSSIAN_DISTANCE_TO_AUTOMATIC_BEATS; NO_FALLBACK",
+    "can_route": false,
+    "comparison_scope": "SIX_METHOD_END_TO_END_BASELINE_COMPARISON; DIFFERENT_PROPOSAL_DOMAINS_NOT_PURE_SAME_POOL_SCORE_ATTRIBUTION_OR_EQUAL_COMPUTE",
+    "core_frames": 240,
+    "costs": "CANDIDATES_STATES_TRANSITIONS_SOLVES_REUSED_AND_NEW_SEPARATE; WALLTIME_SEPARATE_RUNTIME_FILE; HISTORICAL_R67_TIME_UNKNOWN_NOT_ZERO",
+    "fps": 30,
+    "gap_frames": 48,
+    "human_reviewed": false,
+    "methods": [
+      "Uniform",
+      "E1W",
+      "BeatDP",
+      "RhythmDTW",
+      "Single64",
+      "Multi64"
+    ],
+    "neural_training_steps": 0,
+    "new_execution": "DP_AND_DTW_RESAMPLED_FROM_ACTUAL_SOURCE; EACH_NEW_EXECUTION_G1_REBUILT_FIXED_NEIGHBOR48_NO_CACHE; NO_FAILED_CASE_REPLACEMENT",
+    "new_planner_searches": 0,
+    "pair_frames": 528,
+    "parent_commit": "003b29d45d464b476ad2babd2a5b988577b80ea4",
+    "population": "TWELVE_FROZEN_R67_CHANGE_POSITIONS_EIGHT_SOURCE_INTERVALS_THREE_EXPOSED_SONGS; RETROSPECTIVE_DEVELOPMENT_NOT_NEW_MUSIC_OR_UNSEEN_SOURCE_TEST",
+    "preview_first": true,
+    "quality": "ANONYMOUS_REVIEW_INDEPENDENT_FROM_OBJECTIVES; NO_RECORDS_NOT_EVALUABLE; PARTIAL_UNSURE_AND_MISSING_RETAINED; NO_IID_POSITION_P_VALUES",
+    "r64_clocks_sha256": "0a7bd68287f1d98e81639fb3545d78ddca9ae22f01abb89e333eef6587d30247",
+    "r67_main_manifest_sha256": "ebea56cdcc58158f987bd2f7fe9a8292e4a001a3584b2159c0e981cc583040ed",
+    "r67_reuse": "EXACT_SAVED_BANK_SELECTION_FIRST_REGISTERED_RAW_MAXIMUM_TIE; SAVED_Q_ROTATIONS_AND_G1_HASH_VERIFIED; NO_REENCODING_NO_RETRAINING_NO_POSTHOC_SCREENED_RESELECTION",
+    "r68_controls_manifest_sha256": "eea30ac1695642da5318dd5bf5db9df46da2daaa342fa0f300dca1765ad46523",
+    "rhythm_dtw": "PIECEWISE_LINEAR_RATE_CONSTRAINED_DTW_IDEA_ADAPTATION; SOURCE_UPPER_ANGULAR_SPEED_VS_AUDIO_ONSET_STRENGTH; GLOBAL_FULL_SUPPORT_ZNORM; FIXED8_UNIFORM_SOURCE_NODES; SAME_FINITE_TARGET_DOMAIN; NOT_CHOREOGRAPH_REPRODUCTION",
+    "rhythm_proxy_scope": "RAW_SOURCE_PROFILE_RESAMPLED_WITHOUT_CHAIN_RULE_SPEED_SCALING; OPTIMIZATION_SURROGATE_NOT_ACTUAL_OUTPUT_RHYTHM_OR_ARTISTIC_TRUTH",
+    "schema": "R69_FROZEN_SOURCE_RETIMING_BASELINES_V1",
+    "semantic_stage_truth": "UNKNOWN",
+    "solver": {
+      "band_frames": 15,
+      "deformation_weight": 0.03,
+      "max_internal_nodes": 8,
+      "sigma_frames": 3
+    },
+    "uniform_reuse": "EXACT_R68_UNIFORM_Q_ROTATIONS_G1_VERIFIED_AGAINST_SAME_SOURCE_AND_PAIR"
+  },
+  "runtime": {
+    "numpy": "1.26.4",
+    "python": "3.9.25 (main, Nov  3 2025, 22:33:05) \n[GCC 11.2.0]",
+    "scipy": "1.13.1"
+  }
+}

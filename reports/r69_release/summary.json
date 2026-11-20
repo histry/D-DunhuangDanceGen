@@ -1,0 +1,82 @@
+{
+  "Native24": "NOT_EVALUABLE",
+  "artistic_quality": "NOT_EVALUABLE",
+  "can_route": false,
+  "distinct_hash_count_scope": "EXACT_ARRAY_BYTES_NOT_INDEPENDENT_SAMPLES_OR_SEMANTICALLY_DIFFERENT_CLOCKS",
+  "distinct_saved_full_trajectories": 62,
+  "human_review_records": 0,
+  "methods": {
+    "BeatDP": {
+      "current_encoding_calls": 0,
+      "current_geometry_calls": 9,
+      "full_pair_available": 9,
+      "original_G1_screen_passed": 9,
+      "quality_winner": null,
+      "registered_cases": 12,
+      "statuses": {
+        "LEGAL": 9,
+        "NO_EVENT": 3
+      }
+    },
+    "E1W": {
+      "current_encoding_calls": 0,
+      "current_geometry_calls": 0,
+      "full_pair_available": 12,
+      "original_G1_screen_passed": 12,
+      "quality_winner": null,
+      "registered_cases": 12,
+      "statuses": {
+        "LEGAL": 12
+      }
+    },
+    "Multi64": {
+      "current_encoding_calls": 0,
+      "current_geometry_calls": 0,
+      "full_pair_available": 12,
+      "original_G1_screen_passed": 12,
+      "quality_winner": null,
+      "registered_cases": 12,
+      "statuses": {
+        "LEGAL": 12
+      }
+    },
+    "RhythmDTW": {
+      "current_encoding_calls": 0,
+      "current_geometry_calls": 12,
+      "full_pair_available": 12,
+      "original_G1_screen_passed": 11,
+      "quality_winner": null,
+      "registered_cases": 12,
+      "statuses": {
+        "LEGAL": 12
+      }
+    },
+    "Single64": {
+      "current_encoding_calls": 0,
+      "current_geometry_calls": 0,
+      "full_pair_available": 12,
+      "original_G1_screen_passed": 12,
+      "quality_winner": null,
+      "registered_cases": 12,
+      "statuses": {
+        "LEGAL": 12
+      }
+    },
+    "Uniform": {
+      "current_encoding_calls": 0,
+      "current_geometry_calls": 0,
+      "full_pair_available": 12,
+      "original_G1_screen_passed": 12,
+      "quality_winner": null,
+      "registered_cases": 12,
+      "statuses": {
+        "LEGAL": 12
+      }
+    }
+  },
+  "music_tracks": 3,
+  "registered_cases": 12,
+  "registered_method_positions": 72,
+  "scope": "RETROSPECTIVE_EXPOSED_FIXED_SOURCE_BASELINE_COMPARISON_NOT_EQUAL_DOMAIN_OR_COMPUTE",
+  "source_intervals": 8
+}

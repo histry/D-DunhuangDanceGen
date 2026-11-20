@@ -1,0 +1,1439 @@
+{
+  "E1W_scope": "EXACT_BASELINE_CANDIDATE_REUSE; NO_SEPARATE_FULL_BANK_ENCODING_OR_SEARCH_COST_ALLOCATED",
+  "allocation_scope": "NON_ADDITIVE_PARENT_BANK_LEDGER_COUNT_ONCE; NEVER_SUM_E1W_SINGLE64_MULTI64_ROW_COUNTS",
+  "banks": [
+    {
+      "actual_candidate_count": 16,
+      "actual_geometry_calls": {
+        "known_requests": 16,
+        "known_sum": 16,
+        "missing_requests": 0,
+        "total": 16
+      },
+      "cached_geometry_reuses": {
+        "known_requests": 16,
+        "known_sum": 0,
+        "missing_requests": 0,
+        "total": 0
+      },
+      "candidate_receipts": [
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "ce9a0b2bc9a3f9149e1ebf4308e1f33eb75215539eb63cbe0c221dae0297b251",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "bf635a0bbbaad6873d05e2e63bb43a96c36e0cd4683499f767a3bf4938e45366",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "6a65c30da7f1b2a8dc8fe4cdebd53c235dcca9787a5169187583dd64096afca3",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "e3a87bd2dce7a0dc31a74d9b08387f808632a11165cccf1a07d701e02f594607",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "3722234fcb18bcbe8bb5ff96e4c5bf2e519e3f7ba661329403d9153af834f3d6",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "f329434827b71f594a2a33714a8156f1aad6bff3e6185dfcd5107c3d1dbcb14a",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "3af7e529dba09e2b1259728be70aa03dbb8c9eeeef4b845726a9ac0b2d393de7",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "58ebb3d479ee9068f09a8a336ea0a534826f9e973d1a325a30791665839e0d38",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "c537988caed8372d71ab7cd0e9ee799198653fca656f02a78305e5f7e61b1a46",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "4806687a146e0072579f590b88ee26955561fe45b18d1131dad264ad856e9f5d",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "4079b100ea0d49f9cb49904945185e0314243f8fcef51fe719891c4b1af17fcf",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "22ea7213e541020814c82e6a1dfbfe7b914556ba3061c5a537c4c6187d73c36b",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "cd668c1b758924e8d22bb8f63937e4fecceb5537a1b3711d2fb9ac7ef0b79dbd",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "604ad1677edf7fdea1844aa75161aa7fc5bd51edff32d49b1e42a434a9986638",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "286d850ed9ba52bb88ce06563293c9e3ec77e3fcc6f519317a4326a7071f60a5",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "8e1f537d0a04d0124134a462834aad96a870de38e00138d4f7093640d898e0ab",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "78ca2d371599fe4399ddb97501525a8f361bfa0a5b5cfab556e49d5b63a51439",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "50fec4422af8142a42324d3115ed762d1bf6cd06efa644b3ca49f89c0816d620",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "9910e2003750ffaf6a6598010f2b9fd7fa5261569d4d1ea306748ded3d7bc388",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "e4b96393e70a0d2ebc230af01280fb10bd2e0cab45014c6409f83aa1d7a1bd58",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "491c01d95f41edc2562528727537a45c01e8419cad2903ba8ef0f6494abfcb3c",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "46f02c4a9e11d9d53ccc3d71d9b42b5a2494cdb99c7709522794650ac14ae33b",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "78cdd341ffe892880c5a3783bf4ff9a4e644911a391d15f1cd4677b5cefd43e8",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "c364d08f311b83c5bdba85e8caefadeae84dbe5f5e86aadb3e8b2c11aa3594fa",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "c8e8bdce2499151b15f6f3738679f20a14ba5ad9962c6d9a27ce33680c8bab8c",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "8700cb0330105bdb33d1b7fb791352ee813a6ab2bc4002304eb0c18a17142583",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "677817c5f1a05822d27af8e7dfad459808da3e1853fcf718c9a8ad21a245431d",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "9643c2fa61e795b7b637d9ed0360fcc99cc6d271e80190aa93616e7fced7656a",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "65d1d5879bde01393954acb9fc8c825ef3ceb9b5b1b6d056c776842c762968bc",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "145f92b089bcafa5cd5d2dbf0a9398e63f46cf2073561570c67b8e9a8965861f",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "0c80726cf30f2875d95bb9f30fa933f11a12b07db57865ba6b023e19f04c5cd1",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "8d555f5a9f8ed8a49c052addc05ef0167edb3cffbe135b7d072b6ae980311d3d",
+          "receipt_present": true
+        }
+      ],
+      "case_key": "r66b00_6280fdcb23109a34",
+      "geometry_check_requests_inferred": 16,
+      "motion_encoding_calls_inferred": 16,
+      "music_encoding_calls_inferred": 1
+    },
+    {
+      "actual_candidate_count": 8,
+      "actual_geometry_calls": {
+        "known_requests": 8,
+        "known_sum": 8,
+        "missing_requests": 0,
+        "total": 8
+      },
+      "cached_geometry_reuses": {
+        "known_requests": 8,
+        "known_sum": 0,
+        "missing_requests": 0,
+        "total": 0
+      },
+      "candidate_receipts": [
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "3fd854c567c46941d67a67102d09f28f269940bea2177632edd20b79764cf14a",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "7fdb5ff1baf596cd7f3d0b814c365e78d0ecfe5f2d63c4a28466a1daf55f38f9",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "38a15dff0be670cb315b64706e36faac8955cf70f5cabab8579358327dbbdc31",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "b23b40b4cab2325eaff442e154ebb3e3862af40ac19a589160091a3a973c7849",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "5b178333ba9d0c23f89fe03226bc86f22b2252e9ced2eb621cb163ef675e822d",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "1906f692cd4064881d794cfef0e6a1c17e990d9e0c1b7a27596e6b3620fef1b7",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "d50d85caab9042e11fd3e9163d54f4ee4c79ea5e17d469a5b6b1f5aaa0edefb9",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "33b8e45aa421ed31b5e259c0f5478107f424d6716365d16c1b4d7f488bc190af",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "90f08494d57ff4e76d67d8fc6f068366b55908972713248ed3898bbca70bccdf",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "2710f84b63d72542bb0fc36334b925053e3163b510e27f7de25df65c5fdd44dd",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "44dfa80487442e9794301854534ec8f8f69de15c42f999032053f1beb88ed88c",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "cb919767c21f8c84fb38fb092adbb225e06095ea352a1177ba351523116c949f",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "59fa5568b5bff48e7509acf2488db83bef251d36a10eecbe67d08957a8d77a7f",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "7deb7cf5768a2d0f4898cc66c594dbe93b65b9798e6db069efa3a2d80d9afd92",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "b7925d3abf0c6bead49dc6992a82f9c30f01696dea0ee0ca77e84e489062cef0",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "52a8648b11d2d4278e8437a4cc49156412cfaa5df2b263d9fa41a2af3f1e3544",
+          "receipt_present": true
+        }
+      ],
+      "case_key": "r66b01_ca3f06a9b37a47ff",
+      "geometry_check_requests_inferred": 8,
+      "motion_encoding_calls_inferred": 8,
+      "music_encoding_calls_inferred": 1
+    },
+    {
+      "actual_candidate_count": 16,
+      "actual_geometry_calls": {
+        "known_requests": 16,
+        "known_sum": 16,
+        "missing_requests": 0,
+        "total": 16
+      },
+      "cached_geometry_reuses": {
+        "known_requests": 16,
+        "known_sum": 0,
+        "missing_requests": 0,
+        "total": 0
+      },
+      "candidate_receipts": [
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "c851b48793a4319e73e93e703c796fa9377b50fde5d634ca52f9be315e4652e2",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "c54b2bc5352a2e761b1fbdfc90a2d7f6470195038a3a39dc55b7e63247af34a4",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "089cb4f99fb96400bc1dc27975828ec4455354ea316a40192753048b23651fde",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "cddb20bfe6076ef6ece4033c3d0b930f8eed02c221e4850d10476e87b7b324d0",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "bf149c9d5850c7e09b5cae559155a3381f50171517a1f850ca48bf4fb4069483",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "cd9d02af0afe56867c24f2798764de5f574a98abe9e257d9df59a48a3a6aa399",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "97b1a1a5bf9ba5d47f28ff21628de175eca684bb539936a904b8d7ed2ec4fc2a",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "e9327d0879ba6a6711e8dfc6ad3890571cfe151c432169235d8538e4b2fcae7b",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "c014d8dc2656ffdca7200ffbf9e5e88c904b1c03d116502e44c7e1b76bdd0eee",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "fee1d86337cf86986fa039ff9d8a528011f0f5c80188e0f5187944093e54b98b",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "5ec95dccaf21a4426aac276ee391ad7a934e5ad78f7d72b9ea1db811bc4380ba",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "a42bb40ee2805690a14bd172d4c68b0e66566463051c39ca88954fa247469248",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "0b70ecfcc092db64ccaccec55fe6fe73aa62ce2b56f07ecb2e530add8c7fa5d7",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "4b2d94268bcb24cf24dc5810ffc959b28d9cc3e8aed388c37a85b9fec76c7bdf",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "6c66f633d821de6e4fc453a8288023476b5366fc01f5ee14d5f1912ab8c393b6",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "255f667381110f01662fe0c42ff77484a4fc3cb632903a5e829308f86ff3d2f6",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "7a5035cf586d80f10ee711e8af545d57fecb3867adca0f2c640904ef637bb089",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "77d7226957e3a0ab9ba9cace74b50e52861fa567f4eacca8f597f0b3b1e96b96",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "adc5326fc4ab4d027ed1f8247819ff014128585e247c42f5322eb3e74f30993a",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "65e9530c159b9cc01eaf093422fbd446658f23d9f43557934bd5c15e4ffd94e9",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "5a456146aabbb4c0e0c1c0fbcfcb96ce3526a09681a6452e2f1ade5e47bb8998",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "e38b9ac82acd6aa2571e7b34791b3106b387174bd959993466b50f4ee81b73bc",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "508c954dd0dec3ccabae147776221c4a3ca977a06778acfcea5310c5b094592a",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "945feff275d89fc83a18e02e1aa20cf3c95c00e7910ca97d4544fff8b4ce6cf3",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "3d29c26c4d200d614a8abe81912c55644707a0f27adcb5f699b2b707b3860020",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "3d13a7872ec9a570bac2c05db496de2f433ab7f96ab36dcea629c876730c3234",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "d014b3f04d73f59f74b02e4878f1d29bfa249176b59769d389c7a74fab2b38e5",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "ca92086332602685ecf9e98aec292d3a067084888066605b9bb19f8d6813ba85",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "19462938f8d9119b04c33a439e29625edc8a5d79eb57cb6ca5dcda330f12fa14",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "0464e7e5384ff5f688256a797b37dff5e0d3c8ce50f2f37623fcd1698d0165ff",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "cba1ed206282356eb47244175ea67df279789f91df289834a8764cbdd72f9161",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "bf4573ac8f6b3563f59e5b5acc7898f6bb005a7157c72ab1c8d9d96111831ccc",
+          "receipt_present": true
+        }
+      ],
+      "case_key": "r66b02_70c9ebdda89155ec",
+      "geometry_check_requests_inferred": 16,
+      "motion_encoding_calls_inferred": 16,
+      "music_encoding_calls_inferred": 1
+    },
+    {
+      "actual_candidate_count": 16,
+      "actual_geometry_calls": {
+        "known_requests": 16,
+        "known_sum": 16,
+        "missing_requests": 0,
+        "total": 16
+      },
+      "cached_geometry_reuses": {
+        "known_requests": 16,
+        "known_sum": 0,
+        "missing_requests": 0,
+        "total": 0
+      },
+      "candidate_receipts": [
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "31378f02eb1f2ff68afc81de36a7835eeec000913090d21bedf902924d472f3f",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "c46945a6e8b7bdd83dfaff93b7989ab413dbda0b93e87a74650fe0e6fdf926f9",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "6bb911710c16886878e0f01ca07781b150f193b5e5af941fd638e8e0a6782305",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "a7670820f5fb5d8e6e5a0da82b7c1245929b9e92d60010abe1057ee97d217003",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "01bc75ab00e0f0d4440061bee4a41407b791d4709d0d6b1d7d538c80e450c63e",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "9a9536a9a60fa5d2503489748fe57db7e858c7922340e2fcafd7f692ba2b4494",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "1458579717057c343db2e8d361077e7f894d29cefd28734394db721f6ec0269b",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "a502d6bc5702daab14d7ee1c43dd0b6167d42f9961318ec8586f951e6e233276",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "cffb8d0c71b2bbadaf56d3d9c4f14ba27407dd9daebc75a6617ba7273c2ae07f",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "7364cfa0a4caf0421832272003d9c23386d93cb923f107b56b7dc607197dfbeb",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "255c5214601306d155695efb0d22e61b19b77110fa0e232f35f8469bd9996fb2",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "d7195044a46459504cad271d1d6aa7938caf669d438bb1be346036f82844ee66",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "12a10f912192bd64349b818c451ca37361440d1d9646edfe16ec7a4965301a62",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "45205f882bc29a774b3a738db54dbc152585374f0f18448f54b35b4c14d44487",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "65d153ad4ab682dbe7858ee2ea6c2265ec3d546ee06c375eaa35998f1e0271c2",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "61046646ce8a322765057bb3bd7d0ad6ece9c980f3940ce7f7254f3fce6ab5d0",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "efaa374226e5576be89b255da46a56766f45ae51d11efe9fd709f015e47cc6ac",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "c4a47f4344d6f97a881850ba834f23d2c477bca1b355b2cc0b60520983da289b",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "4a2e925ce64cbe10a45f97e8ad3c0bf19d4e23eea34c15f2b5259fe84a1fa6aa",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "1f7f42609bb9f3b3380560f317a9724e9fbec0f2e5a1a7fa6838af39eea466be",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "69c86788dab8d0b632d8becec423427ea1ac5d47dac22f307c083d88178a88d1",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "f937dbc8e5676ff83792cca3843a472392aa8a94b5ba9a3ea6f8dd8b52632ac2",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "8fefc1a8323be3407f3c355b63f4fd8d668dee19af9a254db279147cec04732a",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "56c79c1564ac101815fbcf3b8d440fb7791d936d5088dd8ed93c8e366e28d565",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "596227ddd4be6b006e4b810a7b364bdc55a14e7c551252541da4c5d59bd02933",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "ea4ddc4003c3194a15c8a92a39f41066c3bdbb0c0c80bffba6d250bf9a11436c",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "3330ea219e58bbed873327ce1b2e042bd4db72ab55c249a410ef91a7a69c68ca",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "b6ee8ebb979e902926704467606aee5fb1fabdd9c01ffce3e12b4e09812f147d",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "de8ff49353f7ab83740044a55ea862796c50ede0f0dbb8c185af823ffdab6536",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "1091d4d407604716f3600d41a58f914e958be638dad181d7b1a4f705cdc936d7",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "82dbc6511c6963eecc16ed600d05967fb5fd25d227bfad94c9741b1262419bc3",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "e81da15eba62f98cf115cb6502b850df469b2ac0238622471de3dcf65fdf6c26",
+          "receipt_present": true
+        }
+      ],
+      "case_key": "r66b03_a9c01b65dc66d062",
+      "geometry_check_requests_inferred": 16,
+      "motion_encoding_calls_inferred": 16,
+      "music_encoding_calls_inferred": 1
+    },
+    {
+      "actual_candidate_count": 6,
+      "actual_geometry_calls": {
+        "known_requests": 6,
+        "known_sum": 6,
+        "missing_requests": 0,
+        "total": 6
+      },
+      "cached_geometry_reuses": {
+        "known_requests": 6,
+        "known_sum": 0,
+        "missing_requests": 0,
+        "total": 0
+      },
+      "candidate_receipts": [
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "3366b5341adfc4ad3fd1a6a235e35628d9ff72f782de73c933fa7309a5bf5956",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "a11430fb1626fa57fdff0c5a48812ce6c83627c0784ac10dfaffd25600ffd2c2",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "19e9b042a31c198d56f819bbb94b941dc08696418e216f4b1761810393ad593e",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "9c231535f601c8313134208fc1b15128ad58a8d52824b9fa97622a26768f4264",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "45bcdeb2adfb96ac095e175c4f990a1e41737b3b4e1ee2c244f99dfe6eb414df",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "b74a5ecefafe9b2c690e03c5bf9b9423c64542f17c3f2c8a9f9a7cdfae11e6ff",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "21ae32cdfc2223a259946f746472fc8ee71fbb11befea8b4ebc4982527f4ee79",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "5966c636b4c65047b75e102b35e5ec1aa2d30b5883dae2bf99eff5f832bb4e96",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "f246ba54922d02cab4aa4cdf6ebf6b8b7750fad256e545f844a497b12ac1e750",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "7a51aaf10030354a70e5ce608ba41257cbeae6397903950abcfcfe05f8b9531c",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "960ff99397aac029660e4db9e0ec2115ce8f394c00b3c7613423848e27878bce",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "c92d8d116bb640eea0c3a3529f4f8549d34f69e46ebf5b53334a6b42cad5c450",
+          "receipt_present": true
+        }
+      ],
+      "case_key": "r66b04_c4ded6ddc2d6940d",
+      "geometry_check_requests_inferred": 6,
+      "motion_encoding_calls_inferred": 6,
+      "music_encoding_calls_inferred": 1
+    },
+    {
+      "actual_candidate_count": 16,
+      "actual_geometry_calls": {
+        "known_requests": 16,
+        "known_sum": 16,
+        "missing_requests": 0,
+        "total": 16
+      },
+      "cached_geometry_reuses": {
+        "known_requests": 16,
+        "known_sum": 0,
+        "missing_requests": 0,
+        "total": 0
+      },
+      "candidate_receipts": [
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "aa5b2fe600cfbe166765387d20b5191f7732990b423272b6d614fa875c53a4b0",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "c2a6a6ae4105a654ccfb58b084edd7543cb38498446dc9cf82cd26841c8cbd00",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "393206cb7cab1e95c4190137cef41780001040fd4d415b36be8493fff9997636",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "81c047415492d868063e2e193fe52761e39b46e9a8ffd1e55a24f003bdda5c84",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "401e0a7ff6bd490a413a964e29df85cbcb6cc5d9ad1715f3612a93b7a676aec1",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "966de70204a4f8bf6a4827b6646d62e3918329a1e98806abdee91c96f6f8b46e",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "3ee41a6827846b3d1ce27ef40e5c8a9059475c22d2fc4eaa83cb89aba12802dc",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "23d022a809de91a7dbf8ede089c25a8ad1b6d9b4e16452050dc107cf1bc66f3a",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "06ea15a395ae7951d8a68d47638322f50d7ccfb957acc012295db78f9c6de0b9",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "660e05856943807523b172110274ba34bd57893fa57858d242bc7a36e8631377",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "2daa92e33259b9743d033fbf6e080d18664aabaff0b40c4f222565604d263944",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "5364df9fbdd690c4077090b1acb77dd3ea0b9d9c1a788ba525b912d2f77d4407",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "67ca9e6d9ee1f173f50b1c5a737ac8dd1ae68327c9d6aa3d0f239cb35810e48f",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "2b37d886a43e46a077c47009a47432b684b130f8a56f48edb4b6a6d1d8467453",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "39a74080e302df6542d1f01c0e35bca807ddcc289ca819388e7911d820bad221",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "25ae30199ef97a7ebb4e61498027acefa2f76438e799d84dd70f2baa4a020efa",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "831f286fa5a07ca6f871c1ae4a10dca48e192fa528619d23271f09298c4445c8",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "bc0b114b49f28429c84d9d77c732957bda435b5ab5d6db04b0205427afb9a447",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "7cfd9ac59ebe8433a48f58a0be031aeae6e532e79ab6d652dc66a7cfe3e6207d",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "dce59f70c5600103fd99df6b4566c516361b1464553c183f039e1c5573a4d35e",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "e727ed50bbd1dbb34918cc400efac12358c0184cdd074f75e048ea1166858f5a",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "fd5205dc783f1c1cc2f0994ec464776b71ddb824131f0b9b35bb4ccd89ec9d35",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "1b36d3ab15f2f56f0da9e9f83e0573a8b866bc9a41dfe12011d367c15c380988",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "639520643c7acf59a0ef1ebf6588fe2cdd57eb2ac168f7e6c862cb62f87a9050",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "9d39ce113ba0f50d639532c9fb169071a1b0bac1a2ff3f3e7e34acbb853a2ecd",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "d98fccfe1d7b1275619dd23e36ccaf5a30bb1bd828dda2af58753f91321d6f0f",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "91100d6c5e9518b0f625ef05f95c7ebaac5979f08a6e38ad3e7b265aecb468f3",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "76b2df7b386c96b96754acf21380e7f3d52a57de1d4540c5c7161ff24657088c",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "951f6ff77094af022ee7b16d58b3abfe8ab104d284cd962cf71819ea8534e024",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "16215de74d1769c901ba2a116c6c79af1035ba044b7bd616bb1a2e89ae465658",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "8074d13a5aaca4c5873a74957fd8d3ad94dc8dd5a9506be62bf7b8fa67b18cee",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "1f12bfa4f8ad31b1da26de309bc6358cf8da053419f5ae140d7d8c7970d55bc4",
+          "receipt_present": true
+        }
+      ],
+      "case_key": "r66b05_56fb0e6ccb0310ef",
+      "geometry_check_requests_inferred": 16,
+      "motion_encoding_calls_inferred": 16,
+      "music_encoding_calls_inferred": 1
+    },
+    {
+      "actual_candidate_count": 8,
+      "actual_geometry_calls": {
+        "known_requests": 8,
+        "known_sum": 8,
+        "missing_requests": 0,
+        "total": 8
+      },
+      "cached_geometry_reuses": {
+        "known_requests": 8,
+        "known_sum": 0,
+        "missing_requests": 0,
+        "total": 0
+      },
+      "candidate_receipts": [
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "bd906f4277abcd16dda920322dce52b283a3d233c339dfe3871c77eea5076887",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "4e384af668d456f8f9d6ebb255089446b5bd39cbc3d3130eb72973534fa87b3e",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "d742a3fcabacaaca66cb4b7831ad4a5ca86281bd44a271fc3cd82c3403c16bcf",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "dbee65f9c7183deb520c821f776fa67f664839c18127f74705fdd2223520e655",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "9b6f2f44ad75dab44b0394e813e28bcb6bb1ecfad9e4f83fb43cf0c3d23a15b0",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "b3509ca70a536db1dbc0711c5322edcaa54a56e9cf73a362b6a2718a291e1344",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "225dcde895209cd526f331ed61f94abbfd40997816edd3cb636496194fe364b8",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "b64bc361f8b1358dfc33c15e0a9256f5d1e5fb90ac972d5417f894cbe3074abb",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "5c9726e3585000a41f0ec203816c075bab08234ac86f6ec92ba1a5da51b4798c",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "f53e90ab03287b76ccaddf565feb98eda3b97f980d25e19d8195f7f0c882ae71",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "dee23c9c5e0b9334a8638321ccb2a4373cf31813901eb8945eba1122cfe33b01",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "8cd329b3ea5687cf63b6b6ebe9a991b0d188d08c58fd03e64bca9436d9b7b02e",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "5b457da49bed93d5038774317b0517e4271403d09986070d62a0ec7ec44475bf",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "e7a49fcc8bb29ba008597a6918cbfd476778162bb0157c84ff250c3213260d40",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "8bf65361e22a8e7e0caa614cf2a169ee387543e8eb12e991c19f4d0d7c00ba35",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "a13dfc9308c03206370bf69e8f08aafe717e87907da50269f6f2a91f76be15a4",
+          "receipt_present": true
+        }
+      ],
+      "case_key": "r66b06_0a8028422bbfb1c4",
+      "geometry_check_requests_inferred": 8,
+      "motion_encoding_calls_inferred": 8,
+      "music_encoding_calls_inferred": 1
+    },
+    {
+      "actual_candidate_count": 16,
+      "actual_geometry_calls": {
+        "known_requests": 16,
+        "known_sum": 16,
+        "missing_requests": 0,
+        "total": 16
+      },
+      "cached_geometry_reuses": {
+        "known_requests": 16,
+        "known_sum": 0,
+        "missing_requests": 0,
+        "total": 0
+      },
+      "candidate_receipts": [
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "fdf094dc43ea6b8b003071f238b6f943310a408b77ff2fdc9703fe3f8f32265b",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "555b5c0548f37c492ad88a394adbf1bf644e9c8be8f9cddf8f2e7a54bf628822",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "fefbb0ccfb783f33b424caab2644bf203a3919529cd61afaf5a54a8c443b68d9",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "e604bc0b0b8e9f6fc4b8952812b850d9eb76f929347c360ab272f8d1d4f1bb9e",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "440f27340d5da4e6133dc101cb170f149079c87e8ef3c83502acf058f61a2b97",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "f1f9008ce226246623be660766b2d56cf7ddbea19019f04dcc4ba1796185ecb9",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "6fd7114d08333d150ee46ea255cde82a85eca1c212163792de9c53c0f3bb1521",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "e1662c640b7397b6e76bc9ba2f27256ccc8bb3ffdbf810cb99686331367da767",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "b29cd587e562cd519ea09c8229351a11deb937dc9d592232f457fcf994d0cd0a",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "bc09c24f10c6dd3aaf7e91251d74899c9f2242bb288afa003e3b75367d01b380",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "a485c4c4be3539a72650b87035be33df0073864579887443b4525bca110684eb",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "86dbe4efea39b3ca80e2054dd220c28ad9ebcc7887297e97fdbe2b088517a5bb",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "dbdfa8f39fef1b49ea34c02242d2d4a5fcc60558afcf74e1ff9365cd6dc52a45",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "a3f41a73d69f382d7b9c156973c5cf6c2a51d36194bd04349ce15422138a2ae0",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "584bf75cec5b745ec5fdc6d7dd4ac43d967f57d22d08c516038695e44af15b4b",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "7022ee78ff2bb0e08524965d582c423ad6cbf5e78b2c57db3fe95971a8e32484",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "2474725171bf59cde0e91cd223d59a33a8523d08aae0a22810acf2515eb5dcee",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "3fe7f78f4ef9d6b3816b2076c831d70926e0b55211ee55bcaa5f3aaebfb5e118",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "4c5c95097dc087cf266948488475ed99c1ae171399034464877861a402d1bfd4",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "e3bdabf4fdaba64c7c7b57884478a253f3e225f674074fdefb2cc717ce731271",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "20a1ff129a19998ee1bbb3283fbc17f1d0f65d177d1db6097fac4548a101ff80",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "8ab6369f4d3873cb39bce4c8e18dc338255bf79a763305dc113f2d070d82417f",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "b1f8a1cf01095929d5f41189ae55f2d31b07c3d9e5dc6d5bc9bf93d410d513f3",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "64efaef8b8bc7a892bc2ea0ebbf48bc51f289490ecdc65678608c6e8568d611d",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "42d0d2c42bd42047f268ea7efdf6c47f407593abdc1fb12e4274a18277977813",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "fff38919d188c9fb2fff8ee97c397c13faf46e992c840d5d7aef35f97fb527ab",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "cdf733c17610afe1a708b2a69507188c77bac2bba30af5bdda4de0607fa6f3c7",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "d6fa08376fd30ceec30a3ac4bf2ab334e551562d789eb8ef0c7973b4bf43d25b",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "3b012c95627facae391193d5ee935b906184d7036851ed68254ff387f3f44143",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "5d0278afc40a915d444092e91c8fd4c896899ff3cc263da015f089e564a13f74",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "6121d4bf0ce0e8b2d37ad676de6bd40cfb1b8cf67a1d9aa2859379096c602b59",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "40607d9cdbd99adff92258883a2b59dc9b13177fb261ff6e9be1712c473d118d",
+          "receipt_present": true
+        }
+      ],
+      "case_key": "r66b07_4717682e3be3dd02",
+      "geometry_check_requests_inferred": 16,
+      "motion_encoding_calls_inferred": 16,
+      "music_encoding_calls_inferred": 1
+    },
+    {
+      "actual_candidate_count": 16,
+      "actual_geometry_calls": {
+        "known_requests": 16,
+        "known_sum": 16,
+        "missing_requests": 0,
+        "total": 16
+      },
+      "cached_geometry_reuses": {
+        "known_requests": 16,
+        "known_sum": 0,
+        "missing_requests": 0,
+        "total": 0
+      },
+      "candidate_receipts": [
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "eed0fc44b08e2edd56ff52a06f473d003f254151c4939e751287f36e972e78ea",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "48787f324edc8d49b4b3462f5c125be87b27f08b2b69b382e30c29d51158b11e",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "ad2426e369ab60ae70d1e2c4f64e9667daaea096f4262b7d0fbff4e412175186",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "d4055c4c7192c75759afe12af3cd13eaf8674be2a11a6e4b424adfcbf7a82c60",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "70709707e45d3ae7c00e19f20a48cdab272f00962df7181a0980c6ddaf95857f",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "9fd1741a89717b01872b89d6692fde370b0a6064667922781974d818e86f638c",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "4bad98fb38698b70990101938fa0f3e77c3ecf249b6bc7f4af180d2cd5ad3c66",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "dd4921551654f55993bbd782cb56e17e426409b23ba213b64605eb15ba22c95a",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "22ec707a2e0fb6fa882a2406971bbbd3d82534a47686bfdc59d7366d09552949",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "7c8e205c09c57f206761755ff03a5131ef357eabb09fe2c11396c1960e285383",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "6aca7308d02a06d82fa546505ba7dc0df12a34ac00b94500c9be770e712853dc",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "698d505b93b8b3fdda6a9ba097bb412edc741641c6b1b95cd8987e7756113b18",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "d496b2eb392e5798c3c5e1480c55da6dc9e484ba382a424c333528f94e8a04dc",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "f42269d1a4e693ce541f5fd483117f59a7a2f00e1bc4588f4b4d867693140a68",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "a9bc94b55486e846840362ea9d7622c7005aaea4de2ae161617f927cb8aa598f",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "80e4c369613e636a9b6804106bb9591a110feb142ea3695c2dfa552f8198bd4f",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "be810c477bfcd06f16c454bc52c920d1a598480c8883ff6b177f6005965ff537",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "3f699e80d49edfcc1c100002bbbda330884320782a3813221dc8a6ca8eec985f",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "10dac984bedd444198265429d41a87d99f82d31128df887527c969835af02a8e",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "0670abe3fb7dd30005e6e98d87d0ca885475aff9a411eb68b18d472cc5d9f5c2",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "b0506ec5d022b9289d94e346a2f6f8113e12b194e23533ba7abde101e6ca5268",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "5463c99748c34ae4998e40eaab09345234c3fa70cb62e023cbf36e9b41c3aed9",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "6660ff3ed846bc03b79b71ec4ab25152054b07906aecfc9eded15c7e96db6a5c",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "2bf2382ae96802f54480305d4d686247b9573baca3e408185f4c85e17f67b71f",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "5cfc2b250292358d6d63c4fb86d57be9b5085eeacf00d1f6de48bbdd20f70892",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "21d412c01410869a503dd365fde906c857fa685956638e4adccaa213d629ab3c",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "e714dd703558e7e893c22442f8766806e21a037a223cdf2cd79830e32998e8df",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "bce6552fa3485ec5b6e479a900d337ade3c355c905730a5d4485d1a3791a3f60",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "9957e9d1e9bd910f2e9185afecbb8d59555e8ba9d15e34ab1ba21a52ad167523",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "835601c639155ffa3956c6736232ce7f344bec96ba633af5857ec12805751177",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "df3a8758ebbb25726ebff85a53505a8caaa073a691651ae4694b8c3a349b837b",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "389e90811775c23a906d6c0e62c224fc6603ab7cc351c17e8d3ca63ea489c75b",
+          "receipt_present": true
+        }
+      ],
+      "case_key": "r66b08_a7e0cdf241d7a758",
+      "geometry_check_requests_inferred": 16,
+      "motion_encoding_calls_inferred": 16,
+      "music_encoding_calls_inferred": 1
+    },
+    {
+      "actual_candidate_count": 12,
+      "actual_geometry_calls": {
+        "known_requests": 12,
+        "known_sum": 12,
+        "missing_requests": 0,
+        "total": 12
+      },
+      "cached_geometry_reuses": {
+        "known_requests": 12,
+        "known_sum": 0,
+        "missing_requests": 0,
+        "total": 0
+      },
+      "candidate_receipts": [
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "8e9de0b79e6afe4ee98870ca816bf177e333ad00739baa11fa7da9efa55c9972",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "30f0775cd095737278d5a70c9deba5ad0aec68bc7948bcab07e73a4bdcbf2ec4",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "ac0b49f2b3cdd63049595408927d1d9b82f22c6a73a13582ff82f5c2a5f0ff15",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "7cb2c5130f1f1e51e2006fd91f4fd605decb5b68cc812b3d4b7e318fff76496d",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "3c99401bba9d12da0068405ed8b5819d7f37de8822585cc664060804b1b76126",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "4e472f9ea27735a3fb5c7e254ba3125bbcea41d5e0a69701445e428c271306cd",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "50767f62e6a378266a2470cd258ab66947e2a4bed86e1d4029d0dde4c5eacbb1",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "fd5e6f6f6e79bd52172250b6a8bcea9009eb9ae072125c83288a944fd7172caf",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "1115a0819d928a2cbe178ea544e32e63b594c9e16c1882fd56aeb810278bb90f",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "6203ea06b41f85afb8bdbd0f00cded6f95dbbb613c880d14746aa628e1af8922",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "a4e93ece233ed0eafe9b8c908071735fc42b10c389158612b2e34daf551b04e3",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "44455bfcaaaeabe9d6738de641edc696fa02f68a3854e76af5372c37559641ab",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "5e9bcfc15a897424712db931680e26a77bbc809a61bf1c9dc87c3e4fdb546b81",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "b916162574329f1679c236fe9f878c90f32e168b7a0d0778316fa7beea2ccc3c",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "f7bf44388a4257ae32a8a96918570e4b90dcf99bdb63616557e5b975352cbc6d",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "99d82cb2e4a2fcb685f86bbf2d657e6e8d6743b66fd529143fc0c3f3c51f32dd",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "ef59efb8bc24a56d6c5c53f8eef8c9e0eb7b51986de74f1a28d72addc627eed7",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "2f82f24fa182064f97ae81aeba81e242b5934bf053065da51644631b6cc645f3",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "a904813b92874390d81fde03425e5508f85eb2f612446fe003d8badb100a522b",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "ac10de6f7d6ba7a102bbf97aad2c5b2a48eede7eb01ea04d8459042b38bc2bd1",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "696e8da8f20574e4108e3f2cd0240a268368766f3b850bacc887f6b46adea5f3",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "61d6b06b0e3912752c9613e534fbd4bbcf01cf38ad13cf00e1626b74c9b209df",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "5ab101f1b59a0c81a1e671be05e602f3ba97412367d4c6b6ff121ade2911ebd1",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "98329135fe03a5b7cae3ae1ee08ae89ad66225611584d88e82ebd6891c336460",
+          "receipt_present": true
+        }
+      ],
+      "case_key": "r66b09_43aba2362b9199f7",
+      "geometry_check_requests_inferred": 12,
+      "motion_encoding_calls_inferred": 12,
+      "music_encoding_calls_inferred": 1
+    },
+    {
+      "actual_candidate_count": 16,
+      "actual_geometry_calls": {
+        "known_requests": 16,
+        "known_sum": 16,
+        "missing_requests": 0,
+        "total": 16
+      },
+      "cached_geometry_reuses": {
+        "known_requests": 16,
+        "known_sum": 0,
+        "missing_requests": 0,
+        "total": 0
+      },
+      "candidate_receipts": [
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "43aeb0d1e0e5f61551ce1740539a0c80552e6fa29a19f7221ee905b8847f3330",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "879bcb0cf2a9f57d1a48596d1ee7251e60cd5f058f747258c99f13d3cee99895",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "72bc8a1034e076e5ade0c8dc7a6b1a704282081fcc3da47593d33ce811b2d854",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "d9a5e089a307923e78f2b3a34afb2cd4f5283c462111c9cc2cf1ff7786666862",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "98c1c8bd75a15d408d14055b58885b29928d4033ecdbff651a41f10c731a13e3",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "0eca1c204a0f21e965acfe4474b7dd5c748801f689d4dd5b20017ab17709bd20",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "81eed0b23cb59454bd19b89a9462b109ad6baf1264259132e128eb57dbd7bbf9",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "9f45834261ac3d09c9037f40b4ee969f085d0cbbd7b80a15e1db02912336b298",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "0581e401facf47b8264d434b5b6be2545e59c9bd1056c609cf895c69ebce5b3e",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "2afa3b700293a75981baeb81525ffa7fcd1fd5234b1d83f91b10c28c6747518a",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "01d05d733a55fcc00aca2222f76e343d6ff9fb8dc0f8815171464d48ce1c591e",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "92277c0297b3c56a9f8f8cc9e3b232ceda7e18877a92671a4919a28fadcbebd8",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "15f336f7ff5c1963c1009d0ae90e2657201664c454052ea51a08c289f834997c",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "bbb1530c3febbae961e32acf51b1d98fa3727576def09a44307c855f9894e834",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "c4ad3f741dc2c920fa6dee918ac745f9c3bd001601529cd448e03bd57608989c",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "485f257a02632d07f59e6a3b00736544ddf0cd2a42a0e26c3b7bae672754e661",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "4b4f30018f9a8a1e2b17e0ce58e8317e615b7881934572b05beefa2ced731fc4",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "bd7b66439772bc6d8a7a05cacc6bca499fddd24456121fe46234df031aafce22",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "112ea739c67df981899101ddb1c0de3a04841a151403b1e5864d92c8c6401499",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "a890395797b278895be0f27eea5f6ba222e4d036f18e7e55229b47e057884f58",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "0aeaa2b6928496d100b1fcb34349813eec5e83b5910daf76c79fd7aea3d7b906",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "173de1e045ee9f64311f68cd8d50a786eb118e04ed4be0333067259b3769ce35",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "e3484d6a9916fcf05cc5011560aac4b181805331100af781be07ef463a181ce6",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "7d10462ec3ad8aa5543cb57e07261719b3d398dc2b7c9b009079ba3d6060fe96",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "a203b0ddd165c36a60e322eabcc1ac1e46ed2eba6f4bea470908ba32ff321fd6",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "bf4573ac8f6b3563f59e5b5acc7898f6bb005a7157c72ab1c8d9d96111831ccc",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "a944104594025f3e84a6f1cf8134055d970df9555306bd2dcff419c5700afaa2",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "16164b9a82b654de4a3900afea820103d1824b6c080375b8f376b540582b44b9",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "18b9170fdf04c0acd457f52ddca33a7b9dfe4bc644edfd45bfc3566ad71d8fdb",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "40cd149bcac6ffd2bd0bf18a37f4f8629cff0c967c8fb55c9977dfe09b2146a9",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "5fc3917f3883774127455de5cb4f21518e24702820fc041c2b2a01b5ed13a4ec",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "64e48efa5ba5d9d01f0e750e5fe0855531032b96f5c776518bb9cc1b6ee64254",
+          "receipt_present": true
+        }
+      ],
+      "case_key": "r66b10_f449ca842cdeb74f",
+      "geometry_check_requests_inferred": 16,
+      "motion_encoding_calls_inferred": 16,
+      "music_encoding_calls_inferred": 1
+    },
+    {
+      "actual_candidate_count": 16,
+      "actual_geometry_calls": {
+        "known_requests": 16,
+        "known_sum": 16,
+        "missing_requests": 0,
+        "total": 16
+      },
+      "cached_geometry_reuses": {
+        "known_requests": 16,
+        "known_sum": 0,
+        "missing_requests": 0,
+        "total": 0
+      },
+      "candidate_receipts": [
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "7d90da99c10c9564061c67e4fc4771c8310e0d0f796947149b194c2ad9d38720",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "3df902ce6165fa227ab7c20694c7788ac6f96adc5297ed5920fe05b26fb1662a",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "f59bd2ec633dc03dac0ecec516429b9fc06ab9045ad64447b26a5aeda08b416b",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "fdc8dd59e9298cb3f6dfca2c9e36a855e980649fd954f331d5a635778c8433bb",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "3bec615de400e39b2314619be59d383289f93c024e9515cd10e22ee7f226873d",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "52eed45a4eb9d63e6cffac039f411719c6adcc6eb2c54c9fa6e4ab7841bd5b38",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "29553bef13b4f7b1df9556f97c506171487819a51c807994877befa420fe4cb2",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "76ae56b7c6a08d7e61da9e3a32fd5746aea427cc7e43a29dc5f14bf61243c086",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "b47effa28a5f0f077a950c9f58067efe0bc305ed5b5db4124c278577f59d5eb1",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "bd2bc2b512e5a6893abbac078255f1ee1dff6de818135b30c969e74d77675d47",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "5e8518e9fd7e5f42663670897b5d1a2137f532d8c309a337a437f50a6567c345",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "3985e7715ba273aff2bbbe84e64c98b42a303d45b2ae650acb55ffc8b5841f3e",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "55e835375df601880ee68cc2a6998969ff259a0a666d1ba04573586c0d4b5b37",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "aaab48cbc7ca59b7b83bd0ee47ac4f917e675b58a7bb882406cbf1468c77002f",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "f27cfc2794581100fc57dbb29cb6bf6b9b0cec9cb9b5459e9e5e0cc6ad3a7ea3",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "0322f74247044021f78e2691335a61892d0b2a255f2b04d7b32ceea7e4e3e663",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "4305f86c26a9a78d94572fcd438d1f9a342612e93647590a6e135860cd4409c8",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "999d7f1bca6183e9ad86ee230a34519dc2e626a13b8974f324775ab5fe2c24aa",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "8159678f2009ce51e08f83477ec19992fc53ef643af4b735f34fc2da190b6933",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "c9ee5d7f9d98fc53db019b9030fd762710e15aaf60772236ebb5a114119759f4",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "5af7592bbbfbe4e90e822269047ede47c21d72f0dfb88bf675a23268a09cf7c2",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "c29c14029fe17cf8cf7c135043e50495d6936f439b5ef2c5ca6a5c38c2b69e2b",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "0ee1d482f54cbcff2caf23eaa66c97fbbbc4b01f4309d01e441ede343d099ebc",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "46bd21106362f1d63aec07c28f9682efd5c969a5091ab5123ee4db528905523c",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "abea2cbff3d4c3019fb0afbd96f3c21b5f396c15176668dd18fffda241f04aca",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "5998e19a1dffb9a454f8f61aa1a37f6e080c69cf8abebb6e680f28579bf17a3e",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "9719ce474aa70a4d5b4bed10a9665924964a80774572e7e5f1660ce7857e372f",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "6f5108b5f2441bb5cbb83f0b744d8795d72648d2520fe9f36fe31cfca46d8aa1",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "b92f769aa19c89a1dcc1cc570b0de25025af75a71b7d84c927b39955a31dbe14",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "83e563b53c8d1732ef23bdce81c5381d17e66275025ff10afc3e893474e387a1",
+          "receipt_present": true
+        },
+        {
+          "actual_geometry_calls": 1,
+          "cache_key": "133b9c4680138274b23eaa4685ea17baab05952f1ff27a044b7ce8fcdb13c16f",
+          "cached_geometry_reuses": 0,
+          "candidate_uid": "deb80cd6a1ebd5967a7e99f0b573c50453690acb1678c01d76c456faec161d91",
+          "receipt_present": true
+        }
+      ],
+      "case_key": "r66b11_73f9e95e0fef2d60",
+      "geometry_check_requests_inferred": 16,
+      "motion_encoding_calls_inferred": 16,
+      "music_encoding_calls_inferred": 1
+    }
+  ],
+  "can_route": false,
+  "current_R69_encoding_calls": 0,
+  "distinct_candidate_record_keys": 162,
+  "encoding_count_basis": "INFERRED_FROM_FROZEN_R67_RUN_MAIN_ENCODE_BANK_NOT_INSTRUMENTED",
+  "encoding_count_unit": "ENCODE_ROTATIONS_AND_ENCODE_MUSIC_RAW_API_INVOCATIONS_NOT_NEURAL_FORWARD_CALLS_BATCHES_FLOPS_OR_TIME",
+  "encoding_inference": "ONE_MOTION_ENCODE_PER_CANDIDATE_AND_ONE_MUSIC_ENCODE_PER_CASE_SHARED_BY_SINGLE64_MULTI64",
+  "geometry_count_basis": "ACTUAL_GEOMETRY_CALLS_THIS_REQUEST_AND_CACHED_GEOMETRY_REUSES_THIS_REQUEST; MISSING_IS_UNKNOWN",
+  "helper_sha256": "8ad895f59f3cfdcf96a668115308fd5795cba244d9df79b1012a52979dcac345",
+  "historical_wall_seconds": null,
+  "independent_sample_scope": "BANKS_AND_CANDIDATES_ARE_COST_UNITS_NOT_INDEPENDENT_RECORDINGS",
+  "input_canonical_json_sha256": {
+    "banks": "68ca45101fe3aff3c77e4ab70b74ae7b0fec58f44adfe36afda66c4cedf41535",
+    "records": "01e75adfc2f7dddca9525cbbe25b3c3ccb3ba29fdbb7b8ca2b03f53611c2ccd9",
+    "registration": "78880ef311bc059d4a97044299bb0d6728d6447e14d92bfc98fa75df65d80df1"
+  },
+  "quality_winner": null,
+  "registered_case_banks": 12,
+  "registration_counts": {
+    "actual_geometry_calls": 162,
+    "cached_geometry_reuses": 0,
+    "check_requests": 162
+  },
+  "registration_receipt_agreement": {
+    "actual_geometry_calls": true,
+    "cached_geometry_reuses": true,
+    "check_requests": true
+  },
+  "schema": "R69_SHARED_HISTORICAL_BANK_COSTS_V1",
+  "source_files_verified": "ALL_MANIFEST_BYTES_REHASHED_EXACT",
+  "source_manifest_sha256": "ebea56cdcc58158f987bd2f7fe9a8292e4a001a3584b2159c0e981cc583040ed",
+  "totals": {
+    "actual_geometry_calls": {
+      "known_requests": 162,
+      "known_sum": 162,
+      "missing_requests": 0,
+      "total": 162
+    },
+    "cached_geometry_reuses": {
+      "known_requests": 162,
+      "known_sum": 0,
+      "missing_requests": 0,
+      "total": 0
+    },
+    "geometry_check_requests_inferred": 162,
+    "motion_encoding_calls_inferred": 162,
+    "music_encoding_calls_inferred": 12
+  }
+}

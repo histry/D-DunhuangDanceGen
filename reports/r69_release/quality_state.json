@@ -1,0 +1,2528 @@
+{
+  "Native24": "NOT_EVALUABLE",
+  "admin_attested_distinct_people_with_paired_scores": 0,
+  "authentication_scope": "ADMIN_ATTESTATION_NOT_EXTERNAL_IDENTITY_PROOF; JSON_SELF_REPORT_ALONE_NEVER_SUFFICIENT",
+  "can_route": false,
+  "comparisons": {
+    "BeatDP_minus_E1W": {
+      "continuity": {
+        "case_results": [
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_bc8dedb90b8509a420f58cc0",
+            "case_key": "r66b05_56fb0e6ccb0310ef",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_bcbc1fb2361fdb26793df0b4",
+            "case_key": "r66b04_c4ded6ddc2d6940d",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_e0e5a42dd38792cfaf766378",
+            "case_key": "r66b02_70c9ebdda89155ec",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_7869680f7654c59dae90d7ed",
+            "case_key": "r66b06_0a8028422bbfb1c4",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_328e5d14a4565f8eed251136",
+            "case_key": "r66b01_ca3f06a9b37a47ff",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_a2c8226c5f493b80e30e932b",
+            "case_key": "r66b11_73f9e95e0fef2d60",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_2442e84a913fb45e61cb621f",
+            "case_key": "r66b00_6280fdcb23109a34",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_73917bbc3780e5d1f951163a",
+            "case_key": "r66b09_43aba2362b9199f7",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_02f739adbe2f001326a37623",
+            "case_key": "r66b03_a9c01b65dc66d062",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_3612301c24957d33293f4c9e",
+            "case_key": "r66b07_4717682e3be3dd02",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_ca094c25eac283bb8b92c36a",
+            "case_key": "r66b08_a7e0cdf241d7a758",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_6a6d304d063f921ce5dd30d3",
+            "case_key": "r66b10_f449ca842cdeb74f",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          }
+        ],
+        "ci95": null,
+        "evaluable_cases": 0,
+        "evaluable_source_intervals": 0,
+        "missing_status_counts": {},
+        "ordinal_difference_scope": "SAME_REVIEWER_SAME_CASE; PERSONS_BALANCED_WITHIN_CASE; CASES_WITHIN_SOURCE_INTERVAL",
+        "p_value": null,
+        "paired_records": 0,
+        "raw_paired_records": [],
+        "registered_document_case_slots": 0,
+        "source_interval_balanced_mean": null,
+        "source_interval_means": [],
+        "unpaired_records": []
+      },
+      "music_coordination": {
+        "case_results": [
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_bc8dedb90b8509a420f58cc0",
+            "case_key": "r66b05_56fb0e6ccb0310ef",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_bcbc1fb2361fdb26793df0b4",
+            "case_key": "r66b04_c4ded6ddc2d6940d",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_e0e5a42dd38792cfaf766378",
+            "case_key": "r66b02_70c9ebdda89155ec",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_7869680f7654c59dae90d7ed",
+            "case_key": "r66b06_0a8028422bbfb1c4",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_328e5d14a4565f8eed251136",
+            "case_key": "r66b01_ca3f06a9b37a47ff",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_a2c8226c5f493b80e30e932b",
+            "case_key": "r66b11_73f9e95e0fef2d60",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_2442e84a913fb45e61cb621f",
+            "case_key": "r66b00_6280fdcb23109a34",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_73917bbc3780e5d1f951163a",
+            "case_key": "r66b09_43aba2362b9199f7",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_02f739adbe2f001326a37623",
+            "case_key": "r66b03_a9c01b65dc66d062",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_3612301c24957d33293f4c9e",
+            "case_key": "r66b07_4717682e3be3dd02",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_ca094c25eac283bb8b92c36a",
+            "case_key": "r66b08_a7e0cdf241d7a758",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_6a6d304d063f921ce5dd30d3",
+            "case_key": "r66b10_f449ca842cdeb74f",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          }
+        ],
+        "ci95": null,
+        "evaluable_cases": 0,
+        "evaluable_source_intervals": 0,
+        "missing_status_counts": {},
+        "ordinal_difference_scope": "SAME_REVIEWER_SAME_CASE; PERSONS_BALANCED_WITHIN_CASE; CASES_WITHIN_SOURCE_INTERVAL",
+        "p_value": null,
+        "paired_records": 0,
+        "raw_paired_records": [],
+        "registered_document_case_slots": 0,
+        "source_interval_balanced_mean": null,
+        "source_interval_means": [],
+        "unpaired_records": []
+      },
+      "naturalness": {
+        "case_results": [
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_bc8dedb90b8509a420f58cc0",
+            "case_key": "r66b05_56fb0e6ccb0310ef",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_bcbc1fb2361fdb26793df0b4",
+            "case_key": "r66b04_c4ded6ddc2d6940d",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_e0e5a42dd38792cfaf766378",
+            "case_key": "r66b02_70c9ebdda89155ec",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_7869680f7654c59dae90d7ed",
+            "case_key": "r66b06_0a8028422bbfb1c4",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_328e5d14a4565f8eed251136",
+            "case_key": "r66b01_ca3f06a9b37a47ff",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_a2c8226c5f493b80e30e932b",
+            "case_key": "r66b11_73f9e95e0fef2d60",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_2442e84a913fb45e61cb621f",
+            "case_key": "r66b00_6280fdcb23109a34",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_73917bbc3780e5d1f951163a",
+            "case_key": "r66b09_43aba2362b9199f7",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_02f739adbe2f001326a37623",
+            "case_key": "r66b03_a9c01b65dc66d062",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_3612301c24957d33293f4c9e",
+            "case_key": "r66b07_4717682e3be3dd02",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_ca094c25eac283bb8b92c36a",
+            "case_key": "r66b08_a7e0cdf241d7a758",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_6a6d304d063f921ce5dd30d3",
+            "case_key": "r66b10_f449ca842cdeb74f",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          }
+        ],
+        "ci95": null,
+        "evaluable_cases": 0,
+        "evaluable_source_intervals": 0,
+        "missing_status_counts": {},
+        "ordinal_difference_scope": "SAME_REVIEWER_SAME_CASE; PERSONS_BALANCED_WITHIN_CASE; CASES_WITHIN_SOURCE_INTERVAL",
+        "p_value": null,
+        "paired_records": 0,
+        "raw_paired_records": [],
+        "registered_document_case_slots": 0,
+        "source_interval_balanced_mean": null,
+        "source_interval_means": [],
+        "unpaired_records": []
+      },
+      "richness": {
+        "case_results": [
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_bc8dedb90b8509a420f58cc0",
+            "case_key": "r66b05_56fb0e6ccb0310ef",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_bcbc1fb2361fdb26793df0b4",
+            "case_key": "r66b04_c4ded6ddc2d6940d",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_e0e5a42dd38792cfaf766378",
+            "case_key": "r66b02_70c9ebdda89155ec",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_7869680f7654c59dae90d7ed",
+            "case_key": "r66b06_0a8028422bbfb1c4",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_328e5d14a4565f8eed251136",
+            "case_key": "r66b01_ca3f06a9b37a47ff",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_a2c8226c5f493b80e30e932b",
+            "case_key": "r66b11_73f9e95e0fef2d60",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_2442e84a913fb45e61cb621f",
+            "case_key": "r66b00_6280fdcb23109a34",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_73917bbc3780e5d1f951163a",
+            "case_key": "r66b09_43aba2362b9199f7",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_02f739adbe2f001326a37623",
+            "case_key": "r66b03_a9c01b65dc66d062",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_3612301c24957d33293f4c9e",
+            "case_key": "r66b07_4717682e3be3dd02",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_ca094c25eac283bb8b92c36a",
+            "case_key": "r66b08_a7e0cdf241d7a758",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_6a6d304d063f921ce5dd30d3",
+            "case_key": "r66b10_f449ca842cdeb74f",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          }
+        ],
+        "ci95": null,
+        "evaluable_cases": 0,
+        "evaluable_source_intervals": 0,
+        "missing_status_counts": {},
+        "ordinal_difference_scope": "SAME_REVIEWER_SAME_CASE; PERSONS_BALANCED_WITHIN_CASE; CASES_WITHIN_SOURCE_INTERVAL",
+        "p_value": null,
+        "paired_records": 0,
+        "raw_paired_records": [],
+        "registered_document_case_slots": 0,
+        "source_interval_balanced_mean": null,
+        "source_interval_means": [],
+        "unpaired_records": []
+      },
+      "transition_timing": {
+        "case_results": [
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_bc8dedb90b8509a420f58cc0",
+            "case_key": "r66b05_56fb0e6ccb0310ef",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_bcbc1fb2361fdb26793df0b4",
+            "case_key": "r66b04_c4ded6ddc2d6940d",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_e0e5a42dd38792cfaf766378",
+            "case_key": "r66b02_70c9ebdda89155ec",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_7869680f7654c59dae90d7ed",
+            "case_key": "r66b06_0a8028422bbfb1c4",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_328e5d14a4565f8eed251136",
+            "case_key": "r66b01_ca3f06a9b37a47ff",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_a2c8226c5f493b80e30e932b",
+            "case_key": "r66b11_73f9e95e0fef2d60",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_2442e84a913fb45e61cb621f",
+            "case_key": "r66b00_6280fdcb23109a34",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_73917bbc3780e5d1f951163a",
+            "case_key": "r66b09_43aba2362b9199f7",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_02f739adbe2f001326a37623",
+            "case_key": "r66b03_a9c01b65dc66d062",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_3612301c24957d33293f4c9e",
+            "case_key": "r66b07_4717682e3be3dd02",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_ca094c25eac283bb8b92c36a",
+            "case_key": "r66b08_a7e0cdf241d7a758",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_6a6d304d063f921ce5dd30d3",
+            "case_key": "r66b10_f449ca842cdeb74f",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          }
+        ],
+        "ci95": null,
+        "evaluable_cases": 0,
+        "evaluable_source_intervals": 0,
+        "missing_status_counts": {},
+        "ordinal_difference_scope": "SAME_REVIEWER_SAME_CASE; PERSONS_BALANCED_WITHIN_CASE; CASES_WITHIN_SOURCE_INTERVAL",
+        "p_value": null,
+        "paired_records": 0,
+        "raw_paired_records": [],
+        "registered_document_case_slots": 0,
+        "source_interval_balanced_mean": null,
+        "source_interval_means": [],
+        "unpaired_records": []
+      }
+    },
+    "E1W_minus_Uniform": {
+      "continuity": {
+        "case_results": [
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_bc8dedb90b8509a420f58cc0",
+            "case_key": "r66b05_56fb0e6ccb0310ef",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_bcbc1fb2361fdb26793df0b4",
+            "case_key": "r66b04_c4ded6ddc2d6940d",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_e0e5a42dd38792cfaf766378",
+            "case_key": "r66b02_70c9ebdda89155ec",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_7869680f7654c59dae90d7ed",
+            "case_key": "r66b06_0a8028422bbfb1c4",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_328e5d14a4565f8eed251136",
+            "case_key": "r66b01_ca3f06a9b37a47ff",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_a2c8226c5f493b80e30e932b",
+            "case_key": "r66b11_73f9e95e0fef2d60",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_2442e84a913fb45e61cb621f",
+            "case_key": "r66b00_6280fdcb23109a34",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_73917bbc3780e5d1f951163a",
+            "case_key": "r66b09_43aba2362b9199f7",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_02f739adbe2f001326a37623",
+            "case_key": "r66b03_a9c01b65dc66d062",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_3612301c24957d33293f4c9e",
+            "case_key": "r66b07_4717682e3be3dd02",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_ca094c25eac283bb8b92c36a",
+            "case_key": "r66b08_a7e0cdf241d7a758",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_6a6d304d063f921ce5dd30d3",
+            "case_key": "r66b10_f449ca842cdeb74f",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          }
+        ],
+        "ci95": null,
+        "evaluable_cases": 0,
+        "evaluable_source_intervals": 0,
+        "missing_status_counts": {},
+        "ordinal_difference_scope": "SAME_REVIEWER_SAME_CASE; PERSONS_BALANCED_WITHIN_CASE; CASES_WITHIN_SOURCE_INTERVAL",
+        "p_value": null,
+        "paired_records": 0,
+        "raw_paired_records": [],
+        "registered_document_case_slots": 0,
+        "source_interval_balanced_mean": null,
+        "source_interval_means": [],
+        "unpaired_records": []
+      },
+      "music_coordination": {
+        "case_results": [
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_bc8dedb90b8509a420f58cc0",
+            "case_key": "r66b05_56fb0e6ccb0310ef",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_bcbc1fb2361fdb26793df0b4",
+            "case_key": "r66b04_c4ded6ddc2d6940d",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_e0e5a42dd38792cfaf766378",
+            "case_key": "r66b02_70c9ebdda89155ec",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_7869680f7654c59dae90d7ed",
+            "case_key": "r66b06_0a8028422bbfb1c4",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_328e5d14a4565f8eed251136",
+            "case_key": "r66b01_ca3f06a9b37a47ff",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_a2c8226c5f493b80e30e932b",
+            "case_key": "r66b11_73f9e95e0fef2d60",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_2442e84a913fb45e61cb621f",
+            "case_key": "r66b00_6280fdcb23109a34",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_73917bbc3780e5d1f951163a",
+            "case_key": "r66b09_43aba2362b9199f7",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_02f739adbe2f001326a37623",
+            "case_key": "r66b03_a9c01b65dc66d062",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_3612301c24957d33293f4c9e",
+            "case_key": "r66b07_4717682e3be3dd02",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_ca094c25eac283bb8b92c36a",
+            "case_key": "r66b08_a7e0cdf241d7a758",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_6a6d304d063f921ce5dd30d3",
+            "case_key": "r66b10_f449ca842cdeb74f",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          }
+        ],
+        "ci95": null,
+        "evaluable_cases": 0,
+        "evaluable_source_intervals": 0,
+        "missing_status_counts": {},
+        "ordinal_difference_scope": "SAME_REVIEWER_SAME_CASE; PERSONS_BALANCED_WITHIN_CASE; CASES_WITHIN_SOURCE_INTERVAL",
+        "p_value": null,
+        "paired_records": 0,
+        "raw_paired_records": [],
+        "registered_document_case_slots": 0,
+        "source_interval_balanced_mean": null,
+        "source_interval_means": [],
+        "unpaired_records": []
+      },
+      "naturalness": {
+        "case_results": [
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_bc8dedb90b8509a420f58cc0",
+            "case_key": "r66b05_56fb0e6ccb0310ef",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_bcbc1fb2361fdb26793df0b4",
+            "case_key": "r66b04_c4ded6ddc2d6940d",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_e0e5a42dd38792cfaf766378",
+            "case_key": "r66b02_70c9ebdda89155ec",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_7869680f7654c59dae90d7ed",
+            "case_key": "r66b06_0a8028422bbfb1c4",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_328e5d14a4565f8eed251136",
+            "case_key": "r66b01_ca3f06a9b37a47ff",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_a2c8226c5f493b80e30e932b",
+            "case_key": "r66b11_73f9e95e0fef2d60",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_2442e84a913fb45e61cb621f",
+            "case_key": "r66b00_6280fdcb23109a34",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_73917bbc3780e5d1f951163a",
+            "case_key": "r66b09_43aba2362b9199f7",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_02f739adbe2f001326a37623",
+            "case_key": "r66b03_a9c01b65dc66d062",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_3612301c24957d33293f4c9e",
+            "case_key": "r66b07_4717682e3be3dd02",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_ca094c25eac283bb8b92c36a",
+            "case_key": "r66b08_a7e0cdf241d7a758",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_6a6d304d063f921ce5dd30d3",
+            "case_key": "r66b10_f449ca842cdeb74f",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          }
+        ],
+        "ci95": null,
+        "evaluable_cases": 0,
+        "evaluable_source_intervals": 0,
+        "missing_status_counts": {},
+        "ordinal_difference_scope": "SAME_REVIEWER_SAME_CASE; PERSONS_BALANCED_WITHIN_CASE; CASES_WITHIN_SOURCE_INTERVAL",
+        "p_value": null,
+        "paired_records": 0,
+        "raw_paired_records": [],
+        "registered_document_case_slots": 0,
+        "source_interval_balanced_mean": null,
+        "source_interval_means": [],
+        "unpaired_records": []
+      },
+      "richness": {
+        "case_results": [
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_bc8dedb90b8509a420f58cc0",
+            "case_key": "r66b05_56fb0e6ccb0310ef",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_bcbc1fb2361fdb26793df0b4",
+            "case_key": "r66b04_c4ded6ddc2d6940d",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_e0e5a42dd38792cfaf766378",
+            "case_key": "r66b02_70c9ebdda89155ec",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_7869680f7654c59dae90d7ed",
+            "case_key": "r66b06_0a8028422bbfb1c4",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_328e5d14a4565f8eed251136",
+            "case_key": "r66b01_ca3f06a9b37a47ff",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_a2c8226c5f493b80e30e932b",
+            "case_key": "r66b11_73f9e95e0fef2d60",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_2442e84a913fb45e61cb621f",
+            "case_key": "r66b00_6280fdcb23109a34",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_73917bbc3780e5d1f951163a",
+            "case_key": "r66b09_43aba2362b9199f7",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_02f739adbe2f001326a37623",
+            "case_key": "r66b03_a9c01b65dc66d062",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_3612301c24957d33293f4c9e",
+            "case_key": "r66b07_4717682e3be3dd02",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_ca094c25eac283bb8b92c36a",
+            "case_key": "r66b08_a7e0cdf241d7a758",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_6a6d304d063f921ce5dd30d3",
+            "case_key": "r66b10_f449ca842cdeb74f",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          }
+        ],
+        "ci95": null,
+        "evaluable_cases": 0,
+        "evaluable_source_intervals": 0,
+        "missing_status_counts": {},
+        "ordinal_difference_scope": "SAME_REVIEWER_SAME_CASE; PERSONS_BALANCED_WITHIN_CASE; CASES_WITHIN_SOURCE_INTERVAL",
+        "p_value": null,
+        "paired_records": 0,
+        "raw_paired_records": [],
+        "registered_document_case_slots": 0,
+        "source_interval_balanced_mean": null,
+        "source_interval_means": [],
+        "unpaired_records": []
+      },
+      "transition_timing": {
+        "case_results": [
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_bc8dedb90b8509a420f58cc0",
+            "case_key": "r66b05_56fb0e6ccb0310ef",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_bcbc1fb2361fdb26793df0b4",
+            "case_key": "r66b04_c4ded6ddc2d6940d",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_e0e5a42dd38792cfaf766378",
+            "case_key": "r66b02_70c9ebdda89155ec",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_7869680f7654c59dae90d7ed",
+            "case_key": "r66b06_0a8028422bbfb1c4",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_328e5d14a4565f8eed251136",
+            "case_key": "r66b01_ca3f06a9b37a47ff",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_a2c8226c5f493b80e30e932b",
+            "case_key": "r66b11_73f9e95e0fef2d60",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_2442e84a913fb45e61cb621f",
+            "case_key": "r66b00_6280fdcb23109a34",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_73917bbc3780e5d1f951163a",
+            "case_key": "r66b09_43aba2362b9199f7",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_02f739adbe2f001326a37623",
+            "case_key": "r66b03_a9c01b65dc66d062",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_3612301c24957d33293f4c9e",
+            "case_key": "r66b07_4717682e3be3dd02",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_ca094c25eac283bb8b92c36a",
+            "case_key": "r66b08_a7e0cdf241d7a758",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_6a6d304d063f921ce5dd30d3",
+            "case_key": "r66b10_f449ca842cdeb74f",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          }
+        ],
+        "ci95": null,
+        "evaluable_cases": 0,
+        "evaluable_source_intervals": 0,
+        "missing_status_counts": {},
+        "ordinal_difference_scope": "SAME_REVIEWER_SAME_CASE; PERSONS_BALANCED_WITHIN_CASE; CASES_WITHIN_SOURCE_INTERVAL",
+        "p_value": null,
+        "paired_records": 0,
+        "raw_paired_records": [],
+        "registered_document_case_slots": 0,
+        "source_interval_balanced_mean": null,
+        "source_interval_means": [],
+        "unpaired_records": []
+      }
+    },
+    "Multi64_minus_E1W": {
+      "continuity": {
+        "case_results": [
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_bc8dedb90b8509a420f58cc0",
+            "case_key": "r66b05_56fb0e6ccb0310ef",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_bcbc1fb2361fdb26793df0b4",
+            "case_key": "r66b04_c4ded6ddc2d6940d",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_e0e5a42dd38792cfaf766378",
+            "case_key": "r66b02_70c9ebdda89155ec",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_7869680f7654c59dae90d7ed",
+            "case_key": "r66b06_0a8028422bbfb1c4",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_328e5d14a4565f8eed251136",
+            "case_key": "r66b01_ca3f06a9b37a47ff",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_a2c8226c5f493b80e30e932b",
+            "case_key": "r66b11_73f9e95e0fef2d60",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_2442e84a913fb45e61cb621f",
+            "case_key": "r66b00_6280fdcb23109a34",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_73917bbc3780e5d1f951163a",
+            "case_key": "r66b09_43aba2362b9199f7",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_02f739adbe2f001326a37623",
+            "case_key": "r66b03_a9c01b65dc66d062",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_3612301c24957d33293f4c9e",
+            "case_key": "r66b07_4717682e3be3dd02",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_ca094c25eac283bb8b92c36a",
+            "case_key": "r66b08_a7e0cdf241d7a758",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_6a6d304d063f921ce5dd30d3",
+            "case_key": "r66b10_f449ca842cdeb74f",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          }
+        ],
+        "ci95": null,
+        "evaluable_cases": 0,
+        "evaluable_source_intervals": 0,
+        "missing_status_counts": {},
+        "ordinal_difference_scope": "SAME_REVIEWER_SAME_CASE; PERSONS_BALANCED_WITHIN_CASE; CASES_WITHIN_SOURCE_INTERVAL",
+        "p_value": null,
+        "paired_records": 0,
+        "raw_paired_records": [],
+        "registered_document_case_slots": 0,
+        "source_interval_balanced_mean": null,
+        "source_interval_means": [],
+        "unpaired_records": []
+      },
+      "music_coordination": {
+        "case_results": [
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_bc8dedb90b8509a420f58cc0",
+            "case_key": "r66b05_56fb0e6ccb0310ef",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_bcbc1fb2361fdb26793df0b4",
+            "case_key": "r66b04_c4ded6ddc2d6940d",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_e0e5a42dd38792cfaf766378",
+            "case_key": "r66b02_70c9ebdda89155ec",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_7869680f7654c59dae90d7ed",
+            "case_key": "r66b06_0a8028422bbfb1c4",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_328e5d14a4565f8eed251136",
+            "case_key": "r66b01_ca3f06a9b37a47ff",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_a2c8226c5f493b80e30e932b",
+            "case_key": "r66b11_73f9e95e0fef2d60",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_2442e84a913fb45e61cb621f",
+            "case_key": "r66b00_6280fdcb23109a34",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_73917bbc3780e5d1f951163a",
+            "case_key": "r66b09_43aba2362b9199f7",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_02f739adbe2f001326a37623",
+            "case_key": "r66b03_a9c01b65dc66d062",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_3612301c24957d33293f4c9e",
+            "case_key": "r66b07_4717682e3be3dd02",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_ca094c25eac283bb8b92c36a",
+            "case_key": "r66b08_a7e0cdf241d7a758",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_6a6d304d063f921ce5dd30d3",
+            "case_key": "r66b10_f449ca842cdeb74f",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          }
+        ],
+        "ci95": null,
+        "evaluable_cases": 0,
+        "evaluable_source_intervals": 0,
+        "missing_status_counts": {},
+        "ordinal_difference_scope": "SAME_REVIEWER_SAME_CASE; PERSONS_BALANCED_WITHIN_CASE; CASES_WITHIN_SOURCE_INTERVAL",
+        "p_value": null,
+        "paired_records": 0,
+        "raw_paired_records": [],
+        "registered_document_case_slots": 0,
+        "source_interval_balanced_mean": null,
+        "source_interval_means": [],
+        "unpaired_records": []
+      },
+      "naturalness": {
+        "case_results": [
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_bc8dedb90b8509a420f58cc0",
+            "case_key": "r66b05_56fb0e6ccb0310ef",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_bcbc1fb2361fdb26793df0b4",
+            "case_key": "r66b04_c4ded6ddc2d6940d",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_e0e5a42dd38792cfaf766378",
+            "case_key": "r66b02_70c9ebdda89155ec",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_7869680f7654c59dae90d7ed",
+            "case_key": "r66b06_0a8028422bbfb1c4",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_328e5d14a4565f8eed251136",
+            "case_key": "r66b01_ca3f06a9b37a47ff",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_a2c8226c5f493b80e30e932b",
+            "case_key": "r66b11_73f9e95e0fef2d60",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_2442e84a913fb45e61cb621f",
+            "case_key": "r66b00_6280fdcb23109a34",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_73917bbc3780e5d1f951163a",
+            "case_key": "r66b09_43aba2362b9199f7",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_02f739adbe2f001326a37623",
+            "case_key": "r66b03_a9c01b65dc66d062",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_3612301c24957d33293f4c9e",
+            "case_key": "r66b07_4717682e3be3dd02",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_ca094c25eac283bb8b92c36a",
+            "case_key": "r66b08_a7e0cdf241d7a758",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_6a6d304d063f921ce5dd30d3",
+            "case_key": "r66b10_f449ca842cdeb74f",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          }
+        ],
+        "ci95": null,
+        "evaluable_cases": 0,
+        "evaluable_source_intervals": 0,
+        "missing_status_counts": {},
+        "ordinal_difference_scope": "SAME_REVIEWER_SAME_CASE; PERSONS_BALANCED_WITHIN_CASE; CASES_WITHIN_SOURCE_INTERVAL",
+        "p_value": null,
+        "paired_records": 0,
+        "raw_paired_records": [],
+        "registered_document_case_slots": 0,
+        "source_interval_balanced_mean": null,
+        "source_interval_means": [],
+        "unpaired_records": []
+      },
+      "richness": {
+        "case_results": [
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_bc8dedb90b8509a420f58cc0",
+            "case_key": "r66b05_56fb0e6ccb0310ef",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_bcbc1fb2361fdb26793df0b4",
+            "case_key": "r66b04_c4ded6ddc2d6940d",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_e0e5a42dd38792cfaf766378",
+            "case_key": "r66b02_70c9ebdda89155ec",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_7869680f7654c59dae90d7ed",
+            "case_key": "r66b06_0a8028422bbfb1c4",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_328e5d14a4565f8eed251136",
+            "case_key": "r66b01_ca3f06a9b37a47ff",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_a2c8226c5f493b80e30e932b",
+            "case_key": "r66b11_73f9e95e0fef2d60",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_2442e84a913fb45e61cb621f",
+            "case_key": "r66b00_6280fdcb23109a34",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_73917bbc3780e5d1f951163a",
+            "case_key": "r66b09_43aba2362b9199f7",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_02f739adbe2f001326a37623",
+            "case_key": "r66b03_a9c01b65dc66d062",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_3612301c24957d33293f4c9e",
+            "case_key": "r66b07_4717682e3be3dd02",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_ca094c25eac283bb8b92c36a",
+            "case_key": "r66b08_a7e0cdf241d7a758",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_6a6d304d063f921ce5dd30d3",
+            "case_key": "r66b10_f449ca842cdeb74f",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          }
+        ],
+        "ci95": null,
+        "evaluable_cases": 0,
+        "evaluable_source_intervals": 0,
+        "missing_status_counts": {},
+        "ordinal_difference_scope": "SAME_REVIEWER_SAME_CASE; PERSONS_BALANCED_WITHIN_CASE; CASES_WITHIN_SOURCE_INTERVAL",
+        "p_value": null,
+        "paired_records": 0,
+        "raw_paired_records": [],
+        "registered_document_case_slots": 0,
+        "source_interval_balanced_mean": null,
+        "source_interval_means": [],
+        "unpaired_records": []
+      },
+      "transition_timing": {
+        "case_results": [
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_bc8dedb90b8509a420f58cc0",
+            "case_key": "r66b05_56fb0e6ccb0310ef",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_bcbc1fb2361fdb26793df0b4",
+            "case_key": "r66b04_c4ded6ddc2d6940d",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_e0e5a42dd38792cfaf766378",
+            "case_key": "r66b02_70c9ebdda89155ec",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_7869680f7654c59dae90d7ed",
+            "case_key": "r66b06_0a8028422bbfb1c4",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_328e5d14a4565f8eed251136",
+            "case_key": "r66b01_ca3f06a9b37a47ff",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_a2c8226c5f493b80e30e932b",
+            "case_key": "r66b11_73f9e95e0fef2d60",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_2442e84a913fb45e61cb621f",
+            "case_key": "r66b00_6280fdcb23109a34",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_73917bbc3780e5d1f951163a",
+            "case_key": "r66b09_43aba2362b9199f7",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_02f739adbe2f001326a37623",
+            "case_key": "r66b03_a9c01b65dc66d062",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_3612301c24957d33293f4c9e",
+            "case_key": "r66b07_4717682e3be3dd02",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_ca094c25eac283bb8b92c36a",
+            "case_key": "r66b08_a7e0cdf241d7a758",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_6a6d304d063f921ce5dd30d3",
+            "case_key": "r66b10_f449ca842cdeb74f",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          }
+        ],
+        "ci95": null,
+        "evaluable_cases": 0,
+        "evaluable_source_intervals": 0,
+        "missing_status_counts": {},
+        "ordinal_difference_scope": "SAME_REVIEWER_SAME_CASE; PERSONS_BALANCED_WITHIN_CASE; CASES_WITHIN_SOURCE_INTERVAL",
+        "p_value": null,
+        "paired_records": 0,
+        "raw_paired_records": [],
+        "registered_document_case_slots": 0,
+        "source_interval_balanced_mean": null,
+        "source_interval_means": [],
+        "unpaired_records": []
+      }
+    },
+    "RhythmDTW_minus_E1W": {
+      "continuity": {
+        "case_results": [
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_bc8dedb90b8509a420f58cc0",
+            "case_key": "r66b05_56fb0e6ccb0310ef",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_bcbc1fb2361fdb26793df0b4",
+            "case_key": "r66b04_c4ded6ddc2d6940d",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_e0e5a42dd38792cfaf766378",
+            "case_key": "r66b02_70c9ebdda89155ec",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_7869680f7654c59dae90d7ed",
+            "case_key": "r66b06_0a8028422bbfb1c4",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_328e5d14a4565f8eed251136",
+            "case_key": "r66b01_ca3f06a9b37a47ff",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_a2c8226c5f493b80e30e932b",
+            "case_key": "r66b11_73f9e95e0fef2d60",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_2442e84a913fb45e61cb621f",
+            "case_key": "r66b00_6280fdcb23109a34",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_73917bbc3780e5d1f951163a",
+            "case_key": "r66b09_43aba2362b9199f7",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_02f739adbe2f001326a37623",
+            "case_key": "r66b03_a9c01b65dc66d062",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_3612301c24957d33293f4c9e",
+            "case_key": "r66b07_4717682e3be3dd02",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_ca094c25eac283bb8b92c36a",
+            "case_key": "r66b08_a7e0cdf241d7a758",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_6a6d304d063f921ce5dd30d3",
+            "case_key": "r66b10_f449ca842cdeb74f",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          }
+        ],
+        "ci95": null,
+        "evaluable_cases": 0,
+        "evaluable_source_intervals": 0,
+        "missing_status_counts": {},
+        "ordinal_difference_scope": "SAME_REVIEWER_SAME_CASE; PERSONS_BALANCED_WITHIN_CASE; CASES_WITHIN_SOURCE_INTERVAL",
+        "p_value": null,
+        "paired_records": 0,
+        "raw_paired_records": [],
+        "registered_document_case_slots": 0,
+        "source_interval_balanced_mean": null,
+        "source_interval_means": [],
+        "unpaired_records": []
+      },
+      "music_coordination": {
+        "case_results": [
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_bc8dedb90b8509a420f58cc0",
+            "case_key": "r66b05_56fb0e6ccb0310ef",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_bcbc1fb2361fdb26793df0b4",
+            "case_key": "r66b04_c4ded6ddc2d6940d",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_e0e5a42dd38792cfaf766378",
+            "case_key": "r66b02_70c9ebdda89155ec",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_7869680f7654c59dae90d7ed",
+            "case_key": "r66b06_0a8028422bbfb1c4",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_328e5d14a4565f8eed251136",
+            "case_key": "r66b01_ca3f06a9b37a47ff",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_a2c8226c5f493b80e30e932b",
+            "case_key": "r66b11_73f9e95e0fef2d60",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_2442e84a913fb45e61cb621f",
+            "case_key": "r66b00_6280fdcb23109a34",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_73917bbc3780e5d1f951163a",
+            "case_key": "r66b09_43aba2362b9199f7",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_02f739adbe2f001326a37623",
+            "case_key": "r66b03_a9c01b65dc66d062",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_3612301c24957d33293f4c9e",
+            "case_key": "r66b07_4717682e3be3dd02",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_ca094c25eac283bb8b92c36a",
+            "case_key": "r66b08_a7e0cdf241d7a758",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_6a6d304d063f921ce5dd30d3",
+            "case_key": "r66b10_f449ca842cdeb74f",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          }
+        ],
+        "ci95": null,
+        "evaluable_cases": 0,
+        "evaluable_source_intervals": 0,
+        "missing_status_counts": {},
+        "ordinal_difference_scope": "SAME_REVIEWER_SAME_CASE; PERSONS_BALANCED_WITHIN_CASE; CASES_WITHIN_SOURCE_INTERVAL",
+        "p_value": null,
+        "paired_records": 0,
+        "raw_paired_records": [],
+        "registered_document_case_slots": 0,
+        "source_interval_balanced_mean": null,
+        "source_interval_means": [],
+        "unpaired_records": []
+      },
+      "naturalness": {
+        "case_results": [
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_bc8dedb90b8509a420f58cc0",
+            "case_key": "r66b05_56fb0e6ccb0310ef",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_bcbc1fb2361fdb26793df0b4",
+            "case_key": "r66b04_c4ded6ddc2d6940d",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_e0e5a42dd38792cfaf766378",
+            "case_key": "r66b02_70c9ebdda89155ec",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_7869680f7654c59dae90d7ed",
+            "case_key": "r66b06_0a8028422bbfb1c4",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_328e5d14a4565f8eed251136",
+            "case_key": "r66b01_ca3f06a9b37a47ff",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_a2c8226c5f493b80e30e932b",
+            "case_key": "r66b11_73f9e95e0fef2d60",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_2442e84a913fb45e61cb621f",
+            "case_key": "r66b00_6280fdcb23109a34",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_73917bbc3780e5d1f951163a",
+            "case_key": "r66b09_43aba2362b9199f7",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_02f739adbe2f001326a37623",
+            "case_key": "r66b03_a9c01b65dc66d062",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_3612301c24957d33293f4c9e",
+            "case_key": "r66b07_4717682e3be3dd02",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_ca094c25eac283bb8b92c36a",
+            "case_key": "r66b08_a7e0cdf241d7a758",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_6a6d304d063f921ce5dd30d3",
+            "case_key": "r66b10_f449ca842cdeb74f",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          }
+        ],
+        "ci95": null,
+        "evaluable_cases": 0,
+        "evaluable_source_intervals": 0,
+        "missing_status_counts": {},
+        "ordinal_difference_scope": "SAME_REVIEWER_SAME_CASE; PERSONS_BALANCED_WITHIN_CASE; CASES_WITHIN_SOURCE_INTERVAL",
+        "p_value": null,
+        "paired_records": 0,
+        "raw_paired_records": [],
+        "registered_document_case_slots": 0,
+        "source_interval_balanced_mean": null,
+        "source_interval_means": [],
+        "unpaired_records": []
+      },
+      "richness": {
+        "case_results": [
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_bc8dedb90b8509a420f58cc0",
+            "case_key": "r66b05_56fb0e6ccb0310ef",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_bcbc1fb2361fdb26793df0b4",
+            "case_key": "r66b04_c4ded6ddc2d6940d",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_e0e5a42dd38792cfaf766378",
+            "case_key": "r66b02_70c9ebdda89155ec",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_7869680f7654c59dae90d7ed",
+            "case_key": "r66b06_0a8028422bbfb1c4",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_328e5d14a4565f8eed251136",
+            "case_key": "r66b01_ca3f06a9b37a47ff",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_a2c8226c5f493b80e30e932b",
+            "case_key": "r66b11_73f9e95e0fef2d60",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_2442e84a913fb45e61cb621f",
+            "case_key": "r66b00_6280fdcb23109a34",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_73917bbc3780e5d1f951163a",
+            "case_key": "r66b09_43aba2362b9199f7",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_02f739adbe2f001326a37623",
+            "case_key": "r66b03_a9c01b65dc66d062",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_3612301c24957d33293f4c9e",
+            "case_key": "r66b07_4717682e3be3dd02",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_ca094c25eac283bb8b92c36a",
+            "case_key": "r66b08_a7e0cdf241d7a758",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_6a6d304d063f921ce5dd30d3",
+            "case_key": "r66b10_f449ca842cdeb74f",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          }
+        ],
+        "ci95": null,
+        "evaluable_cases": 0,
+        "evaluable_source_intervals": 0,
+        "missing_status_counts": {},
+        "ordinal_difference_scope": "SAME_REVIEWER_SAME_CASE; PERSONS_BALANCED_WITHIN_CASE; CASES_WITHIN_SOURCE_INTERVAL",
+        "p_value": null,
+        "paired_records": 0,
+        "raw_paired_records": [],
+        "registered_document_case_slots": 0,
+        "source_interval_balanced_mean": null,
+        "source_interval_means": [],
+        "unpaired_records": []
+      },
+      "transition_timing": {
+        "case_results": [
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_bc8dedb90b8509a420f58cc0",
+            "case_key": "r66b05_56fb0e6ccb0310ef",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_bcbc1fb2361fdb26793df0b4",
+            "case_key": "r66b04_c4ded6ddc2d6940d",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_e0e5a42dd38792cfaf766378",
+            "case_key": "r66b02_70c9ebdda89155ec",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_7869680f7654c59dae90d7ed",
+            "case_key": "r66b06_0a8028422bbfb1c4",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_328e5d14a4565f8eed251136",
+            "case_key": "r66b01_ca3f06a9b37a47ff",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_a2c8226c5f493b80e30e932b",
+            "case_key": "r66b11_73f9e95e0fef2d60",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_2442e84a913fb45e61cb621f",
+            "case_key": "r66b00_6280fdcb23109a34",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_73917bbc3780e5d1f951163a",
+            "case_key": "r66b09_43aba2362b9199f7",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_02f739adbe2f001326a37623",
+            "case_key": "r66b03_a9c01b65dc66d062",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_3612301c24957d33293f4c9e",
+            "case_key": "r66b07_4717682e3be3dd02",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_ca094c25eac283bb8b92c36a",
+            "case_key": "r66b08_a7e0cdf241d7a758",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_6a6d304d063f921ce5dd30d3",
+            "case_key": "r66b10_f449ca842cdeb74f",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          }
+        ],
+        "ci95": null,
+        "evaluable_cases": 0,
+        "evaluable_source_intervals": 0,
+        "missing_status_counts": {},
+        "ordinal_difference_scope": "SAME_REVIEWER_SAME_CASE; PERSONS_BALANCED_WITHIN_CASE; CASES_WITHIN_SOURCE_INTERVAL",
+        "p_value": null,
+        "paired_records": 0,
+        "raw_paired_records": [],
+        "registered_document_case_slots": 0,
+        "source_interval_balanced_mean": null,
+        "source_interval_means": [],
+        "unpaired_records": []
+      }
+    },
+    "Single64_minus_E1W": {
+      "continuity": {
+        "case_results": [
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_bc8dedb90b8509a420f58cc0",
+            "case_key": "r66b05_56fb0e6ccb0310ef",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_bcbc1fb2361fdb26793df0b4",
+            "case_key": "r66b04_c4ded6ddc2d6940d",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_e0e5a42dd38792cfaf766378",
+            "case_key": "r66b02_70c9ebdda89155ec",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_7869680f7654c59dae90d7ed",
+            "case_key": "r66b06_0a8028422bbfb1c4",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_328e5d14a4565f8eed251136",
+            "case_key": "r66b01_ca3f06a9b37a47ff",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_a2c8226c5f493b80e30e932b",
+            "case_key": "r66b11_73f9e95e0fef2d60",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_2442e84a913fb45e61cb621f",
+            "case_key": "r66b00_6280fdcb23109a34",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_73917bbc3780e5d1f951163a",
+            "case_key": "r66b09_43aba2362b9199f7",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_02f739adbe2f001326a37623",
+            "case_key": "r66b03_a9c01b65dc66d062",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_3612301c24957d33293f4c9e",
+            "case_key": "r66b07_4717682e3be3dd02",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_ca094c25eac283bb8b92c36a",
+            "case_key": "r66b08_a7e0cdf241d7a758",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_6a6d304d063f921ce5dd30d3",
+            "case_key": "r66b10_f449ca842cdeb74f",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          }
+        ],
+        "ci95": null,
+        "evaluable_cases": 0,
+        "evaluable_source_intervals": 0,
+        "missing_status_counts": {},
+        "ordinal_difference_scope": "SAME_REVIEWER_SAME_CASE; PERSONS_BALANCED_WITHIN_CASE; CASES_WITHIN_SOURCE_INTERVAL",
+        "p_value": null,
+        "paired_records": 0,
+        "raw_paired_records": [],
+        "registered_document_case_slots": 0,
+        "source_interval_balanced_mean": null,
+        "source_interval_means": [],
+        "unpaired_records": []
+      },
+      "music_coordination": {
+        "case_results": [
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_bc8dedb90b8509a420f58cc0",
+            "case_key": "r66b05_56fb0e6ccb0310ef",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_bcbc1fb2361fdb26793df0b4",
+            "case_key": "r66b04_c4ded6ddc2d6940d",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_e0e5a42dd38792cfaf766378",
+            "case_key": "r66b02_70c9ebdda89155ec",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_7869680f7654c59dae90d7ed",
+            "case_key": "r66b06_0a8028422bbfb1c4",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_328e5d14a4565f8eed251136",
+            "case_key": "r66b01_ca3f06a9b37a47ff",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_a2c8226c5f493b80e30e932b",
+            "case_key": "r66b11_73f9e95e0fef2d60",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_2442e84a913fb45e61cb621f",
+            "case_key": "r66b00_6280fdcb23109a34",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_73917bbc3780e5d1f951163a",
+            "case_key": "r66b09_43aba2362b9199f7",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_02f739adbe2f001326a37623",
+            "case_key": "r66b03_a9c01b65dc66d062",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_3612301c24957d33293f4c9e",
+            "case_key": "r66b07_4717682e3be3dd02",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_ca094c25eac283bb8b92c36a",
+            "case_key": "r66b08_a7e0cdf241d7a758",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_6a6d304d063f921ce5dd30d3",
+            "case_key": "r66b10_f449ca842cdeb74f",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          }
+        ],
+        "ci95": null,
+        "evaluable_cases": 0,
+        "evaluable_source_intervals": 0,
+        "missing_status_counts": {},
+        "ordinal_difference_scope": "SAME_REVIEWER_SAME_CASE; PERSONS_BALANCED_WITHIN_CASE; CASES_WITHIN_SOURCE_INTERVAL",
+        "p_value": null,
+        "paired_records": 0,
+        "raw_paired_records": [],
+        "registered_document_case_slots": 0,
+        "source_interval_balanced_mean": null,
+        "source_interval_means": [],
+        "unpaired_records": []
+      },
+      "naturalness": {
+        "case_results": [
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_bc8dedb90b8509a420f58cc0",
+            "case_key": "r66b05_56fb0e6ccb0310ef",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_bcbc1fb2361fdb26793df0b4",
+            "case_key": "r66b04_c4ded6ddc2d6940d",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_e0e5a42dd38792cfaf766378",
+            "case_key": "r66b02_70c9ebdda89155ec",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_7869680f7654c59dae90d7ed",
+            "case_key": "r66b06_0a8028422bbfb1c4",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_328e5d14a4565f8eed251136",
+            "case_key": "r66b01_ca3f06a9b37a47ff",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_a2c8226c5f493b80e30e932b",
+            "case_key": "r66b11_73f9e95e0fef2d60",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_2442e84a913fb45e61cb621f",
+            "case_key": "r66b00_6280fdcb23109a34",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_73917bbc3780e5d1f951163a",
+            "case_key": "r66b09_43aba2362b9199f7",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_02f739adbe2f001326a37623",
+            "case_key": "r66b03_a9c01b65dc66d062",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_3612301c24957d33293f4c9e",
+            "case_key": "r66b07_4717682e3be3dd02",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_ca094c25eac283bb8b92c36a",
+            "case_key": "r66b08_a7e0cdf241d7a758",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_6a6d304d063f921ce5dd30d3",
+            "case_key": "r66b10_f449ca842cdeb74f",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          }
+        ],
+        "ci95": null,
+        "evaluable_cases": 0,
+        "evaluable_source_intervals": 0,
+        "missing_status_counts": {},
+        "ordinal_difference_scope": "SAME_REVIEWER_SAME_CASE; PERSONS_BALANCED_WITHIN_CASE; CASES_WITHIN_SOURCE_INTERVAL",
+        "p_value": null,
+        "paired_records": 0,
+        "raw_paired_records": [],
+        "registered_document_case_slots": 0,
+        "source_interval_balanced_mean": null,
+        "source_interval_means": [],
+        "unpaired_records": []
+      },
+      "richness": {
+        "case_results": [
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_bc8dedb90b8509a420f58cc0",
+            "case_key": "r66b05_56fb0e6ccb0310ef",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_bcbc1fb2361fdb26793df0b4",
+            "case_key": "r66b04_c4ded6ddc2d6940d",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_e0e5a42dd38792cfaf766378",
+            "case_key": "r66b02_70c9ebdda89155ec",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_7869680f7654c59dae90d7ed",
+            "case_key": "r66b06_0a8028422bbfb1c4",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_328e5d14a4565f8eed251136",
+            "case_key": "r66b01_ca3f06a9b37a47ff",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_a2c8226c5f493b80e30e932b",
+            "case_key": "r66b11_73f9e95e0fef2d60",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_2442e84a913fb45e61cb621f",
+            "case_key": "r66b00_6280fdcb23109a34",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_73917bbc3780e5d1f951163a",
+            "case_key": "r66b09_43aba2362b9199f7",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_02f739adbe2f001326a37623",
+            "case_key": "r66b03_a9c01b65dc66d062",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_3612301c24957d33293f4c9e",
+            "case_key": "r66b07_4717682e3be3dd02",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_ca094c25eac283bb8b92c36a",
+            "case_key": "r66b08_a7e0cdf241d7a758",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_6a6d304d063f921ce5dd30d3",
+            "case_key": "r66b10_f449ca842cdeb74f",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          }
+        ],
+        "ci95": null,
+        "evaluable_cases": 0,
+        "evaluable_source_intervals": 0,
+        "missing_status_counts": {},
+        "ordinal_difference_scope": "SAME_REVIEWER_SAME_CASE; PERSONS_BALANCED_WITHIN_CASE; CASES_WITHIN_SOURCE_INTERVAL",
+        "p_value": null,
+        "paired_records": 0,
+        "raw_paired_records": [],
+        "registered_document_case_slots": 0,
+        "source_interval_balanced_mean": null,
+        "source_interval_means": [],
+        "unpaired_records": []
+      },
+      "transition_timing": {
+        "case_results": [
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_bc8dedb90b8509a420f58cc0",
+            "case_key": "r66b05_56fb0e6ccb0310ef",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_bcbc1fb2361fdb26793df0b4",
+            "case_key": "r66b04_c4ded6ddc2d6940d",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_e0e5a42dd38792cfaf766378",
+            "case_key": "r66b02_70c9ebdda89155ec",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_7869680f7654c59dae90d7ed",
+            "case_key": "r66b06_0a8028422bbfb1c4",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_328e5d14a4565f8eed251136",
+            "case_key": "r66b01_ca3f06a9b37a47ff",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_a2c8226c5f493b80e30e932b",
+            "case_key": "r66b11_73f9e95e0fef2d60",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_2442e84a913fb45e61cb621f",
+            "case_key": "r66b00_6280fdcb23109a34",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_73917bbc3780e5d1f951163a",
+            "case_key": "r66b09_43aba2362b9199f7",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_02f739adbe2f001326a37623",
+            "case_key": "r66b03_a9c01b65dc66d062",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_3612301c24957d33293f4c9e",
+            "case_key": "r66b07_4717682e3be3dd02",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_ca094c25eac283bb8b92c36a",
+            "case_key": "r66b08_a7e0cdf241d7a758",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          },
+          {
+            "admin_attested_distinct_persons": 0,
+            "blind_item_id": "item_6a6d304d063f921ce5dd30d3",
+            "case_key": "r66b10_f449ca842cdeb74f",
+            "independent_comparison_condition_met": false,
+            "paired_person_balanced_mean": null
+          }
+        ],
+        "ci95": null,
+        "evaluable_cases": 0,
+        "evaluable_source_intervals": 0,
+        "missing_status_counts": {},
+        "ordinal_difference_scope": "SAME_REVIEWER_SAME_CASE; PERSONS_BALANCED_WITHIN_CASE; CASES_WITHIN_SOURCE_INTERVAL",
+        "p_value": null,
+        "paired_records": 0,
+        "raw_paired_records": [],
+        "registered_document_case_slots": 0,
+        "source_interval_balanced_mean": null,
+        "source_interval_means": [],
+        "unpaired_records": []
+      }
+    }
+  },
+  "human_reviewed": false,
+  "imported_documents": 0,
+  "independent_comparison_condition_met": false,
+  "quality_winner": null,
+  "records": [],
+  "registered_cases": 12,
+  "schema": "R69_QUALITY_RECORD_ANALYSIS_V1",
+  "status": "NOT_EVALUABLE",
+  "structurally_valid_documents": 0,
+  "uncertainty": "UNSURE_UNRATED_MISSING_AND_UNAVAILABLE_NEVER_MAPPED_TO_ZERO_OR_NEUTRAL_SCORE"
+}

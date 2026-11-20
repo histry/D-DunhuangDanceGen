@@ -1,0 +1,372 @@
+{
+  "records": [
+    {
+      "metadata": {
+        "commit": "448b67ea4b86f8a584e60205c8e0c79f306490dd",
+        "completed_at": "2026-11-20T08:46:33.513123+00:00",
+        "exit_status": 1,
+        "log_sha256": "e61e6b6e00f30be7ad27617481a817079ffd2daf538d256ae815d388292c4c1f",
+        "neural_training_steps": 0,
+        "new_planner_searches": 0,
+        "stage": "main",
+        "tmux_session": "ddg_r69_main_01"
+      },
+      "path": "execution/execution_main.json",
+      "sha256": "de9cbf99f4ea832e62abc6a8eab5319904632327b681b9caeebd5fa4bc0439bb"
+    },
+    {
+      "metadata": {
+        "commit": "8a433dbf97c4a6826b1b5c10aba7d5f0296e5baf",
+        "completed_at": "2026-11-20T08:51:10.458282+00:00",
+        "exit_status": 0,
+        "log_sha256": "e5d87ce415ba75fa4f4be4d41c3962dcf7d4c8903c18a54a7782920d2456a850",
+        "neural_training_steps": 0,
+        "new_planner_searches": 0,
+        "stage": "main_retry",
+        "tmux_session": "ddg_r69_main_02"
+      },
+      "path": "execution/execution_main_retry.json",
+      "sha256": "4bba64c52574709d0f710c3cf36408a18a31546a9d99e52dd0913bf54a8c53b2"
+    },
+    {
+      "metadata": {
+        "commit": "8a433dbf97c4a6826b1b5c10aba7d5f0296e5baf",
+        "completed_at": "2026-11-20T08:54:06.407324+00:00",
+        "exit_status": 0,
+        "log_sha256": "41bb2867dc20d6e8a6b95af52b254619e1c6b1c878ba1f1b1e1c0eabc4f44673",
+        "neural_training_steps": 0,
+        "new_planner_searches": 0,
+        "stage": "verify",
+        "tmux_session": "ddg_r69_verify_01"
+      },
+      "path": "execution/execution_verify.json",
+      "sha256": "3684b020924e9f716000a6714a6d5fb0da5360a38e72a968ad1adb57cf88519d"
+    },
+    {
+      "metadata": {
+        "bundle_sha256": null,
+        "https_fetch_exit": 0,
+        "https_stderr": "来自 https://github.com/histry/D-DunhuangDanceGen\n * branch            main       -> FETCH_HEAD\n   003b29d..448b67e  main       -> origin/main\n",
+        "stderr": "",
+        "stdout": "更新 003b29d..448b67e\nFast-forward\n docs/r69_retiming_baselines.md                     |  19 ++\n scripts/release_r69.py                             |  35 +++\n scripts/retiming_baselines_r69.py                  |  20 ++\n .../research/retiming_baselines_r69/__init__.py    |   0\n .../research/retiming_baselines_r69/common.py      |  39 +++\n .../research/retiming_baselines_r69/protocol.json  |  35 +++\n .../research/retiming_baselines_r69/reviewer.html  |  33 +++\n .../research/retiming_baselines_r69/reviews.py     | 179 +++++++++++++\n .../research/retiming_baselines_r69/solver.py      | 281 +++++++++++++++++++++\n .../research/retiming_baselines_r69/study.py       | 188 ++++++++++++++\n .../research/retiming_baselines_r69/viewer.html    |  23 ++\n .../research/retiming_baselines_r69/viewer.py      | 252 ++++++++++++++++++\n tests/test_r69_reviews.py                          | 114 +++++++++\n tests/test_r69_solver.py                           | 170 +++++++++++++\n tests/test_r69_study.py                            |  55 ++++\n tests/test_r69_viewer.py                           | 146 +++++++++++\n tests/test_release_r69.py                          |  24 ++\n 17 files changed, 1613 insertions(+)\n create mode 100644 docs/r69_retiming_baselines.md\n create mode 100644 scripts/release_r69.py\n create mode 100644 scripts/retiming_baselines_r69.py\n create mode 100644 src/dunhuang/research/retiming_baselines_r69/__init__.py\n create mode 100644 src/dunhuang/research/retiming_baselines_r69/common.py\n create mode 100644 src/dunhuang/research/retiming_baselines_r69/protocol.json\n create mode 100644 src/dunhuang/research/retiming_baselines_r69/reviewer.html\n create mode 100644 src/dunhuang/research/retiming_baselines_r69/reviews.py\n create mode 100644 src/dunhuang/research/retiming_baselines_r69/solver.py\n create mode 100644 src/dunhuang/research/retiming_baselines_r69/study.py\n create mode 100644 src/dunhuang/research/retiming_baselines_r69/viewer.html\n create mode 100644 src/dunhuang/research/retiming_baselines_r69/viewer.py\n create mode 100644 tests/test_r69_reviews.py\n create mode 100644 tests/test_r69_solver.py\n create mode 100644 tests/test_r69_study.py\n create mode 100644 tests/test_r69_viewer.py\n create mode 100644 tests/test_release_r69.py\n",
+        "synchronization_exit": 0,
+        "target": "448b67ea4b86f8a584e60205c8e0c79f306490dd"
+      },
+      "path": "execution/synchronization.json",
+      "sha256": "06c72121d15782548c6ddb75aadc90ae944f917d48208b6fe29c1e7467520490"
+    },
+    {
+      "metadata": {
+        "bundle_sha256": null,
+        "https_fetch_exit": 0,
+        "https_stderr": "来自 https://github.com/histry/D-DunhuangDanceGen\n * branch            main       -> FETCH_HEAD\n   8a433db..0887ffb  main       -> origin/main\n",
+        "stderr": "",
+        "stdout": "更新 8a433db..0887ffb\nFast-forward\n scripts/historical_costs_r69.py    | 106 +++++++++++++++++++++++++++++++++++++\n scripts/release_r69.py             |  21 +++++++-\n tests/test_r69_historical_costs.py |  57 ++++++++++++++++++++\n tests/test_release_r69.py          |   4 +-\n 4 files changed, 184 insertions(+), 4 deletions(-)\n create mode 100644 scripts/historical_costs_r69.py\n create mode 100644 tests/test_r69_historical_costs.py\n",
+        "synchronization_exit": 0,
+        "target": "0887ffbbc8e61c4468ce6a5b6331d6acb5f800fa"
+      },
+      "path": "execution/synchronization_publication.json",
+      "sha256": "7a6fc563d6fbd156ce57afc9730a1b58c0b5bbbbe32ebb8049dce946791a906c"
+    },
+    {
+      "metadata": {
+        "bundle_sha256": null,
+        "https_fetch_exit": 0,
+        "https_stderr": "来自 https://github.com/histry/D-DunhuangDanceGen\n * branch            main       -> FETCH_HEAD\n   448b67e..8a433db  main       -> origin/main\n",
+        "stderr": "",
+        "stdout": "更新 448b67e..8a433db\nFast-forward\n src/dunhuang/research/retiming_baselines_r69/viewer.py | 2 +-\n tests/test_r69_viewer.py                               | 9 +++++++++\n 2 files changed, 10 insertions(+), 1 deletion(-)\n",
+        "synchronization_exit": 0,
+        "target": "8a433dbf97c4a6826b1b5c10aba7d5f0296e5baf"
+      },
+      "path": "execution/synchronization_retry.json",
+      "sha256": "d531e8e6d52b4fde4fcb54ac2ac8262aff7d9d435c5b792a30a8cebf532ca228"
+    },
+    {
+      "metadata": {
+        "anonymous": {
+          "audio": {
+            "duration": 17.6,
+            "paused": false,
+            "rate": 0.5
+          },
+          "cases": [
+            {
+              "allUnrated": true,
+              "cards": 6,
+              "clock": "帧 252 / 527 · 8.400秒",
+              "ratingFields": 30,
+              "selected": "项目 1 / 12"
+            },
+            {
+              "allUnrated": true,
+              "cards": 6,
+              "clock": "帧 252 / 527 · 8.400秒",
+              "ratingFields": 30,
+              "selected": "项目 2 / 12"
+            },
+            {
+              "allUnrated": true,
+              "cards": 6,
+              "clock": "帧 252 / 527 · 8.400秒",
+              "ratingFields": 30,
+              "selected": "项目 3 / 12"
+            },
+            {
+              "allUnrated": true,
+              "cards": 6,
+              "clock": "帧 252 / 527 · 8.400秒",
+              "ratingFields": 30,
+              "selected": "项目 4 / 12"
+            },
+            {
+              "allUnrated": true,
+              "cards": 6,
+              "clock": "帧 252 / 527 · 8.400秒",
+              "ratingFields": 30,
+              "selected": "项目 5 / 12"
+            },
+            {
+              "allUnrated": true,
+              "cards": 6,
+              "clock": "帧 252 / 527 · 8.400秒",
+              "ratingFields": 30,
+              "selected": "项目 6 / 12"
+            },
+            {
+              "allUnrated": true,
+              "cards": 6,
+              "clock": "帧 252 / 527 · 8.400秒",
+              "ratingFields": 30,
+              "selected": "项目 7 / 12"
+            },
+            {
+              "allUnrated": true,
+              "cards": 6,
+              "clock": "帧 252 / 527 · 8.400秒",
+              "ratingFields": 30,
+              "selected": "项目 8 / 12"
+            },
+            {
+              "allUnrated": true,
+              "cards": 6,
+              "clock": "帧 252 / 527 · 8.400秒",
+              "ratingFields": 30,
+              "selected": "项目 9 / 12"
+            },
+            {
+              "allUnrated": true,
+              "cards": 6,
+              "clock": "帧 252 / 527 · 8.400秒",
+              "ratingFields": 30,
+              "selected": "项目 10 / 12"
+            },
+            {
+              "allUnrated": true,
+              "cards": 6,
+              "clock": "帧 252 / 527 · 8.400秒",
+              "ratingFields": 30,
+              "selected": "项目 11 / 12"
+            },
+            {
+              "allUnrated": true,
+              "cards": 6,
+              "clock": "帧 252 / 527 · 8.400秒",
+              "ratingFields": 30,
+              "selected": "项目 12 / 12"
+            }
+          ],
+          "empty_export_guard": "没有实际填写的意见，不会创建空白人工记录",
+          "leak_check": {
+            "forbidden": false,
+            "named": false
+          },
+          "step": {
+            "clock": "帧 252 / 527 · 8.400秒",
+            "duration": 17.6
+          }
+        },
+        "checked_at": "2026-11-20T08:57:30.058Z",
+        "human_review_records_created": 0,
+        "named": {
+          "audio": {
+            "duration": 17.6,
+            "paused": false,
+            "rate": 0.5
+          },
+          "cases": [
+            {
+              "clock": "当前帧 252 / 527 · 片段帧 252 · 音乐 8.400秒",
+              "selected": "female_FeiTian / dunhuangwu3 / r66b00_6280fdcb23109a34"
+            },
+            {
+              "clock": "当前帧 252 / 527 · 片段帧 252 · 音乐 8.400秒",
+              "selected": "female_lotus / dunhuangwu2 / r66b01_ca3f06a9b37a47ff"
+            },
+            {
+              "clock": "当前帧 252 / 527 · 片段帧 252 · 音乐 8.400秒",
+              "selected": "female_meditation / dunhuangwu4 / r66b02_70c9ebdda89155ec"
+            },
+            {
+              "clock": "当前帧 252 / 527 · 片段帧 252 · 音乐 8.400秒",
+              "selected": "male_meditation / dunhuangwu2 / r66b03_a9c01b65dc66d062"
+            },
+            {
+              "clock": "当前帧 252 / 527 · 片段帧 252 · 音乐 8.400秒",
+              "selected": "male_pipa_1 / dunhuangwu3 / r66b04_c4ded6ddc2d6940d"
+            },
+            {
+              "clock": "当前帧 252 / 527 · 片段帧 252 · 音乐 8.400秒",
+              "selected": "male_pipa_2 / dunhuangwu4 / r66b05_56fb0e6ccb0310ef"
+            },
+            {
+              "clock": "当前帧 252 / 527 · 片段帧 252 · 音乐 8.400秒",
+              "selected": "male_ribbon / dunhuangwu2 / r66b06_0a8028422bbfb1c4"
+            },
+            {
+              "clock": "当前帧 252 / 527 · 片段帧 252 · 音乐 8.400秒",
+              "selected": "male_ribbon_FenHe / dunhuangwu3 / r66b07_4717682e3be3dd02"
+            },
+            {
+              "clock": "当前帧 252 / 527 · 片段帧 252 · 音乐 8.400秒",
+              "selected": "female_FeiTian / dunhuangwu4 / r66b08_a7e0cdf241d7a758"
+            },
+            {
+              "clock": "当前帧 252 / 527 · 片段帧 252 · 音乐 8.400秒",
+              "selected": "female_lotus / dunhuangwu3 / r66b09_43aba2362b9199f7"
+            },
+            {
+              "clock": "当前帧 252 / 527 · 片段帧 252 · 音乐 8.400秒",
+              "selected": "female_meditation / dunhuangwu2 / r66b10_f449ca842cdeb74f"
+            },
+            {
+              "clock": "当前帧 252 / 527 · 片段帧 252 · 音乐 8.400秒",
+              "selected": "male_meditation / dunhuangwu4 / r66b11_73f9e95e0fef2d60"
+            }
+          ],
+          "core_mode": {
+            "clock": "当前帧 101 / 239 · 片段帧 101 · 音乐 3.367秒",
+            "identity": "来源 male_meditation [1071,1317) · 音乐完整区间 [1536,2064) · 选中 left Core",
+            "max": "239",
+            "time": 3.366666
+          },
+          "original_source_after_master_seek": "原速局部帧 101 / 235 · 3.367秒",
+          "original_source_before": "原速局部帧 101 / 235 · 3.367秒",
+          "step": {
+            "clock": "当前帧 252 / 527 · 片段帧 252 · 音乐 8.400秒",
+            "duration": 17.6,
+            "time": 8.4
+          }
+        },
+        "scope": "ACTUAL_UI_CLOCK_CONTROLS_AND_ANONYMOUS_RECORD_GUARDS_NOT_QUALITY_EVIDENCE",
+        "status": "PASS",
+        "viewer_manifest_sha256": "ff8c839145ad627eb678f2cddfa0c14b6f7fea77e8ec4e69bdcf1b5207cbd40c"
+      },
+      "path": "delivery/browser_acceptance.json",
+      "sha256": "02164cea8f6a51fec5b3a049c10a7ce701fd4b95459a61db5bdaa595d7a506d1"
+    },
+    {
+      "metadata": {
+        "checked_at": "2026-11-20T08:57:57.0769005Z",
+        "listener_present": false,
+        "pid": 15236,
+        "port": 63949,
+        "status": "CLOSED"
+      },
+      "path": "delivery/http_cleanup.json",
+      "sha256": "d8fa19054ae5193afcafc724e19f989ab5502e5bcd774c0a1d6780c15c5b1cbb"
+    },
+    {
+      "metadata": {
+        "files": [
+          {
+            "bytes": 776238,
+            "path": "viewer/audio/36ce6f03d7a8_1536_2064.wav",
+            "sha256": "f3b181e0b6bc695f92abbeb6b46f5c424993d29b12464212310f2c6c13ed22c5"
+          },
+          {
+            "bytes": 776238,
+            "path": "viewer/audio/cd8f37bb78c3_1390_1918.wav",
+            "sha256": "ddb54b8c5b9dd90616c9654cc949d1895542e341ccc2d438dd7f11820419ac94"
+          },
+          {
+            "bytes": 776238,
+            "path": "viewer/audio/cd8f37bb78c3_1534_2062.wav",
+            "sha256": "3e0f1793b8e608b99e7604e6ec831d7e2a54230dd90951acf4958c06ff76f854"
+          },
+          {
+            "bytes": 776238,
+            "path": "viewer/audio/cd8f37bb78c3_1535_2063.wav",
+            "sha256": "3fa25f701034e694b2a090466df24c96cd18cb788ad6cca1e1b24b9dc95d0bee"
+          },
+          {
+            "bytes": 776238,
+            "path": "viewer/audio/d1dc8fbd2897_1392_1920.wav",
+            "sha256": "6c59779c74ac274aca2969590f80212e0cbbf6502653dc1f042b65e8afdae16d"
+          },
+          {
+            "bytes": 776238,
+            "path": "viewer/audio/d1dc8fbd2897_1536_2064.wav",
+            "sha256": "c0244553089c07f78ad266ad1c680dd8be3d5ed407bb043f05496b3308511014"
+          },
+          {
+            "bytes": 32916095,
+            "path": "viewer/index.html",
+            "sha256": "61bbfd103f81bf2a34fb70192d3c3973e9c6f27ca84c11cdb1c5e20e89a2929f"
+          },
+          {
+            "bytes": 2761,
+            "path": "viewer/protocol.json",
+            "sha256": "49dbea59198eab880fb279acf1d406920faf760b386865a0a153ed95bb6b33e6"
+          },
+          {
+            "bytes": 776238,
+            "path": "reviewer/audio/04100eb7a4a372baa30be88916196154.wav",
+            "sha256": "f3b181e0b6bc695f92abbeb6b46f5c424993d29b12464212310f2c6c13ed22c5"
+          },
+          {
+            "bytes": 776238,
+            "path": "reviewer/audio/12aad0aa1d6a09bd6ed0a73ddd1ee97b.wav",
+            "sha256": "c0244553089c07f78ad266ad1c680dd8be3d5ed407bb043f05496b3308511014"
+          },
+          {
+            "bytes": 776238,
+            "path": "reviewer/audio/77b9034baf3dec53a80dc4cdab5955da.wav",
+            "sha256": "3e0f1793b8e608b99e7604e6ec831d7e2a54230dd90951acf4958c06ff76f854"
+          },
+          {
+            "bytes": 776238,
+            "path": "reviewer/audio/7eb64018d63d05281b87a5b39073d513.wav",
+            "sha256": "ddb54b8c5b9dd90616c9654cc949d1895542e341ccc2d438dd7f11820419ac94"
+          },
+          {
+            "bytes": 776238,
+            "path": "reviewer/audio/85dfb2eb6dddf41b498cd816e5cf0186.wav",
+            "sha256": "3fa25f701034e694b2a090466df24c96cd18cb788ad6cca1e1b24b9dc95d0bee"
+          },
+          {
+            "bytes": 776238,
+            "path": "reviewer/audio/9a9b0c3ca8174d0afa6f38b5d1c72078.wav",
+            "sha256": "6c59779c74ac274aca2969590f80212e0cbbf6502653dc1f042b65e8afdae16d"
+          },
+          {
+            "bytes": 21187421,
+            "path": "reviewer/index.html",
+            "sha256": "2d6b97e71f99498d0d6b75a8e0b330152c6db63ce7ac80122ae6f4042bab78f5"
+          },
+          {
+            "bytes": 809,
+            "path": "reviewer/protocol.json",
+            "sha256": "639350d44de1b8058811ff73c9734d0c68ce81d870f920a121e91d5072555f8c"
+          }
+        ],
+        "no_private_admin": true,
+        "no_raw_rotations": true,
+        "no_weights": true,
+        "status": "EXACT_WHITELIST_SHA_AND_BYTES_VERIFIED",
+        "total_bytes": 63421942
+      },
+      "path": "delivery/media_delivery.json",
+      "sha256": "d40a9ad6fab4fcea2a9a81182d8e46ea454e70517b7b6824fbe35845962577c8"
+    }
+  ]
+}

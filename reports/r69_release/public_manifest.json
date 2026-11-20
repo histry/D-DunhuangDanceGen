@@ -1,0 +1,65 @@
+{
+  "excludes": "NO_VIEWER_COORDINATES_AUDIO_ROTATIONS_PRIVATE_ADMIN_MAPPING_SEEDS_OR_REVIEWER_IDENTITIES",
+  "files": [
+    {
+      "bytes": 17040,
+      "path": "execution_and_delivery_receipts.json",
+      "sha256": "a6b2c3c3d60d947c0a9770f1e59e39ff290b6fcaacc23bfaeb196da21413803b"
+    },
+    {
+      "bytes": 5512,
+      "path": "independent.json",
+      "sha256": "188479ddb650b8e3010e2d553387a900612eca7d491e6f40bee06a40d2388ef1"
+    },
+    {
+      "bytes": 729538,
+      "path": "population.json",
+      "sha256": "8dc25c497dc2437feabc3eca225eae9deb1e4ff293f6f7bf04e5a223fc788176"
+    },
+    {
+      "bytes": 336,
+      "path": "publication_inputs.json",
+      "sha256": "dd34ff1d65a9b19ee809b6e41475a443cd6782459ea1c32553965be81ce67f95"
+    },
+    {
+      "bytes": 270,
+      "path": "qualification.json",
+      "sha256": "cb9ac5a67ded5d4ebd8c28ee47b7cd6c73a3ca5568ca8e3ea95ef0d873952b77"
+    },
+    {
+      "bytes": 103571,
+      "path": "quality_state.json",
+      "sha256": "5055c9e3c8d012ac7ba6f87922904d325fadbd06b3a51fb2ed7ab97a3b147288"
+    },
+    {
+      "bytes": 1846721,
+      "path": "records.json",
+      "sha256": "5d7c9aff0e1d11748ae9777c6c7b87a4a9243657386fb86ecff52254565e20d7"
+    },
+    {
+      "bytes": 8347,
+      "path": "registration.json",
+      "sha256": "be3d517a967ef87c4a0135b590a2f6a0de9293ad81a60beaaa193689c7f43a0a"
+    },
+    {
+      "bytes": 22126,
+      "path": "runtime.json",
+      "sha256": "b58912fa6ec0ac4b76a1d2b8d19c9bea7358ab550535798f07491873b4196992"
+    },
+    {
+      "bytes": 9941,
+      "path": "scientific_files.json",
+      "sha256": "b99fd5237e1536387bb883501a83e1173f51cebea3a30117088fad7e4aff27cf"
+    },
+    {
+      "bytes": 60452,
+      "path": "shared_historical_bank_costs.json",
+      "sha256": "0973b93ba53cbdca1a18b239ed01ce4a213edae5a58273ca01ab7f91cad2363d"
+    },
+    {
+      "bytes": 2163,
+      "path": "summary.json",
+      "sha256": "636273eb13eecada59890e674f98c2dc771c678270ba62015f73f6412d8dbab2"
+    }
+  ]
+}
