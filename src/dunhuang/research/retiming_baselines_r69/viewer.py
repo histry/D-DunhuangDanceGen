@@ -9,7 +9,6 @@ import hmac
 import json
 from pathlib import Path
 import re
-import shutil
 import subprocess
 
 import numpy as np
@@ -183,6 +182,8 @@ def build(out,display,J,parents,clocks,*,blind_seed):
         order=sorted(METHODS,key=lambda m:_opaque(blind_seed,"order",[case["key"],m]))
         for method in METHODS:
             result=by_method[method];row=result.get("row") or {};R=result.get("R");full=result.get("full_R")
+            raw_core=None if R is None else np.asarray(R)
+            raw_full=None if full is None else np.asarray(full)
             q=result.get("q");a,b=case["source_interval"]
             if R is not None:
                 R=_rotations(R,240);q=np.asarray(q,float)
@@ -191,7 +192,8 @@ def build(out,display,J,parents,clocks,*,blind_seed):
             elif q is not None:raise ValueError("No source clock may be shown without actual Core")
             if full is not None:
                 full=_rotations(full,528)
-                if R is None or not np.array_equal(full[core_start:core_start+240],R):
+                if (R is None or array_hash(raw_full[core_start:core_start+240])!=array_hash(raw_core)
+                        or not np.array_equal(full[core_start:core_start+240],R)):
                     raise ValueError("Full pair must preserve the actual selected Core bytes")
             dev_panels.append(dict(method=method,label=LABELS[method],
                 P=_position(full,J,parents,528) if full is not None else None,
