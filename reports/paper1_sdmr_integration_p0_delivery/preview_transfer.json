@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "user_batch_authorized": true,
+  "stage": "preview",
+  "transported_files": {
+    "data.js": {
+      "bytes": 57582134,
+      "sha256": "a62722f170b5aa87c702ab002d6ff8f507752970983f86f49f1e653753db9679"
+    },
+    "protocol.json": {
+      "bytes": 927,
+      "sha256": "f2022b038f390ad6f0f31a758ffb33b18d0bf27685308665dba0aae019e02820"
+    },
+    "index.html": {
+      "bytes": 7753,
+      "sha256": "7ee31a6dbd91661dbc3891bce546ef67968d7a9de3bd209518264e6058e630d4"
+    }
+  },
+  "transported_bytes": 57590814,
+  "no_new_audio_transfer": true
+}

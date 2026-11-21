@@ -1,0 +1,3125 @@
+{
+  "task": "Paper1-SDMR-Integration-P0",
+  "config": {
+    "songs": [
+      0,
+      1,
+      2
+    ],
+    "arm": "B0",
+    "source_units": 16,
+    "max_warps": 2,
+    "scan_paths": 64,
+    "gap": 48,
+    "rates": [
+      0.75,
+      1.33
+    ],
+    "event_limit": 3,
+    "proposal_radius": 15,
+    "event_tolerance": 3,
+    "max_local_geometry_requests": 2496,
+    "training_updates": 0,
+    "can_route": false
+  },
+  "songs": [
+    {
+      "song": 0,
+      "frames": 3601,
+      "regions": [
+        {
+          "kind": "core",
+          "interval": [
+            0,
+            233
+          ]
+        },
+        {
+          "kind": "transition",
+          "interval": [
+            233,
+            281
+          ]
+        },
+        {
+          "kind": "core",
+          "interval": [
+            281,
+            514
+          ]
+        },
+        {
+          "kind": "transition",
+          "interval": [
+            514,
+            562
+          ]
+        },
+        {
+          "kind": "core",
+          "interval": [
+            562,
+            795
+          ]
+        },
+        {
+          "kind": "transition",
+          "interval": [
+            795,
+            843
+          ]
+        },
+        {
+          "kind": "core",
+          "interval": [
+            843,
+            1076
+          ]
+        },
+        {
+          "kind": "transition",
+          "interval": [
+            1076,
+            1124
+          ]
+        },
+        {
+          "kind": "core",
+          "interval": [
+            1124,
+            1357
+          ]
+        },
+        {
+          "kind": "transition",
+          "interval": [
+            1357,
+            1405
+          ]
+        },
+        {
+          "kind": "core",
+          "interval": [
+            1405,
+            1638
+          ]
+        },
+        {
+          "kind": "transition",
+          "interval": [
+            1638,
+            1686
+          ]
+        },
+        {
+          "kind": "core",
+          "interval": [
+            1686,
+            1919
+          ]
+        },
+        {
+          "kind": "transition",
+          "interval": [
+            1919,
+            1967
+          ]
+        },
+        {
+          "kind": "core",
+          "interval": [
+            1967,
+            2200
+          ]
+        },
+        {
+          "kind": "transition",
+          "interval": [
+            2200,
+            2248
+          ]
+        },
+        {
+          "kind": "core",
+          "interval": [
+            2248,
+            2481
+          ]
+        },
+        {
+          "kind": "transition",
+          "interval": [
+            2481,
+            2529
+          ]
+        },
+        {
+          "kind": "core",
+          "interval": [
+            2529,
+            2761
+          ]
+        },
+        {
+          "kind": "transition",
+          "interval": [
+            2761,
+            2809
+          ]
+        },
+        {
+          "kind": "core",
+          "interval": [
+            2809,
+            3041
+          ]
+        },
+        {
+          "kind": "transition",
+          "interval": [
+            3041,
+            3089
+          ]
+        },
+        {
+          "kind": "core",
+          "interval": [
+            3089,
+            3321
+          ]
+        },
+        {
+          "kind": "transition",
+          "interval": [
+            3321,
+            3369
+          ]
+        },
+        {
+          "kind": "core",
+          "interval": [
+            3369,
+            3601
+          ]
+        }
+      ],
+      "audio_sha256": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c",
+      "music_catalog_sha256": "837a314379294a46849763667845ade597d7c77a55af65ba6ac0ed94bb2c529b",
+      "baseline_rotation_sha256": "8b1c5f767bc630d8cde68797bd4614405e4634f715ed53b493af943a72d03af5",
+      "baseline_exact": true,
+      "historical_bridge_methods": {
+        "G0": 9,
+        "G1": 3
+      }
+    },
+    {
+      "song": 1,
+      "frames": 3598,
+      "regions": [
+        {
+          "kind": "core",
+          "interval": [
+            0,
+            233
+          ]
+        },
+        {
+          "kind": "transition",
+          "interval": [
+            233,
+            281
+          ]
+        },
+        {
+          "kind": "core",
+          "interval": [
+            281,
+            514
+          ]
+        },
+        {
+          "kind": "transition",
+          "interval": [
+            514,
+            562
+          ]
+        },
+        {
+          "kind": "core",
+          "interval": [
+            562,
+            795
+          ]
+        },
+        {
+          "kind": "transition",
+          "interval": [
+            795,
+            843
+          ]
+        },
+        {
+          "kind": "core",
+          "interval": [
+            843,
+            1076
+          ]
+        },
+        {
+          "kind": "transition",
+          "interval": [
+            1076,
+            1124
+          ]
+        },
+        {
+          "kind": "core",
+          "interval": [
+            1124,
+            1357
+          ]
+        },
+        {
+          "kind": "transition",
+          "interval": [
+            1357,
+            1405
+          ]
+        },
+        {
+          "kind": "core",
+          "interval": [
+            1405,
+            1638
+          ]
+        },
+        {
+          "kind": "transition",
+          "interval": [
+            1638,
+            1686
+          ]
+        },
+        {
+          "kind": "core",
+          "interval": [
+            1686,
+            1918
+          ]
+        },
+        {
+          "kind": "transition",
+          "interval": [
+            1918,
+            1966
+          ]
+        },
+        {
+          "kind": "core",
+          "interval": [
+            1966,
+            2198
+          ]
+        },
+        {
+          "kind": "transition",
+          "interval": [
+            2198,
+            2246
+          ]
+        },
+        {
+          "kind": "core",
+          "interval": [
+            2246,
+            2478
+          ]
+        },
+        {
+          "kind": "transition",
+          "interval": [
+            2478,
+            2526
+          ]
+        },
+        {
+          "kind": "core",
+          "interval": [
+            2526,
+            2758
+          ]
+        },
+        {
+          "kind": "transition",
+          "interval": [
+            2758,
+            2806
+          ]
+        },
+        {
+          "kind": "core",
+          "interval": [
+            2806,
+            3038
+          ]
+        },
+        {
+          "kind": "transition",
+          "interval": [
+            3038,
+            3086
+          ]
+        },
+        {
+          "kind": "core",
+          "interval": [
+            3086,
+            3318
+          ]
+        },
+        {
+          "kind": "transition",
+          "interval": [
+            3318,
+            3366
+          ]
+        },
+        {
+          "kind": "core",
+          "interval": [
+            3366,
+            3598
+          ]
+        }
+      ],
+      "audio_sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f",
+      "music_catalog_sha256": "a6e4dcfc16e15b79b039adb454457a51845b707b0bf6fa88cbd456d17819de28",
+      "baseline_rotation_sha256": "1c582d9d3174d48e40094abcb40b3645e17645e749aca00b3c7b67178a2e3c23",
+      "baseline_exact": true,
+      "historical_bridge_methods": {
+        "G0": 9,
+        "G1": 3
+      }
+    },
+    {
+      "song": 2,
+      "frames": 3601,
+      "regions": [
+        {
+          "kind": "core",
+          "interval": [
+            0,
+            233
+          ]
+        },
+        {
+          "kind": "transition",
+          "interval": [
+            233,
+            281
+          ]
+        },
+        {
+          "kind": "core",
+          "interval": [
+            281,
+            514
+          ]
+        },
+        {
+          "kind": "transition",
+          "interval": [
+            514,
+            562
+          ]
+        },
+        {
+          "kind": "core",
+          "interval": [
+            562,
+            795
+          ]
+        },
+        {
+          "kind": "transition",
+          "interval": [
+            795,
+            843
+          ]
+        },
+        {
+          "kind": "core",
+          "interval": [
+            843,
+            1076
+          ]
+        },
+        {
+          "kind": "transition",
+          "interval": [
+            1076,
+            1124
+          ]
+        },
+        {
+          "kind": "core",
+          "interval": [
+            1124,
+            1357
+          ]
+        },
+        {
+          "kind": "transition",
+          "interval": [
+            1357,
+            1405
+          ]
+        },
+        {
+          "kind": "core",
+          "interval": [
+            1405,
+            1638
+          ]
+        },
+        {
+          "kind": "transition",
+          "interval": [
+            1638,
+            1686
+          ]
+        },
+        {
+          "kind": "core",
+          "interval": [
+            1686,
+            1919
+          ]
+        },
+        {
+          "kind": "transition",
+          "interval": [
+            1919,
+            1967
+          ]
+        },
+        {
+          "kind": "core",
+          "interval": [
+            1967,
+            2200
+          ]
+        },
+        {
+          "kind": "transition",
+          "interval": [
+            2200,
+            2248
+          ]
+        },
+        {
+          "kind": "core",
+          "interval": [
+            2248,
+            2481
+          ]
+        },
+        {
+          "kind": "transition",
+          "interval": [
+            2481,
+            2529
+          ]
+        },
+        {
+          "kind": "core",
+          "interval": [
+            2529,
+            2761
+          ]
+        },
+        {
+          "kind": "transition",
+          "interval": [
+            2761,
+            2809
+          ]
+        },
+        {
+          "kind": "core",
+          "interval": [
+            2809,
+            3041
+          ]
+        },
+        {
+          "kind": "transition",
+          "interval": [
+            3041,
+            3089
+          ]
+        },
+        {
+          "kind": "core",
+          "interval": [
+            3089,
+            3321
+          ]
+        },
+        {
+          "kind": "transition",
+          "interval": [
+            3321,
+            3369
+          ]
+        },
+        {
+          "kind": "core",
+          "interval": [
+            3369,
+            3601
+          ]
+        }
+      ],
+      "audio_sha256": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33",
+      "music_catalog_sha256": "2489c95a5340ec57b8ecfc7fb23ce9bdefe79b1fcaed69f6d76fcf61499733fb",
+      "baseline_rotation_sha256": "bf01df6d44e968190473e4f608e4c69083a591699e02d2641e94a73257b6d1f8",
+      "baseline_exact": true,
+      "historical_bridge_methods": {
+        "G0": 9,
+        "G1": 3
+      }
+    }
+  ],
+  "source_bank": [
+    "r47:c1f1efc803495ee700d67db1",
+    "r47:28088078d89f6394a8b1fa44",
+    "r47:1b228a3e5bd8f536ebd033b8",
+    "r47:929d61abac01304e06bbc7f1",
+    "r47:6932683ac9dd7b541f599811",
+    "r47:70e341228da95cae7b269f2e",
+    "r47:058b4536f51d3c37255b5cf7",
+    "r47:cfac19a77e51175d65951007",
+    "r47:713b0851cf08a6e2c97f0465",
+    "r47:6e0b3c3e9f7ad420012cb8be",
+    "r47:ef27e17da9c989bbd4ff32f5",
+    "r47:a74b575f952414f4396bad53",
+    "r47:ec6fb0184ef6f45871d64668",
+    "r47:d45ceeb25e7c7ff478c7efa9",
+    "r47:021a0275b050c878b2156883",
+    "r47:afdc7bb3f1539b3ddd8517b9"
+  ],
+  "source_slot_scope": "HISTORICAL_DEVELOPMENT_SONGS_NOT_NEW_MUSIC_GENERALIZATION",
+  "candidate_count": 622,
+  "source_slot_groups": 312,
+  "distinct_source_units": 8,
+  "source_bank_units": 16,
+  "source_bank_units_without_duration_eligible_core": [
+    "r47:929d61abac01304e06bbc7f1",
+    "r47:6932683ac9dd7b541f599811",
+    "r47:cfac19a77e51175d65951007",
+    "r47:713b0851cf08a6e2c97f0465",
+    "r47:6e0b3c3e9f7ad420012cb8be",
+    "r47:ef27e17da9c989bbd4ff32f5",
+    "r47:ec6fb0184ef6f45871d64668",
+    "r47:d45ceeb25e7c7ff478c7efa9"
+  ],
+  "duration_rejections": [
+    {
+      "song": 0,
+      "slot": 0,
+      "event_uid": "r47:929d61abac01304e06bbc7f1",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 0,
+      "event_uid": "r47:6932683ac9dd7b541f599811",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 0,
+      "event_uid": "r47:cfac19a77e51175d65951007",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 0,
+      "event_uid": "r47:713b0851cf08a6e2c97f0465",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 0,
+      "event_uid": "r47:6e0b3c3e9f7ad420012cb8be",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 0,
+      "event_uid": "r47:ef27e17da9c989bbd4ff32f5",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 0,
+      "event_uid": "r47:ec6fb0184ef6f45871d64668",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 0,
+      "event_uid": "r47:d45ceeb25e7c7ff478c7efa9",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 1,
+      "event_uid": "r47:929d61abac01304e06bbc7f1",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 1,
+      "event_uid": "r47:6932683ac9dd7b541f599811",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 1,
+      "event_uid": "r47:cfac19a77e51175d65951007",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 1,
+      "event_uid": "r47:713b0851cf08a6e2c97f0465",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 1,
+      "event_uid": "r47:6e0b3c3e9f7ad420012cb8be",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 1,
+      "event_uid": "r47:ef27e17da9c989bbd4ff32f5",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 1,
+      "event_uid": "r47:ec6fb0184ef6f45871d64668",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 1,
+      "event_uid": "r47:d45ceeb25e7c7ff478c7efa9",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 2,
+      "event_uid": "r47:929d61abac01304e06bbc7f1",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 2,
+      "event_uid": "r47:6932683ac9dd7b541f599811",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 2,
+      "event_uid": "r47:cfac19a77e51175d65951007",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 2,
+      "event_uid": "r47:713b0851cf08a6e2c97f0465",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 2,
+      "event_uid": "r47:6e0b3c3e9f7ad420012cb8be",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 2,
+      "event_uid": "r47:ef27e17da9c989bbd4ff32f5",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 2,
+      "event_uid": "r47:ec6fb0184ef6f45871d64668",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 2,
+      "event_uid": "r47:d45ceeb25e7c7ff478c7efa9",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 3,
+      "event_uid": "r47:929d61abac01304e06bbc7f1",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 3,
+      "event_uid": "r47:6932683ac9dd7b541f599811",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 3,
+      "event_uid": "r47:cfac19a77e51175d65951007",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 3,
+      "event_uid": "r47:713b0851cf08a6e2c97f0465",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 3,
+      "event_uid": "r47:6e0b3c3e9f7ad420012cb8be",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 3,
+      "event_uid": "r47:ef27e17da9c989bbd4ff32f5",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 3,
+      "event_uid": "r47:ec6fb0184ef6f45871d64668",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 3,
+      "event_uid": "r47:d45ceeb25e7c7ff478c7efa9",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 4,
+      "event_uid": "r47:929d61abac01304e06bbc7f1",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 4,
+      "event_uid": "r47:6932683ac9dd7b541f599811",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 4,
+      "event_uid": "r47:cfac19a77e51175d65951007",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 4,
+      "event_uid": "r47:713b0851cf08a6e2c97f0465",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 4,
+      "event_uid": "r47:6e0b3c3e9f7ad420012cb8be",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 4,
+      "event_uid": "r47:ef27e17da9c989bbd4ff32f5",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 4,
+      "event_uid": "r47:ec6fb0184ef6f45871d64668",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 4,
+      "event_uid": "r47:d45ceeb25e7c7ff478c7efa9",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 5,
+      "event_uid": "r47:929d61abac01304e06bbc7f1",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 5,
+      "event_uid": "r47:6932683ac9dd7b541f599811",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 5,
+      "event_uid": "r47:cfac19a77e51175d65951007",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 5,
+      "event_uid": "r47:713b0851cf08a6e2c97f0465",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 5,
+      "event_uid": "r47:6e0b3c3e9f7ad420012cb8be",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 5,
+      "event_uid": "r47:ef27e17da9c989bbd4ff32f5",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 5,
+      "event_uid": "r47:ec6fb0184ef6f45871d64668",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 5,
+      "event_uid": "r47:d45ceeb25e7c7ff478c7efa9",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 6,
+      "event_uid": "r47:929d61abac01304e06bbc7f1",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 6,
+      "event_uid": "r47:6932683ac9dd7b541f599811",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 6,
+      "event_uid": "r47:cfac19a77e51175d65951007",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 6,
+      "event_uid": "r47:713b0851cf08a6e2c97f0465",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 6,
+      "event_uid": "r47:6e0b3c3e9f7ad420012cb8be",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 6,
+      "event_uid": "r47:ef27e17da9c989bbd4ff32f5",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 6,
+      "event_uid": "r47:ec6fb0184ef6f45871d64668",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 6,
+      "event_uid": "r47:d45ceeb25e7c7ff478c7efa9",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 7,
+      "event_uid": "r47:929d61abac01304e06bbc7f1",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 7,
+      "event_uid": "r47:6932683ac9dd7b541f599811",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 7,
+      "event_uid": "r47:cfac19a77e51175d65951007",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 7,
+      "event_uid": "r47:713b0851cf08a6e2c97f0465",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 7,
+      "event_uid": "r47:6e0b3c3e9f7ad420012cb8be",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 7,
+      "event_uid": "r47:ef27e17da9c989bbd4ff32f5",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 7,
+      "event_uid": "r47:ec6fb0184ef6f45871d64668",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 7,
+      "event_uid": "r47:d45ceeb25e7c7ff478c7efa9",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 8,
+      "event_uid": "r47:929d61abac01304e06bbc7f1",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 8,
+      "event_uid": "r47:6932683ac9dd7b541f599811",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 8,
+      "event_uid": "r47:cfac19a77e51175d65951007",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 8,
+      "event_uid": "r47:713b0851cf08a6e2c97f0465",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 8,
+      "event_uid": "r47:6e0b3c3e9f7ad420012cb8be",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 8,
+      "event_uid": "r47:ef27e17da9c989bbd4ff32f5",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 8,
+      "event_uid": "r47:ec6fb0184ef6f45871d64668",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 8,
+      "event_uid": "r47:d45ceeb25e7c7ff478c7efa9",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 9,
+      "event_uid": "r47:929d61abac01304e06bbc7f1",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 9,
+      "event_uid": "r47:6932683ac9dd7b541f599811",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 9,
+      "event_uid": "r47:cfac19a77e51175d65951007",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 9,
+      "event_uid": "r47:713b0851cf08a6e2c97f0465",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 9,
+      "event_uid": "r47:6e0b3c3e9f7ad420012cb8be",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 9,
+      "event_uid": "r47:ef27e17da9c989bbd4ff32f5",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 9,
+      "event_uid": "r47:ec6fb0184ef6f45871d64668",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 9,
+      "event_uid": "r47:d45ceeb25e7c7ff478c7efa9",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 10,
+      "event_uid": "r47:929d61abac01304e06bbc7f1",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 10,
+      "event_uid": "r47:6932683ac9dd7b541f599811",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 10,
+      "event_uid": "r47:cfac19a77e51175d65951007",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 10,
+      "event_uid": "r47:713b0851cf08a6e2c97f0465",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 10,
+      "event_uid": "r47:6e0b3c3e9f7ad420012cb8be",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 10,
+      "event_uid": "r47:ef27e17da9c989bbd4ff32f5",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 10,
+      "event_uid": "r47:ec6fb0184ef6f45871d64668",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 10,
+      "event_uid": "r47:d45ceeb25e7c7ff478c7efa9",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 11,
+      "event_uid": "r47:929d61abac01304e06bbc7f1",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 11,
+      "event_uid": "r47:6932683ac9dd7b541f599811",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 11,
+      "event_uid": "r47:cfac19a77e51175d65951007",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 11,
+      "event_uid": "r47:713b0851cf08a6e2c97f0465",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 11,
+      "event_uid": "r47:6e0b3c3e9f7ad420012cb8be",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 11,
+      "event_uid": "r47:ef27e17da9c989bbd4ff32f5",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 11,
+      "event_uid": "r47:ec6fb0184ef6f45871d64668",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 11,
+      "event_uid": "r47:d45ceeb25e7c7ff478c7efa9",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 12,
+      "event_uid": "r47:929d61abac01304e06bbc7f1",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 12,
+      "event_uid": "r47:6932683ac9dd7b541f599811",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 12,
+      "event_uid": "r47:cfac19a77e51175d65951007",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 12,
+      "event_uid": "r47:713b0851cf08a6e2c97f0465",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 12,
+      "event_uid": "r47:6e0b3c3e9f7ad420012cb8be",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 12,
+      "event_uid": "r47:ef27e17da9c989bbd4ff32f5",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 12,
+      "event_uid": "r47:ec6fb0184ef6f45871d64668",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 0,
+      "slot": 12,
+      "event_uid": "r47:d45ceeb25e7c7ff478c7efa9",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 0,
+      "event_uid": "r47:929d61abac01304e06bbc7f1",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 0,
+      "event_uid": "r47:6932683ac9dd7b541f599811",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 0,
+      "event_uid": "r47:cfac19a77e51175d65951007",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 0,
+      "event_uid": "r47:713b0851cf08a6e2c97f0465",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 0,
+      "event_uid": "r47:6e0b3c3e9f7ad420012cb8be",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 0,
+      "event_uid": "r47:ef27e17da9c989bbd4ff32f5",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 0,
+      "event_uid": "r47:ec6fb0184ef6f45871d64668",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 0,
+      "event_uid": "r47:d45ceeb25e7c7ff478c7efa9",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 1,
+      "event_uid": "r47:929d61abac01304e06bbc7f1",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 1,
+      "event_uid": "r47:6932683ac9dd7b541f599811",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 1,
+      "event_uid": "r47:cfac19a77e51175d65951007",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 1,
+      "event_uid": "r47:713b0851cf08a6e2c97f0465",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 1,
+      "event_uid": "r47:6e0b3c3e9f7ad420012cb8be",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 1,
+      "event_uid": "r47:ef27e17da9c989bbd4ff32f5",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 1,
+      "event_uid": "r47:ec6fb0184ef6f45871d64668",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 1,
+      "event_uid": "r47:d45ceeb25e7c7ff478c7efa9",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 2,
+      "event_uid": "r47:929d61abac01304e06bbc7f1",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 2,
+      "event_uid": "r47:6932683ac9dd7b541f599811",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 2,
+      "event_uid": "r47:cfac19a77e51175d65951007",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 2,
+      "event_uid": "r47:713b0851cf08a6e2c97f0465",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 2,
+      "event_uid": "r47:6e0b3c3e9f7ad420012cb8be",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 2,
+      "event_uid": "r47:ef27e17da9c989bbd4ff32f5",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 2,
+      "event_uid": "r47:ec6fb0184ef6f45871d64668",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 2,
+      "event_uid": "r47:d45ceeb25e7c7ff478c7efa9",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 3,
+      "event_uid": "r47:929d61abac01304e06bbc7f1",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 3,
+      "event_uid": "r47:6932683ac9dd7b541f599811",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 3,
+      "event_uid": "r47:cfac19a77e51175d65951007",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 3,
+      "event_uid": "r47:713b0851cf08a6e2c97f0465",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 3,
+      "event_uid": "r47:6e0b3c3e9f7ad420012cb8be",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 3,
+      "event_uid": "r47:ef27e17da9c989bbd4ff32f5",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 3,
+      "event_uid": "r47:ec6fb0184ef6f45871d64668",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 3,
+      "event_uid": "r47:d45ceeb25e7c7ff478c7efa9",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 4,
+      "event_uid": "r47:929d61abac01304e06bbc7f1",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 4,
+      "event_uid": "r47:6932683ac9dd7b541f599811",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 4,
+      "event_uid": "r47:cfac19a77e51175d65951007",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 4,
+      "event_uid": "r47:713b0851cf08a6e2c97f0465",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 4,
+      "event_uid": "r47:6e0b3c3e9f7ad420012cb8be",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 4,
+      "event_uid": "r47:ef27e17da9c989bbd4ff32f5",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 4,
+      "event_uid": "r47:ec6fb0184ef6f45871d64668",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 4,
+      "event_uid": "r47:d45ceeb25e7c7ff478c7efa9",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 5,
+      "event_uid": "r47:929d61abac01304e06bbc7f1",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 5,
+      "event_uid": "r47:6932683ac9dd7b541f599811",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 5,
+      "event_uid": "r47:cfac19a77e51175d65951007",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 5,
+      "event_uid": "r47:713b0851cf08a6e2c97f0465",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 5,
+      "event_uid": "r47:6e0b3c3e9f7ad420012cb8be",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 5,
+      "event_uid": "r47:ef27e17da9c989bbd4ff32f5",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 5,
+      "event_uid": "r47:ec6fb0184ef6f45871d64668",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 5,
+      "event_uid": "r47:d45ceeb25e7c7ff478c7efa9",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 6,
+      "event_uid": "r47:929d61abac01304e06bbc7f1",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 6,
+      "event_uid": "r47:6932683ac9dd7b541f599811",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 6,
+      "event_uid": "r47:cfac19a77e51175d65951007",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 6,
+      "event_uid": "r47:713b0851cf08a6e2c97f0465",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 6,
+      "event_uid": "r47:6e0b3c3e9f7ad420012cb8be",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 6,
+      "event_uid": "r47:ef27e17da9c989bbd4ff32f5",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 6,
+      "event_uid": "r47:ec6fb0184ef6f45871d64668",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 6,
+      "event_uid": "r47:d45ceeb25e7c7ff478c7efa9",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 7,
+      "event_uid": "r47:929d61abac01304e06bbc7f1",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 7,
+      "event_uid": "r47:6932683ac9dd7b541f599811",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 7,
+      "event_uid": "r47:cfac19a77e51175d65951007",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 7,
+      "event_uid": "r47:713b0851cf08a6e2c97f0465",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 7,
+      "event_uid": "r47:6e0b3c3e9f7ad420012cb8be",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 7,
+      "event_uid": "r47:ef27e17da9c989bbd4ff32f5",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 7,
+      "event_uid": "r47:ec6fb0184ef6f45871d64668",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 7,
+      "event_uid": "r47:d45ceeb25e7c7ff478c7efa9",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 8,
+      "event_uid": "r47:929d61abac01304e06bbc7f1",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 8,
+      "event_uid": "r47:6932683ac9dd7b541f599811",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 8,
+      "event_uid": "r47:cfac19a77e51175d65951007",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 8,
+      "event_uid": "r47:713b0851cf08a6e2c97f0465",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 8,
+      "event_uid": "r47:6e0b3c3e9f7ad420012cb8be",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 8,
+      "event_uid": "r47:ef27e17da9c989bbd4ff32f5",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 8,
+      "event_uid": "r47:ec6fb0184ef6f45871d64668",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 8,
+      "event_uid": "r47:d45ceeb25e7c7ff478c7efa9",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 9,
+      "event_uid": "r47:929d61abac01304e06bbc7f1",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 9,
+      "event_uid": "r47:6932683ac9dd7b541f599811",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 9,
+      "event_uid": "r47:cfac19a77e51175d65951007",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 9,
+      "event_uid": "r47:713b0851cf08a6e2c97f0465",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 9,
+      "event_uid": "r47:6e0b3c3e9f7ad420012cb8be",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 9,
+      "event_uid": "r47:ef27e17da9c989bbd4ff32f5",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 9,
+      "event_uid": "r47:ec6fb0184ef6f45871d64668",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 9,
+      "event_uid": "r47:d45ceeb25e7c7ff478c7efa9",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 10,
+      "event_uid": "r47:929d61abac01304e06bbc7f1",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 10,
+      "event_uid": "r47:6932683ac9dd7b541f599811",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 10,
+      "event_uid": "r47:cfac19a77e51175d65951007",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 10,
+      "event_uid": "r47:713b0851cf08a6e2c97f0465",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 10,
+      "event_uid": "r47:6e0b3c3e9f7ad420012cb8be",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 10,
+      "event_uid": "r47:ef27e17da9c989bbd4ff32f5",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 10,
+      "event_uid": "r47:ec6fb0184ef6f45871d64668",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 10,
+      "event_uid": "r47:d45ceeb25e7c7ff478c7efa9",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 11,
+      "event_uid": "r47:929d61abac01304e06bbc7f1",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 11,
+      "event_uid": "r47:6932683ac9dd7b541f599811",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 11,
+      "event_uid": "r47:cfac19a77e51175d65951007",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 11,
+      "event_uid": "r47:713b0851cf08a6e2c97f0465",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 11,
+      "event_uid": "r47:6e0b3c3e9f7ad420012cb8be",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 11,
+      "event_uid": "r47:ef27e17da9c989bbd4ff32f5",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 11,
+      "event_uid": "r47:ec6fb0184ef6f45871d64668",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 11,
+      "event_uid": "r47:d45ceeb25e7c7ff478c7efa9",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 12,
+      "event_uid": "r47:929d61abac01304e06bbc7f1",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 12,
+      "event_uid": "r47:6932683ac9dd7b541f599811",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 12,
+      "event_uid": "r47:cfac19a77e51175d65951007",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 12,
+      "event_uid": "r47:713b0851cf08a6e2c97f0465",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 12,
+      "event_uid": "r47:6e0b3c3e9f7ad420012cb8be",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 12,
+      "event_uid": "r47:ef27e17da9c989bbd4ff32f5",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 12,
+      "event_uid": "r47:ec6fb0184ef6f45871d64668",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 1,
+      "slot": 12,
+      "event_uid": "r47:d45ceeb25e7c7ff478c7efa9",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 0,
+      "event_uid": "r47:929d61abac01304e06bbc7f1",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 0,
+      "event_uid": "r47:6932683ac9dd7b541f599811",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 0,
+      "event_uid": "r47:cfac19a77e51175d65951007",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 0,
+      "event_uid": "r47:713b0851cf08a6e2c97f0465",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 0,
+      "event_uid": "r47:6e0b3c3e9f7ad420012cb8be",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 0,
+      "event_uid": "r47:ef27e17da9c989bbd4ff32f5",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 0,
+      "event_uid": "r47:ec6fb0184ef6f45871d64668",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 0,
+      "event_uid": "r47:d45ceeb25e7c7ff478c7efa9",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 1,
+      "event_uid": "r47:929d61abac01304e06bbc7f1",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 1,
+      "event_uid": "r47:6932683ac9dd7b541f599811",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 1,
+      "event_uid": "r47:cfac19a77e51175d65951007",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 1,
+      "event_uid": "r47:713b0851cf08a6e2c97f0465",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 1,
+      "event_uid": "r47:6e0b3c3e9f7ad420012cb8be",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 1,
+      "event_uid": "r47:ef27e17da9c989bbd4ff32f5",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 1,
+      "event_uid": "r47:ec6fb0184ef6f45871d64668",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 1,
+      "event_uid": "r47:d45ceeb25e7c7ff478c7efa9",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 2,
+      "event_uid": "r47:929d61abac01304e06bbc7f1",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 2,
+      "event_uid": "r47:6932683ac9dd7b541f599811",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 2,
+      "event_uid": "r47:cfac19a77e51175d65951007",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 2,
+      "event_uid": "r47:713b0851cf08a6e2c97f0465",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 2,
+      "event_uid": "r47:6e0b3c3e9f7ad420012cb8be",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 2,
+      "event_uid": "r47:ef27e17da9c989bbd4ff32f5",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 2,
+      "event_uid": "r47:ec6fb0184ef6f45871d64668",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 2,
+      "event_uid": "r47:d45ceeb25e7c7ff478c7efa9",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 3,
+      "event_uid": "r47:929d61abac01304e06bbc7f1",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 3,
+      "event_uid": "r47:6932683ac9dd7b541f599811",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 3,
+      "event_uid": "r47:cfac19a77e51175d65951007",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 3,
+      "event_uid": "r47:713b0851cf08a6e2c97f0465",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 3,
+      "event_uid": "r47:6e0b3c3e9f7ad420012cb8be",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 3,
+      "event_uid": "r47:ef27e17da9c989bbd4ff32f5",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 3,
+      "event_uid": "r47:ec6fb0184ef6f45871d64668",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 3,
+      "event_uid": "r47:d45ceeb25e7c7ff478c7efa9",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 4,
+      "event_uid": "r47:929d61abac01304e06bbc7f1",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 4,
+      "event_uid": "r47:6932683ac9dd7b541f599811",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 4,
+      "event_uid": "r47:cfac19a77e51175d65951007",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 4,
+      "event_uid": "r47:713b0851cf08a6e2c97f0465",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 4,
+      "event_uid": "r47:6e0b3c3e9f7ad420012cb8be",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 4,
+      "event_uid": "r47:ef27e17da9c989bbd4ff32f5",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 4,
+      "event_uid": "r47:ec6fb0184ef6f45871d64668",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 4,
+      "event_uid": "r47:d45ceeb25e7c7ff478c7efa9",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 5,
+      "event_uid": "r47:929d61abac01304e06bbc7f1",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 5,
+      "event_uid": "r47:6932683ac9dd7b541f599811",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 5,
+      "event_uid": "r47:cfac19a77e51175d65951007",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 5,
+      "event_uid": "r47:713b0851cf08a6e2c97f0465",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 5,
+      "event_uid": "r47:6e0b3c3e9f7ad420012cb8be",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 5,
+      "event_uid": "r47:ef27e17da9c989bbd4ff32f5",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 5,
+      "event_uid": "r47:ec6fb0184ef6f45871d64668",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 5,
+      "event_uid": "r47:d45ceeb25e7c7ff478c7efa9",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 6,
+      "event_uid": "r47:929d61abac01304e06bbc7f1",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 6,
+      "event_uid": "r47:6932683ac9dd7b541f599811",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 6,
+      "event_uid": "r47:cfac19a77e51175d65951007",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 6,
+      "event_uid": "r47:713b0851cf08a6e2c97f0465",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 6,
+      "event_uid": "r47:6e0b3c3e9f7ad420012cb8be",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 6,
+      "event_uid": "r47:ef27e17da9c989bbd4ff32f5",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 6,
+      "event_uid": "r47:ec6fb0184ef6f45871d64668",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 6,
+      "event_uid": "r47:d45ceeb25e7c7ff478c7efa9",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 7,
+      "event_uid": "r47:929d61abac01304e06bbc7f1",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 7,
+      "event_uid": "r47:6932683ac9dd7b541f599811",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 7,
+      "event_uid": "r47:cfac19a77e51175d65951007",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 7,
+      "event_uid": "r47:713b0851cf08a6e2c97f0465",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 7,
+      "event_uid": "r47:6e0b3c3e9f7ad420012cb8be",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 7,
+      "event_uid": "r47:ef27e17da9c989bbd4ff32f5",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 7,
+      "event_uid": "r47:ec6fb0184ef6f45871d64668",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 7,
+      "event_uid": "r47:d45ceeb25e7c7ff478c7efa9",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 8,
+      "event_uid": "r47:929d61abac01304e06bbc7f1",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 8,
+      "event_uid": "r47:6932683ac9dd7b541f599811",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 8,
+      "event_uid": "r47:cfac19a77e51175d65951007",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 8,
+      "event_uid": "r47:713b0851cf08a6e2c97f0465",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 8,
+      "event_uid": "r47:6e0b3c3e9f7ad420012cb8be",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 8,
+      "event_uid": "r47:ef27e17da9c989bbd4ff32f5",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 8,
+      "event_uid": "r47:ec6fb0184ef6f45871d64668",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 8,
+      "event_uid": "r47:d45ceeb25e7c7ff478c7efa9",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 9,
+      "event_uid": "r47:929d61abac01304e06bbc7f1",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 9,
+      "event_uid": "r47:6932683ac9dd7b541f599811",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 9,
+      "event_uid": "r47:cfac19a77e51175d65951007",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 9,
+      "event_uid": "r47:713b0851cf08a6e2c97f0465",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 9,
+      "event_uid": "r47:6e0b3c3e9f7ad420012cb8be",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 9,
+      "event_uid": "r47:ef27e17da9c989bbd4ff32f5",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 9,
+      "event_uid": "r47:ec6fb0184ef6f45871d64668",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 9,
+      "event_uid": "r47:d45ceeb25e7c7ff478c7efa9",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 10,
+      "event_uid": "r47:929d61abac01304e06bbc7f1",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 10,
+      "event_uid": "r47:6932683ac9dd7b541f599811",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 10,
+      "event_uid": "r47:cfac19a77e51175d65951007",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 10,
+      "event_uid": "r47:713b0851cf08a6e2c97f0465",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 10,
+      "event_uid": "r47:6e0b3c3e9f7ad420012cb8be",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 10,
+      "event_uid": "r47:ef27e17da9c989bbd4ff32f5",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 10,
+      "event_uid": "r47:ec6fb0184ef6f45871d64668",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 10,
+      "event_uid": "r47:d45ceeb25e7c7ff478c7efa9",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 11,
+      "event_uid": "r47:929d61abac01304e06bbc7f1",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 11,
+      "event_uid": "r47:6932683ac9dd7b541f599811",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 11,
+      "event_uid": "r47:cfac19a77e51175d65951007",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 11,
+      "event_uid": "r47:713b0851cf08a6e2c97f0465",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 11,
+      "event_uid": "r47:6e0b3c3e9f7ad420012cb8be",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 11,
+      "event_uid": "r47:ef27e17da9c989bbd4ff32f5",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 11,
+      "event_uid": "r47:ec6fb0184ef6f45871d64668",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 11,
+      "event_uid": "r47:d45ceeb25e7c7ff478c7efa9",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 12,
+      "event_uid": "r47:929d61abac01304e06bbc7f1",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 12,
+      "event_uid": "r47:6932683ac9dd7b541f599811",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 12,
+      "event_uid": "r47:cfac19a77e51175d65951007",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 12,
+      "event_uid": "r47:713b0851cf08a6e2c97f0465",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 12,
+      "event_uid": "r47:6e0b3c3e9f7ad420012cb8be",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 12,
+      "event_uid": "r47:ef27e17da9c989bbd4ff32f5",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 12,
+      "event_uid": "r47:ec6fb0184ef6f45871d64668",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    },
+    {
+      "song": 2,
+      "slot": 12,
+      "event_uid": "r47:d45ceeb25e7c7ff478c7efa9",
+      "reason": "ORIGINAL_E1W_INFEASIBLE",
+      "legal_path_count": 0,
+      "scanned": 0
+    }
+  ]
+}

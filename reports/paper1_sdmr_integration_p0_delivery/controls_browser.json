@@ -1,0 +1,51 @@
+{
+  "passed": true,
+  "scope": "ACTUAL_ENGINEERING_ACCEPTANCE_NOT_INDEPENDENT_ARTISTIC_REVIEW",
+  "songs_checked": 3,
+  "methods_checked": 6,
+  "observations": [
+    {
+      "candidate": "male_ribbon_FenHe · E1W · 7810655f",
+      "error": "",
+      "method": "E1W",
+      "status": "槽 1 [0,233] · male_ribbon_FenHe · E1W · 独立语义未知；新候选G1已按同预算实测；G1局部 通过"
+    },
+    {
+      "candidate": "male_ribbon_FenHe · R53_FIRST_DISTINCT · a0463a67",
+      "error": "",
+      "method": "GTWLocal",
+      "status": "槽 1 [0,233] · male_ribbon_FenHe · R53_FIRST_DISTINCT · 独立语义未知；新候选G1已按同预算实测；G1局部 通过"
+    },
+    {
+      "candidate": "male_ribbon_FenHe · R53_FIRST_DISTINCT · a0463a67",
+      "error": "",
+      "method": "Single64",
+      "status": "槽 1 [0,233] · male_ribbon_FenHe · R53_FIRST_DISTINCT · 独立语义未知；新候选G1已按同预算实测；G1局部 通过"
+    },
+    {
+      "candidate": "male_ribbon_FenHe · R53_FIRST_DISTINCT · a0463a67",
+      "error": "",
+      "method": "Multi64",
+      "status": "槽 1 [0,233] · male_ribbon_FenHe · R53_FIRST_DISTINCT · 独立语义未知；新候选G1已按同预算实测；G1局部 通过"
+    },
+    {
+      "candidate": "male_ribbon_FenHe · R53_FIRST_DISTINCT · a0463a67",
+      "error": "",
+      "method": "WrongMusic",
+      "status": "槽 1 [0,233] · male_ribbon_FenHe · R53_FIRST_DISTINCT · 独立语义未知；新候选G1已按同预算实测；G1局部 通过"
+    },
+    {
+      "candidate": "male_ribbon_FenHe · R53_FIRST_DISTINCT · a0463a67",
+      "error": "",
+      "method": "MusicZero",
+      "status": "槽 1 [0,233] · male_ribbon_FenHe · R53_FIRST_DISTINCT · 独立语义未知；新候选G1已按同预算实测；G1局部 通过"
+    }
+  ],
+  "final_third_song_frame": 1125,
+  "final_audio_seconds": 37.5,
+  "source_clock_independent": true,
+  "all_scores_shadow": true,
+  "can_route": false,
+  "controls_html_sha256": "787f95e04db67df2e686409bc55a6fc25e88fa79a8ffd47342172893aa1f6e8a",
+  "preview_body_data_sha256": "a62722f170b5aa87c702ab002d6ff8f507752970983f86f49f1e653753db9679"
+}

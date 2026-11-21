@@ -1,0 +1,55 @@
+{
+  "selection_counts": {
+    "source_slot_groups": 312,
+    "dual_clock_groups": 310,
+    "E1W_scorable": 312,
+    "E1W_baseline_among_ties": 312,
+    "E1W_all_ties_nonbaseline": 0,
+    "GTWLocal_scorable": 312,
+    "GTWLocal_baseline_among_ties": 170,
+    "GTWLocal_all_ties_nonbaseline": 142,
+    "Single64_scorable": 304,
+    "Single64_baseline_among_ties": 133,
+    "Single64_all_ties_nonbaseline": 171,
+    "Multi64_scorable": 312,
+    "Multi64_baseline_among_ties": 134,
+    "Multi64_all_ties_nonbaseline": 178,
+    "WrongMusic_scorable": 304,
+    "WrongMusic_baseline_among_ties": 139,
+    "WrongMusic_all_ties_nonbaseline": 165,
+    "MusicZero_scorable": 304,
+    "MusicZero_baseline_among_ties": 135,
+    "MusicZero_all_ties_nonbaseline": 169
+  },
+  "local_connection_counts": {
+    "requests": 1148,
+    "constructed": 1148,
+    "passed": 1096
+  },
+  "actual_geometry_calls": 1112,
+  "geometry_requests": 1148,
+  "actual_chart_trials": 1112,
+  "chart_trial_upper_bound": 7488,
+  "mapped_source_anchor_error_frames": {
+    "count": 1862,
+    "mean": 3.877192295789042,
+    "median": 2.3007598784195125,
+    "maximum": 20.0
+  },
+  "redetected_output_event_error_frames": {
+    "count": 1862,
+    "mean": 5.786573576799138,
+    "median": 3.1000000000000227,
+    "maximum": 43.0
+  },
+  "error_scope": "ALL_UNVALIDATED_PROPOSALS_NOT_EXECUTED_TARGET_CONSTRAINTS_OR_ARTISTIC_TRUTH",
+  "source_and_output_event_error_have_different_missingness": true,
+  "score_change_is_not_quality_gain": true,
+  "stage_A": "GLOBAL_MEAN_LOCAL_TOKENS_NOT_TRAINED_GLOBAL_HEAD",
+  "official_path_changed": false,
+  "new_planner_runs": 0,
+  "new_training_updates": 0,
+  "artistic_quality": "NOT_EVALUABLE",
+  "native24": "NOT_EVALUABLE",
+  "can_route": false
+}

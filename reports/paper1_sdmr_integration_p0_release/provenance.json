@@ -1,0 +1,137 @@
+{
+  "preview_science": {
+    "__init__.py": "74af5e32c9e73df05b9db0d655227fc8b61fd899405c19021e4f624459fe1a5d",
+    "contracts.py": "80f79febc9084eb33f7676e713fb4d02b703adb69d79f2557890b70ad06dd79b",
+    "correspondence.py": "bbbb62e96b636bf79040b729e945b61c95dde4bc5f49f64b022398d20e4e9965",
+    "execute.py": "f0aeb2d25801bd541da7d22608439240e4311688d490f84cb4e62cbbe95d2c5b",
+    "run.py": "5ee708d9a15f8c1ccee95145dae6083ff8ccc45d65872a91238c565253052ec4",
+    "sdmr_adapter.py": "238ef3d7ed93326f79ef4df42c373ef7e775ae8d832df8657f463db53ffd3637",
+    "view.py": "1e40e0f10a9f57bee9f1e921ce3dbe31dbce678131335528cb4b6047729c8a1a",
+    "viewer.html": "7ee31a6dbd91661dbc3891bce546ef67968d7a9de3bd209518264e6058e630d4",
+    "warp_bank.py": "7faef698e946f80efe90190326bcd0f2c8be4953975fee7831c8701cc91d24ae"
+  },
+  "controls_science": {
+    "__init__.py": "74af5e32c9e73df05b9db0d655227fc8b61fd899405c19021e4f624459fe1a5d",
+    "contracts.py": "80f79febc9084eb33f7676e713fb4d02b703adb69d79f2557890b70ad06dd79b",
+    "correspondence.py": "bbbb62e96b636bf79040b729e945b61c95dde4bc5f49f64b022398d20e4e9965",
+    "evaluation.py": "1229cc97383b371edfb880d67211b0adc0398049b480343987cfb76c5cf64890",
+    "execute.py": "f0aeb2d25801bd541da7d22608439240e4311688d490f84cb4e62cbbe95d2c5b",
+    "run.py": "89240688c25b0502561d38da6711596d64f73a3fdceef77314d84278737e6da8",
+    "sdmr_adapter.py": "238ef3d7ed93326f79ef4df42c373ef7e775ae8d832df8657f463db53ffd3637",
+    "view.py": "1e40e0f10a9f57bee9f1e921ce3dbe31dbce678131335528cb4b6047729c8a1a",
+    "viewer.html": "7ee31a6dbd91661dbc3891bce546ef67968d7a9de3bd209518264e6058e630d4",
+    "warp_bank.py": "7faef698e946f80efe90190326bcd0f2c8be4953975fee7831c8701cc91d24ae"
+  },
+  "preview_producer_commit": "9e8a1661b713e08d907b05f0fe59567c58461fef",
+  "baseline_commit": "17bb6df3107498f472e87f2fb8bd3baf5bb200cd",
+  "parent_binding": {
+    "protocol_sha256": "1897ab4463ffafe4c169146d7be63fc67fa9bd5f453d46a8b6b6ace2ffac3fd4",
+    "r51_population_sha256": "a2cf76cf0d54249c3469ae42b8170170155389d0db4b2e144400d0a85be7ee0b",
+    "r52_plans_sha256": "4fcec30e4869d07458f118601024fa59ecefb4541d480efe2f20c307696118e1",
+    "r52_arrays_sha256": "5ee8b57a828bd4cb7c5a176a3b3abb973c5c92d158414e0e1f910e68fd378910",
+    "catalog_sha256": "d33cd546ae746227cfc6e5cad1dee2923c88742631a3c69433b63f4dfa85421a",
+    "native_sources": {
+      "female_FeiTian": {
+        "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/event_plan_01/prepare/catalog/female_FeiTian.npy",
+        "sha256": "50436001fab4f0aa45610b0723cebd7ee93592f3039adc133c270902b3c9fab4"
+      },
+      "female_lotus": {
+        "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/event_plan_01/prepare/catalog/female_lotus.npy",
+        "sha256": "5cebda88bce0ff6ecbff76890f6ea9c2af237aab62a7dc95f23bb40972af8675"
+      },
+      "female_meditation": {
+        "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/event_plan_01/prepare/catalog/female_meditation.npy",
+        "sha256": "d38f5fb33507483d4b01e69d9e3bc5e738a1ecc2d3b88856d2ba8030a82ab3df"
+      },
+      "male_meditation": {
+        "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/event_plan_01/prepare/catalog/male_meditation.npy",
+        "sha256": "8d6c096a31d5b90f9f1021f1e2e980aab808a4aeadef174ec23f92f1423a6737"
+      },
+      "male_pipa_1": {
+        "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/event_plan_01/prepare/catalog/male_pipa_1.npy",
+        "sha256": "59f14fedc9b7c89e269a7cd5f2cf23807080d9f6f980127c4b19d9487a413788"
+      },
+      "male_pipa_2": {
+        "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/event_plan_01/prepare/catalog/male_pipa_2.npy",
+        "sha256": "c3aa1daac4922b6db1423a11e7c1ad98f02178232aa623116f1b6956d546f7cc"
+      },
+      "male_ribbon": {
+        "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/event_plan_01/prepare/catalog/male_ribbon.npy",
+        "sha256": "c8900b68ae468ce8c7b745bf59af61b15ee9ab83d99a4d5f279f25e11c940b2e"
+      },
+      "male_ribbon_FenHe": {
+        "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/event_plan_01/prepare/catalog/male_ribbon_FenHe.npy",
+        "sha256": "16ef0128692035c3cdc54f13530f94374aac3f06888ef37aeb1ea98b207c1d3f"
+      }
+    },
+    "music": [
+      {
+        "path": "outputs/complete_r36_01/viewer/audio/dunhuangwu2.wav",
+        "audio_sha256": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c",
+        "structure_sha256": "7b73e0581e5ab68db730cf9fd8aa7fd31bb269b43804eeb4b95d297ee1b7e5e9"
+      },
+      {
+        "path": "outputs/complete_r36_01/viewer/audio/dunhuangwu3.wav",
+        "audio_sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f",
+        "structure_sha256": "73cedf9754fd61c1c6cdd227ae863b504ca921bcab0c2dae3576fcabc0a6ed56"
+      },
+      {
+        "path": "outputs/complete_r36_01/viewer/audio/dunhuangwu4.wav",
+        "audio_sha256": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33",
+        "structure_sha256": "3cf56237426c7bf6c5098b3c53f4fdc7f26feb890286961c9bce1db46006d507"
+      }
+    ],
+    "algorithms": {
+      "src/dunhuang/research/complete_r36/core.py": "03f296665e48ca2fa2ef8a866baaf2b4b786afeb22f468b6faeedac7225e9901",
+      "src/dunhuang/research/transition_planning_r50/planning.py": "319a63a116e2d9cf235567db2a985005fd48ed2599d8f512e617eef20743e152",
+      "src/dunhuang/research/bridge_r38/geometry.py": "b1b54f1e5b2cbe12a59bf7e8007c6ba12c7d0dea07f1fe709c6289ad38396577",
+      "src/dunhuang/research/bridge_audit_r46/admission.py": "4745854ce2925e4401fef1769bff30c379559518acd74cf35ca83fe2411068bc",
+      "src/dunhuang/research/manifold_bridge_r47/geometry.py": "4646ff82c2775b32e893335abe0aac43cdd4dfbabc643d230e8985a347adea7f",
+      "src/dunhuang/research/bridge_dynamics_r48/study.py": "139067514b35012d5f360c73ac53ee5a49f9f336fa5c3dcf889d1d268c23e228",
+      "src/dunhuang/research/validation_r51/common.py": "2f1f186c668e5db98f69810bd28bd5fa5ef64f97f97f7324badcf32715173884",
+      "/home/disk/lsm/storage/DunhuangDanceGen/src/dunhuang/research/warp_coupling_r53/common.py": "dc94b1346ef986b0c4fab09eb090dceb08b46f3af0e807a940dcf4476cd88d1c",
+      "/home/disk/lsm/storage/DunhuangDanceGen/src/dunhuang/research/warp_coupling_r53/population.py": "834725440955bde6f983877bf43f9d82f8aa2e2f42ea035df516ce7e04009169",
+      "/home/disk/lsm/storage/DunhuangDanceGen/src/dunhuang/research/warp_coupling_r53/warp_lattice.py": "ff804bc34a81943f7549171af6bf3f1bfe5534d4bb2bc7df6071e30130f5e2ba",
+      "/home/disk/lsm/storage/DunhuangDanceGen/src/dunhuang/research/warp_coupling_r53/bridge_graph.py": "03e3296314c836e316fc6cd7d094fc03f9b512582449c142b98a542c928bf721",
+      "/home/disk/lsm/storage/DunhuangDanceGen/src/dunhuang/research/warp_coupling_r53/coupled_search.py": "72919b9332cc6fe13fe53e11913616d0e0a2d79b7c4585b57ea61310da0555d8",
+      "/home/disk/lsm/storage/DunhuangDanceGen/src/dunhuang/research/warp_coupling_r53/study.py": "f5be3e34a9a334f287e98c29e42429461f9698842dc2bb8210ab3689deaecd81"
+    },
+    "J_sha256": "8688bb9218a4a99dda16f80687f5ad66d957e05bd89eac8d4a9d9a0915b4454d",
+    "parents_sha256": "52d567385b152658ee9610a5e9dd794254b67d138e494ab3b23a2ae7362627b7",
+    "reference": {
+      "D2": 11.601721832266323,
+      "D3": 284.73454603204124,
+      "shoulder_wrist_lower_m": 0.1974362962380649,
+      "scope": "TRAIN_SOURCE_Q95_BODY_RELATIVE_NUMERICAL_REFERENCE_NOT_NATIVE",
+      "sources": [
+        {
+          "source_uid": "female_FeiTian",
+          "native_sha256": "50436001fab4f0aa45610b0723cebd7ee93592f3039adc133c270902b3c9fab4"
+        },
+        {
+          "source_uid": "female_lotus",
+          "native_sha256": "5cebda88bce0ff6ecbff76890f6ea9c2af237aab62a7dc95f23bb40972af8675"
+        },
+        {
+          "source_uid": "male_pipa_1",
+          "native_sha256": "59f14fedc9b7c89e269a7cd5f2cf23807080d9f6f980127c4b19d9487a413788"
+        },
+        {
+          "source_uid": "male_ribbon",
+          "native_sha256": "c8900b68ae468ce8c7b745bf59af61b15ee9ab83d99a4d5f279f25e11c940b2e"
+        }
+      ]
+    }
+  },
+  "parent_result_sha256": "da7959f75a263f6ec50b411d44af01ff1c84d06c86fc021f9e00747aa8625ab0",
+  "parent_arrays_sha256": "cbe65b0b22d9922027232ac717f5ea547278fe66b1b3270cf9f4d3d39954b31b",
+  "preview_manifest_sha256": "ff1d72a237bb5133ba3d613ee4bf7a78dacc3215122eeee783a2e09c2dc1b11e",
+  "controls_manifest_sha256": "2628c1de34f0b0bd42d993787aa735ff554ff0af517928d3aa2d3c579d5ac71e",
+  "encoder_binding": {
+    "checkpoint_sha256": "212148e7cd86b482cc7734035725b1165edcd7a1c35e03fa513f6982f440e772",
+    "manifest_sha256": "4b6b884550b120b685b2867996ac5bb7e2efceab127a2b7901d4001af482405e",
+    "normalizer_sha256": "80a83d6f7a5f1bca62d3298cba206a871188f5c6b1519ab4a897672c7c986e35",
+    "device": "cpu"
+  },
+  "network_digest": "73981b85df4839218b7c69cab33939887ca438e77da26caa792434f1a5a322b2"
+}

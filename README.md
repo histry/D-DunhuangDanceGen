@@ -1,3 +1,5 @@
+- [Paper1-SDMR-Integration-P0：整曲槽位与只读双阶段评分](reports/paper1_sdmr_integration_p0_release/report.md)：三首冻结整曲、39槽／622候选；先观看再同预算对照与精确重放。学习分数不选路，唯一局部G1连接1060/1112通过；无新增训练或新全图规划。
+
 - [FGMMC-Q01冻结诊断](reports/fgmmc_q01_diagnosis/report.md)：5条时钟在评分层形成3种匹配图；±8帧仅部分可吸收，Train拟合未转移至留出。原结果、全部诊断与硬路径新进程精确复现，零新增训练，路由保持关闭。
 
 - [FGMMC-Q01：有限合法时钟对应学习先导](reports/fgmmc_q01_release/report.md)：先观看三组实际模型选择，再完成三模型同预算训练、留出对照与冻结检查点推理精确复验；正式路由、整曲和艺术质量资格未升级。

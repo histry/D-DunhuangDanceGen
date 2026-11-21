@@ -32,3 +32,7 @@ FGMMC-Q01：[有限合法时钟域内的对应学习先导](../reports/fgmmc_q01
 ## FGMMC-Q01 冻结失败诊断
 
 [诊断报告与12份标量证据](../reports/fgmmc_q01_diagnosis/report.md)。保留有限域学习为未通过研究假设；不追加训练或扩大搜索。统一观看入口 `outputs/fgmmc_q01/index.html` 已恢复历史120秒几何基线导航（G0×9／G1×3，非本轮新生成）；Root／接触及Native24仍未知。
+
+## Paper 1 SDMR薄集成P0
+
+[正式报告与冻结证据](../reports/paper1_sdmr_integration_p0_release/report.md)。统一入口为`src/dunhuang/paper1/run.py`，实际整曲／来源／Warp／Shadow／局部G1证据共用身份；不修改旧科学模块，不训练或正式学习选路。
