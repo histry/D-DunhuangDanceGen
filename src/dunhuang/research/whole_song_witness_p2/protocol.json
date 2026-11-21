@@ -1,0 +1,27 @@
+{
+  "task": "Paper1-WholeSong-Witness-P2",
+  "baseline_commit": "ca5cb9b8e8b12426d509c8edc55b05eca1de875f",
+  "parent_manifests": {
+    "outputs/paper1_context_feasibility_p1_01/main/manifest.json": "8b55915e6d2688cfc3035f5debe9265e317c99849acf86d80879c4f255395f7d",
+    "outputs/paper1_context_feasibility_p1_01/controls/manifest.json": "a43644683e331bbb0e9b3ad6c8c969c10f6fbf555ee6b168ce028dfb834e221a",
+    "outputs/paper1_sdmr_integration_p0_01/preview/manifest.json": "ff1d72a237bb5133ba3d613ee4bf7a78dacc3215122eeee783a2e09c2dc1b11e"
+  },
+  "population": "ALL14_P1_FAILURE_CENTER_TASKS; TEN_SAVED_P1_STRONG_SEQUENTIAL_PATHS_EXECUTED; FOUR_MISSING_RETAINED",
+  "main_path": "EXACT_SAVED_COMPARISONS_P1_STRONG_SEQUENTIAL_PATH; NO_RESELECTION",
+  "main_expected_present": 10,
+  "main_expected_missing": 4,
+  "expected_distinct_node_paths": 10,
+  "controls": "AFTER_MAIN_BROWSER_ACCEPTANCE: THREE_P0_AND_THREE_P1_UNCONSTRAINED_SAVED_STRONG_PATHS; ALL14_SAVED_P1_R58_ADAPTER_RESULTS_INCLUDING_MISSING",
+  "baseline": "THREE_EXACT_P0_SAVED_R56_B0_WHOLE_ROTATIONS_WITH_HISTORICAL_G0_G1; NEVER_REPLACE_OLD_BRIDGES",
+  "bridge": "P1_FROZEN_G1_48FRAME_READSET; RECONSTRUCT_ONLY_SAVED_ELIGIBLE_EDGES_AND_CHECK_EXACT_SHA_AND_METRICS",
+  "max_distinct_bridge_materializations_per_stage": 512,
+  "workers": 4,
+  "fps": 30,
+  "new_candidates": 0,
+  "new_clocks": 0,
+  "training_updates": 0,
+  "planner_calls": 0,
+  "can_route": false,
+  "Native24": "NOT_EVALUABLE",
+  "independent_artistic_quality": "NOT_EVALUABLE"
+}
