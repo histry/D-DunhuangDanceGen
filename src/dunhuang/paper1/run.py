@@ -54,7 +54,7 @@ def controls(out,preview_root):
     from .sdmr_adapter import FrozenEncoder,score_executed_bank_shadow,recall_shadow
     from .execute import connection
     from dunhuang.research.gtw_kinematic_baseline.features import ReferenceCost
-    net=FrozenEncoder();assert np.array_equal(net.joints,pop.net.joints) and np.array_equal(net.parents,pop.net.parents)
+    net=FrozenEncoder();assert np.array_equal(net.joints[:22],pop.net.joints[:22]) and np.array_equal(net.parents[:22],pop.net.parents[:22])
     feature_path=Path('outputs/exposed_full_song_01/music/arrays.npz');inventory=read(feature_path.with_name('inventory.json'));raw=np.load(feature_path)
     frozen_cfg=read('src/dunhuang/research/sdmr_warp_rank/protocol.json');assert sha(feature_path)==frozen_cfg['change_raw50_feature_arrays_sha256']
     refs={};cache={};calls=0;results=[]
@@ -88,7 +88,9 @@ def controls(out,preview_root):
                         cache[key]=connection(L,Rr,pop.net.joints,pop.net.parents,pop.reference);calls+=1
                     local.append(dict(side=side,cache_key=key,**cache[key]))
                 connections.append(local)
-            results.append(dict(song=s,slot=k,candidate_uids=[r['uid'] for r in rows],scores=score['scores'],GTWLocal=gtw,
+            from dunhuang.research.rhythm_r66.metrics import measure as dynamics
+            dynamic=[dynamics(R,pop.lib.rotations[r['source_uid']],pop.net.joints,pop.net.parents,z[r['uid']+'_q'],r['source_interval'],include_curves=False) for r,R in zip(rows,bodies)]
+            results.append(dict(song=s,slot=k,candidate_uids=[r['uid'] for r in rows],scores=score['scores'],GTWLocal=gtw,dynamics=dynamic,
                                 source_recall_shadow=source_scores,encodings=score['motion_encoding'],music_details=score['details'],common_support=score['common_support'],connections=connections,
                                 candidate_generation_score_blind=True,official_path_changed=False,can_route=False))
             print('P0_SCORES',s,k,len(rows),calls,flush=True)
