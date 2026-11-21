@@ -1,5 +1,7 @@
 # DunhuangDanceGen
 
+当前新增：[Paper 1只读自动评价](src/dunhuang/research/paper1_auto_eval/README.md)。冻结既有动作，接入Music Events并严格区分有效不同／相同／不可评；先验证自动指标，再讨论感知结论。不增加评委或生成模型训练，MotionCritic仅作输入资格审查。
+
 当前 Paper 1 研究入口（2026-11-21）：[按职责整理的研究索引](docs/PAPER1_RESEARCH_INDEX.md)。本轮 `paper1_support` 统一音乐证据、来源原语、执行候选、审计和选择接口；先审查真实来源容量并观看主候选，再做来源／时间的独立对照。正式生成链保持独立，艺术质量和 Native24 未取得证据的继续不可评。
 
 本轮已完成：[来源容量与执行时钟报告](reports/paper1_support_release/report.md)。6组固定来源87条时钟；来源替换完整对照30个展示位置、24项通过原数值门；全量独立重放一致。独立质量与Native24不可评。统一本机观看：`D:/DunhuangDanceGen/outputs/paper1_support_01/index.html`。
