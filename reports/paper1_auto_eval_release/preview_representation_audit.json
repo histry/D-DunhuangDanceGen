@@ -1,0 +1,157 @@
+{
+  "rows": [
+    {
+      "source_uid": "female_36pose_1",
+      "poses55_observed": true,
+      "source_translation_observed": true,
+      "declared_axis": "y_up",
+      "units": "m",
+      "SMPL24_hand_joint_mapping": "UNVERIFIED",
+      "critic_coordinate_transform": "UNVERIFIED",
+      "critic_status": "NOT_EVALUABLE"
+    },
+    {
+      "source_uid": "female_36pose_2",
+      "poses55_observed": true,
+      "source_translation_observed": true,
+      "declared_axis": "y_up",
+      "units": "m",
+      "SMPL24_hand_joint_mapping": "UNVERIFIED",
+      "critic_coordinate_transform": "UNVERIFIED",
+      "critic_status": "NOT_EVALUABLE"
+    },
+    {
+      "source_uid": "female_FeiTian",
+      "poses55_observed": true,
+      "source_translation_observed": true,
+      "declared_axis": "y_up",
+      "units": "m",
+      "SMPL24_hand_joint_mapping": "UNVERIFIED",
+      "critic_coordinate_transform": "UNVERIFIED",
+      "critic_status": "NOT_EVALUABLE"
+    },
+    {
+      "source_uid": "female_lotus",
+      "poses55_observed": true,
+      "source_translation_observed": true,
+      "declared_axis": "y_up",
+      "units": "m",
+      "SMPL24_hand_joint_mapping": "UNVERIFIED",
+      "critic_coordinate_transform": "UNVERIFIED",
+      "critic_status": "NOT_EVALUABLE"
+    },
+    {
+      "source_uid": "female_meditation",
+      "poses55_observed": true,
+      "source_translation_observed": true,
+      "declared_axis": "y_up",
+      "units": "m",
+      "SMPL24_hand_joint_mapping": "UNVERIFIED",
+      "critic_coordinate_transform": "UNVERIFIED",
+      "critic_status": "NOT_EVALUABLE"
+    },
+    {
+      "source_uid": "male_36pose_1",
+      "poses55_observed": true,
+      "source_translation_observed": true,
+      "declared_axis": "y_up",
+      "units": "m",
+      "SMPL24_hand_joint_mapping": "UNVERIFIED",
+      "critic_coordinate_transform": "UNVERIFIED",
+      "critic_status": "NOT_EVALUABLE"
+    },
+    {
+      "source_uid": "male_36pose_2",
+      "poses55_observed": true,
+      "source_translation_observed": true,
+      "declared_axis": "y_up",
+      "units": "m",
+      "SMPL24_hand_joint_mapping": "UNVERIFIED",
+      "critic_coordinate_transform": "UNVERIFIED",
+      "critic_status": "NOT_EVALUABLE"
+    },
+    {
+      "source_uid": "male_drum_1",
+      "poses55_observed": true,
+      "source_translation_observed": true,
+      "declared_axis": "y_up",
+      "units": "m",
+      "SMPL24_hand_joint_mapping": "UNVERIFIED",
+      "critic_coordinate_transform": "UNVERIFIED",
+      "critic_status": "NOT_EVALUABLE"
+    },
+    {
+      "source_uid": "male_drum_2",
+      "poses55_observed": true,
+      "source_translation_observed": true,
+      "declared_axis": "y_up",
+      "units": "m",
+      "SMPL24_hand_joint_mapping": "UNVERIFIED",
+      "critic_coordinate_transform": "UNVERIFIED",
+      "critic_status": "NOT_EVALUABLE"
+    },
+    {
+      "source_uid": "male_meditation",
+      "poses55_observed": true,
+      "source_translation_observed": true,
+      "declared_axis": "y_up",
+      "units": "m",
+      "SMPL24_hand_joint_mapping": "UNVERIFIED",
+      "critic_coordinate_transform": "UNVERIFIED",
+      "critic_status": "NOT_EVALUABLE"
+    },
+    {
+      "source_uid": "male_pipa_1",
+      "poses55_observed": true,
+      "source_translation_observed": true,
+      "declared_axis": "y_up",
+      "units": "m",
+      "SMPL24_hand_joint_mapping": "UNVERIFIED",
+      "critic_coordinate_transform": "UNVERIFIED",
+      "critic_status": "NOT_EVALUABLE"
+    },
+    {
+      "source_uid": "male_pipa_2",
+      "poses55_observed": true,
+      "source_translation_observed": true,
+      "declared_axis": "y_up",
+      "units": "m",
+      "SMPL24_hand_joint_mapping": "UNVERIFIED",
+      "critic_coordinate_transform": "UNVERIFIED",
+      "critic_status": "NOT_EVALUABLE"
+    },
+    {
+      "source_uid": "male_ribbon",
+      "poses55_observed": true,
+      "source_translation_observed": true,
+      "declared_axis": "y_up",
+      "units": "m",
+      "SMPL24_hand_joint_mapping": "UNVERIFIED",
+      "critic_coordinate_transform": "UNVERIFIED",
+      "critic_status": "NOT_EVALUABLE"
+    },
+    {
+      "source_uid": "male_ribbon_FenHe",
+      "poses55_observed": true,
+      "source_translation_observed": true,
+      "declared_axis": "y_up",
+      "units": "m",
+      "SMPL24_hand_joint_mapping": "UNVERIFIED",
+      "critic_coordinate_transform": "UNVERIFIED",
+      "critic_status": "NOT_EVALUABLE"
+    }
+  ],
+  "critic_preprocessed_input": "B,T,25,3: 24_SMPL_AXIS_ANGLE_PLUS_ROOT",
+  "critic_original_demo_input": "B,25,6,T",
+  "generated_body22_world_root": false,
+  "generated_missing_SMPL_hand_rotations": [
+    22,
+    23
+  ],
+  "G1_root_contract": "UNOBSERVED",
+  "zero_padding_performed": false,
+  "weights_downloaded": false,
+  "critic_inference_calls": 0,
+  "status": "NOT_EVALUABLE",
+  "reason": "SMPLX55_TO_SMPL24_HANDS_AND_CRITIC_COORDINATES_NOT_VERIFIED; GENERATED_G1_WORLD_ROOT_ABSENT"
+}

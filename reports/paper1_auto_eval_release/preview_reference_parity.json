@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "official_commit": "feba9d8f8bb66f6c1accd4ed97d65879f246e957",
+  "reference_sha256": "24bcc331b36732de653b52d839adcba643902232db4e365bf1abb39f8f1f4bad",
+  "nonempty_24_joint_synthetic_sequences": 2,
+  "maximum_score_difference": 2.220446049250313e-16,
+  "adaptations": [
+    "22_ROOT_RELATIVE_JOINTS_IN_ACTUAL_AUDIT",
+    "EMPTY_EVENTS_RETURN_NULL_NOT_ZERO",
+    "EXPLICIT_ORIGINAL_SECONDS_AND_READONLY_BEAT_CATALOG"
+  ],
+  "human_calibration": false
+}

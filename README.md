@@ -1,5 +1,7 @@
 # DunhuangDanceGen
 
+最新交付：[自动评价效度报告](reports/paper1_auto_eval_release/report.md)。统一本机观看：`D:/DunhuangDanceGen/outputs/paper1_auto_eval_01/index.html`；7项有效不同／4项相同控制／7项不可评，48个冻结验证位置，完整独立重放一致。AIST++历史Train有时钟线索，FineDance未确认稳定优势；感知质量仍不可评。
+
 当前新增：[Paper 1只读自动评价](src/dunhuang/research/paper1_auto_eval/README.md)。冻结既有动作，接入Music Events并严格区分有效不同／相同／不可评；先验证自动指标，再讨论感知结论。不增加评委或生成模型训练，MotionCritic仅作输入资格审查。
 
 当前 Paper 1 研究入口（2026-11-21）：[按职责整理的研究索引](docs/PAPER1_RESEARCH_INDEX.md)。本轮 `paper1_support` 统一音乐证据、来源原语、执行候选、审计和选择接口；先审查真实来源容量并观看主候选，再做来源／时间的独立对照。正式生成链保持独立，艺术质量和 Native24 未取得证据的继续不可评。

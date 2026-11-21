@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "manifest_sha256": "1ebb89d6bd734f9afa86172d40667ec6264c5a0e4ec9e56fa793e76d644c0173",
+  "before_controls": true,
+  "classes_observed": {
+    "VALID_DISTINCT": 7,
+    "VALID_IDENTICAL": 4,
+    "UNAVAILABLE": 7
+  },
+  "music_evidence_selector": "Beat This beat/downbeat and All-In-One/acoustic sources present on named view",
+  "anonymous_music_observation": "Project7: seek370 -> step371/767; 12.367s; half speed playback advances to379",
+  "silent_observation": "Project1: step1/527=0.033s; no audio controls",
+  "anonymous_music_overlays_visible": false,
+  "ratings_written": 0,
+  "perceptual_judgment": "NOT_EVALUABLE"
+}

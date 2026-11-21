@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "preview_before_controls": true,
+  "classes_observed": {
+    "VALID_DISTINCT": 7,
+    "VALID_IDENTICAL": 4,
+    "UNAVAILABLE": 7
+  },
+  "named_music_events_readonly": true,
+  "anonymous_music_overlays_hidden": true,
+  "frame_step": "Project7: 370->371/767=12.367s",
+  "playback": "0.5x music: 371->379; pause verified",
+  "silent_page": "Project1: 1/527=0.033s; no audio",
+  "control_observation": "female_FeiTian: TimeSkip; 151/282=5.033s; illegal clock marked false; outside write mask true",
+  "orientation_observation": "female_lotus: WristJitter; 70/286=2.333s; local wrist residual2.865deg; parent-chain axis qualification explicit",
+  "orientation_play": "70->94; pause and alternative selection verified",
+  "screenshot_path": "outputs/paper1_auto_eval_01/receipts/browser_acceptance.jpg",
+  "screenshot_sha256": "080672dfd8168619caa152b8270d52b347bc3c3029a3c338b548594c3c40afd1",
+  "ratings_written": 0,
+  "perceptual_judgment": "NOT_EVALUABLE"
+}

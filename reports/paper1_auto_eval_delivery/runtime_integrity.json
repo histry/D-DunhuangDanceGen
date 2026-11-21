@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "head": "74905f96eaa4cbe67defcd9643a153ff43c90f21",
+  "exit_status": {
+    "preview": 0,
+    "controls": 0,
+    "replay": 0,
+    "observability": 0
+  },
+  "scientific_producer_code_unchanged": true,
+  "parent_scientific_outputs_unchanged": true,
+  "frozen_legacy_and_formal_code_unchanged": true,
+  "tmux_sessions_remaining": [],
+  "python": "3.9.25",
+  "numpy": "1.26.4",
+  "scipy": "1.13.1",
+  "new_weights_downloaded": 0,
+  "MotionCritic_calls": 0,
+  "initial_github_pull": "TLS_FAILURE_BEFORE_EXPERIMENT; ONE_SAME_COMMAND_RETRY_SUCCEEDED",
+  "posthoc_reason": "TERMINAL_WRIST_ROTATION_IS_INVISIBLE_TO_BODY22_JOINT_CENTERS; NO_PERTURBATION_OR_MAIN_METRIC_CHANGED",
+  "temporary_SSH_helper_files_created_on_server": 0
+}

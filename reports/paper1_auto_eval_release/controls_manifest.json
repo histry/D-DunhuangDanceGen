@@ -1,0 +1,36 @@
+{
+  "code": {
+    "__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "common.py": "61fd35f7b85a0fcfa3b97f5ac59e47394161f9b1643b7b4b785fe895a498b238",
+    "controls.py": "11cec7c6ec774fb78de208c55ecaee335e054a8fcaa92f97db1e495f83ed86a7",
+    "experiment.py": "0459c9031404d4550044babbcbdeb8e298b9b05d771edae76a3013d770b0cea2",
+    "music.py": "e7894bbf0fc34f3f70a9054f7b6dc3d9ee8f00c719f5114bf04da29a55147777",
+    "protocol.json": "baa5cb5905483b8c82b886d7d4f5472e9be791d0227fae4342dad1b1a6764681",
+    "reference.py": "f59c6b372022b91c6b9c3b3abeee2fa06495652b62bc0a4dfeed28235160a007",
+    "release.py": "3b0045b2991cc07d7b1944b775ecb8090f870c79e6186feba95d421ab29ae2b3",
+    "reviews.py": "a292db6bf998dff2db930ceae42d51fbe5852cb1afad42074dc5cca758da0471",
+    "test_contracts.py": "02429ff2ad10b151c1eb2709552d51e9c1941010d42c274b4f3729908a911447",
+    "verify.py": "3a071a4cd7d0cd9872dbaeccc70eedd0752cf0048a89ae6d1fff011016b6d07b",
+    "view.py": "45249a01d028a1ec52b5d7adb0574d667dacd7eedecb1b06042b8f6b89a3ab4e"
+  },
+  "dependencies": {
+    "paper1_support/study.py": "bbd4196e631be0b2679e7e3f55cd67b19fb19033fa5d4bdb1632e13f77352df2",
+    "paper1_support/contracts.py": "b223b48cecbedce6f67830129469461ca0be848052ce4c449fc25fec266ca679",
+    "gtw_kinematic_baseline/features.py": "d6920145393c340d571405833837f26dd49aeaffb6a0c216db1d479683e246ac",
+    "gtw_kinematic_baseline/reviews.py": "d86df96d7fd018b018165dc4f88f43471c94949d34a053607f2f3abb48f547c7",
+    "gtw_kinematic_baseline/viewer.html": "a42a2bb413a24b6b9d9d21c0b3ea3fd635ff07a75577cfd79f2228dbe86af2d5",
+    "music_events/catalog.py": "7eadea12dbe04115501e71ad1bb0a490a62d0ef4805e88058f1acd61844c04bf",
+    "paired_event_r41/events.py": "e6bbb769f9ed37b9743113a5c0a84139300bfc2e957a1b4315c041d2e1fb3759",
+    "timing_validity_r66/engine.py": "d35fd2828f32732ddb96ff3944239eab74250cd59caf30c93737c2d6c871caff",
+    "warp_coupling_r53/warp_lattice.py": "ff804bc34a81943f7549171af6bf3f1bfe5534d4bb2bc7df6071e30130f5e2ba"
+  },
+  "files": {
+    "arrays.npz": "ba4d19e50becdaf0df76ec67178d261d018ab518cbb967b3f269fd81e6f2cbec",
+    "paired_scores.json": "662f3b40e50c07974afd20eaa1da030ddbc9649cabe349cb05ccf38a7d9de940",
+    "paired_summary.json": "291411843235a70ebe2da3cae7cfa8c105d12c3895a648df7c2af6ac88844281",
+    "perturbations.json": "f0467a3b4bd9f2b9fd4f8d11ba4e7f037ddd764790eb902f0e35f428b510071b",
+    "qualification.json": "736f31102b49e52c46d346af6a33dc4ce590b52f670ee20d25efe6d255ebf90b",
+    "registration.json": "ddc817b2aec3940f4790192d5c7996d428f0c24f12679922e39770a4aa466c9e",
+    "sensitivity.json": "ae1cb9d347d5bd2932f5760ef73febc98b253a6a89fe4f772b9c68ae360dbc0f"
+  }
+}

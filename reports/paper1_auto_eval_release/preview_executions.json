@@ -1,0 +1,902 @@
+[
+  {
+    "case_key": "f8d91db44c816c9c6b18cfb8",
+    "method": "original_Uniform",
+    "source_uid": "female_FeiTian",
+    "source_interval": [
+      2377,
+      2660
+    ],
+    "profile_ref": "a43284478336b85bed8ae683",
+    "rotation_sha256": "f6f1923bf0d412f2988822ea3550a04da7f06a5c96bcc3580ef12643c3af9b6c",
+    "clock_sha256": "c897d7408d1a3b8078984920b4e39a847895ad34507db78b35259072c229086c",
+    "music_evidence_ref": "f4e7ee52277b34b292311299",
+    "G1_pass": true,
+    "G1_frozen_metrics": {
+      "gap_D2": 2.8880106288412657,
+      "gap_D3": 38.50905294143687,
+      "boundary_D3": 49.22554351253679,
+      "sampled_boundary_rate_jump": 0.09939996724038794,
+      "sampled_boundary_acc_jump": 2.4258665626571054,
+      "shoulder_wrist_min_m": 0.39324999641367536,
+      "wrist_separation_max_m": 0.39387351069354276,
+      "gap_angle_error_rad": null,
+      "physical_qualified": false
+    },
+    "source_resampling_exact": true,
+    "mapped_source_low_seconds": 2.3165484633569626,
+    "MotionCritic": null,
+    "MotionCritic_status": "NOT_EVALUABLE",
+    "quality": "NOT_EVALUABLE"
+  },
+  {
+    "case_key": "f8d91db44c816c9c6b18cfb8",
+    "method": "original_GTWLocal",
+    "source_uid": "female_FeiTian",
+    "source_interval": [
+      2377,
+      2660
+    ],
+    "profile_ref": "ab3d10099bf85854a3b1b727",
+    "rotation_sha256": "9bf159e8cd7111a20888ca3928f5f39d68ee3fb1711efa2669e5049da09a2700",
+    "clock_sha256": "867362b23c31a2b89ba9ab9b675d176a86132dfc2a693ea7040025a4e0d966ba",
+    "music_evidence_ref": "f4e7ee52277b34b292311299",
+    "G1_pass": true,
+    "G1_frozen_metrics": {
+      "gap_D2": 2.8880106288412657,
+      "gap_D3": 38.50905294143687,
+      "boundary_D3": 49.22554351253679,
+      "sampled_boundary_rate_jump": 0.09939996724038794,
+      "sampled_boundary_acc_jump": 2.4258665626571054,
+      "shoulder_wrist_min_m": 0.39324999641367536,
+      "wrist_separation_max_m": 0.39387351069354276,
+      "gap_angle_error_rad": null,
+      "physical_qualified": false
+    },
+    "source_resampling_exact": true,
+    "mapped_source_low_seconds": 2.117925449088146,
+    "MotionCritic": null,
+    "MotionCritic_status": "NOT_EVALUABLE",
+    "quality": "NOT_EVALUABLE"
+  },
+  {
+    "case_key": "f8d91db44c816c9c6b18cfb8",
+    "method": "original_MinHoldDiagnostic",
+    "source_uid": "female_FeiTian",
+    "source_interval": [
+      2377,
+      2660
+    ],
+    "profile_ref": "eef7358a2d5e257b486f35ca",
+    "rotation_sha256": "34e37567aac894c97608cec5cd745d7e060e3a60056bf1080a16718adc421cbb",
+    "clock_sha256": "c4416cf5729b03522cef56f04c509aaabd28fd4e5623bb2b0a18c2ce98720ac3",
+    "music_evidence_ref": "f4e7ee52277b34b292311299",
+    "G1_pass": true,
+    "G1_frozen_metrics": {
+      "gap_D2": 2.8880106288412657,
+      "gap_D3": 38.50905294143687,
+      "boundary_D3": 49.22554351253679,
+      "sampled_boundary_rate_jump": 0.09939996724038794,
+      "sampled_boundary_acc_jump": 2.4258665626571054,
+      "shoulder_wrist_min_m": 0.39324999641367536,
+      "wrist_separation_max_m": 0.39387351069354276,
+      "gap_angle_error_rad": null,
+      "physical_qualified": false
+    },
+    "source_resampling_exact": true,
+    "mapped_source_low_seconds": 2.1042143511129288,
+    "MotionCritic": null,
+    "MotionCritic_status": "NOT_EVALUABLE",
+    "quality": "NOT_EVALUABLE"
+  },
+  {
+    "case_key": "f8d91db44c816c9c6b18cfb8",
+    "method": "alternative_Uniform",
+    "source_uid": "female_FeiTian",
+    "source_interval": [
+      11245,
+      11533
+    ],
+    "profile_ref": "73fad67dfcbac43ace7ff8b8",
+    "rotation_sha256": "0ac151b3511713aa82aaf1755b618cf0f7b6a2ab74590ab22bbe14bdfed72cd0",
+    "clock_sha256": "d29d72924678086cab5ae5e44f8f100bdfeb3387120c9c940c7e2fd4858c2872",
+    "music_evidence_ref": "f4e7ee52277b34b292311299",
+    "G1_pass": true,
+    "G1_frozen_metrics": {
+      "gap_D2": 0.936306200934248,
+      "gap_D3": 10.113955759996855,
+      "boundary_D3": 18.27850236519355,
+      "sampled_boundary_rate_jump": 0.09602179430964314,
+      "sampled_boundary_acc_jump": 1.7351456414856194,
+      "shoulder_wrist_min_m": 0.32635053240137313,
+      "wrist_separation_max_m": 0.17271266581433553,
+      "gap_angle_error_rad": null,
+      "physical_qualified": false
+    },
+    "source_resampling_exact": true,
+    "mapped_source_low_seconds": 0,
+    "MotionCritic": null,
+    "MotionCritic_status": "NOT_EVALUABLE",
+    "quality": "NOT_EVALUABLE"
+  },
+  {
+    "case_key": "f8d91db44c816c9c6b18cfb8",
+    "method": "alternative_GTWLocal",
+    "source_uid": "female_FeiTian",
+    "source_interval": [
+      11245,
+      11533
+    ],
+    "profile_ref": "73fad67dfcbac43ace7ff8b8",
+    "rotation_sha256": "0ac151b3511713aa82aaf1755b618cf0f7b6a2ab74590ab22bbe14bdfed72cd0",
+    "clock_sha256": "d29d72924678086cab5ae5e44f8f100bdfeb3387120c9c940c7e2fd4858c2872",
+    "music_evidence_ref": "f4e7ee52277b34b292311299",
+    "G1_pass": true,
+    "G1_frozen_metrics": {
+      "gap_D2": 0.936306200934248,
+      "gap_D3": 10.113955759996855,
+      "boundary_D3": 18.27850236519355,
+      "sampled_boundary_rate_jump": 0.09602179430964314,
+      "sampled_boundary_acc_jump": 1.7351456414856194,
+      "shoulder_wrist_min_m": 0.32635053240137313,
+      "wrist_separation_max_m": 0.17271266581433553,
+      "gap_angle_error_rad": null,
+      "physical_qualified": false
+    },
+    "source_resampling_exact": true,
+    "mapped_source_low_seconds": 0,
+    "MotionCritic": null,
+    "MotionCritic_status": "NOT_EVALUABLE",
+    "quality": "NOT_EVALUABLE"
+  },
+  {
+    "case_key": "f8d91db44c816c9c6b18cfb8",
+    "method": "alternative_MinHoldDiagnostic",
+    "source_uid": "female_FeiTian",
+    "source_interval": [
+      11245,
+      11533
+    ],
+    "profile_ref": "73fad67dfcbac43ace7ff8b8",
+    "rotation_sha256": "0ac151b3511713aa82aaf1755b618cf0f7b6a2ab74590ab22bbe14bdfed72cd0",
+    "clock_sha256": "d29d72924678086cab5ae5e44f8f100bdfeb3387120c9c940c7e2fd4858c2872",
+    "music_evidence_ref": "f4e7ee52277b34b292311299",
+    "G1_pass": true,
+    "G1_frozen_metrics": {
+      "gap_D2": 0.936306200934248,
+      "gap_D3": 10.113955759996855,
+      "boundary_D3": 18.27850236519355,
+      "sampled_boundary_rate_jump": 0.09602179430964314,
+      "sampled_boundary_acc_jump": 1.7351456414856194,
+      "shoulder_wrist_min_m": 0.32635053240137313,
+      "wrist_separation_max_m": 0.17271266581433553,
+      "gap_angle_error_rad": null,
+      "physical_qualified": false
+    },
+    "source_resampling_exact": true,
+    "mapped_source_low_seconds": 0,
+    "MotionCritic": null,
+    "MotionCritic_status": "NOT_EVALUABLE",
+    "quality": "NOT_EVALUABLE"
+  },
+  {
+    "case_key": "4a69181188a9e248a0a6330b",
+    "method": "original_Uniform",
+    "source_uid": "female_lotus",
+    "source_interval": [
+      583,
+      870
+    ],
+    "profile_ref": "9a562e05d64ee184a0c766f2",
+    "rotation_sha256": "88dd4e8b58643d1ca66c0e77ed0c16b503f1bf973de7677f41bbbf9f5a5006ec",
+    "clock_sha256": "1fcf7f831ae758fbc0ade5b1ef2ee0890ca6fe36dbbfc165bd68ac47690248d8",
+    "music_evidence_ref": "c12e4e7a0eb2bc003b393606",
+    "G1_pass": true,
+    "G1_frozen_metrics": {
+      "gap_D2": 1.1551604920512977,
+      "gap_D3": 13.56169013269324,
+      "boundary_D3": 19.503713611223507,
+      "sampled_boundary_rate_jump": 0.0483081019662291,
+      "sampled_boundary_acc_jump": 1.8258647703126731,
+      "shoulder_wrist_min_m": 0.2921086504836697,
+      "wrist_separation_max_m": 1.0283064780109838,
+      "gap_angle_error_rad": null,
+      "physical_qualified": false
+    },
+    "source_resampling_exact": true,
+    "mapped_source_low_seconds": 2.144871794871797,
+    "MotionCritic": null,
+    "MotionCritic_status": "NOT_EVALUABLE",
+    "quality": "NOT_EVALUABLE"
+  },
+  {
+    "case_key": "4a69181188a9e248a0a6330b",
+    "method": "original_GTWLocal",
+    "source_uid": "female_lotus",
+    "source_interval": [
+      583,
+      870
+    ],
+    "profile_ref": "cb41717e71f31bdff959752e",
+    "rotation_sha256": "d5090cfb6c73d51ef1bf7293f88213bdce44d793ea48501d95add3bb5dacf20e",
+    "clock_sha256": "c897a77f5c74b552291b37f46a83e436f83be885a75b079d3c0291a51894762f",
+    "music_evidence_ref": "c12e4e7a0eb2bc003b393606",
+    "G1_pass": true,
+    "G1_frozen_metrics": {
+      "gap_D2": 1.1551604920512977,
+      "gap_D3": 13.56169013269324,
+      "boundary_D3": 19.503713611223507,
+      "sampled_boundary_rate_jump": 0.0483081019662291,
+      "sampled_boundary_acc_jump": 1.8258647703126731,
+      "shoulder_wrist_min_m": 0.2921086504836697,
+      "wrist_separation_max_m": 1.0283064780109838,
+      "gap_angle_error_rad": null,
+      "physical_qualified": false
+    },
+    "source_resampling_exact": true,
+    "mapped_source_low_seconds": 2.0959157433790785,
+    "MotionCritic": null,
+    "MotionCritic_status": "NOT_EVALUABLE",
+    "quality": "NOT_EVALUABLE"
+  },
+  {
+    "case_key": "4a69181188a9e248a0a6330b",
+    "method": "original_MinHoldDiagnostic",
+    "source_uid": "female_lotus",
+    "source_interval": [
+      583,
+      870
+    ],
+    "profile_ref": "cb41717e71f31bdff959752e",
+    "rotation_sha256": "d5090cfb6c73d51ef1bf7293f88213bdce44d793ea48501d95add3bb5dacf20e",
+    "clock_sha256": "c897a77f5c74b552291b37f46a83e436f83be885a75b079d3c0291a51894762f",
+    "music_evidence_ref": "c12e4e7a0eb2bc003b393606",
+    "G1_pass": true,
+    "G1_frozen_metrics": {
+      "gap_D2": 1.1551604920512977,
+      "gap_D3": 13.56169013269324,
+      "boundary_D3": 19.503713611223507,
+      "sampled_boundary_rate_jump": 0.0483081019662291,
+      "sampled_boundary_acc_jump": 1.8258647703126731,
+      "shoulder_wrist_min_m": 0.2921086504836697,
+      "wrist_separation_max_m": 1.0283064780109838,
+      "gap_angle_error_rad": null,
+      "physical_qualified": false
+    },
+    "source_resampling_exact": true,
+    "mapped_source_low_seconds": 2.0959157433790785,
+    "MotionCritic": null,
+    "MotionCritic_status": "NOT_EVALUABLE",
+    "quality": "NOT_EVALUABLE"
+  },
+  {
+    "case_key": "4a69181188a9e248a0a6330b",
+    "method": "alternative_Uniform",
+    "source_uid": "female_lotus",
+    "source_interval": [
+      321,
+      583
+    ],
+    "profile_ref": "426860f6bb898dece19170dd",
+    "rotation_sha256": "62b233d6d6153bb3aa970d50b7eb2bdf010081242670754a8000e44f1043e1f6",
+    "clock_sha256": "084dbdf6777d0c4ee29b54d5ae2436c22fe53dcb3332f3ecd666691b0167ea43",
+    "music_evidence_ref": "c12e4e7a0eb2bc003b393606",
+    "G1_pass": true,
+    "G1_frozen_metrics": {
+      "gap_D2": 0.9958658876495129,
+      "gap_D3": 14.58440421778259,
+      "boundary_D3": 22.05513637164643,
+      "sampled_boundary_rate_jump": 0.1372888359243335,
+      "sampled_boundary_acc_jump": 3.4456429832528483,
+      "shoulder_wrist_min_m": 0.29170932451466447,
+      "wrist_separation_max_m": 1.0286595473105613,
+      "gap_angle_error_rad": null,
+      "physical_qualified": false
+    },
+    "source_resampling_exact": true,
+    "mapped_source_low_seconds": 0,
+    "MotionCritic": null,
+    "MotionCritic_status": "NOT_EVALUABLE",
+    "quality": "NOT_EVALUABLE"
+  },
+  {
+    "case_key": "4a69181188a9e248a0a6330b",
+    "method": "alternative_GTWLocal",
+    "source_uid": "female_lotus",
+    "source_interval": [
+      321,
+      583
+    ],
+    "profile_ref": "426860f6bb898dece19170dd",
+    "rotation_sha256": "62b233d6d6153bb3aa970d50b7eb2bdf010081242670754a8000e44f1043e1f6",
+    "clock_sha256": "084dbdf6777d0c4ee29b54d5ae2436c22fe53dcb3332f3ecd666691b0167ea43",
+    "music_evidence_ref": "c12e4e7a0eb2bc003b393606",
+    "G1_pass": true,
+    "G1_frozen_metrics": {
+      "gap_D2": 0.9958658876495129,
+      "gap_D3": 14.58440421778259,
+      "boundary_D3": 22.05513637164643,
+      "sampled_boundary_rate_jump": 0.1372888359243335,
+      "sampled_boundary_acc_jump": 3.4456429832528483,
+      "shoulder_wrist_min_m": 0.29170932451466447,
+      "wrist_separation_max_m": 1.0286595473105613,
+      "gap_angle_error_rad": null,
+      "physical_qualified": false
+    },
+    "source_resampling_exact": true,
+    "mapped_source_low_seconds": 0,
+    "MotionCritic": null,
+    "MotionCritic_status": "NOT_EVALUABLE",
+    "quality": "NOT_EVALUABLE"
+  },
+  {
+    "case_key": "4a69181188a9e248a0a6330b",
+    "method": "alternative_MinHoldDiagnostic",
+    "source_uid": "female_lotus",
+    "source_interval": [
+      321,
+      583
+    ],
+    "profile_ref": "426860f6bb898dece19170dd",
+    "rotation_sha256": "62b233d6d6153bb3aa970d50b7eb2bdf010081242670754a8000e44f1043e1f6",
+    "clock_sha256": "084dbdf6777d0c4ee29b54d5ae2436c22fe53dcb3332f3ecd666691b0167ea43",
+    "music_evidence_ref": "c12e4e7a0eb2bc003b393606",
+    "G1_pass": true,
+    "G1_frozen_metrics": {
+      "gap_D2": 0.9958658876495129,
+      "gap_D3": 14.58440421778259,
+      "boundary_D3": 22.05513637164643,
+      "sampled_boundary_rate_jump": 0.1372888359243335,
+      "sampled_boundary_acc_jump": 3.4456429832528483,
+      "shoulder_wrist_min_m": 0.29170932451466447,
+      "wrist_separation_max_m": 1.0286595473105613,
+      "gap_angle_error_rad": null,
+      "physical_qualified": false
+    },
+    "source_resampling_exact": true,
+    "mapped_source_low_seconds": 0,
+    "MotionCritic": null,
+    "MotionCritic_status": "NOT_EVALUABLE",
+    "quality": "NOT_EVALUABLE"
+  },
+  {
+    "case_key": "73cb91d45a9d9530430d1650",
+    "method": "original_Uniform",
+    "source_uid": "male_meditation",
+    "source_interval": [
+      689,
+      1071
+    ],
+    "profile_ref": "d8f8435fe01b62f883028eed",
+    "rotation_sha256": "42cbabb39ccc5f83515ee44012ac99f84baf0c4bfb6d90e54a306eb5cb991cb1",
+    "clock_sha256": "9137d981f1f9a3c860b128e13893e4eed52834403022f488408951915af49426",
+    "music_evidence_ref": "59ca51370bef7d4d5828016e",
+    "G1_pass": true,
+    "G1_frozen_metrics": {
+      "gap_D2": 0.8538948540104987,
+      "gap_D3": 10.050773822628702,
+      "boundary_D3": 14.524792694727974,
+      "sampled_boundary_rate_jump": 0.020204604144458932,
+      "sampled_boundary_acc_jump": 1.2334063448920412,
+      "shoulder_wrist_min_m": 0.42050012079147236,
+      "wrist_separation_max_m": 1.0506378372423806,
+      "gap_angle_error_rad": null,
+      "physical_qualified": false
+    },
+    "source_resampling_exact": true,
+    "mapped_source_low_seconds": 4.114523184601924,
+    "MotionCritic": null,
+    "MotionCritic_status": "NOT_EVALUABLE",
+    "quality": "NOT_EVALUABLE"
+  },
+  {
+    "case_key": "73cb91d45a9d9530430d1650",
+    "method": "original_GTWLocal",
+    "source_uid": "male_meditation",
+    "source_interval": [
+      689,
+      1071
+    ],
+    "profile_ref": "c7c27aba44c7f4f72c86dbc2",
+    "rotation_sha256": "cd8ee7cc1818fb7173d0eec6433ad97dd87594838061b4c8d71dcaaaa4efe110",
+    "clock_sha256": "04d53f5322ffb674e09099aef23b845c950f679029cf3ee6ed3c17edd2ccd6d4",
+    "music_evidence_ref": "59ca51370bef7d4d5828016e",
+    "G1_pass": true,
+    "G1_frozen_metrics": {
+      "gap_D2": 0.8538948540104987,
+      "gap_D3": 10.050773822628702,
+      "boundary_D3": 14.524792694727974,
+      "sampled_boundary_rate_jump": 0.020204604144458932,
+      "sampled_boundary_acc_jump": 1.2334063448920412,
+      "shoulder_wrist_min_m": 0.42050012079147236,
+      "wrist_separation_max_m": 1.0506378372423806,
+      "gap_angle_error_rad": null,
+      "physical_qualified": false
+    },
+    "source_resampling_exact": true,
+    "mapped_source_low_seconds": 3.9552593770505684,
+    "MotionCritic": null,
+    "MotionCritic_status": "NOT_EVALUABLE",
+    "quality": "NOT_EVALUABLE"
+  },
+  {
+    "case_key": "73cb91d45a9d9530430d1650",
+    "method": "original_MinHoldDiagnostic",
+    "source_uid": "male_meditation",
+    "source_interval": [
+      689,
+      1071
+    ],
+    "profile_ref": "53b12abdf5a6726ec9a19a3b",
+    "rotation_sha256": "7c47e33af15ac4dab9b7e647636f41fb240f427c7999bc3e2de125e1669678e6",
+    "clock_sha256": "ed38c55f617f4d4b35e415b13705d9000f2fdfc98909f2d3d90153d95767801d",
+    "music_evidence_ref": "59ca51370bef7d4d5828016e",
+    "G1_pass": true,
+    "G1_frozen_metrics": {
+      "gap_D2": 0.8538948540104987,
+      "gap_D3": 10.050773822628702,
+      "boundary_D3": 14.524792694727974,
+      "sampled_boundary_rate_jump": 0.020204604144458932,
+      "sampled_boundary_acc_jump": 1.2334063448920412,
+      "shoulder_wrist_min_m": 0.42050012079147236,
+      "wrist_separation_max_m": 1.0506378372423806,
+      "gap_angle_error_rad": null,
+      "physical_qualified": false
+    },
+    "source_resampling_exact": true,
+    "mapped_source_low_seconds": 3.9527832400746705,
+    "MotionCritic": null,
+    "MotionCritic_status": "NOT_EVALUABLE",
+    "quality": "NOT_EVALUABLE"
+  },
+  {
+    "case_key": "73cb91d45a9d9530430d1650",
+    "method": "alternative_Uniform",
+    "source_uid": "male_meditation",
+    "source_interval": [
+      4004,
+      4391
+    ],
+    "profile_ref": "1f452ffc7ce8396e5d7497b0",
+    "rotation_sha256": "21ad23b9bcf0a85d294b9393b5950bf74dc23a7d462d57f24e4132cde78ec4a7",
+    "clock_sha256": "d2b62ebdaa527a27c67d10877aa89551672a48805961bff9aa9f35a4016c74df",
+    "music_evidence_ref": "59ca51370bef7d4d5828016e",
+    "G1_pass": true,
+    "G1_frozen_metrics": {
+      "gap_D2": 1.136657695892531,
+      "gap_D3": 12.678202104806948,
+      "boundary_D3": 17.950146879224583,
+      "sampled_boundary_rate_jump": 0.019196751199148463,
+      "sampled_boundary_acc_jump": 1.5499502471820614,
+      "shoulder_wrist_min_m": 0.4771540568985273,
+      "wrist_separation_max_m": 1.1276821321394426,
+      "gap_angle_error_rad": null,
+      "physical_qualified": false
+    },
+    "source_resampling_exact": true,
+    "mapped_source_low_seconds": 1.9221070811744376,
+    "MotionCritic": null,
+    "MotionCritic_status": "NOT_EVALUABLE",
+    "quality": "NOT_EVALUABLE"
+  },
+  {
+    "case_key": "73cb91d45a9d9530430d1650",
+    "method": "alternative_GTWLocal",
+    "source_uid": "male_meditation",
+    "source_interval": [
+      4004,
+      4391
+    ],
+    "profile_ref": "1f452ffc7ce8396e5d7497b0",
+    "rotation_sha256": "21ad23b9bcf0a85d294b9393b5950bf74dc23a7d462d57f24e4132cde78ec4a7",
+    "clock_sha256": "d2b62ebdaa527a27c67d10877aa89551672a48805961bff9aa9f35a4016c74df",
+    "music_evidence_ref": "59ca51370bef7d4d5828016e",
+    "G1_pass": true,
+    "G1_frozen_metrics": {
+      "gap_D2": 1.136657695892531,
+      "gap_D3": 12.678202104806948,
+      "boundary_D3": 17.950146879224583,
+      "sampled_boundary_rate_jump": 0.019196751199148463,
+      "sampled_boundary_acc_jump": 1.5499502471820614,
+      "shoulder_wrist_min_m": 0.4771540568985273,
+      "wrist_separation_max_m": 1.1276821321394426,
+      "gap_angle_error_rad": null,
+      "physical_qualified": false
+    },
+    "source_resampling_exact": true,
+    "mapped_source_low_seconds": 1.9221070811744376,
+    "MotionCritic": null,
+    "MotionCritic_status": "NOT_EVALUABLE",
+    "quality": "NOT_EVALUABLE"
+  },
+  {
+    "case_key": "73cb91d45a9d9530430d1650",
+    "method": "alternative_MinHoldDiagnostic",
+    "source_uid": "male_meditation",
+    "source_interval": [
+      4004,
+      4391
+    ],
+    "profile_ref": "1f452ffc7ce8396e5d7497b0",
+    "rotation_sha256": "21ad23b9bcf0a85d294b9393b5950bf74dc23a7d462d57f24e4132cde78ec4a7",
+    "clock_sha256": "d2b62ebdaa527a27c67d10877aa89551672a48805961bff9aa9f35a4016c74df",
+    "music_evidence_ref": "59ca51370bef7d4d5828016e",
+    "G1_pass": true,
+    "G1_frozen_metrics": {
+      "gap_D2": 1.136657695892531,
+      "gap_D3": 12.678202104806948,
+      "boundary_D3": 17.950146879224583,
+      "sampled_boundary_rate_jump": 0.019196751199148463,
+      "sampled_boundary_acc_jump": 1.5499502471820614,
+      "shoulder_wrist_min_m": 0.4771540568985273,
+      "wrist_separation_max_m": 1.1276821321394426,
+      "gap_angle_error_rad": null,
+      "physical_qualified": false
+    },
+    "source_resampling_exact": true,
+    "mapped_source_low_seconds": 1.9221070811744376,
+    "MotionCritic": null,
+    "MotionCritic_status": "NOT_EVALUABLE",
+    "quality": "NOT_EVALUABLE"
+  },
+  {
+    "case_key": "e5722e89378a4fae9c0a660d",
+    "method": "original_Uniform",
+    "source_uid": "male_pipa_1",
+    "source_interval": [
+      2916,
+      3454
+    ],
+    "profile_ref": "529db1fed0c8e02d0d696806",
+    "rotation_sha256": "2262ad782a0cdebaaa6d5e8bf0184ac0d7138ea54c811e7ab317003abd8b4452",
+    "clock_sha256": "87b811293ce53e0f2d4eb8dc235ff39d661cc478946bd5650d8416dcf5aca9c4",
+    "music_evidence_ref": "ee4bae6ec1ec4be82a8a4a78",
+    "G1_pass": true,
+    "G1_frozen_metrics": {
+      "gap_D2": 4.571117743241753,
+      "gap_D3": 61.96450061566745,
+      "boundary_D3": 125.00522376876035,
+      "sampled_boundary_rate_jump": 0.3462433853785817,
+      "sampled_boundary_acc_jump": 12.891788756697649,
+      "shoulder_wrist_min_m": 0.42123503007066665,
+      "wrist_separation_max_m": 1.2050739022469095,
+      "gap_angle_error_rad": null,
+      "physical_qualified": false
+    },
+    "source_resampling_exact": true,
+    "mapped_source_low_seconds": 0.8918684047175608,
+    "MotionCritic": null,
+    "MotionCritic_status": "NOT_EVALUABLE",
+    "quality": "NOT_EVALUABLE"
+  },
+  {
+    "case_key": "e5722e89378a4fae9c0a660d",
+    "method": "original_GTWLocal",
+    "source_uid": "male_pipa_1",
+    "source_interval": [
+      2916,
+      3454
+    ],
+    "profile_ref": "529db1fed0c8e02d0d696806",
+    "rotation_sha256": "2262ad782a0cdebaaa6d5e8bf0184ac0d7138ea54c811e7ab317003abd8b4452",
+    "clock_sha256": "87b811293ce53e0f2d4eb8dc235ff39d661cc478946bd5650d8416dcf5aca9c4",
+    "music_evidence_ref": "ee4bae6ec1ec4be82a8a4a78",
+    "G1_pass": true,
+    "G1_frozen_metrics": {
+      "gap_D2": 4.571117743241753,
+      "gap_D3": 61.96450061566745,
+      "boundary_D3": 125.00522376876035,
+      "sampled_boundary_rate_jump": 0.3462433853785817,
+      "sampled_boundary_acc_jump": 12.891788756697649,
+      "shoulder_wrist_min_m": 0.42123503007066665,
+      "wrist_separation_max_m": 1.2050739022469095,
+      "gap_angle_error_rad": null,
+      "physical_qualified": false
+    },
+    "source_resampling_exact": true,
+    "mapped_source_low_seconds": 0.8918684047175608,
+    "MotionCritic": null,
+    "MotionCritic_status": "NOT_EVALUABLE",
+    "quality": "NOT_EVALUABLE"
+  },
+  {
+    "case_key": "e5722e89378a4fae9c0a660d",
+    "method": "original_MinHoldDiagnostic",
+    "source_uid": "male_pipa_1",
+    "source_interval": [
+      2916,
+      3454
+    ],
+    "profile_ref": "529db1fed0c8e02d0d696806",
+    "rotation_sha256": "2262ad782a0cdebaaa6d5e8bf0184ac0d7138ea54c811e7ab317003abd8b4452",
+    "clock_sha256": "87b811293ce53e0f2d4eb8dc235ff39d661cc478946bd5650d8416dcf5aca9c4",
+    "music_evidence_ref": "ee4bae6ec1ec4be82a8a4a78",
+    "G1_pass": true,
+    "G1_frozen_metrics": {
+      "gap_D2": 4.571117743241753,
+      "gap_D3": 61.96450061566745,
+      "boundary_D3": 125.00522376876035,
+      "sampled_boundary_rate_jump": 0.3462433853785817,
+      "sampled_boundary_acc_jump": 12.891788756697649,
+      "shoulder_wrist_min_m": 0.42123503007066665,
+      "wrist_separation_max_m": 1.2050739022469095,
+      "gap_angle_error_rad": null,
+      "physical_qualified": false
+    },
+    "source_resampling_exact": true,
+    "mapped_source_low_seconds": 0.8918684047175608,
+    "MotionCritic": null,
+    "MotionCritic_status": "NOT_EVALUABLE",
+    "quality": "NOT_EVALUABLE"
+  },
+  {
+    "case_key": "b7b2ddb39b2addc9619fc709",
+    "method": "original_Uniform",
+    "source_uid": "male_pipa_2",
+    "source_interval": [
+      1420,
+      1769
+    ],
+    "profile_ref": "c4e2c59e5423994844f2a345",
+    "rotation_sha256": "3006fdf1ea70e0c89f0d4c568ff4aee0e6fc3f5db103c2e4a7bf9a636375ab7e",
+    "clock_sha256": "2ca0db6e4a17c4275c231bedfd06974ca132acfba84b5919379e18af634b2166",
+    "music_evidence_ref": "c2eb21028381dcf5adf9a44e",
+    "G1_pass": true,
+    "G1_frozen_metrics": {
+      "gap_D2": 3.0437328936838086,
+      "gap_D3": 40.20687511975315,
+      "boundary_D3": 57.16536389845739,
+      "sampled_boundary_rate_jump": 0.07628936273818364,
+      "sampled_boundary_acc_jump": 3.3685834707746185,
+      "shoulder_wrist_min_m": 0.25285969416697457,
+      "wrist_separation_max_m": 1.0728399015086667,
+      "gap_angle_error_rad": null,
+      "physical_qualified": false
+    },
+    "source_resampling_exact": true,
+    "mapped_source_low_seconds": 2.5790229885057507,
+    "MotionCritic": null,
+    "MotionCritic_status": "NOT_EVALUABLE",
+    "quality": "NOT_EVALUABLE"
+  },
+  {
+    "case_key": "b7b2ddb39b2addc9619fc709",
+    "method": "original_GTWLocal",
+    "source_uid": "male_pipa_2",
+    "source_interval": [
+      1420,
+      1769
+    ],
+    "profile_ref": "3177701988c4e6be0ab3cc89",
+    "rotation_sha256": "e93f546b0697e9bfc0fbbf1c3f9328a6ff0cf087156a94dd4832e386ca24ab27",
+    "clock_sha256": "5fa01561e3be858e09a0a5b9231761376254305a870511145a6a6ede8e9800ce",
+    "music_evidence_ref": "c2eb21028381dcf5adf9a44e",
+    "G1_pass": true,
+    "G1_frozen_metrics": {
+      "gap_D2": 3.0437328936838086,
+      "gap_D3": 40.20687511975315,
+      "boundary_D3": 57.16536389845739,
+      "sampled_boundary_rate_jump": 0.07628936273818364,
+      "sampled_boundary_acc_jump": 3.3685834707746185,
+      "shoulder_wrist_min_m": 0.25285969416697457,
+      "wrist_separation_max_m": 1.0728399015086667,
+      "gap_angle_error_rad": null,
+      "physical_qualified": false
+    },
+    "source_resampling_exact": true,
+    "mapped_source_low_seconds": 2.976430850639573,
+    "MotionCritic": null,
+    "MotionCritic_status": "NOT_EVALUABLE",
+    "quality": "NOT_EVALUABLE"
+  },
+  {
+    "case_key": "b7b2ddb39b2addc9619fc709",
+    "method": "original_MinHoldDiagnostic",
+    "source_uid": "male_pipa_2",
+    "source_interval": [
+      1420,
+      1769
+    ],
+    "profile_ref": "b7258541cedd478da835b700",
+    "rotation_sha256": "71b0e7d47d9ebd661ee130a6cc07d6dae9fcc955bd4e9d4520c2a1a754a206c3",
+    "clock_sha256": "116d8660efa7d69052ba824b8918b16ad740564a26bd1863a1e56dd2cdb2b100",
+    "music_evidence_ref": "c2eb21028381dcf5adf9a44e",
+    "G1_pass": true,
+    "G1_frozen_metrics": {
+      "gap_D2": 3.0437328936838086,
+      "gap_D3": 40.20687511975315,
+      "boundary_D3": 57.16536389845739,
+      "sampled_boundary_rate_jump": 0.07628936273818364,
+      "sampled_boundary_acc_jump": 3.3685834707746185,
+      "shoulder_wrist_min_m": 0.25285969416697457,
+      "wrist_separation_max_m": 1.0728399015086667,
+      "gap_angle_error_rad": null,
+      "physical_qualified": false
+    },
+    "source_resampling_exact": true,
+    "mapped_source_low_seconds": 1.9828366659045655,
+    "MotionCritic": null,
+    "MotionCritic_status": "NOT_EVALUABLE",
+    "quality": "NOT_EVALUABLE"
+  },
+  {
+    "case_key": "f98054618c10bac0a98674d3",
+    "method": "original_Uniform",
+    "source_uid": "male_ribbon",
+    "source_interval": [
+      0,
+      358
+    ],
+    "profile_ref": "20313450d87131daa74a060b",
+    "rotation_sha256": "a255bdb7b5732858f4bf703f42afa58556c194e801b0b079a17a1732d457e4d0",
+    "clock_sha256": "24d1d1366a9f369f551070b50161494d84fd6c22655d76e0f89ac87374ec1b58",
+    "music_evidence_ref": "59ca51370bef7d4d5828016e",
+    "G1_pass": false,
+    "G1_frozen_metrics": {
+      "gap_D2": 6.88780886464521,
+      "gap_D3": 102.62111849018217,
+      "boundary_D3": 157.91097992123565,
+      "sampled_boundary_rate_jump": 1.0330540094755074,
+      "sampled_boundary_acc_jump": 26.97361822763583,
+      "shoulder_wrist_min_m": 0.09489912338094487,
+      "wrist_separation_max_m": 1.0517712361014766,
+      "gap_angle_error_rad": null,
+      "physical_qualified": false
+    },
+    "source_resampling_exact": true,
+    "mapped_source_low_seconds": 4.3576097105508875,
+    "MotionCritic": null,
+    "MotionCritic_status": "NOT_EVALUABLE",
+    "quality": "NOT_EVALUABLE"
+  },
+  {
+    "case_key": "f98054618c10bac0a98674d3",
+    "method": "original_GTWLocal",
+    "source_uid": "male_ribbon",
+    "source_interval": [
+      0,
+      358
+    ],
+    "profile_ref": "22054b6e4af5e838a9745a81",
+    "rotation_sha256": "2f652c5a86465db20793348ddc4b6643a6242157467b5d89c308153164826b0f",
+    "clock_sha256": "0797051834bbfd930ad2704c04f7b67b29b595a9b3e19f748a4cfae0d944ab35",
+    "music_evidence_ref": "59ca51370bef7d4d5828016e",
+    "G1_pass": false,
+    "G1_frozen_metrics": {
+      "gap_D2": 6.88780886464521,
+      "gap_D3": 102.62111849018217,
+      "boundary_D3": 157.91097992123565,
+      "sampled_boundary_rate_jump": 1.0330540094755074,
+      "sampled_boundary_acc_jump": 26.97361822763583,
+      "shoulder_wrist_min_m": 0.09489912338094487,
+      "wrist_separation_max_m": 1.0517712361014766,
+      "gap_angle_error_rad": null,
+      "physical_qualified": false
+    },
+    "source_resampling_exact": true,
+    "mapped_source_low_seconds": 4.509386144254048,
+    "MotionCritic": null,
+    "MotionCritic_status": "NOT_EVALUABLE",
+    "quality": "NOT_EVALUABLE"
+  },
+  {
+    "case_key": "f98054618c10bac0a98674d3",
+    "method": "original_MinHoldDiagnostic",
+    "source_uid": "male_ribbon",
+    "source_interval": [
+      0,
+      358
+    ],
+    "profile_ref": "8924642e48b2397eef727b3b",
+    "rotation_sha256": "e0e96bd85a6f37d475a67c5fc48a11c4a0b3ad9d43636db003305168a8ac8cb6",
+    "clock_sha256": "4fd6245189b20c9e2e25fb1e89f936277b082e984d544d98cfc6cacf3d34b73a",
+    "music_evidence_ref": "59ca51370bef7d4d5828016e",
+    "G1_pass": false,
+    "G1_frozen_metrics": {
+      "gap_D2": 6.88780886464521,
+      "gap_D3": 102.62111849018217,
+      "boundary_D3": 157.91097992123565,
+      "sampled_boundary_rate_jump": 1.0330540094755074,
+      "sampled_boundary_acc_jump": 26.97361822763583,
+      "shoulder_wrist_min_m": 0.09489912338094487,
+      "wrist_separation_max_m": 1.0517712361014766,
+      "gap_angle_error_rad": null,
+      "physical_qualified": false
+    },
+    "source_resampling_exact": true,
+    "mapped_source_low_seconds": 4.158005485769717,
+    "MotionCritic": null,
+    "MotionCritic_status": "NOT_EVALUABLE",
+    "quality": "NOT_EVALUABLE"
+  },
+  {
+    "case_key": "f98054618c10bac0a98674d3",
+    "method": "alternative_Uniform",
+    "source_uid": "male_ribbon",
+    "source_interval": [
+      1572,
+      1926
+    ],
+    "profile_ref": "f47ddf902f0e014d6e084d11",
+    "rotation_sha256": "de5eea0563bb978be061fa069daf0665147933c16ad8118d21dcb47829f482b9",
+    "clock_sha256": "0af21dc56647ddbf1fff672e4e145fa1180dbc98f03a7c778814b95c7a57ad32",
+    "music_evidence_ref": "59ca51370bef7d4d5828016e",
+    "G1_pass": false,
+    "G1_frozen_metrics": {
+      "gap_D2": 14.514676421209177,
+      "gap_D3": 347.53650961674805,
+      "boundary_D3": 468.53642433961704,
+      "sampled_boundary_rate_jump": 1.9252043006315747,
+      "sampled_boundary_acc_jump": 48.67915260451373,
+      "shoulder_wrist_min_m": 0.40851618155396013,
+      "wrist_separation_max_m": 1.0507991498282234,
+      "gap_angle_error_rad": null,
+      "physical_qualified": false
+    },
+    "source_resampling_exact": true,
+    "mapped_source_low_seconds": 0,
+    "MotionCritic": null,
+    "MotionCritic_status": "NOT_EVALUABLE",
+    "quality": "NOT_EVALUABLE"
+  },
+  {
+    "case_key": "f98054618c10bac0a98674d3",
+    "method": "alternative_GTWLocal",
+    "source_uid": "male_ribbon",
+    "source_interval": [
+      1572,
+      1926
+    ],
+    "profile_ref": "f47ddf902f0e014d6e084d11",
+    "rotation_sha256": "de5eea0563bb978be061fa069daf0665147933c16ad8118d21dcb47829f482b9",
+    "clock_sha256": "0af21dc56647ddbf1fff672e4e145fa1180dbc98f03a7c778814b95c7a57ad32",
+    "music_evidence_ref": "59ca51370bef7d4d5828016e",
+    "G1_pass": false,
+    "G1_frozen_metrics": {
+      "gap_D2": 14.514676421209177,
+      "gap_D3": 347.53650961674805,
+      "boundary_D3": 468.53642433961704,
+      "sampled_boundary_rate_jump": 1.9252043006315747,
+      "sampled_boundary_acc_jump": 48.67915260451373,
+      "shoulder_wrist_min_m": 0.40851618155396013,
+      "wrist_separation_max_m": 1.0507991498282234,
+      "gap_angle_error_rad": null,
+      "physical_qualified": false
+    },
+    "source_resampling_exact": true,
+    "mapped_source_low_seconds": 0,
+    "MotionCritic": null,
+    "MotionCritic_status": "NOT_EVALUABLE",
+    "quality": "NOT_EVALUABLE"
+  },
+  {
+    "case_key": "f98054618c10bac0a98674d3",
+    "method": "alternative_MinHoldDiagnostic",
+    "source_uid": "male_ribbon",
+    "source_interval": [
+      1572,
+      1926
+    ],
+    "profile_ref": "f47ddf902f0e014d6e084d11",
+    "rotation_sha256": "de5eea0563bb978be061fa069daf0665147933c16ad8118d21dcb47829f482b9",
+    "clock_sha256": "0af21dc56647ddbf1fff672e4e145fa1180dbc98f03a7c778814b95c7a57ad32",
+    "music_evidence_ref": "59ca51370bef7d4d5828016e",
+    "G1_pass": false,
+    "G1_frozen_metrics": {
+      "gap_D2": 14.514676421209177,
+      "gap_D3": 347.53650961674805,
+      "boundary_D3": 468.53642433961704,
+      "sampled_boundary_rate_jump": 1.9252043006315747,
+      "sampled_boundary_acc_jump": 48.67915260451373,
+      "shoulder_wrist_min_m": 0.40851618155396013,
+      "wrist_separation_max_m": 1.0507991498282234,
+      "gap_angle_error_rad": null,
+      "physical_qualified": false
+    },
+    "source_resampling_exact": true,
+    "mapped_source_low_seconds": 0,
+    "MotionCritic": null,
+    "MotionCritic_status": "NOT_EVALUABLE",
+    "quality": "NOT_EVALUABLE"
+  }
+]

@@ -1,0 +1,74 @@
+{
+  "status": "PASS",
+  "files": [
+    {
+      "path": "preview/viewer/index.html",
+      "bytes": 11865645,
+      "sha256": "5e9eb861ec31c49a0ab56c391004dc4c467b577cc0d6f81c3548a89d36927e5e"
+    },
+    {
+      "path": "preview/viewer/music_0_240.wav",
+      "bytes": 1126478,
+      "sha256": "483cd1676926d0ae8ea553428f8a967152e84eadbc88882888d01b653ad41c8c"
+    },
+    {
+      "path": "preview/viewer/music_0_450.wav",
+      "bytes": 2022478,
+      "sha256": "d9a725e0fe339a6e01c31eae9591768da8ce749b38dcaf03bbb5e9bf830ec659"
+    },
+    {
+      "path": "preview/viewer/music_1_240.wav",
+      "bytes": 1126478,
+      "sha256": "13e03b3940f72cebcc219aadfe76ec59cfa7349bfc51b6c6230e2d624da57422"
+    },
+    {
+      "path": "preview/viewer/music_1_360.wav",
+      "bytes": 1638478,
+      "sha256": "658ba22093e813fe2dc7c2d6df98fc8cacbc3ca4aff5cc1332d0e8ec48d12175"
+    },
+    {
+      "path": "preview/viewer/music_2_360.wav",
+      "bytes": 1638478,
+      "sha256": "04683148e3c6fd8512d800a82fac39a28d5cb8f77e69724c995ab2cd00b21348"
+    },
+    {
+      "path": "preview/viewer/music_coordination.html",
+      "bytes": 9473064,
+      "sha256": "0ad65cd3b3e73f6c43e6b898da817ffe672f79480eb6d8460159b00198c19813"
+    },
+    {
+      "path": "preview/viewer/naturalness.html",
+      "bytes": 9473039,
+      "sha256": "3618ec21c183a5d17a58bdf7c734ed6da027a89fc61ddb19c2188c5f2ce89098"
+    },
+    {
+      "path": "preview/viewer/protocol.json",
+      "bytes": 1346,
+      "sha256": "f123bb1c7684f1e8b7b0e2329f777666ea7ce8206d78196563fe482cd79e6d37"
+    },
+    {
+      "path": "controls/viewer/index.html",
+      "bytes": 9202576,
+      "sha256": "953e52df2352d440501c759e8ece58450db54db9bf409e57183332ba95d065bb"
+    },
+    {
+      "path": "controls/viewer/orientation.html",
+      "bytes": 12281562,
+      "sha256": "b207b7a4e922f549a3f5f2f82d2cd3d36a4df22fc49f4d59498c0277db522701"
+    },
+    {
+      "path": "controls/viewer/protocol.json",
+      "bytes": 584,
+      "sha256": "62fa3987e512a484b822f40cc486c3baed69594ef7581c73f2a83fc773d9aa47"
+    },
+    {
+      "path": "index.html",
+      "bytes": 911,
+      "sha256": "9b40819b83b3f817af651443656759118dc1eb19709fbbb595d2299169fac5b4"
+    }
+  ],
+  "total_bytes": 59851117,
+  "admin_mapping_transferred": false,
+  "raw_rotation_npz_transferred": false,
+  "media_public": false
+}

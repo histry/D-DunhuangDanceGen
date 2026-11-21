@@ -1,0 +1,19 @@
+{
+  "closed_service_pid": 79596,
+  "raw_source_and_frozen_archives_preserved": true,
+  "status": "PASS",
+  "credentials_stored_in_files": false,
+  "removed": [
+    {
+      "files_removed": 19,
+      "path": "C:\\Users\\li\\Documents\\敦煌舞视频生成\\outputs\\paper1_q02_ssh_temp"
+    },
+    {
+      "files_removed": 14,
+      "path": "C:\\Users\\li\\Documents\\敦煌舞视频生成\\outputs\\paper1_q02_stage"
+    }
+  ],
+  "closed_loopback_port": 56772,
+  "official_reference_preserved": "outputs/paper1_auto_eval_01/reference/mace_metric.py",
+  "SSH_helpers_created_on_server": 0
+}

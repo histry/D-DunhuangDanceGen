@@ -1,0 +1,37 @@
+{
+  "code": {
+    "__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "common.py": "61fd35f7b85a0fcfa3b97f5ac59e47394161f9b1643b7b4b785fe895a498b238",
+    "controls.py": "11cec7c6ec774fb78de208c55ecaee335e054a8fcaa92f97db1e495f83ed86a7",
+    "experiment.py": "0459c9031404d4550044babbcbdeb8e298b9b05d771edae76a3013d770b0cea2",
+    "music.py": "e7894bbf0fc34f3f70a9054f7b6dc3d9ee8f00c719f5114bf04da29a55147777",
+    "protocol.json": "baa5cb5905483b8c82b886d7d4f5472e9be791d0227fae4342dad1b1a6764681",
+    "reference.py": "f59c6b372022b91c6b9c3b3abeee2fa06495652b62bc0a4dfeed28235160a007",
+    "release.py": "3b0045b2991cc07d7b1944b775ecb8090f870c79e6186feba95d421ab29ae2b3",
+    "reviews.py": "a292db6bf998dff2db930ceae42d51fbe5852cb1afad42074dc5cca758da0471",
+    "test_contracts.py": "02429ff2ad10b151c1eb2709552d51e9c1941010d42c274b4f3729908a911447",
+    "verify.py": "3a071a4cd7d0cd9872dbaeccc70eedd0752cf0048a89ae6d1fff011016b6d07b",
+    "view.py": "45249a01d028a1ec52b5d7adb0574d667dacd7eedecb1b06042b8f6b89a3ab4e"
+  },
+  "dependencies": {
+    "paper1_support/study.py": "bbd4196e631be0b2679e7e3f55cd67b19fb19033fa5d4bdb1632e13f77352df2",
+    "paper1_support/contracts.py": "b223b48cecbedce6f67830129469461ca0be848052ce4c449fc25fec266ca679",
+    "gtw_kinematic_baseline/features.py": "d6920145393c340d571405833837f26dd49aeaffb6a0c216db1d479683e246ac",
+    "gtw_kinematic_baseline/reviews.py": "d86df96d7fd018b018165dc4f88f43471c94949d34a053607f2f3abb48f547c7",
+    "gtw_kinematic_baseline/viewer.html": "a42a2bb413a24b6b9d9d21c0b3ea3fd635ff07a75577cfd79f2228dbe86af2d5",
+    "music_events/catalog.py": "7eadea12dbe04115501e71ad1bb0a490a62d0ef4805e88058f1acd61844c04bf",
+    "paired_event_r41/events.py": "e6bbb769f9ed37b9743113a5c0a84139300bfc2e957a1b4315c041d2e1fb3759",
+    "timing_validity_r66/engine.py": "d35fd2828f32732ddb96ff3944239eab74250cd59caf30c93737c2d6c871caff",
+    "warp_coupling_r53/warp_lattice.py": "ff804bc34a81943f7549171af6bf3f1bfe5534d4bb2bc7df6071e30130f5e2ba"
+  },
+  "files": {
+    "comparisons.json": "088fb2f65229959cf69d1a5fa3aa9ae3ff3b33a31d61bec73de5db5371d2db3c",
+    "executions.json": "18e49de3ce5a8fb490d05bfd3cfd14b0d1e35697fc0c12a41258a7bb66c61803",
+    "music_bindings.json": "52529618693a7f8f926287c6b5a99c07c1558b503726645159f8b9bec853a59c",
+    "profiles.json": "fa2c3560bf38aa62880b11237cdf760e5ca8f87f437022decc02690482716606",
+    "reference_parity.json": "79a88a282fdf2c88388bccd7ee04bcf77fd2c40e2911b6bb9d780f4d2037b05c",
+    "registration.json": "9126606ab2477dac5e1c2327ed5c5f04d77b2bc7dae3d6136c3b71c70eb9db41",
+    "representation_audit.json": "986b2838c3e2fb2030d7fdea12ef42b3b012de6a124c0dc83fb000596894def0",
+    "summary.json": "762f58574e3767178327872b43d8efb0fbd4c86df44802679c10914b141bf230"
+  }
+}

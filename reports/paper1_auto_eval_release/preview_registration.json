@@ -1,0 +1,203 @@
+{
+  "protocol": {
+    "schema": "PAPER1_AUTO_EVAL_Q01",
+    "parent_commit": "a60ccf8f8a2e59c0fa00c78e9096e088b2b779f3",
+    "q01_controls_manifest": "2e1597ea4ca59ae71fbc0e7ecc21fd7d32da54bfd55f9a748a1369f2fda2f10e",
+    "music_main_manifest": "ccc3ace99ac5313135c95f84c9a732f8f50312c00036900115118ddab26dbf52",
+    "music_catalog_sha256": [
+      "837a314379294a46849763667845ade597d7c77a55af65ba6ac0ed94bb2c529b",
+      "a6e4dcfc16e15b79b039adb454457a51845b707b0bf6fa88cbd456d17819de28",
+      "2489c95a5340ec57b8ecfc7fb23ce9bdefe79b1fcaed69f6d76fcf61499733fb"
+    ],
+    "paired_population_sha256": "cffbe02f0b65ba3addbc0ff2baaf7152af2a50f921e60755c52a580f8ead86d0",
+    "paired_catalog_sha256": [
+      "5af1e978a5f60a21641976aaa033a79b215340719283b8ba8bfa0ab67cef6dce",
+      "9d1577520b2a30b88953d3cf0b95ed2e4264b2f9a2b6d0d6e07349b3aa0d75a5",
+      "3e1de6e6342d0197c203586cabb7b682ead042ada54918dd54807ff827dd159b",
+      "23039f3d86a771961be3f8a8c8fc0c52419ba47e9030aa2139cf8dafb7c5d30f",
+      "d56325a043586f6d7b903e56023d37b794c9ae50b9c83a895daa02671c3f56ac",
+      "24e71579142e239e47b102ddd62c9d08dae18db2a1f655c256afe3e3cd3214e5"
+    ],
+    "reference_commit": "feba9d8f8bb66f6c1accd4ed97d65879f246e957",
+    "reference_url": "https://github.com/AMAP-ML/MACE-Dance/blob/feba9d8f8bb66f6c1accd4ed97d65879f246e957/Evaluation-Motion/metric.py",
+    "reference_sha256": "24bcc331b36732de653b52d839adcba643902232db4e365bf1abb39f8f1f4bad",
+    "metric": "BAS3D22_RELATIVE_ADAPTED_MUSIC_TO_MOTION",
+    "fps": 30,
+    "velocity_smoothing_sigma_frames": 5.0,
+    "alignment_sigma_seconds": 0.1,
+    "motion_beat_timestamp": "LEFT_FRAME_INDEX_OF_VELOCITY_CELL_AS_UPSTREAM",
+    "primary_music_stream": [
+      "beat_this",
+      "beat"
+    ],
+    "clock_shifts_seconds": [
+      -0.5,
+      -0.25,
+      0.0,
+      0.25,
+      0.5
+    ],
+    "music_query_margin_seconds": 0.5,
+    "classification_rotation_absolute_tolerance": 1e-09,
+    "jitter_wrist_rad": 0.05,
+    "joint_offset_elbow_rad": 0.7,
+    "joint_offset_frames": 12,
+    "hold_extension": "MAXIMUM_SUPPORTED_HOLD_DURATION_IN_Q01_FINITE_DAG_AT_NATURAL_SOURCE_TOTAL_LENGTH; NOT_KNOWN_ARTISTIC_ERROR",
+    "speed_jump_forward_rates": [
+      0.75,
+      1.25
+    ],
+    "source_time_preflight": "SAME_RECORDING_OTHER_R47_UNIT_WITH_COMPLETE_MIXED_SUPPORT; LENGTH_WITHIN_10_PERCENT; SAME_BUDGET; FIRST_CHRONOLOGICAL; KEEP_MISSING",
+    "joint_execution": "NOT_STARTED_PENDING_EVALUATOR_VALIDITY_AND_QUALITY_EVIDENCE",
+    "MotionCritic": "NOT_RUN_ROOT_AND_COMPLETE_INPUT_CONTRACT_UNVERIFIED",
+    "MotionCritic_reference_commit": "71e9f52e67df4d9924607afd6ac4e0d4dc0dd27e",
+    "FID_DIV": "NOT_REPORTED_SMALL_PAIRED_POPULATION_AND_DIFFERENT_FEATURE_CONTRACT",
+    "human_records": 0,
+    "new_training_steps": 0,
+    "R74": "NOT_STARTED",
+    "can_route": false
+  },
+  "parent_manifest": "2e1597ea4ca59ae71fbc0e7ecc21fd7d32da54bfd55f9a748a1369f2fda2f10e",
+  "parent_input_hashes": {
+    "outputs/event_coverage_r47_01/index/result.json": "483d13759a3efbdf9129cf7d4ab8d81ae248529acbd6a45bcb03d427d552807e",
+    "outputs/hold_timing_01/audit/manifest.json": "7bb08a0c606b83764eec2aed91063376bcb2c448beab204989e0a07be9381b80",
+    "outputs/duration_r62_01/main/cross_source/arrays.npz": "b34d43abb1409eee15a6a1f75821f673f6b0000a51a3bb96b55040861732768e",
+    "outputs/timing_r64_01/main/result.json": "48122dea0886791e5fa7ba946d9715cfc2a788314d6d5bc004baa0912bce30ee"
+  },
+  "source_time_preflight": [
+    {
+      "case_key": "f8d91db44c816c9c6b18cfb8",
+      "source_uid": "female_FeiTian",
+      "status": "REGISTERED_NONDEGENERATE_PAIR",
+      "sources": [
+        {
+          "event_uid": "r47:c114381dab695779ce81904c",
+          "source_interval": [
+            2377,
+            2660
+          ],
+          "distinct_clocks": 9
+        },
+        {
+          "event_uid": "r47:1af47416494c0f224688ba12",
+          "source_interval": [
+            4153,
+            4446
+          ],
+          "distinct_clocks": 6
+        }
+      ],
+      "GTW_or_G1_used_to_select_source": false,
+      "new_G1_calls": 0,
+      "execution": "NOT_STARTED"
+    },
+    {
+      "case_key": "4a69181188a9e248a0a6330b",
+      "source_uid": "female_lotus",
+      "status": "REGISTERED_NONDEGENERATE_PAIR",
+      "sources": [
+        {
+          "event_uid": "r47:7498d2a729087f738d4402df",
+          "source_interval": [
+            583,
+            870
+          ],
+          "distinct_clocks": 6
+        },
+        {
+          "event_uid": "r47:d5b96084cc7cf550bb8d65b8",
+          "source_interval": [
+            6303,
+            6596
+          ],
+          "distinct_clocks": 6
+        }
+      ],
+      "GTW_or_G1_used_to_select_source": false,
+      "new_G1_calls": 0,
+      "execution": "NOT_STARTED"
+    },
+    {
+      "case_key": "73cb91d45a9d9530430d1650",
+      "source_uid": "male_meditation",
+      "status": "REGISTERED_NONDEGENERATE_PAIR",
+      "sources": [
+        {
+          "event_uid": "r47:df065e93a0e1f42193d7cbbc",
+          "source_interval": [
+            689,
+            1071
+          ],
+          "distinct_clocks": 24
+        },
+        {
+          "event_uid": "r47:b25c06227263e363ee383e7c",
+          "source_interval": [
+            5118,
+            5476
+          ],
+          "distinct_clocks": 29
+        }
+      ],
+      "GTW_or_G1_used_to_select_source": false,
+      "new_G1_calls": 0,
+      "execution": "NOT_STARTED"
+    },
+    {
+      "case_key": "e5722e89378a4fae9c0a660d",
+      "source_uid": "male_pipa_1",
+      "status": "MISSING_NONDEGENERATE_PAIR",
+      "sources": [
+        {
+          "event_uid": "r47:bd8565c92cceadf1279b1909",
+          "source_interval": [
+            2916,
+            3454
+          ],
+          "distinct_clocks": 7
+        }
+      ],
+      "GTW_or_G1_used_to_select_source": false,
+      "new_G1_calls": 0,
+      "execution": "NOT_STARTED"
+    },
+    {
+      "case_key": "b7b2ddb39b2addc9619fc709",
+      "source_uid": "male_pipa_2",
+      "status": "MISSING_NONDEGENERATE_PAIR",
+      "sources": [
+        {
+          "event_uid": "r47:ef27e17da9c989bbd4ff32f5",
+          "source_interval": [
+            1420,
+            1769
+          ],
+          "distinct_clocks": 27
+        }
+      ],
+      "GTW_or_G1_used_to_select_source": false,
+      "new_G1_calls": 0,
+      "execution": "NOT_STARTED"
+    },
+    {
+      "case_key": "f98054618c10bac0a98674d3",
+      "source_uid": "male_ribbon",
+      "status": "MISSING_NONDEGENERATE_PAIR",
+      "sources": [
+        {
+          "event_uid": "r47:de4ba4c405a3decf45cd8531",
+          "source_interval": [
+            0,
+            358
+          ],
+          "distinct_clocks": 14
+        }
+      ],
+      "GTW_or_G1_used_to_select_source": false,
+      "new_G1_calls": 0,
+      "execution": "NOT_STARTED"
+    }
+  ],
+  "music_role": "READ_ONLY_NO_SOURCE_OR_CLOCK_SELECTION",
+  "population": "SIX_HISTORICALLY_EXPOSED_SOURCES_AND_THREE_ASSIGNED_SONGS_NOT_PAIRED_GROUND_TRUTH"
+}

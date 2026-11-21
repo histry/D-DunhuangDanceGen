@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "fresh_process": true,
+  "results": {
+    "preview": {
+      "exact": true,
+      "differences": [],
+      "manifest_sha256": "1ebb89d6bd734f9afa86172d40667ec6264c5a0e4ec9e56fa793e76d644c0173"
+    },
+    "controls": {
+      "exact": true,
+      "differences": [],
+      "manifest_sha256": "65c971713b2df43154fe27ff5646e701bba1403b7960553a5444f5731739043d"
+    }
+  },
+  "parent_outputs_unchanged": true,
+  "training_steps": 0,
+  "human_records": 0,
+  "can_route": false
+}

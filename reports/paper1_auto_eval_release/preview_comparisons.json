@@ -1,0 +1,234 @@
+[
+  {
+    "case_key": "f8d91db44c816c9c6b18cfb8",
+    "source_uid": "female_FeiTian",
+    "contrast": "TIMING_ONLY",
+    "left": "original_GTWLocal",
+    "right": "original_Uniform",
+    "classification": "VALID_DISTINCT",
+    "deltas": {
+      "BAS3D22": -0.00791098410654617,
+      "GTW_reference_cost": -0.013348715462830396,
+      "FK_D2_q95": -0.5751487565039204,
+      "FK_D3_q95": -18.215530351386207,
+      "SO3_transported_acceleration": -2.9304025932118467,
+      "longest_low_seconds": -1.0666666666666664,
+      "mapped_source_low_seconds": -0.1986230142688168,
+      "MotionCritic": null,
+      "quality_winner": null
+    }
+  },
+  {
+    "case_key": "f8d91db44c816c9c6b18cfb8",
+    "source_uid": "female_FeiTian",
+    "contrast": "SOURCE_ONLY_UNIFORM",
+    "left": "alternative_Uniform",
+    "right": "original_Uniform",
+    "classification": "VALID_DISTINCT",
+    "deltas": {
+      "BAS3D22": -0.07305838073474112,
+      "GTW_reference_cost": 0.020980647760559468,
+      "FK_D2_q95": 0.135968931565289,
+      "FK_D3_q95": 4.445650347185776,
+      "SO3_transported_acceleration": -2.138234000717219,
+      "longest_low_seconds": -1.7,
+      "mapped_source_low_seconds": -2.3165484633569626,
+      "MotionCritic": null,
+      "quality_winner": null
+    }
+  },
+  {
+    "case_key": "f8d91db44c816c9c6b18cfb8",
+    "source_uid": "female_FeiTian",
+    "contrast": "ALTERNATIVE_TIMING_ONLY",
+    "left": "alternative_GTWLocal",
+    "right": "alternative_Uniform",
+    "classification": "VALID_IDENTICAL",
+    "deltas": null
+  },
+  {
+    "case_key": "4a69181188a9e248a0a6330b",
+    "source_uid": "female_lotus",
+    "contrast": "TIMING_ONLY",
+    "left": "original_GTWLocal",
+    "right": "original_Uniform",
+    "classification": "VALID_DISTINCT",
+    "deltas": {
+      "BAS3D22": 0.17919591145615169,
+      "GTW_reference_cost": -0.004934309824377925,
+      "FK_D2_q95": -0.29876513199484434,
+      "FK_D3_q95": -9.756560763315264,
+      "SO3_transported_acceleration": 0.04541061747170083,
+      "longest_low_seconds": -0.09999999999999987,
+      "mapped_source_low_seconds": -0.04895605149271853,
+      "MotionCritic": null,
+      "quality_winner": null
+    }
+  },
+  {
+    "case_key": "4a69181188a9e248a0a6330b",
+    "source_uid": "female_lotus",
+    "contrast": "SOURCE_ONLY_UNIFORM",
+    "left": "alternative_Uniform",
+    "right": "original_Uniform",
+    "classification": "VALID_DISTINCT",
+    "deltas": {
+      "BAS3D22": 0.17383082478428027,
+      "GTW_reference_cost": -0.014877498404138656,
+      "FK_D2_q95": 9.419131374753341,
+      "FK_D3_q95": 282.3926855914103,
+      "SO3_transported_acceleration": 17.95611626369287,
+      "longest_low_seconds": -1.6666666666666665,
+      "mapped_source_low_seconds": -2.144871794871797,
+      "MotionCritic": null,
+      "quality_winner": null
+    }
+  },
+  {
+    "case_key": "4a69181188a9e248a0a6330b",
+    "source_uid": "female_lotus",
+    "contrast": "ALTERNATIVE_TIMING_ONLY",
+    "left": "alternative_GTWLocal",
+    "right": "alternative_Uniform",
+    "classification": "VALID_IDENTICAL",
+    "deltas": null
+  },
+  {
+    "case_key": "73cb91d45a9d9530430d1650",
+    "source_uid": "male_meditation",
+    "contrast": "TIMING_ONLY",
+    "left": "original_GTWLocal",
+    "right": "original_Uniform",
+    "classification": "VALID_DISTINCT",
+    "deltas": {
+      "BAS3D22": 0.028052712935896576,
+      "GTW_reference_cost": -0.0005094461484840274,
+      "FK_D2_q95": 0.01906296608363922,
+      "FK_D3_q95": -2.8123731137783707,
+      "SO3_transported_acceleration": -0.3874936738080095,
+      "longest_low_seconds": -0.7,
+      "mapped_source_low_seconds": -0.15926380755135572,
+      "MotionCritic": null,
+      "quality_winner": null
+    }
+  },
+  {
+    "case_key": "73cb91d45a9d9530430d1650",
+    "source_uid": "male_meditation",
+    "contrast": "SOURCE_ONLY_UNIFORM",
+    "left": "alternative_Uniform",
+    "right": "original_Uniform",
+    "classification": "VALID_DISTINCT",
+    "deltas": {
+      "BAS3D22": 0.036646188637689356,
+      "GTW_reference_cost": -0.029363047039771495,
+      "FK_D2_q95": 2.5529096010257546,
+      "FK_D3_q95": 54.784771961293245,
+      "SO3_transported_acceleration": 11.631439151276197,
+      "longest_low_seconds": -0.5333333333333334,
+      "mapped_source_low_seconds": -2.1924161034274867,
+      "MotionCritic": null,
+      "quality_winner": null
+    }
+  },
+  {
+    "case_key": "73cb91d45a9d9530430d1650",
+    "source_uid": "male_meditation",
+    "contrast": "ALTERNATIVE_TIMING_ONLY",
+    "left": "alternative_GTWLocal",
+    "right": "alternative_Uniform",
+    "classification": "VALID_IDENTICAL",
+    "deltas": null
+  },
+  {
+    "case_key": "e5722e89378a4fae9c0a660d",
+    "source_uid": "male_pipa_1",
+    "contrast": "TIMING_ONLY",
+    "left": "original_GTWLocal",
+    "right": "original_Uniform",
+    "classification": "VALID_IDENTICAL",
+    "deltas": null
+  },
+  {
+    "case_key": "e5722e89378a4fae9c0a660d",
+    "source_uid": "male_pipa_1",
+    "contrast": "SOURCE_ONLY_UNIFORM",
+    "left": "alternative_Uniform",
+    "right": "original_Uniform",
+    "classification": "UNAVAILABLE",
+    "deltas": null
+  },
+  {
+    "case_key": "e5722e89378a4fae9c0a660d",
+    "source_uid": "male_pipa_1",
+    "contrast": "ALTERNATIVE_TIMING_ONLY",
+    "left": "alternative_GTWLocal",
+    "right": "alternative_Uniform",
+    "classification": "UNAVAILABLE",
+    "deltas": null
+  },
+  {
+    "case_key": "b7b2ddb39b2addc9619fc709",
+    "source_uid": "male_pipa_2",
+    "contrast": "TIMING_ONLY",
+    "left": "original_GTWLocal",
+    "right": "original_Uniform",
+    "classification": "VALID_DISTINCT",
+    "deltas": {
+      "BAS3D22": -0.041832030446520424,
+      "GTW_reference_cost": -0.004176281844555305,
+      "FK_D2_q95": 0.34943421580296885,
+      "FK_D3_q95": 19.39733288144066,
+      "SO3_transported_acceleration": 1.548079661125545,
+      "longest_low_seconds": 0.3999999999999999,
+      "mapped_source_low_seconds": 0.3974078621338224,
+      "MotionCritic": null,
+      "quality_winner": null
+    }
+  },
+  {
+    "case_key": "b7b2ddb39b2addc9619fc709",
+    "source_uid": "male_pipa_2",
+    "contrast": "SOURCE_ONLY_UNIFORM",
+    "left": "alternative_Uniform",
+    "right": "original_Uniform",
+    "classification": "UNAVAILABLE",
+    "deltas": null
+  },
+  {
+    "case_key": "b7b2ddb39b2addc9619fc709",
+    "source_uid": "male_pipa_2",
+    "contrast": "ALTERNATIVE_TIMING_ONLY",
+    "left": "alternative_GTWLocal",
+    "right": "alternative_Uniform",
+    "classification": "UNAVAILABLE",
+    "deltas": null
+  },
+  {
+    "case_key": "f98054618c10bac0a98674d3",
+    "source_uid": "male_ribbon",
+    "contrast": "TIMING_ONLY",
+    "left": "original_GTWLocal",
+    "right": "original_Uniform",
+    "classification": "UNAVAILABLE",
+    "deltas": null
+  },
+  {
+    "case_key": "f98054618c10bac0a98674d3",
+    "source_uid": "male_ribbon",
+    "contrast": "SOURCE_ONLY_UNIFORM",
+    "left": "alternative_Uniform",
+    "right": "original_Uniform",
+    "classification": "UNAVAILABLE",
+    "deltas": null
+  },
+  {
+    "case_key": "f98054618c10bac0a98674d3",
+    "source_uid": "male_ribbon",
+    "contrast": "ALTERNATIVE_TIMING_ONLY",
+    "left": "alternative_GTWLocal",
+    "right": "alternative_Uniform",
+    "classification": "UNAVAILABLE",
+    "deltas": null
+  }
+]
