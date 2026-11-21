@@ -1,0 +1,50 @@
+{
+  "binding": {
+    "code": {
+      "__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "baselines.py": "a1f0e494ca39f8afe32ff979b27d4dd3597ed55c9d55f0922f828c58b5870f50",
+      "common.py": "d6b077e919fb24c94a44de6158d92a66773dc52de4b83af41a504707c2234e27",
+      "protocol.json": "114cab76a3b2ce45c039a3b9712c93606340500e4a0b5c3a672584577758bbf4",
+      "study.py": "f7811913dd17bba2fde920a734e22d0fb515c31bd2bf41324e25111eb6d0f78f",
+      "test_contracts.py": "a5714282100c3fb35f912a4dd2f6c42f375820f6a0a7d51f34e411f2565c4683",
+      "view.py": "c17a6908615327c0a8064f9446a341ec925a48e1a9a9744c9ab4b0099d3595de",
+      "viewer.html": "202d56c9b83a57ddaf65b7123a35cc4a99d6d9cf35a2790809db6845ddd99b41"
+    },
+    "dependencies": {
+      "paper1_support/study.py": "bbd4196e631be0b2679e7e3f55cd67b19fb19033fa5d4bdb1632e13f77352df2",
+      "paper1_support/contracts.py": "b223b48cecbedce6f67830129469461ca0be848052ce4c449fc25fec266ca679",
+      "hold_timing/metrics.py": "45ace4b8d52b19af6e68f60b2b0168f1babbf47acbcd6a24f800c6b1ed3f1cd6",
+      "gtw_kinematic_baseline/features.py": "d6920145393c340d571405833837f26dd49aeaffb6a0c216db1d479683e246ac",
+      "complete_r36/core.py": "03f296665e48ca2fa2ef8a866baaf2b4b786afeb22f468b6faeedac7225e9901",
+      "duration_r62/cross_source.py": "d2a5dc233621d3f653ddd2a3f2721d7edb3340f580fe08704a06ffef549e8dce",
+      "manifold_bridge_r47/geometry.py": "4646ff82c2775b32e893335abe0aac43cdd4dfbabc643d230e8985a347adea7f",
+      "paper1_auto_eval/experiment.py": "0459c9031404d4550044babbcbdeb8e298b9b05d771edae76a3013d770b0cea2",
+      "paper1_auto_eval/music.py": "e7894bbf0fc34f3f70a9054f7b6dc3d9ee8f00c719f5114bf04da29a55147777",
+      "paper1_auto_eval/observability.py": "d35c5c414c603ff8f5c8b8d8f905f39bb84f1e4274d8975b2aca1fa511279784",
+      "paper1_auto_eval/q02_protocol.json": "36ce5cb53cb7821018a04699189f7a8a197429458b05600649ef1a6e483455a2"
+    }
+  },
+  "parents": {
+    "Q01": {
+      "controls": "65c971713b2df43154fe27ff5646e701bba1403b7960553a5444f5731739043d",
+      "preview": "1ebb89d6bd734f9afa86172d40667ec6264c5a0e4ec9e56fa793e76d644c0173"
+    },
+    "Q02_manifest": "2f3b18747725664b947a440f9fdbd49b4f11628f2ac9017a9a355c558c9f56d5",
+    "Q02_files": {
+      "motion_scores.json": "23a3a07503cda60b6048c7e13598fb98a28bf81a72377ed3412bd6f884dcc349",
+      "paired_scores.json": "c75ebe2dd6d29817f05cb26a15a8bf273c9041f8a19a2c95fbeb87960909673b",
+      "paired_summary.json": "8c269dbb50e83497582ed98ba6fc1f4dadc9d025cf93c362f0d881313426aa4c",
+      "qualification.json": "34af5266cf5d151f5e3523d9b6efed8b83cb0d0840c8129df5b582c7df6aa688",
+      "sensitivity.json": "70a59c0350146170c904df3eb4d7a5a551f4399c77cd0fe88a338193c15198f8"
+    },
+    "preflight": "9126606ab2477dac5e1c2327ed5c5f04d77b2bc7dae3d6136c3b71c70eb9db41"
+  },
+  "files": {
+    "arrays.npz": "334d13942f8d941fd121eed7719fa78637ff45ea1449dde0f6b0f490b5fd624d",
+    "candidates.json": "278f7a8cce72c2b836a3e12358e6af9d2c79492bbe703edc5052d1993f771341",
+    "decisions.json": "8ba7a7aa7f6b0a6bae5e59c4ee6026abd28fc2de0fdaf2975e97e4946b934cbe",
+    "geometry_budget.json": "230c3652573dfb80de2e48ccd9e2e35308e9875d1b2f3342990f45873e364167",
+    "registration.json": "af8f3317f5cc3d02cbf551c5e163d5bcfd66622f67a73e952513b1685ad86bf9",
+    "rejected.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+  }
+}

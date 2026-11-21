@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "fresh_process": true,
+  "arrays_exact": true,
+  "candidate_ledger_exact": true,
+  "scalar_differences": [],
+  "parents_unchanged": {
+    "Q01": {
+      "controls": "65c971713b2df43154fe27ff5646e701bba1403b7960553a5444f5731739043d",
+      "preview": "1ebb89d6bd734f9afa86172d40667ec6264c5a0e4ec9e56fa793e76d644c0173"
+    },
+    "Q02_manifest": "2f3b18747725664b947a440f9fdbd49b4f11628f2ac9017a9a355c558c9f56d5",
+    "Q02_files": {
+      "motion_scores.json": "23a3a07503cda60b6048c7e13598fb98a28bf81a72377ed3412bd6f884dcc349",
+      "paired_scores.json": "c75ebe2dd6d29817f05cb26a15a8bf273c9041f8a19a2c95fbeb87960909673b",
+      "paired_summary.json": "8c269dbb50e83497582ed98ba6fc1f4dadc9d025cf93c362f0d881313426aa4c",
+      "qualification.json": "34af5266cf5d151f5e3523d9b6efed8b83cb0d0840c8129df5b582c7df6aa688",
+      "sensitivity.json": "70a59c0350146170c904df3eb4d7a5a551f4399c77cd0fe88a338193c15198f8"
+    },
+    "preflight": "9126606ab2477dac5e1c2327ed5c5f04d77b2bc7dae3d6136c3b71c70eb9db41"
+  },
+  "new_training_steps": 0,
+  "can_route": false
+}

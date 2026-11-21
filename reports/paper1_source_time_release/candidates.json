@@ -1,0 +1,4216 @@
+[
+  {
+    "uid": "3194d3cec9cf69a5b5f2e8cdffa661fe1d0f78e8ba02267ccddf47298f23da7c",
+    "case_key": "f8d91db44c816c9c6b18cfb8",
+    "source_order": 0,
+    "source_uid": "female_FeiTian",
+    "source_interval": [
+      2377,
+      2660
+    ],
+    "labels": [
+      "Uniform"
+    ],
+    "GTWLocal": 0.26076829945812946,
+    "mapped_low_seconds": 2.3165484633569626,
+    "moving_support_seconds": 5.650118203309704,
+    "normalized_clock_RMS": 0.0,
+    "max_clock_shift_frames": 0.0,
+    "anchor_source_frame": 2608,
+    "anchor_target_frame": 195.7765957446808,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "47696415f36ac9ae552bbb59c11f26d6440f57af962bc3b456b7bb870ba3700c",
+      "cache_hit": false,
+      "actual_geometry_calls": 1,
+      "bridge_sha256": "977d5f820d9dd25b5ab8e8c45d2359d0024db98a32606daa4ec10afbdf42c33e",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 2.8880106288412657,
+        "gap_D3": 38.50905294143687,
+        "boundary_D3": 49.22554351253679,
+        "sampled_boundary_rate_jump": 0.09939996724038794,
+        "sampled_boundary_acc_jump": 2.4258665626571054,
+        "shoulder_wrist_min_m": 0.39324999641367536,
+        "wrist_separation_max_m": 0.39387351069354276,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "f6f1923bf0d412f2988822ea3550a04da7f06a5c96bcc3580ef12643c3af9b6c",
+    "clock_sha256": "c897d7408d1a3b8078984920b4e39a847895ad34507db78b35259072c229086c",
+    "full_rotation_sha256": "d63f76c9477e2ef1ed3f3936f73d353a16ad5c58bed24f154676da15aa06a79a",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 240
+  },
+  {
+    "uid": "c4dc6df7880649f6a9478b157579d5be9d508ae560dc88f1ad0026f67fbf9778",
+    "case_key": "f8d91db44c816c9c6b18cfb8",
+    "source_order": 0,
+    "source_uid": "female_FeiTian",
+    "source_interval": [
+      2377,
+      2660
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.2874542879641418,
+    "mapped_low_seconds": 2.2893600632809132,
+    "moving_support_seconds": 5.6773066033857535,
+    "normalized_clock_RMS": 0.034834782166255754,
+    "max_clock_shift_frames": 14.158995815899743,
+    "anchor_source_frame": 2608,
+    "anchor_target_frame": 183.8186189629888,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "47696415f36ac9ae552bbb59c11f26d6440f57af962bc3b456b7bb870ba3700c",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "977d5f820d9dd25b5ab8e8c45d2359d0024db98a32606daa4ec10afbdf42c33e",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 2.8880106288412657,
+        "gap_D3": 38.50905294143687,
+        "boundary_D3": 49.22554351253679,
+        "sampled_boundary_rate_jump": 0.09939996724038794,
+        "sampled_boundary_acc_jump": 2.4258665626571054,
+        "shoulder_wrist_min_m": 0.39324999641367536,
+        "wrist_separation_max_m": 0.39387351069354276,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "7e6614c8cebcabc0469b473f29d76ec3be1baa8b1a9b94d72b2f52be17172c69",
+    "clock_sha256": "a087620ffb80f261085b8a97a86fc11ba0c0e89374975715e41e34ec95421d57",
+    "full_rotation_sha256": "af80a74240a2a115d351a66d9c41a410acc5d2ddebe430752378216ab5e169c0",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 240
+  },
+  {
+    "uid": "19f96dcf05e06ba3efb985c746aa0336031d8e09b18f1b26970463089dce82ed",
+    "case_key": "f8d91db44c816c9c6b18cfb8",
+    "source_order": 0,
+    "source_uid": "female_FeiTian",
+    "source_interval": [
+      2377,
+      2660
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.2734939514553077,
+    "mapped_low_seconds": 2.488159592178225,
+    "moving_support_seconds": 5.478507074488442,
+    "normalized_clock_RMS": 0.029314265997454025,
+    "max_clock_shift_frames": 14.158196098541794,
+    "anchor_source_frame": 2608,
+    "anchor_target_frame": 189.78321956386023,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "47696415f36ac9ae552bbb59c11f26d6440f57af962bc3b456b7bb870ba3700c",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "977d5f820d9dd25b5ab8e8c45d2359d0024db98a32606daa4ec10afbdf42c33e",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 2.8880106288412657,
+        "gap_D3": 38.50905294143687,
+        "boundary_D3": 49.22554351253679,
+        "sampled_boundary_rate_jump": 0.09939996724038794,
+        "sampled_boundary_acc_jump": 2.4258665626571054,
+        "shoulder_wrist_min_m": 0.39324999641367536,
+        "wrist_separation_max_m": 0.39387351069354276,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "37060e2101588e33a24050c6719a81f24b030a541c09a4f0f3c45407bf595fad",
+    "clock_sha256": "72e910ee781dc5ecae216ca6cbf0fa03bc122926dd0684313d75d233c44041bd",
+    "full_rotation_sha256": "1b26e9ddb2a9696841b0fbc805e78bea4b984f95a8e791a25e2c0c43029edc9c",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 240
+  },
+  {
+    "uid": "a5388177830d7e69ffd7c00cabfcbd2dcfce15f628d2040388e3c0a90534cc76",
+    "case_key": "f8d91db44c816c9c6b18cfb8",
+    "source_order": 0,
+    "source_uid": "female_FeiTian",
+    "source_interval": [
+      2377,
+      2660
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.2912962013774279,
+    "mapped_low_seconds": 2.686754815742071,
+    "moving_support_seconds": 5.279911850924596,
+    "normalized_clock_RMS": 0.025981035319262862,
+    "max_clock_shift_frames": 14.157535899848881,
+    "anchor_source_frame": 2608,
+    "anchor_target_frame": 195.74158433177735,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "47696415f36ac9ae552bbb59c11f26d6440f57af962bc3b456b7bb870ba3700c",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "977d5f820d9dd25b5ab8e8c45d2359d0024db98a32606daa4ec10afbdf42c33e",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 2.8880106288412657,
+        "gap_D3": 38.50905294143687,
+        "boundary_D3": 49.22554351253679,
+        "sampled_boundary_rate_jump": 0.09939996724038794,
+        "sampled_boundary_acc_jump": 2.4258665626571054,
+        "shoulder_wrist_min_m": 0.39324999641367536,
+        "wrist_separation_max_m": 0.39387351069354276,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "616c94b47969b0a9ad7e30af87eaceb2442df7559a34135d15205e14cc6410c3",
+    "clock_sha256": "9ddba4482bcb334dad6734d2c0011ea4c78b9e961517fd9fc9188449d0b8908d",
+    "full_rotation_sha256": "847f10e1064468357c4d50c87da4dbfec7ad4a096e112353b4a16a81a715b542",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 240
+  },
+  {
+    "uid": "b4ff9f4f1b522418d1cff339ef6efa6d0993575165fbb1463bcfd6d142a8caca",
+    "case_key": "f8d91db44c816c9c6b18cfb8",
+    "source_order": 0,
+    "source_uid": "female_FeiTian",
+    "source_interval": [
+      2377,
+      2660
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.27433036391046905,
+    "mapped_low_seconds": 2.1042143511129288,
+    "moving_support_seconds": 5.862452315553738,
+    "normalized_clock_RMS": 0.02465362304302298,
+    "max_clock_shift_frames": 14.098425656573,
+    "anchor_source_frame": 2608,
+    "anchor_target_frame": 183.83461474919395,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "47696415f36ac9ae552bbb59c11f26d6440f57af962bc3b456b7bb870ba3700c",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "977d5f820d9dd25b5ab8e8c45d2359d0024db98a32606daa4ec10afbdf42c33e",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 2.8880106288412657,
+        "gap_D3": 38.50905294143687,
+        "boundary_D3": 49.22554351253679,
+        "sampled_boundary_rate_jump": 0.09939996724038794,
+        "sampled_boundary_acc_jump": 2.4258665626571054,
+        "shoulder_wrist_min_m": 0.39324999641367536,
+        "wrist_separation_max_m": 0.39387351069354276,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "34e37567aac894c97608cec5cd745d7e060e3a60056bf1080a16718adc421cbb",
+    "clock_sha256": "c4416cf5729b03522cef56f04c509aaabd28fd4e5623bb2b0a18c2ce98720ac3",
+    "full_rotation_sha256": "53010b745a2961eef7b30a7407940f39b617787eea0711b4b930360adb57cd66",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 240
+  },
+  {
+    "uid": "89c5e21e3c16846cde867dbe5614366b6bd4e7c9b8c9d73d0fe3b2698da27ce5",
+    "case_key": "f8d91db44c816c9c6b18cfb8",
+    "source_order": 0,
+    "source_uid": "female_FeiTian",
+    "source_interval": [
+      2377,
+      2660
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.2585518570135543,
+    "mapped_low_seconds": 2.303026977985542,
+    "moving_support_seconds": 5.663639688681124,
+    "normalized_clock_RMS": 0.01741738520160155,
+    "max_clock_shift_frames": 7.079497907950099,
+    "anchor_source_frame": 2608,
+    "anchor_target_frame": 189.79978869652496,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "47696415f36ac9ae552bbb59c11f26d6440f57af962bc3b456b7bb870ba3700c",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "977d5f820d9dd25b5ab8e8c45d2359d0024db98a32606daa4ec10afbdf42c33e",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 2.8880106288412657,
+        "gap_D3": 38.50905294143687,
+        "boundary_D3": 49.22554351253679,
+        "sampled_boundary_rate_jump": 0.09939996724038794,
+        "sampled_boundary_acc_jump": 2.4258665626571054,
+        "shoulder_wrist_min_m": 0.39324999641367536,
+        "wrist_separation_max_m": 0.39387351069354276,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "03b36ab0954a9efeb5a36c6d964de6dbab32758699082ec8a0619b443bd54ee2",
+    "clock_sha256": "0ccdeaaa9ca669652c4b2a677c6cf3a898ba2fca91aa91b99ba336c0dee04445",
+    "full_rotation_sha256": "a0f93b2bb1c732789986c1ddbfd77893061337c28f293a5644d8c8f556d04d36",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 240
+  },
+  {
+    "uid": "9e076eb2ac2e2f64ea1344427fa4017b82dfccd76f4d8ebb4b2d5a5547d3a8a8",
+    "case_key": "f8d91db44c816c9c6b18cfb8",
+    "source_order": 0,
+    "source_uid": "female_FeiTian",
+    "source_interval": [
+      2377,
+      2660
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.2738150086696942,
+    "mapped_low_seconds": 2.5016354292642995,
+    "moving_support_seconds": 5.465031237402368,
+    "normalized_clock_RMS": 0.01299053413258416,
+    "max_clock_shift_frames": 7.078698190592149,
+    "anchor_source_frame": 2608,
+    "anchor_target_frame": 195.75868633149742,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "47696415f36ac9ae552bbb59c11f26d6440f57af962bc3b456b7bb870ba3700c",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "977d5f820d9dd25b5ab8e8c45d2359d0024db98a32606daa4ec10afbdf42c33e",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 2.8880106288412657,
+        "gap_D3": 38.50905294143687,
+        "boundary_D3": 49.22554351253679,
+        "sampled_boundary_rate_jump": 0.09939996724038794,
+        "sampled_boundary_acc_jump": 2.4258665626571054,
+        "shoulder_wrist_min_m": 0.39324999641367536,
+        "wrist_separation_max_m": 0.39387351069354276,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "20b88eb18030a42b3c6b3a45091a48a771d77d61ef942db1402a6c454796586f",
+    "clock_sha256": "d0863a8ed17ae288aa95bf06f48387131b97deb29d1fa6f1b278356d5bd99d07",
+    "full_rotation_sha256": "6eda20cce21e96b67d73bc9703627b36d236f496efa2a98db95a5c79e5b67e0c",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 240
+  },
+  {
+    "uid": "8d304c6f6b2bc97958798008e653c364b8ae7b7858bc6792caba24bd7e2a9227",
+    "case_key": "f8d91db44c816c9c6b18cfb8",
+    "source_order": 0,
+    "source_uid": "female_FeiTian",
+    "source_interval": [
+      2377,
+      2660
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.24741958399529906,
+    "mapped_low_seconds": 2.117925449088146,
+    "moving_support_seconds": 5.848741217578521,
+    "normalized_clock_RMS": 0.009214821735357611,
+    "max_clock_shift_frames": 7.045281692513981,
+    "anchor_source_frame": 2608,
+    "anchor_target_frame": 189.81707402563617,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "47696415f36ac9ae552bbb59c11f26d6440f57af962bc3b456b7bb870ba3700c",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "977d5f820d9dd25b5ab8e8c45d2359d0024db98a32606daa4ec10afbdf42c33e",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 2.8880106288412657,
+        "gap_D3": 38.50905294143687,
+        "boundary_D3": 49.22554351253679,
+        "sampled_boundary_rate_jump": 0.09939996724038794,
+        "sampled_boundary_acc_jump": 2.4258665626571054,
+        "shoulder_wrist_min_m": 0.39324999641367536,
+        "wrist_separation_max_m": 0.39387351069354276,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "9bf159e8cd7111a20888ca3928f5f39d68ee3fb1711efa2669e5049da09a2700",
+    "clock_sha256": "867362b23c31a2b89ba9ab9b675d176a86132dfc2a693ea7040025a4e0d966ba",
+    "full_rotation_sha256": "6d551e8b0201cf04cc6e94f5b6382c9dfe181373d174bfff645966b4a20e0030",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 240
+  },
+  {
+    "uid": "45c70e6aaeaafdc4bf1199e761c2a9c18e4b8a89ed1cecc6b3749f8842607acc",
+    "case_key": "f8d91db44c816c9c6b18cfb8",
+    "source_order": 0,
+    "source_uid": "female_FeiTian",
+    "source_interval": [
+      2377,
+      2660
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.2531332670828509,
+    "mapped_low_seconds": 2.131497800000969,
+    "moving_support_seconds": 5.835168866665698,
+    "normalized_clock_RMS": 0.012990584565838695,
+    "max_clock_shift_frames": 7.078509220301385,
+    "anchor_source_frame": 2608,
+    "anchor_target_frame": 195.79537113268776,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "47696415f36ac9ae552bbb59c11f26d6440f57af962bc3b456b7bb870ba3700c",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "977d5f820d9dd25b5ab8e8c45d2359d0024db98a32606daa4ec10afbdf42c33e",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 2.8880106288412657,
+        "gap_D3": 38.50905294143687,
+        "boundary_D3": 49.22554351253679,
+        "sampled_boundary_rate_jump": 0.09939996724038794,
+        "sampled_boundary_acc_jump": 2.4258665626571054,
+        "shoulder_wrist_min_m": 0.39324999641367536,
+        "wrist_separation_max_m": 0.39387351069354276,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "a05f07c631f5e29be65c7d799fa35b47bf33b0a90f0a56e3714b75343bf09f18",
+    "clock_sha256": "30a539e6dfaec1136c7e18681d757d5a07eb84773bafb3e8d7af23f87558cf89",
+    "full_rotation_sha256": "8a5e1ab835b19934f071072047a3e93c2479b6b82cd54cb57964df0a55de6245",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 240
+  },
+  {
+    "uid": "8034d7078e2f13fd4f9df3f84a8eefbd4e7783aa54892d87841c16b63ab3af30",
+    "case_key": "f8d91db44c816c9c6b18cfb8",
+    "source_order": 0,
+    "source_uid": "female_FeiTian",
+    "source_interval": [
+      2377,
+      2660
+    ],
+    "labels": [
+      "E1W"
+    ],
+    "GTWLocal": 0.30390910440583113,
+    "mapped_low_seconds": 2.140633865248235,
+    "moving_support_seconds": 5.826032801418432,
+    "normalized_clock_RMS": 0.022919194066747917,
+    "max_clock_shift_frames": 13.472803347280205,
+    "anchor_source_frame": 2608,
+    "anchor_target_frame": 195.93125000000003,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "18bc78625ee091e4d6ec0a1e8e474cdc47c00f2d7c97a5ded5806a3075c953b9",
+      "cache_hit": false,
+      "actual_geometry_calls": 1,
+      "bridge_sha256": "a7a91d879d92232ea7bda636a9524fff5b932b32ae721c064afb0ec68104408b",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 2.888446778034717,
+        "gap_D3": 38.42408693578406,
+        "boundary_D3": 48.90178612160713,
+        "sampled_boundary_rate_jump": 0.09939996724038794,
+        "sampled_boundary_acc_jump": 2.4258665626571054,
+        "shoulder_wrist_min_m": 0.39324999641367536,
+        "wrist_separation_max_m": 0.39387351069354276,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "fa2ba412faca24734a6638ea9fd9da49824595d2ded1874f161e7e493d99fd89",
+    "clock_sha256": "e0f64d12da37f337878ead605bfa8d1cf5fdaf5a5c7253bfee945d28116bdcc9",
+    "full_rotation_sha256": "c39fc32241ad4db3b6345f617b7b8f61f51cb35a916cb05aaa06fe0807fff2e1",
+    "protected_first_last_four_exact": false,
+    "source_resampling_exact": true,
+    "target_frames": 240
+  },
+  {
+    "uid": "2d8032ef7154708b118d1c866efac899a98f0e6bf6b74b17427ced4a1f5dacbf",
+    "case_key": "f8d91db44c816c9c6b18cfb8",
+    "source_order": 1,
+    "source_uid": "female_FeiTian",
+    "source_interval": [
+      4153,
+      4446
+    ],
+    "labels": [
+      "Uniform"
+    ],
+    "GTWLocal": 0.2804341708598485,
+    "mapped_low_seconds": 1.7734018264840088,
+    "moving_support_seconds": 6.193264840182658,
+    "normalized_clock_RMS": 0.0,
+    "max_clock_shift_frames": 0.0,
+    "anchor_source_frame": 4311,
+    "anchor_target_frame": 129.32191780821898,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "34998acf706bb06d726bc3982ab083a991033adcb674e4c51023f4111189b95f",
+      "cache_hit": false,
+      "actual_geometry_calls": 1,
+      "bridge_sha256": "7f4d8e586eb60b8f73cb761bc189429f7a68ac7d5cc4b7c6680ae8dc722552bc",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 1.948767145013072,
+        "gap_D3": 24.57247009316947,
+        "boundary_D3": 34.31286498870065,
+        "sampled_boundary_rate_jump": 0.09569097300424363,
+        "sampled_boundary_acc_jump": 2.3643275879818786,
+        "shoulder_wrist_min_m": 0.3932401972986545,
+        "wrist_separation_max_m": 1.2602143925981577,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "12fdac1d5de6620eaea210bb551c55eda044b62714efc7c6784e1b92054cdc11",
+    "clock_sha256": "65c68616164c48ca8ab8d5505b7d3244cceed8b571384ef893f4d05993f7d589",
+    "full_rotation_sha256": "aebb8a981ec8484fb179cd529f94d8f8e07d7c3f56cf4334f26de42e76848300",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 240
+  },
+  {
+    "uid": "b97a785b2875f08569f2aed84cc2fc02188e30434b6a837ec187a87268a4e4b2",
+    "case_key": "f8d91db44c816c9c6b18cfb8",
+    "source_order": 1,
+    "source_uid": "female_FeiTian",
+    "source_interval": [
+      4153,
+      4446
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.25952875644495493,
+    "mapped_low_seconds": 1.7734927741728195,
+    "moving_support_seconds": 6.1931738924938475,
+    "normalized_clock_RMS": 0.017236398080387703,
+    "max_clock_shift_frames": 7.330543933055196,
+    "anchor_source_frame": 4311,
+    "anchor_target_frame": 123.3339767839446,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "34998acf706bb06d726bc3982ab083a991033adcb674e4c51023f4111189b95f",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "7f4d8e586eb60b8f73cb761bc189429f7a68ac7d5cc4b7c6680ae8dc722552bc",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 1.948767145013072,
+        "gap_D3": 24.57247009316947,
+        "boundary_D3": 34.31286498870065,
+        "sampled_boundary_rate_jump": 0.09569097300424363,
+        "sampled_boundary_acc_jump": 2.3643275879818786,
+        "shoulder_wrist_min_m": 0.3932401972986545,
+        "wrist_separation_max_m": 1.2602143925981577,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "6cdcf325b4d6ae5e64a53ed3549da57f3a3142c814aee6b712dea19d3efcb125",
+    "clock_sha256": "46b733ebceabfe7105f13eaa13b54c64e3ba3b9735fac5d76409f81da43c230f",
+    "full_rotation_sha256": "9a1ab60f76a9c282f1708441376d1634c2949968b76dee542d04bb7251f1bc31",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 240
+  },
+  {
+    "uid": "b2da4cdf46b639b9001307c9e517ae5d58778d6b16a01e512022c4b5af48fbc7",
+    "case_key": "f8d91db44c816c9c6b18cfb8",
+    "source_order": 1,
+    "source_uid": "female_FeiTian",
+    "source_interval": [
+      4153,
+      4446
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.2851717626875242,
+    "mapped_low_seconds": 1.9719116560640373,
+    "moving_support_seconds": 5.9947550106026295,
+    "normalized_clock_RMS": 0.010515658406660053,
+    "max_clock_shift_frames": 7.317453008126904,
+    "anchor_source_frame": 4311,
+    "anchor_target_frame": 129.2990488040835,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "34998acf706bb06d726bc3982ab083a991033adcb674e4c51023f4111189b95f",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "7f4d8e586eb60b8f73cb761bc189429f7a68ac7d5cc4b7c6680ae8dc722552bc",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 1.948767145013072,
+        "gap_D3": 24.57247009316947,
+        "boundary_D3": 34.31286498870065,
+        "sampled_boundary_rate_jump": 0.09569097300424363,
+        "sampled_boundary_acc_jump": 2.3643275879818786,
+        "shoulder_wrist_min_m": 0.3932401972986545,
+        "wrist_separation_max_m": 1.2602143925981577,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "4433950f16cd3b1b8b348abab7962a37a4b29e515a7f8456adf2abbe5645ee3e",
+    "clock_sha256": "f1df189bfe7f5481675ce8073042039d429f104b101b3ba57ef692688cde3b65",
+    "full_rotation_sha256": "92bc9ad9ca944b187e49d97af047e0893d3b059e7d1ff6ba0cf0083d3cd6275b",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 240
+  },
+  {
+    "uid": "d2e0e27068c08d3acf83c152292a4f6959e9c6561ae886861a6ab53fc2535e34",
+    "case_key": "f8d91db44c816c9c6b18cfb8",
+    "source_order": 1,
+    "source_uid": "female_FeiTian",
+    "source_interval": [
+      4153,
+      4446
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.31458618014298273,
+    "mapped_low_seconds": 2.170462101227511,
+    "moving_support_seconds": 5.796204565439156,
+    "normalized_clock_RMS": 0.01428127531948364,
+    "max_clock_shift_frames": 7.317453008126904,
+    "anchor_source_frame": 4311,
+    "anchor_target_frame": 135.2677136252756,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "34998acf706bb06d726bc3982ab083a991033adcb674e4c51023f4111189b95f",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "7f4d8e586eb60b8f73cb761bc189429f7a68ac7d5cc4b7c6680ae8dc722552bc",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 1.948767145013072,
+        "gap_D3": 24.57247009316947,
+        "boundary_D3": 34.31286498870065,
+        "sampled_boundary_rate_jump": 0.09569097300424363,
+        "sampled_boundary_acc_jump": 2.3643275879818786,
+        "shoulder_wrist_min_m": 0.3932401972986545,
+        "wrist_separation_max_m": 1.2602143925981577,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "05b2c35c86477b6d9c190a3bd6baf82cee528fd7d5d6e561dec053ab5f9180df",
+    "clock_sha256": "86533eb7e5e471d4f302ce284d568192dc89fc8bc5f88a27d08704acc3024f40",
+    "full_rotation_sha256": "5d9c745f7a88eae7e5c4a37f967cdce77e17fa0bf966cd7f0ed62d2efd2b6184",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 240
+  },
+  {
+    "uid": "aa1c44492b14419dcd7b066b3ef89528013cbba9ea91ec3ee1d70c5a33ece475",
+    "case_key": "f8d91db44c816c9c6b18cfb8",
+    "source_order": 1,
+    "source_uid": "female_FeiTian",
+    "source_interval": [
+      4153,
+      4446
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.3093354845076857,
+    "mapped_low_seconds": 1.9718485141825088,
+    "moving_support_seconds": 5.994818152484158,
+    "normalized_clock_RMS": 0.011829835915074072,
+    "max_clock_shift_frames": 7.290683278823053,
+    "anchor_source_frame": 4311,
+    "anchor_target_frame": 135.28705732562196,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "34998acf706bb06d726bc3982ab083a991033adcb674e4c51023f4111189b95f",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "7f4d8e586eb60b8f73cb761bc189429f7a68ac7d5cc4b7c6680ae8dc722552bc",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 1.948767145013072,
+        "gap_D3": 24.57247009316947,
+        "boundary_D3": 34.31286498870065,
+        "sampled_boundary_rate_jump": 0.09569097300424363,
+        "sampled_boundary_acc_jump": 2.3643275879818786,
+        "shoulder_wrist_min_m": 0.3932401972986545,
+        "wrist_separation_max_m": 1.2602143925981577,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "3c5e75a8dec0ac7b698d7c51b8a2ee9d866768a601ffd5bfeff5187c2786d963",
+    "clock_sha256": "f482820a95fb63747c345ee2d8681ea8fed05e27e9715c96a2b7a6e7cf21d148",
+    "full_rotation_sha256": "8588d45e306421217cc020de91482efeabdca35e482c8e68075e1f94cecf4050",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 240
+  },
+  {
+    "uid": "b86b02d521aae32bea0a0e7076759bf31902481fa215794dce29a02a7c396c62",
+    "case_key": "f8d91db44c816c9c6b18cfb8",
+    "source_order": 1,
+    "source_uid": "female_FeiTian",
+    "source_interval": [
+      4153,
+      4446
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.3053857968880638,
+    "mapped_low_seconds": 1.773254156049568,
+    "moving_support_seconds": 6.193412510617099,
+    "normalized_clock_RMS": 0.01723638347435299,
+    "max_clock_shift_frames": 7.330543933055196,
+    "anchor_source_frame": 4311,
+    "anchor_target_frame": 135.30941410207353,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "34998acf706bb06d726bc3982ab083a991033adcb674e4c51023f4111189b95f",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "7f4d8e586eb60b8f73cb761bc189429f7a68ac7d5cc4b7c6680ae8dc722552bc",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 1.948767145013072,
+        "gap_D3": 24.57247009316947,
+        "boundary_D3": 34.31286498870065,
+        "sampled_boundary_rate_jump": 0.09569097300424363,
+        "sampled_boundary_acc_jump": 2.3643275879818786,
+        "shoulder_wrist_min_m": 0.3932401972986545,
+        "wrist_separation_max_m": 1.2602143925981577,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "45a630d60a1b9bf008594c995f572390fc089c0978f3d9c39c93ee3b288097f8",
+    "clock_sha256": "eb1ae01f1adf34aa9cd6e832af578389155333c12a76f89be486b40f8b55218c",
+    "full_rotation_sha256": "7180cee3db0215095815653f8950873313640ad3e001ce7cdfac9ede174ef997",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 240
+  },
+  {
+    "uid": "3cd771bab8ff4c3d8b213a25f6b2ffb3d2e85d3858343b19c9a2422204828a61",
+    "case_key": "f8d91db44c816c9c6b18cfb8",
+    "source_order": 1,
+    "source_uid": "female_FeiTian",
+    "source_interval": [
+      4153,
+      4446
+    ],
+    "labels": [
+      "E1W"
+    ],
+    "GTWLocal": 0.27391516688227596,
+    "mapped_low_seconds": 1.6944444444444404,
+    "moving_support_seconds": 6.272222222222227,
+    "normalized_clock_RMS": 0.014884686927480208,
+    "max_clock_shift_frames": 8.836820083682142,
+    "anchor_source_frame": 4311,
+    "anchor_target_frame": 122.30769230769215,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "34998acf706bb06d726bc3982ab083a991033adcb674e4c51023f4111189b95f",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "7f4d8e586eb60b8f73cb761bc189429f7a68ac7d5cc4b7c6680ae8dc722552bc",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 1.948767145013072,
+        "gap_D3": 24.57247009316947,
+        "boundary_D3": 34.31286498870065,
+        "sampled_boundary_rate_jump": 0.09569097300424363,
+        "sampled_boundary_acc_jump": 2.3643275879818786,
+        "shoulder_wrist_min_m": 0.3932401972986545,
+        "wrist_separation_max_m": 1.2602143925981577,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "c0f23cbd349f65874cd9deb8414e581af1f2ee331a8c44f609c972e431d747cb",
+    "clock_sha256": "063de577017bd79d423c1c187cbfb624fd55dda7ee8404d3a3db5fca14003af1",
+    "full_rotation_sha256": "58af74e8c976d0ec58242c26d931527415a859d04bbc47f7a0129dfb9c807974",
+    "protected_first_last_four_exact": false,
+    "source_resampling_exact": true,
+    "target_frames": 240
+  },
+  {
+    "uid": "06f34f3eab2e4d1cf700f885aaaf6f76baad772ff1bb439f94dbe04e9a86ef19",
+    "case_key": "4a69181188a9e248a0a6330b",
+    "source_order": 0,
+    "source_uid": "female_lotus",
+    "source_interval": [
+      583,
+      870
+    ],
+    "labels": [
+      "Uniform"
+    ],
+    "GTWLocal": 0.281041045023009,
+    "mapped_low_seconds": 2.144871794871797,
+    "moving_support_seconds": 5.82179487179487,
+    "normalized_clock_RMS": 0.0,
+    "max_clock_shift_frames": 0.0,
+    "anchor_source_frame": 768,
+    "anchor_target_frame": 154.59790209790214,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "973042fd03c5e8926d11acc500665708db8c1eabc674d505cf76d7bb2bd7e58b",
+      "cache_hit": false,
+      "actual_geometry_calls": 1,
+      "bridge_sha256": "2c47b0c9b4504f1fd660655d043b37c84d96ecdb328949f617a66309451d714f",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 1.1551604920512977,
+        "gap_D3": 13.56169013269324,
+        "boundary_D3": 19.503713611223507,
+        "sampled_boundary_rate_jump": 0.0483081019662291,
+        "sampled_boundary_acc_jump": 1.8258647703126731,
+        "shoulder_wrist_min_m": 0.2921086504836697,
+        "wrist_separation_max_m": 1.0283064780109838,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "88dd4e8b58643d1ca66c0e77ed0c16b503f1bf973de7677f41bbbf9f5a5006ec",
+    "clock_sha256": "1fcf7f831ae758fbc0ade5b1ef2ee0890ca6fe36dbbfc165bd68ac47690248d8",
+    "full_rotation_sha256": "8f4433d81ffc95ac9c6a8a1558e91c3014acd84c89f2ebe9b8fd6f1d449a885b",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 240
+  },
+  {
+    "uid": "4dff8faa644f5b579bbb5402fbbac4a3e614a31b4552e1065b2a6e763c553774",
+    "case_key": "4a69181188a9e248a0a6330b",
+    "source_order": 0,
+    "source_uid": "female_lotus",
+    "source_interval": [
+      583,
+      870
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.27610673519863105,
+    "mapped_low_seconds": 2.0959157433790785,
+    "moving_support_seconds": 5.870750923287588,
+    "normalized_clock_RMS": 0.016335766003147904,
+    "max_clock_shift_frames": 7.179916317991683,
+    "anchor_source_frame": 768,
+    "anchor_target_frame": 148.6148746756596,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "973042fd03c5e8926d11acc500665708db8c1eabc674d505cf76d7bb2bd7e58b",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "2c47b0c9b4504f1fd660655d043b37c84d96ecdb328949f617a66309451d714f",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 1.1551604920512977,
+        "gap_D3": 13.56169013269324,
+        "boundary_D3": 19.503713611223507,
+        "sampled_boundary_rate_jump": 0.0483081019662291,
+        "sampled_boundary_acc_jump": 1.8258647703126731,
+        "shoulder_wrist_min_m": 0.2921086504836697,
+        "wrist_separation_max_m": 1.0283064780109838,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "d5090cfb6c73d51ef1bf7293f88213bdce44d793ea48501d95add3bb5dacf20e",
+    "clock_sha256": "c897a77f5c74b552291b37f46a83e436f83be885a75b079d3c0291a51894762f",
+    "full_rotation_sha256": "c34fa81c7b6ec329bfdd4c5c42f95a387e0161ba891569957baff6195bb9ac52",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 240
+  },
+  {
+    "uid": "106e68129c8fe8a9de5603db039ce4eb3000ec05d6fa8998b7434d15805c9de9",
+    "case_key": "4a69181188a9e248a0a6330b",
+    "source_order": 0,
+    "source_uid": "female_lotus",
+    "source_interval": [
+      583,
+      870
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.28917432820381644,
+    "mapped_low_seconds": 2.293000872856791,
+    "moving_support_seconds": 5.673665793809876,
+    "normalized_clock_RMS": 0.011519289979993933,
+    "max_clock_shift_frames": 7.1364210973431454,
+    "anchor_source_frame": 768,
+    "anchor_target_frame": 154.56028447708027,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "973042fd03c5e8926d11acc500665708db8c1eabc674d505cf76d7bb2bd7e58b",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "2c47b0c9b4504f1fd660655d043b37c84d96ecdb328949f617a66309451d714f",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 1.1551604920512977,
+        "gap_D3": 13.56169013269324,
+        "boundary_D3": 19.503713611223507,
+        "sampled_boundary_rate_jump": 0.0483081019662291,
+        "sampled_boundary_acc_jump": 1.8258647703126731,
+        "shoulder_wrist_min_m": 0.2921086504836697,
+        "wrist_separation_max_m": 1.0283064780109838,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "00cfbb6701ec727e65db768ebed1608ec52249dc1661b4270037151469fb69d3",
+    "clock_sha256": "13ed06b8f1728ee72371cc2508d634069bf26b4f4ad85e09f35f2352cb81edb6",
+    "full_rotation_sha256": "67a3a1472681238d2f4cab7b128347b145d0a094396ba2ba9b51d2b8ddf33f11",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 240
+  },
+  {
+    "uid": "ef4db3f4ffb8fa69102e9723fd0691ccc298ac5160a2875406dbbc0d491a1c84",
+    "case_key": "4a69181188a9e248a0a6330b",
+    "source_order": 0,
+    "source_uid": "female_lotus",
+    "source_interval": [
+      583,
+      870
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.3098897466557635,
+    "mapped_low_seconds": 2.4903647465882717,
+    "moving_support_seconds": 5.476301920078395,
+    "normalized_clock_RMS": 0.014280574977450812,
+    "max_clock_shift_frames": 7.141627870202683,
+    "anchor_source_frame": 768,
+    "anchor_target_frame": 160.50800464557847,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "973042fd03c5e8926d11acc500665708db8c1eabc674d505cf76d7bb2bd7e58b",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "2c47b0c9b4504f1fd660655d043b37c84d96ecdb328949f617a66309451d714f",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 1.1551604920512977,
+        "gap_D3": 13.56169013269324,
+        "boundary_D3": 19.503713611223507,
+        "sampled_boundary_rate_jump": 0.0483081019662291,
+        "sampled_boundary_acc_jump": 1.8258647703126731,
+        "shoulder_wrist_min_m": 0.2921086504836697,
+        "wrist_separation_max_m": 1.0283064780109838,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "d11341f233317cbd1e8f1821c62b9f211cb00e94ab5bd7e6ab638ff7074eeba4",
+    "clock_sha256": "cae460538cf2964dcb3d9399979bff5a247e7a19705db0caf48959c680a43f6f",
+    "full_rotation_sha256": "d5c370631ce261076322d9a35bfb756355d9ea6ce32b79699c133fa5fc9f6519",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 240
+  },
+  {
+    "uid": "a42b2ad0b48212e275a8d6f146f3d1398dcc57c79bc956a6bde3d62907e2d884",
+    "case_key": "4a69181188a9e248a0a6330b",
+    "source_order": 0,
+    "source_uid": "female_lotus",
+    "source_interval": [
+      583,
+      870
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.29862152911902706,
+    "mapped_low_seconds": 2.3418692788985123,
+    "moving_support_seconds": 5.6247973877681545,
+    "normalized_clock_RMS": 0.010134140081184094,
+    "max_clock_shift_frames": 7.141627870202683,
+    "anchor_source_frame": 768,
+    "anchor_target_frame": 160.54134307159467,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "973042fd03c5e8926d11acc500665708db8c1eabc674d505cf76d7bb2bd7e58b",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "2c47b0c9b4504f1fd660655d043b37c84d96ecdb328949f617a66309451d714f",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 1.1551604920512977,
+        "gap_D3": 13.56169013269324,
+        "boundary_D3": 19.503713611223507,
+        "sampled_boundary_rate_jump": 0.0483081019662291,
+        "sampled_boundary_acc_jump": 1.8258647703126731,
+        "shoulder_wrist_min_m": 0.2921086504836697,
+        "wrist_separation_max_m": 1.0283064780109838,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "2debec6430d7f56d7451537e63a2c66ca55c4db84aaf64502322cb0b589e8b13",
+    "clock_sha256": "9690f89660b4e9e80a8099caa28b45db8ba8a73f53dd84f43776776806184920",
+    "full_rotation_sha256": "92f0c7e731f9d065faf4a89db4c0ec5a972afeb31c0490c427047aa26d09e9da",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 240
+  },
+  {
+    "uid": "0b8c45cd2223227a9ebe0ec17c3646148e64e026cde73bb30d698abbf84f9930",
+    "case_key": "4a69181188a9e248a0a6330b",
+    "source_order": 0,
+    "source_uid": "female_lotus",
+    "source_interval": [
+      583,
+      870
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.2937084197381066,
+    "mapped_low_seconds": 2.1937622496733145,
+    "moving_support_seconds": 5.772904416993352,
+    "normalized_clock_RMS": 0.016335759238037376,
+    "max_clock_shift_frames": 7.179916317991683,
+    "anchor_source_frame": 768,
+    "anchor_target_frame": 160.57936458060024,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "973042fd03c5e8926d11acc500665708db8c1eabc674d505cf76d7bb2bd7e58b",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "2c47b0c9b4504f1fd660655d043b37c84d96ecdb328949f617a66309451d714f",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 1.1551604920512977,
+        "gap_D3": 13.56169013269324,
+        "boundary_D3": 19.503713611223507,
+        "sampled_boundary_rate_jump": 0.0483081019662291,
+        "sampled_boundary_acc_jump": 1.8258647703126731,
+        "shoulder_wrist_min_m": 0.2921086504836697,
+        "wrist_separation_max_m": 1.0283064780109838,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "176438e27c69e5162aa6613af825beb25e9f72a58e16cc9d441b18b6df0398a8",
+    "clock_sha256": "3038ec3e1d063232acba841f3896c4b7c4bf9002e905434e484a47c66bd95e92",
+    "full_rotation_sha256": "4c8c2f10132084f47eb7b3ddb965630e6afa6532467305d37cfce42f0cc4fdd8",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 240
+  },
+  {
+    "uid": "bcc518412d02a3f56dc40b7daba4fd46a35c98ebbeaee8becec2440aee624b44",
+    "case_key": "4a69181188a9e248a0a6330b",
+    "source_order": 0,
+    "source_uid": "female_lotus",
+    "source_interval": [
+      583,
+      870
+    ],
+    "labels": [
+      "E1W"
+    ],
+    "GTWLocal": 0.27946343820536423,
+    "mapped_low_seconds": 2.0248973248973217,
+    "moving_support_seconds": 5.941769341769345,
+    "normalized_clock_RMS": 0.014204406471079551,
+    "max_clock_shift_frames": 8.502092050209285,
+    "anchor_source_frame": 768,
+    "anchor_target_frame": 147.71428571428572,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "eb70b851c7992ddeceacffb38c12dfcb82bc698161c2340249a0c123d18ec0d6",
+      "cache_hit": false,
+      "actual_geometry_calls": 1,
+      "bridge_sha256": "a9d9fed070aa70c032a24c103cb749144b7c91186ab7ade079b704e15f0acf22",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 1.1519645281675637,
+        "gap_D3": 13.610708060590593,
+        "boundary_D3": 19.503713611223507,
+        "sampled_boundary_rate_jump": 0.049050358491142095,
+        "sampled_boundary_acc_jump": 1.8249432900186415,
+        "shoulder_wrist_min_m": 0.2923109078404109,
+        "wrist_separation_max_m": 1.0283064780109838,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "507ca7330d6bfb14e22b6c2cc74bc880f27e0dbca77055bd3998979121702e9a",
+    "clock_sha256": "5fc73628199898ee44a0bb7f5215975fb13ce75eaa3821c7c36f4b0c05061659",
+    "full_rotation_sha256": "d1909e36fd2b2e25ba6b7f170cbb0742dc82c6a745a72bf98403c137e635a22f",
+    "protected_first_last_four_exact": false,
+    "source_resampling_exact": true,
+    "target_frames": 240
+  },
+  {
+    "uid": "c2b03c224d131e738ceddae1400cff520bcde6176d6984f91d0fef00598c1b92",
+    "case_key": "4a69181188a9e248a0a6330b",
+    "source_order": 1,
+    "source_uid": "female_lotus",
+    "source_interval": [
+      6303,
+      6596
+    ],
+    "labels": [
+      "Uniform"
+    ],
+    "GTWLocal": 0.2276600959406262,
+    "mapped_low_seconds": 2.728310502283099,
+    "moving_support_seconds": 5.238356164383568,
+    "normalized_clock_RMS": 0.0,
+    "max_clock_shift_frames": 0.0,
+    "anchor_source_frame": 6444,
+    "anchor_target_frame": 115.40753424657518,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "28275e890040856070210d916474e783d3022a3a4006a87fac896fb1b7826b34",
+      "cache_hit": false,
+      "actual_geometry_calls": 1,
+      "bridge_sha256": "3df3fa949bc3b045cb0225b6e30b9c884f849ba6f5cf1330d86ed7314ab0e735",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 1.1925360011821868,
+        "gap_D3": 13.397932081412115,
+        "boundary_D3": 19.117978307875344,
+        "sampled_boundary_rate_jump": 0.1188078609724008,
+        "sampled_boundary_acc_jump": 2.648507467566075,
+        "shoulder_wrist_min_m": 0.28454971391207057,
+        "wrist_separation_max_m": 1.028429557720545,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "28897429955fc3b94373c769af489673d697ed3b2be6723af9afa324e29c4ded",
+    "clock_sha256": "8dee2740186069a6e0407424b1b0d8aee5070fb1dd09c64d04339cde64940b55",
+    "full_rotation_sha256": "bb4e63009b68cc75652bf58529b5dd2be9a65de86300a539bb290c8704833b84",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 240
+  },
+  {
+    "uid": "e4249b6ba4fc64c77878a02dadab4c4273b08f2f38943fcbb70254d16292fc33",
+    "case_key": "4a69181188a9e248a0a6330b",
+    "source_order": 1,
+    "source_uid": "female_lotus",
+    "source_interval": [
+      6303,
+      6596
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.2200948651355552,
+    "mapped_low_seconds": 2.529952712197964,
+    "moving_support_seconds": 5.436713954468702,
+    "normalized_clock_RMS": 0.013311656325399396,
+    "max_clock_shift_frames": 7.296236233867603,
+    "anchor_source_frame": 6444,
+    "anchor_target_frame": 109.43795133174295,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "28275e890040856070210d916474e783d3022a3a4006a87fac896fb1b7826b34",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "3df3fa949bc3b045cb0225b6e30b9c884f849ba6f5cf1330d86ed7314ab0e735",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 1.1925360011821868,
+        "gap_D3": 13.397932081412115,
+        "boundary_D3": 19.117978307875344,
+        "sampled_boundary_rate_jump": 0.1188078609724008,
+        "sampled_boundary_acc_jump": 2.648507467566075,
+        "shoulder_wrist_min_m": 0.28454971391207057,
+        "wrist_separation_max_m": 1.028429557720545,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "bde766133cdd4ce9c2e8c1565db5e51a4214d7c88e73c0b4133d1c9f06669db5",
+    "clock_sha256": "ed1f421f5fe891fcc17168d86fe62b1aabb439b4fdaf70f2447fa47d952853f4",
+    "full_rotation_sha256": "7052b52c10866f6b204b7ce7e0329afeee84a0628dc3c0feedb1544d03002ba1",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 240
+  },
+  {
+    "uid": "81a9cebc2f85b11847e2b36cea7616681a71d1b012d1d2e8fc838304ca72cbbe",
+    "case_key": "4a69181188a9e248a0a6330b",
+    "source_order": 1,
+    "source_uid": "female_lotus",
+    "source_interval": [
+      6303,
+      6596
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.23762603863027973,
+    "mapped_low_seconds": 2.9267635821742166,
+    "moving_support_seconds": 5.03990308449245,
+    "normalized_clock_RMS": 0.013311663571112851,
+    "max_clock_shift_frames": 7.296537433442609,
+    "anchor_source_frame": 6444,
+    "anchor_target_frame": 121.37849386108485,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "28275e890040856070210d916474e783d3022a3a4006a87fac896fb1b7826b34",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "3df3fa949bc3b045cb0225b6e30b9c884f849ba6f5cf1330d86ed7314ab0e735",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 1.1925360011821868,
+        "gap_D3": 13.397932081412115,
+        "boundary_D3": 19.117978307875344,
+        "sampled_boundary_rate_jump": 0.1188078609724008,
+        "sampled_boundary_acc_jump": 2.648507467566075,
+        "shoulder_wrist_min_m": 0.28454971391207057,
+        "wrist_separation_max_m": 1.028429557720545,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "56069398ac2c3704b6531c4e5f1c091a80f7db8f4c02f0e73b2523fbaecbf30d",
+    "clock_sha256": "21a3c0c92b3670f11b13dd9478327975019088783724e6f932ca46e977b9d995",
+    "full_rotation_sha256": "77f540f940025ce7157c64b33a62a9bbfc8630b6c3fed3493f63170298665c79",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 240
+  },
+  {
+    "uid": "1e0a2e44fef48dc8997baa80356fbffa002965e3361ab90ecb2687b463e196cb",
+    "case_key": "4a69181188a9e248a0a6330b",
+    "source_order": 1,
+    "source_uid": "female_lotus",
+    "source_interval": [
+      6303,
+      6596
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.2249685139820196,
+    "mapped_low_seconds": 2.531046790333077,
+    "moving_support_seconds": 5.43561987633359,
+    "normalized_clock_RMS": 0.009918957701753908,
+    "max_clock_shift_frames": 7.287847519501156,
+    "anchor_source_frame": 6444,
+    "anchor_target_frame": 115.42603746361401,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "28275e890040856070210d916474e783d3022a3a4006a87fac896fb1b7826b34",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "3df3fa949bc3b045cb0225b6e30b9c884f849ba6f5cf1330d86ed7314ab0e735",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 1.1925360011821868,
+        "gap_D3": 13.397932081412115,
+        "boundary_D3": 19.117978307875344,
+        "sampled_boundary_rate_jump": 0.1188078609724008,
+        "sampled_boundary_acc_jump": 2.648507467566075,
+        "shoulder_wrist_min_m": 0.28454971391207057,
+        "wrist_separation_max_m": 1.028429557720545,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "731f1d24e29f2eea989764b1e18dec341441eb4c71a599e18d22eeb68ae2dee6",
+    "clock_sha256": "28b5ad97c43b13b07318f3657e48ea29587e672bc0391a9f4fce4b7723e4c169",
+    "full_rotation_sha256": "0e4531263a3e397c990ae4521e57fe731abbea10e2cf69bbf6381a46d4d7b0a7",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 240
+  },
+  {
+    "uid": "84ff65dca3e61c3362c3b18d641ffc34e33db4f1711f391eb81bbb5cc6319c4a",
+    "case_key": "4a69181188a9e248a0a6330b",
+    "source_order": 1,
+    "source_uid": "female_lotus",
+    "source_interval": [
+      6303,
+      6596
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.23478091188957467,
+    "mapped_low_seconds": 2.7293869821900776,
+    "moving_support_seconds": 5.237279684476589,
+    "normalized_clock_RMS": 0.01863428767008062,
+    "max_clock_shift_frames": 7.330543933055196,
+    "anchor_source_frame": 6444,
+    "anchor_target_frame": 121.39527242600236,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "28275e890040856070210d916474e783d3022a3a4006a87fac896fb1b7826b34",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "3df3fa949bc3b045cb0225b6e30b9c884f849ba6f5cf1330d86ed7314ab0e735",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 1.1925360011821868,
+        "gap_D3": 13.397932081412115,
+        "boundary_D3": 19.117978307875344,
+        "sampled_boundary_rate_jump": 0.1188078609724008,
+        "sampled_boundary_acc_jump": 2.648507467566075,
+        "shoulder_wrist_min_m": 0.28454971391207057,
+        "wrist_separation_max_m": 1.028429557720545,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "d0f0f62122b5692375c2510aadf32ca9392479421a93f44f956c314404f39860",
+    "clock_sha256": "8d25d5a4818ecf751d0a62d94301784f303014de93162999e99ccc784994bb9e",
+    "full_rotation_sha256": "15bd63cbf0296f184bce7abd3909b202653679936becac2c0338b4939b635839",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 240
+  },
+  {
+    "uid": "3479706d5a7f55f2344579ddf47bde01caa53ce9b2d3d0607bfc0beac8a9c2e2",
+    "case_key": "4a69181188a9e248a0a6330b",
+    "source_order": 1,
+    "source_uid": "female_lotus",
+    "source_interval": [
+      6303,
+      6596
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.2616696137797472,
+    "mapped_low_seconds": 2.5318952471560814,
+    "moving_support_seconds": 5.434771419510586,
+    "normalized_clock_RMS": 0.026721676486789456,
+    "max_clock_shift_frames": 14.618391452556352,
+    "anchor_source_frame": 6444,
+    "anchor_target_frame": 121.4136075755798,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "28275e890040856070210d916474e783d3022a3a4006a87fac896fb1b7826b34",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "3df3fa949bc3b045cb0225b6e30b9c884f849ba6f5cf1330d86ed7314ab0e735",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 1.1925360011821868,
+        "gap_D3": 13.397932081412115,
+        "boundary_D3": 19.117978307875344,
+        "sampled_boundary_rate_jump": 0.1188078609724008,
+        "sampled_boundary_acc_jump": 2.648507467566075,
+        "shoulder_wrist_min_m": 0.28454971391207057,
+        "wrist_separation_max_m": 1.028429557720545,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "9738164d6416150231df650ff4b3f80085da97a20cab52e2115fd0f48d751b4d",
+    "clock_sha256": "91798d94dec8d7035f4250506520e75cb727744a3e4430f32327e7e7b25bdfff",
+    "full_rotation_sha256": "778afc16aedc6f92bf5ea89e78caa991d10ebb4cd93661a0374bd60e5505e755",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 240
+  },
+  {
+    "uid": "52e5fc3093ca9f62940b2f25f09d7eb9d390aa6f61787b4a1b6f4360d7c1c35b",
+    "case_key": "4a69181188a9e248a0a6330b",
+    "source_order": 1,
+    "source_uid": "female_lotus",
+    "source_interval": [
+      6303,
+      6596
+    ],
+    "labels": [
+      "E1W"
+    ],
+    "GTWLocal": 0.2159912435064902,
+    "mapped_low_seconds": 2.5,
+    "moving_support_seconds": 5.466666666666667,
+    "normalized_clock_RMS": 0.026900839790833502,
+    "max_clock_shift_frames": 12.832635983263572,
+    "anchor_source_frame": 6444,
+    "anchor_target_frame": 106.0,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "4405524409519911f335e256e52ddf849889fda01b3f7be4fe849b89fb2dbc3f",
+      "cache_hit": false,
+      "actual_geometry_calls": 1,
+      "bridge_sha256": "60b5c6705587aa408fb2d9ad2984e4abe1e8adc7ea33357fb3d78f3c83a077ec",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 1.184590116655799,
+        "gap_D3": 13.26688790089963,
+        "boundary_D3": 19.117978307875344,
+        "sampled_boundary_rate_jump": 0.08653496422843637,
+        "sampled_boundary_acc_jump": 2.229000188209717,
+        "shoulder_wrist_min_m": 0.2841984441891199,
+        "wrist_separation_max_m": 1.028429557720545,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "f33d3fc8e70e7c37f858d2e5474d5002324a0a74572b703c20b19b7b410f443e",
+    "clock_sha256": "4596e72e6138f421795bebc6edbc9fb86d981f4e96bb1924e2d67bcf49e44b79",
+    "full_rotation_sha256": "9be02ea94bd44a2752367e658f7cb765b7bc502c7caffaaf126ab1a3af484bf6",
+    "protected_first_last_four_exact": false,
+    "source_resampling_exact": true,
+    "target_frames": 240
+  },
+  {
+    "uid": "c6a07e7f1a3b6075b5484ede9e6624c45b21da8fc418da4d010f3b00f7f54d92",
+    "case_key": "73cb91d45a9d9530430d1650",
+    "source_order": 0,
+    "source_uid": "male_meditation",
+    "source_interval": [
+      689,
+      1071
+    ],
+    "labels": [
+      "Uniform"
+    ],
+    "GTWLocal": 0.23409755092785314,
+    "mapped_low_seconds": 4.114523184601924,
+    "moving_support_seconds": 7.852143482064743,
+    "normalized_clock_RMS": 0.0,
+    "max_clock_shift_frames": 0.0,
+    "anchor_source_frame": 924,
+    "anchor_target_frame": 221.4304461942257,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "aefaf6f6d33842ec5dcda8565afb1da41d33c0f5d752feac6863e7298048d29f",
+      "cache_hit": false,
+      "actual_geometry_calls": 1,
+      "bridge_sha256": "1aeb6ad1df2080adc7d81ecc66c8efc78fd78d2c05bf58be25976faa3174e13c",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 0.8538948540104987,
+        "gap_D3": 10.050773822628702,
+        "boundary_D3": 14.524792694727974,
+        "sampled_boundary_rate_jump": 0.020204604144458932,
+        "sampled_boundary_acc_jump": 1.2334063448920412,
+        "shoulder_wrist_min_m": 0.42050012079147236,
+        "wrist_separation_max_m": 1.0506378372423806,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "42cbabb39ccc5f83515ee44012ac99f84baf0c4bfb6d90e54a306eb5cb991cb1",
+    "clock_sha256": "9137d981f1f9a3c860b128e13893e4eed52834403022f488408951915af49426",
+    "full_rotation_sha256": "76ad5ab7c1d0531876e3f01d543fefc2e13b15cb838923020c69a602b7417d51",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 360
+  },
+  {
+    "uid": "ebb4d570de5816fa825c2d310fddba2c0bb2d7ce865ee40fd5b6e8ced035a15d",
+    "case_key": "73cb91d45a9d9530430d1650",
+    "source_order": 0,
+    "source_uid": "male_meditation",
+    "source_interval": [
+      689,
+      1071
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.2863838310095648,
+    "mapped_low_seconds": 4.124295303277535,
+    "moving_support_seconds": 7.842371363389132,
+    "normalized_clock_RMS": 0.04400557360071455,
+    "max_clock_shift_frames": 25.470752089136568,
+    "anchor_source_frame": 924,
+    "anchor_target_frame": 197.47105270752166,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "aefaf6f6d33842ec5dcda8565afb1da41d33c0f5d752feac6863e7298048d29f",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "1aeb6ad1df2080adc7d81ecc66c8efc78fd78d2c05bf58be25976faa3174e13c",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 0.8538948540104987,
+        "gap_D3": 10.050773822628702,
+        "boundary_D3": 14.524792694727974,
+        "sampled_boundary_rate_jump": 0.020204604144458932,
+        "sampled_boundary_acc_jump": 1.2334063448920412,
+        "shoulder_wrist_min_m": 0.42050012079147236,
+        "wrist_separation_max_m": 1.0506378372423806,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "2ffdb85f869b7dbc55a430b16a07259b05c117ff11ad3762e0546f329df51bca",
+    "clock_sha256": "5046063f9339c9153309a5c383fd800f3a9b5e509c57676cfacdd6090b9c2c31",
+    "full_rotation_sha256": "e092d0c45a23e119e83f96b82320b83f24d21bf42cbb80478336bb4ec66f6736",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 360
+  },
+  {
+    "uid": "759712a7be42ae900b09f088a947015b25c48b7b389ad940c47da908b3522dac",
+    "case_key": "73cb91d45a9d9530430d1650",
+    "source_order": 0,
+    "source_uid": "male_meditation",
+    "source_interval": [
+      689,
+      1071
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.27655483424654365,
+    "mapped_low_seconds": 4.438362774346824,
+    "moving_support_seconds": 7.528303892319843,
+    "normalized_clock_RMS": 0.034950501392704655,
+    "max_clock_shift_frames": 25.462092168135996,
+    "anchor_source_frame": 924,
+    "anchor_target_frame": 209.40510928301543,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "aefaf6f6d33842ec5dcda8565afb1da41d33c0f5d752feac6863e7298048d29f",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "1aeb6ad1df2080adc7d81ecc66c8efc78fd78d2c05bf58be25976faa3174e13c",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 0.8538948540104987,
+        "gap_D3": 10.050773822628702,
+        "boundary_D3": 14.524792694727974,
+        "sampled_boundary_rate_jump": 0.020204604144458932,
+        "sampled_boundary_acc_jump": 1.2334063448920412,
+        "shoulder_wrist_min_m": 0.42050012079147236,
+        "wrist_separation_max_m": 1.0506378372423806,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "8e367b815cd8473dca0f19c0e2f4d3b1171a8452820f08fff3df795d2ca95484",
+    "clock_sha256": "fe75a534c9b66fbb873cb20696de88c55823ecdf343246138f794a0252e967e8",
+    "full_rotation_sha256": "73fa169ed1fef770e2dcac25d413875f7ddb1c1dd857860a11af407e806ecd83",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 360
+  },
+  {
+    "uid": "1a53f40d764df8e45d91b037d553d393b6cb3babe2d0d3d312954922eb9059a1",
+    "case_key": "73cb91d45a9d9530430d1650",
+    "source_order": 0,
+    "source_uid": "male_meditation",
+    "source_interval": [
+      689,
+      1071
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.2791941626193405,
+    "mapped_low_seconds": 4.595533382110283,
+    "moving_support_seconds": 7.371133284556384,
+    "normalized_clock_RMS": 0.03182871674330243,
+    "max_clock_shift_frames": 25.45879482122939,
+    "anchor_source_frame": 924,
+    "anchor_target_frame": 215.37546316258556,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "aefaf6f6d33842ec5dcda8565afb1da41d33c0f5d752feac6863e7298048d29f",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "1aeb6ad1df2080adc7d81ecc66c8efc78fd78d2c05bf58be25976faa3174e13c",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 0.8538948540104987,
+        "gap_D3": 10.050773822628702,
+        "boundary_D3": 14.524792694727974,
+        "sampled_boundary_rate_jump": 0.020204604144458932,
+        "sampled_boundary_acc_jump": 1.2334063448920412,
+        "shoulder_wrist_min_m": 0.42050012079147236,
+        "wrist_separation_max_m": 1.0506378372423806,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "ed95ffd28b092a0a62b91d1bd331e0760c0a0e584b2a43f7b897e1c88194067c",
+    "clock_sha256": "8b7a16da4bc570e19a776c9ad0730f982d9a8f8a3ab3818f1a12724f138c933c",
+    "full_rotation_sha256": "38d31878929aa02971661e84b06c8b1215b30f18a10e63a7287035ff6e657b4f",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 360
+  },
+  {
+    "uid": "8f1db69d3aa1c3d686ba46f7d89130d81efbfd01c291ea5b5787f60b7465c677",
+    "case_key": "73cb91d45a9d9530430d1650",
+    "source_order": 0,
+    "source_uid": "male_meditation",
+    "source_interval": [
+      689,
+      1071
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.24801050804160688,
+    "mapped_low_seconds": 4.119434659415372,
+    "moving_support_seconds": 7.847232007251295,
+    "normalized_clock_RMS": 0.022002778893462877,
+    "max_clock_shift_frames": 12.735376044568284,
+    "anchor_source_frame": 924,
+    "anchor_target_frame": 209.45149996852206,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "aefaf6f6d33842ec5dcda8565afb1da41d33c0f5d752feac6863e7298048d29f",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "1aeb6ad1df2080adc7d81ecc66c8efc78fd78d2c05bf58be25976faa3174e13c",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 0.8538948540104987,
+        "gap_D3": 10.050773822628702,
+        "boundary_D3": 14.524792694727974,
+        "sampled_boundary_rate_jump": 0.020204604144458932,
+        "sampled_boundary_acc_jump": 1.2334063448920412,
+        "shoulder_wrist_min_m": 0.42050012079147236,
+        "wrist_separation_max_m": 1.0506378372423806,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "2f0263940953e6f96779b84ad0a7e3d92981e7e961e6e02e78e3ecb5dbdbc090",
+    "clock_sha256": "9546193087a8f62c9a575ae82a3ff98dea9e3ad8c96d87109e7e5c9e2c915a7b",
+    "full_rotation_sha256": "eb788a713b2b88fda0218d6220ee61ab6c79eee2a9e1909d1778094ce31d23d0",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 360
+  },
+  {
+    "uid": "41ce6fcd566d126258f7bdf824cb6020f43470450e68604454178b6d9fd744d9",
+    "case_key": "73cb91d45a9d9530430d1650",
+    "source_order": 0,
+    "source_uid": "male_meditation",
+    "source_interval": [
+      689,
+      1071
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.24663763425018653,
+    "mapped_low_seconds": 4.276392470735079,
+    "moving_support_seconds": 7.690274195931588,
+    "normalized_clock_RMS": 0.017475253537457866,
+    "max_clock_shift_frames": 12.730636810150258,
+    "anchor_source_frame": 924,
+    "anchor_target_frame": 215.416854049111,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "aefaf6f6d33842ec5dcda8565afb1da41d33c0f5d752feac6863e7298048d29f",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "1aeb6ad1df2080adc7d81ecc66c8efc78fd78d2c05bf58be25976faa3174e13c",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 0.8538948540104987,
+        "gap_D3": 10.050773822628702,
+        "boundary_D3": 14.524792694727974,
+        "sampled_boundary_rate_jump": 0.020204604144458932,
+        "sampled_boundary_acc_jump": 1.2334063448920412,
+        "shoulder_wrist_min_m": 0.42050012079147236,
+        "wrist_separation_max_m": 1.0506378372423806,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "768f3e6370322db075a847f95885daf099760dc01b0c2328129e5a3d13361791",
+    "clock_sha256": "b8acd11f9dafc74e2b2609023f56b80cc5c9e4550775ffdec53bb32a6f4d8011",
+    "full_rotation_sha256": "a12f4e36d4d04437edab766beecbef3038752fe13bc9303cc3a0150fb67421ec",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 360
+  },
+  {
+    "uid": "88076de89d9a6f981788412872923378e046c0e80315d2c566776c2516e092b5",
+    "case_key": "73cb91d45a9d9530430d1650",
+    "source_order": 0,
+    "source_uid": "male_meditation",
+    "source_interval": [
+      689,
+      1071
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.2524100715742216,
+    "mapped_low_seconds": 4.4334554805987345,
+    "moving_support_seconds": 7.533211186067932,
+    "normalized_clock_RMS": 0.015032774995335858,
+    "max_clock_shift_frames": 12.726716123567826,
+    "anchor_source_frame": 924,
+    "anchor_target_frame": 221.38470151440023,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "aefaf6f6d33842ec5dcda8565afb1da41d33c0f5d752feac6863e7298048d29f",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "1aeb6ad1df2080adc7d81ecc66c8efc78fd78d2c05bf58be25976faa3174e13c",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 0.8538948540104987,
+        "gap_D3": 10.050773822628702,
+        "boundary_D3": 14.524792694727974,
+        "sampled_boundary_rate_jump": 0.020204604144458932,
+        "sampled_boundary_acc_jump": 1.2334063448920412,
+        "shoulder_wrist_min_m": 0.42050012079147236,
+        "wrist_separation_max_m": 1.0506378372423806,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "38ad79851983639d9490d2aae75b4db3e44e28f589d6ec3eafbb43a87a54d7c1",
+    "clock_sha256": "49a44f5fc6d7572b5748d2d3c0a1094015f9183ff6ce634a7666c47f6459b0e1",
+    "full_rotation_sha256": "58e50b0ee2857b45ed7c72d4581345180743a35cf18b8e8cff06f5adddb9286c",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 360
+  },
+  {
+    "uid": "2e7c8a93b001130cde6facb2f2bd9b92fb621d55ef46e70600333327a7b1833d",
+    "case_key": "73cb91d45a9d9530430d1650",
+    "source_order": 0,
+    "source_uid": "male_meditation",
+    "source_interval": [
+      689,
+      1071
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.26409986580517736,
+    "mapped_low_seconds": 4.590609939315215,
+    "moving_support_seconds": 7.376056727351452,
+    "normalized_clock_RMS": 0.015681908782073557,
+    "max_clock_shift_frames": 12.72341877666122,
+    "anchor_source_frame": 924,
+    "anchor_target_frame": 227.35478254905624,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "aefaf6f6d33842ec5dcda8565afb1da41d33c0f5d752feac6863e7298048d29f",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "1aeb6ad1df2080adc7d81ecc66c8efc78fd78d2c05bf58be25976faa3174e13c",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 0.8538948540104987,
+        "gap_D3": 10.050773822628702,
+        "boundary_D3": 14.524792694727974,
+        "sampled_boundary_rate_jump": 0.020204604144458932,
+        "sampled_boundary_acc_jump": 1.2334063448920412,
+        "shoulder_wrist_min_m": 0.42050012079147236,
+        "wrist_separation_max_m": 1.0506378372423806,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "1f8f28dd1c71c57b8c99f05f73ad2bf6ce78c06f4f6b4c8fe512f5d43eaac7f4",
+    "clock_sha256": "cefcc04dce71c1b71b0d4b731c84d2feda1c67fed6970bafb9bad016f7860ab7",
+    "full_rotation_sha256": "af6b98d8d7eda7c01000580e00e7a54852f220a9044d87771f80790939faed1d",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 360
+  },
+  {
+    "uid": "e82be5544de7ac17b2d1ad30a1185cee793481853ceaa4886f4ab376f4020ab1",
+    "case_key": "73cb91d45a9d9530430d1650",
+    "source_order": 0,
+    "source_uid": "male_meditation",
+    "source_interval": [
+      689,
+      1071
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.24463780509204217,
+    "mapped_low_seconds": 3.96016663206401,
+    "moving_support_seconds": 8.006500034602656,
+    "normalized_clock_RMS": 0.01687904671615694,
+    "max_clock_shift_frames": 12.685887718338108,
+    "anchor_source_frame": 924,
+    "anchor_target_frame": 209.47892158218664,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "aefaf6f6d33842ec5dcda8565afb1da41d33c0f5d752feac6863e7298048d29f",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "1aeb6ad1df2080adc7d81ecc66c8efc78fd78d2c05bf58be25976faa3174e13c",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 0.8538948540104987,
+        "gap_D3": 10.050773822628702,
+        "boundary_D3": 14.524792694727974,
+        "sampled_boundary_rate_jump": 0.020204604144458932,
+        "sampled_boundary_acc_jump": 1.2334063448920412,
+        "shoulder_wrist_min_m": 0.42050012079147236,
+        "wrist_separation_max_m": 1.0506378372423806,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "e5e2909596c747699f6f06383fed214313c384bb8e3c993c97e91f28ab6a04e9",
+    "clock_sha256": "8c6a3dcdb1891f4749e7cde07eb28535e01bcb1aa4dfd8e2611b6e91d5a775f8",
+    "full_rotation_sha256": "b689ca4167d1527936188458c8dac208b8dbc56c02609138b04aff03dfa5c300",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 360
+  },
+  {
+    "uid": "35f1837f2fc33cbfdf608067abecb4fa478c5ddc1b498a4c73a2e507841e4f15",
+    "case_key": "73cb91d45a9d9530430d1650",
+    "source_order": 0,
+    "source_uid": "male_meditation",
+    "source_interval": [
+      689,
+      1071
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.2391199281022871,
+    "mapped_low_seconds": 4.116985628670584,
+    "moving_support_seconds": 7.849681037996083,
+    "normalized_clock_RMS": 0.011001387525380778,
+    "max_clock_shift_frames": 6.367688022284142,
+    "anchor_source_frame": 924,
+    "anchor_target_frame": 215.44117131038462,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "aefaf6f6d33842ec5dcda8565afb1da41d33c0f5d752feac6863e7298048d29f",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "1aeb6ad1df2080adc7d81ecc66c8efc78fd78d2c05bf58be25976faa3174e13c",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 0.8538948540104987,
+        "gap_D3": 10.050773822628702,
+        "boundary_D3": 14.524792694727974,
+        "sampled_boundary_rate_jump": 0.020204604144458932,
+        "sampled_boundary_acc_jump": 1.2334063448920412,
+        "shoulder_wrist_min_m": 0.42050012079147236,
+        "wrist_separation_max_m": 1.0506378372423806,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "b1ad54c098ec3d2a1763d2fa265db31f652f49c22b25eaa33161793d8cf35b00",
+    "clock_sha256": "4f587d9c612a98d8b64f74300846f27559e77c9379f1fc9319bf3e1ca127d0d0",
+    "full_rotation_sha256": "7cd7d469067d65856133e17bb7df2457b32c5198f90f47d170d41be6aca4c21c",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 360
+  },
+  {
+    "uid": "ee76d096d64ae34de2faa36b9c8734a71d6d645aeda4eaa0aebf2bdc90e4e77d",
+    "case_key": "73cb91d45a9d9530430d1650",
+    "source_order": 0,
+    "source_uid": "male_meditation",
+    "source_interval": [
+      689,
+      1071
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.24169837026153584,
+    "mapped_low_seconds": 4.273930721907852,
+    "moving_support_seconds": 7.692735944758815,
+    "normalized_clock_RMS": 0.007516394380240994,
+    "max_clock_shift_frames": 6.362948787866117,
+    "anchor_source_frame": 924,
+    "anchor_target_frame": 221.40629029814872,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "aefaf6f6d33842ec5dcda8565afb1da41d33c0f5d752feac6863e7298048d29f",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "1aeb6ad1df2080adc7d81ecc66c8efc78fd78d2c05bf58be25976faa3174e13c",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 0.8538948540104987,
+        "gap_D3": 10.050773822628702,
+        "boundary_D3": 14.524792694727974,
+        "sampled_boundary_rate_jump": 0.020204604144458932,
+        "sampled_boundary_acc_jump": 1.2334063448920412,
+        "shoulder_wrist_min_m": 0.42050012079147236,
+        "wrist_separation_max_m": 1.0506378372423806,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "0150d10c8ff57e47f9cb405286cebbea5aa2624285dc345676fa2297eeb95b62",
+    "clock_sha256": "55af22fff4495ac3fbeddcb0fc28a01b8f55db7c97c17a593f117887853982e0",
+    "full_rotation_sha256": "d7a8db132814a4c47d54d826e2ec73e759b704a3f9736edaefcad551e359b520",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 360
+  },
+  {
+    "uid": "abfe46f5a5fd0cda5c641d45403a7bd0dfb053dfb071aa75fd46a9ef808cfadd",
+    "case_key": "73cb91d45a9d9530430d1650",
+    "source_order": 0,
+    "source_uid": "male_meditation",
+    "source_interval": [
+      689,
+      1071
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.25243233751956734,
+    "mapped_low_seconds": 4.430983816597533,
+    "moving_support_seconds": 7.535682850069134,
+    "normalized_clock_RMS": 0.009555092017113836,
+    "max_clock_shift_frames": 6.359028101283684,
+    "anchor_source_frame": 924,
+    "anchor_target_frame": 227.37396339920625,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "aefaf6f6d33842ec5dcda8565afb1da41d33c0f5d752feac6863e7298048d29f",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "1aeb6ad1df2080adc7d81ecc66c8efc78fd78d2c05bf58be25976faa3174e13c",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 0.8538948540104987,
+        "gap_D3": 10.050773822628702,
+        "boundary_D3": 14.524792694727974,
+        "sampled_boundary_rate_jump": 0.020204604144458932,
+        "sampled_boundary_acc_jump": 1.2334063448920412,
+        "shoulder_wrist_min_m": 0.42050012079147236,
+        "wrist_separation_max_m": 1.0506378372423806,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "ecf876830b860afd90f9a1562444cec0e99c1733e97420d15a8b0c8fa387812b",
+    "clock_sha256": "9a0c0770a9b8ae150f6d3083efeafe4a40339c3caf66b3609fe1f9510b031f90",
+    "full_rotation_sha256": "49c0dd4264503060e019f40a19ac6926f1c850ca265ec5c7f100f0f937bfb014",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 360
+  },
+  {
+    "uid": "95bcd6277a53a72c3128ee0f7e5d103ec52aaa0155e50d11dbf9b715369417aa",
+    "case_key": "73cb91d45a9d9530430d1650",
+    "source_order": 0,
+    "source_uid": "male_meditation",
+    "source_interval": [
+      689,
+      1071
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.26517367234396805,
+    "mapped_low_seconds": 4.588130630498381,
+    "moving_support_seconds": 7.378536036168286,
+    "normalized_clock_RMS": 0.015014715191940442,
+    "max_clock_shift_frames": 12.676197548204868,
+    "anchor_source_frame": 924,
+    "anchor_target_frame": 233.34391998953382,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "aefaf6f6d33842ec5dcda8565afb1da41d33c0f5d752feac6863e7298048d29f",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "1aeb6ad1df2080adc7d81ecc66c8efc78fd78d2c05bf58be25976faa3174e13c",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 0.8538948540104987,
+        "gap_D3": 10.050773822628702,
+        "boundary_D3": 14.524792694727974,
+        "sampled_boundary_rate_jump": 0.020204604144458932,
+        "sampled_boundary_acc_jump": 1.2334063448920412,
+        "shoulder_wrist_min_m": 0.42050012079147236,
+        "wrist_separation_max_m": 1.0506378372423806,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "8cef193f841f5d200baba4dbd08f564b5399f3d7b3ea4b459297d1cab9920c0c",
+    "clock_sha256": "26cc7d56b51cc4dc3273e35ffa5d57949e16ef73206b10bffb7adcbedb29aa38",
+    "full_rotation_sha256": "393df54e753697d55980940ba12c7029541e818078c2db22900d6c517cfe12a0",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 360
+  },
+  {
+    "uid": "91b384f3f48f527089f0d0d1b19cfe448cd934fa4d631ef8119218b159e844d7",
+    "case_key": "73cb91d45a9d9530430d1650",
+    "source_order": 0,
+    "source_uid": "male_meditation",
+    "source_interval": [
+      689,
+      1071
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.23607310622905037,
+    "mapped_low_seconds": 3.957720212911446,
+    "moving_support_seconds": 8.008946453755222,
+    "normalized_clock_RMS": 0.007047610306834344,
+    "max_clock_shift_frames": 6.341887691779448,
+    "anchor_source_frame": 924,
+    "anchor_target_frame": 215.4685014316712,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "aefaf6f6d33842ec5dcda8565afb1da41d33c0f5d752feac6863e7298048d29f",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "1aeb6ad1df2080adc7d81ecc66c8efc78fd78d2c05bf58be25976faa3174e13c",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 0.8538948540104987,
+        "gap_D3": 10.050773822628702,
+        "boundary_D3": 14.524792694727974,
+        "sampled_boundary_rate_jump": 0.020204604144458932,
+        "sampled_boundary_acc_jump": 1.2334063448920412,
+        "shoulder_wrist_min_m": 0.42050012079147236,
+        "wrist_separation_max_m": 1.0506378372423806,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "8fd5d3139fb303760eeccbf07764432205a660e550f25394006bb97fac0a5c8f",
+    "clock_sha256": "292613ae1d141b8489cc3de814e9a6c32279f791d1dca20faea2e0318e2a949c",
+    "full_rotation_sha256": "ac2a174e41a95a7c575c2863b20389beb41e5af4c377bcd34af7ae80f1e51559",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 360
+  },
+  {
+    "uid": "c6986134ed9e48dedab3322b2b30b0b0449bb67a2492461a0ad09c84aa689861",
+    "case_key": "73cb91d45a9d9530430d1650",
+    "source_order": 0,
+    "source_uid": "male_meditation",
+    "source_interval": [
+      689,
+      1071
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.24155451402904216,
+    "mapped_low_seconds": 4.27145581564642,
+    "moving_support_seconds": 7.695210851020247,
+    "normalized_clock_RMS": 0.007047623397735811,
+    "max_clock_shift_frames": 6.3394796258191946,
+    "anchor_source_frame": 924,
+    "anchor_target_frame": 227.39533675918955,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "aefaf6f6d33842ec5dcda8565afb1da41d33c0f5d752feac6863e7298048d29f",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "1aeb6ad1df2080adc7d81ecc66c8efc78fd78d2c05bf58be25976faa3174e13c",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 0.8538948540104987,
+        "gap_D3": 10.050773822628702,
+        "boundary_D3": 14.524792694727974,
+        "sampled_boundary_rate_jump": 0.020204604144458932,
+        "sampled_boundary_acc_jump": 1.2334063448920412,
+        "shoulder_wrist_min_m": 0.42050012079147236,
+        "wrist_separation_max_m": 1.0506378372423806,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "1a2410b098bf215b06b4cbd766e4279d12c7db3e6109d299c1753c135c41e8f4",
+    "clock_sha256": "e1518f080573654aa3706945a4ce0bd8b1d3a0dbe25dc2dd001538648acf0b10",
+    "full_rotation_sha256": "3d75a760c08f90e9dfffa6ecec19864ff18dc995a51abdd2df8ed0b317dd2ca7",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 360
+  },
+  {
+    "uid": "e97fb26af74e939a8a584526a1cc3e0624e9c1b735d5ed7074626e2aa263c431",
+    "case_key": "73cb91d45a9d9530430d1650",
+    "source_order": 0,
+    "source_uid": "male_meditation",
+    "source_interval": [
+      689,
+      1071
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.2532894610450584,
+    "mapped_low_seconds": 4.428499298537911,
+    "moving_support_seconds": 7.5381673681287555,
+    "normalized_clock_RMS": 0.014095255322292246,
+    "max_clock_shift_frames": 12.676197548204868,
+    "anchor_source_frame": 924,
+    "anchor_target_frame": 233.36284382626687,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "aefaf6f6d33842ec5dcda8565afb1da41d33c0f5d752feac6863e7298048d29f",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "1aeb6ad1df2080adc7d81ecc66c8efc78fd78d2c05bf58be25976faa3174e13c",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 0.8538948540104987,
+        "gap_D3": 10.050773822628702,
+        "boundary_D3": 14.524792694727974,
+        "sampled_boundary_rate_jump": 0.020204604144458932,
+        "sampled_boundary_acc_jump": 1.2334063448920412,
+        "shoulder_wrist_min_m": 0.42050012079147236,
+        "wrist_separation_max_m": 1.0506378372423806,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "9a23c4a37affbd2d64ddb908b5dc4849a3aa43790d8b4b01dc302a53d5949644",
+    "clock_sha256": "3338efc0b25cc1bd6b83df6f102789592bf7886be6c8ec4843f0628eb2f24fb0",
+    "full_rotation_sha256": "b053b6787838c32875840ae8cca289191d4761296669a0ea67c0974f3a387582",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 360
+  },
+  {
+    "uid": "ebbe6aee06e6d180c53ca7ffe3c495114c51a8dc595c08dc936cbc4bc6c6d90e",
+    "case_key": "73cb91d45a9d9530430d1650",
+    "source_order": 0,
+    "source_uid": "male_meditation",
+    "source_interval": [
+      689,
+      1071
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.23358810477936912,
+    "mapped_low_seconds": 3.9552593770505684,
+    "moving_support_seconds": 8.011407289616098,
+    "normalized_clock_RMS": 0.0075164144413736094,
+    "max_clock_shift_frames": 6.361844021651905,
+    "anchor_source_frame": 924,
+    "anchor_target_frame": 221.45765602793364,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "aefaf6f6d33842ec5dcda8565afb1da41d33c0f5d752feac6863e7298048d29f",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "1aeb6ad1df2080adc7d81ecc66c8efc78fd78d2c05bf58be25976faa3174e13c",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 0.8538948540104987,
+        "gap_D3": 10.050773822628702,
+        "boundary_D3": 14.524792694727974,
+        "sampled_boundary_rate_jump": 0.020204604144458932,
+        "sampled_boundary_acc_jump": 1.2334063448920412,
+        "shoulder_wrist_min_m": 0.42050012079147236,
+        "wrist_separation_max_m": 1.0506378372423806,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "cd8ee7cc1818fb7173d0eec6433ad97dd87594838061b4c8d71dcaaaa4efe110",
+    "clock_sha256": "04d53f5322ffb674e09099aef23b845c950f679029cf3ee6ed3c17edd2ccd6d4",
+    "full_rotation_sha256": "cc92b7f6e0c2bbc13926e477698caa76257ac4674d763861dbefb2998e8a7944",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 360
+  },
+  {
+    "uid": "97abd79457043b2ebeffad9a2f7895e8e67cb49c837c7e9f30949da07128647a",
+    "case_key": "73cb91d45a9d9530430d1650",
+    "source_order": 0,
+    "source_uid": "male_meditation",
+    "source_interval": [
+      689,
+      1071
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.23621792280492587,
+    "mapped_low_seconds": 4.1120465524775565,
+    "moving_support_seconds": 7.85462011418911,
+    "normalized_clock_RMS": 0.011001383698053677,
+    "max_clock_shift_frames": 6.367688022284256,
+    "anchor_source_frame": 924,
+    "anchor_target_frame": 227.41930134675258,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "aefaf6f6d33842ec5dcda8565afb1da41d33c0f5d752feac6863e7298048d29f",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "1aeb6ad1df2080adc7d81ecc66c8efc78fd78d2c05bf58be25976faa3174e13c",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 0.8538948540104987,
+        "gap_D3": 10.050773822628702,
+        "boundary_D3": 14.524792694727974,
+        "sampled_boundary_rate_jump": 0.020204604144458932,
+        "sampled_boundary_acc_jump": 1.2334063448920412,
+        "shoulder_wrist_min_m": 0.42050012079147236,
+        "wrist_separation_max_m": 1.0506378372423806,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "651bb62715744e8727c044e44c74170a2386cc59c154644b8a97e2f9826634ff",
+    "clock_sha256": "b15d6387d43babeba296b479c87a679818a8bf7803bbeb2f497e6a2fe6f6c17f",
+    "full_rotation_sha256": "961b7542766f7634a447dae9fbb8a787b21800931fad57bc513ee8a237041bbf",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 360
+  },
+  {
+    "uid": "ec802812ed45a027464dfee47508fac80356929bd8b498194496fa5b20245978",
+    "case_key": "73cb91d45a9d9530430d1650",
+    "source_order": 0,
+    "source_uid": "male_meditation",
+    "source_interval": [
+      689,
+      1071
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.24448241595736342,
+    "mapped_low_seconds": 4.268967020090894,
+    "moving_support_seconds": 7.6976996465757725,
+    "normalized_clock_RMS": 0.016879059344127586,
+    "max_clock_shift_frames": 12.692196353203485,
+    "anchor_source_frame": 924,
+    "anchor_target_frame": 233.38397145275928,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "aefaf6f6d33842ec5dcda8565afb1da41d33c0f5d752feac6863e7298048d29f",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "1aeb6ad1df2080adc7d81ecc66c8efc78fd78d2c05bf58be25976faa3174e13c",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 0.8538948540104987,
+        "gap_D3": 10.050773822628702,
+        "boundary_D3": 14.524792694727974,
+        "sampled_boundary_rate_jump": 0.020204604144458932,
+        "sampled_boundary_acc_jump": 1.2334063448920412,
+        "shoulder_wrist_min_m": 0.42050012079147236,
+        "wrist_separation_max_m": 1.0506378372423806,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "b658eb97c2ddc1fa52414afabcffc72b6ebd03094a37a00bb96d1fe4d947edf7",
+    "clock_sha256": "729a679cb0f916546de0a3ced7add9ff383b31951054ae6d630fed52648faae7",
+    "full_rotation_sha256": "aee413b1a2fdb92fd12822dfa0e1bfb4e19027e801cca90313f72e27b0c778fa",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 360
+  },
+  {
+    "uid": "65b338724c8d1fe87fbfe166b90b67bd6c3792cf893a85fa7b767980e305c769",
+    "case_key": "73cb91d45a9d9530430d1650",
+    "source_order": 0,
+    "source_uid": "male_meditation",
+    "source_interval": [
+      689,
+      1071
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.2742567632069646,
+    "mapped_low_seconds": 4.583133807533702,
+    "moving_support_seconds": 7.3835328591329645,
+    "normalized_clock_RMS": 0.03017718693835587,
+    "max_clock_shift_frames": 25.36180809264988,
+    "anchor_source_frame": 924,
+    "anchor_target_frame": 245.32105937746033,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "aefaf6f6d33842ec5dcda8565afb1da41d33c0f5d752feac6863e7298048d29f",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "1aeb6ad1df2080adc7d81ecc66c8efc78fd78d2c05bf58be25976faa3174e13c",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 0.8538948540104987,
+        "gap_D3": 10.050773822628702,
+        "boundary_D3": 14.524792694727974,
+        "sampled_boundary_rate_jump": 0.020204604144458932,
+        "sampled_boundary_acc_jump": 1.2334063448920412,
+        "shoulder_wrist_min_m": 0.42050012079147236,
+        "wrist_separation_max_m": 1.0506378372423806,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "62db846d046bddac63c400c5222c63adc63bd7ebd8b874cbb68bd17d9eda3f51",
+    "clock_sha256": "2e07848a6e96386309666ffcc3572810c519fdfb3db93d86bcd3cbcb88697b8b",
+    "full_rotation_sha256": "8dccb779a0f238e7219ad5dd655d93f2c45a6ad18efb2689aff4509468b5ca05",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 360
+  },
+  {
+    "uid": "83a9a06edaa3dc407a41f70826a1679c188adad409b851c58ed49eebd5a0766b",
+    "case_key": "73cb91d45a9d9530430d1650",
+    "source_order": 0,
+    "source_uid": "male_meditation",
+    "source_interval": [
+      689,
+      1071
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.24452026959526502,
+    "mapped_low_seconds": 3.9527832400746705,
+    "moving_support_seconds": 8.013883426591995,
+    "normalized_clock_RMS": 0.01747526851019727,
+    "max_clock_shift_frames": 12.729532043936047,
+    "anchor_source_frame": 924,
+    "anchor_target_frame": 227.44635879641427,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "aefaf6f6d33842ec5dcda8565afb1da41d33c0f5d752feac6863e7298048d29f",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "1aeb6ad1df2080adc7d81ecc66c8efc78fd78d2c05bf58be25976faa3174e13c",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 0.8538948540104987,
+        "gap_D3": 10.050773822628702,
+        "boundary_D3": 14.524792694727974,
+        "sampled_boundary_rate_jump": 0.020204604144458932,
+        "sampled_boundary_acc_jump": 1.2334063448920412,
+        "shoulder_wrist_min_m": 0.42050012079147236,
+        "wrist_separation_max_m": 1.0506378372423806,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "7c47e33af15ac4dab9b7e647636f41fb240f427c7999bc3e2de125e1669678e6",
+    "clock_sha256": "ed38c55f617f4d4b35e415b13705d9000f2fdfc98909f2d3d90153d95767801d",
+    "full_rotation_sha256": "4ddad8a0acb9fd1c19be32d8302ef2b2a61a554dcf501d7302c629aa1fb8909a",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 360
+  },
+  {
+    "uid": "f31877147db6a95c48f635412beb77a725772bd9cd4662c7801b3f13ac6e9e4e",
+    "case_key": "73cb91d45a9d9530430d1650",
+    "source_order": 0,
+    "source_uid": "male_meditation",
+    "source_interval": [
+      689,
+      1071
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.2481111522879619,
+    "mapped_low_seconds": 4.109554895625843,
+    "moving_support_seconds": 7.857111771040824,
+    "normalized_clock_RMS": 0.022002763506636627,
+    "max_clock_shift_frames": 12.735376044568284,
+    "anchor_source_frame": 924,
+    "anchor_target_frame": 233.4077116366985,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "aefaf6f6d33842ec5dcda8565afb1da41d33c0f5d752feac6863e7298048d29f",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "1aeb6ad1df2080adc7d81ecc66c8efc78fd78d2c05bf58be25976faa3174e13c",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 0.8538948540104987,
+        "gap_D3": 10.050773822628702,
+        "boundary_D3": 14.524792694727974,
+        "sampled_boundary_rate_jump": 0.020204604144458932,
+        "sampled_boundary_acc_jump": 1.2334063448920412,
+        "shoulder_wrist_min_m": 0.42050012079147236,
+        "wrist_separation_max_m": 1.0506378372423806,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "d24beb5159fbbc77f2ca3ef6ab805d57dd3948bb9ef5fc232ec2d7c0179d6492",
+    "clock_sha256": "8ddae1ee37fedb6ed0812c46f2074dfdd91bd9386f67ebb3139568113a3d7e3a",
+    "full_rotation_sha256": "a0ef9a83848894777448bc45be2c7d38e7af56f0ca843395910300c60a9042cc",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 360
+  },
+  {
+    "uid": "766512c34cb52a2536e618e8ffaaecbd528f69b6775b22a7238876e13d1dcfeb",
+    "case_key": "73cb91d45a9d9530430d1650",
+    "source_order": 0,
+    "source_uid": "male_meditation",
+    "source_interval": [
+      689,
+      1071
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.27287343873749936,
+    "mapped_low_seconds": 4.42348889270279,
+    "moving_support_seconds": 7.543177773963877,
+    "normalized_clock_RMS": 0.03375812221097702,
+    "max_clock_shift_frames": 25.39185058668818,
+    "anchor_source_frame": 924,
+    "anchor_target_frame": 245.33937600774618,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "aefaf6f6d33842ec5dcda8565afb1da41d33c0f5d752feac6863e7298048d29f",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "1aeb6ad1df2080adc7d81ecc66c8efc78fd78d2c05bf58be25976faa3174e13c",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 0.8538948540104987,
+        "gap_D3": 10.050773822628702,
+        "boundary_D3": 14.524792694727974,
+        "sampled_boundary_rate_jump": 0.020204604144458932,
+        "sampled_boundary_acc_jump": 1.2334063448920412,
+        "shoulder_wrist_min_m": 0.42050012079147236,
+        "wrist_separation_max_m": 1.0506378372423806,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "7cb540ca0ec9c3491e8be3a22b2fefda9e93155ebfbdbf15f53892dd5c7e06b6",
+    "clock_sha256": "a20736ca6e0de3f53b5003a35d015d3715b9ab9065fc740554737212d801761e",
+    "full_rotation_sha256": "85e3b82ea462a0901d29a3ae6f96068df5bfbf21f07235f48c650760a56097e3",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 360
+  },
+  {
+    "uid": "7f3e3796d025690232e49a0a45230fa1b5206b805d0cf8dd2e37c8806d0cfd1d",
+    "case_key": "73cb91d45a9d9530430d1650",
+    "source_order": 0,
+    "source_uid": "male_meditation",
+    "source_interval": [
+      689,
+      1071
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.282393672894614,
+    "mapped_low_seconds": 4.104522812731748,
+    "moving_support_seconds": 7.862143853934919,
+    "normalized_clock_RMS": 0.04400551078001344,
+    "max_clock_shift_frames": 25.470752089136568,
+    "anchor_source_frame": 924,
+    "anchor_target_frame": 245.3830866552054,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "aefaf6f6d33842ec5dcda8565afb1da41d33c0f5d752feac6863e7298048d29f",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "1aeb6ad1df2080adc7d81ecc66c8efc78fd78d2c05bf58be25976faa3174e13c",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 0.8538948540104987,
+        "gap_D3": 10.050773822628702,
+        "boundary_D3": 14.524792694727974,
+        "sampled_boundary_rate_jump": 0.020204604144458932,
+        "sampled_boundary_acc_jump": 1.2334063448920412,
+        "shoulder_wrist_min_m": 0.42050012079147236,
+        "wrist_separation_max_m": 1.0506378372423806,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "519620a4afa0d93f7b1c0068630a9203b8ea0f77fd1eacf1aaffb3231646433d",
+    "clock_sha256": "7050d1544a55615bb22e1fe9f4dba1742118f1f38af9fb09eeae7dc17a51425a",
+    "full_rotation_sha256": "56d2d9c0ee356dea93ae201400a47218898e391cbed0b13af451874c13a1627f",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 360
+  },
+  {
+    "uid": "ef8ee16ab73b402d8275b36571db2ece50e93e7711ca5bb51b089db61a285d9a",
+    "case_key": "73cb91d45a9d9530430d1650",
+    "source_order": 0,
+    "source_uid": "male_meditation",
+    "source_interval": [
+      689,
+      1071
+    ],
+    "labels": [
+      "E1W"
+    ],
+    "GTWLocal": 0.24507087953835838,
+    "mapped_low_seconds": 3.9345615687916533,
+    "moving_support_seconds": 8.032105097875014,
+    "normalized_clock_RMS": 0.005665624291506568,
+    "max_clock_shift_frames": 7.038997214484652,
+    "anchor_source_frame": 924,
+    "anchor_target_frame": 220.51931330472107,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "04cd070263d365c76e670e7ea4f15d87e17ab3663533d072a1b4172abd2cadba",
+      "cache_hit": false,
+      "actual_geometry_calls": 1,
+      "bridge_sha256": "9d27e16466bc183698bfd3368d327fb201c6c644d81265a6dda9901db4c0f05c",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 0.8540518429675077,
+        "gap_D3": 10.050773822628702,
+        "boundary_D3": 14.524792694727974,
+        "sampled_boundary_rate_jump": 0.020204604144458932,
+        "sampled_boundary_acc_jump": 1.2334063448920412,
+        "shoulder_wrist_min_m": 0.42049848330247286,
+        "wrist_separation_max_m": 1.0506378372423806,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "8feef3217e9350c88ce527aa3e4cef6b6efc3c85d3ac6d54aebcf4afbb3a2fe2",
+    "clock_sha256": "a27c68bf47a1f2f6378f7303e834613dd72c43bb4c08150666f0a61c220bef5c",
+    "full_rotation_sha256": "7b81dba2fe38bb2bec4f61ee8c72d3653e9e9c5d581d16fe796bfe379f384332",
+    "protected_first_last_four_exact": false,
+    "source_resampling_exact": true,
+    "target_frames": 360
+  },
+  {
+    "uid": "724be2595b67dc2cabdda3df15f6d2efb8d386602e15a36535130ce701e3a2ab",
+    "case_key": "73cb91d45a9d9530430d1650",
+    "source_order": 1,
+    "source_uid": "male_meditation",
+    "source_interval": [
+      5118,
+      5476
+    ],
+    "labels": [
+      "Uniform"
+    ],
+    "GTWLocal": 0.13328779246575748,
+    "mapped_low_seconds": 2.7151260504201655,
+    "moving_support_seconds": 9.251540616246501,
+    "normalized_clock_RMS": 0.0,
+    "max_clock_shift_frames": 0.0,
+    "anchor_source_frame": 5307,
+    "anchor_target_frame": 190.0588235294116,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "ac27be180e0358243563cff70a580e4b0c8fc35f538229371c2f259e00880a8e",
+      "cache_hit": false,
+      "actual_geometry_calls": 1,
+      "bridge_sha256": "5795a2bc7d02219952431500d6856d105d4e95d45068a3e24e9e9b4635c51726",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 1.659576825495376,
+        "gap_D3": 18.079126997684547,
+        "boundary_D3": 26.04647641950808,
+        "sampled_boundary_rate_jump": 0.05010800157516631,
+        "sampled_boundary_acc_jump": 1.678142317132104,
+        "shoulder_wrist_min_m": 0.39512020386652213,
+        "wrist_separation_max_m": 1.0505475555493644,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "e03239a2abdb1405bb9828e242dfe52347275b4ca81ea1a2c63e029cb7614acb",
+    "clock_sha256": "910a8111946ff7be099d295a2553f95aa45990773a77fcbb27ffa67cb8ec4bb7",
+    "full_rotation_sha256": "de6432f5e0cb283a6d50e0d1aaf2eaab5dc04cd6293180cd7b8ab047ac57d25d",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 360
+  },
+  {
+    "uid": "773c35eb279e3fb2cde5b01aeb77bab1e20d0d4b1c76ca53d1b59192278b5861",
+    "case_key": "73cb91d45a9d9530430d1650",
+    "source_order": 1,
+    "source_uid": "male_meditation",
+    "source_interval": [
+      5118,
+      5476
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.17311147651674336,
+    "mapped_low_seconds": 2.658475000907437,
+    "moving_support_seconds": 9.30819166575923,
+    "normalized_clock_RMS": 0.045203654245317866,
+    "max_clock_shift_frames": 23.86629526462457,
+    "anchor_source_frame": 5307,
+    "anchor_target_frame": 166.06676315517402,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "ac27be180e0358243563cff70a580e4b0c8fc35f538229371c2f259e00880a8e",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "5795a2bc7d02219952431500d6856d105d4e95d45068a3e24e9e9b4635c51726",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 1.659576825495376,
+        "gap_D3": 18.079126997684547,
+        "boundary_D3": 26.04647641950808,
+        "sampled_boundary_rate_jump": 0.05010800157516631,
+        "sampled_boundary_acc_jump": 1.678142317132104,
+        "shoulder_wrist_min_m": 0.39512020386652213,
+        "wrist_separation_max_m": 1.0505475555493644,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "4e0944c9a9ec0aafed8d00d9247d53f0795ca903498e625d9184821ef74e213f",
+    "clock_sha256": "be98adcfb3b66d52bcb187d1be9d81cee5cf18656a335844fc8ec09afd068032",
+    "full_rotation_sha256": "de264e318cced9d1c04563c2220e894e514ed22826e806dd768a1343a63f5df8",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 360
+  },
+  {
+    "uid": "5b4eae9f9ca88172bddd92e454206c4a5bf60aabd54735546b55dbb4d762f225",
+    "case_key": "73cb91d45a9d9530430d1650",
+    "source_order": 1,
+    "source_uid": "male_meditation",
+    "source_interval": [
+      5118,
+      5476
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.15476509395733035,
+    "mapped_low_seconds": 3.0570244255045784,
+    "moving_support_seconds": 8.90964224116209,
+    "normalized_clock_RMS": 0.034120603798569495,
+    "max_clock_shift_frames": 23.818017418419913,
+    "anchor_source_frame": 5307,
+    "anchor_target_frame": 178.05415760931308,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "ac27be180e0358243563cff70a580e4b0c8fc35f538229371c2f259e00880a8e",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "5795a2bc7d02219952431500d6856d105d4e95d45068a3e24e9e9b4635c51726",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 1.659576825495376,
+        "gap_D3": 18.079126997684547,
+        "boundary_D3": 26.04647641950808,
+        "sampled_boundary_rate_jump": 0.05010800157516631,
+        "sampled_boundary_acc_jump": 1.678142317132104,
+        "shoulder_wrist_min_m": 0.39512020386652213,
+        "wrist_separation_max_m": 1.0505475555493644,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "2b4af2caa81570c3cd8daed47c3719649e0ffddcd6ea80ebb662f77ada85e7cc",
+    "clock_sha256": "044820d78a4bb9e368a29b482ff5683f62ebbf781752899a9e56eed805baf8b8",
+    "full_rotation_sha256": "50551298f41da08f05bbe9fb8cebd0e627ff32b1627ffb687287d32ad2e70898",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 360
+  },
+  {
+    "uid": "c95cae2e80bf6371b19bb09a43b587fcace32f993e2fed22ba8a9533ee321fc0",
+    "case_key": "73cb91d45a9d9530430d1650",
+    "source_order": 1,
+    "source_uid": "male_meditation",
+    "source_interval": [
+      5118,
+      5476
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.14874520660577942,
+    "mapped_low_seconds": 3.2564184488021386,
+    "moving_support_seconds": 8.710248217864528,
+    "normalized_clock_RMS": 0.03013331258609861,
+    "max_clock_shift_frames": 23.79879409678415,
+    "anchor_source_frame": 5307,
+    "anchor_target_frame": 184.0490430149169,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "ac27be180e0358243563cff70a580e4b0c8fc35f538229371c2f259e00880a8e",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "5795a2bc7d02219952431500d6856d105d4e95d45068a3e24e9e9b4635c51726",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 1.659576825495376,
+        "gap_D3": 18.079126997684547,
+        "boundary_D3": 26.04647641950808,
+        "sampled_boundary_rate_jump": 0.05010800157516631,
+        "sampled_boundary_acc_jump": 1.678142317132104,
+        "shoulder_wrist_min_m": 0.39512020386652213,
+        "wrist_separation_max_m": 1.0505475555493644,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "8cb707d737a5b45e212641e637e482101dc83c2cb3376c34cf545e4a537d668f",
+    "clock_sha256": "33213eb32eacb20363126a6aecb2339ef3143501e3549709f3b5eef03d0c45f3",
+    "full_rotation_sha256": "aef162983e56a6b8b0bf8c2352f660305a9f2dd5aa27d422bad65967efc4237e",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 360
+  },
+  {
+    "uid": "c5811be4f71c82164ca35997de5f7a309984c4ca9ed4943e25f49a415ba16f7c",
+    "case_key": "73cb91d45a9d9530430d1650",
+    "source_order": 1,
+    "source_uid": "male_meditation",
+    "source_interval": [
+      5118,
+      5476
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.16658993512715897,
+    "mapped_low_seconds": 2.2887597029831235,
+    "moving_support_seconds": 9.677906963683544,
+    "normalized_clock_RMS": 0.03629297627103614,
+    "max_clock_shift_frames": 23.85427396076284,
+    "anchor_source_frame": 5307,
+    "anchor_target_frame": 166.0793941429623,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "ac27be180e0358243563cff70a580e4b0c8fc35f538229371c2f259e00880a8e",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "5795a2bc7d02219952431500d6856d105d4e95d45068a3e24e9e9b4635c51726",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 1.659576825495376,
+        "gap_D3": 18.079126997684547,
+        "boundary_D3": 26.04647641950808,
+        "sampled_boundary_rate_jump": 0.05010800157516631,
+        "sampled_boundary_acc_jump": 1.678142317132104,
+        "shoulder_wrist_min_m": 0.39512020386652213,
+        "wrist_separation_max_m": 1.0505475555493644,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "a8b6df442b4f5b82b11f489c01ff5c4acab30b1d9b2491b04f92de41bd2ffd52",
+    "clock_sha256": "6f52073fa067bde8105388f47991e93bd935973428c968a85a0a0b8d7418fbd3",
+    "full_rotation_sha256": "500c70ecc242a4d21643f0e9a9ce5f42b2e292c0fbf9cd4ed925b4bd016af609",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 360
+  },
+  {
+    "uid": "aa416aade99b2dbab578bacc42b7edcafdd9ab59ca7e83320c6e829d59aba007",
+    "case_key": "73cb91d45a9d9530430d1650",
+    "source_order": 1,
+    "source_uid": "male_meditation",
+    "source_interval": [
+      5118,
+      5476
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.14616843292552237,
+    "mapped_low_seconds": 2.6868301274488324,
+    "moving_support_seconds": 9.279836539217834,
+    "normalized_clock_RMS": 0.022601834536006168,
+    "max_clock_shift_frames": 11.933147632312284,
+    "anchor_source_frame": 5307,
+    "anchor_target_frame": 178.06281015759626,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "ac27be180e0358243563cff70a580e4b0c8fc35f538229371c2f259e00880a8e",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "5795a2bc7d02219952431500d6856d105d4e95d45068a3e24e9e9b4635c51726",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 1.659576825495376,
+        "gap_D3": 18.079126997684547,
+        "boundary_D3": 26.04647641950808,
+        "sampled_boundary_rate_jump": 0.05010800157516631,
+        "sampled_boundary_acc_jump": 1.678142317132104,
+        "shoulder_wrist_min_m": 0.39512020386652213,
+        "wrist_separation_max_m": 1.0505475555493644,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "1d60cff28a8a845690aac97e83ebbf68e2a68d598eb3187663385451bf6aeb14",
+    "clock_sha256": "0c3aa94f29c6562346bdb707aaa6b612120053df2f5b7b66d83bfc679eadde97",
+    "full_rotation_sha256": "ded86909f878fadd1ac141e1345e76b410b05f2925cfda998df9309456a10c72",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 360
+  },
+  {
+    "uid": "7e2511baa5a055d458e8d4a0cfb700748e05b9a1d829b1237d0b5df167493027",
+    "case_key": "73cb91d45a9d9530430d1650",
+    "source_order": 1,
+    "source_uid": "male_meditation",
+    "source_interval": [
+      5118,
+      5476
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.13986063247689687,
+    "mapped_low_seconds": 2.886039935049304,
+    "moving_support_seconds": 9.080626731617363,
+    "normalized_clock_RMS": 0.017060303787355863,
+    "max_clock_shift_frames": 11.907112787631377,
+    "anchor_source_frame": 5307,
+    "anchor_target_frame": 184.05631306789437,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "ac27be180e0358243563cff70a580e4b0c8fc35f538229371c2f259e00880a8e",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "5795a2bc7d02219952431500d6856d105d4e95d45068a3e24e9e9b4635c51726",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 1.659576825495376,
+        "gap_D3": 18.079126997684547,
+        "boundary_D3": 26.04647641950808,
+        "sampled_boundary_rate_jump": 0.05010800157516631,
+        "sampled_boundary_acc_jump": 1.678142317132104,
+        "shoulder_wrist_min_m": 0.39512020386652213,
+        "wrist_separation_max_m": 1.0505475555493644,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "1620f18c7356f375a2db0f49abff1888361b6b7a5a7d72a6649c76ab9a31a136",
+    "clock_sha256": "328d638a493e307257564689714563aedc478dac2f3f9ebc76ae4b238eeac760",
+    "full_rotation_sha256": "7e971544821a677cd76780ef94ed33fc6db81bb0ca3f4fd158bcdbbef2223b31",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 360
+  },
+  {
+    "uid": "9b4181a4403d65f0f071fe97c0806b6b2ba4a52d0a84f78cd957f3210d406d99",
+    "case_key": "73cb91d45a9d9530430d1650",
+    "source_order": 1,
+    "source_uid": "male_meditation",
+    "source_interval": [
+      5118,
+      5476
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.1365510923181128,
+    "mapped_low_seconds": 3.0853392904168486,
+    "moving_support_seconds": 8.881327376249818,
+    "normalized_clock_RMS": 0.013911046928397803,
+    "max_clock_shift_frames": 11.884869786107629,
+    "anchor_source_frame": 5307,
+    "anchor_target_frame": 190.05069046341558,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "ac27be180e0358243563cff70a580e4b0c8fc35f538229371c2f259e00880a8e",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "5795a2bc7d02219952431500d6856d105d4e95d45068a3e24e9e9b4635c51726",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 1.659576825495376,
+        "gap_D3": 18.079126997684547,
+        "boundary_D3": 26.04647641950808,
+        "sampled_boundary_rate_jump": 0.05010800157516631,
+        "sampled_boundary_acc_jump": 1.678142317132104,
+        "shoulder_wrist_min_m": 0.39512020386652213,
+        "wrist_separation_max_m": 1.0505475555493644,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "680ff97eb822f40e784e63c3e75064d70e71747860922cecd2b9b0e44270cec4",
+    "clock_sha256": "543fbabb75dae350117d3baea6e5db88f816db9618ae54e3acab26679a991ad5",
+    "full_rotation_sha256": "e5e8e8ad5a06fef2d116ad02dea22917597e37b0fe17d04c9ddcc54b987e40b2",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 360
+  },
+  {
+    "uid": "26b2d232e79068d7dc9ffd1e8ed96a4906c6ae0b4bc1dd44fdc3eceb179d0b70",
+    "case_key": "73cb91d45a9d9530430d1650",
+    "source_order": 1,
+    "source_uid": "male_meditation",
+    "source_interval": [
+      5118,
+      5476
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.1380274247293532,
+    "mapped_low_seconds": 3.284713617356036,
+    "moving_support_seconds": 8.68195304931063,
+    "normalized_clock_RMS": 0.014772688367853405,
+    "max_clock_shift_frames": 11.865646464471865,
+    "anchor_source_frame": 5307,
+    "anchor_target_frame": 196.0457769228101,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "ac27be180e0358243563cff70a580e4b0c8fc35f538229371c2f259e00880a8e",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "5795a2bc7d02219952431500d6856d105d4e95d45068a3e24e9e9b4635c51726",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 1.659576825495376,
+        "gap_D3": 18.079126997684547,
+        "boundary_D3": 26.04647641950808,
+        "sampled_boundary_rate_jump": 0.05010800157516631,
+        "sampled_boundary_acc_jump": 1.678142317132104,
+        "shoulder_wrist_min_m": 0.39512020386652213,
+        "wrist_separation_max_m": 1.0505475555493644,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "07c47b24ad567832fb9446587a79a771f72b74e7cad521faac753aad1bdadd2c",
+    "clock_sha256": "0901b919e2ceb259deaee9eba72bc9925b56cc66371ac4c4eb4f8737ea3d735a",
+    "full_rotation_sha256": "5b5f526cc8b6473934ddf8dc429e65e0d840328f876ccb7186006604dee5bc0d",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 360
+  },
+  {
+    "uid": "a89549f694142fbce66be77853dddee8814f8182e9b6041de2437b91600a9acc",
+    "case_key": "73cb91d45a9d9530430d1650",
+    "source_order": 1,
+    "source_uid": "male_meditation",
+    "source_interval": [
+      5118,
+      5476
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.1444412488450551,
+    "mapped_low_seconds": 2.5018912136040075,
+    "moving_support_seconds": 9.464775453062659,
+    "normalized_clock_RMS": 0.0181464826634926,
+    "max_clock_shift_frames": 11.927697047218317,
+    "anchor_source_frame": 5307,
+    "anchor_target_frame": 178.06826323164537,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "ac27be180e0358243563cff70a580e4b0c8fc35f538229371c2f259e00880a8e",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "5795a2bc7d02219952431500d6856d105d4e95d45068a3e24e9e9b4635c51726",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 1.659576825495376,
+        "gap_D3": 18.079126997684547,
+        "boundary_D3": 26.04647641950808,
+        "sampled_boundary_rate_jump": 0.05010800157516631,
+        "sampled_boundary_acc_jump": 1.678142317132104,
+        "shoulder_wrist_min_m": 0.39512020386652213,
+        "wrist_separation_max_m": 1.0505475555493644,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "f99bf308efbcf8de51aaccfb10c761263d70884af9014fafe019759ca6b579b3",
+    "clock_sha256": "645656af59eb654719e18e7e7b411f3ab43ccef242cea220044098a709cb2664",
+    "full_rotation_sha256": "317a1000187a7bbf76d1f2a85b0c8e73255bb3c3d9dc86beaaea8d0a39c395ed",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 360
+  },
+  {
+    "uid": "6e180b011562ef80a21264e7f9a4f8ec0904fc490e34c48c3273a1955376a828",
+    "case_key": "73cb91d45a9d9530430d1650",
+    "source_order": 1,
+    "source_uid": "male_meditation",
+    "source_interval": [
+      5118,
+      5476
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.13732014632223175,
+    "mapped_low_seconds": 2.700985110372569,
+    "moving_support_seconds": 9.265681556294098,
+    "normalized_clock_RMS": 0.011300919001792089,
+    "max_clock_shift_frames": 5.966573816156597,
+    "anchor_source_frame": 5307,
+    "anchor_target_frame": 184.06082107409628,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "ac27be180e0358243563cff70a580e4b0c8fc35f538229371c2f259e00880a8e",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "5795a2bc7d02219952431500d6856d105d4e95d45068a3e24e9e9b4635c51726",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 1.659576825495376,
+        "gap_D3": 18.079126997684547,
+        "boundary_D3": 26.04647641950808,
+        "sampled_boundary_rate_jump": 0.05010800157516631,
+        "sampled_boundary_acc_jump": 1.678142317132104,
+        "shoulder_wrist_min_m": 0.39512020386652213,
+        "wrist_separation_max_m": 1.0505475555493644,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "c3e34d79d6f51d188285e5408658a03125e2b9df159ee677078e817dbb8fea47",
+    "clock_sha256": "93a7d5da883651bf019e8cdc2df8ff344836a25bd4a93606d9741f1d3faff6d6",
+    "full_rotation_sha256": "ff7b5e56d851e649cb31bf96ba5907ef29a645575f8bab0daea77af22416e891",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 360
+  },
+  {
+    "uid": "ed2b88d3120800aa7992631b4ba6b840d4c9a2251a026acf4da3365fcbfa362c",
+    "case_key": "73cb91d45a9d9530430d1650",
+    "source_order": 1,
+    "source_uid": "male_meditation",
+    "source_interval": [
+      5118,
+      5476
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.1338419485774366,
+    "mapped_low_seconds": 2.9001868067263588,
+    "moving_support_seconds": 9.066479859940308,
+    "normalized_clock_RMS": 0.006955522081299922,
+    "max_clock_shift_frames": 5.940538971475689,
+    "anchor_source_frame": 5307,
+    "anchor_target_frame": 190.0544549949944,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "ac27be180e0358243563cff70a580e4b0c8fc35f538229371c2f259e00880a8e",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "5795a2bc7d02219952431500d6856d105d4e95d45068a3e24e9e9b4635c51726",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 1.659576825495376,
+        "gap_D3": 18.079126997684547,
+        "boundary_D3": 26.04647641950808,
+        "sampled_boundary_rate_jump": 0.05010800157516631,
+        "sampled_boundary_acc_jump": 1.678142317132104,
+        "shoulder_wrist_min_m": 0.39512020386652213,
+        "wrist_separation_max_m": 1.0505475555493644,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "36c877f6164c0aea27b2b700a70b1b1c13c78dffd6375b0d74c26ec5f7e87ea5",
+    "clock_sha256": "f95fa1d8b0f8d29559ac6f9f20823a6ba5eef4066ee3b1118c21208bde199ec3",
+    "full_rotation_sha256": "c2d6f5c26054d7e10c12c2b7000d9c370a495701d582e4d9f5e56aeeedd3bf39",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 360
+  },
+  {
+    "uid": "21fbc0dfdb91cb1a3ecef37bc1cac33ccb9eb40567e1b8b019ba7ba2395a0149",
+    "case_key": "73cb91d45a9d9530430d1650",
+    "source_order": 1,
+    "source_uid": "male_meditation",
+    "source_interval": [
+      5118,
+      5476
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.13519962063469912,
+    "mapped_low_seconds": 3.0994778645647387,
+    "moving_support_seconds": 8.867188802101929,
+    "normalized_clock_RMS": 0.00955509726003595,
+    "max_clock_shift_frames": 5.958054196237754,
+    "anchor_source_frame": 5307,
+    "anchor_target_frame": 196.04894734090504,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "ac27be180e0358243563cff70a580e4b0c8fc35f538229371c2f259e00880a8e",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "5795a2bc7d02219952431500d6856d105d4e95d45068a3e24e9e9b4635c51726",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 1.659576825495376,
+        "gap_D3": 18.079126997684547,
+        "boundary_D3": 26.04647641950808,
+        "sampled_boundary_rate_jump": 0.05010800157516631,
+        "sampled_boundary_acc_jump": 1.678142317132104,
+        "shoulder_wrist_min_m": 0.39512020386652213,
+        "wrist_separation_max_m": 1.0505475555493644,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "0dc71fdf2a2c8426eab103fd5bd63d2062e17c520ecb34ee05df1a0ce7c4955e",
+    "clock_sha256": "a4c93614e8cfb696e214ff07af1ddfe02b81e5e1caa29bb819929e8cac0fb475",
+    "full_rotation_sha256": "a6b92c27f3e1e6cbedc207f88c0b1427f0f25100109e26ff9b263bc5b502a8ff",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 360
+  },
+  {
+    "uid": "9e0320c85222226d3421325572c962b6917b3ee3f6613efc176efbf3d135c875",
+    "case_key": "73cb91d45a9d9530430d1650",
+    "source_order": 1,
+    "source_uid": "male_meditation",
+    "source_interval": [
+      5118,
+      5476
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.13957641887652691,
+    "mapped_low_seconds": 3.2988438827520454,
+    "moving_support_seconds": 8.667822783914621,
+    "normalized_clock_RMS": 0.01601475066691976,
+    "max_clock_shift_frames": 11.92123566151713,
+    "anchor_source_frame": 5307,
+    "anchor_target_frame": 202.0441354491611,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "ac27be180e0358243563cff70a580e4b0c8fc35f538229371c2f259e00880a8e",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "5795a2bc7d02219952431500d6856d105d4e95d45068a3e24e9e9b4635c51726",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 1.659576825495376,
+        "gap_D3": 18.079126997684547,
+        "boundary_D3": 26.04647641950808,
+        "sampled_boundary_rate_jump": 0.05010800157516631,
+        "sampled_boundary_acc_jump": 1.678142317132104,
+        "shoulder_wrist_min_m": 0.39512020386652213,
+        "wrist_separation_max_m": 1.0505475555493644,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "05158eea50ea50c307ae55a0d1e09e3026f57a2a34fdffc392f23534371242ad",
+    "clock_sha256": "edfa646de272351c043bde6f020eb1ac171ba2a3a928565219d7f42769731f15",
+    "full_rotation_sha256": "7e3ff921f3647408d8a5fcc9b9fab4a6c46814a1da229e7f74b5cb3a834a93c3",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 360
+  },
+  {
+    "uid": "d46fa5bda5bd8e70f99719d7ea5b14388c306b87a587824c320e308325cc4085",
+    "case_key": "73cb91d45a9d9530430d1650",
+    "source_order": 1,
+    "source_uid": "male_meditation",
+    "source_interval": [
+      5118,
+      5476
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.14507462977589894,
+    "mapped_low_seconds": 2.3170817192367603,
+    "moving_support_seconds": 9.649584947429906,
+    "normalized_clock_RMS": 0.015636673655755277,
+    "max_clock_shift_frames": 11.921126328451464,
+    "anchor_source_frame": 5307,
+    "anchor_target_frame": 178.07475317907608,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "ac27be180e0358243563cff70a580e4b0c8fc35f538229371c2f259e00880a8e",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "5795a2bc7d02219952431500d6856d105d4e95d45068a3e24e9e9b4635c51726",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 1.659576825495376,
+        "gap_D3": 18.079126997684547,
+        "boundary_D3": 26.04647641950808,
+        "sampled_boundary_rate_jump": 0.05010800157516631,
+        "sampled_boundary_acc_jump": 1.678142317132104,
+        "shoulder_wrist_min_m": 0.39512020386652213,
+        "wrist_separation_max_m": 1.0505475555493644,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "623368ba08d44997ed2a012cad207102f2f414e0f16168b3989e9f37019b1d2e",
+    "clock_sha256": "c9379f52f417abcc2e21d081ad6b6a97e2efcfd6d3e666c74f0ce19d93d8b653",
+    "full_rotation_sha256": "00b8256ffcaa9ee405f9e7ee17f428391b8ecf2dfc3539f20242e621e3c15d98",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 360
+  },
+  {
+    "uid": "6b204336198a3e431558bcc4cfcdadfaa49ff278bde1b729f419901efcfeda96",
+    "case_key": "73cb91d45a9d9530430d1650",
+    "source_order": 1,
+    "source_uid": "male_meditation",
+    "source_interval": [
+      5118,
+      5476
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.1376025918264124,
+    "mapped_low_seconds": 2.5160384772701794,
+    "moving_support_seconds": 9.450628189396488,
+    "normalized_clock_RMS": 0.007818329151555,
+    "max_clock_shift_frames": 5.96112323106172,
+    "anchor_source_frame": 5307,
+    "anchor_target_frame": 184.06611364146886,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "ac27be180e0358243563cff70a580e4b0c8fc35f538229371c2f259e00880a8e",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "5795a2bc7d02219952431500d6856d105d4e95d45068a3e24e9e9b4635c51726",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 1.659576825495376,
+        "gap_D3": 18.079126997684547,
+        "boundary_D3": 26.04647641950808,
+        "sampled_boundary_rate_jump": 0.05010800157516631,
+        "sampled_boundary_acc_jump": 1.678142317132104,
+        "shoulder_wrist_min_m": 0.39512020386652213,
+        "wrist_separation_max_m": 1.0505475555493644,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "a6c5fafd89b7cf005a74206af9016f17a32f5d295fdd4b4ba9165dde1816f780",
+    "clock_sha256": "d4bf10ff6d60078548441af411e05ad3be016787b7a5ca4dd257f5b3319858f6",
+    "full_rotation_sha256": "e227619ef2caa2342664f1e0f68df89c27a5d13e59b5ecce3670c1ab87b32640",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 360
+  },
+  {
+    "uid": "9dd5726d2d6f3983143c9da5a8c71e687b90a8f51d6d740da0712f5bc8958667",
+    "case_key": "73cb91d45a9d9530430d1650",
+    "source_order": 1,
+    "source_uid": "male_meditation",
+    "source_interval": [
+      5118,
+      5476
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.13449332970865285,
+    "mapped_low_seconds": 2.914320817919063,
+    "moving_support_seconds": 9.052345848747603,
+    "normalized_clock_RMS": 0.007818318161322073,
+    "max_clock_shift_frames": 5.961979431800501,
+    "anchor_source_frame": 5307,
+    "anchor_target_frame": 196.05258959075212,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "ac27be180e0358243563cff70a580e4b0c8fc35f538229371c2f259e00880a8e",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "5795a2bc7d02219952431500d6856d105d4e95d45068a3e24e9e9b4635c51726",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 1.659576825495376,
+        "gap_D3": 18.079126997684547,
+        "boundary_D3": 26.04647641950808,
+        "sampled_boundary_rate_jump": 0.05010800157516631,
+        "sampled_boundary_acc_jump": 1.678142317132104,
+        "shoulder_wrist_min_m": 0.39512020386652213,
+        "wrist_separation_max_m": 1.0505475555493644,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "1b9fd25b25681490a96c2d739b22ad6bb52a36060a8cc9c405c8c27d8e00dacf",
+    "clock_sha256": "fee1cb00d4cfe663f037366f2c01f3ba315034da8e215007fee304e0a9cdeb60",
+    "full_rotation_sha256": "2115208868ca6b6483f13147166339028e266c767b6e9331b56efa62bb7371ac",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 360
+  },
+  {
+    "uid": "9c0e093c834667d5fabc9955c62a08756275fff1bbe3aeb3de6036e0f00bb9fa",
+    "case_key": "73cb91d45a9d9530430d1650",
+    "source_order": 1,
+    "source_uid": "male_meditation",
+    "source_interval": [
+      5118,
+      5476
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.1387518618322321,
+    "mapped_low_seconds": 3.113604625995429,
+    "moving_support_seconds": 8.853062040671238,
+    "normalized_clock_RMS": 0.015636628535984486,
+    "max_clock_shift_frames": 11.92462801239435,
+    "anchor_source_frame": 5307,
+    "anchor_target_frame": 202.0471978051742,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "ac27be180e0358243563cff70a580e4b0c8fc35f538229371c2f259e00880a8e",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "5795a2bc7d02219952431500d6856d105d4e95d45068a3e24e9e9b4635c51726",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 1.659576825495376,
+        "gap_D3": 18.079126997684547,
+        "boundary_D3": 26.04647641950808,
+        "sampled_boundary_rate_jump": 0.05010800157516631,
+        "sampled_boundary_acc_jump": 1.678142317132104,
+        "shoulder_wrist_min_m": 0.39512020386652213,
+        "wrist_separation_max_m": 1.0505475555493644,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "4604903c2c13a74959a0a2f0957e5f637e46e8d3d0e8ee9d8150b0bbc8952765",
+    "clock_sha256": "5d5c1ebffd577d5bb8bf5fc1cd2f8472078837d252e4d0e1de87b57dd105f860",
+    "full_rotation_sha256": "07d65d97d0124af271a62245dbf909edaf39d88f0f34d088daaa20f78b8dfc37",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 360
+  },
+  {
+    "uid": "b27eb99f7043dd1bb59dc5ca27ecf00da7e28dca68a8d0513c273e2a65f2f07d",
+    "case_key": "73cb91d45a9d9530430d1650",
+    "source_order": 1,
+    "source_uid": "male_meditation",
+    "source_interval": [
+      5118,
+      5476
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.14045843728288918,
+    "mapped_low_seconds": 2.3312183231854813,
+    "moving_support_seconds": 9.635448343481185,
+    "normalized_clock_RMS": 0.009555119369562026,
+    "max_clock_shift_frames": 5.9545525122948675,
+    "anchor_source_frame": 5307,
+    "anchor_target_frame": 184.0724151057504,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "ac27be180e0358243563cff70a580e4b0c8fc35f538229371c2f259e00880a8e",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "5795a2bc7d02219952431500d6856d105d4e95d45068a3e24e9e9b4635c51726",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 1.659576825495376,
+        "gap_D3": 18.079126997684547,
+        "boundary_D3": 26.04647641950808,
+        "sampled_boundary_rate_jump": 0.05010800157516631,
+        "sampled_boundary_acc_jump": 1.678142317132104,
+        "shoulder_wrist_min_m": 0.39512020386652213,
+        "wrist_separation_max_m": 1.0505475555493644,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "ee41bf7fd30e0c99e3ec08114e518f4c77b0d6ba1590ea5881befc4c7e660a7b",
+    "clock_sha256": "b1f083ed45f7a6a9e70c278a90b8565d1919586e1f86c060c20bb4c06ad0711f",
+    "full_rotation_sha256": "266ae6725d26a27c1a4fd716ed0116afecc8501d1f2a8e255749e13e3f6c08f7",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 360
+  },
+  {
+    "uid": "25d6dd985bae7aa870ca1db02cec85875e59b0a03276f90a19ae0711b5baafe4",
+    "case_key": "73cb91d45a9d9530430d1650",
+    "source_order": 1,
+    "source_uid": "male_meditation",
+    "source_interval": [
+      5118,
+      5476
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.13579530122902253,
+    "mapped_low_seconds": 2.5301711646808136,
+    "moving_support_seconds": 9.436495501985853,
+    "normalized_clock_RMS": 0.006955517170964347,
+    "max_clock_shift_frames": 5.93568716729078,
+    "anchor_source_frame": 5307,
+    "anchor_target_frame": 190.06395410980855,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "ac27be180e0358243563cff70a580e4b0c8fc35f538229371c2f259e00880a8e",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "5795a2bc7d02219952431500d6856d105d4e95d45068a3e24e9e9b4635c51726",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 1.659576825495376,
+        "gap_D3": 18.079126997684547,
+        "boundary_D3": 26.04647641950808,
+        "sampled_boundary_rate_jump": 0.05010800157516631,
+        "sampled_boundary_acc_jump": 1.678142317132104,
+        "shoulder_wrist_min_m": 0.39512020386652213,
+        "wrist_separation_max_m": 1.0505475555493644,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "d66b64b2590f8ee4d558f2873c283c2273386b74287a2458827b9a0554c3d700",
+    "clock_sha256": "a43e14a09c58e37c8b603b2eb3efd7bbbcae011eb42e927e6e7df01e23082c19",
+    "full_rotation_sha256": "d4aa726f1691616a91ba1565ba06856bbbde004ade32e7e0ce2c9463fe670cc3",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 360
+  },
+  {
+    "uid": "be4ced52d256f43e11b35aead1f870f48bea00dc1b77783b8d652ee385ed6c7b",
+    "case_key": "73cb91d45a9d9530430d1650",
+    "source_order": 1,
+    "source_uid": "male_meditation",
+    "source_interval": [
+      5118,
+      5476
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.1361485070096887,
+    "mapped_low_seconds": 2.7292536415607938,
+    "moving_support_seconds": 9.237413025105873,
+    "normalized_clock_RMS": 0.011300922350038425,
+    "max_clock_shift_frames": 5.966573816156597,
+    "anchor_source_frame": 5307,
+    "anchor_target_frame": 196.05681746943878,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "ac27be180e0358243563cff70a580e4b0c8fc35f538229371c2f259e00880a8e",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "5795a2bc7d02219952431500d6856d105d4e95d45068a3e24e9e9b4635c51726",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 1.659576825495376,
+        "gap_D3": 18.079126997684547,
+        "boundary_D3": 26.04647641950808,
+        "sampled_boundary_rate_jump": 0.05010800157516631,
+        "sampled_boundary_acc_jump": 1.678142317132104,
+        "shoulder_wrist_min_m": 0.39512020386652213,
+        "wrist_separation_max_m": 1.0505475555493644,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "fdc15312093d5acda0aec783cf6f9f894f9882954c01265a7fba194e00a28907",
+    "clock_sha256": "a216baa4d1a11868664c4192fb385a46b5f4fcf03a7f88c67db07122b9b52409",
+    "full_rotation_sha256": "89bedc353e29bf483ea2c77583bd40915fe486e4914a13eef848c4b0130536d1",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 360
+  },
+  {
+    "uid": "e1d2272acdfebc44b042e62326dce82600b3571dda84ca312429870576435529",
+    "case_key": "73cb91d45a9d9530430d1650",
+    "source_order": 1,
+    "source_uid": "male_meditation",
+    "source_interval": [
+      5118,
+      5476
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.14026980877479336,
+    "mapped_low_seconds": 2.928442571319742,
+    "moving_support_seconds": 9.038224095346925,
+    "normalized_clock_RMS": 0.01814647757951557,
+    "max_clock_shift_frames": 11.928553247957097,
+    "anchor_source_frame": 5307,
+    "anchor_target_frame": 202.05071681169113,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "ac27be180e0358243563cff70a580e4b0c8fc35f538229371c2f259e00880a8e",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "5795a2bc7d02219952431500d6856d105d4e95d45068a3e24e9e9b4635c51726",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 1.659576825495376,
+        "gap_D3": 18.079126997684547,
+        "boundary_D3": 26.04647641950808,
+        "sampled_boundary_rate_jump": 0.05010800157516631,
+        "sampled_boundary_acc_jump": 1.678142317132104,
+        "shoulder_wrist_min_m": 0.39512020386652213,
+        "wrist_separation_max_m": 1.0505475555493644,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "9c674a811e682db308ae0202da0fcb9b9c51f7f7a9b3e9d11c16bcbe18a69860",
+    "clock_sha256": "eddf082547e2be7d85948eb327ae7a7ee5260d13373dbcc1a5bcd6015c283f10",
+    "full_rotation_sha256": "e275c00f75d00c73f7d014f6607eb91e2da63191b412a093085bedaf0cbae5df",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 360
+  },
+  {
+    "uid": "b046a4448574894601117ad563af75553f132e53116548442ab1d50e2ae5a85d",
+    "case_key": "73cb91d45a9d9530430d1650",
+    "source_order": 1,
+    "source_uid": "male_meditation",
+    "source_interval": [
+      5118,
+      5476
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.15686578918840954,
+    "mapped_low_seconds": 3.3270722303074565,
+    "moving_support_seconds": 8.63959443635921,
+    "normalized_clock_RMS": 0.033154451066031494,
+    "max_clock_shift_frames": 23.854383293828505,
+    "anchor_source_frame": 5307,
+    "anchor_target_frame": 214.04083550119827,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "ac27be180e0358243563cff70a580e4b0c8fc35f538229371c2f259e00880a8e",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "5795a2bc7d02219952431500d6856d105d4e95d45068a3e24e9e9b4635c51726",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 1.659576825495376,
+        "gap_D3": 18.079126997684547,
+        "boundary_D3": 26.04647641950808,
+        "sampled_boundary_rate_jump": 0.05010800157516631,
+        "sampled_boundary_acc_jump": 1.678142317132104,
+        "shoulder_wrist_min_m": 0.39512020386652213,
+        "wrist_separation_max_m": 1.0505475555493644,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "b69cc5994f80f18b324fb34f527ebb6dd99c0838660df3b95760257503af07ad",
+    "clock_sha256": "ba638c8fe2e4c922f6b39507d45bf9983282064c541703c2c43ee5f4994d6487",
+    "full_rotation_sha256": "9a73cb12ede9a1f590912746d24a9dace66d24aa9f83e6f5869f627edc7d3514",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 360
+  },
+  {
+    "uid": "c0abb3c44ad52b9fa56de1b093632d5c14b482b12a53e0660487aaa166f98997",
+    "case_key": "73cb91d45a9d9530430d1650",
+    "source_order": 1,
+    "source_uid": "male_meditation",
+    "source_interval": [
+      5118,
+      5476
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.14037922654384513,
+    "mapped_low_seconds": 2.3453398363953917,
+    "moving_support_seconds": 9.621326830271276,
+    "normalized_clock_RMS": 0.013911026680987894,
+    "max_clock_shift_frames": 11.871317851833737,
+    "anchor_source_frame": 5307,
+    "anchor_target_frame": 190.0700651859948,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "ac27be180e0358243563cff70a580e4b0c8fc35f538229371c2f259e00880a8e",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "5795a2bc7d02219952431500d6856d105d4e95d45068a3e24e9e9b4635c51726",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 1.659576825495376,
+        "gap_D3": 18.079126997684547,
+        "boundary_D3": 26.04647641950808,
+        "sampled_boundary_rate_jump": 0.05010800157516631,
+        "sampled_boundary_acc_jump": 1.678142317132104,
+        "shoulder_wrist_min_m": 0.39512020386652213,
+        "wrist_separation_max_m": 1.0505475555493644,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "c4b2cbfa94d8fc6e1aff77b6f8102f46b550b5b41d48ac271ca9b03b68ff5060",
+    "clock_sha256": "07888e811e27adef0a0a13c0e69626758c4794eae9c0f7e11fe7291d90eacfac",
+    "full_rotation_sha256": "968d8a512cf19b1695c4bc49a60a5c4b2eb23dd3a1c72f2d91529737ce03806c",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 360
+  },
+  {
+    "uid": "3b8a79c9c0d98f68e5bf780e353d35253e397cdbe6e6b15d5bd2e93d8fb8b20f",
+    "case_key": "73cb91d45a9d9530430d1650",
+    "source_order": 1,
+    "source_uid": "male_meditation",
+    "source_interval": [
+      5118,
+      5476
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.14035143791735163,
+    "mapped_low_seconds": 2.544290023017689,
+    "moving_support_seconds": 9.422376643648978,
+    "normalized_clock_RMS": 0.017060301492952873,
+    "max_clock_shift_frames": 11.902260983446467,
+    "anchor_source_frame": 5307,
+    "anchor_target_frame": 196.06178456753818,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "ac27be180e0358243563cff70a580e4b0c8fc35f538229371c2f259e00880a8e",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "5795a2bc7d02219952431500d6856d105d4e95d45068a3e24e9e9b4635c51726",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 1.659576825495376,
+        "gap_D3": 18.079126997684547,
+        "boundary_D3": 26.04647641950808,
+        "sampled_boundary_rate_jump": 0.05010800157516631,
+        "sampled_boundary_acc_jump": 1.678142317132104,
+        "shoulder_wrist_min_m": 0.39512020386652213,
+        "wrist_separation_max_m": 1.0505475555493644,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "9b3a682cb8bbf87ed82ca5989d15e7db7ecd50fe299d4a2c70b81a0f3f31dd5f",
+    "clock_sha256": "e7c2045cd9a526376c2055b55d43a68e18038634e69b6055d93f085ef4189a1b",
+    "full_rotation_sha256": "2393ad39d137ec5c06d4f0351ca5bf9022995f9b0e9f95e24890ef89e9912edb",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 360
+  },
+  {
+    "uid": "00a289619c6c2f5c6d050d2900cab1bf976213c0daf515455b950fca0164a02c",
+    "case_key": "73cb91d45a9d9530430d1650",
+    "source_order": 1,
+    "source_uid": "male_meditation",
+    "source_interval": [
+      5118,
+      5476
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.14365509884783859,
+    "mapped_low_seconds": 2.743368531619679,
+    "moving_support_seconds": 9.223298135046988,
+    "normalized_clock_RMS": 0.022601848008998567,
+    "max_clock_shift_frames": 11.933147632312284,
+    "anchor_source_frame": 5307,
+    "anchor_target_frame": 202.05480283961205,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "ac27be180e0358243563cff70a580e4b0c8fc35f538229371c2f259e00880a8e",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "5795a2bc7d02219952431500d6856d105d4e95d45068a3e24e9e9b4635c51726",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 1.659576825495376,
+        "gap_D3": 18.079126997684547,
+        "boundary_D3": 26.04647641950808,
+        "sampled_boundary_rate_jump": 0.05010800157516631,
+        "sampled_boundary_acc_jump": 1.678142317132104,
+        "shoulder_wrist_min_m": 0.39512020386652213,
+        "wrist_separation_max_m": 1.0505475555493644,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "d742f2eeb9261a25d0fcf9db107555e797d640bae6feafeb30c4507e54d2d801",
+    "clock_sha256": "d332f6152930d7280c186eeff0fbee03ba86bde13d8fb867989dce770e6cdb44",
+    "full_rotation_sha256": "ac273759b8bfa678b6e119d54d2726ddf299431d94ac4edb25e29cc30059d270",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 360
+  },
+  {
+    "uid": "8d53c4091a55487c9a1a771b86561af96a71ddf2a152d0d59106b8bacacac0d7",
+    "case_key": "73cb91d45a9d9530430d1650",
+    "source_order": 1,
+    "source_uid": "male_meditation",
+    "source_interval": [
+      5118,
+      5476
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.16000372742966343,
+    "mapped_low_seconds": 3.1418247845435703,
+    "moving_support_seconds": 8.824841882123096,
+    "normalized_clock_RMS": 0.036292955206910824,
+    "max_clock_shift_frames": 23.857775644705725,
+    "anchor_source_frame": 5307,
+    "anchor_target_frame": 214.04367935195728,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "ac27be180e0358243563cff70a580e4b0c8fc35f538229371c2f259e00880a8e",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "5795a2bc7d02219952431500d6856d105d4e95d45068a3e24e9e9b4635c51726",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 1.659576825495376,
+        "gap_D3": 18.079126997684547,
+        "boundary_D3": 26.04647641950808,
+        "sampled_boundary_rate_jump": 0.05010800157516631,
+        "sampled_boundary_acc_jump": 1.678142317132104,
+        "shoulder_wrist_min_m": 0.39512020386652213,
+        "wrist_separation_max_m": 1.0505475555493644,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "a12dd1b1d690b857684d17f02f67a396493c6147e1ccfb49f9cb15c1a961933e",
+    "clock_sha256": "587790f579171fe706ce99ff160c53347a11f0010a718ba6b2a55fafdd456fce",
+    "full_rotation_sha256": "91e9c0d46a10ff7a107e56a6a4feb103d1affbbab2a3184373cb19038d1bc25c",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 360
+  },
+  {
+    "uid": "820e9587030f0f24fc553afdd4e37c0e05e809d8f2adb19891f7fa81d0b0102a",
+    "case_key": "73cb91d45a9d9530430d1650",
+    "source_order": 1,
+    "source_uid": "male_meditation",
+    "source_interval": [
+      5118,
+      5476
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.1542105083739364,
+    "mapped_low_seconds": 2.3735407443901986,
+    "moving_support_seconds": 9.593125922276467,
+    "normalized_clock_RMS": 0.03412059470909725,
+    "max_clock_shift_frames": 23.798174542746892,
+    "anchor_source_frame": 5307,
+    "anchor_target_frame": 202.0653294452228,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "ac27be180e0358243563cff70a580e4b0c8fc35f538229371c2f259e00880a8e",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "5795a2bc7d02219952431500d6856d105d4e95d45068a3e24e9e9b4635c51726",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 1.659576825495376,
+        "gap_D3": 18.079126997684547,
+        "boundary_D3": 26.04647641950808,
+        "sampled_boundary_rate_jump": 0.05010800157516631,
+        "sampled_boundary_acc_jump": 1.678142317132104,
+        "shoulder_wrist_min_m": 0.39512020386652213,
+        "wrist_separation_max_m": 1.0505475555493644,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "dae0dcd1448b71263d5959cb99af592f1b797f35e0baaaeb123384b34a0231de",
+    "clock_sha256": "c7ba267fc0c7f1a4c1f890f3851068cade83e56092c5dd592559382eaf2b45e8",
+    "full_rotation_sha256": "a52aa48b7982ad956417af88760f7a1090ed88b8e23ec6133ed408b74c8c2d74",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 360
+  },
+  {
+    "uid": "b855d770386b948b17a9dc6d5a31e7450c0ca139061838d0b8b53a270bc7d4b6",
+    "case_key": "73cb91d45a9d9530430d1650",
+    "source_order": 1,
+    "source_uid": "male_meditation",
+    "source_interval": [
+      5118,
+      5476
+    ],
+    "labels": [
+      "HoldGrid"
+    ],
+    "GTWLocal": 0.16850769375631128,
+    "mapped_low_seconds": 2.7715625912730637,
+    "moving_support_seconds": 9.195104075393603,
+    "normalized_clock_RMS": 0.04520370946128001,
+    "max_clock_shift_frames": 23.86629526462457,
+    "anchor_source_frame": 5307,
+    "anchor_target_frame": 214.0507476497927,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "ac27be180e0358243563cff70a580e4b0c8fc35f538229371c2f259e00880a8e",
+      "cache_hit": true,
+      "actual_geometry_calls": 0,
+      "bridge_sha256": "5795a2bc7d02219952431500d6856d105d4e95d45068a3e24e9e9b4635c51726",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 1.659576825495376,
+        "gap_D3": 18.079126997684547,
+        "boundary_D3": 26.04647641950808,
+        "sampled_boundary_rate_jump": 0.05010800157516631,
+        "sampled_boundary_acc_jump": 1.678142317132104,
+        "shoulder_wrist_min_m": 0.39512020386652213,
+        "wrist_separation_max_m": 1.0505475555493644,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "babd04f76382a91ba7d553915ec5c8fa7ae07e344f925bc33e2068cb56aac0e0",
+    "clock_sha256": "36c61fb7735794ef1df16eef6b6cd32000b07c11e093e06c4b9588cdd29f6e21",
+    "full_rotation_sha256": "43322ee09a5cb8024f0989875809a422868a274391280e5723f5a95de25d4294",
+    "protected_first_last_four_exact": true,
+    "source_resampling_exact": true,
+    "target_frames": 360
+  },
+  {
+    "uid": "61666edf52e4db1e0d7c1df05c147fa3c9e9598cfa907368ddc82aa6db92a48a",
+    "case_key": "73cb91d45a9d9530430d1650",
+    "source_order": 1,
+    "source_uid": "male_meditation",
+    "source_interval": [
+      5118,
+      5476
+    ],
+    "labels": [
+      "E1W"
+    ],
+    "GTWLocal": 0.1461012634899226,
+    "mapped_low_seconds": 2.569709989258845,
+    "moving_support_seconds": 9.396956677407822,
+    "normalized_clock_RMS": 0.008303235155434564,
+    "max_clock_shift_frames": 7.103064066852312,
+    "anchor_source_frame": 5307,
+    "anchor_target_frame": 183.78947368421015,
+    "clock_legal": true,
+    "G1_pass": true,
+    "connection": {
+      "constructible": true,
+      "passes_original_screen": true,
+      "boundary_key": "bedf12fe337ec36d22b670c22b6c0fec61f185fbb8266f5d838475221f4ebc9f",
+      "cache_hit": false,
+      "actual_geometry_calls": 1,
+      "bridge_sha256": "027d73a938215178cc003e31b3ed0bf2e16f5a89505a8d8a44717069bed5b270",
+      "inherited": false,
+      "core_exact": true,
+      "metrics": {
+        "gap_D2": 1.6593858191203725,
+        "gap_D3": 18.079126997684547,
+        "boundary_D3": 26.04647641950808,
+        "sampled_boundary_rate_jump": 0.04972320192838664,
+        "sampled_boundary_acc_jump": 1.678142317132104,
+        "shoulder_wrist_min_m": 0.39511675891379566,
+        "wrist_separation_max_m": 1.0505475555493644,
+        "gap_angle_error_rad": null,
+        "physical_qualified": false
+      }
+    },
+    "rotation_sha256": "ec5ebaa9929f17aee3f9b6768274d0b6a556861a5acb70e093f997c72f59ca9b",
+    "clock_sha256": "2094522a117b240a52e64506a2cf3bc0c98a51132f01d3f90bcafcefa1858f99",
+    "full_rotation_sha256": "8c5ca05699ff059d581968357df7b6d8dab6240f4d4883ff41b5dfdaf6e22ab6",
+    "protected_first_last_four_exact": false,
+    "source_resampling_exact": true,
+    "target_frames": 360
+  }
+]

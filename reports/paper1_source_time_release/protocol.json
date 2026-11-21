@@ -1,0 +1,56 @@
+{
+  "schema": "PAPER1_SOURCE_TIME_Q01",
+  "parent_commit": "a7139b1e384758f42b38018613116d2a89216b99",
+  "preflight_sha256": "9126606ab2477dac5e1c2327ed5c5f04d77b2bc7dae3d6136c3b71c70eb9db41",
+  "Q02_manifest_sha256": "2f3b18747725664b947a440f9fdbd49b4f11628f2ac9017a9a355c558c9f56d5",
+  "population": "EXACT_THREE_Q01_NONDEGENERATE_PREFLIGHT_PAIRS; OTHER_THREE_RETAINED_MISSING; NO_SCORE_BASED_REPLACEMENT",
+  "target_fractions": [
+    0.25,
+    0.5,
+    0.75
+  ],
+  "music_targets": "FIRST_NEAREST_BEAT_THIS_BEAT_TO_FRACTION_OF_CORE; ID_TIME_AND_SHA_REGISTERED_BEFORE_COST; NOT_ARTISTIC_TRUTH",
+  "anchor": "END_OF_FIRST_REGISTERED_INTERNAL_BODY_LOW_RUN; KINEMATIC_PROXY_NOT_SEMANTIC_GESTURE",
+  "target_error_tolerance_frames": 3.0,
+  "minimum_moving_support_seconds": 2.0,
+  "source_support": "EXACT_TARGET_OCCUPANCY_OF_FROZEN_BODY_LOW_RUN_COMPLEMENT",
+  "joint_order": [
+    "target_error_frames",
+    "minus_moving_support_seconds",
+    "normalized_clock_RMS",
+    "source_order",
+    "candidate_uid"
+  ],
+  "GTW_cross_source": "PROHIBITED_RAW_SCALE_COMPARISON",
+  "source_order": "DESCENDING_UNIFORM_MOVING_SUPPORT_THEN_SOURCE_UID_INTERVAL",
+  "candidate_domain": "Q01_COMPLETE_HOLD_DAG_PLUS_UNIFORM_PLUS_ONE_FROZEN_R53_E1W_SOLVER_R64_BEAT_EXECUTION_PER_SOURCE; DEDUP_1e-9",
+  "primary_domain": "FINITE_SHARED_POOL_NOT_CONTINUOUS_OPTIMUM",
+  "bridge_frames": 48,
+  "rate_limits": [
+    0.75,
+    1.33
+  ],
+  "bridge_budget": "FULL_COMMON_POOL_PREEXECUTED_AND_CHARGED_EQUALLY_TO_ALL_ARMS; ACTUAL_BOUNDARY_HASH_CACHE_COUNTS_REPORTED",
+  "bridge_qualification": "RECOMPUTED_ORIGINAL_G1_SCREEN_NO_THRESHOLD_CHANGE",
+  "BAS": "FROZEN_Q01_DIAGNOSTIC_ONLY_NEVER_USED_FOR_SELECTION",
+  "SDMR": "NOT_USED",
+  "methods": [
+    "FixedUniform",
+    "FixedE1W",
+    "FixedGTW",
+    "SupportUniform",
+    "SequentialGTW",
+    "SequentialTargetFallback",
+    "ExhaustiveSequential",
+    "Joint"
+  ],
+  "preview_methods": [
+    "FixedUniform",
+    "Joint"
+  ],
+  "training_steps": 0,
+  "human_records": 0,
+  "can_route": false,
+  "artistic_quality": "NOT_EVALUABLE",
+  "Native24": "NOT_EVALUABLE"
+}

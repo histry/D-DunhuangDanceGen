@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "preview_manifest_sha256": "f721286e148357f11e345eac3d5116d9948d71a178ab17c768aac88d0e5be2a9",
+  "actual_browser_interaction": true,
+  "checks": [
+    "9 target tasks plus3 original source entries",
+    "FeiTian target0.25 unqualified diagnostic clearly labelled",
+    "FeiTian target0.5 S0 Uniform versus actual S1 Joint",
+    "seek125 next126 and half speed playback advances131",
+    "rawFeiTian frame290/292 shorterS0 ended blank, S1 actual pose; audio hidden",
+    "meditation360+48+360 frames, seek390 prev389/767",
+    "source identity, actual proxy target and full clock curves visible"
+  ],
+  "precedes_controls": true,
+  "human_artistic_review": false
+}

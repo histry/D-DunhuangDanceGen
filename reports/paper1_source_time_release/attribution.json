@@ -1,0 +1,371 @@
+[
+  {
+    "case_key": "f8d91db44c816c9c6b18cfb8",
+    "source_uid": "female_FeiTian",
+    "target_fraction": 0.25,
+    "target_frame": 64.20000000000005,
+    "source_results": [
+      {
+        "source_order": 0,
+        "candidates": 10,
+        "G1_passes": 10,
+        "support_passes": 10,
+        "anchor_range_frames": [
+          183.8186189629888,
+          195.93125000000003
+        ],
+        "screened_nearest_target_error_frames": 119.61861896298876,
+        "fully_feasible_count": 0,
+        "moving_support_seconds_range": [
+          5.279911850924596,
+          5.862452315553738
+        ]
+      },
+      {
+        "source_order": 1,
+        "candidates": 7,
+        "G1_passes": 7,
+        "support_passes": 7,
+        "anchor_range_frames": [
+          122.30769230769215,
+          135.30941410207353
+        ],
+        "screened_nearest_target_error_frames": 58.107692307692105,
+        "fully_feasible_count": 0,
+        "moving_support_seconds_range": [
+          5.796204565439156,
+          6.272222222222227
+        ]
+      }
+    ],
+    "scope": "DESCRIPTIVE_FROZEN_POOL_ATTRIBUTION_NOT_CONTINUOUS_CAPACITY_BOUND"
+  },
+  {
+    "case_key": "f8d91db44c816c9c6b18cfb8",
+    "source_uid": "female_FeiTian",
+    "target_fraction": 0.5,
+    "target_frame": 126.0,
+    "source_results": [
+      {
+        "source_order": 0,
+        "candidates": 10,
+        "G1_passes": 10,
+        "support_passes": 10,
+        "anchor_range_frames": [
+          183.8186189629888,
+          195.93125000000003
+        ],
+        "screened_nearest_target_error_frames": 57.81861896298881,
+        "fully_feasible_count": 0,
+        "moving_support_seconds_range": [
+          5.279911850924596,
+          5.862452315553738
+        ]
+      },
+      {
+        "source_order": 1,
+        "candidates": 7,
+        "G1_passes": 7,
+        "support_passes": 7,
+        "anchor_range_frames": [
+          122.30769230769215,
+          135.30941410207353
+        ],
+        "screened_nearest_target_error_frames": 2.666023216055393,
+        "fully_feasible_count": 1,
+        "moving_support_seconds_range": [
+          5.796204565439156,
+          6.272222222222227
+        ]
+      }
+    ],
+    "scope": "DESCRIPTIVE_FROZEN_POOL_ATTRIBUTION_NOT_CONTINUOUS_CAPACITY_BOUND"
+  },
+  {
+    "case_key": "f8d91db44c816c9c6b18cfb8",
+    "source_uid": "female_FeiTian",
+    "target_fraction": 0.75,
+    "target_frame": 187.20000000000005,
+    "source_results": [
+      {
+        "source_order": 0,
+        "candidates": 10,
+        "G1_passes": 10,
+        "support_passes": 10,
+        "anchor_range_frames": [
+          183.8186189629888,
+          195.93125000000003
+        ],
+        "screened_nearest_target_error_frames": 2.583219563860183,
+        "fully_feasible_count": 3,
+        "moving_support_seconds_range": [
+          5.279911850924596,
+          5.862452315553738
+        ]
+      },
+      {
+        "source_order": 1,
+        "candidates": 7,
+        "G1_passes": 7,
+        "support_passes": 7,
+        "anchor_range_frames": [
+          122.30769230769215,
+          135.30941410207353
+        ],
+        "screened_nearest_target_error_frames": 51.89058589792651,
+        "fully_feasible_count": 0,
+        "moving_support_seconds_range": [
+          5.796204565439156,
+          6.272222222222227
+        ]
+      }
+    ],
+    "scope": "DESCRIPTIVE_FROZEN_POOL_ATTRIBUTION_NOT_CONTINUOUS_CAPACITY_BOUND"
+  },
+  {
+    "case_key": "4a69181188a9e248a0a6330b",
+    "source_uid": "female_lotus",
+    "target_fraction": 0.25,
+    "target_frame": 52.19999999999993,
+    "source_results": [
+      {
+        "source_order": 0,
+        "candidates": 7,
+        "G1_passes": 7,
+        "support_passes": 7,
+        "anchor_range_frames": [
+          147.71428571428572,
+          160.57936458060024
+        ],
+        "screened_nearest_target_error_frames": 95.51428571428579,
+        "fully_feasible_count": 0,
+        "moving_support_seconds_range": [
+          5.476301920078395,
+          5.941769341769345
+        ]
+      },
+      {
+        "source_order": 1,
+        "candidates": 7,
+        "G1_passes": 7,
+        "support_passes": 7,
+        "anchor_range_frames": [
+          106.0,
+          121.4136075755798
+        ],
+        "screened_nearest_target_error_frames": 53.80000000000007,
+        "fully_feasible_count": 0,
+        "moving_support_seconds_range": [
+          5.03990308449245,
+          5.466666666666667
+        ]
+      }
+    ],
+    "scope": "DESCRIPTIVE_FROZEN_POOL_ATTRIBUTION_NOT_CONTINUOUS_CAPACITY_BOUND"
+  },
+  {
+    "case_key": "4a69181188a9e248a0a6330b",
+    "source_uid": "female_lotus",
+    "target_fraction": 0.5,
+    "target_frame": 116.40000000000009,
+    "source_results": [
+      {
+        "source_order": 0,
+        "candidates": 7,
+        "G1_passes": 7,
+        "support_passes": 7,
+        "anchor_range_frames": [
+          147.71428571428572,
+          160.57936458060024
+        ],
+        "screened_nearest_target_error_frames": 31.31428571428563,
+        "fully_feasible_count": 0,
+        "moving_support_seconds_range": [
+          5.476301920078395,
+          5.941769341769345
+        ]
+      },
+      {
+        "source_order": 1,
+        "candidates": 7,
+        "G1_passes": 7,
+        "support_passes": 7,
+        "anchor_range_frames": [
+          106.0,
+          121.4136075755798
+        ],
+        "screened_nearest_target_error_frames": 0.9739625363860824,
+        "fully_feasible_count": 2,
+        "moving_support_seconds_range": [
+          5.03990308449245,
+          5.466666666666667
+        ]
+      }
+    ],
+    "scope": "DESCRIPTIVE_FROZEN_POOL_ATTRIBUTION_NOT_CONTINUOUS_CAPACITY_BOUND"
+  },
+  {
+    "case_key": "4a69181188a9e248a0a6330b",
+    "source_uid": "female_lotus",
+    "target_fraction": 0.75,
+    "target_frame": 180.60000000000014,
+    "source_results": [
+      {
+        "source_order": 0,
+        "candidates": 7,
+        "G1_passes": 7,
+        "support_passes": 7,
+        "anchor_range_frames": [
+          147.71428571428572,
+          160.57936458060024
+        ],
+        "screened_nearest_target_error_frames": 20.020635419399895,
+        "fully_feasible_count": 0,
+        "moving_support_seconds_range": [
+          5.476301920078395,
+          5.941769341769345
+        ]
+      },
+      {
+        "source_order": 1,
+        "candidates": 7,
+        "G1_passes": 7,
+        "support_passes": 7,
+        "anchor_range_frames": [
+          106.0,
+          121.4136075755798
+        ],
+        "screened_nearest_target_error_frames": 59.18639242442033,
+        "fully_feasible_count": 0,
+        "moving_support_seconds_range": [
+          5.03990308449245,
+          5.466666666666667
+        ]
+      }
+    ],
+    "scope": "DESCRIPTIVE_FROZEN_POOL_ATTRIBUTION_NOT_CONTINUOUS_CAPACITY_BOUND"
+  },
+  {
+    "case_key": "73cb91d45a9d9530430d1650",
+    "source_uid": "male_meditation",
+    "target_fraction": 0.25,
+    "target_frame": 91.19999999999993,
+    "source_results": [
+      {
+        "source_order": 0,
+        "candidates": 25,
+        "G1_passes": 25,
+        "support_passes": 25,
+        "anchor_range_frames": [
+          197.47105270752166,
+          245.3830866552054
+        ],
+        "screened_nearest_target_error_frames": 106.27105270752173,
+        "fully_feasible_count": 0,
+        "moving_support_seconds_range": [
+          7.371133284556384,
+          8.032105097875014
+        ]
+      },
+      {
+        "source_order": 1,
+        "candidates": 30,
+        "G1_passes": 30,
+        "support_passes": 30,
+        "anchor_range_frames": [
+          166.06676315517402,
+          214.0507476497927
+        ],
+        "screened_nearest_target_error_frames": 74.86676315517408,
+        "fully_feasible_count": 0,
+        "moving_support_seconds_range": [
+          8.63959443635921,
+          9.677906963683544
+        ]
+      }
+    ],
+    "scope": "DESCRIPTIVE_FROZEN_POOL_ATTRIBUTION_NOT_CONTINUOUS_CAPACITY_BOUND"
+  },
+  {
+    "case_key": "73cb91d45a9d9530430d1650",
+    "source_uid": "male_meditation",
+    "target_fraction": 0.5,
+    "target_frame": 181.20000000000005,
+    "source_results": [
+      {
+        "source_order": 0,
+        "candidates": 25,
+        "G1_passes": 25,
+        "support_passes": 25,
+        "anchor_range_frames": [
+          197.47105270752166,
+          245.3830866552054
+        ],
+        "screened_nearest_target_error_frames": 16.27105270752162,
+        "fully_feasible_count": 0,
+        "moving_support_seconds_range": [
+          7.371133284556384,
+          8.032105097875014
+        ]
+      },
+      {
+        "source_order": 1,
+        "candidates": 30,
+        "G1_passes": 30,
+        "support_passes": 30,
+        "anchor_range_frames": [
+          166.06676315517402,
+          214.0507476497927
+        ],
+        "screened_nearest_target_error_frames": 2.5894736842101054,
+        "fully_feasible_count": 6,
+        "moving_support_seconds_range": [
+          8.63959443635921,
+          9.677906963683544
+        ]
+      }
+    ],
+    "scope": "DESCRIPTIVE_FROZEN_POOL_ATTRIBUTION_NOT_CONTINUOUS_CAPACITY_BOUND"
+  },
+  {
+    "case_key": "73cb91d45a9d9530430d1650",
+    "source_uid": "male_meditation",
+    "target_fraction": 0.75,
+    "target_frame": 271.20000000000005,
+    "source_results": [
+      {
+        "source_order": 0,
+        "candidates": 25,
+        "G1_passes": 25,
+        "support_passes": 25,
+        "anchor_range_frames": [
+          197.47105270752166,
+          245.3830866552054
+        ],
+        "screened_nearest_target_error_frames": 25.816913344794642,
+        "fully_feasible_count": 0,
+        "moving_support_seconds_range": [
+          7.371133284556384,
+          8.032105097875014
+        ]
+      },
+      {
+        "source_order": 1,
+        "candidates": 30,
+        "G1_passes": 30,
+        "support_passes": 30,
+        "anchor_range_frames": [
+          166.06676315517402,
+          214.0507476497927
+        ],
+        "screened_nearest_target_error_frames": 57.14925235020735,
+        "fully_feasible_count": 0,
+        "moving_support_seconds_range": [
+          8.63959443635921,
+          9.677906963683544
+        ]
+      }
+    ],
+    "scope": "DESCRIPTIVE_FROZEN_POOL_ATTRIBUTION_NOT_CONTINUOUS_CAPACITY_BOUND"
+  }
+]

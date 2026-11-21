@@ -1,3 +1,5 @@
+- [Paper1-SourceTime-Q01：来源×时钟可行性决策](reports/paper1_source_time_release/report.md)：86候选、9个技术时间任务；联合与强顺序均4/9，穷举顺序逐项等价，未证明额外联合收益。真实观看与精确独立复验完成。
+
 - [Paper1-AutoEval-Q02：完整候选时钟与可观测性资格](reports/paper1_auto_eval_q02_release/report.md)：AIST++ Top-1 3/6、FineDance 1/6，均未通过冻结门槛；84个控制位置与完整SO(3)读域完成精确复验。未启动联合Planner或新训练。
 
 # DunhuangDanceGen

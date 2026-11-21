@@ -1,0 +1,3704 @@
+[
+  {
+    "frames": 240,
+    "time_between_centers_seconds": 7.966666666666667,
+    "low_cell_fraction": 0.36401673640167365,
+    "longest_low_seconds": 1.8333333333333333,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          141,
+          196
+        ],
+        "duration_seconds": 1.8333333333333333,
+        "angular_excursion_max_rad": 0.34361091150730766,
+        "FK_excursion_rms_max_m": 0.11081614010221325,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 115.61811711772164,
+    "FK_D3_max": 211.9835578453799,
+    "FK_activity_path_mean_m": 1.2666630249133184,
+    "FK_motion_range_rms_m": 0.13706141441876088,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.39247173757717063,
+    "FK_D2_q95": 4.247649081825627,
+    "SO3_angular_speed_q95": 0.9763542897697999,
+    "SO3_transported_acceleration_q95": 15.672995046528598,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.007633422088929682,
+    "BAS_diagnostic_only": 0.16378024428123297,
+    "source_uid": "female_FeiTian",
+    "candidate_uid": "3194d3cec9cf69a5b5f2e8cdffa661fe1d0f78e8ba02267ccddf47298f23da7c"
+  },
+  {
+    "frames": 240,
+    "time_between_centers_seconds": 7.966666666666667,
+    "low_cell_fraction": 0.3807531380753138,
+    "longest_low_seconds": 1.9,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          129,
+          186
+        ],
+        "duration_seconds": 1.9,
+        "angular_excursion_max_rad": 0.35488491981066106,
+        "FK_excursion_rms_max_m": 0.11205676839891862,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 108.65835210513814,
+    "FK_D3_max": 218.56742494725694,
+    "FK_activity_path_mean_m": 1.2674910559254704,
+    "FK_motion_range_rms_m": 0.14053892185950484,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.42665427298887904,
+    "FK_D2_q95": 3.2263783354638615,
+    "SO3_angular_speed_q95": 1.0076684578079602,
+    "SO3_transported_acceleration_q95": 14.234880981650791,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.00798322189893043,
+    "BAS_diagnostic_only": 0.1520816246138317,
+    "source_uid": "female_FeiTian",
+    "candidate_uid": "c4dc6df7880649f6a9478b157579d5be9d508ae560dc88f1ad0026f67fbf9778"
+  },
+  {
+    "frames": 240,
+    "time_between_centers_seconds": 7.966666666666667,
+    "low_cell_fraction": 0.38493723849372385,
+    "longest_low_seconds": 2.066666666666667,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          128,
+          190
+        ],
+        "duration_seconds": 2.066666666666667,
+        "angular_excursion_max_rad": 0.358115280054276,
+        "FK_excursion_rms_max_m": 0.115377583089246,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 99.8805315253792,
+    "FK_D3_max": 221.28343765729704,
+    "FK_activity_path_mean_m": 1.2674719485752242,
+    "FK_motion_range_rms_m": 0.13823323409247062,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.4281085442382781,
+    "FK_D2_q95": 3.670201358710419,
+    "SO3_angular_speed_q95": 1.0194508407671412,
+    "SO3_transported_acceleration_q95": 13.995672177801367,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.007530449734550804,
+    "BAS_diagnostic_only": 0.10777868035175087,
+    "source_uid": "female_FeiTian",
+    "candidate_uid": "19f96dcf05e06ba3efb985c746aa0336031d8e09b18f1b26970463089dce82ed"
+  },
+  {
+    "frames": 240,
+    "time_between_centers_seconds": 7.966666666666667,
+    "low_cell_fraction": 0.40585774058577406,
+    "longest_low_seconds": 2.3,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          127,
+          196
+        ],
+        "duration_seconds": 2.3,
+        "angular_excursion_max_rad": 0.370016485348672,
+        "FK_excursion_rms_max_m": 0.11941894947048479,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 118.53416956129864,
+    "FK_D3_max": 218.56742494725694,
+    "FK_activity_path_mean_m": 1.2658651209770975,
+    "FK_motion_range_rms_m": 0.13573804443552845,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.42665427298887904,
+    "FK_D2_q95": 4.247649081825627,
+    "SO3_angular_speed_q95": 1.0762362580403104,
+    "SO3_transported_acceleration_q95": 16.02521124302991,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.007777272185721601,
+    "BAS_diagnostic_only": 0.09078832770139732,
+    "source_uid": "female_FeiTian",
+    "candidate_uid": "a5388177830d7e69ffd7c00cabfcbd2dcfce15f628d2040388e3c0a90534cc76"
+  },
+  {
+    "frames": 240,
+    "time_between_centers_seconds": 7.966666666666667,
+    "low_cell_fraction": 0.33472803347280333,
+    "longest_low_seconds": 0.7666666666666667,
+    "low_runs": [],
+    "FK_D3_q95": 110.50532922097729,
+    "FK_D3_max": 209.51363430297636,
+    "FK_activity_path_mean_m": 1.2677142058584445,
+    "FK_motion_range_rms_m": 0.1412248639641209,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.4082200725332977,
+    "FK_D2_q95": 3.2041507630972164,
+    "SO3_angular_speed_q95": 0.9994903423460979,
+    "SO3_transported_acceleration_q95": 14.124861793159752,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.007966267361235308,
+    "BAS_diagnostic_only": 0.1600722780573542,
+    "source_uid": "female_FeiTian",
+    "candidate_uid": "b4ff9f4f1b522418d1cff339ef6efa6d0993575165fbb1463bcfd6d142a8caca"
+  },
+  {
+    "frames": 240,
+    "time_between_centers_seconds": 7.966666666666667,
+    "low_cell_fraction": 0.3682008368200837,
+    "longest_low_seconds": 1.8333333333333333,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          135,
+          190
+        ],
+        "duration_seconds": 1.8333333333333333,
+        "angular_excursion_max_rad": 0.34323336759524653,
+        "FK_excursion_rms_max_m": 0.1107908057235347,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 102.86327321457195,
+    "FK_D3_max": 221.28343765729704,
+    "FK_activity_path_mean_m": 1.2674476423195487,
+    "FK_motion_range_rms_m": 0.13893485869012315,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.4082200725332977,
+    "FK_D2_q95": 3.670201358710419,
+    "SO3_angular_speed_q95": 1.0140064703991924,
+    "SO3_transported_acceleration_q95": 13.950019922290865,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.0075737602720801715,
+    "BAS_diagnostic_only": 0.0868851280784129,
+    "source_uid": "female_FeiTian",
+    "candidate_uid": "89c5e21e3c16846cde867dbe5614366b6bd4e7c9b8c9d73d0fe3b2698da27ce5"
+  },
+  {
+    "frames": 240,
+    "time_between_centers_seconds": 7.966666666666667,
+    "low_cell_fraction": 0.3891213389121339,
+    "longest_low_seconds": 2.066666666666667,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          134,
+          196
+        ],
+        "duration_seconds": 2.066666666666667,
+        "angular_excursion_max_rad": 0.35849213878249225,
+        "FK_excursion_rms_max_m": 0.11540401086340732,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 117.93051474369209,
+    "FK_D3_max": 204.21396925213415,
+    "FK_activity_path_mean_m": 1.2672657708929271,
+    "FK_motion_range_rms_m": 0.13645721288138513,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.40589471308438785,
+    "FK_D2_q95": 3.99643006654032,
+    "SO3_angular_speed_q95": 1.0272369247287685,
+    "SO3_transported_acceleration_q95": 15.672995046527719,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.007822762648586942,
+    "BAS_diagnostic_only": 0.05893108156392215,
+    "source_uid": "female_FeiTian",
+    "candidate_uid": "9e076eb2ac2e2f64ea1344427fa4017b82dfccd76f4d8ebb4b2d5a5547d3a8a8"
+  },
+  {
+    "frames": 240,
+    "time_between_centers_seconds": 7.966666666666667,
+    "low_cell_fraction": 0.3138075313807531,
+    "longest_low_seconds": 0.7666666666666667,
+    "low_runs": [],
+    "FK_D3_q95": 97.40258676633543,
+    "FK_D3_max": 221.28343765729704,
+    "FK_activity_path_mean_m": 1.2670923484688252,
+    "FK_motion_range_rms_m": 0.13952411777123788,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.3924717375770348,
+    "FK_D2_q95": 3.672500325321707,
+    "SO3_angular_speed_q95": 1.010131539428652,
+    "SO3_transported_acceleration_q95": 12.742592453316751,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.007294653616200838,
+    "BAS_diagnostic_only": 0.1558692601746868,
+    "source_uid": "female_FeiTian",
+    "candidate_uid": "8d304c6f6b2bc97958798008e653c364b8ae7b7858bc6792caba24bd7e2a9227"
+  },
+  {
+    "frames": 240,
+    "time_between_centers_seconds": 7.966666666666667,
+    "low_cell_fraction": 0.3179916317991632,
+    "longest_low_seconds": 0.7666666666666667,
+    "low_runs": [],
+    "FK_D3_q95": 115.46752835169762,
+    "FK_D3_max": 297.9561542719592,
+    "FK_activity_path_mean_m": 1.2676575908624819,
+    "FK_motion_range_rms_m": 0.13755430723738726,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.37586789033168955,
+    "FK_D2_q95": 4.3262818511755805,
+    "SO3_angular_speed_q95": 0.9569183956975061,
+    "SO3_transported_acceleration_q95": 15.672995046527719,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.008058218620650747,
+    "BAS_diagnostic_only": 0.2056277116629011,
+    "source_uid": "female_FeiTian",
+    "candidate_uid": "45c70e6aaeaafdc4bf1199e761c2a9c18e4b8a89ed1cecc6b3749f8842607acc"
+  },
+  {
+    "frames": 240,
+    "time_between_centers_seconds": 7.966666666666667,
+    "low_cell_fraction": 0.3389121338912134,
+    "longest_low_seconds": 0.7666666666666667,
+    "low_runs": [],
+    "FK_D3_q95": 136.4387856937656,
+    "FK_D3_max": 364.52939196221945,
+    "FK_activity_path_mean_m": 1.2686178183370342,
+    "FK_motion_range_rms_m": 0.13925547811438893,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.42467229146499436,
+    "FK_D2_q95": 4.161279599509649,
+    "SO3_angular_speed_q95": 0.9906776816216268,
+    "SO3_transported_acceleration_q95": 13.995818473334719,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.00865724499157416,
+    "BAS_diagnostic_only": 0.06720155892822874,
+    "source_uid": "female_FeiTian",
+    "candidate_uid": "8034d7078e2f13fd4f9df3f84a8eefbd4e7783aa54892d87841c16b63ab3af30"
+  },
+  {
+    "frames": 240,
+    "time_between_centers_seconds": 7.966666666666667,
+    "low_cell_fraction": 0.26359832635983266,
+    "longest_low_seconds": 1.7333333333333334,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          77,
+          129
+        ],
+        "duration_seconds": 1.7333333333333334,
+        "angular_excursion_max_rad": 0.1478163366448391,
+        "FK_excursion_rms_max_m": 0.03473318391782009,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 305.4026613355486,
+    "FK_D3_max": 616.0816311086354,
+    "FK_activity_path_mean_m": 2.97592095844656,
+    "FK_motion_range_rms_m": 0.15525679734507478,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 1.171749437598848,
+    "FK_D2_q95": 11.115736343699231,
+    "SO3_angular_speed_q95": 2.1996898725804575,
+    "SO3_transported_acceleration_q95": 35.495981606124644,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.0074651616159543055,
+    "BAS_diagnostic_only": 0.2018785025106125,
+    "source_uid": "female_FeiTian",
+    "candidate_uid": "2d8032ef7154708b118d1c866efac899a98f0e6bf6b74b17427ced4a1f5dacbf"
+  },
+  {
+    "frames": 240,
+    "time_between_centers_seconds": 7.966666666666667,
+    "low_cell_fraction": 0.26359832635983266,
+    "longest_low_seconds": 1.7333333333333334,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          71,
+          123
+        ],
+        "duration_seconds": 1.7333333333333334,
+        "angular_excursion_max_rad": 0.1478163366448391,
+        "FK_excursion_rms_max_m": 0.03473318391782009,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 291.64762203638134,
+    "FK_D3_max": 718.2183943024318,
+    "FK_activity_path_mean_m": 2.9760495929874167,
+    "FK_motion_range_rms_m": 0.1554283623412267,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 1.1217665315799346,
+    "FK_D2_q95": 10.642655964300008,
+    "SO3_angular_speed_q95": 2.1271206135726617,
+    "SO3_transported_acceleration_q95": 32.68601548082036,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.006938341070437945,
+    "BAS_diagnostic_only": 0.4238906460921351,
+    "source_uid": "female_FeiTian",
+    "candidate_uid": "b97a785b2875f08569f2aed84cc2fc02188e30434b6a837ec187a87268a4e4b2"
+  },
+  {
+    "frames": 240,
+    "time_between_centers_seconds": 7.966666666666667,
+    "low_cell_fraction": 0.28451882845188287,
+    "longest_low_seconds": 1.9333333333333333,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          71,
+          129
+        ],
+        "duration_seconds": 1.9333333333333333,
+        "angular_excursion_max_rad": 0.14915139032807145,
+        "FK_excursion_rms_max_m": 0.03491981243554114,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 330.45463948985446,
+    "FK_D3_max": 718.2183943024318,
+    "FK_activity_path_mean_m": 2.9768678384101857,
+    "FK_motion_range_rms_m": 0.15420506831580386,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 1.171749437598848,
+    "FK_D2_q95": 11.291629848000317,
+    "SO3_angular_speed_q95": 2.1996898725804575,
+    "SO3_transported_acceleration_q95": 36.0779486770256,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.007955655154993635,
+    "BAS_diagnostic_only": 0.23969912671565727,
+    "source_uid": "female_FeiTian",
+    "candidate_uid": "b2da4cdf46b639b9001307c9e517ae5d58778d6b16a01e512022c4b5af48fbc7"
+  },
+  {
+    "frames": 240,
+    "time_between_centers_seconds": 7.966666666666667,
+    "low_cell_fraction": 0.30962343096234307,
+    "longest_low_seconds": 2.1666666666666665,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          70,
+          135
+        ],
+        "duration_seconds": 2.1666666666666665,
+        "angular_excursion_max_rad": 0.16131748498732282,
+        "FK_excursion_rms_max_m": 0.03581448163870512,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 335.4584619609987,
+    "FK_D3_max": 718.2183943024318,
+    "FK_activity_path_mean_m": 2.9727520095601787,
+    "FK_motion_range_rms_m": 0.1528462846110149,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 1.215108076474298,
+    "FK_D2_q95": 12.207977444914,
+    "SO3_angular_speed_q95": 2.23474677656973,
+    "SO3_transported_acceleration_q95": 36.860799671649936,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.007809589654400965,
+    "BAS_diagnostic_only": 0.11320335824039643,
+    "source_uid": "female_FeiTian",
+    "candidate_uid": "d2e0e27068c08d3acf83c152292a4f6959e9c6561ae886861a6ab53fc2535e34"
+  },
+  {
+    "frames": 240,
+    "time_between_centers_seconds": 7.966666666666667,
+    "low_cell_fraction": 0.28451882845188287,
+    "longest_low_seconds": 1.9333333333333333,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          77,
+          135
+        ],
+        "duration_seconds": 1.9333333333333333,
+        "angular_excursion_max_rad": 0.14915139032807145,
+        "FK_excursion_rms_max_m": 0.03491981243554114,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 331.8750797556818,
+    "FK_D3_max": 580.482860845813,
+    "FK_activity_path_mean_m": 2.971749367946538,
+    "FK_motion_range_rms_m": 0.1539537709012629,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 1.215108076474298,
+    "FK_D2_q95": 12.160037391007412,
+    "SO3_angular_speed_q95": 2.23474677656973,
+    "SO3_transported_acceleration_q95": 35.611633742333346,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.007328354735211046,
+    "BAS_diagnostic_only": 0.0814369162525743,
+    "source_uid": "female_FeiTian",
+    "candidate_uid": "aa1c44492b14419dcd7b066b3ef89528013cbba9ea91ec3ee1d70c5a33ece475"
+  },
+  {
+    "frames": 240,
+    "time_between_centers_seconds": 7.966666666666667,
+    "low_cell_fraction": 0.2594142259414226,
+    "longest_low_seconds": 1.7333333333333334,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          83,
+          135
+        ],
+        "duration_seconds": 1.7333333333333334,
+        "angular_excursion_max_rad": 0.1478163366448391,
+        "FK_excursion_rms_max_m": 0.03473318391782009,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 357.99794978888474,
+    "FK_D3_max": 736.0146689082501,
+    "FK_activity_path_mean_m": 2.97603646761911,
+    "FK_motion_range_rms_m": 0.15495417738498968,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 1.215108076474298,
+    "FK_D2_q95": 12.207977444914,
+    "SO3_angular_speed_q95": 2.23474677656973,
+    "SO3_transported_acceleration_q95": 36.860799671649936,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.00799070690398236,
+    "BAS_diagnostic_only": 0.0845228118226878,
+    "source_uid": "female_FeiTian",
+    "candidate_uid": "b86b02d521aae32bea0a0e7076759bf31902481fa215794dce29a02a7c396c62"
+  },
+  {
+    "frames": 240,
+    "time_between_centers_seconds": 7.966666666666667,
+    "low_cell_fraction": 0.24686192468619247,
+    "longest_low_seconds": 1.6333333333333333,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          73,
+          122
+        ],
+        "duration_seconds": 1.6333333333333333,
+        "angular_excursion_max_rad": 0.13895795205090877,
+        "FK_excursion_rms_max_m": 0.03437768075521428,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 296.0534069389044,
+    "FK_D3_max": 756.2973732957345,
+    "FK_activity_path_mean_m": 2.980601942591411,
+    "FK_motion_range_rms_m": 0.15464056364549864,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 1.171749437598848,
+    "FK_D2_q95": 10.738608174029304,
+    "SO3_angular_speed_q95": 2.1996898725804575,
+    "SO3_transported_acceleration_q95": 30.819050270446354,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.008268169626501745,
+    "BAS_diagnostic_only": 0.33143554413341547,
+    "source_uid": "female_FeiTian",
+    "candidate_uid": "3cd771bab8ff4c3d8b213a25f6b2ffb3d2e85d3858343b19c9a2422204828a61"
+  },
+  {
+    "frames": 240,
+    "time_between_centers_seconds": 7.966666666666667,
+    "low_cell_fraction": 0.5146443514644351,
+    "longest_low_seconds": 1.7666666666666666,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          5,
+          58
+        ],
+        "duration_seconds": 1.7666666666666666,
+        "angular_excursion_max_rad": 0.08900978126646178,
+        "FK_excursion_rms_max_m": 0.023462689291970564,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      },
+      {
+        "cells_half_open": [
+          119,
+          154
+        ],
+        "duration_seconds": 1.1666666666666667,
+        "angular_excursion_max_rad": 0.2738768164140894,
+        "FK_excursion_rms_max_m": 0.04091689581101587,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 148.9615965010416,
+    "FK_D3_max": 245.5272955189491,
+    "FK_activity_path_mean_m": 0.7380041996282635,
+    "FK_motion_range_rms_m": 0.0519333266524254,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.22247655144689815,
+    "FK_D2_q95": 3.5238615005532155,
+    "SO3_angular_speed_q95": 0.7164150129434789,
+    "SO3_transported_acceleration_q95": 10.657438034930786,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.043911121151983944,
+    "BAS_diagnostic_only": 0.09228057010327226,
+    "source_uid": "female_lotus",
+    "candidate_uid": "06f34f3eab2e4d1cf700f885aaaf6f76baad772ff1bb439f94dbe04e9a86ef19"
+  },
+  {
+    "frames": 240,
+    "time_between_centers_seconds": 7.966666666666667,
+    "low_cell_fraction": 0.48535564853556484,
+    "longest_low_seconds": 1.6666666666666667,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          5,
+          55
+        ],
+        "duration_seconds": 1.6666666666666667,
+        "angular_excursion_max_rad": 0.0859757355177977,
+        "FK_excursion_rms_max_m": 0.022999470172963977,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      },
+      {
+        "cells_half_open": [
+          113,
+          148
+        ],
+        "duration_seconds": 1.1666666666666667,
+        "angular_excursion_max_rad": 0.2738768164140893,
+        "FK_excursion_rms_max_m": 0.040916895811015964,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 139.20503573772635,
+    "FK_D3_max": 251.80338199061978,
+    "FK_activity_path_mean_m": 0.7351957559164823,
+    "FK_motion_range_rms_m": 0.05246899432559502,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.22332432319256484,
+    "FK_D2_q95": 3.225096368558371,
+    "SO3_angular_speed_q95": 0.6909708397605199,
+    "SO3_transported_acceleration_q95": 10.702848652402487,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.045305381076558696,
+    "BAS_diagnostic_only": 0.27147648155942394,
+    "source_uid": "female_lotus",
+    "candidate_uid": "4dff8faa644f5b579bbb5402fbbac4a3e614a31b4552e1065b2a6e763c553774"
+  },
+  {
+    "frames": 240,
+    "time_between_centers_seconds": 7.966666666666667,
+    "low_cell_fraction": 0.5188284518828452,
+    "longest_low_seconds": 1.6666666666666667,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          5,
+          55
+        ],
+        "duration_seconds": 1.6666666666666667,
+        "angular_excursion_max_rad": 0.0859757355177977,
+        "FK_excursion_rms_max_m": 0.022999470172963977,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      },
+      {
+        "cells_half_open": [
+          113,
+          155
+        ],
+        "duration_seconds": 1.4,
+        "angular_excursion_max_rad": 0.27442577490951553,
+        "FK_excursion_rms_max_m": 0.042294205683900625,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 142.26478388507311,
+    "FK_D3_max": 251.80338199061978,
+    "FK_activity_path_mean_m": 0.734635657389454,
+    "FK_motion_range_rms_m": 0.051970110704371075,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.2246070141060916,
+    "FK_D2_q95": 3.3666248743908955,
+    "SO3_angular_speed_q95": 0.7393599707834,
+    "SO3_transported_acceleration_q95": 10.965305152945115,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.04418147115127112,
+    "BAS_diagnostic_only": 0.18813859860295531,
+    "source_uid": "female_lotus",
+    "candidate_uid": "106e68129c8fe8a9de5603db039ce4eb3000ec05d6fa8998b7434d15805c9de9"
+  },
+  {
+    "frames": 240,
+    "time_between_centers_seconds": 7.966666666666667,
+    "low_cell_fraction": 0.5355648535564853,
+    "longest_low_seconds": 1.6666666666666667,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          5,
+          55
+        ],
+        "duration_seconds": 1.6666666666666667,
+        "angular_excursion_max_rad": 0.0859757355177977,
+        "FK_excursion_rms_max_m": 0.022999470172963977,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      },
+      {
+        "cells_half_open": [
+          113,
+          161
+        ],
+        "duration_seconds": 1.6,
+        "angular_excursion_max_rad": 0.27488737297049526,
+        "FK_excursion_rms_max_m": 0.04239453947048929,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 145.7615824374788,
+    "FK_D3_max": 251.80338199061978,
+    "FK_activity_path_mean_m": 0.7359298773702619,
+    "FK_motion_range_rms_m": 0.051415429257526214,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.23161852149118622,
+    "FK_D2_q95": 3.492188609317183,
+    "SO3_angular_speed_q95": 0.7408699844887002,
+    "SO3_transported_acceleration_q95": 10.979851716591073,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.0441689089197249,
+    "BAS_diagnostic_only": 0.15693898775322032,
+    "source_uid": "female_lotus",
+    "candidate_uid": "ef4db3f4ffb8fa69102e9723fd0691ccc298ac5160a2875406dbbc0d491a1c84"
+  },
+  {
+    "frames": 240,
+    "time_between_centers_seconds": 7.966666666666667,
+    "low_cell_fraction": 0.5313807531380753,
+    "longest_low_seconds": 1.7666666666666666,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          5,
+          58
+        ],
+        "duration_seconds": 1.7666666666666666,
+        "angular_excursion_max_rad": 0.08900978126646178,
+        "FK_excursion_rms_max_m": 0.023462689291970564,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      },
+      {
+        "cells_half_open": [
+          119,
+          160
+        ],
+        "duration_seconds": 1.3666666666666667,
+        "angular_excursion_max_rad": 0.27442577490951553,
+        "FK_excursion_rms_max_m": 0.041088970715109537,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 149.70857093531936,
+    "FK_D3_max": 245.5272955189491,
+    "FK_activity_path_mean_m": 0.7387465257824388,
+    "FK_motion_range_rms_m": 0.05140660095778124,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.23217812738782714,
+    "FK_D2_q95": 3.5494688192173993,
+    "SO3_angular_speed_q95": 0.6892796775630753,
+    "SO3_transported_acceleration_q95": 10.808661934416339,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.04341865610606836,
+    "BAS_diagnostic_only": 0.09712206802115352,
+    "source_uid": "female_lotus",
+    "candidate_uid": "a42b2ad0b48212e275a8d6f146f3d1398dcc57c79bc956a6bde3d62907e2d884"
+  },
+  {
+    "frames": 240,
+    "time_between_centers_seconds": 7.966666666666667,
+    "low_cell_fraction": 0.5146443514644351,
+    "longest_low_seconds": 1.1666666666666667,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          0,
+          35
+        ],
+        "duration_seconds": 1.1666666666666667,
+        "angular_excursion_max_rad": 0.09098189122568888,
+        "FK_excursion_rms_max_m": 0.02063902617596941,
+        "left_censored": true,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      },
+      {
+        "cells_half_open": [
+          125,
+          160
+        ],
+        "duration_seconds": 1.1666666666666667,
+        "angular_excursion_max_rad": 0.2738768164140893,
+        "FK_excursion_rms_max_m": 0.040916895811015964,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 134.76227285166837,
+    "FK_D3_max": 351.68813417950474,
+    "FK_activity_path_mean_m": 0.7410986719169529,
+    "FK_motion_range_rms_m": 0.05137118166710525,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.23161852149118622,
+    "FK_D2_q95": 3.4564242472636733,
+    "SO3_angular_speed_q95": 0.6785483018553311,
+    "SO3_transported_acceleration_q95": 10.78694858735278,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.04893262402534058,
+    "BAS_diagnostic_only": 0.11977885019608861,
+    "source_uid": "female_lotus",
+    "candidate_uid": "0b8c45cd2223227a9ebe0ec17c3646148e64e026cde73bb30d698abbf84f9930"
+  },
+  {
+    "frames": 240,
+    "time_between_centers_seconds": 7.966666666666667,
+    "low_cell_fraction": 0.4895397489539749,
+    "longest_low_seconds": 1.7666666666666666,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          5,
+          58
+        ],
+        "duration_seconds": 1.7666666666666666,
+        "angular_excursion_max_rad": 0.08554983582303272,
+        "FK_excursion_rms_max_m": 0.02235039246798102,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      },
+      {
+        "cells_half_open": [
+          115,
+          147
+        ],
+        "duration_seconds": 1.0666666666666667,
+        "angular_excursion_max_rad": 0.2780265960335971,
+        "FK_excursion_rms_max_m": 0.04111918416344192,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 145.43803830480974,
+    "FK_D3_max": 274.01142139971006,
+    "FK_activity_path_mean_m": 0.7392155227823275,
+    "FK_motion_range_rms_m": 0.05234646308588572,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.22252086330628087,
+    "FK_D2_q95": 3.5009642590308894,
+    "SO3_angular_speed_q95": 0.7056508251353779,
+    "SO3_transported_acceleration_q95": 11.010381052670558,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.045278916950789734,
+    "BAS_diagnostic_only": 0.20693533930186714,
+    "source_uid": "female_lotus",
+    "candidate_uid": "bcc518412d02a3f56dc40b7daba4fd46a35c98ebbeaee8becec2440aee624b44"
+  },
+  {
+    "frames": 240,
+    "time_between_centers_seconds": 7.966666666666667,
+    "low_cell_fraction": 0.4225941422594142,
+    "longest_low_seconds": 2.533333333333333,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          39,
+          115
+        ],
+        "duration_seconds": 2.533333333333333,
+        "angular_excursion_max_rad": 0.09262968631829474,
+        "FK_excursion_rms_max_m": 0.038336712983295204,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 236.68450967802843,
+    "FK_D3_max": 548.6945018173518,
+    "FK_activity_path_mean_m": 1.3486014908807848,
+    "FK_motion_range_rms_m": 0.07274953918134588,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.8416102324938238,
+    "FK_D2_q95": 9.81686187252295,
+    "SO3_angular_speed_q95": 1.3660171628219306,
+    "SO3_transported_acceleration_q95": 17.933513380968773,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.014475916727635525,
+    "BAS_diagnostic_only": 0.10582342900336852,
+    "source_uid": "female_lotus",
+    "candidate_uid": "c2b03c224d131e738ceddae1400cff520bcde6176d6984f91d0fef00598c1b92"
+  },
+  {
+    "frames": 240,
+    "time_between_centers_seconds": 7.966666666666667,
+    "low_cell_fraction": 0.40585774058577406,
+    "longest_low_seconds": 2.3333333333333335,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          39,
+          109
+        ],
+        "duration_seconds": 2.3333333333333335,
+        "angular_excursion_max_rad": 0.08827681385016699,
+        "FK_excursion_rms_max_m": 0.03706833007138508,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 236.68450967802843,
+    "FK_D3_max": 548.6945018173518,
+    "FK_activity_path_mean_m": 1.3494546081482925,
+    "FK_motion_range_rms_m": 0.07315925905772586,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.8416102324938238,
+    "FK_D2_q95": 9.81686187252295,
+    "SO3_angular_speed_q95": 1.3660171628219306,
+    "SO3_transported_acceleration_q95": 18.073339062086482,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.014447842454724977,
+    "BAS_diagnostic_only": 0.10874832353532923,
+    "source_uid": "female_lotus",
+    "candidate_uid": "e4249b6ba4fc64c77878a02dadab4c4273b08f2f38943fcbb70254d16292fc33"
+  },
+  {
+    "frames": 240,
+    "time_between_centers_seconds": 7.966666666666667,
+    "low_cell_fraction": 0.4435146443514644,
+    "longest_low_seconds": 2.9,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          34,
+          121
+        ],
+        "duration_seconds": 2.9,
+        "angular_excursion_max_rad": 0.12124476483218807,
+        "FK_excursion_rms_max_m": 0.05430739004842115,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 236.68450967802843,
+    "FK_D3_max": 548.6945018173518,
+    "FK_activity_path_mean_m": 1.3486124514089228,
+    "FK_motion_range_rms_m": 0.07232592249451483,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.8416102324938238,
+    "FK_D2_q95": 9.81686187252295,
+    "SO3_angular_speed_q95": 1.3660171628219306,
+    "SO3_transported_acceleration_q95": 17.840699784257456,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.014784895274334249,
+    "BAS_diagnostic_only": 0.040549114229076984,
+    "source_uid": "female_lotus",
+    "candidate_uid": "81a9cebc2f85b11847e2b36cea7616681a71d1b012d1d2e8fc838304ca72cbbe"
+  },
+  {
+    "frames": 240,
+    "time_between_centers_seconds": 7.966666666666667,
+    "low_cell_fraction": 0.3891213389121339,
+    "longest_low_seconds": 2.3333333333333335,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          45,
+          115
+        ],
+        "duration_seconds": 2.3333333333333335,
+        "angular_excursion_max_rad": 0.08827681385016699,
+        "FK_excursion_rms_max_m": 0.03706833007138508,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 171.33946014898174,
+    "FK_D3_max": 635.6304131534779,
+    "FK_activity_path_mean_m": 1.3509084793130426,
+    "FK_motion_range_rms_m": 0.07609328399413338,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.7555460932410804,
+    "FK_D2_q95": 7.746389511549384,
+    "SO3_angular_speed_q95": 1.1841096436763898,
+    "SO3_transported_acceleration_q95": 17.41802208049711,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.014070093424537746,
+    "BAS_diagnostic_only": 0.10899886685980788,
+    "source_uid": "female_lotus",
+    "candidate_uid": "1e0a2e44fef48dc8997baa80356fbffa002965e3361ab90ecb2687b463e196cb"
+  },
+  {
+    "frames": 240,
+    "time_between_centers_seconds": 7.966666666666667,
+    "low_cell_fraction": 0.4225941422594142,
+    "longest_low_seconds": 2.533333333333333,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          45,
+          121
+        ],
+        "duration_seconds": 2.533333333333333,
+        "angular_excursion_max_rad": 0.09262968631829474,
+        "FK_excursion_rms_max_m": 0.038336712983295204,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 180.8942436260916,
+    "FK_D3_max": 635.6304131534779,
+    "FK_activity_path_mean_m": 1.351322600878647,
+    "FK_motion_range_rms_m": 0.0756954520684439,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.7555460932410804,
+    "FK_D2_q95": 7.746389511549384,
+    "SO3_angular_speed_q95": 1.1841096436763898,
+    "SO3_transported_acceleration_q95": 17.289403850886536,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.014497117724504871,
+    "BAS_diagnostic_only": 0.07634658360917465,
+    "source_uid": "female_lotus",
+    "candidate_uid": "84ff65dca3e61c3362c3b18d641ffc34e33db4f1711f391eb81bbb5cc6319c4a"
+  },
+  {
+    "frames": 240,
+    "time_between_centers_seconds": 7.966666666666667,
+    "low_cell_fraction": 0.3891213389121339,
+    "longest_low_seconds": 2.3333333333333335,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          51,
+          121
+        ],
+        "duration_seconds": 2.3333333333333335,
+        "angular_excursion_max_rad": 0.08827681385016699,
+        "FK_excursion_rms_max_m": 0.03706833007138508,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 137.82222910195895,
+    "FK_D3_max": 264.19742175074254,
+    "FK_activity_path_mean_m": 1.350044383156538,
+    "FK_motion_range_rms_m": 0.07880608378247632,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.7064122272842008,
+    "FK_D2_q95": 5.902340708281388,
+    "SO3_angular_speed_q95": 1.0144229348462352,
+    "SO3_transported_acceleration_q95": 14.28477312207056,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.009683699797480847,
+    "BAS_diagnostic_only": 0.10626471420944018,
+    "source_uid": "female_lotus",
+    "candidate_uid": "3479706d5a7f55f2344579ddf47bde01caa53ce9b2d3d0607bfc0beac8a9c2e2"
+  },
+  {
+    "frames": 240,
+    "time_between_centers_seconds": 7.966666666666667,
+    "low_cell_fraction": 0.3807531380753138,
+    "longest_low_seconds": 2.2666666666666666,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          38,
+          106
+        ],
+        "duration_seconds": 2.2666666666666666,
+        "angular_excursion_max_rad": 0.07731353861454342,
+        "FK_excursion_rms_max_m": 0.031783844280360504,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 282.36134644588384,
+    "FK_D3_max": 836.0945751537901,
+    "FK_activity_path_mean_m": 1.3503558059838743,
+    "FK_motion_range_rms_m": 0.07204745785348686,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.8491990451148766,
+    "FK_D2_q95": 11.240565996356503,
+    "SO3_angular_speed_q95": 1.465970089787818,
+    "SO3_transported_acceleration_q95": 19.278298432549036,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.020238144018882045,
+    "BAS_diagnostic_only": 0.1322914770528618,
+    "source_uid": "female_lotus",
+    "candidate_uid": "52e5fc3093ca9f62940b2f25f09d7eb9d390aa6f61787b4a1b6f4360d7c1c35b"
+  },
+  {
+    "frames": 360,
+    "time_between_centers_seconds": 11.966666666666667,
+    "low_cell_fraction": 0.3732590529247911,
+    "longest_low_seconds": 1.9333333333333333,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          0,
+          34
+        ],
+        "duration_seconds": 1.1333333333333333,
+        "angular_excursion_max_rad": 0.1263763418141385,
+        "FK_excursion_rms_max_m": 0.013301579584680059,
+        "left_censored": true,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      },
+      {
+        "cells_half_open": [
+          164,
+          222
+        ],
+        "duration_seconds": 1.9333333333333333,
+        "angular_excursion_max_rad": 0.30433081983100013,
+        "FK_excursion_rms_max_m": 0.11078293256484793,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      },
+      {
+        "cells_half_open": [
+          328,
+          359
+        ],
+        "duration_seconds": 1.0333333333333334,
+        "angular_excursion_max_rad": 0.16240452120392865,
+        "FK_excursion_rms_max_m": 0.02534224286246147,
+        "left_censored": false,
+        "right_censored": true,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 46.09453103482366,
+    "FK_D3_max": 405.9321441892502,
+    "FK_activity_path_mean_m": 1.0016402230268264,
+    "FK_motion_range_rms_m": 0.11470897148135767,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.14700459893609163,
+    "FK_D2_q95": 1.1315530185938383,
+    "SO3_angular_speed_q95": 0.3360166725174641,
+    "SO3_transported_acceleration_q95": 4.995433789830115,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.013627268751614045,
+    "BAS_diagnostic_only": 0.10595166504245497,
+    "source_uid": "male_meditation",
+    "candidate_uid": "c6a07e7f1a3b6075b5484ede9e6624c45b21da8fc418da4d010f3b00f7f54d92"
+  },
+  {
+    "frames": 360,
+    "time_between_centers_seconds": 11.966666666666667,
+    "low_cell_fraction": 0.39275766016713093,
+    "longest_low_seconds": 1.9666666666666666,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          140,
+          199
+        ],
+        "duration_seconds": 1.9666666666666666,
+        "angular_excursion_max_rad": 0.30433081983100013,
+        "FK_excursion_rms_max_m": 0.11190720490175132,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      },
+      {
+        "cells_half_open": [
+          323,
+          359
+        ],
+        "duration_seconds": 1.2,
+        "angular_excursion_max_rad": 0.16245671578606782,
+        "FK_excursion_rms_max_m": 0.02535137338411171,
+        "left_censored": false,
+        "right_censored": true,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 55.614755491527376,
+    "FK_D3_max": 245.53785838979726,
+    "FK_activity_path_mean_m": 1.0018365310470152,
+    "FK_motion_range_rms_m": 0.11523632965451118,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.16321317934106463,
+    "FK_D2_q95": 1.2803997122803759,
+    "SO3_angular_speed_q95": 0.39142890174388273,
+    "SO3_transported_acceleration_q95": 5.48260842607969,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.013183734110185837,
+    "BAS_diagnostic_only": 0.15944687569318455,
+    "source_uid": "male_meditation",
+    "candidate_uid": "ebb4d570de5816fa825c2d310fddba2c0bb2d7ce865ee40fd5b6e8ced035a15d"
+  },
+  {
+    "frames": 360,
+    "time_between_centers_seconds": 11.966666666666667,
+    "low_cell_fraction": 0.3983286908077994,
+    "longest_low_seconds": 2.3333333333333335,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          140,
+          210
+        ],
+        "duration_seconds": 2.3333333333333335,
+        "angular_excursion_max_rad": 0.3044256050583906,
+        "FK_excursion_rms_max_m": 0.11075510605509578,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      },
+      {
+        "cells_half_open": [
+          317,
+          359
+        ],
+        "duration_seconds": 1.4,
+        "angular_excursion_max_rad": 0.26776223848917063,
+        "FK_excursion_rms_max_m": 0.040937044266855356,
+        "left_censored": false,
+        "right_censored": true,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 54.77825930376993,
+    "FK_D3_max": 245.53785838979726,
+    "FK_activity_path_mean_m": 1.0013367418301897,
+    "FK_motion_range_rms_m": 0.11631749368598066,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.16426373516230192,
+    "FK_D2_q95": 1.2977143598918717,
+    "SO3_angular_speed_q95": 0.3892574010382056,
+    "SO3_transported_acceleration_q95": 5.48260842607969,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.013548453692125498,
+    "BAS_diagnostic_only": 0.19981927370044755,
+    "source_uid": "male_meditation",
+    "candidate_uid": "759712a7be42ae900b09f088a947015b25c48b7b389ad940c47da908b3522dac"
+  },
+  {
+    "frames": 360,
+    "time_between_centers_seconds": 11.966666666666667,
+    "low_cell_fraction": 0.40668523676880225,
+    "longest_low_seconds": 2.533333333333333,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          140,
+          216
+        ],
+        "duration_seconds": 2.533333333333333,
+        "angular_excursion_max_rad": 0.3046044180657698,
+        "FK_excursion_rms_max_m": 0.11079554241959605,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      },
+      {
+        "cells_half_open": [
+          327,
+          359
+        ],
+        "duration_seconds": 1.0666666666666667,
+        "angular_excursion_max_rad": 0.16008331339800125,
+        "FK_excursion_rms_max_m": 0.024936590624426224,
+        "left_censored": false,
+        "right_censored": true,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 54.70299517430207,
+    "FK_D3_max": 263.57487576837354,
+    "FK_activity_path_mean_m": 1.0014374549484713,
+    "FK_motion_range_rms_m": 0.11675694163737192,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.16426373516230192,
+    "FK_D2_q95": 1.3197336605842043,
+    "SO3_angular_speed_q95": 0.3902434017795541,
+    "SO3_transported_acceleration_q95": 5.689599485751545,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.014075355499163248,
+    "BAS_diagnostic_only": 0.18143739622900926,
+    "source_uid": "male_meditation",
+    "candidate_uid": "1a53f40d764df8e45d91b037d553d393b6cb3babe2d0d3d312954922eb9059a1"
+  },
+  {
+    "frames": 360,
+    "time_between_centers_seconds": 11.966666666666667,
+    "low_cell_fraction": 0.3732590529247911,
+    "longest_low_seconds": 1.9333333333333333,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          0,
+          32
+        ],
+        "duration_seconds": 1.0666666666666667,
+        "angular_excursion_max_rad": 0.1310310158972134,
+        "FK_excursion_rms_max_m": 0.013685454725223698,
+        "left_censored": true,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      },
+      {
+        "cells_half_open": [
+          152,
+          210
+        ],
+        "duration_seconds": 1.9333333333333333,
+        "angular_excursion_max_rad": 0.30433081983100013,
+        "FK_excursion_rms_max_m": 0.11072345790825018,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      },
+      {
+        "cells_half_open": [
+          317,
+          359
+        ],
+        "duration_seconds": 1.4,
+        "angular_excursion_max_rad": 0.26776223848917063,
+        "FK_excursion_rms_max_m": 0.040937044266855356,
+        "left_censored": false,
+        "right_censored": true,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 51.76689409890266,
+    "FK_D3_max": 242.22237732781312,
+    "FK_activity_path_mean_m": 1.0006685140607758,
+    "FK_motion_range_rms_m": 0.1150381330131112,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.15322139397712262,
+    "FK_D2_q95": 1.224075902118672,
+    "SO3_angular_speed_q95": 0.3590281625117388,
+    "SO3_transported_acceleration_q95": 5.170894036809885,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.010809279177157129,
+    "BAS_diagnostic_only": 0.2466540518519688,
+    "source_uid": "male_meditation",
+    "candidate_uid": "8f1db69d3aa1c3d686ba46f7d89130d81efbfd01c291ea5b5787f60b7465c677"
+  },
+  {
+    "frames": 360,
+    "time_between_centers_seconds": 11.966666666666667,
+    "low_cell_fraction": 0.3816155988857939,
+    "longest_low_seconds": 2.1333333333333333,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          0,
+          32
+        ],
+        "duration_seconds": 1.0666666666666667,
+        "angular_excursion_max_rad": 0.1310310158972134,
+        "FK_excursion_rms_max_m": 0.013685454725223698,
+        "left_censored": true,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      },
+      {
+        "cells_half_open": [
+          152,
+          216
+        ],
+        "duration_seconds": 2.1333333333333333,
+        "angular_excursion_max_rad": 0.3044663710026031,
+        "FK_excursion_rms_max_m": 0.11076917462590673,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      },
+      {
+        "cells_half_open": [
+          327,
+          359
+        ],
+        "duration_seconds": 1.0666666666666667,
+        "angular_excursion_max_rad": 0.16008331339800125,
+        "FK_excursion_rms_max_m": 0.024936590624426224,
+        "left_censored": false,
+        "right_censored": true,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 51.0529710952567,
+    "FK_D3_max": 263.57487576837354,
+    "FK_activity_path_mean_m": 1.0007936917453635,
+    "FK_motion_range_rms_m": 0.11560452345807383,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.15322139397712262,
+    "FK_D2_q95": 1.2307274634108771,
+    "SO3_angular_speed_q95": 0.36353908366745047,
+    "SO3_transported_acceleration_q95": 5.931774973706924,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.011396519374793863,
+    "BAS_diagnostic_only": 0.1962077736937471,
+    "source_uid": "male_meditation",
+    "candidate_uid": "41ce6fcd566d126258f7bdf824cb6020f43470450e68604454178b6d9fd744d9"
+  },
+  {
+    "frames": 360,
+    "time_between_centers_seconds": 11.966666666666667,
+    "low_cell_fraction": 0.38997214484679665,
+    "longest_low_seconds": 2.3333333333333335,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          0,
+          32
+        ],
+        "duration_seconds": 1.0666666666666667,
+        "angular_excursion_max_rad": 0.1310310158972134,
+        "FK_excursion_rms_max_m": 0.013685454725223698,
+        "left_censored": true,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      },
+      {
+        "cells_half_open": [
+          152,
+          222
+        ],
+        "duration_seconds": 2.3333333333333335,
+        "angular_excursion_max_rad": 0.3044256050583906,
+        "FK_excursion_rms_max_m": 0.11081455055149998,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      },
+      {
+        "cells_half_open": [
+          328,
+          359
+        ],
+        "duration_seconds": 1.0333333333333334,
+        "angular_excursion_max_rad": 0.16240452120392865,
+        "FK_excursion_rms_max_m": 0.02534224286246147,
+        "left_censored": false,
+        "right_censored": true,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 51.76689409890266,
+    "FK_D3_max": 405.9321441892502,
+    "FK_activity_path_mean_m": 1.0018556111031367,
+    "FK_motion_range_rms_m": 0.1161024892627405,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.15390366064511501,
+    "FK_D2_q95": 1.244441387478329,
+    "SO3_angular_speed_q95": 0.3661750294270295,
+    "SO3_transported_acceleration_q95": 6.394297339295532,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.015596183841746077,
+    "BAS_diagnostic_only": 0.15039225286294552,
+    "source_uid": "male_meditation",
+    "candidate_uid": "88076de89d9a6f981788412872923378e046c0e80315d2c566776c2516e092b5"
+  },
+  {
+    "frames": 360,
+    "time_between_centers_seconds": 11.966666666666667,
+    "low_cell_fraction": 0.4011142061281337,
+    "longest_low_seconds": 2.533333333333333,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          0,
+          32
+        ],
+        "duration_seconds": 1.0666666666666667,
+        "angular_excursion_max_rad": 0.1310310158972134,
+        "FK_excursion_rms_max_m": 0.013685454725223698,
+        "left_censored": true,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      },
+      {
+        "cells_half_open": [
+          152,
+          228
+        ],
+        "duration_seconds": 2.533333333333333,
+        "angular_excursion_max_rad": 0.3046044180657698,
+        "FK_excursion_rms_max_m": 0.11086069224117324,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      },
+      {
+        "cells_half_open": [
+          329,
+          359
+        ],
+        "duration_seconds": 1.0,
+        "angular_excursion_max_rad": 0.16535493734874593,
+        "FK_excursion_rms_max_m": 0.025706646417894392,
+        "left_censored": false,
+        "right_censored": true,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 51.76689409890266,
+    "FK_D3_max": 162.92232120960915,
+    "FK_activity_path_mean_m": 0.999710012602559,
+    "FK_motion_range_rms_m": 0.11653345847581822,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.15634446856521944,
+    "FK_D2_q95": 1.1660194009276241,
+    "SO3_angular_speed_q95": 0.36353908366745047,
+    "SO3_transported_acceleration_q95": 6.435687157912803,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.009474221378194456,
+    "BAS_diagnostic_only": 0.2218223554656679,
+    "source_uid": "male_meditation",
+    "candidate_uid": "2e7c8a93b001130cde6facb2f2bd9b92fb621d55ef46e70600333327a7b1833d"
+  },
+  {
+    "frames": 360,
+    "time_between_centers_seconds": 11.966666666666667,
+    "low_cell_fraction": 0.3426183844011142,
+    "longest_low_seconds": 1.4,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          0,
+          33
+        ],
+        "duration_seconds": 1.1,
+        "angular_excursion_max_rad": 0.12861082554297562,
+        "FK_excursion_rms_max_m": 0.013484042809344477,
+        "left_censored": true,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      },
+      {
+        "cells_half_open": [
+          172,
+          210
+        ],
+        "duration_seconds": 1.2666666666666666,
+        "angular_excursion_max_rad": 0.13404667366950862,
+        "FK_excursion_rms_max_m": 0.055434164217929065,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      },
+      {
+        "cells_half_open": [
+          317,
+          359
+        ],
+        "duration_seconds": 1.4,
+        "angular_excursion_max_rad": 0.26776223848917063,
+        "FK_excursion_rms_max_m": 0.040937044266855356,
+        "left_censored": false,
+        "right_censored": true,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 49.219990006546375,
+    "FK_D3_max": 242.22237732781312,
+    "FK_activity_path_mean_m": 1.0007990560719506,
+    "FK_motion_range_rms_m": 0.11425856635249806,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.1499828644466783,
+    "FK_D2_q95": 1.074596636376598,
+    "SO3_angular_speed_q95": 0.3457980378939159,
+    "SO3_transported_acceleration_q95": 4.658976756634599,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.010134214053562842,
+    "BAS_diagnostic_only": 0.19877962040975142,
+    "source_uid": "male_meditation",
+    "candidate_uid": "e82be5544de7ac17b2d1ad30a1185cee793481853ceaa4886f4ab376f4020ab1"
+  },
+  {
+    "frames": 360,
+    "time_between_centers_seconds": 11.966666666666667,
+    "low_cell_fraction": 0.37047353760445684,
+    "longest_low_seconds": 1.9333333333333333,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          0,
+          33
+        ],
+        "duration_seconds": 1.1,
+        "angular_excursion_max_rad": 0.12861082554297562,
+        "FK_excursion_rms_max_m": 0.013484042809344477,
+        "left_censored": true,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      },
+      {
+        "cells_half_open": [
+          158,
+          216
+        ],
+        "duration_seconds": 1.9333333333333333,
+        "angular_excursion_max_rad": 0.30433081983100013,
+        "FK_excursion_rms_max_m": 0.11075186309216876,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      },
+      {
+        "cells_half_open": [
+          327,
+          359
+        ],
+        "duration_seconds": 1.0666666666666667,
+        "angular_excursion_max_rad": 0.16008331339800125,
+        "FK_excursion_rms_max_m": 0.024936590624426224,
+        "left_censored": false,
+        "right_censored": true,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 48.31048425465107,
+    "FK_D3_max": 263.57487576837354,
+    "FK_activity_path_mean_m": 1.000949064709972,
+    "FK_motion_range_rms_m": 0.11488977020037265,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.15022760986082576,
+    "FK_D2_q95": 1.1203729321348728,
+    "SO3_angular_speed_q95": 0.34929659980835287,
+    "SO3_transported_acceleration_q95": 5.232174057657403,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.01055282060995876,
+    "BAS_diagnostic_only": 0.13212009287454896,
+    "source_uid": "male_meditation",
+    "candidate_uid": "35f1837f2fc33cbfdf608067abecb4fa478c5ddc1b498a4c73a2e507841e4f15"
+  },
+  {
+    "frames": 360,
+    "time_between_centers_seconds": 11.966666666666667,
+    "low_cell_fraction": 0.3788300835654596,
+    "longest_low_seconds": 2.1333333333333333,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          0,
+          33
+        ],
+        "duration_seconds": 1.1,
+        "angular_excursion_max_rad": 0.12861082554297562,
+        "FK_excursion_rms_max_m": 0.013484042809344477,
+        "left_censored": true,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      },
+      {
+        "cells_half_open": [
+          158,
+          222
+        ],
+        "duration_seconds": 2.1333333333333333,
+        "angular_excursion_max_rad": 0.3044663710026031,
+        "FK_excursion_rms_max_m": 0.11080023548509263,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      },
+      {
+        "cells_half_open": [
+          328,
+          359
+        ],
+        "duration_seconds": 1.0333333333333334,
+        "angular_excursion_max_rad": 0.16240452120392865,
+        "FK_excursion_rms_max_m": 0.02534224286246147,
+        "left_censored": false,
+        "right_censored": true,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 49.219990006546375,
+    "FK_D3_max": 405.9321441892502,
+    "FK_activity_path_mean_m": 1.002031733026885,
+    "FK_motion_range_rms_m": 0.11545201334213398,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.1517411154475767,
+    "FK_D2_q95": 1.1775257701118786,
+    "SO3_angular_speed_q95": 0.3527174173782529,
+    "SO3_transported_acceleration_q95": 5.3440433959943805,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.01477800465769149,
+    "BAS_diagnostic_only": 0.09718750129007159,
+    "source_uid": "male_meditation",
+    "candidate_uid": "ee76d096d64ae34de2faa36b9c8734a71d6d645aeda4eaa0aebf2bdc90e4e77d"
+  },
+  {
+    "frames": 360,
+    "time_between_centers_seconds": 11.966666666666667,
+    "low_cell_fraction": 0.38997214484679665,
+    "longest_low_seconds": 2.3333333333333335,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          0,
+          33
+        ],
+        "duration_seconds": 1.1,
+        "angular_excursion_max_rad": 0.12861082554297562,
+        "FK_excursion_rms_max_m": 0.013484042809344477,
+        "left_censored": true,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      },
+      {
+        "cells_half_open": [
+          158,
+          228
+        ],
+        "duration_seconds": 2.3333333333333335,
+        "angular_excursion_max_rad": 0.3044256050583906,
+        "FK_excursion_rms_max_m": 0.11084865918847002,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      },
+      {
+        "cells_half_open": [
+          329,
+          359
+        ],
+        "duration_seconds": 1.0,
+        "angular_excursion_max_rad": 0.16535493734874593,
+        "FK_excursion_rms_max_m": 0.025706646417894392,
+        "left_censored": false,
+        "right_censored": true,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 49.847374293290585,
+    "FK_D3_max": 126.4917325354042,
+    "FK_activity_path_mean_m": 0.999889857804556,
+    "FK_motion_range_rms_m": 0.11594615845201978,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.15348217595934638,
+    "FK_D2_q95": 1.1232481129501726,
+    "SO3_angular_speed_q95": 0.3552230632786638,
+    "SO3_transported_acceleration_q95": 4.963621910429421,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.008541664449994525,
+    "BAS_diagnostic_only": 0.17394792402345052,
+    "source_uid": "male_meditation",
+    "candidate_uid": "abfe46f5a5fd0cda5c641d45403a7bd0dfb053dfb071aa75fd46a9ef808cfadd"
+  },
+  {
+    "frames": 360,
+    "time_between_centers_seconds": 11.966666666666667,
+    "low_cell_fraction": 0.403899721448468,
+    "longest_low_seconds": 2.533333333333333,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          0,
+          33
+        ],
+        "duration_seconds": 1.1,
+        "angular_excursion_max_rad": 0.12861082554297562,
+        "FK_excursion_rms_max_m": 0.013484042809344477,
+        "left_censored": true,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      },
+      {
+        "cells_half_open": [
+          158,
+          234
+        ],
+        "duration_seconds": 2.533333333333333,
+        "angular_excursion_max_rad": 0.3046044180657698,
+        "FK_excursion_rms_max_m": 0.11089832112455969,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      },
+      {
+        "cells_half_open": [
+          324,
+          359
+        ],
+        "duration_seconds": 1.1666666666666667,
+        "angular_excursion_max_rad": 0.25823531688996004,
+        "FK_excursion_rms_max_m": 0.03933829187174827,
+        "left_censored": false,
+        "right_censored": true,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 49.649379297668986,
+    "FK_D3_max": 443.0735080405843,
+    "FK_activity_path_mean_m": 1.0019826872588757,
+    "FK_motion_range_rms_m": 0.11637385729710224,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.1558989615920471,
+    "FK_D2_q95": 1.1259143709628336,
+    "SO3_angular_speed_q95": 0.36407784038670665,
+    "SO3_transported_acceleration_q95": 4.709051126245977,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.015879257256841188,
+    "BAS_diagnostic_only": 0.13984626979125167,
+    "source_uid": "male_meditation",
+    "candidate_uid": "95bcd6277a53a72c3128ee0f7e5d103ec52aaa0155e50d11dbf9b715369417aa"
+  },
+  {
+    "frames": 360,
+    "time_between_centers_seconds": 11.966666666666667,
+    "low_cell_fraction": 0.3426183844011142,
+    "longest_low_seconds": 1.2333333333333334,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          0,
+          34
+        ],
+        "duration_seconds": 1.1333333333333333,
+        "angular_excursion_max_rad": 0.1263763418141385,
+        "FK_excursion_rms_max_m": 0.013301579584680059,
+        "left_censored": true,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      },
+      {
+        "cells_half_open": [
+          178,
+          215
+        ],
+        "duration_seconds": 1.2333333333333334,
+        "angular_excursion_max_rad": 0.13404667366950862,
+        "FK_excursion_rms_max_m": 0.05316792243580201,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      },
+      {
+        "cells_half_open": [
+          327,
+          359
+        ],
+        "duration_seconds": 1.0666666666666667,
+        "angular_excursion_max_rad": 0.16008331339800125,
+        "FK_excursion_rms_max_m": 0.024936590624426224,
+        "left_censored": false,
+        "right_censored": true,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 44.43784830658512,
+    "FK_D3_max": 263.57487576837354,
+    "FK_activity_path_mean_m": 1.0005327202670307,
+    "FK_motion_range_rms_m": 0.11408169187722773,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.1447972518341767,
+    "FK_D2_q95": 1.1020850309866062,
+    "SO3_angular_speed_q95": 0.33342648348221987,
+    "SO3_transported_acceleration_q95": 4.771933155101576,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.00964313473227469,
+    "BAS_diagnostic_only": 0.1288896661754401,
+    "source_uid": "male_meditation",
+    "candidate_uid": "91b384f3f48f527089f0d0d1b19cfe448cd934fa4d631ef8119218b159e844d7"
+  },
+  {
+    "frames": 360,
+    "time_between_centers_seconds": 11.966666666666667,
+    "low_cell_fraction": 0.38440111420612816,
+    "longest_low_seconds": 2.1333333333333333,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          0,
+          34
+        ],
+        "duration_seconds": 1.1333333333333333,
+        "angular_excursion_max_rad": 0.1263763418141385,
+        "FK_excursion_rms_max_m": 0.013301579584680059,
+        "left_censored": true,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      },
+      {
+        "cells_half_open": [
+          164,
+          228
+        ],
+        "duration_seconds": 2.1333333333333333,
+        "angular_excursion_max_rad": 0.3044663710026031,
+        "FK_excursion_rms_max_m": 0.11083435192567126,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      },
+      {
+        "cells_half_open": [
+          329,
+          359
+        ],
+        "duration_seconds": 1.0,
+        "angular_excursion_max_rad": 0.16535493734874593,
+        "FK_excursion_rms_max_m": 0.025706646417894392,
+        "left_censored": false,
+        "right_censored": true,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 48.03861171562652,
+    "FK_D3_max": 125.1559916436338,
+    "FK_activity_path_mean_m": 0.9995191000570487,
+    "FK_motion_range_rms_m": 0.11526762281016303,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.14912202282043285,
+    "FK_D2_q95": 1.1047904693769763,
+    "SO3_angular_speed_q95": 0.3465516061791053,
+    "SO3_transported_acceleration_q95": 4.726272766328531,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.00739634692476617,
+    "BAS_diagnostic_only": 0.18175340264322098,
+    "source_uid": "male_meditation",
+    "candidate_uid": "c6986134ed9e48dedab3322b2b30b0b0449bb67a2492461a0ad09c84aa689861"
+  },
+  {
+    "frames": 360,
+    "time_between_centers_seconds": 11.966666666666667,
+    "low_cell_fraction": 0.3983286908077994,
+    "longest_low_seconds": 2.3333333333333335,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          0,
+          34
+        ],
+        "duration_seconds": 1.1333333333333333,
+        "angular_excursion_max_rad": 0.1263763418141385,
+        "FK_excursion_rms_max_m": 0.013301579584680059,
+        "left_censored": true,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      },
+      {
+        "cells_half_open": [
+          164,
+          234
+        ],
+        "duration_seconds": 2.3333333333333335,
+        "angular_excursion_max_rad": 0.3044256050583906,
+        "FK_excursion_rms_max_m": 0.11088629529069995,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      },
+      {
+        "cells_half_open": [
+          324,
+          359
+        ],
+        "duration_seconds": 1.1666666666666667,
+        "angular_excursion_max_rad": 0.25823531688996004,
+        "FK_excursion_rms_max_m": 0.03933829187174827,
+        "left_censored": false,
+        "right_censored": true,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 46.46538534731581,
+    "FK_D3_max": 443.0735080405843,
+    "FK_activity_path_mean_m": 1.0016156558077192,
+    "FK_motion_range_rms_m": 0.1157586840116069,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.15070458772711245,
+    "FK_D2_q95": 1.1197761594994626,
+    "SO3_angular_speed_q95": 0.3598216166821571,
+    "SO3_transported_acceleration_q95": 4.3707566134739215,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.01484194562136262,
+    "BAS_diagnostic_only": 0.1366158430921428,
+    "source_uid": "male_meditation",
+    "candidate_uid": "e97fb26af74e939a8a584526a1cc3e0624e9c1b735d5ed7074626e2aa263c431"
+  },
+  {
+    "frames": 360,
+    "time_between_centers_seconds": 11.966666666666667,
+    "low_cell_fraction": 0.34818941504178275,
+    "longest_low_seconds": 1.2333333333333334,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          0,
+          36
+        ],
+        "duration_seconds": 1.2,
+        "angular_excursion_max_rad": 0.13767810213456394,
+        "FK_excursion_rms_max_m": 0.014257452481864665,
+        "left_censored": true,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      },
+      {
+        "cells_half_open": [
+          184,
+          221
+        ],
+        "duration_seconds": 1.2333333333333334,
+        "angular_excursion_max_rad": 0.13404667366950862,
+        "FK_excursion_rms_max_m": 0.05316792243580201,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      },
+      {
+        "cells_half_open": [
+          328,
+          359
+        ],
+        "duration_seconds": 1.0333333333333334,
+        "angular_excursion_max_rad": 0.16240452120392865,
+        "FK_excursion_rms_max_m": 0.02534224286246147,
+        "left_censored": false,
+        "right_censored": true,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 43.28215792104529,
+    "FK_D3_max": 405.9321441892502,
+    "FK_activity_path_mean_m": 1.0019136114290745,
+    "FK_motion_range_rms_m": 0.11387171156690992,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.14520672068415366,
+    "FK_D2_q95": 1.1506159846774775,
+    "SO3_angular_speed_q95": 0.33532209284264797,
+    "SO3_transported_acceleration_q95": 4.607940116022106,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.013800106784884315,
+    "BAS_diagnostic_only": 0.13400437797835155,
+    "source_uid": "male_meditation",
+    "candidate_uid": "ebbe6aee06e6d180c53ca7ffe3c495114c51a8dc595c08dc936cbc4bc6c6d90e"
+  },
+  {
+    "frames": 360,
+    "time_between_centers_seconds": 11.966666666666667,
+    "low_cell_fraction": 0.3788300835654596,
+    "longest_low_seconds": 1.9,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          0,
+          36
+        ],
+        "duration_seconds": 1.2,
+        "angular_excursion_max_rad": 0.13767810213456394,
+        "FK_excursion_rms_max_m": 0.014257452481864665,
+        "left_censored": true,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      },
+      {
+        "cells_half_open": [
+          170,
+          227
+        ],
+        "duration_seconds": 1.9,
+        "angular_excursion_max_rad": 0.30433081983100013,
+        "FK_excursion_rms_max_m": 0.10969848038418924,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      },
+      {
+        "cells_half_open": [
+          329,
+          359
+        ],
+        "duration_seconds": 1.0,
+        "angular_excursion_max_rad": 0.16535493734874593,
+        "FK_excursion_rms_max_m": 0.025706646417894392,
+        "left_censored": false,
+        "right_censored": true,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 47.17112204528291,
+    "FK_D3_max": 125.1559916436338,
+    "FK_activity_path_mean_m": 0.9998173362846018,
+    "FK_motion_range_rms_m": 0.11449566188909949,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.1474677369396203,
+    "FK_D2_q95": 1.1037801282302362,
+    "SO3_angular_speed_q95": 0.3449545719955983,
+    "SO3_transported_acceleration_q95": 4.570913300018054,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.007352212438915156,
+    "BAS_diagnostic_only": 0.20152885536125986,
+    "source_uid": "male_meditation",
+    "candidate_uid": "97abd79457043b2ebeffad9a2f7895e8e67cb49c837c7e9f30949da07128647a"
+  },
+  {
+    "frames": 360,
+    "time_between_centers_seconds": 11.966666666666667,
+    "low_cell_fraction": 0.39275766016713093,
+    "longest_low_seconds": 2.1,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          0,
+          36
+        ],
+        "duration_seconds": 1.2,
+        "angular_excursion_max_rad": 0.13767810213456394,
+        "FK_excursion_rms_max_m": 0.014257452481864665,
+        "left_censored": true,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      },
+      {
+        "cells_half_open": [
+          170,
+          233
+        ],
+        "duration_seconds": 2.1,
+        "angular_excursion_max_rad": 0.3044663710026031,
+        "FK_excursion_rms_max_m": 0.10975189975128727,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      },
+      {
+        "cells_half_open": [
+          324,
+          359
+        ],
+        "duration_seconds": 1.1666666666666667,
+        "angular_excursion_max_rad": 0.25823531688996004,
+        "FK_excursion_rms_max_m": 0.03933829187174827,
+        "left_censored": false,
+        "right_censored": true,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 43.28215792104529,
+    "FK_D3_max": 443.0735080405843,
+    "FK_activity_path_mean_m": 1.0019346557206978,
+    "FK_motion_range_rms_m": 0.11505144957166075,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.1496818088890339,
+    "FK_D2_q95": 1.122317061030782,
+    "SO3_angular_speed_q95": 0.35944224793811685,
+    "SO3_transported_acceleration_q95": 4.268158050990156,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.014915202049867106,
+    "BAS_diagnostic_only": 0.15252543178353603,
+    "source_uid": "male_meditation",
+    "candidate_uid": "ec802812ed45a027464dfee47508fac80356929bd8b498194496fa5b20245978"
+  },
+  {
+    "frames": 360,
+    "time_between_centers_seconds": 11.966666666666667,
+    "low_cell_fraction": 0.40947075208913647,
+    "longest_low_seconds": 2.5,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          0,
+          36
+        ],
+        "duration_seconds": 1.2,
+        "angular_excursion_max_rad": 0.13767810213456394,
+        "FK_excursion_rms_max_m": 0.014257452481864665,
+        "left_censored": true,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      },
+      {
+        "cells_half_open": [
+          170,
+          245
+        ],
+        "duration_seconds": 2.5,
+        "angular_excursion_max_rad": 0.3046044180657698,
+        "FK_excursion_rms_max_m": 0.10983374542688774,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 46.61315899033854,
+    "FK_D3_max": 274.9060735777795,
+    "FK_activity_path_mean_m": 0.9999113097124769,
+    "FK_motion_range_rms_m": 0.11595778070973453,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.16018264007754085,
+    "FK_D2_q95": 1.1920322167801738,
+    "SO3_angular_speed_q95": 0.3895542907437026,
+    "SO3_transported_acceleration_q95": 5.269602862597073,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.009334271093232002,
+    "BAS_diagnostic_only": 0.14314508543755855,
+    "source_uid": "male_meditation",
+    "candidate_uid": "65b338724c8d1fe87fbfe166b90b67bd6c3792cf893a85fa7b767980e305c769"
+  },
+  {
+    "frames": 360,
+    "time_between_centers_seconds": 11.966666666666667,
+    "low_cell_fraction": 0.3565459610027855,
+    "longest_low_seconds": 1.2333333333333334,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          0,
+          37
+        ],
+        "duration_seconds": 1.2333333333333334,
+        "angular_excursion_max_rad": 0.13526565652248917,
+        "FK_excursion_rms_max_m": 0.014046802256692565,
+        "left_censored": true,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      },
+      {
+        "cells_half_open": [
+          190,
+          227
+        ],
+        "duration_seconds": 1.2333333333333334,
+        "angular_excursion_max_rad": 0.13404667366950862,
+        "FK_excursion_rms_max_m": 0.05316792243580201,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      },
+      {
+        "cells_half_open": [
+          329,
+          359
+        ],
+        "duration_seconds": 1.0,
+        "angular_excursion_max_rad": 0.16535493734874593,
+        "FK_excursion_rms_max_m": 0.025706646417894392,
+        "left_censored": false,
+        "right_censored": true,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 46.02394978664538,
+    "FK_D3_max": 128.48418495672186,
+    "FK_activity_path_mean_m": 1.000151600548276,
+    "FK_motion_range_rms_m": 0.1136280452946502,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.1464046205960007,
+    "FK_D2_q95": 1.064113510800701,
+    "SO3_angular_speed_q95": 0.3465516061791053,
+    "SO3_transported_acceleration_q95": 5.107375314303325,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.007329059655980832,
+    "BAS_diagnostic_only": 0.17343680367191555,
+    "source_uid": "male_meditation",
+    "candidate_uid": "83a9a06edaa3dc407a41f70826a1679c188adad409b851c58ed49eebd5a0766b"
+  },
+  {
+    "frames": 360,
+    "time_between_centers_seconds": 11.966666666666667,
+    "low_cell_fraction": 0.38997214484679665,
+    "longest_low_seconds": 1.9333333333333333,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          0,
+          37
+        ],
+        "duration_seconds": 1.2333333333333334,
+        "angular_excursion_max_rad": 0.13526565652248917,
+        "FK_excursion_rms_max_m": 0.014046802256692565,
+        "left_censored": true,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      },
+      {
+        "cells_half_open": [
+          175,
+          233
+        ],
+        "duration_seconds": 1.9333333333333333,
+        "angular_excursion_max_rad": 0.31759834657270536,
+        "FK_excursion_rms_max_m": 0.11356148489982464,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      },
+      {
+        "cells_half_open": [
+          324,
+          359
+        ],
+        "duration_seconds": 1.1666666666666667,
+        "angular_excursion_max_rad": 0.25823531688996004,
+        "FK_excursion_rms_max_m": 0.03933829187174827,
+        "left_censored": false,
+        "right_censored": true,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 44.524665052886604,
+    "FK_D3_max": 443.0735080405843,
+    "FK_activity_path_mean_m": 1.002293777762384,
+    "FK_motion_range_rms_m": 0.11424937906519222,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.1479423989670144,
+    "FK_D2_q95": 1.0933452093555653,
+    "SO3_angular_speed_q95": 0.35944224793811685,
+    "SO3_transported_acceleration_q95": 5.016089407505235,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.014874912481603296,
+    "BAS_diagnostic_only": 0.1274725288429627,
+    "source_uid": "male_meditation",
+    "candidate_uid": "f31877147db6a95c48f635412beb77a725772bd9cd4662c7801b3f13ac6e9e4e"
+  },
+  {
+    "frames": 360,
+    "time_between_centers_seconds": 11.966666666666667,
+    "low_cell_fraction": 0.40668523676880225,
+    "longest_low_seconds": 2.3333333333333335,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          0,
+          37
+        ],
+        "duration_seconds": 1.2333333333333334,
+        "angular_excursion_max_rad": 0.13526565652248917,
+        "FK_excursion_rms_max_m": 0.014046802256692565,
+        "left_censored": true,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      },
+      {
+        "cells_half_open": [
+          175,
+          245
+        ],
+        "duration_seconds": 2.3333333333333335,
+        "angular_excursion_max_rad": 0.3176075481119812,
+        "FK_excursion_rms_max_m": 0.1136230014299957,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 46.02394978664538,
+    "FK_D3_max": 274.9060735777795,
+    "FK_activity_path_mean_m": 1.0002949473499758,
+    "FK_motion_range_rms_m": 0.11528443419218436,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.15614229015895736,
+    "FK_D2_q95": 1.1494454586166387,
+    "SO3_angular_speed_q95": 0.3861584727151485,
+    "SO3_transported_acceleration_q95": 5.654125091998439,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.009207273958362848,
+    "BAS_diagnostic_only": 0.11505303374821416,
+    "source_uid": "male_meditation",
+    "candidate_uid": "766512c34cb52a2536e618e8ffaaecbd528f69b6775b22a7238876e13d1dcfeb"
+  },
+  {
+    "frames": 360,
+    "time_between_centers_seconds": 11.966666666666667,
+    "low_cell_fraction": 0.40668523676880225,
+    "longest_low_seconds": 2.0,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          0,
+          39
+        ],
+        "duration_seconds": 1.3,
+        "angular_excursion_max_rad": 0.1309231709100659,
+        "FK_excursion_rms_max_m": 0.013676398395278228,
+        "left_censored": true,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      },
+      {
+        "cells_half_open": [
+          185,
+          245
+        ],
+        "duration_seconds": 2.0,
+        "angular_excursion_max_rad": 0.34341794325239683,
+        "FK_excursion_rms_max_m": 0.1210490541749343,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 48.48455361752802,
+    "FK_D3_max": 274.9060735777795,
+    "FK_activity_path_mean_m": 1.001106865733452,
+    "FK_motion_range_rms_m": 0.11365604473612986,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.15614229015895736,
+    "FK_D2_q95": 1.2423655339510047,
+    "SO3_angular_speed_q95": 0.3895542907437026,
+    "SO3_transported_acceleration_q95": 6.464634426918043,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.009582812075923389,
+    "BAS_diagnostic_only": 0.07677056310161375,
+    "source_uid": "male_meditation",
+    "candidate_uid": "7f3e3796d025690232e49a0a45230fa1b5206b805d0cf8dd2e37c8806d0cfd1d"
+  },
+  {
+    "frames": 360,
+    "time_between_centers_seconds": 11.966666666666667,
+    "low_cell_fraction": 0.3871866295264624,
+    "longest_low_seconds": 1.9333333333333333,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          163,
+          221
+        ],
+        "duration_seconds": 1.9333333333333333,
+        "angular_excursion_max_rad": 0.30130335518548385,
+        "FK_excursion_rms_max_m": 0.10954374723520437,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      },
+      {
+        "cells_half_open": [
+          328,
+          359
+        ],
+        "duration_seconds": 1.0333333333333334,
+        "angular_excursion_max_rad": 0.1604137008562764,
+        "FK_excursion_rms_max_m": 0.024994280075526572,
+        "left_censored": false,
+        "right_censored": true,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 49.2349186264695,
+    "FK_D3_max": 465.2683142698161,
+    "FK_activity_path_mean_m": 1.0043644769552578,
+    "FK_motion_range_rms_m": 0.11472229400718427,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.14487692357113677,
+    "FK_D2_q95": 1.3107465721511569,
+    "SO3_angular_speed_q95": 0.3503196151236409,
+    "SO3_transported_acceleration_q95": 5.559797047943884,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.018286227290713795,
+    "BAS_diagnostic_only": 0.12776805327122626,
+    "source_uid": "male_meditation",
+    "candidate_uid": "ef8ee16ab73b402d8275b36571db2ece50e93e7711ca5bb51b089db61a285d9a"
+  },
+  {
+    "frames": 360,
+    "time_between_centers_seconds": 11.966666666666667,
+    "low_cell_fraction": 0.45403899721448465,
+    "longest_low_seconds": 2.6666666666666665,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          110,
+          190
+        ],
+        "duration_seconds": 2.6666666666666665,
+        "angular_excursion_max_rad": 0.19523226363149626,
+        "FK_excursion_rms_max_m": 0.035505283033597256,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 86.96287852621735,
+    "FK_D3_max": 243.12305581456405,
+    "FK_activity_path_mean_m": 1.3299295265632223,
+    "FK_motion_range_rms_m": 0.11090078880279687,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.47606203512872014,
+    "FK_D2_q95": 3.3710892622229798,
+    "SO3_angular_speed_q95": 1.0921817385445367,
+    "SO3_transported_acceleration_q95": 13.88538062673336,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.004608838420814315,
+    "BAS_diagnostic_only": 0.11049987359456986,
+    "source_uid": "male_meditation",
+    "candidate_uid": "724be2595b67dc2cabdda3df15f6d2efb8d386602e15a36535130ce701e3a2ab"
+  },
+  {
+    "frames": 360,
+    "time_between_centers_seconds": 11.966666666666667,
+    "low_cell_fraction": 0.45125348189415043,
+    "longest_low_seconds": 2.6333333333333333,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          90,
+          169
+        ],
+        "duration_seconds": 2.6333333333333333,
+        "angular_excursion_max_rad": 0.22120572577647288,
+        "FK_excursion_rms_max_m": 0.03391150974652505,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      },
+      {
+        "cells_half_open": [
+          209,
+          242
+        ],
+        "duration_seconds": 1.1,
+        "angular_excursion_max_rad": 0.10201004784084948,
+        "FK_excursion_rms_max_m": 0.02429707457192749,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 68.76435817189144,
+    "FK_D3_max": 163.97300205347537,
+    "FK_activity_path_mean_m": 1.3300269216689236,
+    "FK_motion_range_rms_m": 0.11213185096522282,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.4649549651353277,
+    "FK_D2_q95": 2.8472285900077035,
+    "SO3_angular_speed_q95": 1.0360505728109695,
+    "SO3_transported_acceleration_q95": 12.342827589873687,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.004161603675396703,
+    "BAS_diagnostic_only": 0.08196172203422675,
+    "source_uid": "male_meditation",
+    "candidate_uid": "773c35eb279e3fb2cde5b01aeb77bab1e20d0d4b1c76ca53d1b59192278b5861"
+  },
+  {
+    "frames": 360,
+    "time_between_centers_seconds": 11.966666666666667,
+    "low_cell_fraction": 0.4596100278551532,
+    "longest_low_seconds": 2.933333333333333,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          90,
+          178
+        ],
+        "duration_seconds": 2.933333333333333,
+        "angular_excursion_max_rad": 0.1731635422593765,
+        "FK_excursion_rms_max_m": 0.03145979231543947,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      },
+      {
+        "cells_half_open": [
+          219,
+          249
+        ],
+        "duration_seconds": 1.0,
+        "angular_excursion_max_rad": 0.09755736228719071,
+        "FK_excursion_rms_max_m": 0.02434626102668486,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 81.11449674666501,
+    "FK_D3_max": 174.05937961126253,
+    "FK_activity_path_mean_m": 1.3298664869215175,
+    "FK_motion_range_rms_m": 0.11203481643873181,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.4912495057830941,
+    "FK_D2_q95": 3.06368557416025,
+    "SO3_angular_speed_q95": 1.089593302500242,
+    "SO3_transported_acceleration_q95": 11.55610525804607,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.004396415058501608,
+    "BAS_diagnostic_only": 0.14311493004802558,
+    "source_uid": "male_meditation",
+    "candidate_uid": "5b4eae9f9ca88172bddd92e454206c4a5bf60aabd54735546b55dbb4d762f225"
+  },
+  {
+    "frames": 360,
+    "time_between_centers_seconds": 11.966666666666667,
+    "low_cell_fraction": 0.4735376044568245,
+    "longest_low_seconds": 3.1333333333333333,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          90,
+          184
+        ],
+        "duration_seconds": 3.1333333333333333,
+        "angular_excursion_max_rad": 0.17320923964394688,
+        "FK_excursion_rms_max_m": 0.03146587521757963,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      },
+      {
+        "cells_half_open": [
+          223,
+          253
+        ],
+        "duration_seconds": 1.0,
+        "angular_excursion_max_rad": 0.10350524899722531,
+        "FK_excursion_rms_max_m": 0.024717678821603816,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 85.42482119670699,
+    "FK_D3_max": 205.18241333368897,
+    "FK_activity_path_mean_m": 1.3296671381735248,
+    "FK_motion_range_rms_m": 0.11186470454524712,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.48092223992606187,
+    "FK_D2_q95": 3.1075633840440697,
+    "SO3_angular_speed_q95": 1.1016736097107807,
+    "SO3_transported_acceleration_q95": 12.353282885887975,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.004726041309451364,
+    "BAS_diagnostic_only": 0.12200779012766917,
+    "source_uid": "male_meditation",
+    "candidate_uid": "c95cae2e80bf6371b19bb09a43b587fcace32f993e2fed22ba8a9533ee321fc0"
+  },
+  {
+    "frames": 360,
+    "time_between_centers_seconds": 11.966666666666667,
+    "low_cell_fraction": 0.4373259052924791,
+    "longest_low_seconds": 2.3333333333333335,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          99,
+          169
+        ],
+        "duration_seconds": 2.3333333333333335,
+        "angular_excursion_max_rad": 0.24237698796303,
+        "FK_excursion_rms_max_m": 0.0355055172669077,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      },
+      {
+        "cells_half_open": [
+          209,
+          242
+        ],
+        "duration_seconds": 1.1,
+        "angular_excursion_max_rad": 0.10201004784084948,
+        "FK_excursion_rms_max_m": 0.02429707457192749,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 66.50124276637888,
+    "FK_D3_max": 155.8657631106326,
+    "FK_activity_path_mean_m": 1.3297456788622906,
+    "FK_motion_range_rms_m": 0.11157781975929124,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.4649549651353277,
+    "FK_D2_q95": 2.662743584410442,
+    "SO3_angular_speed_q95": 1.0360505728109695,
+    "SO3_transported_acceleration_q95": 11.797902720254616,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.0036346092866070805,
+    "BAS_diagnostic_only": 0.06856441789554925,
+    "source_uid": "male_meditation",
+    "candidate_uid": "c5811be4f71c82164ca35997de5f7a309984c4ca9ed4943e25f49a415ba16f7c"
+  },
+  {
+    "frames": 360,
+    "time_between_centers_seconds": 11.966666666666667,
+    "low_cell_fraction": 0.4456824512534819,
+    "longest_low_seconds": 2.6333333333333333,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          99,
+          178
+        ],
+        "duration_seconds": 2.6333333333333333,
+        "angular_excursion_max_rad": 0.19518514002537096,
+        "FK_excursion_rms_max_m": 0.03549522709909037,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      },
+      {
+        "cells_half_open": [
+          219,
+          249
+        ],
+        "duration_seconds": 1.0,
+        "angular_excursion_max_rad": 0.09755736228719071,
+        "FK_excursion_rms_max_m": 0.02434626102668486,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 71.17959764565374,
+    "FK_D3_max": 174.05937961126253,
+    "FK_activity_path_mean_m": 1.3298531174438613,
+    "FK_motion_range_rms_m": 0.11160109893435713,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.4912495057830941,
+    "FK_D2_q95": 3.0319700347241003,
+    "SO3_angular_speed_q95": 1.089593302500242,
+    "SO3_transported_acceleration_q95": 11.296122024523095,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.003912572422463488,
+    "BAS_diagnostic_only": 0.02637309651530716,
+    "source_uid": "male_meditation",
+    "candidate_uid": "aa416aade99b2dbab578bacc42b7edcafdd9ab59ca7e83320c6e829d59aba007"
+  },
+  {
+    "frames": 360,
+    "time_between_centers_seconds": 11.966666666666667,
+    "low_cell_fraction": 0.4596100278551532,
+    "longest_low_seconds": 2.8333333333333335,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          99,
+          184
+        ],
+        "duration_seconds": 2.8333333333333335,
+        "angular_excursion_max_rad": 0.19524489033908346,
+        "FK_excursion_rms_max_m": 0.03550620831329125,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      },
+      {
+        "cells_half_open": [
+          223,
+          253
+        ],
+        "duration_seconds": 1.0,
+        "angular_excursion_max_rad": 0.10350524899722531,
+        "FK_excursion_rms_max_m": 0.024717678821603816,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 72.524376312122,
+    "FK_D3_max": 205.18241333368897,
+    "FK_activity_path_mean_m": 1.3295611639704814,
+    "FK_motion_range_rms_m": 0.11149055024706635,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.48092223992606187,
+    "FK_D2_q95": 3.0637442054827098,
+    "SO3_angular_speed_q95": 1.1016736097107807,
+    "SO3_transported_acceleration_q95": 12.018493686680468,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.004245299529920211,
+    "BAS_diagnostic_only": 0.0724797706451166,
+    "source_uid": "male_meditation",
+    "candidate_uid": "7e2511baa5a055d458e8d4a0cfb700748e05b9a1d829b1237d0b5df167493027"
+  },
+  {
+    "frames": 360,
+    "time_between_centers_seconds": 11.966666666666667,
+    "low_cell_fraction": 0.4623955431754875,
+    "longest_low_seconds": 3.033333333333333,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          99,
+          190
+        ],
+        "duration_seconds": 3.033333333333333,
+        "angular_excursion_max_rad": 0.19529594076264725,
+        "FK_excursion_rms_max_m": 0.035499959350756984,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 86.96287852621735,
+    "FK_D3_max": 243.12305581456405,
+    "FK_activity_path_mean_m": 1.3296053400838053,
+    "FK_motion_range_rms_m": 0.1112986208912473,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.47606203512908324,
+    "FK_D2_q95": 3.3710892622204853,
+    "SO3_angular_speed_q95": 1.0921817385436332,
+    "SO3_transported_acceleration_q95": 13.591215626710316,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.004726886522671268,
+    "BAS_diagnostic_only": 0.17548158196553157,
+    "source_uid": "male_meditation",
+    "candidate_uid": "9b4181a4403d65f0f071fe97c0806b6b2ba4a52d0a84f78cd957f3210d406d99"
+  },
+  {
+    "frames": 360,
+    "time_between_centers_seconds": 11.966666666666667,
+    "low_cell_fraction": 0.46518105849582175,
+    "longest_low_seconds": 3.2333333333333334,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          99,
+          196
+        ],
+        "duration_seconds": 3.2333333333333334,
+        "angular_excursion_max_rad": 0.19534006245948118,
+        "FK_excursion_rms_max_m": 0.035501585480074906,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 79.47893685719283,
+    "FK_D3_max": 285.2350645061739,
+    "FK_activity_path_mean_m": 1.3294116987913216,
+    "FK_motion_range_rms_m": 0.11102287182339592,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.47538462698351663,
+    "FK_D2_q95": 2.9940208132447634,
+    "SO3_angular_speed_q95": 1.072769891123524,
+    "SO3_transported_acceleration_q95": 12.150482355342888,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.004484380381810966,
+    "BAS_diagnostic_only": 0.1664148358513269,
+    "source_uid": "male_meditation",
+    "candidate_uid": "26b2d232e79068d7dc9ffd1e8ed96a4906c6ae0b4bc1dd44fdc3eceb179d0b70"
+  },
+  {
+    "frames": 360,
+    "time_between_centers_seconds": 11.966666666666667,
+    "low_cell_fraction": 0.44846796657381616,
+    "longest_low_seconds": 2.466666666666667,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          104,
+          178
+        ],
+        "duration_seconds": 2.466666666666667,
+        "angular_excursion_max_rad": 0.19906330527081365,
+        "FK_excursion_rms_max_m": 0.03635435007320106,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      },
+      {
+        "cells_half_open": [
+          219,
+          249
+        ],
+        "duration_seconds": 1.0,
+        "angular_excursion_max_rad": 0.09755736228719071,
+        "FK_excursion_rms_max_m": 0.02434626102668486,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 81.11449674666501,
+    "FK_D3_max": 174.05937961126253,
+    "FK_activity_path_mean_m": 1.3301385170380433,
+    "FK_motion_range_rms_m": 0.11135272569473241,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.4912495057830941,
+    "FK_D2_q95": 3.06368557416025,
+    "SO3_angular_speed_q95": 1.089593302500242,
+    "SO3_transported_acceleration_q95": 11.55610525804607,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.004230959188400907,
+    "BAS_diagnostic_only": 0.0855296331190709,
+    "source_uid": "male_meditation",
+    "candidate_uid": "a89549f694142fbce66be77853dddee8814f8182e9b6041de2437b91600a9acc"
+  },
+  {
+    "frames": 360,
+    "time_between_centers_seconds": 11.966666666666667,
+    "low_cell_fraction": 0.4623955431754875,
+    "longest_low_seconds": 2.6666666666666665,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          104,
+          184
+        ],
+        "duration_seconds": 2.6666666666666665,
+        "angular_excursion_max_rad": 0.1991335559286961,
+        "FK_excursion_rms_max_m": 0.036349229052985356,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      },
+      {
+        "cells_half_open": [
+          223,
+          253
+        ],
+        "duration_seconds": 1.0,
+        "angular_excursion_max_rad": 0.10350524899722531,
+        "FK_excursion_rms_max_m": 0.024717678821603816,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 84.74021532779838,
+    "FK_D3_max": 205.18241333368897,
+    "FK_activity_path_mean_m": 1.3300809942763259,
+    "FK_motion_range_rms_m": 0.1112722988017411,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.48092223992606187,
+    "FK_D2_q95": 3.1075633840440697,
+    "SO3_angular_speed_q95": 1.1016736097107807,
+    "SO3_transported_acceleration_q95": 12.353282885887975,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.004591635078890695,
+    "BAS_diagnostic_only": 0.13239518188732638,
+    "source_uid": "male_meditation",
+    "candidate_uid": "6e180b011562ef80a21264e7f9a4f8ec0904fc490e34c48c3273a1955376a828"
+  },
+  {
+    "frames": 360,
+    "time_between_centers_seconds": 11.966666666666667,
+    "low_cell_fraction": 0.46518105849582175,
+    "longest_low_seconds": 2.8666666666666667,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          104,
+          190
+        ],
+        "duration_seconds": 2.8666666666666667,
+        "angular_excursion_max_rad": 0.19919277496827087,
+        "FK_excursion_rms_max_m": 0.03636148628199377,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 91.19876881106607,
+    "FK_D3_max": 243.12305581456405,
+    "FK_activity_path_mean_m": 1.330037813945474,
+    "FK_motion_range_rms_m": 0.11111015731147521,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.47606203512908324,
+    "FK_D2_q95": 3.4290999314297483,
+    "SO3_angular_speed_q95": 1.0921817385436332,
+    "SO3_transported_acceleration_q95": 14.825403607486999,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.005027350235859872,
+    "BAS_diagnostic_only": 0.17254449983668765,
+    "source_uid": "male_meditation",
+    "candidate_uid": "ed2b88d3120800aa7992631b4ba6b840d4c9a2251a026acf4da3365fcbfa362c"
+  },
+  {
+    "frames": 360,
+    "time_between_centers_seconds": 11.966666666666667,
+    "low_cell_fraction": 0.467966573816156,
+    "longest_low_seconds": 3.066666666666667,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          104,
+          196
+        ],
+        "duration_seconds": 3.066666666666667,
+        "angular_excursion_max_rad": 0.1992433716968825,
+        "FK_excursion_rms_max_m": 0.03635627748678539,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 80.39251956967664,
+    "FK_D3_max": 285.2350645061739,
+    "FK_activity_path_mean_m": 1.329838912140361,
+    "FK_motion_range_rms_m": 0.11086431503694859,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.47538462698351663,
+    "FK_D2_q95": 3.267971382906088,
+    "SO3_angular_speed_q95": 1.072769891123524,
+    "SO3_transported_acceleration_q95": 12.310294860982054,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.004793435272068342,
+    "BAS_diagnostic_only": 0.12985041200358463,
+    "source_uid": "male_meditation",
+    "candidate_uid": "21fbc0dfdb91cb1a3ecef37bc1cac33ccb9eb40567e1b8b019ba7ba2395a0149"
+  },
+  {
+    "frames": 360,
+    "time_between_centers_seconds": 11.966666666666667,
+    "low_cell_fraction": 0.467966573816156,
+    "longest_low_seconds": 3.2666666666666666,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          104,
+          202
+        ],
+        "duration_seconds": 3.2666666666666666,
+        "angular_excursion_max_rad": 0.19928710144150227,
+        "FK_excursion_rms_max_m": 0.0363557829516091,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 91.6646207521378,
+    "FK_D3_max": 333.2495958259268,
+    "FK_activity_path_mean_m": 1.3294877762998512,
+    "FK_motion_range_rms_m": 0.11053710189104422,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.4625617424597466,
+    "FK_D2_q95": 3.709487428324706,
+    "SO3_angular_speed_q95": 1.1401167750986956,
+    "SO3_transported_acceleration_q95": 15.019909863715863,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.005846646594434871,
+    "BAS_diagnostic_only": 0.043371263612773873,
+    "source_uid": "male_meditation",
+    "candidate_uid": "9e0320c85222226d3421325572c962b6917b3ee3f6613efc176efbf3d135c875"
+  },
+  {
+    "frames": 360,
+    "time_between_centers_seconds": 11.966666666666667,
+    "low_cell_fraction": 0.4373259052924791,
+    "longest_low_seconds": 2.2666666666666666,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          110,
+          178
+        ],
+        "duration_seconds": 2.2666666666666666,
+        "angular_excursion_max_rad": 0.19507595626480614,
+        "FK_excursion_rms_max_m": 0.03551559149976559,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      },
+      {
+        "cells_half_open": [
+          219,
+          249
+        ],
+        "duration_seconds": 1.0,
+        "angular_excursion_max_rad": 0.09755736228719071,
+        "FK_excursion_rms_max_m": 0.02434626102668486,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 70.69335575735157,
+    "FK_D3_max": 174.05937961126253,
+    "FK_activity_path_mean_m": 1.3299094829034912,
+    "FK_motion_range_rms_m": 0.1110831446507393,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.4912495057830941,
+    "FK_D2_q95": 3.0319700347241003,
+    "SO3_angular_speed_q95": 1.089593302500242,
+    "SO3_transported_acceleration_q95": 11.296122024523095,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.0037501196772695288,
+    "BAS_diagnostic_only": 0.06318836827379286,
+    "source_uid": "male_meditation",
+    "candidate_uid": "d46fa5bda5bd8e70f99719d7ea5b14388c306b87a587824c320e308325cc4085"
+  },
+  {
+    "frames": 360,
+    "time_between_centers_seconds": 11.966666666666667,
+    "low_cell_fraction": 0.45125348189415043,
+    "longest_low_seconds": 2.466666666666667,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          110,
+          184
+        ],
+        "duration_seconds": 2.466666666666667,
+        "angular_excursion_max_rad": 0.19516138961294965,
+        "FK_excursion_rms_max_m": 0.03550773071381861,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      },
+      {
+        "cells_half_open": [
+          223,
+          253
+        ],
+        "duration_seconds": 1.0,
+        "angular_excursion_max_rad": 0.10350524899722531,
+        "FK_excursion_rms_max_m": 0.024717678821603816,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 71.31621823573848,
+    "FK_D3_max": 205.18241333368897,
+    "FK_activity_path_mean_m": 1.329738282358295,
+    "FK_motion_range_rms_m": 0.11103275905218027,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.48092223992606187,
+    "FK_D2_q95": 3.0637442054827098,
+    "SO3_angular_speed_q95": 1.1016736097107807,
+    "SO3_transported_acceleration_q95": 12.018493686680468,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.0041206198733082225,
+    "BAS_diagnostic_only": 0.08713593642329455,
+    "source_uid": "male_meditation",
+    "candidate_uid": "6b204336198a3e431558bcc4cfcdadfaa49ff278bde1b729f419901efcfeda96"
+  },
+  {
+    "frames": 360,
+    "time_between_centers_seconds": 11.966666666666667,
+    "low_cell_fraction": 0.4568245125348189,
+    "longest_low_seconds": 2.8666666666666667,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          110,
+          196
+        ],
+        "duration_seconds": 2.8666666666666667,
+        "angular_excursion_max_rad": 0.19529200783623343,
+        "FK_excursion_rms_max_m": 0.03551628105553154,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 79.47893685719283,
+    "FK_D3_max": 285.2350645061739,
+    "FK_activity_path_mean_m": 1.3296432636724562,
+    "FK_motion_range_rms_m": 0.11068477037728397,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.47538462698351663,
+    "FK_D2_q95": 2.9940208132447634,
+    "SO3_angular_speed_q95": 1.072769891123524,
+    "SO3_transported_acceleration_q95": 12.150482355342888,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.004348699523049623,
+    "BAS_diagnostic_only": 0.05741984919682732,
+    "source_uid": "male_meditation",
+    "candidate_uid": "9dd5726d2d6f3983143c9da5a8c71e687b90a8f51d6d740da0712f5bc8958667"
+  },
+  {
+    "frames": 360,
+    "time_between_centers_seconds": 11.966666666666667,
+    "low_cell_fraction": 0.4568245125348189,
+    "longest_low_seconds": 3.066666666666667,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          110,
+          202
+        ],
+        "duration_seconds": 3.066666666666667,
+        "angular_excursion_max_rad": 0.19534305304292165,
+        "FK_excursion_rms_max_m": 0.035510045718915126,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 80.44297877383413,
+    "FK_D3_max": 333.2495958259268,
+    "FK_activity_path_mean_m": 1.329286863914176,
+    "FK_motion_range_rms_m": 0.11038751225836078,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.4625617424597466,
+    "FK_D2_q95": 3.3556427449710453,
+    "SO3_angular_speed_q95": 1.1401167750986956,
+    "SO3_transported_acceleration_q95": 13.96153632138856,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.005464446142982744,
+    "BAS_diagnostic_only": 0.042475975126513535,
+    "source_uid": "male_meditation",
+    "candidate_uid": "9c0e093c834667d5fabc9955c62a08756275fff1bbe3aeb3de6036e0f00bb9fa"
+  },
+  {
+    "frames": 360,
+    "time_between_centers_seconds": 11.966666666666667,
+    "low_cell_fraction": 0.45125348189415043,
+    "longest_low_seconds": 2.3,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          115,
+          184
+        ],
+        "duration_seconds": 2.3,
+        "angular_excursion_max_rad": 0.1986389971938423,
+        "FK_excursion_rms_max_m": 0.03628402338335747,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      },
+      {
+        "cells_half_open": [
+          223,
+          253
+        ],
+        "duration_seconds": 1.0,
+        "angular_excursion_max_rad": 0.10350524899722531,
+        "FK_excursion_rms_max_m": 0.024717678821603816,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 74.17524805041491,
+    "FK_D3_max": 205.18241333368897,
+    "FK_activity_path_mean_m": 1.3298618812107514,
+    "FK_motion_range_rms_m": 0.110772486275654,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.48092223992606187,
+    "FK_D2_q95": 3.0637442054827098,
+    "SO3_angular_speed_q95": 1.1016736097107807,
+    "SO3_transported_acceleration_q95": 12.000051458411702,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.0041079253101541,
+    "BAS_diagnostic_only": 0.05250735674601876,
+    "source_uid": "male_meditation",
+    "candidate_uid": "b27eb99f7043dd1bb59dc5ca27ecf00da7e28dca68a8d0513c273e2a65f2f07d"
+  },
+  {
+    "frames": 360,
+    "time_between_centers_seconds": 11.966666666666667,
+    "low_cell_fraction": 0.45403899721448465,
+    "longest_low_seconds": 2.5,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          115,
+          190
+        ],
+        "duration_seconds": 2.5,
+        "angular_excursion_max_rad": 0.19872375161417855,
+        "FK_excursion_rms_max_m": 0.036277374730279886,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 86.92788029058455,
+    "FK_D3_max": 243.12305581456405,
+    "FK_activity_path_mean_m": 1.3299394394405069,
+    "FK_motion_range_rms_m": 0.11067055490065072,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.47606203512908324,
+    "FK_D2_q95": 3.3710892622204853,
+    "SO3_angular_speed_q95": 1.0921817385436332,
+    "SO3_transported_acceleration_q95": 13.591215626710316,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.004597533873836157,
+    "BAS_diagnostic_only": 0.11320909201854375,
+    "source_uid": "male_meditation",
+    "candidate_uid": "25d6dd985bae7aa870ca1db02cec85875e59b0a03276f90a19ae0711b5baafe4"
+  },
+  {
+    "frames": 360,
+    "time_between_centers_seconds": 11.966666666666667,
+    "low_cell_fraction": 0.4568245125348189,
+    "longest_low_seconds": 2.7,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          115,
+          196
+        ],
+        "duration_seconds": 2.7,
+        "angular_excursion_max_rad": 0.1987940627972683,
+        "FK_excursion_rms_max_m": 0.036272436618439784,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 79.47893685719283,
+    "FK_D3_max": 285.2350645061739,
+    "FK_activity_path_mean_m": 1.329887595084703,
+    "FK_motion_range_rms_m": 0.11048468863691593,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.47538462698351663,
+    "FK_D2_q95": 2.9940208132447634,
+    "SO3_angular_speed_q95": 1.072769891123524,
+    "SO3_transported_acceleration_q95": 12.148955526277307,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.0043507583483374844,
+    "BAS_diagnostic_only": 0.0926516405341001,
+    "source_uid": "male_meditation",
+    "candidate_uid": "be4ced52d256f43e11b35aead1f870f48bea00dc1b77783b8d652ee385ed6c7b"
+  },
+  {
+    "frames": 360,
+    "time_between_centers_seconds": 11.966666666666667,
+    "low_cell_fraction": 0.4568245125348189,
+    "longest_low_seconds": 2.9,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          115,
+          202
+        ],
+        "duration_seconds": 2.9,
+        "angular_excursion_max_rad": 0.19885333282764708,
+        "FK_excursion_rms_max_m": 0.03628460836530959,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 80.1361929822294,
+    "FK_D3_max": 333.2495958259268,
+    "FK_activity_path_mean_m": 1.3294438299113553,
+    "FK_motion_range_rms_m": 0.11021725176802177,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.4625617424597466,
+    "FK_D2_q95": 3.3556427449710453,
+    "SO3_angular_speed_q95": 1.1401167750986956,
+    "SO3_transported_acceleration_q95": 13.257590941701311,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.005439677314646888,
+    "BAS_diagnostic_only": 0.0935802104020683,
+    "source_uid": "male_meditation",
+    "candidate_uid": "e1d2272acdfebc44b042e62326dce82600b3571dda84ca312429870576435529"
+  },
+  {
+    "frames": 360,
+    "time_between_centers_seconds": 11.966666666666667,
+    "low_cell_fraction": 0.467966573816156,
+    "longest_low_seconds": 3.3,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          115,
+          214
+        ],
+        "duration_seconds": 3.3,
+        "angular_excursion_max_rad": 0.198947740464483,
+        "FK_excursion_rms_max_m": 0.036278977764995834,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 96.70132987653506,
+    "FK_D3_max": 383.60680563694166,
+    "FK_activity_path_mean_m": 1.3296083345736152,
+    "FK_motion_range_rms_m": 0.10943248119740627,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.4138507047912454,
+    "FK_D2_q95": 3.4987148046479937,
+    "SO3_angular_speed_q95": 1.1471730490458194,
+    "SO3_transported_acceleration_q95": 14.765805171989886,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.0061760076643077805,
+    "BAS_diagnostic_only": 0.12523475521773697,
+    "source_uid": "male_meditation",
+    "candidate_uid": "b046a4448574894601117ad563af75553f132e53116548442ab1d50e2ae5a85d"
+  },
+  {
+    "frames": 360,
+    "time_between_centers_seconds": 11.966666666666667,
+    "low_cell_fraction": 0.44846796657381616,
+    "longest_low_seconds": 2.3,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          121,
+          190
+        ],
+        "duration_seconds": 2.3,
+        "angular_excursion_max_rad": 0.19511431286340095,
+        "FK_excursion_rms_max_m": 0.0355237880610137,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 91.19876881106607,
+    "FK_D3_max": 243.12305581456405,
+    "FK_activity_path_mean_m": 1.3304141785228731,
+    "FK_motion_range_rms_m": 0.11041893897933283,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.47606203512908324,
+    "FK_D2_q95": 3.4069616938309166,
+    "SO3_angular_speed_q95": 1.0921817385436332,
+    "SO3_transported_acceleration_q95": 13.88538062673336,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.00492709333753433,
+    "BAS_diagnostic_only": 0.1164621530415705,
+    "source_uid": "male_meditation",
+    "candidate_uid": "c0abb3c44ad52b9fa56de1b093632d5c14b482b12a53e0660487aaa166f98997"
+  },
+  {
+    "frames": 360,
+    "time_between_centers_seconds": 11.966666666666667,
+    "low_cell_fraction": 0.45125348189415043,
+    "longest_low_seconds": 2.5,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          121,
+          196
+        ],
+        "duration_seconds": 2.5,
+        "angular_excursion_max_rad": 0.19519973909481228,
+        "FK_excursion_rms_max_m": 0.03551594132534614,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 80.39251956967664,
+    "FK_D3_max": 285.2350645061739,
+    "FK_activity_path_mean_m": 1.3302486402199123,
+    "FK_motion_range_rms_m": 0.11026311333013622,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.47538462698351663,
+    "FK_D2_q95": 3.267971382906088,
+    "SO3_angular_speed_q95": 1.072769891123524,
+    "SO3_transported_acceleration_q95": 12.279710843573135,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.0046726023312417386,
+    "BAS_diagnostic_only": 0.13315850492658196,
+    "source_uid": "male_meditation",
+    "candidate_uid": "3b8a79c9c0d98f68e5bf780e353d35253e397cdbe6e6b15d5bd2e93d8fb8b20f"
+  },
+  {
+    "frames": 360,
+    "time_between_centers_seconds": 11.966666666666667,
+    "low_cell_fraction": 0.45125348189415043,
+    "longest_low_seconds": 2.7,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          121,
+          202
+        ],
+        "duration_seconds": 2.7,
+        "angular_excursion_max_rad": 0.19527060721360387,
+        "FK_excursion_rms_max_m": 0.03551346471851576,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 91.6646207521378,
+    "FK_D3_max": 333.2495958259268,
+    "FK_activity_path_mean_m": 1.3300392879531049,
+    "FK_motion_range_rms_m": 0.11002584422782732,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.4625617424597466,
+    "FK_D2_q95": 3.6229207381914077,
+    "SO3_angular_speed_q95": 1.1401167750986956,
+    "SO3_transported_acceleration_q95": 13.96153632138856,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.005752167436815637,
+    "BAS_diagnostic_only": 0.08425209840124705,
+    "source_uid": "male_meditation",
+    "candidate_uid": "00a289619c6c2f5c6d050d2900cab1bf976213c0daf515455b950fca0164a02c"
+  },
+  {
+    "frames": 360,
+    "time_between_centers_seconds": 11.966666666666667,
+    "low_cell_fraction": 0.4623955431754875,
+    "longest_low_seconds": 3.1,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          121,
+          214
+        ],
+        "duration_seconds": 3.1,
+        "angular_excursion_max_rad": 0.195381387410156,
+        "FK_excursion_rms_max_m": 0.03551825214652302,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 104.72587612131045,
+    "FK_D3_max": 383.60680563694166,
+    "FK_activity_path_mean_m": 1.330111152717379,
+    "FK_motion_range_rms_m": 0.10930118431872801,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.4138507047912454,
+    "FK_D2_q95": 3.609381389444944,
+    "SO3_angular_speed_q95": 1.1471730490458194,
+    "SO3_transported_acceleration_q95": 15.282103619030895,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.006432849173875293,
+    "BAS_diagnostic_only": 0.06964788468973916,
+    "source_uid": "male_meditation",
+    "candidate_uid": "8d53c4091a55487c9a1a771b86561af96a71ddf2a152d0d59106b8bacacac0d7"
+  },
+  {
+    "frames": 360,
+    "time_between_centers_seconds": 11.966666666666667,
+    "low_cell_fraction": 0.4428969359331476,
+    "longest_low_seconds": 2.966666666666667,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          113,
+          202
+        ],
+        "duration_seconds": 2.966666666666667,
+        "angular_excursion_max_rad": 0.30538020390729154,
+        "FK_excursion_rms_max_m": 0.05851356974422033,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 91.6646207521378,
+    "FK_D3_max": 333.2495958259268,
+    "FK_activity_path_mean_m": 1.3297692473043357,
+    "FK_motion_range_rms_m": 0.10957947202381135,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.4625617424597466,
+    "FK_D2_q95": 3.3556427449710453,
+    "SO3_angular_speed_q95": 1.1401167750986956,
+    "SO3_transported_acceleration_q95": 13.872985035927083,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.005485486475899417,
+    "BAS_diagnostic_only": 0.02286479959594597,
+    "source_uid": "male_meditation",
+    "candidate_uid": "820e9587030f0f24fc553afdd4e37c0e05e809d8f2adb19891f7fa81d0b0102a"
+  },
+  {
+    "frames": 360,
+    "time_between_centers_seconds": 11.966666666666667,
+    "low_cell_fraction": 0.45403899721448465,
+    "longest_low_seconds": 3.3666666666666667,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          113,
+          214
+        ],
+        "duration_seconds": 3.3666666666666667,
+        "angular_excursion_max_rad": 0.3055887203415941,
+        "FK_excursion_rms_max_m": 0.058515688703709906,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 101.52869776125094,
+    "FK_D3_max": 383.60680563694166,
+    "FK_activity_path_mean_m": 1.3301088394327394,
+    "FK_motion_range_rms_m": 0.10897552388442949,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.4138507047912454,
+    "FK_D2_q95": 3.4987148046479937,
+    "SO3_angular_speed_q95": 1.1471730490458194,
+    "SO3_transported_acceleration_q95": 14.765805171989886,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.006193624028837881,
+    "BAS_diagnostic_only": 0.1356221469773942,
+    "source_uid": "male_meditation",
+    "candidate_uid": "b855d770386b948b17a9dc6d5a31e7450c0ca139061838d0b8b53a270bc7d4b6"
+  },
+  {
+    "frames": 360,
+    "time_between_centers_seconds": 11.966666666666667,
+    "low_cell_fraction": 0.45403899721448465,
+    "longest_low_seconds": 2.533333333333333,
+    "low_runs": [
+      {
+        "cells_half_open": [
+          108,
+          184
+        ],
+        "duration_seconds": 2.533333333333333,
+        "angular_excursion_max_rad": 0.2032621237638711,
+        "FK_excursion_rms_max_m": 0.036131073823273414,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      },
+      {
+        "cells_half_open": [
+          223,
+          256
+        ],
+        "duration_seconds": 1.1,
+        "angular_excursion_max_rad": 0.10538026291911473,
+        "FK_excursion_rms_max_m": 0.02473405021830781,
+        "left_censored": false,
+        "right_censored": false,
+        "semantic_truth": "UNKNOWN"
+      }
+    ],
+    "FK_D3_q95": 83.34034682758785,
+    "FK_D3_max": 274.21610097395603,
+    "FK_activity_path_mean_m": 1.3312499689953237,
+    "FK_motion_range_rms_m": 0.11109766965341974,
+    "world_root_contact": "UNKNOWN",
+    "hand_fingers": "UNOBSERVED_BODY22_WRISTS_ONLY",
+    "semantic_hold": "UNKNOWN",
+    "FK_D1_q95": 0.47952521497599754,
+    "FK_D2_q95": 3.2047122710365596,
+    "SO3_angular_speed_q95": 1.0649082047280218,
+    "SO3_transported_acceleration_q95": 12.099276420826584,
+    "FK_velocity_high_frequency_fraction_above6Hz": 0.0053529218550656555,
+    "BAS_diagnostic_only": 0.12985777003164106,
+    "source_uid": "male_meditation",
+    "candidate_uid": "61666edf52e4db1e0d7c1df05c147fa3c9e9598cfa907368ddc82aa6db92a48a"
+  }
+]

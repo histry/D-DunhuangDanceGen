@@ -1,0 +1,405 @@
+{
+  "protocol": {
+    "schema": "PAPER1_SOURCE_TIME_Q01",
+    "parent_commit": "a7139b1e384758f42b38018613116d2a89216b99",
+    "preflight_sha256": "9126606ab2477dac5e1c2327ed5c5f04d77b2bc7dae3d6136c3b71c70eb9db41",
+    "Q02_manifest_sha256": "2f3b18747725664b947a440f9fdbd49b4f11628f2ac9017a9a355c558c9f56d5",
+    "population": "EXACT_THREE_Q01_NONDEGENERATE_PREFLIGHT_PAIRS; OTHER_THREE_RETAINED_MISSING; NO_SCORE_BASED_REPLACEMENT",
+    "target_fractions": [
+      0.25,
+      0.5,
+      0.75
+    ],
+    "music_targets": "FIRST_NEAREST_BEAT_THIS_BEAT_TO_FRACTION_OF_CORE; ID_TIME_AND_SHA_REGISTERED_BEFORE_COST; NOT_ARTISTIC_TRUTH",
+    "anchor": "END_OF_FIRST_REGISTERED_INTERNAL_BODY_LOW_RUN; KINEMATIC_PROXY_NOT_SEMANTIC_GESTURE",
+    "target_error_tolerance_frames": 3.0,
+    "minimum_moving_support_seconds": 2.0,
+    "source_support": "EXACT_TARGET_OCCUPANCY_OF_FROZEN_BODY_LOW_RUN_COMPLEMENT",
+    "joint_order": [
+      "target_error_frames",
+      "minus_moving_support_seconds",
+      "normalized_clock_RMS",
+      "source_order",
+      "candidate_uid"
+    ],
+    "GTW_cross_source": "PROHIBITED_RAW_SCALE_COMPARISON",
+    "source_order": "DESCENDING_UNIFORM_MOVING_SUPPORT_THEN_SOURCE_UID_INTERVAL",
+    "candidate_domain": "Q01_COMPLETE_HOLD_DAG_PLUS_UNIFORM_PLUS_ONE_FROZEN_R53_E1W_SOLVER_R64_BEAT_EXECUTION_PER_SOURCE; DEDUP_1e-9",
+    "primary_domain": "FINITE_SHARED_POOL_NOT_CONTINUOUS_OPTIMUM",
+    "bridge_frames": 48,
+    "rate_limits": [
+      0.75,
+      1.33
+    ],
+    "bridge_budget": "FULL_COMMON_POOL_PREEXECUTED_AND_CHARGED_EQUALLY_TO_ALL_ARMS; ACTUAL_BOUNDARY_HASH_CACHE_COUNTS_REPORTED",
+    "bridge_qualification": "RECOMPUTED_ORIGINAL_G1_SCREEN_NO_THRESHOLD_CHANGE",
+    "BAS": "FROZEN_Q01_DIAGNOSTIC_ONLY_NEVER_USED_FOR_SELECTION",
+    "SDMR": "NOT_USED",
+    "methods": [
+      "FixedUniform",
+      "FixedE1W",
+      "FixedGTW",
+      "SupportUniform",
+      "SequentialGTW",
+      "SequentialTargetFallback",
+      "ExhaustiveSequential",
+      "Joint"
+    ],
+    "preview_methods": [
+      "FixedUniform",
+      "Joint"
+    ],
+    "training_steps": 0,
+    "human_records": 0,
+    "can_route": false,
+    "artistic_quality": "NOT_EVALUABLE",
+    "Native24": "NOT_EVALUABLE"
+  },
+  "binding": {
+    "code": {
+      "__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "baselines.py": "a1f0e494ca39f8afe32ff979b27d4dd3597ed55c9d55f0922f828c58b5870f50",
+      "common.py": "d6b077e919fb24c94a44de6158d92a66773dc52de4b83af41a504707c2234e27",
+      "protocol.json": "114cab76a3b2ce45c039a3b9712c93606340500e4a0b5c3a672584577758bbf4",
+      "study.py": "f7811913dd17bba2fde920a734e22d0fb515c31bd2bf41324e25111eb6d0f78f",
+      "test_contracts.py": "a5714282100c3fb35f912a4dd2f6c42f375820f6a0a7d51f34e411f2565c4683",
+      "view.py": "c17a6908615327c0a8064f9446a341ec925a48e1a9a9744c9ab4b0099d3595de",
+      "viewer.html": "202d56c9b83a57ddaf65b7123a35cc4a99d6d9cf35a2790809db6845ddd99b41"
+    },
+    "dependencies": {
+      "paper1_support/study.py": "bbd4196e631be0b2679e7e3f55cd67b19fb19033fa5d4bdb1632e13f77352df2",
+      "paper1_support/contracts.py": "b223b48cecbedce6f67830129469461ca0be848052ce4c449fc25fec266ca679",
+      "hold_timing/metrics.py": "45ace4b8d52b19af6e68f60b2b0168f1babbf47acbcd6a24f800c6b1ed3f1cd6",
+      "gtw_kinematic_baseline/features.py": "d6920145393c340d571405833837f26dd49aeaffb6a0c216db1d479683e246ac",
+      "complete_r36/core.py": "03f296665e48ca2fa2ef8a866baaf2b4b786afeb22f468b6faeedac7225e9901",
+      "duration_r62/cross_source.py": "d2a5dc233621d3f653ddd2a3f2721d7edb3340f580fe08704a06ffef549e8dce",
+      "manifold_bridge_r47/geometry.py": "4646ff82c2775b32e893335abe0aac43cdd4dfbabc643d230e8985a347adea7f",
+      "paper1_auto_eval/experiment.py": "0459c9031404d4550044babbcbdeb8e298b9b05d771edae76a3013d770b0cea2",
+      "paper1_auto_eval/music.py": "e7894bbf0fc34f3f70a9054f7b6dc3d9ee8f00c719f5114bf04da29a55147777",
+      "paper1_auto_eval/observability.py": "d35c5c414c603ff8f5c8b8d8f905f39bb84f1e4274d8975b2aca1fa511279784",
+      "paper1_auto_eval/q02_protocol.json": "36ce5cb53cb7821018a04699189f7a8a197429458b05600649ef1a6e483455a2"
+    }
+  },
+  "parents": {
+    "Q01": {
+      "controls": "65c971713b2df43154fe27ff5646e701bba1403b7960553a5444f5731739043d",
+      "preview": "1ebb89d6bd734f9afa86172d40667ec6264c5a0e4ec9e56fa793e76d644c0173"
+    },
+    "Q02_manifest": "2f3b18747725664b947a440f9fdbd49b4f11628f2ac9017a9a355c558c9f56d5",
+    "Q02_files": {
+      "motion_scores.json": "23a3a07503cda60b6048c7e13598fb98a28bf81a72377ed3412bd6f884dcc349",
+      "paired_scores.json": "c75ebe2dd6d29817f05cb26a15a8bf273c9041f8a19a2c95fbeb87960909673b",
+      "paired_summary.json": "8c269dbb50e83497582ed98ba6fc1f4dadc9d025cf93c362f0d881313426aa4c",
+      "qualification.json": "34af5266cf5d151f5e3523d9b6efed8b83cb0d0840c8129df5b582c7df6aa688",
+      "sensitivity.json": "70a59c0350146170c904df3eb4d7a5a551f4399c77cd0fe88a338193c15198f8"
+    },
+    "preflight": "9126606ab2477dac5e1c2327ed5c5f04d77b2bc7dae3d6136c3b71c70eb9db41"
+  },
+  "cases": [
+    {
+      "key": "f8d91db44c816c9c6b18cfb8",
+      "source_uid": "female_FeiTian",
+      "sources": [
+        {
+          "order": 0,
+          "event_uid": "r47:c114381dab695779ce81904c",
+          "source_uid": "female_FeiTian",
+          "source_interval": [
+            2377,
+            2660
+          ],
+          "source_sha256": "120e0157ccdd60d128d2973ac0682883ee178ba43ce8479100e80f56c64f37a4",
+          "hold": {
+            "cells_half_open": [
+              2541,
+              2608
+            ],
+            "duration_seconds": 2.2333333333333334,
+            "angular_excursion_max_rad": 0.3671998989111531,
+            "FK_excursion_rms_max_m": 0.11923811081809278,
+            "left_censored": false,
+            "right_censored": false,
+            "semantic_truth": "UNKNOWN"
+          },
+          "expected_preflight_clocks": 9
+        },
+        {
+          "order": 1,
+          "event_uid": "r47:1af47416494c0f224688ba12",
+          "source_uid": "female_FeiTian",
+          "source_interval": [
+            4153,
+            4446
+          ],
+          "source_sha256": "120e0157ccdd60d128d2973ac0682883ee178ba43ce8479100e80f56c64f37a4",
+          "hold": {
+            "cells_half_open": [
+              4246,
+              4311
+            ],
+            "duration_seconds": 2.1666666666666665,
+            "angular_excursion_max_rad": 0.16055946435725574,
+            "FK_excursion_rms_max_m": 0.03671824773927523,
+            "left_censored": false,
+            "right_censored": false,
+            "semantic_truth": "UNKNOWN"
+          },
+          "expected_preflight_clocks": 6
+        }
+      ],
+      "target_frames": 240,
+      "bridge_frames": 48,
+      "pair_frames": 528,
+      "music_song": 0,
+      "music_start_frame": 900,
+      "audio_sha256": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c",
+      "music_catalog_sha256": "837a314379294a46849763667845ade597d7c77a55af65ba6ac0ed94bb2c529b",
+      "targets": [
+        {
+          "fraction": 0.25,
+          "event_uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:beat_this:beat:47",
+          "target_frame": 64.20000000000005,
+          "target_seconds": 32.14,
+          "status": "REGISTERED_AUTOMATIC_TARGET_NOT_TRUTH",
+          "music_semantic_correctness": "UNKNOWN"
+        },
+        {
+          "fraction": 0.5,
+          "event_uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:beat_this:beat:50",
+          "target_frame": 126.0,
+          "target_seconds": 34.2,
+          "status": "REGISTERED_AUTOMATIC_TARGET_NOT_TRUTH",
+          "music_semantic_correctness": "UNKNOWN"
+        },
+        {
+          "fraction": 0.75,
+          "event_uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:beat_this:beat:53",
+          "target_frame": 187.20000000000005,
+          "target_seconds": 36.24,
+          "status": "REGISTERED_AUTOMATIC_TARGET_NOT_TRUTH",
+          "music_semantic_correctness": "UNKNOWN"
+        }
+      ],
+      "neighbor": {
+        "event_uid": "r47:9d9a6115663f65b30bd23e62",
+        "source_uid": "female_lotus",
+        "source_interval": [
+          321,
+          583
+        ],
+        "source_sha256": "22b915af2e0fbb645acb78d7f61e58afe3f7aa40c0fc719da95f7403ed8dd47d"
+      }
+    },
+    {
+      "key": "4a69181188a9e248a0a6330b",
+      "source_uid": "female_lotus",
+      "sources": [
+        {
+          "order": 0,
+          "event_uid": "r47:7498d2a729087f738d4402df",
+          "source_uid": "female_lotus",
+          "source_interval": [
+            583,
+            870
+          ],
+          "source_sha256": "22b915af2e0fbb645acb78d7f61e58afe3f7aa40c0fc719da95f7403ed8dd47d",
+          "hold": {
+            "cells_half_open": [
+              725,
+              768
+            ],
+            "duration_seconds": 1.4333333333333333,
+            "angular_excursion_max_rad": 0.278815261791757,
+            "FK_excursion_rms_max_m": 0.04212998819784939,
+            "left_censored": false,
+            "right_censored": false,
+            "semantic_truth": "UNKNOWN"
+          },
+          "expected_preflight_clocks": 6
+        },
+        {
+          "order": 1,
+          "event_uid": "r47:d5b96084cc7cf550bb8d65b8",
+          "source_uid": "female_lotus",
+          "source_interval": [
+            6303,
+            6596
+          ],
+          "source_sha256": "22b915af2e0fbb645acb78d7f61e58afe3f7aa40c0fc719da95f7403ed8dd47d",
+          "hold": {
+            "cells_half_open": [
+              6344,
+              6444
+            ],
+            "duration_seconds": 3.3333333333333335,
+            "angular_excursion_max_rad": 0.12369730223765091,
+            "FK_excursion_rms_max_m": 0.055690277009425616,
+            "left_censored": false,
+            "right_censored": false,
+            "semantic_truth": "UNKNOWN"
+          },
+          "expected_preflight_clocks": 6
+        }
+      ],
+      "target_frames": 240,
+      "bridge_frames": 48,
+      "pair_frames": 528,
+      "music_song": 1,
+      "music_start_frame": 900,
+      "audio_sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f",
+      "music_catalog_sha256": "a6e4dcfc16e15b79b039adb454457a51845b707b0bf6fa88cbd456d17819de28",
+      "targets": [
+        {
+          "fraction": 0.25,
+          "event_uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:beat:78",
+          "target_frame": 52.19999999999993,
+          "target_seconds": 31.74,
+          "status": "REGISTERED_AUTOMATIC_TARGET_NOT_TRUTH",
+          "music_semantic_correctness": "UNKNOWN"
+        },
+        {
+          "fraction": 0.5,
+          "event_uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:beat:82",
+          "target_frame": 116.40000000000009,
+          "target_seconds": 33.88,
+          "status": "REGISTERED_AUTOMATIC_TARGET_NOT_TRUTH",
+          "music_semantic_correctness": "UNKNOWN"
+        },
+        {
+          "fraction": 0.75,
+          "event_uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:beat:86",
+          "target_frame": 180.60000000000014,
+          "target_seconds": 36.02,
+          "status": "REGISTERED_AUTOMATIC_TARGET_NOT_TRUTH",
+          "music_semantic_correctness": "UNKNOWN"
+        }
+      ],
+      "neighbor": {
+        "event_uid": "r47:30e2f1036450b06a12a13fb6",
+        "source_uid": "female_FeiTian",
+        "source_interval": [
+          474,
+          750
+        ],
+        "source_sha256": "120e0157ccdd60d128d2973ac0682883ee178ba43ce8479100e80f56c64f37a4"
+      }
+    },
+    {
+      "key": "73cb91d45a9d9530430d1650",
+      "source_uid": "male_meditation",
+      "sources": [
+        {
+          "order": 0,
+          "event_uid": "r47:df065e93a0e1f42193d7cbbc",
+          "source_uid": "male_meditation",
+          "source_interval": [
+            689,
+            1071
+          ],
+          "source_sha256": "1cd10b49771226ae7f9ea962bf21e2c86324af2249d80bf08a069a881d20d165",
+          "hold": {
+            "cells_half_open": [
+              863,
+              924
+            ],
+            "duration_seconds": 2.033333333333333,
+            "angular_excursion_max_rad": 0.3050859462529498,
+            "FK_excursion_rms_max_m": 0.11027639988615782,
+            "left_censored": false,
+            "right_censored": false,
+            "semantic_truth": "UNKNOWN"
+          },
+          "expected_preflight_clocks": 24
+        },
+        {
+          "order": 1,
+          "event_uid": "r47:b25c06227263e363ee383e7c",
+          "source_uid": "male_meditation",
+          "source_interval": [
+            5118,
+            5476
+          ],
+          "source_sha256": "1cd10b49771226ae7f9ea962bf21e2c86324af2249d80bf08a069a881d20d165",
+          "hold": {
+            "cells_half_open": [
+              5237,
+              5307
+            ],
+            "duration_seconds": 2.3333333333333335,
+            "angular_excursion_max_rad": 0.13033408214081982,
+            "FK_excursion_rms_max_m": 0.027079749629948826,
+            "left_censored": false,
+            "right_censored": false,
+            "semantic_truth": "UNKNOWN"
+          },
+          "expected_preflight_clocks": 29
+        }
+      ],
+      "target_frames": 360,
+      "bridge_frames": 48,
+      "pair_frames": 768,
+      "music_song": 2,
+      "music_start_frame": 900,
+      "audio_sha256": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33",
+      "music_catalog_sha256": "2489c95a5340ec57b8ecfc7fb23ce9bdefe79b1fcaed69f6d76fcf61499733fb",
+      "targets": [
+        {
+          "fraction": 0.25,
+          "event_uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:66",
+          "target_frame": 91.19999999999993,
+          "target_seconds": 33.04,
+          "status": "REGISTERED_AUTOMATIC_TARGET_NOT_TRUTH",
+          "music_semantic_correctness": "UNKNOWN"
+        },
+        {
+          "fraction": 0.5,
+          "event_uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:72",
+          "target_frame": 181.20000000000005,
+          "target_seconds": 36.04,
+          "status": "REGISTERED_AUTOMATIC_TARGET_NOT_TRUTH",
+          "music_semantic_correctness": "UNKNOWN"
+        },
+        {
+          "fraction": 0.75,
+          "event_uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:78",
+          "target_frame": 271.20000000000005,
+          "target_seconds": 39.04,
+          "status": "REGISTERED_AUTOMATIC_TARGET_NOT_TRUTH",
+          "music_semantic_correctness": "UNKNOWN"
+        }
+      ],
+      "neighbor": {
+        "event_uid": "r47:3f3db9b835546587729157c8",
+        "source_uid": "female_FeiTian",
+        "source_interval": [
+          140,
+          474
+        ],
+        "source_sha256": "120e0157ccdd60d128d2973ac0682883ee178ba43ce8479100e80f56c64f37a4"
+      }
+    }
+  ],
+  "missing": [
+    {
+      "case_key": "e5722e89378a4fae9c0a660d",
+      "source_uid": "male_pipa_1",
+      "reason": "PREEXISTING_NONDEGENERATE_PAIR_MISSING",
+      "replacement_used": false
+    },
+    {
+      "case_key": "b7b2ddb39b2addc9619fc709",
+      "source_uid": "male_pipa_2",
+      "reason": "PREEXISTING_NONDEGENERATE_PAIR_MISSING",
+      "replacement_used": false
+    },
+    {
+      "case_key": "f98054618c10bac0a98674d3",
+      "source_uid": "male_ribbon",
+      "reason": "PREEXISTING_NONDEGENERATE_PAIR_MISSING",
+      "replacement_used": false
+    }
+  ],
+  "target_registration_precedes_costs": true,
+  "exposure": "THREE_HISTORICALLY_EXPOSED_RECORDINGS; PAIRED_INTERVALS_NOT_INDEPENDENT_SOURCES",
+  "artistic_quality": "NOT_EVALUABLE"
+}

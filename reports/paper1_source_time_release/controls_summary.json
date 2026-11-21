@@ -1,0 +1,74 @@
+[
+  {
+    "method": "FixedUniform",
+    "registered_tasks": 9,
+    "successful_tasks": 0,
+    "source_recording_groups": 3,
+    "mean_target_error_success_only": null,
+    "failure_count": 9,
+    "artistic_quality": "NOT_EVALUABLE"
+  },
+  {
+    "method": "FixedE1W",
+    "registered_tasks": 9,
+    "successful_tasks": 0,
+    "source_recording_groups": 3,
+    "mean_target_error_success_only": null,
+    "failure_count": 9,
+    "artistic_quality": "NOT_EVALUABLE"
+  },
+  {
+    "method": "FixedGTW",
+    "registered_tasks": 9,
+    "successful_tasks": 1,
+    "source_recording_groups": 3,
+    "mean_target_error_success_only": 2.6170740256361285,
+    "failure_count": 8,
+    "artistic_quality": "NOT_EVALUABLE"
+  },
+  {
+    "method": "SupportUniform",
+    "registered_tasks": 9,
+    "successful_tasks": 0,
+    "source_recording_groups": 3,
+    "mean_target_error_success_only": null,
+    "failure_count": 9,
+    "artistic_quality": "NOT_EVALUABLE"
+  },
+  {
+    "method": "SequentialGTW",
+    "registered_tasks": 9,
+    "successful_tasks": 1,
+    "source_recording_groups": 3,
+    "mean_target_error_success_only": 2.666023216055393,
+    "failure_count": 8,
+    "artistic_quality": "NOT_EVALUABLE"
+  },
+  {
+    "method": "SequentialTargetFallback",
+    "registered_tasks": 9,
+    "successful_tasks": 4,
+    "source_recording_groups": 3,
+    "mean_target_error_success_only": 2.27947021304346,
+    "failure_count": 5,
+    "artistic_quality": "NOT_EVALUABLE"
+  },
+  {
+    "method": "ExhaustiveSequential",
+    "registered_tasks": 9,
+    "successful_tasks": 4,
+    "source_recording_groups": 3,
+    "mean_target_error_success_only": 2.203169750127941,
+    "failure_count": 5,
+    "artistic_quality": "NOT_EVALUABLE"
+  },
+  {
+    "method": "Joint",
+    "registered_tasks": 9,
+    "successful_tasks": 4,
+    "source_recording_groups": 3,
+    "mean_target_error_success_only": 2.203169750127941,
+    "failure_count": 5,
+    "artistic_quality": "NOT_EVALUABLE"
+  }
+]

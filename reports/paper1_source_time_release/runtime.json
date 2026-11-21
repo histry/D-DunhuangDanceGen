@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "scientific_commit": "30f349e040330aba5c4efdbeaf557365d9b9bc7c",
+  "exit_status": {
+    "preview": 0,
+    "controls": 0,
+    "view": 1,
+    "view_fixed": 0,
+    "reference": 0,
+    "replay": 0
+  },
+  "first_view_failure": "SHELL_QUOTING_ONLY; SCIENTIFIC_CONTROLS_ALREADY_EXITED0",
+  "first_view_error_log_sha256": "bc6298824976517b1458569a44427d8055f0c8d64a36c6bfb8714d3e4fa5a111",
+  "fixed_view_exit": 0,
+  "contract_tests": 15,
+  "source_arrays_and_scalar_replay": "EXACT",
+  "reference_validation_calls": 12,
+  "geometry_budget": {
+    "candidate_G1_requests": 86,
+    "actual_G1_solves": 11,
+    "cache_reuses": 75,
+    "common_pool_execution_charged_to_every_arm": true
+  },
+  "training_steps": 0,
+  "can_route": false
+}
