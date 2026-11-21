@@ -1,0 +1,538 @@
+{
+  "task": "Paper1-ContextFeasibility-P1",
+  "base_commit": "44c37873c7fe1697fcb194ed524d16a6b45e2a04",
+  "p0_public_manifest_sha256": "cc2da90a7ff72a4845bb26f3d3c29e70474de562d60835ba02f6d7ce5dd1695b",
+  "cases": [
+    {
+      "role": "failure",
+      "song": 0,
+      "slot": 1,
+      "event_uid": "r47:a74b575f952414f4396bad53",
+      "source_uid": "male_pipa_2",
+      "center_uids": [
+        "e96c12021e342e5b2c411243d7748dc8c84a71fb4c971d0b05fee87dfb3b4544",
+        "e4e601c4edec4126f0c24c4b67d0c4312535f5a313da0f41d4ccc27098e95177"
+      ],
+      "matched_failure": [
+        0,
+        1,
+        "r47:a74b575f952414f4396bad53"
+      ],
+      "P0_eligible_uids": []
+    },
+    {
+      "role": "control",
+      "song": 0,
+      "slot": 2,
+      "event_uid": "r47:a74b575f952414f4396bad53",
+      "source_uid": "male_pipa_2",
+      "center_uids": [
+        "e48f7fa782cb526c584101df458e5e072f27fd3f96223113f243c135331e249c",
+        "d3fad56c973f3835a73f95904f5b629f78c2759b6b997c72fb1e73ea905c4474"
+      ],
+      "matched_failure": [
+        0,
+        1,
+        "r47:a74b575f952414f4396bad53"
+      ],
+      "P0_eligible_uids": [
+        "d3fad56c973f3835a73f95904f5b629f78c2759b6b997c72fb1e73ea905c4474"
+      ]
+    },
+    {
+      "role": "failure",
+      "song": 0,
+      "slot": 9,
+      "event_uid": "r47:a74b575f952414f4396bad53",
+      "source_uid": "male_pipa_2",
+      "center_uids": [
+        "34b91d1da087977ef5bac21ba484415b9e7ec4bb6fab0c79e479c59284789b64",
+        "7769158802f42bf2e668009dd230331f7c2d9f5a8eb7cc423f283be5ebabda09"
+      ],
+      "matched_failure": [
+        0,
+        9,
+        "r47:a74b575f952414f4396bad53"
+      ],
+      "P0_eligible_uids": []
+    },
+    {
+      "role": "control",
+      "song": 0,
+      "slot": 8,
+      "event_uid": "r47:a74b575f952414f4396bad53",
+      "source_uid": "male_pipa_2",
+      "center_uids": [
+        "ab4aebf11f8775fbca63911922bbddc0bef6edfabd64adcdba30017491b61655",
+        "58ad119f044a9dd47bef9a318ba20d00f4eea06d42a2c24253806b010d2be454"
+      ],
+      "matched_failure": [
+        0,
+        9,
+        "r47:a74b575f952414f4396bad53"
+      ],
+      "P0_eligible_uids": [
+        "ab4aebf11f8775fbca63911922bbddc0bef6edfabd64adcdba30017491b61655"
+      ]
+    },
+    {
+      "role": "failure",
+      "song": 1,
+      "slot": 6,
+      "event_uid": "r47:a74b575f952414f4396bad53",
+      "source_uid": "male_pipa_2",
+      "center_uids": [
+        "bcd8a0a600bf05e2bc986284901025a8a917ae238d3df8d3af8f83705e98a256",
+        "72ddf0dfd82ff2fd67d81c09beac82bff397dd89016c5e19d24bef0f16335545"
+      ],
+      "matched_failure": [
+        1,
+        6,
+        "r47:a74b575f952414f4396bad53"
+      ],
+      "P0_eligible_uids": []
+    },
+    {
+      "role": "control",
+      "song": 1,
+      "slot": 5,
+      "event_uid": "r47:a74b575f952414f4396bad53",
+      "source_uid": "male_pipa_2",
+      "center_uids": [
+        "69a24c30b3b8fd152018a1e21c3bd51f860e5c31c2cbf6d266e2647653027a57",
+        "7ddb8a195688950fda91a75a498009a048f2635a2778ac89a3aaba41ddab76ae"
+      ],
+      "matched_failure": [
+        1,
+        6,
+        "r47:a74b575f952414f4396bad53"
+      ],
+      "P0_eligible_uids": [
+        "69a24c30b3b8fd152018a1e21c3bd51f860e5c31c2cbf6d266e2647653027a57"
+      ]
+    },
+    {
+      "role": "failure",
+      "song": 1,
+      "slot": 8,
+      "event_uid": "r47:a74b575f952414f4396bad53",
+      "source_uid": "male_pipa_2",
+      "center_uids": [
+        "510a824333646491aa5c8e1ed259133cfb58fba230c2bfad043908f4e4beb4d3",
+        "7ef896f31f95530d3381aba2a43aed8b49d3d00495f863722fe6e0369f1671b0"
+      ],
+      "matched_failure": [
+        1,
+        8,
+        "r47:a74b575f952414f4396bad53"
+      ],
+      "P0_eligible_uids": []
+    },
+    {
+      "role": "control",
+      "song": 1,
+      "slot": 7,
+      "event_uid": "r47:a74b575f952414f4396bad53",
+      "source_uid": "male_pipa_2",
+      "center_uids": [
+        "faa7b00f3fb2efb37a0d1d31cce0e2fb5bf92d8681d459616efdc56fa7d15713",
+        "358a84d4572ea0ffa2cc8832decd01c0aec930c45e307832708c2a964d61fb6f"
+      ],
+      "matched_failure": [
+        1,
+        8,
+        "r47:a74b575f952414f4396bad53"
+      ],
+      "P0_eligible_uids": [
+        "faa7b00f3fb2efb37a0d1d31cce0e2fb5bf92d8681d459616efdc56fa7d15713"
+      ]
+    },
+    {
+      "role": "failure",
+      "song": 1,
+      "slot": 11,
+      "event_uid": "r47:a74b575f952414f4396bad53",
+      "source_uid": "male_pipa_2",
+      "center_uids": [
+        "c8cdb7c7dc3e3b85ed83f9152949261307d58355381e30916f538266f00761ba",
+        "3c8192707d0fd0a3bd91fe6003a2e2f38bf766c14a85846a1238c92bc2ee8a85"
+      ],
+      "matched_failure": [
+        1,
+        11,
+        "r47:a74b575f952414f4396bad53"
+      ],
+      "P0_eligible_uids": []
+    },
+    {
+      "role": "control",
+      "song": 1,
+      "slot": 10,
+      "event_uid": "r47:a74b575f952414f4396bad53",
+      "source_uid": "male_pipa_2",
+      "center_uids": [
+        "31d2e0623ea8540dd5af1db92a11662897deed26c9ca530da8e98522545aac47",
+        "90005b77a2c8e11e4ca3f75785d2a9127c9e933b23273c0f239241fb1676ff2f"
+      ],
+      "matched_failure": [
+        1,
+        11,
+        "r47:a74b575f952414f4396bad53"
+      ],
+      "P0_eligible_uids": [
+        "90005b77a2c8e11e4ca3f75785d2a9127c9e933b23273c0f239241fb1676ff2f"
+      ]
+    },
+    {
+      "role": "failure",
+      "song": 2,
+      "slot": 0,
+      "event_uid": "r47:a74b575f952414f4396bad53",
+      "source_uid": "male_pipa_2",
+      "center_uids": [
+        "dc7ab8c80b6d1faf40cb7426cbe22942cbac39e8de57d77cb241f3f229ed5c32",
+        "3445381f51680fd2fd9b6965455c45a5fea88ccd6d8e3d7c3bd230061f6c5082"
+      ],
+      "matched_failure": [
+        2,
+        0,
+        "r47:a74b575f952414f4396bad53"
+      ],
+      "P0_eligible_uids": []
+    },
+    {
+      "role": "control",
+      "song": 2,
+      "slot": 12,
+      "event_uid": "r47:a74b575f952414f4396bad53",
+      "source_uid": "male_pipa_2",
+      "center_uids": [
+        "3e3257fb56c4a79da943e05f5c1c427018d59c51217db69039148658ee101b45",
+        "91b09ba40ce442a86a2607fcc6653cbdcc53d5fe8505a6c4bfcca142b59e4dee"
+      ],
+      "matched_failure": [
+        2,
+        0,
+        "r47:a74b575f952414f4396bad53"
+      ],
+      "P0_eligible_uids": [
+        "3e3257fb56c4a79da943e05f5c1c427018d59c51217db69039148658ee101b45",
+        "91b09ba40ce442a86a2607fcc6653cbdcc53d5fe8505a6c4bfcca142b59e4dee"
+      ]
+    },
+    {
+      "role": "failure",
+      "song": 2,
+      "slot": 4,
+      "event_uid": "r47:021a0275b050c878b2156883",
+      "source_uid": "male_ribbon_FenHe",
+      "center_uids": [
+        "fcf9fcb830ff2a9ecc37954233b7da9ed46460b5a001394741f11f5de81f3d60",
+        "8b98053704a71eb543f4048d6d6177cd490d0a248f6ca5f7b8e0a720758bdb88"
+      ],
+      "matched_failure": [
+        2,
+        4,
+        "r47:021a0275b050c878b2156883"
+      ],
+      "P0_eligible_uids": []
+    },
+    {
+      "role": "control",
+      "song": 2,
+      "slot": 3,
+      "event_uid": "r47:021a0275b050c878b2156883",
+      "source_uid": "male_ribbon_FenHe",
+      "center_uids": [
+        "271f2b55e5f9befd8883782d76588782a1831e2cea403a8082961c20a291438b",
+        "e54254df574d2d6c0e5ce6017566ec81c8701551b07ccdd00ff1e3fc22115f33"
+      ],
+      "matched_failure": [
+        2,
+        4,
+        "r47:021a0275b050c878b2156883"
+      ],
+      "P0_eligible_uids": [
+        "271f2b55e5f9befd8883782d76588782a1831e2cea403a8082961c20a291438b",
+        "e54254df574d2d6c0e5ce6017566ec81c8701551b07ccdd00ff1e3fc22115f33"
+      ]
+    },
+    {
+      "role": "failure",
+      "song": 2,
+      "slot": 4,
+      "event_uid": "r47:058b4536f51d3c37255b5cf7",
+      "source_uid": "male_meditation",
+      "center_uids": [
+        "9ec43fc715210e17c784523725c13aa0694d178404a014f10cc2ada3236614c0",
+        "ccfea142e45784dc646bfc8d31987c7a90c3c4574bbc337d34cf77f871b3b10c"
+      ],
+      "matched_failure": [
+        2,
+        4,
+        "r47:058b4536f51d3c37255b5cf7"
+      ],
+      "P0_eligible_uids": []
+    },
+    {
+      "role": "control",
+      "song": 2,
+      "slot": 3,
+      "event_uid": "r47:058b4536f51d3c37255b5cf7",
+      "source_uid": "male_meditation",
+      "center_uids": [
+        "52e3bb9884b7107678a103cc9f8fafa464161172013b2caa944b44aed180db21",
+        "add6a61affe30d0d9b85b48edfd98cc635e422941ba95dc1979c1b516f985e50"
+      ],
+      "matched_failure": [
+        2,
+        4,
+        "r47:058b4536f51d3c37255b5cf7"
+      ],
+      "P0_eligible_uids": [
+        "52e3bb9884b7107678a103cc9f8fafa464161172013b2caa944b44aed180db21",
+        "add6a61affe30d0d9b85b48edfd98cc635e422941ba95dc1979c1b516f985e50"
+      ]
+    },
+    {
+      "role": "failure",
+      "song": 2,
+      "slot": 4,
+      "event_uid": "r47:70e341228da95cae7b269f2e",
+      "source_uid": "female_meditation",
+      "center_uids": [
+        "1196be83abd91fe6d57a7b7d55c60a1eec5d1ab932f90f99f684ffea8d6fe2c4",
+        "0757a5be7152b09081f2ad8aba67d08552dacdc3587cca6ff955cf519fbc9ab4"
+      ],
+      "matched_failure": [
+        2,
+        4,
+        "r47:70e341228da95cae7b269f2e"
+      ],
+      "P0_eligible_uids": []
+    },
+    {
+      "role": "control",
+      "song": 2,
+      "slot": 3,
+      "event_uid": "r47:70e341228da95cae7b269f2e",
+      "source_uid": "female_meditation",
+      "center_uids": [
+        "62bfbededa5b4679decc10e65942c468cb0e0254fbe1a2c51686fcba2402dd6d",
+        "b111424fa19ccfb390dd9d4a6339e2df4c6cb50c165575ff68111f37007a8d63"
+      ],
+      "matched_failure": [
+        2,
+        4,
+        "r47:70e341228da95cae7b269f2e"
+      ],
+      "P0_eligible_uids": [
+        "62bfbededa5b4679decc10e65942c468cb0e0254fbe1a2c51686fcba2402dd6d",
+        "b111424fa19ccfb390dd9d4a6339e2df4c6cb50c165575ff68111f37007a8d63"
+      ]
+    },
+    {
+      "role": "failure",
+      "song": 2,
+      "slot": 4,
+      "event_uid": "r47:a74b575f952414f4396bad53",
+      "source_uid": "male_pipa_2",
+      "center_uids": [
+        "52ad84439d7d7f34dab2b3b1ebfbbdd0bc9f1461483d6b483f9f37d4eb0e8d7f",
+        "f16c49f2295160f9982019eee1f7bda72d2e73655a9b6e6aec99e0e508dc32bf"
+      ],
+      "matched_failure": [
+        2,
+        4,
+        "r47:a74b575f952414f4396bad53"
+      ],
+      "P0_eligible_uids": []
+    },
+    {
+      "role": "control",
+      "song": 2,
+      "slot": 3,
+      "event_uid": "r47:a74b575f952414f4396bad53",
+      "source_uid": "male_pipa_2",
+      "center_uids": [
+        "57c550ab9f4db8a262ecc0483ff35985822196390f151e3f53f76e52ea85909e",
+        "5ac74ea9f1d4c9977f7e280aae3df9e0e4f759e688a099618eacbaac9b039510"
+      ],
+      "matched_failure": [
+        2,
+        4,
+        "r47:a74b575f952414f4396bad53"
+      ],
+      "P0_eligible_uids": [
+        "57c550ab9f4db8a262ecc0483ff35985822196390f151e3f53f76e52ea85909e",
+        "5ac74ea9f1d4c9977f7e280aae3df9e0e4f759e688a099618eacbaac9b039510"
+      ]
+    },
+    {
+      "role": "failure",
+      "song": 2,
+      "slot": 8,
+      "event_uid": "r47:021a0275b050c878b2156883",
+      "source_uid": "male_ribbon_FenHe",
+      "center_uids": [
+        "d42f39bc4c1e64a05a42b3d17775e1c02d6f1f0fee8b96dad81b63e2ef6d37b8",
+        "adab231e3cdcf5c83ab83ee6ed9e92d04fad5dbd51530e6aae485a77f07dc807"
+      ],
+      "matched_failure": [
+        2,
+        8,
+        "r47:021a0275b050c878b2156883"
+      ],
+      "P0_eligible_uids": []
+    },
+    {
+      "role": "control",
+      "song": 2,
+      "slot": 7,
+      "event_uid": "r47:021a0275b050c878b2156883",
+      "source_uid": "male_ribbon_FenHe",
+      "center_uids": [
+        "980d508ed2cdd93d83ab275197710e67e0d99a9646676f677722e0b37616f7e8",
+        "1e2a677d84ca66bc125d314a59b36e0023e64ad11489401eac95fdf7c18da6bd"
+      ],
+      "matched_failure": [
+        2,
+        8,
+        "r47:021a0275b050c878b2156883"
+      ],
+      "P0_eligible_uids": [
+        "980d508ed2cdd93d83ab275197710e67e0d99a9646676f677722e0b37616f7e8",
+        "1e2a677d84ca66bc125d314a59b36e0023e64ad11489401eac95fdf7c18da6bd"
+      ]
+    },
+    {
+      "role": "failure",
+      "song": 2,
+      "slot": 8,
+      "event_uid": "r47:058b4536f51d3c37255b5cf7",
+      "source_uid": "male_meditation",
+      "center_uids": [
+        "2a3a51fd49edec0913ac3dabef4ff8e38927ac3070de82bfbbb15e7bba113869",
+        "5d39c9cc9651421cbd5bf81d350a7ab2da830bb70415b0334666c21c65f15aa5"
+      ],
+      "matched_failure": [
+        2,
+        8,
+        "r47:058b4536f51d3c37255b5cf7"
+      ],
+      "P0_eligible_uids": []
+    },
+    {
+      "role": "control",
+      "song": 2,
+      "slot": 7,
+      "event_uid": "r47:058b4536f51d3c37255b5cf7",
+      "source_uid": "male_meditation",
+      "center_uids": [
+        "fa4d81b80fffc090927b70ea391ccdc5f24b0bf2d97368fa19908bdfcd46b397",
+        "f4f0e2c55c72895f04a0bdeeb6f123c6a77c07525823ad27c74e5dde939a5fbd"
+      ],
+      "matched_failure": [
+        2,
+        8,
+        "r47:058b4536f51d3c37255b5cf7"
+      ],
+      "P0_eligible_uids": [
+        "fa4d81b80fffc090927b70ea391ccdc5f24b0bf2d97368fa19908bdfcd46b397",
+        "f4f0e2c55c72895f04a0bdeeb6f123c6a77c07525823ad27c74e5dde939a5fbd"
+      ]
+    },
+    {
+      "role": "failure",
+      "song": 2,
+      "slot": 8,
+      "event_uid": "r47:70e341228da95cae7b269f2e",
+      "source_uid": "female_meditation",
+      "center_uids": [
+        "7b6ac69925dcd577c7ccd7747335d9afb28ec09c1e249d052c5c56c5733c2e13",
+        "088abb0b4f670c4373485c47b2d0a019abefd2f35c26383943a45900fe088f82"
+      ],
+      "matched_failure": [
+        2,
+        8,
+        "r47:70e341228da95cae7b269f2e"
+      ],
+      "P0_eligible_uids": []
+    },
+    {
+      "role": "control",
+      "song": 2,
+      "slot": 7,
+      "event_uid": "r47:70e341228da95cae7b269f2e",
+      "source_uid": "female_meditation",
+      "center_uids": [
+        "065bd9a7c93be5e9d3a3249890ea006d6dd66ad2eac705a6ca62f139858feb04",
+        "68798544eda7ff6897ffafe6e2e531cbc2659f2cfe7f37c7b01aa5c1c270808b"
+      ],
+      "matched_failure": [
+        2,
+        8,
+        "r47:70e341228da95cae7b269f2e"
+      ],
+      "P0_eligible_uids": [
+        "065bd9a7c93be5e9d3a3249890ea006d6dd66ad2eac705a6ca62f139858feb04",
+        "68798544eda7ff6897ffafe6e2e531cbc2659f2cfe7f37c7b01aa5c1c270808b"
+      ]
+    },
+    {
+      "role": "failure",
+      "song": 2,
+      "slot": 8,
+      "event_uid": "r47:a74b575f952414f4396bad53",
+      "source_uid": "male_pipa_2",
+      "center_uids": [
+        "79d7c0393748e4e0ecd4c420aec7123c83864caacf10a95de210add3ae11a386",
+        "9e142425170b365fbf9d60e1f53504f9a2f649c6fa7db76e7a79bc9e9854a0e7"
+      ],
+      "matched_failure": [
+        2,
+        8,
+        "r47:a74b575f952414f4396bad53"
+      ],
+      "P0_eligible_uids": []
+    },
+    {
+      "role": "control",
+      "song": 2,
+      "slot": 7,
+      "event_uid": "r47:a74b575f952414f4396bad53",
+      "source_uid": "male_pipa_2",
+      "center_uids": [
+        "216caaba2421eefbc699a36b6e7a3c48674d9ec9597234d2e481c161e2a07135",
+        "c383e7d2e7083d38bc3fa165ecc37b09bd468905418e80a2b4c6c75ceb8476e4"
+      ],
+      "matched_failure": [
+        2,
+        8,
+        "r47:a74b575f952414f4396bad53"
+      ],
+      "P0_eligible_uids": [
+        "216caaba2421eefbc699a36b6e7a3c48674d9ec9597234d2e481c161e2a07135",
+        "c383e7d2e7083d38bc3fa165ecc37b09bd468905418e80a2b4c6c75ceb8476e4"
+      ]
+    }
+  ],
+  "registration": "ALL14_P0_FAILURES; UNIQUE_SAME_EVENT_EQUAL_SIDE_COUNT_AND_CLOCK_COUNT_CONTROLS; SAME_SONG_THEN_NEAREST_SLOT_THEN_ID",
+  "neighbor_order": "FROZEN_BASELINE_FIRST_THEN_UID; ALL_REGISTERED_P0_NEIGHBOR_CANDIDATES",
+  "center_order": "E1W_FIRST_THEN_UID",
+  "gap": 48,
+  "same_source_adjacency": "GEOMETRY_RECORDED_SEPARATELY; R58_ROUTING_EXCLUDES_SAME_SOURCE",
+  "max_geometry_calls": 2048,
+  "max_chart_trials": 6144,
+  "max_materializations": 256,
+  "workers": 4,
+  "display_witness": "MIN_CHANGED_NEIGHBORS_THEN_REGISTERED_CENTER_AND_NEIGHBOR_ORDER; SAME_CENTER_CLOCK_IN_BOTH_PANELS",
+  "primary": "ONE_COMMON_CENTER_CLOCK_WITH_ALL_EXISTING_SIDES_NUMERICALLY_PASSING_AND_POLICY_ADMISSIBLE",
+  "path_budget_extensions": 131072,
+  "path_scope": "EXACT_SUFFIX_FEASIBILITY_PLUS_GREEDY_SEQUENTIAL_AND_R58_CHOOSE_ADAPTER_EXECUTION_STRUCTURE_DISABLED_SHARED_MEASURED_GRAPH",
+  "unknown_edges": "UNKNOWN_NEVER_PASS",
+  "new_candidates": 0,
+  "training_updates": 0,
+  "can_route": false,
+  "native24": "NOT_EVALUABLE"
+}
