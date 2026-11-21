@@ -1,0 +1,58 @@
+[
+  {
+    "method": "Uniform",
+    "registered_tasks": 9,
+    "G1_passes": 9,
+    "selected_nonuniform": 0,
+    "bound_target_checks_pass": 0,
+    "artistic_quality": "NOT_EVALUABLE"
+  },
+  {
+    "method": "E1W",
+    "registered_tasks": 9,
+    "G1_passes": 9,
+    "selected_nonuniform": 9,
+    "bound_target_checks_pass": 0,
+    "artistic_quality": "NOT_EVALUABLE"
+  },
+  {
+    "method": "GTWLocal",
+    "registered_tasks": 9,
+    "G1_passes": 9,
+    "selected_nonuniform": 7,
+    "bound_target_checks_pass": 4,
+    "artistic_quality": "NOT_EVALUABLE"
+  },
+  {
+    "method": "NoTypes",
+    "registered_tasks": 9,
+    "G1_passes": 9,
+    "selected_nonuniform": 9,
+    "bound_target_checks_pass": 9,
+    "artistic_quality": "NOT_EVALUABLE"
+  },
+  {
+    "method": "RoleOrdered",
+    "registered_tasks": 9,
+    "G1_passes": 9,
+    "selected_nonuniform": 9,
+    "bound_target_checks_pass": 9,
+    "artistic_quality": "NOT_EVALUABLE"
+  },
+  {
+    "method": "TypeShuffled",
+    "registered_tasks": 9,
+    "G1_passes": 9,
+    "selected_nonuniform": 9,
+    "bound_target_checks_pass": 9,
+    "artistic_quality": "NOT_EVALUABLE"
+  },
+  {
+    "method": "SourceAwareSequential",
+    "registered_tasks": 9,
+    "G1_passes": 9,
+    "selected_nonuniform": 9,
+    "bound_target_checks_pass": 9,
+    "artistic_quality": "NOT_EVALUABLE"
+  }
+]

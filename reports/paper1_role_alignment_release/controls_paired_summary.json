@@ -1,0 +1,128 @@
+[
+  {
+    "dataset": "AIST++",
+    "registered": 3,
+    "observed": 3,
+    "complete_cases": 3,
+    "methods": {
+      "RoleOrdered": {
+        "top1": 0,
+        "tied_top1": 0.0,
+        "paired_win": 0.25
+      },
+      "NoTypes": {
+        "top1": 1,
+        "tied_top1": 0.3333333333333333,
+        "paired_win": 0.75
+      },
+      "TypeShuffled": {
+        "top1": 0,
+        "tied_top1": 0.0,
+        "paired_win": 0.4166666666666667
+      },
+      "MusicDensity": {
+        "top1": 3,
+        "tied_top1": 1.0,
+        "paired_win": 1.0
+      },
+      "PositionOnly": {
+        "top1": 2,
+        "tied_top1": 0.6666666666666666,
+        "paired_win": 0.75
+      },
+      "NoMusic": {
+        "top1": 0,
+        "tied_top1": 0.20000000000000004,
+        "paired_win": 0.5
+      }
+    },
+    "Role_minus_null_top1_95": {
+      "NoTypes": [
+        -1.0,
+        0.0
+      ],
+      "TypeShuffled": [
+        0.0,
+        0.0
+      ],
+      "MusicDensity": [
+        -1.0,
+        -1.0
+      ],
+      "PositionOnly": [
+        -1.0,
+        0.0
+      ],
+      "NoMusic": [
+        -0.20000000000000004,
+        -0.20000000000000004
+      ]
+    },
+    "clock_gate_pass": false,
+    "semantic_role_gate": "NOT_EVALUABLE_NO_INDEPENDENT_RECORDS",
+    "independent_new_music_certified": false
+  },
+  {
+    "dataset": "FineDance",
+    "registered": 3,
+    "observed": 3,
+    "complete_cases": 3,
+    "methods": {
+      "RoleOrdered": {
+        "top1": 2,
+        "tied_top1": 0.6666666666666666,
+        "paired_win": 0.9166666666666666
+      },
+      "NoTypes": {
+        "top1": 0,
+        "tied_top1": 0.0,
+        "paired_win": 0.5833333333333334
+      },
+      "TypeShuffled": {
+        "top1": 0,
+        "tied_top1": 0.0,
+        "paired_win": 0.5
+      },
+      "MusicDensity": {
+        "top1": 2,
+        "tied_top1": 0.6666666666666666,
+        "paired_win": 0.8333333333333334
+      },
+      "PositionOnly": {
+        "top1": 0,
+        "tied_top1": 0.0,
+        "paired_win": 0.3333333333333333
+      },
+      "NoMusic": {
+        "top1": 0,
+        "tied_top1": 0.20000000000000004,
+        "paired_win": 0.5
+      }
+    },
+    "Role_minus_null_top1_95": {
+      "NoTypes": [
+        0.0,
+        1.0
+      ],
+      "TypeShuffled": [
+        0.0,
+        1.0
+      ],
+      "MusicDensity": [
+        -1.0,
+        1.0
+      ],
+      "PositionOnly": [
+        0.0,
+        1.0
+      ],
+      "NoMusic": [
+        -0.20000000000000004,
+        0.8000000000000002
+      ]
+    },
+    "clock_gate_pass": false,
+    "semantic_role_gate": "NOT_EVALUABLE_NO_INDEPENDENT_RECORDS",
+    "independent_new_music_certified": false
+  }
+]

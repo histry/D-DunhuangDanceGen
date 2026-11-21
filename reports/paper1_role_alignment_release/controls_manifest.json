@@ -1,0 +1,39 @@
+{
+  "binding": {
+    "code": {
+      "__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "alignment.py": "845a8277374690789370c98d4aca0497097b38280eb68e020388bc46dde50e90",
+      "common.py": "2273f807bff0bc54382eaf3043ef94719fbded896a8d3da28e82201856d4b219",
+      "events.py": "d8c838e615125416c54dbe855d6362eeaf8f5577e119e0166221345f742688fc",
+      "execution.py": "656dc8a30fe4d24a25a4e6bdc8c459421c80d39127dfb893a6be40869e26ad38",
+      "paired.py": "5610a38852ca54432d22110a7192d8e98aef20dc55f73d1e26119c827ee9322f",
+      "protocol.json": "8659565a7f32ba03b2459d83c6d666234e2002550a5b28a908bb3eef057d0f53",
+      "run.py": "f867f838d8c25d62e92243aa770ee332903c00d76c1b504b803c32408cdfe557",
+      "test_contracts.py": "fd21c81e9dc82b9048b24357f06f57c8fc9e6a0b54f5472efa95fb7da4d4de33",
+      "view.py": "db96868f416496b67893e448cfef9ab5c34a09799a5a89f6914a534ef00dd492"
+    },
+    "dependencies": {
+      "planning/anchor_reachability.py": "2c52be366c2d8e5e3bb6c90ed2b5e57cf6c9a570d19430b5dedce43542f80fe5",
+      "research/paired_event_r41/events.py": "e6bbb769f9ed37b9743113a5c0a84139300bfc2e957a1b4315c041d2e1fb3759",
+      "research/manifold_bridge_r47/config.json": "b6f85af0569bf34577561df17e2fe9b4a03076fad4c148aeff5edf660f3c9f4b",
+      "research/source_time_q01/study.py": "f7811913dd17bba2fde920a734e22d0fb515c31bd2bf41324e25111eb6d0f78f",
+      "research/paper1_auto_eval/experiment.py": "0459c9031404d4550044babbcbdeb8e298b9b05d771edae76a3013d770b0cea2",
+      "research/music_events/infer.py": "1107549872699de4c28773b1c05a4693437de9fc3e20bea22fe88431e27e968f",
+      "research/timing_validity_r66/engine.py": "d35fd2828f32732ddb96ff3944239eab74250cd59caf30c93737c2d6c871caff"
+    }
+  },
+  "parents": {
+    "preview": "e8169c342bd54ca9f58ea6a0173bfdb049735a254725cde26627a06b7fc97644",
+    "controls": "fd90d6a70e0a849e4ecb6d1c168ee5293b328c4d5b54508a18a705c24083f962",
+    "public": "bbadcd2655bb1cefc291d082a7d39acedd9596654c73ecc9cc37e518e2a0cf24"
+  },
+  "files": {
+    "decisions.json": "98bbb7ac73afe9273eefc08b581272f20a23e29c3c51eca76ffc81ff96fe654a",
+    "execution_summary.json": "61406fb0bb0d9eed836002af21539b6eec0c31fc78bb870dee50198f56143451",
+    "paired_motion_catalogs.json": "a54b3c9afd6561737a9323c94b2041998c9869992b320af8f70e8c3a30d9d786",
+    "paired_results.json": "2fadcbba5a26fba57d14b4350262da8ea0400504e3ef94a581c5f23f2c6e5aa7",
+    "paired_summary.json": "83ab510129887fce286b8e29922bc02f6e72441cb05405eb22d70bbf05a8ba60",
+    "qualification.json": "be50c60cc5a5ec269db86abdb6ad4ad7d93a40cd0bbda2e2dad76ef3e6a8b9fe",
+    "sequential_equivalence.json": "05ba0aac51c33601e491dc72b078fd8d042a05b698c3bd0a35bff7cbb87616f2"
+  }
+}

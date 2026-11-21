@@ -1,3 +1,5 @@
+- [Paper1-RoleAlignment-Q01：有限事件对应与实际执行](reports/paper1_role_alignment_release/report.md)：先验收9任务双栏，再完成真实配对时钟及七方案对照；68位置／56唯一Core，G1均通过。角色评分AIST++ 0/3、FineDance 2/3，均未取得资格；独立角色与艺术质量不可评，未扩大Planner或训练。
+
 - [Paper1-Reachability-Q01：精确可达证书与完整阶段审查](reports/paper1_reachability_release/report.md)：5项严格排除、4项实际见证确认上限；139单位／417假设均保留，58项可比较假设无合法多阶段时钟，未新增对齐动作或训练。
 
 - [Paper1-SourceTime-Q01：来源×时钟可行性决策](reports/paper1_source_time_release/report.md)：86候选、9个技术时间任务；联合与强顺序均4/9，穷举顺序逐项等价，未证明额外联合收益。真实观看与精确独立复验完成。

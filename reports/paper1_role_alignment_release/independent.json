@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "fresh_process": true,
+  "arrays_exact": true,
+  "candidate_ledger_exact": true,
+  "scalar_differences": [],
+  "audio_replay": {
+    "status": "PASS",
+    "differences": [],
+    "fresh_process": true
+  },
+  "parents_unchanged": {
+    "preview": "e8169c342bd54ca9f58ea6a0173bfdb049735a254725cde26627a06b7fc97644",
+    "controls": "fd90d6a70e0a849e4ecb6d1c168ee5293b328c4d5b54508a18a705c24083f962",
+    "public": "bbadcd2655bb1cefc291d082a7d39acedd9596654c73ecc9cc37e518e2a0cf24"
+  },
+  "training_steps": 0,
+  "can_route": false
+}

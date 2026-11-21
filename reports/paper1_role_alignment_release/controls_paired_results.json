@@ -1,0 +1,1478 @@
+[
+  {
+    "source_uid": "027536653a49e6bf25e3c9b0",
+    "dataset": "AIST++",
+    "role": "train",
+    "dancer_role": "UNKNOWN",
+    "status": "OBSERVED",
+    "clock_scope": "VERIFIED_OFFICIAL_SOURCE_CLOCK",
+    "proof": {
+      "source_uid": "027536653a49e6bf25e3c9b0",
+      "dataset": "AIST++",
+      "raw_motion_sha256": "47954305c14e854b3e4ad7e6bc4d85bfa4098a02c78c543bc1bcb529f8e70f6e",
+      "audio_sha256": "f44ff12179bbc416d53240488b0997b16995fb83b2bd7516e888bc48ce0f7611",
+      "raw_bytes_verified": true,
+      "skeleton_used": false,
+      "FK_used": false,
+      "root_used": false,
+      "contact_used": false,
+      "raw_origin_preserved": true,
+      "audio_offset_frames": 0.0,
+      "clock_scope": "VERIFIED_OFFICIAL_SOURCE_CLOCK",
+      "representation": "NATIVE151_COLUMNS_LOCAL_SO3_FIRST22_30HZ",
+      "source_seals_sha256": "4aa438be09b5833efc5d78bed8cdec28f20767693e413d4b53a147b63c8b432d",
+      "native_sha256": "7f8235462db9ade33da3c7ca5e56e927f0032822c1d3b3f9c102557900b2bdf7",
+      "clock_proof_sha256": "d44eedfbacc3ff71db9dccbdfee13d6ff8c01e95cc912bdef9d73df2ae6bef8a",
+      "calibration": {
+        "verified": true,
+        "audio_offset_seconds": 0.0,
+        "anchors": [
+          {
+            "video_sample": 0,
+            "source_lag_samples": 0,
+            "ncc": 0.9995755200807266
+          },
+          {
+            "video_sample": 35957,
+            "source_lag_samples": 0,
+            "ncc": 0.9995927150777405
+          },
+          {
+            "video_sample": 71915,
+            "source_lag_samples": 0,
+            "ncc": 0.999537274206839
+          }
+        ],
+        "minimum_ncc": 0.999537274206839,
+        "global_ncc": 0.9995842414223347,
+        "zero_ncc": 0.9995842414223347,
+        "maximum_residual_seconds": 0.0,
+        "periodic_alternatives": true,
+        "origin_anchor_used": true,
+        "rate": 8000,
+        "method": "official_refined_origin_plus_three_anchor_waveform_ncc",
+        "motion_seconds": 12.0,
+        "decoded_audio_seconds": 11.989375,
+        "duration_error_seconds": 0.010624999999999218,
+        "stream_metadata": {
+          "video": {
+            "index": 0,
+            "codec_name": "h264",
+            "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+            "profile": "High",
+            "codec_type": "video",
+            "codec_tag_string": "avc1",
+            "codec_tag": "0x31637661",
+            "width": 1920,
+            "height": 1080,
+            "coded_width": 1920,
+            "coded_height": 1080,
+            "closed_captions": 0,
+            "has_b_frames": 2,
+            "sample_aspect_ratio": "1:1",
+            "display_aspect_ratio": "16:9",
+            "pix_fmt": "yuv420p",
+            "level": 42,
+            "chroma_location": "left",
+            "refs": 1,
+            "is_avc": "true",
+            "nal_length_size": "4",
+            "r_frame_rate": "60000/1001",
+            "avg_frame_rate": "60000/1001",
+            "time_base": "1/60000",
+            "start_pts": 0,
+            "start_time": "0.000000",
+            "duration_ts": 719719,
+            "duration": "11.995317",
+            "bit_rate": "1941535",
+            "bits_per_raw_sample": "8",
+            "nb_frames": "719",
+            "disposition": {
+              "default": 1,
+              "dub": 0,
+              "original": 0,
+              "comment": 0,
+              "lyrics": 0,
+              "karaoke": 0,
+              "forced": 0,
+              "hearing_impaired": 0,
+              "visual_impaired": 0,
+              "clean_effects": 0,
+              "attached_pic": 0,
+              "timed_thumbnails": 0
+            },
+            "tags": {
+              "language": "eng",
+              "handler_name": "\u001fMainconcept Video Media Handler",
+              "vendor_id": "[0][0][0][0]"
+            }
+          },
+          "audio": {
+            "index": 1,
+            "codec_name": "aac",
+            "codec_long_name": "AAC (Advanced Audio Coding)",
+            "profile": "LC",
+            "codec_type": "audio",
+            "codec_tag_string": "mp4a",
+            "codec_tag": "0x6134706d",
+            "sample_fmt": "fltp",
+            "sample_rate": "48000",
+            "channels": 2,
+            "channel_layout": "stereo",
+            "bits_per_sample": 0,
+            "r_frame_rate": "0/0",
+            "avg_frame_rate": "0/0",
+            "time_base": "1/48000",
+            "start_pts": 0,
+            "start_time": "0.000000",
+            "duration_ts": 575424,
+            "duration": "11.988000",
+            "bit_rate": "324102",
+            "nb_frames": "563",
+            "disposition": {
+              "default": 1,
+              "dub": 0,
+              "original": 0,
+              "comment": 0,
+              "lyrics": 0,
+              "karaoke": 0,
+              "forced": 0,
+              "hearing_impaired": 0,
+              "visual_impaired": 0,
+              "clean_effects": 0,
+              "attached_pic": 0,
+              "timed_thumbnails": 0
+            },
+            "tags": {
+              "language": "und",
+              "handler_name": "SoundHandler",
+              "vendor_id": "[0][0][0][0]"
+            }
+          }
+        }
+      },
+      "source_clock_verified": true,
+      "full_record_frames": 360,
+      "full_R_sha256": "8d7fe89729457249212f1797b74fdd8cdf690f9c3eaeaba19cee84690b391fc3",
+      "shared_source_interval": [
+        0,
+        360
+      ],
+      "R59_shared_prefix_frames": 360,
+      "R59_shared_prefix_R_sha256": "8d7fe89729457249212f1797b74fdd8cdf690f9c3eaeaba19cee84690b391fc3",
+      "R59_source_arrays_sha256": "a3d5fa7f4a7110efe470c06623dbe27e10e439af61e6d3ced5f0d0b2c43d92ec",
+      "R59_prefix_exact": true,
+      "full_record_not_shared_prefix_used_for_peak_extraction": true
+    },
+    "audio_group": "f44ff12179bbc416d53240488b0997b16995fb83b2bd7516e888bc48ce0f7611",
+    "wrong_audio_group": "8065fc70fa59988555931452b16be59e7562b5c5d55c44f6cf34d0c92e2b525a",
+    "common_support_seconds": [
+      0.5,
+      11.466666666666667
+    ],
+    "query_events": 55,
+    "music_events": 58,
+    "query_role_counts": {
+      "ACCEL_RISE": 20,
+      "SPEED_PEAK": 17,
+      "DIRECTION_TURN": 18,
+      "HOLD_END": 0
+    },
+    "music_role_counts": {
+      "BEAT": 15,
+      "ACCENT_PROXY": 36,
+      "DOWNBEAT": 6,
+      "STRUCTURE_PROXY": 1
+    },
+    "scores": {
+      "RoleOrdered": {
+        "values": [
+          0.3330151427018559,
+          0.3111717374825006,
+          0.31100146132286743,
+          0.3572940649544336,
+          0.28376816324736587
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": false,
+          "tied_top1_credit": 0.0,
+          "tied_maximum_indices": [
+            3
+          ],
+          "paired_win": 0.25,
+          "correct_rank_lower": 4
+        }
+      },
+      "NoTypes": {
+        "values": [
+          0.5587632474010519,
+          0.4889023973973741,
+          0.5545989944109334,
+          0.5494246733139175,
+          0.4345095678222092
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": false,
+          "tied_top1_credit": 0.0,
+          "tied_maximum_indices": [
+            0
+          ],
+          "paired_win": 0.75,
+          "correct_rank_lower": 2
+        }
+      },
+      "TypeShuffled": {
+        "values": [
+          0.328870150224902,
+          0.21113980892499043,
+          0.290129833780932,
+          0.3104561081855804,
+          0.24789670234222227
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": false,
+          "tied_top1_credit": 0.0,
+          "tied_maximum_indices": [
+            0
+          ],
+          "paired_win": 0.5,
+          "correct_rank_lower": 3
+        }
+      },
+      "MusicDensity": {
+        "values": [
+          0.3357765587482097,
+          0.3138815827952075,
+          0.4071250024853824,
+          0.32943643873624584,
+          0.36381991542557063
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": true,
+          "tied_top1_credit": 1.0,
+          "tied_maximum_indices": [
+            2
+          ],
+          "paired_win": 1.0,
+          "correct_rank_lower": 1
+        }
+      },
+      "PositionOnly": {
+        "values": [
+          0.35726151704559733,
+          0.32257425674567036,
+          0.3836864097266385,
+          0.3497835323617658,
+          0.3786103920317205
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": true,
+          "tied_top1_credit": 1.0,
+          "tied_maximum_indices": [
+            2
+          ],
+          "paired_win": 1.0,
+          "correct_rank_lower": 1
+        }
+      },
+      "NoMusic": {
+        "values": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": false,
+          "tied_top1_credit": 0.2,
+          "tied_maximum_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "paired_win": 0.5,
+          "correct_rank_lower": 1
+        }
+      }
+    },
+    "correct_vs_wrong_role_scores": [
+      0.31100146132286743,
+      0.4022703798450998
+    ],
+    "semantic_accuracy": "NOT_EVALUABLE"
+  },
+  {
+    "source_uid": "027d60beccae2e38f7dc9ff3",
+    "dataset": "AIST++",
+    "role": "train",
+    "dancer_role": "UNKNOWN",
+    "status": "OBSERVED",
+    "clock_scope": "VERIFIED_OFFICIAL_SOURCE_CLOCK",
+    "proof": {
+      "source_uid": "027d60beccae2e38f7dc9ff3",
+      "dataset": "AIST++",
+      "raw_motion_sha256": "41047961268555bd5734c799ec17c30f7d378a577855064cd14c30ee8510c56d",
+      "audio_sha256": "8065fc70fa59988555931452b16be59e7562b5c5d55c44f6cf34d0c92e2b525a",
+      "raw_bytes_verified": true,
+      "skeleton_used": false,
+      "FK_used": false,
+      "root_used": false,
+      "contact_used": false,
+      "raw_origin_preserved": true,
+      "audio_offset_frames": 0.0,
+      "clock_scope": "VERIFIED_OFFICIAL_SOURCE_CLOCK",
+      "representation": "NATIVE151_COLUMNS_LOCAL_SO3_FIRST22_30HZ",
+      "source_seals_sha256": "4aa438be09b5833efc5d78bed8cdec28f20767693e413d4b53a147b63c8b432d",
+      "native_sha256": "16277e72d901997b4457aabc47825b191e4dd83b0cbdd92168bf56bec0da80a1",
+      "clock_proof_sha256": "0a081c77e4ca781fb6ae108b1eb9da3c7fcf3fe69c570789c98cc8e14f85c780",
+      "calibration": {
+        "verified": true,
+        "audio_offset_seconds": 0.0,
+        "anchors": [
+          {
+            "video_sample": 0,
+            "source_lag_samples": 0,
+            "ncc": 0.9995160112504298
+          },
+          {
+            "video_sample": 22901,
+            "source_lag_samples": 0,
+            "ncc": 0.999559996638536
+          },
+          {
+            "video_sample": 45803,
+            "source_lag_samples": 0,
+            "ncc": 0.9979596977475761
+          }
+        ],
+        "minimum_ncc": 0.9979596977475761,
+        "global_ncc": 0.9991059844175398,
+        "zero_ncc": 0.9991059844175398,
+        "maximum_residual_seconds": 0.0,
+        "periodic_alternatives": false,
+        "origin_anchor_used": true,
+        "rate": 8000,
+        "method": "official_refined_origin_plus_three_anchor_waveform_ncc",
+        "motion_seconds": 8.733333333333333,
+        "decoded_audio_seconds": 8.725375,
+        "duration_error_seconds": 0.007958333333332845,
+        "stream_metadata": {
+          "video": {
+            "index": 0,
+            "codec_name": "h264",
+            "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+            "profile": "High",
+            "codec_type": "video",
+            "codec_tag_string": "avc1",
+            "codec_tag": "0x31637661",
+            "width": 1920,
+            "height": 1080,
+            "coded_width": 1920,
+            "coded_height": 1080,
+            "closed_captions": 0,
+            "has_b_frames": 2,
+            "sample_aspect_ratio": "1:1",
+            "display_aspect_ratio": "16:9",
+            "pix_fmt": "yuv420p",
+            "level": 42,
+            "chroma_location": "left",
+            "refs": 1,
+            "is_avc": "true",
+            "nal_length_size": "4",
+            "r_frame_rate": "60000/1001",
+            "avg_frame_rate": "60000/1001",
+            "time_base": "1/60000",
+            "start_pts": 0,
+            "start_time": "0.000000",
+            "duration_ts": 523523,
+            "duration": "8.725383",
+            "bit_rate": "1968018",
+            "bits_per_raw_sample": "8",
+            "nb_frames": "523",
+            "disposition": {
+              "default": 1,
+              "dub": 0,
+              "original": 0,
+              "comment": 0,
+              "lyrics": 0,
+              "karaoke": 0,
+              "forced": 0,
+              "hearing_impaired": 0,
+              "visual_impaired": 0,
+              "clean_effects": 0,
+              "attached_pic": 0,
+              "timed_thumbnails": 0
+            },
+            "tags": {
+              "language": "eng",
+              "handler_name": "\u001fMainconcept Video Media Handler",
+              "vendor_id": "[0][0][0][0]"
+            }
+          },
+          "audio": {
+            "index": 1,
+            "codec_name": "aac",
+            "codec_long_name": "AAC (Advanced Audio Coding)",
+            "profile": "LC",
+            "codec_type": "audio",
+            "codec_tag_string": "mp4a",
+            "codec_tag": "0x6134706d",
+            "sample_fmt": "fltp",
+            "sample_rate": "48000",
+            "channels": 2,
+            "channel_layout": "stereo",
+            "bits_per_sample": 0,
+            "r_frame_rate": "0/0",
+            "avg_frame_rate": "0/0",
+            "time_base": "1/48000",
+            "start_pts": 0,
+            "start_time": "0.000000",
+            "duration_ts": 418464,
+            "duration": "8.718000",
+            "bit_rate": "324191",
+            "nb_frames": "410",
+            "disposition": {
+              "default": 1,
+              "dub": 0,
+              "original": 0,
+              "comment": 0,
+              "lyrics": 0,
+              "karaoke": 0,
+              "forced": 0,
+              "hearing_impaired": 0,
+              "visual_impaired": 0,
+              "clean_effects": 0,
+              "attached_pic": 0,
+              "timed_thumbnails": 0
+            },
+            "tags": {
+              "language": "und",
+              "handler_name": "SoundHandler",
+              "vendor_id": "[0][0][0][0]"
+            }
+          }
+        }
+      },
+      "source_clock_verified": true,
+      "full_record_frames": 262,
+      "full_R_sha256": "381a547dfc00b5f4df3a662bd15ccff0a57d085fb7a63e1dadb70c5d1395ac48",
+      "shared_source_interval": [
+        0,
+        262
+      ],
+      "R59_shared_prefix_frames": 262,
+      "R59_shared_prefix_R_sha256": "381a547dfc00b5f4df3a662bd15ccff0a57d085fb7a63e1dadb70c5d1395ac48",
+      "R59_source_arrays_sha256": "bb0bc73191861b0b3e94d8c48c2a2285e96ede62a5e99412aae156320165861a",
+      "R59_prefix_exact": true,
+      "full_record_not_shared_prefix_used_for_peak_extraction": true
+    },
+    "audio_group": "8065fc70fa59988555931452b16be59e7562b5c5d55c44f6cf34d0c92e2b525a",
+    "wrong_audio_group": "472225d798603db9014afcc6bf4dc241496db22269a867b8178397ddc92194b4",
+    "common_support_seconds": [
+      0.5,
+      8.2
+    ],
+    "query_events": 24,
+    "music_events": 45,
+    "query_role_counts": {
+      "ACCEL_RISE": 12,
+      "SPEED_PEAK": 7,
+      "DIRECTION_TURN": 5,
+      "HOLD_END": 0
+    },
+    "music_role_counts": {
+      "BEAT": 14,
+      "ACCENT_PROXY": 28,
+      "DOWNBEAT": 3,
+      "STRUCTURE_PROXY": 0
+    },
+    "scores": {
+      "RoleOrdered": {
+        "values": [
+          0.33574735141929973,
+          0.4220989202391994,
+          0.3283677118357527,
+          0.4350422812758434,
+          0.22212937440216038
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": false,
+          "tied_top1_credit": 0.0,
+          "tied_maximum_indices": [
+            3
+          ],
+          "paired_win": 0.25,
+          "correct_rank_lower": 4
+        }
+      },
+      "NoTypes": {
+        "values": [
+          0.6418507693165775,
+          0.5512649250412981,
+          0.660585104864339,
+          0.625195166303277,
+          0.5685743134356115
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": true,
+          "tied_top1_credit": 1.0,
+          "tied_maximum_indices": [
+            2
+          ],
+          "paired_win": 1.0,
+          "correct_rank_lower": 1
+        }
+      },
+      "TypeShuffled": {
+        "values": [
+          0.361628537323701,
+          0.38128859332534154,
+          0.37476495612831745,
+          0.4041669084324285,
+          0.2478028152855769
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": false,
+          "tied_top1_credit": 0.0,
+          "tied_maximum_indices": [
+            3
+          ],
+          "paired_win": 0.5,
+          "correct_rank_lower": 3
+        }
+      },
+      "MusicDensity": {
+        "values": [
+          0.49918559110721744,
+          0.358445211290368,
+          0.5382749349093018,
+          0.3160617380738417,
+          0.4860036150025974
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": true,
+          "tied_top1_credit": 1.0,
+          "tied_maximum_indices": [
+            2
+          ],
+          "paired_win": 1.0,
+          "correct_rank_lower": 1
+        }
+      },
+      "PositionOnly": {
+        "values": [
+          0.46958550147390565,
+          0.40322350683983044,
+          0.43190917243288457,
+          0.4521541098732636,
+          0.45196400264786024
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": false,
+          "tied_top1_credit": 0.0,
+          "tied_maximum_indices": [
+            0
+          ],
+          "paired_win": 0.25,
+          "correct_rank_lower": 4
+        }
+      },
+      "NoMusic": {
+        "values": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": false,
+          "tied_top1_credit": 0.2,
+          "tied_maximum_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "paired_win": 0.5,
+          "correct_rank_lower": 1
+        }
+      }
+    },
+    "correct_vs_wrong_role_scores": [
+      0.3283677118357527,
+      0.4485291013734684
+    ],
+    "semantic_accuracy": "NOT_EVALUABLE"
+  },
+  {
+    "source_uid": "02eaabac10a3f6ac51d8e8e6",
+    "dataset": "AIST++",
+    "role": "train",
+    "dancer_role": "UNKNOWN",
+    "status": "OBSERVED",
+    "clock_scope": "VERIFIED_OFFICIAL_SOURCE_CLOCK",
+    "proof": {
+      "source_uid": "02eaabac10a3f6ac51d8e8e6",
+      "dataset": "AIST++",
+      "raw_motion_sha256": "943393235369c732ad63f01bf9cc4b4c3c1d960f0bcf4aee60dc1fbe432ad080",
+      "audio_sha256": "472225d798603db9014afcc6bf4dc241496db22269a867b8178397ddc92194b4",
+      "raw_bytes_verified": true,
+      "skeleton_used": false,
+      "FK_used": false,
+      "root_used": false,
+      "contact_used": false,
+      "raw_origin_preserved": true,
+      "audio_offset_frames": 0.0,
+      "clock_scope": "VERIFIED_OFFICIAL_SOURCE_CLOCK",
+      "representation": "NATIVE151_COLUMNS_LOCAL_SO3_FIRST22_30HZ",
+      "source_seals_sha256": "4aa438be09b5833efc5d78bed8cdec28f20767693e413d4b53a147b63c8b432d",
+      "native_sha256": "9fa822f4b2d6e945008d10ad05ae7697eff4cd1000fc87d3acbbdbe829646eac",
+      "clock_proof_sha256": "1bb0a96b824225d7d605f1ed382c15e66aadecfbe84a3511ec6a460133bc297d",
+      "calibration": {
+        "verified": true,
+        "audio_offset_seconds": 0.0,
+        "anchors": [
+          {
+            "video_sample": 0,
+            "source_lag_samples": 0,
+            "ncc": 0.9995274912075837
+          },
+          {
+            "video_sample": 17525,
+            "source_lag_samples": 0,
+            "ncc": 0.999483796699031
+          },
+          {
+            "video_sample": 35051,
+            "source_lag_samples": 0,
+            "ncc": 0.9993459173348236
+          }
+        ],
+        "minimum_ncc": 0.9993459173348236,
+        "global_ncc": 0.9994561174663141,
+        "zero_ncc": 0.9994561174663141,
+        "maximum_residual_seconds": 0.0,
+        "periodic_alternatives": false,
+        "origin_anchor_used": true,
+        "rate": 8000,
+        "method": "official_refined_origin_plus_three_anchor_waveform_ncc",
+        "motion_seconds": 7.383333333333334,
+        "decoded_audio_seconds": 7.381375,
+        "duration_error_seconds": 0.0019583333333335062,
+        "stream_metadata": {
+          "video": {
+            "index": 0,
+            "codec_name": "h264",
+            "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+            "profile": "High",
+            "codec_type": "video",
+            "codec_tag_string": "avc1",
+            "codec_tag": "0x31637661",
+            "width": 1920,
+            "height": 1080,
+            "coded_width": 1920,
+            "coded_height": 1080,
+            "closed_captions": 0,
+            "has_b_frames": 2,
+            "sample_aspect_ratio": "1:1",
+            "display_aspect_ratio": "16:9",
+            "pix_fmt": "yuv420p",
+            "level": 42,
+            "chroma_location": "left",
+            "refs": 1,
+            "is_avc": "true",
+            "nal_length_size": "4",
+            "r_frame_rate": "60000/1001",
+            "avg_frame_rate": "60000/1001",
+            "time_base": "1/60000",
+            "start_pts": 0,
+            "start_time": "0.000000",
+            "duration_ts": 443443,
+            "duration": "7.390717",
+            "bit_rate": "1921223",
+            "bits_per_raw_sample": "8",
+            "nb_frames": "443",
+            "disposition": {
+              "default": 1,
+              "dub": 0,
+              "original": 0,
+              "comment": 0,
+              "lyrics": 0,
+              "karaoke": 0,
+              "forced": 0,
+              "hearing_impaired": 0,
+              "visual_impaired": 0,
+              "clean_effects": 0,
+              "attached_pic": 0,
+              "timed_thumbnails": 0
+            },
+            "tags": {
+              "language": "eng",
+              "handler_name": "\u001fMainconcept Video Media Handler",
+              "vendor_id": "[0][0][0][0]"
+            }
+          },
+          "audio": {
+            "index": 1,
+            "codec_name": "aac",
+            "codec_long_name": "AAC (Advanced Audio Coding)",
+            "profile": "LC",
+            "codec_type": "audio",
+            "codec_tag_string": "mp4a",
+            "codec_tag": "0x6134706d",
+            "sample_fmt": "fltp",
+            "sample_rate": "48000",
+            "channels": 2,
+            "channel_layout": "stereo",
+            "bits_per_sample": 0,
+            "r_frame_rate": "0/0",
+            "avg_frame_rate": "0/0",
+            "time_base": "1/48000",
+            "start_pts": 0,
+            "start_time": "0.000000",
+            "duration_ts": 354096,
+            "duration": "7.377000",
+            "bit_rate": "321427",
+            "nb_frames": "347",
+            "disposition": {
+              "default": 1,
+              "dub": 0,
+              "original": 0,
+              "comment": 0,
+              "lyrics": 0,
+              "karaoke": 0,
+              "forced": 0,
+              "hearing_impaired": 0,
+              "visual_impaired": 0,
+              "clean_effects": 0,
+              "attached_pic": 0,
+              "timed_thumbnails": 0
+            },
+            "tags": {
+              "language": "und",
+              "handler_name": "SoundHandler",
+              "vendor_id": "[0][0][0][0]"
+            }
+          }
+        }
+      },
+      "source_clock_verified": true,
+      "full_record_frames": 222,
+      "full_R_sha256": "7cc7e0c45d395f7b50831c45751ade480a64369670342b70938bd109f94a4c65",
+      "shared_source_interval": [
+        0,
+        222
+      ],
+      "R59_shared_prefix_frames": 222,
+      "R59_shared_prefix_R_sha256": "7cc7e0c45d395f7b50831c45751ade480a64369670342b70938bd109f94a4c65",
+      "R59_source_arrays_sha256": "adb6eade69f8df3b33b181f40a3d01976c20c736423e2b3f4a05bf95efda76f0",
+      "R59_prefix_exact": true,
+      "full_record_not_shared_prefix_used_for_peak_extraction": true
+    },
+    "audio_group": "472225d798603db9014afcc6bf4dc241496db22269a867b8178397ddc92194b4",
+    "wrong_audio_group": "f44ff12179bbc416d53240488b0997b16995fb83b2bd7516e888bc48ce0f7611",
+    "common_support_seconds": [
+      0.5,
+      6.866666666666666
+    ],
+    "query_events": 31,
+    "music_events": 37,
+    "query_role_counts": {
+      "ACCEL_RISE": 10,
+      "SPEED_PEAK": 10,
+      "DIRECTION_TURN": 11,
+      "HOLD_END": 0
+    },
+    "music_role_counts": {
+      "BEAT": 13,
+      "ACCENT_PROXY": 20,
+      "DOWNBEAT": 3,
+      "STRUCTURE_PROXY": 1
+    },
+    "scores": {
+      "RoleOrdered": {
+        "values": [
+          0.353514715953873,
+          0.3896426186654303,
+          0.35075447728622916,
+          0.436677205500531,
+          0.2768401470415957
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": false,
+          "tied_top1_credit": 0.0,
+          "tied_maximum_indices": [
+            3
+          ],
+          "paired_win": 0.25,
+          "correct_rank_lower": 4
+        }
+      },
+      "NoTypes": {
+        "values": [
+          0.5957974971893516,
+          0.6281083713461885,
+          0.5997634073309103,
+          0.6086375661445294,
+          0.5329786867317216
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": false,
+          "tied_top1_credit": 0.0,
+          "tied_maximum_indices": [
+            1
+          ],
+          "paired_win": 0.5,
+          "correct_rank_lower": 3
+        }
+      },
+      "TypeShuffled": {
+        "values": [
+          0.29794916100124996,
+          0.3547702172179424,
+          0.2592320141606147,
+          0.43320891782309773,
+          0.2401843245856806
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": false,
+          "tied_top1_credit": 0.0,
+          "tied_maximum_indices": [
+            3
+          ],
+          "paired_win": 0.25,
+          "correct_rank_lower": 4
+        }
+      },
+      "MusicDensity": {
+        "values": [
+          0.34275831407313234,
+          0.39797235547301424,
+          0.47131651486500525,
+          0.36617445380303826,
+          0.33115386450755585
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": true,
+          "tied_top1_credit": 1.0,
+          "tied_maximum_indices": [
+            2
+          ],
+          "paired_win": 1.0,
+          "correct_rank_lower": 1
+        }
+      },
+      "PositionOnly": {
+        "values": [
+          0.3979907992880493,
+          0.33780448966455606,
+          0.4345346147640555,
+          0.35018300855637075,
+          0.37072557969933795
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": true,
+          "tied_top1_credit": 1.0,
+          "tied_maximum_indices": [
+            2
+          ],
+          "paired_win": 1.0,
+          "correct_rank_lower": 1
+        }
+      },
+      "NoMusic": {
+        "values": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": false,
+          "tied_top1_credit": 0.2,
+          "tied_maximum_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "paired_win": 0.5,
+          "correct_rank_lower": 1
+        }
+      }
+    },
+    "correct_vs_wrong_role_scores": [
+      0.35075447728622916,
+      0.39908867088306343
+    ],
+    "semantic_accuracy": "NOT_EVALUABLE"
+  },
+  {
+    "source_uid": "fine_010",
+    "dataset": "FineDance",
+    "role": "genre_train_diagnostic",
+    "dancer_role": "test",
+    "status": "OBSERVED",
+    "clock_scope": "OFFICIAL_ARCHIVE_ID_AND_RAW_COMMON_START_NOT_AIST_WAVEFORM_CALIBRATED",
+    "proof": {
+      "source_uid": "fine_010",
+      "dataset": "FineDance",
+      "raw_motion_sha256": "24074f6f2a858a879876497522e19c10adb6440eb830965ca0ad5ae829747ab4",
+      "audio_sha256": "0223a697a2ca0a7a4a6c41b5e1a9293b755952a4b19d310cd994fb596b5d16c5",
+      "raw_bytes_verified": true,
+      "skeleton_used": false,
+      "FK_used": false,
+      "root_used": false,
+      "contact_used": false,
+      "raw_origin_preserved": true,
+      "audio_offset_frames": 0.0,
+      "clock_scope": "OFFICIAL_ARCHIVE_ID_AND_RAW_COMMON_START_NOT_AIST_WAVEFORM_CALIBRATED",
+      "representation": "FINEDANCE315_ROWS6D_COMMON22_LOCAL_SO3_30HZ",
+      "source_clock_verified": false,
+      "source_clock_limitation": "OFFICIAL_ARCHIVE_ID_COMMON_START_NOT_AIST_WAVEFORM_CALIBRATION",
+      "full_record_frames": 5498,
+      "full_R_sha256": "552c6dc1907aa315c5f23b7143b41ea985bf1b8d2e6fa6c38ba16a01ffd447b3",
+      "shared_source_interval": [
+        0,
+        5497
+      ],
+      "R59_shared_prefix_frames": 5497,
+      "R59_shared_prefix_R_sha256": "a88e865281cc3bf18dc88d1c865ec9725a7a9536524d2d3e850af6e7b195f4c9",
+      "R59_source_arrays_sha256": "115b3e4abb714a7bf1244343e3b20adcefe363b6074ce5e58c6542ff3935c5ca",
+      "R59_prefix_exact": true,
+      "full_record_not_shared_prefix_used_for_peak_extraction": true
+    },
+    "audio_group": "0223a697a2ca0a7a4a6c41b5e1a9293b755952a4b19d310cd994fb596b5d16c5",
+    "wrong_audio_group": "abee5d9938935d3efc42e14e258e46c4dae90a2b3ea93780e9507eab856e8639",
+    "common_support_seconds": [
+      0.5,
+      73.37466666666667
+    ],
+    "query_events": 213,
+    "music_events": 339,
+    "query_role_counts": {
+      "ACCEL_RISE": 122,
+      "SPEED_PEAK": 52,
+      "DIRECTION_TURN": 38,
+      "HOLD_END": 1
+    },
+    "music_role_counts": {
+      "BEAT": 109,
+      "ACCENT_PROXY": 196,
+      "DOWNBEAT": 27,
+      "STRUCTURE_PROXY": 7
+    },
+    "scores": {
+      "RoleOrdered": {
+        "values": [
+          0.33453817576603495,
+          0.34765253017103515,
+          0.35186387073318415,
+          0.34108296490122164,
+          0.3651684735873566
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": false,
+          "tied_top1_credit": 0.0,
+          "tied_maximum_indices": [
+            4
+          ],
+          "paired_win": 0.75,
+          "correct_rank_lower": 2
+        }
+      },
+      "NoTypes": {
+        "values": [
+          0.5531476086746543,
+          0.5901226347228823,
+          0.5872542847829414,
+          0.535425615447395,
+          0.6099024902527836
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": false,
+          "tied_top1_credit": 0.0,
+          "tied_maximum_indices": [
+            4
+          ],
+          "paired_win": 0.5,
+          "correct_rank_lower": 3
+        }
+      },
+      "TypeShuffled": {
+        "values": [
+          0.2814819909540125,
+          0.3463382671440506,
+          0.31383152045329277,
+          0.33727817198275417,
+          0.3356553178399397
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": false,
+          "tied_top1_credit": 0.0,
+          "tied_maximum_indices": [
+            1
+          ],
+          "paired_win": 0.25,
+          "correct_rank_lower": 4
+        }
+      },
+      "MusicDensity": {
+        "values": [
+          0.32050148996121036,
+          0.36640913256461205,
+          0.3846924663920841,
+          0.3475160260956363,
+          0.3572331400218398
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": true,
+          "tied_top1_credit": 1.0,
+          "tied_maximum_indices": [
+            2
+          ],
+          "paired_win": 1.0,
+          "correct_rank_lower": 1
+        }
+      },
+      "PositionOnly": {
+        "values": [
+          0.3601721721510492,
+          0.402419857262446,
+          0.3729604252515368,
+          0.3729623359615737,
+          0.35498571314644883
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": false,
+          "tied_top1_credit": 0.0,
+          "tied_maximum_indices": [
+            1
+          ],
+          "paired_win": 0.5,
+          "correct_rank_lower": 3
+        }
+      },
+      "NoMusic": {
+        "values": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": false,
+          "tied_top1_credit": 0.2,
+          "tied_maximum_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "paired_win": 0.5,
+          "correct_rank_lower": 1
+        }
+      }
+    },
+    "correct_vs_wrong_role_scores": [
+      0.35186387073318415,
+      0.2999632438441658
+    ],
+    "semantic_accuracy": "NOT_EVALUABLE"
+  },
+  {
+    "source_uid": "fine_011",
+    "dataset": "FineDance",
+    "role": "genre_train_diagnostic",
+    "dancer_role": "test",
+    "status": "OBSERVED",
+    "clock_scope": "OFFICIAL_ARCHIVE_ID_AND_RAW_COMMON_START_NOT_AIST_WAVEFORM_CALIBRATED",
+    "proof": {
+      "source_uid": "fine_011",
+      "dataset": "FineDance",
+      "raw_motion_sha256": "34a99c89994d90be35a3d4c6a8823c25bbe0b4fe88b3a60c6991c3e402571668",
+      "audio_sha256": "abee5d9938935d3efc42e14e258e46c4dae90a2b3ea93780e9507eab856e8639",
+      "raw_bytes_verified": true,
+      "skeleton_used": false,
+      "FK_used": false,
+      "root_used": false,
+      "contact_used": false,
+      "raw_origin_preserved": true,
+      "audio_offset_frames": 0.0,
+      "clock_scope": "OFFICIAL_ARCHIVE_ID_AND_RAW_COMMON_START_NOT_AIST_WAVEFORM_CALIBRATED",
+      "representation": "FINEDANCE315_ROWS6D_COMMON22_LOCAL_SO3_30HZ",
+      "source_clock_verified": false,
+      "source_clock_limitation": "OFFICIAL_ARCHIVE_ID_COMMON_START_NOT_AIST_WAVEFORM_CALIBRATION",
+      "full_record_frames": 2191,
+      "full_R_sha256": "8e5fc5babedcedbf4cb527128b4decf8fe9f9a443d735619aaa12ad98ec1bbd4",
+      "shared_source_interval": [
+        0,
+        2191
+      ],
+      "R59_shared_prefix_frames": 2191,
+      "R59_shared_prefix_R_sha256": "8e5fc5babedcedbf4cb527128b4decf8fe9f9a443d735619aaa12ad98ec1bbd4",
+      "R59_source_arrays_sha256": "5c2849b2ae71cb3dfa1df21f24375f3d80b2bdc4da7de551011ca9f31a8ff5e0",
+      "R59_prefix_exact": true,
+      "full_record_not_shared_prefix_used_for_peak_extraction": true
+    },
+    "audio_group": "abee5d9938935d3efc42e14e258e46c4dae90a2b3ea93780e9507eab856e8639",
+    "wrong_audio_group": "51b0eec9e397a9472f40b48e916be1953e5bc38cf8ebc32d66104871b28a9e29",
+    "common_support_seconds": [
+      0.5,
+      72.5
+    ],
+    "query_events": 204,
+    "music_events": 318,
+    "query_role_counts": {
+      "ACCEL_RISE": 119,
+      "SPEED_PEAK": 59,
+      "DIRECTION_TURN": 25,
+      "HOLD_END": 1
+    },
+    "music_role_counts": {
+      "BEAT": 102,
+      "ACCENT_PROXY": 180,
+      "DOWNBEAT": 30,
+      "STRUCTURE_PROXY": 6
+    },
+    "scores": {
+      "RoleOrdered": {
+        "values": [
+          0.3491892659384996,
+          0.3659350612361753,
+          0.3666199576105116,
+          0.3606206899569548,
+          0.35535686693226615
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": true,
+          "tied_top1_credit": 1.0,
+          "tied_maximum_indices": [
+            2
+          ],
+          "paired_win": 1.0,
+          "correct_rank_lower": 1
+        }
+      },
+      "NoTypes": {
+        "values": [
+          0.5841905452614631,
+          0.5570670661742855,
+          0.5682308882587473,
+          0.5529808605796669,
+          0.5243383319889396
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": false,
+          "tied_top1_credit": 0.0,
+          "tied_maximum_indices": [
+            0
+          ],
+          "paired_win": 0.75,
+          "correct_rank_lower": 2
+        }
+      },
+      "TypeShuffled": {
+        "values": [
+          0.3549979357449227,
+          0.33039853485790394,
+          0.3351400890862782,
+          0.35906324836399706,
+          0.30700361832876616
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": false,
+          "tied_top1_credit": 0.0,
+          "tied_maximum_indices": [
+            3
+          ],
+          "paired_win": 0.5,
+          "correct_rank_lower": 3
+        }
+      },
+      "MusicDensity": {
+        "values": [
+          0.3686809359376307,
+          0.33294861718313395,
+          0.4112751106697585,
+          0.33579340124477514,
+          0.36022950164580864
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": true,
+          "tied_top1_credit": 1.0,
+          "tied_maximum_indices": [
+            2
+          ],
+          "paired_win": 1.0,
+          "correct_rank_lower": 1
+        }
+      },
+      "PositionOnly": {
+        "values": [
+          0.34449972725975814,
+          0.5026157003680826,
+          0.3331699688453408,
+          0.2412803333446663,
+          0.5072298977107275
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": false,
+          "tied_top1_credit": 0.0,
+          "tied_maximum_indices": [
+            4
+          ],
+          "paired_win": 0.25,
+          "correct_rank_lower": 4
+        }
+      },
+      "NoMusic": {
+        "values": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": false,
+          "tied_top1_credit": 0.2,
+          "tied_maximum_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "paired_win": 0.5,
+          "correct_rank_lower": 1
+        }
+      }
+    },
+    "correct_vs_wrong_role_scores": [
+      0.3666199576105116,
+      0.37421581045602426
+    ],
+    "semantic_accuracy": "NOT_EVALUABLE"
+  },
+  {
+    "source_uid": "fine_013",
+    "dataset": "FineDance",
+    "role": "genre_train_diagnostic",
+    "dancer_role": "test",
+    "status": "OBSERVED",
+    "clock_scope": "OFFICIAL_ARCHIVE_ID_AND_RAW_COMMON_START_NOT_AIST_WAVEFORM_CALIBRATED",
+    "proof": {
+      "source_uid": "fine_013",
+      "dataset": "FineDance",
+      "raw_motion_sha256": "15eb2d0b7d138b28b75464a91881c143717e5877c57f6a16698ae589e7ddf932",
+      "audio_sha256": "51b0eec9e397a9472f40b48e916be1953e5bc38cf8ebc32d66104871b28a9e29",
+      "raw_bytes_verified": true,
+      "skeleton_used": false,
+      "FK_used": false,
+      "root_used": false,
+      "contact_used": false,
+      "raw_origin_preserved": true,
+      "audio_offset_frames": 0.0,
+      "clock_scope": "OFFICIAL_ARCHIVE_ID_AND_RAW_COMMON_START_NOT_AIST_WAVEFORM_CALIBRATED",
+      "representation": "FINEDANCE315_ROWS6D_COMMON22_LOCAL_SO3_30HZ",
+      "source_clock_verified": false,
+      "source_clock_limitation": "OFFICIAL_ARCHIVE_ID_COMMON_START_NOT_AIST_WAVEFORM_CALIBRATION",
+      "full_record_frames": 2217,
+      "full_R_sha256": "8921521636cfa41f5a8e39f8b07f8886243d0e167ba07c82f2b6ad2fa65b7540",
+      "shared_source_interval": [
+        0,
+        2216
+      ],
+      "R59_shared_prefix_frames": 2216,
+      "R59_shared_prefix_R_sha256": "87fad93e345fbd14a0f231a4098c0b08d805371c08fe4661b18c40ae88550f92",
+      "R59_source_arrays_sha256": "8c45091a823fa9fb36dc0fbf8f0e7aa9cfb813e8f264c16c3c3cd07abb25e176",
+      "R59_prefix_exact": true,
+      "full_record_not_shared_prefix_used_for_peak_extraction": true
+    },
+    "audio_group": "51b0eec9e397a9472f40b48e916be1953e5bc38cf8ebc32d66104871b28a9e29",
+    "wrong_audio_group": "0223a697a2ca0a7a4a6c41b5e1a9293b755952a4b19d310cd994fb596b5d16c5",
+    "common_support_seconds": [
+      0.5,
+      73.33333333333333
+    ],
+    "query_events": 243,
+    "music_events": 346,
+    "query_role_counts": {
+      "ACCEL_RISE": 122,
+      "SPEED_PEAK": 79,
+      "DIRECTION_TURN": 42,
+      "HOLD_END": 0
+    },
+    "music_role_counts": {
+      "BEAT": 109,
+      "ACCENT_PROXY": 200,
+      "DOWNBEAT": 31,
+      "STRUCTURE_PROXY": 6
+    },
+    "scores": {
+      "RoleOrdered": {
+        "values": [
+          0.38475440078475764,
+          0.3953425704373846,
+          0.39984852167946305,
+          0.3867552989967345,
+          0.3843177276401375
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": true,
+          "tied_top1_credit": 1.0,
+          "tied_maximum_indices": [
+            2
+          ],
+          "paired_win": 1.0,
+          "correct_rank_lower": 1
+        }
+      },
+      "NoTypes": {
+        "values": [
+          0.5899407997588938,
+          0.5767252962138927,
+          0.5826328526379879,
+          0.5910709322328147,
+          0.5708254610058748
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": false,
+          "tied_top1_credit": 0.0,
+          "tied_maximum_indices": [
+            3
+          ],
+          "paired_win": 0.5,
+          "correct_rank_lower": 3
+        }
+      },
+      "TypeShuffled": {
+        "values": [
+          0.32623952393263067,
+          0.3593957515967143,
+          0.35479642387027693,
+          0.3329939791787803,
+          0.3473642686685819
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": false,
+          "tied_top1_credit": 0.0,
+          "tied_maximum_indices": [
+            1
+          ],
+          "paired_win": 0.75,
+          "correct_rank_lower": 2
+        }
+      },
+      "MusicDensity": {
+        "values": [
+          0.4026478218235161,
+          0.3690419080237477,
+          0.3826294439930796,
+          0.4149844813468844,
+          0.3555013138514866
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": false,
+          "tied_top1_credit": 0.0,
+          "tied_maximum_indices": [
+            3
+          ],
+          "paired_win": 0.5,
+          "correct_rank_lower": 3
+        }
+      },
+      "PositionOnly": {
+        "values": [
+          0.4084374615329604,
+          0.41091113966517306,
+          0.39244038583393476,
+          0.40370953827615913,
+          0.37618542793936177
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": false,
+          "tied_top1_credit": 0.0,
+          "tied_maximum_indices": [
+            1
+          ],
+          "paired_win": 0.25,
+          "correct_rank_lower": 4
+        }
+      },
+      "NoMusic": {
+        "values": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": false,
+          "tied_top1_credit": 0.2,
+          "tied_maximum_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "paired_win": 0.5,
+          "correct_rank_lower": 1
+        }
+      }
+    },
+    "correct_vs_wrong_role_scores": [
+      0.39984852167946305,
+      0.3615750406160299
+    ],
+    "semantic_accuracy": "NOT_EVALUABLE"
+  }
+]

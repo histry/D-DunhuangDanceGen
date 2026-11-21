@@ -1,0 +1,72 @@
+{
+  "schema": "PAPER1_ROLE_ALIGNMENT_Q01",
+  "parent_commit": "bcd7435fe0de91f1edd34035d28e29b7be545bbe",
+  "reachability_public_manifest_sha256": "bbadcd2655bb1cefc291d082a7d39acedd9596654c73ecc9cc37e518e2a0cf24",
+  "past_paired_registration_sha256": "e304c9b33961ad24e9fc26e14c75a67b2a5d244efb66dd5644216886424a112f",
+  "role_map": {
+    "ACCEL_RISE": "BEAT",
+    "SPEED_PEAK": "ACCENT_PROXY",
+    "DIRECTION_TURN": "DOWNBEAT",
+    "HOLD_END": "STRUCTURE_PROXY"
+  },
+  "role_semantics": "UNKNOWN_AUTOMATIC_KINEMATIC_AND_ACOUSTIC_LABELS_NOT_ARTISTIC_TRUTH",
+  "node_counts": [
+    1,
+    2,
+    3
+  ],
+  "source_node_rule": "NEAREST_WHOLE_SUPPORTED_EVENT_TO_SOURCE_PROGRESS_0.2_0.5_0.8; UNIQUE_FRAMES_DISTANCE12; NO_REQUIRED_EVENT_TYPES; KEEP_MISSING",
+  "proposal_rule": "AT_MOST2_NEAREST_EVENTS_WITHIN15_TARGET_FRAMES_OF_UNIFORM_PROJECTION_FOR_TYPED_AND_UNTYPED; UNION_COMMON_OPTIONS; FREEZE_BEFORE_RATE_CHECK",
+  "maximum_options_per_node": 4,
+  "maximum_combinations_per_task": 64,
+  "construction_tolerance_frames": 2.5,
+  "execution_tolerance_frames": 3.0,
+  "protect_edge_samples": 4,
+  "scoring": "ORDER_PRESERVING_DISTINCT_MUSIC_EVENT_DP_WITH_NULL_MATCH_ZERO; GAUSSIAN0.1SEC; NORMALIZE_QUERY_COUNT; NO_FITTING",
+  "sigma_seconds": 0.1,
+  "clock_offsets_seconds": [
+    -0.5,
+    -0.25,
+    0,
+    0.25,
+    0.5
+  ],
+  "paired_groups_per_domain": 3,
+  "paired_selection": "LEX_UID_GREEDY_EXCLUDE_ALL_Q01_Q02_MUSIC_RECORDING_RAW_KNOWN_CHOREOGRAPHY; NO_REPLACEMENT; R59_TRAIN_AND_GENRE_TRAIN_DIAGNOSTIC",
+  "paired_methods": [
+    "RoleOrdered",
+    "NoTypes",
+    "TypeShuffled",
+    "MusicDensity",
+    "PositionOnly",
+    "NoMusic"
+  ],
+  "execution_methods": [
+    "Uniform",
+    "E1W",
+    "GTWLocal",
+    "NoTypes",
+    "RoleOrdered",
+    "TypeShuffled",
+    "SourceAwareSequential"
+  ],
+  "preview_methods": [
+    "NoTypes",
+    "RoleOrdered"
+  ],
+  "shuffle": "ROTATE_TIME_SORTED_MUSIC_LABEL_VECTOR_BY_HALF_LENGTH; UID_TIME_AND_PER_TYPE_COUNTS_RETAINED",
+  "density": "PER_MUSIC_TYPE_EQUAL_COUNT_UNIFORM_GRID_PHASE0_ON_COMMON_SUPPORT",
+  "qualification": "PER_DOMAIN_ALL3_COMPLETE; PAIRED_BOOTSTRAP_LOWER_TOP1_ROLE_MINUS_EACH_NULL_ABOVE0; SEMANTIC_GATE_REQUIRES_INDEPENDENT_ROLE_RECORDS",
+  "bootstrap_draws": 3000,
+  "seed": 79001,
+  "independent_role_records": 0,
+  "independent_new_music_certified": false,
+  "training_steps": 0,
+  "new_planner_runs": 0,
+  "BAS": "NOT_USED_FOR_SELECTION",
+  "SDMR": "SHADOW_NOT_USED",
+  "MotionCritic": "NOT_USED",
+  "can_route": false,
+  "whole_song": "NOT_STARTED",
+  "artistic_quality": "NOT_EVALUABLE"
+}

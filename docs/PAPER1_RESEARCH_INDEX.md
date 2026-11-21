@@ -24,3 +24,5 @@ Q02：[完整候选音乐时钟及运动可观测性资格](../reports/paper1_au
 SourceTime-Q01：[有限共同池决策实验](../reports/paper1_source_time_release/report.md)。固定来源×时间与强顺序对照；BAS只读，不参与选路，未宣称艺术质量或未见泛化。
 
 Reachability-Q01：[精确可达证书及完整139单位结构审查](../reports/paper1_reachability_release/report.md)。单锚点和联合窗口分开，连续可达不升级G1；有限对应假设无合法解，不扩搜或宣称艺术收益。
+
+RoleAlignment-Q01：[有限事件对应资格与来源执行](../reports/paper1_role_alignment_release/report.md)。复用1–3节点可达证书、共同候选和原G1；新配对诊断仍未确认角色信息超越密度／位置控制，不进入正式路由。

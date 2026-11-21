@@ -1,0 +1,105 @@
+{
+  "status": "PASS",
+  "preview": {
+    "status": "PASS",
+    "batch_user_authorized": true,
+    "files": {
+      "index.html": {
+        "bytes": 8872543,
+        "sha256": "0eae59f6b4c473f9ade04e674c05277a6f45a8be512a670e0ff29c9fe3d1e176"
+      },
+      "protocol.json": {
+        "bytes": 930,
+        "sha256": "b9c84b0f61a0f53c204d48d924bae91b2c548ab474cb3c51e70524e61043b11d"
+      }
+    },
+    "reused_local_audio": [
+      {
+        "name": "music_0_240.wav",
+        "existing_relative_path": "outputs/paper1_auto_eval_01/preview/viewer/music_0_240.wav",
+        "sha256": "483cd1676926d0ae8ea553428f8a967152e84eadbc88882888d01b653ad41c8c"
+      },
+      {
+        "name": "music_1_240.wav",
+        "existing_relative_path": "outputs/paper1_auto_eval_01/preview/viewer/music_1_240.wav",
+        "sha256": "13e03b3940f72cebcc219aadfe76ec59cfa7349bfc51b6c6230e2d624da57422"
+      },
+      {
+        "name": "music_2_360.wav",
+        "existing_relative_path": "outputs/paper1_auto_eval_01/preview/viewer/music_2_360.wav",
+        "sha256": "04683148e3c6fd8512d800a82fac39a28d5cb8f77e69724c995ab2cd00b21348"
+      }
+    ],
+    "no_new_audio_transfer": true
+  },
+  "controls": {
+    "status": "PASS",
+    "batch_user_authorized": true,
+    "files": {
+      "index.html": {
+        "bytes": 18724783,
+        "sha256": "fec05a8606f2d84dee5b5bfbe186d09bbdd4a2225f9bc82281fb948111134794"
+      },
+      "protocol.json": {
+        "bytes": 1022,
+        "sha256": "aa4a5a6bd8548a2365e9095a3a3b8e6524f9601e32fc8b9a04675bee1f1625ff"
+      }
+    },
+    "reused_local_audio": [
+      {
+        "name": "music_0_240.wav",
+        "existing_relative_path": "outputs/paper1_auto_eval_01/preview/viewer/music_0_240.wav",
+        "sha256": "483cd1676926d0ae8ea553428f8a967152e84eadbc88882888d01b653ad41c8c"
+      },
+      {
+        "name": "music_1_240.wav",
+        "existing_relative_path": "outputs/paper1_auto_eval_01/preview/viewer/music_1_240.wav",
+        "sha256": "13e03b3940f72cebcc219aadfe76ec59cfa7349bfc51b6c6230e2d624da57422"
+      },
+      {
+        "name": "music_2_360.wav",
+        "existing_relative_path": "outputs/paper1_auto_eval_01/preview/viewer/music_2_360.wav",
+        "sha256": "04683148e3c6fd8512d800a82fac39a28d5cb8f77e69724c995ab2cd00b21348"
+      }
+    ],
+    "no_new_audio_transfer": true
+  },
+  "playback": {
+    "preview": {
+      "status": "PASS",
+      "technical_tasks": 9,
+      "original_source_entries": 3,
+      "methods": 2,
+      "all_playback_shapes_and_lengths_pass": true,
+      "html_sha256": "0eae59f6b4c473f9ade04e674c05277a6f45a8be512a670e0ff29c9fe3d1e176",
+      "protocol_sha256": "b9c84b0f61a0f53c204d48d924bae91b2c548ab474cb3c51e70524e61043b11d",
+      "all_reused_audio_exact": true,
+      "browser_interaction_scope": "ACTUALLY_TESTED_PREVIEW"
+    },
+    "controls": {
+      "status": "PASS",
+      "technical_tasks": 9,
+      "original_source_entries": 3,
+      "methods": 7,
+      "all_playback_shapes_and_lengths_pass": true,
+      "html_sha256": "fec05a8606f2d84dee5b5bfbe186d09bbdd4a2225f9bc82281fb948111134794",
+      "protocol_sha256": "aa4a5a6bd8548a2365e9095a3a3b8e6524f9601e32fc8b9a04675bee1f1625ff",
+      "all_reused_audio_exact": true,
+      "browser_interaction_scope": "STATIC_PAYLOAD_PARITY_ONLY_SAME_PLAYER"
+    }
+  },
+  "preview_browser_receipt": {
+    "status": "PASS",
+    "manifest_sha256": "e4e54b3f58b2cd788cd10c865b151dc2fe3c01c9c9ce6aed4358f7a9cc399dd2",
+    "scope": "ENGINEERING_PLAYBACK_NOT_ARTISTIC_QUALITY",
+    "observed_tasks": 9,
+    "observed_panels": 2,
+    "source_original_speed_entry": true,
+    "common_audio_clock": true,
+    "seek_single_frame_pause_half_speed": true,
+    "local_whitelist_service_closed": true,
+    "independent_role_records": 0
+  },
+  "temporary_localhost_service_closed": true,
+  "private_coordinates_audio_rotations_not_published": true
+}

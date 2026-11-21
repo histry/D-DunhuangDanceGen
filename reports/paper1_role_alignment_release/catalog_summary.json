@@ -1,0 +1,110 @@
+[
+  {
+    "source_uid": "female_FeiTian",
+    "events": 1157,
+    "supported": 1157,
+    "role_counts": {
+      "ACCEL_RISE": 627,
+      "SPEED_PEAK": 270,
+      "DIRECTION_TURN": 240,
+      "HOLD_END": 20
+    },
+    "semantic_accuracy": "NOT_EVALUABLE"
+  },
+  {
+    "source_uid": "female_lotus",
+    "events": 742,
+    "supported": 742,
+    "role_counts": {
+      "ACCEL_RISE": 390,
+      "SPEED_PEAK": 165,
+      "DIRECTION_TURN": 178,
+      "HOLD_END": 9
+    },
+    "semantic_accuracy": "NOT_EVALUABLE"
+  },
+  {
+    "source_uid": "male_meditation",
+    "events": 528,
+    "supported": 528,
+    "role_counts": {
+      "ACCEL_RISE": 275,
+      "SPEED_PEAK": 146,
+      "DIRECTION_TURN": 103,
+      "HOLD_END": 4
+    },
+    "semantic_accuracy": "NOT_EVALUABLE"
+  },
+  {
+    "source_uid": "027536653a49e6bf25e3c9b0",
+    "events": 61,
+    "supported": 61,
+    "role_counts": {
+      "ACCEL_RISE": 22,
+      "SPEED_PEAK": 19,
+      "DIRECTION_TURN": 20,
+      "HOLD_END": 0
+    },
+    "semantic_accuracy": "NOT_EVALUABLE"
+  },
+  {
+    "source_uid": "027d60beccae2e38f7dc9ff3",
+    "events": 26,
+    "supported": 26,
+    "role_counts": {
+      "ACCEL_RISE": 12,
+      "SPEED_PEAK": 8,
+      "DIRECTION_TURN": 6,
+      "HOLD_END": 0
+    },
+    "semantic_accuracy": "NOT_EVALUABLE"
+  },
+  {
+    "source_uid": "02eaabac10a3f6ac51d8e8e6",
+    "events": 37,
+    "supported": 37,
+    "role_counts": {
+      "ACCEL_RISE": 12,
+      "SPEED_PEAK": 12,
+      "DIRECTION_TURN": 13,
+      "HOLD_END": 0
+    },
+    "semantic_accuracy": "NOT_EVALUABLE"
+  },
+  {
+    "source_uid": "fine_010",
+    "events": 576,
+    "supported": 576,
+    "role_counts": {
+      "ACCEL_RISE": 311,
+      "SPEED_PEAK": 163,
+      "DIRECTION_TURN": 101,
+      "HOLD_END": 1
+    },
+    "semantic_accuracy": "NOT_EVALUABLE"
+  },
+  {
+    "source_uid": "fine_011",
+    "events": 208,
+    "supported": 208,
+    "role_counts": {
+      "ACCEL_RISE": 121,
+      "SPEED_PEAK": 60,
+      "DIRECTION_TURN": 26,
+      "HOLD_END": 1
+    },
+    "semantic_accuracy": "NOT_EVALUABLE"
+  },
+  {
+    "source_uid": "fine_013",
+    "events": 247,
+    "supported": 247,
+    "role_counts": {
+      "ACCEL_RISE": 124,
+      "SPEED_PEAK": 80,
+      "DIRECTION_TURN": 43,
+      "HOLD_END": 0
+    },
+    "semantic_accuracy": "NOT_EVALUABLE"
+  }
+]

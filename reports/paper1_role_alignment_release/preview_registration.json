@@ -1,0 +1,5237 @@
+{
+  "protocol": {
+    "schema": "PAPER1_ROLE_ALIGNMENT_Q01",
+    "parent_commit": "bcd7435fe0de91f1edd34035d28e29b7be545bbe",
+    "reachability_public_manifest_sha256": "bbadcd2655bb1cefc291d082a7d39acedd9596654c73ecc9cc37e518e2a0cf24",
+    "past_paired_registration_sha256": "e304c9b33961ad24e9fc26e14c75a67b2a5d244efb66dd5644216886424a112f",
+    "role_map": {
+      "ACCEL_RISE": "BEAT",
+      "SPEED_PEAK": "ACCENT_PROXY",
+      "DIRECTION_TURN": "DOWNBEAT",
+      "HOLD_END": "STRUCTURE_PROXY"
+    },
+    "role_semantics": "UNKNOWN_AUTOMATIC_KINEMATIC_AND_ACOUSTIC_LABELS_NOT_ARTISTIC_TRUTH",
+    "node_counts": [
+      1,
+      2,
+      3
+    ],
+    "source_node_rule": "NEAREST_WHOLE_SUPPORTED_EVENT_TO_SOURCE_PROGRESS_0.2_0.5_0.8; UNIQUE_FRAMES_DISTANCE12; NO_REQUIRED_EVENT_TYPES; KEEP_MISSING",
+    "proposal_rule": "AT_MOST2_NEAREST_EVENTS_WITHIN15_TARGET_FRAMES_OF_UNIFORM_PROJECTION_FOR_TYPED_AND_UNTYPED; UNION_COMMON_OPTIONS; FREEZE_BEFORE_RATE_CHECK",
+    "maximum_options_per_node": 4,
+    "maximum_combinations_per_task": 64,
+    "construction_tolerance_frames": 2.5,
+    "execution_tolerance_frames": 3.0,
+    "protect_edge_samples": 4,
+    "scoring": "ORDER_PRESERVING_DISTINCT_MUSIC_EVENT_DP_WITH_NULL_MATCH_ZERO; GAUSSIAN0.1SEC; NORMALIZE_QUERY_COUNT; NO_FITTING",
+    "sigma_seconds": 0.1,
+    "clock_offsets_seconds": [
+      -0.5,
+      -0.25,
+      0,
+      0.25,
+      0.5
+    ],
+    "paired_groups_per_domain": 3,
+    "paired_selection": "LEX_UID_GREEDY_EXCLUDE_ALL_Q01_Q02_MUSIC_RECORDING_RAW_KNOWN_CHOREOGRAPHY; NO_REPLACEMENT; R59_TRAIN_AND_GENRE_TRAIN_DIAGNOSTIC",
+    "paired_methods": [
+      "RoleOrdered",
+      "NoTypes",
+      "TypeShuffled",
+      "MusicDensity",
+      "PositionOnly",
+      "NoMusic"
+    ],
+    "execution_methods": [
+      "Uniform",
+      "E1W",
+      "GTWLocal",
+      "NoTypes",
+      "RoleOrdered",
+      "TypeShuffled",
+      "SourceAwareSequential"
+    ],
+    "preview_methods": [
+      "NoTypes",
+      "RoleOrdered"
+    ],
+    "shuffle": "ROTATE_TIME_SORTED_MUSIC_LABEL_VECTOR_BY_HALF_LENGTH; UID_TIME_AND_PER_TYPE_COUNTS_RETAINED",
+    "density": "PER_MUSIC_TYPE_EQUAL_COUNT_UNIFORM_GRID_PHASE0_ON_COMMON_SUPPORT",
+    "qualification": "PER_DOMAIN_ALL3_COMPLETE; PAIRED_BOOTSTRAP_LOWER_TOP1_ROLE_MINUS_EACH_NULL_ABOVE0; SEMANTIC_GATE_REQUIRES_INDEPENDENT_ROLE_RECORDS",
+    "bootstrap_draws": 3000,
+    "seed": 79001,
+    "independent_role_records": 0,
+    "independent_new_music_certified": false,
+    "training_steps": 0,
+    "new_planner_runs": 0,
+    "BAS": "NOT_USED_FOR_SELECTION",
+    "SDMR": "SHADOW_NOT_USED",
+    "MotionCritic": "NOT_USED",
+    "can_route": false,
+    "whole_song": "NOT_STARTED",
+    "artistic_quality": "NOT_EVALUABLE"
+  },
+  "binding": {
+    "code": {
+      "__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "alignment.py": "845a8277374690789370c98d4aca0497097b38280eb68e020388bc46dde50e90",
+      "common.py": "2273f807bff0bc54382eaf3043ef94719fbded896a8d3da28e82201856d4b219",
+      "events.py": "d8c838e615125416c54dbe855d6362eeaf8f5577e119e0166221345f742688fc",
+      "execution.py": "656dc8a30fe4d24a25a4e6bdc8c459421c80d39127dfb893a6be40869e26ad38",
+      "paired.py": "5610a38852ca54432d22110a7192d8e98aef20dc55f73d1e26119c827ee9322f",
+      "protocol.json": "8659565a7f32ba03b2459d83c6d666234e2002550a5b28a908bb3eef057d0f53",
+      "run.py": "f867f838d8c25d62e92243aa770ee332903c00d76c1b504b803c32408cdfe557",
+      "test_contracts.py": "fd21c81e9dc82b9048b24357f06f57c8fc9e6a0b54f5472efa95fb7da4d4de33",
+      "view.py": "db96868f416496b67893e448cfef9ab5c34a09799a5a89f6914a534ef00dd492"
+    },
+    "dependencies": {
+      "planning/anchor_reachability.py": "2c52be366c2d8e5e3bb6c90ed2b5e57cf6c9a570d19430b5dedce43542f80fe5",
+      "research/paired_event_r41/events.py": "e6bbb769f9ed37b9743113a5c0a84139300bfc2e957a1b4315c041d2e1fb3759",
+      "research/manifold_bridge_r47/config.json": "b6f85af0569bf34577561df17e2fe9b4a03076fad4c148aeff5edf660f3c9f4b",
+      "research/source_time_q01/study.py": "f7811913dd17bba2fde920a734e22d0fb515c31bd2bf41324e25111eb6d0f78f",
+      "research/paper1_auto_eval/experiment.py": "0459c9031404d4550044babbcbdeb8e298b9b05d771edae76a3013d770b0cea2",
+      "research/music_events/infer.py": "1107549872699de4c28773b1c05a4693437de9fc3e20bea22fe88431e27e968f",
+      "research/timing_validity_r66/engine.py": "d35fd2828f32732ddb96ff3944239eab74250cd59caf30c93737c2d6c871caff"
+    }
+  },
+  "parents": {
+    "preview": "e8169c342bd54ca9f58ea6a0173bfdb049735a254725cde26627a06b7fc97644",
+    "controls": "fd90d6a70e0a849e4ecb6d1c168ee5293b328c4d5b54508a18a705c24083f962",
+    "public": "bbadcd2655bb1cefc291d082a7d39acedd9596654c73ecc9cc37e518e2a0cf24"
+  },
+  "cases": [
+    {
+      "key": "f8d91db44c816c9c6b18cfb8__nodes1",
+      "parent_case_key": "f8d91db44c816c9c6b18cfb8",
+      "source_uid": "female_FeiTian",
+      "source_interval": [
+        2377,
+        2660
+      ],
+      "target_frames": 240,
+      "neighbor": {
+        "event_uid": "r47:9d9a6115663f65b30bd23e62",
+        "source_uid": "female_lotus",
+        "source_interval": [
+          321,
+          583
+        ],
+        "source_sha256": "22b915af2e0fbb645acb78d7f61e58afe3f7aa40c0fc719da95f7403ed8dd47d"
+      },
+      "music_song": 0,
+      "music_start_frame": 900,
+      "nodes": [
+        {
+          "uid": "25926de3e44250737f284e3486b94ae9ca36688049e505400cf79a05c7aaa5de",
+          "source_uid": "female_FeiTian",
+          "role": "ACCEL_RISE",
+          "frame": 2429,
+          "time": 80.96666666666667,
+          "evidence_span": [
+            2428,
+            2431
+          ],
+          "supported": true,
+          "semantic_role": "UNKNOWN",
+          "detector_definition": "POSITIVE_ANGULAR_SPEED_CHANGE_PEAK"
+        }
+      ],
+      "requested_nodes": 1,
+      "status": "REGISTERED",
+      "options": [
+        [
+          {
+            "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:beat_this:beat:46",
+            "role": "BEAT",
+            "time": 31.46,
+            "source": "beat_this",
+            "kind": "beat",
+            "semantic_role": "UNKNOWN",
+            "local_frame": 43.80000000000007
+          },
+          {
+            "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:80",
+            "role": "ACCENT_PROXY",
+            "time": 31.466666666666665,
+            "source": "acoustic",
+            "kind": "accent_candidate",
+            "semantic_role": "UNKNOWN",
+            "local_frame": 44.0
+          }
+        ]
+      ],
+      "music_events": [
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:76",
+          "role": "ACCENT_PROXY",
+          "time": 30.1,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:beat_this:beat:44",
+          "role": "BEAT",
+          "time": 30.1,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:beat_this:downbeat:11",
+          "role": "DOWNBEAT",
+          "time": 30.1,
+          "source": "beat_this",
+          "kind": "downbeat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:77",
+          "role": "ACCENT_PROXY",
+          "time": 30.333333333333332,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:78",
+          "role": "ACCENT_PROXY",
+          "time": 30.633333333333333,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:beat_this:beat:45",
+          "role": "BEAT",
+          "time": 30.78,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:79",
+          "role": "ACCENT_PROXY",
+          "time": 31.133333333333333,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:beat_this:beat:46",
+          "role": "BEAT",
+          "time": 31.46,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:beat_this:downbeat:12",
+          "role": "DOWNBEAT",
+          "time": 31.46,
+          "source": "beat_this",
+          "kind": "downbeat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:80",
+          "role": "ACCENT_PROXY",
+          "time": 31.466666666666665,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:81",
+          "role": "ACCENT_PROXY",
+          "time": 31.966666666666665,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:beat_this:beat:47",
+          "role": "BEAT",
+          "time": 32.14,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:82",
+          "role": "ACCENT_PROXY",
+          "time": 32.166666666666664,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:83",
+          "role": "ACCENT_PROXY",
+          "time": 32.5,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:beat_this:beat:48",
+          "role": "BEAT",
+          "time": 32.82,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:beat_this:downbeat:13",
+          "role": "DOWNBEAT",
+          "time": 32.82,
+          "source": "beat_this",
+          "kind": "downbeat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:84",
+          "role": "ACCENT_PROXY",
+          "time": 32.833333333333336,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:85",
+          "role": "ACCENT_PROXY",
+          "time": 33.333333333333336,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:beat_this:beat:49",
+          "role": "BEAT",
+          "time": 33.5,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:86",
+          "role": "ACCENT_PROXY",
+          "time": 33.86666666666667,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:87",
+          "role": "ACCENT_PROXY",
+          "time": 34.2,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:beat_this:beat:50",
+          "role": "BEAT",
+          "time": 34.2,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:beat_this:downbeat:14",
+          "role": "DOWNBEAT",
+          "time": 34.2,
+          "source": "beat_this",
+          "kind": "downbeat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:88",
+          "role": "ACCENT_PROXY",
+          "time": 34.4,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:89",
+          "role": "ACCENT_PROXY",
+          "time": 34.7,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:beat_this:beat:51",
+          "role": "BEAT",
+          "time": 34.88,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:90",
+          "role": "ACCENT_PROXY",
+          "time": 34.9,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:91",
+          "role": "ACCENT_PROXY",
+          "time": 35.2,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:beat_this:beat:52",
+          "role": "BEAT",
+          "time": 35.56,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:beat_this:downbeat:15",
+          "role": "DOWNBEAT",
+          "time": 35.56,
+          "source": "beat_this",
+          "kind": "downbeat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:92",
+          "role": "ACCENT_PROXY",
+          "time": 35.56666666666667,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:93",
+          "role": "ACCENT_PROXY",
+          "time": 36.06666666666667,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:beat_this:beat:53",
+          "role": "BEAT",
+          "time": 36.24,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:94",
+          "role": "ACCENT_PROXY",
+          "time": 36.6,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:beat_this:beat:54",
+          "role": "BEAT",
+          "time": 36.92,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:95",
+          "role": "ACCENT_PROXY",
+          "time": 36.93333333333333,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:96",
+          "role": "ACCENT_PROXY",
+          "time": 37.13333333333333,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:97",
+          "role": "ACCENT_PROXY",
+          "time": 37.43333333333333,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:beat_this:beat:55",
+          "role": "BEAT",
+          "time": 37.6,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:98",
+          "role": "ACCENT_PROXY",
+          "time": 37.766666666666666,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        }
+      ],
+      "music_audio_sha256": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c"
+    },
+    {
+      "key": "f8d91db44c816c9c6b18cfb8__nodes2",
+      "parent_case_key": "f8d91db44c816c9c6b18cfb8",
+      "source_uid": "female_FeiTian",
+      "source_interval": [
+        2377,
+        2660
+      ],
+      "target_frames": 240,
+      "neighbor": {
+        "event_uid": "r47:9d9a6115663f65b30bd23e62",
+        "source_uid": "female_lotus",
+        "source_interval": [
+          321,
+          583
+        ],
+        "source_sha256": "22b915af2e0fbb645acb78d7f61e58afe3f7aa40c0fc719da95f7403ed8dd47d"
+      },
+      "music_song": 0,
+      "music_start_frame": 900,
+      "nodes": [
+        {
+          "uid": "25926de3e44250737f284e3486b94ae9ca36688049e505400cf79a05c7aaa5de",
+          "source_uid": "female_FeiTian",
+          "role": "ACCEL_RISE",
+          "frame": 2429,
+          "time": 80.96666666666667,
+          "evidence_span": [
+            2428,
+            2431
+          ],
+          "supported": true,
+          "semantic_role": "UNKNOWN",
+          "detector_definition": "POSITIVE_ANGULAR_SPEED_CHANGE_PEAK"
+        },
+        {
+          "uid": "db42ea09abb42cb069c9c17a3315fa52d9b6b3710219b69f8cc935cb9d974cb5",
+          "source_uid": "female_FeiTian",
+          "role": "ACCEL_RISE",
+          "frame": 2523,
+          "time": 84.1,
+          "evidence_span": [
+            2522,
+            2525
+          ],
+          "supported": true,
+          "semantic_role": "UNKNOWN",
+          "detector_definition": "POSITIVE_ANGULAR_SPEED_CHANGE_PEAK"
+        }
+      ],
+      "requested_nodes": 2,
+      "status": "REGISTERED",
+      "options": [
+        [
+          {
+            "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:beat_this:beat:46",
+            "role": "BEAT",
+            "time": 31.46,
+            "source": "beat_this",
+            "kind": "beat",
+            "semantic_role": "UNKNOWN",
+            "local_frame": 43.80000000000007
+          },
+          {
+            "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:80",
+            "role": "ACCENT_PROXY",
+            "time": 31.466666666666665,
+            "source": "acoustic",
+            "kind": "accent_candidate",
+            "semantic_role": "UNKNOWN",
+            "local_frame": 44.0
+          }
+        ],
+        [
+          {
+            "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:87",
+            "role": "ACCENT_PROXY",
+            "time": 34.2,
+            "source": "acoustic",
+            "kind": "accent_candidate",
+            "semantic_role": "UNKNOWN",
+            "local_frame": 126.0
+          },
+          {
+            "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:beat_this:beat:50",
+            "role": "BEAT",
+            "time": 34.2,
+            "source": "beat_this",
+            "kind": "beat",
+            "semantic_role": "UNKNOWN",
+            "local_frame": 126.0
+          }
+        ]
+      ],
+      "music_events": [
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:76",
+          "role": "ACCENT_PROXY",
+          "time": 30.1,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:beat_this:beat:44",
+          "role": "BEAT",
+          "time": 30.1,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:beat_this:downbeat:11",
+          "role": "DOWNBEAT",
+          "time": 30.1,
+          "source": "beat_this",
+          "kind": "downbeat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:77",
+          "role": "ACCENT_PROXY",
+          "time": 30.333333333333332,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:78",
+          "role": "ACCENT_PROXY",
+          "time": 30.633333333333333,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:beat_this:beat:45",
+          "role": "BEAT",
+          "time": 30.78,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:79",
+          "role": "ACCENT_PROXY",
+          "time": 31.133333333333333,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:beat_this:beat:46",
+          "role": "BEAT",
+          "time": 31.46,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:beat_this:downbeat:12",
+          "role": "DOWNBEAT",
+          "time": 31.46,
+          "source": "beat_this",
+          "kind": "downbeat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:80",
+          "role": "ACCENT_PROXY",
+          "time": 31.466666666666665,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:81",
+          "role": "ACCENT_PROXY",
+          "time": 31.966666666666665,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:beat_this:beat:47",
+          "role": "BEAT",
+          "time": 32.14,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:82",
+          "role": "ACCENT_PROXY",
+          "time": 32.166666666666664,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:83",
+          "role": "ACCENT_PROXY",
+          "time": 32.5,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:beat_this:beat:48",
+          "role": "BEAT",
+          "time": 32.82,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:beat_this:downbeat:13",
+          "role": "DOWNBEAT",
+          "time": 32.82,
+          "source": "beat_this",
+          "kind": "downbeat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:84",
+          "role": "ACCENT_PROXY",
+          "time": 32.833333333333336,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:85",
+          "role": "ACCENT_PROXY",
+          "time": 33.333333333333336,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:beat_this:beat:49",
+          "role": "BEAT",
+          "time": 33.5,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:86",
+          "role": "ACCENT_PROXY",
+          "time": 33.86666666666667,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:87",
+          "role": "ACCENT_PROXY",
+          "time": 34.2,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:beat_this:beat:50",
+          "role": "BEAT",
+          "time": 34.2,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:beat_this:downbeat:14",
+          "role": "DOWNBEAT",
+          "time": 34.2,
+          "source": "beat_this",
+          "kind": "downbeat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:88",
+          "role": "ACCENT_PROXY",
+          "time": 34.4,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:89",
+          "role": "ACCENT_PROXY",
+          "time": 34.7,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:beat_this:beat:51",
+          "role": "BEAT",
+          "time": 34.88,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:90",
+          "role": "ACCENT_PROXY",
+          "time": 34.9,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:91",
+          "role": "ACCENT_PROXY",
+          "time": 35.2,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:beat_this:beat:52",
+          "role": "BEAT",
+          "time": 35.56,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:beat_this:downbeat:15",
+          "role": "DOWNBEAT",
+          "time": 35.56,
+          "source": "beat_this",
+          "kind": "downbeat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:92",
+          "role": "ACCENT_PROXY",
+          "time": 35.56666666666667,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:93",
+          "role": "ACCENT_PROXY",
+          "time": 36.06666666666667,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:beat_this:beat:53",
+          "role": "BEAT",
+          "time": 36.24,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:94",
+          "role": "ACCENT_PROXY",
+          "time": 36.6,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:beat_this:beat:54",
+          "role": "BEAT",
+          "time": 36.92,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:95",
+          "role": "ACCENT_PROXY",
+          "time": 36.93333333333333,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:96",
+          "role": "ACCENT_PROXY",
+          "time": 37.13333333333333,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:97",
+          "role": "ACCENT_PROXY",
+          "time": 37.43333333333333,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:beat_this:beat:55",
+          "role": "BEAT",
+          "time": 37.6,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:98",
+          "role": "ACCENT_PROXY",
+          "time": 37.766666666666666,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        }
+      ],
+      "music_audio_sha256": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c"
+    },
+    {
+      "key": "f8d91db44c816c9c6b18cfb8__nodes3",
+      "parent_case_key": "f8d91db44c816c9c6b18cfb8",
+      "source_uid": "female_FeiTian",
+      "source_interval": [
+        2377,
+        2660
+      ],
+      "target_frames": 240,
+      "neighbor": {
+        "event_uid": "r47:9d9a6115663f65b30bd23e62",
+        "source_uid": "female_lotus",
+        "source_interval": [
+          321,
+          583
+        ],
+        "source_sha256": "22b915af2e0fbb645acb78d7f61e58afe3f7aa40c0fc719da95f7403ed8dd47d"
+      },
+      "music_song": 0,
+      "music_start_frame": 900,
+      "nodes": [
+        {
+          "uid": "25926de3e44250737f284e3486b94ae9ca36688049e505400cf79a05c7aaa5de",
+          "source_uid": "female_FeiTian",
+          "role": "ACCEL_RISE",
+          "frame": 2429,
+          "time": 80.96666666666667,
+          "evidence_span": [
+            2428,
+            2431
+          ],
+          "supported": true,
+          "semantic_role": "UNKNOWN",
+          "detector_definition": "POSITIVE_ANGULAR_SPEED_CHANGE_PEAK"
+        },
+        {
+          "uid": "db42ea09abb42cb069c9c17a3315fa52d9b6b3710219b69f8cc935cb9d974cb5",
+          "source_uid": "female_FeiTian",
+          "role": "ACCEL_RISE",
+          "frame": 2523,
+          "time": 84.1,
+          "evidence_span": [
+            2522,
+            2525
+          ],
+          "supported": true,
+          "semantic_role": "UNKNOWN",
+          "detector_definition": "POSITIVE_ANGULAR_SPEED_CHANGE_PEAK"
+        },
+        {
+          "uid": "c368ceac68818667b3720d88a2abebca56898c77dc334f912560d7239a8cf4a0",
+          "source_uid": "female_FeiTian",
+          "role": "ACCEL_RISE",
+          "frame": 2605,
+          "time": 86.83333333333333,
+          "evidence_span": [
+            2604,
+            2607
+          ],
+          "supported": true,
+          "semantic_role": "UNKNOWN",
+          "detector_definition": "POSITIVE_ANGULAR_SPEED_CHANGE_PEAK"
+        }
+      ],
+      "requested_nodes": 3,
+      "status": "REGISTERED",
+      "options": [
+        [
+          {
+            "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:beat_this:beat:46",
+            "role": "BEAT",
+            "time": 31.46,
+            "source": "beat_this",
+            "kind": "beat",
+            "semantic_role": "UNKNOWN",
+            "local_frame": 43.80000000000007
+          },
+          {
+            "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:80",
+            "role": "ACCENT_PROXY",
+            "time": 31.466666666666665,
+            "source": "acoustic",
+            "kind": "accent_candidate",
+            "semantic_role": "UNKNOWN",
+            "local_frame": 44.0
+          }
+        ],
+        [
+          {
+            "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:87",
+            "role": "ACCENT_PROXY",
+            "time": 34.2,
+            "source": "acoustic",
+            "kind": "accent_candidate",
+            "semantic_role": "UNKNOWN",
+            "local_frame": 126.0
+          },
+          {
+            "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:beat_this:beat:50",
+            "role": "BEAT",
+            "time": 34.2,
+            "source": "beat_this",
+            "kind": "beat",
+            "semantic_role": "UNKNOWN",
+            "local_frame": 126.0
+          }
+        ],
+        [
+          {
+            "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:beat_this:beat:53",
+            "role": "BEAT",
+            "time": 36.24,
+            "source": "beat_this",
+            "kind": "beat",
+            "semantic_role": "UNKNOWN",
+            "local_frame": 187.20000000000005
+          },
+          {
+            "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:94",
+            "role": "ACCENT_PROXY",
+            "time": 36.6,
+            "source": "acoustic",
+            "kind": "accent_candidate",
+            "semantic_role": "UNKNOWN",
+            "local_frame": 198.0
+          },
+          {
+            "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:beat_this:beat:54",
+            "role": "BEAT",
+            "time": 36.92,
+            "source": "beat_this",
+            "kind": "beat",
+            "semantic_role": "UNKNOWN",
+            "local_frame": 207.60000000000014
+          }
+        ]
+      ],
+      "music_events": [
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:76",
+          "role": "ACCENT_PROXY",
+          "time": 30.1,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:beat_this:beat:44",
+          "role": "BEAT",
+          "time": 30.1,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:beat_this:downbeat:11",
+          "role": "DOWNBEAT",
+          "time": 30.1,
+          "source": "beat_this",
+          "kind": "downbeat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:77",
+          "role": "ACCENT_PROXY",
+          "time": 30.333333333333332,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:78",
+          "role": "ACCENT_PROXY",
+          "time": 30.633333333333333,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:beat_this:beat:45",
+          "role": "BEAT",
+          "time": 30.78,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:79",
+          "role": "ACCENT_PROXY",
+          "time": 31.133333333333333,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:beat_this:beat:46",
+          "role": "BEAT",
+          "time": 31.46,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:beat_this:downbeat:12",
+          "role": "DOWNBEAT",
+          "time": 31.46,
+          "source": "beat_this",
+          "kind": "downbeat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:80",
+          "role": "ACCENT_PROXY",
+          "time": 31.466666666666665,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:81",
+          "role": "ACCENT_PROXY",
+          "time": 31.966666666666665,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:beat_this:beat:47",
+          "role": "BEAT",
+          "time": 32.14,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:82",
+          "role": "ACCENT_PROXY",
+          "time": 32.166666666666664,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:83",
+          "role": "ACCENT_PROXY",
+          "time": 32.5,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:beat_this:beat:48",
+          "role": "BEAT",
+          "time": 32.82,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:beat_this:downbeat:13",
+          "role": "DOWNBEAT",
+          "time": 32.82,
+          "source": "beat_this",
+          "kind": "downbeat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:84",
+          "role": "ACCENT_PROXY",
+          "time": 32.833333333333336,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:85",
+          "role": "ACCENT_PROXY",
+          "time": 33.333333333333336,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:beat_this:beat:49",
+          "role": "BEAT",
+          "time": 33.5,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:86",
+          "role": "ACCENT_PROXY",
+          "time": 33.86666666666667,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:87",
+          "role": "ACCENT_PROXY",
+          "time": 34.2,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:beat_this:beat:50",
+          "role": "BEAT",
+          "time": 34.2,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:beat_this:downbeat:14",
+          "role": "DOWNBEAT",
+          "time": 34.2,
+          "source": "beat_this",
+          "kind": "downbeat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:88",
+          "role": "ACCENT_PROXY",
+          "time": 34.4,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:89",
+          "role": "ACCENT_PROXY",
+          "time": 34.7,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:beat_this:beat:51",
+          "role": "BEAT",
+          "time": 34.88,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:90",
+          "role": "ACCENT_PROXY",
+          "time": 34.9,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:91",
+          "role": "ACCENT_PROXY",
+          "time": 35.2,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:beat_this:beat:52",
+          "role": "BEAT",
+          "time": 35.56,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:beat_this:downbeat:15",
+          "role": "DOWNBEAT",
+          "time": 35.56,
+          "source": "beat_this",
+          "kind": "downbeat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:92",
+          "role": "ACCENT_PROXY",
+          "time": 35.56666666666667,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:93",
+          "role": "ACCENT_PROXY",
+          "time": 36.06666666666667,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:beat_this:beat:53",
+          "role": "BEAT",
+          "time": 36.24,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:94",
+          "role": "ACCENT_PROXY",
+          "time": 36.6,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:beat_this:beat:54",
+          "role": "BEAT",
+          "time": 36.92,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:95",
+          "role": "ACCENT_PROXY",
+          "time": 36.93333333333333,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:96",
+          "role": "ACCENT_PROXY",
+          "time": 37.13333333333333,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:97",
+          "role": "ACCENT_PROXY",
+          "time": 37.43333333333333,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:beat_this:beat:55",
+          "role": "BEAT",
+          "time": 37.6,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c:acoustic:accent_candidate:98",
+          "role": "ACCENT_PROXY",
+          "time": 37.766666666666666,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        }
+      ],
+      "music_audio_sha256": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c"
+    },
+    {
+      "key": "4a69181188a9e248a0a6330b__nodes1",
+      "parent_case_key": "4a69181188a9e248a0a6330b",
+      "source_uid": "female_lotus",
+      "source_interval": [
+        583,
+        870
+      ],
+      "target_frames": 240,
+      "neighbor": {
+        "event_uid": "r47:30e2f1036450b06a12a13fb6",
+        "source_uid": "female_FeiTian",
+        "source_interval": [
+          474,
+          750
+        ],
+        "source_sha256": "120e0157ccdd60d128d2973ac0682883ee178ba43ce8479100e80f56c64f37a4"
+      },
+      "music_song": 1,
+      "music_start_frame": 900,
+      "nodes": [
+        {
+          "uid": "63d265475d1c89405445ff7ca4e8eff8b1928c509529fa5ad9dc9d24f7f4ab81",
+          "source_uid": "female_lotus",
+          "role": "ACCEL_RISE",
+          "frame": 636,
+          "time": 21.2,
+          "evidence_span": [
+            635,
+            638
+          ],
+          "supported": true,
+          "semantic_role": "UNKNOWN",
+          "detector_definition": "POSITIVE_ANGULAR_SPEED_CHANGE_PEAK"
+        }
+      ],
+      "requested_nodes": 1,
+      "status": "REGISTERED",
+      "options": [
+        [
+          {
+            "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:beat:77",
+            "role": "BEAT",
+            "time": 31.2,
+            "source": "beat_this",
+            "kind": "beat",
+            "semantic_role": "UNKNOWN",
+            "local_frame": 36.0
+          },
+          {
+            "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:117",
+            "role": "ACCENT_PROXY",
+            "time": 31.466666666666665,
+            "source": "acoustic",
+            "kind": "accent_candidate",
+            "semantic_role": "UNKNOWN",
+            "local_frame": 44.0
+          },
+          {
+            "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:beat:78",
+            "role": "BEAT",
+            "time": 31.74,
+            "source": "beat_this",
+            "kind": "beat",
+            "semantic_role": "UNKNOWN",
+            "local_frame": 52.19999999999993
+          }
+        ]
+      ],
+      "music_events": [
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:beat:75",
+          "role": "BEAT",
+          "time": 30.14,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:downbeat:43",
+          "role": "DOWNBEAT",
+          "time": 30.14,
+          "source": "beat_this",
+          "kind": "downbeat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:112",
+          "role": "ACCENT_PROXY",
+          "time": 30.166666666666668,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:113",
+          "role": "ACCENT_PROXY",
+          "time": 30.4,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:114",
+          "role": "ACCENT_PROXY",
+          "time": 30.666666666666668,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:beat:76",
+          "role": "BEAT",
+          "time": 30.68,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:115",
+          "role": "ACCENT_PROXY",
+          "time": 30.966666666666665,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:116",
+          "role": "ACCENT_PROXY",
+          "time": 31.2,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:beat:77",
+          "role": "BEAT",
+          "time": 31.2,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:117",
+          "role": "ACCENT_PROXY",
+          "time": 31.466666666666665,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:beat:78",
+          "role": "BEAT",
+          "time": 31.74,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:118",
+          "role": "ACCENT_PROXY",
+          "time": 31.766666666666666,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:119",
+          "role": "ACCENT_PROXY",
+          "time": 32.0,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:beat:79",
+          "role": "BEAT",
+          "time": 32.28,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:downbeat:44",
+          "role": "DOWNBEAT",
+          "time": 32.28,
+          "source": "beat_this",
+          "kind": "downbeat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:120",
+          "role": "ACCENT_PROXY",
+          "time": 32.3,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:121",
+          "role": "ACCENT_PROXY",
+          "time": 32.56666666666667,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:122",
+          "role": "ACCENT_PROXY",
+          "time": 32.8,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:beat:80",
+          "role": "BEAT",
+          "time": 32.8,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:123",
+          "role": "ACCENT_PROXY",
+          "time": 33.1,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:beat:81",
+          "role": "BEAT",
+          "time": 33.36,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:124",
+          "role": "ACCENT_PROXY",
+          "time": 33.36666666666667,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:125",
+          "role": "ACCENT_PROXY",
+          "time": 33.63333333333333,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:beat:82",
+          "role": "BEAT",
+          "time": 33.88,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:126",
+          "role": "ACCENT_PROXY",
+          "time": 33.9,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:127",
+          "role": "ACCENT_PROXY",
+          "time": 34.166666666666664,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:chroma_boundary_candidate:3",
+          "role": "STRUCTURE_PROXY",
+          "time": 34.4,
+          "source": "acoustic",
+          "kind": "chroma_boundary_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:beat:83",
+          "role": "BEAT",
+          "time": 34.42,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:downbeat:45",
+          "role": "DOWNBEAT",
+          "time": 34.42,
+          "source": "beat_this",
+          "kind": "downbeat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:128",
+          "role": "ACCENT_PROXY",
+          "time": 34.43333333333333,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:129",
+          "role": "ACCENT_PROXY",
+          "time": 34.7,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:beat:84",
+          "role": "BEAT",
+          "time": 34.94,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:130",
+          "role": "ACCENT_PROXY",
+          "time": 34.96666666666667,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:131",
+          "role": "ACCENT_PROXY",
+          "time": 35.233333333333334,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:132",
+          "role": "ACCENT_PROXY",
+          "time": 35.5,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:beat:85",
+          "role": "BEAT",
+          "time": 35.5,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:133",
+          "role": "ACCENT_PROXY",
+          "time": 35.766666666666666,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:beat:86",
+          "role": "BEAT",
+          "time": 36.02,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:134",
+          "role": "ACCENT_PROXY",
+          "time": 36.03333333333333,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:135",
+          "role": "ACCENT_PROXY",
+          "time": 36.3,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:beat:87",
+          "role": "BEAT",
+          "time": 36.56,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:downbeat:46",
+          "role": "DOWNBEAT",
+          "time": 36.56,
+          "source": "beat_this",
+          "kind": "downbeat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:136",
+          "role": "ACCENT_PROXY",
+          "time": 36.56666666666667,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:137",
+          "role": "ACCENT_PROXY",
+          "time": 36.833333333333336,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:138",
+          "role": "ACCENT_PROXY",
+          "time": 37.1,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:beat:88",
+          "role": "BEAT",
+          "time": 37.1,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:139",
+          "role": "ACCENT_PROXY",
+          "time": 37.36666666666667,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:beat:89",
+          "role": "BEAT",
+          "time": 37.64,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:140",
+          "role": "ACCENT_PROXY",
+          "time": 37.666666666666664,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:141",
+          "role": "ACCENT_PROXY",
+          "time": 37.9,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        }
+      ],
+      "music_audio_sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f"
+    },
+    {
+      "key": "4a69181188a9e248a0a6330b__nodes2",
+      "parent_case_key": "4a69181188a9e248a0a6330b",
+      "source_uid": "female_lotus",
+      "source_interval": [
+        583,
+        870
+      ],
+      "target_frames": 240,
+      "neighbor": {
+        "event_uid": "r47:30e2f1036450b06a12a13fb6",
+        "source_uid": "female_FeiTian",
+        "source_interval": [
+          474,
+          750
+        ],
+        "source_sha256": "120e0157ccdd60d128d2973ac0682883ee178ba43ce8479100e80f56c64f37a4"
+      },
+      "music_song": 1,
+      "music_start_frame": 900,
+      "nodes": [
+        {
+          "uid": "63d265475d1c89405445ff7ca4e8eff8b1928c509529fa5ad9dc9d24f7f4ab81",
+          "source_uid": "female_lotus",
+          "role": "ACCEL_RISE",
+          "frame": 636,
+          "time": 21.2,
+          "evidence_span": [
+            635,
+            638
+          ],
+          "supported": true,
+          "semantic_role": "UNKNOWN",
+          "detector_definition": "POSITIVE_ANGULAR_SPEED_CHANGE_PEAK"
+        },
+        {
+          "uid": "0b297efea93b822a76e28ff8f77c15c08a74b0d1c726619346374a19476c3f79",
+          "source_uid": "female_lotus",
+          "role": "ACCEL_RISE",
+          "frame": 725,
+          "time": 24.166666666666668,
+          "evidence_span": [
+            724,
+            727
+          ],
+          "supported": true,
+          "semantic_role": "UNKNOWN",
+          "detector_definition": "POSITIVE_ANGULAR_SPEED_CHANGE_PEAK"
+        }
+      ],
+      "requested_nodes": 2,
+      "status": "REGISTERED",
+      "options": [
+        [
+          {
+            "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:beat:77",
+            "role": "BEAT",
+            "time": 31.2,
+            "source": "beat_this",
+            "kind": "beat",
+            "semantic_role": "UNKNOWN",
+            "local_frame": 36.0
+          },
+          {
+            "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:117",
+            "role": "ACCENT_PROXY",
+            "time": 31.466666666666665,
+            "source": "acoustic",
+            "kind": "accent_candidate",
+            "semantic_role": "UNKNOWN",
+            "local_frame": 44.0
+          },
+          {
+            "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:beat:78",
+            "role": "BEAT",
+            "time": 31.74,
+            "source": "beat_this",
+            "kind": "beat",
+            "semantic_role": "UNKNOWN",
+            "local_frame": 52.19999999999993
+          }
+        ],
+        [
+          {
+            "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:beat:82",
+            "role": "BEAT",
+            "time": 33.88,
+            "source": "beat_this",
+            "kind": "beat",
+            "semantic_role": "UNKNOWN",
+            "local_frame": 116.40000000000009
+          },
+          {
+            "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:126",
+            "role": "ACCENT_PROXY",
+            "time": 33.9,
+            "source": "acoustic",
+            "kind": "accent_candidate",
+            "semantic_role": "UNKNOWN",
+            "local_frame": 117.0
+          },
+          {
+            "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:beat:83",
+            "role": "BEAT",
+            "time": 34.42,
+            "source": "beat_this",
+            "kind": "beat",
+            "semantic_role": "UNKNOWN",
+            "local_frame": 132.60000000000014
+          }
+        ]
+      ],
+      "music_events": [
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:beat:75",
+          "role": "BEAT",
+          "time": 30.14,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:downbeat:43",
+          "role": "DOWNBEAT",
+          "time": 30.14,
+          "source": "beat_this",
+          "kind": "downbeat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:112",
+          "role": "ACCENT_PROXY",
+          "time": 30.166666666666668,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:113",
+          "role": "ACCENT_PROXY",
+          "time": 30.4,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:114",
+          "role": "ACCENT_PROXY",
+          "time": 30.666666666666668,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:beat:76",
+          "role": "BEAT",
+          "time": 30.68,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:115",
+          "role": "ACCENT_PROXY",
+          "time": 30.966666666666665,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:116",
+          "role": "ACCENT_PROXY",
+          "time": 31.2,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:beat:77",
+          "role": "BEAT",
+          "time": 31.2,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:117",
+          "role": "ACCENT_PROXY",
+          "time": 31.466666666666665,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:beat:78",
+          "role": "BEAT",
+          "time": 31.74,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:118",
+          "role": "ACCENT_PROXY",
+          "time": 31.766666666666666,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:119",
+          "role": "ACCENT_PROXY",
+          "time": 32.0,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:beat:79",
+          "role": "BEAT",
+          "time": 32.28,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:downbeat:44",
+          "role": "DOWNBEAT",
+          "time": 32.28,
+          "source": "beat_this",
+          "kind": "downbeat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:120",
+          "role": "ACCENT_PROXY",
+          "time": 32.3,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:121",
+          "role": "ACCENT_PROXY",
+          "time": 32.56666666666667,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:122",
+          "role": "ACCENT_PROXY",
+          "time": 32.8,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:beat:80",
+          "role": "BEAT",
+          "time": 32.8,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:123",
+          "role": "ACCENT_PROXY",
+          "time": 33.1,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:beat:81",
+          "role": "BEAT",
+          "time": 33.36,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:124",
+          "role": "ACCENT_PROXY",
+          "time": 33.36666666666667,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:125",
+          "role": "ACCENT_PROXY",
+          "time": 33.63333333333333,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:beat:82",
+          "role": "BEAT",
+          "time": 33.88,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:126",
+          "role": "ACCENT_PROXY",
+          "time": 33.9,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:127",
+          "role": "ACCENT_PROXY",
+          "time": 34.166666666666664,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:chroma_boundary_candidate:3",
+          "role": "STRUCTURE_PROXY",
+          "time": 34.4,
+          "source": "acoustic",
+          "kind": "chroma_boundary_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:beat:83",
+          "role": "BEAT",
+          "time": 34.42,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:downbeat:45",
+          "role": "DOWNBEAT",
+          "time": 34.42,
+          "source": "beat_this",
+          "kind": "downbeat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:128",
+          "role": "ACCENT_PROXY",
+          "time": 34.43333333333333,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:129",
+          "role": "ACCENT_PROXY",
+          "time": 34.7,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:beat:84",
+          "role": "BEAT",
+          "time": 34.94,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:130",
+          "role": "ACCENT_PROXY",
+          "time": 34.96666666666667,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:131",
+          "role": "ACCENT_PROXY",
+          "time": 35.233333333333334,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:132",
+          "role": "ACCENT_PROXY",
+          "time": 35.5,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:beat:85",
+          "role": "BEAT",
+          "time": 35.5,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:133",
+          "role": "ACCENT_PROXY",
+          "time": 35.766666666666666,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:beat:86",
+          "role": "BEAT",
+          "time": 36.02,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:134",
+          "role": "ACCENT_PROXY",
+          "time": 36.03333333333333,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:135",
+          "role": "ACCENT_PROXY",
+          "time": 36.3,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:beat:87",
+          "role": "BEAT",
+          "time": 36.56,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:downbeat:46",
+          "role": "DOWNBEAT",
+          "time": 36.56,
+          "source": "beat_this",
+          "kind": "downbeat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:136",
+          "role": "ACCENT_PROXY",
+          "time": 36.56666666666667,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:137",
+          "role": "ACCENT_PROXY",
+          "time": 36.833333333333336,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:138",
+          "role": "ACCENT_PROXY",
+          "time": 37.1,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:beat:88",
+          "role": "BEAT",
+          "time": 37.1,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:139",
+          "role": "ACCENT_PROXY",
+          "time": 37.36666666666667,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:beat:89",
+          "role": "BEAT",
+          "time": 37.64,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:140",
+          "role": "ACCENT_PROXY",
+          "time": 37.666666666666664,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:141",
+          "role": "ACCENT_PROXY",
+          "time": 37.9,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        }
+      ],
+      "music_audio_sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f"
+    },
+    {
+      "key": "4a69181188a9e248a0a6330b__nodes3",
+      "parent_case_key": "4a69181188a9e248a0a6330b",
+      "source_uid": "female_lotus",
+      "source_interval": [
+        583,
+        870
+      ],
+      "target_frames": 240,
+      "neighbor": {
+        "event_uid": "r47:30e2f1036450b06a12a13fb6",
+        "source_uid": "female_FeiTian",
+        "source_interval": [
+          474,
+          750
+        ],
+        "source_sha256": "120e0157ccdd60d128d2973ac0682883ee178ba43ce8479100e80f56c64f37a4"
+      },
+      "music_song": 1,
+      "music_start_frame": 900,
+      "nodes": [
+        {
+          "uid": "63d265475d1c89405445ff7ca4e8eff8b1928c509529fa5ad9dc9d24f7f4ab81",
+          "source_uid": "female_lotus",
+          "role": "ACCEL_RISE",
+          "frame": 636,
+          "time": 21.2,
+          "evidence_span": [
+            635,
+            638
+          ],
+          "supported": true,
+          "semantic_role": "UNKNOWN",
+          "detector_definition": "POSITIVE_ANGULAR_SPEED_CHANGE_PEAK"
+        },
+        {
+          "uid": "0b297efea93b822a76e28ff8f77c15c08a74b0d1c726619346374a19476c3f79",
+          "source_uid": "female_lotus",
+          "role": "ACCEL_RISE",
+          "frame": 725,
+          "time": 24.166666666666668,
+          "evidence_span": [
+            724,
+            727
+          ],
+          "supported": true,
+          "semantic_role": "UNKNOWN",
+          "detector_definition": "POSITIVE_ANGULAR_SPEED_CHANGE_PEAK"
+        },
+        {
+          "uid": "6c94519dc61b686bc017a165195daa29deaad1e1aeb22d96307f59af2c9a1482",
+          "source_uid": "female_lotus",
+          "role": "ACCEL_RISE",
+          "frame": 817,
+          "time": 27.233333333333334,
+          "evidence_span": [
+            816,
+            819
+          ],
+          "supported": true,
+          "semantic_role": "UNKNOWN",
+          "detector_definition": "POSITIVE_ANGULAR_SPEED_CHANGE_PEAK"
+        }
+      ],
+      "requested_nodes": 3,
+      "status": "REGISTERED",
+      "options": [
+        [
+          {
+            "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:beat:77",
+            "role": "BEAT",
+            "time": 31.2,
+            "source": "beat_this",
+            "kind": "beat",
+            "semantic_role": "UNKNOWN",
+            "local_frame": 36.0
+          },
+          {
+            "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:117",
+            "role": "ACCENT_PROXY",
+            "time": 31.466666666666665,
+            "source": "acoustic",
+            "kind": "accent_candidate",
+            "semantic_role": "UNKNOWN",
+            "local_frame": 44.0
+          },
+          {
+            "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:beat:78",
+            "role": "BEAT",
+            "time": 31.74,
+            "source": "beat_this",
+            "kind": "beat",
+            "semantic_role": "UNKNOWN",
+            "local_frame": 52.19999999999993
+          }
+        ],
+        [
+          {
+            "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:beat:82",
+            "role": "BEAT",
+            "time": 33.88,
+            "source": "beat_this",
+            "kind": "beat",
+            "semantic_role": "UNKNOWN",
+            "local_frame": 116.40000000000009
+          },
+          {
+            "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:126",
+            "role": "ACCENT_PROXY",
+            "time": 33.9,
+            "source": "acoustic",
+            "kind": "accent_candidate",
+            "semantic_role": "UNKNOWN",
+            "local_frame": 117.0
+          },
+          {
+            "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:beat:83",
+            "role": "BEAT",
+            "time": 34.42,
+            "source": "beat_this",
+            "kind": "beat",
+            "semantic_role": "UNKNOWN",
+            "local_frame": 132.60000000000014
+          }
+        ],
+        [
+          {
+            "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:beat:86",
+            "role": "BEAT",
+            "time": 36.02,
+            "source": "beat_this",
+            "kind": "beat",
+            "semantic_role": "UNKNOWN",
+            "local_frame": 180.60000000000014
+          },
+          {
+            "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:beat:87",
+            "role": "BEAT",
+            "time": 36.56,
+            "source": "beat_this",
+            "kind": "beat",
+            "semantic_role": "UNKNOWN",
+            "local_frame": 196.80000000000018
+          },
+          {
+            "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:downbeat:46",
+            "role": "DOWNBEAT",
+            "time": 36.56,
+            "source": "beat_this",
+            "kind": "downbeat",
+            "semantic_role": "UNKNOWN",
+            "local_frame": 196.80000000000018
+          }
+        ]
+      ],
+      "music_events": [
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:beat:75",
+          "role": "BEAT",
+          "time": 30.14,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:downbeat:43",
+          "role": "DOWNBEAT",
+          "time": 30.14,
+          "source": "beat_this",
+          "kind": "downbeat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:112",
+          "role": "ACCENT_PROXY",
+          "time": 30.166666666666668,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:113",
+          "role": "ACCENT_PROXY",
+          "time": 30.4,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:114",
+          "role": "ACCENT_PROXY",
+          "time": 30.666666666666668,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:beat:76",
+          "role": "BEAT",
+          "time": 30.68,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:115",
+          "role": "ACCENT_PROXY",
+          "time": 30.966666666666665,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:116",
+          "role": "ACCENT_PROXY",
+          "time": 31.2,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:beat:77",
+          "role": "BEAT",
+          "time": 31.2,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:117",
+          "role": "ACCENT_PROXY",
+          "time": 31.466666666666665,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:beat:78",
+          "role": "BEAT",
+          "time": 31.74,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:118",
+          "role": "ACCENT_PROXY",
+          "time": 31.766666666666666,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:119",
+          "role": "ACCENT_PROXY",
+          "time": 32.0,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:beat:79",
+          "role": "BEAT",
+          "time": 32.28,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:downbeat:44",
+          "role": "DOWNBEAT",
+          "time": 32.28,
+          "source": "beat_this",
+          "kind": "downbeat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:120",
+          "role": "ACCENT_PROXY",
+          "time": 32.3,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:121",
+          "role": "ACCENT_PROXY",
+          "time": 32.56666666666667,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:122",
+          "role": "ACCENT_PROXY",
+          "time": 32.8,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:beat:80",
+          "role": "BEAT",
+          "time": 32.8,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:123",
+          "role": "ACCENT_PROXY",
+          "time": 33.1,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:beat:81",
+          "role": "BEAT",
+          "time": 33.36,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:124",
+          "role": "ACCENT_PROXY",
+          "time": 33.36666666666667,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:125",
+          "role": "ACCENT_PROXY",
+          "time": 33.63333333333333,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:beat:82",
+          "role": "BEAT",
+          "time": 33.88,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:126",
+          "role": "ACCENT_PROXY",
+          "time": 33.9,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:127",
+          "role": "ACCENT_PROXY",
+          "time": 34.166666666666664,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:chroma_boundary_candidate:3",
+          "role": "STRUCTURE_PROXY",
+          "time": 34.4,
+          "source": "acoustic",
+          "kind": "chroma_boundary_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:beat:83",
+          "role": "BEAT",
+          "time": 34.42,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:downbeat:45",
+          "role": "DOWNBEAT",
+          "time": 34.42,
+          "source": "beat_this",
+          "kind": "downbeat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:128",
+          "role": "ACCENT_PROXY",
+          "time": 34.43333333333333,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:129",
+          "role": "ACCENT_PROXY",
+          "time": 34.7,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:beat:84",
+          "role": "BEAT",
+          "time": 34.94,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:130",
+          "role": "ACCENT_PROXY",
+          "time": 34.96666666666667,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:131",
+          "role": "ACCENT_PROXY",
+          "time": 35.233333333333334,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:132",
+          "role": "ACCENT_PROXY",
+          "time": 35.5,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:beat:85",
+          "role": "BEAT",
+          "time": 35.5,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:133",
+          "role": "ACCENT_PROXY",
+          "time": 35.766666666666666,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:beat:86",
+          "role": "BEAT",
+          "time": 36.02,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:134",
+          "role": "ACCENT_PROXY",
+          "time": 36.03333333333333,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:135",
+          "role": "ACCENT_PROXY",
+          "time": 36.3,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:beat:87",
+          "role": "BEAT",
+          "time": 36.56,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:downbeat:46",
+          "role": "DOWNBEAT",
+          "time": 36.56,
+          "source": "beat_this",
+          "kind": "downbeat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:136",
+          "role": "ACCENT_PROXY",
+          "time": 36.56666666666667,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:137",
+          "role": "ACCENT_PROXY",
+          "time": 36.833333333333336,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:138",
+          "role": "ACCENT_PROXY",
+          "time": 37.1,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:beat:88",
+          "role": "BEAT",
+          "time": 37.1,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:139",
+          "role": "ACCENT_PROXY",
+          "time": 37.36666666666667,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:beat_this:beat:89",
+          "role": "BEAT",
+          "time": 37.64,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:140",
+          "role": "ACCENT_PROXY",
+          "time": 37.666666666666664,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f:acoustic:accent_candidate:141",
+          "role": "ACCENT_PROXY",
+          "time": 37.9,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        }
+      ],
+      "music_audio_sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f"
+    },
+    {
+      "key": "73cb91d45a9d9530430d1650__nodes1",
+      "parent_case_key": "73cb91d45a9d9530430d1650",
+      "source_uid": "male_meditation",
+      "source_interval": [
+        689,
+        1071
+      ],
+      "target_frames": 360,
+      "neighbor": {
+        "event_uid": "r47:3f3db9b835546587729157c8",
+        "source_uid": "female_FeiTian",
+        "source_interval": [
+          140,
+          474
+        ],
+        "source_sha256": "120e0157ccdd60d128d2973ac0682883ee178ba43ce8479100e80f56c64f37a4"
+      },
+      "music_song": 2,
+      "music_start_frame": 900,
+      "nodes": [
+        {
+          "uid": "dd06308d1779700143fb17c3d7f1caa5503a63636449d13531d9015df6c9bb31",
+          "source_uid": "male_meditation",
+          "role": "ACCEL_RISE",
+          "frame": 767,
+          "time": 25.566666666666666,
+          "evidence_span": [
+            766,
+            769
+          ],
+          "supported": true,
+          "semantic_role": "UNKNOWN",
+          "detector_definition": "POSITIVE_ANGULAR_SPEED_CHANGE_PEAK"
+        }
+      ],
+      "requested_nodes": 1,
+      "status": "REGISTERED",
+      "options": [
+        [
+          {
+            "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:64",
+            "role": "BEAT",
+            "time": 32.04,
+            "source": "beat_this",
+            "kind": "beat",
+            "semantic_role": "UNKNOWN",
+            "local_frame": 61.19999999999993
+          },
+          {
+            "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:117",
+            "role": "ACCENT_PROXY",
+            "time": 32.5,
+            "source": "acoustic",
+            "kind": "accent_candidate",
+            "semantic_role": "UNKNOWN",
+            "local_frame": 75.0
+          },
+          {
+            "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:65",
+            "role": "BEAT",
+            "time": 32.54,
+            "source": "beat_this",
+            "kind": "beat",
+            "semantic_role": "UNKNOWN",
+            "local_frame": 76.19999999999993
+          }
+        ]
+      ],
+      "music_events": [
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:108",
+          "role": "ACCENT_PROXY",
+          "time": 30.033333333333335,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:60",
+          "role": "BEAT",
+          "time": 30.04,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:downbeat:16",
+          "role": "DOWNBEAT",
+          "time": 30.04,
+          "source": "beat_this",
+          "kind": "downbeat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:109",
+          "role": "ACCENT_PROXY",
+          "time": 30.3,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:110",
+          "role": "ACCENT_PROXY",
+          "time": 30.533333333333335,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:61",
+          "role": "BEAT",
+          "time": 30.54,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:111",
+          "role": "ACCENT_PROXY",
+          "time": 30.8,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:112",
+          "role": "ACCENT_PROXY",
+          "time": 31.033333333333335,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:62",
+          "role": "BEAT",
+          "time": 31.04,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:chroma_boundary_candidate:1",
+          "role": "STRUCTURE_PROXY",
+          "time": 31.166666666666668,
+          "source": "acoustic",
+          "kind": "chroma_boundary_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:113",
+          "role": "ACCENT_PROXY",
+          "time": 31.3,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:114",
+          "role": "ACCENT_PROXY",
+          "time": 31.533333333333335,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:63",
+          "role": "BEAT",
+          "time": 31.54,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:115",
+          "role": "ACCENT_PROXY",
+          "time": 31.8,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:116",
+          "role": "ACCENT_PROXY",
+          "time": 32.03333333333333,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:64",
+          "role": "BEAT",
+          "time": 32.04,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:downbeat:17",
+          "role": "DOWNBEAT",
+          "time": 32.04,
+          "source": "beat_this",
+          "kind": "downbeat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:117",
+          "role": "ACCENT_PROXY",
+          "time": 32.5,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:65",
+          "role": "BEAT",
+          "time": 32.54,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:118",
+          "role": "ACCENT_PROXY",
+          "time": 32.8,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:66",
+          "role": "BEAT",
+          "time": 33.04,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:119",
+          "role": "ACCENT_PROXY",
+          "time": 33.06666666666667,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:120",
+          "role": "ACCENT_PROXY",
+          "time": 33.3,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:121",
+          "role": "ACCENT_PROXY",
+          "time": 33.53333333333333,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:67",
+          "role": "BEAT",
+          "time": 33.54,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:68",
+          "role": "BEAT",
+          "time": 34.04,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:downbeat:18",
+          "role": "DOWNBEAT",
+          "time": 34.04,
+          "source": "beat_this",
+          "kind": "downbeat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:122",
+          "role": "ACCENT_PROXY",
+          "time": 34.06666666666667,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:123",
+          "role": "ACCENT_PROXY",
+          "time": 34.3,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:69",
+          "role": "BEAT",
+          "time": 34.54,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:124",
+          "role": "ACCENT_PROXY",
+          "time": 34.56666666666667,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:125",
+          "role": "ACCENT_PROXY",
+          "time": 34.8,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:70",
+          "role": "BEAT",
+          "time": 35.04,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:126",
+          "role": "ACCENT_PROXY",
+          "time": 35.06666666666667,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:127",
+          "role": "ACCENT_PROXY",
+          "time": 35.3,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:128",
+          "role": "ACCENT_PROXY",
+          "time": 35.53333333333333,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:71",
+          "role": "BEAT",
+          "time": 35.54,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:129",
+          "role": "ACCENT_PROXY",
+          "time": 35.8,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:72",
+          "role": "BEAT",
+          "time": 36.04,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:downbeat:19",
+          "role": "DOWNBEAT",
+          "time": 36.04,
+          "source": "beat_this",
+          "kind": "downbeat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:130",
+          "role": "ACCENT_PROXY",
+          "time": 36.06666666666667,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:131",
+          "role": "ACCENT_PROXY",
+          "time": 36.3,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:73",
+          "role": "BEAT",
+          "time": 36.54,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:132",
+          "role": "ACCENT_PROXY",
+          "time": 36.56666666666667,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:133",
+          "role": "ACCENT_PROXY",
+          "time": 36.8,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:74",
+          "role": "BEAT",
+          "time": 37.04,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:134",
+          "role": "ACCENT_PROXY",
+          "time": 37.06666666666667,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:135",
+          "role": "ACCENT_PROXY",
+          "time": 37.3,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:75",
+          "role": "BEAT",
+          "time": 37.54,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:136",
+          "role": "ACCENT_PROXY",
+          "time": 37.56666666666667,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:76",
+          "role": "BEAT",
+          "time": 38.04,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:downbeat:20",
+          "role": "DOWNBEAT",
+          "time": 38.04,
+          "source": "beat_this",
+          "kind": "downbeat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:137",
+          "role": "ACCENT_PROXY",
+          "time": 38.06666666666667,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:138",
+          "role": "ACCENT_PROXY",
+          "time": 38.3,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:77",
+          "role": "BEAT",
+          "time": 38.54,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:139",
+          "role": "ACCENT_PROXY",
+          "time": 38.8,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:78",
+          "role": "BEAT",
+          "time": 39.04,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:140",
+          "role": "ACCENT_PROXY",
+          "time": 39.06666666666667,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:141",
+          "role": "ACCENT_PROXY",
+          "time": 39.3,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:142",
+          "role": "ACCENT_PROXY",
+          "time": 39.53333333333333,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:79",
+          "role": "BEAT",
+          "time": 39.54,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:143",
+          "role": "ACCENT_PROXY",
+          "time": 39.8,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:144",
+          "role": "ACCENT_PROXY",
+          "time": 40.03333333333333,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:80",
+          "role": "BEAT",
+          "time": 40.04,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:downbeat:21",
+          "role": "DOWNBEAT",
+          "time": 40.04,
+          "source": "beat_this",
+          "kind": "downbeat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:145",
+          "role": "ACCENT_PROXY",
+          "time": 40.333333333333336,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:81",
+          "role": "BEAT",
+          "time": 40.54,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:146",
+          "role": "ACCENT_PROXY",
+          "time": 40.8,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:82",
+          "role": "BEAT",
+          "time": 41.04,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:147",
+          "role": "ACCENT_PROXY",
+          "time": 41.06666666666667,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:148",
+          "role": "ACCENT_PROXY",
+          "time": 41.3,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:83",
+          "role": "BEAT",
+          "time": 41.54,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:149",
+          "role": "ACCENT_PROXY",
+          "time": 41.56666666666667,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        }
+      ],
+      "music_audio_sha256": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33"
+    },
+    {
+      "key": "73cb91d45a9d9530430d1650__nodes2",
+      "parent_case_key": "73cb91d45a9d9530430d1650",
+      "source_uid": "male_meditation",
+      "source_interval": [
+        689,
+        1071
+      ],
+      "target_frames": 360,
+      "neighbor": {
+        "event_uid": "r47:3f3db9b835546587729157c8",
+        "source_uid": "female_FeiTian",
+        "source_interval": [
+          140,
+          474
+        ],
+        "source_sha256": "120e0157ccdd60d128d2973ac0682883ee178ba43ce8479100e80f56c64f37a4"
+      },
+      "music_song": 2,
+      "music_start_frame": 900,
+      "nodes": [
+        {
+          "uid": "dd06308d1779700143fb17c3d7f1caa5503a63636449d13531d9015df6c9bb31",
+          "source_uid": "male_meditation",
+          "role": "ACCEL_RISE",
+          "frame": 767,
+          "time": 25.566666666666666,
+          "evidence_span": [
+            766,
+            769
+          ],
+          "supported": true,
+          "semantic_role": "UNKNOWN",
+          "detector_definition": "POSITIVE_ANGULAR_SPEED_CHANGE_PEAK"
+        },
+        {
+          "uid": "4756ed67cfbfb285b8c6e1c9df197c17f86e07e6f135890fb0090b49a007dec3",
+          "source_uid": "male_meditation",
+          "role": "DIRECTION_TURN",
+          "frame": 853,
+          "time": 28.433333333333334,
+          "evidence_span": [
+            850,
+            857
+          ],
+          "supported": true,
+          "semantic_role": "UNKNOWN",
+          "detector_definition": "R47_WHOLE_RECORD_KINEMATIC_PROXY"
+        }
+      ],
+      "requested_nodes": 2,
+      "status": "REGISTERED",
+      "options": [
+        [
+          {
+            "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:64",
+            "role": "BEAT",
+            "time": 32.04,
+            "source": "beat_this",
+            "kind": "beat",
+            "semantic_role": "UNKNOWN",
+            "local_frame": 61.19999999999993
+          },
+          {
+            "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:117",
+            "role": "ACCENT_PROXY",
+            "time": 32.5,
+            "source": "acoustic",
+            "kind": "accent_candidate",
+            "semantic_role": "UNKNOWN",
+            "local_frame": 75.0
+          },
+          {
+            "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:65",
+            "role": "BEAT",
+            "time": 32.54,
+            "source": "beat_this",
+            "kind": "beat",
+            "semantic_role": "UNKNOWN",
+            "local_frame": 76.19999999999993
+          }
+        ],
+        [
+          {
+            "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:70",
+            "role": "BEAT",
+            "time": 35.04,
+            "source": "beat_this",
+            "kind": "beat",
+            "semantic_role": "UNKNOWN",
+            "local_frame": 151.20000000000005
+          },
+          {
+            "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:126",
+            "role": "ACCENT_PROXY",
+            "time": 35.06666666666667,
+            "source": "acoustic",
+            "kind": "accent_candidate",
+            "semantic_role": "UNKNOWN",
+            "local_frame": 152.0
+          }
+        ]
+      ],
+      "music_events": [
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:108",
+          "role": "ACCENT_PROXY",
+          "time": 30.033333333333335,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:60",
+          "role": "BEAT",
+          "time": 30.04,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:downbeat:16",
+          "role": "DOWNBEAT",
+          "time": 30.04,
+          "source": "beat_this",
+          "kind": "downbeat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:109",
+          "role": "ACCENT_PROXY",
+          "time": 30.3,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:110",
+          "role": "ACCENT_PROXY",
+          "time": 30.533333333333335,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:61",
+          "role": "BEAT",
+          "time": 30.54,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:111",
+          "role": "ACCENT_PROXY",
+          "time": 30.8,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:112",
+          "role": "ACCENT_PROXY",
+          "time": 31.033333333333335,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:62",
+          "role": "BEAT",
+          "time": 31.04,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:chroma_boundary_candidate:1",
+          "role": "STRUCTURE_PROXY",
+          "time": 31.166666666666668,
+          "source": "acoustic",
+          "kind": "chroma_boundary_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:113",
+          "role": "ACCENT_PROXY",
+          "time": 31.3,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:114",
+          "role": "ACCENT_PROXY",
+          "time": 31.533333333333335,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:63",
+          "role": "BEAT",
+          "time": 31.54,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:115",
+          "role": "ACCENT_PROXY",
+          "time": 31.8,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:116",
+          "role": "ACCENT_PROXY",
+          "time": 32.03333333333333,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:64",
+          "role": "BEAT",
+          "time": 32.04,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:downbeat:17",
+          "role": "DOWNBEAT",
+          "time": 32.04,
+          "source": "beat_this",
+          "kind": "downbeat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:117",
+          "role": "ACCENT_PROXY",
+          "time": 32.5,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:65",
+          "role": "BEAT",
+          "time": 32.54,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:118",
+          "role": "ACCENT_PROXY",
+          "time": 32.8,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:66",
+          "role": "BEAT",
+          "time": 33.04,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:119",
+          "role": "ACCENT_PROXY",
+          "time": 33.06666666666667,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:120",
+          "role": "ACCENT_PROXY",
+          "time": 33.3,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:121",
+          "role": "ACCENT_PROXY",
+          "time": 33.53333333333333,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:67",
+          "role": "BEAT",
+          "time": 33.54,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:68",
+          "role": "BEAT",
+          "time": 34.04,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:downbeat:18",
+          "role": "DOWNBEAT",
+          "time": 34.04,
+          "source": "beat_this",
+          "kind": "downbeat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:122",
+          "role": "ACCENT_PROXY",
+          "time": 34.06666666666667,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:123",
+          "role": "ACCENT_PROXY",
+          "time": 34.3,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:69",
+          "role": "BEAT",
+          "time": 34.54,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:124",
+          "role": "ACCENT_PROXY",
+          "time": 34.56666666666667,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:125",
+          "role": "ACCENT_PROXY",
+          "time": 34.8,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:70",
+          "role": "BEAT",
+          "time": 35.04,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:126",
+          "role": "ACCENT_PROXY",
+          "time": 35.06666666666667,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:127",
+          "role": "ACCENT_PROXY",
+          "time": 35.3,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:128",
+          "role": "ACCENT_PROXY",
+          "time": 35.53333333333333,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:71",
+          "role": "BEAT",
+          "time": 35.54,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:129",
+          "role": "ACCENT_PROXY",
+          "time": 35.8,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:72",
+          "role": "BEAT",
+          "time": 36.04,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:downbeat:19",
+          "role": "DOWNBEAT",
+          "time": 36.04,
+          "source": "beat_this",
+          "kind": "downbeat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:130",
+          "role": "ACCENT_PROXY",
+          "time": 36.06666666666667,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:131",
+          "role": "ACCENT_PROXY",
+          "time": 36.3,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:73",
+          "role": "BEAT",
+          "time": 36.54,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:132",
+          "role": "ACCENT_PROXY",
+          "time": 36.56666666666667,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:133",
+          "role": "ACCENT_PROXY",
+          "time": 36.8,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:74",
+          "role": "BEAT",
+          "time": 37.04,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:134",
+          "role": "ACCENT_PROXY",
+          "time": 37.06666666666667,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:135",
+          "role": "ACCENT_PROXY",
+          "time": 37.3,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:75",
+          "role": "BEAT",
+          "time": 37.54,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:136",
+          "role": "ACCENT_PROXY",
+          "time": 37.56666666666667,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:76",
+          "role": "BEAT",
+          "time": 38.04,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:downbeat:20",
+          "role": "DOWNBEAT",
+          "time": 38.04,
+          "source": "beat_this",
+          "kind": "downbeat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:137",
+          "role": "ACCENT_PROXY",
+          "time": 38.06666666666667,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:138",
+          "role": "ACCENT_PROXY",
+          "time": 38.3,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:77",
+          "role": "BEAT",
+          "time": 38.54,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:139",
+          "role": "ACCENT_PROXY",
+          "time": 38.8,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:78",
+          "role": "BEAT",
+          "time": 39.04,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:140",
+          "role": "ACCENT_PROXY",
+          "time": 39.06666666666667,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:141",
+          "role": "ACCENT_PROXY",
+          "time": 39.3,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:142",
+          "role": "ACCENT_PROXY",
+          "time": 39.53333333333333,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:79",
+          "role": "BEAT",
+          "time": 39.54,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:143",
+          "role": "ACCENT_PROXY",
+          "time": 39.8,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:144",
+          "role": "ACCENT_PROXY",
+          "time": 40.03333333333333,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:80",
+          "role": "BEAT",
+          "time": 40.04,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:downbeat:21",
+          "role": "DOWNBEAT",
+          "time": 40.04,
+          "source": "beat_this",
+          "kind": "downbeat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:145",
+          "role": "ACCENT_PROXY",
+          "time": 40.333333333333336,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:81",
+          "role": "BEAT",
+          "time": 40.54,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:146",
+          "role": "ACCENT_PROXY",
+          "time": 40.8,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:82",
+          "role": "BEAT",
+          "time": 41.04,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:147",
+          "role": "ACCENT_PROXY",
+          "time": 41.06666666666667,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:148",
+          "role": "ACCENT_PROXY",
+          "time": 41.3,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:83",
+          "role": "BEAT",
+          "time": 41.54,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:149",
+          "role": "ACCENT_PROXY",
+          "time": 41.56666666666667,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        }
+      ],
+      "music_audio_sha256": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33"
+    },
+    {
+      "key": "73cb91d45a9d9530430d1650__nodes3",
+      "parent_case_key": "73cb91d45a9d9530430d1650",
+      "source_uid": "male_meditation",
+      "source_interval": [
+        689,
+        1071
+      ],
+      "target_frames": 360,
+      "neighbor": {
+        "event_uid": "r47:3f3db9b835546587729157c8",
+        "source_uid": "female_FeiTian",
+        "source_interval": [
+          140,
+          474
+        ],
+        "source_sha256": "120e0157ccdd60d128d2973ac0682883ee178ba43ce8479100e80f56c64f37a4"
+      },
+      "music_song": 2,
+      "music_start_frame": 900,
+      "nodes": [
+        {
+          "uid": "dd06308d1779700143fb17c3d7f1caa5503a63636449d13531d9015df6c9bb31",
+          "source_uid": "male_meditation",
+          "role": "ACCEL_RISE",
+          "frame": 767,
+          "time": 25.566666666666666,
+          "evidence_span": [
+            766,
+            769
+          ],
+          "supported": true,
+          "semantic_role": "UNKNOWN",
+          "detector_definition": "POSITIVE_ANGULAR_SPEED_CHANGE_PEAK"
+        },
+        {
+          "uid": "4756ed67cfbfb285b8c6e1c9df197c17f86e07e6f135890fb0090b49a007dec3",
+          "source_uid": "male_meditation",
+          "role": "DIRECTION_TURN",
+          "frame": 853,
+          "time": 28.433333333333334,
+          "evidence_span": [
+            850,
+            857
+          ],
+          "supported": true,
+          "semantic_role": "UNKNOWN",
+          "detector_definition": "R47_WHOLE_RECORD_KINEMATIC_PROXY"
+        },
+        {
+          "uid": "af9cd55d6c2447ae2e67a260f367070b121ceeb6ca1d243a2cb0bbf8dc219cba",
+          "source_uid": "male_meditation",
+          "role": "ACCEL_RISE",
+          "frame": 995,
+          "time": 33.166666666666664,
+          "evidence_span": [
+            994,
+            997
+          ],
+          "supported": true,
+          "semantic_role": "UNKNOWN",
+          "detector_definition": "POSITIVE_ANGULAR_SPEED_CHANGE_PEAK"
+        }
+      ],
+      "requested_nodes": 3,
+      "status": "REGISTERED",
+      "options": [
+        [
+          {
+            "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:64",
+            "role": "BEAT",
+            "time": 32.04,
+            "source": "beat_this",
+            "kind": "beat",
+            "semantic_role": "UNKNOWN",
+            "local_frame": 61.19999999999993
+          },
+          {
+            "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:117",
+            "role": "ACCENT_PROXY",
+            "time": 32.5,
+            "source": "acoustic",
+            "kind": "accent_candidate",
+            "semantic_role": "UNKNOWN",
+            "local_frame": 75.0
+          },
+          {
+            "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:65",
+            "role": "BEAT",
+            "time": 32.54,
+            "source": "beat_this",
+            "kind": "beat",
+            "semantic_role": "UNKNOWN",
+            "local_frame": 76.19999999999993
+          }
+        ],
+        [
+          {
+            "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:70",
+            "role": "BEAT",
+            "time": 35.04,
+            "source": "beat_this",
+            "kind": "beat",
+            "semantic_role": "UNKNOWN",
+            "local_frame": 151.20000000000005
+          },
+          {
+            "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:126",
+            "role": "ACCENT_PROXY",
+            "time": 35.06666666666667,
+            "source": "acoustic",
+            "kind": "accent_candidate",
+            "semantic_role": "UNKNOWN",
+            "local_frame": 152.0
+          }
+        ],
+        [
+          {
+            "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:142",
+            "role": "ACCENT_PROXY",
+            "time": 39.53333333333333,
+            "source": "acoustic",
+            "kind": "accent_candidate",
+            "semantic_role": "UNKNOWN",
+            "local_frame": 286.0
+          },
+          {
+            "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:79",
+            "role": "BEAT",
+            "time": 39.54,
+            "source": "beat_this",
+            "kind": "beat",
+            "semantic_role": "UNKNOWN",
+            "local_frame": 286.20000000000005
+          },
+          {
+            "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:80",
+            "role": "BEAT",
+            "time": 40.04,
+            "source": "beat_this",
+            "kind": "beat",
+            "semantic_role": "UNKNOWN",
+            "local_frame": 301.20000000000005
+          }
+        ]
+      ],
+      "music_events": [
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:108",
+          "role": "ACCENT_PROXY",
+          "time": 30.033333333333335,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:60",
+          "role": "BEAT",
+          "time": 30.04,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:downbeat:16",
+          "role": "DOWNBEAT",
+          "time": 30.04,
+          "source": "beat_this",
+          "kind": "downbeat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:109",
+          "role": "ACCENT_PROXY",
+          "time": 30.3,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:110",
+          "role": "ACCENT_PROXY",
+          "time": 30.533333333333335,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:61",
+          "role": "BEAT",
+          "time": 30.54,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:111",
+          "role": "ACCENT_PROXY",
+          "time": 30.8,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:112",
+          "role": "ACCENT_PROXY",
+          "time": 31.033333333333335,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:62",
+          "role": "BEAT",
+          "time": 31.04,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:chroma_boundary_candidate:1",
+          "role": "STRUCTURE_PROXY",
+          "time": 31.166666666666668,
+          "source": "acoustic",
+          "kind": "chroma_boundary_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:113",
+          "role": "ACCENT_PROXY",
+          "time": 31.3,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:114",
+          "role": "ACCENT_PROXY",
+          "time": 31.533333333333335,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:63",
+          "role": "BEAT",
+          "time": 31.54,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:115",
+          "role": "ACCENT_PROXY",
+          "time": 31.8,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:116",
+          "role": "ACCENT_PROXY",
+          "time": 32.03333333333333,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:64",
+          "role": "BEAT",
+          "time": 32.04,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:downbeat:17",
+          "role": "DOWNBEAT",
+          "time": 32.04,
+          "source": "beat_this",
+          "kind": "downbeat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:117",
+          "role": "ACCENT_PROXY",
+          "time": 32.5,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:65",
+          "role": "BEAT",
+          "time": 32.54,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:118",
+          "role": "ACCENT_PROXY",
+          "time": 32.8,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:66",
+          "role": "BEAT",
+          "time": 33.04,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:119",
+          "role": "ACCENT_PROXY",
+          "time": 33.06666666666667,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:120",
+          "role": "ACCENT_PROXY",
+          "time": 33.3,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:121",
+          "role": "ACCENT_PROXY",
+          "time": 33.53333333333333,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:67",
+          "role": "BEAT",
+          "time": 33.54,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:68",
+          "role": "BEAT",
+          "time": 34.04,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:downbeat:18",
+          "role": "DOWNBEAT",
+          "time": 34.04,
+          "source": "beat_this",
+          "kind": "downbeat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:122",
+          "role": "ACCENT_PROXY",
+          "time": 34.06666666666667,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:123",
+          "role": "ACCENT_PROXY",
+          "time": 34.3,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:69",
+          "role": "BEAT",
+          "time": 34.54,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:124",
+          "role": "ACCENT_PROXY",
+          "time": 34.56666666666667,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:125",
+          "role": "ACCENT_PROXY",
+          "time": 34.8,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:70",
+          "role": "BEAT",
+          "time": 35.04,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:126",
+          "role": "ACCENT_PROXY",
+          "time": 35.06666666666667,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:127",
+          "role": "ACCENT_PROXY",
+          "time": 35.3,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:128",
+          "role": "ACCENT_PROXY",
+          "time": 35.53333333333333,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:71",
+          "role": "BEAT",
+          "time": 35.54,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:129",
+          "role": "ACCENT_PROXY",
+          "time": 35.8,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:72",
+          "role": "BEAT",
+          "time": 36.04,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:downbeat:19",
+          "role": "DOWNBEAT",
+          "time": 36.04,
+          "source": "beat_this",
+          "kind": "downbeat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:130",
+          "role": "ACCENT_PROXY",
+          "time": 36.06666666666667,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:131",
+          "role": "ACCENT_PROXY",
+          "time": 36.3,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:73",
+          "role": "BEAT",
+          "time": 36.54,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:132",
+          "role": "ACCENT_PROXY",
+          "time": 36.56666666666667,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:133",
+          "role": "ACCENT_PROXY",
+          "time": 36.8,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:74",
+          "role": "BEAT",
+          "time": 37.04,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:134",
+          "role": "ACCENT_PROXY",
+          "time": 37.06666666666667,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:135",
+          "role": "ACCENT_PROXY",
+          "time": 37.3,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:75",
+          "role": "BEAT",
+          "time": 37.54,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:136",
+          "role": "ACCENT_PROXY",
+          "time": 37.56666666666667,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:76",
+          "role": "BEAT",
+          "time": 38.04,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:downbeat:20",
+          "role": "DOWNBEAT",
+          "time": 38.04,
+          "source": "beat_this",
+          "kind": "downbeat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:137",
+          "role": "ACCENT_PROXY",
+          "time": 38.06666666666667,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:138",
+          "role": "ACCENT_PROXY",
+          "time": 38.3,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:77",
+          "role": "BEAT",
+          "time": 38.54,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:139",
+          "role": "ACCENT_PROXY",
+          "time": 38.8,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:78",
+          "role": "BEAT",
+          "time": 39.04,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:140",
+          "role": "ACCENT_PROXY",
+          "time": 39.06666666666667,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:141",
+          "role": "ACCENT_PROXY",
+          "time": 39.3,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:142",
+          "role": "ACCENT_PROXY",
+          "time": 39.53333333333333,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:79",
+          "role": "BEAT",
+          "time": 39.54,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:143",
+          "role": "ACCENT_PROXY",
+          "time": 39.8,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:144",
+          "role": "ACCENT_PROXY",
+          "time": 40.03333333333333,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:80",
+          "role": "BEAT",
+          "time": 40.04,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:downbeat:21",
+          "role": "DOWNBEAT",
+          "time": 40.04,
+          "source": "beat_this",
+          "kind": "downbeat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:145",
+          "role": "ACCENT_PROXY",
+          "time": 40.333333333333336,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:81",
+          "role": "BEAT",
+          "time": 40.54,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:146",
+          "role": "ACCENT_PROXY",
+          "time": 40.8,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:82",
+          "role": "BEAT",
+          "time": 41.04,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:147",
+          "role": "ACCENT_PROXY",
+          "time": 41.06666666666667,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:148",
+          "role": "ACCENT_PROXY",
+          "time": 41.3,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:beat_this:beat:83",
+          "role": "BEAT",
+          "time": 41.54,
+          "source": "beat_this",
+          "kind": "beat",
+          "semantic_role": "UNKNOWN"
+        },
+        {
+          "uid": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33:acoustic:accent_candidate:149",
+          "role": "ACCENT_PROXY",
+          "time": 41.56666666666667,
+          "source": "acoustic",
+          "kind": "accent_candidate",
+          "semantic_role": "UNKNOWN"
+        }
+      ],
+      "music_audio_sha256": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33"
+    }
+  ],
+  "paired": {
+    "sources": [
+      {
+        "source_uid": "027536653a49e6bf25e3c9b0",
+        "dataset": "AIST++",
+        "role": "train",
+        "group": "aist_publisher_track:mJS0",
+        "recording_uid": "aist_capture:gJS_sBM_cAll_d01_mJS0_ch08",
+        "choreography_uid": "aist_basic:gJS:ch08",
+        "raw_motion_sha256": "47954305c14e854b3e4ad7e6bc4d85bfa4098a02c78c543bc1bcb529f8e70f6e",
+        "raw_motion": {
+          "path": "/home/disk/lsm/storage/DunhuangDanceGen/assets/datasets/aistpp/annotations/motions/gJS_sBM_cAll_d01_mJS0_ch08.pkl",
+          "sha256": "47954305c14e854b3e4ad7e6bc4d85bfa4098a02c78c543bc1bcb529f8e70f6e"
+        },
+        "audio_sha256": "f44ff12179bbc416d53240488b0997b16995fb83b2bd7516e888bc48ce0f7611",
+        "audio": {
+          "path": "/home/disk/lsm/storage/DunhuangDanceGen/assets/datasets/aistpp/music/mJS0.wav",
+          "sha256": "f44ff12179bbc416d53240488b0997b16995fb83b2bd7516e888bc48ce0f7611"
+        },
+        "audio_offset_frames": 0.0,
+        "shared_start": 0,
+        "clock_scope": "VERIFIED_OFFICIAL_SOURCE_CLOCK",
+        "clock_proof": {
+          "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/aist_calibration_01/calibration/gJS_sBM_cAll_d01_mJS0_ch08.json",
+          "sha256": "d44eedfbacc3ff71db9dccbdfee13d6ff8c01e95cc912bdef9d73df2ae6bef8a"
+        },
+        "root_scope": "OBSERVED_FITTED_SOURCE_TRANSLATION_NOT_CONTACT_TRUTH",
+        "shared_support": {
+          "frames": 360,
+          "unmatched_motion_tail": 0,
+          "unmatched_audio_feature_tail": 0,
+          "unmatched_audio_energy_tail": 0,
+          "padding_frames": 0,
+          "resampling": false
+        },
+        "frames": 360,
+        "arrays": "outputs/paired_benchmark_r59_01/data/sources/027536653a49e6bf25e3c9b0.npz",
+        "arrays_sha256": "a3d5fa7f4a7110efe470c06623dbe27e10e439af61e6d3ced5f0d0b2c43d92ec"
+      },
+      {
+        "source_uid": "027d60beccae2e38f7dc9ff3",
+        "dataset": "AIST++",
+        "role": "train",
+        "group": "aist_publisher_track:mJS3",
+        "recording_uid": "aist_capture:gJS_sBM_cAll_d01_mJS3_ch02",
+        "choreography_uid": "aist_basic:gJS:ch02",
+        "raw_motion_sha256": "41047961268555bd5734c799ec17c30f7d378a577855064cd14c30ee8510c56d",
+        "raw_motion": {
+          "path": "/home/disk/lsm/storage/DunhuangDanceGen/assets/datasets/aistpp/annotations/motions/gJS_sBM_cAll_d01_mJS3_ch02.pkl",
+          "sha256": "41047961268555bd5734c799ec17c30f7d378a577855064cd14c30ee8510c56d"
+        },
+        "audio_sha256": "8065fc70fa59988555931452b16be59e7562b5c5d55c44f6cf34d0c92e2b525a",
+        "audio": {
+          "path": "/home/disk/lsm/storage/DunhuangDanceGen/assets/datasets/aistpp/music/mJS3.wav",
+          "sha256": "8065fc70fa59988555931452b16be59e7562b5c5d55c44f6cf34d0c92e2b525a"
+        },
+        "audio_offset_frames": 0.0,
+        "shared_start": 0,
+        "clock_scope": "VERIFIED_OFFICIAL_SOURCE_CLOCK",
+        "clock_proof": {
+          "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/aist_calibration_01/calibration/gJS_sBM_cAll_d01_mJS3_ch02.json",
+          "sha256": "0a081c77e4ca781fb6ae108b1eb9da3c7fcf3fe69c570789c98cc8e14f85c780"
+        },
+        "root_scope": "OBSERVED_FITTED_SOURCE_TRANSLATION_NOT_CONTACT_TRUTH",
+        "shared_support": {
+          "frames": 262,
+          "unmatched_motion_tail": 0,
+          "unmatched_audio_feature_tail": 0,
+          "unmatched_audio_energy_tail": 0,
+          "padding_frames": 0,
+          "resampling": false
+        },
+        "frames": 262,
+        "arrays": "outputs/paired_benchmark_r59_01/data/sources/027d60beccae2e38f7dc9ff3.npz",
+        "arrays_sha256": "bb0bc73191861b0b3e94d8c48c2a2285e96ede62a5e99412aae156320165861a"
+      },
+      {
+        "source_uid": "02eaabac10a3f6ac51d8e8e6",
+        "dataset": "AIST++",
+        "role": "train",
+        "group": "aist_publisher_track:mMH5",
+        "recording_uid": "aist_capture:gMH_sBM_cAll_d23_mMH5_ch07",
+        "choreography_uid": "aist_basic:gMH:ch07",
+        "raw_motion_sha256": "943393235369c732ad63f01bf9cc4b4c3c1d960f0bcf4aee60dc1fbe432ad080",
+        "raw_motion": {
+          "path": "/home/disk/lsm/storage/DunhuangDanceGen/assets/datasets/aistpp/annotations/motions/gMH_sBM_cAll_d23_mMH5_ch07.pkl",
+          "sha256": "943393235369c732ad63f01bf9cc4b4c3c1d960f0bcf4aee60dc1fbe432ad080"
+        },
+        "audio_sha256": "472225d798603db9014afcc6bf4dc241496db22269a867b8178397ddc92194b4",
+        "audio": {
+          "path": "/home/disk/lsm/storage/DunhuangDanceGen/assets/datasets/aistpp/music/mMH5.wav",
+          "sha256": "472225d798603db9014afcc6bf4dc241496db22269a867b8178397ddc92194b4"
+        },
+        "audio_offset_frames": 0.0,
+        "shared_start": 0,
+        "clock_scope": "VERIFIED_OFFICIAL_SOURCE_CLOCK",
+        "clock_proof": {
+          "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/aist_calibration_01/calibration/gMH_sBM_cAll_d23_mMH5_ch07.json",
+          "sha256": "1bb0a96b824225d7d605f1ed382c15e66aadecfbe84a3511ec6a460133bc297d"
+        },
+        "root_scope": "OBSERVED_FITTED_SOURCE_TRANSLATION_NOT_CONTACT_TRUTH",
+        "shared_support": {
+          "frames": 222,
+          "unmatched_motion_tail": 0,
+          "unmatched_audio_feature_tail": 0,
+          "unmatched_audio_energy_tail": 0,
+          "padding_frames": 0,
+          "resampling": false
+        },
+        "frames": 222,
+        "arrays": "outputs/paired_benchmark_r59_01/data/sources/02eaabac10a3f6ac51d8e8e6.npz",
+        "arrays_sha256": "adb6eade69f8df3b33b181f40a3d01976c20c736423e2b3f4a05bf95efda76f0"
+      },
+      {
+        "source_uid": "fine_010",
+        "dataset": "FineDance",
+        "role": "genre_train_diagnostic",
+        "group": "finedance_archive:010",
+        "recording_uid": "fine_010",
+        "raw_motion_sha256": "24074f6f2a858a879876497522e19c10adb6440eb830965ca0ad5ae829747ab4",
+        "raw_motion": {
+          "path": "inputs/paired_benchmark_r59/finedance/motion/010.npy",
+          "sha256": "24074f6f2a858a879876497522e19c10adb6440eb830965ca0ad5ae829747ab4"
+        },
+        "audio_sha256": "0223a697a2ca0a7a4a6c41b5e1a9293b755952a4b19d310cd994fb596b5d16c5",
+        "audio": {
+          "path": "inputs/paired_benchmark_r59/finedance/music_wav/010.wav",
+          "sha256": "0223a697a2ca0a7a4a6c41b5e1a9293b755952a4b19d310cd994fb596b5d16c5"
+        },
+        "audio_offset_frames": 0.0,
+        "shared_start": 0,
+        "clock_scope": "OFFICIAL_ARCHIVE_ID_AND_RAW_COMMON_START_NOT_AIST_WAVEFORM_CALIBRATED",
+        "root_scope": "RAW_TRANSLATION_COORDINATES_NOT_NATIVE_WORLD_ADMITTED",
+        "dancer_role": "test",
+        "shared_support": {
+          "frames": 5497,
+          "unmatched_motion_tail": 1,
+          "unmatched_audio_feature_tail": 0,
+          "unmatched_audio_energy_tail": 0,
+          "padding_frames": 0,
+          "resampling": false
+        },
+        "frames": 5497,
+        "arrays": "outputs/paired_benchmark_r59_01/data/sources/fine_010.npz",
+        "arrays_sha256": "115b3e4abb714a7bf1244343e3b20adcefe363b6074ce5e58c6542ff3935c5ca"
+      },
+      {
+        "source_uid": "fine_011",
+        "dataset": "FineDance",
+        "role": "genre_train_diagnostic",
+        "group": "finedance_archive:011",
+        "recording_uid": "fine_011",
+        "raw_motion_sha256": "34a99c89994d90be35a3d4c6a8823c25bbe0b4fe88b3a60c6991c3e402571668",
+        "raw_motion": {
+          "path": "inputs/paired_benchmark_r59/finedance/motion/011.npy",
+          "sha256": "34a99c89994d90be35a3d4c6a8823c25bbe0b4fe88b3a60c6991c3e402571668"
+        },
+        "audio_sha256": "abee5d9938935d3efc42e14e258e46c4dae90a2b3ea93780e9507eab856e8639",
+        "audio": {
+          "path": "inputs/paired_benchmark_r59/finedance/music_wav/011.wav",
+          "sha256": "abee5d9938935d3efc42e14e258e46c4dae90a2b3ea93780e9507eab856e8639"
+        },
+        "audio_offset_frames": 0.0,
+        "shared_start": 0,
+        "clock_scope": "OFFICIAL_ARCHIVE_ID_AND_RAW_COMMON_START_NOT_AIST_WAVEFORM_CALIBRATED",
+        "root_scope": "RAW_TRANSLATION_COORDINATES_NOT_NATIVE_WORLD_ADMITTED",
+        "dancer_role": "test",
+        "shared_support": {
+          "frames": 2191,
+          "unmatched_motion_tail": 0,
+          "unmatched_audio_feature_tail": 25,
+          "unmatched_audio_energy_tail": 25,
+          "padding_frames": 0,
+          "resampling": false
+        },
+        "frames": 2191,
+        "arrays": "outputs/paired_benchmark_r59_01/data/sources/fine_011.npz",
+        "arrays_sha256": "5c2849b2ae71cb3dfa1df21f24375f3d80b2bdc4da7de551011ca9f31a8ff5e0"
+      },
+      {
+        "source_uid": "fine_013",
+        "dataset": "FineDance",
+        "role": "genre_train_diagnostic",
+        "group": "finedance_archive:013",
+        "recording_uid": "fine_013",
+        "raw_motion_sha256": "15eb2d0b7d138b28b75464a91881c143717e5877c57f6a16698ae589e7ddf932",
+        "raw_motion": {
+          "path": "inputs/paired_benchmark_r59/finedance/motion/013.npy",
+          "sha256": "15eb2d0b7d138b28b75464a91881c143717e5877c57f6a16698ae589e7ddf932"
+        },
+        "audio_sha256": "51b0eec9e397a9472f40b48e916be1953e5bc38cf8ebc32d66104871b28a9e29",
+        "audio": {
+          "path": "inputs/paired_benchmark_r59/finedance/music_wav/013.wav",
+          "sha256": "51b0eec9e397a9472f40b48e916be1953e5bc38cf8ebc32d66104871b28a9e29"
+        },
+        "audio_offset_frames": 0.0,
+        "shared_start": 0,
+        "clock_scope": "OFFICIAL_ARCHIVE_ID_AND_RAW_COMMON_START_NOT_AIST_WAVEFORM_CALIBRATED",
+        "root_scope": "RAW_TRANSLATION_COORDINATES_NOT_NATIVE_WORLD_ADMITTED",
+        "dancer_role": "test",
+        "shared_support": {
+          "frames": 2216,
+          "unmatched_motion_tail": 1,
+          "unmatched_audio_feature_tail": 0,
+          "unmatched_audio_energy_tail": 0,
+          "padding_frames": 0,
+          "resampling": false
+        },
+        "frames": 2216,
+        "arrays": "outputs/paired_benchmark_r59_01/data/sources/fine_013.npz",
+        "arrays_sha256": "8c45091a823fa9fb36dc0fbf8f0e7aa9cfb813e8f264c16c3c3cd07abb25e176"
+      }
+    ],
+    "excluded_prior_source_uids": [
+      "0015e899c42897c0c09e5036",
+      "00572033bcc251b5b06633e0",
+      "005735562a8435e57f302d16",
+      "00b9f3eb03942f2b4c75d8e2",
+      "024088709e019be8e29d8b3a",
+      "0257b96842874c545b7cea88",
+      "033c4d217edce5e9cbd07626",
+      "05548ccce94e669f7c061092",
+      "062462537c48db40add1905e",
+      "fine_001",
+      "fine_002",
+      "fine_003",
+      "fine_004",
+      "fine_005",
+      "fine_006",
+      "fine_007",
+      "fine_008",
+      "fine_009"
+    ],
+    "new_to_role_task": true,
+    "independent_new_music_certified": false,
+    "historical_project_exposure": "R59_OR_EARLIER_POSSIBLE",
+    "selection": "LEX_UID_GREEDY_EXCLUDE_ALL_Q01_Q02_MUSIC_RECORDING_RAW_KNOWN_CHOREOGRAPHY; NO_REPLACEMENT; R59_TRAIN_AND_GENRE_TRAIN_DIAGNOSTIC",
+    "source_manifest_sha256": "5d66076438baba182176576de91fb7ca53c7398b612db3211e1cb461cede9c38"
+  },
+  "registration_precedes_execution": true
+}
