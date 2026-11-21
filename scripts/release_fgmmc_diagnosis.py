@@ -32,11 +32,23 @@ def build(out):
             lo,hi=max(0,a-radius),min(CFG['frames'],b+radius)
             halo.append(max(0,min(hi+delta,hi)-max(lo+delta,lo))/(hi-lo))
         support.append(dict(offset_frames=delta,mean_same_index_nominal_bin_overlap=float(np.mean(nominal)),mean_same_index_TCN_receptive_upper_support_overlap=float(np.mean(halo))))
+    tie_summary=[]
+    for split in ['train','dev','holdout','fine_diagnostic']:
+        for model in CFG['models']:
+            rows=[r for r in detail if r['split']==split and r['model']==model]
+            for c,delta in enumerate(CFG['clock_offsets']):
+                maxima=[]
+                for row in rows:
+                    values=row['conditions'][c]['per_clock'];best=max(v['soft_score'] for v in values)
+                    maxima.append([v['clock_amplitude'] for v in values if abs(v['soft_score']-best)<=1e-7])
+                tie_summary.append(dict(split=split,model=model,offset_frames=delta,windows=len(rows),uniform_among_maximal_contributors=sum(0 in v for v in maxima),only_nonuniform_maximal_contributors=sum(0 not in v for v in maxima),multiway_maxima=sum(len(v)>1 for v in maxima)))
     graph=dict(unique_clocks=len(bank),unique_allowed_graphs=len(classes),
                classes=[dict(mask_sha256=h,clock_indices=ids,amplitudes=[order[k]['amplitude'] for k in ids],nominal_aggregation_prior_mass=len(ids)/len(bank)) for h,ids in classes.items()],
                all_equal_graph_scores_exact=True,checked_model_conditions=checked,
                TCN_receptive_radius_frames=radius,identity_path_support_overlap=support,
                support_scope='NOMINAL_BINS_AND_MASK_BLIND_COMPUTATIONAL_SUPPORT_BOUND_NOT_SALIENCY_OR_SEMANTIC_EQUALITY; MODEL_PATH_OVERLAP_METRIC_EXCLUDES_EXTRA_TCN_HALO',
+               contribution_max_tie_summary=tie_summary,
+               argmax_tie_warning='Original path_summary dominant_nonuniform_fraction uses first argmax; canonical order puts +4 before 0 in an identical graph class. It cannot establish nonuniform preference. Aggregate logmeanexp scores are unchanged.',
                no_reweighted_scores_or_new_rankings=True,
                interpretation='Exact-clock deduplication does not deduplicate effective matching graphs; this is representation degeneracy, not proof of the full failure cause')
     out=fresh(out)
