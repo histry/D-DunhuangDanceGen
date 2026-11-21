@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "diagnosis_script_sha256": "dcd1143ef21332cc3c56df301237bda68eab8c5273014e81bc58706bd6d52b89",
+  "export_script_sha256": "4b1ee9a2b15968bde43baf79ffde85ed3a586d02b2226a535c1aef31a6eee166",
+  "original_fgmmc_public_manifest_sha256": "fe15a0b23845e46d435fd07f042f41c2934c5a99fd89d664ea707ec9ae8813be",
+  "exit_status": {
+    "diagnosis": 0,
+    "diagnosis_replay": 0
+  },
+  "diagnosis_contract_tests": 6,
+  "model_rows": 810,
+  "registered_clock_conditions_per_model_row": 6,
+  "registered_clocks": 5,
+  "decoded_hard_paths": 24300,
+  "new_optimizer_updates": 0,
+  "new_windows": 0,
+  "new_clocks": 0,
+  "new_geometry_calls": 0,
+  "new_planner_runs": 0,
+  "qualification_unchanged": true,
+  "hard_path_arrays_kept_private_sha256": "e8b097ff3e75f773ee8f61f606b4df63a9234f8e56680013504292a40812eb98",
+  "model_weight_sha256": {
+    "Feasible": "6346898699e9269e038c6bc592673144f3629a10507c2ecc5b6c00ee99169ea5",
+    "OrdinaryPostFilter": "5d35825865c4b9be9e30d6246bda538c301c37cf5c879e7aaf2c673b31f7ecea",
+    "ShuffledPair": "2fbe11a5aadeb5cd0057acf98eba454f7fcff4d8c8ab1615b114e585d17b0ce7"
+  },
+  "causal_conclusion": "NOT_ESTABLISHED",
+  "can_route": false
+}

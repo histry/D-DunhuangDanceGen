@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "diagnostic_json_batch_user_authorized": true,
+  "public_files": {
+    "reports/fgmmc_q01_diagnosis/diagnosis_replay.json": "5c564a8fc53a874635a1a82b49afa3ee3c822c7b03844f53ee7aa85d865ef76b",
+    "reports/fgmmc_q01_diagnosis/graph_equivalence.json": "39eda9858116b4cccc16693c0823250511b39f55cf78eab7437772a60e925bfa",
+    "reports/fgmmc_q01_diagnosis/manifest.json": "627b164bcf8e9b2efe434e50e61f4eaeb42dbac9ea0e11df44a891656317e9cd",
+    "reports/fgmmc_q01_diagnosis/report.md": "c71814fc7404e43280b3c2e312d3fcfcb554ec6c3bdf8321e056138481d3bccd",
+    "reports/fgmmc_q01_diagnosis/runtime.json": "c1cb2a2e8ff72c19c699212c013117202db12aed46c3978e03e78e1a07a1eeb3",
+    "reports/fgmmc_q01_diagnosis/source_clock_breakdown.json": "8419b4a1311b5645c4199ff6597b072381c8c93a685e616987e205108bd1f2e5",
+    "reports/fgmmc_q01_diagnosis/source_manifest.json": "abf094e8444ae7f6b80d17f8861d5ef6c08b28e427c80f811d1270371ba4eb77",
+    "reports/fgmmc_q01_diagnosis/source_p0_p1.json": "0374522335ee49fde70d723391af54b366d4e13977bb41db27fe261900e9553c",
+    "reports/fgmmc_q01_diagnosis/source_p3.json": "3b5117e9307c548d8aa54a93ea764f51c542ed7452ce04fb5942e58bbdc3396a",
+    "reports/fgmmc_q01_diagnosis/source_p4.json": "8f2b20019806390c59ae80ade186fc9c3098f9eb2fe7a45f83daa7c2e050df2b",
+    "reports/fgmmc_q01_diagnosis/source_path_summary.json": "7ef14ad757eeb315ee0c0622a9aa96f7f9ae4a54227f385dd495a88cc6ce5e03",
+    "reports/fgmmc_q01_diagnosis/source_qualification.json": "85d9e9c6d3af798b9d92033b2690e6b74a1fa5d29ff45f52055ea8cbaf0e7ba8",
+    "reports/fgmmc_q01_diagnosis/source_structure.json": "b1c848777c0066acf4b8983ad1acb48022cec07e8b4d3ca55b461a7da49274be"
+  },
+  "json_files": 12,
+  "json_bytes": 16444750,
+  "private_motion_audio_weights_not_published": true,
+  "transfer_manifest_sha256": "3df48582ef9e02e8db2dccb474876adbd29a9c1a9ae948a33281540b40fb2bbd"
+}

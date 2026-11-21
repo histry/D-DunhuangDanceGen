@@ -1,0 +1,21 @@
+{
+  "status": "FROZEN_POSTHOC_DIAGNOSIS_COMPLETE",
+  "original_gate": {
+    "content_and_feasibility_gate": false,
+    "finite_pilot": true,
+    "new_unseen_music_certified": false,
+    "semantic_role_accuracy": "NOT_EVALUABLE",
+    "independent_role_records": 0,
+    "can_route": false,
+    "whole_song": "NOT_STARTED",
+    "next_step": "INDEPENDENT_CORRESPONDENCE_VALIDITY_REQUIRED"
+  },
+  "optimizer_calls": 0,
+  "new_clocks": 0,
+  "new_windows": 0,
+  "new_geometry_calls": 0,
+  "new_planner_runs": 0,
+  "causal_failure_identification": "NOT_ESTABLISHED_BY_ASSOCIATION",
+  "semantic_or_artistic_truth": "NOT_EVALUABLE",
+  "can_route": false
+}

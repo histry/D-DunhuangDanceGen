@@ -28,3 +28,7 @@ Reachability-Q01：[精确可达证书及完整139单位结构审查](../reports
 RoleAlignment-Q01：[有限事件对应资格与来源执行](../reports/paper1_role_alignment_release/report.md)。复用1–3节点可达证书、共同候选和原G1；新配对诊断仍未确认角色信息超越密度／位置控制，不进入正式路由。
 
 FGMMC-Q01：[有限合法时钟域内的对应学习先导](../reports/fgmmc_q01_release/report.md)。新随机初始化、Train-only统计、音乐／录制／已知编舞／舞者隔离；与普通学习后过滤及打乱配对比较，目标域仅Shadow。
+
+## FGMMC-Q01 冻结失败诊断
+
+[诊断报告与12份标量证据](../reports/fgmmc_q01_diagnosis/report.md)。保留有限域学习为未通过研究假设；不追加训练或扩大搜索。统一观看入口 `outputs/fgmmc_q01/index.html` 已恢复历史120秒几何基线导航（G0×9／G1×3，非本轮新生成）；Root／接触及Native24仍未知。

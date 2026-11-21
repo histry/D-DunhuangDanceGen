@@ -1,3 +1,5 @@
+- [FGMMC-Q01冻结诊断](reports/fgmmc_q01_diagnosis/report.md)：5条时钟在评分层形成3种匹配图；±8帧仅部分可吸收，Train拟合未转移至留出。原结果、全部诊断与硬路径新进程精确复现，零新增训练，路由保持关闭。
+
 - [FGMMC-Q01：有限合法时钟对应学习先导](reports/fgmmc_q01_release/report.md)：先观看三组实际模型选择，再完成三模型同预算训练、留出对照与冻结检查点推理精确复验；正式路由、整曲和艺术质量资格未升级。
 
 - [Paper1-RoleAlignment-Q01：有限事件对应与实际执行](reports/paper1_role_alignment_release/report.md)：先验收9任务双栏，再完成真实配对时钟及七方案对照；68位置／56唯一Core，G1均通过。角色评分AIST++ 0/3、FineDance 2/3，均未取得资格；独立角色与艺术质量不可评，未扩大Planner或训练。
