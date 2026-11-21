@@ -1,0 +1,64 @@
+{
+  "status": "PRIMARY_AND_SOURCE_ONLY_EXACT_GRAPH_OPTIMA_ACTUALLY_EXECUTED_AND_REPLAYED",
+  "counts": {
+    "main": {
+      "registered": 14,
+      "actual": 10,
+      "missing": 4,
+      "distinct_node_paths": 10,
+      "distinct_rotation_arrays": 10,
+      "distinct_FK_arrays": 10,
+      "bridge_materializations": 56,
+      "fewer_source_changes_than_strong": 10
+    },
+    "controls": {
+      "registered": 14,
+      "actual": 10,
+      "missing": 4,
+      "distinct_node_paths": 10,
+      "distinct_rotation_arrays": 10,
+      "distinct_FK_arrays": 10,
+      "bridge_materializations": 58,
+      "fewer_source_changes_than_strong": 10
+    }
+  },
+  "distinct_rotations_across_arms": 20,
+  "distinct_boundary_keys": 67,
+  "original_constructor_calls": 114,
+  "including_independent_replays_constructor_calls": 228,
+  "primary_extra_clock_changes": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "source_only_extra_clock_changes": [
+    3,
+    2,
+    2,
+    2,
+    3,
+    3,
+    3,
+    3,
+    2,
+    3
+  ],
+  "exact_minimum_only_in_frozen_measured_graph": true,
+  "new_unknown_edges_solved": 0,
+  "new_clocks": 0,
+  "new_candidates": 0,
+  "training_updates": 0,
+  "can_route": false,
+  "Native24": "NOT_EVALUABLE",
+  "independent_artistic_quality": "NOT_EVALUABLE",
+  "independent_music_quality": "NOT_EVALUABLE",
+  "new_music_generalization": false,
+  "continuous_domain_global_optimality": false
+}

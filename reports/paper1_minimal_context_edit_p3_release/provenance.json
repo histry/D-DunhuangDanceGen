@@ -1,0 +1,120 @@
+{
+  "science": {
+    "__init__.py": "867559e65650c0911c044b7eec359eb9645f6dc9d049b0f4ad1da8a2c4758a82",
+    "common.py": "88da5d47fbd57bd2d7e0ad625db09754057e240a6f0665442b100f9a5807cc95",
+    "execution.py": "63f3498fe89de71aecbf1d01dbee56194e1a9b911adfa4723b599e96d2202ff7",
+    "optimal.py": "ad4883d70d33f4dedb5e3ae2a44fc2c4768c100bf7d4f29f564383aa0905f615",
+    "protocol.json": "ddcb138b242109dd308b3ac26cdb50f070ced963ba44b0addf2fe51838c6a373",
+    "study.py": "3066e51ad6fe4324ceec8d0dfb23781dc7e344e8dcc4e1fe34e593596c471156",
+    "view.py": "632b8a6260d70b6d460949712f788f58877a942e025de42fe987619ddae9fb63",
+    "viewer.html": "42851fc62c7da12388d159d5631cc00703719a587a089d97a6cb23780fc3435d"
+  },
+  "protocol": {
+    "task": "Paper1-MinimalContextEdit-P3",
+    "baseline_commit": "0a7e9efa0b39d8b85e6ad176726ab3ba6caf048f",
+    "P2_stage_manifests": {
+      "main": "cd38403373cf4af72151ab4cdb0c245e9d606d41f2af4b619f452a715595f53e",
+      "controls": "4e724cfd6ed6cfa1c37668ccc89b15cf988cc94ced1d80f853ab1cb4ff49a3e3"
+    },
+    "P2_viewer_data_sha256": "cede13282c55f46c12f1af2a891d599a57a19ad605f28c420ccbebac5f2903d5",
+    "cases": "ALL14_P2_REGISTERED_FAILURE_CENTER_TASKS_IN_SAVED_ORDER; SAME_CENTER_UID_DOMAIN_AS_P1",
+    "primary": "EXACT_DAG_DP_LEXICOGRAPHIC_SOURCE_UNIT_CHANGES_THEN_SAME_UNIT_ACTUAL_Q_SHA_CHANGES_THEN_FULL_UID_PATH",
+    "source_unit_identity": [
+      "source_uid",
+      "event_uid",
+      "source_interval"
+    ],
+    "clock_identity": "ACTUAL_TARGET_FRAME_SOURCE_POSITIONS_Q_SHA256; NOT_WARP_KNOT_LIST_EQUALITY",
+    "source_only_control": "AFTER_PRIMARY_BROWSER_ACCEPTANCE; MIN_SOURCE_UNIT_CHANGES_THEN_FULL_UID_PATH; NO_WARP_SECONDARY",
+    "baseline": "EXACT_P2_SAVED_B0_MIXED_G0_G1_AND_P2_SAVED_CONSTRAINED_STRONG; DO_NOT_REBUILD_AS_ALL_G1",
+    "graph": "EXACT_P1_SONG_FILTERED_MEASURED_POLICY_ADMISSIBLE_AND_ORIGINAL_G1_NUMERIC_PASS; UNKNOWN_NEVER_ADMITTED",
+    "certificate": "COMPLETE_LAYER_NODE_BELLMAN_LABELS_AND_PREDECESSORS; VERIFY_ALL_LABELS_AND_TERMINAL_MINIMUM",
+    "expected_graph_feasible_tasks": 10,
+    "expected_graph_missing_tasks": 4,
+    "materialization_budget_per_stage": 512,
+    "workers": 4,
+    "new_unknown_edges_solved": 0,
+    "new_candidates": 0,
+    "new_clocks": 0,
+    "training_updates": 0,
+    "SDMR_used_for_selection": false,
+    "D3_used_for_selection": false,
+    "can_route": false,
+    "Native24": "NOT_EVALUABLE",
+    "independent_artistic_quality": "NOT_EVALUABLE"
+  },
+  "stage_manifests": {
+    "main": "85ed56a85f350268f26c67c642393c7429f3c81abdb68c886f13f03523c4c747",
+    "controls": "5977cc575a38baa781d5fff8fb285c818471ae23b5f8ba90081f4743d2bbc9c5"
+  },
+  "private_arrays_sha256": {
+    "main": "5e23fe9f1668414eee39e3473ef663905303e4c2161eb429db89a8fa6727e09d",
+    "controls": "bbb6181cde60a47bd30e746bc11fbac3a429240e5aea7e405679a97e7cbad258"
+  },
+  "native_source_sha256": {
+    "female_FeiTian": "50436001fab4f0aa45610b0723cebd7ee93592f3039adc133c270902b3c9fab4",
+    "female_lotus": "5cebda88bce0ff6ecbff76890f6ea9c2af237aab62a7dc95f23bb40972af8675",
+    "female_meditation": "d38f5fb33507483d4b01e69d9e3bc5e738a1ecc2d3b88856d2ba8030a82ab3df",
+    "male_meditation": "8d6c096a31d5b90f9f1021f1e2e980aab808a4aeadef174ec23f92f1423a6737",
+    "male_pipa_1": "59f14fedc9b7c89e269a7cd5f2cf23807080d9f6f980127c4b19d9487a413788",
+    "male_pipa_2": "c3aa1daac4922b6db1423a11e7c1ad98f02178232aa623116f1b6956d546f7cc",
+    "male_ribbon": "c8900b68ae468ce8c7b745bf59af61b15ee9ab83d99a4d5f279f25e11c940b2e",
+    "male_ribbon_FenHe": "16ef0128692035c3cdc54f13530f94374aac3f06888ef37aeb1ea98b207c1d3f"
+  },
+  "J_sha256": "8688bb9218a4a99dda16f80687f5ad66d957e05bd89eac8d4a9d9a0915b4454d",
+  "parents_sha256": "52d567385b152658ee9610a5e9dd794254b67d138e494ab3b23a2ae7362627b7",
+  "reference": {
+    "D2": 11.601721832266323,
+    "D3": 284.73454603204124,
+    "shoulder_wrist_lower_m": 0.1974362962380649,
+    "scope": "TRAIN_SOURCE_Q95_BODY_RELATIVE_NUMERICAL_REFERENCE_NOT_NATIVE",
+    "sources": [
+      {
+        "source_uid": "female_FeiTian",
+        "native_sha256": "50436001fab4f0aa45610b0723cebd7ee93592f3039adc133c270902b3c9fab4"
+      },
+      {
+        "source_uid": "female_lotus",
+        "native_sha256": "5cebda88bce0ff6ecbff76890f6ea9c2af237aab62a7dc95f23bb40972af8675"
+      },
+      {
+        "source_uid": "male_pipa_1",
+        "native_sha256": "59f14fedc9b7c89e269a7cd5f2cf23807080d9f6f980127c4b19d9487a413788"
+      },
+      {
+        "source_uid": "male_ribbon",
+        "native_sha256": "c8900b68ae468ce8c7b745bf59af61b15ee9ab83d99a4d5f279f25e11c940b2e"
+      }
+    ]
+  },
+  "public_algorithm_file_hashes": {
+    "src/dunhuang/research/complete_r36/core.py": "03f296665e48ca2fa2ef8a866baaf2b4b786afeb22f468b6faeedac7225e9901",
+    "src/dunhuang/research/transition_planning_r50/planning.py": "319a63a116e2d9cf235567db2a985005fd48ed2599d8f512e617eef20743e152",
+    "src/dunhuang/research/bridge_r38/geometry.py": "b1b54f1e5b2cbe12a59bf7e8007c6ba12c7d0dea07f1fe709c6289ad38396577",
+    "src/dunhuang/research/bridge_audit_r46/admission.py": "4745854ce2925e4401fef1769bff30c379559518acd74cf35ca83fe2411068bc",
+    "src/dunhuang/research/manifold_bridge_r47/geometry.py": "4646ff82c2775b32e893335abe0aac43cdd4dfbabc643d230e8985a347adea7f",
+    "src/dunhuang/research/bridge_dynamics_r48/study.py": "139067514b35012d5f360c73ac53ee5a49f9f336fa5c3dcf889d1d268c23e228",
+    "src/dunhuang/research/validation_r51/common.py": "2f1f186c668e5db98f69810bd28bd5fa5ef64f97f97f7324badcf32715173884",
+    "/home/disk/lsm/storage/DunhuangDanceGen/src/dunhuang/research/warp_coupling_r53/common.py": "dc94b1346ef986b0c4fab09eb090dceb08b46f3af0e807a940dcf4476cd88d1c",
+    "/home/disk/lsm/storage/DunhuangDanceGen/src/dunhuang/research/warp_coupling_r53/population.py": "834725440955bde6f983877bf43f9d82f8aa2e2f42ea035df516ce7e04009169",
+    "/home/disk/lsm/storage/DunhuangDanceGen/src/dunhuang/research/warp_coupling_r53/warp_lattice.py": "ff804bc34a81943f7549171af6bf3f1bfe5534d4bb2bc7df6071e30130f5e2ba",
+    "/home/disk/lsm/storage/DunhuangDanceGen/src/dunhuang/research/warp_coupling_r53/bridge_graph.py": "03e3296314c836e316fc6cd7d094fc03f9b512582449c142b98a542c928bf721",
+    "/home/disk/lsm/storage/DunhuangDanceGen/src/dunhuang/research/warp_coupling_r53/coupled_search.py": "72919b9332cc6fe13fe53e11913616d0e0a2d79b7c4585b57ea61310da0555d8",
+    "/home/disk/lsm/storage/DunhuangDanceGen/src/dunhuang/research/warp_coupling_r53/study.py": "f5be3e34a9a334f287e98c29e42429461f9698842dc2bb8210ab3689deaecd81"
+  },
+  "music": [
+    {
+      "audio_sha256": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c",
+      "structure_sha256": "7b73e0581e5ab68db730cf9fd8aa7fd31bb269b43804eeb4b95d297ee1b7e5e9"
+    },
+    {
+      "audio_sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f",
+      "structure_sha256": "73cedf9754fd61c1c6cdd227ae863b504ca921bcab0c2dae3576fcabc0a6ed56"
+    },
+    {
+      "audio_sha256": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33",
+      "structure_sha256": "3cf56237426c7bf6c5098b3c53f4fdc7f26feb890286961c9bce1db46006d507"
+    }
+  ],
+  "private_paths_motion_coordinates_rotations_tensors_audio_weights_excluded": true
+}

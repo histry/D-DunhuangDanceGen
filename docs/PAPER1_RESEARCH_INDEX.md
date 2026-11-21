@@ -36,3 +36,7 @@ FGMMC-Q01：[有限合法时钟域内的对应学习先导](../reports/fgmmc_q01
 ## Paper 1 SDMR薄集成P0
 
 [正式报告与冻结证据](../reports/paper1_sdmr_integration_p0_release/report.md)。统一入口为`src/dunhuang/paper1/run.py`，实际整曲／来源／Warp／Shadow／局部G1证据共用身份；不修改旧科学模块，不训练或正式学习选路。
+
+## MinimalContextEdit-P3
+
+[正式报告与授权标量证据](../reports/paper1_minimal_context_edit_p3_release/report.md)。固定已测图、原音乐槽和中心来源，以精确来源／时钟字典序DP执行全部14任务；主方案与Source-only各10条实际整曲、各4缺失。科学代码f4e4ea9，独立精确复验，无新增UNKNOWN边、训练或艺术质量资格。

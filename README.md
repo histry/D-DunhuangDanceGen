@@ -1,3 +1,5 @@
+- [P3：有限已测图内最少上下文修改与Source-only对照](reports/paper1_minimal_context_edit_p3_release/report.md)：10个实际整曲任务由强顺序6–8处换源降为图内最少2–3处；保留失败、完整证书与独立重放，不宣称艺术质量收益。
+
 - [Paper1-SDMR-Integration-P0：整曲槽位与只读双阶段评分](reports/paper1_sdmr_integration_p0_release/report.md)：三首冻结整曲、39槽／622候选；先观看再同预算对照与精确重放。学习分数不选路，唯一局部G1连接1060/1112通过；无新增训练或新全图规划。
 
 - [FGMMC-Q01冻结诊断](reports/fgmmc_q01_diagnosis/report.md)：5条时钟在评分层形成3种匹配图；±8帧仅部分可吸收，Train拟合未转移至留出。原结果、全部诊断与硬路径新进程精确复现，零新增训练，路由保持关闭。

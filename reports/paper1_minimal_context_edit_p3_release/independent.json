@@ -1,0 +1,237 @@
+{
+  "replays": {
+    "main": {
+      "status": "PASS",
+      "fresh_process": true,
+      "all_certificates_rotations_FK_bridges_metrics_and_viewer_exact": true,
+      "optimizer_calls": 0,
+      "new_unknown_edges_solved": 0,
+      "source_manifest_sha256": "85ed56a85f350268f26c67c642393c7429f3c81abdb68c886f13f03523c4c747",
+      "can_route": false
+    },
+    "controls": {
+      "status": "PASS",
+      "fresh_process": true,
+      "all_certificates_rotations_FK_bridges_metrics_and_viewer_exact": true,
+      "optimizer_calls": 0,
+      "new_unknown_edges_solved": 0,
+      "source_manifest_sha256": "5977cc575a38baa781d5fff8fb285c818471ae23b5f8ba90081f4743d2bbc9c5",
+      "can_route": false
+    }
+  },
+  "browser": {
+    "passed": true,
+    "main_result_sha256": "a967fb845adc4b3ec130366bc2937e656e7a6604e005873f2c52d3b0ac4da252",
+    "scope": "ACTUAL_BROWSER_ENGINEERING_ACCEPTANCE_NOT_ARTISTIC_QUALITY",
+    "cases_checked": 14,
+    "missing_paths_retained": 4,
+    "three_panels_common_audio_clock": true,
+    "play_pause_half_speed": true,
+    "seek_frame_step_and_native_audio_linked": true,
+    "all_three_song_last_frames": true,
+    "raw_source_separate_30fps_clock": true,
+    "observations": {
+      "cases": [
+        {
+          "error": "",
+          "label": "1 · 音乐2 槽1 · male_pipa_2 · 实际整曲",
+          "maxFrame": "3600",
+          "minimal": "来源原语变化 2；同来源时钟变化 0",
+          "status": "总来源变化（含指定中心）6 → 2；排除中心后上下文变化 1；仅限已测图内最优",
+          "strong": "来源原语变化 6；同来源时钟变化 0"
+        },
+        {
+          "error": "",
+          "label": "2 · 音乐2 槽9 · male_pipa_2 · 无完整路径",
+          "maxFrame": "3600",
+          "minimal": "无完整路径",
+          "status": "无完整路径；局部也未恢复；UNKNOWN边未补为通过",
+          "strong": "无完整路径"
+        },
+        {
+          "error": "",
+          "label": "3 · 音乐3 槽6 · male_pipa_2 · 无完整路径",
+          "maxFrame": "3597",
+          "minimal": "无完整路径",
+          "status": "无完整路径；该中心局部有见证，但整曲仍无见证；UNKNOWN边未补为通过",
+          "strong": "无完整路径"
+        },
+        {
+          "error": "",
+          "label": "4 · 音乐3 槽8 · male_pipa_2 · 无完整路径",
+          "maxFrame": "3597",
+          "minimal": "无完整路径",
+          "status": "无完整路径；局部也未恢复；UNKNOWN边未补为通过",
+          "strong": "无完整路径"
+        },
+        {
+          "error": "",
+          "label": "5 · 音乐3 槽11 · male_pipa_2 · 实际整曲",
+          "maxFrame": "3597",
+          "minimal": "来源原语变化 2；同来源时钟变化 0",
+          "status": "总来源变化（含指定中心）7 → 2；排除中心后上下文变化 1；仅限已测图内最优",
+          "strong": "来源原语变化 7；同来源时钟变化 2"
+        },
+        {
+          "error": "",
+          "label": "6 · 音乐4 槽0 · male_pipa_2 · 实际整曲",
+          "maxFrame": "3600",
+          "minimal": "来源原语变化 2；同来源时钟变化 0",
+          "status": "总来源变化（含指定中心）6 → 2；排除中心后上下文变化 1；仅限已测图内最优",
+          "strong": "来源原语变化 6；同来源时钟变化 0"
+        },
+        {
+          "error": "",
+          "label": "7 · 音乐4 槽4 · male_ribbon_FenHe · 实际整曲",
+          "maxFrame": "3600",
+          "minimal": "来源原语变化 3；同来源时钟变化 0",
+          "status": "总来源变化（含指定中心）8 → 3；排除中心后上下文变化 2；仅限已测图内最优",
+          "strong": "来源原语变化 8；同来源时钟变化 0"
+        },
+        {
+          "error": "",
+          "label": "8 · 音乐4 槽4 · male_meditation · 实际整曲",
+          "maxFrame": "3600",
+          "minimal": "来源原语变化 2；同来源时钟变化 0",
+          "status": "总来源变化（含指定中心）8 → 2；排除中心后上下文变化 1；仅限已测图内最优",
+          "strong": "来源原语变化 8；同来源时钟变化 0"
+        },
+        {
+          "error": "",
+          "label": "9 · 音乐4 槽4 · female_meditation · 实际整曲",
+          "maxFrame": "3600",
+          "minimal": "来源原语变化 2；同来源时钟变化 0",
+          "status": "总来源变化（含指定中心）8 → 2；排除中心后上下文变化 1；仅限已测图内最优",
+          "strong": "来源原语变化 8；同来源时钟变化 0"
+        },
+        {
+          "error": "",
+          "label": "10 · 音乐4 槽4 · male_pipa_2 · 无完整路径",
+          "maxFrame": "3600",
+          "minimal": "无完整路径",
+          "status": "无完整路径；局部也未恢复；UNKNOWN边未补为通过",
+          "strong": "无完整路径"
+        },
+        {
+          "error": "",
+          "label": "11 · 音乐4 槽8 · male_ribbon_FenHe · 实际整曲",
+          "maxFrame": "3600",
+          "minimal": "来源原语变化 2；同来源时钟变化 0",
+          "status": "总来源变化（含指定中心）7 → 2；排除中心后上下文变化 1；仅限已测图内最优",
+          "strong": "来源原语变化 7；同来源时钟变化 0"
+        },
+        {
+          "error": "",
+          "label": "12 · 音乐4 槽8 · male_meditation · 实际整曲",
+          "maxFrame": "3600",
+          "minimal": "来源原语变化 2；同来源时钟变化 0",
+          "status": "总来源变化（含指定中心）7 → 2；排除中心后上下文变化 1；仅限已测图内最优",
+          "strong": "来源原语变化 7；同来源时钟变化 0"
+        },
+        {
+          "error": "",
+          "label": "13 · 音乐4 槽8 · female_meditation · 实际整曲",
+          "maxFrame": "3600",
+          "minimal": "来源原语变化 3；同来源时钟变化 0",
+          "status": "总来源变化（含指定中心）7 → 3；排除中心后上下文变化 2；仅限已测图内最优",
+          "strong": "来源原语变化 7；同来源时钟变化 0"
+        },
+        {
+          "error": "",
+          "label": "14 · 音乐4 槽8 · male_pipa_2 · 实际整曲",
+          "maxFrame": "3600",
+          "minimal": "来源原语变化 2；同来源时钟变化 0",
+          "status": "总来源变化（含指定中心）7 → 2；排除中心后上下文变化 1；仅限已测图内最优",
+          "strong": "来源原语变化 7；同来源时钟变化 0"
+        }
+      ],
+      "play": {
+        "clock": "全局音乐帧 107/3600 · 3.567 秒",
+        "error": "",
+        "paused": false,
+        "rate": 0.5,
+        "time": 3.589638
+      },
+      "seek": {
+        "clock": "全局音乐帧 1470/3600 · 49.000 秒",
+        "frame": "1470",
+        "time": 49
+      },
+      "next": {
+        "frame": "1471",
+        "time": 49.033333
+      },
+      "previous": {
+        "frame": "1470",
+        "time": 49
+      },
+      "rawActive": {
+        "audioPaused": true,
+        "audioTime": 49,
+        "mainFrame": "1470",
+        "rawClock": "来源帧 2708 · 局部 7.833 秒 · 原速",
+        "rawFrame": "235"
+      },
+      "rawStep": {
+        "audioTime": 49,
+        "mainFrame": "1470",
+        "rawClock": "来源帧 2503 · 局部 1.000 秒 · 原速"
+      },
+      "songEnds": [
+        {
+          "clock": "全局音乐帧 3600/3600 · 120.000 秒",
+          "error": "",
+          "frame": "3600",
+          "label": "1 · 音乐2 槽1 · male_pipa_2 · 实际整曲",
+          "time": 120
+        },
+        {
+          "clock": "全局音乐帧 3597/3597 · 119.900 秒",
+          "error": "",
+          "frame": "3597",
+          "label": "5 · 音乐3 槽11 · male_pipa_2 · 实际整曲",
+          "time": 119.9
+        },
+        {
+          "clock": "全局音乐帧 3600/3600 · 120.000 秒",
+          "error": "",
+          "frame": "3600",
+          "label": "6 · 音乐4 槽0 · male_pipa_2 · 实际整曲",
+          "time": 120
+        }
+      ],
+      "nativeAudioSeek": {
+        "clock": "全局音乐帧 913/3597 · 30.433 秒",
+        "frame": "913",
+        "time": 30.448452
+      },
+      "consoleErrors": [],
+      "final": {
+        "clock": "全局音乐帧 2400/3600 · 80.000 秒",
+        "error": "",
+        "status": "总来源变化（含指定中心）6 → 2；排除中心后上下文变化 1；仅限已测图内最优"
+      }
+    },
+    "can_route": false
+  },
+  "runtime_source_identity": {
+    "controls": {
+      "expected_GitHub_main_independently_verified_by_local_ls_remote": "f4e4ea9b9c22125c3076bd965341ec46d19c597c",
+      "server_HEAD": "f4e4ea9b9c22125c3076bd965341ec46d19c597c",
+      "tracked_worktree_clean": true,
+      "source": "PREVIOUSLY_FETCHED_IDENTICAL_FROZEN_COMMIT",
+      "current_server_fetch_tls_failed": true,
+      "tls_verification_disabled": false,
+      "HTTP11_retry_failed": true
+    },
+    "replay-controls": {
+      "expected_GitHub_main_independently_verified_by_local_ls_remote": "f4e4ea9b9c22125c3076bd965341ec46d19c597c",
+      "server_HEAD": "f4e4ea9b9c22125c3076bd965341ec46d19c597c",
+      "tracked_worktree_clean": true,
+      "source": "PREVIOUSLY_FETCHED_IDENTICAL_FROZEN_COMMIT",
+      "current_server_fetch_tls_failed": true,
+      "tls_verification_disabled": false,
+      "HTTP11_retry_failed": true
+    }
+  }
+}
