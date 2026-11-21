@@ -11,6 +11,9 @@ def ties(values,indices,maximize=True):
 def build():
     p=read(ROOT/'preview/result.json');c=read(ROOT/'controls/result.json');check_seal(ROOT/'preview');check_seal(ROOT/'controls')
     for stage in ['preview','controls']:assert read(ROOT/'receipts'/('independent_'+stage+'.json'))['status']=='PASS'
+    unique_edges={x['cache_key']:x for r in c['slots'] for group in r['connections'] for x in group}
+    chart_trials=sum(len(x['proof']['guards']['G1']['trials']) for x in unique_edges.values())
+    assert len(unique_edges)==c['new_geometry_calls'] and chart_trials<=3*2496
     target=fresh('reports/paper1_sdmr_integration_p0_release');table=[];songs=[];selection=[];groups=Counter();connection_counts=Counter();mapped=[];output=[];motion_change=[]
     for song in p['songs']:
         songs.append(dict(song=song['song'],frames=song['frames'],regions=song['regions'],audio_sha256=song['audio']['audio_sha256'],music_catalog_sha256=song['music_catalog_sha256'],
@@ -38,7 +41,7 @@ def build():
     write(target/'candidates.json',table)
     write(target/'selections.json',selection)
     write(target/'readouts.json',c)
-    write(target/'summary.json',dict(selection_counts=dict(groups),local_connection_counts=dict(connection_counts),actual_geometry_calls=c['new_geometry_calls'],geometry_requests=c['geometry_requests'],
+    write(target/'summary.json',dict(selection_counts=dict(groups),local_connection_counts=dict(connection_counts),actual_geometry_calls=c['new_geometry_calls'],geometry_requests=c['geometry_requests'],actual_chart_trials=chart_trials,chart_trial_upper_bound=3*2496,
           mapped_source_anchor_error_frames=stats(mapped),redetected_output_event_error_frames=stats(output),error_scope='ALL_UNVALIDATED_PROPOSALS_NOT_EXECUTED_TARGET_CONSTRAINTS_OR_ARTISTIC_TRUTH',
           source_and_output_event_error_have_different_missingness=True,score_change_is_not_quality_gain=True,stage_A='GLOBAL_MEAN_LOCAL_TOKENS_NOT_TRAINED_GLOBAL_HEAD',
           official_path_changed=False,new_planner_runs=0,new_training_updates=0,artistic_quality='NOT_EVALUABLE',native24='NOT_EVALUABLE',can_route=False))

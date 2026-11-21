@@ -1,6 +1,5 @@
 """Delivery only: reuse the accepted body media, add scalar six-method controls."""
-import json,shutil
-from pathlib import Path
+import json
 from dunhuang.paper1.contracts import ROOT,read,write,sha,fresh,check_seal
 
 def build():
