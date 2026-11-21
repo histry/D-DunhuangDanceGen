@@ -34,13 +34,13 @@ def run(replay=False):
     mark="c.stroke()}c.fillStyle='#276b89';";assert mark in t
     t=t.replace(mark,"c.stroke()}let ax=D.items[current].axes_by_variant?.[vi]?.[f];if(ax){for(let k=0;k<2;k++)for(let j=0;j<3;j++){let e=ax[k][j],px=150+115*(e[0]+.35*e[2]),py=180-115*(e[1]-.15*e[2]);c.strokeStyle=['#ed7d79','#8edb89','#82b8f0'][j];c.beginPath();c.moveTo(...p[20+k]);c.lineTo(px,py);c.stroke()}}c.fillStyle='#276b89';")
     # Display the recorded wrist residual, without changing the underlying poses.
-    t=t.replace("$('evidenceText').textContent=x.evidence||", "$('evidenceText').textContent=(x.wrist_error_degrees?'当前腕部相对来源旋转差 '+x.wrist_error_degrees[k][Math.min(frame,x.frames-1)].toFixed(3)+'°； ':'')+(x.evidence||'')||")
+    t=t.replace("$('evidenceText').textContent=x.evidence||", "$('evidenceText').textContent=(x.wrist_error_degrees?'当前腕关节局部旋转差（方向轴包含父关节旋转） '+x.wrist_error_degrees[k][Math.min(frame,x.frames-1)].toFixed(3)+'°； ':'')+(x.evidence||'')||")
     payload=dict(items=items,parents=ctx['parents'].tolist(),anonymous=False,task='naturalness',variant_select=True,intro='原始扰动未更换：腕部局部旋转不会改变身体22关节中的末端中心。这里显示实际旋转推导的腕部方向轴与SO(3)差值；同时保留原关节中心视图。')
     page=t.replace('__TITLE__','末端方向与冻结写域诊断').replace('__DATA__',json.dumps(payload,ensure_ascii=False,separators=(',',':')));(dest/'orientation.html').write_bytes(page.encode())
     if replay:
         original=ROOT/'observability';diff=[n for n in ['edit_support.json','orientation.html'] if sha(dest/n)!=sha(original/n)];assert not diff,diff;write(ROOT/'receipts/observability_replay.json',dict(status='PASS',differences=diff,scope='POST_HOC_DERIVED_SCALARS_AND_VIEW_ONLY'))
     else:
         out=root/'viewer';(out/'orientation.html').write_bytes((dest/'orientation.html').read_bytes());p=out/'protocol.json';m=read(p);m['files']['orientation.html']=dict(bytes=(out/'orientation.html').stat().st_size,sha256=sha(out/'orientation.html'));m['orientation_diagnostic']='POST_HOC_READONLY_NO_SCIENTIFIC_PRODUCER_CHANGE';write(p,m)
-        p=ROOT/'index.html';s=p.read_text(encoding='utf8');s=s.replace('</ol>','<li><a href="controls/viewer/orientation.html">腕部方向与完整编辑读域诊断（事后只读）</a></li></ol>');p.write_bytes(s.encode())
+        p=ROOT/'index.html';s=p.read_text(encoding='utf8');s=s if 'controls/viewer/orientation.html' in s else s.replace('</ol>','<li><a href="controls/viewer/orientation.html">腕部方向与完整编辑读域诊断（事后只读）</a></li></ol>');p.write_bytes(s.encode())
     print('AUTO_EVAL_ORIENTATION_DIAGNOSTIC',len(results),'REPLAY',replay,flush=True)
 if __name__=='__main__':run('--replay' in sys.argv)
