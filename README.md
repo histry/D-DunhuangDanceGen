@@ -1,3 +1,5 @@
+- [Paper1-AutoEval-Q02：完整候选时钟与可观测性资格](reports/paper1_auto_eval_q02_release/report.md)：AIST++ Top-1 3/6、FineDance 1/6，均未通过冻结门槛；84个控制位置与完整SO(3)读域完成精确复验。未启动联合Planner或新训练。
+
 # DunhuangDanceGen
 
 最新交付：[自动评价效度报告](reports/paper1_auto_eval_release/report.md)。统一本机观看：`D:/DunhuangDanceGen/outputs/paper1_auto_eval_01/index.html`；7项有效不同／4项相同控制／7项不可评，48个冻结验证位置，完整独立重放一致。AIST++历史Train有时钟线索，FineDance未确认稳定优势；感知质量仍不可评。

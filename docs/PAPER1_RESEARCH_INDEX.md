@@ -18,3 +18,5 @@
 旧README各轮条目作为历史交付索引保留；本页按当前研究职责导航，不重写冻结结果。
 
 自动评价入口：`src/dunhuang/research/paper1_auto_eval`。改编BAS、只读音乐证据、真实配对非循环错位与受控运动干预各自报告；不改变旧Uniform／GTW／G1，未准入MotionCritic、BAP、PFC或Native24。
+
+Q02：[完整候选音乐时钟及运动可观测性资格](../reports/paper1_auto_eval_q02_release/report.md)。冻结自动评价仍未取得跨域准入；历史人口不作为新音乐泛化，来源×时间机会保持登记，联合决策尚未执行。

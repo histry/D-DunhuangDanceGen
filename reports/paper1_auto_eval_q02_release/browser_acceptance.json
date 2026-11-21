@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "preview_manifest_sha256": "f36d590e1a07719d3decc7e68f2502194ee9ab11c512ad3e060598f803bd4ccd",
+  "browser": "IAB_ACTUAL_INTERACTION",
+  "checks": [
+    "6 source options; 14 registered positions per source",
+    "wristNoise0.05; seek70 and next71 at2.367s",
+    "BeatOscillation0.05; half speed playback advances71 to92",
+    "Static; sourceFeiTian; seek100 at3.333s",
+    "BeatOscillation0.05 next101 at3.367s; actual wrist glyphs",
+    "shared audio pause and native controls visible"
+  ],
+  "human_quality_evaluation": false,
+  "preceded_scoring": true,
+  "files": 8,
+  "total_bytes": 25886998
+}

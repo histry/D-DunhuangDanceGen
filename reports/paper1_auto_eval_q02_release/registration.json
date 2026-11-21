@@ -1,0 +1,561 @@
+{
+  "protocol": {
+    "schema": "PAPER1_AUTO_EVAL_Q02_V1",
+    "parent_commit": "b1259d13a5ac1947337c75e1321d925c4f844c4c",
+    "parent_controls_manifest": "65c971713b2df43154fe27ff5646e701bba1403b7960553a5444f5731739043d",
+    "parent_preview_manifest": "1ebb89d6bd734f9afa86172d40667ec6264c5a0e4ec9e56fa793e76d644c0173",
+    "groups_per_domain": 6,
+    "roles": {
+      "AIST++": "train",
+      "FineDance": "genre_train_diagnostic"
+    },
+    "selection": "LEX_SOURCE_UID_GREEDY_EXCLUDE_Q01_AUDIO_MUSIC_GROUP_RECORDING_RAW_AND_KNOWN_CHOREOGRAPHY; UNIQUE_WITHIN_NEW_SET; NO_REPLACEMENT_AFTER_SCORES",
+    "historical_exposure": "R59_AND_EARLIER_PROJECT_EXPOSURE_POSSIBLE; NEW_TO_Q01_BAS_ONLY",
+    "independent_generalization_certified": false,
+    "offsets": [
+      -0.5,
+      -0.25,
+      0,
+      0.25,
+      0.5
+    ],
+    "primary_stream": "beat_this:beat",
+    "primary_metric": "BAS3D22_RELATIVE_ADAPTED_MUSIC_TO_MOTION",
+    "beat_model": "FROZEN_MUSIC_EVENTS_FINAL0_MINIMAL_50HZ_FLOAT32",
+    "smoothing_sigma_frames": 5,
+    "matching_sigma_seconds": 0.1,
+    "periodic_grid_phases": [
+      0,
+      0.25,
+      0.5,
+      0.75
+    ],
+    "bootstrap_draws": 3000,
+    "bootstrap_seed": 77002,
+    "tie_tolerance": 1e-12,
+    "doses_rad": [
+      0.0125,
+      0.025,
+      0.05
+    ],
+    "edit_guard_frames": 4,
+    "envelope_seconds": 0.5,
+    "synthetic_beat_frequency": "HALF_OF_ASSIGNED_MUSIC_BEAT_FREQUENCY; NO_SCORE_SEARCH",
+    "static_control": "FIRST_SOURCE_POSE_ALL_FRAMES; SYNTHETIC_NOT_AN_ARTISTIC_ERROR_LABEL",
+    "metrics": [
+      "FK_D1_D2_D3_Q95",
+      "FK_D3_EDIT_STENCIL_MAX",
+      "SO3_SPEED_ACCEL_Q95",
+      "SO3_ACCEL_EDIT_STENCIL_MAX",
+      "WRIST_ORIENTATION",
+      "LONGEST_LOW_ACTIVITY",
+      "GTWLocal",
+      "BAS",
+      "DENSITY_NULL_AND_ENERGY_BASELINES"
+    ],
+    "qualification": "ALL_REQUESTED_GROUPS_SUPPORTED; PER_DOMAIN_PAIRED_BOOTSTRAP_LOWER_TOP1_BAS_MINUS_ENERGY_AND_EQUAL_DENSITY_GRID_PHASE0_ABOVE_ZERO; STILL_NOT_ARTISTIC_VALIDITY",
+    "MotionCritic": "SHADOW_NOT_RUN_INPUT_CONTRACT_UNVERIFIED",
+    "human_records": 0,
+    "training_steps": 0,
+    "planner_calls": 0,
+    "new_G1_calls": 0,
+    "can_route": false,
+    "joint_decision": "NOT_STARTED_UNTIL_QUALIFICATION"
+  },
+  "code": {
+    "q02_run.py": "b47e6d263c3f02629868fde73c025d3f8270d75005768584744244eee7308fd2",
+    "q02_motion.py": "d84fc9de137b8c5d024983eba35d5aaa538d8b5e6f3ccc73daae186f38e46d67",
+    "q02_protocol.json": "36ce5cb53cb7821018a04699189f7a8a197429458b05600649ef1a6e483455a2",
+    "q02_view.py": "99f4a60d6685f9c3c0297b29360b3814da3ee07be78df8444d8b7ee4a0ef2db1",
+    "q02_common.py": "c2db1f4a00516cc7efb8e8b6c7a3df191f017215feaa61f35aadd1121dd612e5",
+    "q02_music.py": "807e95bc4bcf9fccca5f74a726e16e02a8af39112f51628bde4d680aee28e3e9",
+    "common.py": "61fd35f7b85a0fcfa3b97f5ac59e47394161f9b1643b7b4b785fe895a498b238",
+    "music.py": "e7894bbf0fc34f3f70a9054f7b6dc3d9ee8f00c719f5114bf04da29a55147777",
+    "experiment.py": "0459c9031404d4550044babbcbdeb8e298b9b05d771edae76a3013d770b0cea2",
+    "controls.py": "11cec7c6ec774fb78de208c55ecaee335e054a8fcaa92f97db1e495f83ed86a7",
+    "observability.py": "d35c5c414c603ff8f5c8b8d8f905f39bb84f1e4274d8975b2aca1fa511279784",
+    "view.py": "45249a01d028a1ec52b5d7adb0574d667dacd7eedecb1b06042b8f6b89a3ab4e"
+  },
+  "parents": {
+    "controls": "65c971713b2df43154fe27ff5646e701bba1403b7960553a5444f5731739043d",
+    "preview": "1ebb89d6bd734f9afa86172d40667ec6264c5a0e4ec9e56fa793e76d644c0173"
+  },
+  "paired": {
+    "sources": [
+      {
+        "source_uid": "0015e899c42897c0c09e5036",
+        "dataset": "AIST++",
+        "role": "train",
+        "group": "aist_publisher_track:mPO5",
+        "recording_uid": "aist_capture:gPO_sBM_cAll_d12_mPO5_ch10",
+        "choreography_uid": "aist_basic:gPO:ch10",
+        "raw_motion_sha256": "d6016a238446f0db6ea84a26b7fc729dc6d3014a239a42e40a0fc7e8cd621683",
+        "raw_motion": {
+          "path": "/home/disk/lsm/storage/DunhuangDanceGen/assets/datasets/aistpp/annotations/motions/gPO_sBM_cAll_d12_mPO5_ch10.pkl",
+          "sha256": "d6016a238446f0db6ea84a26b7fc729dc6d3014a239a42e40a0fc7e8cd621683"
+        },
+        "audio_sha256": "1703e669553f166a049d21abed9ebc0508dba493fd13ae519c00c407c273f617",
+        "audio": {
+          "path": "/home/disk/lsm/storage/DunhuangDanceGen/assets/datasets/aistpp/music/mPO5.wav",
+          "sha256": "1703e669553f166a049d21abed9ebc0508dba493fd13ae519c00c407c273f617"
+        },
+        "audio_offset_frames": 0.0,
+        "shared_start": 0,
+        "clock_scope": "VERIFIED_OFFICIAL_SOURCE_CLOCK",
+        "clock_proof": {
+          "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/aist_calibration_01/calibration/gPO_sBM_cAll_d12_mPO5_ch10.json",
+          "sha256": "4983e4ed07bb8428d1794c89c7a3a0e3ecc684cf181e46ff2b759852d6a5d0ff"
+        },
+        "root_scope": "OBSERVED_FITTED_SOURCE_TRANSLATION_NOT_CONTACT_TRUTH",
+        "shared_support": {
+          "frames": 222,
+          "unmatched_motion_tail": 0,
+          "unmatched_audio_feature_tail": 0,
+          "unmatched_audio_energy_tail": 0,
+          "padding_frames": 0,
+          "resampling": false
+        },
+        "frames": 222,
+        "arrays": "outputs/paired_benchmark_r59_01/data/sources/0015e899c42897c0c09e5036.npz",
+        "arrays_sha256": "14696a8373d6491ab2f0aea875451134a3b4765b8857f26287053aa236a5f23c"
+      },
+      {
+        "source_uid": "00572033bcc251b5b06633e0",
+        "dataset": "AIST++",
+        "role": "train",
+        "group": "aist_publisher_track:mHO3",
+        "recording_uid": "aist_capture:gHO_sBM_cAll_d19_mHO3_ch02",
+        "choreography_uid": "aist_basic:gHO:ch02",
+        "raw_motion_sha256": "3ab912710c1a295eccbcb968caa175bace04f351b2afb74cd09bb6bb9bf6aab0",
+        "raw_motion": {
+          "path": "/home/disk/lsm/storage/DunhuangDanceGen/assets/datasets/aistpp/annotations/motions/gHO_sBM_cAll_d19_mHO3_ch02.pkl",
+          "sha256": "3ab912710c1a295eccbcb968caa175bace04f351b2afb74cd09bb6bb9bf6aab0"
+        },
+        "audio_sha256": "cc3b7934a746ce28161133f1c29d51bb7c6546bb542db946fb952d66f54df275",
+        "audio": {
+          "path": "/home/disk/lsm/storage/DunhuangDanceGen/assets/datasets/aistpp/music/mHO3.wav",
+          "sha256": "cc3b7934a746ce28161133f1c29d51bb7c6546bb542db946fb952d66f54df275"
+        },
+        "audio_offset_frames": 0.0,
+        "shared_start": 0,
+        "clock_scope": "VERIFIED_OFFICIAL_SOURCE_CLOCK",
+        "clock_proof": {
+          "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/aist_calibration_01/calibration/gHO_sBM_cAll_d19_mHO3_ch02.json",
+          "sha256": "1bbae458cfcbb68c22c06060cc2e753d19b017a3f95452f5ad0329b548a4f5c3"
+        },
+        "root_scope": "OBSERVED_FITTED_SOURCE_TRANSLATION_NOT_CONTACT_TRUTH",
+        "shared_support": {
+          "frames": 230,
+          "unmatched_motion_tail": 0,
+          "unmatched_audio_feature_tail": 0,
+          "unmatched_audio_energy_tail": 0,
+          "padding_frames": 0,
+          "resampling": false
+        },
+        "frames": 230,
+        "arrays": "outputs/paired_benchmark_r59_01/data/sources/00572033bcc251b5b06633e0.npz",
+        "arrays_sha256": "1439a15a9708f63be78064691bbb4bdc1b042d085a8c16db257f40530885ce05"
+      },
+      {
+        "source_uid": "005735562a8435e57f302d16",
+        "dataset": "AIST++",
+        "role": "train",
+        "group": "aist_publisher_track:mBR5",
+        "recording_uid": "aist_capture:gBR_sBM_cAll_d06_mBR5_ch08",
+        "choreography_uid": "aist_basic:gBR:ch08",
+        "raw_motion_sha256": "9ca98c23091ee4931cd82037f4ff5e747f3bb8006b164e57d11e1cb750312ddc",
+        "raw_motion": {
+          "path": "/home/disk/lsm/storage/DunhuangDanceGen/assets/datasets/aistpp/annotations/motions/gBR_sBM_cAll_d06_mBR5_ch08.pkl",
+          "sha256": "9ca98c23091ee4931cd82037f4ff5e747f3bb8006b164e57d11e1cb750312ddc"
+        },
+        "audio_sha256": "c6b02afd39a191361282323192c81968242dd0b9c09fed01eea545e38a77f675",
+        "audio": {
+          "path": "/home/disk/lsm/storage/DunhuangDanceGen/assets/datasets/aistpp/music/mBR5.wav",
+          "sha256": "c6b02afd39a191361282323192c81968242dd0b9c09fed01eea545e38a77f675"
+        },
+        "audio_offset_frames": 0.0,
+        "shared_start": 0,
+        "clock_scope": "VERIFIED_OFFICIAL_SOURCE_CLOCK",
+        "clock_proof": {
+          "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/aist_calibration_01/calibration/gBR_sBM_cAll_d06_mBR5_ch08.json",
+          "sha256": "291fb2eb3b7a79cd4cfe73415c635bcae39364b372ff1350e100e9f5c5f6a413"
+        },
+        "root_scope": "OBSERVED_FITTED_SOURCE_TRANSLATION_NOT_CONTACT_TRUTH",
+        "shared_support": {
+          "frames": 222,
+          "unmatched_motion_tail": 0,
+          "unmatched_audio_feature_tail": 0,
+          "unmatched_audio_energy_tail": 0,
+          "padding_frames": 0,
+          "resampling": false
+        },
+        "frames": 222,
+        "arrays": "outputs/paired_benchmark_r59_01/data/sources/005735562a8435e57f302d16.npz",
+        "arrays_sha256": "f32184463f7eb262c37bfaf85d4f92a78831ffbc025ff73d6d999a9cd17dedb6"
+      },
+      {
+        "source_uid": "00b9f3eb03942f2b4c75d8e2",
+        "dataset": "AIST++",
+        "role": "train",
+        "group": "aist_publisher_track:mHO5",
+        "recording_uid": "aist_capture:gHO_sBM_cAll_d20_mHO5_ch09",
+        "choreography_uid": "aist_basic:gHO:ch09",
+        "raw_motion_sha256": "9d72e85d4c902d869af15287de3ae3c10b6a431f0d961df66928581f5a6c9afc",
+        "raw_motion": {
+          "path": "/home/disk/lsm/storage/DunhuangDanceGen/assets/datasets/aistpp/annotations/motions/gHO_sBM_cAll_d20_mHO5_ch09.pkl",
+          "sha256": "9d72e85d4c902d869af15287de3ae3c10b6a431f0d961df66928581f5a6c9afc"
+        },
+        "audio_sha256": "96c613b68d0b341b24e5f56687dd9e89f696325fe39a46270d2e8738a42e8025",
+        "audio": {
+          "path": "/home/disk/lsm/storage/DunhuangDanceGen/assets/datasets/aistpp/music/mHO5.wav",
+          "sha256": "96c613b68d0b341b24e5f56687dd9e89f696325fe39a46270d2e8738a42e8025"
+        },
+        "audio_offset_frames": 0.0,
+        "shared_start": 0,
+        "clock_scope": "VERIFIED_OFFICIAL_SOURCE_CLOCK",
+        "clock_proof": {
+          "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/aist_calibration_01/calibration/gHO_sBM_cAll_d20_mHO5_ch09.json",
+          "sha256": "792d534d0bc3e8d55794121a52ab5ce4646c239b1251ee150fb20af28c075a12"
+        },
+        "root_scope": "OBSERVED_FITTED_SOURCE_TRANSLATION_NOT_CONTACT_TRUTH",
+        "shared_support": {
+          "frames": 213,
+          "unmatched_motion_tail": 0,
+          "unmatched_audio_feature_tail": 0,
+          "unmatched_audio_energy_tail": 0,
+          "padding_frames": 0,
+          "resampling": false
+        },
+        "frames": 213,
+        "arrays": "outputs/paired_benchmark_r59_01/data/sources/00b9f3eb03942f2b4c75d8e2.npz",
+        "arrays_sha256": "7a6bb4d30ae443519a4b8cc60397f304f6d3c59a545860e70771e16ded9ab249"
+      },
+      {
+        "source_uid": "024088709e019be8e29d8b3a",
+        "dataset": "AIST++",
+        "role": "train",
+        "group": "aist_publisher_track:mJS5",
+        "recording_uid": "aist_capture:gJS_sBM_cAll_d03_mJS5_ch04",
+        "choreography_uid": "aist_basic:gJS:ch04",
+        "raw_motion_sha256": "511c318904321f6dc948508800c8439b05da0e8795b820f9317764f44024b8c4",
+        "raw_motion": {
+          "path": "/home/disk/lsm/storage/DunhuangDanceGen/assets/datasets/aistpp/annotations/motions/gJS_sBM_cAll_d03_mJS5_ch04.pkl",
+          "sha256": "511c318904321f6dc948508800c8439b05da0e8795b820f9317764f44024b8c4"
+        },
+        "audio_sha256": "abc355734882ca2d2c1efb90b2f648854f4cdd93fbf2ca3ab015f7dcb57a0951",
+        "audio": {
+          "path": "/home/disk/lsm/storage/DunhuangDanceGen/assets/datasets/aistpp/music/mJS5.wav",
+          "sha256": "abc355734882ca2d2c1efb90b2f648854f4cdd93fbf2ca3ab015f7dcb57a0951"
+        },
+        "audio_offset_frames": 0.0,
+        "shared_start": 0,
+        "clock_scope": "VERIFIED_OFFICIAL_SOURCE_CLOCK",
+        "clock_proof": {
+          "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/aist_calibration_01/calibration/gJS_sBM_cAll_d03_mJS5_ch04.json",
+          "sha256": "b26a8767b6f0c021e5c75f5b9eb9f28ecf6eb2882d1a74706fd1d3023e78bfda"
+        },
+        "root_scope": "OBSERVED_FITTED_SOURCE_TRANSLATION_NOT_CONTACT_TRUTH",
+        "shared_support": {
+          "frames": 222,
+          "unmatched_motion_tail": 0,
+          "unmatched_audio_feature_tail": 0,
+          "unmatched_audio_energy_tail": 0,
+          "padding_frames": 0,
+          "resampling": false
+        },
+        "frames": 222,
+        "arrays": "outputs/paired_benchmark_r59_01/data/sources/024088709e019be8e29d8b3a.npz",
+        "arrays_sha256": "af57b45bec1508bcdb3da5d69d88a7cc77410c717eb0ac2575b8aea167da8b99"
+      },
+      {
+        "source_uid": "0257b96842874c545b7cea88",
+        "dataset": "AIST++",
+        "role": "train",
+        "group": "aist_publisher_track:mMH3",
+        "recording_uid": "aist_capture:gMH_sBM_cAll_d22_mMH3_ch06",
+        "choreography_uid": "aist_basic:gMH:ch06",
+        "raw_motion_sha256": "1aa57c19a70a51d1bea77204c640aa56ab0f2729bbf98bc745ef042abfdc9172",
+        "raw_motion": {
+          "path": "/home/disk/lsm/storage/DunhuangDanceGen/assets/datasets/aistpp/annotations/motions/gMH_sBM_cAll_d22_mMH3_ch06.pkl",
+          "sha256": "1aa57c19a70a51d1bea77204c640aa56ab0f2729bbf98bc745ef042abfdc9172"
+        },
+        "audio_sha256": "4615db8b31d7194a9f3a0534251489f10257971c0b5e0b20ec3d53658ba8a8f7",
+        "audio": {
+          "path": "/home/disk/lsm/storage/DunhuangDanceGen/assets/datasets/aistpp/music/mMH3.wav",
+          "sha256": "4615db8b31d7194a9f3a0534251489f10257971c0b5e0b20ec3d53658ba8a8f7"
+        },
+        "audio_offset_frames": 0.0,
+        "shared_start": 0,
+        "clock_scope": "VERIFIED_OFFICIAL_SOURCE_CLOCK",
+        "clock_proof": {
+          "path": "/home/disk/lsm/storage/DunhuangDanceGen/outputs/aist_calibration_01/calibration/gMH_sBM_cAll_d22_mMH3_ch06.json",
+          "sha256": "b6caa2b41d10a0980c494c60046ece529936dd9c6d9a12eacd6db55a332989ef"
+        },
+        "root_scope": "OBSERVED_FITTED_SOURCE_TRANSLATION_NOT_CONTACT_TRUTH",
+        "shared_support": {
+          "frames": 262,
+          "unmatched_motion_tail": 0,
+          "unmatched_audio_feature_tail": 0,
+          "unmatched_audio_energy_tail": 0,
+          "padding_frames": 0,
+          "resampling": false
+        },
+        "frames": 262,
+        "arrays": "outputs/paired_benchmark_r59_01/data/sources/0257b96842874c545b7cea88.npz",
+        "arrays_sha256": "74bb142b06642dcf95b1f809a59bee64ec7aac1378e27d78379cc315bb92cf5a"
+      },
+      {
+        "source_uid": "fine_004",
+        "dataset": "FineDance",
+        "role": "genre_train_diagnostic",
+        "group": "finedance_archive:004",
+        "recording_uid": "fine_004",
+        "raw_motion_sha256": "2b4e03162438ba5ad8b8e86692c23f6ae98297123c60577f47b90ac70b647f3b",
+        "raw_motion": {
+          "path": "inputs/paired_benchmark_r59/finedance/motion/004.npy",
+          "sha256": "2b4e03162438ba5ad8b8e86692c23f6ae98297123c60577f47b90ac70b647f3b"
+        },
+        "audio_sha256": "26c033424113adc182d906df04da2c057556a1a64e10158518c285dafb4fd613",
+        "audio": {
+          "path": "inputs/paired_benchmark_r59/finedance/music_wav/004.wav",
+          "sha256": "26c033424113adc182d906df04da2c057556a1a64e10158518c285dafb4fd613"
+        },
+        "audio_offset_frames": 0.0,
+        "shared_start": 0,
+        "clock_scope": "OFFICIAL_ARCHIVE_ID_AND_RAW_COMMON_START_NOT_AIST_WAVEFORM_CALIBRATED",
+        "root_scope": "RAW_TRANSLATION_COORDINATES_NOT_NATIVE_WORLD_ADMITTED",
+        "dancer_role": "test",
+        "shared_support": {
+          "frames": 2888,
+          "unmatched_motion_tail": 2,
+          "unmatched_audio_feature_tail": 0,
+          "unmatched_audio_energy_tail": 0,
+          "padding_frames": 0,
+          "resampling": false
+        },
+        "frames": 2888,
+        "arrays": "outputs/paired_benchmark_r59_01/data/sources/fine_004.npz",
+        "arrays_sha256": "b056d88e7b8e667906f8ae91676f71e9e00ff6115a4e817a7cae1070b27d8bf9"
+      },
+      {
+        "source_uid": "fine_005",
+        "dataset": "FineDance",
+        "role": "genre_train_diagnostic",
+        "group": "finedance_archive:005",
+        "recording_uid": "fine_005",
+        "raw_motion_sha256": "4e62e814feb1cb4d09d0ec27f5d8d85f387c347dc6720d9795d1b1440bdcfd99",
+        "raw_motion": {
+          "path": "inputs/paired_benchmark_r59/finedance/motion/005.npy",
+          "sha256": "4e62e814feb1cb4d09d0ec27f5d8d85f387c347dc6720d9795d1b1440bdcfd99"
+        },
+        "audio_sha256": "88d55c0d0cb8b420dcf5a917ae088deaa87d727b49743ffa6439e3b223b61c19",
+        "audio": {
+          "path": "inputs/paired_benchmark_r59/finedance/music_wav/005.wav",
+          "sha256": "88d55c0d0cb8b420dcf5a917ae088deaa87d727b49743ffa6439e3b223b61c19"
+        },
+        "audio_offset_frames": 0.0,
+        "shared_start": 0,
+        "clock_scope": "OFFICIAL_ARCHIVE_ID_AND_RAW_COMMON_START_NOT_AIST_WAVEFORM_CALIBRATED",
+        "root_scope": "RAW_TRANSLATION_COORDINATES_NOT_NATIVE_WORLD_ADMITTED",
+        "dancer_role": "test",
+        "shared_support": {
+          "frames": 2880,
+          "unmatched_motion_tail": 2,
+          "unmatched_audio_feature_tail": 0,
+          "unmatched_audio_energy_tail": 0,
+          "padding_frames": 0,
+          "resampling": false
+        },
+        "frames": 2880,
+        "arrays": "outputs/paired_benchmark_r59_01/data/sources/fine_005.npz",
+        "arrays_sha256": "43ac8e72068a43a49d9a9e200ae0df1b5d80b579ede0f2cef8b72e36da88e9c7"
+      },
+      {
+        "source_uid": "fine_006",
+        "dataset": "FineDance",
+        "role": "genre_train_diagnostic",
+        "group": "finedance_archive:006",
+        "recording_uid": "fine_006",
+        "raw_motion_sha256": "ca8e71354c867efecf0ebe71cda9924b080ee432fa93892167d6db840ca54df5",
+        "raw_motion": {
+          "path": "inputs/paired_benchmark_r59/finedance/motion/006.npy",
+          "sha256": "ca8e71354c867efecf0ebe71cda9924b080ee432fa93892167d6db840ca54df5"
+        },
+        "audio_sha256": "4b992e340878cd4b31ba583d40a83ca806b78548b43c3958960545ccdf5ce02d",
+        "audio": {
+          "path": "inputs/paired_benchmark_r59/finedance/music_wav/006.wav",
+          "sha256": "4b992e340878cd4b31ba583d40a83ca806b78548b43c3958960545ccdf5ce02d"
+        },
+        "audio_offset_frames": 0.0,
+        "shared_start": 0,
+        "clock_scope": "OFFICIAL_ARCHIVE_ID_AND_RAW_COMMON_START_NOT_AIST_WAVEFORM_CALIBRATED",
+        "root_scope": "RAW_TRANSLATION_COORDINATES_NOT_NATIVE_WORLD_ADMITTED",
+        "dancer_role": "test",
+        "shared_support": {
+          "frames": 843,
+          "unmatched_motion_tail": 2,
+          "unmatched_audio_feature_tail": 0,
+          "unmatched_audio_energy_tail": 0,
+          "padding_frames": 0,
+          "resampling": false
+        },
+        "frames": 843,
+        "arrays": "outputs/paired_benchmark_r59_01/data/sources/fine_006.npz",
+        "arrays_sha256": "ccc419abb7fa5e7f81729ff46ed4dd0e5117daef23a2e9b626f25a5df1d49780"
+      },
+      {
+        "source_uid": "fine_007",
+        "dataset": "FineDance",
+        "role": "genre_train_diagnostic",
+        "group": "finedance_archive:007",
+        "recording_uid": "fine_007",
+        "raw_motion_sha256": "b4d345f082dd54e7bad7f9f975b37d923cc4224d6fb1d8658cdeb51d4cff1431",
+        "raw_motion": {
+          "path": "inputs/paired_benchmark_r59/finedance/motion/007.npy",
+          "sha256": "b4d345f082dd54e7bad7f9f975b37d923cc4224d6fb1d8658cdeb51d4cff1431"
+        },
+        "audio_sha256": "9045b0021bf6f3105232b222563c8423a77af2b093cb05686fb23752a1758b29",
+        "audio": {
+          "path": "inputs/paired_benchmark_r59/finedance/music_wav/007.wav",
+          "sha256": "9045b0021bf6f3105232b222563c8423a77af2b093cb05686fb23752a1758b29"
+        },
+        "audio_offset_frames": 0.0,
+        "shared_start": 0,
+        "clock_scope": "OFFICIAL_ARCHIVE_ID_AND_RAW_COMMON_START_NOT_AIST_WAVEFORM_CALIBRATED",
+        "root_scope": "RAW_TRANSLATION_COORDINATES_NOT_NATIVE_WORLD_ADMITTED",
+        "dancer_role": "test",
+        "shared_support": {
+          "frames": 3747,
+          "unmatched_motion_tail": 1,
+          "unmatched_audio_feature_tail": 0,
+          "unmatched_audio_energy_tail": 0,
+          "padding_frames": 0,
+          "resampling": false
+        },
+        "frames": 3747,
+        "arrays": "outputs/paired_benchmark_r59_01/data/sources/fine_007.npz",
+        "arrays_sha256": "bbc1e0bf9d70783d750e881707c8e6e9652036a7b91d47426b7e878a56e19480"
+      },
+      {
+        "source_uid": "fine_008",
+        "dataset": "FineDance",
+        "role": "genre_train_diagnostic",
+        "group": "finedance_archive:008",
+        "recording_uid": "fine_008",
+        "raw_motion_sha256": "aa09ffdc39801d993f81ac950c9d3112aefabdc77c1bd24e56b45e3100eb2400",
+        "raw_motion": {
+          "path": "inputs/paired_benchmark_r59/finedance/motion/008.npy",
+          "sha256": "aa09ffdc39801d993f81ac950c9d3112aefabdc77c1bd24e56b45e3100eb2400"
+        },
+        "audio_sha256": "4c178f413740a16b7bf14421a443f91a891a898a82f75b0028bf522d25a27cdd",
+        "audio": {
+          "path": "inputs/paired_benchmark_r59/finedance/music_wav/008.wav",
+          "sha256": "4c178f413740a16b7bf14421a443f91a891a898a82f75b0028bf522d25a27cdd"
+        },
+        "audio_offset_frames": 0.0,
+        "shared_start": 0,
+        "clock_scope": "OFFICIAL_ARCHIVE_ID_AND_RAW_COMMON_START_NOT_AIST_WAVEFORM_CALIBRATED",
+        "root_scope": "RAW_TRANSLATION_COORDINATES_NOT_NATIVE_WORLD_ADMITTED",
+        "dancer_role": "test",
+        "shared_support": {
+          "frames": 3960,
+          "unmatched_motion_tail": 1,
+          "unmatched_audio_feature_tail": 0,
+          "unmatched_audio_energy_tail": 0,
+          "padding_frames": 0,
+          "resampling": false
+        },
+        "frames": 3960,
+        "arrays": "outputs/paired_benchmark_r59_01/data/sources/fine_008.npz",
+        "arrays_sha256": "22c8603cb999d41665f22bd9d24b65dc6484f5f1893c7e183ea9b2e9d68796e8"
+      },
+      {
+        "source_uid": "fine_009",
+        "dataset": "FineDance",
+        "role": "genre_train_diagnostic",
+        "group": "finedance_archive:009",
+        "recording_uid": "fine_009",
+        "raw_motion_sha256": "c967fa94dd39b895878169b0f31d2fc9f6b495444a5f0edc2192d4ac5da09d64",
+        "raw_motion": {
+          "path": "inputs/paired_benchmark_r59/finedance/motion/009.npy",
+          "sha256": "c967fa94dd39b895878169b0f31d2fc9f6b495444a5f0edc2192d4ac5da09d64"
+        },
+        "audio_sha256": "4fbacdf09ed8db54ad1f92bf056f6ea59be50a4420282545aa63badaea37c952",
+        "audio": {
+          "path": "inputs/paired_benchmark_r59/finedance/music_wav/009.wav",
+          "sha256": "4fbacdf09ed8db54ad1f92bf056f6ea59be50a4420282545aa63badaea37c952"
+        },
+        "audio_offset_frames": 0.0,
+        "shared_start": 0,
+        "clock_scope": "OFFICIAL_ARCHIVE_ID_AND_RAW_COMMON_START_NOT_AIST_WAVEFORM_CALIBRATED",
+        "root_scope": "RAW_TRANSLATION_COORDINATES_NOT_NATIVE_WORLD_ADMITTED",
+        "dancer_role": "test",
+        "shared_support": {
+          "frames": 1497,
+          "unmatched_motion_tail": 3,
+          "unmatched_audio_feature_tail": 0,
+          "unmatched_audio_energy_tail": 0,
+          "padding_frames": 0,
+          "resampling": false
+        },
+        "frames": 1497,
+        "arrays": "outputs/paired_benchmark_r59_01/data/sources/fine_009.npz",
+        "arrays_sha256": "c01b2247669e1b346f8c8ca98cb0f05f2df46add9b85cec04263d5863af7cc66"
+      }
+    ],
+    "selection": "LEX_SOURCE_UID_GREEDY_EXCLUDE_Q01_AUDIO_MUSIC_GROUP_RECORDING_RAW_AND_KNOWN_CHOREOGRAPHY; UNIQUE_WITHIN_NEW_SET; NO_REPLACEMENT_AFTER_SCORES",
+    "exclusions": [
+      {
+        "source_uid": "01c011558c752bd79e43637d",
+        "exclusion": [
+          "audio_sha256",
+          "group"
+        ]
+      },
+      {
+        "source_uid": "fine_001",
+        "exclusion": [
+          "source_uid",
+          "audio_sha256",
+          "raw_motion_sha256",
+          "group",
+          "recording_uid"
+        ]
+      },
+      {
+        "source_uid": "fine_002",
+        "exclusion": [
+          "source_uid",
+          "audio_sha256",
+          "raw_motion_sha256",
+          "group",
+          "recording_uid"
+        ]
+      },
+      {
+        "source_uid": "fine_003",
+        "exclusion": [
+          "source_uid",
+          "audio_sha256",
+          "raw_motion_sha256",
+          "group",
+          "recording_uid"
+        ]
+      }
+    ],
+    "requested_per_domain": 6,
+    "old_source_uids": [
+      "033c4d217edce5e9cbd07626",
+      "05548ccce94e669f7c061092",
+      "062462537c48db40add1905e",
+      "fine_001",
+      "fine_002",
+      "fine_003"
+    ],
+    "known_link_isolation": true,
+    "unknown_links_certified": false,
+    "independent_generalization_certified": false,
+    "historical_exposure": "R59_AND_EARLIER_PROJECT_EXPOSURE_POSSIBLE; NEW_TO_Q01_BAS_ONLY",
+    "source_metadata_sha256": "5d66076438baba182176576de91fb7ca53c7398b612db3211e1cb461cede9c38"
+  }
+}

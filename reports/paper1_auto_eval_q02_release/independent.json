@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "fresh_process": true,
+  "scalar_differences": [],
+  "control_arrays_exact": true,
+  "audio_replay": {
+    "status": "PASS",
+    "differences": [],
+    "fresh_process": true
+  },
+  "parents_unchanged": {
+    "controls": "65c971713b2df43154fe27ff5646e701bba1403b7960553a5444f5731739043d",
+    "preview": "1ebb89d6bd734f9afa86172d40667ec6264c5a0e4ec9e56fa793e76d644c0173"
+  },
+  "training_steps": 0,
+  "can_route": false
+}

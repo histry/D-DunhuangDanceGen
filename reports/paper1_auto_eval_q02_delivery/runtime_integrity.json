@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "scientific_commit": "455404c",
+  "local_contract_tests": 9,
+  "server_contract_tests": 9,
+  "tmux_exit_status": {
+    "preview": 0,
+    "audio": 0,
+    "score": 0,
+    "audio_replay": 0,
+    "replay": 0
+  },
+  "model_replay_exact": true,
+  "control_npz_exact": true,
+  "scalar_replay_exact": true,
+  "Q01_immutable_parents": {
+    "controls": "65c971713b2df43154fe27ff5646e701bba1403b7960553a5444f5731739043d",
+    "preview": "1ebb89d6bd734f9afa86172d40667ec6264c5a0e4ec9e56fa793e76d644c0173"
+  },
+  "training_steps": 0,
+  "new_G1_calls": 0,
+  "planner_calls": 0,
+  "temporary_http_service": "STOPPED_PORT56773",
+  "temporary_ssh_helpers": "REMOVED_6_RUN_CREATED_FILES"
+}

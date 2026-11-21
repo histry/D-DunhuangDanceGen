@@ -1,0 +1,3324 @@
+[
+  {
+    "source_uid": "0015e899c42897c0c09e5036",
+    "dataset": "AIST++",
+    "role": "train",
+    "group": "aist_publisher_track:mPO5",
+    "audio_group": "1703e669553f166a049d21abed9ebc0508dba493fd13ae519c00c407c273f617",
+    "choreography_uid": "aist_basic:gPO:ch10",
+    "clock_scope": "VERIFIED_OFFICIAL_SOURCE_CLOCK",
+    "dancer_role": "UNKNOWN",
+    "status": "OBSERVED",
+    "source_proof": {
+      "source_uid": "0015e899c42897c0c09e5036",
+      "dataset": "AIST++",
+      "raw_motion_sha256": "d6016a238446f0db6ea84a26b7fc729dc6d3014a239a42e40a0fc7e8cd621683",
+      "audio_sha256": "1703e669553f166a049d21abed9ebc0508dba493fd13ae519c00c407c273f617",
+      "raw_bytes_verified": true,
+      "skeleton_used": false,
+      "FK_used": false,
+      "root_used": false,
+      "contact_used": false,
+      "raw_origin_preserved": true,
+      "audio_offset_frames": 0.0,
+      "clock_scope": "VERIFIED_OFFICIAL_SOURCE_CLOCK",
+      "representation": "NATIVE151_COLUMNS_LOCAL_SO3_FIRST22_30HZ",
+      "source_seals_sha256": "4aa438be09b5833efc5d78bed8cdec28f20767693e413d4b53a147b63c8b432d",
+      "native_sha256": "9e561cbd796f1fa7963d7868235ff19a7fb3af4b7c0872947b5d6ee3a7061c29",
+      "clock_proof_sha256": "4983e4ed07bb8428d1794c89c7a3a0e3ecc684cf181e46ff2b759852d6a5d0ff",
+      "calibration": {
+        "verified": true,
+        "audio_offset_seconds": 0.0,
+        "anchors": [
+          {
+            "video_sample": 0,
+            "source_lag_samples": 0,
+            "ncc": 0.9996273546698532
+          },
+          {
+            "video_sample": 17525,
+            "source_lag_samples": 0,
+            "ncc": 0.9995647810128344
+          },
+          {
+            "video_sample": 35051,
+            "source_lag_samples": 0,
+            "ncc": 0.999443718386626
+          }
+        ],
+        "minimum_ncc": 0.999443718386626,
+        "global_ncc": 0.9995353414401815,
+        "zero_ncc": 0.9995353414401815,
+        "maximum_residual_seconds": 0.0,
+        "periodic_alternatives": false,
+        "origin_anchor_used": true,
+        "rate": 8000,
+        "method": "official_refined_origin_plus_three_anchor_waveform_ncc",
+        "motion_seconds": 7.383333333333334,
+        "decoded_audio_seconds": 7.381375,
+        "duration_error_seconds": 0.0019583333333335062,
+        "stream_metadata": {
+          "video": {
+            "index": 0,
+            "codec_name": "h264",
+            "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+            "profile": "High",
+            "codec_type": "video",
+            "codec_tag_string": "avc1",
+            "codec_tag": "0x31637661",
+            "width": 1920,
+            "height": 1080,
+            "coded_width": 1920,
+            "coded_height": 1080,
+            "closed_captions": 0,
+            "has_b_frames": 2,
+            "sample_aspect_ratio": "1:1",
+            "display_aspect_ratio": "16:9",
+            "pix_fmt": "yuv420p",
+            "level": 42,
+            "chroma_location": "left",
+            "refs": 1,
+            "is_avc": "true",
+            "nal_length_size": "4",
+            "r_frame_rate": "2997/50",
+            "avg_frame_rate": "2997/50",
+            "time_base": "1/11988",
+            "start_pts": 0,
+            "start_time": "0.000000",
+            "duration_ts": 88600,
+            "duration": "7.390724",
+            "bit_rate": "1908787",
+            "bits_per_raw_sample": "8",
+            "nb_frames": "443",
+            "disposition": {
+              "default": 1,
+              "dub": 0,
+              "original": 0,
+              "comment": 0,
+              "lyrics": 0,
+              "karaoke": 0,
+              "forced": 0,
+              "hearing_impaired": 0,
+              "visual_impaired": 0,
+              "clean_effects": 0,
+              "attached_pic": 0,
+              "timed_thumbnails": 0
+            },
+            "tags": {
+              "language": "eng",
+              "handler_name": "Mainconcept MP4 Video Media Handler",
+              "vendor_id": "[0][0][0][0]"
+            }
+          },
+          "audio": {
+            "index": 1,
+            "codec_name": "aac",
+            "codec_long_name": "AAC (Advanced Audio Coding)",
+            "profile": "LC",
+            "codec_type": "audio",
+            "codec_tag_string": "mp4a",
+            "codec_tag": "0x6134706d",
+            "sample_fmt": "fltp",
+            "sample_rate": "48000",
+            "channels": 2,
+            "channel_layout": "stereo",
+            "bits_per_sample": 0,
+            "r_frame_rate": "0/0",
+            "avg_frame_rate": "0/0",
+            "time_base": "1/48000",
+            "start_pts": 0,
+            "start_time": "0.000000",
+            "duration_ts": 354096,
+            "duration": "7.377000",
+            "bit_rate": "326804",
+            "nb_frames": "347",
+            "disposition": {
+              "default": 1,
+              "dub": 0,
+              "original": 0,
+              "comment": 0,
+              "lyrics": 0,
+              "karaoke": 0,
+              "forced": 0,
+              "hearing_impaired": 0,
+              "visual_impaired": 0,
+              "clean_effects": 0,
+              "attached_pic": 0,
+              "timed_thumbnails": 0
+            },
+            "tags": {
+              "language": "und",
+              "handler_name": "SoundHandler",
+              "vendor_id": "[0][0][0][0]"
+            }
+          }
+        }
+      },
+      "source_clock_verified": true,
+      "full_record_frames": 222,
+      "full_R_sha256": "04c17db15c12f3ef53cecfd272000691b3f355b1e9c6558e15cbe921f29074de",
+      "shared_source_interval": [
+        0,
+        222
+      ],
+      "R59_shared_prefix_frames": 222,
+      "R59_shared_prefix_R_sha256": "04c17db15c12f3ef53cecfd272000691b3f355b1e9c6558e15cbe921f29074de",
+      "R59_source_arrays_sha256": "14696a8373d6491ab2f0aea875451134a3b4765b8857f26287053aa236a5f23c",
+      "R59_prefix_exact": true,
+      "full_record_not_shared_prefix_used_for_peak_extraction": true
+    },
+    "motion_sha256": "04c17db15c12f3ef53cecfd272000691b3f355b1e9c6558e15cbe921f29074de",
+    "support_seconds": [
+      0.5,
+      6.866666666666666
+    ],
+    "query_count": 13,
+    "motion_minima_count": 3,
+    "wrong_query_count": 14,
+    "wrong_audio_sha256": "cc3b7934a746ce28161133f1c29d51bb7c6546bb542db946fb952d66f54df275",
+    "offsets": [
+      -0.5,
+      -0.25,
+      0,
+      0.25,
+      0.5
+    ],
+    "scores": [
+      0.16853864020521175,
+      0.05873989957231825,
+      0.2068896484227016,
+      0.041573118293965254,
+      0.22394579460092812
+    ],
+    "ranking": {
+      "status": "EVALUABLE",
+      "strict_top1": false,
+      "tied_top1_credit": 0.0,
+      "tied_maximum_indices": [
+        4
+      ],
+      "paired_win": 0.75,
+      "correct_rank_lower": 2
+    },
+    "six_candidate_ranking": {
+      "status": "EVALUABLE",
+      "strict_top1": false,
+      "tied_top1_credit": 0.0,
+      "tied_maximum_indices": [
+        4
+      ],
+      "paired_win": 0.8,
+      "correct_rank_lower": 2
+    },
+    "wrong_song_score": 0.05056803411178044,
+    "correct_vs_wrong": 1,
+    "median_beat_period_seconds": 0.45999999999999996,
+    "period_ambiguity": [
+      {
+        "offset": -0.5,
+        "distance_to_integer_beat_cycles_seconds": 0.040000000000000036,
+        "within_0_1_second": true
+      },
+      {
+        "offset": -0.25,
+        "distance_to_integer_beat_cycles_seconds": 0.20999999999999996,
+        "within_0_1_second": false
+      },
+      {
+        "offset": 0.25,
+        "distance_to_integer_beat_cycles_seconds": 0.20999999999999996,
+        "within_0_1_second": false
+      },
+      {
+        "offset": 0.5,
+        "distance_to_integer_beat_cycles_seconds": 0.040000000000000036,
+        "within_0_1_second": true
+      }
+    ],
+    "equal_density_grid": [
+      {
+        "phase": 0,
+        "scores": [
+          0.051955792837371985,
+          0.1222311927183352,
+          0.045962392222556284,
+          0.1153916214684107,
+          0.05771884743063087
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": false,
+          "tied_top1_credit": 0.0,
+          "tied_maximum_indices": [
+            1
+          ],
+          "paired_win": 0.0,
+          "correct_rank_lower": 5
+        },
+        "motion_event_count": 3
+      },
+      {
+        "phase": 0.25,
+        "scores": [
+          0.12821808702922002,
+          0.12242743302365641,
+          0.09557939775051018,
+          0.09010989901978318,
+          0.06992050445006479
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": false,
+          "tied_top1_credit": 0.0,
+          "tied_maximum_indices": [
+            0
+          ],
+          "paired_win": 0.5,
+          "correct_rank_lower": 3
+        },
+        "motion_event_count": 3
+      },
+      {
+        "phase": 0.5,
+        "scores": [
+          0.129081356787563,
+          0.11872478945216473,
+          0.1327201798466235,
+          0.11844374968181116,
+          0.1208565281971456
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": true,
+          "tied_top1_credit": 1.0,
+          "tied_maximum_indices": [
+            2
+          ],
+          "paired_win": 1.0,
+          "correct_rank_lower": 1
+        },
+        "motion_event_count": 3
+      },
+      {
+        "phase": 0.75,
+        "scores": [
+          0.09828119097664081,
+          0.06099304679291743,
+          0.10772932026833633,
+          0.13022255515237074,
+          0.12391311612912835
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": false,
+          "tied_top1_credit": 0.0,
+          "tied_maximum_indices": [
+            3
+          ],
+          "paired_win": 0.5,
+          "correct_rank_lower": 3
+        },
+        "motion_event_count": 3
+      }
+    ],
+    "energy_scores": [
+      0.08577281291259325,
+      -0.097571814253301,
+      -0.06415519422059539,
+      -0.0394866675979049,
+      0.07411513385894966
+    ],
+    "energy_ranking": {
+      "status": "EVALUABLE",
+      "strict_top1": false,
+      "tied_top1_credit": 0.0,
+      "tied_maximum_indices": [
+        0
+      ],
+      "paired_win": 0.25,
+      "correct_rank_lower": 4
+    },
+    "wrong_song_energy": -0.038214144060496114,
+    "artistic_quality": "NOT_EVALUABLE"
+  },
+  {
+    "source_uid": "00572033bcc251b5b06633e0",
+    "dataset": "AIST++",
+    "role": "train",
+    "group": "aist_publisher_track:mHO3",
+    "audio_group": "cc3b7934a746ce28161133f1c29d51bb7c6546bb542db946fb952d66f54df275",
+    "choreography_uid": "aist_basic:gHO:ch02",
+    "clock_scope": "VERIFIED_OFFICIAL_SOURCE_CLOCK",
+    "dancer_role": "UNKNOWN",
+    "status": "OBSERVED",
+    "source_proof": {
+      "source_uid": "00572033bcc251b5b06633e0",
+      "dataset": "AIST++",
+      "raw_motion_sha256": "3ab912710c1a295eccbcb968caa175bace04f351b2afb74cd09bb6bb9bf6aab0",
+      "audio_sha256": "cc3b7934a746ce28161133f1c29d51bb7c6546bb542db946fb952d66f54df275",
+      "raw_bytes_verified": true,
+      "skeleton_used": false,
+      "FK_used": false,
+      "root_used": false,
+      "contact_used": false,
+      "raw_origin_preserved": true,
+      "audio_offset_frames": 0.0,
+      "clock_scope": "VERIFIED_OFFICIAL_SOURCE_CLOCK",
+      "representation": "NATIVE151_COLUMNS_LOCAL_SO3_FIRST22_30HZ",
+      "source_seals_sha256": "4aa438be09b5833efc5d78bed8cdec28f20767693e413d4b53a147b63c8b432d",
+      "native_sha256": "e1a6115904c63af489a914b74adb7aeaa9c633b0ed4068b855ac2dd441062d57",
+      "clock_proof_sha256": "1bbae458cfcbb68c22c06060cc2e753d19b017a3f95452f5ad0329b548a4f5c3",
+      "calibration": {
+        "verified": true,
+        "audio_offset_seconds": 0.0,
+        "anchors": [
+          {
+            "video_sample": 0,
+            "source_lag_samples": 0,
+            "ncc": 0.999697102719787
+          },
+          {
+            "video_sample": 18666,
+            "source_lag_samples": 0,
+            "ncc": 0.9997088862778906
+          },
+          {
+            "video_sample": 37333,
+            "source_lag_samples": 0,
+            "ncc": 0.9997055845654534
+          }
+        ],
+        "minimum_ncc": 0.999697102719787,
+        "global_ncc": 0.9997044907970547,
+        "zero_ncc": 0.9997044907970547,
+        "maximum_residual_seconds": 0.0,
+        "periodic_alternatives": false,
+        "origin_anchor_used": true,
+        "rate": 8000,
+        "method": "official_refined_origin_plus_three_anchor_waveform_ncc",
+        "motion_seconds": 7.666666666666667,
+        "decoded_audio_seconds": 7.68,
+        "duration_error_seconds": 0.013333333333332753,
+        "stream_metadata": {
+          "video": {
+            "index": 0,
+            "codec_name": "h264",
+            "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+            "profile": "High",
+            "codec_type": "video",
+            "codec_tag_string": "avc1",
+            "codec_tag": "0x31637661",
+            "width": 1920,
+            "height": 1080,
+            "coded_width": 1920,
+            "coded_height": 1080,
+            "closed_captions": 0,
+            "has_b_frames": 2,
+            "sample_aspect_ratio": "1:1",
+            "display_aspect_ratio": "16:9",
+            "pix_fmt": "yuv420p",
+            "level": 42,
+            "chroma_location": "left",
+            "refs": 1,
+            "is_avc": "true",
+            "nal_length_size": "4",
+            "r_frame_rate": "2997/50",
+            "avg_frame_rate": "2997/50",
+            "time_base": "1/11988",
+            "start_pts": 0,
+            "start_time": "0.000000",
+            "duration_ts": 92000,
+            "duration": "7.674341",
+            "bit_rate": "1945549",
+            "bits_per_raw_sample": "8",
+            "nb_frames": "460",
+            "disposition": {
+              "default": 1,
+              "dub": 0,
+              "original": 0,
+              "comment": 0,
+              "lyrics": 0,
+              "karaoke": 0,
+              "forced": 0,
+              "hearing_impaired": 0,
+              "visual_impaired": 0,
+              "clean_effects": 0,
+              "attached_pic": 0,
+              "timed_thumbnails": 0
+            },
+            "tags": {
+              "language": "eng",
+              "handler_name": "Mainconcept MP4 Video Media Handler",
+              "vendor_id": "[0][0][0][0]"
+            }
+          },
+          "audio": {
+            "index": 1,
+            "codec_name": "aac",
+            "codec_long_name": "AAC (Advanced Audio Coding)",
+            "profile": "LC",
+            "codec_type": "audio",
+            "codec_tag_string": "mp4a",
+            "codec_tag": "0x6134706d",
+            "sample_fmt": "fltp",
+            "sample_rate": "48000",
+            "channels": 2,
+            "channel_layout": "stereo",
+            "bits_per_sample": 0,
+            "r_frame_rate": "0/0",
+            "avg_frame_rate": "0/0",
+            "time_base": "1/48000",
+            "start_pts": 0,
+            "start_time": "0.000000",
+            "duration_ts": 368256,
+            "duration": "7.672000",
+            "bit_rate": "316894",
+            "nb_frames": "361",
+            "disposition": {
+              "default": 1,
+              "dub": 0,
+              "original": 0,
+              "comment": 0,
+              "lyrics": 0,
+              "karaoke": 0,
+              "forced": 0,
+              "hearing_impaired": 0,
+              "visual_impaired": 0,
+              "clean_effects": 0,
+              "attached_pic": 0,
+              "timed_thumbnails": 0
+            },
+            "tags": {
+              "language": "und",
+              "handler_name": "SoundHandler",
+              "vendor_id": "[0][0][0][0]"
+            }
+          }
+        }
+      },
+      "source_clock_verified": true,
+      "full_record_frames": 230,
+      "full_R_sha256": "da9402794cb161ac4d54e701678d8be0e18ecb5c8d0e652ac2aaedfda63d5ebe",
+      "shared_source_interval": [
+        0,
+        230
+      ],
+      "R59_shared_prefix_frames": 230,
+      "R59_shared_prefix_R_sha256": "da9402794cb161ac4d54e701678d8be0e18ecb5c8d0e652ac2aaedfda63d5ebe",
+      "R59_source_arrays_sha256": "1439a15a9708f63be78064691bbb4bdc1b042d085a8c16db257f40530885ce05",
+      "R59_prefix_exact": true,
+      "full_record_not_shared_prefix_used_for_peak_extraction": true
+    },
+    "motion_sha256": "da9402794cb161ac4d54e701678d8be0e18ecb5c8d0e652ac2aaedfda63d5ebe",
+    "support_seconds": [
+      0.5,
+      7.133333333333334
+    ],
+    "query_count": 14,
+    "motion_minima_count": 7,
+    "wrong_query_count": 14,
+    "wrong_audio_sha256": "c6b02afd39a191361282323192c81968242dd0b9c09fed01eea545e38a77f675",
+    "offsets": [
+      -0.5,
+      -0.25,
+      0,
+      0.25,
+      0.5
+    ],
+    "scores": [
+      0.20744564837446325,
+      0.31950067351962297,
+      0.1876280232217961,
+      0.3460902379902265,
+      0.15555810628250624
+    ],
+    "ranking": {
+      "status": "EVALUABLE",
+      "strict_top1": false,
+      "tied_top1_credit": 0.0,
+      "tied_maximum_indices": [
+        3
+      ],
+      "paired_win": 0.25,
+      "correct_rank_lower": 4
+    },
+    "six_candidate_ranking": {
+      "status": "EVALUABLE",
+      "strict_top1": false,
+      "tied_top1_credit": 0.0,
+      "tied_maximum_indices": [
+        3
+      ],
+      "paired_win": 0.2,
+      "correct_rank_lower": 5
+    },
+    "wrong_song_score": 0.27665297472582223,
+    "correct_vs_wrong": 0,
+    "median_beat_period_seconds": 0.48,
+    "period_ambiguity": [
+      {
+        "offset": -0.5,
+        "distance_to_integer_beat_cycles_seconds": 0.020000000000000018,
+        "within_0_1_second": true
+      },
+      {
+        "offset": -0.25,
+        "distance_to_integer_beat_cycles_seconds": 0.22999999999999998,
+        "within_0_1_second": false
+      },
+      {
+        "offset": 0.25,
+        "distance_to_integer_beat_cycles_seconds": 0.22999999999999998,
+        "within_0_1_second": false
+      },
+      {
+        "offset": 0.5,
+        "distance_to_integer_beat_cycles_seconds": 0.020000000000000018,
+        "within_0_1_second": true
+      }
+    ],
+    "equal_density_grid": [
+      {
+        "phase": 0,
+        "scores": [
+          0.2741695549757066,
+          0.20390513772513832,
+          0.24137903441192682,
+          0.19378596249857563,
+          0.26256925159058897
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": false,
+          "tied_top1_credit": 0.0,
+          "tied_maximum_indices": [
+            0
+          ],
+          "paired_win": 0.5,
+          "correct_rank_lower": 3
+        },
+        "motion_event_count": 7
+      },
+      {
+        "phase": 0.25,
+        "scores": [
+          0.18326162191411252,
+          0.2740877423696789,
+          0.21335573781579473,
+          0.23155952547705103,
+          0.2041070734992639
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": false,
+          "tied_top1_credit": 0.0,
+          "tied_maximum_indices": [
+            1
+          ],
+          "paired_win": 0.5,
+          "correct_rank_lower": 3
+        },
+        "motion_event_count": 7
+      },
+      {
+        "phase": 0.5,
+        "scores": [
+          0.25633165668701946,
+          0.18270066233544854,
+          0.2726830996879198,
+          0.22358690208735352,
+          0.22124668010323048
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": true,
+          "tied_top1_credit": 1.0,
+          "tied_maximum_indices": [
+            2
+          ],
+          "paired_win": 1.0,
+          "correct_rank_lower": 1
+        },
+        "motion_event_count": 7
+      },
+      {
+        "phase": 0.75,
+        "scores": [
+          0.1959648931125298,
+          0.24989863305513785,
+          0.1863641086534586,
+          0.26955073123769396,
+          0.23381844120379183
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": false,
+          "tied_top1_credit": 0.0,
+          "tied_maximum_indices": [
+            3
+          ],
+          "paired_win": 0.0,
+          "correct_rank_lower": 5
+        },
+        "motion_event_count": 7
+      }
+    ],
+    "energy_scores": [
+      0.28886528105647286,
+      -0.1606250747782932,
+      0.008711781500016915,
+      -0.03695043243687263,
+      -0.04585391305619861
+    ],
+    "energy_ranking": {
+      "status": "EVALUABLE",
+      "strict_top1": false,
+      "tied_top1_credit": 0.0,
+      "tied_maximum_indices": [
+        0
+      ],
+      "paired_win": 0.75,
+      "correct_rank_lower": 2
+    },
+    "wrong_song_energy": -0.12824815665102005,
+    "artistic_quality": "NOT_EVALUABLE"
+  },
+  {
+    "source_uid": "005735562a8435e57f302d16",
+    "dataset": "AIST++",
+    "role": "train",
+    "group": "aist_publisher_track:mBR5",
+    "audio_group": "c6b02afd39a191361282323192c81968242dd0b9c09fed01eea545e38a77f675",
+    "choreography_uid": "aist_basic:gBR:ch08",
+    "clock_scope": "VERIFIED_OFFICIAL_SOURCE_CLOCK",
+    "dancer_role": "UNKNOWN",
+    "status": "OBSERVED",
+    "source_proof": {
+      "source_uid": "005735562a8435e57f302d16",
+      "dataset": "AIST++",
+      "raw_motion_sha256": "9ca98c23091ee4931cd82037f4ff5e747f3bb8006b164e57d11e1cb750312ddc",
+      "audio_sha256": "c6b02afd39a191361282323192c81968242dd0b9c09fed01eea545e38a77f675",
+      "raw_bytes_verified": true,
+      "skeleton_used": false,
+      "FK_used": false,
+      "root_used": false,
+      "contact_used": false,
+      "raw_origin_preserved": true,
+      "audio_offset_frames": 0.0,
+      "clock_scope": "VERIFIED_OFFICIAL_SOURCE_CLOCK",
+      "representation": "NATIVE151_COLUMNS_LOCAL_SO3_FIRST22_30HZ",
+      "source_seals_sha256": "4aa438be09b5833efc5d78bed8cdec28f20767693e413d4b53a147b63c8b432d",
+      "native_sha256": "b21e89f4d2d97adaa4635070045b47387c0d8c402110c74d30dd6f5e92ac5bf8",
+      "clock_proof_sha256": "291fb2eb3b7a79cd4cfe73415c635bcae39364b372ff1350e100e9f5c5f6a413",
+      "calibration": {
+        "verified": true,
+        "audio_offset_seconds": 0.0,
+        "anchors": [
+          {
+            "video_sample": 0,
+            "source_lag_samples": 0,
+            "ncc": 0.9996759161815456
+          },
+          {
+            "video_sample": 17525,
+            "source_lag_samples": 0,
+            "ncc": 0.9996741456213577
+          },
+          {
+            "video_sample": 35051,
+            "source_lag_samples": 0,
+            "ncc": 0.9996589513407375
+          }
+        ],
+        "minimum_ncc": 0.9996589513407375,
+        "global_ncc": 0.999661829911703,
+        "zero_ncc": 0.999661829911703,
+        "maximum_residual_seconds": 0.0,
+        "periodic_alternatives": true,
+        "origin_anchor_used": true,
+        "rate": 8000,
+        "method": "official_refined_origin_plus_three_anchor_waveform_ncc",
+        "motion_seconds": 7.383333333333334,
+        "decoded_audio_seconds": 7.381375,
+        "duration_error_seconds": 0.0019583333333335062,
+        "stream_metadata": {
+          "video": {
+            "index": 0,
+            "codec_name": "h264",
+            "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+            "profile": "High",
+            "codec_type": "video",
+            "codec_tag_string": "avc1",
+            "codec_tag": "0x31637661",
+            "width": 1920,
+            "height": 1080,
+            "coded_width": 1920,
+            "coded_height": 1080,
+            "closed_captions": 0,
+            "has_b_frames": 2,
+            "pix_fmt": "yuv420p",
+            "level": 42,
+            "chroma_location": "left",
+            "refs": 1,
+            "is_avc": "true",
+            "nal_length_size": "4",
+            "r_frame_rate": "60000/1001",
+            "avg_frame_rate": "60000/1001",
+            "time_base": "1/60000",
+            "start_pts": 0,
+            "start_time": "0.000000",
+            "duration_ts": 443443,
+            "duration": "7.390717",
+            "bit_rate": "1834402",
+            "bits_per_raw_sample": "8",
+            "nb_frames": "443",
+            "disposition": {
+              "default": 1,
+              "dub": 0,
+              "original": 0,
+              "comment": 0,
+              "lyrics": 0,
+              "karaoke": 0,
+              "forced": 0,
+              "hearing_impaired": 0,
+              "visual_impaired": 0,
+              "clean_effects": 0,
+              "attached_pic": 0,
+              "timed_thumbnails": 0
+            },
+            "tags": {
+              "language": "eng",
+              "handler_name": "\u001fMainconcept Video Media Handler",
+              "vendor_id": "[0][0][0][0]"
+            }
+          },
+          "audio": {
+            "index": 1,
+            "codec_name": "aac",
+            "codec_long_name": "AAC (Advanced Audio Coding)",
+            "profile": "LC",
+            "codec_type": "audio",
+            "codec_tag_string": "mp4a",
+            "codec_tag": "0x6134706d",
+            "sample_fmt": "fltp",
+            "sample_rate": "48000",
+            "channels": 2,
+            "channel_layout": "stereo",
+            "bits_per_sample": 0,
+            "r_frame_rate": "0/0",
+            "avg_frame_rate": "0/0",
+            "time_base": "1/48000",
+            "start_pts": 0,
+            "start_time": "0.000000",
+            "duration_ts": 354096,
+            "duration": "7.377000",
+            "bit_rate": "321797",
+            "nb_frames": "347",
+            "disposition": {
+              "default": 1,
+              "dub": 0,
+              "original": 0,
+              "comment": 0,
+              "lyrics": 0,
+              "karaoke": 0,
+              "forced": 0,
+              "hearing_impaired": 0,
+              "visual_impaired": 0,
+              "clean_effects": 0,
+              "attached_pic": 0,
+              "timed_thumbnails": 0
+            },
+            "tags": {
+              "language": "und",
+              "handler_name": "SoundHandler",
+              "vendor_id": "[0][0][0][0]"
+            }
+          }
+        }
+      },
+      "source_clock_verified": true,
+      "full_record_frames": 222,
+      "full_R_sha256": "112ebbfaabce84afd0bc4921a07276d627036d7b56e5dd9a42dce77e8d7d5c14",
+      "shared_source_interval": [
+        0,
+        222
+      ],
+      "R59_shared_prefix_frames": 222,
+      "R59_shared_prefix_R_sha256": "112ebbfaabce84afd0bc4921a07276d627036d7b56e5dd9a42dce77e8d7d5c14",
+      "R59_source_arrays_sha256": "f32184463f7eb262c37bfaf85d4f92a78831ffbc025ff73d6d999a9cd17dedb6",
+      "R59_prefix_exact": true,
+      "full_record_not_shared_prefix_used_for_peak_extraction": true
+    },
+    "motion_sha256": "112ebbfaabce84afd0bc4921a07276d627036d7b56e5dd9a42dce77e8d7d5c14",
+    "support_seconds": [
+      0.5,
+      6.866666666666666
+    ],
+    "query_count": 13,
+    "motion_minima_count": 7,
+    "wrong_query_count": 14,
+    "wrong_audio_sha256": "96c613b68d0b341b24e5f56687dd9e89f696325fe39a46270d2e8738a42e8025",
+    "offsets": [
+      -0.5,
+      -0.25,
+      0,
+      0.25,
+      0.5
+    ],
+    "scores": [
+      0.46043708320108034,
+      0.10092485440050278,
+      0.44975736810132394,
+      0.07122229671136096,
+      0.43195935319966244
+    ],
+    "ranking": {
+      "status": "EVALUABLE",
+      "strict_top1": false,
+      "tied_top1_credit": 0.0,
+      "tied_maximum_indices": [
+        0
+      ],
+      "paired_win": 0.75,
+      "correct_rank_lower": 2
+    },
+    "six_candidate_ranking": {
+      "status": "EVALUABLE",
+      "strict_top1": false,
+      "tied_top1_credit": 0.0,
+      "tied_maximum_indices": [
+        0
+      ],
+      "paired_win": 0.8,
+      "correct_rank_lower": 2
+    },
+    "wrong_song_score": 0.16648515189187293,
+    "correct_vs_wrong": 1,
+    "median_beat_period_seconds": 0.45999999999999996,
+    "period_ambiguity": [
+      {
+        "offset": -0.5,
+        "distance_to_integer_beat_cycles_seconds": 0.040000000000000036,
+        "within_0_1_second": true
+      },
+      {
+        "offset": -0.25,
+        "distance_to_integer_beat_cycles_seconds": 0.20999999999999996,
+        "within_0_1_second": false
+      },
+      {
+        "offset": 0.25,
+        "distance_to_integer_beat_cycles_seconds": 0.20999999999999996,
+        "within_0_1_second": false
+      },
+      {
+        "offset": 0.5,
+        "distance_to_integer_beat_cycles_seconds": 0.040000000000000036,
+        "within_0_1_second": true
+      }
+    ],
+    "equal_density_grid": [
+      {
+        "phase": 0,
+        "scores": [
+          0.1821490721145322,
+          0.2767773766088555,
+          0.21368258757709904,
+          0.28329481092147135,
+          0.17060221805476214
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": false,
+          "tied_top1_credit": 0.0,
+          "tied_maximum_indices": [
+            3
+          ],
+          "paired_win": 0.5,
+          "correct_rank_lower": 3
+        },
+        "motion_event_count": 7
+      },
+      {
+        "phase": 0.25,
+        "scores": [
+          0.2712293178481664,
+          0.1776285547088316,
+          0.2756446478053699,
+          0.2122935185437806,
+          0.2851980347138528
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": false,
+          "tied_top1_credit": 0.0,
+          "tied_maximum_indices": [
+            4
+          ],
+          "paired_win": 0.75,
+          "correct_rank_lower": 2
+        },
+        "motion_event_count": 7
+      },
+      {
+        "phase": 0.5,
+        "scores": [
+          0.22032155655328298,
+          0.2763163616430716,
+          0.17413795683543098,
+          0.2739764933931459,
+          0.2123281904186826
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": false,
+          "tied_top1_credit": 0.0,
+          "tied_maximum_indices": [
+            1
+          ],
+          "paired_win": 0.0,
+          "correct_rank_lower": 5
+        },
+        "motion_event_count": 7
+      },
+      {
+        "phase": 0.75,
+        "scores": [
+          0.2772999749675715,
+          0.21640849892019587,
+          0.2803410541692106,
+          0.17178369731114065,
+          0.27182388229987675
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": true,
+          "tied_top1_credit": 1.0,
+          "tied_maximum_indices": [
+            2
+          ],
+          "paired_win": 1.0,
+          "correct_rank_lower": 1
+        },
+        "motion_event_count": 7
+      }
+    ],
+    "energy_scores": [
+      -0.08525329005180926,
+      -0.310176379045523,
+      0.25085661548676536,
+      0.3954063107839515,
+      -0.11636485498434203
+    ],
+    "energy_ranking": {
+      "status": "EVALUABLE",
+      "strict_top1": false,
+      "tied_top1_credit": 0.0,
+      "tied_maximum_indices": [
+        3
+      ],
+      "paired_win": 0.75,
+      "correct_rank_lower": 2
+    },
+    "wrong_song_energy": -0.16115795283262016,
+    "artistic_quality": "NOT_EVALUABLE"
+  },
+  {
+    "source_uid": "00b9f3eb03942f2b4c75d8e2",
+    "dataset": "AIST++",
+    "role": "train",
+    "group": "aist_publisher_track:mHO5",
+    "audio_group": "96c613b68d0b341b24e5f56687dd9e89f696325fe39a46270d2e8738a42e8025",
+    "choreography_uid": "aist_basic:gHO:ch09",
+    "clock_scope": "VERIFIED_OFFICIAL_SOURCE_CLOCK",
+    "dancer_role": "UNKNOWN",
+    "status": "OBSERVED",
+    "source_proof": {
+      "source_uid": "00b9f3eb03942f2b4c75d8e2",
+      "dataset": "AIST++",
+      "raw_motion_sha256": "9d72e85d4c902d869af15287de3ae3c10b6a431f0d961df66928581f5a6c9afc",
+      "audio_sha256": "96c613b68d0b341b24e5f56687dd9e89f696325fe39a46270d2e8738a42e8025",
+      "raw_bytes_verified": true,
+      "skeleton_used": false,
+      "FK_used": false,
+      "root_used": false,
+      "contact_used": false,
+      "raw_origin_preserved": true,
+      "audio_offset_frames": 0.0,
+      "clock_scope": "VERIFIED_OFFICIAL_SOURCE_CLOCK",
+      "representation": "NATIVE151_COLUMNS_LOCAL_SO3_FIRST22_30HZ",
+      "source_seals_sha256": "4aa438be09b5833efc5d78bed8cdec28f20767693e413d4b53a147b63c8b432d",
+      "native_sha256": "5aece9e6872696f7437c4f7344cfb69e566834b5a5ec246a403d9cc3aead48de",
+      "clock_proof_sha256": "792d534d0bc3e8d55794121a52ab5ce4646c239b1251ee150fb20af28c075a12",
+      "calibration": {
+        "verified": true,
+        "audio_offset_seconds": 0.0,
+        "anchors": [
+          {
+            "video_sample": 0,
+            "source_lag_samples": 0,
+            "ncc": 0.9996326954457193
+          },
+          {
+            "video_sample": 16400,
+            "source_lag_samples": 0,
+            "ncc": 0.9996295208438033
+          },
+          {
+            "video_sample": 32800,
+            "source_lag_samples": 0,
+            "ncc": 0.9996506020864442
+          }
+        ],
+        "minimum_ncc": 0.9996295208438033,
+        "global_ncc": 0.9996354426476823,
+        "zero_ncc": 0.9996354426476823,
+        "maximum_residual_seconds": 0.0,
+        "periodic_alternatives": false,
+        "origin_anchor_used": true,
+        "rate": 8000,
+        "method": "official_refined_origin_plus_three_anchor_waveform_ncc",
+        "motion_seconds": 7.1,
+        "decoded_audio_seconds": 7.104,
+        "duration_error_seconds": 0.004000000000000448,
+        "stream_metadata": {
+          "video": {
+            "index": 0,
+            "codec_name": "h264",
+            "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+            "profile": "High",
+            "codec_type": "video",
+            "codec_tag_string": "avc1",
+            "codec_tag": "0x31637661",
+            "width": 1920,
+            "height": 1080,
+            "coded_width": 1920,
+            "coded_height": 1080,
+            "closed_captions": 0,
+            "has_b_frames": 2,
+            "sample_aspect_ratio": "1:1",
+            "display_aspect_ratio": "16:9",
+            "pix_fmt": "yuv420p",
+            "level": 42,
+            "chroma_location": "left",
+            "refs": 1,
+            "is_avc": "true",
+            "nal_length_size": "4",
+            "r_frame_rate": "2997/50",
+            "avg_frame_rate": "2997/50",
+            "time_base": "1/11988",
+            "start_pts": 0,
+            "start_time": "0.000000",
+            "duration_ts": 85200,
+            "duration": "7.107107",
+            "bit_rate": "1901199",
+            "bits_per_raw_sample": "8",
+            "nb_frames": "426",
+            "disposition": {
+              "default": 1,
+              "dub": 0,
+              "original": 0,
+              "comment": 0,
+              "lyrics": 0,
+              "karaoke": 0,
+              "forced": 0,
+              "hearing_impaired": 0,
+              "visual_impaired": 0,
+              "clean_effects": 0,
+              "attached_pic": 0,
+              "timed_thumbnails": 0
+            },
+            "tags": {
+              "language": "eng",
+              "handler_name": "Mainconcept MP4 Video Media Handler",
+              "vendor_id": "[0][0][0][0]"
+            }
+          },
+          "audio": {
+            "index": 1,
+            "codec_name": "aac",
+            "codec_long_name": "AAC (Advanced Audio Coding)",
+            "profile": "LC",
+            "codec_type": "audio",
+            "codec_tag_string": "mp4a",
+            "codec_tag": "0x6134706d",
+            "sample_fmt": "fltp",
+            "sample_rate": "48000",
+            "channels": 2,
+            "channel_layout": "stereo",
+            "bits_per_sample": 0,
+            "r_frame_rate": "0/0",
+            "avg_frame_rate": "0/0",
+            "time_base": "1/48000",
+            "start_pts": 0,
+            "start_time": "0.000000",
+            "duration_ts": 340992,
+            "duration": "7.104000",
+            "bit_rate": "325209",
+            "nb_frames": "334",
+            "disposition": {
+              "default": 1,
+              "dub": 0,
+              "original": 0,
+              "comment": 0,
+              "lyrics": 0,
+              "karaoke": 0,
+              "forced": 0,
+              "hearing_impaired": 0,
+              "visual_impaired": 0,
+              "clean_effects": 0,
+              "attached_pic": 0,
+              "timed_thumbnails": 0
+            },
+            "tags": {
+              "language": "und",
+              "handler_name": "SoundHandler",
+              "vendor_id": "[0][0][0][0]"
+            }
+          }
+        }
+      },
+      "source_clock_verified": true,
+      "full_record_frames": 213,
+      "full_R_sha256": "694cea5e7b461844b764a94fedd4971478b9864b34bf5626a08a74fc4f9e74b3",
+      "shared_source_interval": [
+        0,
+        213
+      ],
+      "R59_shared_prefix_frames": 213,
+      "R59_shared_prefix_R_sha256": "694cea5e7b461844b764a94fedd4971478b9864b34bf5626a08a74fc4f9e74b3",
+      "R59_source_arrays_sha256": "7a6bb4d30ae443519a4b8cc60397f304f6d3c59a545860e70771e16ded9ab249",
+      "R59_prefix_exact": true,
+      "full_record_not_shared_prefix_used_for_peak_extraction": true
+    },
+    "motion_sha256": "694cea5e7b461844b764a94fedd4971478b9864b34bf5626a08a74fc4f9e74b3",
+    "support_seconds": [
+      0.5,
+      6.566666666666666
+    ],
+    "query_count": 13,
+    "motion_minima_count": 7,
+    "wrong_query_count": 13,
+    "wrong_audio_sha256": "abc355734882ca2d2c1efb90b2f648854f4cdd93fbf2ca3ab015f7dcb57a0951",
+    "offsets": [
+      -0.5,
+      -0.25,
+      0,
+      0.25,
+      0.5
+    ],
+    "scores": [
+      0.3071562951838501,
+      0.2379405124892119,
+      0.327972500265723,
+      0.28547796333594394,
+      0.20382998183823509
+    ],
+    "ranking": {
+      "status": "EVALUABLE",
+      "strict_top1": true,
+      "tied_top1_credit": 1.0,
+      "tied_maximum_indices": [
+        2
+      ],
+      "paired_win": 1.0,
+      "correct_rank_lower": 1
+    },
+    "six_candidate_ranking": {
+      "status": "EVALUABLE",
+      "strict_top1": true,
+      "tied_top1_credit": 1.0,
+      "tied_maximum_indices": [
+        2
+      ],
+      "paired_win": 1.0,
+      "correct_rank_lower": 1
+    },
+    "wrong_song_score": 0.2759583378020609,
+    "correct_vs_wrong": 1,
+    "median_beat_period_seconds": 0.4400000000000003,
+    "period_ambiguity": [
+      {
+        "offset": -0.5,
+        "distance_to_integer_beat_cycles_seconds": 0.05999999999999972,
+        "within_0_1_second": true
+      },
+      {
+        "offset": -0.25,
+        "distance_to_integer_beat_cycles_seconds": 0.19000000000000028,
+        "within_0_1_second": false
+      },
+      {
+        "offset": 0.25,
+        "distance_to_integer_beat_cycles_seconds": 0.19000000000000028,
+        "within_0_1_second": false
+      },
+      {
+        "offset": 0.5,
+        "distance_to_integer_beat_cycles_seconds": 0.05999999999999972,
+        "within_0_1_second": true
+      }
+    ],
+    "equal_density_grid": [
+      {
+        "phase": 0,
+        "scores": [
+          0.1900536257472552,
+          0.29503781819386915,
+          0.2252147011509889,
+          0.2768813128977038,
+          0.18688741517044904
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": false,
+          "tied_top1_credit": 0.0,
+          "tied_maximum_indices": [
+            1
+          ],
+          "paired_win": 0.5,
+          "correct_rank_lower": 3
+        },
+        "motion_event_count": 7
+      },
+      {
+        "phase": 0.25,
+        "scores": [
+          0.27330796871790713,
+          0.18929553889302195,
+          0.2952379840438856,
+          0.22435972670700693,
+          0.2780268957044416
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": true,
+          "tied_top1_credit": 1.0,
+          "tied_maximum_indices": [
+            2
+          ],
+          "paired_win": 1.0,
+          "correct_rank_lower": 1
+        },
+        "motion_event_count": 7
+      },
+      {
+        "phase": 0.5,
+        "scores": [
+          0.22705601585410215,
+          0.27452099301044836,
+          0.18857670552512532,
+          0.2954065031893633,
+          0.22355028650291003
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": false,
+          "tied_top1_credit": 0.0,
+          "tied_maximum_indices": [
+            3
+          ],
+          "paired_win": 0.0,
+          "correct_rank_lower": 5
+        },
+        "motion_event_count": 7
+      },
+      {
+        "phase": 0.75,
+        "scores": [
+          0.29480601337066653,
+          0.22611391768631312,
+          0.2757123949202041,
+          0.18789742970227405,
+          0.2955433656063783
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": false,
+          "tied_top1_credit": 0.0,
+          "tied_maximum_indices": [
+            4
+          ],
+          "paired_win": 0.5,
+          "correct_rank_lower": 3
+        },
+        "motion_event_count": 7
+      }
+    ],
+    "energy_scores": [
+      0.26241211359276,
+      -0.11497801943405996,
+      0.05099143400078283,
+      -0.11609995761050267,
+      -0.02714655528867881
+    ],
+    "energy_ranking": {
+      "status": "EVALUABLE",
+      "strict_top1": false,
+      "tied_top1_credit": 0.0,
+      "tied_maximum_indices": [
+        0
+      ],
+      "paired_win": 0.75,
+      "correct_rank_lower": 2
+    },
+    "wrong_song_energy": -0.06572891515342359,
+    "artistic_quality": "NOT_EVALUABLE"
+  },
+  {
+    "source_uid": "024088709e019be8e29d8b3a",
+    "dataset": "AIST++",
+    "role": "train",
+    "group": "aist_publisher_track:mJS5",
+    "audio_group": "abc355734882ca2d2c1efb90b2f648854f4cdd93fbf2ca3ab015f7dcb57a0951",
+    "choreography_uid": "aist_basic:gJS:ch04",
+    "clock_scope": "VERIFIED_OFFICIAL_SOURCE_CLOCK",
+    "dancer_role": "UNKNOWN",
+    "status": "OBSERVED",
+    "source_proof": {
+      "source_uid": "024088709e019be8e29d8b3a",
+      "dataset": "AIST++",
+      "raw_motion_sha256": "511c318904321f6dc948508800c8439b05da0e8795b820f9317764f44024b8c4",
+      "audio_sha256": "abc355734882ca2d2c1efb90b2f648854f4cdd93fbf2ca3ab015f7dcb57a0951",
+      "raw_bytes_verified": true,
+      "skeleton_used": false,
+      "FK_used": false,
+      "root_used": false,
+      "contact_used": false,
+      "raw_origin_preserved": true,
+      "audio_offset_frames": 0.0,
+      "clock_scope": "VERIFIED_OFFICIAL_SOURCE_CLOCK",
+      "representation": "NATIVE151_COLUMNS_LOCAL_SO3_FIRST22_30HZ",
+      "source_seals_sha256": "4aa438be09b5833efc5d78bed8cdec28f20767693e413d4b53a147b63c8b432d",
+      "native_sha256": "aae269face241a7fa89791ef0ecd011566a30c2b98e97bf105148c982a204ca0",
+      "clock_proof_sha256": "b26a8767b6f0c021e5c75f5b9eb9f28ecf6eb2882d1a74706fd1d3023e78bfda",
+      "calibration": {
+        "verified": true,
+        "audio_offset_seconds": 0.0,
+        "anchors": [
+          {
+            "video_sample": 0,
+            "source_lag_samples": 0,
+            "ncc": 0.9995796396879093
+          },
+          {
+            "video_sample": 17525,
+            "source_lag_samples": 0,
+            "ncc": 0.9995838461252056
+          },
+          {
+            "video_sample": 35051,
+            "source_lag_samples": 0,
+            "ncc": 0.9991791377539417
+          }
+        ],
+        "minimum_ncc": 0.9991791377539417,
+        "global_ncc": 0.9994236299156846,
+        "zero_ncc": 0.9994236299156846,
+        "maximum_residual_seconds": 0.0,
+        "periodic_alternatives": false,
+        "origin_anchor_used": true,
+        "rate": 8000,
+        "method": "official_refined_origin_plus_three_anchor_waveform_ncc",
+        "motion_seconds": 7.383333333333334,
+        "decoded_audio_seconds": 7.381375,
+        "duration_error_seconds": 0.0019583333333335062,
+        "stream_metadata": {
+          "video": {
+            "index": 0,
+            "codec_name": "h264",
+            "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+            "profile": "High",
+            "codec_type": "video",
+            "codec_tag_string": "avc1",
+            "codec_tag": "0x31637661",
+            "width": 1920,
+            "height": 1080,
+            "coded_width": 1920,
+            "coded_height": 1080,
+            "closed_captions": 0,
+            "has_b_frames": 2,
+            "sample_aspect_ratio": "1:1",
+            "display_aspect_ratio": "16:9",
+            "pix_fmt": "yuv420p",
+            "level": 42,
+            "chroma_location": "left",
+            "refs": 1,
+            "is_avc": "true",
+            "nal_length_size": "4",
+            "r_frame_rate": "60000/1001",
+            "avg_frame_rate": "60000/1001",
+            "time_base": "1/60000",
+            "start_pts": 0,
+            "start_time": "0.000000",
+            "duration_ts": 443443,
+            "duration": "7.390717",
+            "bit_rate": "1935046",
+            "bits_per_raw_sample": "8",
+            "nb_frames": "443",
+            "disposition": {
+              "default": 1,
+              "dub": 0,
+              "original": 0,
+              "comment": 0,
+              "lyrics": 0,
+              "karaoke": 0,
+              "forced": 0,
+              "hearing_impaired": 0,
+              "visual_impaired": 0,
+              "clean_effects": 0,
+              "attached_pic": 0,
+              "timed_thumbnails": 0
+            },
+            "tags": {
+              "language": "eng",
+              "handler_name": "\u001fMainconcept Video Media Handler",
+              "vendor_id": "[0][0][0][0]"
+            }
+          },
+          "audio": {
+            "index": 1,
+            "codec_name": "aac",
+            "codec_long_name": "AAC (Advanced Audio Coding)",
+            "profile": "LC",
+            "codec_type": "audio",
+            "codec_tag_string": "mp4a",
+            "codec_tag": "0x6134706d",
+            "sample_fmt": "fltp",
+            "sample_rate": "48000",
+            "channels": 2,
+            "channel_layout": "stereo",
+            "bits_per_sample": 0,
+            "r_frame_rate": "0/0",
+            "avg_frame_rate": "0/0",
+            "time_base": "1/48000",
+            "start_pts": 0,
+            "start_time": "0.000000",
+            "duration_ts": 354096,
+            "duration": "7.377000",
+            "bit_rate": "325322",
+            "nb_frames": "347",
+            "disposition": {
+              "default": 1,
+              "dub": 0,
+              "original": 0,
+              "comment": 0,
+              "lyrics": 0,
+              "karaoke": 0,
+              "forced": 0,
+              "hearing_impaired": 0,
+              "visual_impaired": 0,
+              "clean_effects": 0,
+              "attached_pic": 0,
+              "timed_thumbnails": 0
+            },
+            "tags": {
+              "language": "und",
+              "handler_name": "SoundHandler",
+              "vendor_id": "[0][0][0][0]"
+            }
+          }
+        }
+      },
+      "source_clock_verified": true,
+      "full_record_frames": 222,
+      "full_R_sha256": "48f6fff65278a0ba53ac368a73d44d64113f7d6c13e9f214a4f8f1c8a7369c38",
+      "shared_source_interval": [
+        0,
+        222
+      ],
+      "R59_shared_prefix_frames": 222,
+      "R59_shared_prefix_R_sha256": "48f6fff65278a0ba53ac368a73d44d64113f7d6c13e9f214a4f8f1c8a7369c38",
+      "R59_source_arrays_sha256": "af57b45bec1508bcdb3da5d69d88a7cc77410c717eb0ac2575b8aea167da8b99",
+      "R59_prefix_exact": true,
+      "full_record_not_shared_prefix_used_for_peak_extraction": true
+    },
+    "motion_sha256": "48f6fff65278a0ba53ac368a73d44d64113f7d6c13e9f214a4f8f1c8a7369c38",
+    "support_seconds": [
+      0.5,
+      6.866666666666666
+    ],
+    "query_count": 13,
+    "motion_minima_count": 8,
+    "wrong_query_count": 12,
+    "wrong_audio_sha256": "4615db8b31d7194a9f3a0534251489f10257971c0b5e0b20ec3d53658ba8a8f7",
+    "offsets": [
+      -0.5,
+      -0.25,
+      0,
+      0.25,
+      0.5
+    ],
+    "scores": [
+      0.35628429810981915,
+      0.2224745234715184,
+      0.4003419325667395,
+      0.27573713434992225,
+      0.31153191859381507
+    ],
+    "ranking": {
+      "status": "EVALUABLE",
+      "strict_top1": true,
+      "tied_top1_credit": 1.0,
+      "tied_maximum_indices": [
+        2
+      ],
+      "paired_win": 1.0,
+      "correct_rank_lower": 1
+    },
+    "six_candidate_ranking": {
+      "status": "EVALUABLE",
+      "strict_top1": true,
+      "tied_top1_credit": 1.0,
+      "tied_maximum_indices": [
+        2
+      ],
+      "paired_win": 1.0,
+      "correct_rank_lower": 1
+    },
+    "wrong_song_score": 0.3660036802423629,
+    "correct_vs_wrong": 1,
+    "median_beat_period_seconds": 0.45999999999999996,
+    "period_ambiguity": [
+      {
+        "offset": -0.5,
+        "distance_to_integer_beat_cycles_seconds": 0.040000000000000036,
+        "within_0_1_second": true
+      },
+      {
+        "offset": -0.25,
+        "distance_to_integer_beat_cycles_seconds": 0.20999999999999996,
+        "within_0_1_second": false
+      },
+      {
+        "offset": 0.25,
+        "distance_to_integer_beat_cycles_seconds": 0.20999999999999996,
+        "within_0_1_second": false
+      },
+      {
+        "offset": 0.5,
+        "distance_to_integer_beat_cycles_seconds": 0.040000000000000036,
+        "within_0_1_second": true
+      }
+    ],
+    "equal_density_grid": [
+      {
+        "phase": 0,
+        "scores": [
+          0.45600177857099616,
+          0.07197425671747404,
+          0.5198753566742912,
+          0.09857466094634826,
+          0.36997904148929905
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": true,
+          "tied_top1_credit": 1.0,
+          "tied_maximum_indices": [
+            2
+          ],
+          "paired_win": 1.0,
+          "correct_rank_lower": 1
+        },
+        "motion_event_count": 8
+      },
+      {
+        "phase": 0.25,
+        "scores": [
+          0.07756355174216527,
+          0.4587073627291759,
+          0.08406447755086692,
+          0.4852593039876811,
+          0.12826107367234804
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": false,
+          "tied_top1_credit": 0.0,
+          "tied_maximum_indices": [
+            3
+          ],
+          "paired_win": 0.25,
+          "correct_rank_lower": 4
+        },
+        "motion_event_count": 8
+      },
+      {
+        "phase": 0.5,
+        "scores": [
+          0.5310856178807888,
+          0.0727650331888708,
+          0.44387035504229144,
+          0.10810276139966948,
+          0.43574311569983426
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": false,
+          "tied_top1_credit": 0.0,
+          "tied_maximum_indices": [
+            0
+          ],
+          "paired_win": 0.75,
+          "correct_rank_lower": 2
+        },
+        "motion_event_count": 8
+      },
+      {
+        "phase": 0.75,
+        "scores": [
+          0.07172955220550875,
+          0.5357535059504172,
+          0.07988002437210716,
+          0.4131761845509147,
+          0.143874731678287
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": false,
+          "tied_top1_credit": 0.0,
+          "tied_maximum_indices": [
+            1
+          ],
+          "paired_win": 0.25,
+          "correct_rank_lower": 4
+        },
+        "motion_event_count": 8
+      }
+    ],
+    "energy_scores": [
+      -0.033046453636669804,
+      -0.003035182484405201,
+      0.06608735086763227,
+      0.007366004903074263,
+      0.02591585054974108
+    ],
+    "energy_ranking": {
+      "status": "EVALUABLE",
+      "strict_top1": true,
+      "tied_top1_credit": 1.0,
+      "tied_maximum_indices": [
+        2
+      ],
+      "paired_win": 1.0,
+      "correct_rank_lower": 1
+    },
+    "wrong_song_energy": -0.15090523415925772,
+    "artistic_quality": "NOT_EVALUABLE"
+  },
+  {
+    "source_uid": "0257b96842874c545b7cea88",
+    "dataset": "AIST++",
+    "role": "train",
+    "group": "aist_publisher_track:mMH3",
+    "audio_group": "4615db8b31d7194a9f3a0534251489f10257971c0b5e0b20ec3d53658ba8a8f7",
+    "choreography_uid": "aist_basic:gMH:ch06",
+    "clock_scope": "VERIFIED_OFFICIAL_SOURCE_CLOCK",
+    "dancer_role": "UNKNOWN",
+    "status": "OBSERVED",
+    "source_proof": {
+      "source_uid": "0257b96842874c545b7cea88",
+      "dataset": "AIST++",
+      "raw_motion_sha256": "1aa57c19a70a51d1bea77204c640aa56ab0f2729bbf98bc745ef042abfdc9172",
+      "audio_sha256": "4615db8b31d7194a9f3a0534251489f10257971c0b5e0b20ec3d53658ba8a8f7",
+      "raw_bytes_verified": true,
+      "skeleton_used": false,
+      "FK_used": false,
+      "root_used": false,
+      "contact_used": false,
+      "raw_origin_preserved": true,
+      "audio_offset_frames": 0.0,
+      "clock_scope": "VERIFIED_OFFICIAL_SOURCE_CLOCK",
+      "representation": "NATIVE151_COLUMNS_LOCAL_SO3_FIRST22_30HZ",
+      "source_seals_sha256": "4aa438be09b5833efc5d78bed8cdec28f20767693e413d4b53a147b63c8b432d",
+      "native_sha256": "c2e853941e13c39500805e004f0915422299091be0845d9cb63398409549a9df",
+      "clock_proof_sha256": "b6caa2b41d10a0980c494c60046ece529936dd9c6d9a12eacd6db55a332989ef",
+      "calibration": {
+        "verified": true,
+        "audio_offset_seconds": 0.0,
+        "anchors": [
+          {
+            "video_sample": 0,
+            "source_lag_samples": 0,
+            "ncc": 0.9996546263791257
+          },
+          {
+            "video_sample": 22901,
+            "source_lag_samples": 0,
+            "ncc": 0.9996761495635453
+          },
+          {
+            "video_sample": 45803,
+            "source_lag_samples": 0,
+            "ncc": 0.9988760371236354
+          }
+        ],
+        "minimum_ncc": 0.9988760371236354,
+        "global_ncc": 0.9993762338415393,
+        "zero_ncc": 0.9993762338415393,
+        "maximum_residual_seconds": 0.0,
+        "periodic_alternatives": false,
+        "origin_anchor_used": true,
+        "rate": 8000,
+        "method": "official_refined_origin_plus_three_anchor_waveform_ncc",
+        "motion_seconds": 8.733333333333333,
+        "decoded_audio_seconds": 8.725375,
+        "duration_error_seconds": 0.007958333333332845,
+        "stream_metadata": {
+          "video": {
+            "index": 0,
+            "codec_name": "h264",
+            "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+            "profile": "High",
+            "codec_type": "video",
+            "codec_tag_string": "avc1",
+            "codec_tag": "0x31637661",
+            "width": 1920,
+            "height": 1080,
+            "coded_width": 1920,
+            "coded_height": 1080,
+            "closed_captions": 0,
+            "has_b_frames": 2,
+            "sample_aspect_ratio": "1:1",
+            "display_aspect_ratio": "16:9",
+            "pix_fmt": "yuv420p",
+            "level": 42,
+            "chroma_location": "left",
+            "refs": 1,
+            "is_avc": "true",
+            "nal_length_size": "4",
+            "r_frame_rate": "60000/1001",
+            "avg_frame_rate": "60000/1001",
+            "time_base": "1/60000",
+            "start_pts": 0,
+            "start_time": "0.000000",
+            "duration_ts": 523523,
+            "duration": "8.725383",
+            "bit_rate": "1934035",
+            "bits_per_raw_sample": "8",
+            "nb_frames": "523",
+            "disposition": {
+              "default": 1,
+              "dub": 0,
+              "original": 0,
+              "comment": 0,
+              "lyrics": 0,
+              "karaoke": 0,
+              "forced": 0,
+              "hearing_impaired": 0,
+              "visual_impaired": 0,
+              "clean_effects": 0,
+              "attached_pic": 0,
+              "timed_thumbnails": 0
+            },
+            "tags": {
+              "language": "eng",
+              "handler_name": "\u001fMainconcept Video Media Handler",
+              "vendor_id": "[0][0][0][0]"
+            }
+          },
+          "audio": {
+            "index": 1,
+            "codec_name": "aac",
+            "codec_long_name": "AAC (Advanced Audio Coding)",
+            "profile": "LC",
+            "codec_type": "audio",
+            "codec_tag_string": "mp4a",
+            "codec_tag": "0x6134706d",
+            "sample_fmt": "fltp",
+            "sample_rate": "48000",
+            "channels": 2,
+            "channel_layout": "stereo",
+            "bits_per_sample": 0,
+            "r_frame_rate": "0/0",
+            "avg_frame_rate": "0/0",
+            "time_base": "1/48000",
+            "start_pts": 0,
+            "start_time": "0.000000",
+            "duration_ts": 418464,
+            "duration": "8.718000",
+            "bit_rate": "324441",
+            "nb_frames": "410",
+            "disposition": {
+              "default": 1,
+              "dub": 0,
+              "original": 0,
+              "comment": 0,
+              "lyrics": 0,
+              "karaoke": 0,
+              "forced": 0,
+              "hearing_impaired": 0,
+              "visual_impaired": 0,
+              "clean_effects": 0,
+              "attached_pic": 0,
+              "timed_thumbnails": 0
+            },
+            "tags": {
+              "language": "und",
+              "handler_name": "SoundHandler",
+              "vendor_id": "[0][0][0][0]"
+            }
+          }
+        }
+      },
+      "source_clock_verified": true,
+      "full_record_frames": 262,
+      "full_R_sha256": "159b6e197cc3eac8cee8aa247062bc77919df76eb4b02f8887b563f6e42fba2b",
+      "shared_source_interval": [
+        0,
+        262
+      ],
+      "R59_shared_prefix_frames": 262,
+      "R59_shared_prefix_R_sha256": "159b6e197cc3eac8cee8aa247062bc77919df76eb4b02f8887b563f6e42fba2b",
+      "R59_source_arrays_sha256": "74bb142b06642dcf95b1f809a59bee64ec7aac1378e27d78379cc315bb92cf5a",
+      "R59_prefix_exact": true,
+      "full_record_not_shared_prefix_used_for_peak_extraction": true
+    },
+    "motion_sha256": "159b6e197cc3eac8cee8aa247062bc77919df76eb4b02f8887b563f6e42fba2b",
+    "support_seconds": [
+      0.5,
+      8.2
+    ],
+    "query_count": 14,
+    "motion_minima_count": 10,
+    "wrong_query_count": 16,
+    "wrong_audio_sha256": "1703e669553f166a049d21abed9ebc0508dba493fd13ae519c00c407c273f617",
+    "offsets": [
+      -0.5,
+      -0.25,
+      0,
+      0.25,
+      0.5
+    ],
+    "scores": [
+      0.36439930927723313,
+      0.12753628888560783,
+      0.4801031283181216,
+      0.10926906793811955,
+      0.43624646052932486
+    ],
+    "ranking": {
+      "status": "EVALUABLE",
+      "strict_top1": true,
+      "tied_top1_credit": 1.0,
+      "tied_maximum_indices": [
+        2
+      ],
+      "paired_win": 1.0,
+      "correct_rank_lower": 1
+    },
+    "six_candidate_ranking": {
+      "status": "EVALUABLE",
+      "strict_top1": true,
+      "tied_top1_credit": 1.0,
+      "tied_maximum_indices": [
+        2
+      ],
+      "paired_win": 1.0,
+      "correct_rank_lower": 1
+    },
+    "wrong_song_score": 0.22403279471947293,
+    "correct_vs_wrong": 1,
+    "median_beat_period_seconds": 0.54,
+    "period_ambiguity": [
+      {
+        "offset": -0.5,
+        "distance_to_integer_beat_cycles_seconds": 0.040000000000000036,
+        "within_0_1_second": true
+      },
+      {
+        "offset": -0.25,
+        "distance_to_integer_beat_cycles_seconds": 0.25,
+        "within_0_1_second": false
+      },
+      {
+        "offset": 0.25,
+        "distance_to_integer_beat_cycles_seconds": 0.25,
+        "within_0_1_second": false
+      },
+      {
+        "offset": 0.5,
+        "distance_to_integer_beat_cycles_seconds": 0.040000000000000036,
+        "within_0_1_second": true
+      }
+    ],
+    "equal_density_grid": [
+      {
+        "phase": 0,
+        "scores": [
+          0.2945311881162721,
+          0.2928810874440898,
+          0.26656382958482433,
+          0.32090093425995114,
+          0.24810322596774634
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": false,
+          "tied_top1_credit": 0.0,
+          "tied_maximum_indices": [
+            3
+          ],
+          "paired_win": 0.25,
+          "correct_rank_lower": 4
+        },
+        "motion_event_count": 10
+      },
+      {
+        "phase": 0.25,
+        "scores": [
+          0.3170380377276402,
+          0.27786701746342907,
+          0.30103000967176824,
+          0.27813793670366566,
+          0.3192764345674229
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": false,
+          "tied_top1_credit": 0.0,
+          "tied_maximum_indices": [
+            4
+          ],
+          "paired_win": 0.5,
+          "correct_rank_lower": 3
+        },
+        "motion_event_count": 10
+      },
+      {
+        "phase": 0.5,
+        "scores": [
+          0.26319060040981607,
+          0.3197921780919654,
+          0.2617443393261926,
+          0.30097509214951623,
+          0.29203827290798373
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": false,
+          "tied_top1_credit": 0.0,
+          "tied_maximum_indices": [
+            1
+          ],
+          "paired_win": 0.0,
+          "correct_rank_lower": 5
+        },
+        "motion_event_count": 10
+      },
+      {
+        "phase": 0.75,
+        "scores": [
+          0.2780014155457481,
+          0.2609574269302947,
+          0.32083978488045445,
+          0.2506978335508921,
+          0.2932467571991434
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": true,
+          "tied_top1_credit": 1.0,
+          "tied_maximum_indices": [
+            2
+          ],
+          "paired_win": 1.0,
+          "correct_rank_lower": 1
+        },
+        "motion_event_count": 10
+      }
+    ],
+    "energy_scores": [
+      -0.16749306375275438,
+      -0.04491614963782294,
+      -0.21272922564691432,
+      0.011523306047327457,
+      -0.11599390106089509
+    ],
+    "energy_ranking": {
+      "status": "EVALUABLE",
+      "strict_top1": false,
+      "tied_top1_credit": 0.0,
+      "tied_maximum_indices": [
+        3
+      ],
+      "paired_win": 0.0,
+      "correct_rank_lower": 5
+    },
+    "wrong_song_energy": 0.03174593333335713,
+    "artistic_quality": "NOT_EVALUABLE"
+  },
+  {
+    "source_uid": "fine_004",
+    "dataset": "FineDance",
+    "role": "genre_train_diagnostic",
+    "group": "finedance_archive:004",
+    "audio_group": "26c033424113adc182d906df04da2c057556a1a64e10158518c285dafb4fd613",
+    "choreography_uid": "UNKNOWN",
+    "clock_scope": "OFFICIAL_ARCHIVE_ID_AND_RAW_COMMON_START_NOT_AIST_WAVEFORM_CALIBRATED",
+    "dancer_role": "test",
+    "status": "OBSERVED",
+    "source_proof": {
+      "source_uid": "fine_004",
+      "dataset": "FineDance",
+      "raw_motion_sha256": "2b4e03162438ba5ad8b8e86692c23f6ae98297123c60577f47b90ac70b647f3b",
+      "audio_sha256": "26c033424113adc182d906df04da2c057556a1a64e10158518c285dafb4fd613",
+      "raw_bytes_verified": true,
+      "skeleton_used": false,
+      "FK_used": false,
+      "root_used": false,
+      "contact_used": false,
+      "raw_origin_preserved": true,
+      "audio_offset_frames": 0.0,
+      "clock_scope": "OFFICIAL_ARCHIVE_ID_AND_RAW_COMMON_START_NOT_AIST_WAVEFORM_CALIBRATED",
+      "representation": "FINEDANCE315_ROWS6D_COMMON22_LOCAL_SO3_30HZ",
+      "source_clock_verified": false,
+      "source_clock_limitation": "OFFICIAL_ARCHIVE_ID_COMMON_START_NOT_AIST_WAVEFORM_CALIBRATION",
+      "full_record_frames": 2890,
+      "full_R_sha256": "ca11b93fab0c9a6fc4f378a6c7683dc6cd8dc2e0d8ecc70cd58e486d21d876ab",
+      "shared_source_interval": [
+        0,
+        2888
+      ],
+      "R59_shared_prefix_frames": 2888,
+      "R59_shared_prefix_R_sha256": "0ddd7eedd13d8dbaf79e11921f14a11d6ce7931f03fecf770d33a388785e8b30",
+      "R59_source_arrays_sha256": "b056d88e7b8e667906f8ae91676f71e9e00ff6115a4e817a7cae1070b27d8bf9",
+      "R59_prefix_exact": true,
+      "full_record_not_shared_prefix_used_for_peak_extraction": true
+    },
+    "motion_sha256": "ca11b93fab0c9a6fc4f378a6c7683dc6cd8dc2e0d8ecc70cd58e486d21d876ab",
+    "support_seconds": [
+      0.5,
+      95.52199546485261
+    ],
+    "query_count": 143,
+    "motion_minima_count": 87,
+    "wrong_query_count": 162,
+    "wrong_audio_sha256": "88d55c0d0cb8b420dcf5a917ae088deaa87d727b49743ffa6439e3b223b61c19",
+    "offsets": [
+      -0.5,
+      -0.25,
+      0,
+      0.25,
+      0.5
+    ],
+    "scores": [
+      0.160061482209476,
+      0.26038248284096027,
+      0.23613385451799498,
+      0.1660525259971925,
+      0.31370358384134156
+    ],
+    "ranking": {
+      "status": "EVALUABLE",
+      "strict_top1": false,
+      "tied_top1_credit": 0.0,
+      "tied_maximum_indices": [
+        4
+      ],
+      "paired_win": 0.5,
+      "correct_rank_lower": 3
+    },
+    "six_candidate_ranking": {
+      "status": "EVALUABLE",
+      "strict_top1": false,
+      "tied_top1_credit": 0.0,
+      "tied_maximum_indices": [
+        4
+      ],
+      "paired_win": 0.4,
+      "correct_rank_lower": 4
+    },
+    "wrong_song_score": 0.24852847298028763,
+    "correct_vs_wrong": 0,
+    "median_beat_period_seconds": 0.6600000000000001,
+    "period_ambiguity": [
+      {
+        "offset": -0.5,
+        "distance_to_integer_beat_cycles_seconds": 0.16000000000000014,
+        "within_0_1_second": false
+      },
+      {
+        "offset": -0.25,
+        "distance_to_integer_beat_cycles_seconds": 0.25,
+        "within_0_1_second": false
+      },
+      {
+        "offset": 0.25,
+        "distance_to_integer_beat_cycles_seconds": 0.25,
+        "within_0_1_second": false
+      },
+      {
+        "offset": 0.5,
+        "distance_to_integer_beat_cycles_seconds": 0.16000000000000014,
+        "within_0_1_second": false
+      }
+    ],
+    "equal_density_grid": [
+      {
+        "phase": 0,
+        "scores": [
+          0.2291711204595066,
+          0.22841052044436383,
+          0.22337115216401152,
+          0.2266305005482953,
+          0.22642636496658924
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": false,
+          "tied_top1_credit": 0.0,
+          "tied_maximum_indices": [
+            0
+          ],
+          "paired_win": 0.0,
+          "correct_rank_lower": 5
+        },
+        "motion_event_count": 87
+      },
+      {
+        "phase": 0.25,
+        "scores": [
+          0.2270823760565377,
+          0.2293511846412157,
+          0.22871575115216997,
+          0.22294130384754043,
+          0.2263222516523376
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": false,
+          "tied_top1_credit": 0.0,
+          "tied_maximum_indices": [
+            1
+          ],
+          "paired_win": 0.75,
+          "correct_rank_lower": 2
+        },
+        "motion_event_count": 87
+      },
+      {
+        "phase": 0.5,
+        "scores": [
+          0.22502861113989964,
+          0.22708209928757983,
+          0.22943787447575212,
+          0.22899342877363374,
+          0.22302777562163295
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": true,
+          "tied_top1_credit": 1.0,
+          "tied_maximum_indices": [
+            2
+          ],
+          "paired_win": 1.0,
+          "correct_rank_lower": 1
+        },
+        "motion_event_count": 87
+      },
+      {
+        "phase": 0.75,
+        "scores": [
+          0.22807891872765415,
+          0.22415535946168424,
+          0.22692376360470556,
+          0.22932667794199812,
+          0.22919814996340368
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": false,
+          "tied_top1_credit": 0.0,
+          "tied_maximum_indices": [
+            3
+          ],
+          "paired_win": 0.25,
+          "correct_rank_lower": 4
+        },
+        "motion_event_count": 87
+      }
+    ],
+    "energy_scores": [
+      0.14628116132191757,
+      0.20285897745611334,
+      0.23917546772433143,
+      0.24361448279162193,
+      0.21271012885369525
+    ],
+    "energy_ranking": {
+      "status": "EVALUABLE",
+      "strict_top1": false,
+      "tied_top1_credit": 0.0,
+      "tied_maximum_indices": [
+        3
+      ],
+      "paired_win": 0.75,
+      "correct_rank_lower": 2
+    },
+    "wrong_song_energy": 0.21601664436046467,
+    "artistic_quality": "NOT_EVALUABLE"
+  },
+  {
+    "source_uid": "fine_005",
+    "dataset": "FineDance",
+    "role": "genre_train_diagnostic",
+    "group": "finedance_archive:005",
+    "audio_group": "88d55c0d0cb8b420dcf5a917ae088deaa87d727b49743ffa6439e3b223b61c19",
+    "choreography_uid": "UNKNOWN",
+    "clock_scope": "OFFICIAL_ARCHIVE_ID_AND_RAW_COMMON_START_NOT_AIST_WAVEFORM_CALIBRATED",
+    "dancer_role": "test",
+    "status": "OBSERVED",
+    "source_proof": {
+      "source_uid": "fine_005",
+      "dataset": "FineDance",
+      "raw_motion_sha256": "4e62e814feb1cb4d09d0ec27f5d8d85f387c347dc6720d9795d1b1440bdcfd99",
+      "audio_sha256": "88d55c0d0cb8b420dcf5a917ae088deaa87d727b49743ffa6439e3b223b61c19",
+      "raw_bytes_verified": true,
+      "skeleton_used": false,
+      "FK_used": false,
+      "root_used": false,
+      "contact_used": false,
+      "raw_origin_preserved": true,
+      "audio_offset_frames": 0.0,
+      "clock_scope": "OFFICIAL_ARCHIVE_ID_AND_RAW_COMMON_START_NOT_AIST_WAVEFORM_CALIBRATED",
+      "representation": "FINEDANCE315_ROWS6D_COMMON22_LOCAL_SO3_30HZ",
+      "source_clock_verified": false,
+      "source_clock_limitation": "OFFICIAL_ARCHIVE_ID_COMMON_START_NOT_AIST_WAVEFORM_CALIBRATION",
+      "full_record_frames": 2882,
+      "full_R_sha256": "bc1abf72c1877ef140cc3a37c73a86a7cb88a94bc2a9959ea9c94de50c0be777",
+      "shared_source_interval": [
+        0,
+        2880
+      ],
+      "R59_shared_prefix_frames": 2880,
+      "R59_shared_prefix_R_sha256": "5a9bac0fdcd11159ada519885a2d6894f174946b755cbbe739fdc8ade8b4e445",
+      "R59_source_arrays_sha256": "43ac8e72068a43a49d9a9e200ae0df1b5d80b579ede0f2cef8b72e36da88e9c7",
+      "R59_prefix_exact": true,
+      "full_record_not_shared_prefix_used_for_peak_extraction": true
+    },
+    "motion_sha256": "bc1abf72c1877ef140cc3a37c73a86a7cb88a94bc2a9959ea9c94de50c0be777",
+    "support_seconds": [
+      0.5,
+      27.6
+    ],
+    "query_count": 32,
+    "motion_minima_count": 25,
+    "wrong_query_count": 34,
+    "wrong_audio_sha256": "4b992e340878cd4b31ba583d40a83ca806b78548b43c3958960545ccdf5ce02d",
+    "offsets": [
+      -0.5,
+      -0.25,
+      0,
+      0.25,
+      0.5
+    ],
+    "scores": [
+      0.19439939140680818,
+      0.28802674969507513,
+      0.20436702124493597,
+      0.18199091719602836,
+      0.2454812138341848
+    ],
+    "ranking": {
+      "status": "EVALUABLE",
+      "strict_top1": false,
+      "tied_top1_credit": 0.0,
+      "tied_maximum_indices": [
+        1
+      ],
+      "paired_win": 0.5,
+      "correct_rank_lower": 3
+    },
+    "six_candidate_ranking": {
+      "status": "EVALUABLE",
+      "strict_top1": false,
+      "tied_top1_credit": 0.0,
+      "tied_maximum_indices": [
+        1
+      ],
+      "paired_win": 0.4,
+      "correct_rank_lower": 4
+    },
+    "wrong_song_score": 0.22639055382813927,
+    "correct_vs_wrong": 0,
+    "median_beat_period_seconds": 0.8399999999999999,
+    "period_ambiguity": [
+      {
+        "offset": -0.5,
+        "distance_to_integer_beat_cycles_seconds": 0.33999999999999986,
+        "within_0_1_second": false
+      },
+      {
+        "offset": -0.25,
+        "distance_to_integer_beat_cycles_seconds": 0.25,
+        "within_0_1_second": false
+      },
+      {
+        "offset": 0.25,
+        "distance_to_integer_beat_cycles_seconds": 0.25,
+        "within_0_1_second": false
+      },
+      {
+        "offset": 0.5,
+        "distance_to_integer_beat_cycles_seconds": 0.33999999999999986,
+        "within_0_1_second": false
+      }
+    ],
+    "equal_density_grid": [
+      {
+        "phase": 0,
+        "scores": [
+          0.26279063187528107,
+          0.21465550144034407,
+          0.22387579800187896,
+          0.2135357904914115,
+          0.24180691073813848
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": false,
+          "tied_top1_credit": 0.0,
+          "tied_maximum_indices": [
+            0
+          ],
+          "paired_win": 0.5,
+          "correct_rank_lower": 3
+        },
+        "motion_event_count": 25
+      },
+      {
+        "phase": 0.25,
+        "scores": [
+          0.25249466532002596,
+          0.26878345287204974,
+          0.21704117363731873,
+          0.2080818246365208,
+          0.19511867729157933
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": false,
+          "tied_top1_credit": 0.0,
+          "tied_maximum_indices": [
+            1
+          ],
+          "paired_win": 0.5,
+          "correct_rank_lower": 3
+        },
+        "motion_event_count": 25
+      },
+      {
+        "phase": 0.5,
+        "scores": [
+          0.22878198948602946,
+          0.24718160398816805,
+          0.2674746404752671,
+          0.21580655299992457,
+          0.19109714234072991
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": true,
+          "tied_top1_credit": 1.0,
+          "tied_maximum_indices": [
+            2
+          ],
+          "paired_win": 1.0,
+          "correct_rank_lower": 1
+        },
+        "motion_event_count": 25
+      },
+      {
+        "phase": 0.75,
+        "scores": [
+          0.20700085681789784,
+          0.23194164360282385,
+          0.233090287460197,
+          0.26015496345759487,
+          0.2144427729668847
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": false,
+          "tied_top1_credit": 0.0,
+          "tied_maximum_indices": [
+            3
+          ],
+          "paired_win": 0.75,
+          "correct_rank_lower": 2
+        },
+        "motion_event_count": 25
+      }
+    ],
+    "energy_scores": [
+      0.09157750526890053,
+      0.08748759890419407,
+      0.175358310424818,
+      0.35472752564416593,
+      0.3262772792889509
+    ],
+    "energy_ranking": {
+      "status": "EVALUABLE",
+      "strict_top1": false,
+      "tied_top1_credit": 0.0,
+      "tied_maximum_indices": [
+        3
+      ],
+      "paired_win": 0.5,
+      "correct_rank_lower": 3
+    },
+    "wrong_song_energy": -0.10074220509526094,
+    "artistic_quality": "NOT_EVALUABLE"
+  },
+  {
+    "source_uid": "fine_006",
+    "dataset": "FineDance",
+    "role": "genre_train_diagnostic",
+    "group": "finedance_archive:006",
+    "audio_group": "4b992e340878cd4b31ba583d40a83ca806b78548b43c3958960545ccdf5ce02d",
+    "choreography_uid": "UNKNOWN",
+    "clock_scope": "OFFICIAL_ARCHIVE_ID_AND_RAW_COMMON_START_NOT_AIST_WAVEFORM_CALIBRATED",
+    "dancer_role": "test",
+    "status": "OBSERVED",
+    "source_proof": {
+      "source_uid": "fine_006",
+      "dataset": "FineDance",
+      "raw_motion_sha256": "ca8e71354c867efecf0ebe71cda9924b080ee432fa93892167d6db840ca54df5",
+      "audio_sha256": "4b992e340878cd4b31ba583d40a83ca806b78548b43c3958960545ccdf5ce02d",
+      "raw_bytes_verified": true,
+      "skeleton_used": false,
+      "FK_used": false,
+      "root_used": false,
+      "contact_used": false,
+      "raw_origin_preserved": true,
+      "audio_offset_frames": 0.0,
+      "clock_scope": "OFFICIAL_ARCHIVE_ID_AND_RAW_COMMON_START_NOT_AIST_WAVEFORM_CALIBRATED",
+      "representation": "FINEDANCE315_ROWS6D_COMMON22_LOCAL_SO3_30HZ",
+      "source_clock_verified": false,
+      "source_clock_limitation": "OFFICIAL_ARCHIVE_ID_COMMON_START_NOT_AIST_WAVEFORM_CALIBRATION",
+      "full_record_frames": 845,
+      "full_R_sha256": "37ac101c3089fc6c1c308fee34840a72f9f3635e85f8170d4018c990a7162bb7",
+      "shared_source_interval": [
+        0,
+        843
+      ],
+      "R59_shared_prefix_frames": 843,
+      "R59_shared_prefix_R_sha256": "885f6e58c9e7688069555e7348cbb28507d7e26c20d86560fb80fbc94a95e17d",
+      "R59_source_arrays_sha256": "ccc419abb7fa5e7f81729ff46ed4dd0e5117daef23a2e9b626f25a5df1d49780",
+      "R59_prefix_exact": true,
+      "full_record_not_shared_prefix_used_for_peak_extraction": true
+    },
+    "motion_sha256": "37ac101c3089fc6c1c308fee34840a72f9f3635e85f8170d4018c990a7162bb7",
+    "support_seconds": [
+      0.5,
+      27.566666666666666
+    ],
+    "query_count": 34,
+    "motion_minima_count": 23,
+    "wrong_query_count": 45,
+    "wrong_audio_sha256": "9045b0021bf6f3105232b222563c8423a77af2b093cb05686fb23752a1758b29",
+    "offsets": [
+      -0.5,
+      -0.25,
+      0,
+      0.25,
+      0.5
+    ],
+    "scores": [
+      0.1509296186040372,
+      0.19638322268832992,
+      0.32129633281091446,
+      0.17929625802217275,
+      0.20081085540213692
+    ],
+    "ranking": {
+      "status": "EVALUABLE",
+      "strict_top1": true,
+      "tied_top1_credit": 1.0,
+      "tied_maximum_indices": [
+        2
+      ],
+      "paired_win": 1.0,
+      "correct_rank_lower": 1
+    },
+    "six_candidate_ranking": {
+      "status": "EVALUABLE",
+      "strict_top1": true,
+      "tied_top1_credit": 1.0,
+      "tied_maximum_indices": [
+        2
+      ],
+      "paired_win": 1.0,
+      "correct_rank_lower": 1
+    },
+    "wrong_song_score": 0.2941145452710809,
+    "correct_vs_wrong": 1,
+    "median_beat_period_seconds": 0.8999999999999999,
+    "period_ambiguity": [
+      {
+        "offset": -0.5,
+        "distance_to_integer_beat_cycles_seconds": 0.3999999999999999,
+        "within_0_1_second": false
+      },
+      {
+        "offset": -0.25,
+        "distance_to_integer_beat_cycles_seconds": 0.25,
+        "within_0_1_second": false
+      },
+      {
+        "offset": 0.25,
+        "distance_to_integer_beat_cycles_seconds": 0.25,
+        "within_0_1_second": false
+      },
+      {
+        "offset": 0.5,
+        "distance_to_integer_beat_cycles_seconds": 0.3999999999999999,
+        "within_0_1_second": false
+      }
+    ],
+    "equal_density_grid": [
+      {
+        "phase": 0,
+        "scores": [
+          0.2317368484305702,
+          0.20847396293752574,
+          0.21418186627037786,
+          0.20633105036615482,
+          0.18464186758141746
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": false,
+          "tied_top1_credit": 0.0,
+          "tied_maximum_indices": [
+            0
+          ],
+          "paired_win": 0.75,
+          "correct_rank_lower": 2
+        },
+        "motion_event_count": 23
+      },
+      {
+        "phase": 0.25,
+        "scores": [
+          0.16819979033595067,
+          0.24680173167873298,
+          0.2240517877213489,
+          0.2141782259643303,
+          0.18796773111369602
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": false,
+          "tied_top1_credit": 0.0,
+          "tied_maximum_indices": [
+            1
+          ],
+          "paired_win": 0.75,
+          "correct_rank_lower": 2
+        },
+        "motion_event_count": 23
+      },
+      {
+        "phase": 0.5,
+        "scores": [
+          0.176503159351488,
+          0.18765656884274418,
+          0.24425331690039767,
+          0.22411553755532096,
+          0.1979428495599703
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": true,
+          "tied_top1_credit": 1.0,
+          "tied_maximum_indices": [
+            2
+          ],
+          "paired_win": 1.0,
+          "correct_rank_lower": 1
+        },
+        "motion_event_count": 23
+      },
+      {
+        "phase": 0.75,
+        "scores": [
+          0.19072565973674704,
+          0.19493064888732178,
+          0.20718919958826934,
+          0.21854057218071327,
+          0.21808315465153982
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": false,
+          "tied_top1_credit": 0.0,
+          "tied_maximum_indices": [
+            3
+          ],
+          "paired_win": 0.5,
+          "correct_rank_lower": 3
+        },
+        "motion_event_count": 23
+      }
+    ],
+    "energy_scores": [
+      -0.1566440067089922,
+      -0.11891106874773555,
+      -0.1432752114772003,
+      0.021283159332596086,
+      -0.09159002773560632
+    ],
+    "energy_ranking": {
+      "status": "EVALUABLE",
+      "strict_top1": false,
+      "tied_top1_credit": 0.0,
+      "tied_maximum_indices": [
+        3
+      ],
+      "paired_win": 0.25,
+      "correct_rank_lower": 4
+    },
+    "wrong_song_energy": 0.15698722586134523,
+    "artistic_quality": "NOT_EVALUABLE"
+  },
+  {
+    "source_uid": "fine_007",
+    "dataset": "FineDance",
+    "role": "genre_train_diagnostic",
+    "group": "finedance_archive:007",
+    "audio_group": "9045b0021bf6f3105232b222563c8423a77af2b093cb05686fb23752a1758b29",
+    "choreography_uid": "UNKNOWN",
+    "clock_scope": "OFFICIAL_ARCHIVE_ID_AND_RAW_COMMON_START_NOT_AIST_WAVEFORM_CALIBRATED",
+    "dancer_role": "test",
+    "status": "OBSERVED",
+    "source_proof": {
+      "source_uid": "fine_007",
+      "dataset": "FineDance",
+      "raw_motion_sha256": "b4d345f082dd54e7bad7f9f975b37d923cc4224d6fb1d8658cdeb51d4cff1431",
+      "audio_sha256": "9045b0021bf6f3105232b222563c8423a77af2b093cb05686fb23752a1758b29",
+      "raw_bytes_verified": true,
+      "skeleton_used": false,
+      "FK_used": false,
+      "root_used": false,
+      "contact_used": false,
+      "raw_origin_preserved": true,
+      "audio_offset_frames": 0.0,
+      "clock_scope": "OFFICIAL_ARCHIVE_ID_AND_RAW_COMMON_START_NOT_AIST_WAVEFORM_CALIBRATED",
+      "representation": "FINEDANCE315_ROWS6D_COMMON22_LOCAL_SO3_30HZ",
+      "source_clock_verified": false,
+      "source_clock_limitation": "OFFICIAL_ARCHIVE_ID_COMMON_START_NOT_AIST_WAVEFORM_CALIBRATION",
+      "full_record_frames": 3748,
+      "full_R_sha256": "55184cfd66b995bfae9e1f2e8ad1d076b9ead5373897ef4f137b92094dde4d5c",
+      "shared_source_interval": [
+        0,
+        3747
+      ],
+      "R59_shared_prefix_frames": 3747,
+      "R59_shared_prefix_R_sha256": "ff1d6d6378e6ee8f12b604179adefc4f001e3b19a353d4f495b7970c4f5b7135",
+      "R59_source_arrays_sha256": "bbc1e0bf9d70783d750e881707c8e6e9652036a7b91d47426b7e878a56e19480",
+      "R59_prefix_exact": true,
+      "full_record_not_shared_prefix_used_for_peak_extraction": true
+    },
+    "motion_sha256": "55184cfd66b995bfae9e1f2e8ad1d076b9ead5373897ef4f137b92094dde4d5c",
+    "support_seconds": [
+      0.5,
+      124.36666666666666
+    ],
+    "query_count": 206,
+    "motion_minima_count": 108,
+    "wrong_query_count": 210,
+    "wrong_audio_sha256": "4c178f413740a16b7bf14421a443f91a891a898a82f75b0028bf522d25a27cdd",
+    "offsets": [
+      -0.5,
+      -0.25,
+      0,
+      0.25,
+      0.5
+    ],
+    "scores": [
+      0.2147246334421898,
+      0.2342323288296377,
+      0.19631232865583184,
+      0.23098880189285448,
+      0.1963331465765439
+    ],
+    "ranking": {
+      "status": "EVALUABLE",
+      "strict_top1": false,
+      "tied_top1_credit": 0.0,
+      "tied_maximum_indices": [
+        1
+      ],
+      "paired_win": 0.0,
+      "correct_rank_lower": 5
+    },
+    "six_candidate_ranking": {
+      "status": "EVALUABLE",
+      "strict_top1": false,
+      "tied_top1_credit": 0.0,
+      "tied_maximum_indices": [
+        1
+      ],
+      "paired_win": 0.2,
+      "correct_rank_lower": 5
+    },
+    "wrong_song_score": 0.1855650916342202,
+    "correct_vs_wrong": 1,
+    "median_beat_period_seconds": 0.6000000000000005,
+    "period_ambiguity": [
+      {
+        "offset": -0.5,
+        "distance_to_integer_beat_cycles_seconds": 0.10000000000000053,
+        "within_0_1_second": false
+      },
+      {
+        "offset": -0.25,
+        "distance_to_integer_beat_cycles_seconds": 0.25,
+        "within_0_1_second": false
+      },
+      {
+        "offset": 0.25,
+        "distance_to_integer_beat_cycles_seconds": 0.25,
+        "within_0_1_second": false
+      },
+      {
+        "offset": 0.5,
+        "distance_to_integer_beat_cycles_seconds": 0.10000000000000053,
+        "within_0_1_second": false
+      }
+    ],
+    "equal_density_grid": [
+      {
+        "phase": 0,
+        "scores": [
+          0.2198271492179909,
+          0.21404626523742593,
+          0.21975601929091956,
+          0.21924380940924748,
+          0.212801818473568
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": false,
+          "tied_top1_credit": 0.0,
+          "tied_maximum_indices": [
+            0
+          ],
+          "paired_win": 0.75,
+          "correct_rank_lower": 2
+        },
+        "motion_event_count": 108
+      },
+      {
+        "phase": 0.25,
+        "scores": [
+          0.2151215625247964,
+          0.21875680290876076,
+          0.21640582685523724,
+          0.21653103785715042,
+          0.21982822582359826
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": false,
+          "tied_top1_credit": 0.0,
+          "tied_maximum_indices": [
+            4
+          ],
+          "paired_win": 0.25,
+          "correct_rank_lower": 4
+        },
+        "motion_event_count": 108
+      },
+      {
+        "phase": 0.5,
+        "scores": [
+          0.2222809435005879,
+          0.21708222742775593,
+          0.21693491685160946,
+          0.21807323289034128,
+          0.2129015997864757
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": false,
+          "tied_top1_credit": 0.0,
+          "tied_maximum_indices": [
+            0
+          ],
+          "paired_win": 0.25,
+          "correct_rank_lower": 4
+        },
+        "motion_event_count": 108
+      },
+      {
+        "phase": 0.75,
+        "scores": [
+          0.2114503293813521,
+          0.2217201491227831,
+          0.2184599545264722,
+          0.21471355577630172,
+          0.21912044933214142
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": false,
+          "tied_top1_credit": 0.0,
+          "tied_maximum_indices": [
+            1
+          ],
+          "paired_win": 0.5,
+          "correct_rank_lower": 3
+        },
+        "motion_event_count": 108
+      }
+    ],
+    "energy_scores": [
+      0.28676995955856976,
+      0.3180396038297551,
+      0.3315615247372252,
+      0.3361987069616716,
+      0.3343413943660596
+    ],
+    "energy_ranking": {
+      "status": "EVALUABLE",
+      "strict_top1": false,
+      "tied_top1_credit": 0.0,
+      "tied_maximum_indices": [
+        3
+      ],
+      "paired_win": 0.5,
+      "correct_rank_lower": 3
+    },
+    "wrong_song_energy": 0.1972383699464297,
+    "artistic_quality": "NOT_EVALUABLE"
+  },
+  {
+    "source_uid": "fine_008",
+    "dataset": "FineDance",
+    "role": "genre_train_diagnostic",
+    "group": "finedance_archive:008",
+    "audio_group": "4c178f413740a16b7bf14421a443f91a891a898a82f75b0028bf522d25a27cdd",
+    "choreography_uid": "UNKNOWN",
+    "clock_scope": "OFFICIAL_ARCHIVE_ID_AND_RAW_COMMON_START_NOT_AIST_WAVEFORM_CALIBRATED",
+    "dancer_role": "test",
+    "status": "OBSERVED",
+    "source_proof": {
+      "source_uid": "fine_008",
+      "dataset": "FineDance",
+      "raw_motion_sha256": "aa09ffdc39801d993f81ac950c9d3112aefabdc77c1bd24e56b45e3100eb2400",
+      "audio_sha256": "4c178f413740a16b7bf14421a443f91a891a898a82f75b0028bf522d25a27cdd",
+      "raw_bytes_verified": true,
+      "skeleton_used": false,
+      "FK_used": false,
+      "root_used": false,
+      "contact_used": false,
+      "raw_origin_preserved": true,
+      "audio_offset_frames": 0.0,
+      "clock_scope": "OFFICIAL_ARCHIVE_ID_AND_RAW_COMMON_START_NOT_AIST_WAVEFORM_CALIBRATED",
+      "representation": "FINEDANCE315_ROWS6D_COMMON22_LOCAL_SO3_30HZ",
+      "source_clock_verified": false,
+      "source_clock_limitation": "OFFICIAL_ARCHIVE_ID_COMMON_START_NOT_AIST_WAVEFORM_CALIBRATION",
+      "full_record_frames": 3961,
+      "full_R_sha256": "e0da4ebd7287c9cfbd51c47f379546081c9da26270b714c762469eebda337bd8",
+      "shared_source_interval": [
+        0,
+        3960
+      ],
+      "R59_shared_prefix_frames": 3960,
+      "R59_shared_prefix_R_sha256": "9e672598cb47027135ee26db53cb077141af1515ccd6b98f247ed5ad41fcf6c9",
+      "R59_source_arrays_sha256": "22c8603cb999d41665f22bd9d24b65dc6484f5f1893c7e183ea9b2e9d68796e8",
+      "R59_prefix_exact": true,
+      "full_record_not_shared_prefix_used_for_peak_extraction": true
+    },
+    "motion_sha256": "e0da4ebd7287c9cfbd51c47f379546081c9da26270b714c762469eebda337bd8",
+    "support_seconds": [
+      0.5,
+      49.41700680272109
+    ],
+    "query_count": 83,
+    "motion_minima_count": 46,
+    "wrong_query_count": 87,
+    "wrong_audio_sha256": "4fbacdf09ed8db54ad1f92bf056f6ea59be50a4420282545aa63badaea37c952",
+    "offsets": [
+      -0.5,
+      -0.25,
+      0,
+      0.25,
+      0.5
+    ],
+    "scores": [
+      0.2836988378017306,
+      0.20352536726897177,
+      0.23259034229747375,
+      0.2540341118500011,
+      0.18267179636558994
+    ],
+    "ranking": {
+      "status": "EVALUABLE",
+      "strict_top1": false,
+      "tied_top1_credit": 0.0,
+      "tied_maximum_indices": [
+        0
+      ],
+      "paired_win": 0.5,
+      "correct_rank_lower": 3
+    },
+    "six_candidate_ranking": {
+      "status": "EVALUABLE",
+      "strict_top1": false,
+      "tied_top1_credit": 0.0,
+      "tied_maximum_indices": [
+        0
+      ],
+      "paired_win": 0.6,
+      "correct_rank_lower": 3
+    },
+    "wrong_song_score": 0.22664896975206522,
+    "correct_vs_wrong": 1,
+    "median_beat_period_seconds": 0.5800000000000018,
+    "period_ambiguity": [
+      {
+        "offset": -0.5,
+        "distance_to_integer_beat_cycles_seconds": 0.08000000000000185,
+        "within_0_1_second": true
+      },
+      {
+        "offset": -0.25,
+        "distance_to_integer_beat_cycles_seconds": 0.25,
+        "within_0_1_second": false
+      },
+      {
+        "offset": 0.25,
+        "distance_to_integer_beat_cycles_seconds": 0.25,
+        "within_0_1_second": false
+      },
+      {
+        "offset": 0.5,
+        "distance_to_integer_beat_cycles_seconds": 0.08000000000000185,
+        "within_0_1_second": true
+      }
+    ],
+    "equal_density_grid": [
+      {
+        "phase": 0,
+        "scores": [
+          0.23033253752390848,
+          0.2311494409524025,
+          0.22783895297036336,
+          0.2341153920221905,
+          0.2323959691512893
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": false,
+          "tied_top1_credit": 0.0,
+          "tied_maximum_indices": [
+            3
+          ],
+          "paired_win": 0.0,
+          "correct_rank_lower": 5
+        },
+        "motion_event_count": 46
+      },
+      {
+        "phase": 0.25,
+        "scores": [
+          0.23211756548899123,
+          0.23095561831550346,
+          0.23109235203265385,
+          0.22830666619855017,
+          0.23449723738174272
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": false,
+          "tied_top1_credit": 0.0,
+          "tied_maximum_indices": [
+            4
+          ],
+          "paired_win": 0.5,
+          "correct_rank_lower": 3
+        },
+        "motion_event_count": 46
+      },
+      {
+        "phase": 0.5,
+        "scores": [
+          0.2278070211958497,
+          0.23278867218401642,
+          0.2315815981316481,
+          0.23094364648226332,
+          0.22892468465815496
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": false,
+          "tied_top1_credit": 0.0,
+          "tied_maximum_indices": [
+            1
+          ],
+          "paired_win": 0.75,
+          "correct_rank_lower": 2
+        },
+        "motion_event_count": 46
+      },
+      {
+        "phase": 0.75,
+        "scores": [
+          0.2311452082047552,
+          0.22764356017151688,
+          0.23350165557519328,
+          0.23211620480080342,
+          0.23069236250406863
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": true,
+          "tied_top1_credit": 1.0,
+          "tied_maximum_indices": [
+            2
+          ],
+          "paired_win": 1.0,
+          "correct_rank_lower": 1
+        },
+        "motion_event_count": 46
+      }
+    ],
+    "energy_scores": [
+      0.38391635506627225,
+      0.3427234733105848,
+      0.323484057953411,
+      0.34464423199212824,
+      0.35218189456694954
+    ],
+    "energy_ranking": {
+      "status": "EVALUABLE",
+      "strict_top1": false,
+      "tied_top1_credit": 0.0,
+      "tied_maximum_indices": [
+        0
+      ],
+      "paired_win": 0.0,
+      "correct_rank_lower": 5
+    },
+    "wrong_song_energy": -0.2136125952704778,
+    "artistic_quality": "NOT_EVALUABLE"
+  },
+  {
+    "source_uid": "fine_009",
+    "dataset": "FineDance",
+    "role": "genre_train_diagnostic",
+    "group": "finedance_archive:009",
+    "audio_group": "4fbacdf09ed8db54ad1f92bf056f6ea59be50a4420282545aa63badaea37c952",
+    "choreography_uid": "UNKNOWN",
+    "clock_scope": "OFFICIAL_ARCHIVE_ID_AND_RAW_COMMON_START_NOT_AIST_WAVEFORM_CALIBRATED",
+    "dancer_role": "test",
+    "status": "OBSERVED",
+    "source_proof": {
+      "source_uid": "fine_009",
+      "dataset": "FineDance",
+      "raw_motion_sha256": "c967fa94dd39b895878169b0f31d2fc9f6b495444a5f0edc2192d4ac5da09d64",
+      "audio_sha256": "4fbacdf09ed8db54ad1f92bf056f6ea59be50a4420282545aa63badaea37c952",
+      "raw_bytes_verified": true,
+      "skeleton_used": false,
+      "FK_used": false,
+      "root_used": false,
+      "contact_used": false,
+      "raw_origin_preserved": true,
+      "audio_offset_frames": 0.0,
+      "clock_scope": "OFFICIAL_ARCHIVE_ID_AND_RAW_COMMON_START_NOT_AIST_WAVEFORM_CALIBRATED",
+      "representation": "FINEDANCE315_ROWS6D_COMMON22_LOCAL_SO3_30HZ",
+      "source_clock_verified": false,
+      "source_clock_limitation": "OFFICIAL_ARCHIVE_ID_COMMON_START_NOT_AIST_WAVEFORM_CALIBRATION",
+      "full_record_frames": 1500,
+      "full_R_sha256": "ba0a5fbbdd761316c3b1ea9ea9e4788796bc7995b01b7c743652a130d2341977",
+      "shared_source_interval": [
+        0,
+        1497
+      ],
+      "R59_shared_prefix_frames": 1497,
+      "R59_shared_prefix_R_sha256": "0091d7c251ac4c3d75870ecaa17ef8a665428df9a1e4500f6d116b001763a437",
+      "R59_source_arrays_sha256": "c01b2247669e1b346f8c8ca98cb0f05f2df46add9b85cec04263d5863af7cc66",
+      "R59_prefix_exact": true,
+      "full_record_not_shared_prefix_used_for_peak_extraction": true
+    },
+    "motion_sha256": "ba0a5fbbdd761316c3b1ea9ea9e4788796bc7995b01b7c743652a130d2341977",
+    "support_seconds": [
+      0.5,
+      49.36666666666667
+    ],
+    "query_count": 87,
+    "motion_minima_count": 47,
+    "wrong_query_count": 74,
+    "wrong_audio_sha256": "26c033424113adc182d906df04da2c057556a1a64e10158518c285dafb4fd613",
+    "offsets": [
+      -0.5,
+      -0.25,
+      0,
+      0.25,
+      0.5
+    ],
+    "scores": [
+      0.20971219654722376,
+      0.2754352729953947,
+      0.1952736207999484,
+      0.2859759870417959,
+      0.1957094790656945
+    ],
+    "ranking": {
+      "status": "EVALUABLE",
+      "strict_top1": false,
+      "tied_top1_credit": 0.0,
+      "tied_maximum_indices": [
+        3
+      ],
+      "paired_win": 0.0,
+      "correct_rank_lower": 5
+    },
+    "six_candidate_ranking": {
+      "status": "EVALUABLE",
+      "strict_top1": false,
+      "tied_top1_credit": 0.0,
+      "tied_maximum_indices": [
+        3
+      ],
+      "paired_win": 0.0,
+      "correct_rank_lower": 6
+    },
+    "wrong_song_score": 0.25425575398016825,
+    "correct_vs_wrong": 0,
+    "median_beat_period_seconds": 0.5600000000000005,
+    "period_ambiguity": [
+      {
+        "offset": -0.5,
+        "distance_to_integer_beat_cycles_seconds": 0.0600000000000005,
+        "within_0_1_second": true
+      },
+      {
+        "offset": -0.25,
+        "distance_to_integer_beat_cycles_seconds": 0.25,
+        "within_0_1_second": false
+      },
+      {
+        "offset": 0.25,
+        "distance_to_integer_beat_cycles_seconds": 0.25,
+        "within_0_1_second": false
+      },
+      {
+        "offset": 0.5,
+        "distance_to_integer_beat_cycles_seconds": 0.0600000000000005,
+        "within_0_1_second": true
+      }
+    ],
+    "equal_density_grid": [
+      {
+        "phase": 0,
+        "scores": [
+          0.2368484733273205,
+          0.23467383700378072,
+          0.23908057295556698,
+          0.2333323005070978,
+          0.23900777731933834
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": true,
+          "tied_top1_credit": 1.0,
+          "tied_maximum_indices": [
+            2
+          ],
+          "paired_win": 1.0,
+          "correct_rank_lower": 1
+        },
+        "motion_event_count": 47
+      },
+      {
+        "phase": 0.25,
+        "scores": [
+          0.2341399855432393,
+          0.2377527218648507,
+          0.23446678234148804,
+          0.23958079375108132,
+          0.23325611538028865
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": false,
+          "tied_top1_credit": 0.0,
+          "tied_maximum_indices": [
+            3
+          ],
+          "paired_win": 0.5,
+          "correct_rank_lower": 3
+        },
+        "motion_event_count": 47
+      },
+      {
+        "phase": 0.5,
+        "scores": [
+          0.2378960768547873,
+          0.2337680341022668,
+          0.23859474109212986,
+          0.2342670594058356,
+          0.2399715967024288
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": false,
+          "tied_top1_credit": 0.0,
+          "tied_maximum_indices": [
+            4
+          ],
+          "paired_win": 0.75,
+          "correct_rank_lower": 2
+        },
+        "motion_event_count": 47
+      },
+      {
+        "phase": 0.75,
+        "scores": [
+          0.23491661227191332,
+          0.2385071936336944,
+          0.233500433418849,
+          0.23932164256698457,
+          0.23405276643305248
+        ],
+        "ranking": {
+          "status": "EVALUABLE",
+          "strict_top1": false,
+          "tied_top1_credit": 0.0,
+          "tied_maximum_indices": [
+            3
+          ],
+          "paired_win": 0.0,
+          "correct_rank_lower": 5
+        },
+        "motion_event_count": 47
+      }
+    ],
+    "energy_scores": [
+      0.042055083850819144,
+      -0.029708922314791896,
+      0.0698475547041533,
+      0.07487107646851267,
+      0.0007609950059670398
+    ],
+    "energy_ranking": {
+      "status": "EVALUABLE",
+      "strict_top1": false,
+      "tied_top1_credit": 0.0,
+      "tied_maximum_indices": [
+        3
+      ],
+      "paired_win": 0.75,
+      "correct_rank_lower": 2
+    },
+    "wrong_song_energy": 0.06388847542096152,
+    "artistic_quality": "NOT_EVALUABLE"
+  }
+]

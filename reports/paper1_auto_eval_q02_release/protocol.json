@@ -1,0 +1,63 @@
+{
+  "schema": "PAPER1_AUTO_EVAL_Q02_V1",
+  "parent_commit": "b1259d13a5ac1947337c75e1321d925c4f844c4c",
+  "parent_controls_manifest": "65c971713b2df43154fe27ff5646e701bba1403b7960553a5444f5731739043d",
+  "parent_preview_manifest": "1ebb89d6bd734f9afa86172d40667ec6264c5a0e4ec9e56fa793e76d644c0173",
+  "groups_per_domain": 6,
+  "roles": {
+    "AIST++": "train",
+    "FineDance": "genre_train_diagnostic"
+  },
+  "selection": "LEX_SOURCE_UID_GREEDY_EXCLUDE_Q01_AUDIO_MUSIC_GROUP_RECORDING_RAW_AND_KNOWN_CHOREOGRAPHY; UNIQUE_WITHIN_NEW_SET; NO_REPLACEMENT_AFTER_SCORES",
+  "historical_exposure": "R59_AND_EARLIER_PROJECT_EXPOSURE_POSSIBLE; NEW_TO_Q01_BAS_ONLY",
+  "independent_generalization_certified": false,
+  "offsets": [
+    -0.5,
+    -0.25,
+    0,
+    0.25,
+    0.5
+  ],
+  "primary_stream": "beat_this:beat",
+  "primary_metric": "BAS3D22_RELATIVE_ADAPTED_MUSIC_TO_MOTION",
+  "beat_model": "FROZEN_MUSIC_EVENTS_FINAL0_MINIMAL_50HZ_FLOAT32",
+  "smoothing_sigma_frames": 5,
+  "matching_sigma_seconds": 0.1,
+  "periodic_grid_phases": [
+    0,
+    0.25,
+    0.5,
+    0.75
+  ],
+  "bootstrap_draws": 3000,
+  "bootstrap_seed": 77002,
+  "tie_tolerance": 1e-12,
+  "doses_rad": [
+    0.0125,
+    0.025,
+    0.05
+  ],
+  "edit_guard_frames": 4,
+  "envelope_seconds": 0.5,
+  "synthetic_beat_frequency": "HALF_OF_ASSIGNED_MUSIC_BEAT_FREQUENCY; NO_SCORE_SEARCH",
+  "static_control": "FIRST_SOURCE_POSE_ALL_FRAMES; SYNTHETIC_NOT_AN_ARTISTIC_ERROR_LABEL",
+  "metrics": [
+    "FK_D1_D2_D3_Q95",
+    "FK_D3_EDIT_STENCIL_MAX",
+    "SO3_SPEED_ACCEL_Q95",
+    "SO3_ACCEL_EDIT_STENCIL_MAX",
+    "WRIST_ORIENTATION",
+    "LONGEST_LOW_ACTIVITY",
+    "GTWLocal",
+    "BAS",
+    "DENSITY_NULL_AND_ENERGY_BASELINES"
+  ],
+  "qualification": "ALL_REQUESTED_GROUPS_SUPPORTED; PER_DOMAIN_PAIRED_BOOTSTRAP_LOWER_TOP1_BAS_MINUS_ENERGY_AND_EQUAL_DENSITY_GRID_PHASE0_ABOVE_ZERO; STILL_NOT_ARTISTIC_VALIDITY",
+  "MotionCritic": "SHADOW_NOT_RUN_INPUT_CONTRACT_UNVERIFIED",
+  "human_records": 0,
+  "training_steps": 0,
+  "planner_calls": 0,
+  "new_G1_calls": 0,
+  "can_route": false,
+  "joint_decision": "NOT_STARTED_UNTIL_QUALIFICATION"
+}

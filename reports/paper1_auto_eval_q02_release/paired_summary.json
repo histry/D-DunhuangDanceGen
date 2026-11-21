@@ -1,0 +1,46 @@
+[
+  {
+    "dataset": "AIST++",
+    "requested": 6,
+    "registered": 6,
+    "observed": 6,
+    "complete_cases": 6,
+    "strict_top1_correct": 3,
+    "tied_top1_mean": 0.5,
+    "paired_win_mean": 0.7916666666666666,
+    "energy_top1": 0.16666666666666666,
+    "grid_phase0_top1": 0.16666666666666666,
+    "top1_minus_energy_95": [
+      0.0,
+      0.6666666666666666
+    ],
+    "top1_minus_grid_95": [
+      0.0,
+      0.6666666666666666
+    ],
+    "qualifies": false,
+    "independent_generalization_certified": false
+  },
+  {
+    "dataset": "FineDance",
+    "requested": 6,
+    "registered": 6,
+    "observed": 6,
+    "complete_cases": 6,
+    "strict_top1_correct": 1,
+    "tied_top1_mean": 0.16666666666666666,
+    "paired_win_mean": 0.4166666666666667,
+    "energy_top1": 0.0,
+    "grid_phase0_top1": 0.16666666666666666,
+    "top1_minus_energy_95": [
+      0.0,
+      0.5
+    ],
+    "top1_minus_grid_95": [
+      -0.5,
+      0.5
+    ],
+    "qualifies": false,
+    "independent_generalization_certified": false
+  }
+]

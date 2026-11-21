@@ -1,0 +1,27 @@
+{
+  "code": {
+    "q02_run.py": "b47e6d263c3f02629868fde73c025d3f8270d75005768584744244eee7308fd2",
+    "q02_motion.py": "d84fc9de137b8c5d024983eba35d5aaa538d8b5e6f3ccc73daae186f38e46d67",
+    "q02_protocol.json": "36ce5cb53cb7821018a04699189f7a8a197429458b05600649ef1a6e483455a2",
+    "q02_view.py": "99f4a60d6685f9c3c0297b29360b3814da3ee07be78df8444d8b7ee4a0ef2db1",
+    "q02_common.py": "c2db1f4a00516cc7efb8e8b6c7a3df191f017215feaa61f35aadd1121dd612e5",
+    "q02_music.py": "807e95bc4bcf9fccca5f74a726e16e02a8af39112f51628bde4d680aee28e3e9",
+    "common.py": "61fd35f7b85a0fcfa3b97f5ac59e47394161f9b1643b7b4b785fe895a498b238",
+    "music.py": "e7894bbf0fc34f3f70a9054f7b6dc3d9ee8f00c719f5114bf04da29a55147777",
+    "experiment.py": "0459c9031404d4550044babbcbdeb8e298b9b05d771edae76a3013d770b0cea2",
+    "controls.py": "11cec7c6ec774fb78de208c55ecaee335e054a8fcaa92f97db1e495f83ed86a7",
+    "observability.py": "d35c5c414c603ff8f5c8b8d8f905f39bb84f1e4274d8975b2aca1fa511279784",
+    "view.py": "45249a01d028a1ec52b5d7adb0574d667dacd7eedecb1b06042b8f6b89a3ab4e"
+  },
+  "parents": {
+    "controls": "65c971713b2df43154fe27ff5646e701bba1403b7960553a5444f5731739043d",
+    "preview": "1ebb89d6bd734f9afa86172d40667ec6264c5a0e4ec9e56fa793e76d644c0173"
+  },
+  "files": {
+    "motion_scores.json": "23a3a07503cda60b6048c7e13598fb98a28bf81a72377ed3412bd6f884dcc349",
+    "paired_scores.json": "c75ebe2dd6d29817f05cb26a15a8bf273c9041f8a19a2c95fbeb87960909673b",
+    "paired_summary.json": "8c269dbb50e83497582ed98ba6fc1f4dadc9d025cf93c362f0d881313426aa4c",
+    "qualification.json": "34af5266cf5d151f5e3523d9b6efed8b83cb0d0840c8129df5b582c7df6aa688",
+    "sensitivity.json": "70a59c0350146170c904df3eb4d7a5a551f4399c77cd0fe88a338193c15198f8"
+  }
+}
