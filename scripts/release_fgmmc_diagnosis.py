@@ -1,6 +1,7 @@
 """Scalar-only frozen diagnosis export, including effective graph multiplicity audit."""
 import importlib.util, sys
 from pathlib import Path
+import numpy as np
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'src'))
 from dunhuang.research.fgmmc_q01.common import ROOT, CFG, read, write, sha, fresh, array_hash
 
@@ -20,9 +21,22 @@ def build(out):
                 values=[condition['per_clock'][k]['soft_score'] for k in ids]
                 assert len(set(values))==1,'Same graph gave different score'
             checked+=1
+    from dunhuang.research.fgmmc_q01.network import initial
+    template=initial();radius=sum((b.conv.kernel_size[0]-1)//2*b.conv.dilation[0] for b in template.music.blocks)
+    assert radius==3
+    bounds=np.linspace(0,CFG['frames'],CFG['tokens']+1).round().astype(int);support=[]
+    for delta in CFG['clock_offsets']:
+        nominal=[];halo=[]
+        for a,b in zip(bounds[:-1],bounds[1:]):
+            nominal.append(max(0,min(b+delta,b)-max(a+delta,a))/(b-a))
+            lo,hi=max(0,a-radius),min(CFG['frames'],b+radius)
+            halo.append(max(0,min(hi+delta,hi)-max(lo+delta,lo))/(hi-lo))
+        support.append(dict(offset_frames=delta,mean_same_index_nominal_bin_overlap=float(np.mean(nominal)),mean_same_index_TCN_receptive_upper_support_overlap=float(np.mean(halo))))
     graph=dict(unique_clocks=len(bank),unique_allowed_graphs=len(classes),
                classes=[dict(mask_sha256=h,clock_indices=ids,amplitudes=[order[k]['amplitude'] for k in ids],nominal_aggregation_prior_mass=len(ids)/len(bank)) for h,ids in classes.items()],
                all_equal_graph_scores_exact=True,checked_model_conditions=checked,
+               TCN_receptive_radius_frames=radius,identity_path_support_overlap=support,
+               support_scope='NOMINAL_BINS_AND_MASK_BLIND_COMPUTATIONAL_SUPPORT_BOUND_NOT_SALIENCY_OR_SEMANTIC_EQUALITY; MODEL_PATH_OVERLAP_METRIC_EXCLUDES_EXTRA_TCN_HALO',
                no_reweighted_scores_or_new_rankings=True,
                interpretation='Exact-clock deduplication does not deduplicate effective matching graphs; this is representation degeneracy, not proof of the full failure cause')
     out=fresh(out)
