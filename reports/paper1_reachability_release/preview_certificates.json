@@ -1,0 +1,1181 @@
+[
+  {
+    "case_key": "f8d91db44c816c9c6b18cfb8",
+    "source_uid": "female_FeiTian",
+    "fraction": 0.25,
+    "target_frame": 64.20000000000005,
+    "target_frames": 240,
+    "sources": [
+      {
+        "source_interval": [
+          2377,
+          2660
+        ],
+        "anchor_source_frame": 2608.0,
+        "target_frames": 240,
+        "rate_min": 0.75,
+        "rate_max": 1.33,
+        "requested_target_frame": 64.20000000000005,
+        "target_tolerance_frames": 3.0,
+        "continuous_reachable_interval": [
+          173.25,
+          200.75
+        ],
+        "reachable_interval_rational": [
+          [
+            693,
+            4
+          ],
+          [
+            803,
+            4
+          ]
+        ],
+        "minimum_target_error_lower_bound": 109.04999999999995,
+        "error_lower_bound_rational": [
+          2180999999999999,
+          20000000000000
+        ],
+        "rate_status": "EXCLUDED_BY_RATE",
+        "status": "EXCLUDED_BY_RATE",
+        "additional_constraints": [
+          "FINITE_CLOCK_FAMILY",
+          "G1",
+          "MOVING_SUPPORT",
+          "FOUR_FRAME_GUARD_WHERE_APPLICABLE"
+        ],
+        "exact_arithmetic": "RATIONAL_FROM_DECLARED_DECIMAL_PARAMETERS",
+        "scope": "ENDPOINTS_MONOTONICITY_LOCAL_RATE_ONLY_ACTUAL_FRAME_CENTERS",
+        "witness_clock": null,
+        "source_uid": "female_FeiTian",
+        "source_order": 0,
+        "actual_frozen_execution_witness": null
+      },
+      {
+        "source_interval": [
+          4153,
+          4446
+        ],
+        "anchor_source_frame": 4311.0,
+        "target_frames": 240,
+        "rate_min": 0.75,
+        "rate_max": 1.33,
+        "requested_target_frame": 64.20000000000005,
+        "target_tolerance_frames": 3.0,
+        "continuous_reachable_interval": [
+          118.5,
+          138.5
+        ],
+        "reachable_interval_rational": [
+          [
+            237,
+            2
+          ],
+          [
+            277,
+            2
+          ]
+        ],
+        "minimum_target_error_lower_bound": 54.29999999999995,
+        "error_lower_bound_rational": [
+          1085999999999999,
+          20000000000000
+        ],
+        "rate_status": "EXCLUDED_BY_RATE",
+        "status": "EXCLUDED_BY_RATE",
+        "additional_constraints": [
+          "FINITE_CLOCK_FAMILY",
+          "G1",
+          "MOVING_SUPPORT",
+          "FOUR_FRAME_GUARD_WHERE_APPLICABLE"
+        ],
+        "exact_arithmetic": "RATIONAL_FROM_DECLARED_DECIMAL_PARAMETERS",
+        "scope": "ENDPOINTS_MONOTONICITY_LOCAL_RATE_ONLY_ACTUAL_FRAME_CENTERS",
+        "witness_clock": null,
+        "source_uid": "female_FeiTian",
+        "source_order": 1,
+        "actual_frozen_execution_witness": null
+      }
+    ],
+    "rate_upper_bound_success": false,
+    "actual_success": false,
+    "scope": "FIXED_TWO_SOURCES_ANCHOR_BUDGET_AND_RATES_ONLY"
+  },
+  {
+    "case_key": "f8d91db44c816c9c6b18cfb8",
+    "source_uid": "female_FeiTian",
+    "fraction": 0.5,
+    "target_frame": 126.0,
+    "target_frames": 240,
+    "sources": [
+      {
+        "source_interval": [
+          2377,
+          2660
+        ],
+        "anchor_source_frame": 2608.0,
+        "target_frames": 240,
+        "rate_min": 0.75,
+        "rate_max": 1.33,
+        "requested_target_frame": 126.0,
+        "target_tolerance_frames": 3.0,
+        "continuous_reachable_interval": [
+          173.25,
+          200.75
+        ],
+        "reachable_interval_rational": [
+          [
+            693,
+            4
+          ],
+          [
+            803,
+            4
+          ]
+        ],
+        "minimum_target_error_lower_bound": 47.25,
+        "error_lower_bound_rational": [
+          189,
+          4
+        ],
+        "rate_status": "EXCLUDED_BY_RATE",
+        "status": "EXCLUDED_BY_RATE",
+        "additional_constraints": [
+          "FINITE_CLOCK_FAMILY",
+          "G1",
+          "MOVING_SUPPORT",
+          "FOUR_FRAME_GUARD_WHERE_APPLICABLE"
+        ],
+        "exact_arithmetic": "RATIONAL_FROM_DECLARED_DECIMAL_PARAMETERS",
+        "scope": "ENDPOINTS_MONOTONICITY_LOCAL_RATE_ONLY_ACTUAL_FRAME_CENTERS",
+        "witness_clock": null,
+        "source_uid": "female_FeiTian",
+        "source_order": 0,
+        "actual_frozen_execution_witness": null
+      },
+      {
+        "source_interval": [
+          4153,
+          4446
+        ],
+        "anchor_source_frame": 4311.0,
+        "target_frames": 240,
+        "rate_min": 0.75,
+        "rate_max": 1.33,
+        "requested_target_frame": 126.0,
+        "target_tolerance_frames": 3.0,
+        "continuous_reachable_interval": [
+          118.5,
+          138.5
+        ],
+        "reachable_interval_rational": [
+          [
+            237,
+            2
+          ],
+          [
+            277,
+            2
+          ]
+        ],
+        "minimum_target_error_lower_bound": 0.0,
+        "error_lower_bound_rational": [
+          0,
+          1
+        ],
+        "rate_status": "REACHABLE_BY_RATE",
+        "status": "UNKNOWN_WITH_ADDITIONAL_CONSTRAINTS",
+        "additional_constraints": [
+          "FINITE_CLOCK_FAMILY",
+          "G1",
+          "MOVING_SUPPORT",
+          "FOUR_FRAME_GUARD_WHERE_APPLICABLE"
+        ],
+        "exact_arithmetic": "RATIONAL_FROM_DECLARED_DECIMAL_PARAMETERS",
+        "scope": "ENDPOINTS_MONOTONICITY_LOCAL_RATE_ONLY_ACTUAL_FRAME_CENTERS",
+        "witness_clock": [
+          [
+            4153.0,
+            0.0
+          ],
+          [
+            4311.0,
+            126.0
+          ],
+          [
+            4445.0,
+            239.0
+          ]
+        ],
+        "witness_clock_rational": [
+          [
+            [
+              4153,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          [
+            [
+              4311,
+              1
+            ],
+            [
+              126,
+              1
+            ]
+          ],
+          [
+            [
+              4445,
+              1
+            ],
+            [
+              239,
+              1
+            ]
+          ]
+        ],
+        "source_uid": "female_FeiTian",
+        "source_order": 1,
+        "actual_frozen_execution_witness": {
+          "candidate_uid": "b97a785b2875f08569f2aed84cc2fc02188e30434b6a837ec187a87268a4e4b2",
+          "actual_anchor_target_frame": 123.3339767839446,
+          "actual_clock_sha256": "46b733ebceabfe7105f13eaa13b54c64e3ba3b9735fac5d76409f81da43c230f",
+          "actual_full_rotation_sha256": "9a1ab60f76a9c282f1708441376d1634c2949968b76dee542d04bb7251f1bc31",
+          "G1_original_screen": true,
+          "source_resampling_exact": true,
+          "protected_first_last_four": true,
+          "target_error_frames": 2.666023216055393
+        }
+      }
+    ],
+    "rate_upper_bound_success": true,
+    "actual_success": true,
+    "scope": "FIXED_TWO_SOURCES_ANCHOR_BUDGET_AND_RATES_ONLY"
+  },
+  {
+    "case_key": "f8d91db44c816c9c6b18cfb8",
+    "source_uid": "female_FeiTian",
+    "fraction": 0.75,
+    "target_frame": 187.20000000000005,
+    "target_frames": 240,
+    "sources": [
+      {
+        "source_interval": [
+          2377,
+          2660
+        ],
+        "anchor_source_frame": 2608.0,
+        "target_frames": 240,
+        "rate_min": 0.75,
+        "rate_max": 1.33,
+        "requested_target_frame": 187.20000000000005,
+        "target_tolerance_frames": 3.0,
+        "continuous_reachable_interval": [
+          173.25,
+          200.75
+        ],
+        "reachable_interval_rational": [
+          [
+            693,
+            4
+          ],
+          [
+            803,
+            4
+          ]
+        ],
+        "minimum_target_error_lower_bound": 0.0,
+        "error_lower_bound_rational": [
+          0,
+          1
+        ],
+        "rate_status": "REACHABLE_BY_RATE",
+        "status": "UNKNOWN_WITH_ADDITIONAL_CONSTRAINTS",
+        "additional_constraints": [
+          "FINITE_CLOCK_FAMILY",
+          "G1",
+          "MOVING_SUPPORT",
+          "FOUR_FRAME_GUARD_WHERE_APPLICABLE"
+        ],
+        "exact_arithmetic": "RATIONAL_FROM_DECLARED_DECIMAL_PARAMETERS",
+        "scope": "ENDPOINTS_MONOTONICITY_LOCAL_RATE_ONLY_ACTUAL_FRAME_CENTERS",
+        "witness_clock": [
+          [
+            2377.0,
+            0.0
+          ],
+          [
+            2608.0,
+            187.20000000000005
+          ],
+          [
+            2659.0,
+            239.0
+          ]
+        ],
+        "witness_clock_rational": [
+          [
+            [
+              2377,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          [
+            [
+              2608,
+              1
+            ],
+            [
+              3744000000000001,
+              20000000000000
+            ]
+          ],
+          [
+            [
+              2659,
+              1
+            ],
+            [
+              239,
+              1
+            ]
+          ]
+        ],
+        "source_uid": "female_FeiTian",
+        "source_order": 0,
+        "actual_frozen_execution_witness": {
+          "candidate_uid": "19f96dcf05e06ba3efb985c746aa0336031d8e09b18f1b26970463089dce82ed",
+          "actual_anchor_target_frame": 189.78321956386023,
+          "actual_clock_sha256": "72e910ee781dc5ecae216ca6cbf0fa03bc122926dd0684313d75d233c44041bd",
+          "actual_full_rotation_sha256": "1b26e9ddb2a9696841b0fbc805e78bea4b984f95a8e791a25e2c0c43029edc9c",
+          "G1_original_screen": true,
+          "source_resampling_exact": true,
+          "protected_first_last_four": true,
+          "target_error_frames": 2.583219563860183
+        }
+      },
+      {
+        "source_interval": [
+          4153,
+          4446
+        ],
+        "anchor_source_frame": 4311.0,
+        "target_frames": 240,
+        "rate_min": 0.75,
+        "rate_max": 1.33,
+        "requested_target_frame": 187.20000000000005,
+        "target_tolerance_frames": 3.0,
+        "continuous_reachable_interval": [
+          118.5,
+          138.5
+        ],
+        "reachable_interval_rational": [
+          [
+            237,
+            2
+          ],
+          [
+            277,
+            2
+          ]
+        ],
+        "minimum_target_error_lower_bound": 48.70000000000005,
+        "error_lower_bound_rational": [
+          974000000000001,
+          20000000000000
+        ],
+        "rate_status": "EXCLUDED_BY_RATE",
+        "status": "EXCLUDED_BY_RATE",
+        "additional_constraints": [
+          "FINITE_CLOCK_FAMILY",
+          "G1",
+          "MOVING_SUPPORT",
+          "FOUR_FRAME_GUARD_WHERE_APPLICABLE"
+        ],
+        "exact_arithmetic": "RATIONAL_FROM_DECLARED_DECIMAL_PARAMETERS",
+        "scope": "ENDPOINTS_MONOTONICITY_LOCAL_RATE_ONLY_ACTUAL_FRAME_CENTERS",
+        "witness_clock": null,
+        "source_uid": "female_FeiTian",
+        "source_order": 1,
+        "actual_frozen_execution_witness": null
+      }
+    ],
+    "rate_upper_bound_success": true,
+    "actual_success": true,
+    "scope": "FIXED_TWO_SOURCES_ANCHOR_BUDGET_AND_RATES_ONLY"
+  },
+  {
+    "case_key": "4a69181188a9e248a0a6330b",
+    "source_uid": "female_lotus",
+    "fraction": 0.25,
+    "target_frame": 52.19999999999993,
+    "target_frames": 240,
+    "sources": [
+      {
+        "source_interval": [
+          583,
+          870
+        ],
+        "anchor_source_frame": 768.0,
+        "target_frames": 240,
+        "rate_min": 0.75,
+        "rate_max": 1.33,
+        "requested_target_frame": 52.19999999999993,
+        "target_tolerance_frames": 3.0,
+        "continuous_reachable_interval": [
+          138.75,
+          163.25
+        ],
+        "reachable_interval_rational": [
+          [
+            555,
+            4
+          ],
+          [
+            653,
+            4
+          ]
+        ],
+        "minimum_target_error_lower_bound": 86.55000000000007,
+        "error_lower_bound_rational": [
+          8655000000000007,
+          100000000000000
+        ],
+        "rate_status": "EXCLUDED_BY_RATE",
+        "status": "EXCLUDED_BY_RATE",
+        "additional_constraints": [
+          "FINITE_CLOCK_FAMILY",
+          "G1",
+          "MOVING_SUPPORT",
+          "FOUR_FRAME_GUARD_WHERE_APPLICABLE"
+        ],
+        "exact_arithmetic": "RATIONAL_FROM_DECLARED_DECIMAL_PARAMETERS",
+        "scope": "ENDPOINTS_MONOTONICITY_LOCAL_RATE_ONLY_ACTUAL_FRAME_CENTERS",
+        "witness_clock": null,
+        "source_uid": "female_lotus",
+        "source_order": 0,
+        "actual_frozen_execution_witness": null
+      },
+      {
+        "source_interval": [
+          6303,
+          6596
+        ],
+        "anchor_source_frame": 6444.0,
+        "target_frames": 240,
+        "rate_min": 0.75,
+        "rate_max": 1.33,
+        "requested_target_frame": 52.19999999999993,
+        "target_tolerance_frames": 3.0,
+        "continuous_reachable_interval": [
+          105.75,
+          125.75
+        ],
+        "reachable_interval_rational": [
+          [
+            423,
+            4
+          ],
+          [
+            503,
+            4
+          ]
+        ],
+        "minimum_target_error_lower_bound": 53.55000000000007,
+        "error_lower_bound_rational": [
+          5355000000000007,
+          100000000000000
+        ],
+        "rate_status": "EXCLUDED_BY_RATE",
+        "status": "EXCLUDED_BY_RATE",
+        "additional_constraints": [
+          "FINITE_CLOCK_FAMILY",
+          "G1",
+          "MOVING_SUPPORT",
+          "FOUR_FRAME_GUARD_WHERE_APPLICABLE"
+        ],
+        "exact_arithmetic": "RATIONAL_FROM_DECLARED_DECIMAL_PARAMETERS",
+        "scope": "ENDPOINTS_MONOTONICITY_LOCAL_RATE_ONLY_ACTUAL_FRAME_CENTERS",
+        "witness_clock": null,
+        "source_uid": "female_lotus",
+        "source_order": 1,
+        "actual_frozen_execution_witness": null
+      }
+    ],
+    "rate_upper_bound_success": false,
+    "actual_success": false,
+    "scope": "FIXED_TWO_SOURCES_ANCHOR_BUDGET_AND_RATES_ONLY"
+  },
+  {
+    "case_key": "4a69181188a9e248a0a6330b",
+    "source_uid": "female_lotus",
+    "fraction": 0.5,
+    "target_frame": 116.40000000000009,
+    "target_frames": 240,
+    "sources": [
+      {
+        "source_interval": [
+          583,
+          870
+        ],
+        "anchor_source_frame": 768.0,
+        "target_frames": 240,
+        "rate_min": 0.75,
+        "rate_max": 1.33,
+        "requested_target_frame": 116.40000000000009,
+        "target_tolerance_frames": 3.0,
+        "continuous_reachable_interval": [
+          138.75,
+          163.25
+        ],
+        "reachable_interval_rational": [
+          [
+            555,
+            4
+          ],
+          [
+            653,
+            4
+          ]
+        ],
+        "minimum_target_error_lower_bound": 22.34999999999991,
+        "error_lower_bound_rational": [
+          2234999999999991,
+          100000000000000
+        ],
+        "rate_status": "EXCLUDED_BY_RATE",
+        "status": "EXCLUDED_BY_RATE",
+        "additional_constraints": [
+          "FINITE_CLOCK_FAMILY",
+          "G1",
+          "MOVING_SUPPORT",
+          "FOUR_FRAME_GUARD_WHERE_APPLICABLE"
+        ],
+        "exact_arithmetic": "RATIONAL_FROM_DECLARED_DECIMAL_PARAMETERS",
+        "scope": "ENDPOINTS_MONOTONICITY_LOCAL_RATE_ONLY_ACTUAL_FRAME_CENTERS",
+        "witness_clock": null,
+        "source_uid": "female_lotus",
+        "source_order": 0,
+        "actual_frozen_execution_witness": null
+      },
+      {
+        "source_interval": [
+          6303,
+          6596
+        ],
+        "anchor_source_frame": 6444.0,
+        "target_frames": 240,
+        "rate_min": 0.75,
+        "rate_max": 1.33,
+        "requested_target_frame": 116.40000000000009,
+        "target_tolerance_frames": 3.0,
+        "continuous_reachable_interval": [
+          105.75,
+          125.75
+        ],
+        "reachable_interval_rational": [
+          [
+            423,
+            4
+          ],
+          [
+            503,
+            4
+          ]
+        ],
+        "minimum_target_error_lower_bound": 0.0,
+        "error_lower_bound_rational": [
+          0,
+          1
+        ],
+        "rate_status": "REACHABLE_BY_RATE",
+        "status": "UNKNOWN_WITH_ADDITIONAL_CONSTRAINTS",
+        "additional_constraints": [
+          "FINITE_CLOCK_FAMILY",
+          "G1",
+          "MOVING_SUPPORT",
+          "FOUR_FRAME_GUARD_WHERE_APPLICABLE"
+        ],
+        "exact_arithmetic": "RATIONAL_FROM_DECLARED_DECIMAL_PARAMETERS",
+        "scope": "ENDPOINTS_MONOTONICITY_LOCAL_RATE_ONLY_ACTUAL_FRAME_CENTERS",
+        "witness_clock": [
+          [
+            6303.0,
+            0.0
+          ],
+          [
+            6444.0,
+            116.40000000000009
+          ],
+          [
+            6595.0,
+            239.0
+          ]
+        ],
+        "witness_clock_rational": [
+          [
+            [
+              6303,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          [
+            [
+              6444,
+              1
+            ],
+            [
+              11640000000000009,
+              100000000000000
+            ]
+          ],
+          [
+            [
+              6595,
+              1
+            ],
+            [
+              239,
+              1
+            ]
+          ]
+        ],
+        "source_uid": "female_lotus",
+        "source_order": 1,
+        "actual_frozen_execution_witness": {
+          "candidate_uid": "1e0a2e44fef48dc8997baa80356fbffa002965e3361ab90ecb2687b463e196cb",
+          "actual_anchor_target_frame": 115.42603746361401,
+          "actual_clock_sha256": "28b5ad97c43b13b07318f3657e48ea29587e672bc0391a9f4fce4b7723e4c169",
+          "actual_full_rotation_sha256": "0e4531263a3e397c990ae4521e57fe731abbea10e2cf69bbf6381a46d4d7b0a7",
+          "G1_original_screen": true,
+          "source_resampling_exact": true,
+          "protected_first_last_four": true,
+          "target_error_frames": 0.9739625363860824
+        }
+      }
+    ],
+    "rate_upper_bound_success": true,
+    "actual_success": true,
+    "scope": "FIXED_TWO_SOURCES_ANCHOR_BUDGET_AND_RATES_ONLY"
+  },
+  {
+    "case_key": "4a69181188a9e248a0a6330b",
+    "source_uid": "female_lotus",
+    "fraction": 0.75,
+    "target_frame": 180.60000000000014,
+    "target_frames": 240,
+    "sources": [
+      {
+        "source_interval": [
+          583,
+          870
+        ],
+        "anchor_source_frame": 768.0,
+        "target_frames": 240,
+        "rate_min": 0.75,
+        "rate_max": 1.33,
+        "requested_target_frame": 180.60000000000014,
+        "target_tolerance_frames": 3.0,
+        "continuous_reachable_interval": [
+          138.75,
+          163.25
+        ],
+        "reachable_interval_rational": [
+          [
+            555,
+            4
+          ],
+          [
+            653,
+            4
+          ]
+        ],
+        "minimum_target_error_lower_bound": 17.35000000000014,
+        "error_lower_bound_rational": [
+          867500000000007,
+          50000000000000
+        ],
+        "rate_status": "EXCLUDED_BY_RATE",
+        "status": "EXCLUDED_BY_RATE",
+        "additional_constraints": [
+          "FINITE_CLOCK_FAMILY",
+          "G1",
+          "MOVING_SUPPORT",
+          "FOUR_FRAME_GUARD_WHERE_APPLICABLE"
+        ],
+        "exact_arithmetic": "RATIONAL_FROM_DECLARED_DECIMAL_PARAMETERS",
+        "scope": "ENDPOINTS_MONOTONICITY_LOCAL_RATE_ONLY_ACTUAL_FRAME_CENTERS",
+        "witness_clock": null,
+        "source_uid": "female_lotus",
+        "source_order": 0,
+        "actual_frozen_execution_witness": null
+      },
+      {
+        "source_interval": [
+          6303,
+          6596
+        ],
+        "anchor_source_frame": 6444.0,
+        "target_frames": 240,
+        "rate_min": 0.75,
+        "rate_max": 1.33,
+        "requested_target_frame": 180.60000000000014,
+        "target_tolerance_frames": 3.0,
+        "continuous_reachable_interval": [
+          105.75,
+          125.75
+        ],
+        "reachable_interval_rational": [
+          [
+            423,
+            4
+          ],
+          [
+            503,
+            4
+          ]
+        ],
+        "minimum_target_error_lower_bound": 54.85000000000014,
+        "error_lower_bound_rational": [
+          2742500000000007,
+          50000000000000
+        ],
+        "rate_status": "EXCLUDED_BY_RATE",
+        "status": "EXCLUDED_BY_RATE",
+        "additional_constraints": [
+          "FINITE_CLOCK_FAMILY",
+          "G1",
+          "MOVING_SUPPORT",
+          "FOUR_FRAME_GUARD_WHERE_APPLICABLE"
+        ],
+        "exact_arithmetic": "RATIONAL_FROM_DECLARED_DECIMAL_PARAMETERS",
+        "scope": "ENDPOINTS_MONOTONICITY_LOCAL_RATE_ONLY_ACTUAL_FRAME_CENTERS",
+        "witness_clock": null,
+        "source_uid": "female_lotus",
+        "source_order": 1,
+        "actual_frozen_execution_witness": null
+      }
+    ],
+    "rate_upper_bound_success": false,
+    "actual_success": false,
+    "scope": "FIXED_TWO_SOURCES_ANCHOR_BUDGET_AND_RATES_ONLY"
+  },
+  {
+    "case_key": "73cb91d45a9d9530430d1650",
+    "source_uid": "male_meditation",
+    "fraction": 0.25,
+    "target_frame": 91.19999999999993,
+    "target_frames": 360,
+    "sources": [
+      {
+        "source_interval": [
+          689,
+          1071
+        ],
+        "anchor_source_frame": 924.0,
+        "target_frames": 360,
+        "rate_min": 0.75,
+        "rate_max": 1.33,
+        "requested_target_frame": 91.19999999999993,
+        "target_tolerance_frames": 3.0,
+        "continuous_reachable_interval": [
+          176.25,
+          249.5
+        ],
+        "reachable_interval_rational": [
+          [
+            705,
+            4
+          ],
+          [
+            499,
+            2
+          ]
+        ],
+        "minimum_target_error_lower_bound": 85.05000000000007,
+        "error_lower_bound_rational": [
+          8505000000000007,
+          100000000000000
+        ],
+        "rate_status": "EXCLUDED_BY_RATE",
+        "status": "EXCLUDED_BY_RATE",
+        "additional_constraints": [
+          "FINITE_CLOCK_FAMILY",
+          "G1",
+          "MOVING_SUPPORT",
+          "FOUR_FRAME_GUARD_WHERE_APPLICABLE"
+        ],
+        "exact_arithmetic": "RATIONAL_FROM_DECLARED_DECIMAL_PARAMETERS",
+        "scope": "ENDPOINTS_MONOTONICITY_LOCAL_RATE_ONLY_ACTUAL_FRAME_CENTERS",
+        "witness_clock": null,
+        "source_uid": "male_meditation",
+        "source_order": 0,
+        "actual_frozen_execution_witness": null
+      },
+      {
+        "source_interval": [
+          5118,
+          5476
+        ],
+        "anchor_source_frame": 5307.0,
+        "target_frames": 360,
+        "rate_min": 0.75,
+        "rate_max": 1.33,
+        "requested_target_frame": 91.19999999999993,
+        "target_tolerance_frames": 3.0,
+        "continuous_reachable_interval": [
+          141.75,
+          233.0
+        ],
+        "reachable_interval_rational": [
+          [
+            567,
+            4
+          ],
+          [
+            233,
+            1
+          ]
+        ],
+        "minimum_target_error_lower_bound": 50.55000000000007,
+        "error_lower_bound_rational": [
+          5055000000000007,
+          100000000000000
+        ],
+        "rate_status": "EXCLUDED_BY_RATE",
+        "status": "EXCLUDED_BY_RATE",
+        "additional_constraints": [
+          "FINITE_CLOCK_FAMILY",
+          "G1",
+          "MOVING_SUPPORT",
+          "FOUR_FRAME_GUARD_WHERE_APPLICABLE"
+        ],
+        "exact_arithmetic": "RATIONAL_FROM_DECLARED_DECIMAL_PARAMETERS",
+        "scope": "ENDPOINTS_MONOTONICITY_LOCAL_RATE_ONLY_ACTUAL_FRAME_CENTERS",
+        "witness_clock": null,
+        "source_uid": "male_meditation",
+        "source_order": 1,
+        "actual_frozen_execution_witness": null
+      }
+    ],
+    "rate_upper_bound_success": false,
+    "actual_success": false,
+    "scope": "FIXED_TWO_SOURCES_ANCHOR_BUDGET_AND_RATES_ONLY"
+  },
+  {
+    "case_key": "73cb91d45a9d9530430d1650",
+    "source_uid": "male_meditation",
+    "fraction": 0.5,
+    "target_frame": 181.20000000000005,
+    "target_frames": 360,
+    "sources": [
+      {
+        "source_interval": [
+          689,
+          1071
+        ],
+        "anchor_source_frame": 924.0,
+        "target_frames": 360,
+        "rate_min": 0.75,
+        "rate_max": 1.33,
+        "requested_target_frame": 181.20000000000005,
+        "target_tolerance_frames": 3.0,
+        "continuous_reachable_interval": [
+          176.25,
+          249.5
+        ],
+        "reachable_interval_rational": [
+          [
+            705,
+            4
+          ],
+          [
+            499,
+            2
+          ]
+        ],
+        "minimum_target_error_lower_bound": 0.0,
+        "error_lower_bound_rational": [
+          0,
+          1
+        ],
+        "rate_status": "REACHABLE_BY_RATE",
+        "status": "UNKNOWN_WITH_ADDITIONAL_CONSTRAINTS",
+        "additional_constraints": [
+          "FINITE_CLOCK_FAMILY",
+          "G1",
+          "MOVING_SUPPORT",
+          "FOUR_FRAME_GUARD_WHERE_APPLICABLE"
+        ],
+        "exact_arithmetic": "RATIONAL_FROM_DECLARED_DECIMAL_PARAMETERS",
+        "scope": "ENDPOINTS_MONOTONICITY_LOCAL_RATE_ONLY_ACTUAL_FRAME_CENTERS",
+        "witness_clock": [
+          [
+            689.0,
+            0.0
+          ],
+          [
+            924.0,
+            181.20000000000005
+          ],
+          [
+            1070.0,
+            359.0
+          ]
+        ],
+        "witness_clock_rational": [
+          [
+            [
+              689,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          [
+            [
+              924,
+              1
+            ],
+            [
+              3624000000000001,
+              20000000000000
+            ]
+          ],
+          [
+            [
+              1070,
+              1
+            ],
+            [
+              359,
+              1
+            ]
+          ]
+        ],
+        "source_uid": "male_meditation",
+        "source_order": 0,
+        "actual_frozen_execution_witness": null
+      },
+      {
+        "source_interval": [
+          5118,
+          5476
+        ],
+        "anchor_source_frame": 5307.0,
+        "target_frames": 360,
+        "rate_min": 0.75,
+        "rate_max": 1.33,
+        "requested_target_frame": 181.20000000000005,
+        "target_tolerance_frames": 3.0,
+        "continuous_reachable_interval": [
+          141.75,
+          233.0
+        ],
+        "reachable_interval_rational": [
+          [
+            567,
+            4
+          ],
+          [
+            233,
+            1
+          ]
+        ],
+        "minimum_target_error_lower_bound": 0.0,
+        "error_lower_bound_rational": [
+          0,
+          1
+        ],
+        "rate_status": "REACHABLE_BY_RATE",
+        "status": "UNKNOWN_WITH_ADDITIONAL_CONSTRAINTS",
+        "additional_constraints": [
+          "FINITE_CLOCK_FAMILY",
+          "G1",
+          "MOVING_SUPPORT",
+          "FOUR_FRAME_GUARD_WHERE_APPLICABLE"
+        ],
+        "exact_arithmetic": "RATIONAL_FROM_DECLARED_DECIMAL_PARAMETERS",
+        "scope": "ENDPOINTS_MONOTONICITY_LOCAL_RATE_ONLY_ACTUAL_FRAME_CENTERS",
+        "witness_clock": [
+          [
+            5118.0,
+            0.0
+          ],
+          [
+            5307.0,
+            181.20000000000005
+          ],
+          [
+            5475.0,
+            359.0
+          ]
+        ],
+        "witness_clock_rational": [
+          [
+            [
+              5118,
+              1
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          [
+            [
+              5307,
+              1
+            ],
+            [
+              3624000000000001,
+              20000000000000
+            ]
+          ],
+          [
+            [
+              5475,
+              1
+            ],
+            [
+              359,
+              1
+            ]
+          ]
+        ],
+        "source_uid": "male_meditation",
+        "source_order": 1,
+        "actual_frozen_execution_witness": {
+          "candidate_uid": "61666edf52e4db1e0d7c1df05c147fa3c9e9598cfa907368ddc82aa6db92a48a",
+          "actual_anchor_target_frame": 183.78947368421015,
+          "actual_clock_sha256": "2094522a117b240a52e64506a2cf3bc0c98a51132f01d3f90bcafcefa1858f99",
+          "actual_full_rotation_sha256": "8c5ca05699ff059d581968357df7b6d8dab6240f4d4883ff41b5dfdaf6e22ab6",
+          "G1_original_screen": true,
+          "source_resampling_exact": true,
+          "protected_first_last_four": false,
+          "target_error_frames": 2.5894736842101054
+        }
+      }
+    ],
+    "rate_upper_bound_success": true,
+    "actual_success": true,
+    "scope": "FIXED_TWO_SOURCES_ANCHOR_BUDGET_AND_RATES_ONLY"
+  },
+  {
+    "case_key": "73cb91d45a9d9530430d1650",
+    "source_uid": "male_meditation",
+    "fraction": 0.75,
+    "target_frame": 271.20000000000005,
+    "target_frames": 360,
+    "sources": [
+      {
+        "source_interval": [
+          689,
+          1071
+        ],
+        "anchor_source_frame": 924.0,
+        "target_frames": 360,
+        "rate_min": 0.75,
+        "rate_max": 1.33,
+        "requested_target_frame": 271.20000000000005,
+        "target_tolerance_frames": 3.0,
+        "continuous_reachable_interval": [
+          176.25,
+          249.5
+        ],
+        "reachable_interval_rational": [
+          [
+            705,
+            4
+          ],
+          [
+            499,
+            2
+          ]
+        ],
+        "minimum_target_error_lower_bound": 21.70000000000005,
+        "error_lower_bound_rational": [
+          434000000000001,
+          20000000000000
+        ],
+        "rate_status": "EXCLUDED_BY_RATE",
+        "status": "EXCLUDED_BY_RATE",
+        "additional_constraints": [
+          "FINITE_CLOCK_FAMILY",
+          "G1",
+          "MOVING_SUPPORT",
+          "FOUR_FRAME_GUARD_WHERE_APPLICABLE"
+        ],
+        "exact_arithmetic": "RATIONAL_FROM_DECLARED_DECIMAL_PARAMETERS",
+        "scope": "ENDPOINTS_MONOTONICITY_LOCAL_RATE_ONLY_ACTUAL_FRAME_CENTERS",
+        "witness_clock": null,
+        "source_uid": "male_meditation",
+        "source_order": 0,
+        "actual_frozen_execution_witness": null
+      },
+      {
+        "source_interval": [
+          5118,
+          5476
+        ],
+        "anchor_source_frame": 5307.0,
+        "target_frames": 360,
+        "rate_min": 0.75,
+        "rate_max": 1.33,
+        "requested_target_frame": 271.20000000000005,
+        "target_tolerance_frames": 3.0,
+        "continuous_reachable_interval": [
+          141.75,
+          233.0
+        ],
+        "reachable_interval_rational": [
+          [
+            567,
+            4
+          ],
+          [
+            233,
+            1
+          ]
+        ],
+        "minimum_target_error_lower_bound": 38.20000000000005,
+        "error_lower_bound_rational": [
+          764000000000001,
+          20000000000000
+        ],
+        "rate_status": "EXCLUDED_BY_RATE",
+        "status": "EXCLUDED_BY_RATE",
+        "additional_constraints": [
+          "FINITE_CLOCK_FAMILY",
+          "G1",
+          "MOVING_SUPPORT",
+          "FOUR_FRAME_GUARD_WHERE_APPLICABLE"
+        ],
+        "exact_arithmetic": "RATIONAL_FROM_DECLARED_DECIMAL_PARAMETERS",
+        "scope": "ENDPOINTS_MONOTONICITY_LOCAL_RATE_ONLY_ACTUAL_FRAME_CENTERS",
+        "witness_clock": null,
+        "source_uid": "male_meditation",
+        "source_order": 1,
+        "actual_frozen_execution_witness": null
+      }
+    ],
+    "rate_upper_bound_success": false,
+    "actual_success": false,
+    "scope": "FIXED_TWO_SOURCES_ANCHOR_BUDGET_AND_RATES_ONLY"
+  }
+]

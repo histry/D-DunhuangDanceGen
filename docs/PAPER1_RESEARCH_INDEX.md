@@ -22,3 +22,5 @@
 Q02：[完整候选音乐时钟及运动可观测性资格](../reports/paper1_auto_eval_q02_release/report.md)。冻结自动评价仍未取得跨域准入；历史人口不作为新音乐泛化，来源×时间机会保持登记，联合决策尚未执行。
 
 SourceTime-Q01：[有限共同池决策实验](../reports/paper1_source_time_release/report.md)。固定来源×时间与强顺序对照；BAS只读，不参与选路，未宣称艺术质量或未见泛化。
+
+Reachability-Q01：[精确可达证书及完整139单位结构审查](../reports/paper1_reachability_release/report.md)。单锚点和联合窗口分开，连续可达不升级G1；有限对应假设无合法解，不扩搜或宣称艺术收益。

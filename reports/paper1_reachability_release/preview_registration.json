@@ -1,0 +1,107 @@
+{
+  "protocol": {
+    "schema": "PAPER1_REACHABILITY_Q01",
+    "parent_commit": "9730608829cdc1c69e120b6c108ad81eeced9ac9",
+    "source_time_public_manifest_sha256": "4ccfa55a13c6545a29598cb44fd0cbe161f3263e93d61226587fc93194ff8a6d",
+    "source_time_preview_manifest_sha256": "f721286e148357f11e345eac3d5116d9948d71a178ab17c768aac88d0e5be2a9",
+    "source_time_controls_manifest_sha256": "144a833fa400599c726f7b96d48dbb4e2e066e28afe4b8890459cfc7bcef3023",
+    "rates": [
+      0.75,
+      1.33
+    ],
+    "target_tolerance_frames": 3,
+    "actual_frame_centers": true,
+    "phase_A": "EXACT_EXISTING9_TASKS2_SOURCES; PROVE_ONLY_FIXED_SOURCE_ANCHOR_BUDGET_RATES",
+    "phase_B": "ALL139_R47_UNITS_SORT_SOURCE_UID_INTERVAL_EVENT_UID; KEEP_MISSING",
+    "budgets": [
+      240,
+      360,
+      450
+    ],
+    "anchor_rule": "EARLIEST_FULLY_SUPPORTED_UPPER_ONSET; EARLIEST_UPPER_PEAK_AFTER_ONSET; EARLIEST_FULL_BODY_LOW_RUN_END_AFTER_PEAK",
+    "target_fractions": [
+      0.25,
+      0.5,
+      0.75
+    ],
+    "hypotheses": {
+      "BeatTriple": [
+        [
+          "beat_this",
+          "beat"
+        ],
+        [
+          "beat_this",
+          "beat"
+        ],
+        [
+          "beat_this",
+          "beat"
+        ]
+      ],
+      "AccentPeak": [
+        [
+          "beat_this",
+          "beat"
+        ],
+        [
+          "acoustic",
+          "accent_candidate"
+        ],
+        [
+          "beat_this",
+          "beat"
+        ]
+      ],
+      "SectionHoldEnd": [
+        [
+          "beat_this",
+          "beat"
+        ],
+        [
+          "acoustic",
+          "accent_candidate"
+        ],
+        [
+          "allin1",
+          "section_boundary"
+        ]
+      ]
+    },
+    "music_assignment": "UNIT_SORTED_INDEX_MOD3; ORIGINAL_A900; NEAREST_EVENT_TO_FIXED_FRACTION; NO_SCORE_OR_FEASIBILITY_SELECTION",
+    "execution": "FINITE_REGISTERED_HYPOTHESES; EXACT_RATE_WITNESS_REPARAMETERIZATION; ORIGINAL_G1_RECHECK; NO_BAS_GTW_RANKING",
+    "display": "FIRST_METADATA_COMPLETE_TRIPLE_AND_BUDGET_PER_SOURCE_BEFORE_CERTIFICATE; KEEP_INFEASIBLE",
+    "LP_validation_seed": 78001,
+    "LP_validation_cases": 160,
+    "can_route": false,
+    "training_steps": 0,
+    "new_planner_runs": 0,
+    "semantic_correspondence": "UNKNOWN",
+    "artistic_quality": "NOT_EVALUABLE",
+    "whole_song": "NOT_STARTED_WITHOUT_INDEPENDENT_CORRESPONDENCE_EVIDENCE"
+  },
+  "binding": {
+    "code": {
+      "__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "common.py": "695b7f519390c53d398b29596f98d9ed5c796449173a1c928c2f1386c03c49a3",
+      "protocol.json": "0a046c8f8107781b5197a04c2e07a3f7d18d36430fa937e341e7c3b8a06dc0a4",
+      "study.py": "a610c9fbcc416e2aaa8add265086769403dd1690321743b16f781a379cd89aa9",
+      "test_contracts.py": "b8f51dbe1335510dce2141783ffab2d6a45a38fda3b65647045599e1903406b0",
+      "view.py": "626b8f042681f1a9e4493c30db94e852fc74b172d18d5cdb1c760894cd49ecd8"
+    },
+    "dependencies": {
+      "planning/anchor_reachability.py": "2c52be366c2d8e5e3bb6c90ed2b5e57cf6c9a570d19430b5dedce43542f80fe5",
+      "planning/feasible_time_map.py": "5b036914dc3e89c267cc6ed1517686cada927ed8c91d85342a66a7db201bcd59",
+      "research/source_time_q01/study.py": "f7811913dd17bba2fde920a734e22d0fb515c31bd2bf41324e25111eb6d0f78f",
+      "research/source_time_q01/common.py": "d6b077e919fb24c94a44de6158d92a66773dc52de4b83af41a504707c2234e27",
+      "research/paper1_auto_eval/experiment.py": "0459c9031404d4550044babbcbdeb8e298b9b05d771edae76a3013d770b0cea2",
+      "research/paper1_auto_eval/music.py": "e7894bbf0fc34f3f70a9054f7b6dc3d9ee8f00c719f5114bf04da29a55147777"
+    }
+  },
+  "parents": {
+    "preview": "f721286e148357f11e345eac3d5116d9948d71a178ab17c768aac88d0e5be2a9",
+    "controls": "144a833fa400599c726f7b96d48dbb4e2e066e28afe4b8890459cfc7bcef3023",
+    "public": "4ccfa55a13c6545a29598cb44fd0cbe161f3263e93d61226587fc93194ff8a6d"
+  },
+  "scope": "READONLY_EXISTING_EXECUTIONS; NO_NEW_CLOCK_OR_G1_SOLVE"
+}

@@ -1,0 +1,55 @@
+{
+  "status": "PASS",
+  "explicit_user_authorization": true,
+  "files": 2,
+  "total_bytes": 1850905,
+  "new_audio_transferred": false,
+  "local_audio_reconstruction": [
+    {
+      "name": "dunhuangwu4_240.wav",
+      "original_path": "D:\\danceRAG\\assets\\music\\test\\audio\\dunhuangwu4.wav",
+      "original_sha256": "d1dc8fbd2897f3ce0631aa3ac8487d81ddec334951d3422a6edcea48a3a77f33",
+      "start_frame": 900,
+      "frames": 528,
+      "clip_sha256": "41b36ff4a47263275a11c305ece58ed2c25d3cf1921ae14f8c3d710a449debb9",
+      "generated_locally": true
+    },
+    {
+      "name": "dunhuangwu2_240.wav",
+      "original_path": "D:\\danceRAG\\assets\\music\\test\\audio\\dunhuangwu2.wav",
+      "original_sha256": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c",
+      "start_frame": 900,
+      "frames": 528,
+      "clip_sha256": "483bf57a6da1d11240d0cad20af21a4ca9a1104ed2a523febeba837a606e0cd8",
+      "generated_locally": true
+    },
+    {
+      "name": "dunhuangwu3_360.wav",
+      "original_path": "D:\\danceRAG\\assets\\music\\test\\audio\\dunhuangwu3.wav",
+      "original_sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f",
+      "start_frame": 900,
+      "frames": 768,
+      "clip_sha256": "ae204ef526c6613d3f0309f2f7137552a4e4ed3bbdb570a46a98d14dce3d304f",
+      "generated_locally": true
+    },
+    {
+      "name": "dunhuangwu3_240.wav",
+      "original_path": "D:\\danceRAG\\assets\\music\\test\\audio\\dunhuangwu3.wav",
+      "original_sha256": "cd8f37bb78c3cec7fe67aaa207a90d6c30646de281bdc39c2983b4c3b7b67b2f",
+      "start_frame": 900,
+      "frames": 528,
+      "clip_sha256": "850ddd553e8d960725f6646d5c67ceda0f2cef815368a86c371bf41e8178da6c",
+      "generated_locally": true
+    },
+    {
+      "name": "dunhuangwu2_360.wav",
+      "original_path": "D:\\danceRAG\\assets\\music\\test\\audio\\dunhuangwu2.wav",
+      "original_sha256": "36ce6f03d7a8c57507071fcd74429562b256c03f5523c7e0657f0d1037cd598c",
+      "start_frame": 900,
+      "frames": 768,
+      "clip_sha256": "2526fa722dfc87f47a1998ca40ee3fea684196545685a31dd03cad94a0cbe68e",
+      "generated_locally": true
+    }
+  ],
+  "body_tracks_unchanged": "fd563521dc88f7baa797c55c54109889ee7ecd7338b4737d7e76b63007caa3e2"
+}

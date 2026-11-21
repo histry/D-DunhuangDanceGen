@@ -1,0 +1,18 @@
+{
+  "metadata_missing_reason_counts": {
+    "NO_ORDERED_SUPPORTED_TRIPLE": 110,
+    "NO_LEGAL_REGISTERED_BUDGET": 8
+  },
+  "missing_reason_counts": {
+    "NO_ORDERED_SUPPORTED_TRIPLE": 330,
+    "NO_LEGAL_REGISTERED_BUDGET": 24,
+    "MISSING_MUSIC_EVENT_ID": 17,
+    "NONORDERED_AUTOMATIC_TARGET_EVENTS": 12
+  },
+  "individual_node_exclusion_counts": {
+    "0": 58,
+    "1": 51,
+    "2": 48
+  },
+  "note": "OVERLAPPING_MISSING_REASONS_MUST_NOT_BE_SUMMED; FIXED_SELECTION_RULE_NOT_ALL_POSSIBLE_CORRESPONDENCES"
+}

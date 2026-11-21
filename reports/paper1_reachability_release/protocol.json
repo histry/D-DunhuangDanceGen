@@ -1,0 +1,81 @@
+{
+  "schema": "PAPER1_REACHABILITY_Q01",
+  "parent_commit": "9730608829cdc1c69e120b6c108ad81eeced9ac9",
+  "source_time_public_manifest_sha256": "4ccfa55a13c6545a29598cb44fd0cbe161f3263e93d61226587fc93194ff8a6d",
+  "source_time_preview_manifest_sha256": "f721286e148357f11e345eac3d5116d9948d71a178ab17c768aac88d0e5be2a9",
+  "source_time_controls_manifest_sha256": "144a833fa400599c726f7b96d48dbb4e2e066e28afe4b8890459cfc7bcef3023",
+  "rates": [
+    0.75,
+    1.33
+  ],
+  "target_tolerance_frames": 3,
+  "actual_frame_centers": true,
+  "phase_A": "EXACT_EXISTING9_TASKS2_SOURCES; PROVE_ONLY_FIXED_SOURCE_ANCHOR_BUDGET_RATES",
+  "phase_B": "ALL139_R47_UNITS_SORT_SOURCE_UID_INTERVAL_EVENT_UID; KEEP_MISSING",
+  "budgets": [
+    240,
+    360,
+    450
+  ],
+  "anchor_rule": "EARLIEST_FULLY_SUPPORTED_UPPER_ONSET; EARLIEST_UPPER_PEAK_AFTER_ONSET; EARLIEST_FULL_BODY_LOW_RUN_END_AFTER_PEAK",
+  "target_fractions": [
+    0.25,
+    0.5,
+    0.75
+  ],
+  "hypotheses": {
+    "BeatTriple": [
+      [
+        "beat_this",
+        "beat"
+      ],
+      [
+        "beat_this",
+        "beat"
+      ],
+      [
+        "beat_this",
+        "beat"
+      ]
+    ],
+    "AccentPeak": [
+      [
+        "beat_this",
+        "beat"
+      ],
+      [
+        "acoustic",
+        "accent_candidate"
+      ],
+      [
+        "beat_this",
+        "beat"
+      ]
+    ],
+    "SectionHoldEnd": [
+      [
+        "beat_this",
+        "beat"
+      ],
+      [
+        "acoustic",
+        "accent_candidate"
+      ],
+      [
+        "allin1",
+        "section_boundary"
+      ]
+    ]
+  },
+  "music_assignment": "UNIT_SORTED_INDEX_MOD3; ORIGINAL_A900; NEAREST_EVENT_TO_FIXED_FRACTION; NO_SCORE_OR_FEASIBILITY_SELECTION",
+  "execution": "FINITE_REGISTERED_HYPOTHESES; EXACT_RATE_WITNESS_REPARAMETERIZATION; ORIGINAL_G1_RECHECK; NO_BAS_GTW_RANKING",
+  "display": "FIRST_METADATA_COMPLETE_TRIPLE_AND_BUDGET_PER_SOURCE_BEFORE_CERTIFICATE; KEEP_INFEASIBLE",
+  "LP_validation_seed": 78001,
+  "LP_validation_cases": 160,
+  "can_route": false,
+  "training_steps": 0,
+  "new_planner_runs": 0,
+  "semantic_correspondence": "UNKNOWN",
+  "artistic_quality": "NOT_EVALUABLE",
+  "whole_song": "NOT_STARTED_WITHOUT_INDEPENDENT_CORRESPONDENCE_EVIDENCE"
+}
