@@ -1,0 +1,115 @@
+{
+  "status": "PASS",
+  "batches": {
+    "preview": {
+      "status": "PASS",
+      "files": {
+        "index.html": {
+          "bytes": 2425743,
+          "sha256": "7baa9a3e3df294350960288abba355a89b529216154699e378b3ba7644e369a0"
+        },
+        "protocol.json": {
+          "bytes": 911,
+          "sha256": "679033d6fd566a9d126c77a7a87bf7c418486976c0e0db041627f558bfc2dc5e"
+        }
+      },
+      "total_bytes": 2426654,
+      "batch_user_authorized": true,
+      "reused_local_audio": [
+        {
+          "name": "music_0_240.wav",
+          "existing_relative_path": "outputs/paper1_auto_eval_01/preview/viewer/music_0_240.wav",
+          "sha256": "483cd1676926d0ae8ea553428f8a967152e84eadbc88882888d01b653ad41c8c"
+        },
+        {
+          "name": "music_1_240.wav",
+          "existing_relative_path": "outputs/paper1_auto_eval_01/preview/viewer/music_1_240.wav",
+          "sha256": "13e03b3940f72cebcc219aadfe76ec59cfa7349bfc51b6c6230e2d624da57422"
+        },
+        {
+          "name": "music_2_360.wav",
+          "existing_relative_path": "outputs/paper1_auto_eval_01/preview/viewer/music_2_360.wav",
+          "sha256": "04683148e3c6fd8512d800a82fac39a28d5cb8f77e69724c995ab2cd00b21348"
+        }
+      ],
+      "no_new_audio_transfer": true
+    },
+    "controls_view": {
+      "status": "PASS",
+      "batch_user_authorized": true,
+      "files": {
+        "index.html": {
+          "bytes": 3255287,
+          "sha256": "4f955072e43bdc73edc95ff5e5247de8561e310f76c58a6c165674a99f24e10c"
+        },
+        "protocol.json": {
+          "bytes": 957,
+          "sha256": "9f43c18609ce5b36f6ffab7d766389c79d467aff2e01dae4ccf5d235e8c5e878"
+        }
+      },
+      "total_bytes": 3256244,
+      "reused_local_audio": [
+        {
+          "name": "music_0_240.wav",
+          "existing_relative_path": "outputs/paper1_auto_eval_01/preview/viewer/music_0_240.wav",
+          "sha256": "483cd1676926d0ae8ea553428f8a967152e84eadbc88882888d01b653ad41c8c"
+        },
+        {
+          "name": "music_1_240.wav",
+          "existing_relative_path": "outputs/paper1_auto_eval_01/preview/viewer/music_1_240.wav",
+          "sha256": "13e03b3940f72cebcc219aadfe76ec59cfa7349bfc51b6c6230e2d624da57422"
+        },
+        {
+          "name": "music_2_360.wav",
+          "existing_relative_path": "outputs/paper1_auto_eval_01/preview/viewer/music_2_360.wav",
+          "sha256": "04683148e3c6fd8512d800a82fac39a28d5cb8f77e69724c995ab2cd00b21348"
+        }
+      ],
+      "no_new_audio_transfer": true
+    }
+  },
+  "preview_actual_browser_acceptance": {
+    "status": "PASS",
+    "preview_manifest_sha256": "7fe2c9db154e65b7cc978c8a7894a112b673dde79e95e2237d1d8361b9e6176e",
+    "scope": "ENGINEERING_PLAYBACK_NOT_ARTISTIC_QUALITY",
+    "technical_cases": 3,
+    "panels": 2,
+    "source_original_speed_entries": 3,
+    "common_music_clock": true,
+    "seek_pause_single_frame_half_speed": true,
+    "local_whitelist_service_closed": true
+  },
+  "static_playback_contracts": {
+    "preview": {
+      "status": "PASS",
+      "technical_cases": 3,
+      "source_entries": 3,
+      "all_track_shapes_and_lengths_exact": true,
+      "all_local_audio_hashes_exact": true,
+      "html_sha256": "7baa9a3e3df294350960288abba355a89b529216154699e378b3ba7644e369a0",
+      "scope": "STATIC_PLAYBACK_PAYLOAD_CONTRACT; PREVIEW_BROWSER_INTERACTION_SEPARATE"
+    },
+    "controls_view": {
+      "status": "PASS",
+      "technical_cases": 3,
+      "source_entries": 3,
+      "all_track_shapes_and_lengths_exact": true,
+      "all_local_audio_hashes_exact": true,
+      "html_sha256": "4f955072e43bdc73edc95ff5e5247de8561e310f76c58a6c165674a99f24e10c",
+      "scope": "STATIC_PLAYBACK_PAYLOAD_CONTRACT; PREVIEW_BROWSER_INTERACTION_SEPARATE"
+    }
+  },
+  "temporary_readonly_service_closed": true,
+  "four_method_actual_browser_acceptance": {
+    "status": "PASS",
+    "scope": "ACTUAL_BROWSER_ENGINEERING_ACCEPTANCE_NOT_ARTISTIC_JUDGMENT",
+    "technical_cases": 3,
+    "methods": 4,
+    "source_original_speed_entry_checked": true,
+    "shared_audio_clock": true,
+    "seek_pause_frame_step_half_speed": true,
+    "html_sha256": "4f955072e43bdc73edc95ff5e5247de8561e310f76c58a6c165674a99f24e10c",
+    "protocol_sha256": "9f43c18609ce5b36f6ffab7d766389c79d467aff2e01dae4ccf5d235e8c5e878",
+    "temporary_whitelist_service_closed": true
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "binding": {
+    "code": {
+      "__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "common.py": "cc206d24215c410ff24b118097eb40ad4099d36b8bbbedb33c366fe3e0aed52f",
+      "data.py": "91420ac105f8b12ec839184a71692c8831b4b633c10a34dc2c514c6d43ddfea0",
+      "evaluate.py": "85341f61d06a31e4b374ce2baa66990cf5301e2b2aac4b31171fa086206c6988",
+      "network.py": "205e4b3f80fd9790486cf46367da60c5174ecae5d3af7eb82c82ff54603fd5d6",
+      "preview.py": "293e6754f16cde84846454af9be1ee1f9319228f484866f9127aa5b9ec65d92c",
+      "protocol.json": "8506294bd6898fcbe6102cab1fca80c329468ff94bc188874a8b205f7ebc66a0",
+      "replay.py": "b5a5f8f1d37c4c5c782054e0c00317429815403b14df1efa8b20da91941edc01",
+      "test_contracts.py": "5bdb2305baf11ace523551ce2b7ac39753c1aeb80b772ae2bbf49e2a6ec95342",
+      "train.py": "4b38c1159fb9b654d2af318645cefe4234e23a86f34693882ca1e621e2d3c00c"
+    },
+    "dependencies": {
+      "alignment/model.py": "245f63f53e60dfbb57d6bd642bd1a61e1643bd80be7e2bd80a416554edb531fb",
+      "alignment/partial_path.py": "b0e30e5f4d1f4cc024d58fb3259a7a25b2ca66de3065be9d72c024cf929a45cc",
+      "planning/anchor_reachability.py": "2c52be366c2d8e5e3bb6c90ed2b5e57cf6c9a570d19430b5dedce43542f80fe5",
+      "research/transition_r37/content.py": "c9ee4734ba0a644086c4da2b3af90ce0fe4720cde11ac85e989099bef6e82070",
+      "research/source_time_q01/study.py": "f7811913dd17bba2fde920a734e22d0fb515c31bd2bf41324e25111eb6d0f78f"
+    }
+  },
+  "files": {
+    "comparisons.json": "eb4cfec24aedeaf61058aafdf301524af0a8e9eced9c2f89344764e3e30f57a6",
+    "qualification.json": "690309dee5b41e57563d06ea9391cd0683eab77aa8afd4b212785e56b32effcf",
+    "results.json": "5fdc33e99e39cf4c31ffc4c29082cb77b54672e2d0c9ab99368fd520712ba252",
+    "summary.json": "222263a0fd79d422aa2582ae482ea32e3296ce2a16e3fcb3c68dbb1d18046146"
+  }
+}

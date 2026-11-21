@@ -1,0 +1,2432 @@
+[
+  {
+    "uid": "1167bcdbbabb2a95c15e2af7de5354097f74adc52b4711f553897c2aadea69bb",
+    "source_uid": "07813fa67804911f8620acb0",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mBR0",
+    "audio_sha256": "6bde923c8a0b374a08cab44055c60ccd9c10da75613434636b66bd51d8434767",
+    "start": 15
+  },
+  {
+    "uid": "d8cc1568833cbcd1b8cbe8b7ad166adef99fbce98bbbff37edcd4cb449b4903a",
+    "source_uid": "07813fa67804911f8620acb0",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mBR0",
+    "audio_sha256": "6bde923c8a0b374a08cab44055c60ccd9c10da75613434636b66bd51d8434767",
+    "start": 105
+  },
+  {
+    "uid": "8e4b71040218d88e9cb21c1b259fb557f436589ba0f7960ec683fd228cfa97ae",
+    "source_uid": "07813fa67804911f8620acb0",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mBR0",
+    "audio_sha256": "6bde923c8a0b374a08cab44055c60ccd9c10da75613434636b66bd51d8434767",
+    "start": 195
+  },
+  {
+    "uid": "37a4f72fc8645c4b6f94671581c82787e1813b92970d0200ddd96e9dc1c7b91e",
+    "source_uid": "2be7270cbe7f59f14d7acd6b",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mBR0",
+    "audio_sha256": "6bde923c8a0b374a08cab44055c60ccd9c10da75613434636b66bd51d8434767",
+    "start": 15
+  },
+  {
+    "uid": "a43c6c1667d1f71be4a3ae64c2953ce5f66f1c46f25b8ad61818e13ccdd27cda",
+    "source_uid": "2be7270cbe7f59f14d7acd6b",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mBR0",
+    "audio_sha256": "6bde923c8a0b374a08cab44055c60ccd9c10da75613434636b66bd51d8434767",
+    "start": 105
+  },
+  {
+    "uid": "fa6805e82ba73585bcdcfb6caf56d0942c126f2f379bb77f4796f7ee28a49042",
+    "source_uid": "2be7270cbe7f59f14d7acd6b",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mBR0",
+    "audio_sha256": "6bde923c8a0b374a08cab44055c60ccd9c10da75613434636b66bd51d8434767",
+    "start": 195
+  },
+  {
+    "uid": "35b2161d1b945dd58bd4207609f02aadc4dfe6d3f4f23d540b26c80f8d47a332",
+    "source_uid": "3108446db030e24f554c44a1",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mBR1",
+    "audio_sha256": "7d9a3f700836bf3ec1ccd1ee6e2543ed1514e141bf83b43ce120d1ea252f7889",
+    "start": 15
+  },
+  {
+    "uid": "043f14247c041c499c95d7b9879bd1e677b9aef02f7027859fa297fc3701c949",
+    "source_uid": "3108446db030e24f554c44a1",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mBR1",
+    "audio_sha256": "7d9a3f700836bf3ec1ccd1ee6e2543ed1514e141bf83b43ce120d1ea252f7889",
+    "start": 85
+  },
+  {
+    "uid": "a47c1818c2f8ee46a61456d250280407f6a8e4222fff07eb499499d7292858a1",
+    "source_uid": "3108446db030e24f554c44a1",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mBR1",
+    "audio_sha256": "7d9a3f700836bf3ec1ccd1ee6e2543ed1514e141bf83b43ce120d1ea252f7889",
+    "start": 155
+  },
+  {
+    "uid": "9317abc0f08a45b5eb54f8d16f7b1ec2587938d6f0520b392581cd0edd0a5be4",
+    "source_uid": "3a699d4fa044dd736e093498",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mBR1",
+    "audio_sha256": "7d9a3f700836bf3ec1ccd1ee6e2543ed1514e141bf83b43ce120d1ea252f7889",
+    "start": 15
+  },
+  {
+    "uid": "028c1ce5e802d691f44fe456eca6a3040e55d219d894144c07abedabe0f5fac5",
+    "source_uid": "3a699d4fa044dd736e093498",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mBR1",
+    "audio_sha256": "7d9a3f700836bf3ec1ccd1ee6e2543ed1514e141bf83b43ce120d1ea252f7889",
+    "start": 85
+  },
+  {
+    "uid": "ca1a1337fd610d24982f542c35efd1fe5e7095745c4895923bb8e17fe7f4c0cb",
+    "source_uid": "3a699d4fa044dd736e093498",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mBR1",
+    "audio_sha256": "7d9a3f700836bf3ec1ccd1ee6e2543ed1514e141bf83b43ce120d1ea252f7889",
+    "start": 155
+  },
+  {
+    "uid": "7a7e77c7c9f1b43143c9e186923e3cb8db516e9ccd59d816e4d882ff653573ea",
+    "source_uid": "042dcf4b28d1bf53ca28172a",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mBR3",
+    "audio_sha256": "0d2e173c96d4c96bc2757ff89579f3029465e8ce729c51ce691d5db06b7c33d2",
+    "start": 15
+  },
+  {
+    "uid": "9fa4959861b64918068d7cadd7f251b5e4f09f85ce45886676258609bb53615d",
+    "source_uid": "042dcf4b28d1bf53ca28172a",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mBR3",
+    "audio_sha256": "0d2e173c96d4c96bc2757ff89579f3029465e8ce729c51ce691d5db06b7c33d2",
+    "start": 56
+  },
+  {
+    "uid": "81e66392276d229b4456ccac44f6c78cc56f459b507c72130aed8ad8840e6f43",
+    "source_uid": "042dcf4b28d1bf53ca28172a",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mBR3",
+    "audio_sha256": "0d2e173c96d4c96bc2757ff89579f3029465e8ce729c51ce691d5db06b7c33d2",
+    "start": 97
+  },
+  {
+    "uid": "7bff116ad73232c231fa5beb737631e541af9a3f148ae67c9126a3f7a24323f8",
+    "source_uid": "1c1c916a4a24ee2cda762657",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mBR3",
+    "audio_sha256": "0d2e173c96d4c96bc2757ff89579f3029465e8ce729c51ce691d5db06b7c33d2",
+    "start": 15
+  },
+  {
+    "uid": "57d258942e10179354d3e1ab13d2865cc1bfea098720509ebacfea5cdb058753",
+    "source_uid": "1c1c916a4a24ee2cda762657",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mBR3",
+    "audio_sha256": "0d2e173c96d4c96bc2757ff89579f3029465e8ce729c51ce691d5db06b7c33d2",
+    "start": 56
+  },
+  {
+    "uid": "5b2d1a54cc10bfdb88aada5c4a15a07172e1f140ee703bbcf3a4680132449cbd",
+    "source_uid": "1c1c916a4a24ee2cda762657",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mBR3",
+    "audio_sha256": "0d2e173c96d4c96bc2757ff89579f3029465e8ce729c51ce691d5db06b7c33d2",
+    "start": 97
+  },
+  {
+    "uid": "9e799a758c4f5198a8eaefa5fe95b0edfdc5645be6dae553f9bc4a82146a01f7",
+    "source_uid": "05f4fc96cd398d159ba4d2df",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mBR4",
+    "audio_sha256": "72702c0937afbd27d2006fd023ee049b2f884961ed2c0536c35c70595553b99e",
+    "start": 15
+  },
+  {
+    "uid": "42ee92220184a52a65c99ba5763b14a8e13fc161d411819c6c78dab41746a13a",
+    "source_uid": "05f4fc96cd398d159ba4d2df",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mBR4",
+    "audio_sha256": "72702c0937afbd27d2006fd023ee049b2f884961ed2c0536c35c70595553b99e",
+    "start": 45
+  },
+  {
+    "uid": "b94fdf0afdc609c20e5bf584928279aab65bac2111b061c7ced6abe9d4cfcfc9",
+    "source_uid": "05f4fc96cd398d159ba4d2df",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mBR4",
+    "audio_sha256": "72702c0937afbd27d2006fd023ee049b2f884961ed2c0536c35c70595553b99e",
+    "start": 75
+  },
+  {
+    "uid": "9e5a09fbc0674f0b80e50b60691481ade1cd7001e213fa0d8080f6d838673f62",
+    "source_uid": "593334b7a47186ad0c51f7b6",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mBR4",
+    "audio_sha256": "72702c0937afbd27d2006fd023ee049b2f884961ed2c0536c35c70595553b99e",
+    "start": 15
+  },
+  {
+    "uid": "bc0cd89cbc1c451744c864c68a07e07c4cd2bc2e03c9199eca79d34a61a651ab",
+    "source_uid": "593334b7a47186ad0c51f7b6",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mBR4",
+    "audio_sha256": "72702c0937afbd27d2006fd023ee049b2f884961ed2c0536c35c70595553b99e",
+    "start": 45
+  },
+  {
+    "uid": "720202f04fbe781189f1667a12d89f20d78394fedbfd66bc38219fb52d3e560b",
+    "source_uid": "593334b7a47186ad0c51f7b6",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mBR4",
+    "audio_sha256": "72702c0937afbd27d2006fd023ee049b2f884961ed2c0536c35c70595553b99e",
+    "start": 75
+  },
+  {
+    "uid": "6d694337de8ea8ffb5f5293aa9602750bb620620d86ce5df9b5198e0eb55cc8a",
+    "source_uid": "005735562a8435e57f302d16",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mBR5",
+    "audio_sha256": "c6b02afd39a191361282323192c81968242dd0b9c09fed01eea545e38a77f675",
+    "start": 15
+  },
+  {
+    "uid": "c343a9d293f23078f7533eb0ec47620b835c380c6318de8e0729c919aa778635",
+    "source_uid": "005735562a8435e57f302d16",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mBR5",
+    "audio_sha256": "c6b02afd39a191361282323192c81968242dd0b9c09fed01eea545e38a77f675",
+    "start": 36
+  },
+  {
+    "uid": "a53c419f4ae89b9e1157dc8f29f417406e424422a6385fb5e1d76ffeaa3198e6",
+    "source_uid": "005735562a8435e57f302d16",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mBR5",
+    "audio_sha256": "c6b02afd39a191361282323192c81968242dd0b9c09fed01eea545e38a77f675",
+    "start": 57
+  },
+  {
+    "uid": "8393018c06993777918adb2518c55515cefd3679907c22af9c00ee5f5157831c",
+    "source_uid": "01c011558c752bd79e43637d",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mBR5",
+    "audio_sha256": "c6b02afd39a191361282323192c81968242dd0b9c09fed01eea545e38a77f675",
+    "start": 15
+  },
+  {
+    "uid": "d7e6432180e70a569ee686b0431dd98b8498d4ba149008ed837be6228831d269",
+    "source_uid": "01c011558c752bd79e43637d",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mBR5",
+    "audio_sha256": "c6b02afd39a191361282323192c81968242dd0b9c09fed01eea545e38a77f675",
+    "start": 36
+  },
+  {
+    "uid": "7f4d66909cb74ee93fcd1067f0c6e39cc122dfa8598088b4677320dab7091b99",
+    "source_uid": "01c011558c752bd79e43637d",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mBR5",
+    "audio_sha256": "c6b02afd39a191361282323192c81968242dd0b9c09fed01eea545e38a77f675",
+    "start": 57
+  },
+  {
+    "uid": "975fb1776785e284b552746b6c197206a406c64115acb0fad842685647e1c88b",
+    "source_uid": "0f7c7382c08e0687758e7c0b",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mJB0",
+    "audio_sha256": "9b78122c3c8cb169bdff8b0e5af341f86617150f967d05462ddbe7c62b3008be",
+    "start": 15
+  },
+  {
+    "uid": "4ca36387cb2585e73655823db8f9c31a011b9a59dfb6fcdcc47d6cb5ced1299a",
+    "source_uid": "0f7c7382c08e0687758e7c0b",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mJB0",
+    "audio_sha256": "9b78122c3c8cb169bdff8b0e5af341f86617150f967d05462ddbe7c62b3008be",
+    "start": 105
+  },
+  {
+    "uid": "1984f9fa446b6380fc022697fcae6fc090be4c08a2f001897f8f37737a6b8e7d",
+    "source_uid": "0f7c7382c08e0687758e7c0b",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mJB0",
+    "audio_sha256": "9b78122c3c8cb169bdff8b0e5af341f86617150f967d05462ddbe7c62b3008be",
+    "start": 195
+  },
+  {
+    "uid": "779e5b923e9aa39d2811d6be72c153ea14d0fb83ad6f8a1b54d047fe03af56e8",
+    "source_uid": "1e25ac416f3827ed7bc72d12",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mJB0",
+    "audio_sha256": "9b78122c3c8cb169bdff8b0e5af341f86617150f967d05462ddbe7c62b3008be",
+    "start": 15
+  },
+  {
+    "uid": "17eae9d61994ecdb482d7f185dc77223c4116a57d36fc2e82239340ab4d73bd7",
+    "source_uid": "1e25ac416f3827ed7bc72d12",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mJB0",
+    "audio_sha256": "9b78122c3c8cb169bdff8b0e5af341f86617150f967d05462ddbe7c62b3008be",
+    "start": 105
+  },
+  {
+    "uid": "5cf54330ccb4e27617b9ec870d4340b02f2ca39271b29a9ccc528ab4f8bbd87f",
+    "source_uid": "1e25ac416f3827ed7bc72d12",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mJB0",
+    "audio_sha256": "9b78122c3c8cb169bdff8b0e5af341f86617150f967d05462ddbe7c62b3008be",
+    "start": 195
+  },
+  {
+    "uid": "201c32f712aff00680226b66bc42d35db4fd119be8a33c5fc6cdc8addbd704f7",
+    "source_uid": "0d701f33b91a3d3425f7c38a",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mJB1",
+    "audio_sha256": "7a23ff77f70aaf9b73d17be50a8f6c95f2649f52ee5f6a3fbf0ec9c5d3caf14f",
+    "start": 15
+  },
+  {
+    "uid": "6213baa5b9e17b80b2e8a825678f47081ecfa7a02ed361eb191750ed13761b65",
+    "source_uid": "0d701f33b91a3d3425f7c38a",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mJB1",
+    "audio_sha256": "7a23ff77f70aaf9b73d17be50a8f6c95f2649f52ee5f6a3fbf0ec9c5d3caf14f",
+    "start": 85
+  },
+  {
+    "uid": "7693d490f7f66775dba8551df9908f3b5914377c763351ea6310460b802b0d92",
+    "source_uid": "0d701f33b91a3d3425f7c38a",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mJB1",
+    "audio_sha256": "7a23ff77f70aaf9b73d17be50a8f6c95f2649f52ee5f6a3fbf0ec9c5d3caf14f",
+    "start": 155
+  },
+  {
+    "uid": "8fd1f02041f27b98c80fee0698e52fe85e0b7d8bfcd3b6c021d6fbf5c2582815",
+    "source_uid": "135f8197523889cc653b8b15",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mJB1",
+    "audio_sha256": "7a23ff77f70aaf9b73d17be50a8f6c95f2649f52ee5f6a3fbf0ec9c5d3caf14f",
+    "start": 15
+  },
+  {
+    "uid": "93e320dd7f1d0ce79e616839fefa4de6b84e9e538703fc910cd0424b2915d263",
+    "source_uid": "135f8197523889cc653b8b15",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mJB1",
+    "audio_sha256": "7a23ff77f70aaf9b73d17be50a8f6c95f2649f52ee5f6a3fbf0ec9c5d3caf14f",
+    "start": 85
+  },
+  {
+    "uid": "6673539f719707cdece8aee506ca6bf49f8ae92f8ddbb52105f78676193a5ae4",
+    "source_uid": "135f8197523889cc653b8b15",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mJB1",
+    "audio_sha256": "7a23ff77f70aaf9b73d17be50a8f6c95f2649f52ee5f6a3fbf0ec9c5d3caf14f",
+    "start": 155
+  },
+  {
+    "uid": "5bbd2c914e100fa4f2345dcc864bc4948380c290c1dafc7713f2460896d1396c",
+    "source_uid": "1221165a2e58e2f937f5d88f",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mJB3",
+    "audio_sha256": "d1eb68a33c519d928d88cb46508a26766d89b9b3a73b7255df4c32049122463c",
+    "start": 15
+  },
+  {
+    "uid": "e016f5b528a7c4cbf35aad80b6a8d7ab89fbe6b3527b6152d1d3c557d44328ff",
+    "source_uid": "1221165a2e58e2f937f5d88f",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mJB3",
+    "audio_sha256": "d1eb68a33c519d928d88cb46508a26766d89b9b3a73b7255df4c32049122463c",
+    "start": 56
+  },
+  {
+    "uid": "1d0f8b74e348f46272987cb5daede3579d9fcd723b8a39f2dfc0f6b4692c655e",
+    "source_uid": "1221165a2e58e2f937f5d88f",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mJB3",
+    "audio_sha256": "d1eb68a33c519d928d88cb46508a26766d89b9b3a73b7255df4c32049122463c",
+    "start": 97
+  },
+  {
+    "uid": "0e4fb9635f55b6b0548298fbc8d4811ffb4bd7674a13918d6f17d38276f0f538",
+    "source_uid": "4cb2f4a97c65dac8fa142e6a",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mJB3",
+    "audio_sha256": "d1eb68a33c519d928d88cb46508a26766d89b9b3a73b7255df4c32049122463c",
+    "start": 15
+  },
+  {
+    "uid": "16dce07519f4ac7d0f9396bf71928dc66a7d1d9105dae64cc58309526e8af2c9",
+    "source_uid": "4cb2f4a97c65dac8fa142e6a",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mJB3",
+    "audio_sha256": "d1eb68a33c519d928d88cb46508a26766d89b9b3a73b7255df4c32049122463c",
+    "start": 56
+  },
+  {
+    "uid": "26fcf7f5f5db9b14ce4fafd52eb6cf1039552dc573bae0745275da93d2ece92b",
+    "source_uid": "4cb2f4a97c65dac8fa142e6a",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mJB3",
+    "audio_sha256": "d1eb68a33c519d928d88cb46508a26766d89b9b3a73b7255df4c32049122463c",
+    "start": 97
+  },
+  {
+    "uid": "6c2507a8c93e04ac6128297ad0208a94368dc7d4c520b24d865e6200f1fa31c6",
+    "source_uid": "16efc51bea005c881ef3326f",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mJB4",
+    "audio_sha256": "31200d5823f0f5be3ffa8f1ab056649da4ff6a9e45712a9b8bfc413b833589fa",
+    "start": 15
+  },
+  {
+    "uid": "ebf29e06504870e6a61df30967b7d7c74d6f6698ec5d0f7ede55cc8fe263fe56",
+    "source_uid": "16efc51bea005c881ef3326f",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mJB4",
+    "audio_sha256": "31200d5823f0f5be3ffa8f1ab056649da4ff6a9e45712a9b8bfc413b833589fa",
+    "start": 45
+  },
+  {
+    "uid": "8e3a450d6ed545d130484bd99d05e0f7b23108a56c26fb75d53af6e46c54fee1",
+    "source_uid": "16efc51bea005c881ef3326f",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mJB4",
+    "audio_sha256": "31200d5823f0f5be3ffa8f1ab056649da4ff6a9e45712a9b8bfc413b833589fa",
+    "start": 75
+  },
+  {
+    "uid": "891247bb7499e557c775401ec3e234bde50a7a1e00b90baaa21cab46c85150aa",
+    "source_uid": "20af81ad9d0bb92de78a33bb",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mJB4",
+    "audio_sha256": "31200d5823f0f5be3ffa8f1ab056649da4ff6a9e45712a9b8bfc413b833589fa",
+    "start": 15
+  },
+  {
+    "uid": "e8dedc9232c233d4f515da5a4de7d14dc1b69be74b882f8e5bebf60f54e4c97c",
+    "source_uid": "20af81ad9d0bb92de78a33bb",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mJB4",
+    "audio_sha256": "31200d5823f0f5be3ffa8f1ab056649da4ff6a9e45712a9b8bfc413b833589fa",
+    "start": 45
+  },
+  {
+    "uid": "d20c7ec421e1fc2eef3519efd106b18f51e999708f6b089957dd400e56cacce8",
+    "source_uid": "20af81ad9d0bb92de78a33bb",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mJB4",
+    "audio_sha256": "31200d5823f0f5be3ffa8f1ab056649da4ff6a9e45712a9b8bfc413b833589fa",
+    "start": 75
+  },
+  {
+    "uid": "fc24acfb002222b930be8c30e778c96ea580322c90e48cc946a8653717fe6cd9",
+    "source_uid": "0b58a426aebf7e0c1939119f",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mJB5",
+    "audio_sha256": "79ddee9ed9f022abc6e83da5641b498ce2a2e2114e8fa6cf76a966525e908748",
+    "start": 15
+  },
+  {
+    "uid": "4af38bb0f42d0b4e8ba5c97e3ae63ecc4cf5e4b0ed31fcc98ca265f36787a740",
+    "source_uid": "0b58a426aebf7e0c1939119f",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mJB5",
+    "audio_sha256": "79ddee9ed9f022abc6e83da5641b498ce2a2e2114e8fa6cf76a966525e908748",
+    "start": 36
+  },
+  {
+    "uid": "78d8968dfae1b4997b31d537cdea939521bd9ad76f01108a0cdb90b8e67fe375",
+    "source_uid": "0b58a426aebf7e0c1939119f",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mJB5",
+    "audio_sha256": "79ddee9ed9f022abc6e83da5641b498ce2a2e2114e8fa6cf76a966525e908748",
+    "start": 57
+  },
+  {
+    "uid": "89381a2196f695f59c87a0e3f4b25f0b90ff1f25fc62e3ec421dc70a98f64f67",
+    "source_uid": "2733df7203ba56dfdc10588a",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mJB5",
+    "audio_sha256": "79ddee9ed9f022abc6e83da5641b498ce2a2e2114e8fa6cf76a966525e908748",
+    "start": 15
+  },
+  {
+    "uid": "90113d3c05aa6f3db548a42e189dfad74641c590597f43dcda44b100fe8b35ea",
+    "source_uid": "2733df7203ba56dfdc10588a",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mJB5",
+    "audio_sha256": "79ddee9ed9f022abc6e83da5641b498ce2a2e2114e8fa6cf76a966525e908748",
+    "start": 36
+  },
+  {
+    "uid": "d2713c5302ed17fc5aa37a7f905b9982ef010b5bef2a4fe724b5c6baedd113a2",
+    "source_uid": "2733df7203ba56dfdc10588a",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mJB5",
+    "audio_sha256": "79ddee9ed9f022abc6e83da5641b498ce2a2e2114e8fa6cf76a966525e908748",
+    "start": 57
+  },
+  {
+    "uid": "8330fb05c503fa02318f9cbb950739cfb595f891b89029eddc1deda0eb0d2d86",
+    "source_uid": "0a4aa73cd6887c031e4943ed",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mLH0",
+    "audio_sha256": "94889534012d2b7025bafe9d665968c4bbcc731d2c77f0b608002d6fd6206187",
+    "start": 15
+  },
+  {
+    "uid": "c1c9916cac3afc99e80d8976cebbe39955310425f138f1612ff7f0a0e4d45ea3",
+    "source_uid": "0a4aa73cd6887c031e4943ed",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mLH0",
+    "audio_sha256": "94889534012d2b7025bafe9d665968c4bbcc731d2c77f0b608002d6fd6206187",
+    "start": 105
+  },
+  {
+    "uid": "61e3621e5a42317b15bcd0f96a2b8b8cd716f065e306c0846bf4984b30109c37",
+    "source_uid": "0a4aa73cd6887c031e4943ed",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mLH0",
+    "audio_sha256": "94889534012d2b7025bafe9d665968c4bbcc731d2c77f0b608002d6fd6206187",
+    "start": 195
+  },
+  {
+    "uid": "a8f23e3976a6b7286b608aa9355ad7eceb7cc94d7b1166ae8a30b3d5e2a339de",
+    "source_uid": "664daedd26de2ffeb27b0969",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mLH0",
+    "audio_sha256": "94889534012d2b7025bafe9d665968c4bbcc731d2c77f0b608002d6fd6206187",
+    "start": 15
+  },
+  {
+    "uid": "b1f3d38c7d9ed58987b5ce9460de83a87136eb399fd4a418fb227d4ff5121254",
+    "source_uid": "664daedd26de2ffeb27b0969",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mLH0",
+    "audio_sha256": "94889534012d2b7025bafe9d665968c4bbcc731d2c77f0b608002d6fd6206187",
+    "start": 105
+  },
+  {
+    "uid": "f3a607ef7b85b9ee00e9d00da15926bedb88f31f47f82ecc307382ad0ce018e3",
+    "source_uid": "664daedd26de2ffeb27b0969",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mLH0",
+    "audio_sha256": "94889534012d2b7025bafe9d665968c4bbcc731d2c77f0b608002d6fd6206187",
+    "start": 195
+  },
+  {
+    "uid": "96d6306c785f1b935f4a11051978b52545c67dcb4cb2941d7fc1bdd2a9944920",
+    "source_uid": "05b7015da54266da2570bc35",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mLH4",
+    "audio_sha256": "bc71ffb0679ad0b0554a4295e25d040ad1d0d7c2eb402126ec2c123f77549a3d",
+    "start": 15
+  },
+  {
+    "uid": "ddb05bdef531ef1f6f601c36c2f5e379deb7807c2e5d251ec5374ce2d04140d0",
+    "source_uid": "05b7015da54266da2570bc35",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mLH4",
+    "audio_sha256": "bc71ffb0679ad0b0554a4295e25d040ad1d0d7c2eb402126ec2c123f77549a3d",
+    "start": 45
+  },
+  {
+    "uid": "0ae76d61dfd5807cc38823ba7b5e455c40775815111061e0c3ad80819fd0a6f5",
+    "source_uid": "05b7015da54266da2570bc35",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mLH4",
+    "audio_sha256": "bc71ffb0679ad0b0554a4295e25d040ad1d0d7c2eb402126ec2c123f77549a3d",
+    "start": 75
+  },
+  {
+    "uid": "2f2c8d76319084df7b6b6029e84c8791605ccb08f27e3e0dda3a15e3e31aba1a",
+    "source_uid": "0e828c827297b66695ce20e8",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mLH4",
+    "audio_sha256": "bc71ffb0679ad0b0554a4295e25d040ad1d0d7c2eb402126ec2c123f77549a3d",
+    "start": 15
+  },
+  {
+    "uid": "01904468b6e357462b2f258ae81e84c44e1adb964bd36a49b013d6d21d96bce8",
+    "source_uid": "0e828c827297b66695ce20e8",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mLH4",
+    "audio_sha256": "bc71ffb0679ad0b0554a4295e25d040ad1d0d7c2eb402126ec2c123f77549a3d",
+    "start": 45
+  },
+  {
+    "uid": "ed94ce8e44199dc53d8506e460f2c136059985f90cd9f24f28072b63c0eca8d7",
+    "source_uid": "0e828c827297b66695ce20e8",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mLH4",
+    "audio_sha256": "bc71ffb0679ad0b0554a4295e25d040ad1d0d7c2eb402126ec2c123f77549a3d",
+    "start": 75
+  },
+  {
+    "uid": "5144268f4dacda36f5c931f5f81c115b4f6a61bce5394e44a1622ef51b8160bf",
+    "source_uid": "13de8f116a13d1b12dd3794d",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mLH5",
+    "audio_sha256": "103309aaa07151432847621f4b3e1ea1399d9f38eb581c0c5fbbcca3ed34c093",
+    "start": 15
+  },
+  {
+    "uid": "a5a0ae4a795d99890ab054deffea7cda8d0146cf6b29def920e9af877f7528d4",
+    "source_uid": "13de8f116a13d1b12dd3794d",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mLH5",
+    "audio_sha256": "103309aaa07151432847621f4b3e1ea1399d9f38eb581c0c5fbbcca3ed34c093",
+    "start": 36
+  },
+  {
+    "uid": "0abc61816a7f43ad296a77f11c9cb3495fcabeae50d9f3708f53a2b75586449b",
+    "source_uid": "13de8f116a13d1b12dd3794d",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mLH5",
+    "audio_sha256": "103309aaa07151432847621f4b3e1ea1399d9f38eb581c0c5fbbcca3ed34c093",
+    "start": 57
+  },
+  {
+    "uid": "2be2716c1ff99f6fc99fcbfb702c82f7ae6f07cd8d657f80554162fb401dd48e",
+    "source_uid": "1870dba69b979d595cbd8ca5",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mLH5",
+    "audio_sha256": "103309aaa07151432847621f4b3e1ea1399d9f38eb581c0c5fbbcca3ed34c093",
+    "start": 15
+  },
+  {
+    "uid": "14ebf8e25b86b4dde26dd5376e6dc4349a556a3b5c017ba22caf1e49a2072679",
+    "source_uid": "1870dba69b979d595cbd8ca5",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mLH5",
+    "audio_sha256": "103309aaa07151432847621f4b3e1ea1399d9f38eb581c0c5fbbcca3ed34c093",
+    "start": 36
+  },
+  {
+    "uid": "fc8c8d045912009b31e661f72fbb01aa728d8b3b50b87ce4aaef3b9897d5236b",
+    "source_uid": "1870dba69b979d595cbd8ca5",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mLH5",
+    "audio_sha256": "103309aaa07151432847621f4b3e1ea1399d9f38eb581c0c5fbbcca3ed34c093",
+    "start": 57
+  },
+  {
+    "uid": "b106b998d7d50b7d267e1472082d0c880cc08f2b5079bd5ccc417508855e99b2",
+    "source_uid": "1113ab614e921c62ab1a88b7",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mLO0",
+    "audio_sha256": "6bd0add6619d94e7fc3ed0287d7a75844d64be1eca0b2cae165381e4068002ff",
+    "start": 15
+  },
+  {
+    "uid": "9569019626c999c35b0c40475f14d5ca165dac069cc172aa4de0462656b6ba27",
+    "source_uid": "1113ab614e921c62ab1a88b7",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mLO0",
+    "audio_sha256": "6bd0add6619d94e7fc3ed0287d7a75844d64be1eca0b2cae165381e4068002ff",
+    "start": 105
+  },
+  {
+    "uid": "c70c4d7980fa32c776d9407bcefed22639bd56912893f7a7755fc0e92ad13829",
+    "source_uid": "1113ab614e921c62ab1a88b7",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mLO0",
+    "audio_sha256": "6bd0add6619d94e7fc3ed0287d7a75844d64be1eca0b2cae165381e4068002ff",
+    "start": 195
+  },
+  {
+    "uid": "d750ec17c2d452cd920bd682b049e475c0539049241b793270ebad8124702687",
+    "source_uid": "2dfec9ee1fae31f9c401d662",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mLO0",
+    "audio_sha256": "6bd0add6619d94e7fc3ed0287d7a75844d64be1eca0b2cae165381e4068002ff",
+    "start": 15
+  },
+  {
+    "uid": "5bc3e21b5a8279f9c1727f82cd064c28749844598a15c75cf183f289d6f8ee7f",
+    "source_uid": "2dfec9ee1fae31f9c401d662",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mLO0",
+    "audio_sha256": "6bd0add6619d94e7fc3ed0287d7a75844d64be1eca0b2cae165381e4068002ff",
+    "start": 105
+  },
+  {
+    "uid": "aaeb921046f66a6f82aee2b7d2b9cd7d7b1234a6ff4aef915ed15e4340ebd115",
+    "source_uid": "2dfec9ee1fae31f9c401d662",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mLO0",
+    "audio_sha256": "6bd0add6619d94e7fc3ed0287d7a75844d64be1eca0b2cae165381e4068002ff",
+    "start": 195
+  },
+  {
+    "uid": "dcd950bb49cfc3086503afbd08491581d779cf8e03802bd8803c33aa863e9e0f",
+    "source_uid": "03ad903dea869328fe6f792d",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mLO1",
+    "audio_sha256": "accadf976dbe11e04409312e5b9589f396be8778a612bce243f504df16f7ce0a",
+    "start": 15
+  },
+  {
+    "uid": "3d7418d13666a92684efe7b9372e435c9494cb8849a214b2718b388301f8dcce",
+    "source_uid": "03ad903dea869328fe6f792d",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mLO1",
+    "audio_sha256": "accadf976dbe11e04409312e5b9589f396be8778a612bce243f504df16f7ce0a",
+    "start": 85
+  },
+  {
+    "uid": "6b1d336af6aa0ccba9e3fffe57498a10c68fe9bf6ddf8730acabb336996f8be5",
+    "source_uid": "03ad903dea869328fe6f792d",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mLO1",
+    "audio_sha256": "accadf976dbe11e04409312e5b9589f396be8778a612bce243f504df16f7ce0a",
+    "start": 155
+  },
+  {
+    "uid": "0206ed88c777d2c47f918566b934ee7911fe298b755c0f47490ec30306ef093f",
+    "source_uid": "091250c2a3f8f6aada011461",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mLO1",
+    "audio_sha256": "accadf976dbe11e04409312e5b9589f396be8778a612bce243f504df16f7ce0a",
+    "start": 15
+  },
+  {
+    "uid": "ef195a5ced31ed22664e2f111ac4b4b860fe216626ccef3096a9edc416128d45",
+    "source_uid": "091250c2a3f8f6aada011461",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mLO1",
+    "audio_sha256": "accadf976dbe11e04409312e5b9589f396be8778a612bce243f504df16f7ce0a",
+    "start": 85
+  },
+  {
+    "uid": "c7b024e9fcd188002bf114ada85c11574528b8f6f6a0627493a8159f9ee82114",
+    "source_uid": "091250c2a3f8f6aada011461",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mLO1",
+    "audio_sha256": "accadf976dbe11e04409312e5b9589f396be8778a612bce243f504df16f7ce0a",
+    "start": 155
+  },
+  {
+    "uid": "17bc386bc070498078756027fb0e3a67aba791a6684d785079c034022ea4a258",
+    "source_uid": "111834edc3f6d1f1cdf3f978",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mLO2",
+    "audio_sha256": "769cb39282e4a4e7e2cb73c26b0e4922d8c50c6518ea8cd5f4a0bf39ab1fab66",
+    "start": 15
+  },
+  {
+    "uid": "b357ba3b52bd17dd95522f1eb8ad20c855eab278df3651601abd1937da5e1421",
+    "source_uid": "111834edc3f6d1f1cdf3f978",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mLO2",
+    "audio_sha256": "769cb39282e4a4e7e2cb73c26b0e4922d8c50c6518ea8cd5f4a0bf39ab1fab66",
+    "start": 69
+  },
+  {
+    "uid": "6a5e4ea7363a9bdf391ca2a30db62565dc7e32eb137408c544747ee24c37a9d8",
+    "source_uid": "111834edc3f6d1f1cdf3f978",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mLO2",
+    "audio_sha256": "769cb39282e4a4e7e2cb73c26b0e4922d8c50c6518ea8cd5f4a0bf39ab1fab66",
+    "start": 123
+  },
+  {
+    "uid": "ecfb793a5181deb2044f4d4d4e6ff6e0e6c72e0b4b92bbd619f2bdc41a359f8d",
+    "source_uid": "1400c190567031990e3aa91e",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mLO2",
+    "audio_sha256": "769cb39282e4a4e7e2cb73c26b0e4922d8c50c6518ea8cd5f4a0bf39ab1fab66",
+    "start": 15
+  },
+  {
+    "uid": "34c94d29d9713c863c59b122c8b3c79f0145e43fd2b391fd3e78c56d9ac1652f",
+    "source_uid": "1400c190567031990e3aa91e",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mLO2",
+    "audio_sha256": "769cb39282e4a4e7e2cb73c26b0e4922d8c50c6518ea8cd5f4a0bf39ab1fab66",
+    "start": 69
+  },
+  {
+    "uid": "4109fe1f2b9347d4a11561984bbf280bc27b472fdfea80ce2edc5f2952f4f870",
+    "source_uid": "1400c190567031990e3aa91e",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mLO2",
+    "audio_sha256": "769cb39282e4a4e7e2cb73c26b0e4922d8c50c6518ea8cd5f4a0bf39ab1fab66",
+    "start": 123
+  },
+  {
+    "uid": "873616c34c8ac1fd70cc30a937d86f32bca55ee1db1568cf397b64024b832710",
+    "source_uid": "0631ae0832e3d28f7e47dd4b",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mLO3",
+    "audio_sha256": "b43ed83719692d0ff413133a26ff3df0d8401de562abcf516ad06bf1a8661c01",
+    "start": 15
+  },
+  {
+    "uid": "64c3b21bc99c454996dc474f88d9174064da3683359d65bcdba6b4a7dd966a6c",
+    "source_uid": "0631ae0832e3d28f7e47dd4b",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mLO3",
+    "audio_sha256": "b43ed83719692d0ff413133a26ff3df0d8401de562abcf516ad06bf1a8661c01",
+    "start": 56
+  },
+  {
+    "uid": "16ab0c50b6dcaa7709d01751ae96aa7705cef3fbbfb6aa7d27cffdca040595f5",
+    "source_uid": "0631ae0832e3d28f7e47dd4b",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mLO3",
+    "audio_sha256": "b43ed83719692d0ff413133a26ff3df0d8401de562abcf516ad06bf1a8661c01",
+    "start": 97
+  },
+  {
+    "uid": "10c4e90883c5c94732ed0c20ac5ebb502cf401d0472c3371b359e422ff0d48f6",
+    "source_uid": "077faabe3e6d13caa8c0f64e",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mLO3",
+    "audio_sha256": "b43ed83719692d0ff413133a26ff3df0d8401de562abcf516ad06bf1a8661c01",
+    "start": 15
+  },
+  {
+    "uid": "7202cad1835871fec578975459d1e1c1a7c7666e069d80da22faac2d399a8b66",
+    "source_uid": "077faabe3e6d13caa8c0f64e",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mLO3",
+    "audio_sha256": "b43ed83719692d0ff413133a26ff3df0d8401de562abcf516ad06bf1a8661c01",
+    "start": 56
+  },
+  {
+    "uid": "2e618604d502b577dea755a9caebcf6397a29492fca6e61a945534c2e2309717",
+    "source_uid": "077faabe3e6d13caa8c0f64e",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mLO3",
+    "audio_sha256": "b43ed83719692d0ff413133a26ff3df0d8401de562abcf516ad06bf1a8661c01",
+    "start": 97
+  },
+  {
+    "uid": "8fee83c82931e1e35802bc591a29822e7a63ce08dbe98319cddb32888feaa544",
+    "source_uid": "0acc93e1c60410f463a02ca8",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mLO5",
+    "audio_sha256": "7507a5b5d5159407d543de213ebd6af680ff3113936690cf05d19b13e6282f57",
+    "start": 15
+  },
+  {
+    "uid": "6aa2d4265d27fc838d1bcf4bb086a09de4ebb08911ac951448a7188c1e3ddd17",
+    "source_uid": "0acc93e1c60410f463a02ca8",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mLO5",
+    "audio_sha256": "7507a5b5d5159407d543de213ebd6af680ff3113936690cf05d19b13e6282f57",
+    "start": 36
+  },
+  {
+    "uid": "917a4c84ef16a891bfbfb0833c73e59c02ba245aa2bd87dc48b1da580d507272",
+    "source_uid": "0acc93e1c60410f463a02ca8",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mLO5",
+    "audio_sha256": "7507a5b5d5159407d543de213ebd6af680ff3113936690cf05d19b13e6282f57",
+    "start": 57
+  },
+  {
+    "uid": "778a259a9c3b9eba3a70715d87da12d9fa032a463725dfa613802a7b9f5d6e27",
+    "source_uid": "1aed534ae96522a93e43b1bf",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mLO5",
+    "audio_sha256": "7507a5b5d5159407d543de213ebd6af680ff3113936690cf05d19b13e6282f57",
+    "start": 15
+  },
+  {
+    "uid": "2a014ccd3ca88bab1be13d98d8b7637b640830a9ddcbb26206c78cab5a63b7ff",
+    "source_uid": "1aed534ae96522a93e43b1bf",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mLO5",
+    "audio_sha256": "7507a5b5d5159407d543de213ebd6af680ff3113936690cf05d19b13e6282f57",
+    "start": 36
+  },
+  {
+    "uid": "5695984e1aa477d6f724e16c96b292e74a38b715b433c25885da69abe09f8c6a",
+    "source_uid": "1aed534ae96522a93e43b1bf",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mLO5",
+    "audio_sha256": "7507a5b5d5159407d543de213ebd6af680ff3113936690cf05d19b13e6282f57",
+    "start": 57
+  },
+  {
+    "uid": "af35a6c9a2b1d8ab65e078a78ce78da850b0a41b2004dd08affd91d73e6a6c1d",
+    "source_uid": "03fbc892e21b91258ea005cc",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mPO2",
+    "audio_sha256": "37c79f8452dca0e0001d09f5dbaf99302e770c47165d096f5f1fcfe84f2f7309",
+    "start": 15
+  },
+  {
+    "uid": "48f2cd5ee05bddd3ce32df1cefb9a8991241430d48aaec911a6b131a2669962b",
+    "source_uid": "03fbc892e21b91258ea005cc",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mPO2",
+    "audio_sha256": "37c79f8452dca0e0001d09f5dbaf99302e770c47165d096f5f1fcfe84f2f7309",
+    "start": 69
+  },
+  {
+    "uid": "a7b612e0580190ba0fb3a6f9a189161f63914c3a517a7be8429c74da66499162",
+    "source_uid": "03fbc892e21b91258ea005cc",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mPO2",
+    "audio_sha256": "37c79f8452dca0e0001d09f5dbaf99302e770c47165d096f5f1fcfe84f2f7309",
+    "start": 123
+  },
+  {
+    "uid": "6842f480c3fd8085e178c9218b5a4b30a604cd1e63e1b4330c3c11f2a5986c63",
+    "source_uid": "0639aa1202cdb91c858250fb",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mPO2",
+    "audio_sha256": "37c79f8452dca0e0001d09f5dbaf99302e770c47165d096f5f1fcfe84f2f7309",
+    "start": 15
+  },
+  {
+    "uid": "e5606849ba35ada65aa4d5d78373d9d768ab0f274264b1349aeb28daa4f77ae6",
+    "source_uid": "0639aa1202cdb91c858250fb",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mPO2",
+    "audio_sha256": "37c79f8452dca0e0001d09f5dbaf99302e770c47165d096f5f1fcfe84f2f7309",
+    "start": 69
+  },
+  {
+    "uid": "ff34381b0e69fa621b1207455dc5968e17a9b6dd16406dde8c49a5631990de22",
+    "source_uid": "0639aa1202cdb91c858250fb",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mPO2",
+    "audio_sha256": "37c79f8452dca0e0001d09f5dbaf99302e770c47165d096f5f1fcfe84f2f7309",
+    "start": 123
+  },
+  {
+    "uid": "dbac96024e243780bdb1be43904b724d246f4c06275ea2702b73891aa4161ea1",
+    "source_uid": "102af910c5770188a9e98eb1",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mPO3",
+    "audio_sha256": "4e1475b0cfe8f16eb1030b8dcc1dc4bc5362483a06258855838d1298a60cb4cc",
+    "start": 15
+  },
+  {
+    "uid": "20262a72905886e503074d8286029af55147b6279ebd5ec2333c4ffbff3d4581",
+    "source_uid": "102af910c5770188a9e98eb1",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mPO3",
+    "audio_sha256": "4e1475b0cfe8f16eb1030b8dcc1dc4bc5362483a06258855838d1298a60cb4cc",
+    "start": 56
+  },
+  {
+    "uid": "08ad2b1a61ab5b96a60debecda868db68b287c7ab8e1c4a5a086cf3bdf073d2a",
+    "source_uid": "102af910c5770188a9e98eb1",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mPO3",
+    "audio_sha256": "4e1475b0cfe8f16eb1030b8dcc1dc4bc5362483a06258855838d1298a60cb4cc",
+    "start": 97
+  },
+  {
+    "uid": "8e778df7c0b27829f49b1437d85ccf08d5f64601a083ff15fbc003ea33beffa8",
+    "source_uid": "12bc40b05909858dd6e083cf",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mPO3",
+    "audio_sha256": "4e1475b0cfe8f16eb1030b8dcc1dc4bc5362483a06258855838d1298a60cb4cc",
+    "start": 15
+  },
+  {
+    "uid": "6c0f36740490375b7b90de887cfa7a4535322bdd1591e393ad632987aa50f84f",
+    "source_uid": "12bc40b05909858dd6e083cf",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mPO3",
+    "audio_sha256": "4e1475b0cfe8f16eb1030b8dcc1dc4bc5362483a06258855838d1298a60cb4cc",
+    "start": 56
+  },
+  {
+    "uid": "daace3bdc4c48c862f02e947cba149ca1b51a95bf59261de4f7789e8dd53470b",
+    "source_uid": "12bc40b05909858dd6e083cf",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mPO3",
+    "audio_sha256": "4e1475b0cfe8f16eb1030b8dcc1dc4bc5362483a06258855838d1298a60cb4cc",
+    "start": 97
+  },
+  {
+    "uid": "672b91754d4e2034743d8267da81d5dcb4d347c9d907f273d1a35a6387e9cd1b",
+    "source_uid": "42752bbc35576e6d32e0dd26",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mPO4",
+    "audio_sha256": "2c6d617060eb5eac3a5663e6c1fb593748fd544f248e649e4f6deaf44aaaa07f",
+    "start": 15
+  },
+  {
+    "uid": "9036f52d33ee95db3a5d08b9c6874e4fdf4bd666b9d5a904dc3f1e3213af2dff",
+    "source_uid": "42752bbc35576e6d32e0dd26",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mPO4",
+    "audio_sha256": "2c6d617060eb5eac3a5663e6c1fb593748fd544f248e649e4f6deaf44aaaa07f",
+    "start": 45
+  },
+  {
+    "uid": "b5e0f2b36789aa0becbed7791a8e799a43ef39e76237398760eb4c14d244b830",
+    "source_uid": "42752bbc35576e6d32e0dd26",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mPO4",
+    "audio_sha256": "2c6d617060eb5eac3a5663e6c1fb593748fd544f248e649e4f6deaf44aaaa07f",
+    "start": 75
+  },
+  {
+    "uid": "aa1e36abbddece318face4cded9c935353efeea5465272b220b90ea8047f068b",
+    "source_uid": "5ac6745348adbc2b6054ae53",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mPO4",
+    "audio_sha256": "2c6d617060eb5eac3a5663e6c1fb593748fd544f248e649e4f6deaf44aaaa07f",
+    "start": 15
+  },
+  {
+    "uid": "08f1b2dad32aa1d95f3e6c16f87217067a0654a02b42b57b9f99734e7c0663c0",
+    "source_uid": "5ac6745348adbc2b6054ae53",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mPO4",
+    "audio_sha256": "2c6d617060eb5eac3a5663e6c1fb593748fd544f248e649e4f6deaf44aaaa07f",
+    "start": 45
+  },
+  {
+    "uid": "5bb078eba402757a0e6309cfcccb2a1a007ae7d157e34f8455a34be88a5c5d2d",
+    "source_uid": "5ac6745348adbc2b6054ae53",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mPO4",
+    "audio_sha256": "2c6d617060eb5eac3a5663e6c1fb593748fd544f248e649e4f6deaf44aaaa07f",
+    "start": 75
+  },
+  {
+    "uid": "b150491301214ab94ae3dcfe87aa2e24a7e92f9ddea9b9c1557a0f39b1169247",
+    "source_uid": "0015e899c42897c0c09e5036",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mPO5",
+    "audio_sha256": "1703e669553f166a049d21abed9ebc0508dba493fd13ae519c00c407c273f617",
+    "start": 15
+  },
+  {
+    "uid": "b751f6eff54f28b9b5d1cb35a5d1d3fe14d06470ba6d94041f44c4a2a3321ed9",
+    "source_uid": "0015e899c42897c0c09e5036",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mPO5",
+    "audio_sha256": "1703e669553f166a049d21abed9ebc0508dba493fd13ae519c00c407c273f617",
+    "start": 36
+  },
+  {
+    "uid": "439150480258627458a08081776fd68bdcc9ddb6adfd9da4e3c0eaa7fcc78f88",
+    "source_uid": "0015e899c42897c0c09e5036",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mPO5",
+    "audio_sha256": "1703e669553f166a049d21abed9ebc0508dba493fd13ae519c00c407c273f617",
+    "start": 57
+  },
+  {
+    "uid": "ba9673cb004447ead6a14ad401b6d317a97cb32877e6e195c9700e5cdae097c9",
+    "source_uid": "2c919024442d6ed11eceb767",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mPO5",
+    "audio_sha256": "1703e669553f166a049d21abed9ebc0508dba493fd13ae519c00c407c273f617",
+    "start": 15
+  },
+  {
+    "uid": "8c989fe964ebb044fb48148d8dc72c41f4a5336c924b3b5d75e9b5a8bef27c67",
+    "source_uid": "2c919024442d6ed11eceb767",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mPO5",
+    "audio_sha256": "1703e669553f166a049d21abed9ebc0508dba493fd13ae519c00c407c273f617",
+    "start": 36
+  },
+  {
+    "uid": "8a35d773a8f93b2721845270310870aeb9cbd5da6af5e7a353e10a6ab6aef818",
+    "source_uid": "2c919024442d6ed11eceb767",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mPO5",
+    "audio_sha256": "1703e669553f166a049d21abed9ebc0508dba493fd13ae519c00c407c273f617",
+    "start": 57
+  },
+  {
+    "uid": "66496a103a6a4a25c1b97c21aa59e89ed7ee8391ba38ae99390b8964b961679f",
+    "source_uid": "0303cf08bb15539a4cc7d315",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mWA1",
+    "audio_sha256": "177a9af86e41cfcb03d9b170644571774d1e351e0c6a4b90ddd570c9ad7e3f50",
+    "start": 15
+  },
+  {
+    "uid": "74a2c4b62ba3f3125dc8d6e881383770cd6fd3b99cc421dc074afbcaa947a66f",
+    "source_uid": "0303cf08bb15539a4cc7d315",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mWA1",
+    "audio_sha256": "177a9af86e41cfcb03d9b170644571774d1e351e0c6a4b90ddd570c9ad7e3f50",
+    "start": 85
+  },
+  {
+    "uid": "59a2244a757e44d1c693afa39098f6f64c59f71421a940e374cb507dad213560",
+    "source_uid": "0303cf08bb15539a4cc7d315",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mWA1",
+    "audio_sha256": "177a9af86e41cfcb03d9b170644571774d1e351e0c6a4b90ddd570c9ad7e3f50",
+    "start": 155
+  },
+  {
+    "uid": "6ea7bdb22c239e767cc6d8c2caa0a4add87934c89d2397c08aa3c26c777a3a4f",
+    "source_uid": "06c2da4fb8cdd5fa901f64ed",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mWA1",
+    "audio_sha256": "177a9af86e41cfcb03d9b170644571774d1e351e0c6a4b90ddd570c9ad7e3f50",
+    "start": 15
+  },
+  {
+    "uid": "66849094907d20c206aced7e07e3dfab6fd91b8a581e24bf61e24e067d726079",
+    "source_uid": "06c2da4fb8cdd5fa901f64ed",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mWA1",
+    "audio_sha256": "177a9af86e41cfcb03d9b170644571774d1e351e0c6a4b90ddd570c9ad7e3f50",
+    "start": 85
+  },
+  {
+    "uid": "2a213cace06cd80d7d8d0ca44efa2bca1ba7b61e5f1ddabe73455107a3303654",
+    "source_uid": "06c2da4fb8cdd5fa901f64ed",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mWA1",
+    "audio_sha256": "177a9af86e41cfcb03d9b170644571774d1e351e0c6a4b90ddd570c9ad7e3f50",
+    "start": 155
+  },
+  {
+    "uid": "e7a380a6dabf081348e96fe5df53e83004321e3e0f2d0a24df97ab7c5da98ddf",
+    "source_uid": "311617b2c16252400d394d2f",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mWA2",
+    "audio_sha256": "2de6d2b1db1c19d71cb13f9d5c2ceabef8e7e60c81e05fe01f6422ea204bb0e0",
+    "start": 15
+  },
+  {
+    "uid": "f24fa847831467f7b75d4ab2ca7bcefbefc2e73bc9af5bb0d65af0387b1a0e81",
+    "source_uid": "311617b2c16252400d394d2f",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mWA2",
+    "audio_sha256": "2de6d2b1db1c19d71cb13f9d5c2ceabef8e7e60c81e05fe01f6422ea204bb0e0",
+    "start": 69
+  },
+  {
+    "uid": "8ea1e2c97225c5b0806a82456b96248a186a55ea7f572de7b6d46def5f364e38",
+    "source_uid": "311617b2c16252400d394d2f",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mWA2",
+    "audio_sha256": "2de6d2b1db1c19d71cb13f9d5c2ceabef8e7e60c81e05fe01f6422ea204bb0e0",
+    "start": 123
+  },
+  {
+    "uid": "75efe5f63e2449db066c304e93f47f3501e757672f3bab15e7609f3c14ce19a4",
+    "source_uid": "415e23a856acff880e218939",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mWA2",
+    "audio_sha256": "2de6d2b1db1c19d71cb13f9d5c2ceabef8e7e60c81e05fe01f6422ea204bb0e0",
+    "start": 15
+  },
+  {
+    "uid": "af3d38258a557a429d45a7eb8fb1aaf7c1630539263ef789b95ddd8f86c4a543",
+    "source_uid": "415e23a856acff880e218939",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mWA2",
+    "audio_sha256": "2de6d2b1db1c19d71cb13f9d5c2ceabef8e7e60c81e05fe01f6422ea204bb0e0",
+    "start": 69
+  },
+  {
+    "uid": "908e40321f6d499c098ea1cf7b4066ee9b570f0d4a5ae333833bfe0dddb4d027",
+    "source_uid": "415e23a856acff880e218939",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mWA2",
+    "audio_sha256": "2de6d2b1db1c19d71cb13f9d5c2ceabef8e7e60c81e05fe01f6422ea204bb0e0",
+    "start": 123
+  },
+  {
+    "uid": "a6d494b0a6ef721f1e9e57c13e8e68f71798774ce61fcc460757e6214836f199",
+    "source_uid": "2e7651dadb3c74dfa6db9382",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mWA3",
+    "audio_sha256": "9914e72bd3be53cb52dd84f9dfc3d3f22a1d4ad9bf04dfd2cbaca9b0c6b6f692",
+    "start": 15
+  },
+  {
+    "uid": "4c24eeedf9144cf23e644f903887e77b94f36fd0f318d1c731a009949fd6057b",
+    "source_uid": "2e7651dadb3c74dfa6db9382",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mWA3",
+    "audio_sha256": "9914e72bd3be53cb52dd84f9dfc3d3f22a1d4ad9bf04dfd2cbaca9b0c6b6f692",
+    "start": 56
+  },
+  {
+    "uid": "b1ed87adcec78a3ed5be78755ef0df1dfb6cc0e8be1a0b8c384c06841b648e21",
+    "source_uid": "2e7651dadb3c74dfa6db9382",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mWA3",
+    "audio_sha256": "9914e72bd3be53cb52dd84f9dfc3d3f22a1d4ad9bf04dfd2cbaca9b0c6b6f692",
+    "start": 97
+  },
+  {
+    "uid": "12d4ff0c190cc5e3c655eedc46dbaff1125cc7b3da9f96503090d76eea538d73",
+    "source_uid": "4127b24ec0afc96102aaa0ed",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mWA3",
+    "audio_sha256": "9914e72bd3be53cb52dd84f9dfc3d3f22a1d4ad9bf04dfd2cbaca9b0c6b6f692",
+    "start": 15
+  },
+  {
+    "uid": "02e782bdb6815d610d87b240d4425931d15a0292aeebceda5d5c2689f9dabdad",
+    "source_uid": "4127b24ec0afc96102aaa0ed",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mWA3",
+    "audio_sha256": "9914e72bd3be53cb52dd84f9dfc3d3f22a1d4ad9bf04dfd2cbaca9b0c6b6f692",
+    "start": 56
+  },
+  {
+    "uid": "0e620e200234b97339813929115ec5c0d25cf1f6d57c5eccee390d30a4f9a3b1",
+    "source_uid": "4127b24ec0afc96102aaa0ed",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mWA3",
+    "audio_sha256": "9914e72bd3be53cb52dd84f9dfc3d3f22a1d4ad9bf04dfd2cbaca9b0c6b6f692",
+    "start": 97
+  },
+  {
+    "uid": "f712c997480e8dd7e2f7f60461f45d4407134fe3cd89197febfa915fcac1f05e",
+    "source_uid": "210f054b161bf37aa18ba00d",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mWA4",
+    "audio_sha256": "7d1d19a20701bb92d07a1711a5557d5c3f6d9d1558b9983b720013e5858b7d6f",
+    "start": 15
+  },
+  {
+    "uid": "9dc147a912ad46fc97e8569dbc255f0df0eb33d867506cb3fb73edb7ed37a6c0",
+    "source_uid": "210f054b161bf37aa18ba00d",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mWA4",
+    "audio_sha256": "7d1d19a20701bb92d07a1711a5557d5c3f6d9d1558b9983b720013e5858b7d6f",
+    "start": 45
+  },
+  {
+    "uid": "8621ecc32e86f4ecddc84ca2c2450c84995238983ece19e1f17a657a5791b28a",
+    "source_uid": "210f054b161bf37aa18ba00d",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mWA4",
+    "audio_sha256": "7d1d19a20701bb92d07a1711a5557d5c3f6d9d1558b9983b720013e5858b7d6f",
+    "start": 75
+  },
+  {
+    "uid": "429a0a5141ba84ee10b169acf8953a4231b25591aec287adb69231b7f51e547e",
+    "source_uid": "2edb9db1d8b655c846cc8c4c",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mWA4",
+    "audio_sha256": "7d1d19a20701bb92d07a1711a5557d5c3f6d9d1558b9983b720013e5858b7d6f",
+    "start": 15
+  },
+  {
+    "uid": "35ff7e6b77a69a50d2bf67249db13c3e9e23bc5eef45766fd0dcfbb93ae16453",
+    "source_uid": "2edb9db1d8b655c846cc8c4c",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mWA4",
+    "audio_sha256": "7d1d19a20701bb92d07a1711a5557d5c3f6d9d1558b9983b720013e5858b7d6f",
+    "start": 45
+  },
+  {
+    "uid": "3597f69e8b125424626d1e37218bcb00df3bce775282532d6e67481df9ffed8c",
+    "source_uid": "2edb9db1d8b655c846cc8c4c",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mWA4",
+    "audio_sha256": "7d1d19a20701bb92d07a1711a5557d5c3f6d9d1558b9983b720013e5858b7d6f",
+    "start": 75
+  },
+  {
+    "uid": "9a33133cb2ccdd0c7ae7d385f27c4c6105680c1233384ab90ea55811b623f891",
+    "source_uid": "5219b65ffcc5192f338bd55d",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mWA5",
+    "audio_sha256": "28a954233d1401911b754f1407f5576895b76a58dd7d71e139c5d2458cde770e",
+    "start": 15
+  },
+  {
+    "uid": "bd2346727dd9f5eef1e5560879710287f53c9e9a8937fadae53003505c9a40f8",
+    "source_uid": "5219b65ffcc5192f338bd55d",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mWA5",
+    "audio_sha256": "28a954233d1401911b754f1407f5576895b76a58dd7d71e139c5d2458cde770e",
+    "start": 36
+  },
+  {
+    "uid": "7d4db0863a867d3cf3d3b6c8333b5bb5b3179f96cd17eac442312623454b3207",
+    "source_uid": "5219b65ffcc5192f338bd55d",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mWA5",
+    "audio_sha256": "28a954233d1401911b754f1407f5576895b76a58dd7d71e139c5d2458cde770e",
+    "start": 57
+  },
+  {
+    "uid": "d0090ed5b466079b84560914dab10edac4d1681dbeff4a0694cb901d620959a6",
+    "source_uid": "97e0be380e2b0bdc371031f6",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mWA5",
+    "audio_sha256": "28a954233d1401911b754f1407f5576895b76a58dd7d71e139c5d2458cde770e",
+    "start": 15
+  },
+  {
+    "uid": "6dc86db2955a1628ac6f444bb610694d1c4f66b04822b3ffebd33f8e3c60fb0b",
+    "source_uid": "97e0be380e2b0bdc371031f6",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mWA5",
+    "audio_sha256": "28a954233d1401911b754f1407f5576895b76a58dd7d71e139c5d2458cde770e",
+    "start": 36
+  },
+  {
+    "uid": "c35d7d8944aa97f2803bcd46d93142bdb08987cbe26bba52f9bed01c642a255e",
+    "source_uid": "97e0be380e2b0bdc371031f6",
+    "split": "train",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mWA5",
+    "audio_sha256": "28a954233d1401911b754f1407f5576895b76a58dd7d71e139c5d2458cde770e",
+    "start": 57
+  },
+  {
+    "uid": "3b9aef0d0fee01ae8e95ddc15647d54385e658d1ffada0f988b4a29f00a522cf",
+    "source_uid": "02fb0abfee83427cf3d02628",
+    "split": "dev",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mKR0",
+    "audio_sha256": "8c2de10090cae153e1b5b3b70a13b25f0d0fc4cfd976d3986e6fc656cea420fa",
+    "start": 15
+  },
+  {
+    "uid": "3b456067c2569156dbd5f49b9dc12e46c9e29da92a02bd7f6c93ba23288af2be",
+    "source_uid": "02fb0abfee83427cf3d02628",
+    "split": "dev",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mKR0",
+    "audio_sha256": "8c2de10090cae153e1b5b3b70a13b25f0d0fc4cfd976d3986e6fc656cea420fa",
+    "start": 105
+  },
+  {
+    "uid": "a806e6031272b54d04237a0b2605b3af17c2b8fd00b0456dd9ebb16493d7bd23",
+    "source_uid": "02fb0abfee83427cf3d02628",
+    "split": "dev",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mKR0",
+    "audio_sha256": "8c2de10090cae153e1b5b3b70a13b25f0d0fc4cfd976d3986e6fc656cea420fa",
+    "start": 195
+  },
+  {
+    "uid": "25e8fbdca37838c7d9d220af52e9c2728827845e1c19d871da7b21b2877b4b7f",
+    "source_uid": "07e6143d0877acb974a64964",
+    "split": "dev",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mKR0",
+    "audio_sha256": "8c2de10090cae153e1b5b3b70a13b25f0d0fc4cfd976d3986e6fc656cea420fa",
+    "start": 15
+  },
+  {
+    "uid": "0ea0a5581f900e0406f18f3f256c2cd45e98b04348dba12901f55e2be267d488",
+    "source_uid": "07e6143d0877acb974a64964",
+    "split": "dev",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mKR0",
+    "audio_sha256": "8c2de10090cae153e1b5b3b70a13b25f0d0fc4cfd976d3986e6fc656cea420fa",
+    "start": 105
+  },
+  {
+    "uid": "161d80ff31b67e7141a3da52cbea45a9f4adc928d3c876cc9517375d99880741",
+    "source_uid": "07e6143d0877acb974a64964",
+    "split": "dev",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mKR0",
+    "audio_sha256": "8c2de10090cae153e1b5b3b70a13b25f0d0fc4cfd976d3986e6fc656cea420fa",
+    "start": 195
+  },
+  {
+    "uid": "e6120b2ac91f2edb6077923ace114d9e9fe5bb5a86d5e3c204f61bf8fc636e2a",
+    "source_uid": "033c4d217edce5e9cbd07626",
+    "split": "dev",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mKR2",
+    "audio_sha256": "9db11a207fcba36c22c7e502e302f48ac2a5d863c4f160fb532ce8020065ab37",
+    "start": 15
+  },
+  {
+    "uid": "6df817b365e701974327b63147707eafd9c81ac4f4cdf4b9134c042757440daa",
+    "source_uid": "033c4d217edce5e9cbd07626",
+    "split": "dev",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mKR2",
+    "audio_sha256": "9db11a207fcba36c22c7e502e302f48ac2a5d863c4f160fb532ce8020065ab37",
+    "start": 69
+  },
+  {
+    "uid": "c7b887f5fd51d2e1e1b4ee6a29ef638a2d3752dbc46af3dd77082fc729f12dea",
+    "source_uid": "033c4d217edce5e9cbd07626",
+    "split": "dev",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mKR2",
+    "audio_sha256": "9db11a207fcba36c22c7e502e302f48ac2a5d863c4f160fb532ce8020065ab37",
+    "start": 123
+  },
+  {
+    "uid": "fbde177c950655f56161b499586863ea4b22145e4ce624fba1d9277c4364b854",
+    "source_uid": "0e8923127a30994d07cf5586",
+    "split": "dev",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mKR2",
+    "audio_sha256": "9db11a207fcba36c22c7e502e302f48ac2a5d863c4f160fb532ce8020065ab37",
+    "start": 15
+  },
+  {
+    "uid": "03448b21fada364e70f7b5a44e8f111fa668bf1fcae1469f2c9ad772bcd837e1",
+    "source_uid": "0e8923127a30994d07cf5586",
+    "split": "dev",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mKR2",
+    "audio_sha256": "9db11a207fcba36c22c7e502e302f48ac2a5d863c4f160fb532ce8020065ab37",
+    "start": 69
+  },
+  {
+    "uid": "7794c2ccad83aa9eaecf4add8e6f0702e2c78b07d9a7bee5f138a52dc0faf4e3",
+    "source_uid": "0e8923127a30994d07cf5586",
+    "split": "dev",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mKR2",
+    "audio_sha256": "9db11a207fcba36c22c7e502e302f48ac2a5d863c4f160fb532ce8020065ab37",
+    "start": 123
+  },
+  {
+    "uid": "8b6fb213e289fd26926154d3a3a22a713d3a913c2396ecb507f2068a6d3af236",
+    "source_uid": "1b0f27f9bcd90b43584ac6ad",
+    "split": "dev",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mKR3",
+    "audio_sha256": "2ef27ff15839893ee4799638f44353e564164190a52e7f99e708471746483422",
+    "start": 15
+  },
+  {
+    "uid": "38df03525a1451327c13cfbc4fbec3312ea83c30811160fe6fd9b82ffad70be0",
+    "source_uid": "1b0f27f9bcd90b43584ac6ad",
+    "split": "dev",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mKR3",
+    "audio_sha256": "2ef27ff15839893ee4799638f44353e564164190a52e7f99e708471746483422",
+    "start": 56
+  },
+  {
+    "uid": "f53d2bdd54bccef26f65a55184f894df4de8639b5f5c98fbefc69ee8b8c68b4f",
+    "source_uid": "1b0f27f9bcd90b43584ac6ad",
+    "split": "dev",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mKR3",
+    "audio_sha256": "2ef27ff15839893ee4799638f44353e564164190a52e7f99e708471746483422",
+    "start": 97
+  },
+  {
+    "uid": "20f6c3b75c79a7ed8e049bf08a055d0d867997cb6452fa2cc7a2b71766d23842",
+    "source_uid": "3d532d46e28daac062fd15ee",
+    "split": "dev",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mKR3",
+    "audio_sha256": "2ef27ff15839893ee4799638f44353e564164190a52e7f99e708471746483422",
+    "start": 15
+  },
+  {
+    "uid": "2aea0ac4fe0d434be6763db46ffc4c9c8f64a3a8cb257f099e7ad34f3cfb1583",
+    "source_uid": "3d532d46e28daac062fd15ee",
+    "split": "dev",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mKR3",
+    "audio_sha256": "2ef27ff15839893ee4799638f44353e564164190a52e7f99e708471746483422",
+    "start": 56
+  },
+  {
+    "uid": "5059861c686ec38a67668141435bb41276dd93b6d1b03697e09ed41ec8842612",
+    "source_uid": "3d532d46e28daac062fd15ee",
+    "split": "dev",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mKR3",
+    "audio_sha256": "2ef27ff15839893ee4799638f44353e564164190a52e7f99e708471746483422",
+    "start": 97
+  },
+  {
+    "uid": "02777051e16341a0fcbdd53c2efe9dd8ec2ef292086d072003845b72e069b7eb",
+    "source_uid": "0c872864905b88e4a459547e",
+    "split": "dev",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mKR4",
+    "audio_sha256": "c6e0a8b4b68d0fb9eaf0c1d8f223fc4a1aa1d3cffc3ed8803cc0c1f0b8d2e94e",
+    "start": 15
+  },
+  {
+    "uid": "e55a4d5a3febfd7d6960f6fbdb8f07e35cf34d73fb37b2435492b565e018855a",
+    "source_uid": "0c872864905b88e4a459547e",
+    "split": "dev",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mKR4",
+    "audio_sha256": "c6e0a8b4b68d0fb9eaf0c1d8f223fc4a1aa1d3cffc3ed8803cc0c1f0b8d2e94e",
+    "start": 45
+  },
+  {
+    "uid": "bf067ebb31699843d4da544f5be3a135e981dc8da3db171d707306554f496cd7",
+    "source_uid": "0c872864905b88e4a459547e",
+    "split": "dev",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mKR4",
+    "audio_sha256": "c6e0a8b4b68d0fb9eaf0c1d8f223fc4a1aa1d3cffc3ed8803cc0c1f0b8d2e94e",
+    "start": 75
+  },
+  {
+    "uid": "bece1696eaf2182c659ba60528d30cbf2a084d77dc2dcb2be4a473456607a4e9",
+    "source_uid": "1f37a19c18532896533aee51",
+    "split": "dev",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mKR4",
+    "audio_sha256": "c6e0a8b4b68d0fb9eaf0c1d8f223fc4a1aa1d3cffc3ed8803cc0c1f0b8d2e94e",
+    "start": 15
+  },
+  {
+    "uid": "526e88af9f43e4dc3bd4593690cc941846cf5e3474f9214157559f57fc677f49",
+    "source_uid": "1f37a19c18532896533aee51",
+    "split": "dev",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mKR4",
+    "audio_sha256": "c6e0a8b4b68d0fb9eaf0c1d8f223fc4a1aa1d3cffc3ed8803cc0c1f0b8d2e94e",
+    "start": 45
+  },
+  {
+    "uid": "586e2f8917dc415f39fc5ee536052ecc55230b9befa5005a2470bd433ef45594",
+    "source_uid": "1f37a19c18532896533aee51",
+    "split": "dev",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mKR4",
+    "audio_sha256": "c6e0a8b4b68d0fb9eaf0c1d8f223fc4a1aa1d3cffc3ed8803cc0c1f0b8d2e94e",
+    "start": 75
+  },
+  {
+    "uid": "45f22c3f3354301762939e81023b4edd3b7e1610ee74368cb54c97844c5a83b1",
+    "source_uid": "03b079bddbe25d8af6d591a0",
+    "split": "dev",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mKR5",
+    "audio_sha256": "afd6fc7054cfc92f6e60f85a0464613943cc30c5a154c3f179d7c30f94701a85",
+    "start": 15
+  },
+  {
+    "uid": "7e1416f0ff5d61dd01a2384328492f872b64b5b98ca86adbb0c828a1980e8a6d",
+    "source_uid": "03b079bddbe25d8af6d591a0",
+    "split": "dev",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mKR5",
+    "audio_sha256": "afd6fc7054cfc92f6e60f85a0464613943cc30c5a154c3f179d7c30f94701a85",
+    "start": 36
+  },
+  {
+    "uid": "7d0336fcfef97239c0e0cd1ec1165f188235380c6db1834fcf84c92fb7810b44",
+    "source_uid": "03b079bddbe25d8af6d591a0",
+    "split": "dev",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mKR5",
+    "audio_sha256": "afd6fc7054cfc92f6e60f85a0464613943cc30c5a154c3f179d7c30f94701a85",
+    "start": 57
+  },
+  {
+    "uid": "ce01fdce24a2a62dc47fd5106eb92525c61d68b04e3286dc7a1ff8bc41d413ff",
+    "source_uid": "085b866d8f46f6caf160821a",
+    "split": "dev",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mKR5",
+    "audio_sha256": "afd6fc7054cfc92f6e60f85a0464613943cc30c5a154c3f179d7c30f94701a85",
+    "start": 15
+  },
+  {
+    "uid": "471a622589433c4aa071726fcc5a59030ad75d5156892b2e0c3f89c2b899731c",
+    "source_uid": "085b866d8f46f6caf160821a",
+    "split": "dev",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mKR5",
+    "audio_sha256": "afd6fc7054cfc92f6e60f85a0464613943cc30c5a154c3f179d7c30f94701a85",
+    "start": 36
+  },
+  {
+    "uid": "e546ef6f6f1a6e526b02f26c3cfe70e21cd3e3c9d3ec4edcd4b232fd8faed345",
+    "source_uid": "085b866d8f46f6caf160821a",
+    "split": "dev",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mKR5",
+    "audio_sha256": "afd6fc7054cfc92f6e60f85a0464613943cc30c5a154c3f179d7c30f94701a85",
+    "start": 57
+  },
+  {
+    "uid": "35b13f8dedefdf5c8dc643118de4a7900e2e8c84abefe931229d513ccea92376",
+    "source_uid": "1c584a0b76f6055c078ec78c",
+    "split": "holdout",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mHO2",
+    "audio_sha256": "036eea7ab134f5ba3eb0fb23c02c0ebe40c47760c5f76f375084cf34042c0fa1",
+    "start": 15
+  },
+  {
+    "uid": "c4efe6dae38ca6d04789187996c12740b8cc8b44b5cf3d62b29fdfd0cd6bc6d5",
+    "source_uid": "1c584a0b76f6055c078ec78c",
+    "split": "holdout",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mHO2",
+    "audio_sha256": "036eea7ab134f5ba3eb0fb23c02c0ebe40c47760c5f76f375084cf34042c0fa1",
+    "start": 45
+  },
+  {
+    "uid": "2abc69e85444d0787cc6729bfd6f6dae494d69cbc11ccb2ac068c7279be56d64",
+    "source_uid": "1c584a0b76f6055c078ec78c",
+    "split": "holdout",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mHO2",
+    "audio_sha256": "036eea7ab134f5ba3eb0fb23c02c0ebe40c47760c5f76f375084cf34042c0fa1",
+    "start": 75
+  },
+  {
+    "uid": "db383dd16dab6ce0989681c68e888400275cf51a2f8d697c763734acea117c6d",
+    "source_uid": "2f59c53d05d7b197d0a41ede",
+    "split": "holdout",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mHO2",
+    "audio_sha256": "036eea7ab134f5ba3eb0fb23c02c0ebe40c47760c5f76f375084cf34042c0fa1",
+    "start": 15
+  },
+  {
+    "uid": "4c5a21cd7f91e86415481940f85b288bd3aea468bf3d395ef5004113f9a32d2b",
+    "source_uid": "2f59c53d05d7b197d0a41ede",
+    "split": "holdout",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mHO2",
+    "audio_sha256": "036eea7ab134f5ba3eb0fb23c02c0ebe40c47760c5f76f375084cf34042c0fa1",
+    "start": 45
+  },
+  {
+    "uid": "778aa35d4f497d19db51d6198b9a4380f431d1b3e14530b173ba7e223302e31b",
+    "source_uid": "2f59c53d05d7b197d0a41ede",
+    "split": "holdout",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mHO2",
+    "audio_sha256": "036eea7ab134f5ba3eb0fb23c02c0ebe40c47760c5f76f375084cf34042c0fa1",
+    "start": 75
+  },
+  {
+    "uid": "2bcb8b1784ecd1be36dd23cff9f09a1b0afd9411c1a82a5827e414417d127558",
+    "source_uid": "18dc9c9a8fd6dd7722b4539c",
+    "split": "holdout",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mHO3",
+    "audio_sha256": "cc3b7934a746ce28161133f1c29d51bb7c6546bb542db946fb952d66f54df275",
+    "start": 15
+  },
+  {
+    "uid": "0bf3c4748b33f7eff3d172d496ab3ef4d1babe44d5f902b817d5e6d0126e1cc9",
+    "source_uid": "18dc9c9a8fd6dd7722b4539c",
+    "split": "holdout",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mHO3",
+    "audio_sha256": "cc3b7934a746ce28161133f1c29d51bb7c6546bb542db946fb952d66f54df275",
+    "start": 40
+  },
+  {
+    "uid": "b11295a168472cc830e42960d324bafbc1ba11e01f5c598c051f241ca0a16941",
+    "source_uid": "18dc9c9a8fd6dd7722b4539c",
+    "split": "holdout",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mHO3",
+    "audio_sha256": "cc3b7934a746ce28161133f1c29d51bb7c6546bb542db946fb952d66f54df275",
+    "start": 65
+  },
+  {
+    "uid": "7fd359214da88c209a61cec41235b38f27acf75027b20013e47fb0482049aa8f",
+    "source_uid": "23fb7e3efeeb2bdc67f408e3",
+    "split": "holdout",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mHO3",
+    "audio_sha256": "cc3b7934a746ce28161133f1c29d51bb7c6546bb542db946fb952d66f54df275",
+    "start": 15
+  },
+  {
+    "uid": "f3a3d130037bb7ced9fbba3d7e7d32c7b8402d90b346cf79d40a42ae1cf400b2",
+    "source_uid": "23fb7e3efeeb2bdc67f408e3",
+    "split": "holdout",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mHO3",
+    "audio_sha256": "cc3b7934a746ce28161133f1c29d51bb7c6546bb542db946fb952d66f54df275",
+    "start": 40
+  },
+  {
+    "uid": "2a0821caf1b382975893110f149e62a69ab22b9c3cd6808eaf147ca1fee2fe79",
+    "source_uid": "23fb7e3efeeb2bdc67f408e3",
+    "split": "holdout",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mHO3",
+    "audio_sha256": "cc3b7934a746ce28161133f1c29d51bb7c6546bb542db946fb952d66f54df275",
+    "start": 65
+  },
+  {
+    "uid": "dd615225c7aafdd3289cc4156791ff22a05c57174e5dd05e7a32c2d9be4eb18d",
+    "source_uid": "23e8ffed92509ca82f4e9f56",
+    "split": "holdout",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mHO4",
+    "audio_sha256": "a5b234f97eb60f7e459c4613b92cc574d410895781c75288858c62ccdcddcb74",
+    "start": 15
+  },
+  {
+    "uid": "58f7b32ceb585e46e4da5ab60ef6e6fbee75bda2a97cf2a3881070ca4ed4ebec",
+    "source_uid": "23e8ffed92509ca82f4e9f56",
+    "split": "holdout",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mHO4",
+    "audio_sha256": "a5b234f97eb60f7e459c4613b92cc574d410895781c75288858c62ccdcddcb74",
+    "start": 36
+  },
+  {
+    "uid": "6c178b3a76317029a52b4d6dc5bd3b41c4e378bf1e462760b0f3bca27982ca89",
+    "source_uid": "23e8ffed92509ca82f4e9f56",
+    "split": "holdout",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mHO4",
+    "audio_sha256": "a5b234f97eb60f7e459c4613b92cc574d410895781c75288858c62ccdcddcb74",
+    "start": 57
+  },
+  {
+    "uid": "2b64611ff9fc5a6b9d2fc1d03e25cbfa93999752b808fabf7e40d31217855f12",
+    "source_uid": "26bd119d80871941c4c8a5b0",
+    "split": "holdout",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mHO4",
+    "audio_sha256": "a5b234f97eb60f7e459c4613b92cc574d410895781c75288858c62ccdcddcb74",
+    "start": 15
+  },
+  {
+    "uid": "9848d346fbcb550dd8099dad7ad97c0a0b86cb7a205c65deff1cfe7b0286a448",
+    "source_uid": "26bd119d80871941c4c8a5b0",
+    "split": "holdout",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mHO4",
+    "audio_sha256": "a5b234f97eb60f7e459c4613b92cc574d410895781c75288858c62ccdcddcb74",
+    "start": 36
+  },
+  {
+    "uid": "e02541afad3382d1a6db8157d798673756b86171456eb675495ef2a52eea8f7b",
+    "source_uid": "26bd119d80871941c4c8a5b0",
+    "split": "holdout",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mHO4",
+    "audio_sha256": "a5b234f97eb60f7e459c4613b92cc574d410895781c75288858c62ccdcddcb74",
+    "start": 57
+  },
+  {
+    "uid": "bc926d6fd77fe4883004414e84ee49d0bbdfac127e43ee7d7b909d5924d7817f",
+    "source_uid": "2f0a08b8b41718ee9c2d9239",
+    "split": "holdout",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mHO5",
+    "audio_sha256": "96c613b68d0b341b24e5f56687dd9e89f696325fe39a46270d2e8738a42e8025",
+    "start": 15
+  },
+  {
+    "uid": "b253d8bab3b5592b01a754fc0deeec3e5ffb98287c7c9a3fa6704b6d3991073b",
+    "source_uid": "2f0a08b8b41718ee9c2d9239",
+    "split": "holdout",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mHO5",
+    "audio_sha256": "96c613b68d0b341b24e5f56687dd9e89f696325fe39a46270d2e8738a42e8025",
+    "start": 32
+  },
+  {
+    "uid": "9453eca3a8f34d009ed9662d7d685922379293ca7ba8b0d646d8ea0e5174064c",
+    "source_uid": "2f0a08b8b41718ee9c2d9239",
+    "split": "holdout",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mHO5",
+    "audio_sha256": "96c613b68d0b341b24e5f56687dd9e89f696325fe39a46270d2e8738a42e8025",
+    "start": 48
+  },
+  {
+    "uid": "d8ad2d4fab5472e4928c39a2c9057db098d54dbcf4a0780ef7d5898d51940be2",
+    "source_uid": "5d7ac68eb7d34f0a50e81c06",
+    "split": "holdout",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mHO5",
+    "audio_sha256": "96c613b68d0b341b24e5f56687dd9e89f696325fe39a46270d2e8738a42e8025",
+    "start": 15
+  },
+  {
+    "uid": "0c2ac343158acee0682daa40af6ffcc853ca8e90bd24e4ba7cd75f0aad1a15a4",
+    "source_uid": "5d7ac68eb7d34f0a50e81c06",
+    "split": "holdout",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mHO5",
+    "audio_sha256": "96c613b68d0b341b24e5f56687dd9e89f696325fe39a46270d2e8738a42e8025",
+    "start": 32
+  },
+  {
+    "uid": "af9e6ace81dba8b2082cd68f16430887aa5a064f83c671a851008a8b100c974f",
+    "source_uid": "5d7ac68eb7d34f0a50e81c06",
+    "split": "holdout",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mHO5",
+    "audio_sha256": "96c613b68d0b341b24e5f56687dd9e89f696325fe39a46270d2e8738a42e8025",
+    "start": 48
+  },
+  {
+    "uid": "dd3ee6a1a74a062a313b1c697410c5eb1fae8073ecf3e498a7f93047853031f0",
+    "source_uid": "2f54f3080a523e71b7c3cacb",
+    "split": "holdout",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mMH2",
+    "audio_sha256": "4f2e7b08bf7ce1cfa0e7d9f52930ee61cf9380c2d1fe4804a743e6a414546405",
+    "start": 15
+  },
+  {
+    "uid": "e6a677f79ec7f6365d64b7f053433f14e6099c7c6b4eac6c1c43fed3870e2703",
+    "source_uid": "2f54f3080a523e71b7c3cacb",
+    "split": "holdout",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mMH2",
+    "audio_sha256": "4f2e7b08bf7ce1cfa0e7d9f52930ee61cf9380c2d1fe4804a743e6a414546405",
+    "start": 69
+  },
+  {
+    "uid": "7f41842d77ffededa2634743f1d50c13da81efa0918b49a32216298a8db79c2f",
+    "source_uid": "2f54f3080a523e71b7c3cacb",
+    "split": "holdout",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mMH2",
+    "audio_sha256": "4f2e7b08bf7ce1cfa0e7d9f52930ee61cf9380c2d1fe4804a743e6a414546405",
+    "start": 123
+  },
+  {
+    "uid": "1b148673fcafdf060af3348894b5738fdc8fa99861f9fdf2905e71b65df44ec1",
+    "source_uid": "5cb7ca4ba13bba168e94afbe",
+    "split": "holdout",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mMH2",
+    "audio_sha256": "4f2e7b08bf7ce1cfa0e7d9f52930ee61cf9380c2d1fe4804a743e6a414546405",
+    "start": 15
+  },
+  {
+    "uid": "b95103c382afdb56695cb5c32d8550b22acb7db27705398b4934d770d55de3e6",
+    "source_uid": "5cb7ca4ba13bba168e94afbe",
+    "split": "holdout",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mMH2",
+    "audio_sha256": "4f2e7b08bf7ce1cfa0e7d9f52930ee61cf9380c2d1fe4804a743e6a414546405",
+    "start": 69
+  },
+  {
+    "uid": "4ea1e74b623fd62dbbe298ad07ad65c198eac91158bacc41d620ecc5f2f7de41",
+    "source_uid": "5cb7ca4ba13bba168e94afbe",
+    "split": "holdout",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mMH2",
+    "audio_sha256": "4f2e7b08bf7ce1cfa0e7d9f52930ee61cf9380c2d1fe4804a743e6a414546405",
+    "start": 123
+  },
+  {
+    "uid": "0cfd1c897c974bd54e6451129dd61f1d5598151fcf873f5fa3496abbb0d23c24",
+    "source_uid": "380d534c7972df58761d3021",
+    "split": "holdout",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mMH3",
+    "audio_sha256": "4615db8b31d7194a9f3a0534251489f10257971c0b5e0b20ec3d53658ba8a8f7",
+    "start": 15
+  },
+  {
+    "uid": "bac08ed41493de9efbd936b013b73c950e01607cbfd5588767bf8163d80d271b",
+    "source_uid": "380d534c7972df58761d3021",
+    "split": "holdout",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mMH3",
+    "audio_sha256": "4615db8b31d7194a9f3a0534251489f10257971c0b5e0b20ec3d53658ba8a8f7",
+    "start": 56
+  },
+  {
+    "uid": "6929b8e08fd61390ce7b3149fd592a05849f78b1a27b8a36993d6b132bf0f63f",
+    "source_uid": "380d534c7972df58761d3021",
+    "split": "holdout",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mMH3",
+    "audio_sha256": "4615db8b31d7194a9f3a0534251489f10257971c0b5e0b20ec3d53658ba8a8f7",
+    "start": 97
+  },
+  {
+    "uid": "ff47f0d800279590996bd8f504b357cb05b0405eaff9edadb89234131a3db794",
+    "source_uid": "48821840b649ce986841d4b5",
+    "split": "holdout",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mMH3",
+    "audio_sha256": "4615db8b31d7194a9f3a0534251489f10257971c0b5e0b20ec3d53658ba8a8f7",
+    "start": 15
+  },
+  {
+    "uid": "8e6b82fcdf693b2344fc2a415e06b150365910da0e8a3c9cd74cb15d8040db14",
+    "source_uid": "48821840b649ce986841d4b5",
+    "split": "holdout",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mMH3",
+    "audio_sha256": "4615db8b31d7194a9f3a0534251489f10257971c0b5e0b20ec3d53658ba8a8f7",
+    "start": 56
+  },
+  {
+    "uid": "751bc790ed3c28670e91c720163ca10cf02e7a2ac18bf538961a7894e335daf1",
+    "source_uid": "48821840b649ce986841d4b5",
+    "split": "holdout",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mMH3",
+    "audio_sha256": "4615db8b31d7194a9f3a0534251489f10257971c0b5e0b20ec3d53658ba8a8f7",
+    "start": 97
+  },
+  {
+    "uid": "7edf6746ee041d8e5f5bb1fdcc906d9c163b9ca3a93231f793ab9442a1701583",
+    "source_uid": "34103a6b62e8e096a57c1b0a",
+    "split": "holdout",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mMH5",
+    "audio_sha256": "472225d798603db9014afcc6bf4dc241496db22269a867b8178397ddc92194b4",
+    "start": 15
+  },
+  {
+    "uid": "27d4e80c0c291356244e414a16616da57757116726410d00f8804a618c6f75f4",
+    "source_uid": "34103a6b62e8e096a57c1b0a",
+    "split": "holdout",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mMH5",
+    "audio_sha256": "472225d798603db9014afcc6bf4dc241496db22269a867b8178397ddc92194b4",
+    "start": 36
+  },
+  {
+    "uid": "5b8a24898d6e312461391fb406186f3feb3c5608c8f0afdd984cd0ec62a78e65",
+    "source_uid": "34103a6b62e8e096a57c1b0a",
+    "split": "holdout",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mMH5",
+    "audio_sha256": "472225d798603db9014afcc6bf4dc241496db22269a867b8178397ddc92194b4",
+    "start": 57
+  },
+  {
+    "uid": "da46329019177ec25c463b92c614fe8c28cc975254d34b25f54f76cc53fe17b0",
+    "source_uid": "48203047b2c243c82bb0986e",
+    "split": "holdout",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mMH5",
+    "audio_sha256": "472225d798603db9014afcc6bf4dc241496db22269a867b8178397ddc92194b4",
+    "start": 15
+  },
+  {
+    "uid": "76d32059c567ed5d9405d4b42a3fc0df331816ccfe5abef616fc578f27873a83",
+    "source_uid": "48203047b2c243c82bb0986e",
+    "split": "holdout",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mMH5",
+    "audio_sha256": "472225d798603db9014afcc6bf4dc241496db22269a867b8178397ddc92194b4",
+    "start": 36
+  },
+  {
+    "uid": "ec74ae51008581aef5b900793a80311edfd00c9c07af76f5f5955271d96cc66d",
+    "source_uid": "48203047b2c243c82bb0986e",
+    "split": "holdout",
+    "dataset": "AIST++",
+    "group": "aist_publisher_track:mMH5",
+    "audio_sha256": "472225d798603db9014afcc6bf4dc241496db22269a867b8178397ddc92194b4",
+    "start": 57
+  },
+  {
+    "uid": "7e25efb8170590076392666312550f247fab277aeeb193c30e2696267f108583",
+    "source_uid": "fine_001",
+    "split": "fine_diagnostic",
+    "dataset": "FineDance",
+    "group": "finedance_archive:001",
+    "audio_sha256": "b5536d4ae0f07f28d3068c3b41dec3320be8d5a6c9c356d28eb15e914bf9d031",
+    "start": 15
+  },
+  {
+    "uid": "7f13d19635586700622422d50dc79b19a0b79e7675558ab3866e8eba2faa176e",
+    "source_uid": "fine_001",
+    "split": "fine_diagnostic",
+    "dataset": "FineDance",
+    "group": "finedance_archive:001",
+    "audio_sha256": "b5536d4ae0f07f28d3068c3b41dec3320be8d5a6c9c356d28eb15e914bf9d031",
+    "start": 1389
+  },
+  {
+    "uid": "a77e0cb996c922a8673d67d449f5f769589137838d3535834d8394ea812d016a",
+    "source_uid": "fine_001",
+    "split": "fine_diagnostic",
+    "dataset": "FineDance",
+    "group": "finedance_archive:001",
+    "audio_sha256": "b5536d4ae0f07f28d3068c3b41dec3320be8d5a6c9c356d28eb15e914bf9d031",
+    "start": 2763
+  },
+  {
+    "uid": "4f7f0dd56e9f57bce13dd50f3d873f34e92d08f61cc0c83340405cb8a8002701",
+    "source_uid": "fine_002",
+    "split": "fine_diagnostic",
+    "dataset": "FineDance",
+    "group": "finedance_archive:002",
+    "audio_sha256": "1dbeaef56f43f07c462844df651f5e04cd0e7aca821e55b433433c747fed6d51",
+    "start": 15
+  },
+  {
+    "uid": "23cc045590a3ef05336438ea211b92ac7b1a33e53373862239e8593bcf455b9e",
+    "source_uid": "fine_002",
+    "split": "fine_diagnostic",
+    "dataset": "FineDance",
+    "group": "finedance_archive:002",
+    "audio_sha256": "1dbeaef56f43f07c462844df651f5e04cd0e7aca821e55b433433c747fed6d51",
+    "start": 1478
+  },
+  {
+    "uid": "08c51c7bba1c4dcdcbac4849cde616a5461c54bca4dddb9b4daf7fc3b042284a",
+    "source_uid": "fine_002",
+    "split": "fine_diagnostic",
+    "dataset": "FineDance",
+    "group": "finedance_archive:002",
+    "audio_sha256": "1dbeaef56f43f07c462844df651f5e04cd0e7aca821e55b433433c747fed6d51",
+    "start": 2941
+  },
+  {
+    "uid": "fcad9285ab80cec711b33740f2e2797075aa620a6ca6825b31aab88bd28633b5",
+    "source_uid": "fine_003",
+    "split": "fine_diagnostic",
+    "dataset": "FineDance",
+    "group": "finedance_archive:003",
+    "audio_sha256": "6b7bb2fb634a39744380605b1821d9a123bce388c00932541c01121cab0fcba5",
+    "start": 15
+  },
+  {
+    "uid": "c215a741c17afe8c59458618f713fabe35c442c07f5dd2ba478b2680d5e977f0",
+    "source_uid": "fine_003",
+    "split": "fine_diagnostic",
+    "dataset": "FineDance",
+    "group": "finedance_archive:003",
+    "audio_sha256": "6b7bb2fb634a39744380605b1821d9a123bce388c00932541c01121cab0fcba5",
+    "start": 2588
+  },
+  {
+    "uid": "afeab0a214958a19e1a85ddf48bf3d1c389b3459488593cba8c119fc102aa480",
+    "source_uid": "fine_003",
+    "split": "fine_diagnostic",
+    "dataset": "FineDance",
+    "group": "finedance_archive:003",
+    "audio_sha256": "6b7bb2fb634a39744380605b1821d9a123bce388c00932541c01121cab0fcba5",
+    "start": 5161
+  },
+  {
+    "uid": "e98b318f9d9b976e83e9cdef20dcfc136204116c2fe9d5e88d010ba3130c52b9",
+    "source_uid": "fine_004",
+    "split": "fine_diagnostic",
+    "dataset": "FineDance",
+    "group": "finedance_archive:004",
+    "audio_sha256": "26c033424113adc182d906df04da2c057556a1a64e10158518c285dafb4fd613",
+    "start": 15
+  },
+  {
+    "uid": "3e6b3aac161d3f169f2462a7f2f78f6dcc6cbb044428f5f8ac06d0ce8ecdf880",
+    "source_uid": "fine_004",
+    "split": "fine_diagnostic",
+    "dataset": "FineDance",
+    "group": "finedance_archive:004",
+    "audio_sha256": "26c033424113adc182d906df04da2c057556a1a64e10158518c285dafb4fd613",
+    "start": 1369
+  },
+  {
+    "uid": "d5bfefa3e22c2a977950e550daf49e114281137fecd3e69bca4f09ecdb93d772",
+    "source_uid": "fine_004",
+    "split": "fine_diagnostic",
+    "dataset": "FineDance",
+    "group": "finedance_archive:004",
+    "audio_sha256": "26c033424113adc182d906df04da2c057556a1a64e10158518c285dafb4fd613",
+    "start": 2723
+  },
+  {
+    "uid": "09d0c8c11440c85d5f95d593680abab23df30bd030c09a476028456925d85a42",
+    "source_uid": "fine_005",
+    "split": "fine_diagnostic",
+    "dataset": "FineDance",
+    "group": "finedance_archive:005",
+    "audio_sha256": "88d55c0d0cb8b420dcf5a917ae088deaa87d727b49743ffa6439e3b223b61c19",
+    "start": 15
+  },
+  {
+    "uid": "08dd46f399c834a6666666a313d87b8dd2d95258745bcb008fdffd17891bab94",
+    "source_uid": "fine_005",
+    "split": "fine_diagnostic",
+    "dataset": "FineDance",
+    "group": "finedance_archive:005",
+    "audio_sha256": "88d55c0d0cb8b420dcf5a917ae088deaa87d727b49743ffa6439e3b223b61c19",
+    "start": 1365
+  },
+  {
+    "uid": "002ef89c8254193e6fa6305ae08c3f42c4881aeb915dd293ce2c99a78ac0fb0f",
+    "source_uid": "fine_005",
+    "split": "fine_diagnostic",
+    "dataset": "FineDance",
+    "group": "finedance_archive:005",
+    "audio_sha256": "88d55c0d0cb8b420dcf5a917ae088deaa87d727b49743ffa6439e3b223b61c19",
+    "start": 2715
+  },
+  {
+    "uid": "ab0fe6f58ecc33ee9f47802bb513297e06c3d3f4bf040bb069dedb527de7aad9",
+    "source_uid": "fine_006",
+    "split": "fine_diagnostic",
+    "dataset": "FineDance",
+    "group": "finedance_archive:006",
+    "audio_sha256": "4b992e340878cd4b31ba583d40a83ca806b78548b43c3958960545ccdf5ce02d",
+    "start": 15
+  },
+  {
+    "uid": "c1f1b38a830fd93afd51d71cbc3d8a6ed1d6cb9b8d7c5fb3cd394d30cbc35643",
+    "source_uid": "fine_006",
+    "split": "fine_diagnostic",
+    "dataset": "FineDance",
+    "group": "finedance_archive:006",
+    "audio_sha256": "4b992e340878cd4b31ba583d40a83ca806b78548b43c3958960545ccdf5ce02d",
+    "start": 346
+  },
+  {
+    "uid": "823457203634765bd46e55afab58077c44dce571e1aefbc407db277dd674e0bf",
+    "source_uid": "fine_006",
+    "split": "fine_diagnostic",
+    "dataset": "FineDance",
+    "group": "finedance_archive:006",
+    "audio_sha256": "4b992e340878cd4b31ba583d40a83ca806b78548b43c3958960545ccdf5ce02d",
+    "start": 678
+  },
+  {
+    "uid": "dbf8f827680532e474d7f4c58a2e0fd9651b6639c22e1f0e4d8a4d5ac77cd9c3",
+    "source_uid": "fine_007",
+    "split": "fine_diagnostic",
+    "dataset": "FineDance",
+    "group": "finedance_archive:007",
+    "audio_sha256": "9045b0021bf6f3105232b222563c8423a77af2b093cb05686fb23752a1758b29",
+    "start": 15
+  },
+  {
+    "uid": "c8c902c0d6e4553f3c0cef319797b1a64f90b2b063c2ec350983cf418af9b603",
+    "source_uid": "fine_007",
+    "split": "fine_diagnostic",
+    "dataset": "FineDance",
+    "group": "finedance_archive:007",
+    "audio_sha256": "9045b0021bf6f3105232b222563c8423a77af2b093cb05686fb23752a1758b29",
+    "start": 1798
+  },
+  {
+    "uid": "632f4d519709e03e2dc3f80ce862f008931bbe91348a038701571737f7116fb0",
+    "source_uid": "fine_007",
+    "split": "fine_diagnostic",
+    "dataset": "FineDance",
+    "group": "finedance_archive:007",
+    "audio_sha256": "9045b0021bf6f3105232b222563c8423a77af2b093cb05686fb23752a1758b29",
+    "start": 3582
+  },
+  {
+    "uid": "361fca7b8db408f04242b559f2b62fe36c23ac4bd6c74bf16d7a46fc87b52c35",
+    "source_uid": "fine_008",
+    "split": "fine_diagnostic",
+    "dataset": "FineDance",
+    "group": "finedance_archive:008",
+    "audio_sha256": "4c178f413740a16b7bf14421a443f91a891a898a82f75b0028bf522d25a27cdd",
+    "start": 15
+  },
+  {
+    "uid": "804c02693e231d33e19c4e6f45955035995d7e636578cae67b3ef36df760dfca",
+    "source_uid": "fine_008",
+    "split": "fine_diagnostic",
+    "dataset": "FineDance",
+    "group": "finedance_archive:008",
+    "audio_sha256": "4c178f413740a16b7bf14421a443f91a891a898a82f75b0028bf522d25a27cdd",
+    "start": 1905
+  },
+  {
+    "uid": "d54d526878416710b7c902dbab047da0d36ca4ce90df386ee6a3216994c50154",
+    "source_uid": "fine_008",
+    "split": "fine_diagnostic",
+    "dataset": "FineDance",
+    "group": "finedance_archive:008",
+    "audio_sha256": "4c178f413740a16b7bf14421a443f91a891a898a82f75b0028bf522d25a27cdd",
+    "start": 3795
+  },
+  {
+    "uid": "16eb2543e234d13f503e7bf24f1b50ab4cc8baed7132f869f0ce5c8befb2cbe8",
+    "source_uid": "fine_009",
+    "split": "fine_diagnostic",
+    "dataset": "FineDance",
+    "group": "finedance_archive:009",
+    "audio_sha256": "4fbacdf09ed8db54ad1f92bf056f6ea59be50a4420282545aa63badaea37c952",
+    "start": 15
+  },
+  {
+    "uid": "78c124e9580438cf51f334803a5bd1724e3f3403db6c8770182769a125db1ab9",
+    "source_uid": "fine_009",
+    "split": "fine_diagnostic",
+    "dataset": "FineDance",
+    "group": "finedance_archive:009",
+    "audio_sha256": "4fbacdf09ed8db54ad1f92bf056f6ea59be50a4420282545aa63badaea37c952",
+    "start": 674
+  },
+  {
+    "uid": "10604e1db01a802a0ed73c2eed9fc2eb664504f01bb35224873a0670343959a4",
+    "source_uid": "fine_009",
+    "split": "fine_diagnostic",
+    "dataset": "FineDance",
+    "group": "finedance_archive:009",
+    "audio_sha256": "4fbacdf09ed8db54ad1f92bf056f6ea59be50a4420282545aa63badaea37c952",
+    "start": 1332
+  },
+  {
+    "uid": "33324a57002d9c77d4757cc1b664cd09afcbdcbd3b65696f539cbd0ca8db7cf2",
+    "source_uid": "fine_010",
+    "split": "fine_diagnostic",
+    "dataset": "FineDance",
+    "group": "finedance_archive:010",
+    "audio_sha256": "0223a697a2ca0a7a4a6c41b5e1a9293b755952a4b19d310cd994fb596b5d16c5",
+    "start": 15
+  },
+  {
+    "uid": "7e9d968c74d61a932135e37fb581ce4f6eb8d8102d3911b13a9fa68b6911686a",
+    "source_uid": "fine_010",
+    "split": "fine_diagnostic",
+    "dataset": "FineDance",
+    "group": "finedance_archive:010",
+    "audio_sha256": "0223a697a2ca0a7a4a6c41b5e1a9293b755952a4b19d310cd994fb596b5d16c5",
+    "start": 2674
+  },
+  {
+    "uid": "ba5dfe1c2633fd767db007978b2ca218b87360d782207a61d237f7bf45717798",
+    "source_uid": "fine_010",
+    "split": "fine_diagnostic",
+    "dataset": "FineDance",
+    "group": "finedance_archive:010",
+    "audio_sha256": "0223a697a2ca0a7a4a6c41b5e1a9293b755952a4b19d310cd994fb596b5d16c5",
+    "start": 5332
+  },
+  {
+    "uid": "8ff2de599c163dd4a4a26606562220762e8dbf3a0ac07065e78ef8f67bfeb63f",
+    "source_uid": "fine_011",
+    "split": "fine_diagnostic",
+    "dataset": "FineDance",
+    "group": "finedance_archive:011",
+    "audio_sha256": "abee5d9938935d3efc42e14e258e46c4dae90a2b3ea93780e9507eab856e8639",
+    "start": 15
+  },
+  {
+    "uid": "715e679944eacd9c13dd7750adca73520655c6f4c38b491ff82c97a85178ea5d",
+    "source_uid": "fine_011",
+    "split": "fine_diagnostic",
+    "dataset": "FineDance",
+    "group": "finedance_archive:011",
+    "audio_sha256": "abee5d9938935d3efc42e14e258e46c4dae90a2b3ea93780e9507eab856e8639",
+    "start": 1020
+  },
+  {
+    "uid": "7bb5b6fa98baa24d5950a9cce35c6fced03b2c85f8ae4b897813c4804f6e754c",
+    "source_uid": "fine_011",
+    "split": "fine_diagnostic",
+    "dataset": "FineDance",
+    "group": "finedance_archive:011",
+    "audio_sha256": "abee5d9938935d3efc42e14e258e46c4dae90a2b3ea93780e9507eab856e8639",
+    "start": 2026
+  },
+  {
+    "uid": "3b0ca81b6300cc6580e5263c5d1eb7f3f87aa6827dcc36b99dfd3b5fe05b424e",
+    "source_uid": "fine_013",
+    "split": "fine_diagnostic",
+    "dataset": "FineDance",
+    "group": "finedance_archive:013",
+    "audio_sha256": "51b0eec9e397a9472f40b48e916be1953e5bc38cf8ebc32d66104871b28a9e29",
+    "start": 15
+  },
+  {
+    "uid": "5cc77c40a849c00fe4f9fefb7693860797cdeea183a0495b0800520720d67a32",
+    "source_uid": "fine_013",
+    "split": "fine_diagnostic",
+    "dataset": "FineDance",
+    "group": "finedance_archive:013",
+    "audio_sha256": "51b0eec9e397a9472f40b48e916be1953e5bc38cf8ebc32d66104871b28a9e29",
+    "start": 1033
+  },
+  {
+    "uid": "47d4d3fe6b60ca940e62743c7fe4e1b1798fbb7174ee1a0e4701d95b6ccc6d03",
+    "source_uid": "fine_013",
+    "split": "fine_diagnostic",
+    "dataset": "FineDance",
+    "group": "finedance_archive:013",
+    "audio_sha256": "51b0eec9e397a9472f40b48e916be1953e5bc38cf8ebc32d66104871b28a9e29",
+    "start": 2051
+  }
+]

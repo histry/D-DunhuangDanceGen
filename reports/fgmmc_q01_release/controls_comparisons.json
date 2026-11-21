@@ -1,0 +1,152 @@
+[
+  {
+    "split": "dev",
+    "control": "OrdinaryPostFilter",
+    "groups": 5,
+    "mean_delta": -0.16666666666666666,
+    "group_bootstrap95": [
+      -0.4666666666666666,
+      0.13333333333333336
+    ]
+  },
+  {
+    "split": "dev",
+    "control": "ShuffledPair",
+    "groups": 5,
+    "mean_delta": -0.1,
+    "group_bootstrap95": [
+      -0.3,
+      0.06666666666666667
+    ]
+  },
+  {
+    "split": "dev",
+    "control": "MusicDensity",
+    "groups": 5,
+    "mean_delta": -0.07388888888888889,
+    "group_bootstrap95": [
+      -0.21055555555555555,
+      0.09444444444444444
+    ]
+  },
+  {
+    "split": "dev",
+    "control": "PositionOnly",
+    "groups": 5,
+    "mean_delta": -0.13333333333333333,
+    "group_bootstrap95": [
+      -0.19999999999999998,
+      1.1102230246251566e-17
+    ]
+  },
+  {
+    "split": "dev",
+    "control": "MusicZero",
+    "groups": 5,
+    "mean_delta": -0.13333333333333333,
+    "group_bootstrap95": [
+      -0.19999999999999998,
+      5.551115123125783e-18
+    ]
+  },
+  {
+    "split": "holdout",
+    "control": "OrdinaryPostFilter",
+    "groups": 7,
+    "mean_delta": -0.047619047619047616,
+    "group_bootstrap95": [
+      -0.11904761904761904,
+      0.047619047619047616
+    ]
+  },
+  {
+    "split": "holdout",
+    "control": "ShuffledPair",
+    "groups": 7,
+    "mean_delta": -0.19047619047619047,
+    "group_bootstrap95": [
+      -0.2857142857142857,
+      -0.09523809523809523
+    ]
+  },
+  {
+    "split": "holdout",
+    "control": "MusicDensity",
+    "groups": 7,
+    "mean_delta": 0.01944444444444445,
+    "group_bootstrap95": [
+      -0.09960317460317458,
+      0.1357142857142857
+    ]
+  },
+  {
+    "split": "holdout",
+    "control": "PositionOnly",
+    "groups": 7,
+    "mean_delta": -0.05714285714285714,
+    "group_bootstrap95": [
+      -0.17619047619047618,
+      0.08571428571428573
+    ]
+  },
+  {
+    "split": "holdout",
+    "control": "MusicZero",
+    "groups": 7,
+    "mean_delta": -0.05714285714285714,
+    "group_bootstrap95": [
+      -0.15238095238095237,
+      0.08571428571428572
+    ]
+  },
+  {
+    "split": "fine_diagnostic",
+    "control": "OrdinaryPostFilter",
+    "groups": 12,
+    "mean_delta": 0.08333333333333333,
+    "group_bootstrap95": [
+      -0.05555555555555556,
+      0.2222222222222222
+    ]
+  },
+  {
+    "split": "fine_diagnostic",
+    "control": "ShuffledPair",
+    "groups": 12,
+    "mean_delta": -0.05555555555555556,
+    "group_bootstrap95": [
+      -0.19444444444444445,
+      0.08333333333333333
+    ]
+  },
+  {
+    "split": "fine_diagnostic",
+    "control": "MusicDensity",
+    "groups": 12,
+    "mean_delta": 0.03148148148148148,
+    "group_bootstrap95": [
+      -0.09583333333333334,
+      0.16018518518518518
+    ]
+  },
+  {
+    "split": "fine_diagnostic",
+    "control": "PositionOnly",
+    "groups": 12,
+    "mean_delta": -0.03333333333333335,
+    "group_bootstrap95": [
+      -0.1166666666666667,
+      0.05000000000000001
+    ]
+  },
+  {
+    "split": "fine_diagnostic",
+    "control": "MusicZero",
+    "groups": 12,
+    "mean_delta": -0.03333333333333335,
+    "group_bootstrap95": [
+      -0.1166666666666667,
+      0.05000000000000001
+    ]
+  }
+]

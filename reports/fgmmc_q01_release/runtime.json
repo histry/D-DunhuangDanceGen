@@ -1,0 +1,60 @@
+{
+  "status": "PASS",
+  "scientific_commit": "8582331f8e15c3dde89a70000ab4dae15dd3fd22",
+  "binding": {
+    "code": {
+      "__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "common.py": "cc206d24215c410ff24b118097eb40ad4099d36b8bbbedb33c366fe3e0aed52f",
+      "data.py": "91420ac105f8b12ec839184a71692c8831b4b633c10a34dc2c514c6d43ddfea0",
+      "evaluate.py": "85341f61d06a31e4b374ce2baa66990cf5301e2b2aac4b31171fa086206c6988",
+      "network.py": "205e4b3f80fd9790486cf46367da60c5174ecae5d3af7eb82c82ff54603fd5d6",
+      "preview.py": "293e6754f16cde84846454af9be1ee1f9319228f484866f9127aa5b9ec65d92c",
+      "protocol.json": "8506294bd6898fcbe6102cab1fca80c329468ff94bc188874a8b205f7ebc66a0",
+      "replay.py": "b5a5f8f1d37c4c5c782054e0c00317429815403b14df1efa8b20da91941edc01",
+      "test_contracts.py": "5bdb2305baf11ace523551ce2b7ac39753c1aeb80b772ae2bbf49e2a6ec95342",
+      "train.py": "4b38c1159fb9b654d2af318645cefe4234e23a86f34693882ca1e621e2d3c00c"
+    },
+    "dependencies": {
+      "alignment/model.py": "245f63f53e60dfbb57d6bd642bd1a61e1643bd80be7e2bd80a416554edb531fb",
+      "alignment/partial_path.py": "b0e30e5f4d1f4cc024d58fb3259a7a25b2ca66de3065be9d72c024cf929a45cc",
+      "planning/anchor_reachability.py": "2c52be366c2d8e5e3bb6c90ed2b5e57cf6c9a570d19430b5dedce43542f80fe5",
+      "research/transition_r37/content.py": "c9ee4734ba0a644086c4da2b3af90ce0fe4720cde11ac85e989099bef6e82070",
+      "research/source_time_q01/study.py": "f7811913dd17bba2fde920a734e22d0fb515c31bd2bf41324e25111eb6d0f78f"
+    }
+  },
+  "exit_status": {
+    "main": 0,
+    "controls": 0,
+    "replay": 0
+  },
+  "environment": {
+    "python": "3.9.25",
+    "numpy": "1.26.4",
+    "scipy": "1.13.1",
+    "torch": "2.8.0+cu128",
+    "cuda_runtime": "12.8",
+    "gpu": "NVIDIA GeForce RTX 4090"
+  },
+  "contract_tests": 7,
+  "model_parameters": 116480,
+  "real_optimizer_updates": 900,
+  "optimizer_updates_per_arm": 300,
+  "checkpoint_selection": "FINAL_STEP_NO_DEV_SELECTION",
+  "data_manifest_sha256": "4b68b31a5c5af38e8d59e5747f587ec01f3e1d1d860d82e9537e04e5da4064d4",
+  "normalizer_sha256": "498a9bd5ab8b4b0c4b6ed638b5e64c454d4a714c3a6c1b9e5263ba84a6117882",
+  "weight_sha256": {
+    "Feasible": "6346898699e9269e038c6bc592673144f3629a10507c2ecc5b6c00ee99169ea5",
+    "OrdinaryPostFilter": "5d35825865c4b9be9e30d6246bda538c301c37cf5c879e7aaf2c673b31f7ecea",
+    "ShuffledPair": "2fbe11a5aadeb5cd0057acf98eba454f7fcff4d8c8ab1615b114e585d17b0ce7"
+  },
+  "parent_role_manifest_sha256": "e4e54b3f58b2cd788cd10c865b151dc2fe3c01c9c9ce6aed4358f7a9cc399dd2",
+  "new_geometry_solves": 0,
+  "geometry_scope": "EXACT_ALREADY_EXECUTED_PARENT_ARRAYS_AND_HASH_BOUND_BRIDGES; NO_NEW_MOTION_ARRAY_OR_INHERITED_QUALIFICATION_FOR_CHANGED_MOTION",
+  "independent_inference_replay": "PASS",
+  "independent_training_reproduction": false,
+  "whole_song": "NOT_STARTED",
+  "can_route": false,
+  "semantic_role_truth": "UNKNOWN",
+  "artistic_quality": "NOT_EVALUABLE",
+  "Native24": "NOT_EVALUABLE"
+}

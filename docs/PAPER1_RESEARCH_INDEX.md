@@ -26,3 +26,5 @@ SourceTime-Q01：[有限共同池决策实验](../reports/paper1_source_time_rel
 Reachability-Q01：[精确可达证书及完整139单位结构审查](../reports/paper1_reachability_release/report.md)。单锚点和联合窗口分开，连续可达不升级G1；有限对应假设无合法解，不扩搜或宣称艺术收益。
 
 RoleAlignment-Q01：[有限事件对应资格与来源执行](../reports/paper1_role_alignment_release/report.md)。复用1–3节点可达证书、共同候选和原G1；新配对诊断仍未确认角色信息超越密度／位置控制，不进入正式路由。
+
+FGMMC-Q01：[有限合法时钟域内的对应学习先导](../reports/fgmmc_q01_release/report.md)。新随机初始化、Train-only统计、音乐／录制／已知编舞／舞者隔离；与普通学习后过滤及打乱配对比较，目标域仅Shadow。

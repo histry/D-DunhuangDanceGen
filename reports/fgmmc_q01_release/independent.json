@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "fresh_process": true,
+  "raw_features_reconstructed": true,
+  "new_train_normalization_exact": true,
+  "donors_exact": true,
+  "scalar_differences": [],
+  "view_differences": [],
+  "initial_model_digest_same_all_arms": true,
+  "checkpoint_sha256": {
+    "Feasible": "6346898699e9269e038c6bc592673144f3629a10507c2ecc5b6c00ee99169ea5",
+    "OrdinaryPostFilter": "5d35825865c4b9be9e30d6246bda538c301c37cf5c879e7aaf2c673b31f7ecea",
+    "ShuffledPair": "2fbe11a5aadeb5cd0057acf98eba454f7fcff4d8c8ab1615b114e585d17b0ce7"
+  },
+  "optimizer_calls": 0,
+  "retraining_performed": false,
+  "scope": "INDEPENDENT_FROZEN_CHECKPOINT_INFERENCE_NOT_TRAINING_REPRODUCTION",
+  "can_route": false
+}

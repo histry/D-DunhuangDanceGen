@@ -1,0 +1,15 @@
+{
+  "model": "ShuffledPair",
+  "steps": 300,
+  "initial_digest": "2729111ce84cb977884306d0b90522c8eb647a75f17b596277cb8d1b93264316",
+  "final_digest": "2ba8f0e256e94231a8a1f3fb38d2d105a1e6d1d716d0a66fe8241e31c7774c4d",
+  "parameters": 116480,
+  "elapsed_seconds": 72.2070473600179,
+  "peak_cuda_bytes": 102422016,
+  "train_music_groups": 27,
+  "data_manifest_sha256": "4b68b31a5c5af38e8d59e5747f587ec01f3e1d1d860d82e9537e04e5da4064d4",
+  "selection": "FINAL_STEP_ONLY_NO_DEV_SELECTION",
+  "training_domain": "AIST_OFFICIAL_TRAIN_ONLY_NEW_GENRE_DANCER_DISJOINT_PARTITIONS",
+  "heldout_used_in_optimizer": false,
+  "can_route": false
+}
