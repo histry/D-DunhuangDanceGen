@@ -1,0 +1,30 @@
+{
+  "task": "Paper1-MinimalContextEdit-P3",
+  "baseline_commit": "0a7e9efa0b39d8b85e6ad176726ab3ba6caf048f",
+  "P2_stage_manifests": {
+    "main": "cd38403373cf4af72151ab4cdb0c245e9d606d41f2af4b619f452a715595f53e",
+    "controls": "4e724cfd6ed6cfa1c37668ccc89b15cf988cc94ced1d80f853ab1cb4ff49a3e3"
+  },
+  "P2_viewer_data_sha256": "cede13282c55f46c12f1af2a891d599a57a19ad605f28c420ccbebac5f2903d5",
+  "cases": "ALL14_P2_REGISTERED_FAILURE_CENTER_TASKS_IN_SAVED_ORDER; SAME_CENTER_UID_DOMAIN_AS_P1",
+  "primary": "EXACT_DAG_DP_LEXICOGRAPHIC_SOURCE_UNIT_CHANGES_THEN_SAME_UNIT_ACTUAL_Q_SHA_CHANGES_THEN_FULL_UID_PATH",
+  "source_unit_identity": ["source_uid", "event_uid", "source_interval"],
+  "clock_identity": "ACTUAL_TARGET_FRAME_SOURCE_POSITIONS_Q_SHA256; NOT_WARP_KNOT_LIST_EQUALITY",
+  "source_only_control": "AFTER_PRIMARY_BROWSER_ACCEPTANCE; MIN_SOURCE_UNIT_CHANGES_THEN_FULL_UID_PATH; NO_WARP_SECONDARY",
+  "baseline": "EXACT_P2_SAVED_B0_MIXED_G0_G1_AND_P2_SAVED_CONSTRAINED_STRONG; DO_NOT_REBUILD_AS_ALL_G1",
+  "graph": "EXACT_P1_SONG_FILTERED_MEASURED_POLICY_ADMISSIBLE_AND_ORIGINAL_G1_NUMERIC_PASS; UNKNOWN_NEVER_ADMITTED",
+  "certificate": "COMPLETE_LAYER_NODE_BELLMAN_LABELS_AND_PREDECESSORS; VERIFY_ALL_LABELS_AND_TERMINAL_MINIMUM",
+  "expected_graph_feasible_tasks": 10,
+  "expected_graph_missing_tasks": 4,
+  "materialization_budget_per_stage": 512,
+  "workers": 4,
+  "new_unknown_edges_solved": 0,
+  "new_candidates": 0,
+  "new_clocks": 0,
+  "training_updates": 0,
+  "SDMR_used_for_selection": false,
+  "D3_used_for_selection": false,
+  "can_route": false,
+  "Native24": "NOT_EVALUABLE",
+  "independent_artistic_quality": "NOT_EVALUABLE"
+}
