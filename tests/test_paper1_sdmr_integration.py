@@ -43,3 +43,10 @@ def test_shadow_variable_support(monkeypatch):
     assert not r['can_route'] and len(r['common_support'])==N-12
     hashes=[d['readout']['support']['common_support_sha256'] for d in r['details'].values()]
     assert len(set(hashes))==1 and all(len(v['Single64'])==2 for v in r['scores'].values())
+
+@pytest.mark.parametrize('frames',[180,233,300])
+def test_dynamic_readout_does_not_reuse_fixed240(frames):
+    from dunhuang.paper1.evaluation import measure
+    source=np.broadcast_to(np.eye(3),(frames,22,3,3)).copy();J=np.zeros((22,3));parents=np.r_[-1,np.zeros(21,dtype=int)]
+    r=measure(source,source,J,parents,np.arange(frames),[0,frames])
+    assert r['frames']==frames and r['sampler_exact'] and r['actual']['frames']==frames

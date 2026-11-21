@@ -50,7 +50,15 @@ def preview(out):
 def controls(out,preview_root):
     # Browser acceptance is a phase gate, not a scientific quality label.
     receipt=read(ROOT/'receipts/preview_browser.json');assert receipt['passed'] and receipt['preview_result_sha256']==sha(preview_root/'result.json')
-    check_seal(preview_root);p=read(preview_root/'result.json');assert p['science']==binding();out=fresh(out);z=np.load(preview_root/'arrays.npz');pop=Population()
+    check_seal(preview_root);p=read(preview_root/'result.json')
+    # The accepted preview producer is versioned independently from later
+    # read-only consumers. No change to its candidate, clock or display contract.
+    for name,digest in p['science'].items():
+        blob=subprocess.check_output(['git','show','9e8a1661b713e08d907b05f0fe59567c58461fef:src/dunhuang/paper1/'+name])
+        assert __import__('hashlib').sha256(blob).hexdigest()==digest
+    for name in ('contracts.py','warp_bank.py','correspondence.py','view.py','viewer.html'):
+        assert binding()[name]==p['science'][name]
+    out=fresh(out);z=np.load(preview_root/'arrays.npz');pop=Population()
     from .sdmr_adapter import FrozenEncoder,score_executed_bank_shadow,recall_shadow
     from .execute import connection
     from dunhuang.research.gtw_kinematic_baseline.features import ReferenceCost
@@ -88,7 +96,7 @@ def controls(out,preview_root):
                         cache[key]=connection(L,Rr,pop.net.joints,pop.net.parents,pop.reference);calls+=1
                     local.append(dict(side=side,cache_key=key,**cache[key]))
                 connections.append(local)
-            from dunhuang.research.rhythm_r66.metrics import measure as dynamics
+            from .evaluation import measure as dynamics
             dynamic=[dynamics(R,pop.lib.rotations[r['source_uid']],pop.net.joints,pop.net.parents,z[r['uid']+'_q'],r['source_interval'],include_curves=False) for r,R in zip(rows,bodies)]
             results.append(dict(song=s,slot=k,candidate_uids=[r['uid'] for r in rows],scores=score['scores'],GTWLocal=gtw,dynamics=dynamic,
                                 source_recall_shadow=source_scores,encodings=score['motion_encoding'],music_details=score['details'],common_support=score['common_support'],connections=connections,
