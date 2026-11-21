@@ -1,0 +1,35 @@
+"""Scalar-only frozen diagnosis export, including effective graph multiplicity audit."""
+import importlib.util, sys
+from pathlib import Path
+sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'src'))
+from dunhuang.research.fgmmc_q01.common import ROOT, CFG, read, write, sha, fresh, array_hash
+
+def build(out):
+    source=ROOT/'diagnosis';m=read(source/'manifest.json')
+    assert all(sha(source/n)==v for n,v in m['files'].items())
+    replay=read(ROOT/'receipts/diagnosis_replay.json');assert replay['status']=='PASS'
+    path=Path('scripts/diagnose_fgmmc.py');assert sha(path)==m['script_sha256']
+    spec=importlib.util.spec_from_file_location('frozen_fgmmc_diagnosis',path);diag=importlib.util.module_from_spec(spec);spec.loader.exec_module(diag)
+    centers,bank,masks,order=diag.geometry();classes={}
+    for k,mask in enumerate(masks):classes.setdefault(array_hash(mask),[]).append(k)
+    assert len(bank)==5 and len(classes)==3
+    detail=read(source/'clock_breakdown.json');checked=0
+    for row in detail:
+        for condition in row['conditions']:
+            for ids in classes.values():
+                values=[condition['per_clock'][k]['soft_score'] for k in ids]
+                assert len(set(values))==1,'Same graph gave different score'
+            checked+=1
+    graph=dict(unique_clocks=len(bank),unique_allowed_graphs=len(classes),
+               classes=[dict(mask_sha256=h,clock_indices=ids,amplitudes=[order[k]['amplitude'] for k in ids],nominal_aggregation_prior_mass=len(ids)/len(bank)) for h,ids in classes.items()],
+               all_equal_graph_scores_exact=True,checked_model_conditions=checked,
+               no_reweighted_scores_or_new_rankings=True,
+               interpretation='Exact-clock deduplication does not deduplicate effective matching graphs; this is representation degeneracy, not proof of the full failure cause')
+    out=fresh(out)
+    for name in ['p0_p1','structure','clock_breakdown','path_summary','p3','p4','qualification','manifest']:write(out/('source_'+name+'.json'),read(source/(name+'.json')))
+    write(out/'graph_equivalence.json',graph);write(out/'diagnosis_replay.json',replay)
+    launch=Path('outputs/fgmmc_launch');exits={n:int((launch/(n+'.exit')).read_text()) for n in ['diagnosis','diagnosis_replay']};assert all(v==0 for v in exits.values())
+    write(out/'runtime.json',dict(status='PASS',diagnosis_script_sha256=sha(path),export_script_sha256=sha(Path(__file__)),original_fgmmc_public_manifest_sha256=sha('reports/fgmmc_q01_release/manifest.json'),exit_status=exits,diagnosis_contract_tests=6,model_rows=len(detail),registered_clock_conditions_per_model_row=6,registered_clocks=5,decoded_hard_paths=len(detail)*6*5,new_optimizer_updates=0,new_windows=0,new_clocks=0,new_geometry_calls=0,new_planner_runs=0,qualification_unchanged=True,hard_path_arrays_kept_private_sha256=sha(source/'hard_paths.npz'),model_weight_sha256={n:sha(ROOT/n/'weights.npz') for n in CFG['models']},causal_conclusion='NOT_ESTABLISHED',can_route=False))
+    write(out/'manifest.json',dict(files={p.name:sha(p) for p in sorted(out.iterdir()) if p.is_file()}));print('FG_DIAG_PUBLIC',len(list(out.iterdir())),sum(p.stat().st_size for p in out.iterdir()))
+
+if __name__=='__main__':build('reports/fgmmc_q01_diagnosis')
