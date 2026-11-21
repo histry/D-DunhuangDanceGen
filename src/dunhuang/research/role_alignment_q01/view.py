@@ -12,7 +12,7 @@ def build(phase):
             if k not in tracks:tracks[k]=np.round(relative_fk(z[k],ctx['J'],ctx['parents']),4).tolist()
             return k
         for c in reg['cases']:
-            variants=[];T=c['target_frames'];A=c['music_start_frame'];name='music_'+str(c['music_song'])+'_'+str(T)+'.wav';p=Path('outputs/paper1_source_time_01/preview/viewer')/name;assert p.exists();audio[name]=dict(name=name,existing_relative_path=str(p),sha256=sha(p))
+            variants=[];T=c['target_frames'];A=c['music_start_frame'];name='music_'+str(c['music_song'])+'_'+str(T)+'.wav';p=Path('outputs/paper1_auto_eval_01/preview/viewer')/name;assert p.exists();audio[name]=dict(name=name,existing_relative_path=str(p),sha256=sha(p))
             for decision in [v for v in d if v['case_key']==c['key']]:
                 r=next((r for r in rows if r['uid']==decision['selected_uid']),None);uid=None if r is None else r['uid'];variants.append(dict(label=decision['method']+' · G1 '+str(decision['G1_pass']),track=None if uid is None else track(uid+'__full_R'),core_track=None if uid is None else track(uid+'__R'),qualified=decision['G1_pass'],source=str(c['source_interval']),q=None if uid is None else np.round(z[uid+'__q'],6).tolist(),source_interval=c['source_interval'],anchor_marks=[] if r is None else r['actual_node_target_frames'],target_marks=[] if r is None or r['targets'] is None else [v['local_frame'] for v in r['targets']],details=decision))
             items.append(dict(label=c['source_uid']+' · '+str(c['requested_nodes'])+'节点',frames=2*T+48,core=T,target=None,raw=False,audio=name,variants=variants,explanation='节点允许缺失、不要求固定阶段类型。粉线是候选中明确登记的音乐目标±3帧，青线是实际映射动作事件。自动角色兼容是假设，未通过独立语义资格。'))
